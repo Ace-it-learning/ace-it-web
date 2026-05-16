@@ -1,0 +1,485 @@
+{
+  "factPack": {
+    "code": "JS4238",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4238"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4238"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/ifaab/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://ifaa.bschool.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4238",
+      "nameEn": "Insurance, Financial and Actuarial Analysis",
+      "nameZh": "保險、金融與精算學",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 41.75,
+      "uq": 27.5,
+      "lq": 40.25,
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 41.75
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 40.25
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 27.5
+        }
+      },
+      "subjectWeighting": "• The best one subject of Chemistry, Physics, Economics or ICT (x 1.25)"
+    },
+    "jupas": {
+      "code": "JS4238",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4238",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4238",
+      "nameEn": "Insurance, Financial and Actuarial Analysis",
+      "nameZh": "保險、金融與精算學",
+      "shortDescription": "an class=\"before_label\">Short Description The Insurance, Financial and Actuarial Analysis programme provides students with a conceptual understanding of, and the analytical skills necessary for a career in insurance, financial and actuarial analysis. It also gives them a sound knowledge of the structure, practices and business functions of the insurance industry. In response to the needs of the market, the programme is rooted in Hong Kong’s institutional environment, supplemented with topics related to international issues and practices. Students in the programme receive training in actuarial and statistical techniques in both life and non-life insurance risk, as well as insurance operations, financial markets, portfolio management and financial derivatives. This paves students’ way to managerial positions in the insurance and finance sectors.",
+      "programmeWebsite": "http://ifaa.bschool.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 43,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART NOTE1 5 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE2 3 NOTE 1: Mathematics (Extended Part) Module I or II at Level 5 is required if Mathematics (Compulsory Part) at Level 3 or 4 is obtained. NOTE 2: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 139,
+        "bandB": 75,
+        "bandC": 146,
+        "bandD": 221,
+        "bandE": 206,
+        "total": 787
+      },
+      "offers2025": {
+        "bandA": 39,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 39
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/ifaab/",
+      "introduction": "Prepping for a Professional Career with Our BBA Insurance, Financial and Actuarial Analysis Programme The Bachelor of Business Administration (BBA) programme in Insurance, Financial and Actuarial Analysis (IFAA), offered by the Faculty of Business Administration at CUHK, provides in-depth education in insurance, finance and actuarial science. The programme is tailor-made for those who wishes to be an actuary, a financial analyst or a risk manager. It offers excellent career opportunity in the area of insurance, banking and investment, business consulting. In response to the needs of the markets above, the IFAA programme is rooted in Hong Kong’s institutional environment, supplemented with topics related to international issues and practices. The programme curriculum is well-rounded and practical: students in the programme receive training in actuarial and statistical techniques in both life and non-life insurance risk, as well as insurance operations, financial markets, portfolio management and financial derivatives. This paves students’ way to managerial positions in the insurance and finance sectors. The IFAA programme was accredited by the Society of Actuaries (SoA) in the US in 2011. The programme’s curriculum is aligned with the exam syllabi of the SoA. Our graduates perform very well in professional actuarial examinations. The majority of them enter the actuarial department of insurance companies or consulting firms. Some join other financial sectors such as banking and accounting. Accreditation The IFAA Programme was awarded the title of a Centre of Actuarial Excellence by the Society of Actuaries (SOA) in 2011. This is the highest award bestowed upon an actuarial programme, and currently there are only 40 universities holding this title. The SOA recognises IFAA’s excellence in a wide range of areas, including curriculum design, faculty qualifications, connection with the insurance industry and graduate prospects: “Fully integrated business courses, close to 100% participation in its internship and co-op programme and a strong connection to the industry are among the exceptional qualities of the CUHK actuarial science programme, and are instrumental in positioning students for success.” &#8211; CAE Evaluation Committee (CEC), Society of Actuaries We are also honoured to be among the inaugural group of the 13 universities recognized by the Society of Actuaries for the University-Earned Credit (UEC) programme in August 2022. Students taking approved courses at CUHK are eligible for specific SOA exam credits if they obtain the required score.",
+      "ranking": "",
+      "careerProspects": "IFAA graduates are competitive candidates for a number business careers and are ideally suited for careers in banks, consulting firms, insurance firms and a number of key fields in the financial services industry. Actuaries Graduates who aspire to become actuaries are well-equipped for work in insurance companies, consulting firms, government agencies, banks, investment firms, the employee benefits",
+      "craftYourPath": "Ready to dive into the IFAA programme adventure? Here are some tips from our graduates: “Students in the IFAA programme are not only strong in mathematics but are also equipped with excellent communication and presentation skills. You can make good use of the internship and overseas exchange opportunities offered by the programme and the University to sharpen your skills in foreign languages and build a professional network. This experience is extremely useful for your future",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4238",
+    "nameEn": "Insurance, Financial and Actuarial Analysis",
+    "nameZh": "保險、金融與精算學",
+    "name": "Insurance, Financial and Actuarial Analysis",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 41.75,
+    "band_a": 40.25,
+    "uq": 27.5,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "The programme requires a minimum of Level 3 in Chinese Language, Level 3 in English Language, Level 5 in Mathematics Compulsory Part, and 'Attained' in Citizenship and Social Development. Applicants must also have at least two elective subjects at Level 3 or above. If Mathematics Compulsory Part is at Level 3 or 4, then Mathematics Extended Part Module I or II at Level 5 is required.",
+            "",
+            "First Year Intake: 43",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 139",
+            "Offers made (Band A): 39",
+            "Total applications: 787",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 41.75",
+            "Lower quartile (LQ): 40.25",
+            "Upper quartile (UQ): 27.5",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese Language: 3",
+            "English Language: 5*",
+            "Mathematics Compulsory Part: 5*",
+            "Citizenship and Social Development: A",
+            "Mathematics Extended Part (M1/M2): 5",
+            "1st Elective: 5*",
+            "2nd Elective: 5",
+            "3rd Elective: 4",
+            "",
+            "Subject Weighting: The best one subject of Chemistry, Physics, Economics or ICT is weighted at 1.25."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The BBA in Insurance, Financial and Actuarial Analysis (IFAA) programme provides a conceptual understanding and analytical skills for careers in insurance, financial and actuarial analysis. It covers the structure, practices and business functions of the insurance industry, rooted in Hong Kong’s institutional environment with international perspectives.",
+            "",
+            "Students receive training in actuarial and statistical techniques for both life and non-life insurance risk, as well as insurance operations, financial markets, portfolio management and financial derivatives.",
+            "",
+            "The programme is accredited by the Society of Actuaries (SOA) as a Centre of Actuarial Excellence (since 2011) and is part of the SOA University-Earned Credit (UEC) programme, allowing students to earn exam credits through approved courses.",
+            "",
+            "The curriculum is aligned with SOA exam syllabi, preparing students for professional actuarial examinations."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are competitive candidates for careers in banks, consulting firms, insurance companies, and key fields in the financial services industry.",
+            "",
+            "Typical career paths include actuary, financial analyst, risk manager, and positions in insurance, banking, investment, and business consulting.",
+            "",
+            "The programme’s strong industry connections and internship/co-op programme (close to 100% participation) provide practical experience and professional networking opportunities."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK’s scenic Shatin campus offers a vibrant college system, with nine colleges providing residential, pastoral, and co-curricular support.",
+            "",
+            "Students have access to the Centre for Financial and Actuarial Mathematics for research and industry projects.",
+            "",
+            "The programme encourages participation in internships and overseas exchange opportunities to sharpen language skills and build professional networks."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selectivity",
+          "content": [
+            "With 139 Band A applications and 39 offers, the Band A offer rate is approximately 28.1%.",
+            "",
+            "The Band A applications per offer ratio is about 3.6, indicating strong competition.",
+            "",
+            "The median admission score of 41.75 (Best 5) reflects the high academic standards required."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is taught by faculty with expertise in actuarial science, finance, and risk management, many holding professional designations such as FSA and CFA.",
+            "",
+            "CUHK Business School is accredited by AACSB and EQUIS, ensuring high teaching standards.",
+            "",
+            "Graduates perform very well in professional actuarial examinations, with the majority entering actuarial departments of insurance companies or consulting firms, while others join banking and accounting sectors."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students, including full or partial tuition coverage and living expenses.",
+            "",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available for eligible local students.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4238 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "- Aim for a Best 5 score of at least 41.75 (median) to be competitive. The LQ is 40.25, so scores above 41 are ideal.",
+            "",
+            "**2. Excel in Mathematics**",
+            "",
+            "- Mathematics Compulsory Part requires Level 5 minimum. If you score Level 3 or 4, you must have M1/M2 at Level 5. Strong math is critical.",
+            "",
+            "**3. Leverage Weighted Subjects**",
+            "",
+            "- The best one subject among Chemistry, Physics, Economics or ICT is weighted 1.25. Choose one of these as an elective to boost your score.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview. Practice articulating your interest in insurance, finance, and actuarial science. Be ready to discuss current industry trends.",
+            "",
+            "**5. Build a Strong Elective Profile**",
+            "",
+            "- The median admit had electives at 5*, 5, and 4. Aim for at least two electives at Level 5 or above. M1/M2 at Level 5 is a plus.",
+            "",
+            "**6. Use Band A Strategically**",
+            "",
+            "- With a Band A offer rate of ~28%, placing JS4238 in Band A is essential. Only 39 offers were made from 139 Band A applicants.",
+            "",
+            "**7. Highlight Actuarial Passion**",
+            "",
+            "- In your interview and personal statement, emphasize your interest in actuarial science and the SOA accreditation. Mention any relevant competitions or projects.",
+            "",
+            "**8. Gain Practical Experience**",
+            "",
+            "- Participate in internships or co-op programmes. The IFAA programme has near 100% participation, which strengthens your application and career readiness.",
+            "",
+            "**9. Research the Programme Thoroughly**",
+            "",
+            "- Visit the programme website (http://ifaa.bschool.cuhk.edu.hk) and CUHK admissions page. Understand the curriculum and SOA UEC credits to show genuine interest."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "本課程要求中國語文達第3級、英國語文達第3級、數學必修部分達第5級、公民與社會發展科達「達標」。申請人須具備至少兩科選修科目達第3級或以上。若數學必修部分僅達第3或第4級，則須數學延伸部分單元一或二達第5級。",
+            "",
+            "首年學額：43",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要",
+            "",
+            "2025年聯招申請統計：",
+            "Band A申請人數：139",
+            "Band A取錄人數：39",
+            "總申請人數：787",
+            "",
+            "2025年聯招入學分數（最佳五科）：",
+            "中位數：41.75",
+            "下四分位數：40.25",
+            "上四分位數：27.5",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：3",
+            "英國語文：5*",
+            "數學必修部分：5*",
+            "公民與社會發展科：A",
+            "數學延伸部分（M1/M2）：5",
+            "第一選修科：5*",
+            "第二選修科：5",
+            "第三選修科：4",
+            "",
+            "科目比重：化學、物理、經濟或資訊及通訊科技科中最佳一科比重為1.25。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "保險、金融與精算學工商管理學士課程提供保險、金融及精算分析所需的觀念理解及分析技巧，涵蓋保險業的結構、實務及商業功能，並以香港制度環境為基礎，輔以國際議題與實務。",
+            "",
+            "學生將接受壽險及非壽險風險的精算與統計技術訓練，以及保險營運、金融市場、投資組合管理及金融衍生工具等培訓。",
+            "",
+            "本課程獲美國精算師學會（SOA）認證為精算卓越中心（自2011年起），並納入SOA大學學分抵免計劃，學生可透過指定課程獲得考試學分。",
+            "",
+            "課程內容與SOA考試大綱對應，為學生參加專業精算考試做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備競爭力，適合從事銀行、顧問公司、保險公司及金融服務業等多個領域的工作。",
+            "",
+            "典型職業路徑包括精算師、金融分析師、風險管理師，以及保險、銀行、投資及商業諮詢等職位。",
+            "",
+            "課程擁有強大的業界聯繫及實習/合作教育計劃（接近100%參與率），提供實戰經驗及專業人脈網絡。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "香港中文大學位於沙田，校園風景優美，設有九所書院，提供住宿、生活輔導及課外活動支援。",
+            "",
+            "學生可使用金融及精算數學中心進行研究及業界項目。",
+            "",
+            "課程鼓勵學生參與實習及海外交流機會，以提升語言能力及建立專業網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與選擇性",
+          "content": [
+            "2025年Band A申請人數139人，取錄39人，Band A取錄率約28.1%。",
+            "",
+            "Band A申請與取錄比例約3.6:1，競爭激烈。",
+            "",
+            "中位數入學分數41.75（最佳五科）反映課程對學術成績的高要求。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系優勢",
+          "content": [
+            "課程由精算學、金融及風險管理領域的專家教授，多位持有FSA、CFA等專業資格。",
+            "",
+            "香港中文大學商學院獲AACSB及EQUIS認證，教學質素卓越。",
+            "",
+            "畢業生在專業精算考試中表現優異，大部分投身保險公司或顧問公司的精算部門，亦有部分加入銀行及會計行業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的入學獎學金，包括全額或部分學費減免及生活費資助。",
+            "",
+            "合資格本地學生可申請「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4238 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "- 最佳五科成績應達至少41.75分（中位數）以具競爭力。下四分位數為40.25，41分以上較為穩妥。",
+            "",
+            "**2. 數學必須突出**",
+            "",
+            "- 數學必修部分須達第5級。若僅達第3或第4級，則須M1/M2達第5級。數學能力至關重要。",
+            "",
+            "**3. 善用加權科目**",
+            "",
+            "- 化學、物理、經濟或資訊及通訊科技科中最佳一科比重為1.25，建議選修其中一科以提升分數。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 課程需要面試。練習表達你對保險、金融及精算學的興趣，並準備討論行業趨勢。",
+            "",
+            "**5. 建立強勁選修科組合**",
+            "",
+            "- 中位數取錄者選修科成績為5*、5及4。目標至少兩科達第5級或以上，M1/M2達第5級更佳。",
+            "",
+            "**6. 策略性選擇Band A**",
+            "",
+            "- Band A取錄率約28%，必須將JS4238放在Band A。2025年僅139名Band A申請者中取錄39人。",
+            "",
+            "**7. 突顯對精算的熱誠**",
+            "",
+            "- 在面試及個人陳述中強調你對精算學的興趣及對SOA認證的認識，可提及相關比賽或項目。",
+            "",
+            "**8. 累積實戰經驗**",
+            "",
+            "- 積極參與實習或合作教育計劃。IFAA課程參與率接近100%，有助提升申請競爭力及就業準備。",
+            "",
+            "**9. 深入了解課程**",
+            "",
+            "- 瀏覽課程網站（http://ifaa.bschool.cuhk.edu.hk）及中大入學頁面，了解課程內容及SOA學分抵免計劃，展現真誠興趣。"
+          ]
+        }
+      }
+    },
+    "code": "JS4238",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 41.75,
+    "uq": 27.5,
+    "lq": 40.25,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 41.75
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 40.25
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 27.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is taught by faculty with expertise in actuarial science, finance, and risk management, many holding professional designations (e.g., FSA, CFA).",
+      "CUHK Business School is accredited by AACSB and EQUIS, ensuring high teaching standards.",
+      "Students have access to the Centre for Financial and Actuarial Mathematics for research and industry projects."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Insurance, Financial and Actuarial Analysis notable alumni",
+      "香港中文大學 保險、金融與精算學 著名校友",
+      "CUHK Insurance, Financial and Actuarial Analysis graduates Hong Kong careers"
+    ]
+  }
+}

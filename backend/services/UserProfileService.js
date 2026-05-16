@@ -1197,11 +1197,15 @@ class UserProfileService {
             return rows.map((d) => ({
                 role: (d.role === 'assistant' || d.role === 'model') ? 'model' : d.role,
                 content: d.content || "",
-                timestamp: d.createdAt ? new Date(d.createdAt) : new Date(0)
-            })).sort((a, b) => a.timestamp - b.timestamp);
+                timestamp: d.createdAt || null
+            })).sort((a, b) => {
+                const ta = a.timestamp ? new Date(a.timestamp).getTime() : 0;
+                const tb = b.timestamp ? new Date(b.timestamp).getTime() : 0;
+                return ta - tb;
+            });
         } catch (error) {
             console.error(`[UserProfileService] Error fetching chat history for ${uid}:`, error);
-            return [];
+            throw error;
         }
     }
 

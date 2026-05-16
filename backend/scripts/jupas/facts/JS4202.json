@@ -1,0 +1,129 @@
+{
+  "code": "JS4202",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4202"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4202"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/ibbac/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://ibba.bschool.cuhk.edu.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS4202",
+    "nameEn": "Integrated BBA",
+    "nameZh": "工商管理學士綜合課程",
+    "university": "香港中文大學",
+    "facultyZh": "商學院",
+    "category": "business"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 26,
+    "uq": 41,
+    "lq": 26,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 41
+      }
+    },
+    "subjectWeighting": null
+  },
+  "jupas": {
+    "code": "JS4202",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4202",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4202",
+    "nameEn": "Bachelor of Business Administration Programme",
+    "nameZh": "工商管理學士綜合課程",
+    "shortDescription": "",
+    "programmeWebsite": "http://ibba.bschool.cuhk.edu.hk/",
+    "tuition": "HK$47,000",
+    "intake": 212,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 864,
+      "bandB": 420,
+      "bandC": 675,
+      "bandD": 898,
+      "bandE": 754,
+      "total": 3611
+    },
+    "offers2025": {
+      "bandA": 194,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 194
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/ibbac/",
+    "introduction": "The Flag in a Flagship Among the many flagship programmes pioneered by CUHK, the Integrated BBA (IBBA) programme is the first of its kind in the region and has the largest annual intake of all business programmes. The IBBA programme harnesses the foresight and experience of its world-class faculty to deliver a curriculum that grooms tomorrow’s business leaders. A distinguishing feature of the globally focused programme is its simultaneous emphasis on broad-based knowledge and specialised expertise. Complementing the coursework is frequent exposure to real business scenarios, well-connected leaders, and bright entrepreneurs in the region. Graduates from the programme are ready to tackle the near-constant emergence of new business models and excel in a diverse range of professions. The programme’s prestige and flexibility attract students from all over the world, making IBBA students among the most diverse groups on campus. Enjoy exploring different perspectives on today’s most pressing topics and ideas alongside a high-achieving group of peers from diverse cultural backgrounds. As a member of the IBBA programme, you will have access to a host of resources to enhance your learning. Tremendous overseas exchange opportunities, mentorship programme, partnership courses, and internship opportunities are ready vehicles that will groom our students to become business leaders of the future amidst innovation and change. You will form strong relationships across the business world, laying the groundwork for a fruitful and professional network.",
+    "ranking": "",
+    "careerProspects": "As an IBBA graduate, you will obtain the competence and experience to excel in various industries. IBBA alumni work in various fields, including banking, finance, accounting, information technology, communication, the civil service, research institutions, start-ups and other entrepreneurial ventures. The CUHK Business School prepares you for job searching with diverse and practical professional development workshops. Numerous workshops are specifically designed to enhance your soft skills and help you improve your career prospects. Versatile professionals will be provided with exclusive opportunities and all-round support under the IBBA programme, preparing you to embrace any challenges or adventures in the vibrant world. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "Discover different options and personalise your learning journey! The IBBA programme offers the ultimate freedom to customise a curriculum that truly suits each student’s interests and aspirations. The programme boasts nine unique concentration areas, with no intake limit. Students may select up to two concentrations, each requiring the completion of at least five courses. Business Analytics Business Economics Finance Entrepreneurship Human Resource Management Management of International Business Marketing Big Data and Quantitative Marketing General Business Apart from selecting up to two concentrations, you may choose to pursue a double-degrees programme in collaboration with the School of Journalism and Communication, the Integrated BBA Programme and Financial Technology Double Major Programme, or other double majors (with business programme such as Professional Accountancy, Quantitative Finance, or Insurance, Financial and Actuarial Analysis) and minors, as needed, to achieve your dreams. Alternatively, you may opt for International Business and Chinese Enterprise (IBCE) and Asian Business Studies (ABS) in Year 1. Have the audacity to contrive and shape your own odyssey. Prepare for the dynamic business world in the flexible and unparalleled IBBA programme.",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

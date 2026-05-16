@@ -1,0 +1,499 @@
+{
+  "factPack": {
+    "code": "JS6999",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6999"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://cds.hku.hk/admissions/"
+      }
+    ],
+    "programme": {
+      "code": "JS6999",
+      "nameEn": "Bachelor of Arts and Sciences in Computing and Data Science",
+      "nameZh": "計算與數據科學",
+      "university": "香港大學",
+      "facultyZh": "文學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 41,
+      "uq": 44,
+      "lq": 39
+    },
+    "jupas": {
+      "code": "JS6999",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6999",
+      "nameEn": "Computing and Data Science",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://cds.hku.hk/admissions/",
+      "tuition": "HK$47,000",
+      "intake": 91,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 454,
+        "bandB": 218,
+        "bandC": 295,
+        "bandD": 338,
+        "bandE": 353,
+        "total": 1658
+      },
+      "offers2025": {
+        "bandA": 68,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 68
+      },
+      "facultyPhone": "+852 3917 2180"
+    },
+    "admissionsSnippet": "Admissions - HKU School of Computing and Data Science (HKUCDS) Admissions - HKU School of Computing and Data Science (HKUCDS) --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos Top Contact HKU CDS About About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Groups Awards / Fundings Highlights Centers / Laboratories Groups Awards / Fundings News and Events News Events Social Media Channels News Events Social Media Channels Connect with Us Instagram Linkedin Youtube Contact Us Address: Room 206 Chow Yei Ching Building, The University of Hong Kong, Pokfulam Email: askcds@hku.hk Tel: (+852) 3917-2180 Fax: (+852) 2559-8447 Copyright © 2025 School of Computing and Data Science, The University of Hong Kong. All rights reserved. Disclaimer Privacy Policy Sitemap Current Students Undergraduate programmes Taught Postgraduate Programmes Research Postgraduate Programmes Knowledge Exchange All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Alumni All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Giving to CDS All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page People School Leadership Team Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Research Students School Advisory Board Alumni All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. Our Alumni Request Info Visit Apply Search FAQ How to apply? How much does it cost? Where is it? What is the Academic Calendar? Top Searches: Campus Tuition Fees Scholarships Application Schedule Sports Graduate Programs"
+  },
+  "programme": {
+    "code": "JS6999",
+    "nameEn": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "nameZh": "計算與數據科學",
+    "name": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "university": "香港大學",
+    "faculty": "文學院",
+    "median": 41,
+    "band_a": 39,
+    "uq": 44,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 91",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 DSE Subject Requirements:**",
+            "- Core: Chinese Language, English Language, Mathematics Compulsory Part, Liberal Studies / Citizenship and Social Development",
+            "- Electives: Any 2 elective subjects (preferred: Mathematics Extended Part Module 1 or 2, Physics, Chemistry, Biology, Economics, Information and Communication Technology)",
+            "",
+            "**Admission Formula:** Best 5 Subjects",
+            "",
+            "**Weighting:**",
+            "- English Language: ×1.5",
+            "- Mathematics Compulsory Part: ×1.5",
+            "- Mathematics Extended Part Module 1 or 2: ×1.5",
+            "- Best elective: ×1.0",
+            "- Second best elective: ×1.0",
+            "- Other subjects: ×1.0",
+            "",
+            "**Interview:** Yes (shortlisted applicants; group discussion and individual interview)",
+            "",
+            "**2025 Admission Scores:**",
+            "- Median: 41 | LQ: 39 | UQ: 44"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Arts and Sciences in Computing and Data Science is an interdisciplinary programme offered by the School of Computing and Data Science at HKU. It integrates computing, data science, and arts and sciences perspectives, preparing students for data-driven decision-making in diverse fields.",
+            "",
+            "**Year 1:** Foundation courses in programming, mathematics, statistics, and data science; introduction to arts and sciences core.",
+            "",
+            "**Year 2:** Core courses in machine learning, database systems, data visualization, and computational thinking; elective options from arts, humanities, and social sciences.",
+            "",
+            "**Year 3:** Advanced data science and computing electives; capstone project preparation; internship or research opportunity.",
+            "",
+            "**Year 4:** Capstone project; specialization courses; interdisciplinary seminars.",
+            "",
+            "**Unique Features:**",
+            "- Interdisciplinary curriculum combining computing, data science, and arts/sciences",
+            "- Access to HKUCDS research labs and centres",
+            "- Capstone project with industry or research partners",
+            "- Overseas exchange opportunities",
+            "- Strong emphasis on ethical and societal implications of data science"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Science & Analytics:**",
+            "- Data Scientist",
+            "- Data Analyst",
+            "- Business Intelligence Analyst",
+            "- Machine Learning Engineer",
+            "",
+            "**Technology & Computing:**",
+            "- Software Developer",
+            "- Systems Analyst",
+            "- IT Consultant",
+            "- Cloud Solutions Architect",
+            "",
+            "**Finance & Consulting:**",
+            "- Quantitative Analyst",
+            "- Risk Analyst",
+            "- Management Consultant",
+            "- Financial Data Analyst",
+            "",
+            "**Research & Academia:**",
+            "- Research Assistant (universities or labs)",
+            "- PhD pursuit in data science, computer science, or related fields",
+            "",
+            "**Public Sector & NGOs:**",
+            "- Policy Analyst (data-driven policy)",
+            "- Data Officer in government or non-profit"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus, Pokfulam, Hong Kong",
+            "",
+            "**Facilities:**",
+            "- State-of-the-art computing labs and data science facilities",
+            "- Libraries with extensive digital resources",
+            "- Student common rooms and study spaces",
+            "",
+            "**Student Activities:**",
+            "- Student societies and clubs (e.g., Data Science Society, Computing Society)",
+            "- Hackathons, coding competitions, and data challenges",
+            "- Seminars and workshops by industry professionals",
+            "",
+            "**Support Services:**",
+            "- Academic advising and mentoring",
+            "- Career services and internship placement",
+            "- Counselling and wellness support"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 454",
+            "- Band A offers: 68",
+            "- Band A offer rate: ~15.0%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Best 5 subjects, weighted)",
+            "2. Interview performance (group discussion and individual)",
+            "3. Subject choices (preference for M1/M2, sciences, ICT)",
+            "4. OEA (Other Experiences and Achievements) – relevant competitions, projects, or leadership",
+            "5. Overall profile fit with interdisciplinary nature of programme"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:**",
+            "- HKU School of Computing and Data Science (HKUCDS) comprises three departments: AI & Data Science, Computer Science, and Statistics & Actuarial Science.",
+            "- Faculty members are internationally recognized for research in machine learning, data science, and computing.",
+            "",
+            "**Rankings:**",
+            "- HKU is consistently ranked among the top universities globally (QS, THE).",
+            "- Computer Science and Data Science programmes are highly regarded in Asia.",
+            "",
+            "**Labs & Research Centres:**",
+            "- Access to multiple research centres and laboratories within HKUCDS.",
+            "- Opportunities to work on cutting-edge projects in AI, data science, and computing.",
+            "",
+            "**Alumni:**",
+            "- Graduates have pursued careers in top tech companies, financial institutions, and research institutes globally.",
+            "- Many alumni have advanced to PhD programmes at leading universities."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on academic merit (DSE scores, interview, OEA).",
+            "- Full and partial tuition scholarships available.",
+            "",
+            "**Faculty/Programme-specific Scholarships:**",
+            "- School of Computing and Data Science scholarships for outstanding students.",
+            "- May require separate application or nomination.",
+            "",
+            "**External Scholarships:**",
+            "- Government scholarships (e.g., HKSAR Government Scholarship Fund).",
+            "- Private and corporate sponsorships.",
+            "",
+            "**Financial Aid:**",
+            "- HKU offers need-based financial assistance and student loans.",
+            "- Emergency funds available for unforeseen circumstances."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS6999 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Formula**",
+            "",
+            "Focus on English, Mathematics Compulsory, and M1/M2 (each ×1.5). A high score in these three subjects can significantly boost your Best 5 total. Aim for Level 5* or above in English and Maths, and at least Level 5 in M1/M2.",
+            "",
+            "**2. Choose Electives Strategically**",
+            "",
+            "Preference is given to M1/M2, Physics, Chemistry, Biology, Economics, and ICT. If you have two of these, your application stands out. Avoid non-preferred subjects unless they are your best scores.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "The interview includes group discussion and individual questions. Practice articulating your interest in data science and computing. Be ready to discuss current trends (e.g., AI ethics, big data) and how the programme's interdisciplinary nature fits your goals.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Highlight projects, competitions (e.g., coding hackathons, data science challenges), leadership roles, or relevant work experience. Even a personal data analysis project can demonstrate initiative.",
+            "",
+            "**5. Aim for Median or Above**",
+            "",
+            "With median 41 and LQ 39, a score of 41+ gives you a solid chance. If your predicted score is 39-40, strong interview and OEA can compensate. Below 39, consider backup options.",
+            "",
+            "**6. Use Band A Wisely**",
+            "",
+            "JS6999 is competitive (~15% Band A offer rate). Place it as your first choice if it's your top preference. Use Band B for similar programmes (e.g., JS6688 Science Master Class, JS6901 Computer Science) to maximize chances.",
+            "",
+            "**7. Backup with Related Programmes**",
+            "",
+            "Consider JS6688 (Science Master Class) for a broader science foundation, or JS6901 (Computer Science) for a more traditional computing path. Both have overlapping skills and good career prospects.",
+            "",
+            "**8. Stay Updated on Admission Changes**",
+            "",
+            "Check the HKUCDS website for any changes in subject requirements or weighting. Attend admission talks or webinars to get insider tips.",
+            "",
+            "**9. Demonstrate Interdisciplinary Passion**",
+            "",
+            "In your interview and OEA, show how you connect computing/data science with arts, humanities, or social sciences. This programme values students who can apply data science to real-world problems beyond pure tech."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額:** 91",
+            "",
+            "**修讀年期:** 4年",
+            "",
+            "**首年學費:** HK$47,000",
+            "",
+            "**2025年文憑試科目要求:**",
+            "- 核心科目：中國語文、英國語文、數學必修部分、通識教育／公民與社會發展",
+            "- 選修科目：任何2個選修科目（優先考慮：數學延伸部分單元一或二、物理、化學、生物、經濟、資訊及通訊科技）",
+            "",
+            "**計分公式:** 最佳5科",
+            "",
+            "**比重:**",
+            "- 英國語文：×1.5",
+            "- 數學必修部分：×1.5",
+            "- 數學延伸部分單元一或二：×1.5",
+            "- 最佳選修科：×1.0",
+            "- 次佳選修科：×1.0",
+            "- 其他科目：×1.0",
+            "",
+            "**面試:** 有（篩選後入圍者；小組討論及個人面試）",
+            "",
+            "**2025年入學分數:**",
+            "- 中位數：41 | 下四分位數：39 | 上四分位數：44"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽:**",
+            "計算與數據科學文學士及理學士是一個跨學科課程，由香港大學計算與數據科學學院開辦。課程融合計算、數據科學及文理視角，培養學生在多元領域中進行數據驅動決策的能力。",
+            "",
+            "**一年級:** 編程、數學、統計學及數據科學基礎課程；文理核心入門。",
+            "",
+            "**二年級:** 機器學習、數據庫系統、數據可視化及計算思維核心課程；可選修文學、人文及社會科學科目。",
+            "",
+            "**三年級:** 高級數據科學及計算選修課；頂石項目準備；實習或研究機會。",
+            "",
+            "",
+            "**四年級:** 頂石項目；專業化課程；跨學科研討會。",
+            "",
+            "**獨特之處:**",
+            "- 跨學科課程結合計算、數據科學及文理",
+            "- 可使用HKUCDS研究實驗室及中心",
+            "- 與業界或研究夥伴合作的頂石項目",
+            "- 海外交流機會",
+            "- 強調數據科學的倫理及社會影響"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學與分析:**",
+            "- 數據科學家",
+            "- 數據分析師",
+            "- 商業智能分析師",
+            "- 機器學習工程師",
+            "",
+            "**科技與計算:**",
+            "- 軟件開發人員",
+            "- 系統分析師",
+            "- IT顧問",
+            "- 雲端解決方案架構師",
+            "",
+            "**金融與諮詢:**",
+            "- 量化分析師",
+            "- 風險分析師",
+            "- 管理顧問",
+            "- 金融數據分析師",
+            "",
+            "**研究與學術:**",
+            "- 研究助理（大學或實驗室）",
+            "- 攻讀數據科學、計算機科學或相關領域博士",
+            "",
+            "**公共部門與非政府組織:**",
+            "- 政策分析師（數據驅動政策）",
+            "- 政府或非牟利機構數據主任"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點:** 香港薄扶林主校園",
+            "",
+            "**設施:**",
+            "- 先進的計算實驗室及數據科學設施",
+            "- 藏書豐富的圖書館及數位資源",
+            "- 學生共用空間及自修室",
+            "",
+            "**學生活動:**",
+            "- 學生學會及社團（如數據科學學會、計算學會）",
+            "- 黑客松、編程比賽及數據挑戰賽",
+            "- 業界專業人士講座及工作坊",
+            "",
+            "**支援服務:**",
+            "- 學術指導及導師計劃",
+            "- 就業服務及實習安排",
+            "- 輔導及身心健康支援"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度:** 高",
+            "",
+            "**2025年Band A統計:**",
+            "- Band A申請人數：454",
+            "- Band A取錄人數：68",
+            "- Band A取錄率：約15.0%",
+            "",
+            "**影響取錄因素:**",
+            "1. 文憑試成績（最佳5科，經比重調整）",
+            "2. 面試表現（小組討論及個人面試）",
+            "3. 選修科目（優先考慮M1/M2、理科、ICT）",
+            "4. OEA（其他經驗及成就）－相關比賽、項目或領導經驗",
+            "5. 整體個人檔案與課程跨學科性質的匹配度"
+          ]
+        },
+        "alumni": {
+          "title": "校友及成就",
+          "content": [
+            "**學院卓越:**",
+            "- 港大計算與數據科學學院（HKUCDS）包含三個學系：人工智能與數據科學、計算機科學、統計學與精算學。",
+            "- 教職員在機器學習、數據科學及計算領域享譽國際。",
+            "",
+            "**排名:**",
+            "- 港大 consistently 位列全球頂尖大學（QS、THE）。",
+            "- 計算機科學及數據科學課程在亞洲備受推崇。",
+            "",
+            "**實驗室及研究中心:**",
+            "- 可使用HKUCDS內多個研究中心及實驗室。",
+            "- 有機會參與人工智能、數據科學及計算領域的前沿項目。",
+            "",
+            "**校友:**",
+            "- 畢業生在全球頂尖科技公司、金融機構及研究機構發展。",
+            "- 許多校友在頂尖大學攻讀博士課程。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金:**",
+            "- 根據學術成績（文憑試分數、面試、OEA）頒發。",
+            "- 提供全額及部分學費獎學金。",
+            "",
+            "**學院/課程特定獎學金:**",
+            "- 計算與數據科學學院為優秀學生提供獎學金。",
+            "- 可能需要獨立申請或提名。",
+            "",
+            "**外部獎學金:**",
+            "- 政府獎學金（如香港特別行政區政府獎學金基金）。",
+            "- 私人及企業贊助。",
+            "",
+            "**經濟援助:**",
+            "- 港大提供基於需要的經濟援助及學生貸款。",
+            "- 設有緊急基金應對突發情況。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS6999策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握加權計分公式**",
+            "",
+            "重點提升英國語文、數學必修及M1/M2（各×1.5）。這三科取得高分能顯著提高最佳5科總分。目標是英文及數學達5*或以上，M1/M2至少5級。",
+            "",
+            "**2. 策略性選擇選修科**",
+            "",
+            "優先考慮M1/M2、物理、化學、生物、經濟及ICT。若你擁有其中兩科，申請會更突出。除非是非優先科目能取得極高分，否則應避免。",
+            "",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "面試包括小組討論及個人提問。練習清晰表達你對數據科學及計算的興趣。準備討論當前趨勢（如人工智能倫理、大數據）及課程跨學科性質如何配合你的目標。",
+            "",
+            "**4. 建立強大的OEA檔案**",
+            "",
+            "突出項目、比賽（如編程黑客松、數據科學挑戰賽）、領導角色或相關工作經驗。即使是個人數據分析項目也能展示你的主動性。",
+            "",
+            "**5. 目標分數達中位數或以上**",
+            "",
+            "中位數41、下四分位數39，取得41分或以上將有穩妥機會。若預測分數為39-40分，強勁的面試及OEA可作補償。低於39分則應考慮後備方案。",
+            "",
+            "**6. 善用Band A選擇**",
+            "",
+            "JS6999競爭激烈（Band A取錄率約15%）。若這是你的首選，應放在Band A第一位。Band B可選類似課程（如JS6688科學大師班、JS6901計算機科學）以增加機會。",
+            "",
+            "**7. 準備相關後備課程**",
+            "",
+            "考慮JS6688（科學大師班）以獲得更廣泛的科學基礎，或JS6901（計算機科學）走更傳統的計算路徑。兩者技能重疊且就業前景良好。",
+            "",
+            "**8. 緊貼入學要求變動**",
+            "",
+            "定期瀏覽HKUCDS網站，查看科目要求或比重有否更改。參加入學講座或網上研討會獲取內部貼士。",
+            "",
+            "**9. 展現跨學科熱誠**",
+            "",
+            "在面試及OEA中，展示你如何將計算/數據科學與文學、人文或社會科學連結。此課程重視能將數據科學應用於純科技以外現實問題的學生。"
+          ]
+        }
+      }
+    },
+    "code": "JS6999",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 41,
+    "uq": 44,
+    "lq": 39
+  }
+}

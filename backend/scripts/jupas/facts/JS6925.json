@@ -1,0 +1,66 @@
+{
+  "code": "JS6925",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6925"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://sbme.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6925",
+    "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+    "nameZh": "Bachelor of Engineering in Biomedical Engineering",
+    "university": "香港大學",
+    "facultyZh": "李嘉誠醫學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 29,
+    "uq": 31,
+    "lq": 29
+  },
+  "jupas": {
+    "code": "JS6925",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6925",
+    "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description The Bachelor of Engineering in Biomedical Engineering (BEng(BME)) (JS6925), offered by a newly-established School of Biomedical Engineering at HKU, is a unique interdisciplinary programme offered in partnership with the Faculties of Medicine, Engineering, Dentistry and Sciences. Building on our 20-year experience in delivering this curriculum, it is designed to nurture the next generation of biomedical engineers who will combine engineering rigor with biomedical innovation to improve health and quality of life. The programme equips students to: Apply engineering solutions to advance biomedical research and transform healthcare; Innovate and translate cutting-edge technologies into real-world medical applications; Address global health challenges with ethical, professional and social responsibility.",
+    "programmeWebsite": "https://sbme.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 75,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 176,
+      "bandB": 108,
+      "bandC": 238,
+      "bandD": 360,
+      "bandE": 311,
+      "total": 1193
+    },
+    "offers2025": {
+      "bandA": 50,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 50
+    },
+    "facultyPhone": "+852 3910 3790"
+  },
+  "admissionsSnippet": "--> HOME | School of Biomedical Engineering - HKU top of page HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT Menu Close Search Talk title:&nbsp; Scaffold-guided &nbsp;Bone Regeneration &nbsp;1.0 and 2.0&nbsp; Date: April 2, 2026 Time: 2:30pm - 3:30pm Venue: &nbsp;5/F Lecture Theatre Professorial Block Queen Mary Hospital EXPLORE MORE A Nexus for Next-Generation BME&nbsp; SBME is a trailblazer in redefining BME education and research &mdash; empowering the next generation to transform healthcare by linking engineering, life sciences, and clinical translation. EXPLORE MORE The School of Biomedical Engineering (SBME) was founded in March 2025 and represents a unique collaboration between the Faculties of Medicine, Engineering, Dentistry and Sciences at the University of Hong Kong. Degree Programme Our Biomedical Engineering (BEng (BME)) programme is training a new generation of biomedical engineers to transform healthcare by combining a deep understanding of human biology with innovative engineering solutions. We empower students to apply fundamental principles and quantitative analysis to address urgent biomedical problems across the lifespan, to enhance health and quality of life and promote healthy aging. LEARN MORE SBME UNDERGRADUTE ADMISSIONS JOIN US: JOIN US: UNDERGRADUTE ADMISSIONS JOIN US: UNDERGRADUTE ADMISSIONS ​ Address: William M.W. Mong Block, School of Biomedical Engineering, The University of Hong Kong, 21 Sassoon Road, Hong Kong. Contact Us: FB: IG: YouTube: Twitter: Bluesky: Email: Tel: @HKUBME @hkuniversitybme @sbmehku @HKUSBME @hkusbme.bsky.social sbme@hku.hk (852) 3917 6845 Address: William M.W. Mong Block, ​ School of Biomedical Engineering, The University of Hong Kong, 21 Sassoon Road, Hong Kong. HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT Menu Close &copy; 2025 by School of Biomedical Engineering The University of Hong Kong All Rights Reserved | Privacy Policy HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT bottom of page"
+}

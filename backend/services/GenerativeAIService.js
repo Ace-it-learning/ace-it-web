@@ -618,7 +618,12 @@ class GenerativeAIService {
             throw wrapped;
         }
 
-        const text = response?.data?.choices?.[0]?.message?.content || '';
+        const msg = response?.data?.choices?.[0]?.message || {};
+        let text = (typeof msg.content === 'string' ? msg.content : '') || '';
+        // deepseek-reasoner can return empty `content` while chain-of-thought is in `reasoning_content`.
+        if (!String(text).trim() && typeof msg.reasoning_content === 'string' && msg.reasoning_content.trim()) {
+            text = msg.reasoning_content;
+        }
         return {
             response: {
                 text: () => text,

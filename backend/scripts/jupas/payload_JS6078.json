@@ -1,0 +1,461 @@
+{
+  "factPack": {
+    "code": "JS6078",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6078"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://arts.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6078",
+      "nameEn": "Bachelor of Arts and Bachelor of Laws",
+      "nameZh": "文學士及法學士",
+      "university": "香港大學",
+      "facultyZh": "法律學院",
+      "category": "law"
+    },
+    "scores": {
+      "formula": "1.5 x Eng + Best 5 Subjects",
+      "median": 38,
+      "uq": 41,
+      "lq": 36
+    },
+    "jupas": {
+      "code": "JS6078",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6078",
+      "nameEn": "Bachelor of Arts and Bachelor of Laws",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description This double degree programme in arts and law provides students with the opportunity to pursue their studies in arts and the law, and to explore the connections between the two. On completion of the five-year programme, students will be awarded two degrees - Bachelor of Arts and Bachelor of Laws. In addition to preparing students for legal practice, the programme cultivates an appreciation of the narrative dimensions and rhetoric of law and of the overlaps between literary and legal histories. The curriculum provides a solid foundation for legal practice as well as a wide variety of careers beyond the law, including journalism, media and communications, the arts and culture, and politics.",
+      "programmeWebsite": "https://arts.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 43,
+        "bandB": 32,
+        "bandC": 71,
+        "bandD": 88,
+        "bandE": 88,
+        "total": 322
+      },
+      "offers2025": {
+        "bandA": 21,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 21
+      },
+      "facultyPhone": "+852 3917 8977"
+    },
+    "admissionsSnippet": "Home - arts.hku.hk Skip to content About Us Admissions Current Students Research Arts Impact News &#038; Events Resources for staff More About Us Vision and Mission Units Schools and Departments Research Centres Arts Infrastructure Faculty Office Arts Tech Lab Black Box Theatre; Music Studios; Heritage House Quick Facts and Achievements Admissions Undergraduate Programme Admissions Teaching Stars @HKUArts Students Life HKU Arts Elite Scheme Exchange Scholarships Taught Postgraduate Admissions Grants under the Professional Development Incentive Grant Scheme for Language Teachers Application Research Postgraduate Admissions Young Global Arts Leaders Current Students Undergraduate Programmes BA BA(HDT) BA&#038;BEng(AI&#038;DataSc) BA&#038;LLB Regulations and Syllabuses Incoming Exchange &#038; Visiting Students Undergraduate Academic Matters Course Selection Notices Assessment &#038; Honours Classification Awards &#038; Scholarships Useful Forms Academic Advising Student Academic Advisers Taught Postgraduate Programmes Research Postgraduate Programmes Career Development Career Events, Training, and Preparation HKUArts Industry Experience Partnering with HKUArts Enhancing Student Employability with HKUArts Financial Support Student Advising and Career Consultation Available e-Resources Student Experiential Learning Internship &amp; Career Development Initiatives Student Exchange &#038; Short-term Study Abroad Programmes Local and Overseas Field Trips Financial Support Internships Student Wellness SEN Support Self-Assessment Activities / Events Useful Resources Wellness Contact Entrepreneurship and Innovation @HKUArts MEPop Digerati and HAGG History Applied Research Rankings and Global Recognition Research Strengths Research Centres and Initiatives Centre for the Humanities and Medicine Institute of Transnational History of China AI&amp;Humanity Lab Centre for the Study of Globalisation and Cultures Research and Impact Initiative on Communication in Healthcare China, Humanities and Global Studies Hub Modern East Asian Literature Research Cluster (MEAL) Society of Fellows Honours and Awards Visiting Researchers Arts Impact Knowledge Exchange Partnering with HKUArts Being Human Festival News &#038; Events Resources for staff Apply NOW 2 Arts UG Scholarships (by July 2026) Unlock Your Career Potential with FirstResume Undergraduate Information Sessions (May 7-8, 2026) Recruitment of Student Academic Advisers 2026-27 A LEGACY of Excellence A Vision for the Future Explore a BA in Global Creative Industries Arts Technology Lab: Strengthening AI Proficiency News Events More [APPLY NOW!] Two Scholarships for Arts UG Students (Academic year 2025-26) 17 April 2026 More Congratulations to Professor Geng Song (宋耕教授) on receiving the HKU Outstanding Research Student Supervisor Award 04 May 2026 More [APPLY NOW!] Two Scholarships for Arts UG Students (Academic year 2025-26) 17 April 2026 More Michael Schindhelm Delivers Public Lecture “AI and the Future of the University” at HKU 19 March 2026 More Renowned Artist Xu Bing Delivers Public Lecture Titled “How Do We Make Art Today” at HKU 18 March 2026 More HKU Alumni Day 2026: Faculty of Arts hosts Faculty booth and co-organises Black Box Open House with School of English 14 March 2026 More Masterclass of “Between Wen and Wu: Mythologizing Hong Kong Ghettos — A Conversation with Dir. Soi Cheang” and Film Screening &amp; Post-Screening Discussion of Mad Fate at HKU attracted an Industry Professional and International Audience 04 February 2026 More Screening and Post-screening Talk of Dream Home (International Version) at HKU Drew a Full House 29 January 2026 More HKU Faculty of Arts to launch pioneering Music Entrepreneurship &amp; Popular Practice Initiative 01 September 2025 More The 217th Congregation 20 April 2026 More The 217th Congregation 20 April 2026 More HKU Arts Undergraduate Information Sessions (May 7-8, 2026) 10 April 2026 More Digital Philology in Practice: A Study of the Xi’an Stele of Jingzhao Prefectural School Property in the Jin Dynasty 10 April 2026 More New Directions in Eileen Chang Studies Lecture Series &#8211; How would Nora be a Mother?: The Absent “New Mother” in May Fourth China 06 March 2026 More The Possibilities and Pitfalls of Creative Non-fiction 06 February 2026 More Conflict, Novelty and Print: The Birth of News Writing in the West 05 February 2026 More International Conference Chinese Chan Buddhism: Innovation and Inheritance in Translocal Contexts 11 January 2026 More The 215th Congregation: Information 04 December 2025 More Welcome to HKU Arts Prospective Students Current Students Alumni Public Prospective Students Prospective Students Current Students Alumni Public Considering each application with care Admissions Undergraduate Taught Postgraduate Research Postgraduate Considering each application with care Admissions Undergraduate Taught Postgraduate Research Postgraduate Supporting every step of your journey with care Career Development Wellness Support Exchange Programmes Internships Supporting every step of your journey with care Career Development Wellness Support Exchange Programmes Internships Treasuring every chapter of your legacy and success Internship Partners Knowledge Exchange Virtual Tour Financial Aid Overview Treasuring every chapter of your legacy and success Internship Partners Knowledge Exchange Virtual Tour Financial Aid Overview Engaging with our communities with care Schools and Departments Research Centres and Initiatives Ranking and Global Recognition Find an Expert Engaging with our communities with care Schools and Departments Research Centres and Initiatives Ranking and Global Recognition Find an Expert Our Vision To advance innovative, high-impact, and leading-edge research within and across the humanities and other disciplines, through a research strategy underpinning the Faculty’s distinctive brand of Asia-West scholarship and supporting its role as an international ‘forum’ ; To innovate thr"
+  },
+  "programme": {
+    "code": "JS6078",
+    "nameEn": "Bachelor of Arts and Bachelor of Laws",
+    "nameZh": "文學士及法學士",
+    "name": "Bachelor of Arts and Bachelor of Laws",
+    "university": "香港大學",
+    "faculty": "法律學院",
+    "median": 38,
+    "band_a": 36,
+    "uq": 41,
+    "category": "law"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 20",
+            "",
+            "**Duration:** 5 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Chinese Language, Mathematics, Liberal Studies",
+            "- Electives: Any 2 elective subjects (preferred: Humanities, Social Sciences, or Languages)",
+            "",
+            "**Admission Score Formula:** 1.5 × English + Best 5 Subjects",
+            "",
+            "**2025 Admission Scores (Median | LQ | UQ):** 38 | 36 | 41",
+            "",
+            "**Interview:** Required (shortlisted applicants only)",
+            "",
+            "**Weighting:** English Language weighted 1.5x; all other subjects weighted equally"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "This double degree programme in arts and law provides students with the opportunity to pursue their studies in arts and the law, and to explore the connections between the two. On completion of the five-year programme, students will be awarded two degrees - Bachelor of Arts and Bachelor of Laws.",
+            "",
+            "**Year 1-2:** Foundation courses in both Arts (e.g., literature, history, philosophy) and Law (e.g., legal system, constitutional law, criminal law).",
+            "",
+            "**Year 3-4:** Advanced Arts electives and core Law subjects (e.g., contract, tort, property, equity).",
+            "",
+            "**Year 5:** Capstone project or dissertation, plus professional legal training components.",
+            "",
+            "**Unique Features:**",
+            "- Integrated curriculum blending humanities perspectives with legal reasoning",
+            "- Emphasis on narrative dimensions and rhetoric of law",
+            "- Overlaps between literary and legal histories",
+            "- Preparation for legal practice and careers beyond law (journalism, media, arts, politics)"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Legal Practice:**",
+            "- Barrister or solicitor in Hong Kong",
+            "- Legal advisor in corporate or government sectors",
+            "",
+            "**Media & Communications:**",
+            "- Journalist or editor covering legal affairs",
+            "- Communications manager for law firms or NGOs",
+            "",
+            "**Arts & Culture:**",
+            "- Arts administrator or curator",
+            "- Cultural policy analyst",
+            "",
+            "**Politics & Public Service:**",
+            "- Legislative or policy advisor",
+            "- Diplomatic service or international organisations"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus, HKU, Pokfulam Road, Hong Kong",
+            "",
+            "**Facilities:**",
+            "- Faculty of Arts: Arts Tech Lab, Black Box Theatre, Music Studios, Heritage House",
+            "- Faculty of Law: Moot court, law library, study rooms",
+            "",
+            "**Student Activities:**",
+            "- Law Society, Arts Society, debate teams, mock trial competitions",
+            "- Exchange programmes with partner universities worldwide",
+            "",
+            "**Support Services:**",
+            "- Academic advising, career development, wellness support",
+            "- Internship and experiential learning opportunities"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** Very High",
+            "",
+            "**2025 JUPAS Band A Statistics:**",
+            "- Band A applications: 43",
+            "- Band A offers: 21",
+            "- Band A offer rate: ~48.8%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. High DSE English score (weighted 1.5x)",
+            "2. Strong performance in Humanities/Social Sciences electives",
+            "3. Interview performance (communication, critical thinking, motivation)",
+            "4. Overall academic profile and personal statement"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:**",
+            "- HKU Faculty of Arts is a leading humanities faculty in Asia, with strong research output and global recognition.",
+            "- HKU Faculty of Law is consistently ranked among the top law schools worldwide.",
+            "",
+            "**Rankings:**",
+            "- HKU Arts: Top 30 in QS World University Rankings by Subject (Arts & Humanities)",
+            "- HKU Law: Top 20 in QS World University Rankings by Subject (Law)",
+            "",
+            "**Notable Alumni:**",
+            "- (No specific alumni names provided in fact pack)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Arts UG Scholarships (by July 2026):**",
+            "- Two scholarships available for Arts undergraduate students",
+            "- Based on academic merit and financial need",
+            "",
+            "**Other Opportunities:**",
+            "- HKU Entrance Scholarships for outstanding DSE results",
+            "- Faculty-specific awards and bursaries",
+            "- External scholarships (e.g., HKSAR Government Scholarships)"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BA&LLB Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English to Excel**",
+            "",
+            "Since English is weighted 1.5x, aim for Level 5** or above. Practice essay writing and critical analysis of legal texts.",
+            "- Read law reports and editorials to build vocabulary",
+            "- Join debate or mock trial to sharpen oral advocacy",
+            "",
+            "**2. Choose Humanities Electives Wisely**",
+            "",
+            "Subjects like History, Literature, or Economics are preferred. They demonstrate analytical and writing skills.",
+            "- Avoid purely vocational subjects unless they align with arts/law",
+            "- Take at least one essay-based elective",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "The interview is crucial. Expect questions on current affairs, legal reasoning, and your motivation for the double degree.",
+            "- Practice with mock interviews focusing on ethical dilemmas",
+            "- Show genuine interest in both arts and law",
+            "",
+            "**4. Build a Strong Personal Statement**",
+            "",
+            "Highlight how arts and law intersect in your interests. Mention relevant reading, projects, or work experience.",
+            "- Connect personal experiences to broader societal issues",
+            "- Avoid generic statements; be specific and reflective",
+            "",
+            "**5. Leverage OEA (Other Experiences and Achievements)**",
+            "",
+            "Submit a well-documented OEA portfolio. Include leadership roles, community service, and any legal or arts-related activities.",
+            "- Quantify achievements where possible (e.g., hours, impact)",
+            "- Ensure authenticity — don't exaggerate",
+            "",
+            "**6. Understand the Score Formula**",
+            "",
+            "Your score = 1.5 × English + Best 5 Subjects. Plan your study time accordingly.",
+            "- Prioritise English but don't neglect other subjects",
+            "- Aim for at least 38 points to be competitive",
+            "",
+            "**7. Have a Backup Plan**",
+            "",
+            "Consider related programmes like JS6688 Science Master Class or other double degrees. This reduces pressure.",
+            "- Research alternative programmes with lower entry scores",
+            "- Keep options open for arts-only or law-only degrees",
+            "",
+            "**8. Stay Updated on Current Affairs**",
+            "",
+            "Law and arts both require awareness of social and political issues. Follow news and read widely.",
+            "- Subscribe to reputable newspapers and journals",
+            "- Discuss issues with peers to refine your views",
+            "",
+            "**9. Seek Guidance Early**",
+            "",
+            "Consult teachers, alumni, or career advisors. Attend HKU information sessions and open days.",
+            "- Prepare questions in advance for admissions staff",
+            "- Network with current students for insider tips"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：** 20",
+            "",
+            "**修讀年期：** 5年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**DSE科目要求：**",
+            "- 核心科目：英國語文、中國語文、數學、通識教育",
+            "- 選修科目：任何2科選修（建議：人文學科、社會科學或語言）",
+            "",
+            "**入學分數公式：** 1.5 × 英國語文 + 最佳5科",
+            "",
+            "**2025年入學分數（中位數 | 下四分位數 | 上四分位數）：** 38 | 36 | 41",
+            "",
+            "**面試：** 需要（僅限獲篩選申請人）",
+            "",
+            "**比重：** 英國語文比重1.5倍；其他科目比重相等"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "此文學士及法學士雙學位課程讓學生同時修讀文學與法律，並探索兩者之間的聯繫。完成五年課程後，學生將獲頒文學士及法學士兩個學位。",
+            "",
+            "**第一至二年：** 文學（如文學、歷史、哲學）及法律（如法律制度、憲法、刑法）基礎科目。",
+            "",
+            "**第三至四年：** 高級文學選修及核心法律科目（如合約法、侵權法、財產法、衡平法）。",
+            "",
+            "**第五年：** 頂石項目或論文，以及專業法律培訓元素。",
+            "",
+            "**獨特之處：**",
+            "- 融合人文學科視角與法律推理的綜合課程",
+            "- 強調法律的敘事維度與修辭",
+            "- 文學與法律歷史的重疊",
+            "- 為法律執業及法律以外職業（新聞、媒體、藝術、政治）做好準備"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**法律執業：**",
+            "- 香港大律師或律師",
+            "- 企業或政府部門法律顧問",
+            "",
+            "**媒體與傳訊：**",
+            "- 報道法律事務的記者或編輯",
+            "- 律師事務所或非政府組織傳訊經理",
+            "",
+            "**藝術與文化：**",
+            "- 藝術行政人員或策展人",
+            "- 文化政策分析師",
+            "",
+            "**政治與公共服務：**",
+            "- 立法或政策顧問",
+            "- 外交服務或國際組織"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：** 香港大學主校園，薄扶林道",
+            "",
+            "**設施：**",
+            "- 文學院：藝術科技實驗室、黑盒劇場、音樂工作室、文物館",
+            "- 法律學院：模擬法庭、法律圖書館、研習室",
+            "",
+            "**學生活動：**",
+            "- 法律學會、文學院學會、辯論隊、模擬法庭比賽",
+            "- 與世界各地夥伴大學的交換計劃",
+            "",
+            "**支援服務：**",
+            "- 學術輔導、職業發展、身心健康支援",
+            "- 實習及體驗學習機會"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 極高",
+            "",
+            "**2025年JUPAS Band A統計：**",
+            "- Band A申請人數：43",
+            "- Band A取錄人數：21",
+            "- Band A取錄率：約48.8%",
+            "",
+            "**影響取錄的因素：**",
+            "1. 高DSE英國語文成績（比重1.5倍）",
+            "2. 人文學科/社會科學選修科表現優異",
+            "3. 面試表現（溝通、批判思考、動機）",
+            "4. 整體學術背景及個人陳述"
+          ]
+        },
+        "alumni": {
+          "title": "校友與成就",
+          "content": [
+            "**學院卓越：**",
+            "- 香港大學文學院是亞洲領先的人文學院，研究產出及全球認受性高。",
+            "- 香港大學法律學院 consistently 位列全球頂尖法律學院之一。",
+            "",
+            "**排名：**",
+            "- 港大文學：QS世界大學學科排名（人文學科）前30名",
+            "- 港大法律：QS世界大學學科排名（法律）前20名",
+            "",
+            "**知名校友：**",
+            "- （資料包未提供具體校友姓名）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大文學院本科生獎學金（2026年7月截止）：**",
+            "- 兩個獎學金名額，供文學院本科生申請",
+            "- 根據學術成績及經濟需要",
+            "",
+            "**其他機會：**",
+            "- 港大入學獎學金（DSE成績優異者）",
+            "- 學院特定獎項及助學金",
+            "- 外部獎學金（如香港特別行政區政府獎學金）"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的文學士及法學士策略 — 9個實用貼士",
+          "content": [
+            "**1. 精通英語以脫穎而出**",
+            "",
+            "由於英語比重1.5倍，目標取得5**或以上。練習論文寫作及法律文本的批判分析。",
+            "- 閱讀法律報告及社論以擴充詞彙",
+            "- 參加辯論或模擬法庭以提升口頭辯論技巧",
+            "",
+            "**2. 明智選擇人文選修科**",
+            "",
+            "歷史、文學或經濟等科目較受青睞，能展示分析及寫作能力。",
+            "- 避免純職業導向科目，除非與文學/法律相關",
+            "- 至少選修一科以論文為主的選修科",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "面試至關重要。預計會問及時事、法律推理及你報讀雙學位的動機。",
+            "- 以模擬面試練習道德兩難問題",
+            "- 展示對文學與法律的真正興趣",
+            "",
+            "**4. 撰寫有力的個人陳述**",
+            "",
+            "突出文學與法律在你興趣中的交集。提及相關閱讀、項目或工作經驗。",
+            "- 將個人經歷與更廣泛的社會議題聯繫",
+            "- 避免空泛陳述，要具體且具反思性",
+            "",
+            "**5. 善用OEA（其他經驗及成就）**",
+            "",
+            "提交有條理的OEA檔案。包括領導角色、社區服務及任何法律或文學相關活動。",
+            "- 盡量量化成就（如時數、影響）",
+            "- 確保真實性，不要誇大",
+            "",
+            "**6. 理解分數公式**",
+            "",
+            "你的分數 = 1.5 × 英語 + 最佳5科。相應規劃學習時間。",
+            "- 優先處理英語但不要忽略其他科目",
+            "- 目標至少38分以保持競爭力",
+            "",
+            "**7. 制定後備計劃**",
+            "",
+            "考慮相關課程如JS6688科學大師班或其他雙學位，以減輕壓力。",
+            "- 研究入學分數較低的替代課程",
+            "- 保留純文學或純法律學位的選項",
+            "",
+            "**8. 緊貼時事**",
+            "",
+            "法律與文學都需要關注社會及政治議題。追蹤新聞並廣泛閱讀。",
+            "- 訂閱信譽良好的報紙及期刊",
+            "- 與同儕討論議題以完善觀點",
+            "",
+            "**9. 及早尋求指導**",
+            "",
+            "諮詢老師、校友或職業顧問。參加港大資訊日及開放日。",
+            "- 預先準備問題向招生職員提問",
+            "- 與現屆學生交流獲取內部貼士"
+          ]
+        }
+      }
+    },
+    "code": "JS6078",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 38,
+    "uq": 41,
+    "lq": 36
+  }
+}

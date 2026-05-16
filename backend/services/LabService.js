@@ -772,7 +772,11 @@ class LabService {
     // --- GRAMMAR LAB: PRE-GENERATED CONTENT CHECK ---
     if (topic?.startsWith('grammar_')) {
       try {
-        const filename = `${topic}_level_${level}.json`;
+        const lvl = String(level);
+        const fileLevel = lvl === '6'
+          ? (topic.includes('_elite_') ? '5' : '7')
+          : lvl;
+        const filename = `${topic}_level_${fileLevel}.json`;
         const filepath = path.join(__dirname, '..', 'data', 'grammar_labs', filename);
         if (fs.existsSync(filepath)) {
           console.log(`[LabService] SUCCESS: Loading pre-generated grammar lab: ${filename}`);

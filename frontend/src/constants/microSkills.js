@@ -136,7 +136,7 @@ export const MICRO_SKILLS = {
         cluster: 'interaction'
     },
 
-    // GRAMMAR LAB (8 modules)
+    // GRAMMAR LAB (13 modules)
     grammar_accuracy_sva: {
         en: { name: 'Subject-Verb Agreement', desc: 'Ensuring subjects and verbs match in number.', outcome: 'Master core SVA rules to eliminate fossilized errors.' },
         zh: { name: '主謂一致性', desc: '確保主語與謂語動詞在單複數上保持一致。', outcome: '掌握核心 SVA 規則，消除根深蒂固的語法錯誤。' }

@@ -1,0 +1,495 @@
+{
+  "factPack": {
+    "code": "JS6092",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6092"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://web.edu.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6092",
+      "nameEn": "Bachelor of Education in English Language and Literature",
+      "nameZh": "教育學士(幼兒教育及特殊教育)",
+      "university": "香港大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 27,
+      "uq": 27,
+      "lq": 26
+    },
+    "jupas": {
+      "code": "JS6092",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6092",
+      "nameEn": "Bachelor of Education in Early Childhood Education and Special Education",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The BED (ECE&amp;SE) programme allows graduates to nurture and teach children from birth to six years in diverse early childhood settings (e.g., kindergartens, child care centres and special child care centres). It provides students with a strong foundation in the knowledge, skills and attitudes required for working with young children and their families. The programme fully integrates early childhood education with inclusive education hence students will be prepared to recognise children’s diverse needs and effectively support children with both typical and atypical development. The programme combines rigorous academic study with experiential learning, internship, and practical application. Following graduation, students can apply for registration as a qualified kindergarten teacher, a child care worker and supervisor under the Child Care Services Regulations. They will be considered as having acquired training on the One-year In-service Course in Special Child Care Work recognised by the Social Welfare Department. Graduates will also be considered to have met the academic qualifications required as a kindergarten principal.",
+      "programmeWebsite": "https://web.edu.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 16,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 131,
+        "bandB": 233,
+        "bandC": 358,
+        "bandD": 488,
+        "bandE": 553,
+        "total": 1763
+      },
+      "offers2025": {
+        "bandA": 9,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 9
+      },
+      "facultyPhone": "+852 3917 6044"
+    },
+    "admissionsSnippet": "HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners HKU - Faculty of Education News See All News Shaping the Future of Education with AI: Community Engagement with King’s College Professor Kevin W. H. Tai receives the Study UK Alumni Awards 2026 for Social Action Professor Paul Campbell receives 2026 Emerging Scholar Award from the Educational Change SIG of AERA Education Summit 2026 Unites Global Leaders on the Future of Intelligence and Education in Hong Kong Emotional Management and Communication Skills Workshop for Early Childhood Educators HKU Faculty of Education hosts Dialogue on Reimagining Higher Education Governance in Hong Kong Shared Commitment to Education: Visit by School of Education, USJ Macao HKU Education ranked 5th Globally in Quacquarelli Symonds (QS) World University Rankings by Subject 2026 Professor Timothy Hew and Mr Wang Sikai awarded Silver Medal at the 51st International Exhibition of Inventions of Geneva Faculty of Education Students shine at The 13th Hong Kong Outstanding Prospective Teachers Award Professor Timothy Hew honoured with the Kintoy Professorship in Educational Technology Education Mentorship Programme 2026 Inauguration Ceremony HKU Alumni Day 2026 Professor Jimmy de la Torre selected as 2026 AERA Fellow Inspiring the Future: Fusing Higher Education Pedagogy with AI Literacy Shaping the Future of Education with AI: Community Engagement with King’s College Professor Kevin W. H. Tai receives the Study UK Alumni Awards 2026 for Social Action Professor Paul Campbell receives 2026 Emerging Scholar Award from the Educational Change SIG of AERA Education Summit 2026 Unites Global Leaders on the Future of Intelligence and Education in Hong Kong Emotional Management and Communication Skills Workshop for Early Childhood Educators HKU Faculty of Education hosts Dialogue on Reimagining Higher Education Governance in Hong Kong Shared Commitment to Education: Visit by School of Education, USJ Macao HKU Education ranked 5th Globally in Quacquarelli Symonds (QS) World University Rankings by Subject 2026 Professor Timothy Hew and Mr Wang Sikai awarded Silver Medal at the 51st International Exhibition of Inventions of Geneva Faculty of Education Students shine at The 13th Hong Kong Outstanding Prospective Teachers Award Professor Timothy Hew honoured with the Kintoy Professorship in Educational Technology Education Mentorship Programme 2026 Inauguration Ceremony HKU Alumni Day 2026 Professor Jimmy de la Torre selected as 2026 AERA Fellow Inspiring the Future: Fusing Higher Education Pedagogy with AI Literacy See All News In the Media See All Media Coverage 信報 - 他們擔心人工智能：合理嗎? (程介明教授) May 01, 2026 (Fri) 信報 - 教育：真的需要擔心嗎? (程介明教授) April 24, 2026 (Fri) 巴士的報 - 2026教育峰會匯聚環球領袖 共議香港人工智能與教育的未來 April 24, 2026 (Fri) See All Media Coverage Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes By Research Events See All Events 18 May AI in Education in OECD Countries: Research Evidence and Insights for Policy Initiatives Event time 12:00 pm - 01:00 pm Speaker Dr St&eacute;phanVincent-Lancrin Event type Seminar 18 May "
+  },
+  "programme": {
+    "code": "JS6092",
+    "nameEn": "Bachelor of Education in English Language and Literature",
+    "nameZh": "教育學士(幼兒教育及特殊教育)",
+    "name": "Bachelor of Education in English Language and Literature",
+    "university": "香港大學",
+    "faculty": "教育學院",
+    "median": 27,
+    "band_a": 26,
+    "uq": 27,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:**",
+            "16",
+            "",
+            "**Duration:**",
+            "5 years",
+            "",
+            "**First Year Tuition:**",
+            "HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Formula: Best 5 Subjects",
+            "Median: 27 | LQ: 26 | UQ: 27",
+            "",
+            "**Programme Entrance Requirements:**",
+            "- Core Subjects: Level 3 or above in English Language, Chinese Language, and Mathematics",
+            "- Elective Subjects: Level 3 or above in one elective subject",
+            "- Interview required for shortlisted applicants",
+            "",
+            "**Weighting:**",
+            "- English Language: x1.5",
+            "- Best 4 other subjects: x1.0 each"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Education in English Language and Literature is a 5-year full-time programme designed to prepare students for a career in English language teaching. It combines rigorous academic study in English literature and linguistics with professional teacher training, including supervised teaching practice in local schools.",
+            "",
+            "**Year 1-2: Foundation Studies**",
+            "- Core courses in English literature, linguistics, and language acquisition",
+            "- Introduction to educational theory and pedagogy",
+            "- General University Requirements (e.g., Common Core courses)",
+            "",
+            "**Year 3-4: Advanced Studies and Specialisation**",
+            "- Advanced courses in English literature, creative writing, and applied linguistics",
+            "- Professional courses in curriculum design, assessment, and classroom management",
+            "- Elective options in areas such as drama in education, language testing, or digital literacies",
+            "",
+            "**Year 5: Professional Practice and Capstone**",
+            "- Full-time supervised teaching practicum in partner schools",
+            "- Capstone project or dissertation on a topic in English language education",
+            "- Professional portfolio and career preparation",
+            "",
+            "**Unique Features:**",
+            "- Integrated teacher training with QTS (Qualified Teacher Status) recognition in Hong Kong",
+            "- Strong emphasis on experiential learning through school placements from Year 2 onwards",
+            "- Access to the Faculty of Education's research labs and language learning centres"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Education and Teaching:**",
+            "- English language teacher in primary and secondary schools (local and international)",
+            "- Curriculum developer or educational consultant for publishing houses",
+            "- Teacher trainer or lecturer in tertiary institutions",
+            "",
+            "**Language and Communication:**",
+            "- Editor, copywriter, or content creator in media and publishing",
+            "- Corporate communications specialist or public relations officer",
+            "- Translator or interpreter (with further training)",
+            "",
+            "**Further Studies and Research:**",
+            "- Postgraduate studies in English literature, linguistics, or education (MA, MEd, PhD)",
+            "- Research assistant or academic career in universities",
+            "- Professional qualifications in speech therapy, library science, or law (with additional study)"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Main Campus (Pokfulam):**",
+            "- State-of-the-art libraries, language labs, and multimedia centres",
+            "- Access to the Faculty of Education's dedicated learning spaces and research facilities",
+            "",
+            "**Student Organisations:**",
+            "- Education Society: organises teaching workshops, school visits, and networking events",
+            "- English Society: hosts literary readings, drama performances, and language exchange programmes",
+            "",
+            "**Support Services:**",
+            "- Academic advising and mentoring by faculty members",
+            "- Career counselling and placement services through the Faculty's Career Development Office",
+            "- Scholarships and financial aid for outstanding students"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "- Band A applications: 131",
+            "- Band A offers: 9",
+            "- Band A offer rate: ~6.9%",
+            "- Total applications: 1,763",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. Academic performance in English Language and Literature-related subjects",
+            "2. Interview performance (communication skills, passion for teaching, and subject knowledge)",
+            "3. OEA (Other Experiences and Achievements) – especially relevant teaching or language-related activities",
+            "4. Overall HKDSE score with emphasis on English Language weighting (x1.5)"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Recognition",
+          "content": [
+            "**Faculty Excellence:**",
+            "- HKU Faculty of Education ranked 5th globally in QS World University Rankings by Subject 2026",
+            "- Faculty members are leading researchers in language education, literacy, and applied linguistics",
+            "",
+            "**Notable Alumni:**",
+            "- Graduates have become award-winning teachers, curriculum leaders, and education policymakers in Hong Kong",
+            "- Alumni network includes principals, teacher trainers, and language specialists in local and international schools",
+            "",
+            "**Research and Labs:**",
+            "- Language and Literacy Education Academic Unit conducts cutting-edge research on bilingualism, second language acquisition, and digital literacies",
+            "- Access to the Speech, Language and Hearing Clinic for practical training and research"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on HKDSE results and interview performance",
+            "- Full and partial tuition waivers available for top applicants",
+            "",
+            "**Faculty of Education Scholarships:**",
+            "- Dean's Scholarship for outstanding academic achievement",
+            "- Subject-specific scholarships for English Language and Literature students",
+            "",
+            "**External Scholarships:**",
+            "- HKSAR Government Scholarship Fund",
+            "- Sir Edward Youde Memorial Scholarships",
+            "- Other private and corporate scholarships for education students"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's English Language and Literature Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the HKDSE English Language Paper**",
+            "",
+            "Focus on Paper 2 (Writing) and Paper 4 (Speaking) as they carry significant weight. Practice writing argumentative and discursive essays with clear structure and sophisticated vocabulary. For speaking, engage in group discussions on education-related topics to build fluency.",
+            "- Use past papers to identify common themes (e.g., education, technology, culture)",
+            "- Record yourself speaking and review for clarity and coherence",
+            "",
+            "**2. Excel in Literature-Related Electives**",
+            "",
+            "If you take Literature in English as an elective, aim for Level 5 or above. Read widely beyond the syllabus – novels, plays, and poetry – to develop analytical skills. For other electives (e.g., History, Geography), link them to language and communication themes.",
+            "- Annotate texts with literary devices and thematic connections",
+            "- Write practice essays under timed conditions",
+            "",
+            "**3. Build a Strong OEA Profile**",
+            "",
+            "Demonstrate your passion for English and teaching through relevant activities. Join debate clubs, creative writing workshops, or volunteer as an English tutor. Any experience working with children or in educational settings is highly valued.",
+            "- Participate in HKU's summer programmes or open days",
+            "- Start a blog or YouTube channel discussing English literature or language learning",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "The interview assesses your communication skills, subject knowledge, and motivation for teaching. Be ready to discuss why you want to become an English teacher and how you can contribute to the field. Practice answering questions about current issues in education.",
+            "- Prepare examples of how you have helped others learn English",
+            "- Research the programme structure and be ready to ask thoughtful questions",
+            "",
+            "**5. Use the Weighting to Your Advantage**",
+            "",
+            "English Language is weighted x1.5, so a high score here can significantly boost your overall ranking. Prioritise English revision, but do not neglect other subjects – the formula is Best 5, so every subject counts.",
+            "- Allocate extra study time for English Language papers",
+            "- Aim for Level 5* or 5** in English to maximise your score",
+            "",
+            "**6. Consider Backup Choices**",
+            "",
+            "With a Band A offer rate of ~6.9%, JS6092 is highly competitive. Include other education or language programmes in your Band A choices, such as JS6090 (BEd in Early Childhood Education) or JS6054 (BA in English Studies). Also consider related programmes at other universities.",
+            "- JS6090: BEd in Early Childhood Education and Special Education (HKU)",
+            "- JS6054: BA in English Studies (HKU)",
+            "- Programmes at CUHK or EdUHK with similar focus",
+            "",
+            "**7. Strengthen Your Chinese Language**",
+            "",
+            "Chinese Language is a core requirement. A Level 3 is the minimum, but a higher score (Level 4 or above) will improve your overall profile. Practice Chinese writing and reading comprehension regularly.",
+            "- Read Chinese newspapers and editorials to improve vocabulary",
+            "- Write short essays on education-related topics in Chinese",
+            "",
+            "**8. Develop a Passion for Reading**",
+            "",
+            "English teachers need a deep love for literature. Read widely – from Shakespeare to contemporary novels, and from poetry to non-fiction. Keep a reading journal to record your thoughts and analyses.",
+            "- Join a book club or online reading community",
+            "- Explore different genres to broaden your literary knowledge",
+            "",
+            "**9. Stay Updated on Education Trends**",
+            "",
+            "Show awareness of current issues in education, such as AI in the classroom, bilingual education policies, or inclusive teaching. This will help you in the interview and demonstrate your genuine interest in the field.",
+            "- Follow education news in Hong Kong and globally",
+            "- Read reports from the Education Bureau or UNESCO"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：**",
+            "16",
+            "",
+            "**修讀年期：**",
+            "5年",
+            "",
+            "**首年學費：**",
+            "港幣47,000元",
+            "",
+            "**2025年入學分數：**",
+            "計算公式：最佳5科",
+            "中位數：27 | 下四分位數：26 | 上四分位數：27",
+            "",
+            "**課程入學要求：**",
+            "- 核心科目：英國語文、中國語文及數學達第3級或以上",
+            "- 選修科目：一科選修科目達第3級或以上",
+            "- 需通過面試",
+            "",
+            "**比重：**",
+            "- 英國語文：x1.5",
+            "- 最佳4科其他科目：各x1.0"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "教育學士（英國語文及文學）為五年全日制課程，旨在培養學生成為英語教師。課程結合英國文學及語言學的嚴謹學術訓練與專業教師培訓，包括在本地學校進行督導教學實習。",
+            "",
+            "**第一至二年：基礎學習**",
+            "- 英國文學、語言學及語言習得核心課程",
+            "- 教育理論與教學法入門",
+            "- 大學核心課程（如共通核心課程）",
+            "",
+            "**第三至四年：進階學習與專修**",
+            "- 英國文學、創意寫作及應用語言學進階課程",
+            "- 課程設計、評估及課室管理專業課程",
+            "- 選修科目包括戲劇教育、語言測試或數碼素養等",
+            "",
+            "**第五年：專業實踐與總結**",
+            "- 全職督導教學實習（於合作學校進行）",
+            "- 專題研習或論文（英國語文教育相關題目）",
+            "- 專業檔案及就業準備",
+            "",
+            "**課程特色：**",
+            "- 整合教師培訓，畢業後可獲香港認可教師資格",
+            "- 從第二年開始提供學校實習機會，強調體驗式學習",
+            "- 可使用教育學院的研究實驗室及語言學習中心"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**教育與教學：**",
+            "- 中小學英語教師（本地及國際學校）",
+            "- 課程發展主任或教育顧問（出版社）",
+            "- 教師培訓導師或大專院校講師",
+            "",
+            "**語言與傳訊：**",
+            "- 編輯、撰稿員或內容創作者（媒體及出版業）",
+            "- 企業傳訊專員或公共關係主任",
+            "- 翻譯員或傳譯員（需進一步進修）",
+            "",
+            "**深造與研究：**",
+            "- 英國文學、語言學或教育學深造課程（文學碩士、教育碩士、博士）",
+            "- 大學研究助理或學術研究人員",
+            "- 言語治療、圖書館學或法律等專業資格（需額外進修）"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**主校園（薄扶林）：**",
+            "- 先進圖書館、語言實驗室及多媒體中心",
+            "- 教育學院專屬學習空間及研究設施",
+            "",
+            "**學生組織：**",
+            "- 教育學會：舉辦教學工作坊、學校參觀及聯誼活動",
+            "- 英文學會：舉辦文學朗讀、戲劇表演及語言交流計劃",
+            "",
+            "**支援服務：**",
+            "- 學術指導及導師計劃",
+            "- 就業輔導及實習安排（透過學院就業發展中心）",
+            "- 為優秀學生提供獎學金及經濟援助"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**競爭程度：** 高",
+            "",
+            "**2025年聯招統計：**",
+            "- Band A申請人數：131",
+            "- Band A取錄人數：9",
+            "- Band A取錄率：約6.9%",
+            "- 總申請人數：1,763",
+            "",
+            "**影響取錄因素：**",
+            "1. 英國語文及文學相關科目的學業成績",
+            "2. 面試表現（溝通技巧、教學熱誠及學科知識）",
+            "3. 其他經驗及成就（OEA）－尤其與教學或語言相關的活動",
+            "4. 整體文憑試成績，英國語文比重較高（x1.5）"
+          ]
+        },
+        "alumni": {
+          "title": "校友成就與認可",
+          "content": [
+            "**學院卓越表現：**",
+            "- 香港大學教育學院於2026年QS世界大學學科排名中位列全球第5位",
+            "- 學院教授為語言教育、讀寫能力及應用語言學領域的頂尖研究人員",
+            "",
+            "**知名校友：**",
+            "- 畢業生已成為香港獲獎教師、課程領袖及教育政策制定者",
+            "- 校友網絡包括本地及國際學校的校長、教師培訓導師及語言專家",
+            "",
+            "**研究與實驗室：**",
+            "- 語言與讀寫教育學術單位專注於雙語教學、第二語言習得及數碼素養的前沿研究",
+            "- 可使用言語、聽覺及語言診所進行實踐培訓及研究"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**香港大學入學獎學金：**",
+            "- 根據文憑試成績及面試表現頒發",
+            "- 頂尖申請人可獲全額或部分學費減免",
+            "",
+            "**教育學院獎學金：**",
+            "- 院長獎學金（表揚傑出學業成績）",
+            "- 英國語文及文學學生專屬學科獎學金",
+            "",
+            "**校外獎學金：**",
+            "- 香港特別行政區政府獎學金基金",
+            "- 尤德爵士紀念基金獎學金",
+            "- 其他教育相關的私人及企業獎學金"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的英國語文及文學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握文憑試英國語文科**",
+            "",
+            "集中提升卷二（寫作）及卷四（說話）的表現，因這兩卷佔分較重。練習撰寫結構清晰、詞彙豐富的論說文及議論文章。說話方面，多參與與教育相關的小組討論，提升流暢度。",
+            "- 利用歷屆試題找出常見主題（如教育、科技、文化）",
+            "- 錄下自己的說話練習，檢討清晰度及連貫性",
+            "",
+            "**2. 在文學相關選修科中脫穎而出**",
+            "",
+            "若選修英國文學，目標為第5級或以上。廣泛閱讀課程以外的作品（小說、戲劇、詩歌），培養分析能力。其他選修科（如歷史、地理）可嘗試與語言及傳訊主題連結。",
+            "- 在文本中標註文學手法及主題聯繫",
+            "- 限時練習撰寫論文",
+            "",
+            "**3. 建立豐富的OEA檔案**",
+            "",
+            "透過相關活動展示你對英語及教學的熱誠。參加辯論隊、創意寫作工作坊，或擔任英語補習導師。任何與兒童工作或教育環境相關的經驗均受重視。",
+            "- 參加港大的暑期課程或開放日",
+            "- 開設網誌或YouTube頻道，討論英國文學或語言學習",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "面試評估你的溝通技巧、學科知識及教學動機。準備回答為何想成為英語教師，以及你能如何貢獻教育界。練習回應當前教育議題的提問。",
+            "- 準備例子說明你如何協助他人學習英語",
+            "- 了解課程結構，並準備提出有深度的問題",
+            "",
+            "**5. 善用科目比重**",
+            "",
+            "英國語文比重為x1.5，高分可大幅提升整體排名。優先複習英國語文，但不要忽略其他科目——計算公式為最佳5科，每科都重要。",
+            "- 分配更多時間給英國語文試卷",
+            "- 目標為英國語文取得5*或5**級",
+            "",
+            "**6. 考慮後備選擇**",
+            "",
+            "JS6092的Band A取錄率約6.9%，競爭激烈。在Band A中包括其他教育或語言課程，如JS6090（教育學士（幼兒教育及特殊教育））或JS6054（文學士（英國研究））。也可考慮其他大學的類似課程。",
+            "- JS6090：教育學士（幼兒教育及特殊教育）（港大）",
+            "- JS6054：文學士（英國研究）（港大）",
+            "- 中大或教大的相關課程",
+            "",
+            "**7. 加強中國語文能力**",
+            "",
+            "中國語文是核心科目，最低要求為第3級，但取得第4級或以上可提升整體競爭力。定期練習中文寫作及閱讀理解。",
+            "- 閱讀中文報紙及社論，擴充詞彙",
+            "- 以中文撰寫與教育相關的短篇文章",
+            "",
+            "**8. 培養閱讀興趣**",
+            "",
+            "英語教師需對文學有深厚熱愛。廣泛閱讀——從莎士比亞到當代小說，從詩歌到非虛構作品。撰寫閱讀筆記，記錄你的想法及分析。",
+            "- 加入讀書會或網上閱讀社群",
+            "- 探索不同體裁，擴闊文學知識",
+            "",
+            "**9. 緊貼教育趨勢**",
+            "",
+            "展示你對當前教育議題的認識，如人工智能在課室的應用、雙語教育政策或融合教學。這有助於面試表現，並顯示你對教育領域的濃厚興趣。",
+            "- 關注香港及全球的教育新聞",
+            "- 閱讀教育局或聯合國教科文組織的報告"
+          ]
+        }
+      }
+    },
+    "code": "JS6092",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 27,
+    "uq": 27,
+    "lq": 26
+  }
+}

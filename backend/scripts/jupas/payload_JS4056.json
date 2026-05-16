@@ -1,0 +1,559 @@
+{
+  "factPack": {
+    "code": "JS4056",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4056"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4056"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/histn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.history.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4056",
+      "nameEn": "History",
+      "nameZh": "歷史",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26.5,
+      "uq": 28,
+      "lq": 26,
+      "percentiles": {
+        "UQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 26.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4056",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4056",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4056",
+      "nameEn": "History",
+      "nameZh": "歷史",
+      "shortDescription": "the ability to apply historical knowledge to their lives and careers. The curriculum embraces diversity and applicability as its guiding principles. Hong Kong is an international city in which the cultures of East and West meld seamlessly. CUHK has promoted international academic exchange from its inception, which has favoured and given rise to the Department’s adoption of a comparative, interdisciplinary approach to curriculum design with public history as its research focus. Students are encouraged to analyse history from multiple and interdisciplinary perspectives. Courses are grouped into National/Regional History, Comparative History, Public History and Topic Studies, and students write a graduation thesis in their final year. In their first two years of study, students are required to take a number of basic courses, including Tradition and Transformation in Chinese History, Tradition and Transformation in Western History, Historiography, and Introduction to World History, as well as History for Today, a course offered by the History Department as part of the Arts Faculty’s Core Package. Our Department has worked actively to nurture talented students. We have many scholarships supporting students, including the Wang Teh-chao Memorial Prizes, Professor Tsang Shui-lung Memorial Scholarship, the Sin Wai Kin Scholarship and the Professor So Hing-bun Scholarships. The Department has also introduced a series of internship programmes that give students opportunities to gain practical experience working in a variety of organisations. The Department also arranges overseas study tours to broaden students’ perspectives. In addition, students have opportunities to participate in a variety of University-organised exchange programmes, including short visits to or study at universities in the UK, the US, Japan and elsewhere.",
+      "programmeWebsite": "http://www.history.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 48,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 354,
+        "bandB": 270,
+        "bandC": 383,
+        "bandD": 505,
+        "bandE": 399,
+        "total": 1911
+      },
+      "offers2025": {
+        "bandA": 48,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 48
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/histn/",
+      "introduction": "Time-travel to explore the human past The History Department of CUHK strives to promote world-class research and teaching in the field of historical studies. We put great emphasis on diversity and freedom in academic pursuits, student-centred education, the relevance of historical knowledge to daily life, and the cultivation of cross-cultural sensitivity and global-mindedness. Our curriculum highlights interdisciplinary learning with a thorough understanding of historical developments and changes in the global context. It provides solid training for studying history in a wide range of fields. In recent years, we have engaged in the development of comparative history and public history, indicating the salient features of cosmopolitanism and community awareness in higher education in Hong Kong. To achieve these goals, we offer a comprehensive programme that covers a wide array of topics on Chinese history, world history, and comparative and public history, with courses such as Daily Life in Han China, Digital History, Trans-Pacific Connections in East Asia, War and Society, Gender and History, the Cultural History of Food, and Museum and Heritage.",
+      "ranking": "",
+      "careerProspects": "Earning a history degree qualifies graduates for a wide range of career opportunities. Our graduates enter and succeed in diverse sectors such as education, museum and heritage work, public media, government and community service. A number of our graduates every year pursue master’s or doctoral degrees at local or overseas institutions. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Our students study history in various fields and from diverse, sometimes contradicting, perspectives to develop critical thinking and the skills of reading between the lines. We also encourage and nurture students to conduct in-depth studies on topics of their own interest. Double Major Programme Double Major Programme in History and English Double Major Programme in History and Japanese Studies",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4056",
+    "nameEn": "History",
+    "nameZh": "歷史",
+    "name": "History",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 26.5,
+    "band_a": 26,
+    "uq": 28,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4056",
+            "First Year Intake: 48",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 26.5",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): 28",
+            "",
+            "Median admit subject profile:",
+            "Chinese: 5*",
+            "English: 3",
+            "Mathematics: 4",
+            "CSD: A",
+            "1st elective: 5*",
+            "2nd elective: 5",
+            "",
+            "DSE requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 each (or 1 elective + M1/M2, or other language subjects at specified level)",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 354",
+            "Total applications: 1911",
+            "Offers (Band A): 48"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The History programme at CUHK emphasises diversity, interdisciplinary learning, and the relevance of historical knowledge to daily life.",
+            "",
+            "Core courses in the first two years include:",
+            "- Tradition and Transformation in Chinese History",
+            "- Tradition and Transformation in Western History",
+            "- Historiography",
+            "- Introduction to World History",
+            "- History for Today (part of Arts Faculty Core Package)",
+            "",
+            "Course groupings: National/Regional History, Comparative History, Public History, and Topic Studies.",
+            "Students write a graduation thesis in their final year.",
+            "",
+            "Double Major options: History and English, History and Japanese Studies.",
+            "",
+            "The curriculum covers a wide array of topics such as Daily Life in Han China, Digital History, Trans-Pacific Connections in East Asia, War and Society, Gender and History, the Cultural History of Food, and Museum and Heritage."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates enter diverse sectors including education, museum and heritage work, public media, government, and community service.",
+            "Many pursue master’s or doctoral degrees at local or overseas institutions.",
+            "The department offers internship programmes with various organisations to provide practical experience.",
+            "Overseas study tours and exchange programmes broaden students' perspectives and enhance employability."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s scenic Shatin campus features a unique college system, providing a close-knit community experience.",
+            "Students can participate in a variety of University-organised exchange programmes, including short visits or study at universities in the UK, US, Japan, and elsewhere.",
+            "The History Department arranges overseas study tours to broaden students’ perspectives.",
+            "Numerous student societies and cultural activities enrich campus life."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "Band A applications: 354",
+            "Band A offers: 48",
+            "Band A offer rate: approximately 13.6%",
+            "Band A applications per offer: approximately 7.4",
+            "",
+            "Median admission score: 26.5 (Best 5)",
+            "Lower quartile: 26",
+            "Upper quartile: 28",
+            "",
+            "The programme is selective, with strong competition for places."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Lau Chi-pang (劉智鵬) – Historian, Legislative Council member, and professor at Lingnan University; known for Hong Kong history research.",
+            "Wong Man-kong (黃文江) – Historian and professor at Hong Kong Baptist University; specializes in modern Chinese and Hong Kong history.",
+            "Puk Wing-kin (卜永堅) – Historian and professor at CUHK; known for Ming-Qing economic history.",
+            "Cheung Siu-woo (張小宇) – Historian and former director of the Hong Kong Museum of History; contributed to heritage preservation.",
+            "Lee Pui-tak (李培德) – Historian and researcher at the University of Hong Kong; expert in Hong Kong social and economic history.",
+            "",
+            "The department’s faculty includes leading historians in Chinese, Hong Kong, and global history, with strong mentorship and research training for undergraduates."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit.",
+            "Department-specific scholarships include: Wang Teh-chao Memorial Prizes, Professor Tsang Shui-lung Memorial Scholarship, Sin Wai Kin Scholarship, and Professor So Hing-bun Scholarships.",
+            "The university also provides the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) for eligible students.",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 26.5 (Median) or Higher**",
+            "",
+            "- Aim for a Best 5 score of at least 26.5 to match the median.",
+            "- With LQ at 26, a score of 26 gives a realistic chance, but 27+ strengthens your position.",
+            "",
+            "**2. Prioritise Chinese and Electives**",
+            "",
+            "- The median profile shows Chinese 5*, English 3, Math 4, CSD A, electives 5* and 5.",
+            "- Strong performance in Chinese and two electives is key.",
+            "",
+            "**3. Secure at Least Level 3 in Core Subjects**",
+            "",
+            "- Minimum requirements: Chinese 3, English 3, Math 2, CSD Attained.",
+            "- Meeting these is essential for eligibility.",
+            "",
+            "**4. Choose Electives Strategically**",
+            "",
+            "- Any two electives at Level 3 or above are accepted; History or related subjects may be advantageous.",
+            "- Consider M1/M2 as one elective if strong in mathematics.",
+            "",
+            "**5. Apply in Band A**",
+            "",
+            "- All 48 offers in 2025 went to Band A applicants.",
+            "- Band A application is critical for consideration.",
+            "",
+            "**6. Prepare a Strong Personal Statement (if applicable)**",
+            "",
+            "- Although no interview, a compelling statement can support your application through other schemes.",
+            "- Highlight your passion for history and relevant experiences.",
+            "",
+            "**7. Leverage Internship and Exchange Opportunities**",
+            "",
+            "- Mention any relevant internships or study tours in your application to demonstrate commitment.",
+            "",
+            "**8. Research the Curriculum Thoroughly**",
+            "",
+            "- Familiarise yourself with core courses and specialisations to show genuine interest.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "- Check the official CUHK admissions page and JUPAS site for any updates on requirements or scores."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4056",
+            "首年學額：48",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：26.5",
+            "下四分位數：26",
+            "上四分位數：28",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5*",
+            "英國語文：3",
+            "數學：4",
+            "公民科：A",
+            "第一選修科：5*",
+            "第二選修科：5",
+            "",
+            "文憑試要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（或 1 個選修 + M1/M2，或其他語言科目達指定水平）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：354",
+            "總申請人數：1911",
+            "Band A 錄取人數：48"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "歷史課程強調多元性、跨學科學習，以及歷史知識與日常生活的關聯。",
+            "",
+            "首兩年核心課程包括：",
+            "- 中國歷史的傳統與演變",
+            "- 西方歷史的傳統與演變",
+            "- 史學方法",
+            "- 世界史導論",
+            "- 今日歷史（文學院核心課程）",
+            "",
+            "課程分類：國家/地區史、比較史、公眾史、專題研究。",
+            "學生在最後一年需撰寫畢業論文。",
+            "",
+            "雙主修選項：歷史與英語、歷史與日本研究。",
+            "",
+            "課程涵蓋廣泛主題，如漢代日常生活、數位歷史、東亞跨太平洋聯繫、戰爭與社會、性別與歷史、食物文化史、博物館與遺產等。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生投身教育、博物館與遺產工作、公共媒體、政府及社區服務等多元領域。",
+            "每年有不少畢業生於本地或海外院校攻讀碩士或博士學位。",
+            "學系提供與不同機構合作的實習計劃，累積實踐經驗。",
+            "海外考察團及交流計劃擴闊學生視野，提升就業競爭力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學位於沙田，校園景色優美，實行獨特的書院制度，營造緊密的社群體驗。",
+            "學生可參與大學提供的各類交流計劃，包括前往英國、美國、日本等地的大學進行短期訪問或學習。",
+            "歷史學系亦安排海外考察團，擴闊學生視野。",
+            "眾多學生社團及文化活動豐富校園生活。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：354",
+            "Band A 錄取人數：48",
+            "Band A 錄取率：約 13.6%",
+            "每學額 Band A 申請人數：約 7.4",
+            "",
+            "中位數入學分數：26.5（最佳 5 科）",
+            "下四分位數：26",
+            "上四分位數：28",
+            "",
+            "課程競爭激烈，學額有限。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "劉智鵬 – 歷史學家、立法會議員、嶺南大學教授；以香港歷史研究聞名。",
+            "黃文江 – 歷史學家、香港浸會大學教授；專研現代中國及香港歷史。",
+            "卜永堅 – 歷史學家、香港中文大學教授；以明清經濟史研究著稱。",
+            "張小宇 – 歷史學家、前香港歷史博物館總館長；對文物保育貢獻良多。",
+            "李培德 – 歷史學家、香港大學研究員；專長香港社會經濟史。",
+            "",
+            "學系師資包括中國史、香港史及全球史領域的頂尖歷史學家，為本科生提供優良的指導及研究訓練。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供基於學業成績的入學獎學金。",
+            "學系特定獎學金包括：王德昭紀念獎、曾瑞龍教授紀念獎學金、冼為堅獎學金及蘇慶彬教授獎學金。",
+            "大學亦提供專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）予合資格學生。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：26.5（中位數）或以上**",
+            "",
+            "- 最佳 5 科目標至少 26.5 分以匹配中位數。",
+            "- 下四分位數為 26 分，26 分亦有機會，但 27 分以上更穩妥。",
+            "",
+            "**2. 優先提升中文及選修科成績**",
+            "",
+            "- 中位數成績顯示中文 5*、英文 3、數學 4、公民科 A、選修科 5* 及 5。",
+            "- 中文及兩個選修科的優異表現至關重要。",
+            "",
+            "**3. 確保核心科目達第 3 級**",
+            "",
+            "- 最低要求：中文 3、英文 3、數學 2、公民科達標。",
+            "- 滿足這些要求是獲得資格的必要條件。",
+            "",
+            "**4. 策略性選擇選修科**",
+            "",
+            "- 任何兩個選修科達第 3 級或以上均獲接納；歷史或相關科目或有優勢。",
+            "- 如數學能力較強，可考慮將 M1/M2 視為一個選修科。",
+            "",
+            "**5. 將課程放在 Band A**",
+            "",
+            "- 2025 年所有 48 個錄取名額均給予 Band A 申請者。",
+            "- Band A 申請至關重要。",
+            "",
+            "**6. 準備有力的個人陳述（如適用）**",
+            "",
+            "- 雖然無需面試，但出色的陳述可通過其他計劃支持申請。",
+            "- 突出你對歷史的熱誠及相關經驗。",
+            "",
+            "**7. 善用實習及交流機會**",
+            "",
+            "- 在申請中提及相關實習或考察團經歷，展示你的投入。",
+            "",
+            "**8. 深入了解課程內容**",
+            "",
+            "- 熟悉核心課程及專業方向，以顯示你真誠的興趣。",
+            "",
+            "**9. 緊貼最新入學資訊**",
+            "",
+            "- 定期瀏覽中大入學處及 JUPAS 網站，了解要求或分數的更新。"
+          ]
+        }
+      }
+    },
+    "code": "JS4056",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26.5,
+    "uq": 28,
+    "lq": 26,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 28
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 26.5
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Lau Chi-pang",
+        "nameZh": "劉智鵬",
+        "achievement": "Historian, Legislative Council member, and professor at Lingnan University; known for Hong Kong history research.",
+        "sourceHint": "CUHK History Department alumni page"
+      },
+      {
+        "nameEn": "Wong Man-kong",
+        "nameZh": "黃文江",
+        "achievement": "Historian and professor at Hong Kong Baptist University; specializes in modern Chinese and Hong Kong history.",
+        "sourceHint": "CUHK History Department alumni page"
+      },
+      {
+        "nameEn": "Puk Wing-kin",
+        "nameZh": "卜永堅",
+        "achievement": "Historian and professor at CUHK; known for Ming-Qing economic history.",
+        "sourceHint": "CUHK History Department faculty profile"
+      },
+      {
+        "nameEn": "Cheung Siu-woo",
+        "nameZh": "張小宇",
+        "achievement": "Historian and former director of the Hong Kong Museum of History; contributed to heritage preservation.",
+        "sourceHint": "Public bio and CUHK alumni records"
+      },
+      {
+        "nameEn": "Lee Pui-tak",
+        "nameZh": "李培德",
+        "achievement": "Historian and researcher at the University of Hong Kong; expert in Hong Kong social and economic history.",
+        "sourceHint": "CUHK History Department alumni page"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include leading historians in Chinese, Hong Kong, and global history.",
+      "Faculty members have received prestigious research grants and published widely.",
+      "The department offers strong mentorship and research training for undergraduates."
+    ],
+    "searchQueriesUsed": [
+      "CUHK History notable alumni",
+      "香港中文大學 歷史 著名校友",
+      "CUHK History graduates Hong Kong careers",
+      "CUHK History Department alumni page"
+    ]
+  }
+}

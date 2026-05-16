@@ -108,33 +108,187 @@ export const translations = {
         },
         footer: {
             copyright: "© 2026 Ace It! Education. All rights reserved.",
+            faq: "FAQ",
+            contact: "Contact Us",
             terms: "Terms & Conditions",
+            privacy: "Privacy Policy",
             disclaimer: "Disclaimer"
         },
         legal: {
             terms_title: "Terms and Conditions",
+            privacy_title: "Privacy Policy",
             disclaimer_title: "General Disclaimer",
             terms: [],
             disclaimer: [
-                { 
-                    title: "1. GENERAL INFORMATIONAL PURPOSES", 
-                    content: "The Services provided by Ace It! Education are intended for supplemental informational and educational purposes only. While we strive to provide high-quality educational guidance for HKDSE preparation, the feedback, grading analysis, and suggestions provided by our AI tutors do not constitute official academic certification and should not be relied upon as the sole basis for academic decision-making." 
+                {
+                    title: "1. GENERAL INFORMATIONAL PURPOSES",
+                    content: "The Services provided by Ace It! Education are intended for supplemental informational and educational purposes only. At launch, the platform focuses on HKDSE English Language practice and related study tools; additional subjects may be introduced over time and will be labelled in the app when available. Feedback, automated grading, skill-map scores, and suggestions from our AI tutors do not constitute official academic certification, HKEAA marking, or school assessment, and must not be relied upon as the sole basis for academic or university decisions."
                 },
-                { 
-                    title: "2. NO GUARANTEE OF ACADEMIC SUCCESS", 
-                    content: "YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT THE USE OF THE SERVICES DOES NOT GUARANTEE ANY SPECIFIC ACADEMIC OUTCOME, EXAMINATION RESULT, OR UNIVERSITY ADMISSION. Examination performance is subject to a multitude of external variables beyond the control of the Company, including but not limited to individual student effort, examination conditions, and HKEAA assessment revisions." 
+                {
+                    title: "2. NO GUARANTEE OF OUTCOMES",
+                    content: "YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE SERVICES DOES NOT GUARANTEE ANY SPECIFIC HKDSE GRADE, EXAMINATION RESULT, JUPAS OUTCOME, OR UNIVERSITY ADMISSION. Performance depends on many factors outside our control, including your effort, school teaching, examination conditions, HKEAA syllabus or marking changes, and each institution’s admission policies. Any “gap”, “reachable”, or “ambitious” indicators on Dream Subjects or similar features are estimates for planning only—not offers, predictions, or promises of admission."
                 },
-                { 
-                    title: "3. AI ACCURACY AND LIMITATIONS", 
-                    content: "THE SERVICES UTILIZE ADVANCED ARTIFICIAL INTELLIGENCE MODELS WHICH ARE SUBJECT TO INHERENT LIMITATIONS. YOU ACKNOWLEDGE AND AGREE THAT THE AI ASSETS MAY OCCASIONALLY GENERATE INACCURATE ACADEMIC DATA, ERRONEOUS FEEDBACK, OR FICTITIOUS INFORMATION (COMMONLY REFERRED TO AS “HALLUCINATIONS”). IT IS YOUR SOLE RESPONSIBILITY TO CROSS-REFERENCE AND VERIFY ANY CRITICAL ACADEMIC CONTENT WITH OFFICIAL TEXTBOOKS AND PAST PAPERS." 
+                {
+                    title: "3. AI ACCURACY, GRADING, AND ACADEMIC INTEGRITY",
+                    content: "THE SERVICES USE ARTIFICIAL INTELLIGENCE MODELS WITH INHERENT LIMITATIONS. AI outputs may be incomplete, outdated, biased, or wrong, and may include fabricated content (“hallucinations”). Automated mock and Quest scores are indicative practice feedback; depth and accuracy may vary by subscription tier. YOU ARE RESPONSIBLE FOR VERIFYING CRITICAL CONTENT AGAINST OFFICIAL HKEAA MATERIALS, TEXTBOOKS, PAST PAPERS, AND YOUR TEACHERS. Unless your school explicitly permits and requires disclosure, do not submit AI-generated text or answers as your own work in graded school assessments or public examinations."
                 },
-                { 
-                    title: "4. NO PROFESSIONAL OR OFFICIAL ADVICE", 
-                    content: "THE INFORMATION PROVIDED THROUGH THE SERVICES DOES NOT CONSTITUTE LEGAL, MEDICAL, OR OFFICIAL ACADEMIC ADVICE. ACE IT! EDUCATION IS AN INDEPENDENT PRIVATE ENTITY AND IS NOT AFFILIATED WITH, ENDORSED BY, OR CONNECTED TO THE HONG KONG EXAMINATIONS AND ASSESSMENT AUTHORITY (“HKEAA”) OR ANY GOVERNMENTAL EDUCATIONAL BODY." 
+                {
+                    title: "4. NO PROFESSIONAL OR OFFICIAL ADVICE",
+                    content: "Information provided through the Services—including chat with Ace Sir or other tutors, strategy tips, and parental progress summaries—does not constitute legal, medical, financial, careers counselling, or official academic advice. Ace It! Education is an independent private entity. We are not affiliated with, endorsed by, or acting on behalf of the Hong Kong Examinations and Assessment Authority (“HKEAA”), any government body, or any university or JUPAS office. Always confirm requirements on official admissions websites and with qualified school or careers staff before making Band choices or life decisions."
                 },
-                { 
-                    title: "5. WARRANTY DISCLAIMER", 
-                    content: "THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS-AVAILABLE” BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT." 
+                {
+                    title: "5. JUPAS AND PROGRAMME DATA (DREAM SUBJECTS)",
+                    content: "Programme listings, admission scores, weighting rules, and strategy notes shown in Dream Subjects or related features are compiled from publicly available university and JUPAS sources for convenience. Data may be incomplete, delayed, or revised by institutions without notice. Scoring scales (e.g. standard DSE vs institutional bonus) are simplified models and may not match how a university calculates your actual score. You must verify every programme’s current requirements, interview arrangements, and cut-off trends directly with the official source before applying."
+                },
+                {
+                    title: "6. WARRANTY AND AVAILABILITY",
+                    content: "THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS-AVAILABLE” BASIS. YOU AGREE THAT YOUR USE IS AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. We do not warrant uninterrupted access, error-free operation, or that content will meet every user’s expectations. Features may change, be limited, or be withdrawn as the product evolves."
+                }
+            ]
+        },
+        contact: {
+            title: "Contact Us",
+            intro: "We are here to help with HKDSE English learning, your account, subscriptions, and partnerships.",
+            email_intro: "You can also email us directly at",
+            email_value: "info@aceit-learning.com",
+            reply_email_label: "Your email (for our reply)",
+            reply_email_hint: "We use this so you can get a reply from our team. It is shown in the message we receive and set as Reply-To when your mail app supports it.",
+            enquiry_type_label: "Enquiry type",
+            message_label: "Your message",
+            message_placeholder: "Please describe your question or feedback in as much detail as you can (e.g. device, browser, what you tried, screenshots described in words).",
+            submit: "Submit",
+            sending: "Sending…",
+            success_title: "Message sent",
+            success_body: "Thank you. Our team will review your message and get back to you by email when needed.",
+            thanks_popup_title: "Thank you for your message",
+            thanks_popup_body: "We have received your enquiry. Our team will review it and may reply to the email address you provided.",
+            error_generic: "Something went wrong. Please try again in a moment or email us directly.",
+            error_short: "Please write at least 10 characters so we can help you properly.",
+            error_select: "Please select an enquiry type.",
+            error_email: "Please enter a valid email address so we can reply to you.",
+            select_placeholder: "Select a topic…",
+            enquiry_types: {
+                general: "General enquiry",
+                technical: "Technical / account support",
+                billing: "Billing & subscription",
+                feedback: "Feedback & suggestions",
+                schools_b2b: "Schools, partners & B2B",
+                press: "Media & press",
+                hkdse_content: "HKDSE content & curriculum",
+                privacy_data: "Privacy & data"
+            }
+        },
+        faq: {
+            title: "Frequently Asked Questions",
+            intro: "Detailed answers about Ace It!, HKDSE English, Ace Sir, Dream Subjects, learning features, plans, devices, AI feedback, your data, and troubleshooting.",
+            items: [
+                {
+                    q: "What is Ace It! and who is it for?",
+                    a: [
+                        "Ace It! is an AI-powered learning platform built for Hong Kong Secondary 4–6 students preparing for the HKDSE. At launch, the MVP focuses on HKDSE English Language: structured Quests, mock-style papers, diagnostics, micro-skill tracking, and 24/7 chat with English specialist tutors so you can revise beyond class hours with feedback that adapts to your level.",
+                        "The platform suits students who want clearer comments on their work, more targeted revision, and visible progress—not only high achievers. Parents on Premium may receive optional monthly progress summaries, but day-to-day learning is student-led.",
+                        "Ace It! does not replace your school, textbook, or English teacher. It works best when used regularly alongside lessons: finish a Quest after class, check weak areas on your skill map, and use full mocks closer to the exam to practise timing and stamina.",
+                        "Start on the Free Trial to explore core English features. If you are unsure where to begin, open the dashboard roadmap or chat with Miss Janie (English practice) or Ace Sir on Pro (exam and university strategy)—they can suggest a sensible first step."
+                    ]
+                },
+                {
+                    q: "Which HKDSE subjects and papers do you cover?",
+                    a: [
+                        "The current MVP is built around HKDSE English Language. You will find practice aligned with the major papers: Reading, Writing, Listening & Integrated Skills, and Speaking-style tasks, plus tools such as Grammar Lab and writing studios.",
+                        "Activities are tagged to English micro-skills (for example inference, tone, organisation, or grammar accuracy). Your skill map and recommended Quests use these tags to highlight specific gaps—not only overall scores—so you know what to practise next.",
+                        "Other DSE subjects (such as Mathematics) are not part of this launch. We may expand subject coverage in future releases; always check in-app labels for what is available today.",
+                        "Official syllabi and marking standards are set by HKEAA. Ace It! aims to stay aligned with English papers, but for high-stakes decisions (e.g. whether a task type is examinable this year) always confirm with the latest HKEAA notices and your school."
+                    ]
+                },
+                {
+                    q: "Who is Ace Sir, and what can he help with?",
+                    a: [
+                        "Ace Sir is your academic and university strategy advisor inside Ace It!. He focuses on exam logic, time management, paper strategy, JUPAS planning, and how to turn your current grades into a realistic path toward your dream programmes—not on marking every sentence of homework.",
+                        "Chat with Ace Sir is included on the Pro and Premium plans (see Pricing). In conversation he can discuss study schedules, which English paper to prioritise, how mocks relate to your targets, and how to interpret gap analysis from your Dream Subjects list.",
+                        "When you are in Ace Sir’s chat, a Dream Subjects button appears in the header so you can jump straight to your Top 20 JUPAS programmes without losing context. He works best when your profile and dream list are up to date.",
+                        "For line-by-line English practice (grammar, essays, comprehension techniques), use Miss Janie or Ben Sir in the English tutor agents. Use Ace Sir when you need the bigger picture: strategy, motivation, and university direction."
+                    ]
+                },
+                {
+                    q: "What is the Dream Subjects page and how should I use it?",
+                    a: [
+                        "Dream Subjects (夢想學科) is where you build your Top 20 JUPAS university programmes in priority order. Search by programme code or name, filter by university or study area, then add programmes to your list. Drag to reorder—your #1 choice sits at the top.",
+                        "The page estimates your Best 5 total from your English targets, elective grades you report, and the scoring scale you pick (Standard DSE 1–7, or Institutional Bonus where universities weight 5** / 5* differently). Each programme shows a target score and whether it looks Reachable, Stretch, or Ambitious based on the gap.",
+                        "Tap a programme for official-style details: admission criteria, course structure, career prospects, and—where available—Ace Sir’s Strategy Tips for that degree. Some programmes may show “data being updated” while we refresh JUPAS sources.",
+                        "Save your list after changes so Ace Sir and your dashboard stay in sync. Revisit the page each term as your mock results improve or your priorities shift. Data is sourced from university JUPAS pages (e.g. 2024/25 cycle); always double-check final requirements on the official admissions site before choosing Band A."
+                    ]
+                },
+                {
+                    q: "How do Quests, diagnostics, and mock exams work?",
+                    a: [
+                        "Quests are interactive, paper-style English missions—reading passages, writing prompts, listening simulations, and speaking scenarios. They are shorter than full mocks but mirror DSE task types. Completing Quests earns XP, updates your skill map, and feeds recommendations for what to try next.",
+                        "Diagnostics help establish a baseline or re-check progress after a period of study. They are useful when you return after a break or want evidence of improvement before investing time in a full mock.",
+                        "Mock exams simulate fuller papers under time pressure. Free Trial users can preview mock flows; Pro includes a monthly mock allowance; Premium unlocks unlimited mocks and deeper AI grading on mock work. Treat mocks as dress rehearsals: note timing, careless errors, and recurring weak skills, then return to targeted Quests.",
+                        "Weekly Challenge Quests (on eligible plans) rotate fresh, DSE-aligned content so practice stays current. Your achievement timeline records milestones—helpful motivation, but not a substitute for consistent weekly study."
+                    ]
+                },
+                {
+                    q: "How do subscriptions, trials, and billing work?",
+                    a: [
+                        "We offer a Free Trial (HK$0), Pro, and Premium. Each tier lists its entitlements on the Pricing page—e.g. how many mocks per month, XP multipliers, device limits, Grammar Lab access, Ace Sir advisory chat, and parental reports. Your account area should reflect the plan you purchased.",
+                        "Paid plans are billed monthly through our secure payment partner (Stripe). Promotional prices shown on the site may differ from the standard rate; the checkout screen is the source of truth for what you will be charged.",
+                        "Upgrading usually takes effect soon after payment; downgrades or cancellations follow the rules shown at checkout and in our Terms. If a charge looks wrong, failed, or duplicated, contact us via the footer Contact link and choose “Billing & subscription”. Include the email on your account and the approximate charge date.",
+                        "School or bulk licences are handled separately. For institutional pricing, choose “Schools, partners & B2B” in the contact form so the request reaches the right team."
+                    ]
+                },
+                {
+                    q: "Can I use Ace It! on more than one device?",
+                    a: [
+                        "Yes. Pro allows up to three simultaneous devices; Premium allows up to five. This helps you study on a phone during commute and on a laptop at home, while reducing account sharing.",
+                        "If you hit the device cap, you may be signed out on another session or blocked from starting a new one. Sign out on browsers or phones you no longer use (Profile / account settings), clear old sessions, then sign in again on the device you need today.",
+                        "For the smoothest experience, use an up-to-date version of Chrome, Edge, or Safari, allow browser storage for the site (do not block site data), and avoid private browsing modes that discard login state. Keep the app tab open during long mock or listening tasks so progress is not lost if the connection drops briefly.",
+                        "Still stuck? Contact us under “Technical / account support” with your device model, operating system, browser, and whether the issue happens at login or mid-lesson."
+                    ]
+                },
+                {
+                    q: "How accurate is the AI feedback?",
+                    a: [
+                        "Our AI tutors and graders are trained to follow HKDSE-style rubrics and common examiner expectations. They excel at explaining steps, suggesting improvements, and spotting patterns in your mistakes—especially when you paste work or upload clear images.",
+                        "Like any AI system, they can hallucinate facts, miss subtle context, or grade generously on creative writing. Treat feedback as coaching, not an official mark. For borderline grades or exam strategy, discuss with your school teacher.",
+                        "Premium mock grading uses a stronger model tier for more detailed commentary; Free and Pro still provide useful practice but may be less nuanced on long essays or multi-part listening tasks.",
+                        "Never submit AI-generated text as your own in school assessments unless your school explicitly allows it and you declare it. Our Disclaimer explains limitations of automated scoring and content generation."
+                    ]
+                },
+                {
+                    q: "How is my data used? What about parental reports?",
+                    a: [
+                        "We process learning activity—Quest results, mock scores, chat metadata needed for safety, XP, streaks, and skill-map updates—to personalise your experience and show progress dashboards. We do not sell your personal data to advertisers.",
+                        "Premium subscribers may receive an optional monthly parental progress summary (high-level trends, not verbatim chat logs). Parents should discuss healthy study habits with students; the report is a supplement, not surveillance of every message.",
+                        "Do not type passwords, HKID numbers, full addresses, or other highly sensitive personal data into tutor chat. If you need to share a screenshot, crop out unrelated personal information first.",
+                        "For access, correction, deletion, or questions about retention, use the Contact form and select “Privacy & data”. We will respond according to our Privacy Policy and applicable Hong Kong requirements."
+                    ]
+                },
+                {
+                    q: "I cannot sign in or my progress looks wrong — what should I do?",
+                    a: [
+                        "First, confirm you are signing in with the same method (e.g. school Microsoft account) you used when you subscribed. Mixed accounts are the most common cause of “missing” progress.",
+                        "Check your network, disable VPNs that block sign-in or site storage, and try another browser or device. Hard-refresh the page (Ctrl+F5 on Windows) if the dashboard looks stale after completing a Quest.",
+                        "If XP, a mock result, or a completed Quest did not appear, note the task name and approximate completion time before retrying the same paper—duplicates can sometimes confuse local state. A short screen recording helps our team reproduce UI issues.",
+                        "Contact us via “Technical / account support” with: what you expected, what you saw, browser/device, and time zone. We aim to investigate account-specific issues within a few business days."
+                    ]
+                },
+                {
+                    q: "What are XP, streaks, and the skill map?",
+                    a: [
+                        "XP (experience points) rewards consistent study: finishing Quests, mocks, Grammar Lab, and challenges adds XP that levels up your profile and unlocks avatar rewards on eligible plans.",
+                        "Streaks track how many days in a row you have been active. They are a gentle nudge to build habit—not a measure of exam readiness on their own.",
+                        "The skill map breaks English into fine-grained micro-skills (e.g. inference, summarising, tone). Scores update as you complete tagged activities so you can see strengths and weaknesses at a glance.",
+                        "Use the skill map with recommended Quests: if a skill bar is low, prioritise related missions before repeating full mocks on the same weak area."
+                    ]
+                },
+                {
+                    q: "Can schools or teachers use Ace It!?",
+                    a: [
+                        "Yes. We offer school pilots, class licences, and partnership options separate from individual student subscriptions.",
+                        "Teachers typically use Ace It! for extra reading/writing/listening practice, mock previews, and data-informed revision—not as a replacement for school marking policies.",
+                        "For quotes, onboarding, or bulk accounts, use the footer Contact form and choose “Schools, partners & B2B”. Include your school name, approximate student count, and whether you need English-only access for the MVP.",
+                        "Student data handling for school deals follows our Terms and Privacy Policy; we can discuss DPA-style arrangements during procurement."
+                    ]
                 }
             ]
         },
@@ -569,6 +723,15 @@ export const translations = {
             key_competencies: "Key Competencies",
             case_studies: "Case Studies",
             proceed_to_quest: "Proceed to Quest",
+            grammar_intro: "Master this grammar point in four focused phases: learn the rules, spot the pattern, drill under pressure, then proofread a real paragraph.",
+            grammar_phase_rules: "Rules",
+            grammar_phase_identify: "Spot",
+            grammar_phase_drill: "Drill",
+            grammar_phase_final: "Proofread",
+            grammar_core_rules: "Core rules you'll practise",
+            grammar_formula: "Formula",
+            grammar_next_steps: "After this mission",
+            grammar_xp_up_to: "Max XP at this level",
             source_material: "Source Material",
             click_to_define: "Click words to define",
             loading_scaffolds: "Loading scaffolds...",
@@ -846,33 +1009,187 @@ export const translations = {
         },
         footer: {
             copyright: "© 2026 Ace It! 教育。版權所有。",
+            faq: "常見問題",
+            contact: "聯絡我們",
             terms: "條款及細則",
+            privacy: "私隱政策",
             disclaimer: "免責聲明"
         },
         legal: {
             terms_title: "條款及細則",
+            privacy_title: "私隱政策",
             disclaimer_title: "一般免責聲明",
             terms: [],
             disclaimer: [
-                { 
-                    title: "1. 一般資訊用途", 
-                    content: "Ace It! Education 提供的服務僅用於補充資訊和教育目的。雖然我們努力提供高質量的教育指導，但 AI 導師提供的反饋、評分分析和建議不構成官方學術認證，不應作為學術決策的唯一依據。" 
+                {
+                    title: "1. 一般資訊用途",
+                    content: "Ace It! Education 提供的服務僅作補充資訊及教育用途。現階段平台以 HKDSE 英國語文練習及相關學習工具為主；其他科目或會日後推出，並於應用內標示。AI 導師的回饋、自動評分、能力圖譜分數及建議均不構成官方學術認證、考評局評分或學校評核，不應作為學術或升學決策的唯一依據。"
                 },
-                { 
-                    title: "2. 不保證學術成功", 
-                    content: "您明確承認並同意，使用本服務並不保證任何特定的學術成果、考試成績或大學錄取。考試表現受公司控制範圍之外的多種外部變量影響，包括學生個人努力、考試環境以及考評局的評估修訂。" 
+                {
+                    title: "2. 不保證任何結果",
+                    content: "您明確承認並同意，使用本服務並不保證任何 DSE 等級、考試成績、JUPAS 結果或大學錄取。表現受多項因素影響，包括個人努力、學校教學、考試環境、考評局課程或評分修訂，以及各院校收生政策。「夢想學科」等功能的「分數差距」「穩陣／搏一搏／進取」等提示僅供規劃參考，並非取錄承諾、預測或保證。"
                 },
-                { 
-                    title: "3. AI 準確性與局限性", 
-                    content: "本服務利用先進的人工智能模型，但仍受固有局限性的約束。您承認並同意，AI 資產偶爾可能會生成不準確的數據、錯誤的反饋或虛構信息（稱為「幻覺」）。您有責任將任何關鍵內容與官方教科書、歷屆試題進行交叉驗證。" 
+                {
+                    title: "3. AI 準確性、評分及學術誠信",
+                    content: "本服務使用人工智能，存在固有局限。輸出可能不完整、過時、有偏見或錯誤，並可能包含虛構內容（「幻覺」）。模擬試及 Quest 的自動分數僅屬練習性質；評語深度及準確度可能因訂閱方案而異。您須自行對照考評局官方資料、課本、歷屆試題及老師意見核實重要內容。除非學校明確允許並要求申報，否則切勿將 AI 生成內容當作自己的作品提交予學校評核或公開考試。"
                 },
-                { 
-                    title: "4. 非專業或官方建議", 
-                    content: "透過本服務提供的資訊不構成法律、醫療或官方學術建議。ACE IT! EDUCATION 是一家獨立的私人實體，不隸屬於香港考試及評核局（「考評局」）或任何政府教育機構，亦未獲得上述機構的認可。" 
+                {
+                    title: "4. 非專業或官方建議",
+                    content: "透過本服務提供的資訊——包括與 Ace Sir 或其他導師的對話、策略提示及家長進度摘要——不構成法律、醫療、財務、生涯輔導或官方學術建議。Ace It! Education 為獨立私人機構，與香港考試及評核局（「考評局」）、任何政府部門或大學／JUPAS 辦事處均無隸屬、認可或代理關係。填寫 Band、選科或作重大決定前，請向官方招生網站及具資格的學校或升學輔導人員核實。"
                 },
-                { 
-                    title: "5. 保證免責聲明", 
-                    content: "本服務按「原樣」及「現有」狀態提供。您同意自行承擔使用本服務的風險。在法律允許的最大範圍內，我們不承擔與服務及其使用相關的所有明示或暗示的保證，包括適銷性、特定用途的適用性和非侵權性。" 
+                {
+                    title: "5. JUPAS 及課程資料（夢想學科）",
+                    content: "「夢想學科」等處顯示的課程、收生分數、加權規則及攻略備註，乃整理自大學及 JUPAS 公開資料，僅為方便查閱。資料可能不完整、滯後或已被院校修訂而不另行通知。計分方式（例如標準 DSE 與院校加分制）為簡化模型，未必與院校實際計分一致。申請前請務必向官方來源核實最新收生要求、面試安排及近年的取錄趨勢。"
+                },
+                {
+                    title: "6. 保證及服務可用性",
+                    content: "本服務按「原樣」及「現有」狀態提供，使用風險由您自行承擔。在法律允許的最大範圍內，我們不承擔任何明示或暗示保證，包括適銷性、特定用途的適用性及非侵權性。我們不保證服務不間斷、無錯誤或完全符合每位用戶期望；功能可能因產品發展而調整、限制或停止。"
+                }
+            ]
+        },
+        contact: {
+            title: "聯絡我們",
+            intro: "歡迎就 HKDSE 英文學習、帳戶、訂閱或合作事宜與我們聯絡。",
+            email_intro: "你亦可直接發送電郵至",
+            email_value: "info@aceit-learning.com",
+            reply_email_label: "你的電郵（以便我們回覆）",
+            reply_email_hint: "我們會用此地址與你聯絡。此地址會顯示在我們收到的通知中，並在支援的情況下設為「回覆至」地址。",
+            enquiry_type_label: "查詢類型",
+            message_label: "訊息內容",
+            message_placeholder: "請盡量詳細描述你的問題或意見（例如裝置、瀏覽器、已嘗試的步驟；如有畫面問題，請以文字描述）。",
+            submit: "提交",
+            sending: "傳送中…",
+            success_title: "已成功送出",
+            success_body: "多謝你的來信，我們會盡快查閱，有需要時會以電郵回覆你。",
+            thanks_popup_title: "感謝你的來信",
+            thanks_popup_body: "我們已收到你的查詢，團隊會盡快查閱，有需要時會以你提供的電郵地址回覆。",
+            error_generic: "傳送失敗，請稍後再試，或直接發電郵與我們聯絡。",
+            error_short: "請至少輸入 10 個字，以便我們更有效地協助你。",
+            error_select: "請先選擇查詢類型。",
+            error_email: "請輸入有效的電郵地址，以便我們回覆你。",
+            select_placeholder: "請選擇查詢類型…",
+            enquiry_types: {
+                general: "一般查詢",
+                technical: "技術支援／帳戶問題",
+                billing: "帳單及訂閱",
+                feedback: "意見與建議",
+                schools_b2b: "學校、合作夥伴及企業方案",
+                press: "媒體查詢",
+                hkdse_content: "HKDSE 課程與內容",
+                privacy_data: "私隱與資料"
+            }
+        },
+        faq: {
+            title: "常見問題",
+            intro: "關於 Ace It!、HKDSE 英文、Ace Sir、夢想學科、學習功能、訂閱與付款、裝置、AI 回饋、資料私隱及疑難排解的詳細說明。",
+            items: [
+                {
+                    q: "Ace It! 是什麼？適合誰使用？",
+                    a: [
+                        "Ace It! 是專為香港中四至中六同學而設、以 HKDSE 為核心的 AI 學習平台。現階段 MVP 聚焦 HKDSE 英國語文：結構化 Quest、模擬試、診斷、微技能追蹤，以及可 24 小時對話的英文專科導師，讓你在課餘按個人程度持續溫習。",
+                        "無論目標是穩守合格線或衝刺更高等級，只要希望獲得更清晰的作答回饋、更有針對性的重溫路徑，都適合使用。Premium 家長進度摘要可供參考，但日常學習仍以學生為中心。",
+                        "Ace It! 不能取代學校、課本或英文老師。最有效用法是與課堂並行：上完課做相關 Quest、在能力圖譜查看弱項、考試季前用模擬試訓練時間與耐力。",
+                        "可先以免費試用體驗英文核心功能。若不確定從何開始，可查看儀表板學習藍圖，或向 Miss Janie（英文操卷）查詢；已訂 Pro 者可向 Ace Sir 請教應試與升學策略。"
+                    ]
+                },
+                {
+                    q: "平台涵蓋哪些 HKDSE 科目或試卷？",
+                    a: [
+                        "現階段 MVP 以 HKDSE 英國語文為主，涵蓋閱讀、寫作、聆聽及綜合技能、口語溝通類任務，並提供 Grammar Lab、寫作工作室等輔助工具。",
+                        "活動會標記英文微技能（例如推論、語氣、組織、文法準確度等）。能力圖譜與推薦任務會指出具體弱項，而不只顯示總分。",
+                        "其他 DSE 科目（例如數學）不在今次推出範圍內，日後或會擴充；請以應用內標籤顯示的「已上線」功能為準。",
+                        "官方課程與評分標準以考評局（HKEAA）公布為準。涉及是否考核某類題型等重要決定，請對照最新考評局通告及學校老師意見。"
+                    ]
+                },
+                {
+                    q: "Ace Sir 是誰？可以幫我什麼？",
+                    a: [
+                        "Ace Sir 是平台內的學術及升學策略顧問，專注應試邏輯、時間管理、各卷策略、JUPAS 規劃，以及如何由現有成績走向心儀課程——而非逐句批改所有家課。",
+                        "與 Ace Sir 對話屬 Pro 及 Premium 方案功能（見定價頁）。你可討論溫習時間表、英文各卷優先次序、模擬試與目標分的關係，以及如何解讀「夢想學科」名單上的分數差距。",
+                        "在 Ace Sir 對話介面，頂部會出現「夢想學科」按鈕，可快速開啟你的 Top 20 JUPAS 課程清單。資料愈新，建議愈貼近你現況。",
+                        "若需逐句英文練習（文法、作文、閱讀技巧），請使用 Miss Janie 或 Ben Sir 等英文導師；需要整體策略、心態與升學方向時，再找 Ace Sir。"
+                    ]
+                },
+                {
+                    q: "「夢想學科」頁面是什麼？如何使用？",
+                    a: [
+                        "「夢想學科」讓你建立最多 20 個心儀 JUPAS 大學課程，並以拖曳方式排列優先次序（最想去嘅放最前）。可按課程編號或名稱搜尋，並以大學或學科範疇篩選。",
+                        "頁面會根據你的英文目標、你填報的其他科目成績，以及所選計分方式（標準 DSE 1–7，或部分院校加分制）估算 Best 5 總分。每個課程會顯示目標分，以及屬「穩陣」「搏一搏」或「進取」。",
+                        "點選課程可查看收生要求、課程結構、職業前景，以及（如有）Ace Sir 為該學位整理的戰略攻略。部分課程可能暫時顯示「資料更新中」。",
+                        "每次修改後請儲存清單，以便 Ace Sir 與儀表板同步。每學期或模擬試後可更新一次。數據來源為各大學官方 JUPAS 頁面（例如 2024/25 學年）；填寫 Band A 前請務必再核對官方招生網站。"
+                    ]
+                },
+                {
+                    q: "Quest、診斷與模擬試如何運作？",
+                    a: [
+                        "Quest 是互動式英文短任務——閱讀篇章、寫作題、聆聽模擬及口語情境等。長度通常短於完整模擬試，但仍反映 DSE 題型。完成 Quest 可賺取 XP、更新能力圖譜，並獲得下一步練習建議。",
+                        "診斷測驗有助建立基線，或在一段時間溫習後重新檢視進度，特別適合放假後復課，或想在投入完整模擬試前先確認自己是否有所進步。",
+                        "模擬試在限時下模擬較完整的試卷流程。免費試用可預覽模擬試流程；Pro 每月有一定模擬試次數；Premium 可無限次模擬，並對模擬作答提供較深入的 AI 評語。請把模擬試當作「彩排」：記錄時間壓力、粗心錯誤及反覆出現的弱項，再回去做針對性 Quest。",
+                        "合資格方案設有每週挑戰任務，提供貼近 DSE 趨勢的新題材。成就時間線可記錄里程碑，有助保持動力，但不能代替每週恆常溫習。"
+                    ]
+                },
+                {
+                    q: "免費試用、訂閱與付款如何運作？",
+                    a: [
+                        "我們提供免費試用（HK$0）、Pro 及 Premium 三個層級。各方案權限（例如每月模擬試次數、XP 加成、裝置上限、Grammar Lab、與 Ace Sir 學術顧問對話、家長報告等）均列於定價頁面；付款後帳戶內應顯示你購買的方案。",
+                        "付費方案以月費形式透過 Stripe 安全付款。網站顯示的優惠價可能與標準價不同，實際收費以結帳畫面為準。",
+                        "升級通常在付款後短時間內生效；降級或取消則依結帳頁及使用條款所列規則處理。若發現扣款異常、失敗或重複，請透過頁尾「聯絡我們」並選擇「帳單及訂閱」，附上帳戶電郵及大約扣款日期。",
+                        "學校或批量授權另行處理。如需機構報價，請在聯絡表單選擇「學校、合作夥伴及企業方案」。"
+                    ]
+                },
+                {
+                    q: "可以在多部裝置上使用嗎？",
+                    a: [
+                        "可以。Pro 最多同時使用 3 部裝置；Premium 最多 5 部，方便你在手機與電腦之間切換溫習，同時減少帳戶共用。",
+                        "若超出上限，你可能被其他裝置登出或無法在新裝置開始學習。請在不再使用的瀏覽器或手機上登出（個人檔案／帳戶設定），清除舊連線後，再在需要使用的裝置重新登入。",
+                        "建議使用最新版本的 Chrome、Edge 或 Safari，允許網站儲存資料（勿封鎖網站數據），並避免會清除登入狀態的無痕模式。進行較長的模擬試或聆聽任務時，盡量保持分頁開啟，以免網絡短暫中斷導致進度未能儲存。",
+                        "若仍無法使用，請選擇「技術支援／帳戶問題」，並提供裝置型號、作業系統、瀏覽器，以及問題發生在登入時還是學習中途。"
+                    ]
+                },
+                {
+                    q: "AI 回饋有多準確？",
+                    a: [
+                        "AI 導師與評分系統按 HKDSE 常見評分準則及改卷邏輯設計，擅長解釋步驟、提出改善建議，以及從你的錯誤中找出規律—尤其當你貼上作答或上載清晰圖片時。",
+                        "與所有 AI 一樣，系統仍可能捏造事實、忽略細微語境，或在創意寫作上評分過寬。請把回饋視為輔導，而非官方分數；對於邊界分數或應試策略，應與學校老師商討。",
+                        "Premium 模擬試評分採用較高階模型，評語較詳盡；免費試用及 Pro 仍具練習價值，但在長篇作文或較複雜聆讀任務上可能較簡略。",
+                        "除非學校明確允許並要求申報，否則切勿在校內評估中將 AI 生成內容當作自己的作品提交。詳見應用內免責聲明對自動評分及內容生成的限制說明。"
+                    ]
+                },
+                {
+                    q: "我的學習資料會如何被使用？家長報告呢？",
+                    a: [
+                        "我們會處理學習活動資料—包括 Quest 結果、模擬試分數、維持安全所需的對話元數據、XP、連續學習紀錄及能力圖譜更新—以個人化你的體驗並顯示進度。我們不會向廣告商出售你的個人資料。",
+                        "Premium 訂閱者可選擇每月家長進度摘要（以整體趨勢為主，並非逐句對話紀錄）。家長宜與子女討論健康溫習習慣；報告僅作參考，不能取代日常溝通。",
+                        "請勿在導師對話中輸入密碼、身份證號碼、完整地址或其他高度敏感個人資料。如需上載截圖，請先裁剪與學習無關的個人資訊。",
+                        "如需查閱、更正、刪除資料或有保留期限疑問，請在聯絡表單選擇「私隱與資料」。我們將按私隱政策及適用的香港法例回覆。"
+                    ]
+                },
+                {
+                    q: "無法登入或進度顯示異常，怎麼辦？",
+                    a: [
+                        "請先確認你使用與訂閱時相同的登入方式（例如學校 Microsoft 帳戶）。混用不同帳戶是最常見的「進度消失」原因。",
+                        "檢查網絡、暫停可能阻擋登入或網站儲存的 VPN，並嘗試其他瀏覽器或裝置。若完成 Quest 後儀表板未更新，可強制重新整理頁面（Windows 可按 Ctrl+F5）。",
+                        "若 XP、模擬試結果或已完成的 Quest 未顯示，請先記下任務名稱及大約完成時間，再考慮是否重做同一試卷—重複作答有時會令本地狀態混亂。簡短螢幕錄影有助我們重現介面問題。",
+                        "請透過「技術支援／帳戶問題」聯絡我們，並說明：預期畫面、實際畫面、瀏覽器／裝置及時區。帳戶相關問題一般會在數個工作天內開始跟進。"
+                    ]
+                },
+                {
+                    q: "XP、連續學習紀錄和能力圖譜是什麼？",
+                    a: [
+                        "XP（經驗值）獎勵持續溫習：完成 Quest、模擬試、Grammar Lab 及挑戰任務可累積 XP，提升等級並在合資格方案下兌換頭像等獎勵。",
+                        "連續學習紀錄（Streak）顯示你連續多少天有使用平台，有助養成習慣，但本身不代表 DSE 已達標。",
+                        "能力圖譜把英文拆成細項微技能（例如推論、摘要、語氣）。完成相關活動後分數會更新，方便一眼看出強弱項。",
+                        "建議配合推薦 Quest 使用：某項技能偏低時，先做相關任務，再重複做同一弱項的完整模擬試。"
+                    ]
+                },
+                {
+                    q: "學校或老師可以使用 Ace It! 嗎？",
+                    a: [
+                        "可以。我們提供學校試用、班級授權及合作方案，與個人學生訂閱分開處理。",
+                        "老師通常用於額外閱讀／寫作／聆聽練習、模擬試預覽及數據輔助溫習安排——不能取代學校本身的評分政策。",
+                        "如需報價或批量帳戶，請在頁尾「聯絡我們」選擇「學校、合作夥伴及企業方案」，並註明學校名稱、大約學生人數，以及 MVP 是否只需英文功能。",
+                        "學校方案的學生資料處理依使用條款及私隱政策；採購階段可商討資料處理安排。"
+                    ]
                 }
             ]
         },
@@ -1307,6 +1624,15 @@ export const translations = {
             key_competencies: "核心能力點",
             case_studies: "實例分析",
             proceed_to_quest: "進入實戰任務",
+            grammar_intro: "呢個語法任務分四個階段：學規則、辨識關鍵詞、快閃練習，最後校對一段真實段落。",
+            grammar_phase_rules: "規則",
+            grammar_phase_identify: "辨識",
+            grammar_phase_drill: "快閃",
+            grammar_phase_final: "校對",
+            grammar_core_rules: "核心規則預覽",
+            grammar_formula: "句式公式",
+            grammar_next_steps: "完成後建議",
+            grammar_xp_up_to: "此級別最高 XP",
             source_material: "參考材料",
             click_to_define: "點擊單詞查看定義",
             loading_scaffolds: "正在讀取學習支架...",

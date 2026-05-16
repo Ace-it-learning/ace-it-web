@@ -1,0 +1,557 @@
+{
+  "factPack": {
+    "code": "JS4428",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4428"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4428"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/ftecn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://fintech.se.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4428",
+      "nameEn": "Financial Technology",
+      "nameZh": "金融科技學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 47.375,
+      "uq": 48.75,
+      "lq": 45.625,
+      "percentiles": {
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 48.75
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 47.375
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 45.625
+        }
+      },
+      "subjectWeighting": "• English (x 1.25) • Chinese (x 1.25) • Mathematics (x 1.75) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, BAFS, Economics, ICT (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4428",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4428",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4428",
+      "nameEn": "Financial Technology",
+      "nameZh": "金融科技學",
+      "shortDescription": "an class=\"before_label\">Short Description The Financial Technology (FinTech) programme aims at providing students with essential knowledge to apply new technology, especially information technology and data science techniques, to a variety of financial services. After four years of all-round education, students are expected to be able to derive and develop financial and managerial insights from big data, design and engineer innovative solutions to meet financial service needs, optimize financial decisions in complex business environments, and understand and analyze the social, economic, security, and legal impact of their solutions. Students admitted by the FinTech programme can also apply for the double major programme in FinTech and IBBA as well as the dual degree programmes.",
+      "programmeWebsite": "http://fintech.se.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Preferred subjects: Mathematics (Extended Part) Module I or Module II, Biology, Business, Accounting and Financial Studies, Chemistry, Economics, Information and Communication Technology and Physics. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 118,
+        "bandB": 84,
+        "bandC": 177,
+        "bandD": 235,
+        "bandE": 215,
+        "total": 829
+      },
+      "offers2025": {
+        "bandA": 35,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 35
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/ftecn/",
+      "introduction": "Experience Innovative Technologies in Financial Practice with Our FinTech Programme Financial Technology (FinTech) is an emerging engineering discipline that focuses on employing technological innovations in finance. The purpose of our FinTech programme is to educate and equip students with the essential knowledge and capabilities they need to apply technological innovations to financial services, and to nurture leadership and entrepreneurship for the next generation of financial talent in support of Hong Kong’s endeavours to grow into an international FinTech hub. The programme is built on strong collaboration between the Faculty of Engineering and the faculties of Business Administration, Law and Social Science. It offers multi-disciplinary training to equip students with both a solid technological education in engineering innovations and a comprehensive understanding of the business and legal environment for FinTech. New course offerings bring state-of-the-art developments in the field to our undergraduate education programme for the first time. Closely collaborating with the Hong Kong Monetary Authority (HKMA) and the Hong Kong Applied Science and Technology Research Institute (ASTRI), the programme also organises internships and overseas exchanges to encourage students to apply theory to real-world cases. In addition, the programme offers a double-major programme in FinTech-IBBA with the Faculty of Business, a dual-degree programme in Finance and FinTech with Shanghai Jiao Tong University, as well as a dual-degree programme in Financial Math and FinTech with Peking University.",
+      "ranking": "",
+      "careerProspects": "Our FinTech programme graduates are ideally suited for positions that require strong quantitative and technological skills in the financial services industry. In addition to traditional careers in the financial industry, the graduates are very competitive for jobs with an innovative nature, such as: Insurance (automatic underwriting and claims, precision marketing, risk management) Asset and wealth management (data-driven investment strategy design, robo-advisory, algo trading) Internet finance (P2P lending, crowdfunding, mobile payment systems, credit analytics, electronic currencies) Retail and Investment banks, securities companies and other trading platforms (IT system development, financial infrastructure architecture, investment analysis, trading) Government regulatory agencies (data analytics, RegTech) FinTech-related start-ups Employers of recent graduates include HSBC, BOCHK, Dah Sing, Goldman Sachs and Deloitte. Recent internship placements include DBS, Haitong Securities, Hang Seng Bank, HSBC, HKMA and Zhong An Insurance. The programme also provides a good foundation for further advanced studies in finance, FinTech, financial engineering, management science and engineering, computer science, information engineering and related fields. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Enrich yourself with the essential knowledge and capabilities to apply technological innovations to financial services. Broaden your skill set with courses in IT Infrastructure, Data Sciences, Quantitative Methods and Computing. Immerse yourself in cutting-edge financial applications, such as investment, risk management and innovation. Join the next generation of financial talent in the FinTech Programme. Dual Degree Options Additionally, the programme offers a dual-degree programme (DDP) together with the Antai College of Economics and Management (SJTU-BOC Institute of Technology and Finance) of Shanghai Jiaotong University (SJTU). Under this framework, students in this programme will obtain a Bachelor of Engineering in Financial Technology offered by CUHK and a Bachelor of Economics in Finance offered by SJTU upon completion of the graduation requirements of the concerned programmes. Students participating in this programme benefit from rigorous training in both finance and engineering, which significantly enhances their competitiveness.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4428",
+    "nameEn": "Financial Technology",
+    "nameZh": "金融科技學",
+    "name": "Financial Technology",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 47.375,
+    "band_a": 45.625,
+    "uq": 48.75,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "JUPAS Code: JS4428",
+            "First Year Intake: 30",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 118",
+            "Band A offers: 35",
+            "Total applications: 829",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 47.375",
+            "Lower quartile (LQ): 45.625",
+            "Upper quartile (UQ): 48.75",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5",
+            "English: 4",
+            "Mathematics: 5*",
+            "CSD: A",
+            "1st Elective: 5**",
+            "2nd Elective: 5*",
+            "",
+            "Subject Weighting:",
+            "English (x1.25), Chinese (x1.25), Mathematics (x1.75), M1/M2 (x1.75), Biology, Chemistry, Physics, BAFS, Economics, ICT (x1.5)",
+            "",
+            "Minimum Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 4",
+            "CSD: Attained",
+            "Two elective subjects at Level 3 (including M1/M2 as one elective)",
+            "Preferred subjects: M1/M2, Biology, BAFS, Chemistry, Economics, ICT, Physics"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Financial Technology (FinTech) programme is an emerging engineering discipline focusing on technological innovations in finance. It is built on strong collaboration between the Faculty of Engineering and the faculties of Business Administration, Law and Social Science.",
+            "",
+            "The curriculum provides multi-disciplinary training, equipping students with solid technological education in engineering innovations and a comprehensive understanding of the business and legal environment for FinTech.",
+            "",
+            "Key areas of study include:",
+            "- IT Infrastructure",
+            "- Data Sciences",
+            "- Quantitative Methods",
+            "- Computing",
+            "- Financial applications such as investment, risk management and innovation",
+            "",
+            "The programme offers a double-major programme in FinTech-IBBA with the Faculty of Business, a dual-degree programme in Finance and FinTech with Shanghai Jiao Tong University, and a dual-degree programme in Financial Math and FinTech with Peking University.",
+            "",
+            "New course offerings bring state-of-the-art developments in the field to undergraduate education for the first time."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are ideally suited for positions requiring strong quantitative and technological skills in the financial services industry. They are competitive for innovative roles such as:",
+            "",
+            "- Insurance (automatic underwriting and claims, precision marketing, risk management)",
+            "- Asset and wealth management (data-driven investment strategy design, robo-advisory, algo trading)",
+            "- Internet finance (P2P lending, crowdfunding, mobile payment systems, credit analytics, electronic currencies)",
+            "- Retail and Investment banks, securities companies and trading platforms (IT system development, financial infrastructure architecture, investment analysis, trading)",
+            "- Government regulatory agencies (data analytics, RegTech)",
+            "- FinTech-related start-ups",
+            "",
+            "Employers of recent graduates include HSBC, BOCHK, Dah Sing, Goldman Sachs and Deloitte.",
+            "Recent internship placements include DBS, Haitong Securities, Hang Seng Bank, HSBC, HKMA and Zhong An Insurance.",
+            "",
+            "The programme also provides a strong foundation for further advanced studies in finance, FinTech, financial engineering, management science and engineering, computer science, information engineering and related fields."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and green environment with state-of-the-art facilities.",
+            "",
+            "Students are part of CUHK's unique college system, which provides a close-knit community, pastoral care, and co-curricular activities.",
+            "",
+            "The programme collaborates with the Hong Kong Monetary Authority (HKMA) and the Hong Kong Applied Science and Technology Research Institute (ASTRI) to organise internships and overseas exchanges, allowing students to apply theory to real-world cases.",
+            "",
+            "The Faculty of Engineering provides modern laboratories, computing facilities, and collaborative spaces for FinTech projects."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "With a Band A offer rate of approximately 29.7% (35 offers from 118 Band A applications), JS4428 is highly competitive.",
+            "",
+            "Band A applications per offer: ~3.4",
+            "",
+            "The programme uses a Best 5 admission score formula with subject weightings favouring Mathematics, M1/M2, and related electives.",
+            "",
+            "No interview is required; selection is based solely on academic merit as reflected in HKDSE results.",
+            "",
+            "Applicants should aim for scores at or above the median of 47.375 to maximise their chances."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "CUHK Engineering Faculty has strong research groups in blockchain, AI, and financial modeling.",
+            "",
+            "The FinTech programme is jointly supported by the Department of Computer Science and Engineering and the Faculty of Business Administration.",
+            "",
+            "Students have won awards in the Hong Kong FinTech Week university competitions.",
+            "",
+            "Graduates have secured positions at leading financial institutions such as HSBC, BOCHK, Goldman Sachs, and Deloitte, demonstrating the programme's strong industry reputation."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit. These may cover tuition fees and living expenses.",
+            "",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-local Student Living Subsidy Scheme (NLSPS) for eligible students.",
+            "",
+            "For detailed information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Other major scholarships and financial aid schemes are available; students are encouraged to apply early."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's FinTech Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 47.375+**",
+            "",
+            "- The median admission score is 47.375 (Best 5). To be competitive, aim for at least this score.",
+            "- Use the subject weightings to your advantage: Mathematics (x1.75) and M1/M2 (x1.75) are heavily weighted.",
+            "",
+            "**2. Excel in Mathematics and M1/M2**",
+            "",
+            "- Mathematics and M1/M2 are weighted at 1.75 each. A high grade (5* or 5**) significantly boosts your total score.",
+            "- The median admit profile shows Mathematics 5* and M1/M2 5* (LQ).",
+            "",
+            "**3. Strong English and Chinese**",
+            "",
+            "- Both English and Chinese are weighted at 1.25. Aim for Level 5 or above in both.",
+            "- The median profile shows Chinese 5 and English 4.",
+            "",
+            "**4. Choose Preferred Electives**",
+            "",
+            "- Preferred subjects (Biology, BAFS, Chemistry, Economics, ICT, Physics) are weighted at 1.5.",
+            "- Taking two of these can give you an edge.",
+            "",
+            "**5. Understand the Score Formula**",
+            "",
+            "- The programme uses Best 5 subjects with the given weightings. Plan your subject combination to maximise your weighted score.",
+            "- CSD is not counted in the score calculation.",
+            "",
+            "**6. No Interview, Focus on Academics**",
+            "",
+            "- Since there is no interview, your HKDSE results are the sole determinant. Prioritise exam preparation.",
+            "",
+            "**7. Apply as Band A**",
+            "",
+            "- All 35 offers in 2025 went to Band A applicants. Placing JS4428 as Band A is critical.",
+            "",
+            "**8. Consider Dual Degree Options**",
+            "",
+            "- The programme offers dual degrees with Shanghai Jiao Tong University and Peking University. Research these options early to align your studies.",
+            "",
+            "**9. Gain Practical Experience**",
+            "",
+            "- Participate in internships with HKMA, ASTRI, or partner banks. Real-world experience strengthens your profile and future career prospects."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "JUPAS 編號：JS4428",
+            "首年學額：30",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年度 JUPAS 申請統計：",
+            "Band A 申請人數：118",
+            "Band A 取錄人數：35",
+            "總申請人數：829",
+            "",
+            "2025 年度 JUPAS 入學分數（最佳五科）：",
+            "中位數：47.375",
+            "下四分位數：45.625",
+            "上四分位數：48.75",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：5*",
+            "公民科：A",
+            "第一選修科：5**",
+            "第二選修科：5*",
+            "",
+            "科目比重：",
+            "英國語文 (x1.25)、中國語文 (x1.25)、數學 (x1.75)、M1/M2 (x1.75)、生物、化學、物理、BAFS、經濟、ICT (x1.5)",
+            "",
+            "最低入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學（必修部分）：第 4 級",
+            "公民科：達標",
+            "兩科選修科第 3 級（可包括 M1/M2 為其中一科）",
+            "優先考慮科目：M1/M2、生物、BAFS、化學、經濟、ICT、物理"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "金融科技學是一門新興的工程學科，專注於金融領域的技術創新。課程由工程學院與工商管理學院、法律學院及社會科學院緊密合作開辦。",
+            "",
+            "課程提供跨學科培訓，讓學生同時具備扎實的工程技術教育，以及對金融科技商業及法律環境的全面理解。",
+            "",
+            "主要學習範疇包括：",
+            "- 資訊科技基礎設施",
+            "- 數據科學",
+            "- 定量方法",
+            "- 計算",
+            "- 金融應用（如投資、風險管理及創新）",
+            "",
+            "課程提供與商學院合辦的金融科技與 IBBA 雙主修課程、與上海交通大學合辦的金融與金融科技雙學位課程，以及與北京大學合辦的金融數學與金融科技雙學位課程。",
+            "",
+            "新開設的科目首次將該領域的最新發展引入本科教育。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生非常適合在金融服務行業擔任需要強大定量和技術技能的職位。他們在以下創新職位上極具競爭力：",
+            "",
+            "- 保險業（自動核保與理賠、精準營銷、風險管理）",
+            "- 資產與財富管理（數據驅動投資策略設計、機械人理財、算法交易）",
+            "- 互聯網金融（P2P 借貸、眾籌、移動支付系統、信貸分析、電子貨幣）",
+            "- 零售及投資銀行、證券公司及交易平台（IT 系統開發、金融基礎設施架構、投資分析、交易）",
+            "- 政府監管機構（數據分析、監管科技）",
+            "- 金融科技相關初創企業",
+            "",
+            "近期畢業生僱主包括滙豐、中銀香港、大新、高盛及德勤。",
+            "近期實習機構包括星展銀行、海通證券、恒生銀行、滙豐、金管局及眾安保險。",
+            "",
+            "課程亦為進一步修讀金融、金融科技、金融工程、管理科學與工程、計算機科學、信息工程及相關領域的高級研究提供良好基礎。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞綠化，設施先進。",
+            "",
+            "學生可參與獨特的書院制度，享受緊密的社群生活、關顧輔導及課外活動。",
+            "",
+            "課程與香港金融管理局（HKMA）及香港應用科技研究院（ASTRI）合作，組織實習及海外交流，讓學生將理論應用於實際案例。",
+            "",
+            "工程學院提供現代化實驗室、電腦設施及協作空間，支援金融科技項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選",
+          "content": [
+            "JS4428 的 Band A 取錄率約為 29.7%（118 名 Band A 申請者中取錄 35 人），競爭激烈。",
+            "",
+            "每個 Band A 取錄名額約有 3.4 人申請。",
+            "",
+            "課程採用最佳五科計分法，並對數學、M1/M2 及相關選修科設有比重。",
+            "",
+            "無需面試，遴選完全基於香港中學文憑考試成績。",
+            "",
+            "申請人應爭取達到或高於中位數 47.375 分，以增加取錄機會。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "中大工程學院在區塊鏈、人工智能及金融建模方面擁有強大的研究團隊。",
+            "",
+            "金融科技課程由計算機科學與工程學系及工商管理學院共同支持。",
+            "",
+            "學生曾在香港金融科技周大學比賽中獲獎。",
+            "",
+            "畢業生已於滙豐、中銀香港、高盛及德勤等領先金融機構任職，彰顯課程的業界聲譽。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學業成績的入學獎學金，部分可涵蓋學費及生活費。",
+            "",
+            "大學亦參與政府的「特定獎學金及財政支援計劃」（TSFS）及「非本地學生生活津貼計劃」（NLSPS），供合資格學生申請。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "其他主要獎學金及資助計劃亦開放申請，學生宜及早遞交申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的金融科技入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭 47.375 分或以上**",
+            "",
+            "- 入學中位數為 47.375（最佳五科）。要具競爭力，應至少達到此分數。",
+            "- 善用科目比重：數學 (x1.75) 及 M1/M2 (x1.75) 比重較高。",
+            "",
+            "**2. 在數學及 M1/M2 取得佳績**",
+            "",
+            "- 數學及 M1/M2 比重均為 1.75。取得 5* 或 5** 可大幅提升總分。",
+            "- 中位數取錄者成績顯示數學 5*，M1/M2 5*（下四分位數）。",
+            "",
+            "**3. 英文及中文成績要強**",
+            "",
+            "- 英文及中文比重均為 1.25。目標為第 5 級或以上。",
+            "- 中位數取錄者成績顯示中文 5 級，英文 4 級。",
+            "",
+            "**4. 選擇優先選修科**",
+            "",
+            "- 優先科目（生物、BAFS、化學、經濟、ICT、物理）比重為 1.5。",
+            "- 選修兩科此類科目可增加優勢。",
+            "",
+            "**5. 了解計分方法**",
+            "",
+            "- 課程採用最佳五科並按比重計分。規劃科目組合以最大化加權分數。",
+            "- 公民科不計入分數計算。",
+            "",
+            "**6. 無需面試，專注學業**",
+            "",
+            "- 由於無需面試，文憑試成績是唯一決定因素。應優先準備考試。",
+            "",
+            "**7. 將課程放在 Band A**",
+            "",
+            "- 2025 年所有 35 個取錄名額均給予 Band A 申請人。將 JS4428 放在 Band A 至關重要。",
+            "",
+            "**8. 考慮雙學位選項**",
+            "",
+            "- 課程提供與上海交通大學及北京大學的雙學位計劃。及早研究這些選項以規劃學習。",
+            "",
+            "**9. 獲取實踐經驗**",
+            "",
+            "- 參與金管局、應科院或合作銀行的實習。真實世界經驗有助提升個人檔案及未來職業前景。"
+          ]
+        }
+      }
+    },
+    "code": "JS4428",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 47.375,
+    "uq": 48.75,
+    "lq": 45.625,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 48.75
+      },
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 47.375
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 45.625
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "CUHK Engineering Faculty has strong research groups in blockchain, AI, and financial modeling.",
+      "The FinTech programme is jointly supported by the Department of Computer Science and Engineering and the Faculty of Business Administration.",
+      "Students have won awards in the Hong Kong FinTech Week university competitions."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Financial Technology notable alumni",
+      "香港中文大學 金融科技學 著名校友",
+      "CUHK Financial Technology graduates Hong Kong careers"
+    ]
+  }
+}

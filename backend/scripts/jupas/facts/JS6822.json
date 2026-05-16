@@ -1,0 +1,66 @@
+{
+  "code": "JS6822",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6822"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://hkums.hku.hk/bjmai-programme/"
+    }
+  ],
+  "programme": {
+    "code": "JS6822",
+    "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "nameZh": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "university": "香港大學",
+    "facultyZh": "社會科學學院",
+    "category": "social_science"
+  },
+  "scores": {
+    "formula": "1.5 x Eng + Best 4 Subjects",
+    "median": 32,
+    "uq": 35,
+    "lq": 31
+  },
+  "jupas": {
+    "code": "JS6822",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6822",
+    "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://hkums.hku.hk/bjmai-programme/",
+    "tuition": "HK$47,000",
+    "intake": 19,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 111,
+      "bandB": 99,
+      "bandC": 206,
+      "bandD": 314,
+      "bandE": 334,
+      "total": 1064
+    },
+    "offers2025": {
+      "bandA": 8,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 8
+    },
+    "facultyPhone": "+852 3917 1156"
+  },
+  "admissionsSnippet": "Bachelor of Journalism, Media &amp; AI Programme - School of Future Media About Welcome to the School of Future Media Director’s Message Divisions Journalism and Media Studies Centre Documentary and AI Filmmaking Global Creative Industries Scholarships History Contact Us Programme Undergraduate Bachelor of Journalism, Media &#038; AI Bachelor of Arts in Global Creative Industries Postgraduate Master of Arts in Creative AI Film &#038; Media Master of Journalism Master of Journalism – Documentary Filmmaking Specialisation Research Postgraduate People Faculty &#038; Staff Open Positions News &#038; Events News &#038; Events Newsletter Professional Learning Employment Prospects Internships JMSC network GCIN Industry Experiences Student Projects Capstone Videos Annie Lab Alumni ✕ Bachelor of Journalism, Media and Artificial Intelligence A technology-driven, communication-focused double-major curriculum for the digital age The Journalism and Media Studies Centre (division of the School of Future Media) seeks intellectually curious students with a passion for learning. If you are keen to question, to explore and to be challenged, we welcome your application. In a rapid changing world shaped by AI and digital media, the ability to tell accurate and in-depth stories is more crucial than ever. This double-major programme blends cutting-edge training in journalism, media and artificial intelligence with the flexibility to choose a second major in fields such as finance, computer science, psychology or the arts. Graduates emerge with deep knowledge in their chosen discipline and strong media skills, preparing them for a wide range of careers. The curriculum covers news reporting, video production, strategic communication and AI-powered storytelling, emphasising hands-on practice, ethical decision-making and real-world relevance. Small classes and close mentorship ensure each student is supported in building their own creative and professional pathway. Eliot Hall on The University of Hong Kong campus Industry &amp; Global Experience Gain real-world experience through a required professional internship at leading newsrooms, creative agencies, or media-tech companies. Apply your AI and multimedia storytelling skills to professional projects that connect theory with industry practice. Receive individual career guidance and mentorship from internationally experienced journalists and educators. Expand your global outlook through exchange programmes at more than 100 partner universities worldwide, including UC Berkeley, LSE, Sciences Po Paris, University of Edinburgh, and Tsinghua University. Learn in a multicultural, English-speaking environment at the heart of Asia. Graduate with industry-ready, globally informed skills for careers across journalism, media, and AI-driven communication. For admissions information, please contact: Admissions Office G14, Ground Floor, Main Building The University of Hong Kong Pok Fu Lam, Hong Kong Tel: +852 3917 5886 Email: admissions@hku.hk Website: https://aal.hku.hk/admissions/ For further information about the programme, please contact: Bachelor of Journalism, Media and Artificial Intelligence programme School of Future Media, Eliot Hall, The University of Hong Kong Pok Fu Lam, Hong Kong Tel: +852 3917 1156 Email: bjmsc.info@hku.hk Resources Internships and forms Recommended study plan (2025–2026) International student exchanges and forms BJMAI leaflet 2026-27 Regulations and Syllabuses Provision of feedback We believe that detailed and timely feedback on student assignments is a critical component of an active-learning environment founded on continuous assessment. Therefore, the School of Future Media requires course instructors to return all student work submitted for assessment, including weekly tutorial assignments, media projects and exams, to the student with written comments as well as a grade. Weekly tutorial assignments should be assessed and returned to students within one week of the submission deadline. Other assessment tasks such as exams or media projects should be returned to students with detailed comments within one month of submission. Feedback on oral presentations or group projects may be delivered orally or in writing. HKU School of Future Media Room 121, Eliot Hall, The University of Hong Kong, Pok Fu Lam, Hong Kong General enquiries: Tel: +852 3917 1155 Email: schofm@hku.hk Follow us Arrangements during bad weather : - The Tropical Cyclone Warning Signal No. 8 or above is in effect - The Black Rainstorm Signal is in effect - There are other severe weather conditions HKU students should refer to Guidelines for STUDENTS about classes and examinations Copyright © 2026 School of Future Media (香港大學未來媒體學院). All Rights Reserved."
+}

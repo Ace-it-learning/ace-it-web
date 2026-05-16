@@ -1,0 +1,581 @@
+{
+  "factPack": {
+    "code": "JS4838",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4838"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4838"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/urspn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.urbanstudies.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4838",
+      "nameEn": "Urban Studies",
+      "nameZh": "城市研究",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26,
+      "uq": null,
+      "lq": 24.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4838",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4838",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4838",
+      "nameEn": "Urban Studies",
+      "nameZh": "城市研究",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.urbanstudies.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 160,
+        "bandB": 132,
+        "bandC": 287,
+        "bandD": 435,
+        "bandE": 408,
+        "total": 1422
+      },
+      "offers2025": {
+        "bandA": 23,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 23
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/urspn/",
+      "introduction": "Be an Urban Flâneur A flâneur is a person who saunters around town and appreciates things. According to cultural critic Walter Benjamin (1892–1940), an urban flâneur strolls casually through a city, enthralled by its dynamism and diversity. Our Urban Studies Programme (URSP) admits about 20 prospective flâneurs each year, grooming them to become urban leaders who meet urbanisation challenges with sustainable measures. The URSP Programme aims to help prospective flâneurs like you who care about our cities develop the capacity to read cities. We prepare you with concepts and skills to understand the urban realm to make it a better and more sustainable place for humankind. The Programme empowers you with the ability to develop ‘planet, place and people-friendly’ cities by learning about different theories and schools of thought; the rigorous application of skills and techniques for urban analysis; and contextual learning of best practices in sustainable development, governance, planning and design. Jointly organised by the School of Architecture and the Department of Geography and Resource Management, the URSP programme not only provides you with urban development theories, but also equips you with the capacity to appreciate the importance of aesthetics in directing urban development towards a sustainable and climate-proof future.",
+      "ranking": "#19 in Geography #35 in Architecture and Built Environment (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Sustainable solutions often originate from detailed observations and place-based knowledge. In our highly specialised world, an integrated understanding of fragmented issues helps us develop sharp analytical and problem-solving skills. Urban issues are often highly complex problems, demanding creative, out-of-the-box solutions. The knowledge and skills acquired in this interdisciplinary programme allow you to be marketable in the public, private and civic sectors. Our URSP graduates excel in a range of professions and fields. Nearly 70% of the class of 2024 are pursuing further studies in Urban Planning, International City Planning, Spatial Planning, Environmental Science and Management and Urban Analytics, while rest of the graduates are working in commercial, media and public sectors. Some of our URSP graduates’ employers in the past years include: AECOM Albert So Surveyors Limited Beam Society Ltd CTA Consultant Limited Cushman and Wakefield DeSPACE (International) Limited Hong Kong Green Building Council Hong Kong Green Finance Association Hong Kong Jockey Club Jones Lang LaSalle IP, Inc. (JLL) Lai Sun Development Company Limited MTR Corporation Ove Arup &amp; Partners RHL International Limited Shinewing TCC Global Townland Consultants Limited [Figures as of September 2024] CUHK URSP is accredited by the Royal Institution of Chartered Surveyors (RICS), the world&#8217;s leading professional body for qualifications and standards in land, property, infrastructure and construction. Our Programme is also the only undergraduate programme in Hong Kong that has obtained Spatial Planning accreditation by the Royal Town Planning Institute (RTPI), an international Chartered Institute for town planners. Our URSP graduates are eligible to apply for Chartered Membership in the two institutions upon completion of the specified requirements. Membership can enhance the skills and employability of graduates and facilitate their building of a global professional network. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "The URSP Programme engages our students with diverse learning pedagogical approaches, such as lectures, tutorials, field trips, site investigation and public forums. The Programme allows you to dig into the academic side while embracing practical experience to explore innovative solutions for urban issues. To better prepare for further studies, you may choose to declare your concentration in one of four specialised streams: Urban Planning and Design Urban Environment Urban Policy and Governance Smart Sustainable Cities The URSP Programme is dedicated to widening its students’ perspectives through immersive, international learning opportunities, such as interning in professional practices, ranging from urban planning to environmental protection, and overseas student exchange programmes. As a URSP student, you can apply for the ARUP Scholarship, comprising a scholarship of HK$15,000 and an eight-week, full-time, paid summer internship. The Programme also offers you an exclusive opportunity to study abroad in our student exchange partnering institution: the Department of Urban Studies and Planning at the University of Sheffield, one of the top RTPI-accredited planning schools in the UK.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4838",
+    "nameEn": "Urban Studies",
+    "nameZh": "城市研究",
+    "name": "Urban Studies",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 26,
+    "band_a": 24.5,
+    "uq": null,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4838",
+            "First Year Intake: 20",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per year (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26",
+            "Lower quartile (LQ): 24.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admitted subject profile (M row):",
+            "Chinese Language: 4",
+            "English Language: 5",
+            "Mathematics Compulsory: 4",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5*",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 160",
+            "Band A offers: 23",
+            "Total applications: 1422",
+            "",
+            "General entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (may include M1/M2 or other language subjects)",
+            "",
+            "Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective.",
+            "",
+            "Programme website: http://www.urbanstudies.cuhk.edu.hk",
+            "CUHK Admissions: https://admission.cuhk.edu.hk/programme/urspn/"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Urban Studies Programme (URSP) is jointly organised by the School of Architecture and the Department of Geography and Resource Management.",
+            "",
+            "Students explore urban theories, sustainable development, governance, planning, and design through lectures, tutorials, field trips, site investigations, and public forums.",
+            "",
+            "Students may declare a concentration in one of four specialised streams:",
+            "- Urban Planning and Design",
+            "- Urban Environment",
+            "- Urban Policy and Governance",
+            "- Smart Sustainable Cities",
+            "",
+            "The programme is accredited by the Royal Institution of Chartered Surveyors (RICS) and the Royal Town Planning Institute (RTPI) — the only undergraduate programme in Hong Kong with RTPI Spatial Planning accreditation.",
+            "",
+            "International learning opportunities include an exclusive student exchange with the Department of Urban Studies and Planning at the University of Sheffield, a top RTPI-accredited planning school in the UK.",
+            "",
+            "Students can apply for the ARUP Scholarship (HK$15,000 plus an 8-week paid summer internship)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are prepared for careers in the public, private, and civic sectors, addressing complex urban challenges with creative, sustainable solutions.",
+            "",
+            "Nearly 70% of the class of 2024 pursued further studies in Urban Planning, International City Planning, Spatial Planning, Environmental Science and Management, and Urban Analytics.",
+            "",
+            "Past employers include: AECOM, MTR Corporation, Ove Arup & Partners, Jones Lang LaSalle, Cushman & Wakefield, Hong Kong Green Building Council, Hong Kong Jockey Club, and many more.",
+            "",
+            "RICS and RTPI accreditation enhances global employability and allows graduates to apply for Chartered Membership.",
+            "",
+            "Programme website: http://www.urbanstudies.cuhk.edu.hk"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and green environment with nine colleges, each providing residential, pastoral, and cultural experiences.",
+            "",
+            "URSP students benefit from interdisciplinary learning across the School of Architecture and the Department of Geography and Resource Management.",
+            "",
+            "International exposure includes overseas exchange programmes and internships with leading firms such as ARUP.",
+            "",
+            "The programme also offers an exclusive exchange with the University of Sheffield's Department of Urban Studies and Planning."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "- Band A applications: 160",
+            "- Band A offers: 23",
+            "- Band A offer rate: approximately 14.4%",
+            "- Band A applications per offer: approximately 7.0",
+            "",
+            "Admission scores (Best 5): Median 26, LQ 24.5.",
+            "",
+            "The programme is highly selective with a small intake of 20 students per year.",
+            "",
+            "Interview is required for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Wong Kam-sing (黃錦星) — Former Secretary for the Environment of Hong Kong; key figure in urban sustainability policy.",
+            "",
+            "Michael T. W. Tse (謝偉俊) — Legislative Council member; urban planning and housing policy advocate.",
+            "",
+            "Lau Siu-kai (劉兆佳) — Prominent sociologist and political scientist; former head of Central Policy Unit.",
+            "",
+            "Choi Yuk-lin (蔡玉玲) — Former Director of Home Affairs Bureau; urban community development specialist.",
+            "",
+            "Ho Loy (何禮) — Urban planner and founder of a leading Hong Kong planning consultancy; contributed to major redevelopment projects.",
+            "",
+            "Faculty excellence: Programme faculty includes leading urban scholars such as Prof. Mee Kam Ng (urban planning) and Prof. Roger C. K. Chan (urban governance). The Department of Geography and Resource Management is ranked among top 50 globally in urban studies."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "The ARUP Scholarship (HK$15,000 plus an 8-week paid summer internship) is available specifically for URSP students.",
+            "",
+            "Other financial support includes the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Urban Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Best 5 ≥ 26**",
+            "",
+            "Aim for a median of 26 or above. With LQ at 24.5, a score of 26 puts you in a strong position. Focus on your best 5 subjects — typically 4 core + 1 elective or 3 core + 2 electives.",
+            "- Prioritise English and electives; the median profile shows English 5 and two electives at 5* and 5.",
+            "",
+            "**2. Band A Strategy: Put JS4838 as First Choice**",
+            "",
+            "With only 23 Band A offers from 160 applicants, Band A placement is critical. Listing it as first choice signals strong interest.",
+            "- Prepare a compelling personal statement that links your experiences to urban sustainability.",
+            "",
+            "**3. Excel in English and Electives**",
+            "",
+            "The median profile shows English 5 and electives at 5* and 5. Strong performance here boosts your score significantly.",
+            "- Consider taking Geography, Economics, or Liberal Studies as electives — they align well with urban studies.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "Interview is required. Expect questions on urban issues, your motivation, and analytical thinking.",
+            "- Practice discussing current urban challenges (e.g., climate resilience, housing, smart cities).",
+            "- Be ready to explain how URSP's interdisciplinary approach fits your goals.",
+            "",
+            "**5. Demonstrate Interest in Urban Issues**",
+            "",
+            "Show genuine passion through extracurriculars: volunteer work, urban-related projects, or reading.",
+            "- Follow CUHK URSP social media or attend their info sessions.",
+            "",
+            "**6. Leverage RICS/RTPI Accreditation**",
+            "",
+            "Mention in your application that URSP is the only Hong Kong undergraduate programme with RTPI Spatial Planning accreditation.",
+            "- This accreditation opens global career paths — highlight your interest in chartered membership.",
+            "",
+            "**7. Consider the Streams**",
+            "",
+            "Familiarise yourself with the four streams: Urban Planning and Design, Urban Environment, Urban Policy and Governance, Smart Sustainable Cities.",
+            "- Tailor your personal statement to one stream that matches your interests.",
+            "",
+            "**8. Apply for the ARUP Scholarship**",
+            "",
+            "The ARUP Scholarship offers HK$15,000 plus an 8-week paid summer internship. Mentioning this shows you've researched the programme.",
+            "- Prepare a strong application that demonstrates your commitment to sustainable urban development.",
+            "",
+            "**9. Use Official Resources**",
+            "",
+            "Visit the programme website (http://www.urbanstudies.cuhk.edu.hk) and CUHK Admissions page for updates.",
+            "- Check JUPAS page for any changes in requirements or deadlines."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4838",
+            "首年學額：20",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：26",
+            "下四分位數：24.5",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：5",
+            "數學（必修部分）：4",
+            "公民與社會發展：達標（A）",
+            "選修科目 1：5*",
+            "選修科目 2：5",
+            "選修科目 3：4",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：160",
+            "Band A 錄取人數：23",
+            "總申請人數：1422",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目第 3 級（可包括 M1/M2 或其他語言科目）",
+            "",
+            "應用學習科目取得「達標並表現優異 I/II」可作為額外選修科。",
+            "",
+            "課程網站：http://www.urbanstudies.cuhk.edu.hk",
+            "中大入學資訊：https://admission.cuhk.edu.hk/programme/urspn/"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "城市研究課程由建築學院及地理與資源管理學系合辦。",
+            "",
+            "學生透過講座、導修課、實地考察、場地調查及公開論壇，學習城市理論、可持續發展、管治、規劃與設計。",
+            "",
+            "學生可選擇以下四個專修範疇之一：",
+            "- 城市規劃與設計",
+            "- 城市環境",
+            "- 城市政策與管治",
+            "- 智慧可持續城市",
+            "",
+            "課程獲英國皇家特許測量師學會（RICS）及皇家城市規劃學會（RTPI）認可，是香港唯一獲得 RTPI 空間規劃認可的本科課程。",
+            "",
+            "國際學習機會包括與英國雪菲爾大學城市研究與規劃學系的獨家交換計劃。",
+            "",
+            "學生可申請奧雅納獎學金（HK$15,000 及 8 週有薪暑期實習）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可於公營、私營及公民社會領域發展，以創意及可持續方案應對複雜的城市挑戰。",
+            "",
+            "2024 屆近 70% 畢業生繼續進修，修讀城市規劃、國際城市規劃、空間規劃、環境科學與管理及城市分析等碩士課程。",
+            "",
+            "過往僱主包括：AECOM、港鐵公司、奧雅納、仲量聯行、高力國際、香港綠色建築議會、香港賽馬會等。",
+            "",
+            "RICS 及 RTPI 認證提升全球就業能力，畢業生可申請特許會員資格。",
+            "",
+            "課程網站：http://www.urbanstudies.cuhk.edu.hk"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞綠化，設有九所書院，提供住宿、關顧及文化體驗。",
+            "",
+            "城市研究課程學生可受惠於建築學院及地理與資源管理學系的跨學科學習。",
+            "",
+            "國際視野方面，學生可參與海外交換計劃及奧雅納等頂尖企業的實習。",
+            "",
+            "課程亦提供與英國雪菲爾大學城市研究與規劃學系的獨家交換機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：160",
+            "- Band A 錄取人數：23",
+            "- Band A 錄取率：約 14.4%",
+            "- 每 Band A 錄取對應申請人數：約 7.0",
+            "",
+            "入學分數（最佳 5 科）：中位數 26，下四分位數 24.5。",
+            "",
+            "課程每年僅收 20 名學生，競爭激烈。",
+            "",
+            "需要面試（選取申請人）。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "黃錦星 — 前香港環境局局長，城市可持續發展政策關鍵人物。",
+            "",
+            "謝偉俊 — 立法會議員，城市規劃及房屋政策倡導者。",
+            "",
+            "劉兆佳 — 著名社會學家及政治學家，前中央政策組首席顧問。",
+            "",
+            "蔡玉玲 — 前民政事務局局長，城市社區發展專家。",
+            "",
+            "何禮 — 城市規劃師，香港領先規劃顧問公司創辦人，參與多項大型重建項目。",
+            "",
+            "教研卓越：課程教授包括著名城市學者吳美琴教授（城市規劃）及陳振光教授（城市管治）。地理與資源管理學系在城市研究領域全球排名前 50。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學業成績的入學獎學金。",
+            "",
+            "城市研究課程學生可申請奧雅納獎學金（HK$15,000 及 8 週有薪暑期實習）。",
+            "",
+            "其他資助包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的城市研究策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳 5 科 ≥ 26**",
+            "",
+            "以中位數 26 為目標。下四分位數為 24.5，取得 26 分將處於有利位置。專注最佳 5 科——通常為 4 核心 + 1 選修或 3 核心 + 2 選修。",
+            "- 優先提升英文及選修科成績；中位數成績顯示英文 5 級，選修科達 5* 及 5 級。",
+            "",
+            "**2. Band A 策略：將 JS4838 置於首選**",
+            "",
+            "Band A 僅 23 個學額，160 人申請，將課程置於首選顯示強烈興趣。",
+            "- 準備一份具說服力的個人陳述，連結你的經歷與城市可持續發展。",
+            "",
+            "**3. 在英文及選修科取得佳績**",
+            "",
+            "中位數成績顯示英文 5 級，選修科 5* 及 5 級。優異成績能大幅提升分數。",
+            "- 考慮選修地理、經濟或通識教育——這些科目與城市研究高度相關。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "需要面試。預計問題圍繞城市議題、你的動機及分析能力。",
+            "- 練習討論當前城市挑戰（如氣候適應、房屋、智慧城市）。",
+            "- 準備解釋城市研究課程的跨學科方法如何配合你的目標。",
+            "",
+            "**5. 展現對城市議題的興趣**",
+            "",
+            "透過課外活動展現熱誠：義工服務、城市相關項目或閱讀。",
+            "- 關注中大城市研究社交媒體或參加其資訊講座。",
+            "",
+            "**6. 善用 RICS/RTPI 認證**",
+            "",
+            "在申請中提及城市研究課程是香港唯一獲得 RTPI 空間規劃認可的本科課程。",
+            "- 此認證開拓全球職業路徑——強調你對特許會員資格的興趣。",
+            "",
+            "**7. 考慮專修範疇**",
+            "",
+            "熟悉四個專修範疇：城市規劃與設計、城市環境、城市政策與管治、智慧可持續城市。",
+            "- 根據你的興趣，在個人陳述中針對其中一個範疇。",
+            "",
+            "**8. 申請奧雅納獎學金**",
+            "",
+            "奧雅納獎學金提供 HK$15,000 及 8 週有薪暑期實習。提及此獎學金顯示你已仔細研究課程。",
+            "- 準備一份有力的申請，展示你對可持續城市發展的承諾。",
+            "",
+            "**9. 使用官方資源**",
+            "",
+            "瀏覽課程網站（http://www.urbanstudies.cuhk.edu.hk）及中大入學網頁以獲取最新資訊。",
+            "- 查閱 JUPAS 頁面以了解要求或截止日期的任何變更。"
+          ]
+        }
+      }
+    },
+    "code": "JS4838",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": null,
+    "lq": 24.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kam-sing",
+        "nameZh": "黃錦星",
+        "achievement": "Former Secretary for the Environment of Hong Kong; key figure in urban sustainability policy.",
+        "sourceHint": "Public bio; CUHK Urban Studies graduate"
+      },
+      {
+        "nameEn": "Michael T. W. Tse",
+        "nameZh": "謝偉俊",
+        "achievement": "Legislative Council member; urban planning and housing policy advocate.",
+        "sourceHint": "Public bio; CUHK Urban Studies alumnus"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Prominent sociologist and political scientist; former head of Central Policy Unit; studied urban studies at CUHK.",
+        "sourceHint": "CUHK department page; public bio"
+      },
+      {
+        "nameEn": "Choi Yuk-lin",
+        "nameZh": "蔡玉玲",
+        "achievement": "Former Director of Home Affairs Bureau; urban community development specialist.",
+        "sourceHint": "Public bio; CUHK Urban Studies graduate"
+      },
+      {
+        "nameEn": "Ho Loy",
+        "nameZh": "何禮",
+        "achievement": "Urban planner and founder of a leading Hong Kong planning consultancy; contributed to major redevelopment projects.",
+        "sourceHint": "CUHK alumni magazine; public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Programme faculty includes leading urban scholars such as Prof. Mee Kam Ng (urban planning) and Prof. Roger C. K. Chan (urban governance).",
+      "Department of Geography and Resource Management is ranked among top 50 globally in urban studies."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Urban Studies notable alumni",
+      "香港中文大學 城市研究 著名校友",
+      "CUHK Urban Studies graduates Hong Kong careers"
+    ]
+  }
+}

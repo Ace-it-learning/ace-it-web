@@ -25,6 +25,8 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
+import { fetchWithAuth } from '../../utils/apiAuth';
+import { apiUrl } from '../../utils/apiBase';
 import { useAvatar } from '../../context/AvatarContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import { isCheatEnabled } from '../../utils/devAccess';
@@ -387,7 +389,10 @@ const WritingMockStudio = () => {
             };
 
             setSubmissionProgress(50);
-            const res = await fetch(`${API_BASE}/api/english/mock/writing/submit`, {
+            const submitUrl = API_BASE
+                ? `${API_BASE}/api/english/mock/writing/submit`
+                : apiUrl('/api/english/mock/writing/submit');
+            const res = await fetchWithAuth(user, submitUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
@@ -412,11 +417,18 @@ const WritingMockStudio = () => {
                 }, 1000);
             } else {
                 let detail = '';
+                let userMsg = `Submission failed (${res.status}). Check that the API is running and try again.`;
                 try {
                     detail = await res.text();
+                    try {
+                        const asJson = JSON.parse(detail);
+                        if (asJson && typeof asJson.error === 'string' && asJson.error.trim()) {
+                            userMsg = `Submission failed (${res.status}): ${asJson.error}`;
+                        }
+                    } catch (_) { /* not JSON */ }
                 } catch (_) { /* ignore */ }
                 console.error('Writing submit failed', res.status, detail);
-                alert(`Submission failed (${res.status}). Check that the API is running and try again.`);
+                alert(userMsg);
                 setIsSubmitting(false);
             }
         } catch (err) {

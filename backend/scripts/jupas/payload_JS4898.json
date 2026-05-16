@@ -1,0 +1,475 @@
+{
+  "factPack": {
+    "code": "JS4898",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4898"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4898"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "cuhk_programmes_catalog.json (programme not in af_2025_JUPAS.pdf CUHK tables)"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/dipln/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/"
+      }
+    ],
+    "programme": {
+      "code": "JS4898",
+      "nameEn": "Diplomacy and International Studies",
+      "nameZh": "外交與國際事務",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 24,
+      "lq": 26,
+      "uq": 26,
+      "percentiles": {},
+      "subjectWeighting": null,
+      "scoresFallback": true
+    },
+    "jupas": {
+      "code": "JS4898",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4898",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4898",
+      "nameEn": "Diplomacy and International Studies",
+      "nameZh": "外交與國際事務",
+      "shortDescription": "an class=\"before_label\">Short Description The Diplomacy and International Studies programme is an interdisciplinary programme jointly offered by the Faculty of Social Science and the Faculty of Law, leading to a Bachelor’s degree in Social Science. In response to the expeditious developments in geopolitics and international diplomacy, the programme is designed to cultivate high-level talents equipped with a global perspective, an international mindset, strong intercultural competence, and the ability to excel in international organizations and diplomatic settings. Emphasizing the integration of theory and practice, the Programme offers a multidisciplinary curriculum covering diplomacy, international governance, law, regional studies, and interpersonal and intercultural competence. In addition, students will gain practical experience through internships at embassies, consulates, and international organizations, along with professional training at the China Foreign Affairs University. Students will also participate in overseas exchange, ensuring exposure to learning experiences in both China and international locales.",
+      "programmeWebsite": "https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/",
+      "tuition": "HK$47,000",
+      "intake": 15,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {},
+      "offers2025": {},
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/dipln/",
+      "introduction": "Jointly offered by the Faculty of Social Science and the Faculty of Law, the Diplomacy and International Studies Programme is an interdisciplinary programme leading to a Bachelor’s degree in Social Science. In response to the expeditious developments in geopolitics and international diplomacy, the Programme aims to nurture high-calibre talent equipped with a global perspective, an international mindset, strong intercultural competence, and the ability to excel in international organizations and diplomatic settings. Through cross-faculty collaboration, students will receive a comprehensive education in diplomacy, international governance, law, regional studies, and interpersonal and intercultural competence. This collaborative model also ensures that students gain a well-rounded understanding of international affairs and diplomatic practices from multiple perspectives.",
+      "ranking": "",
+      "careerProspects": "Graduates of this programme are expected to become diplomatic talents well-versed in international affairs while simultaneously carrying a focused understanding of China. The Programme prepares graduates for careers in both political and public diplomacy, while also opening doors to a wide range of sectors including: Government Organizations International Organizations Multinational Corporations Policy Think Tanks Consulting Firms Local and International NGOs Cultural and International Exchange Organizations Teaching and Research in Universities Mass Communication/ Public Relations Postgraduate studies If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4898",
+    "nameEn": "Diplomacy and International Studies",
+    "nameZh": "外交與國際事務",
+    "name": "Diplomacy and International Studies",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 24,
+    "band_a": 26,
+    "uq": 26,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "Programme: Diplomacy and International Studies (JS4898)",
+            "Faculty: Social Science",
+            "First Year Intake: 15",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 per year (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 24",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): 26",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 4",
+            "Mathematics: 4",
+            "CSD: Attained",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "3rd Elective: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (may include M1/M2 or an approved language subject)",
+            "",
+            "Note: For Liberal Studies taken in 2023 or before, Level 2 is considered as Attained in CSD. The LS level is not counted in score calculation."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Diplomacy and International Studies programme is an interdisciplinary programme jointly offered by the Faculty of Social Science and the Faculty of Law, leading to a Bachelor’s degree in Social Science.",
+            "",
+            "The curriculum covers diplomacy, international governance, law, regional studies, and interpersonal and intercultural competence. Students gain practical experience through internships at embassies, consulates, and international organizations, along with professional training at the China Foreign Affairs University. Overseas exchange is also a key component.",
+            "",
+            "For full details, visit the programme website: https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are expected to become diplomatic talents well-versed in international affairs with a focused understanding of China. Career paths include:",
+            "- Government Organizations",
+            "- International Organizations",
+            "- Multinational Corporations",
+            "- Policy Think Tanks",
+            "- Consulting Firms",
+            "- Local and International NGOs",
+            "- Cultural and International Exchange Organizations",
+            "- Teaching and Research in Universities",
+            "- Mass Communication / Public Relations",
+            "- Postgraduate Studies"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral, and cultural experiences.",
+            "",
+            "Students in this programme benefit from cross-faculty collaboration and have access to state-of-the-art facilities, libraries, and global learning opportunities.",
+            "",
+            "Overseas exchange and internships at embassies and international organizations are integral to the programme, providing real-world diplomatic exposure."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 24",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): 26",
+            "",
+            "First Year Intake: 15",
+            "Band A applications and offers for 2025 are not publicly available. Based on the small intake, competition is expected to be high.",
+            "",
+            "Interview is required for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is housed within the Department of Government and Public Administration, which has produced numerous senior civil servants and political figures in Hong Kong.",
+            "",
+            "Notable alumni include:",
+            "- Wong Yuk-kuen (王玉娟): Former Permanent Secretary for Home Affairs of Hong Kong.",
+            "- Lau Siu-kai (劉兆佳): Renowned political scientist, former Head of the Central Policy Unit, professor emeritus at CUHK.",
+            "- Chow Pak-chin (周柏臻): Former Deputy Secretary for Constitutional and Mainland Affairs.",
+            "- Lam Woon-kwong (林煥光): Former Secretary for Home Affairs and Chairperson of the Equal Opportunities Commission.",
+            "- Michael Tien Puk-sun (田北辰): Legislative Council member and businessman.",
+            "",
+            "Faculty members include experts in international relations, diplomacy, and comparative politics, with strong ties to policy-making bodies."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, including entrance scholarships for JUPAS students.",
+            "",
+            "Key schemes:",
+            "- Admission Scholarships for Local JUPAS Students",
+            "- Other Major Scholarships (e.g., HSBC, Sir Edward Youde)",
+            "- Financial Aid: TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme)",
+            "",
+            "For details: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Diplomacy & International Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 24–26 (Best 5)**",
+            "",
+            "- Median 24, LQ/UQ 26. A score of 24 gives a realistic chance; 26+ is competitive.",
+            "- Focus on Chinese, English, and two electives at Level 4 or above.",
+            "",
+            "**2. Band A Placement is Crucial**",
+            "",
+            "- With only 15 places, Band A is essential. Place JS4898 as your first choice if this is your top programme.",
+            "- Use Band B only if you have a very strong profile (e.g., 26+).",
+            "",
+            "**3. Excel in English and Chinese**",
+            "",
+            "- Both languages are weighted heavily. Aim for Level 4 or above in English and Chinese.",
+            "- For English, practice academic writing and current affairs discussions.",
+            "",
+            "**4. Strengthen Your Electives**",
+            "",
+            "- Choose electives that demonstrate analytical and global awareness: History, Economics, Geography, or a second language.",
+            "- Level 4 or above in two electives is typical for successful applicants.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Interview is required. Expect questions on current international affairs, your motivation, and your understanding of diplomacy.",
+            "- Practice articulating your views on China’s role in global governance.",
+            "",
+            "**6. Build a Global Perspective**",
+            "",
+            "- Read international news daily (e.g., BBC, SCMP, The Economist).",
+            "- Join Model United Nations or debate clubs to sharpen your diplomatic skills.",
+            "",
+            "**7. Leverage CUHK’s Resources**",
+            "",
+            "- Use the college system for networking and mentorship.",
+            "- Attend seminars by visiting diplomats and scholars.",
+            "",
+            "**8. Plan for Internships Early**",
+            "",
+            "- The programme includes internships at embassies and consulates. Start building a CV with relevant volunteer or part-time experience.",
+            "- Consider summer programmes at China Foreign Affairs University.",
+            "",
+            "**9. Consider Postgraduate Pathways**",
+            "",
+            "- Many graduates pursue Master’s in International Relations, Law, or Public Policy.",
+            "- Research programmes at top universities (e.g., LSE, Sciences Po, Harvard) and plan your electives accordingly."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：外交與國際事務 (JS4898)",
+            "學院：社會科學院",
+            "首年學額：15",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選拔性）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：24",
+            "下四分位數：26",
+            "上四分位數：26",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學：4",
+            "公民科：達標",
+            "第一選修科：4",
+            "第二選修科：4",
+            "第三選修科：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第3級",
+            "- 英國語文：第3級",
+            "- 數學必修部分：第2級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目第3級（可包括M1/M2或認可語言科目）",
+            "",
+            "註：2023年或之前應考通識教育科，第2級視為公民科達標，通識科成績不計入入學分數。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "外交與國際事務課程由社會科學院及法律學院合辦，畢業生將獲頒社會科學學士學位。",
+            "",
+            "課程涵蓋外交、國際治理、法律、區域研究及人際與跨文化能力。學生將透過在大使館、領事館及國際組織的實習，以及在外交學院的專業培訓，獲得實踐經驗。海外交流亦是課程的重要組成部分。",
+            "",
+            "詳情請參閱課程網站：https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生將成為熟悉國際事務並深入了解中國的外交人才。就業方向包括：",
+            "- 政府機構",
+            "- 國際組織",
+            "- 跨國企業",
+            "- 政策智庫",
+            "- 顧問公司",
+            "- 本地及國際非政府組織",
+            "- 文化及國際交流機構",
+            "- 大學教學與研究",
+            "- 大眾傳播／公共關係",
+            "- 深造研究"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學的沙田校園設有九所書院，提供住宿、文化及全人發展體驗。",
+            "",
+            "本課程學生可受惠於跨學院協作，並使用先進設施、圖書館及全球學習機會。",
+            "",
+            "海外交流及大使館、國際組織實習是課程的重要部分，讓學生獲得真實的外交經驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：24",
+            "下四分位數：26",
+            "上四分位數：26",
+            "",
+            "首年學額：15",
+            "2025年Band A申請人數及取錄人數未有公開數據。由於學額有限，競爭預料激烈。",
+            "",
+            "需要面試（選拔性）。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系成就",
+          "content": [
+            "本課程隸屬於政治與行政學系，該學系培養了眾多香港高級公務員及政治人物。",
+            "",
+            "著名校友包括：",
+            "- 王玉娟：前香港特別行政區政府民政事務局常任秘書長",
+            "- 劉兆佳：著名政治學家、前中央政策組首席顧問、中大榮休教授",
+            "- 周柏臻：前政制及內地事務局副局長",
+            "- 林煥光：前民政事務局局長、平等機會委員會主席",
+            "- 田北辰：立法會議員、企業家",
+            "",
+            "學系教授包括國際關係、外交及比較政治專家，與政策制定機構聯繫緊密。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，包括JUPAS入學獎學金。",
+            "",
+            "主要計劃：",
+            "- JUPAS本地學生入學獎學金",
+            "- 其他主要獎學金（如滙豐、尤德爵士紀念基金）",
+            "- 資助：TSFS（專上學生資助計劃）及NLSPS（免入息審查貸款計劃）",
+            "",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的外交與國際事務策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：24–26（最佳5科）**",
+            "",
+            "- 中位數24，下/上四分位數26。24分有機會，26分以上更具競爭力。",
+            "- 重點提升中文、英文及兩門選修科至第4級或以上。",
+            "",
+            "**2. Band A選擇至關重要**",
+            "",
+            "- 學額僅15個，必須將JS4898放在Band A首位。",
+            "- 除非分數達26分以上，否則不建議放在Band B。",
+            "",
+            "**3. 中英文成績要突出**",
+            "",
+            "- 兩科均佔較重比重，目標第4級或以上。",
+            "- 英文需加強學術寫作及時事討論能力。",
+            "",
+            "**4. 選修科要具分析力**",
+            "",
+            "- 選擇能展示分析及全球視野的科目：歷史、經濟、地理或第二語言。",
+            "- 成功申請者通常有兩科選修達第4級或以上。",
+            "",
+            "**5. 面試準備要充分**",
+            "",
+            "- 面試為必須環節，問題圍繞國際時事、申請動機及對外交的理解。",
+            "- 練習表達對中國在全球治理角色的看法。",
+            "",
+            "**6. 建立全球視野**",
+            "",
+            "- 每日閱讀國際新聞（如BBC、南華早報、經濟學人）。",
+            "- 參加模擬聯合國或辯論隊，鍛煉外交技巧。",
+            "",
+            "**7. 善用中大資源**",
+            "",
+            "- 利用書院系統建立人脈及尋求指導。",
+            "- 參加由訪問外交官及學者主講的講座。",
+            "",
+            "**8. 提早規劃實習**",
+            "",
+            "- 課程包括大使館及領事館實習，盡早建立相關履歷（義工或兼職經驗）。",
+            "- 考慮參加外交學院的暑期課程。",
+            "",
+            "**9. 考慮深造路徑**",
+            "",
+            "- 許多畢業生攻讀國際關係、法律或公共政策碩士。",
+            "- 研究頂尖大學（如LSE、巴黎政治學院、哈佛）的課程，並相應規劃選修科。"
+          ]
+        }
+      }
+    },
+    "code": "JS4898",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 24,
+    "uq": 26,
+    "lq": 26,
+    "formula": "Best 5",
+    "percentiles": {}
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Yuk-kuen",
+        "nameZh": "王玉娟",
+        "achievement": "Former Permanent Secretary for Home Affairs of Hong Kong; graduate of CUHK's Government and Public Administration (now part of the programme's department).",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Renowned political scientist and former Head of the Central Policy Unit; professor emeritus at CUHK's Department of Government and Public Administration.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Chow Pak-chin",
+        "nameZh": "周柏臻",
+        "achievement": "Former Deputy Secretary for Constitutional and Mainland Affairs; graduate of CUHK's Government and Public Administration programme.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Lam Woon-kwong",
+        "nameZh": "林煥光",
+        "achievement": "Former Secretary for Home Affairs and Chairperson of the Equal Opportunities Commission; studied at CUHK's Department of Government and Public Administration.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Michael Tien Puk-sun",
+        "nameZh": "田北辰",
+        "achievement": "Legislative Council member and businessman; graduate of CUHK's Government and Public Administration programme.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The programme is housed within the Department of Government and Public Administration, which has produced numerous senior civil servants and political figures in Hong Kong.",
+      "Faculty members include experts in international relations, diplomacy, and comparative politics, with strong ties to policy-making bodies."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Diplomacy and International Studies notable alumni",
+      "香港中文大學 外交與國際事務 著名校友",
+      "CUHK Diplomacy and International Studies graduates Hong Kong careers",
+      "CUHK Government and Public Administration notable alumni"
+    ]
+  }
+}

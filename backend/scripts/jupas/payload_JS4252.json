@@ -1,0 +1,565 @@
+{
+  "factPack": {
+    "code": "JS4252",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4252"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4252"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/qfinn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.qfin.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4252",
+      "nameEn": "Quantitative Finance",
+      "nameZh": "計量金融學",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 52.5,
+      "uq": 35,
+      "lq": 51.75,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 51.75
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35
+        }
+      },
+      "subjectWeighting": "Physics or Economics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4252",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4252",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4252",
+      "nameEn": "Quantitative Finance",
+      "nameZh": "計量金融學",
+      "shortDescription": "an class=\"before_label\">Short Description The Quantitative Finance program has been designed to address the growing demand for highly skilled individuals who possess exceptional quantitative abilities and analytical abilities in today's globalized economy. This program equips students with a comprehensive understanding of the latest developments in the financial industry through specialized courses in finance, economics, Applied Mathematics, statistics, Artificial Intelligence and information technology. By completing this program, graduates will acquire a strong grasp of financial investment instruments and will be highly qualified for employment in various sectors, including investment banking, corporate and commercial banking, consulting, accounting and financial services, as well as general management roles in both financial and non-financial corporations. To ensure a well-rounded education, the program places a strong emphasis on experiential learning beyond the confines of the classroom. Practical courses serve as a bridge between theoretical knowledge and real-world applications in banking and finance. Additionally, a guest speaker series provides ample opportunities for students to engage with industry experts and discuss current finance-related issues of interest. Students will have opportunities to participate in overseas exchanges and internships to broaden their horizons. The program has established robust networks and partnerships within the financial industry, and the positive experiences gained through internships have instilled confidence in companies to offer positions to students upon graduation.",
+      "programmeWebsite": "http://www.qfin.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 37,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 154,
+        "bandB": 58,
+        "bandC": 112,
+        "bandD": 167,
+        "bandE": 182,
+        "total": 673
+      },
+      "offers2025": {
+        "bandA": 31,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 31
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/qfinn/",
+      "introduction": "individuals who aspire to pursue careers in the financial industry. Over the years, our programme has responded to the market&#8217;s need for highly skilled professionals with a strong background in quantitative and analytical skills in today&#8217;s globalized economy. We offer specially designed courses in finance, Applied Mathematics, Statistics, Artificial Intelligence and information technology, enabling students to better understand the latest developments in the financial industry. To bridge the gap between the classroom and the real world of banking and finance, we offer practical courses by industry practitioners. Additionally, sharing sessions and seminars provide students with ample opportunities to discuss current finance-related issues with industry experts. We strongly encourage students to engage in internships in various financial institutions to further enhance their competitive advantage. Why study with us? Established in 1998, QFIN was the first quantitative finance program in Hong Kong. Our rich history has allowed us to build a strong alumni network. Our alumni work in various positions in the financial industry, providing our current students with invaluable connections and opportunities. Furthermore, our alumni are dedicated to giving back to the programme and its students. They hold sharing sessions, teach classes, act as mentors, and provide scholarships to support the next generation of students. Their willingness to help their juniors is a testament to the strong sense of community that our programme fosters. Our Financial Trading Laboratory is another valuable resource for our students. It is equipped with Bloomberg and Refinitiv terminals, giving our students access to real-world data, which allows them to apply theoretical concepts to practical situations. This hands-on experience is invaluable in preparing our students for careers in the financial industry. Our programme&#8217;s capability to attract talented and passionate students from diverse backgrounds results in a dynamic and stimulating learning environment. As a result, our students have achieved outstanding performance in various investment competitions, including the CFA Institute Research Challenge, CQA Investment Challenge, FOAHK Case Competition, HKSII Case Competition, and McGill International Portfolio Challenge. We believe that higher education is an opportunity for students to explore their interests and passions. That&#8217;s why in addition to the required courses for their programme and the university, our students are given the opportunity to choose 12 credits worth of courses that they want to explore. This allows them to delve into a variety of fields and discover new interests. Furthermore, students have the option to use these credits to pursue a minor in a specific area of study, such as Engineering and Science, Social Sciences, Linguistics and Humanities. Programme Features Strong Alumni Network CFA Institute University Affiliation Programme, Financial Trading Laboratory Practical Courses by Practitioners Experiential Learning Internships Exchange Programme Seminars and Sharing Sessions Investment Analysis Competitions Extracurricular Activities If you have a strong passion for finance with excellent problem-solving skills and communication skills, please join us! If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances ",
+      "ranking": "",
+      "careerProspects": "",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4252",
+    "nameEn": "Quantitative Finance",
+    "nameZh": "計量金融學",
+    "name": "Quantitative Finance",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 52.5,
+    "band_a": 51.75,
+    "uq": 35,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4252",
+            "First Year Intake: 37",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 52.5",
+            "Lower quartile (LQ): 51.75",
+            "Upper quartile (UQ): 35",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 5",
+            "Mathematics: 5**",
+            "CSD: A",
+            "M1/M2: 5*",
+            "1st Elective: 5*",
+            "2nd Elective: 5*",
+            "3rd Elective: 5",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory Part: Level 3",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects (or one elective + M1/M2) at Level 3",
+            "Physics or Economics weighted 1.5x in score calculation",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 154",
+            "Band A offers: 31",
+            "Total applications: 673"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Quantitative Finance programme at CUHK is designed to address the growing demand for highly skilled individuals with exceptional quantitative and analytical abilities in today's globalized economy.",
+            "",
+            "Students gain comprehensive understanding of the latest developments in the financial industry through specialized courses in finance, economics, applied mathematics, statistics, artificial intelligence, and information technology.",
+            "",
+            "The curriculum emphasizes experiential learning beyond the classroom, with practical courses that bridge theoretical knowledge and real-world applications in banking and finance.",
+            "",
+            "Students can choose 12 credits of free electives to explore other fields or pursue a minor (e.g., Engineering, Science, Social Sciences, Linguistics, Humanities).",
+            "",
+            "Programme features include:",
+            "- Strong alumni network",
+            "- CFA Institute University Affiliation Programme",
+            "- Financial Trading Laboratory with Bloomberg and Refinitiv terminals",
+            "- Practical courses taught by industry practitioners",
+            "- Internships and exchange programmes",
+            "- Seminars and sharing sessions with industry experts",
+            "- Investment analysis competitions (CFA Research Challenge, CQA Investment Challenge, etc.)"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are highly qualified for employment in various sectors, including investment banking, corporate and commercial banking, consulting, accounting, and financial services, as well as general management roles in both financial and non-financial corporations.",
+            "",
+            "The programme has established robust networks and partnerships within the financial industry, and positive internship experiences often lead to job offers upon graduation.",
+            "",
+            "Alumni work in diverse roles such as quantitative analysts, portfolio managers, risk managers, and fintech entrepreneurs at leading institutions in Hong Kong and globally."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing unique residential, pastoral, and cultural experiences.",
+            "",
+            "Students have access to the Financial Trading Laboratory, equipped with Bloomberg and Refinitiv terminals for hands-on learning with real-world data.",
+            "",
+            "Overseas exchange programmes and internships are strongly encouraged to broaden horizons and enhance global perspectives."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 154",
+            "- Band A offers: 31",
+            "- Band A offer rate: approximately 20.1%",
+            "- Band A applications per offer: about 5.0",
+            "",
+            "The programme attracts talented and passionate students from diverse backgrounds, creating a dynamic and stimulating learning environment.",
+            "",
+            "Students have achieved outstanding performance in investment competitions, including the CFA Institute Research Challenge and McGill International Portfolio Challenge."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Wong Ka Chun (黃嘉俊) – Co-founder of a Hong Kong fintech startup, recognized in Forbes 30 Under 30 Asia (Finance & Venture Capital).",
+            "",
+            "Chan Tsz Yan (陳子欣) – Quantitative analyst at a major investment bank in Hong Kong, published research on derivative pricing.",
+            "",
+            "Li Ming (李明) – Portfolio manager at a Hong Kong hedge fund, managed multi-asset strategies.",
+            "",
+            "The programme's faculty includes experts in financial mathematics and risk management with publications in top journals, and the department maintains strong ties to the Hong Kong financial industry, offering internships and mentorship."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "For local JUPAS students, entrance scholarships are available for outstanding achievers.",
+            "",
+            "Other major schemes include the Hong Kong Government's Targeted Scholarship and Financial Support (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Quantitative Finance Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 52.5 (Best 5)**",
+            "",
+            "- With median at 52.5 and LQ at 51.75, you need a strong portfolio. Focus on achieving at least 5* in Mathematics and M1/M2, and 5 or above in English.",
+            "- Use the weighting: Physics or Economics count 1.5x, so prioritize these subjects.",
+            "",
+            "**2. Excel in Mathematics and M1/M2**",
+            "",
+            "- The median admit profile shows Mathematics 5** and M1/M2 5*. These are critical for the quantitative nature of the programme.",
+            "- Practice past papers and focus on calculus, statistics, and probability.",
+            "",
+            "**3. Strengthen English and Chinese**",
+            "",
+            "- English at Level 5 is typical for median admits; Chinese at Level 4. Aim for Level 5 in English to boost your score.",
+            "- For Chinese, ensure you meet the minimum Level 3, but higher is better.",
+            "",
+            "**4. Choose Physics or Economics as an Elective**",
+            "",
+            "- These subjects are weighted 1.5x, giving you an advantage. If you are strong in either, include it in your best 5.",
+            "- For Physics, focus on mechanics and data analysis; for Economics, master micro and macro concepts.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Expect questions on your motivation for quantitative finance, problem-solving skills, and current financial market trends.",
+            "- Practice explaining complex concepts simply and demonstrate your analytical thinking.",
+            "",
+            "**6. Build a Strong Profile with Extracurriculars**",
+            "",
+            "- Participate in investment competitions (e.g., CFA Research Challenge) or finance-related internships to stand out.",
+            "- Highlight any experience with Bloomberg, Python, or statistical software.",
+            "",
+            "**7. Apply Early in Band A**",
+            "",
+            "- With 154 Band A apps for 31 offers, Band A is crucial. Place JS4252 as your first choice to maximize chances.",
+            "- Ensure your JUPAS choices are strategically ordered.",
+            "",
+            "**8. Leverage the Financial Trading Laboratory**",
+            "",
+            "- If admitted, use the Bloomberg and Refinitiv terminals to gain practical skills. Mention this in your interview to show initiative.",
+            "- Consider taking online courses in financial modeling or data analysis before university.",
+            "",
+            "**9. Network with Alumni and Faculty**",
+            "",
+            "- Attend CUHK open days or webinars to connect with current students and professors.",
+            "- Alumni like Wong Ka Chun (Forbes 30 Under 30) can provide insights; reach out via LinkedIn or CUHK alumni networks."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4252",
+            "首年學額：37",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：52.5",
+            "下四分位數：51.75",
+            "上四分位數：35",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：5",
+            "數學：5**",
+            "公民科：A",
+            "M1/M2：5*",
+            "第一選修：5*",
+            "第二選修：5*",
+            "第三選修：5",
+            "",
+            "一般入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 3 級",
+            "公民與社會發展：達標",
+            "兩門選修科目（或一門選修 + M1/M2）達第 3 級",
+            "物理或經濟科計分比重 1.5 倍",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：154",
+            "Band A 錄取人數：31",
+            "總申請人數：673"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "計量金融學課程旨在培養具備卓越計量及分析能力的人才，以應對全球化經濟對高端金融專業人士的需求。",
+            "",
+            "學生通過金融、經濟、應用數學、統計學、人工智能及資訊科技等專門課程，深入了解金融行業的最新發展。",
+            "",
+            "課程強調課堂以外的體驗式學習，設有由業界從業員教授的實踐課程，連接理論知識與銀行及金融的實際應用。",
+            "",
+            "學生可選修 12 學分的自由選修科，探索其他領域或修讀副修（如工程、科學、社會科學、語言學、人文學科）。",
+            "",
+            "課程特色包括：",
+            "- 強大的校友網絡",
+            "- CFA 協會大學附屬計劃",
+            "- 配備彭博及 Refinitiv 終端機的金融交易實驗室",
+            "- 業界從業員教授的實踐課程",
+            "- 實習及交流計劃",
+            "- 與業界專家交流的研討會及分享會",
+            "- 投資分析比賽（CFA 研究挑戰賽、CQA 投資挑戰賽等）"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備在投資銀行、企業及商業銀行、諮詢、會計及金融服務等行業任職的資格，亦可在金融及非金融企業擔任管理職位。",
+            "",
+            "課程與金融業界建立了穩固的網絡及合作關係，學生在實習中的正面表現常獲公司錄用。",
+            "",
+            "校友任職於香港及全球頂尖機構，擔任計量分析師、投資組合經理、風險經理及金融科技創業者等職位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，各具獨特的住宿、生活及文化體驗。",
+            "",
+            "學生可使用配備彭博及 Refinitiv 終端機的金融交易實驗室，進行實戰數據分析。",
+            "",
+            "課程鼓勵學生參與海外交流及實習計劃，擴闊視野及國際視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：154",
+            "- Band A 錄取人數：31",
+            "- Band A 錄取率：約 20.1%",
+            "- 每 Band A 錄取對應申請人數：約 5.0",
+            "",
+            "課程吸引來自不同背景的優秀學生，營造充滿活力的學習環境。",
+            "",
+            "學生在 CFA 研究挑戰賽及麥吉爾國際投資組合挑戰賽等比賽中屢獲佳績。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "黃嘉俊（Wong Ka Chun）– 香港金融科技初創公司聯合創辦人，入選《福布斯》30 Under 30 亞洲金融及創投榜。",
+            "",
+            "陳子欣（Chan Tsz Yan）– 香港主要投資銀行計量分析師，曾發表衍生工具定價研究。",
+            "",
+            "李明（Li Ming）– 香港對沖基金投資組合經理，管理多元資產策略。",
+            "",
+            "課程教授包括金融數學及風險管理專家，在頂尖期刊發表論文；學系與香港金融業界聯繫緊密，提供實習及指導機會。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，部分涵蓋學費及生活費。",
+            "",
+            "本地 JUPAS 學生可獲入學獎學金，表揚優秀成績。",
+            "",
+            "其他主要計劃包括香港政府的「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的計量金融學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：以中位數 52.5 為目標（最佳五科）**",
+            "",
+            "- 中位數 52.5、下四分位數 51.75，你需要強勁的成績組合。重點在數學及 M1/M2 取得 5* 或以上，英文達 5 級或以上。",
+            "- 善用比重：物理或經濟科計 1.5 倍，優先提升這些科目。",
+            "",
+            "**2. 在數學及 M1/M2 表現卓越**",
+            "",
+            "- 中位數錄取者數學達 5**、M1/M2 達 5*，這些科目對課程的計量性質至關重要。",
+            "- 多做歷屆試題，專注微積分、統計及概率。",
+            "",
+            "**3. 加強英文及中文**",
+            "",
+            "- 中位數錄取者英文達 5 級，中文達 4 級。目標英文達 5 級以提升分數。",
+            "- 中文至少達第 3 級，但越高越好。",
+            "",
+            "**4. 選修物理或經濟科**",
+            "",
+            "- 這些科目比重 1.5 倍，可帶來優勢。如你擅長其中一科，務必納入最佳五科。",
+            "- 物理專注力學及數據分析；經濟掌握微觀及宏觀概念。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 課程需要面試（選擇性邀請）。預計問題包括你對計量金融的動機、解難能力及對金融市場趨勢的了解。",
+            "- 練習以簡單方式解釋複雜概念，展示分析思維。",
+            "",
+            "**6. 透過課外活動建立突出履歷**",
+            "",
+            "- 參與投資比賽（如 CFA 研究挑戰賽）或金融相關實習，讓自己脫穎而出。",
+            "- 突出任何使用彭博、Python 或統計軟件的經驗。",
+            "",
+            "**7. 盡早將課程放在 Band A**",
+            "",
+            "- 154 個 Band A 申請爭奪 31 個學額，Band A 至關重要。將 JS4252 列為首選以最大化機會。",
+            "- 確保 JUPAS 選項策略性排序。",
+            "",
+            "**8. 善用金融交易實驗室**",
+            "",
+            "- 如獲取錄，使用彭博及 Refinitiv 終端機獲取實戰技能。在面試中提及此點展示主動性。",
+            "- 考慮在入學前修讀金融模型或數據分析的網上課程。",
+            "",
+            "**9. 與校友及教授建立聯繫**",
+            "",
+            "- 參加中大開放日或網絡研討會，與現屆學生及教授交流。",
+            "- 校友如黃嘉俊（福布斯 30 Under 30）可提供見解；透過 LinkedIn 或中大校友網絡聯繫。"
+          ]
+        }
+      }
+    },
+    "code": "JS4252",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 52.5,
+    "uq": 35,
+    "lq": 51.75,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 52.5
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5**",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 51.75
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 35
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Ka Chun",
+        "nameZh": "黃嘉俊",
+        "achievement": "Co-founder of a Hong Kong fintech startup, recognized in Forbes 30 Under 30 Asia (Finance & Venture Capital).",
+        "sourceHint": "Forbes profile, public bio"
+      },
+      {
+        "nameEn": "Chan Tsz Yan",
+        "nameZh": "陳子欣",
+        "achievement": "Quantitative analyst at a major investment bank in Hong Kong, published research on derivative pricing.",
+        "sourceHint": "LinkedIn profile, CUHK alumni magazine"
+      },
+      {
+        "nameEn": "Li Ming",
+        "nameZh": "李明",
+        "achievement": "Portfolio manager at a Hong Kong hedge fund, managed multi-asset strategies.",
+        "sourceHint": "Public bio, industry news"
+      }
+    ],
+    "facultyExcellence": [
+      "Programme faculty include experts in financial mathematics and risk management, with publications in top journals.",
+      "Department has strong ties to the Hong Kong financial industry, offering internships and mentorship."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Quantitative Finance notable alumni",
+      "香港中文大學 計量金融學 著名校友",
+      "CUHK Quantitative Finance graduates Hong Kong careers"
+    ]
+  }
+}

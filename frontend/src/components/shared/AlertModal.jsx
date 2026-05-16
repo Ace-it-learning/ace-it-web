@@ -1,11 +1,29 @@
 import React from 'react';
 import { X, WifiOff, CheckCircle2, AlertTriangle } from 'lucide-react';
 
-const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry, onConfirm }) => {
+const defaultTitleForType = (type) => {
+    if (type === 'success') return 'Success!';
+    if (type === 'error') return 'Error';
+    if (type === 'network') return 'Connection Issue';
+    return 'Notice';
+};
+
+const AlertModal = ({
+    isOpen,
+    type = 'info',
+    title,
+    message,
+    primaryLabel = 'OK',
+    rootClassName,
+    onClose,
+    onRetry,
+    onConfirm
+}) => {
     if (!isOpen) return null;
 
     // Determine Icon and Color based on type
     const styles = getAlertStyles(type);
+    const heading = title != null && title !== '' ? title : defaultTitleForType(type);
 
     const handlePrimaryClick = async () => {
         if (onConfirm) {
@@ -19,7 +37,9 @@ const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry, onConfir
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
+        <div
+            className={`fixed inset-0 flex items-center justify-center p-4 animate-in fade-in duration-200 ${rootClassName || 'z-[100]'}`}
+        >
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-black/40 backdrop-blur-sm"
@@ -37,10 +57,7 @@ const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry, onConfir
                     )}
 
                     <h3 className={`text-lg font-bold mb-2 ${type === 'network' ? 'text-amber-700' : 'text-gray-900'}`}>
-                        {type === 'success' && 'Success!'}
-                        {type === 'error' && 'Error'}
-                        {type === 'network' && 'Connection Issue'}
-                        {type === 'info' && 'Notice'}
+                        {heading}
                     </h3>
 
                     <p className="text-gray-600 mb-6 font-medium leading-relaxed">
@@ -60,7 +77,7 @@ const AlertModal = ({ isOpen, type = 'info', message, onClose, onRetry, onConfir
                             onClick={handlePrimaryClick}
                             className={`flex-1 py-2.5 px-4 text-white rounded-xl font-bold shadow-lg shadow-gray-200 transition-all active:scale-95 ${styles.btn}`}
                         >
-                            {onRetry ? 'Close' : 'OK'}
+                            {onRetry ? 'Close' : primaryLabel}
                         </button>
                     </div>
                 </div>

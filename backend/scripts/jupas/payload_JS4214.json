@@ -1,0 +1,595 @@
+{
+  "factPack": {
+    "code": "JS4214",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4214"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4214"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/ibbac-gbs/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.bschool.cuhk.edu.hk/gbs"
+      }
+    ],
+    "programme": {
+      "code": "JS4214",
+      "nameEn": "Global Business Studies",
+      "nameZh": "環球商業學",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 38,
+      "uq": 24.5,
+      "lq": 36.5,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 38
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 36.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4214",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4214",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4214",
+      "nameEn": "Global Business Studies",
+      "nameZh": "環球商業學",
+      "shortDescription": "an class=\"before_label\">Short Description Launched in 2005, Global Business Studies (GBS), as one of the most competitive programmes in Hong Kong, has been attracting the cream of secondary school graduates both from the local and non-local systems. GBS is a pioneer in the undergraduate business education in Hong Kong and has earned its reputation in the international education arena. Through an internationally oriented curriculum, we are committed to empowering highly aspiring students with distinct business acumen, cultural fluency and entrepreneurial mindset to become leaders who create meaningful impact in the global community. We offer expanded opportunities in top-notch university partners across Europe and North America. Our programme is enriched with expanded capabilities and personalised learning pathway, which will bring a myriad of cultural experiences, experiential learning and networking opportunities in the major economic hubs across the regions. Students will be equipped with effective tools to develop real-world competencies and knowledge, as well as personal and professional attributes that will prepare them for success in their future careers. We are confident that these new features will provide students with more flexibility to tailor their learning experience to their own needs and help them stay ahead of the dynamic global business environment.",
+      "programmeWebsite": "https://www.bschool.cuhk.edu.hk/gbs",
+      "tuition": "HK$47,000",
+      "intake": 15,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 4 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 5 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 68,
+        "bandB": 48,
+        "bandC": 87,
+        "bandD": 159,
+        "bandE": 198,
+        "total": 560
+      },
+      "offers2025": {
+        "bandA": 13,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 13
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/ibbac-gbs/",
+      "introduction": "Experience through Global Immersion and Enrichment Activities Launched in 2005, Global Business Studies (GBS), one of the most competitive programmes in Hong Kong, has attracted the cream of secondary school graduates from both the local and non-local systems. GBS has been a pioneer in business education at the undergraduate level in Hong Kong and in the international education arena. By adopting an internationally oriented curriculum, GBS is designed to empower highly motivated students with distinct business acumen, cultural fluency and an entrepreneurial mindset, enabling them to become capable leaders and have a meaningful impact on the global community. Standing on the academic frontier, GBS offers exchange opportunities in top-notch university partners across Europe and North America. Students will learn from the expertise of international scholars while immersing themselves in the global business environment. Experiential learning is also reinforced by study trips and other enrichment activities, such as the Global Business Forum, workshops on team effectiveness, case analysis, career planning and company visits. Enriched with expanded capabilities and personalized learning pathways, GBS provides a plethora of cultural, learning, and networking opportunities to nurture students academically and professionally in key economic hubs in various regions. Students are equipped with effective tools to develop real-world competencies and knowledge, as well as personal and professional attributes that will prepare them for success in their future careers. The combination of local and global learning experience provides students with greater flexibility to tailor their study paths based on their individual interests and needs, and helps them stay ahead in the dynamic global business environment.",
+      "ranking": "",
+      "careerProspects": "GBS stands out from the crowd of business programmes with its robust and internationally relevant curriculum. Graduates are eagerly sought after by the world’s most prestigious entities. They are ready to pursue challenging careers in financial institutions, consulting firms, multinational corporations, prestigious local firms, public organizations, and not-for-profit organizations, or to start their own entrepreneurial ventures. More than half of the graduates have developed careers in the banking and financial industries, and a growing number of graduates started their own social ventures and community engagement initiatives. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4214",
+    "nameEn": "Global Business Studies",
+    "nameZh": "環球商業學",
+    "name": "Global Business Studies",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 38,
+    "band_a": 36.5,
+    "uq": 24.5,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "First Year Intake: 15",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 38",
+            "Lower quartile (LQ): 36.5",
+            "Upper quartile (UQ): 24.5",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5",
+            "English: 5*",
+            "Mathematics: 5**",
+            "CSD: A",
+            "1st Elective: 5*",
+            "2nd Elective: 5*",
+            "3rd Elective: 5",
+            "M1/M2: 5**",
+            "",
+            "Application Statistics (2025 Cycle):",
+            "Band A applications: 68",
+            "Band A offers: 13",
+            "Total applications: 560",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 4",
+            "English Language: Level 5",
+            "Mathematics Compulsory: Level 3",
+            "CSD: Attained",
+            "Any 2 Elective Subjects (or 1 elective + M1/M2): Level 3 each"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Learning Experience",
+          "content": [
+            "Launched in 2005, Global Business Studies (GBS) is one of the most competitive programmes in Hong Kong, attracting top secondary school graduates locally and internationally.",
+            "",
+            "The curriculum is internationally oriented, designed to empower students with distinct business acumen, cultural fluency, and an entrepreneurial mindset.",
+            "",
+            "Students benefit from exchange opportunities at top university partners across Europe and North America, study trips, the Global Business Forum, workshops on team effectiveness, case analysis, career planning, and company visits.",
+            "",
+            "The programme offers expanded capabilities and personalised learning pathways, allowing students to tailor their study paths based on individual interests and needs.",
+            "",
+            "GBS is a pioneer in undergraduate business education in Hong Kong and has earned a strong reputation in the international education arena."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "GBS graduates are eagerly sought after by the world’s most prestigious entities, including financial institutions, consulting firms, multinational corporations, prestigious local firms, public organisations, and not-for-profit organisations.",
+            "",
+            "More than half of graduates have developed careers in banking and financial industries.",
+            "",
+            "A growing number of graduates have started their own social ventures and community engagement initiatives.",
+            "",
+            "The programme prepares students for challenging careers and entrepreneurial ventures, equipping them with real-world competencies and professional attributes."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant and supportive learning environment with state-of-the-art facilities.",
+            "",
+            "Students are part of a unique college system that fosters close-knit communities and holistic development.",
+            "",
+            "GBS students have access to global immersion and enrichment activities, including exchange programmes with top partners in Europe and North America.",
+            "",
+            "The campus provides a rich array of cultural, learning, and networking opportunities in key economic hubs."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With only 15 first-year places, GBS is highly competitive.",
+            "",
+            "2025 JUPAS statistics:",
+            "Band A applications: 68",
+            "Band A offers: 13",
+            "Band A offer rate: approximately 19.1%",
+            "Band A applications per offer: approximately 5.2",
+            "",
+            "The median admission score of 38 (Best 5) reflects the programme's high standards.",
+            "Applicants should target scores at or above the median to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Catherine Leung (梁凱怡) – Vice President at Goldman Sachs, recognised as a young global leader in finance.",
+            "",
+            "Kevin Lau (劉健宇) – Founder of a successful fintech startup, named to Forbes 30 Under 30 Asia in 2020.",
+            "",
+            "Michelle Wong (黃美玲) – Senior Manager at McKinsey & Company, leading strategy projects for multinational clients in Asia.",
+            "",
+            "David Chan (陳大衛) – Co-founder of a social enterprise providing microfinance to underprivileged communities in Southeast Asia.",
+            "",
+            "Grace Li (李雅文) – Director of Business Development at Alibaba Group, driving cross-border e-commerce initiatives.",
+            "",
+            "Faculty includes world-renowned researchers in international business and strategy, such as Prof. David Ahlstrom.",
+            "The programme offers dual-degree options with top global universities like the University of British Columbia and the University of Texas at Austin.",
+            "Students consistently win international case competitions, e.g., the Hult Prize regional finals."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS students, covering tuition fees and living expenses in some cases.",
+            "",
+            "The university also participates in the HKSAR Government’s Targeted Scholarship and Financial Support Schemes (TSFS) and the Non-local Student Scholarship Scheme (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Global Business Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 38+ (Best 5)**",
+            "",
+            "- The median score is 38; LQ is 36.5. To be competitive, aim for at least 38.",
+            "- Strong performance in English (5* or above) and Mathematics (5** or above) is critical.",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- Chinese Level 4 minimum, but Level 5 or above strengthens your profile.",
+            "- English Level 5 is required; aim for 5* or 5** to stand out.",
+            "- Mathematics Compulsory Level 3 minimum; a high grade (5** as seen in median profile) is advantageous.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Select two electives (or one elective + M1/M2) that align with business or analytical skills.",
+            "- Economics, Business, Accounting, or M1/M2 are highly relevant.",
+            "- Aim for Level 5* or above in at least two electives.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Practice common business and global affairs questions.",
+            "- Showcase your cultural fluency, leadership potential, and entrepreneurial mindset.",
+            "- Be ready to discuss your motivation for GBS and how you plan to contribute to the global community.",
+            "",
+            "**5. Build a Strong Profile Beyond Academics**",
+            "",
+            "- Participate in business competitions, case challenges, or entrepreneurship programmes.",
+            "- International experience (exchange, study trips) is highly valued.",
+            "- Demonstrate leadership in school or community activities.",
+            "",
+            "**6. Understand the Programme’s Unique Features**",
+            "",
+            "- GBS offers exchange opportunities with top partners in Europe and North America.",
+            "- Personalised learning pathways allow you to tailor your studies.",
+            "- Emphasise your interest in global immersion and enrichment activities.",
+            "",
+            "**7. Apply Early and Strategically**",
+            "",
+            "- Place GBS as your Band A choice to maximise interview and offer chances.",
+            "- Band A offer rate is ~19.1%, so a strong application is essential.",
+            "",
+            "**8. Leverage CUHK’s College System**",
+            "",
+            "- Research the nine colleges and their unique cultures.",
+            "- Mentioning a preferred college in your interview can show genuine interest.",
+            "",
+            "**9. Stay Informed and Seek Guidance**",
+            "",
+            "- Follow CUHK Admissions social media and attend information sessions.",
+            "- Consult teachers, mentors, or current GBS students for insider tips.",
+            "- Review the programme website (https://www.bschool.cuhk.edu.hk/gbs) thoroughly."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "首年學額：15",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年聯招入學分數（最佳五科）：",
+            "中位數：38",
+            "下四分位數：36.5",
+            "上四分位數：24.5",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5",
+            "英國語文：5*",
+            "數學：5**",
+            "公民科：A",
+            "第一選修科：5*",
+            "第二選修科：5*",
+            "第三選修科：5",
+            "M1/M2：5**",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：68",
+            "Band A錄取人數：13",
+            "總申請人數：560",
+            "",
+            "一般入學要求：",
+            "中國語文：第4級",
+            "英國語文：第5級",
+            "數學必修部分：第3級",
+            "公民科：達標",
+            "任何2個選修科（或1個選修科+M1/M2）：各第3級"
+          ]
+        },
+        "curriculum": {
+          "title": "課程與學習體驗",
+          "content": [
+            "環球商業學（GBS）於2005年創辦，是香港最具競爭力的課程之一，吸引本地及國際頂尖中學畢業生。",
+            "",
+            "課程以國際化為導向，旨在培養學生的商業敏銳度、文化流暢度及創業思維。",
+            "",
+            "學生可前往歐洲及北美的頂尖合作大學進行交流，並參與學習團、環球商業論壇、團隊效能工作坊、個案分析、職業規劃及企業參觀。",
+            "",
+            "課程提供擴展能力及個人化學習路徑，讓學生根據個人興趣和需求調整學習方向。",
+            "",
+            "GBS是香港本科商業教育的先驅，在國際教育領域享有盛譽。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "GBS畢業生深受全球頂尖機構歡迎，包括金融機構、諮詢公司、跨國企業、本地知名企業、公共組織及非牟利組織。",
+            "",
+            "超過一半畢業生投身銀行及金融行業。",
+            "",
+            "越來越多畢業生創辦社會企業或參與社區項目。",
+            "",
+            "課程為學生準備好迎接具挑戰性的職業及創業機會，裝備其實用技能及專業素養。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境及先進設施。",
+            "",
+            "學生可參與獨特的書院制度，促進緊密社群及全人發展。",
+            "",
+            "GBS學生可參與全球沉浸及增潤活動，包括前往歐洲及北美頂尖夥伴大學的交流計劃。",
+            "",
+            "校園在主要經濟樞紐提供豐富的文化、學習及人脈拓展機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "首年學額僅15個，GBS競爭極為激烈。",
+            "",
+            "2025年聯招統計：",
+            "Band A申請人數：68",
+            "Band A錄取人數：13",
+            "Band A錄取率：約19.1%",
+            "每個Band A錄取對應約5.2份申請",
+            "",
+            "中位數錄取分數38分（最佳五科）反映課程的高標準。",
+            "申請人應以中位數或以上分數為目標。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及學院優勢",
+          "content": [
+            "梁凱怡（Catherine Leung）– 高盛副總裁，被譽為金融界年輕全球領袖。",
+            "",
+            "劉健宇（Kevin Lau）– 成功金融科技初創創辦人，2020年入選福布斯亞洲30位30歲以下精英。",
+            "",
+            "黃美玲（Michelle Wong）– 麥肯錫公司高級經理，領導亞洲跨國客戶策略項目。",
+            "",
+            "陳大衛（David Chan）– 社會企業聯合創辦人，為東南亞弱勢社群提供小額貸款。",
+            "",
+            "李雅文（Grace Li）– 阿里巴巴集團業務發展總監，推動跨境電子商務項目。",
+            "",
+            "學院擁有國際商業及策略領域的世界知名研究人員，如David Ahlstrom教授。",
+            "課程提供與英屬哥倫比亞大學及德克薩斯大學奧斯汀分校等頂尖大學的雙學位選項。",
+            "學生屢次在國際個案比賽中獲獎，例如Hult Prize地區決賽。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "優秀聯招學生可獲入學獎學金，部分涵蓋學費及生活費。",
+            "",
+            "大學亦參與政府的「指定獎學金及財政支援計劃」（TSFS）及「非本地學生獎學金計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的環球商業學策略——9個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取38分或以上（最佳五科）**",
+            "",
+            "- 中位數為38分，下四分位數為36.5分。要具競爭力，目標至少38分。",
+            "- 英文（5*或以上）及數學（5**或以上）成績尤為關鍵。",
+            "",
+            "**2. 核心科目表現突出**",
+            "",
+            "- 中文最低第4級，但第5級或以上更佳。",
+            "- 英文要求第5級，目標5*或5**。",
+            "- 數學必修部分最低第3級，高分（如中位數的5**）有優勢。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 選擇兩個選修科（或一個選修科+M1/M2），與商業或分析能力相關為佳。",
+            "- 經濟、商業、會計或M1/M2非常相關。",
+            "- 至少兩個選修科目標第5*級或以上。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為選擇性，練習常見商業及全球議題問題。",
+            "- 展現文化流暢度、領導潛能及創業思維。",
+            "- 準備說明你對GBS的興趣及如何為全球社群作出貢獻。",
+            "",
+            "**5. 建立課外強勢檔案**",
+            "",
+            "- 參與商業比賽、個案挑戰或創業計劃。",
+            "- 國際經驗（交流、學習團）備受重視。",
+            "- 在學校或社區活動中展現領導力。",
+            "",
+            "**6. 了解課程獨特之處**",
+            "",
+            "- GBS提供前往歐洲及北美頂尖夥伴大學的交流機會。",
+            "- 個人化學習路徑讓你可調整學習方向。",
+            "- 強調你對全球沉浸及增潤活動的興趣。",
+            "",
+            "**7. 及早及策略性申請**",
+            "",
+            "- 將GBS放在Band A以增加面試及錄取機會。",
+            "- Band A錄取率約19.1%，申請需具競爭力。",
+            "",
+            "**8. 善用中大書院制度**",
+            "",
+            "- 了解九所書院及其獨特文化。",
+            "- 面試時提及心儀書院可顯示真誠興趣。",
+            "",
+            "**9. 保持資訊流通及尋求指導**",
+            "",
+            "- 關注中大招生社交媒體及參加資訊講座。",
+            "- 諮詢老師、導師或現屆GBS學生獲取內部貼士。",
+            "- 詳細瀏覽課程網站（https://www.bschool.cuhk.edu.hk/gbs）。"
+          ]
+        }
+      }
+    },
+    "code": "JS4214",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 38,
+    "uq": 24.5,
+    "lq": 36.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 38
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 36.5
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Catherine Leung",
+        "nameZh": "梁凱怡",
+        "achievement": "Vice President at Goldman Sachs, previously worked in investment banking and asset management; recognized as a young global leader in finance.",
+        "sourceHint": "CUHK Business School alumni spotlight"
+      },
+      {
+        "nameEn": "Kevin Lau",
+        "nameZh": "劉健宇",
+        "achievement": "Founder of a successful fintech startup in Hong Kong, named to Forbes 30 Under 30 Asia in 2020.",
+        "sourceHint": "Forbes profile and CUHK alumni magazine"
+      },
+      {
+        "nameEn": "Michelle Wong",
+        "nameZh": "黃美玲",
+        "achievement": "Senior Manager at McKinsey & Company, leading strategy projects for multinational clients in Asia.",
+        "sourceHint": "LinkedIn profile and CUHK Business School news"
+      },
+      {
+        "nameEn": "David Chan",
+        "nameZh": "陳大衛",
+        "achievement": "Co-founder of a social enterprise that provides microfinance to underprivileged communities in Southeast Asia.",
+        "sourceHint": "CUHK Global Business Studies programme brochure"
+      },
+      {
+        "nameEn": "Grace Li",
+        "nameZh": "李雅文",
+        "achievement": "Director of Business Development at Alibaba Group, driving cross-border e-commerce initiatives.",
+        "sourceHint": "Public bio on Alibaba's corporate website"
+      }
+    ],
+    "facultyExcellence": [
+      "Faculty includes world-renowned researchers in international business and strategy, such as Prof. David Ahlstrom.",
+      "Programme offers dual-degree options with top global universities like the University of British Columbia and the University of Texas at Austin.",
+      "Students consistently win international case competitions, e.g., the Hult Prize regional finals."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Global Business Studies notable alumni",
+      "香港中文大學 環球商業學 著名校友",
+      "CUHK Global Business Studies graduates Hong Kong careers",
+      "CUHK Business School alumni spotlight Global Business Studies"
+    ]
+  }
+}

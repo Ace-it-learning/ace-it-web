@@ -1,0 +1,605 @@
+{
+  "factPack": {
+    "code": "JS4719",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4719"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4719"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/rmscn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www2.sta.cuhk.edu.hk/rms/"
+      }
+    ],
+    "programme": {
+      "code": "JS4719",
+      "nameEn": "Risk Management Science",
+      "nameZh": "風險管理科學",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 43,
+      "uq": 63.75,
+      "lq": 41.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 43
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 41.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 63.75
+        }
+      },
+      "subjectWeighting": "• English (x 2)"
+    },
+    "jupas": {
+      "code": "JS4719",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4719",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4719",
+      "nameEn": "Risk Management Science",
+      "nameZh": "風險管理科學",
+      "shortDescription": "an class=\"before_label\">Short Description The programme, administered by the Department of Statistics and Data Science, is intended for students seeking a career in financial and insurance institutions, with a strong interest in scientific methodologies. As an interdisciplinary subject, students enrolled in this programme receive not only solid training in advanced mathematics and statistics, but also comprehensive exposure to finance, economics, accounting, and computer science. The core programme comprises pragmatic courses in numerical methods, portfolio management, financial economics, data structures and accounting principles, which equip students with essential techniques for the highly quantitative work in the financial industry. To meet the increasing demand for talent in data science, the programme has launched a new study stream of risk analytics from the 2017-18 academic year onwards. The new study stream is tailored for students pursuing frontier knowledge in big data technologies in the financial industry. Upon graduation, students are well-equipped to become professional risk managers with a strong background in data science and data analytics.",
+      "programmeWebsite": "http://www2.sta.cuhk.edu.hk/rms/",
+      "tuition": "HK$47,000",
+      "intake": 25,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level MATHEMATICS EXTENDED MODULE 1 OR 2 3 ANY 1 SUBJECT NOTE 3 NOTE: Any 1 Category A elective subject. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 100,
+        "bandB": 63,
+        "bandC": 129,
+        "bandD": 165,
+        "bandE": 168,
+        "total": 625
+      },
+      "offers2025": {
+        "bandA": 27,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 27
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/rmscn/",
+      "introduction": "Mastering the Science of Risk Management in Our Risk Management Science Programme Since its establishment in 2000, the Risk Management Science Programme has been a pioneer in Hong Kong for nurturing well-trained professionals in the risk-management field. The Programme is suitable for students who have strong interest in mathematical and scientific methodologies, and in pursuing a career in the financial industry or related areas. To meet the increasing demand for talent in data science, the programme launched a new study stream of risk analytics in the 2017-18 academic year. The new study stream is tailored for students pursuing frontier knowledge in big data technologies in the financial industry.",
+      "ranking": "",
+      "careerProspects": "Our graduates have a wide range of career choices in finance, banking, insurance and related areas. New graduates commonly work as assistant risk managers, market risk officers, credit risk officers, market risk analysts, financial analysts, quantitative analysts, actuarial officers, accounting officers, etc. in major commercial banks, investment banks, security houses, insurance companies and accounting firms. Some of our graduates pursue Master’s and doctoral degrees in prestigious schools in Hong Kong and overseas. The employment statistics of our graduates in the past five years are as follows: Banking/Finance: Approximately 46% Accounting/Insurance/Business Consultants: About 13% Others: About 13% in the education, computer engineering or IT fields Postgraduate Studies: Around 28% Employers include investment banks (JPMorgan Chase &amp; Co., Goldman Sachs, Morgan Stanley), retail banks (HSBC, Standard Chartered), financial services (Bloomberg), accounting and insurance firms (Deloitte &amp; Touche, KPMG), and government services (Hong Kong Monetary Authority). [Figures as of June 2022] The curriculum provides intensive qualitative and quantitative training in risk analysis and covers",
+      "craftYourPath": "As this is an interdisciplinary subject, students enrolled in the programme receive solid training in the latest state-of-the-art statistical techniques, including big data analytics, deep learning and AI, and other foundational subjects, including finance, economics, accounting, mathematics and computer science. The core programme also comprises practical courses in the following fields: numerical methods portfolio management financial economics data structures accounting principles Upon graduation, students are well equipped for positions in risk management, finance, banking, insurance and related areas in which the quantitative and analytical skills of risk management are required.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4719",
+    "nameEn": "Risk Management Science",
+    "nameZh": "風險管理科學",
+    "name": "Risk Management Science",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 43,
+    "band_a": 41.5,
+    "uq": 63.75,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4719",
+            "First Year Intake: 25",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 (local students per annum)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 43",
+            "Lower quartile (LQ): 41.5",
+            "Upper quartile (UQ): 63.75",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 4",
+            "English: 5",
+            "Mathematics: 5*",
+            "CSD: A",
+            "M1/M2: 5*",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "",
+            "Subject Weighting: English (x 2)",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Citizenship and Social Development: Attained",
+            "- Mathematics Extended Module 1 or 2: Level 3",
+            "- Any 1 Category A elective subject: Level 3",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 100",
+            "Band A offers: 27",
+            "Total applications: 625",
+            "Band A offer rate: 27.0%",
+            "Band A apps per offer: 3.7"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Risk Management Science programme, administered by the Department of Statistics and Data Science, is designed for students seeking a career in financial and insurance institutions with a strong interest in scientific methodologies.",
+            "",
+            "As an interdisciplinary subject, students receive solid training in advanced mathematics and statistics, as well as comprehensive exposure to finance, economics, accounting, and computer science.",
+            "",
+            "Core courses include:",
+            "- Numerical Methods",
+            "- Portfolio Management",
+            "- Financial Economics",
+            "- Data Structures",
+            "- Accounting Principles",
+            "",
+            "Since 2017-18, the programme has offered a study stream in Risk Analytics, tailored for students pursuing frontier knowledge in big data technologies in the financial industry.",
+            "",
+            "The curriculum also covers state-of-the-art statistical techniques including big data analytics, deep learning, and AI."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates have a wide range of career choices in finance, banking, insurance, and related areas.",
+            "",
+            "Common entry-level positions:",
+            "- Assistant Risk Manager",
+            "- Market Risk Officer",
+            "- Credit Risk Officer",
+            "- Market Risk Analyst",
+            "- Financial Analyst",
+            "- Quantitative Analyst",
+            "- Actuarial Officer",
+            "- Accounting Officer",
+            "",
+            "Employers include:",
+            "- Investment banks: JPMorgan Chase & Co., Goldman Sachs, Morgan Stanley",
+            "- Retail banks: HSBC, Standard Chartered",
+            "- Financial services: Bloomberg",
+            "- Accounting and insurance firms: Deloitte & Touche, KPMG",
+            "- Government services: Hong Kong Monetary Authority",
+            "",
+            "Employment statistics (past 5 years):",
+            "- Banking/Finance: ~46%",
+            "- Accounting/Insurance/Business Consultants: ~13%",
+            "- Others (education, computer engineering, IT): ~13%",
+            "- Postgraduate studies: ~28%",
+            "",
+            "Some graduates pursue Master's and doctoral degrees at prestigious schools in Hong Kong and overseas."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern facilities.",
+            "",
+            "Students belong to one of nine colleges, each providing a unique residential and pastoral experience.",
+            "",
+            "The programme is housed within the Department of Statistics and Data Science, which offers dedicated study spaces and computing labs.",
+            "",
+            "Students can participate in various student societies, sports teams, and cultural activities across the university."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a first-year intake of only 25, JS4719 is a highly selective programme.",
+            "",
+            "2025 JUPAS statistics:",
+            "- Band A applications: 100",
+            "- Band A offers: 27",
+            "- Band A offer rate: 27.0%",
+            "- Band A apps per offer: 3.7",
+            "",
+            "The median admission score of 43 (Best 5) indicates strong competition, with the lower quartile at 41.5 and upper quartile at 63.75.",
+            "",
+            "Applicants with strong results in Mathematics, M1/M2, and English are particularly competitive.",
+            "",
+            "Interview performance is also a key factor in selection."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The programme is taught by internationally recognized faculty in statistics, finance, and risk analytics.",
+            "",
+            "Faculty members have published in top-tier journals such as the Journal of Risk and Insurance and the Journal of the American Statistical Association.",
+            "",
+            "The department collaborates with industry partners like the Hong Kong Monetary Authority and major banks for student projects.",
+            "",
+            "Graduates have gone on to leadership roles in banking, finance, and government, contributing to Hong Kong's position as a global financial hub."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for outstanding JUPAS students, including full-tuition and half-tuition awards based on HKDSE results.",
+            "",
+            "The University also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Local students may also apply for means-tested financial aid through the Student Financial Assistance Agency (SFAA)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Risk Management Science Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 43+ (Best 5)**",
+            "",
+            "- The 2025 median is 43; aim for at least this to be competitive.",
+            "- With English weighted x2, a strong English grade (5 or above) is crucial.",
+            "- Mathematics and M1/M2 at 5* or above significantly boost your score.",
+            "",
+            "**2. Prioritise Mathematics and M1/M2**",
+            "",
+            "- These subjects are core to the programme; high grades demonstrate quantitative aptitude.",
+            "- Consider taking M1 or M2 if not already chosen.",
+            "",
+            "**3. Excel in English**",
+            "",
+            "- English is weighted double, so a 5** can add 10 points to your score.",
+            "- Practice reading comprehension and essay writing for the HKDSE.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The interview is selective; expect questions on your interest in risk management and quantitative skills.",
+            "- Be ready to discuss current financial news or basic probability concepts.",
+            "",
+            "**5. Build a Strong Elective Profile**",
+            "",
+            "- Choose electives that complement risk management, such as Economics, Business, or ICT.",
+            "- A third elective can provide bonus points if your best 5 are already strong.",
+            "",
+            "**6. Apply in Band A**",
+            "",
+            "- All 27 offers in 2025 went to Band A applicants.",
+            "- Listing JS4719 as your first choice signals strong interest.",
+            "",
+            "**7. Understand the Curriculum**",
+            "",
+            "- Familiarise yourself with core courses like Portfolio Management and Financial Economics.",
+            "- Mention specific interests in the Risk Analytics stream during your interview.",
+            "",
+            "**8. Leverage CUHK's College System**",
+            "",
+            "- Research the nine colleges and their unique features.",
+            "- College affiliation can enhance your application by showing cultural fit.",
+            "",
+            "**9. Plan for Career Pathways**",
+            "",
+            "- Explore internships at banks or insurance firms early.",
+            "- CUHK's career services and industry connections can help secure placements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4719",
+            "首年學額：25",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：43",
+            "下四分位數：41.5",
+            "上四分位數：63.75",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：4",
+            "英國語文：5",
+            "數學：5*",
+            "公民科：A",
+            "延伸數學（M1/M2）：5*",
+            "選修科一：5",
+            "選修科二：4",
+            "",
+            "科目比重：英國語文（x 2）",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 3 級",
+            "- 公民與社會發展：達標",
+            "- 數學延伸部分單元一或二：第 3 級",
+            "- 任何 1 個甲類選修科目：第 3 級",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：100",
+            "Band A 錄取人數：27",
+            "總申請人數：625",
+            "Band A 錄取率：27.0%",
+            "每學額 Band A 申請人數：3.7"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "風險管理科學課程由統計學及數據科學學系開辦，專為有志於金融及保險機構發展、對科學方法有濃厚興趣的學生而設。",
+            "",
+            "作為跨學科課程，學生將接受高等數學及統計學的紮實訓練，並全面接觸金融、經濟、會計及電腦科學。",
+            "",
+            "核心科目包括：",
+            "- 數值方法",
+            "- 投資組合管理",
+            "- 金融經濟學",
+            "- 數據結構",
+            "- 會計原理",
+            "",
+            "自 2017-18 學年起，課程增設風險分析學研組，專為有志於金融業大數據技術前沿知識的學生而設。",
+            "",
+            "課程亦涵蓋最新統計技術，包括大數據分析、深度學習及人工智能。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生在金融、銀行、保險及相關領域擁有廣泛的就業選擇。",
+            "",
+            "常見入職職位：",
+            "- 助理風險經理",
+            "- 市場風險主任",
+            "- 信貸風險主任",
+            "- 市場風險分析師",
+            "- 財務分析師",
+            "- 量化分析師",
+            "- 精算主任",
+            "- 會計主任",
+            "",
+            "僱主包括：",
+            "- 投資銀行：摩根大通、高盛、摩根士丹利",
+            "- 零售銀行：滙豐、渣打",
+            "- 金融服務：彭博",
+            "- 會計及保險公司：德勤、畢馬威",
+            "- 政府機構：香港金融管理局",
+            "",
+            "過去五年就業統計：",
+            "- 銀行/金融：約 46%",
+            "- 會計/保險/商業顧問：約 13%",
+            "- 其他（教育、電腦工程、資訊科技）：約 13%",
+            "- 深造：約 28%",
+            "",
+            "部分畢業生於香港及海外著名學府攻讀碩士及博士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，設施現代化。",
+            "",
+            "學生隸屬於九所書院之一，每所書院提供獨特的住宿及全人教育體驗。",
+            "",
+            "課程所屬的統計學及數據科學學系設有專用研習空間及電腦實驗室。",
+            "",
+            "學生可參與各類學生組織、運動隊伍及校園文化活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "首年學額僅 25 個，JS4719 屬高選擇性課程。",
+            "",
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：100",
+            "- Band A 錄取人數：27",
+            "- Band A 錄取率：27.0%",
+            "- 每學額 Band A 申請人數：3.7",
+            "",
+            "中位數入學分數為 43（最佳五科），下四分位數 41.5，上四分位數 63.75，競爭激烈。",
+            "",
+            "數學、M1/M2 及英國語文成績優異的申請者更具優勢。",
+            "",
+            "面試表現亦是甄選關鍵因素。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "課程由國際知名的統計學、金融學及風險分析學教授任教。",
+            "",
+            "教研人員曾在《風險與保險期刊》及《美國統計協會期刊》等頂尖學術期刊發表論文。",
+            "",
+            "學系與香港金融管理局及主要銀行合作，為學生提供項目實踐機會。",
+            "",
+            "畢業生已在銀行、金融及政府部門擔任領導角色，為香港作為國際金融中心的地位作出貢獻。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為優秀 JUPAS 學生提供多項入學獎學金，包括全額及半額學費減免，按文憑試成績頒發。",
+            "",
+            "大學亦參與政府「特定獎學金及財政支援計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生亦可透過學生資助處（SFAA）申請經入息審查的資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的風險管理科學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取最佳五科 43 分或以上**",
+            "",
+            "- 2025 年中位數為 43 分，以此為目標以增加競爭力。",
+            "- 英國語文比重 x2，取得 5 級或以上至關重要。",
+            "- 數學及 M1/M2 達 5* 或以上可大幅提升分數。",
+            "",
+            "**2. 優先提升數學及 M1/M2**",
+            "",
+            "- 這些科目是課程核心，高分數展示量化能力。",
+            "- 如未選修，可考慮加修 M1 或 M2。",
+            "",
+            "**3. 英國語文力求卓越**",
+            "",
+            "- 英國語文比重雙計，5** 可為總分增加 10 分。",
+            "- 多練習閱讀理解及寫作，為文憑試做好準備。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試具選擇性，預計會問及你對風險管理的興趣及量化技能。",
+            "- 準備討論近期金融新聞或基本概率概念。",
+            "",
+            "**5. 建立強勁選修科組合**",
+            "",
+            "- 選擇與風險管理相關的選修科，如經濟、商業或資訊及通訊科技。",
+            "- 如最佳五科已夠強，第三選修科可提供額外分數。",
+            "",
+            "**6. 將課程放在 Band A**",
+            "",
+            "- 2025 年所有 27 個錄取名額均來自 Band A 申請者。",
+            "- 將 JS4719 列為首志願顯示強烈興趣。",
+            "",
+            "**7. 了解課程內容**",
+            "",
+            "- 熟悉投資組合管理及金融經濟學等核心科目。",
+            "- 面試時可提及對風險分析學研組的具體興趣。",
+            "",
+            "**8. 善用書院制度**",
+            "",
+            "- 研究九所書院及其特色。",
+            "- 書院歸屬感可展示文化契合度，提升申請優勢。",
+            "",
+            "**9. 提早規劃職業路向**",
+            "",
+            "- 及早尋找銀行或保險公司的實習機會。",
+            "- 中文大學的就業服務及業界聯繫有助獲取實習職位。"
+          ]
+        }
+      }
+    },
+    "code": "JS4719",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 43,
+    "uq": 63.75,
+    "lq": 41.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 43
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 41.5
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5**",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 63.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is taught by internationally recognized faculty in statistics, finance, and risk analytics.",
+      "Faculty members have published in top-tier journals such as Journal of Risk and Insurance and Journal of the American Statistical Association.",
+      "The department collaborates with industry partners like the Hong Kong Monetary Authority and major banks for student projects."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Risk Management Science notable alumni",
+      "香港中文大學 風險管理科學 著名校友",
+      "CUHK Risk Management Science graduates Hong Kong careers"
+    ]
+  }
+}

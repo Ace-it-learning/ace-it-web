@@ -1,0 +1,539 @@
+{
+  "factPack": {
+    "code": "JS4812",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4812"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4812"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/archn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.arch.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4812",
+      "nameEn": "Architectural Studies",
+      "nameZh": "建築學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "design"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 28,
+      "uq": 28,
+      "lq": 26.5,
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 28
+        },
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4812",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4812",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4812",
+      "nameEn": "Architectural Studies",
+      "nameZh": "建築學",
+      "shortDescription": "an class=\"before_label\">Short Description The programme provides a basis for architectural education in general, as well as a first stage in the preparation for a professional career in architecture. The core of the programme is the design studio, complemented by courses in the humanities, technology, design computation and professional practice. Students are encouraged to enrich their basic architectural studies through an extensive range of elective courses, both architectural and cross-disciplinary, and to experience other cultures made possible by field trips and student exchange programmes .",
+      "programmeWebsite": "http://www.arch.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. In addition to fulfilling the University requirements, applicants are required to submit a design portfolio to the General Office of the School of Architecture directly. Portfolio guidelines and additional information can be found on the School website . Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 96,
+        "bandB": 78,
+        "bandC": 127,
+        "bandD": 184,
+        "bandE": 182,
+        "total": 667
+      },
+      "offers2025": {
+        "bandA": 26,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 26
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/archn/",
+      "introduction": "Introduction Title:&nbsp; Architecturally Speaking Together with experienced practitioners and visiting scholars from around the world, our faculty members and students explore a range of architectural investigations, expand design know-how, and confront the increasing challenges of the built environment in Hong Kong, China and Asia. The School’s philosophy of design excellence integrates professional manipulation of form and imaginative space, as well as the ability to generate inspiration from a broad body of information.",
+      "ranking": "",
+      "careerProspects": "For 35 years, the School of Architecture has educated committed individuals who have subsequently assumed leadership roles in shaping the built environment. The graduates form a unique community with diverse educational backgrounds, profession collaboration and career paths. Our alumni have attained success in different fields over the past 10 years: Industry Sector: Approximately 65% of our graduates enter the industry, where they excel in design, management, business and entrepreneurship. Emerging Industry Sectors: Another 15% of graduates thrived in shaping new industries, like scripting, AI, eco-tourism and rural development. Community Service and Government: About 15% of graduates work on social improvement and policy-making initiatives. Postgraduate Studies: About 15% of graduates pursue specialised fields through advanced studies. Employers include governmental institutions, such as the HKSAR Architectural Services",
+      "craftYourPath": "The accredited professional architecture curriculum includes design studios, theory, history, technology, visual communication and professional practice, with design studios the central focus of instruction. Collaboration thrives in six undergraduate studios, 12 graduate studios and diverse courses. The students explore today’s most effective design approaches with a leading-edge faculty that has a broad range of expertise and experience.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4812",
+    "nameEn": "Architectural Studies",
+    "nameZh": "建築學",
+    "name": "Architectural Studies",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 28,
+    "band_a": 26.5,
+    "uq": 28,
+    "category": "design"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4812",
+            "First Year Intake: 30",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (portfolio submission required)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 28",
+            "Lower quartile (LQ): 26.5",
+            "Upper quartile (UQ): 28",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 3",
+            "English: 5*",
+            "Mathematics: 4",
+            "CSD: A",
+            "M1/M2: 4",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 96",
+            "Band A offers: 26",
+            "Total applications: 667",
+            "",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Level 3, CSD Attained",
+            "Electives: Any 2 subjects at Level 3 (including M1/M2 as one elective)",
+            "Portfolio: Must be submitted directly to the School of Architecture"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The programme provides a comprehensive architectural education, with the design studio as the central focus. Courses cover humanities, technology, design computation, and professional practice.",
+            "",
+            "Students enrich their studies through elective courses, both architectural and cross-disciplinary, and gain global perspectives via field trips and exchange programmes.",
+            "",
+            "The curriculum integrates theory and practice, preparing students for professional careers in architecture."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates assume leadership roles in shaping the built environment. Over the past 10 years:",
+            "- Approximately 65% enter the industry (design, management, business, entrepreneurship)",
+            "- 15% thrive in emerging sectors (scripting, AI, eco-tourism, rural development)",
+            "- 15% work in community service and government (policy-making, social improvement)",
+            "- 15% pursue postgraduate studies in specialised fields",
+            "",
+            "Employers include HKSAR Architectural Services Department and other governmental institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system, providing a close-knit community and holistic development.",
+            "",
+            "Students have access to state-of-the-art facilities, libraries, and cultural activities. The School of Architecture fosters collaboration through studios and workshops.",
+            "",
+            "Exchange programmes and field trips enrich the learning experience, exposing students to diverse architectural practices."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "- Band A applications: 96",
+            "- Band A offers: 26",
+            "- Band A offer rate: ~27.1%",
+            "- Band A applications per offer: ~3.7",
+            "",
+            "Median admission score: 28 (Best 5). Strong English proficiency is essential (English weighted x1.5).",
+            "",
+            "Portfolio quality and interview performance are critical differentiators."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty",
+          "content": [
+            "Peter W. Ferretto – Professor and former Director of the School of Architecture, CUHK; renowned for architectural design and research.",
+            "",
+            "Thomas Chung – Associate Professor, CUHK School of Architecture; specialist in urban design and community engagement.",
+            "",
+            "Hendrik Tieben – Professor and Director of the School of Architecture, CUHK; research on urban transformation and public space.",
+            "",
+            "Faculty excellence: The School of Architecture is consistently ranked among Asia's top architecture schools, with faculty receiving international awards including the RIBA President's Medal for Research."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit. These may cover tuition fees and living expenses.",
+            "",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) provide additional support.",
+            "",
+            "For details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4812 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 28 (Best 5)**",
+            "",
+            "- Aim for at least 28 points in Best 5. With English weighted x1.5, a 5* in English is highly advantageous.",
+            "- LQ 26.5 means Band A applicants with 26-27 points may still be considered if portfolio and interview are strong.",
+            "",
+            "**2. Prioritise English**",
+            "",
+            "- English carries a multiplier of 1.5. A high grade (5 or above) significantly boosts your score.",
+            "- Practice academic writing and presentation skills for the interview.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- Submit a design portfolio showcasing creativity, technical skills, and conceptual thinking.",
+            "- Include sketches, models, digital work, and any design-related projects.",
+            "- Follow guidelines on the School of Architecture website.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The interview assesses passion for architecture, critical thinking, and communication skills.",
+            "- Be ready to discuss your portfolio, inspirations, and current architectural issues.",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "- Select two electives that align with architecture (e.g., Visual Arts, Design & Technology, Physics).",
+            "- M1/M2 can count as one elective; strong math skills are beneficial.",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "- The design studio is the core. Familiarise yourself with CUHK's focus on sustainability and community-based projects.",
+            "- Explore elective options in humanities, technology, and cross-disciplinary fields.",
+            "",
+            "**7. Gain Relevant Experience**",
+            "",
+            "- Participate in architecture workshops, summer programmes, or internships.",
+            "- Volunteer in community design projects to demonstrate commitment.",
+            "",
+            "**8. Research the School**",
+            "",
+            "- Visit the School of Architecture website (arch.cuhk.edu.hk) and review faculty research.",
+            "- Attend open days or info sessions to connect with current students and professors.",
+            "",
+            "**9. Apply Early and Confirm Band A**",
+            "",
+            "- Place JS4812 in Band A to maximise chances. With 96 Band A apps for 26 offers, early and strong application is key.",
+            "- Double-check portfolio submission deadlines and requirements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4812",
+            "首年學額：30",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（需提交作品集）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：28",
+            "下四分位數：26.5",
+            "上四分位數：28",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：3",
+            "英國語文：5*",
+            "數學：4",
+            "公民科：A",
+            "M1/M2：4",
+            "選修 1：5",
+            "選修 2：4",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：96",
+            "Band A 錄取人數：26",
+            "總申請人數：667",
+            "",
+            "入學要求：",
+            "核心科目：中文 3 級、英文 3 級、數學 3 級、公民科達標",
+            "選修科目：任何 2 科達 3 級（包括 M1/M2 作為一科選修）",
+            "作品集：必須直接提交至建築學院"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "本課程提供全面的建築教育，以設計工作室為核心。涵蓋人文、科技、設計運算及專業實踐等範疇。",
+            "",
+            "學生可透過選修科（建築及跨學科）豐富學習，並透過實地考察及交流計劃拓展國際視野。",
+            "",
+            "課程融合理論與實踐，為學生投身建築專業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生在建築環境領域擔任領導角色。過去十年：",
+            "- 約 65% 投身業界（設計、管理、商業、創業）",
+            "- 15% 在新興領域發展（腳本編寫、人工智能、生態旅遊、鄉郊發展）",
+            "- 15% 從事社區服務及政府工作（政策制定、社會改善）",
+            "- 15% 攻讀研究生課程，專注專門領域",
+            "",
+            "僱主包括香港特區政府建築署及其他政府機構。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的書院制度，營造緊密社群及全人發展環境。",
+            "",
+            "學生可使用先進設施、圖書館及參與文化活動。建築學院透過工作室及工作坊促進協作。",
+            "",
+            "交流計劃及實地考察豐富學習體驗，讓學生接觸多元建築實踐。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：96",
+            "- Band A 錄取人數：26",
+            "- Band A 錄取率：約 27.1%",
+            "- 每個錄取名額的 Band A 申請人數：約 3.7",
+            "",
+            "中位數入學分數：28（最佳 5 科）。英文能力至關重要（英文加權 x1.5）。",
+            "",
+            "作品集質素及面試表現是關鍵區分因素。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及教職員",
+          "content": [
+            "Peter W. Ferretto（彼得·費雷托）－ 中大建築學院教授及前院長；以建築設計及研究聞名。",
+            "",
+            "Thomas Chung（鍾宏亮）－ 中大建築學院副教授；專注城市設計及社區參與。",
+            "",
+            "Hendrik Tieben（蒂本）－ 中大建築學院教授及院長；研究城市轉型及公共空間。",
+            "",
+            "學院卓越成就：建築學院持續位列亞洲頂尖建築學院之一，教職員屢獲國際獎項，包括 RIBA 主席研究獎章。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地 JUPAS 學生提供入學獎學金，根據學業成績頒發，可涵蓋學費及生活費。",
+            "",
+            "此外，學生可申請「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4812 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數 28（最佳 5 科）**",
+            "",
+            "- 最佳 5 科目標至少 28 分。英文加權 x1.5，英文考獲 5* 級別極具優勢。",
+            "- 下四分位數 26.5 分，表示 Band A 申請者若取得 26-27 分，配合優秀作品集及面試仍有機會。",
+            "",
+            "**2. 優先提升英文**",
+            "",
+            "- 英文科加權 1.5 倍，取得 5 級或以上能大幅提升總分。",
+            "- 練習學術寫作及面試表達技巧。",
+            "",
+            "**3. 建立優秀作品集**",
+            "",
+            "- 提交設計作品集，展示創意、技術能力及概念思維。",
+            "- 包括素描、模型、數碼作品及任何設計相關項目。",
+            "- 遵循建築學院網站上的指引。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試評估對建築的熱誠、批判思維及溝通能力。",
+            "- 準備討論你的作品集、靈感來源及當前建築議題。",
+            "",
+            "**5. 策略性選擇選修科**",
+            "",
+            "- 選擇與建築相關的兩科選修（如視覺藝術、設計與科技、物理）。",
+            "- M1/M2 可計為一科選修，良好的數學能力有幫助。",
+            "",
+            "**6. 了解課程內容**",
+            "",
+            "- 設計工作室是核心。了解中大對可持續發展及社區項目的重視。",
+            "- 探索人文、科技及跨學科的選修機會。",
+            "",
+            "**7. 獲取相關經驗**",
+            "",
+            "- 參加建築工作坊、暑期課程或實習。",
+            "- 參與社區設計項目，展示你的投入。",
+            "",
+            "**8. 研究學院**",
+            "",
+            "- 瀏覽建築學院網站（arch.cuhk.edu.hk），了解教職員研究。",
+            "- 參加開放日或資訊講座，與現屆學生及教授交流。",
+            "",
+            "**9. 及早申請並確認 Band A**",
+            "",
+            "- 將 JS4812 放在 Band A 以最大化機會。Band A 有 96 人申請 26 個學額，及早及強勁的申請是關鍵。",
+            "- 雙重確認作品集提交截止日期及要求。"
+          ]
+        }
+      }
+    },
+    "code": "JS4812",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 28,
+    "uq": 28,
+    "lq": 26.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 28
+      },
+      "M": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 28
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 26.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Peter W. Ferretto",
+        "nameZh": "彼得·費雷托",
+        "achievement": "Professor and former Director of the School of Architecture at CUHK; known for architectural design and research in Hong Kong.",
+        "sourceHint": "CUHK School of Architecture faculty page"
+      },
+      {
+        "nameEn": "Thomas Chung",
+        "nameZh": "鍾宏亮",
+        "achievement": "Associate Professor at CUHK School of Architecture; specializes in urban design and community engagement.",
+        "sourceHint": "CUHK School of Architecture faculty page"
+      },
+      {
+        "nameEn": "Hendrik Tieben",
+        "nameZh": "蒂本",
+        "achievement": "Professor and Director of the School of Architecture at CUHK; research on urban transformation and public space.",
+        "sourceHint": "CUHK School of Architecture faculty page"
+      }
+    ],
+    "facultyExcellence": [
+      "The CUHK School of Architecture is consistently ranked among the top architecture schools in Asia.",
+      "Faculty members have received numerous international awards, including the RIBA President's Medal for Research.",
+      "The programme emphasizes sustainable design and community-based projects in Hong Kong and the Pearl River Delta."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Architectural Studies notable alumni",
+      "香港中文大學 建築學 著名校友",
+      "CUHK Architectural Studies graduates Hong Kong careers",
+      "CUHK School of Architecture faculty"
+    ]
+  }
+}

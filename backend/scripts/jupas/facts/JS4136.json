@@ -1,0 +1,129 @@
+{
+  "code": "JS4136",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4136"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4136"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/chesb/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://www.ccs.cuhk.edu.hk"
+    }
+  ],
+  "programme": {
+    "code": "JS4136",
+    "nameEn": "Chinese Studies",
+    "nameZh": "中國研究",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24.25,
+    "uq": 24.75,
+    "lq": 24.25,
+    "percentiles": {
+      "UQ": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "3",
+        "e4": "",
+        "total": 24.75
+      },
+      "M": {
+        "chi": "4",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 24.25
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "",
+        "e3": "",
+        "e4": "",
+        "total": 24.25
+      }
+    },
+    "subjectWeighting": "• English (x 1.25)"
+  },
+  "jupas": {
+    "code": "JS4136",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4136",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4136",
+    "nameEn": "Chinese Studies",
+    "nameZh": "中國研究",
+    "shortDescription": "an class=\"before_label\">Short Description BA in Chinese studies is a multi-disciplinary, primarily English-taught undergraduate programme which offers an integrated exploration of the complexities of Chinese history, economy, governance, business, culture, literature and contemporary society. With an emphasis on interactive teaching, international exchange, and immersive study, our programme is ideal for students intent on becoming globally-oriented China experts, cross-cultural communicators and network-builders. This major is designed for two streams of students distinguished by Chinese language fluency, i.e. 1) International Stream (IS) and 2) Chinese Native-Speaker Stream (CNSS). Students in each stream pursue a subset of learning offerings tailored to their language capacities while completing most of their course work in a shared learning environment in which international and Chinese-native speaker students learn from each other and pursue collaborative projects together. Special features of the programme include 1) adopting an interdisciplinary approach to exploring Greater China; 2) training students to gain an integrated understanding of China’s past, present, and future; 3) offering interactive instruction in a “liberal arts” mode and immersive learning through “on-the-ground” sociocultural experience in Greater China; 4) emphasizing intensive empirical research to equip students with strong analytical and communication skills; 5) providing an international-oriented network for developing careers in Hong Kong, mainland China, and abroad.",
+    "programmeWebsite": "http://www.ccs.cuhk.edu.hk",
+    "tuition": "HK$47,000",
+    "intake": 11,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 115,
+      "bandB": 196,
+      "bandC": 294,
+      "bandD": 432,
+      "bandE": 359,
+      "total": 1396
+    },
+    "offers2025": {
+      "bandA": 10,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 10
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/chesb/",
+    "introduction": "Chinese Studies - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Apply Now Programmes Chinese Studies Home Programmes Programme List Chinese Studies Chinese Studies JUPAS Code Programme Code Faculty Study Period Open for JUPAS Code JS4136 Programme Code CHESB Faculty Arts Study Period 4 Years Open for JUPAS / Non-JUPAS Year 1 / Mainland (Gaokao) / International Programme Introduction Gateway to China The vicissitudes in the history of China have created a rich diversity that both fascinates and puzzles us. Today, as the most populous country in the world and an emerging superpower, China is a force to reckon with. Hence, there is always great demand for programmes that help students from different cultural backgrounds acquire the essential skills and knowledge for getting a grasp on the many faces of China. It is this awareness of cross-cultural engagement that makes CUHK’s Chinese Studies stand out. With the aim of training global China experts, the BA in Chinese Studies programme was designed to give students an in-depth understanding of China and Chinese communities throughout the world through scholarship and first-hand experience. The programme takes an interdisciplinary approach to guide students to pursue their own paths of investigation into the myriad aspects of China’s history, governance, economy, business, culture, literature and contemporary society in a global context. There is strong emphasis on socio-cultural immersion, on-the-ground research, and an exchange of views among a distinctive mix of learners and faculty from Chinese societies and from around the world. Students are encouraged to broaden their understanding and think critically, and from that basis explore deeply and innovatively. We encourage our students to delve into current social, economic and governmental structures, pursue research on specific cases, and undertake fieldwork or internships to “learn by seeing and doing”. Our students find this approach fascinating. Learning through Cross-Cultural Dialogue Admitting students from around the globe, the programme prizes learning through cross-cultural dialogue and tailored, individualized student development. Local and non-local students take courses and do fieldwork together, while having the chance to work on their individual strengths and weaknesses. Through sharing and learning from each other, they can see different sides of China’s development. This exposes them to different perspectives, which helps deepen their understanding of China. From its longstanding position as a site of convergence, multilingualism and cultural exchange, Hong Kong is an ideal place to practise this mixed-learning model. As our recent graduate Marta Magdalena GRAMATYKA, from Poland, put it, “I think Hong Kong is a perfect mix between the East and West, as it offers a cosmopolitan ",
+    "ranking": "",
+    "careerProspects": "Our programme offers a comprehensive, in-depth understanding of China, equipping students with excellent proficiency in both Chinese (Putonghua) and English, as well as a profound understanding of Chinese society and culture. Students study in a cross-cultural environment and gain an international outlook through diverse fieldwork and in-class learning experiences. Our graduates possess strong analytical and communication skills that make them highly sought-after in today’s competitive job market. Graduates of our programme have a wide range of exciting career opportunities ahead of them. Our alumni have achieved remarkable success in various fields, including media, public policy, business, finance, education, tourism, marketing, academic research and culture management. Many have secured key positions in renowned multinational corporations, such as A.P. Moller – Maersk, Dealogic, Societe Generale, the Maritime Silk Road Society and Ernst &amp; Young, as well as prominent institutions in Hong Kong, like AIA Hong Kong. Their contribution has added significant value to these organizations. Many of our graduates have chosen to pursue advanced academic studies, both locally and internationally. They have been admitted to prestigious universities around the world, including Harvard University, the University of Chicago, Johns Hopkins University, SOAS University of London, and University College London. Locally, many have continued their postgraduate education at esteemed institutions such as The Chinese University of Hong Kong, The University of Hong Kong, The Hong Kong University of Science and Technology, and Hong Kong Baptist University. By further expanding their academic horizons, these individuals have continued to make an outstanding contribution to the field of Chinese studies. Through the BA in Chinese Studies programme, our students gain a solid foundation of academic knowledge and practical skills, positioning them for a successful future in their chosen career path. Regardless of their interests and career goals, this programme offers a broad and exciting range of opportunities for personal and professional growth. Join us at the Centre for China Studies and embark on a transformative educational journey that will shape your future and open doors to diverse and rewarding career prospects. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

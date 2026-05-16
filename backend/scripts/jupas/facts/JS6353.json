@@ -1,0 +1,66 @@
+{
+  "code": "JS6353",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6353"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.civil.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6353",
+    "nameEn": "Bachelor of Engineering in Civil Engineering (existing)",
+    "nameZh": "Bachelor of Engineering in Civil Engineering (existing)",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 28,
+    "uq": 29,
+    "lq": 27
+  },
+  "jupas": {
+    "code": "JS6353",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6353",
+    "nameEn": "Bachelor of Engineering in Civil Engineering",
+    "nameZh": "",
+    "shortDescription": "the benefit of humankind. Civil Engineers are responsible for the design, construction, and management of our infrastructure and built environment, ensuring that our buildings, roads, railways, bridges, slopes, dams, and tunnels, are safe and sustainable. They also oversee stormwater drainage systems to prevent flooding, collect and properly treat wastewater to protect the environment, and ensure that all infrastructure components function in a safe, effective, and sustainable manner. Our programme aims to equip students with a solid foundation in the modern civil engineering profession through five core areas: Structural Engineering, Geotechnical Engineering, Environmental Engineering, Transportation Engineering, and Infrastructure Construction Management. Contemporary technologies such as building information modeling, modular integrated construction, advanced building materials, and artificial intelligence are incorporated into the curriculum, enabling graduates to offer innovative solutions to practical problems through planning, design, construction, management, and control. Our programme emphasizes active learning, capstone experiences, hands-on activities, internships, exchange and research-based studies. These opportunities allow students to develop lifelong learning skills that will help them excel in their careers as competent Civil Engineers.",
+    "programmeWebsite": "https://www.civil.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 327,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 313,
+      "bandB": 192,
+      "bandC": 303,
+      "bandD": 310,
+      "bandE": 294,
+      "total": 1412
+    },
+    "offers2025": {
+      "bandA": 70,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 70
+    },
+    "facultyPhone": "+852 3917 2286"
+  },
+  "admissionsSnippet": "Department of Civil Engineering, HKU | &nbsp; &nbsp; | HKU | Faculty of Engineering | Student Intranet | Project Mingde | Related Sites | About Our Missions Welcome Message Contact Us People Civil People Home Academic Staff Honorary &amp; Adjunct Staffs Administrative Staff Teaching &amp; Research Staff Technical Staff &amp; Lab Contact MPhil/PhD Students Post-docs Research Staff Expertise Facilities Research Centres Research Projects Prospective Student Undergraduate Programmes Postgraduate Programmes Studying Here Services --> Current Student Undergraduate Programmes Postgraduate Programmes Student Intranet News and Events News Newsletter &amp; Brochure Events &amp; Seminars Job Openings --> &nbsp; Learn More &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; More &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; &nbsp; More Project Mingde • Nurture students through experiential learning in real-life building projects • Provide education and infrastructure to impoverished areas in China and Southeast Asia Click to enter Project Mingde Title Since the establishment of the University of Hong Kong and the Faculty of Engineering in 1912, the Department of Civil Engineering has nurtured many brilliant leaders in the civil engineering discipline and made significant contributions to local and overseas communities. More Previous Next &nbsp; Home Portfolio 3 Students &nbsp;Undergraduate &nbsp;Taught Postgraduate &nbsp;Research Postgraduate BEng in Civil Engineering MSc programmes MSc(Eng) in Civil Engineering MSc(Eng) in Infrastructure Engineering and Management MPhil / PhD Research &nbsp;Staff Expertise &nbsp;Facilities &nbsp;Research Centres &nbsp;Research Projects Our diverse research encompasses: Construction Engineering &amp; Management Geotechnical Engineering Structural Engineering Transportation Engineering Water &amp; Environmental Engineering News &amp; Events &nbsp;News &nbsp;Newsletter &amp; Brochure &nbsp;Events &amp; Seminars &nbsp;Job Openings We host a variety of seminars, workshops, conferences and courses. Check out our latest news, events and seminars! &nbsp; Studying Here: Geotechnical Engineering &amp; Transportation Engineering Civil Engineering Programmes &nbsp; &nbsp; HK PhD Fellowship Scheme &nbsp; &nbsp; &nbsp; Civil Lab Tour Fung Tsoi Ying HKIE Scholarship Video 2025 &nbsp; &nbsp; Copyright &copy; 2020 Department of Civil Engineering, Faculty of Engineering, The University of Hong Kong. All Rights Reserved."
+}

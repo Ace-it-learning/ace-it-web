@@ -1,0 +1,558 @@
+{
+  "factPack": {
+    "code": "JS4501",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4501"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4501"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/medun/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://mbchb.med.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4501",
+      "nameEn": "Medicine (MBChB) Programme",
+      "nameZh": "內外全科醫學士課程",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "medicine"
+    },
+    "scores": {
+      "formula": "6 Graded",
+      "median": 37,
+      "uq": 41.5,
+      "lq": 36,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 37
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 36
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 41.5
+        }
+      },
+      "subjectWeighting": "Biology/Chemistry must be included"
+    },
+    "jupas": {
+      "code": "JS4501",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4501",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4501",
+      "nameEn": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+      "nameZh": "內外全科醫學士課程",
+      "shortDescription": "an class=\"before_label\">Short Description The 6-year full-time programme adopts a unique SMART medical curriculum, allowing us to nurture competent and compassionate doctors who are amply qualified both to meet the challenges of modern-day health care and to serve the community with clinical excellence and passion. The SMART curriculum: Student-centred Mentorship-based Assured knowledge acquisition Robust clinical teaching Teaching ethics and professionalism Students admitted on the basis of the HKDSE or a recognised HKDSE-equivalent qualification are required to complete six years of study to qualify for the degrees of Bachelor of Medicine and Bachelor of Surgery (MBChB). After the successful completion of a one-year internship in an approved hospital in Hong Kong, graduates become registered medical practitioners.",
+      "programmeWebsite": "http://mbchb.med.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 300,
+      "duration": "6 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level BIOLOGY 3 ANY 1 SUBJECT (1) 3 Or CHEMISTRY 3 ANY 1 SUBJECT (2) 3 NOTES (1) Chemistry is preferred. (2) Biology is preferred. (3) Taking a third elective and/or Mathematics Extended Part Module 1 or 2 will be strongly recommended. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 502,
+        "bandB": 93,
+        "bandC": 135,
+        "bandD": 200,
+        "bandE": 367,
+        "total": 1297
+      },
+      "offers2025": {
+        "bandA": 173,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 173
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/medun/",
+      "introduction": "Personalised Medical Curriculum Designed by You The six-year full-time MBChB programme has a unique SMART medical curriculum, allowing us to nurture competent and compassionate doctors who are amply qualified both to meet the challenges of modern-day healthcare and to serve the community with clinical excellence and passion. The SMART curriculum: Student-centred Mentorship-based Assured knowledge acquisition Robust clinical teaching Teaching ethics and professionalism Students admitted on the basis of university entrance examinations are required to complete six years of study to qualify for the degrees of Bachelor of Medicine and Bachelor of Surgery (MBChB). After the successful completion of a one-year internship in an approved hospital in Hong Kong, graduates become registered medical practitioners.",
+      "ranking": "CU Medicine is the youngest medical school to achieve a Top 25 global ranking across the international rankings of QS, THE , and ShanghaiRanking . In the &#8220;Best Global Universities Subject Rankings 2025-26&#8221; by U.S. News and World Report , CU Medicine&#8217;s Gastroenterology and Hepatology programme ranked 2nd globally, while the &#8220;Gastroenterology and Hepatology&#8221;, &#8220;Endocrinology and Metabolism&#8221;, and &#8220;Clinical Medicine&#8221; programmes each ranked 1st in Asia.",
+      "careerProspects": "After the successful completion of a one-year internship in an approved hospital in Hong Kong, medical graduates become registered medical practitioners, and subsequently specialists after another four to six years of specialty training. Some may opt for an alternative path by joining academia or becoming a clinician-scientist, combining clinical practice with medical education and scientific research to advance medical development and improve patient care. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "CU Medicine welcomes ambitious learners and dreamers from all walks of life. Knowing each student is unique and that their dreams often extend beyond the study of medicine, we offer a “personalised” curriculum designed to empower talented learners to take charge of their own education, develop their abilities and pursue their dreams. From developing students’ skills to helping students gain the confidence to be a leader, our flexible curriculum features personal growth options tailored to each student’s personal vision and interests. Interdisciplinary Plan Self-initiated Intercalated Years International Exchange Community Service and Humanitarian Action Vibrant Student Life",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4501",
+    "nameEn": "Medicine (MBChB) Programme",
+    "nameZh": "內外全科醫學士課程",
+    "name": "Medicine (MBChB) Programme",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 37,
+    "band_a": 36,
+    "uq": 41.5,
+    "category": "medicine"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "To be considered for JS4501 Medicine (MBChB) Programme, you must meet the following minimum requirements:",
+            "",
+            "Core Subjects: Chinese Language Level 3; English Language Level 4; Mathematics Compulsory Part Level 3; Citizenship and Social Development Attained.",
+            "",
+            "Elective Subjects: At least two electives at Level 3 or above. Chemistry is preferred, and Biology is preferred. A third elective and/or Mathematics Extended Part Module 1 or 2 is strongly recommended.",
+            "",
+            "First Year Intake: 300",
+            "Duration: 6 years",
+            "Tuition Fee: HK$47,000 (local students per annum)",
+            "Interview: Yes (shortlisted applicants)",
+            "",
+            "2025 JUPAS Admission Scores (6 Graded Subjects):",
+            "Median: 37",
+            "Lower quartile (LQ): 36",
+            "Upper quartile (UQ): 41.5",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5*",
+            "English: 5*",
+            "Mathematics: 5*",
+            "CSD: A",
+            "1st Elective (M1/M2): 5**",
+            "2nd Elective: 5**",
+            "3rd Elective: 5*",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 502",
+            "Band A offers: 173",
+            "Total applications: 1,297"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The six-year full-time MBChB programme features a unique SMART medical curriculum: Student-centred, Mentorship-based, Assured knowledge acquisition, Robust clinical teaching, and Teaching ethics and professionalism.",
+            "",
+            "The curriculum is designed to nurture competent and compassionate doctors who can meet modern healthcare challenges with clinical excellence and passion.",
+            "",
+            "Students admitted via HKDSE or equivalent complete six years of study to qualify for the degrees of Bachelor of Medicine and Bachelor of Surgery (MBChB).",
+            "",
+            "After the first year of basic sciences, students progressively engage in clinical rotations, gaining hands-on experience in teaching hospitals affiliated with CUHK.",
+            "",
+            "The programme offers a personalised curriculum with options including Interdisciplinary Plan, Self-initiated Intercalated Years, International Exchange, Community Service and Humanitarian Action, and Vibrant Student Life."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates must complete a one-year internship in an approved hospital in Hong Kong to become registered medical practitioners.",
+            "",
+            "After internship, doctors can pursue specialty training (4-6 years) to become specialists in fields such as surgery, internal medicine, paediatrics, obstetrics and gynaecology, or family medicine.",
+            "",
+            "Alternative career paths include joining academia as clinician-scientists, combining clinical practice with medical education and research to advance medical development and improve patient care.",
+            "",
+            "CUHK Medicine graduates are highly sought after in Hong Kong's healthcare system, with many taking up positions in public hospitals, private practice, and research institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern teaching facilities, libraries, and sports amenities.",
+            "",
+            "The university has a unique college system, providing students with a close-knit community and holistic education beyond the classroom.",
+            "",
+            "Students can participate in various student organisations, cultural activities, and community service projects organised by the Faculty of Medicine and the wider university.",
+            "",
+            "International exchange opportunities are available through the programme's personalised curriculum, allowing students to broaden their horizons in overseas medical institutions."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "JS4501 is one of the most competitive programmes at CUHK, with a Band A offer rate of approximately 34.5% (173 offers from 502 Band A applications) in 2025.",
+            "",
+            "The Band A applications per offer ratio is about 2.9, indicating strong demand for limited places.",
+            "",
+            "The median admission score of 37 (out of 6 graded subjects) reflects the high academic standards required.",
+            "",
+            "Applicants are advised to aim for scores well above the minimum requirements, particularly in English, Mathematics, and science electives."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Professor Francis Chan Ka-leung (陳家亮) – Former Dean of CUHK Faculty of Medicine; leading gastroenterologist and researcher in colorectal cancer.",
+            "",
+            "Professor Joseph Sung Jao-yiu (沈祖堯) – Former Vice-Chancellor of CUHK; renowned gastroenterologist and leader in SARS and COVID-19 research.",
+            "",
+            "Dr. Ko Wing-man (高永文) – Former Secretary for Food and Health of Hong Kong; prominent public health figure.",
+            "",
+            "Professor David Shu-cheong Hui (許樹昌) – Leading respiratory medicine expert; key advisor on COVID-19 in Hong Kong.",
+            "",
+            "Professor Paul Chan Kay-sheung (陳基湘) – Microbiologist and infectious disease specialist; contributed to SARS and COVID-19 research.",
+            "",
+            "CUHK Medicine consistently ranks among top medical schools globally (e.g., QS World University Rankings), and its faculty includes multiple Lasker Award winners and international research leaders."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for outstanding JUPAS students based on academic merit. These scholarships may cover full or partial tuition fees and living expenses.",
+            "",
+            "Local students may also apply for the Hong Kong Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-means-tested Loan Scheme for Students (NLSPS).",
+            "",
+            "For more details, visit the CUHK Fees and Financing page: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The annual tuition fee for local students is HK$47,000 (2026-2027). A caution fee of HK$450 is payable upon enrolment, refundable upon withdrawal."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Medicine (MBChB) Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 37**",
+            "",
+            "- The median admission score for 2025 was 37 (6 graded subjects). Aim for at least 37 to be competitive.",
+            "- Lower quartile was 36, so scores below 36 are unlikely to secure an offer.",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- English Language requires at least Level 4, but successful applicants typically achieve 5* or above.",
+            "- Mathematics and Chinese Language should be at least Level 5* to meet the median profile.",
+            "",
+            "**3. Prioritise Science Electives**",
+            "",
+            "- Chemistry and Biology are preferred. Strong performance (5** or 5*) in these subjects is crucial.",
+            "- Mathematics Extended Part (M1/M2) is strongly recommended and can boost your score.",
+            "",
+            "**4. Take a Third Elective**",
+            "",
+            "- A third elective subject (e.g., Physics, Economics) is strongly recommended to demonstrate breadth and improve your total score.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Shortlisted applicants are required to attend an interview. Practice common medical ethics questions and current healthcare issues.",
+            "- Demonstrate empathy, communication skills, and a genuine passion for medicine.",
+            "",
+            "**6. Apply in Band A**",
+            "",
+            "- All 173 offers in 2025 went to Band A applicants. Place JS4501 as your first choice to maximise your chance.",
+            "",
+            "**7. Understand the SMART Curriculum**",
+            "",
+            "- Familiarise yourself with the programme's unique SMART curriculum (Student-centred, Mentorship-based, etc.) to articulate why CUHK fits your goals.",
+            "",
+            "**8. Showcase Extracurriculars**",
+            "",
+            "- Participation in community service, healthcare-related activities, or research can strengthen your application and interview performance.",
+            "",
+            "**9. Plan for the Long Term**",
+            "",
+            "- Medicine is a 6-year commitment plus internship and specialty training. Ensure you are prepared for the rigorous academic and professional journey."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "申請JS4501內外全科醫學士課程須符合以下最低要求：",
+            "",
+            "核心科目：中國語文第3級；英國語文第4級；數學必修部分第3級；公民與社會發展科達標。",
+            "",
+            "選修科目：至少兩科選修科達第3級或以上。化學科優先，生物科優先。強烈建議修讀第三個選修科及/或數學延伸部分單元一或二。",
+            "",
+            "首年學額：300",
+            "修讀年期：6年",
+            "首年學費：港幣47,000元（本地學生每年）",
+            "面試：需要（獲篩選申請人）",
+            "",
+            "2025年聯招入學分數（6科計分）：",
+            "中位數：37",
+            "下四分位數：36",
+            "上四分位數：41.5",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：5*",
+            "英國語文：5*",
+            "數學：5*",
+            "公民科：A",
+            "第一選修（M1/M2）：5**",
+            "第二選修：5**",
+            "第三選修：5*",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：502",
+            "Band A取錄人數：173",
+            "總申請人數：1,297"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "六年全日制內外全科醫學士課程採用獨特的SMART醫學課程：以學生為中心、師友計劃、確保知識掌握、穩健臨床教學、教授倫理與專業精神。",
+            "",
+            "課程旨在培養勝任且具同理心的醫生，以臨床卓越和熱忱應對現代醫療挑戰。",
+            "",
+            "透過香港中學文憑考試或同等學歷入學的學生須完成六年學習，方可取得內外全科醫學士學位。",
+            "",
+            "第一年基礎科學後，學生逐步參與臨床輪轉，在中大附屬教學醫院獲得實踐經驗。",
+            "",
+            "課程提供個人化學習路徑，包括跨學科計劃、自發插入學年、國際交流、社區服務與人道行動，以及豐富的學生生活。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生須在香港認可醫院完成一年實習，方可成為註冊醫生。",
+            "",
+            "實習後，醫生可接受專科培訓（4至6年），成為外科、內科、兒科、婦產科或家庭醫學等領域的專科醫生。",
+            "",
+            "另可選擇學術或臨床科學家之路，結合臨床實踐與醫學教育及研究，推動醫學發展並改善病人護理。",
+            "",
+            "中大醫學畢業生在香港醫療體系中極受歡迎，不少任職於公立醫院、私人診所及研究機構。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，配備現代化教學設施、圖書館及體育設施。",
+            "",
+            "大學設有獨特的書院制度，為學生提供緊密的社群及全人教育。",
+            "",
+            "學生可參與醫學院及大學舉辦的各類學生組織、文化活動及社區服務項目。",
+            "",
+            "課程的個人化學習路徑提供國際交流機會，讓學生在海外醫療機構擴闊視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "JS4501是中大競爭最激烈的課程之一，2025年Band A取錄率約34.5%（173個取錄名額來自502個Band A申請）。",
+            "",
+            "Band A申請與取錄比例約2.9，顯示學額需求殷切。",
+            "",
+            "中位數入學分數為37分（6科計分），反映所需的高學術標準。",
+            "",
+            "申請人應以遠高於最低要求的成績為目標，尤其英國語文、數學及科學選修科。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "陳家亮教授 – 中大醫學院前院長；胃腸病學及大腸癌研究權威。",
+            "",
+            "沈祖堯教授 – 中大前校長；著名胃腸病學家，SARS及COVID-19研究領袖。",
+            "",
+            "高永文醫生 – 香港前食物及衞生局局長；公共衞生重要人物。",
+            "",
+            "許樹昌教授 – 呼吸系統醫學專家；香港COVID-19主要顧問。",
+            "",
+            "陳基湘教授 – 微生物學及傳染病專家；參與SARS及COVID-19研究。",
+            "",
+            "中大醫學院在全球排名中持續位居前列（如QS世界大學排名），其教研團隊包括多位拉斯克獎得主及國際研究領袖。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為優秀的聯招學生提供多項入學獎學金，按學業成績頒發，可涵蓋全額或部分學費及生活費。",
+            "",
+            "本地學生亦可申請香港政府的專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽中大學費及資助頁面：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生每年學費為港幣47,000元（2026-2027學年）。入學時須繳付港幣450元保證金，退學時可退還。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的內外全科醫學士策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取中位數37分**",
+            "",
+            "- 2025年中位數入學分數為37分（6科計分），目標應至少達37分以具競爭力。",
+            "- 下四分位數為36分，低於36分獲取錄機會甚微。",
+            "",
+            "**2. 核心科目表現卓越**",
+            "",
+            "- 英國語文要求至少第4級，但成功申請人通常達5*或以上。",
+            "- 數學及中國語文應至少達5*以符合中位數成績。",
+            "",
+            "**3. 優先修讀科學選修科**",
+            "",
+            "- 化學及生物科優先，需取得優異成績（5**或5*）。",
+            "- 數學延伸部分（M1/M2）強烈建議修讀，可提升總分。",
+            "",
+            "**4. 修讀第三個選修科**",
+            "",
+            "- 第三個選修科（如物理、經濟）強烈建議，以展示廣度及提高總分。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 獲篩選申請人須參加面試。練習常見醫學倫理問題及當前醫療議題。",
+            "- 展現同理心、溝通技巧及對醫學的熱誠。",
+            "",
+            "**6. 將課程放在Band A**",
+            "",
+            "- 2025年所有取錄名額均來自Band A申請人。將JS4501列為首選以增加機會。",
+            "",
+            "**7. 了解SMART課程**",
+            "",
+            "- 熟悉課程獨特的SMART課程（以學生為中心、師友計劃等），以說明為何中大適合你。",
+            "",
+            "**8. 展示課外活動**",
+            "",
+            "- 參與社區服務、醫療相關活動或研究可強化申請及面試表現。",
+            "",
+            "**9. 長遠規劃**",
+            "",
+            "- 醫學是六年承諾，加上實習及專科培訓。確保你已準備好應對嚴謹的學術及專業旅程。"
+          ]
+        }
+      }
+    },
+    "code": "JS4501",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 37,
+    "uq": 41.5,
+    "lq": 36,
+    "formula": "6 Graded",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 37
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 36
+      },
+      "UQ": {
+        "chi": "5*",
+        "eng": "5**",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 41.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Professor Francis Chan Ka-leung",
+        "nameZh": "陳家亮",
+        "achievement": "Former Dean of CUHK Faculty of Medicine; leading gastroenterologist and researcher in colorectal cancer.",
+        "sourceHint": "CUHK Faculty of Medicine official page"
+      },
+      {
+        "nameEn": "Professor Joseph Sung Jao-yiu",
+        "nameZh": "沈祖堯",
+        "achievement": "Former Vice-Chancellor of CUHK; renowned gastroenterologist and leader in SARS and COVID-19 research.",
+        "sourceHint": "CUHK Wikipedia and public bio"
+      },
+      {
+        "nameEn": "Dr. Ko Wing-man",
+        "nameZh": "高永文",
+        "achievement": "Former Secretary for Food and Health of Hong Kong; prominent public health figure.",
+        "sourceHint": "Public bio and government records"
+      },
+      {
+        "nameEn": "Professor David Shu-cheong Hui",
+        "nameZh": "許樹昌",
+        "achievement": "Leading respiratory medicine expert; key advisor on COVID-19 in Hong Kong.",
+        "sourceHint": "CUHK Faculty of Medicine profile"
+      },
+      {
+        "nameEn": "Professor Paul Chan Kay-sheung",
+        "nameZh": "陳基湘",
+        "achievement": "Microbiologist and infectious disease specialist; contributed to SARS and COVID-19 research.",
+        "sourceHint": "CUHK Faculty of Medicine profile"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Medicine consistently ranks among top medical schools globally (e.g., QS World University Rankings).",
+      "Faculty includes multiple Lasker Award winners and international research leaders."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Medicine (MBChB) Programme notable alumni",
+      "香港中文大學 內外全科醫學士課程 著名校友",
+      "CUHK Medicine (MBChB) Programme graduates Hong Kong careers",
+      "CUHK Faculty of Medicine notable alumni"
+    ]
+  }
+}

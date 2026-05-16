@@ -1,0 +1,66 @@
+{
+  "code": "JS6339",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6339"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.mech.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6339",
+    "nameEn": "Bachelor of Engineering in Civil Engineering",
+    "nameZh": "Bachelor of Engineering in Civil Engineering",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 27,
+    "uq": 28,
+    "lq": 26
+  },
+  "jupas": {
+    "code": "JS6339",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6339",
+    "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+    "nameZh": "",
+    "shortDescription": "the profession. The program covers a broad range of engineering science knowledge, including thermodynamics, fluid mechanics, solid mechanics, materials technology, dynamics, and control. Students can specialize in areas of their interest, such as aeronautical engineering, biomedical engineering, control and robotics, energy and environment, mechanics and materials, nanotechnology, product design and manufacture, and thermo-fluids. Graduates are prepared to pursue various career paths, including research and development, manufacturing, design, and consulting. They may also choose to pursue further education, such as a master's or doctoral degree, to specialize in a particular area of mechanical engineering. Mechanical engineering is a growing field with excellent career prospects. Graduates can work in industries such as aerospace, automotive, medical, and energy, as well as in emerging fields like nanotechnology, robotics, and renewable energy. The demand for mechanical engineers is high and expected to grow in the coming years. The BEng degree in Mechanical Engineering provides students with hands-on experience in designing and testing mechanical systems. The program emphasizes problem-solving, critical thinking, and teamwork, which are essential skills in the field. Graduates are well-equipped to tackle real-world problems and contribute to the advancement of mechanical engineering.",
+    "programmeWebsite": "https://www.mech.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 327,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 192,
+      "bandB": 163,
+      "bandC": 251,
+      "bandD": 339,
+      "bandE": 301,
+      "total": 1246
+    },
+    "offers2025": {
+      "bandA": 26,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 26
+    },
+    "facultyPhone": "+852 3917 2635"
+  },
+  "admissionsSnippet": "HKU mech &#8211; Mechanical Engineering HKU Back About About Us Head&#8217;s Message Head&#8217;s Office Mission &amp; Vision Industrial Advisory Committee History Professional Engineer Teaching &amp; Learning Undergraduate Minor of Innovation &#038; Design Taught Postgraduate Introduction Building Services Engineering Innovative Design &#038; Technology Low-Altitude Technology Mechanical Engineering Microelectronics Science &#038; Technology MSc(Eng) Courses offered in 2025-26 Occasional Student Research Postgraduate People Academic Staff Professoriate Staff Teaching Staff Emeritus Professors Research Assistant Professors Honorary Professors Adjunct Professors Administrative &amp; Clerical Staff Technical Staff Research Research Areas Research Foci of Staff Research Activity Posters Research Facilities Laboratories News &#038; Seminars News Seminars Media Coverage More HKU Homepage HKU Portal Faculty of Engineering Homepage UG Student Support Centre TPG Student Commons RPG Student Support Centre ME Info Hub Safety Policy Social Media --> About About Us Head&#8217;s Message Head&#8217;s Office Mission &amp; Vision Industrial Advisory Committee History Professional Engineer Teaching &amp; Learning Undergraduate Minor of Innovation &#038; Design Taught Postgraduate Introduction Building Services Engineering Innovative Design &#038; Technology Low-Altitude Technology Mechanical Engineering Microelectronics Science &#038; Technology MSc(Eng) Courses offered in 2025-26 Occasional Student Research Postgraduate People Academic Staff Professoriate Staff Teaching Staff Emeritus Professors Research Assistant Professors Honorary Professors Adjunct Professors Administrative &amp; Clerical Staff Technical Staff Research Research Areas Research Foci of Staff Research Activity Posters Research Facilities Laboratories News &#038; Seminars News Seminars Media Coverage More HKU Homepage HKU Portal Faculty of Engineering Homepage UG Student Support Centre TPG Student Commons RPG Student Support Centre ME Info Hub Safety Policy Social Media Search for: About Our Department Inaugurates X-Dimension: Frontiers in Engineering Science Forum To Explore the Dimensions of Future Engineering & Science Development Click Here HKU Team receive the Merit Award in the competition of Samsung Solve for Tomorrow 2025–2026 Click Here Deep Elastic Strain Engineering of Free-Standing GaN Microbridge Click Here Chemical bonding manipulation unlocks high performance ionic-bonded thermoelectrics Click Here Our Department and CETIC Foundation Host “MeckUp Quest 2026” AI Robotics Competition 19 Elite Youth Teams Harness Innovation to Address Post-Typhoon Disaster Scenarios Click Here Click Here Latest News Most Favorite Teacher Awards 2025-26: Celebrating Teaching Excellence in Mechanical Engineering 2026-04-14 Read More » HKU Team receive the Merit Award in the competition of Samsung Solve for Tomorrow 2025–2026 2026-04-14 Read More » Deep Elastic Strain Engineering of Free-Standing GaN Microbridge 2026-04-09 Read More » Chemical bonding manipulation unlocks high performance ionic-bonded thermoelectrics 2026-03-26 Read More » Our Department and CETIC Foundation Host “MeckUp Quest 2026” AI Robotics Competition 19 Elite Youth Teams Harness Innovation to Address Post-Typhoon Disaster Scenarios 2026-03-18 Read More » HKU Engineering achieves outstanding results in securing funding under multiple prestigious research schemes 2026-03-16 Read More » Upcoming/Latest Seminars 2026-06-16 Mechanotransduction in Active Matter 2026-05-06 Modernising Environmental Impact Assessment through AI in Hong Kong 2026-04-29 Sodium-Ion Batteries: From Research to Commercialization [Cancelled] 2026-04-23 Intelligent additive manufacturing: from multi-physics modeling to AI-driven prediction and diagnostics 2026-04-22 Central Fabrication Laboratory- Technical sharing session –Analysis of Semiconductor Cleanliness and Detection Methods (Auto SEM，CT，CP，AFM） 2026-04-21 Macrotransport theory for active matter Company Contact us Facebook Instagram Our Location Tel: +852 3917 2635 &nbsp; | &nbsp; Fax: +852 2858 5415 &nbsp; | &nbsp; Email: mech@hku.hk 7/F, Haking Wong Building, Pokfulam Road, Hong Kong Copyright © Dept of Mechanical Engineering, Faculty of Engineering, The University of Hong Kong. All Rights Reserved | Privacy Policy"
+}

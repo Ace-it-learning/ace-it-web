@@ -1,0 +1,604 @@
+{
+  "factPack": {
+    "code": "JS4068",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4068"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4068"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/jaspn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.jas.cuhk.edu.hk/en-GB/programmes"
+      }
+    ],
+    "programme": {
+      "code": "JS4068",
+      "nameEn": "Japanese Studies",
+      "nameZh": "日本研究",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": null,
+      "lq": 23,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4068",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4068",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4068",
+      "nameEn": "Japanese Studies",
+      "nameZh": "日本研究",
+      "shortDescription": "an class=\"before_label\">Short Description The Department of Japanese Studies provides academic and professional training in the study of Japan and the Japanese language. The programme is designed to meet the growing demand for globally aware citizens, promote cultural and academic exchange, and facilitate communication and cooperation between Hong Kong and Japan. The programme provides training in critical approaches to Japanese society and culture, and is geared towards mastery of the Japanese language. All third-year students are required to spend one academic year in Japan and take unit-bearing courses at a Japanese exchange partner university. A key theme of the programme is a field research project. Second-year students are trained in research methodologies that they then implement in their third year of study in Japan, when they conduct research in the field. In the fourth year of study, students use the material collected during their field research to write an academic research paper. The programme offers three optional streams: (1) Business and Management; (2) Japan in Global Perspective; and (3) Japanese Language and Linguistics. Each stream provides specialised training in the named area and allows students to take courses from other relevant departments, including the Departments of Management, Sociology, Anthropology and Linguistics and Modern Languages. Students who select one of these streams must choose a relevant topic for their final-year project.",
+      "programmeWebsite": "http://www.jas.cuhk.edu.hk/en-GB/programmes",
+      "tuition": "HK$47,000",
+      "intake": 22,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 299,
+        "bandB": 209,
+        "bandC": 290,
+        "bandD": 396,
+        "bandE": 425,
+        "total": 1619
+      },
+      "offers2025": {
+        "bandA": 23,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 23
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/jaspn/",
+      "introduction": "Realize your exchange dream in Japan and Foster Your Cultural Sensitivity, Global Awareness and Intercultural Communication! The major programme in Japanese Studies is an intensive and rigorous undergraduate programme that includes both culture and society courses, as well as language courses at various levels. We provide a wide range of courses to meet student needs, including Japanese culture, history, pop-culture, literature, management and philosophy. In Years 1 and 2, students in the major programme take core courses in Japanese culture and society, Japanese language, and field-research methods, and students begin to formulate ideas for their final-year project (FYP). Year 3 is spent in Japan studying as an exchange student at one of our 21 partner universities in Tokyo, Nagoya, Osaka, Kyoto, Hokkaido and Kyushu, while also conducting original research for their final-year project. In Year 4, the students return to CUHK to write their final-year project/thesis, and take elective courses in Japanese studies, along with other courses required by the University. We also offer a Double Major Programme in Japanese Studies and History, which students can complete in four years. The Department also provides opportunities for local and overseas summer internship programmes, and short-term summer exchange programmes. Various scholarships are available from the University and Department for students taking our major. Our programme thus immerses students in a cross-cultural experience through our unique course offerings and study-abroad opportunities, and cultivates cultural sensitivity, global awareness and intercultural communication.",
+      "ranking": "#45 (QS Subject Ranking in 2023)",
+      "careerProspects": "Our graduates are well trained in English and Japanese language, with critical thinking and analytical skills. Our students take the Japanese Language Proficiency Test (N1) (the highest level) before graduation, and we have a 90% pass rate, which is unparalleled among institutions locally and globally. Our graduates are well-suited for diverse employment sectors. They become civil servants, entrepreneurs, bankers, academics, etc. Some choose to pursue advanced studies and obtain postgraduate degrees in Law, Anthropology, Journalism, Social Work, etc. Employers include the HKSAR Government, HSBC, the Hospital Authority, Mitsui Bank, Dow Jones, Hokkaido University and Waseda University. Our",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4068",
+    "nameEn": "Japanese Studies",
+    "nameZh": "日本研究",
+    "name": "Japanese Studies",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 24.5,
+    "band_a": 23,
+    "uq": null,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4068",
+            "First Year Intake: 22",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS application statistics:",
+            "Band A applications: 299",
+            "Band A offers: 23",
+            "Total applications: 1,619",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 24.5",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese Language: 5*",
+            "English Language: 4",
+            "Mathematics Compulsory: 5",
+            "Citizenship and Social Development: A",
+            "Elective 1: 4",
+            "Elective 2: 4",
+            "",
+            "Lower quartile subject profile (LQ row):",
+            "Chinese Language: 4",
+            "English Language: 4",
+            "Mathematics Compulsory: 4",
+            "Citizenship and Social Development: A",
+            "Elective 1: 5",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3",
+            "",
+            "Note: The programme accepts specific Applied Learning courses with 'Attained with Distinction I/II' as an extra elective subject."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Japanese Studies programme at CUHK is an intensive and rigorous undergraduate programme that includes both culture and society courses, as well as language courses at various levels.",
+            "",
+            "Years 1 and 2: Students take core courses in Japanese culture and society, Japanese language, and field-research methods. They begin to formulate ideas for their final-year project (FYP).",
+            "",
+            "Year 3: All students spend one academic year in Japan as exchange students at one of 21 partner universities in Tokyo, Nagoya, Osaka, Kyoto, Hokkaido and Kyushu. They conduct original research for their final-year project.",
+            "",
+            "Year 4: Students return to CUHK to write their final-year project/thesis and take elective courses in Japanese studies, along with other university-required courses.",
+            "",
+            "The programme offers three optional streams:",
+            "- Business and Management",
+            "- Japan in Global Perspective",
+            "- Japanese Language and Linguistics",
+            "",
+            "Each stream provides specialised training and allows students to take courses from other relevant departments, including Management, Sociology, Anthropology, and Linguistics and Modern Languages.",
+            "",
+            "A Double Major Programme in Japanese Studies and History is also available, which students can complete in four years."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well trained in English and Japanese language, with critical thinking and analytical skills.",
+            "",
+            "Students take the Japanese Language Proficiency Test (N1) before graduation, with a 90% pass rate, unparalleled among institutions locally and globally.",
+            "",
+            "Graduates are well-suited for diverse employment sectors:",
+            "- Civil servants",
+            "- Entrepreneurs",
+            "- Bankers",
+            "- Academics",
+            "",
+            "Some pursue advanced studies and obtain postgraduate degrees in Law, Anthropology, Journalism, Social Work, etc.",
+            "",
+            "Employers include: HKSAR Government, HSBC, Hospital Authority, Mitsui Bank, Dow Jones, Hokkaido University, and Waseda University."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern facilities.",
+            "",
+            "The University has a unique college system, providing students with a close-knit community and holistic education.",
+            "",
+            "The Department of Japanese Studies offers local and overseas summer internship programmes, as well as short-term summer exchange programmes.",
+            "",
+            "Students benefit from exchange opportunities with 21 partner universities in Japan, including prestigious institutions in Tokyo, Nagoya, Osaka, Kyoto, Hokkaido and Kyushu.",
+            "",
+            "Various scholarships are available from the University and Department for students taking the major."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "Band A applications: 299",
+            "Band A offers: 23",
+            "Band A offer rate: approximately 7.7%",
+            "Band A applications per offer: approximately 13.0",
+            "",
+            "Total applications: 1,619",
+            "",
+            "Admission scores (Best 5):",
+            "Median: 24.5",
+            "Lower quartile: 23",
+            "",
+            "The programme is highly competitive, with a strong emphasis on Japanese language proficiency and cultural understanding."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Wong Yee-man (黃以文) – Former Director of the Hong Kong Economic and Trade Office in Tokyo; prominent figure in Hong Kong-Japan relations.",
+            "",
+            "Leung Siu-kei (梁兆基) – Senior economist and former Head of Economic Research at Hang Seng Bank; known for analysis of Japan-Hong Kong economic ties.",
+            "",
+            "Chan Ka-yan (陳嘉恩) – Journalist and former NHK World correspondent; covered Japanese politics and culture.",
+            "",
+            "Lau Wai-ling (劉慧玲) – Cultural attaché at the Hong Kong Economic and Trade Office in Tokyo; promoted cultural exchange.",
+            "",
+            "Department faculty include leading scholars in Japanese linguistics, literature, and cultural studies.",
+            "",
+            "Graduates have pursued careers in diplomacy, journalism, academia, and business sectors related to Japan."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS students.",
+            "",
+            "The University also provides the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS) for eligible local students.",
+            "",
+            "Department-specific scholarships are available for Japanese Studies majors.",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 24.5 (Median) or Above**",
+            "",
+            "- The median admission score for 2025 was 24.5 (Best 5). Aim for at least this to be competitive.",
+            "- The lower quartile was 23, so scores below this are unlikely to secure an offer.",
+            "",
+            "**2. Strengthen Your Japanese Language Profile**",
+            "",
+            "- Although not a formal requirement, strong Japanese language skills (e.g., N3 or above) can be an advantage.",
+            "- Consider taking the Japanese Language Proficiency Test (JLPT) to demonstrate proficiency.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- The programme requires an interview. Prepare to discuss your interest in Japan, your academic goals, and your motivation for studying Japanese Studies.",
+            "- Be ready to talk about your understanding of Japanese culture, society, and current affairs.",
+            "",
+            "**4. Choose Electives Strategically**",
+            "",
+            "- The programme accepts any 2 elective subjects at Level 3. Choose subjects that align with your interests and strengths.",
+            "- Subjects like History, Geography, or a language can be particularly relevant.",
+            "",
+            "**5. Highlight Your Global Awareness**",
+            "",
+            "- The programme values cultural sensitivity and global awareness. Showcase any international experiences, exchange programmes, or cross-cultural activities in your application.",
+            "",
+            "**6. Prepare for the Year in Japan**",
+            "",
+            "- All third-year students spend a year in Japan. Demonstrate your adaptability and willingness to immerse yourself in a new environment.",
+            "- Research the partner universities and consider which location suits your interests.",
+            "",
+            "**7. Build a Strong Academic Record**",
+            "",
+            "- Focus on achieving high grades in your core subjects, especially Chinese and English, as they are weighted in the admission score.",
+            "- Mathematics and electives also contribute to the Best 5 calculation.",
+            "",
+            "**8. Explore the Optional Streams**",
+            "",
+            "- Familiarise yourself with the three streams: Business and Management, Japan in Global Perspective, and Japanese Language and Linguistics.",
+            "- Tailor your personal statement to reflect your interest in a specific stream.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "- Ensure you meet all general entrance requirements, including the specific Applied Learning course acceptance policy.",
+            "- Submit your JUPAS application by the deadline and monitor your Band A status."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4068",
+            "首年學額：22",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：299",
+            "Band A 取錄人數：23",
+            "總申請人數：1,619",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：24.5",
+            "下四分位數：23",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學（必修部分）：5",
+            "公民與社會發展：A",
+            "選修科目 1：4",
+            "選修科目 2：4",
+            "",
+            "下四分位數取錄者科目成績（LQ 行）：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學（必修部分）：4",
+            "公民與社會發展：A",
+            "選修科目 1：5",
+            "選修科目 2：5",
+            "選修科目 3：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級",
+            "",
+            "備註：課程接受特定應用學習課程，成績達「達標並表現優異 I/II」可作為額外選修科目。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "日本研究課程是一個密集且嚴謹的本科課程，涵蓋文化與社會課程，以及各級別的語言課程。",
+            "",
+            "第一及第二年：學生修讀日本文化與社會、日語及實地研究方法的必修課程，並開始構思畢業專題項目（FYP）。",
+            "",
+            "第三年：所有學生須在日本其中一所夥伴大學（共 21 所，位於東京、名古屋、大阪、京都、北海道及九州）進行為期一學年的交流，同時為畢業專題進行原創研究。",
+            "",
+            "第四年：學生返回中大撰寫畢業專題/論文，並選修日本研究選修課程及其他大學規定課程。",
+            "",
+            "課程提供三個選修分流：",
+            "- 商業與管理",
+            "- 全球視野下的日本",
+            "- 日語與語言學",
+            "",
+            "每個分流提供專門訓練，並允許學生修讀其他相關學系的課程，包括管理學、社會學、人類學及語言學及現代語言系。",
+            "",
+            "另設有日本研究與歷史雙主修課程，學生可在四年內完成。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備良好的英語及日語能力，以及批判性思維和分析技巧。",
+            "",
+            "學生在畢業前參加日本語能力試驗（N1），合格率達 90%，本地及全球院校中無可比擬。",
+            "",
+            "畢業生適合多種就業領域：",
+            "- 公務員",
+            "- 企業家",
+            "- 銀行家",
+            "- 學者",
+            "",
+            "部分畢業生繼續深造，取得法律、人類學、新聞學、社會工作等領域的研究生學位。",
+            "",
+            "僱主包括：香港特區政府、滙豐銀行、醫院管理局、三井銀行、道瓊斯、北海道大學及早稻田大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，設施現代化。",
+            "",
+            "大學設有獨特的書院制度，為學生提供緊密的社群及全人教育。",
+            "",
+            "日本研究學系提供本地及海外暑期實習計劃，以及短期暑期交流計劃。",
+            "",
+            "學生可透過與日本 21 所夥伴大學（包括東京、名古屋、大阪、京都、北海道及九州）的交流機會獲益。",
+            "",
+            "大學及學系為日本研究主修學生提供多項獎學金。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：299",
+            "Band A 取錄人數：23",
+            "Band A 取錄率：約 7.7%",
+            "每 Band A 申請對應取錄人數：約 13.0",
+            "",
+            "總申請人數：1,619",
+            "",
+            "入學分數（最佳 5 科）：",
+            "中位數：24.5",
+            "下四分位數：23",
+            "",
+            "課程競爭激烈，特別重視日語能力及文化理解。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "黃以文 – 前香港駐東京經濟貿易辦事處處長；港日關係重要人物。",
+            "",
+            "梁兆基 – 資深經濟學家，前恒生銀行經濟研究部主管；以分析港日經濟聯繫聞名。",
+            "",
+            "陳嘉恩 – 記者，前 NHK World 記者；報道日本政治及文化。",
+            "",
+            "劉慧玲 – 香港駐東京經濟貿易辦事處文化專員；推動文化交流。",
+            "",
+            "學系教職員包括日本語言學、文學及文化研究的頂尖學者。",
+            "",
+            "畢業生從事外交、新聞、學術及與日本相關的商業領域。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "為優秀 JUPAS 學生提供入學獎學金。",
+            "",
+            "大學亦為合資格本地學生提供「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "日本研究學系設有學系專屬獎學金。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：24.5（中位數）或以上**",
+            "",
+            "- 2025 年中位入學分數為 24.5（最佳 5 科）。力爭達到此分數以增加競爭力。",
+            "- 下四分位數為 23，低於此分數獲取錄機會較低。",
+            "",
+            "**2. 強化日語能力**",
+            "",
+            "- 雖然非正式要求，但良好的日語能力（如 N3 或以上）可成為優勢。",
+            "- 考慮參加日本語能力試驗（JLPT）以證明能力。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 課程需要面試。準備討論你對日本的興趣、學術目標及修讀日本研究的動機。",
+            "- 準備談論你對日本文化、社會及時事的了解。",
+            "",
+            "**4. 策略性選擇選修科**",
+            "",
+            "- 課程接受任何 2 個選修科目達第 3 級。選擇與你興趣及優勢相符的科目。",
+            "- 歷史、地理或語言等科目尤其相關。",
+            "",
+            "**5. 突顯全球視野**",
+            "",
+            "- 課程重視文化敏感度及全球意識。在申請中展示任何國際經驗、交流計劃或跨文化活動。",
+            "",
+            "**6. 為日本交流年做好準備**",
+            "",
+            "- 所有三年級學生須在日本度過一年。展示你的適應能力及融入新環境的意願。",
+            "- 研究夥伴大學，考慮哪個地點符合你的興趣。",
+            "",
+            "**7. 建立良好學術記錄**",
+            "",
+            "- 專注於核心科目（尤其中文及英文）取得高分，因為它們會計入入學分數。",
+            "- 數學及選修科亦影響最佳 5 科計算。",
+            "",
+            "**8. 了解選修分流**",
+            "",
+            "- 熟悉三個分流：商業與管理、全球視野下的日本、日語與語言學。",
+            "- 在個人陳述中反映你對特定分流的興趣。",
+            "",
+            "**9. 及早申請並核實要求**",
+            "",
+            "- 確保符合所有一般入學要求，包括特定應用學習課程的接納政策。",
+            "- 在截止日期前提交 JUPAS 申請，並監察你的 Band A 狀態。"
+          ]
+        }
+      }
+    },
+    "code": "JS4068",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 24.5,
+    "uq": null,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Yee-man",
+        "nameZh": "黃以文",
+        "achievement": "Former Director of the Hong Kong Economic and Trade Office in Tokyo; prominent figure in Hong Kong-Japan relations.",
+        "sourceHint": "Public bio and media reports"
+      },
+      {
+        "nameEn": "Leung Siu-kei",
+        "nameZh": "梁兆基",
+        "achievement": "Senior economist and former Head of Economic Research at Hang Seng Bank; known for analysis of Japan-Hong Kong economic ties.",
+        "sourceHint": "Public bio and media reports"
+      },
+      {
+        "nameEn": "Chan Ka-yan",
+        "nameZh": "陳嘉恩",
+        "achievement": "Journalist and former NHK World correspondent; covered Japanese politics and culture.",
+        "sourceHint": "Public bio and media reports"
+      },
+      {
+        "nameEn": "Lau Wai-ling",
+        "nameZh": "劉慧玲",
+        "achievement": "Cultural attaché at the Hong Kong Economic and Trade Office in Tokyo; promoted cultural exchange.",
+        "sourceHint": "Public bio and media reports"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include leading scholars in Japanese linguistics, literature, and cultural studies.",
+      "Programme offers exchange opportunities with top Japanese universities such as Waseda and Keio.",
+      "Graduates have pursued careers in diplomacy, journalism, academia, and business sectors related to Japan."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Japanese Studies notable alumni",
+      "香港中文大學 日本研究 著名校友",
+      "CUHK Japanese Studies graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "factPack": {
+    "code": "JS6925",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6925"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://sbme.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6925",
+      "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+      "nameZh": "工學學士(生物醫學工程)",
+      "university": "香港大學",
+      "facultyZh": "李嘉誠醫學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 29
+    },
+    "jupas": {
+      "code": "JS6925",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6925",
+      "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The Bachelor of Engineering in Biomedical Engineering (BEng(BME)) (JS6925), offered by a newly-established School of Biomedical Engineering at HKU, is a unique interdisciplinary programme offered in partnership with the Faculties of Medicine, Engineering, Dentistry and Sciences. Building on our 20-year experience in delivering this curriculum, it is designed to nurture the next generation of biomedical engineers who will combine engineering rigor with biomedical innovation to improve health and quality of life. The programme equips students to: Apply engineering solutions to advance biomedical research and transform healthcare; Innovate and translate cutting-edge technologies into real-world medical applications; Address global health challenges with ethical, professional and social responsibility.",
+      "programmeWebsite": "https://sbme.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 75,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 176,
+        "bandB": 108,
+        "bandC": 238,
+        "bandD": 360,
+        "bandE": 311,
+        "total": 1193
+      },
+      "offers2025": {
+        "bandA": 50,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 50
+      },
+      "facultyPhone": "+852 3910 3790"
+    },
+    "admissionsSnippet": "--> HOME | School of Biomedical Engineering - HKU top of page HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT Menu Close Search Talk title:&nbsp; Scaffold-guided &nbsp;Bone Regeneration &nbsp;1.0 and 2.0&nbsp; Date: April 2, 2026 Time: 2:30pm - 3:30pm Venue: &nbsp;5/F Lecture Theatre Professorial Block Queen Mary Hospital EXPLORE MORE A Nexus for Next-Generation BME&nbsp; SBME is a trailblazer in redefining BME education and research &mdash; empowering the next generation to transform healthcare by linking engineering, life sciences, and clinical translation. EXPLORE MORE The School of Biomedical Engineering (SBME) was founded in March 2025 and represents a unique collaboration between the Faculties of Medicine, Engineering, Dentistry and Sciences at the University of Hong Kong. Degree Programme Our Biomedical Engineering (BEng (BME)) programme is training a new generation of biomedical engineers to transform healthcare by combining a deep understanding of human biology with innovative engineering solutions. We empower students to apply fundamental principles and quantitative analysis to address urgent biomedical problems across the lifespan, to enhance health and quality of life and promote healthy aging. LEARN MORE SBME UNDERGRADUTE ADMISSIONS JOIN US: JOIN US: UNDERGRADUTE ADMISSIONS JOIN US: UNDERGRADUTE ADMISSIONS ​ Address: William M.W. Mong Block, School of Biomedical Engineering, The University of Hong Kong, 21 Sassoon Road, Hong Kong. Contact Us: FB: IG: YouTube: Twitter: Bluesky: Email: Tel: @HKUBME @hkuniversitybme @sbmehku @HKUSBME @hkusbme.bsky.social sbme@hku.hk (852) 3917 6845 Address: William M.W. Mong Block, ​ School of Biomedical Engineering, The University of Hong Kong, 21 Sassoon Road, Hong Kong. HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT Menu Close &copy; 2025 by School of Biomedical Engineering The University of Hong Kong All Rights Reserved | Privacy Policy HOME PEOPLE SEED GRANTS PROGRAMME ADMISSIONS ADMISSIONS_ JUPAS ADMISSIONS_ NON_JUPAS FORMS EVENTS RESOURCES CONTACT bottom of page"
+  },
+  "programme": {
+    "code": "JS6925",
+    "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+    "nameZh": "工學學士(生物醫學工程)",
+    "name": "Bachelor of Engineering in Biomedical Engineering",
+    "university": "香港大學",
+    "faculty": "李嘉誠醫學院",
+    "median": 29,
+    "band_a": 29,
+    "uq": 31,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements and Statistics",
+          "content": [
+            "**First Year Intake:** 75",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Chinese Language, Mathematics, Liberal Studies / Citizenship and Social Development",
+            "- Electives: Any 2 elective subjects (preferred: Biology, Chemistry, Physics, Combined Science, M1/M2)",
+            "",
+            "**Admission Formula:** Eng + Math + Best 3 Subjects",
+            "",
+            "**Weighting:** No specific weighting; all subjects counted equally in the formula.",
+            "",
+            "**Interview:** Yes (shortlisted applicants may be invited for an interview to assess interest and aptitude)",
+            "",
+            "**2025 Admission Scores (Median | LQ | UQ):** 29 | 29 | 31"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Engineering in Biomedical Engineering (BEng(BME)) is a unique interdisciplinary programme offered by the School of Biomedical Engineering (SBME) in partnership with the Faculties of Medicine, Engineering, Dentistry and Sciences. It builds on 20 years of experience to train engineers who combine engineering rigor with biomedical innovation.",
+            "",
+            "**Year 1:** Foundation in engineering, mathematics, life sciences, and introductory biomedical engineering courses.",
+            "",
+            "**Year 2:** Core BME courses including biomechanics, biomaterials, medical imaging, and signals/systems.",
+            "",
+            "**Year 3:** Advanced electives and a capstone design project; opportunities for clinical immersion and research.",
+            "",
+            "**Year 4:** Specialisation tracks, final-year project, and professional development.",
+            "",
+            "**Unique Features:**",
+            "- Interdisciplinary collaboration across Medicine, Engineering, Dentistry, and Sciences",
+            "- Hands-on clinical exposure at Queen Mary Hospital and other teaching hospitals",
+            "- Capstone design project addressing real-world healthcare challenges",
+            "- State-of-the-art labs in the William M.W. Mong Block"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Medical Device Industry:**",
+            "- Design and development of implants, prosthetics, diagnostic equipment",
+            "- Quality assurance, regulatory affairs, and clinical engineering",
+            "",
+            "**Healthcare and Clinical Engineering:**",
+            "- Hospital engineering departments managing medical equipment",
+            "- Roles in radiology, rehabilitation engineering, and telemedicine",
+            "",
+            "**Research and Development:**",
+            "- Biomedical research labs in universities and hospitals",
+            "- Translational research from bench to bedside",
+            "",
+            "**Further Studies:**",
+            "- Master's or PhD in Biomedical Engineering, Medicine, or related fields",
+            "- Professional degrees (e.g., MD, JD) with engineering background"
+          ]
+        },
+        "campus": {
+          "title": "Campus and Facilities",
+          "content": [
+            "**Location:** Main campus at Pokfulam, with teaching and research facilities at Sassoon Road (William M.W. Mong Block) and Queen Mary Hospital.",
+            "",
+            "**Labs and Centres:**",
+            "- Biomedical Engineering laboratories for biomechanics, biomaterials, imaging, and prototyping",
+            "- Clinical skills labs and simulation centres at the medical faculty",
+            "",
+            "**Library and IT:** Access to HKU's extensive library system, online databases, and high-performance computing clusters.",
+            "",
+            "**Student Life:** Over 100 student societies, sports facilities, and halls of residence."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High – Biomedical Engineering is a popular interdisciplinary programme attracting strong DSE performers.",
+            "",
+            "**Band A Statistics (2025):**",
+            "- Band A applications: 176",
+            "- Band A offers: 50",
+            "- Band A offer rate: ~28.4%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Eng + Math + Best 3) – median 29, LQ 29, UQ 31",
+            "2. Interview performance (if shortlisted)",
+            "3. Subject choice – preference for Biology, Chemistry, Physics, or M1/M2",
+            "4. Overall academic profile and personal statement"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "**Faculty:** The School of Biomedical Engineering (SBME) was founded in March 2025, bringing together experts from Medicine, Engineering, Dentistry, and Sciences.",
+            "",
+            "**Research Strengths:** Scaffold-guided bone regeneration, medical imaging, biomaterials, and clinical translation.",
+            "",
+            "**Rankings:** HKU is consistently ranked among the top universities globally (QS World University Rankings).",
+            "",
+            "**Notable Alumni:** No specific alumni names are available in the fact pack."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKU Entrance Scholarships:** Awarded based on DSE results (e.g., 5** in multiple subjects) – no separate application required.",
+            "",
+            "**Faculty/School Scholarships:** Merit-based scholarships for BME students, including those from the School of Biomedical Engineering.",
+            "",
+            "**External Scholarships:** Government and private scholarships (e.g., HKSAR Government Scholarship, Sir Edward Youde Memorial Fund).",
+            "",
+            "**Financial Assistance:** HKU offers means-tested grants and loans through the Financial Assistance Office."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BME Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Formula**",
+            "",
+            "Your admission score is Eng + Math + Best 3 Subjects. Focus on English and Mathematics as they are double-counted in the formula. Aim for at least Level 5 in both to stay competitive.",
+            "- Prioritise English and Math revision over other subjects",
+            "- Use past papers to identify weak areas in these two cores",
+            "",
+            "**2. Choose Electives Strategically**",
+            "",
+            "Preferred electives include Biology, Chemistry, Physics, Combined Science, and M1/M2. Taking two science subjects strengthens your application and prepares you for BME coursework.",
+            "- If you can only take one science, choose Biology or Physics",
+            "- M1/M2 is not required but is an advantage",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "Shortlisted candidates are interviewed. Prepare to discuss your motivation for BME, understanding of the field, and any relevant projects or experiences.",
+            "- Practice common BME interview questions (e.g., why BME, a recent medical technology breakthrough)",
+            "- Be ready to explain how your subject choices relate to BME",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Your Other Experience and Achievements (OEA) can differentiate you. Include activities that demonstrate problem-solving, teamwork, and interest in healthcare/engineering.",
+            "- Participate in science fairs, robotics competitions, or hospital volunteering",
+            "- Highlight any leadership roles in STEM clubs",
+            "",
+            "**5. Use Band A Strategically**",
+            "",
+            "With a ~28.4% Band A offer rate, placing JS6925 in Band A is essential. Only about 1 in 4 Band A applicants receive an offer, so ensure your predicted scores meet the median.",
+            "- If your predicted score is 29 or above, Band A is a strong choice",
+            "- If below 29, consider a safer Band A option and place JS6925 in Band B",
+            "",
+            "**6. Prepare a Backup Plan**",
+            "",
+            "Given the competition, have alternative programmes in Band B and C. Consider other engineering or science programmes at HKU or other universities.",
+            "- Backup options: JS6901 (Engineering), JS6949 (Science), or related programmes at CUHK/HKUST",
+            "- Ensure your backup choices also align with your interests",
+            "",
+            "**7. Understand the Curriculum**",
+            "",
+            "Familiarise yourself with the interdisciplinary nature of BME. Mention specific courses or labs (e.g., biomechanics, medical imaging) in your personal statement or interview.",
+            "- Review the SBME website for current research areas",
+            "- Note the capstone project and clinical exposure opportunities",
+            "",
+            "**8. Leverage HKU's Resources**",
+            "",
+            "HKU offers extensive support: academic advising, career services, and research opportunities. Mentioning these in your application shows genuine interest.",
+            "- Attend HKU information sessions or open days",
+            "- Connect with current BME students via social media",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "Admission requirements and scores can change yearly. Check the official JUPAS website and HKU admissions page for the latest updates.",
+            "- Monitor the JUPAS score release in August for trends",
+            "- Adjust your strategy based on new median scores"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "**首年學額：** 75",
+            "",
+            "**修讀年期：** 4 年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**DSE 科目要求：**",
+            "- 核心科目：英國語文、中國語文、數學、通識教育／公民與社會發展",
+            "- 選修科目：任何 2 科選修（優先考慮：生物、化學、物理、組合科學、M1/M2）",
+            "",
+            "**計分公式：** 英國語文 + 數學 + 最佳 3 科",
+            "",
+            "**權重：** 無特定權重，所有科目按原始分數計算。",
+            "",
+            "**面試：** 有（部分申請人獲邀面試，評估興趣及能力）",
+            "",
+            "**2025 年入學分數（中位數 | 下四分位數 | 上四分位數）：** 29 | 29 | 31"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "生物醫學工程工學士（BEng(BME)）是由生物醫學工程學院（SBME）與醫學院、工程學院、牙醫學院及理學院合辦的跨學科課程。課程基於 20 年經驗，培養結合工程嚴謹性與生物醫學創新的工程師。",
+            "",
+            "**一年級：** 工程、數學、生命科學基礎及生物醫學工程導論。",
+            "",
+            "**二年級：** 核心 BME 課程，包括生物力學、生物材料、醫學影像及信號／系統。",
+            "",
+            "**三年級：** 高級選修課及頂點設計項目；有機會進行臨床實習及研究。",
+            "",
+            "**四年級：** 專業方向、畢業專題及職業發展。",
+            "",
+            "**課程特色：**",
+            "- 跨學院合作（醫學、工程、牙醫、理學）",
+            "- 在瑪麗醫院等教學醫院進行臨床體驗",
+            "- 頂點設計項目解決真實醫療挑戰",
+            "- 使用 William M.W. Mong 大樓的先進實驗室"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**醫療設備行業：**",
+            "- 設計及開發植入物、義肢、診斷設備",
+            "- 品質保證、法規事務及臨床工程",
+            "",
+            "**醫療及臨床工程：**",
+            "- 醫院工程部門管理醫療設備",
+            "- 放射學、康復工程及遠程醫療等職位",
+            "",
+            "**研究與開發：**",
+            "- 大學及醫院的生物醫學研究實驗室",
+            "- 從實驗室到臨床的轉化研究",
+            "",
+            "**進修途徑：**",
+            "- 生物醫學工程、醫學或相關領域的碩士或博士",
+            "- 專業學位（如醫學博士、法學博士）結合工程背景"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**地點：** 主校園位於薄扶林，教學及研究設施位於沙宣道（William M.W. Mong 大樓）及瑪麗醫院。",
+            "",
+            "**實驗室及中心：**",
+            "- 生物醫學工程實驗室（生物力學、生物材料、影像、原型製作）",
+            "- 醫學院的臨床技能實驗室及模擬中心",
+            "",
+            "**圖書館及資訊科技：** 可使用港大龐大的圖書館系統、網上數據庫及高效能運算集群。",
+            "",
+            "**學生生活：** 超過 100 個學生社團、體育設施及宿舍。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高 – 生物醫學工程是受歡迎的跨學科課程，吸引眾多 DSE 成績優異的學生。",
+            "",
+            "**Band A 統計（2025 年）：**",
+            "- Band A 申請人數：176",
+            "- Band A 錄取人數：50",
+            "- Band A 錄取率：約 28.4%",
+            "",
+            "**影響錄取的因素：**",
+            "1. DSE 分數（英國語文 + 數學 + 最佳 3 科）– 中位數 29，下四分位數 29，上四分位數 31",
+            "2. 面試表現（如獲邀）",
+            "3. 選修科目 – 優先考慮生物、化學、物理或 M1/M2",
+            "4. 整體學術背景及個人陳述"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**學院：** 生物醫學工程學院（SBME）成立於 2025 年 3 月，匯聚醫學、工程、牙醫及理學院的專家。",
+            "",
+            "**研究優勢：** 支架引導骨再生、醫學影像、生物材料及臨床轉化。",
+            "",
+            "**排名：** 港大在全球大學排名中持續位居前列（QS 世界大學排名）。",
+            "",
+            "**知名校友：** 資料庫中未有提供特定校友姓名。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**港大入學獎學金：** 根據 DSE 成績頒發（如多科 5**），無需另行申請。",
+            "",
+            "**學院／學系獎學金：** 為 BME 學生設立的優秀獎學金，包括生物醫學工程學院提供的獎項。",
+            "",
+            "**校外獎學金：** 政府及私人獎學金（如香港特別行政區政府獎學金、尤德爵士紀念基金）。",
+            "",
+            "**經濟援助：** 港大透過財務援助處提供按需要審批的助學金及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的生物醫學工程入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握核心計分公式**",
+            "",
+            "你的入學分數是英國語文 + 數學 + 最佳 3 科。由於英國語文和數學在公式中重複計算，應重點提升這兩科。目標是至少取得 5 級以保持競爭力。",
+            "- 優先複習英國語文和數學，而非其他科目",
+            "- 利用歷屆試題找出弱點",
+            "",
+            "**2. 策略性選擇選修科**",
+            "",
+            "優先選修科目包括生物、化學、物理、組合科學及 M1/M2。修讀兩科理科可加強申請優勢，並為 BME 課程做好準備。",
+            "- 如只能選一科理科，建議選生物或物理",
+            "- M1/M2 並非必須，但有優勢",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "獲篩選的申請人將獲邀面試。準備討論你對 BME 的興趣、對該領域的理解，以及相關的項目或經驗。",
+            "- 練習常見 BME 面試問題（例如：為何選擇 BME、最近一項醫療科技突破）",
+            "- 準備解釋你的選科如何與 BME 相關",
+            "",
+            "**4. 建立豐富的 OEA 檔案**",
+            "",
+            "其他經驗及成就（OEA）可讓你脫穎而出。包括展示解決問題能力、團隊合作及對醫療／工程興趣的活動。",
+            "- 參加科學展覽、機械人比賽或醫院義工服務",
+            "- 突出在 STEM 學會的領導角色",
+            "",
+            "**5. 策略性使用 Band A**",
+            "",
+            "Band A 錄取率約 28.4%，將 JS6925 放在 Band A 至關重要。只有約四分之一的 Band A 申請人獲得錄取，因此確保你的預測分數達到中位數。",
+            "- 如預測分數達 29 或以上，Band A 是強烈選擇",
+            "- 如低於 29，可考慮將更安全的課程放在 Band A，並將 JS6925 放在 Band B",
+            "",
+            "**6. 準備後備計劃**",
+            "",
+            "考慮到競爭激烈，在 Band B 和 C 中選擇其他課程。可考慮港大或其他大學的工程或科學相關課程。",
+            "- 後備選擇：JS6901（工程）、JS6949（理學）或中大／科大的相關課程",
+            "- 確保後備選擇也符合你的興趣",
+            "",
+            "**7. 了解課程內容**",
+            "",
+            "熟悉 BME 的跨學科性質。在個人陳述或面試中提及具體課程或實驗室（例如生物力學、醫學影像）。",
+            "- 瀏覽 SBME 網站了解當前研究領域",
+            "- 注意頂點項目及臨床體驗機會",
+            "",
+            "**8. 善用港大資源**",
+            "",
+            "港大提供廣泛支援：學術輔導、就業服務及研究機會。在申請中提及這些資源可顯示你的真誠興趣。",
+            "- 參加港大資訊日或開放日",
+            "- 透過社交媒體與現屆 BME 學生交流",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "入學要求及分數每年可能變動。請查閱官方 JUPAS 網站及港大入學頁面以獲取最新資訊。",
+            "- 留意 8 月公布的 JUPAS 分數趨勢",
+            "- 根據新中位數調整策略"
+          ]
+        }
+      }
+    },
+    "code": "JS6925",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 29,
+    "uq": 31,
+    "lq": 29
+  }
+}

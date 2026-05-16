@@ -1,0 +1,526 @@
+{
+  "factPack": {
+    "code": "JS4893",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4893"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4893"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/dspsn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://dsps.ssc.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4893",
+      "nameEn": "Data Science and Policy Studies",
+      "nameZh": "數據科學與政策研究",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 23.5,
+      "uq": 35,
+      "lq": 23,
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 23
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4893",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4893",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4893",
+      "nameEn": "Data Science and Policy Studies",
+      "nameZh": "數據科學與政策研究",
+      "shortDescription": "",
+      "programmeWebsite": "http://dsps.ssc.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 18,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 76,
+        "bandB": 71,
+        "bandC": 139,
+        "bandD": 238,
+        "bandE": 232,
+        "total": 756
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/dspsn/",
+      "introduction": "Think Data. Shape Policy. – Empowering Data-Driven Policy Leaders The Bachelor of Social Science in Data Science and Policy Studies (DSPS) at CUHK is an interdisciplinary programme that integrates data science with public policy analysis. It is designed to equip students with the skills and vision to design innovative, evidence-based solutions for complex social challenges, using the power of data, technology, and critical thinking. The programme is ideal for students who: Aspire to apply data science in addressing real-world issues such as inequality, sustainability, healthcare, and urban development Wish to develop strong technical capabilities in Python programming, machine learning, social network analysis, and emerging tools such as AI and immersive media Value academic flexibility and are keen to shape their own area of specialisation (e.g. Social Data and Policy, Technology Governance, Urban Innovation, or Environmental Policy Analytics) Programme Highlights Integrated training in data management, statistics, machine learning, policy design, and analytical methodologies, with a strong emphasis on integrations and applications Critical exploration of the governance, ethical implications, and real-world applications of emerging technologies including AI, big data, and AR/VR Flexible curriculum structure offering a broad selection of electives across data science and policy applications, allowing students to build a personalised academic pathway and specialisation Experiential learning opportunities, including internships with public and private organisations, a hands-on capstone project, and overseas exchanges to broaden global perspectives",
+      "ranking": "",
+      "careerProspects": "Graduates are prepared for impactful careers in but not limited to: Government departments and public policy think tanks Non-governmental and international organisations Consulting and technology firms Academic and research institutions If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4893",
+    "nameEn": "Data Science and Policy Studies",
+    "nameZh": "數據科學與政策研究",
+    "name": "Data Science and Policy Studies",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 23.5,
+    "band_a": 23,
+    "uq": 35,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4893",
+            "First Year Intake: 18",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 23.5",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): 35",
+            "",
+            "Median admitted subject profile:",
+            "Chinese: 3",
+            "English: 4",
+            "Mathematics: 5*",
+            "Citizenship and Social Development: Attained",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 76",
+            "Offers (Band A): 19",
+            "Total applications: 756",
+            "",
+            "Entrance requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Compulsory Part Level 3, Citizenship and Social Development Attained",
+            "Electives: Any 2 subjects at Level 3 (may include 1 elective + M1/M2, or Applied Learning with 'Attained with Distinction I/II' as extra subject)",
+            "For details: https://www.cuhk.edu.hk/adm/jupas/ApL2026"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Bachelor of Social Science in Data Science and Policy Studies (DSPS) is an interdisciplinary programme integrating data science with public policy analysis.",
+            "",
+            "Programme highlights:",
+            "- Integrated training in data management, statistics, machine learning, policy design, and analytical methodologies",
+            "- Critical exploration of governance, ethics, and real-world applications of AI, big data, and AR/VR",
+            "- Flexible curriculum with electives across data science and policy applications, allowing personalised specialisation (e.g. Social Data and Policy, Technology Governance, Urban Innovation, Environmental Policy Analytics)",
+            "- Experiential learning: internships with public/private organisations, capstone project, overseas exchanges",
+            "",
+            "For full details: http://dsps.ssc.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are prepared for impactful careers in:",
+            "- Government departments and public policy think tanks",
+            "- Non-governmental and international organisations",
+            "- Consulting and technology firms",
+            "- Academic and research institutions",
+            "",
+            "The programme equips students with data-driven policy analysis skills highly sought after in the public and private sectors."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with over 9,000 hostel places.",
+            "Students benefit from a unique learning environment that combines academic excellence with holistic development.",
+            "The programme provides access to the CUHK Policy Research Centre and the Hong Kong Institute of Asia-Pacific Studies for applied research.",
+            "Overseas exchange opportunities are available to broaden global perspectives."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "Band A applications: 76",
+            "Band A offers: 19",
+            "Band A offer rate: 25.0%",
+            "Band A applications per offer: 4.0",
+            "",
+            "Median admission score (Best 5): 23.5",
+            "Lower quartile: 23",
+            "Upper quartile: 35",
+            "",
+            "The programme is highly selective, with strong competition for places."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is jointly offered by the Faculty of Social Science and the Department of Statistics, providing interdisciplinary training in data science and policy analysis.",
+            "Faculty members include experts in data science, public policy, and social statistics, with active research in urban informatics, health policy, and computational social science.",
+            "Students have access to the CUHK Policy Research Centre and the Hong Kong Institute of Asia-Pacific Studies for applied research opportunities.",
+            "Graduates have pursued careers in government, consulting, tech firms, and academia."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for local and non-local students, including entrance scholarships that may cover tuition fees and living expenses.",
+            "Local JUPAS students are eligible for various scholarships and financial aid schemes.",
+            "For details: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Key schemes:",
+            "- Admission Scholarships for undergraduates",
+            "- Scholarships for Local JUPAS Students",
+            "- Other Major Scholarships and Financial Aid (e.g. TSFS, NLSPS)"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Data Science & Policy Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 24+ in Best 5**",
+            "",
+            "- The median is 23.5 and LQ is 23, so a score of 24 or above gives you a strong chance.",
+            "- Focus on boosting your best 5 subjects, especially electives.",
+            "",
+            "**2. Excel in Mathematics (Compulsory) — Target 5* or above**",
+            "",
+            "- The median admitted student scored 5* in Maths; aim for at least 5.",
+            "- Strong quantitative skills are essential for data science coursework.",
+            "",
+            "**3. Strengthen English — Target Level 4 or above**",
+            "",
+            "- Median English is 4; a higher score improves your overall profile.",
+            "- Practice academic writing and data interpretation in English.",
+            "",
+            "**4. Choose Relevant Electives**",
+            "",
+            "- Electives like M1/M2, Economics, Geography, or ICT are advantageous.",
+            "- The programme accepts Applied Learning with 'Attained with Distinction I/II' as an extra subject.",
+            "",
+            "**5. Build a Strong Portfolio**",
+            "",
+            "- Showcase projects or experiences in data analysis, policy research, or community work.",
+            "- This can strengthen your application even though no interview is required.",
+            "",
+            "**6. Understand the Programme's Interdisciplinary Nature**",
+            "",
+            "- DSPS blends data science with policy; demonstrate interest in both areas in your personal statement.",
+            "- Mention specific areas like urban innovation or technology governance.",
+            "",
+            "**7. Apply Early in Band A**",
+            "",
+            "- With only 19 Band A offers out of 76 applicants, Band A placement is critical.",
+            "- Ensure JS4893 is your first choice to maximise chances.",
+            "",
+            "**8. Prepare for No Interview**",
+            "",
+            "- Since there is no interview, your JUPAS score and subject choices are the sole criteria.",
+            "- Double-check that you meet all entrance requirements, including CSD Attained.",
+            "",
+            "**9. Use Official Resources**",
+            "",
+            "- Visit the programme website (http://dsps.ssc.cuhk.edu.hk) and CUHK admissions page for updates.",
+            "- Check JUPAS for any changes in requirements or score calculations."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4893",
+            "首年學額：18",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：23.5",
+            "下四分位數：23",
+            "上四分位數：35",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：3",
+            "英國語文：4",
+            "數學：5*",
+            "公民科：達標",
+            "選修一：5",
+            "選修二：4",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：76",
+            "Band A 錄取人數：19",
+            "總申請人數：756",
+            "",
+            "入學要求：",
+            "核心科目：中國語文 3 級、英國語文 3 級、數學必修部分 3 級、公民與社會發展科達標",
+            "選修科目：任何 2 科達 3 級（可包括 1 選修 + M1/M2，或應用學習科目「達標並表現優異 I/II」作為額外科目）",
+            "詳情：https://www.cuhk.edu.hk/adm/jupas/ApL2026"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "數據科學與政策研究社會科學學士課程是一門跨學科課程，融合數據科學與公共政策分析。",
+            "",
+            "課程亮點：",
+            "- 整合數據管理、統計學、機器學習、政策設計及分析方法論的訓練",
+            "- 批判性探討人工智能、大數據及 AR/VR 的治理、倫理及實際應用",
+            "- 靈活的課程結構，提供數據科學與政策應用的廣泛選修，讓學生建立個人化的學習路徑及專修範疇（例如社會數據與政策、科技治理、城市創新、環境政策分析）",
+            "- 體驗式學習：公私營機構實習、專題研習、海外交流",
+            "",
+            "詳情：http://dsps.ssc.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可投身以下領域：",
+            "- 政府部門及公共政策智庫",
+            "- 非政府組織及國際組織",
+            "- 顧問及科技公司",
+            "- 學術及研究機構",
+            "",
+            "課程培養的數據驅動政策分析技能在公私營機構均極具需求。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供獨特的書院制度，設有超過 9,000 個宿位。",
+            "學生可在卓越學術與全人發展相結合的環境中學習。",
+            "課程提供政策研究中心及香港亞太研究所的應用研究機會。",
+            "設有海外交流機會，擴闊國際視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：76",
+            "Band A 錄取人數：19",
+            "Band A 錄取率：25.0%",
+            "每錄取一名 Band A 申請者平均申請人數：4.0",
+            "",
+            "中位數入學分數（最佳五科）：23.5",
+            "下四分位數：23",
+            "上四分位數：35",
+            "",
+            "課程競爭激烈，學額有限。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系優勢",
+          "content": [
+            "本課程由社會科學院及統計學系合辦，提供數據科學與政策分析的跨學科訓練。",
+            "教學團隊包括數據科學、公共政策及社會統計學專家，活躍於城市信息學、健康政策及計算社會科學等研究領域。",
+            "學生可使用政策研究中心及香港亞太研究所進行應用研究。",
+            "畢業生於政府、顧問、科技公司及學術界發展。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，包括入學獎學金，部分涵蓋學費及生活費。",
+            "本地 JUPAS 學生可申請各類獎學金及資助計劃。",
+            "詳情：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "主要計劃：",
+            "- 本科生入學獎學金",
+            "- 本地 JUPAS 學生獎學金",
+            "- 其他主要獎學金及財政資助（如 TSFS、NLSPS）"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的數據科學與政策研究策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳五科 24 分或以上**",
+            "",
+            "- 中位數為 23.5，下四分位數為 23，24 分或以上能大大提高機會。",
+            "- 集中提升最佳五科成績，尤其是選修科。",
+            "",
+            "**2. 數學必修部分要強 — 目標 5* 或以上**",
+            "",
+            "- 中位數錄取者數學達 5*，至少應爭取 5 級。",
+            "- 數據科學課程需要扎實的數學基礎。",
+            "",
+            "**3. 加強英文 — 目標 4 級或以上**",
+            "",
+            "- 中位數英文為 4 級，更高分數有助提升整體競爭力。",
+            "- 多練習學術寫作及數據解讀。",
+            "",
+            "**4. 選擇相關選修科**",
+            "",
+            "- 選修 M1/M2、經濟、地理或資訊及通訊科技等科目有優勢。",
+            "- 課程接受應用學習科目「達標並表現優異 I/II」作為額外科目。",
+            "",
+            "**5. 建立豐富的個人檔案**",
+            "",
+            "- 展示數據分析、政策研究或社區服務的項目經驗。",
+            "- 即使無面試，個人檔案仍能突顯你的優勢。",
+            "",
+            "**6. 了解課程的跨學科本質**",
+            "",
+            "- DSPS 融合數據科學與政策，在個人陳述中展現對兩者的興趣。",
+            "- 提及城市創新或科技治理等具體範疇。",
+            "",
+            "**7. 將課程放在 Band A 首位**",
+            "",
+            "- 只有 19 個 Band A 錄取名額，76 人競爭，Band A 位置至關重要。",
+            "- 確保 JS4893 是你的首選。",
+            "",
+            "**8. 無面試，專注分數**",
+            "",
+            "- 由於無面試，JUPAS 分數及科目選擇是唯一標準。",
+            "- 確保符合所有入學要求，包括公民科達標。",
+            "",
+            "**9. 善用官方資源**",
+            "",
+            "- 瀏覽課程網站 (http://dsps.ssc.cuhk.edu.hk) 及中大入學網頁獲取最新資訊。",
+            "- 查閱 JUPAS 了解任何要求或計分方法的變更。"
+          ]
+        }
+      }
+    },
+    "code": "JS4893",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 23.5,
+    "uq": 35,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 23.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 23
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 35
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is jointly offered by the Faculty of Social Science and the Department of Statistics, providing interdisciplinary training in data science and policy analysis.",
+      "Faculty members include experts in data science, public policy, and social statistics, with active research in areas such as urban informatics, health policy, and computational social science.",
+      "Students have access to the CUHK Policy Research Centre and the Hong Kong Institute of Asia-Pacific Studies for applied research opportunities."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Data Science and Policy Studies notable alumni",
+      "香港中文大學 數據科學與政策研究 著名校友",
+      "CUHK Data Science and Policy Studies graduates Hong Kong careers",
+      "CUHK JS4893 alumni"
+    ]
+  }
+}

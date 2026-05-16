@@ -1,0 +1,612 @@
+{
+  "factPack": {
+    "code": "JS4903",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4903"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4903"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/lawsn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.law.cuhk.edu.hk/app/bachelor-of-laws-llb/#tab1"
+      }
+    ],
+    "programme": {
+      "code": "JS4903",
+      "nameEn": "Bachelor of Laws",
+      "nameZh": "法學士",
+      "university": "香港中文大學",
+      "facultyZh": "法律學院",
+      "category": "law"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 36,
+      "uq": 37.5,
+      "lq": 34.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 36
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 34.5
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 37.5
+        }
+      },
+      "subjectWeighting": "• English (x 2)"
+    },
+    "jupas": {
+      "code": "JS4903",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4903",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4903",
+      "nameEn": "Bachelor of Laws",
+      "nameZh": "法學士",
+      "shortDescription": "an class=\"before_label\">Short Description The Bachelor of Laws (LLB) is a four-year programme that offers intellectual and personal development through the medium of law. Students will explore a range of engaging and important subjects, while developing their critical analysis and creative problem-solving skills and enhancing their ability to construct detailed, well-reasoned, compelling arguments. These are life-long skills that will support graduates in whatever careers they choose, be they in law or other fields. The first two years are almost entirely focused on compulsory subjects, grouped into the themes of Foundations of Law, Public Law (which governs relations between the state and citizens) and Obligations (which governs relations between citizens). In their final two years, students will combine a few remaining compulsory subjects with courses they select from a range of electives, allowing students to develop further expertise in legal areas of their choice. Students may also choose to specialize in the Global Law or Chinese Law streams, indicated a degree of specialization in that particular area that will be reflected on their transcripts. LLB students have a few opportunities to obtain double degrees. Please visit the Faculty website for further details.",
+      "programmeWebsite": "https://www.law.cuhk.edu.hk/app/bachelor-of-laws-llb/#tab1",
+      "tuition": "HK$47,000",
+      "intake": 68,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 4 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 5 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 195,
+        "bandB": 100,
+        "bandC": 148,
+        "bandD": 213,
+        "bandE": 245,
+        "total": 901
+      },
+      "offers2025": {
+        "bandA": 25,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 25
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/lawsn/",
+      "introduction": "Explore an Exciting Journey in Our Bachelor of Laws Programme Our Bachelor of Laws (LLB) programme provides world-class academic and professional education in law. Students learn the rules and values underpinning the law and its role in structuring society through extensive reading, thinking, writing, discussing and debating. Our approach to legal education emphasises persuasion, problem solving, analysing complex issues, dispute management and reflecting on competing viewpoints. The legal knowledge and critical thinking skills you gain will be with you for the rest of your life and will allow you to be successful at the highest level in the legal field or any other professional path you choose, whether in Hong Kong or elsewhere around the world.",
+      "ranking": "",
+      "careerProspects": "After completing our LLB program, you will satisfy one of the admission requirements for the Postgraduate Certificate in Laws (PCLL) in Hong Kong. In recent years, on average, 80% of CUHK LLB graduates who sought a place in the PCLL program were successful. You are eligible for admission as a Solicitor or Barrister of the High Court of Hong Kong after completing the PCLL, and a training contract (2 years) or pupillage (1 year). Our LLB graduates are well equipped to be legal practitioners or leaders in other fields, such as commerce, industry, government, community service, academia and media. Employers include major international law firms (e.g., A&amp;O Shearman, Baker McKenzie, Clifford Chance, Deacons, DLA Piper, Fangda Partners, Freshfields Bruckhaus Deringer, Herbert Smith Freehills, Hogan Lovells, Johnson Stokes &amp; Master, King &amp; Wood Mallesons, Linklaters, Morrison Foerster, Norton Rose Fulbright, Slaughter &amp; May, and Zhong Lun Law Firm LLP), the Hong Kong",
+      "craftYourPath": "aging and transformative. We provide a liberal education in the theory and practice of law at the level of rigour appropriate to an undergraduate programme of study. Our LLB programme is designed for critical and creative thinkers who are ready to become leaders in law or related fields, who want to be successful in the increasingly globalised legal arena, and who are dedicated to serving society. Double-Degree Study Options Bachelor of Laws (LLB) Double Degree Programmes at CUHK Students can register for one of the following double-degree options towards the end of their first year of studies: (i)&nbsp; LLB with a Bachelor of Arts in Translation (ii) LLB with a Bachelor of Social Science in Sociology Master of Laws (LLM) Programme at the Dickson Poon School of Law of King&#8217;s College London Master of Laws (LLM) Programme at the University of Southern California Gould School of Law CUHK LAW offers two joint study options in partnership with King&#8217;s College London (KCL) and the University of Southern California (USC). Under these options, students may enrol in the Master of Laws (LLM) Programme at KCL or USC in their fourth year. This provides students with an opportunity to obtain both an undergraduate degree (LLB from CUHK) and a postgraduate degree (LLM from KCL or USC) in four years.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4903",
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "法學士",
+    "name": "Bachelor of Laws",
+    "university": "香港中文大學",
+    "faculty": "法律學院",
+    "median": 36,
+    "band_a": 34.5,
+    "uq": 37.5,
+    "category": "law"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: Bachelor of Laws (LLB) – JS4903",
+            "First Year Intake: 68",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 36",
+            "Lower quartile (LQ): 34.5",
+            "Upper quartile (UQ): 37.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 5**",
+            "Mathematics: 4",
+            "CSD: A",
+            "1st Elective: 5*",
+            "2nd Elective: 4",
+            "3rd Elective: 4",
+            "",
+            "Subject Weighting: English (x 2)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 195",
+            "Band A offers: 25",
+            "Total applications: 901",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 4",
+            "- English Language: Level 5",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects (or 1 elective + M1/M2): Level 3 each",
+            "",
+            "Note: Applicants with very special circumstances may be granted Chinese Language waiver on a case-by-case basis."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The LLB programme offers intellectual and personal development through the medium of law. Students explore engaging subjects while developing critical analysis, creative problem-solving, and argument construction skills.",
+            "",
+            "Years 1-2: Focus on compulsory subjects grouped into Foundations of Law, Public Law (state-citizen relations), and Obligations (citizen-citizen relations).",
+            "",
+            "Years 3-4: Combine remaining compulsory subjects with elective courses, allowing specialisation in areas of choice. Students may also choose the Global Law or Chinese Law streams, with specialisation reflected on transcripts.",
+            "",
+            "Double-Degree Options (register after Year 1):",
+            "- LLB with BA in Translation",
+            "- LLB with BSocSc in Sociology",
+            "",
+            "Joint LLM Pathways (4-year LLB + LLM):",
+            "- Master of Laws at King’s College London (KCL)",
+            "- Master of Laws at University of Southern California (USC) Gould School of Law",
+            "",
+            "Programme website: https://www.law.cuhk.edu.hk/app/bachelor-of-laws-llb/#tab1"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates satisfy one of the admission requirements for the Postgraduate Certificate in Laws (PCLL) in Hong Kong. On average, 80% of CUHK LLB graduates who sought a PCLL place were successful.",
+            "",
+            "After completing PCLL and a training contract (2 years) or pupillage (1 year), graduates are eligible for admission as a Solicitor or Barrister of the High Court of Hong Kong.",
+            "",
+            "LLB graduates are well-equipped for legal practice or leadership in commerce, industry, government, community service, academia, and media.",
+            "",
+            "Employers include major international law firms: A&O Shearman, Baker McKenzie, Clifford Chance, Deacons, DLA Piper, Fangda Partners, Freshfields Bruckhaus Deringer, Herbert Smith Freehills, Hogan Lovells, Johnson Stokes & Master, King & Wood Mallesons, Linklaters, Morrison Foerster, Norton Rose Fulbright, Slaughter & May, Zhong Lun Law Firm LLP, and the Hong Kong government."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s main campus is located in Shatin, New Territories, offering a spacious and scenic environment with over 9,000 hostel places.",
+            "",
+            "Students belong to one of nine colleges, each providing pastoral care, general education, and residential life.",
+            "",
+            "The Faculty of Law is housed in the Lee Shau Kee Building, with modern facilities including a law library, moot court, and seminar rooms.",
+            "",
+            "Exchange and internship opportunities are available through the Faculty’s global partnerships, including joint LLM pathways with KCL and USC."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics reflect strong competition:",
+            "- Band A applications: 195",
+            "- Band A offers: 25",
+            "- Band A offer rate: ~12.8%",
+            "- Band A applications per offer: ~7.8",
+            "",
+            "Total applications across all bands: 901",
+            "",
+            "Admission scores (Best 5): Median 36, LQ 34.5, UQ 37.5",
+            "",
+            "English is weighted double, so strong English performance is critical.",
+            "",
+            "Interview is required for selected applicants; preparation is essential."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "CUHK Law has produced many distinguished graduates who have excelled in law, politics, and public service:",
+            "",
+            "Margaret Ng Ngoi-yee (吳靄儀) – Former Legislative Council member (Legal functional constituency); barrister and human rights advocate.",
+            "",
+            "Priscilla Leung Mei-fun (梁美芬) – Legislative Council member (Kowloon West); barrister; former CUHK law lecturer.",
+            "",
+            "Ronny Tong Ka-wah (湯家驊) – Senior Counsel; former Legislative Council member; former Chairman of the Hong Kong Bar Association.",
+            "",
+            "Dennis Kwok Wing-hang (郭榮鏗) – Former Legislative Council member (Legal functional constituency); barrister.",
+            "",
+            "Albert Ho Chun-yan (何俊仁) – Former Legislative Council member; barrister; former Chairman of the Democratic Party.",
+            "",
+            "Faculty Excellence: CUHK Law is consistently ranked among the top law schools in Asia, with leading scholars in constitutional law, commercial law, and human rights, and strong mooting and legal skills training programmes."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Entrance Scholarships for JUPAS students: Awarded to top performers in HKDSE, with amounts varying based on scores.",
+            "",
+            "Other major scholarships open for application include the Hong Kong Scholarship for Excellence Scheme and various faculty-specific awards.",
+            "",
+            "Financial aid schemes are available for students with demonstrated need, including the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For full details: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4903 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 36+ (Best 5)**",
+            "",
+            "- Median 36, LQ 34.5, UQ 37.5. Aim for at least 36 to be competitive.",
+            "- English weighted double – a 5** in English is almost essential.",
+            "",
+            "**2. Prioritise English and Electives**",
+            "",
+            "- English (x2) means a 5** adds 10 points. Pair with strong electives (5* or above).",
+            "- Median admit profile: English 5**, 1st elective 5*, plus solid Chinese and Maths.",
+            "",
+            "**3. Band A Strategy: Put JS4903 as First Choice**",
+            "",
+            "- All 25 offers went to Band A. Band B-E received zero offers.",
+            "- Only Band A applicants are considered for interview and admission.",
+            "",
+            "**4. Prepare for Interview**",
+            "",
+            "- Interview is required for selected applicants. Expect questions on current legal issues, reasoning, and motivation.",
+            "- Practice articulating arguments clearly and responding to counterpoints.",
+            "",
+            "**5. Strengthen Your Elective Profile**",
+            "",
+            "- Two electives at Level 3 minimum, but competitive applicants have 5* or 5** in at least one.",
+            "- Consider M1/M2 as a second elective if strong in Maths.",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "- First two years are compulsory-heavy (Foundations, Public Law, Obligations). Be ready for intensive reading and writing.",
+            "- Electives in Years 3-4 allow specialisation – plan ahead.",
+            "",
+            "**7. Explore Double-Degree and LLM Pathways**",
+            "",
+            "- Register for LLB+Translation or LLB+Sociology after Year 1.",
+            "- Joint LLM with KCL or USC in Year 4 – a unique advantage.",
+            "",
+            "**8. Leverage CUHK’s College System**",
+            "",
+            "- College life provides academic support, networking, and holistic development.",
+            "- Choose a college that aligns with your interests (e.g., law-focused activities).",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- CUHK entrance scholarships are merit-based. High DSE scores (e.g., 36+) may qualify for substantial awards.",
+            "- Check TSFS and NLSPS for financial aid if needed."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：法學士 (LLB) – JS4903",
+            "首年學額：68",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：36",
+            "下四分位數：34.5",
+            "上四分位數：37.5",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：5**",
+            "數學：4",
+            "公民科：A",
+            "第一選修科：5*",
+            "第二選修科：4",
+            "第三選修科：4",
+            "",
+            "科目比重：英國語文（x2）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：195",
+            "Band A錄取人數：25",
+            "總申請人數：901",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第4級",
+            "- 英國語文：第5級",
+            "- 數學必修部分：第3級",
+            "- 公民與社會發展：達標",
+            "- 任何2個選修科（或1個選修科+ M1/M2）：第3級",
+            "",
+            "備註：特殊情況下可申請豁免中文要求，按個別情況審批。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "法學士課程通過法律媒介提供智力與個人發展。學生探索引人入勝的課題，同時培養批判分析、創意解難及論證構建能力。",
+            "",
+            "第一至二年：專注於必修科目，分為法律基礎、公法（國家與公民關係）及義務（公民之間關係）。",
+            "",
+            "第三至四年：結合剩餘必修科與選修科，學生可選擇環球法律或中國法律分流，相關專長會顯示在成績單上。",
+            "",
+            "雙學位選項（一年級後註冊）：",
+            "- 法學士 + 翻譯文學士",
+            "- 法學士 + 社會學社會科學學士",
+            "",
+            "聯合LLM途徑（4年法學士+法學碩士）：",
+            "- 倫敦國王學院法學碩士",
+            "- 南加州大學古爾德法學院法學碩士",
+            "",
+            "課程網站：https://www.law.cuhk.edu.hk/app/bachelor-of-laws-llb/#tab1"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生符合香港法學專業證書（PCLL）的入學要求。近年平均80%申請PCLL的中大法學士畢業生成功獲取錄。",
+            "",
+            "完成PCLL及兩年實習合約或一年實習期後，可成為香港高等法院律師或大律師。",
+            "",
+            "法學士畢業生勝任法律執業或商業、工業、政府、社區服務、學術及媒體等領域的領導職位。",
+            "",
+            "僱主包括主要國際律師事務所：安理、貝克·麥堅時、高偉紳、的近、DLA Piper、方達、富而德、史密夫斐爾、霍金路偉、周俊軒·張岱樞、金杜、禮德、摩根路易斯、諾頓羅氏、司力達、中倫，以及香港政府。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，提供超過9,000個宿位。",
+            "",
+            "學生隸屬九所書院之一，每所書院提供關顧輔導、通識教育及住宿生活。",
+            "",
+            "法律學院設於利樹培大樓，配備現代化設施，包括法律圖書館、模擬法庭及研討室。",
+            "",
+            "學院透過全球合作夥伴提供交流及實習機會，包括與KCL及USC的聯合LLM途徑。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025年JUPAS統計反映激烈競爭：",
+            "- Band A申請人數：195",
+            "- Band A錄取人數：25",
+            "- Band A錄取率：約12.8%",
+            "- 每個Band A錄取名額的申請人數：約7.8",
+            "",
+            "所有Band總申請人數：901",
+            "",
+            "入學分數（最佳5科）：中位數36，下四分位數34.5，上四分位數37.5",
+            "",
+            "英國語文比重雙倍，因此英文成績至關重要。",
+            "",
+            "需要面試（選定申請人），準備面試必不可少。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "中大法律學院培養了多位在法律、政治及公共服務領域傑出的畢業生：",
+            "",
+            "吳靄儀 – 前立法會議員（法律功能界別）；大律師及人權倡導者。",
+            "",
+            "梁美芬 – 立法會議員（九龍西）；大律師；前中大法律學院講師。",
+            "",
+            "湯家驊 – 資深大律師；前立法會議員；前香港大律師公會主席。",
+            "",
+            "郭榮鏗 – 前立法會議員（法律功能界別）；大律師。",
+            "",
+            "何俊仁 – 前立法會議員；大律師；前民主黨主席。",
+            "",
+            "學院卓越：中大法律學院持續位列亞洲頂尖法學院，擁有憲法、商法及人權領域的領先學者，並提供強大的模擬法庭及法律技能培訓。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，部分涵蓋學費及生活費。",
+            "",
+            "JUPAS學生入學獎學金：頒予HKDSE成績優異者，金額因分數而異。",
+            "",
+            "其他可申請的主要獎學金包括香港卓越獎學金計劃及各學院特定獎項。",
+            "",
+            "經濟援助計劃為有需要學生提供支援，包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS4903策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：36分或以上（最佳5科）**",
+            "",
+            "- 中位數36，下四分位數34.5，上四分位數37.5。目標至少36分才具競爭力。",
+            "- 英文比重雙倍，5**幾乎是必須。",
+            "",
+            "**2. 優先處理英文及選修科**",
+            "",
+            "- 英文（x2）使5**值10分。搭配強勁選修科（5*或以上）。",
+            "- 中位數錄取者成績：英文5**，第一選修5*，中文及數學穩固。",
+            "",
+            "**3. Band A策略：將JS4903放在首選**",
+            "",
+            "- 所有25個錄取名額均來自Band A。Band B-E無人獲取錄。",
+            "- 只有Band A申請人才獲考慮面試及錄取。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 需要面試（選定申請人）。預計問題涉及當前法律議題、推理及動機。",
+            "- 練習清晰表達論點及回應反駁。",
+            "",
+            "**5. 強化選修科組合**",
+            "",
+            "- 最少兩個選修科達第3級，但競爭者通常至少一科達5*或5**。",
+            "- 如數學強勁，可考慮M1/M2作為第二選修科。",
+            "",
+            "**6. 了解課程結構**",
+            "",
+            "- 首兩年以必修科為主（法律基礎、公法、義務）。準備大量閱讀及寫作。",
+            "- 第三至四年選修科可專攻特定領域，提前規劃。",
+            "",
+            "**7. 探索雙學位及LLM途徑**",
+            "",
+            "- 一年級後可註冊法學士+翻譯或法學士+社會學。",
+            "- 四年級可選KCL或USC聯合LLM，獨特優勢。",
+            "",
+            "**8. 善用書院制度**",
+            "",
+            "- 書院生活提供學術支援、人脈建立及全人發展。",
+            "- 選擇與興趣相符的書院（例如法律相關活動）。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 中大入學獎學金基於成績。HKDSE高分（如36+）可能獲得可觀獎勵。",
+            "- 如有需要，查閱TSFS及NLSPS申請經濟援助。"
+          ]
+        }
+      }
+    },
+    "code": "JS4903",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 36,
+    "uq": 37.5,
+    "lq": 34.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5**",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 36
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 34.5
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 37.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Margaret Ng Ngoi-yee",
+        "nameZh": "吳靄儀",
+        "achievement": "Former Legislative Council member (Legal functional constituency); barrister and human rights advocate.",
+        "sourceHint": "Wikipedia and public bio; studied law at CUHK (LLB)."
+      },
+      {
+        "nameEn": "Priscilla Leung Mei-fun",
+        "nameZh": "梁美芬",
+        "achievement": "Legislative Council member (Kowloon West); barrister; former CUHK law lecturer.",
+        "sourceHint": "Public bio; LLB from CUHK."
+      },
+      {
+        "nameEn": "Ronny Tong Ka-wah",
+        "nameZh": "湯家驊",
+        "achievement": "Senior Counsel; former Legislative Council member; former Chairman of the Hong Kong Bar Association.",
+        "sourceHint": "Wikipedia; studied law at CUHK."
+      },
+      {
+        "nameEn": "Dennis Kwok Wing-hang",
+        "nameZh": "郭榮鏗",
+        "achievement": "Former Legislative Council member (Legal functional constituency); barrister.",
+        "sourceHint": "Public bio; LLB from CUHK."
+      },
+      {
+        "nameEn": "Albert Ho Chun-yan",
+        "nameZh": "何俊仁",
+        "achievement": "Former Legislative Council member; barrister; former Chairman of the Democratic Party.",
+        "sourceHint": "Wikipedia; studied law at CUHK."
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Law is consistently ranked among the top law schools in Asia.",
+      "Faculty includes leading scholars in constitutional law, commercial law, and human rights.",
+      "Strong mooting and legal skills training programmes."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Bachelor of Laws notable alumni",
+      "香港中文大學 法學士 著名校友",
+      "CUHK Bachelor of Laws graduates Hong Kong careers"
+    ]
+  }
+}

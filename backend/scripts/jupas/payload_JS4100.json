@@ -1,0 +1,484 @@
+{
+  "factPack": {
+    "code": "JS4100",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4100"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4100"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/puhsn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www2.crs.cuhk.edu.hk/baph/programme-description"
+      }
+    ],
+    "programme": {
+      "code": "JS4100",
+      "nameEn": "Public Humanities",
+      "nameZh": "公共人文學",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 23.5,
+      "uq": null,
+      "lq": 23,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4100",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4100",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4100",
+      "nameEn": "Public Humanities",
+      "nameZh": "公共人文學",
+      "shortDescription": "an class=\"before_label\">Short Description The Bachelor of Arts in Public Humanities integrates the critical skills of Cultural Studies and practical know-how of Cultural Management, focusing not only on research and theories, but also on cultural practices, knowledge transfer, and public engagement. We aim to nurture a new generation of cultural mediators, producers, and professionals to meet the needs and challenges of contemporary society. We also aim to transform cultural practices for better community building. This programme fosters students’ critical and creative thinking, deepens their understanding of culture, heritage, and the arts; it also enhances their ability to communicate and collaborate with the public. We are committed to training students in research skills, cultural sensitivity, media literacy, curating, and policy-making, bringing the knowledge and values of the humanities into the cultural life of the general public. We also promote global citizenship and civic participation, and support sustainable development of various cultural enterprises in society.",
+      "programmeWebsite": "https://www2.crs.cuhk.edu.hk/baph/programme-description",
+      "tuition": "HK$47,000",
+      "intake": 37,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 195,
+        "bandB": 159,
+        "bandC": 236,
+        "bandD": 370,
+        "bandE": 347,
+        "total": 1307
+      },
+      "offers2025": {
+        "bandA": 28,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 28
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/puhsn/",
+      "introduction": "The Bachelor of Arts in Public Humanities integrates the critical skills of Cultural Studies and practical know-how of Cultural Management, focusing not only on research and theories, but also on cultural practices, knowledge transfer, and public engagement. We aim to nurture a new generation of cultural mediators, producers, and professionals to meet the needs and challenges of contemporary society. We also aim to transform cultural practices for better community building. This programme fosters students’ critical and creative thinking, deepens their understanding of culture, heritage, and the arts; it also enhances their ability to communicate and collaborate with the public. We are committed to training students in research skills, cultural sensitivity, media literacy, curating, and policy-making, bringing the knowledge and values of the humanities into the cultural life of the general public. We also promote global citizenship and civic participation, and support sustainable development of various cultural enterprises in society.",
+      "ranking": "",
+      "careerProspects": "The Bachelor of Arts in Public Humanities opens the door to a wide range of exciting career paths, allowing graduates to pursue their passion and make a meaningful contribution in various fields. Here are some potential career avenues for Public Humanities graduates: &nbsp;Researchers and Educators in the field of humanities, arts and culture &nbsp;Cultural Policy research and advocacy &nbsp;Curators, managers, and specialists of cultural venues (such as arts centres, public museums, private galleries, and auction houses) Practitioners in Government and Non-Government Organizations and Social Enterprises devoted to community-building, cultural conservations, and sustainability Cultural entrepreneurs and influencers Cultural, Arts and Media Practitioners Professionals of tangible and intangible cultural heritage If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "How culture nurtures ideas, how ideas transform culture",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4100",
+    "nameEn": "Public Humanities",
+    "nameZh": "公共人文學",
+    "name": "Public Humanities",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 23.5,
+    "band_a": 23,
+    "uq": null,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "Programme: JS4100 – Public Humanities (BA)",
+            "First Year Intake: 37",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 23.5",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5",
+            "English: 3",
+            "Mathematics: 3",
+            "CSD: A",
+            "Elective 1: 5",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 195",
+            "Band A offers: 28",
+            "Total applications: 1307",
+            "",
+            "Entrance Requirements (JUPAS):",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects at Level 3 (or one elective + M1/M2, or other language subjects at specified levels)",
+            "Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The BA in Public Humanities integrates critical skills of Cultural Studies with practical know-how of Cultural Management.",
+            "Focus areas: research and theories, cultural practices, knowledge transfer, and public engagement.",
+            "Students develop critical and creative thinking, deepen understanding of culture, heritage, and the arts, and enhance ability to communicate and collaborate with the public.",
+            "Training in research skills, cultural sensitivity, media literacy, curating, and policy-making.",
+            "Promotes global citizenship, civic participation, and sustainable development of cultural enterprises.",
+            "For detailed programme structure, visit: https://www2.crs.cuhk.edu.hk/baph/programme-description"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates can pursue careers as researchers and educators in humanities, arts and culture.",
+            "Cultural policy research and advocacy.",
+            "Curators, managers, and specialists of cultural venues (arts centres, public museums, private galleries, auction houses).",
+            "Practitioners in government and non-government organizations and social enterprises focused on community-building, cultural conservation, and sustainability.",
+            "Cultural entrepreneurs and influencers.",
+            "Cultural, arts and media practitioners.",
+            "Professionals of tangible and intangible cultural heritage."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with a unique college system.",
+            "Students benefit from interdisciplinary interactions across eight faculties.",
+            "The programme is hosted by the Department of Cultural and Religious Studies, part of the Faculty of Arts.",
+            "CUHK provides over 9,000 hostel places, on-campus accommodation about HK$17,000 per year.",
+            "Estimated living expenses: about HK$45,000 per year.",
+            "For exchange and internship opportunities, refer to programme website."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics: Band A applications 195, Band A offers 28.",
+            "Band A offer rate: approximately 14.4%.",
+            "Band A applications per offer: about 7.0.",
+            "Median admission score (Best 5): 23.5; LQ: 23.",
+            "Interview is required for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is newly launched (first intake 2024/25), so no alumni have graduated yet.",
+            "Faculty includes experienced scholars from the Department of Cultural and Religious Studies and other humanities departments at CUHK.",
+            "Students benefit from interdisciplinary training in public history, cultural heritage, and community engagement."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit.",
+            "Scholarships may cover tuition fees and living expenses.",
+            "Financial aid schemes available, including TSFS and NLSPS.",
+            "For details: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Public Humanities Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Best 5 at 23.5+**",
+            "",
+            "- Median is 23.5, LQ 23. Aim for at least 24 to be competitive.",
+            "- Chinese and electives carry weight; median admits scored 5 in Chinese and two electives at 5.",
+            "",
+            "**2. Band A Placement is Critical**",
+            "",
+            "- All 28 offers went to Band A applicants. Put JS4100 as your first choice.",
+            "- Band B/C/D/E received zero offers in 2025.",
+            "",
+            "**3. Strengthen Your Elective Portfolio**",
+            "",
+            "- Median admit had three electives at 5,5,4. Choose subjects that showcase analytical and cultural understanding.",
+            "- History, Literature, or Liberal Studies (if taken) can be strong choices.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required. Expect questions on your interest in public humanities, cultural projects, and community engagement.",
+            "- Demonstrate critical thinking and awareness of current cultural issues in Hong Kong.",
+            "",
+            "**5. Highlight Cultural Experience in Your Application**",
+            "",
+            "- Mention any volunteer work, internships, or projects related to heritage, arts, or community work.",
+            "- Show how you have engaged with the public through cultural activities.",
+            "",
+            "**6. Understand the Programme's Interdisciplinary Nature**",
+            "",
+            "- Be ready to discuss how you combine cultural studies with management skills.",
+            "- Familiarize yourself with the programme's focus on knowledge transfer and public engagement.",
+            "",
+            "**7. Use the JUPAS Band A Strategy**",
+            "",
+            "- With only 37 places, competition is high. Ensure your other Band A choices are realistic backups.",
+            "- Consider related programmes like Cultural Management (if available) as alternatives.",
+            "",
+            "**8. Check Admission Requirements Carefully**",
+            "",
+            "- You need Level 3 in Chinese and English, Level 2 in Maths, and Attained in CSD.",
+            "- Two electives at Level 3; Applied Learning subjects with Distinction can be used as extra.",
+            "",
+            "**9. Stay Updated via Official Sources**",
+            "",
+            "- Regularly visit the programme website and CUHK admissions page for any changes.",
+            "- Attend information sessions if offered by the department."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學資訊",
+          "content": [
+            "課程：JS4100 – 公共人文學（文學士）",
+            "首年學額：37",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 JUPAS 入學分數（最佳5科）：",
+            "中位數：23.5",
+            "下四分位數：23",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：5",
+            "英國語文：3",
+            "數學：3",
+            "公民科：A",
+            "選修1：5",
+            "選修2：5",
+            "選修3：4",
+            "",
+            "2025 申請統計：",
+            "Band A 申請人數：195",
+            "Band A 錄取人數：28",
+            "總申請人數：1307",
+            "",
+            "入學要求（JUPAS）：",
+            "中國語文：第3級",
+            "英國語文：第3級",
+            "數學必修部分：第2級",
+            "公民與社會發展：達標",
+            "兩科選修科目第3級（或一科選修+ M1/M2，或其他語言科目指定等級）",
+            "應用學習科目「達標並表現優異I/II」可作為額外選修科"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "公共人文學文學士結合文化研究的批判技能與文化管理的實務知識。",
+            "重點領域：研究與理論、文化實踐、知識轉移及公眾參與。",
+            "培養學生的批判與創意思維，加深對文化、遺產及藝術的理解，提升與公眾溝通協作的能力。",
+            "訓練研究技巧、文化敏感度、媒體素養、策展及政策制定。",
+            "促進全球公民意識、公民參與及文化企業的可持續發展。",
+            "詳細課程結構請參閱：https://www2.crs.cuhk.edu.hk/baph/programme-description"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可從事人文、藝術及文化領域的研究員及教育工作者。",
+            "文化政策研究及倡導。",
+            "文化場館（藝術中心、公共博物館、私人畫廊、拍賣行）的策展人、經理及專家。",
+            "政府及非政府組織、社會企業中從事社區建設、文化保護及可持續發展的從業者。",
+            "文化創業家及影響者。",
+            "文化、藝術及媒體從業者。",
+            "有形及非物質文化遺產專業人員。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中文大學沙田校園提供充滿活力的學習環境，並設有獨特的書院制度。",
+            "學生可透過八個學院進行跨學科交流。",
+            "本課程由文化及宗教研究系開設，隸屬文學院。",
+            "中大提供超過9,000個宿位，每年住宿費約HK$17,000。",
+            "估計每年生活費約HK$45,000。",
+            "交流及實習機會請參閱課程網站。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "2025 JUPAS 統計：Band A 申請195人，Band A 錄取28人。",
+            "Band A 錄取率約14.4%。",
+            "Band A 申請/錄取比約7.0。",
+            "中位數入學分數（最佳5科）：23.5；下四分位數：23。",
+            "需要面試（選定申請人）。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及師資卓越",
+          "content": [
+            "本課程為新開辦課程（2024/25學年首屆招生），暫未有畢業校友。",
+            "師資包括文化及宗教研究系及其他中文大學人文學院的資深學者。",
+            "學生受益於公共歷史、文化遺產及社區參與的跨學科訓練。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地JUPAS學生提供基於學術成績的入學獎學金。",
+            "獎學金可涵蓋學費及生活費。",
+            "設有資助計劃，包括TSFS及NLSPS。",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的公共人文學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科達23.5或以上**",
+            "",
+            "- 中位數為23.5，下四分位數為23。建議目標定在24分以上以增加競爭力。",
+            "- 中文及選修科比重較高；中位數錄取者中文及兩科選修均達5級。",
+            "",
+            "**2. Band A 選擇至關重要**",
+            "",
+            "- 2025年所有28個錄取名額均來自Band A申請者。請將JS4100放在首選。",
+            "- Band B/C/D/E 在2025年並無錄取。",
+            "",
+            "**3. 強化選修科組合**",
+            "",
+            "- 中位數錄取者選修科成績為5,5,4。選擇能展現分析能力及文化理解的科目。",
+            "- 歷史、文學或通識教育（如曾修讀）均為有力選擇。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 需要面試。預計會問及你對公共人文學的興趣、文化項目及社區參與經驗。",
+            "- 展現批判思維及對香港當前文化議題的認識。",
+            "",
+            "**5. 在申請中突出文化經驗**",
+            "",
+            "- 提及任何與遺產、藝術或社區工作相關的義工、實習或項目。",
+            "- 展示你如何透過文化活動與公眾互動。",
+            "",
+            "**6. 理解課程的跨學科性質**",
+            "",
+            "- 準備討論如何結合文化研究與管理技能。",
+            "- 熟悉課程對知識轉移及公眾參與的重點。",
+            "",
+            "**7. 運用JUPAS Band A策略**",
+            "",
+            "- 學額僅37個，競爭激烈。確保其他Band A選擇為現實的後備方案。",
+            "- 可考慮相關課程如文化管理（如有開設）作為替代。",
+            "",
+            "**8. 仔細檢查入學要求**",
+            "",
+            "- 需中文及英文第3級、數學第2級、公民科達標。",
+            "- 兩科選修第3級；應用學習科目達「優異」可作額外選修。",
+            "",
+            "**9. 透過官方來源獲取最新資訊**",
+            "",
+            "- 定期瀏覽課程網站及中大入學頁面以了解任何變更。",
+            "- 如學系舉辦資訊講座，建議參加。"
+          ]
+        }
+      }
+    },
+    "code": "JS4100",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 23.5,
+    "uq": null,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 23.5
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is newly launched (first intake 2024/25), so no alumni have graduated yet.",
+      "Faculty includes experienced scholars from the Department of Cultural and Religious Studies and other humanities departments at CUHK.",
+      "Students benefit from interdisciplinary training in public history, cultural heritage, and community engagement."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Public Humanities notable alumni",
+      "香港中文大學 公共人文學 著名校友",
+      "CUHK Public Humanities graduates Hong Kong careers",
+      "CUHK JS4100 alumni"
+    ]
+  }
+}

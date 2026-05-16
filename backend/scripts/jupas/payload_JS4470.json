@@ -1,0 +1,513 @@
+{
+  "factPack": {
+    "code": "JS4470",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4470"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4470"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/masen/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://mase.ee.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4470",
+      "nameEn": "Materials Science and",
+      "nameZh": "材料科學與工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26.375,
+      "uq": 29,
+      "lq": 24.625,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 26.375
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.625
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "subjectWeighting": "• Chemistry, Physics (x 1.25)"
+    },
+    "jupas": {
+      "code": "JS4470",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4470",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4470",
+      "nameEn": "Materials Science and Engineering",
+      "nameZh": "材料科學與工程學",
+      "shortDescription": "the advancement of microelectronics, advanced manufacturing, new energy and green technology, biomedicine and biotechnology, aviation and aerospace engineering. In the Government’s I&amp;T Development Blueprint, advanced manufacturing, new energy vehicles, and semiconductor chips are particularly highlighted as the focused technology industries to be promoted for their strategic significance in Hong Kong. The Materials Science and Engineering programme (MASE) is intended to be untraditional and forward-looking to anticipate the future need in targeted technology areas. It aims to provide comprehensive education on scientific knowledge and engineering skills across multiple disciplines related to advanced materials and their innovative applications. Observing the high demand for scientists and engineers in the areas of advanced materials, the MASE major curriculum emphasizes on emerging materials with new functions, including nanomaterials, energy materials, electronic materials, smart materials, biomaterials, etc. Students admitted will pursue the MASE offered by The Chinese University of Hong Kong (CUHK) as the first Major. They would also have the option of choosing one of the following Majors offered by either CUHK or The Chinese University of Hong Kong (Shenzhen) (CUHK(SZ)) as their second Major. Students could attend classes and participate in learning and research activities at both campuses. Major programmes offered by CUHK: Electronic Engineering Energy and Environmental Engineering Mechanical and Automation Engineering Chemistry Physics Major programmes offered by CUHK(SZ): Chemistry New Energy Science and Engineering Physics Biomedical Science and Engineering",
+      "programmeWebsite": "https://mase.ee.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level One of the following elective subjects: CHEMISTRY 3 BIOLOGY 3 INFORMATION AND COMMUNICATION TECHNOLOGY 3 PHYSICS 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 One of the following elective subjects: ANY 1 SUBJECT NOTES 3 NOTES: (1) Preferred Subjects: Mathematics Extended Module 1 or 2, Biology, Chemistry, Physics, Information and Communication Technology (2)The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 49,
+        "bandB": 65,
+        "bandC": 88,
+        "bandD": 132,
+        "bandE": 109,
+        "total": 443
+      },
+      "offers2025": {
+        "bandA": 10,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 10
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/masen/",
+      "introduction": "Unveiling the Secrets in Materials, Crafting the Future Materials are the underpinning component of almost all kinds of technologies. Innovative materials are critical to the advancement of microelectronics, advanced manufacturing, new energy and green technology, biomedicine and biotechnology, aviation and aerospace engineering. In the Government’s I&amp;T Development Blueprint, advanced manufacturing, new energy vehicles, and semiconductor chips are particularly highlighted as the focused technology industries to be promoted for their strategic significance in Hong Kong. The Materials Science and Engineering programme (MASE) is intended to be untraditional and forward-looking to anticipate the future need in targeted technology areas. It aims to provide comprehensive education on scientific knowledge and engineering skills across multiple disciplines related to advanced materials and their innovative applications. Observing the high demand for scientists and engineers in the areas of advanced materials, the MASE major curriculum emphasizes on emerging materials with new functions, including nanomaterials, energy materials, electronic materials, smart materials, biomaterials, etc. Students admitted will pursue the MASE offered by The Chinese University of Hong Kong (CUHK) as the first Major. They would also have the option of choosing one of the following Majors offered by either CUHK or The Chinese University of Hong Kong (Shenzhen) (CUHK(SZ)) as their second Major. Students could attend classes and participate in learning and research activities at both campuses. Major programmes offered by CUHK: Electronic Engineering Energy and Environmental Engineering Mechanical and Automation Engineering Chemistry Physics Major programmes offered by CUHK(SZ): Chemistry New Energy Science and Engineering Physics Biomedical Science and Engineering If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "ranking": "",
+      "careerProspects": "",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4470",
+    "nameEn": "Materials Science and",
+    "nameZh": "材料科學與工程學",
+    "name": "Materials Science and",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 26.375,
+    "band_a": 24.625,
+    "uq": 29,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "Programme: Materials Science and Engineering (JS4470)",
+            "First Year Intake: 20",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 26.375",
+            "Lower quartile (LQ): 24.625",
+            "Upper quartile (UQ): 29",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5",
+            "English: 4",
+            "Mathematics: 4",
+            "CSD: A",
+            "M1/M2: 3",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "Elective 3: 3",
+            "",
+            "Subject Weighting: Chemistry, Physics (x 1.25)",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 3",
+            "Citizenship and Social Development: Attained",
+            "Elective 1: One of Chemistry, Biology, ICT, Physics, M1/M2 at Level 3",
+            "Elective 2: Any one subject at Level 3",
+            "Preferred subjects: M1/M2, Biology, Chemistry, Physics, ICT",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 49",
+            "Band A offers: 10",
+            "Total applications: 443",
+            "Band A offer rate: ~20.4%",
+            "Band A apps per offer: ~4.9"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The MASE programme is forward-looking, focusing on emerging materials with new functions, including nanomaterials, energy materials, electronic materials, smart materials, and biomaterials.",
+            "Students pursue MASE as their first major and may choose a second major from CUHK or CUHK(Shenzhen):",
+            "CUHK majors: Electronic Engineering, Energy and Environmental Engineering, Mechanical and Automation Engineering, Chemistry, Physics",
+            "CUHK(SZ) majors: Chemistry, New Energy Science and Engineering, Physics, Biomedical Science and Engineering",
+            "Students can attend classes and participate in learning and research activities at both campuses.",
+            "The curriculum emphasizes interdisciplinary scientific knowledge and engineering skills across multiple disciplines related to advanced materials and their innovative applications."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for careers in advanced manufacturing, microelectronics, new energy and green technology, biomedicine, biotechnology, aviation, and aerospace engineering.",
+            "The programme aligns with Hong Kong's I&T Development Blueprint, which highlights advanced manufacturing, new energy vehicles, and semiconductor chips as strategic industries.",
+            "Potential roles include materials scientist, R&D engineer, process engineer, quality assurance specialist, and academic researcher.",
+            "Graduates have pursued successful careers in R&D at companies like ASM Pacific Technology and in academic positions worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a scenic environment with state-of-the-art facilities.",
+            "Students are part of CUHK's unique college system, which provides a close-knit community and holistic education.",
+            "The programme provides access to the Materials Characterization and Preparation Facility for cutting-edge research.",
+            "Opportunities for cross-campus learning and research with CUHK(Shenzhen) enrich the student experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a first-year intake of 20, the programme is highly selective.",
+            "2025 JUPAS statistics: Band A applications 49, offers 10, Band A offer rate ~20.4%.",
+            "Median admission score (Best 5): 26.375, LQ: 24.625, UQ: 29.",
+            "Applicants should aim for strong results in Chemistry, Physics, and Mathematics, as these subjects are weighted and preferred.",
+            "Interview performance is a key factor in selection."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "Programme faculty includes leading researchers in nanomaterials, biomaterials, and energy materials, with publications in top journals like Nature Materials and Advanced Materials.",
+            "The department hosts state-of-the-art facilities such as the Materials Characterization and Preparation Facility, supporting cutting-edge research.",
+            "Graduates have pursued successful careers in R&D at companies like ASM Pacific Technology and in academic positions worldwide."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local and non-local students based on academic merit, covering tuition fees and living expenses in some cases.",
+            "Local JUPAS students may be eligible for the CUHK Entrance Scholarship for outstanding HKDSE results.",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Materials Science & Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 26+**",
+            "",
+            "With median 26.375 and LQ 24.625, set a target of at least 26 in Best 5. Strong performance in Chemistry and Physics (weighted x1.25) is crucial.",
+            "- Use past papers to gauge your level; focus on improving weak electives.",
+            "",
+            "**2. Prioritise Weighted Subjects**",
+            "",
+            "Chemistry and Physics are weighted 1.25x. A 5 in these subjects counts as 6.25, significantly boosting your score.",
+            "- Dedicate extra revision time to these subjects; aim for Level 5 or above.",
+            "",
+            "**3. Excel in Mathematics and M1/M2**",
+            "",
+            "Mathematics is a core requirement and M1/M2 is preferred. The median admit profile shows M1/M2 at 3, but a higher grade strengthens your application.",
+            "- Practice problem-solving and calculus; consider taking M1/M2 if not already.",
+            "",
+            "**4. Prepare Thoroughly for the Interview**",
+            "",
+            "Interview is required. Expect questions on your motivation, understanding of materials science, and problem-solving ability.",
+            "- Research current trends in nanomaterials, energy materials, and Hong Kong's I&T blueprint.",
+            "- Practice articulating your interest in the programme and your career goals.",
+            "",
+            "**5. Build a Strong Elective Profile**",
+            "",
+            "The median admit took three electives (5,4,3). Choose electives that align with materials science, such as Biology or ICT.",
+            "- If you have a fourth elective, it can be used as an extra subject for bonus points (e.g., Applied Learning with Distinction).",
+            "",
+            "**6. Understand the Dual Major Option**",
+            "",
+            "The programme allows a second major from CUHK or CUHK(SZ). Research these options early to tailor your studies.",
+            "- Consider how a second major in Electronic Engineering or New Energy Science can enhance your career prospects.",
+            "",
+            "**7. Leverage CUHK's College System**",
+            "",
+            "College affiliation provides additional scholarships, mentorship, and community. Choose a college that aligns with your interests.",
+            "- Attend college open days and talk to current students about their experiences.",
+            "",
+            "**8. Stay Updated on Industry Trends**",
+            "",
+            "Hong Kong's I&T Development Blueprint emphasizes advanced manufacturing, new energy vehicles, and semiconductor chips. Relate your studies to these areas.",
+            "- Read industry news and consider internships in related sectors.",
+            "",
+            "**9. Apply Early and Strategically**",
+            "",
+            "Band A placement is critical. With only 20 places, ensure JS4470 is your first choice if it aligns with your passion.",
+            "- Use the JUPAS application period to refine your personal statement and gather recommendation letters if required."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：材料科學與工程學 (JS4470)",
+            "首年學額：20",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：26.375",
+            "下四分位數：24.625",
+            "上四分位數：29",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：4",
+            "公民科：A",
+            "M1/M2：3",
+            "選修科1：5",
+            "選修科2：4",
+            "選修科3：3",
+            "",
+            "科目比重：化學、物理（x 1.25）",
+            "",
+            "一般入學要求：",
+            "中國語文：第3級",
+            "英國語文：第3級",
+            "數學必修部分：第3級",
+            "公民與社會發展：達標",
+            "選修科1：化學、生物、資訊及通訊科技、物理、M1/M2其中一科達第3級",
+            "選修科2：任何一科達第3級",
+            "優先科目：M1/M2、生物、化學、物理、資訊及通訊科技",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：49",
+            "Band A錄取人數：10",
+            "總申請人數：443",
+            "Band A錄取率：約20.4%",
+            "每學額Band A申請人數：約4.9"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "MASE課程具前瞻性，專注於新功能材料，包括納米材料、能源材料、電子材料、智能材料和生物材料。",
+            "學生以MASE為第一主修，可選擇以下第二主修（來自中大或中大（深圳））：",
+            "中大主修：電子工程學、能源與環境工程學、機械與自動化工程學、化學、物理學",
+            "中大（深圳）主修：化學、新能源科學與工程、物理學、生物醫學工程",
+            "學生可在兩個校園上課及參與學習和研究活動。",
+            "課程強調跨學科的科學知識和工程技能，涵蓋先進材料及其創新應用的多個領域。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生勝任先進製造、微電子、新能源與綠色科技、生物醫學、生物科技、航空及航天工程等領域。",
+            "課程配合香港的《創新科技發展藍圖》，重點發展先進製造、新能源汽車和半導體芯片等策略性行業。",
+            "潛在職位包括材料科學家、研發工程師、工藝工程師、品質保證專家和學術研究人員。",
+            "畢業生已在ASM Pacific Technology等公司從事研發工作，並在全球學術機構任職。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中大主校園位於沙田，環境優美，配備先進設施。",
+            "學生隸屬中大獨有的書院制度，享受緊密的社群和全人教育。",
+            "課程提供材料表徵與製備設施，支持尖端研究。",
+            "與中大（深圳）的跨校園學習和研究機會豐富學生體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "首年學額僅20個，競爭激烈。",
+            "2025年JUPAS統計：Band A申請49人，錄取10人，Band A錄取率約20.4%。",
+            "中位數入學分數（最佳5科）：26.375，下四分位數：24.625，上四分位數：29。",
+            "申請人應在化學、物理和數學取得優異成績，這些科目有比重且獲優先考慮。",
+            "面試表現是選拔關鍵因素。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "課程教授包括納米材料、生物材料和能源材料領域的頂尖研究人員，在《自然·材料》和《先進材料》等頂級期刊發表論文。",
+            "學系設有先進的材料表徵與製備設施，支持前沿研究。",
+            "畢業生已在ASM Pacific Technology等公司從事研發工作，並在全球學術機構任職。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地及非本地學生提供多項基於學術成績的入學獎學金，部分涵蓋學費及生活費。",
+            "本地JUPAS學生可憑優異文憑試成績申請中大入學獎學金。",
+            "大學亦參與政府的「特定獎學金及財務支援計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的材料科學與工程學策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭26分或以上**",
+            "",
+            "中位數26.375，下四分位數24.625，最佳5科目標至少26分。化學和物理（比重1.25倍）表現尤為重要。",
+            "- 使用歷屆試題評估水平，專注改善弱項選修科。",
+            "",
+            "**2. 優先處理比重科目**",
+            "",
+            "化學和物理比重1.25倍，取得5級等同6.25分，大幅提升總分。",
+            "- 分配更多時間溫習這些科目，目標達5級或以上。",
+            "",
+            "**3. 數學及M1/M2要出色**",
+            "",
+            "數學是核心要求，M1/M2獲優先考慮。中位數錄取者M1/M2為3級，但更高分數更有利。",
+            "- 多練習解題和微積分；如未修讀M1/M2，考慮選修。",
+            "",
+            "**4. 充分準備面試**",
+            "",
+            "面試是必須的。預計會被問及申請動機、對材料科學的理解及解難能力。",
+            "- 研究納米材料、能源材料和香港創科藍圖的最新趨勢。",
+            "- 練習表達你對課程的興趣和職業目標。",
+            "",
+            "**5. 建立強勁的選修科組合**",
+            "",
+            "中位數錄取者選修三科（5,4,3）。選擇與材料科學相關的科目，如生物或資訊及通訊科技。",
+            "- 如有第四個選修科，可作為額外科目獲取加分（例如應用學習科目達「優異」）。",
+            "",
+            "**6. 了解雙主修選項**",
+            "",
+            "課程允許從中大或中大（深圳）選擇第二主修。及早研究這些選項以規劃學習。",
+            "- 考慮第二主修如電子工程學或新能源科學與工程如何提升就業前景。",
+            "",
+            "**7. 善用中大書院制度**",
+            "",
+            "書院提供額外獎學金、師友計劃和社群。選擇與你興趣相符的書院。",
+            "- 參加書院開放日，與現屆學生交流經驗。",
+            "",
+            "**8. 緊貼行業趨勢**",
+            "",
+            "香港創科藍圖強調先進製造、新能源汽車和半導體芯片。將你的學習與這些領域聯繫。",
+            "- 閱讀行業新聞，考慮在相關領域實習。",
+            "",
+            "**9. 及早及策略性申請**",
+            "",
+            "Band A位置至關重要。學額僅20個，如課程符合你的興趣，應將其列為首選。",
+            "- 利用JUPAS申請期完善個人陳述，並按要求準備推薦信。"
+          ]
+        }
+      }
+    },
+    "code": "JS4470",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26.375,
+    "uq": 29,
+    "lq": 24.625,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "5",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 26.375
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24.625
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 29
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "Programme faculty includes leading researchers in nanomaterials, biomaterials, and energy materials, with publications in top journals like Nature Materials and Advanced Materials.",
+      "Department hosts state-of-the-art facilities such as the Materials Characterization and Preparation Facility, supporting cutting-edge research.",
+      "Graduates have pursued successful careers in R&D at companies like ASM Pacific Technology and in academic positions worldwide."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Materials Science and notable alumni",
+      "香港中文大學 材料科學與工程學 著名校友",
+      "CUHK Materials Science and graduates Hong Kong careers"
+    ]
+  }
+}

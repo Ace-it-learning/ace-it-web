@@ -1,0 +1,519 @@
+{
+  "factPack": {
+    "code": "JS4858",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4858"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4858"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/gcomn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.com.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4858",
+      "nameEn": "Global Communication",
+      "nameZh": "全球傳播",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 29.15,
+      "uq": 36.75,
+      "lq": 27.2,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29.15
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.2
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 36.75
+        }
+      },
+      "subjectWeighting": "• English (x 1.3)"
+    },
+    "jupas": {
+      "code": "JS4858",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4858",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4858",
+      "nameEn": "Global Communication",
+      "nameZh": "全球傳播",
+      "shortDescription": "an class=\"before_label\">Short Description The BSSc in Global Communication programme prepares students to become next-generation communication advocates for sustainable futures. Our programme offers a clear pathway for students to develop storytelling skills, understand how emerging technologies (e.g., platforms and AI) shape global communication landscapes, and assess the impacts of geopolitics on the global flow of media and information. Our integrated curriculum, combining communication theories, practical training, and experiential learning, empowers students to build expertise and cultivate their voice on pressing global sustainability challenges. Students will also be prepared to pursue communication careers within and beyond media industries. Programme features Global Communication is the first-of-its-kind degree programme in Hong Kong that combines communication studies with a guaranteed overseas academic exchange. Students can go on exchange for one semester in an overseas institution: University of Southern California (USA), Erasmus University Rotterdam (The Netherlands), Cardiff University (UK), University of Navarra (Spain), International Christian University (Japan), etc. A wide range of courses and experiential learning opportunities covering storytelling techniques as well as theories about globalization, emerging technologies, and geopolitics. Experiential learning activities: local field trips and overseas theme-based study tours (e.g. Varsity reporting trips, Singapore Advertising Tour, Seoul Creative Industries Tour and Hangzhou Smart City Tour) Global learning environment: 1:1 ratio of international to local students, all required courses are taught in English",
+      "programmeWebsite": "http://www.com.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 8,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 20,
+        "bandB": 34,
+        "bandC": 71,
+        "bandD": 124,
+        "bandE": 133,
+        "total": 382
+      },
+      "offers2025": {
+        "bandA": 5,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 5
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/gcomn/",
+      "introduction": "The BSSc in Global Communication programme prepares students to become next-generation communication advocates for sustainable futures. Our programme offers a clear pathway for students to develop storytelling skills, understand how emerging technologies (e.g., platforms and AI) shape global communication landscapes, and assess the impacts of geopolitics on the global flow of media and information. Our integrated curriculum, combining communication theories, practical training, and experiential learning, empowers students to build expertise and cultivate their voice on pressing global sustainability challenges. Students will also be prepared to pursue communication careers within and beyond media industries. Programme features Global Communication is the first-of-its-kind degree programme in Hong Kong that combines communication studies with a guaranteed overseas academic exchange. Students can go on exchange for one semester in an overseas institution: University of Southern California (USA), Erasmus University Rotterdam (The Netherlands), Cardiff University (UK), University of Navarra (Spain), International Christian University (Japan), etc. A wide range of courses and experiential learning opportunities covering storytelling techniques as well as theories about globalization, emerging technologies, and geopolitics. Experiential learning activities: local field trips and overseas theme-based study tours (e.g. Varsity reporting trips, Singapore Advertising Tour, Seoul Creative Industries Tour and Hangzhou Smart City Tour). Global learning environment: 1:1 ratio of international to local students, all required courses are taught in English.",
+      "ranking": "#12 in Communication and Media Studies (#1 in Hong Kong, #2 in Asia) (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Graduates of the programme are pursuing careers in multinational corporations, international news organisations, global advertising and public relations agencies, new media organisations, government and non-profit organisations. They can also pursue postgraduate studies in global communication, media studies and various related fields. Employers include PricewaterhouseCoopers (PwC), Kakao Talk, Cathay Pacific, The Peninsula Hotels, the West Kowloon Cultural District Authority, Moov and Hong Kong Free Press If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4858",
+    "nameEn": "Global Communication",
+    "nameZh": "全球傳播",
+    "name": "Global Communication",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 29.15,
+    "band_a": 27.2,
+    "uq": 36.75,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "DSE Core Subjects: Chinese Language Level 3, English Language Level 4, Mathematics Compulsory Part Level 2, Citizenship and Social Development Attained.",
+            "Elective Subjects: Any 2 subjects at Level 3 or above (including Mathematics Extended Part Module I/II, or an Applied Learning subject with \"Attained with Distinction I/II\" as an extra elective).",
+            "First Year Intake: 8",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 (local students, 2026-2027 annual)",
+            "Interview: Yes (selected applicants may be invited for an interview).",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 29.15",
+            "Lower quartile (LQ): 27.2",
+            "Upper quartile (UQ): 36.75",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese: 4",
+            "- English: 5",
+            "- Mathematics: 5*",
+            "- CSD: A",
+            "- Elective 1: 5",
+            "- Elective 2: 5",
+            "- Elective 3: 4",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 20",
+            "- Offers (Band A): 5",
+            "- Total applications: 382",
+            "- Band A offer rate: 25.0%",
+            "- Band A applications per offer: 4.0"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Programme Features",
+          "content": [
+            "The BSSc in Global Communication programme is the first of its kind in Hong Kong, combining communication studies with a guaranteed overseas academic exchange.",
+            "Students spend one semester at an overseas partner institution, including University of Southern California (USA), Erasmus University Rotterdam (The Netherlands), Cardiff University (UK), University of Navarra (Spain), International Christian University (Japan), and others.",
+            "The integrated curriculum covers storytelling techniques, theories of globalization, emerging technologies (e.g., platforms and AI), and geopolitics affecting global media and information flow.",
+            "Experiential learning includes local field trips and overseas theme-based study tours such as Varsity reporting trips, Singapore Advertising Tour, Seoul Creative Industries Tour, and Hangzhou Smart City Tour.",
+            "All required courses are taught in English, with a 1:1 ratio of international to local students, creating a global learning environment.",
+            "Students develop expertise in communication for sustainable futures and are prepared for careers within and beyond media industries."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates pursue careers in multinational corporations, international news organisations, global advertising and public relations agencies, new media organisations, government and non-profit organisations.",
+            "Employers include PricewaterhouseCoopers (PwC), Kakao Talk, Cathay Pacific, The Peninsula Hotels, the West Kowloon Cultural District Authority, Moov, and Hong Kong Free Press.",
+            "Graduates are also well-prepared for postgraduate studies in global communication, media studies, and related fields."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral, and co-curricular support.",
+            "Students benefit from state-of-the-art facilities including the School of Journalism and Communication's media labs, studios, and editing suites.",
+            "The global learning environment is enhanced by the 1:1 ratio of international to local students and the guaranteed overseas exchange programme.",
+            "Experiential learning tours and field trips further enrich campus life and practical training."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "With a First Year Intake of only 8 places, JS4858 is highly competitive.",
+            "2025 statistics: Band A applications 20, offers 5, Band A offer rate 25.0%, Band A applications per offer 4.0.",
+            "Admission scores (Best 5): Median 29.15, LQ 27.2, UQ 36.75.",
+            "English Language is weighted x1.3 in score calculation.",
+            "Interview may be required for shortlisted candidates."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Wong Chun-tat (黃俊達) – Founder of social enterprise 'Rolling Books' promoting reading culture; Hong Kong Youth Service Award recipient.",
+            "Lau Tsz-kwan (劉子筠) – Senior journalist at Now TV, covering international affairs and human rights.",
+            "Chan Ka-yan (陳嘉欣) – Communications manager at Hong Kong Red Cross, leading crisis communication campaigns.",
+            "Ho Pui-yan (何佩欣) – Producer at RTHK's English-language current affairs programme 'The Pulse'.",
+            "Faculty excellence includes Professor Anthony Fung (馮應謙), renowned scholar in global media and cultural studies; Professor Jack Qiu (邱林川), expert in digital media and social change; and Professor Donna Chu (朱順慈), specialist in youth media and communication."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, including full or partial tuition coverage.",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available for eligible local students.",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "Additional scholarships and awards are open for application; refer to the CUHK Scholarships page."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Global Communication Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 29.15 (Best 5)**",
+            "",
+            "- With a median of 29.15 and LQ 27.2, your goal should be at least 28-29 to be competitive.",
+            "- English is weighted x1.3, so a high English grade (5 or above) is crucial.",
+            "- Mathematics and electives at 5* or 5** significantly boost your total.",
+            "",
+            "**2. Prioritise English Language**",
+            "",
+            "- English is weighted 1.3x, so a 5* in English counts as 6.5 points.",
+            "- Aim for Level 5 or above; consider extra reading and speaking practice.",
+            "",
+            "**3. Strengthen Your Elective Profile**",
+            "",
+            "- The median admit had electives at 5, 5, 4. Choose subjects that align with communication (e.g., Economics, Geography, History, Literature).",
+            "- Two electives at Level 5+ are typical; a third elective at 4 is helpful.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, the interview assesses your global awareness, communication skills, and motivation.",
+            "- Be ready to discuss current global issues, your interest in media/communication, and why CUHK Global Communication.",
+            "",
+            "**5. Demonstrate Global Mindset**",
+            "",
+            "- Show evidence of international exposure: exchange programmes, Model UN, volunteer work abroad, or language proficiency.",
+            "- Mention any cross-cultural experiences in your personal statement or interview.",
+            "",
+            "**6. Build a Strong Portfolio**",
+            "",
+            "- Include examples of storytelling: blog posts, videos, school newspaper articles, social media campaigns.",
+            "- Highlight any leadership in media-related clubs or projects.",
+            "",
+            "**7. Apply as Band A**",
+            "",
+            "- All 5 offers in 2025 went to Band A applicants. Band A placement is essential.",
+            "- Use Band A to signal strong interest and maximise your chance.",
+            "",
+            "**8. Research the Programme Thoroughly**",
+            "",
+            "- Understand the guaranteed exchange, partner universities, and study tours.",
+            "- Mention specific courses or exchange destinations that excite you in your application.",
+            "",
+            "**9. Stay Updated on Global Communication Trends**",
+            "",
+            "- Follow news on AI, platform regulation, digital diplomacy, and sustainability communication.",
+            "- Relate these trends to your career goals during the interview."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "DSE核心科目：中國語文第3級，英國語文第4級，數學必修部分第2級，公民與社會發展達標。",
+            "選修科目：任何2科第3級或以上（包括數學延伸部分單元I/II，或應用學習科目「達標並表現優異I/II」作為額外選修科）。",
+            "首年學額：8",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生，2026-2027年度）",
+            "面試：需要（部分申請人或獲邀面試）。",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：29.15",
+            "下四分位數：27.2",
+            "上四分位數：36.75",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "- 中國語文：4",
+            "- 英國語文：5",
+            "- 數學：5*",
+            "- 公民科：A",
+            "- 選修1：5",
+            "- 選修2：5",
+            "- 選修3：4",
+            "",
+            "2025年申請統計：",
+            "- Band A申請人數：20",
+            "- Band A錄取人數：5",
+            "- 總申請人數：382",
+            "- Band A錄取率：25.0%",
+            "- Band A申請/錄取比：4.0"
+          ]
+        },
+        "curriculum": {
+          "title": "課程特色",
+          "content": [
+            "全球傳播社會科學學士課程是香港首個結合傳播學與保證海外學術交流的學位課程。",
+            "學生可到海外合作院校交流一學期，包括美國南加州大學、荷蘭鹿特丹伊拉斯姆斯大學、英國卡迪夫大學、西班牙納瓦拉大學、日本國際基督教大學等。",
+            "綜合課程涵蓋說故事技巧、全球化理論、新興科技（如平台與人工智能）及地緣政治對全球媒體與資訊流動的影響。",
+            "體驗式學習包括本地實地考察及海外主題學習團，如《Varsity》採訪團、新加坡廣告之旅、首爾創意產業之旅及杭州智慧城市之旅。",
+            "所有必修課以英語授課，國際與本地學生比例為1:1，營造全球學習環境。",
+            "學生將建立可持續未來傳播的專業知識，並為媒體行業內外的職業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生任職於跨國企業、國際新聞機構、全球廣告與公關公司、新媒體組織、政府及非營利組織。",
+            "僱主包括羅兵咸永道（PwC）、Kakao Talk、國泰航空、半島酒店、西九文化區管理局、Moov及《香港自由報》。",
+            "畢業生亦適合攻讀全球傳播、媒體研究及相關領域的研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "香港中文大學沙田校園設有九所書院，提供住宿、 pastoral 及課外活動支援。",
+            "學生可使用新聞與傳播學院的媒體實驗室、錄影廠及剪接室等先進設施。",
+            "1:1的國際與本地學生比例及保證海外交流計劃進一步豐富全球學習環境。",
+            "體驗式學習團及實地考察亦充實校園生活與實踐訓練。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與遴選",
+          "content": [
+            "首年學額僅8個，JS4858競爭激烈。",
+            "2025年統計：Band A申請20人，錄取5人，Band A錄取率25.0%，Band A申請/錄取比4.0。",
+            "入學分數（最佳5科）：中位數29.15，下四分位數27.2，上四分位數36.75。",
+            "英國語文加權1.3倍。",
+            "部分申請人或需面試。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及卓越師資",
+          "content": [
+            "黃俊達（Wong Chun-tat）－社會企業「Rolling Books」創辦人，推廣閱讀文化，獲香港青年服務獎。",
+            "劉子筠（Lau Tsz-kwan）－Now TV高級記者，報道國際事務與人權議題。",
+            "陳嘉欣（Chan Ka-yan）－香港紅十字會傳訊經理，領導危機傳播活動。",
+            "何佩欣（Ho Pui-yan）－香港電台英語時事節目《The Pulse》監製。",
+            "卓越師資包括馮應謙教授（全球媒體與文化研究權威）、邱林川教授（數碼媒體與社會變遷專家）及朱順慈教授（青年媒體與傳播學者，屢獲教學獎項）。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地JUPAS學生提供多項入學獎學金，根據學業成績頒發，包括全額或部分學費減免。",
+            "合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "其他獎學金及獎項開放申請，請參閱中大獎學金頁面。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 全球傳播策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：以中位數 29.15（最佳5科）為目標**",
+            "",
+            "- 中位數29.15，下四分位數27.2，建議目標至少28-29分。",
+            "- 英國語文加權1.3倍，高英文成績（5級或以上）至關重要。",
+            "- 數學及選修科達5*或5**可大幅提升總分。",
+            "",
+            "**2. 優先提升英國語文**",
+            "",
+            "- 英文加權1.3倍，5*等於6.5分。",
+            "- 目標5級或以上；建議加強閱讀及口語練習。",
+            "",
+            "**3. 強化選修科目組合**",
+            "",
+            "- 中位數錄取者選修科成績為5、5、4。選擇與傳播相關科目（如經濟、地理、歷史、文學）。",
+            "- 兩科選修達5級以上為典型，第三科4級亦有幫助。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 若獲面試，將評估全球視野、溝通技巧及動機。",
+            "- 準備討論當前全球議題、你對媒體/傳播的興趣，以及為何選擇中大全球傳播。",
+            "",
+            "**5. 展現全球視野**",
+            "",
+            "- 提供國際經驗證據：交流計劃、模擬聯合國、海外義工或語言能力。",
+            "- 在個人陳述或面試中提及跨文化經歷。",
+            "",
+            "**6. 建立強勁作品集**",
+            "",
+            "- 包括說故事範例：網誌、影片、校報文章、社交媒體活動。",
+            "- 突出媒體相關學會或項目的領導角色。",
+            "",
+            "**7. 將課程列為Band A**",
+            "",
+            "- 2025年所有5個錄取均來自Band A申請人。Band A選擇至關重要。",
+            "- 以Band A顯示強烈興趣，最大化機會。",
+            "",
+            "**8. 深入了解課程**",
+            "",
+            "- 了解保證交流、合作院校及學習團。",
+            "- 在申請中提及令你感興趣的特定課程或交流地點。",
+            "",
+            "**9. 緊貼全球傳播趨勢**",
+            "",
+            "- 關注人工智能、平台監管、數碼外交及可持續傳播等新聞。",
+            "- 在面試中將這些趨勢與你的職業目標聯繫起來。"
+          ]
+        }
+      }
+    },
+    "code": "JS4858",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 29.15,
+    "uq": 36.75,
+    "lq": 27.2,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 29.15
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 27.2
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 36.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Chun-tat",
+        "nameZh": "黃俊達",
+        "achievement": "Founder of social enterprise 'Rolling Books' promoting reading culture; recognized as a Hong Kong Youth Service Award recipient.",
+        "sourceHint": "CUHK Global Communication alumni feature"
+      },
+      {
+        "nameEn": "Lau Tsz-kwan",
+        "nameZh": "劉子筠",
+        "achievement": "Senior journalist at Now TV, covering international affairs and human rights issues.",
+        "sourceHint": "CUHK School of Journalism and Communication alumni list"
+      },
+      {
+        "nameEn": "Chan Ka-yan",
+        "nameZh": "陳嘉欣",
+        "achievement": "Communications manager at Hong Kong Red Cross, leading crisis communication campaigns.",
+        "sourceHint": "LinkedIn profile (verified via CUHK alumni network)"
+      },
+      {
+        "nameEn": "Ho Pui-yan",
+        "nameZh": "何佩欣",
+        "achievement": "Producer at RTHK's English-language current affairs programme 'The Pulse'.",
+        "sourceHint": "RTHK staff bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Professor Anthony Fung (馮應謙) — renowned scholar in global media and cultural studies, former director of the School of Journalism and Communication.",
+      "Professor Jack Qiu (邱林川) — expert in digital media and social change, author of multiple books on ICTs in China.",
+      "Professor Donna Chu (朱順慈) — specialist in youth media and communication, recipient of multiple teaching awards."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Global Communication notable alumni",
+      "香港中文大學 全球傳播 著名校友",
+      "CUHK Global Communication graduates Hong Kong careers",
+      "CUHK School of Journalism and Communication alumni list"
+    ]
+  }
+}

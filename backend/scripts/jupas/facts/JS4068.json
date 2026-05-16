@@ -1,0 +1,116 @@
+{
+  "code": "JS4068",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4068"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4068"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/jaspn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://www.jas.cuhk.edu.hk/en-GB/programmes"
+    }
+  ],
+  "programme": {
+    "code": "JS4068",
+    "nameEn": "Japanese Studies",
+    "nameZh": "日本研究",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24.5,
+    "uq": null,
+    "lq": 23,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      }
+    },
+    "subjectWeighting": null
+  },
+  "jupas": {
+    "code": "JS4068",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4068",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4068",
+    "nameEn": "Japanese Studies",
+    "nameZh": "日本研究",
+    "shortDescription": "an class=\"before_label\">Short Description The Department of Japanese Studies provides academic and professional training in the study of Japan and the Japanese language. The programme is designed to meet the growing demand for globally aware citizens, promote cultural and academic exchange, and facilitate communication and cooperation between Hong Kong and Japan. The programme provides training in critical approaches to Japanese society and culture, and is geared towards mastery of the Japanese language. All third-year students are required to spend one academic year in Japan and take unit-bearing courses at a Japanese exchange partner university. A key theme of the programme is a field research project. Second-year students are trained in research methodologies that they then implement in their third year of study in Japan, when they conduct research in the field. In the fourth year of study, students use the material collected during their field research to write an academic research paper. The programme offers three optional streams: (1) Business and Management; (2) Japan in Global Perspective; and (3) Japanese Language and Linguistics. Each stream provides specialised training in the named area and allows students to take courses from other relevant departments, including the Departments of Management, Sociology, Anthropology and Linguistics and Modern Languages. Students who select one of these streams must choose a relevant topic for their final-year project.",
+    "programmeWebsite": "http://www.jas.cuhk.edu.hk/en-GB/programmes",
+    "tuition": "HK$47,000",
+    "intake": 22,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 299,
+      "bandB": 209,
+      "bandC": 290,
+      "bandD": 396,
+      "bandE": 425,
+      "total": 1619
+    },
+    "offers2025": {
+      "bandA": 23,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 23
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/jaspn/",
+    "introduction": "Realize your exchange dream in Japan and Foster Your Cultural Sensitivity, Global Awareness and Intercultural Communication! The major programme in Japanese Studies is an intensive and rigorous undergraduate programme that includes both culture and society courses, as well as language courses at various levels. We provide a wide range of courses to meet student needs, including Japanese culture, history, pop-culture, literature, management and philosophy. In Years 1 and 2, students in the major programme take core courses in Japanese culture and society, Japanese language, and field-research methods, and students begin to formulate ideas for their final-year project (FYP). Year 3 is spent in Japan studying as an exchange student at one of our 21 partner universities in Tokyo, Nagoya, Osaka, Kyoto, Hokkaido and Kyushu, while also conducting original research for their final-year project. In Year 4, the students return to CUHK to write their final-year project/thesis, and take elective courses in Japanese studies, along with other courses required by the University. We also offer a Double Major Programme in Japanese Studies and History, which students can complete in four years. The Department also provides opportunities for local and overseas summer internship programmes, and short-term summer exchange programmes. Various scholarships are available from the University and Department for students taking our major. Our programme thus immerses students in a cross-cultural experience through our unique course offerings and study-abroad opportunities, and cultivates cultural sensitivity, global awareness and intercultural communication.",
+    "ranking": "#45 (QS Subject Ranking in 2023)",
+    "careerProspects": "Our graduates are well trained in English and Japanese language, with critical thinking and analytical skills. Our students take the Japanese Language Proficiency Test (N1) (the highest level) before graduation, and we have a 90% pass rate, which is unparalleled among institutions locally and globally. Our graduates are well-suited for diverse employment sectors. They become civil servants, entrepreneurs, bankers, academics, etc. Some choose to pursue advanced studies and obtain postgraduate degrees in Law, Anthropology, Journalism, Social Work, etc. Employers include the HKSAR Government, HSBC, the Hospital Authority, Mitsui Bank, Dow Jones, Hokkaido University and Waseda University. Our",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

@@ -1,0 +1,569 @@
+{
+  "factPack": {
+    "code": "JS4109",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4109"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4109"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/relsn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www2.crs.cuhk.edu.hk/bars/explore-rs"
+      }
+    ],
+    "programme": {
+      "code": "JS4109",
+      "nameEn": "Religious Studies",
+      "nameZh": "宗教研究",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 21.5,
+      "uq": 22,
+      "lq": 21,
+      "percentiles": {
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 22
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 21.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 21
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4109",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4109",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4109",
+      "nameEn": "Religious Studies",
+      "nameZh": "宗教研究",
+      "shortDescription": "an class=\"before_label\">Short Description Religious Studies considers religion to be an integral part of human life, thought and activity. It advocates an objective and academic approach to the study of religious phenomena and a critical yet sympathetic understanding of people’s religious life. Students are able to explore numerous religious traditions, including Buddhism, Taoism, Christianity, Hinduism, Islam, and Judaism. Students can take courses in the following areas: (1) Approaches to Religious Studies (2) Religious Traditions and Classics (3) Religion, Culture and Society (4) Classical Languages (5) Seminars.",
+      "programmeWebsite": "https://www2.crs.cuhk.edu.hk/bars/explore-rs",
+      "tuition": "HK$47,000",
+      "intake": 17,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 155,
+        "bandB": 103,
+        "bandC": 187,
+        "bandD": 200,
+        "bandE": 205,
+        "total": 850
+      },
+      "offers2025": {
+        "bandA": 16,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 16
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/relsn/",
+      "introduction": "Religious Studies: Unveiling the Complexity of Human Beliefs and Practices Religious Studies considers religion to be an integral part of human thought and activity. It advocates an objective and academic approach to studying religious phenomena and a critical yet sympathetic understanding of people&#8217;s religious life. Students may take courses in five areas: Approaches to Religious Studies; Religious Traditions and Classics; Religion, Culture and Society; Classical Languages; and Seminars. To facilitate the development of various study interests of students, the programme offers four areas of concentration: Religion and Culture, Religious Education, Arabic Studies, and Religion and Health. The programme places significant emphasis on interdisciplinary studies, specifically Philosophy of Religion, Psychology of Religion, Sociology of Religion, Religion and Ethics, Religion and Education, and Religion and Literature. The primary goal is to familiarize students with the relationship between religion and various academic fields. The Religious Studies programme requires students to engage in fieldwork and research to deepen their understanding of the everyday religious practices in our society and the surrounding region. To bridge the gap between theoretical knowledge and practical application, the programme offers internship opportunities for undergraduate students, providing them with first-hand experience in the field.",
+      "ranking": "#32 in Theology, Divinity &amp; Religious Studies (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Religious Studies: Promoting the Preservation of Religious Cultural Heritage and Enhancing Human and Social Wellness In Hong Kong’s multicultural and rapidly changing society, understanding and embracing diverse religious and cultural perspectives is especially important. Our Religious Studies programme equips students with solid knowledge and practical skills to enhance cross-cultural sensitivity, supporting their confident living, learning, and growth within a pluralistic society. Combining theory and practice, the programme offers diverse learning opportunities such as fieldwork, summer internships, and overseas exchanges. These experiences allow students to gain an in-depth understanding of the diversity of religious cultures, respond effectively to complex social issues, foster personal development, and make positive contributions to their future workplaces and communities. Our graduates excel in sectors such as education, media and publishing, journalism, advertising, business, tourism, government, and non-governmental organizations. Many also choose to pursue further studies, both locally and abroad, to broaden their academic horizons and achieve higher levels of scholarly accomplishment. We invite you to join our programme to explore the dimensions of religion and culture, develop interdisciplinary perspectives, and promote the understanding and preservation of religious cultural heritage while advancing human and social wellness. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "To Ponder and to Participate",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4109",
+    "nameEn": "Religious Studies",
+    "nameZh": "宗教研究",
+    "name": "Religious Studies",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 21.5,
+    "band_a": 21,
+    "uq": 22,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4109",
+            "First Year Intake: 17",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 21.5",
+            "Lower quartile (LQ): 21",
+            "Upper quartile (UQ): 22",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese Language: 5",
+            "- English Language: 4",
+            "- Mathematics Compulsory: 4",
+            "- Citizenship and Social Development: Attained",
+            "- Mathematics Extended Part (M1/M2): 3",
+            "- Elective 1: 4",
+            "- Elective 2: 4",
+            "- Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 Elective Subjects: Level 3 each (or 1 elective + M1/M2, or other language subjects at specified levels)",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 155",
+            "- Offers (Band A): 16",
+            "- Total applications: 850"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Religious Studies programme at CUHK considers religion an integral part of human life, thought, and activity. It advocates an objective and academic approach to studying religious phenomena and a critical yet sympathetic understanding of people’s religious life.",
+            "",
+            "Students explore numerous religious traditions, including Buddhism, Taoism, Christianity, Hinduism, Islam, and Judaism.",
+            "",
+            "Courses are offered in five areas:",
+            "- Approaches to Religious Studies",
+            "- Religious Traditions and Classics",
+            "- Religion, Culture and Society",
+            "- Classical Languages",
+            "- Seminars",
+            "",
+            "The programme offers four areas of concentration:",
+            "- Religion and Culture",
+            "- Religious Education",
+            "- Arabic Studies",
+            "- Religion and Health",
+            "",
+            "Interdisciplinary studies are emphasised, including Philosophy of Religion, Psychology of Religion, Sociology of Religion, Religion and Ethics, Religion and Education, and Religion and Literature.",
+            "",
+            "Students are required to engage in fieldwork and research to deepen understanding of everyday religious practices in Hong Kong and the surrounding region.",
+            "",
+            "Internship opportunities are available to bridge theoretical knowledge and practical application."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates excel in sectors such as education, media and publishing, journalism, advertising, business, tourism, government, and non-governmental organisations.",
+            "",
+            "Many pursue further studies locally and abroad to broaden academic horizons and achieve higher levels of scholarly accomplishment.",
+            "",
+            "The programme equips students with solid knowledge and practical skills to enhance cross-cultural sensitivity, supporting confident living, learning, and growth within a pluralistic society.",
+            "",
+            "Combining theory and practice, students gain diverse learning opportunities including fieldwork, summer internships, and overseas exchanges, enabling them to understand religious cultural diversity and respond effectively to complex social issues."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant and inclusive environment with a unique college system that fosters close-knit communities and holistic development.",
+            "",
+            "Students benefit from a wide range of extracurricular activities, cultural events, and facilities that support both academic and personal growth.",
+            "",
+            "The programme encourages overseas exchanges and internships to broaden students' global perspectives, as part of the curriculum's emphasis on fieldwork and practical experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 155",
+            "- Offers from Band A: 16",
+            "- Band A offer rate: approximately 10.3%",
+            "- Band A applications per offer: approximately 9.7",
+            "",
+            "The programme is selective, with a median admission score of 21.5 (Best 5) and a lower quartile of 21.",
+            "",
+            "Applicants should aim for strong results in Chinese, English, and elective subjects to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Faculty Excellence",
+          "content": [
+            "Lai Chi Tim (黎志添) – Professor of Religious Studies at CUHK; expert in Daoist studies and Chinese religions.",
+            "",
+            "Tam Wai Lun (譚偉倫) – Professor and former Head of the Department of Cultural and Religious Studies at CUHK; specialist in Chinese Buddhism.",
+            "",
+            "Yau Ching (游靜) – Cultural critic, filmmaker, and professor; known for work on gender, sexuality, and religion in Hong Kong.",
+            "",
+            "Chan Ka Ki (陳家祺) – Hong Kong writer and religious studies scholar; published on Christian theology and Chinese culture.",
+            "",
+            "The Department of Cultural and Religious Studies at CUHK is a leading centre for the study of Chinese religions, Christianity, and interfaith dialogue in Asia. Faculty members have received prestigious research grants and published extensively in top international journals."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Local JUPAS students may be eligible for entrance scholarships, the Tertiary Student Finance Scheme (TSFS), and the Non-means-tested Loan Scheme for Post-secondary Students (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Religious Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 22+ in Best 5**",
+            "",
+            "- The median is 21.5, but aiming for 22 (UQ) gives you a stronger edge. Focus on Chinese and English (Level 4 or above) and at least two electives at Level 4.",
+            "",
+            "**2. Prioritise Chinese and English**",
+            "",
+            "- Both core subjects are weighted heavily. A Level 5 in Chinese and Level 4 in English (as seen in median profile) significantly boost your score.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Select two electives that align with your interests in religious studies, such as History, Ethics, or Sociology. Level 4 or above in both is ideal.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview. Demonstrate genuine interest in religious diversity, critical thinking, and a willingness to engage with different worldviews.",
+            "",
+            "**5. Highlight Extracurricular Involvement**",
+            "",
+            "- Participation in cultural or religious events, volunteer work, or related reading shows commitment. Mention these in your application or interview.",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "- Familiarise yourself with the five course areas and four concentrations. Tailor your personal statement to show how your interests match the programme's offerings.",
+            "",
+            "**7. Leverage Fieldwork and Internships**",
+            "",
+            "- The programme values practical experience. If you have done any research or volunteer work related to religion or culture, highlight it.",
+            "",
+            "**8. Apply Early in Band A**",
+            "",
+            "- With only 16 offers from 155 Band A applicants, placing JS4109 in Band A maximises your chance. Band B or lower rarely receives offers.",
+            "",
+            "**9. Stay Updated on Admission Requirements**",
+            "",
+            "- Check the official CUHK admissions page and JUPAS site for any changes in requirements or deadlines. Ensure you meet the minimum subject levels."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4109",
+            "首年學額：17",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：21.5",
+            "下四分位數：21",
+            "上四分位數：22",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：5",
+            "- 英國語文：4",
+            "- 數學（必修部分）：4",
+            "- 公民與社會發展：達標",
+            "- 數學延伸部分（M1/M2）：3",
+            "- 選修科目一：4",
+            "- 選修科目二：4",
+            "- 選修科目三：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（或 1 個選修 + M1/M2，或其他語言科目指定等級）",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：155",
+            "- Band A 錄取人數：16",
+            "- 總申請人數：850"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "宗教研究課程視宗教為人類生活、思想與活動的重要組成部分，提倡以客觀及學術方式研究宗教現象，並以批判但同理的態度理解人們的宗教生活。",
+            "",
+            "學生可探索多種宗教傳統，包括佛教、道教、基督教、印度教、伊斯蘭教及猶太教。",
+            "",
+            "課程涵蓋五大範疇：",
+            "- 宗教研究進路",
+            "- 宗教傳統與經典",
+            "- 宗教、文化與社會",
+            "- 古典語言",
+            "- 研討會",
+            "",
+            "課程提供四個專修範疇：",
+            "- 宗教與文化",
+            "- 宗教教育",
+            "- 阿拉伯研究",
+            "- 宗教與健康",
+            "",
+            "強調跨學科研究，包括宗教哲學、宗教心理學、宗教社會學、宗教與倫理、宗教與教育、宗教與文學。",
+            "",
+            "學生須進行實地考察與研究，以深入了解香港及周邊地區的日常宗教實踐。",
+            "",
+            "課程提供實習機會，以連繫理論知識與實際應用。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生於教育、媒體與出版、新聞、廣告、商業、旅遊、政府及非政府組織等領域表現卓越。",
+            "",
+            "許多畢業生選擇在本地或海外繼續深造，擴闊學術視野並取得更高學術成就。",
+            "",
+            "課程裝備學生扎實知識與實用技能，提升跨文化敏感度，支持他們在多元社會中自信地生活、學習與成長。",
+            "",
+            "結合理論與實踐，學生透過實地考察、暑期實習及海外交流等多元學習機會，深入了解宗教文化多樣性，有效應對複雜社會議題。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的包容環境，獨特的書院系統促進緊密社群與全人發展。",
+            "",
+            "學生可參與豐富的課外活動、文化活動及使用各項設施，支持學術與個人成長。",
+            "",
+            "課程鼓勵海外交流與實習，以擴闊學生的全球視野，此為課程實地考察與實踐經驗的重要部分。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：155",
+            "- Band A 錄取人數：16",
+            "- Band A 錄取率：約 10.3%",
+            "- 每 Band A 錄取對應申請人數：約 9.7",
+            "",
+            "課程具選擇性，中位數入學分數為 21.5（最佳 5 科），下四分位數為 21。",
+            "",
+            "申請人應在中文、英文及選修科目取得優異成績，以提升競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與學系成就",
+          "content": [
+            "黎志添 – 香港中文大學宗教研究教授；道教研究與中國宗教專家。",
+            "",
+            "譚偉倫 – 香港中文大學文化及宗教研究系前系主任及教授；中國佛教專家。",
+            "",
+            "游靜 – 文化評論人、電影製作人及教授；以香港性別、性與宗教研究聞名。",
+            "",
+            "陳家祺 – 香港作家及宗教研究學者；出版基督教神學與中國文化相關著作。",
+            "",
+            "香港中文大學文化及宗教研究系是亞洲研究中國宗教、基督教及跨宗教對話的領先中心。教職員曾獲著名研究資助，並在頂尖國際期刊上發表大量著作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，部分涵蓋學費及生活費。",
+            "",
+            "本地 JUPAS 學生可申請入學獎學金、專上學生資助計劃（TSFS）及專上學生免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的宗教研究策略 — 9 個可行貼士",
+          "content": [
+            "**1. 目標分數：最佳 5 科爭取 22 分或以上**",
+            "",
+            "- 中位數為 21.5，但以 22 分（上四分位數）為目標更具優勢。重點提升中文及英文（第 4 級或以上），並至少兩個選修科達第 4 級。",
+            "",
+            "**2. 優先處理中文及英文**",
+            "",
+            "- 兩個核心科目均佔重要比重。中文第 5 級及英文第 4 級（如中位數檔案所示）能大幅提升分數。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 選擇與宗教研究相關的選修科，如歷史、倫理或社會學。兩個選修科達第 4 級或以上為理想。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 課程需要面試。展現對宗教多元性的真正興趣、批判性思考及願意接觸不同世界觀的態度。",
+            "",
+            "**5. 突顯課外活動參與**",
+            "",
+            "- 參與文化或宗教活動、義工工作或相關閱讀能顯示投入感。在申請或面試中提及這些經歷。",
+            "",
+            "**6. 了解課程內容**",
+            "",
+            "- 熟悉五大範疇及四個專修範疇。在個人陳述中展示你的興趣如何與課程內容匹配。",
+            "",
+            "**7. 善用實地考察與實習**",
+            "",
+            "- 課程重視實踐經驗。如有任何與宗教或文化相關的研究或義工經驗，務必強調。",
+            "",
+            "**8. 盡早將課程置於 Band A**",
+            "",
+            "- 由於只有 16 個錄取名額來自 155 名 Band A 申請人，將 JS4109 置於 Band A 能最大化機會。Band B 或更低組別極少獲得錄取。",
+            "",
+            "**9. 緊貼入學要求更新**",
+            "",
+            "- 定期查看官方中大入學頁面及 JUPAS 網站，了解要求或截止日期的變動。確保符合最低科目等級。"
+          ]
+        }
+      }
+    },
+    "code": "JS4109",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 21.5,
+    "uq": 22,
+    "lq": 21,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 22
+      },
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 21.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "3",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 21
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Lai Chi Tim",
+        "nameZh": "黎志添",
+        "achievement": "Professor of Religious Studies at CUHK; expert in Daoist studies and Chinese religions.",
+        "sourceHint": "CUHK Department of Cultural and Religious Studies faculty page"
+      },
+      {
+        "nameEn": "Tam Wai Lun",
+        "nameZh": "譚偉倫",
+        "achievement": "Professor and former Head of the Department of Cultural and Religious Studies at CUHK; specialist in Chinese Buddhism.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Yau Ching",
+        "nameZh": "游靜",
+        "achievement": "Cultural critic, filmmaker, and professor; known for work on gender, sexuality, and religion in Hong Kong.",
+        "sourceHint": "Public bio and CUHK alumni records"
+      },
+      {
+        "nameEn": "Chan Ka Ki",
+        "nameZh": "陳家祺",
+        "achievement": "Hong Kong writer and religious studies scholar; published on Christian theology and Chinese culture.",
+        "sourceHint": "Public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The Department of Cultural and Religious Studies at CUHK is a leading center for the study of Chinese religions, Christianity, and interfaith dialogue in Asia.",
+      "Faculty members have received prestigious research grants and published extensively in top international journals.",
+      "The programme offers unique courses on Daoist liturgy, Buddhist texts, and comparative religion."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Religious Studies notable alumni",
+      "香港中文大學 宗教研究 著名校友",
+      "CUHK Religious Studies graduates Hong Kong careers",
+      "CUHK Department of Cultural and Religious Studies faculty"
+    ]
+  }
+}

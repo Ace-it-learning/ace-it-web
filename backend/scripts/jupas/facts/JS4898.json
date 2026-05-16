@@ -1,0 +1,76 @@
+{
+  "code": "JS4898",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4898"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4898"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "cuhk_programmes_catalog.json (programme not in af_2025_JUPAS.pdf CUHK tables)"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/dipln/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/"
+    }
+  ],
+  "programme": {
+    "code": "JS4898",
+    "nameEn": "Diplomacy and International Studies",
+    "nameZh": "外交與國際事務",
+    "university": "香港中文大學",
+    "facultyZh": "社會科學院",
+    "category": "social_science"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24,
+    "lq": 26,
+    "uq": 26,
+    "percentiles": {},
+    "subjectWeighting": null,
+    "scoresFallback": true
+  },
+  "jupas": {
+    "code": "JS4898",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4898",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4898",
+    "nameEn": "Diplomacy and International Studies",
+    "nameZh": "外交與國際事務",
+    "shortDescription": "an class=\"before_label\">Short Description The Diplomacy and International Studies programme is an interdisciplinary programme jointly offered by the Faculty of Social Science and the Faculty of Law, leading to a Bachelor’s degree in Social Science. In response to the expeditious developments in geopolitics and international diplomacy, the programme is designed to cultivate high-level talents equipped with a global perspective, an international mindset, strong intercultural competence, and the ability to excel in international organizations and diplomatic settings. Emphasizing the integration of theory and practice, the Programme offers a multidisciplinary curriculum covering diplomacy, international governance, law, regional studies, and interpersonal and intercultural competence. In addition, students will gain practical experience through internships at embassies, consulates, and international organizations, along with professional training at the China Foreign Affairs University. Students will also participate in overseas exchange, ensuring exposure to learning experiences in both China and international locales.",
+    "programmeWebsite": "https://socsc.cuhk.edu.hk/diplomacy-and-international-studies/",
+    "tuition": "HK$47,000",
+    "intake": 15,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {},
+    "offers2025": {},
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/dipln/",
+    "introduction": "Jointly offered by the Faculty of Social Science and the Faculty of Law, the Diplomacy and International Studies Programme is an interdisciplinary programme leading to a Bachelor’s degree in Social Science. In response to the expeditious developments in geopolitics and international diplomacy, the Programme aims to nurture high-calibre talent equipped with a global perspective, an international mindset, strong intercultural competence, and the ability to excel in international organizations and diplomatic settings. Through cross-faculty collaboration, students will receive a comprehensive education in diplomacy, international governance, law, regional studies, and interpersonal and intercultural competence. This collaborative model also ensures that students gain a well-rounded understanding of international affairs and diplomatic practices from multiple perspectives.",
+    "ranking": "",
+    "careerProspects": "Graduates of this programme are expected to become diplomatic talents well-versed in international affairs while simultaneously carrying a focused understanding of China. The Programme prepares graduates for careers in both political and public diplomacy, while also opening doors to a wide range of sectors including: Government Organizations International Organizations Multinational Corporations Policy Think Tanks Consulting Firms Local and International NGOs Cultural and International Exchange Organizations Teaching and Research in Universities Mass Communication/ Public Relations Postgraduate studies If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

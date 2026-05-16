@@ -1,0 +1,129 @@
+{
+  "code": "JS4501",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4501"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4501"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/medun/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://mbchb.med.cuhk.edu.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS4501",
+    "nameEn": "Medicine (MBChB) Programme",
+    "nameZh": "內外全科醫學士課程",
+    "university": "香港中文大學",
+    "facultyZh": "醫學院",
+    "category": "medicine"
+  },
+  "scores": {
+    "formula": "6 Graded",
+    "median": 37,
+    "uq": 41.5,
+    "lq": 36,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 37
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 36
+      },
+      "UQ": {
+        "chi": "5*",
+        "eng": "5**",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 41.5
+      }
+    },
+    "subjectWeighting": "Biology/Chemistry must be included"
+  },
+  "jupas": {
+    "code": "JS4501",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4501",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4501",
+    "nameEn": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+    "nameZh": "內外全科醫學士課程",
+    "shortDescription": "an class=\"before_label\">Short Description The 6-year full-time programme adopts a unique SMART medical curriculum, allowing us to nurture competent and compassionate doctors who are amply qualified both to meet the challenges of modern-day health care and to serve the community with clinical excellence and passion. The SMART curriculum: Student-centred Mentorship-based Assured knowledge acquisition Robust clinical teaching Teaching ethics and professionalism Students admitted on the basis of the HKDSE or a recognised HKDSE-equivalent qualification are required to complete six years of study to qualify for the degrees of Bachelor of Medicine and Bachelor of Surgery (MBChB). After the successful completion of a one-year internship in an approved hospital in Hong Kong, graduates become registered medical practitioners.",
+    "programmeWebsite": "http://mbchb.med.cuhk.edu.hk/",
+    "tuition": "HK$47,000",
+    "intake": 300,
+    "duration": "6 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level BIOLOGY 3 ANY 1 SUBJECT (1) 3 Or CHEMISTRY 3 ANY 1 SUBJECT (2) 3 NOTES (1) Chemistry is preferred. (2) Biology is preferred. (3) Taking a third elective and/or Mathematics Extended Part Module 1 or 2 will be strongly recommended. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 502,
+      "bandB": 93,
+      "bandC": 135,
+      "bandD": 200,
+      "bandE": 367,
+      "total": 1297
+    },
+    "offers2025": {
+      "bandA": 173,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 173
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/medun/",
+    "introduction": "Personalised Medical Curriculum Designed by You The six-year full-time MBChB programme has a unique SMART medical curriculum, allowing us to nurture competent and compassionate doctors who are amply qualified both to meet the challenges of modern-day healthcare and to serve the community with clinical excellence and passion. The SMART curriculum: Student-centred Mentorship-based Assured knowledge acquisition Robust clinical teaching Teaching ethics and professionalism Students admitted on the basis of university entrance examinations are required to complete six years of study to qualify for the degrees of Bachelor of Medicine and Bachelor of Surgery (MBChB). After the successful completion of a one-year internship in an approved hospital in Hong Kong, graduates become registered medical practitioners.",
+    "ranking": "CU Medicine is the youngest medical school to achieve a Top 25 global ranking across the international rankings of QS, THE , and ShanghaiRanking . In the &#8220;Best Global Universities Subject Rankings 2025-26&#8221; by U.S. News and World Report , CU Medicine&#8217;s Gastroenterology and Hepatology programme ranked 2nd globally, while the &#8220;Gastroenterology and Hepatology&#8221;, &#8220;Endocrinology and Metabolism&#8221;, and &#8220;Clinical Medicine&#8221; programmes each ranked 1st in Asia.",
+    "careerProspects": "After the successful completion of a one-year internship in an approved hospital in Hong Kong, medical graduates become registered medical practitioners, and subsequently specialists after another four to six years of specialty training. Some may opt for an alternative path by joining academia or becoming a clinician-scientist, combining clinical practice with medical education and scientific research to advance medical development and improve patient care. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "CU Medicine welcomes ambitious learners and dreamers from all walks of life. Knowing each student is unique and that their dreams often extend beyond the study of medicine, we offer a “personalised” curriculum designed to empower talented learners to take charge of their own education, develop their abilities and pursue their dreams. From developing students’ skills to helping students gain the confidence to be a leader, our flexible curriculum features personal growth options tailored to each student’s personal vision and interests. Interdisciplinary Plan Self-initiated Intercalated Years International Exchange Community Service and Humanitarian Action Vibrant Student Life",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

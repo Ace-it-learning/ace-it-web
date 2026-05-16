@@ -1,0 +1,116 @@
+{
+  "code": "JS4458",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4458"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4458"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/seemn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://seem.se.cuhk.edu.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS4458",
+    "nameEn": "Systems Engineering and Engineering Management",
+    "nameZh": "系統工程與工程管理",
+    "university": "香港中文大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 32.5,
+    "uq": null,
+    "lq": 32.5,
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 32.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 32.5
+      }
+    },
+    "subjectWeighting": "Economics, ICT (x 1.5)"
+  },
+  "jupas": {
+    "code": "JS4458",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4458",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4458",
+    "nameEn": "Systems Engineering and Engineering Management",
+    "nameZh": "系統工程與工程管理",
+    "shortDescription": "an class=\"before_label\">Short Description The programme integrates cutting-edge technology and quantitative skills with management. With a mission to nurture talents for pillar industries in Hong Kong, the programme equips students with essential methodologies to derive managerial insights for optimal decision-making in complex environments in industries like finance, logistics and the service sector. The programme features a well-rounded education so that students acquire both a range of useful technical skills and a broad perspective in technology and management. Graduates from the programme are able to work in a variety of industries and pursue senior management positions requiring engineering training and background.",
+    "programmeWebsite": "https://seem.se.cuhk.edu.hk/",
+    "tuition": "HK$47,000",
+    "intake": 50,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: Preferred subjects for one of the electives: Mathematics Extended Module I or II, Biology, Business, Accounting and Financial Studies, Chemistry, Economics, Information and Communication Technology and Physics. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 222,
+      "bandB": 117,
+      "bandC": 225,
+      "bandD": 302,
+      "bandE": 268,
+      "total": 1134
+    },
+    "offers2025": {
+      "bandA": 50,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 50
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/seemn/",
+    "introduction": "Explore Engineering Innovation in Our Systems Engineering and Engineering Management Programme Dive into the realm of engineering innovation in our comprehensive Systems Engineering and Engineering Management Programme. Embark on a transformative academic journey, on which the intricate threads of operational research, logistics management, financial acumen, and information systems are intricately intertwined. This programme serves as a launch pad for honing your technical acumen and strategic prowess, enabling you to adeptly navigate the dynamic landscape of technology-driven solutions. Join us to unravel the intricate fabric of modern engineering, skilfully weaving together disciplines that define industries and drive innovation forward.",
+    "ranking": "",
+    "careerProspects": "With a curriculum closely related to the four pillar industries in Hong Kong (finance, trading and logistics, professional services and tourism), SEEM graduates are very competitive in the job market. Graduates have joined leading firms, like AIA, Bank of China, Cathy Pacific Airways, FedEx, HSBC, IBM and PCCW, as well as the Hong Kong SAR Government. SEEM program graduates are ideally suited for positions requiring a strong engineering background (in technologies like AI and mathematics, like mathematical modelling) and a comprehensive understanding of business management. Our graduates are very competitive for jobs such as the following: Asset and wealth management (e.g., data-driven investment strategy design) Information Technology consulting (e.g., providing guidance on technology to companies to meet their business needs) IT companies and IT service roles in banking and e-commerce companies (e.g., developing, supporting, managing and maintaining the IT system in these companies) Supply chain system management in e-commerce (e.g., using data analytics to predict demand and hence plan inventory levels) Dynamic pricing for a broad class of industries (e.g., real-time pricing for flight tickets by incorporating customer behaviour) Healthcare systems management (e.g., appointment scheduling for surgery) Operational analyst for logistics companies (e.g., using optimisation models to improve the operations in logistics systems, such as route planning and scheduling) [Figures as of June 2022] If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "Shape your educational journey with a curriculum that is aligned with your aspirations: Forge Your Trail: Immerse yourself in a transformative journey, on which operational research, logistics mastery, financial insight, and information systems converge, enabling you to craft a personalized path in the field of engineering innovation. Engineering Innovation: Navigate a dynamic educational landscape to unleash your potential by tailoring your learning, whether in supply chain optimisation or strategic information systems, as you weave the fabric of modern engineering innovation. Join us to craft expertise and embrace growth, making your expedition a masterpiece of brilliance.",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

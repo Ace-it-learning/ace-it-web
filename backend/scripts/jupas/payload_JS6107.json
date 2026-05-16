@@ -1,0 +1,491 @@
+{
+  "factPack": {
+    "code": "JS6107",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6107"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://facdent.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6107",
+      "nameEn": "Bachelor of Dental Surgery",
+      "nameZh": "牙醫學士",
+      "university": "香港大學",
+      "facultyZh": "牙醫學院",
+      "category": "medicine"
+    },
+    "scores": {
+      "formula": "Best 6 Subjects",
+      "median": 48,
+      "uq": 50,
+      "lq": 47
+    },
+    "jupas": {
+      "code": "JS6107",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6107",
+      "nameEn": "Bachelor of Dental Surgery",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The intent of the BDS curriculum at the Faculty of Dentistry, The University of Hong Kong, is to educate and train students to become dentists in its mission of providing oral health care for individuals and the community in the Hong Kong context. The integrated Bachelor of Dental Surgery (BDS) curriculum is outcomes- and competency-based and adopts a problem-based learning (PBL) approach in achieving this mission. The dental degree curriculum lasts six years. Learning principally takes place in the Prince Philip Dental Hospital, the only dental teaching hospital in Hong Kong. There are also classes in the general medical and surgical wards of the University Departments of Medicine and Surgery, and with the ward and operating theatre of Oral and Maxillofacial Surgery in the Queen Mary Hospital. Learning also occurs at a variety of dental clinics and oral health education delivery settings throughout Hong Kong.",
+      "programmeWebsite": "https://facdent.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 90,
+      "duration": "6 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 165,
+        "bandB": 98,
+        "bandC": 144,
+        "bandD": 215,
+        "bandE": 372,
+        "total": 994
+      },
+      "offers2025": {
+        "bandA": 54,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 54
+      },
+      "facultyPhone": "+852 2859 0345"
+    },
+    "admissionsSnippet": "HKU Faculty of Dentistry 香港大學牙醫學院 Intranet Alumni HKU Portal HKU Contact Us About About the Faculty Dean's Message Vision & Mission Organization & Divisions Giving to Faculty Rules & Regulations Faculty Intranet Vacancies Contact Us People Leadership Professoriate & Academic Staff Emeritus Professor Honorary & Visiting Staff Part-time Staff Administrative Staff Learning Bachelor of Dental Surgery Taught Postgraduate Research Postgraduate Incoming Electives Global Education Hub For Oral Healthcare Professionals Learning Facilities Student Wellness HKU School of Biomedical Engineering Research Research Strategy Central Research Laboratories Clinical Research Centre Volunteering for Clinical Research Knowledge Exchange Global Hub for Future Dentistry Community Engagement Global Collaborations Engagement with Industry Clinical Services News Press Release Events Publications In the Media Useful Links World-Class Programmes Learning in Dentistry Empowering Dental Innovators Research & Innovation Our Community Engagment Knowledge Exchange HKU Dentistry Ranked by QS as World's No. 2 in 2026 No. 2 in 2025 No. 3 in 2024 No. 3 in 2023 No. 2 in 2022 No. 3 in 2021 No. 1 in 2018 No. 1 in 2017 No. 1 in 2016 No. 2 in 2015 Consistently Leading in Academic & Research Excellence in Oral Healthcare Established in 1982, the Faculty of Dentistry at The University of Hong Kong has been the sole provider of undergraduate and postgraduate dental degrees in Hong Kong. In 2026, the Faculty was ranked 2nd in the QS World University Rankings by Subject, solidifying its status as a premier global dental school. The latest ranking not only reaffirms our strong commitment to academic excellence but also highlights our consistently stellar performance. HKU Dentistry has impressively maintained a top-three global ranking in 10 out of the past 12 years (2015-2026) . World's No.2 Dentistry Top 3 Global Ranking in 10 Out of the Past 12 Years Read More Top 2% Scientists Outstanding Academic Prowess & Global Recognition Read More Global Hub for Future Dentistry Read More TU-HKU-FJMU International Symposium Read More Brain Microenvironment Drives New Metastatic Insights Read More HKU Faculty of Dentistry Excellence & Impact AI Clinic for Early Oral Cancer Detection Read more GUM AI Technology for Elderly Read more Azalea Gum Treatment Project for Underprivileged Adults Read more DentalGPT: World’s First Dental AI Model Read more Jockey Club Children Oral Health Project Read more HKU Faculty of Dentistry Latest Highlights Column Read More Why Do So Many People Fear Dental Visits? Read More Award Read More Faculty Innovation Recognised in Geneva Read More Event Read More IADR 2026 Read More Media Read More Orthognathic Surgery Read More Column Read More Lip, Tongue and Jaw Exercises for the Reversal of Oral Frailty Read More Column Read More Should an inflamed wisdom tooth be extracted immediately? Read More New Chapter for HKU Dentistry I am immensely proud of what we have accomplished together. Our achievements in global rankings, interdisciplinary collaboration, and regional and international partnerships are a testament to the vision and hard work of our entire community. Professor Lijian Jin Dean Read More Work Hard, Play Hard Athletes have high concentration and determination, and will strive to overcome pressure and difficult environment. A great dentist must be able to think on their feet and find creative solutions for the unique problems patients bring to the clinic. Professor Mike Leung Associate Dean (Global Engagement and Development) Read More World’s First AI Oral Cancer Clinic Our tool is freely available on the internet for use by all dentists and doctors everywhere. With a united goal of advancing cancer care, the tool brings precision, confidence, and earlier intervention to clinical decision-making, potentially mitigating oral cancer burden and saving lives. Professor John Adeoye Assistant Professor in Digital / Precision Dentistry Read More Healing Gums, Rebuilding Self-Esteem For Phase 1, we’re already seeing improvements in the oral and general health, chewing function, speech, well-being, and confidence of our patients. Professor George Pelekos Clinical Associate Professor in Periodontology & Implant Dentistry Read More Accolade for Faculty Clinician–Scientist I extend my thanks to Kingboard Chemical Holdings Limited for their generous donation, which has greatly advanced research and development in dental science, positively impacting oral health in Hong Kong and beyond. Professor Chun-hung Chu Kingboard Professor in Advanced Dentistry Read More AI-Driven Device Design For research to create real-world impact, it must bridge the gap between translation, commercialisation, and practical application. Professor Yanning Chen Clinical Assistant Professor in Restorative Dental Sciences (Cariology) Read More Decoding Cancer Progression Our results provide insights into how OSCC metastasises, bypasses immune responses, and resists conventional therapies. Professor Gao Zhang Associate Professor in Applied Oral Sciences & Community Dental Care Read More Smart Support for Senior Smiles GUM AI represents a breakthrough in preventive dental care. Identifying signs of gum inflammation early lets us empower seniors and their caregivers with timely, actionable insight and information that can dramatically improve oral, and overall, health outcomes. Professor Walter Lam Clinical Associate Professor in Prosthodontics Read More The Faculty of Dentistry at the University of Hong Kong is the premier dental school in the world and the only institution in Hong Kong that provides undergraduate and postgraduate dental degrees. The Faculty was established in 1982 and is located in the Prince Philip Dental Hospital in Sai Ying Pun. Faculty of Dentistry About People Learning Research Knowledge Exchange Clinical Services News Contact Us Community HKU HKU Portal Giving to Faculty Vacancies Alumni Intranet Useful Links Disclaimer Priv"
+  },
+  "programme": {
+    "code": "JS6107",
+    "nameEn": "Bachelor of Dental Surgery",
+    "nameZh": "牙醫學士",
+    "name": "Bachelor of Dental Surgery",
+    "university": "香港大學",
+    "faculty": "牙醫學院",
+    "median": 48,
+    "band_a": 47,
+    "uq": 50,
+    "category": "medicine"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 90",
+            "",
+            "**Duration:** 6 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 DSE Score Formula:** Best 6 Subjects",
+            "",
+            "**Core Subjects:** English Language, Chinese Language, Mathematics, Liberal Studies",
+            "",
+            "**Elective Subjects:** Any two electives from Category A (including M1/M2) or Category C. One elective must be Biology or Chemistry.",
+            "",
+            "**Weighting:** No specific weighting; all subjects counted equally in Best 6.",
+            "",
+            "**Interview:** Required. Shortlisted applicants are invited for an interview. Performance in the interview is considered in the admission decision.",
+            "",
+            "**2025 Admission Scores (Best 6):** Median: 48 | LQ: 47 | UQ: 50",
+            "",
+            "**Note:** Meeting the minimum requirements does not guarantee an interview or offer. Selection is competitive based on DSE results and interview performance."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:** The Bachelor of Dental Surgery (BDS) is a six-year, outcomes- and competency-based programme that adopts a problem-based learning (PBL) approach. It aims to educate and train students to become competent dentists capable of providing oral health care for individuals and the community in the Hong Kong context.",
+            "",
+            "**Year 1-2:** Foundation sciences including anatomy, physiology, biochemistry, and introductory dental subjects. Early clinical exposure begins in Year 1.",
+            "",
+            "**Year 3-4:** Integrated clinical training in restorative dentistry, periodontology, oral surgery, paediatric dentistry, orthodontics, and prosthodontics. Students rotate through various clinical disciplines at Prince Philip Dental Hospital.",
+            "",
+            "**Year 5-6:** Advanced clinical practice, community outreach, and elective rotations. Students undertake a research project and gain experience in hospital settings including Queen Mary Hospital.",
+            "",
+            "**Unique Features:**",
+            "- Problem-based learning (PBL) approach throughout the curriculum.",
+            "- Clinical training at Prince Philip Dental Hospital, the only dental teaching hospital in Hong Kong.",
+            "- Rotations in general medical and surgical wards at Queen Mary Hospital.",
+            "- Community-based oral health education placements across Hong Kong.",
+            "- Research project in final years to develop analytical and scientific skills."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Clinical Practice:**",
+            "- General dental practitioner in private or public sector.",
+            "- Hospital dental officer in government or private hospitals.",
+            "- Specialist practice after completing advanced training (e.g., orthodontics, oral surgery, periodontology).",
+            "",
+            "**Academic & Research:**",
+            "- Teaching and research positions at universities and dental schools.",
+            "- Clinical research roles in dental materials, oral biology, or public health.",
+            "- PhD or MPhil pathways for those interested in academic dentistry.",
+            "",
+            "**Public Health & Community:**",
+            "- Dental officer in the Department of Health or Hospital Authority.",
+            "- Community oral health programme coordinator.",
+            "- Policy advisor in oral health promotion.",
+            "",
+            "**Industry & Entrepreneurship:**",
+            "- Dental product development and consultancy.",
+            "- Dental technology and innovation startups.",
+            "- Roles in dental insurance, healthcare management, or dental education technology."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Prince Philip Dental Hospital:** The primary teaching facility located in Sai Ying Pun, Hong Kong Island. It houses state-of-the-art dental clinics, simulation labs, and lecture theatres.",
+            "",
+            "**Queen Mary Hospital:** Clinical rotations in oral and maxillofacial surgery take place at this major teaching hospital.",
+            "",
+            "**HKU Main Campus:** Students have access to the Main Library, sports facilities, and student amenities at the Pokfulam campus.",
+            "",
+            "**Dental Simulation Laboratory:** Equipped with advanced mannequins and virtual reality systems for pre-clinical training.",
+            "",
+            "**Research Laboratories:** Specialised labs for oral biology, biomaterials, and digital dentistry research.",
+            "",
+            "**Community Clinics:** Outreach clinics across Hong Kong for community-based learning and service."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** Very High. BDS is one of the most competitive programmes at HKU due to limited places and high demand.",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 165",
+            "- Band A offers: 54",
+            "- Band A offer rate: ~32.7%",
+            "",
+            "**Factors Influencing Competitiveness:**",
+            "1. **DSE Scores:** Best 6 Subjects median of 48 indicates very high academic standards.",
+            "2. **Interview Performance:** Strong interview skills are critical; shortlisted candidates must demonstrate motivation, communication, and empathy.",
+            "3. **Subject Requirements:** Biology or Chemistry at elective level is mandatory, limiting the applicant pool.",
+            "4. **Overall Demand:** Total applications (all bands) in 2025: 994, with only 54 offers made.",
+            "",
+            "**Note:** The programme does not consider Band B-E applicants for offers; all offers go to Band A candidates."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Global Ranking:** HKU Dentistry ranked 2nd in the QS World University Rankings by Subject in 2026, and has been in the top 3 globally for 10 out of the past 12 years (2015-2026).",
+            "",
+            "**Faculty Excellence:** The Faculty of Dentistry is the sole provider of undergraduate and postgraduate dental degrees in Hong Kong, established in 1982.",
+            "",
+            "**Notable Alumni:** (No specific alumni names provided in the fact pack.)",
+            "",
+            "**Research Impact:** Faculty members are among the top 2% of scientists worldwide, with breakthroughs in AI for oral cancer detection, gum disease treatment, and dental materials.",
+            "",
+            "**Key Laboratories:**",
+            "- AI Clinic for Early Oral Cancer Detection",
+            "- GUM AI Technology for Elderly",
+            "- DentalGPT: World’s First Dental AI Model",
+            "",
+            "**Community Engagement:** Programmes such as the Jockey Club Children Oral Health Project and Azalea Gum Treatment Project for Underprivileged Adults."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKU Entrance Scholarships:** Awarded to outstanding DSE students based on academic merit. Details available on the HKU Admissions website.",
+            "",
+            "**Faculty of Dentistry Scholarships:** Various scholarships and bursaries for BDS students, including those for clinical excellence and research.",
+            "",
+            "**Kingboard Professorship in Advanced Dentistry:** Supports research and education in dental science.",
+            "",
+            "**External Scholarships:** Students may apply for government scholarships such as the HKSAR Government Scholarship Fund or the Sir Edward Youde Memorial Fund.",
+            "",
+            "**Financial Assistance:** The HKU Financial Assistance Scheme provides means-tested grants and loans to eligible students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BDS Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Aim for a Best 6 Score of 48 or Above**",
+            "",
+            "With a median of 48 and LQ of 47, you need a very strong DSE result. Focus on achieving Level 5** or above in your best six subjects, especially in Biology or Chemistry if you are taking them.",
+            "- Prioritise core subjects: English and Mathematics are crucial.",
+            "- If you are not taking Biology or Chemistry, consider switching or taking an additional elective to meet the requirement.",
+            "",
+            "**2. Master the Interview**",
+            "",
+            "The interview is a key differentiator. Prepare for scenario-based questions about ethics, patient communication, and motivation for dentistry.",
+            "- Practice explaining why you want to be a dentist, not just why you want to study BDS.",
+            "- Be ready to discuss current issues in oral health or healthcare in Hong Kong.",
+            "- Show empathy and communication skills—these are highly valued.",
+            "",
+            "**3. Choose Your Electives Strategically**",
+            "",
+            "Biology and Chemistry are the most relevant subjects. If you take both, you will have a stronger foundation.",
+            "- If you only take one, ensure it is Biology or Chemistry as required.",
+            "- M1/M2 can count as an elective but are less directly relevant; still useful for quantitative skills.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Your Other Experiences and Achievements (OEA) should demonstrate commitment to healthcare, leadership, and community service.",
+            "- Volunteer at dental clinics, hospitals, or elderly homes.",
+            "- Participate in science competitions or research projects.",
+            "- Show sustained involvement rather than one-off activities.",
+            "",
+            "**5. Prepare for the 6-Year Commitment**",
+            "",
+            "BDS is a long programme. Ensure you are ready for the academic and financial commitment.",
+            "- Research the curriculum thoroughly to confirm your interest.",
+            "- Talk to current students or alumni if possible.",
+            "- Consider the cost: tuition is HK$47,000 per year, plus living expenses.",
+            "",
+            "**6. Have a Backup Plan**",
+            "",
+            "Given the high competition, apply to other programmes as insurance. Consider related fields like Biomedical Sciences (JS6456) or Pharmacy (JS6496).",
+            "- Choose backups that also lead to healthcare careers.",
+            "- Ensure your backup choices are realistic based on your predicted scores.",
+            "",
+            "**7. Ace the DSE Science Papers**",
+            "",
+            "Strong performance in Biology and Chemistry will boost your Best 6 score and prepare you for the PBL curriculum.",
+            "- Focus on understanding concepts rather than rote memorisation.",
+            "- Practice past papers and seek feedback from teachers.",
+            "",
+            "**8. Demonstrate Passion for Dentistry**",
+            "",
+            "In your interview and OEA, show genuine interest in oral health. Mention specific areas like AI in dentistry or community outreach.",
+            "- Read about HKU Dentistry's research (e.g., DentalGPT, GUM AI).",
+            "- Attend open days or webinars hosted by the Faculty.",
+            "",
+            "**9. Manage Your Time and Stress**",
+            "",
+            "Balancing DSE preparation, OEA, and interview practice is challenging. Create a study schedule and stick to it.",
+            "- Use past interview questions to simulate real scenarios.",
+            "- Seek support from teachers, family, or mentors.",
+            "- Stay healthy—sleep, exercise, and eat well."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：** 90",
+            "",
+            "**修讀年期：** 6年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**2025年DSE計分公式：** 最佳6科",
+            "",
+            "**核心科目：** 英國語文、中國語文、數學、通識教育",
+            "",
+            "**選修科目：** 任何兩科選修科（包括M1/M2）或丙類科目。其中一科必須為生物或化學。",
+            "",
+            "**比重：** 無特定比重，所有科目在最佳6科中同等計算。",
+            "",
+            "**面試：** 需要。獲篩選的申請人將獲邀面試，面試表現會納入取錄決定。",
+            "",
+            "**2025年入學分數（最佳6科）：** 中位數：48 | 下四分位數：47 | 上四分位數：50",
+            "",
+            "**備註：** 達到最低要求並不保證獲邀面試或取錄。遴選基於DSE成績及面試表現，競爭激烈。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：** 牙醫學士課程為六年制，以成果為本及能力為本，採用問題導向學習（PBL）模式，旨在培訓學生成為能為香港社會提供口腔醫療服務的稱職牙醫。",
+            "",
+            "**第一至二年：** 基礎科學包括解剖學、生理學、生物化學及牙科導論。第一年開始早期臨床接觸。",
+            "",
+            "**第三至四年：** 綜合臨床訓練，涵蓋修復齒科、牙周病學、口腔外科、兒童齒科、矯齒學及義齒學。學生在菲臘牙科醫院輪轉各臨床專科。",
+            "",
+            "**第五至六年：** 高階臨床實習、社區外展及選修輪轉。學生需完成研究項目，並在瑪麗醫院等醫院環境中獲得經驗。",
+            "",
+            "**課程特色：**",
+            "- 全課程採用問題導向學習（PBL）模式。",
+            "- 臨床訓練在菲臘牙科醫院進行，這是香港唯一的牙科教學醫院。",
+            "- 在瑪麗醫院內科及外科病房輪轉。",
+            "- 於香港各社區進行口腔健康教育實習。",
+            "- 最後一年進行研究項目，培養分析及科學技能。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**臨床執業：**",
+            "- 私營或公營機構的普通牙科醫生。",
+            "- 政府或私家醫院的醫院牙科醫生。",
+            "- 完成專科訓練後（如矯齒學、口腔外科、牙周病學）成為專科醫生。",
+            "",
+            "**學術與研究：**",
+            "- 大學及牙科學院的教學及研究職位。",
+            "- 牙科材料、口腔生物學或公共衛生的臨床研究角色。",
+            "- 對學術牙科有興趣者可攻讀哲學博士或哲學碩士。",
+            "",
+            "**公共衛生與社區：**",
+            "- 衛生署或醫院管理局的牙科醫生。",
+            "- 社區口腔健康計劃統籌。",
+            "- 口腔健康推廣政策顧問。",
+            "",
+            "**行業與創業：**",
+            "- 牙科產品開發及顧問。",
+            "- 牙科技術與創新初創企業。",
+            "- 牙科保險、醫療管理或牙科教育科技等角色。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**菲臘牙科醫院：** 主要教學設施，位於香港島西營盤，配備先進牙科診所、模擬實驗室及演講廳。",
+            "",
+            "**瑪麗醫院：** 口腔頜面外科臨床輪轉在此主要教學醫院進行。",
+            "",
+            "**香港大學主校園：** 學生可使用薄扶林校園的主圖書館、體育設施及學生設施。",
+            "",
+            "**牙科模擬實驗室：** 配備先進人體模型及虛擬實境系統，用於臨床前訓練。",
+            "",
+            "**研究實驗室：** 專門進行口腔生物學、生物材料及數碼牙科研究的實驗室。",
+            "",
+            "**社區診所：** 遍佈香港的外展診所，提供社區為本的學習及服務。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 極高。由於學額有限且需求龐大，牙醫學士是港大競爭最激烈的課程之一。",
+            "",
+            "**2025年Band A統計：**",
+            "- Band A申請人數：165",
+            "- Band A取錄人數：54",
+            "- Band A取錄率：約32.7%",
+            "",
+            "**影響競爭因素：**",
+            "1. **DSE成績：** 最佳6科中位數48分，反映極高的學術標準。",
+            "2. **面試表現：** 面試技巧至關重要；獲篩選的申請人須展示動機、溝通能力及同理心。",
+            "3. **科目要求：** 必須在選修科中修讀生物或化學，限制了申請人群。",
+            "4. **整體需求：** 2025年總申請人數（所有組別）為994人，僅發出54個取錄。",
+            "",
+            "**備註：** 課程不考慮Band B-E申請人；所有取錄均給予Band A考生。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與成就",
+          "content": [
+            "**全球排名：** 港大牙醫學院在2026年QS世界大學學科排名中位列第2，並在過去12年（2015-2026）中有10年位居全球前三。",
+            "",
+            "**學院卓越：** 牙醫學院自1982年成立以來，一直是香港唯一提供本科及研究生牙科學位的院校。",
+            "",
+            "**知名校友：** （資料庫中未提供具體校友姓名。）",
+            "",
+            "**研究影響力：** 學院教職員位列全球頂尖2%科學家，在人工智能口腔癌檢測、牙周病治療及牙科材料方面取得突破。",
+            "",
+            "**主要實驗室：**",
+            "- 人工智能早期口腔癌檢測診所",
+            "- 長者牙齦人工智能技術",
+            "- DentalGPT：全球首個牙科人工智能模型",
+            "",
+            "**社區參與：** 賽馬會兒童口腔健康計劃及杜鵑花牙齦治療計劃等項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**港大入學獎學金：** 根據DSE成績頒予傑出學生，詳情請參閱港大入學網站。",
+            "",
+            "**牙醫學院獎學金：** 為牙醫學士學生設有多項獎學金及助學金，包括臨床卓越及研究獎學金。",
+            "",
+            "**金保利先進牙科教授席：** 支持牙科科學的研究與教育。",
+            "",
+            "**外部獎學金：** 學生可申請政府獎學金，如香港特別行政區政府獎學基金或尤德爵士紀念基金。",
+            "",
+            "**經濟援助：** 港大經濟援助計劃為合資格學生提供經入息審查的助學金及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's 牙醫學士入學策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標最佳6科達48分或以上**",
+            "",
+            "由於中位數為48分，下四分位數為47分，你需要非常優秀的DSE成績。專注於在最佳六科中取得5**或以上，尤其是生物或化學（如有修讀）。",
+            "- 優先處理核心科目：英國語文及數學至關重要。",
+            "- 如你未修讀生物或化學，考慮轉科或加修一科以滿足要求。",
+            "",
+            "**2. 掌握面試技巧**",
+            "",
+            "面試是關鍵區分因素。準備情境題，涉及倫理、病人溝通及選擇牙科的原因。",
+            "- 練習解釋為何你想成為牙醫，而不僅僅是為何想讀牙科。",
+            "- 準備討論香港口腔健康或醫療保健的當前議題。",
+            "- 展現同理心及溝通技巧——這些特質備受重視。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "生物及化學是最相關的科目。如你兩科都修讀，將有更穩固的基礎。",
+            "- 如只修讀一科，確保是生物或化學以符合要求。",
+            "- M1/M2可計入選修科，但直接相關性較低；仍對量化技能有幫助。",
+            "",
+            "**4. 建立強大的OEA檔案**",
+            "",
+            "你的其他經驗及成就（OEA）應展示對醫療保健的承擔、領導才能及社區服務。",
+            "- 在牙科診所、醫院或長者中心擔任義工。",
+            "- 參加科學比賽或研究項目。",
+            "- 展示持續參與，而非一次性活動。",
+            "",
+            "**5. 為六年課程做好準備**",
+            "",
+            "牙醫學士是長期課程。確保你已準備好應付學術及財務承擔。",
+            "- 仔細研究課程內容以確認你的興趣。",
+            "- 如可能，與現屆學生或校友交談。",
+            "- 考慮費用：每年學費HK$47,000，另加生活費。",
+            "",
+            "**6. 制定後備計劃**",
+            "",
+            "由於競爭激烈，申請其他課程作為保險。考慮相關領域如生物醫學科學（JS6456）或藥劑學（JS6496）。",
+            "- 選擇同樣通往醫療保健事業的後備課程。",
+            "- 確保後備選擇基於你的預測分數是實際的。",
+            "",
+            "**7. 在DSE科學科目中取得佳績**",
+            "",
+            "在生物及化學中表現優異將提升你的最佳6科分數，並為PBL課程做好準備。",
+            "- 專注理解概念而非死記硬背。",
+            "- 練習歷屆試題並尋求老師反饋。",
+            "",
+            "**8. 展示對牙科的熱誠**",
+            "",
+            "在面試及OEA中，展示對口腔健康的真正興趣。提及特定領域如人工智能牙科或社區外展。",
+            "- 閱讀港大牙科的研究（如DentalGPT、GUM AI）。",
+            "- 參加學院舉辦的開放日或網絡研討會。",
+            "",
+            "**9. 管理時間及壓力**",
+            "",
+            "平衡DSE準備、OEA及面試練習充滿挑戰。制定學習時間表並嚴格遵守。",
+            "- 使用過往面試問題模擬真實情境。",
+            "- 尋求老師、家人或導師的支持。",
+            "- 保持健康——充足睡眠、運動及均衡飲食。"
+          ]
+        }
+      }
+    },
+    "code": "JS6107",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 48,
+    "uq": 50,
+    "lq": 47
+  }
+}

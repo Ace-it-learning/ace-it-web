@@ -6,14 +6,15 @@ export const JUPAS_PROGRAMS = [
     // =====================================================
     // 香港大學 (HKU) - JS6xxx
     // =====================================================
-    { id: 'hku-med', code: 'JS6107', name: '內外全科醫學士', university: '香港大學', faculty: '醫學院', median: 36, band_a: 38, category: 'medicine' },
-    { id: 'hku-dent', code: 'JS6113', name: '牙醫學士', university: '香港大學', faculty: '牙醫學院', median: 35, band_a: 37, category: 'medicine' },
+    // JS6107 = Dental Surgery (BDS); JS6456 = MBBS — do not swap codes
+    { id: 'hku-dent', code: 'JS6107', name: '牙醫學士', university: '香港大學', faculty: '牙醫學院', median: 35, band_a: 37, category: 'medicine' },
+    { id: 'hku-med', code: 'JS6456', name: '內外全科醫學士', university: '香港大學', faculty: '醫學院', median: 36, band_a: 38, category: 'medicine' },
     { id: 'hku-law', code: 'JS6070', name: '法學士', university: '香港大學', faculty: '法律學院', median: 32, band_a: 34, category: 'law' },
-    { id: 'hku-gf', code: 'JS6781', name: '環球金融學士', university: '香港大學', faculty: '商學院', median: 31, band_a: 33, category: 'business' },
+    { id: 'hku-bba-accfin', code: 'JS6781', name: '工商管理學學士(會計及財務)', university: '香港大學', faculty: '商學院', median: 35, band_a: 34, category: 'business' },
     { id: 'hku-qfin', code: 'JS6227', name: '計量金融學士', university: '香港大學', faculty: '商學院', median: 30, band_a: 32, category: 'business' },
     { id: 'hku-arch', code: 'JS6411', name: '建築學士', university: '香港大學', faculty: '建築學院', median: 29, band_a: 31, category: 'design' },
-    { id: 'hku-bba-acc', code: 'JS6767', name: '工商管理學士(會計及財務)', university: '香港大學', faculty: '商學院', median: 28, band_a: 30, category: 'business' },
-    { id: 'hku-bba-law', code: 'JS6808', name: '工商管理學士及法學士', university: '香港大學', faculty: '商學院/法律學院', median: 33, band_a: 35, category: 'law' },
+    { id: 'hku-econ', code: 'JS6767', name: '經濟學學士', university: '香港大學', faculty: '商學院', median: 35, band_a: 34, category: 'business' },
+    { id: 'hku-bba-law', code: 'JS6808', name: '工商管理學學士(法學)及法學士', university: '香港大學', faculty: '商學院/法律學院', median: 37, band_a: 36, category: 'law' },
     { id: 'hku-eng-cs', code: 'JS6951', name: '工程學士(計算機科學)', university: '香港大學', faculty: '工程學院', median: 27, band_a: 29, category: 'engineering' },
     { id: 'hku-eng-civil', code: 'JS6963', name: '土木工程學士', university: '香港大學', faculty: '工程學院', median: 24, band_a: 26, category: 'engineering' },
     { id: 'hku-sci', code: 'JS6901', name: '理學士', university: '香港大學', faculty: '理學院', median: 24, band_a: 26, category: 'science' },

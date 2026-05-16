@@ -1,0 +1,129 @@
+{
+  "code": "JS4006",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4006"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4006"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/anthn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://www.cuhk.edu.hk/ant/undergr.htm"
+    }
+  ],
+  "programme": {
+    "code": "JS4006",
+    "nameEn": "Anthropology",
+    "nameZh": "人類學",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24,
+    "uq": 24.5,
+    "lq": 23,
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 24.5
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      }
+    },
+    "subjectWeighting": null
+  },
+  "jupas": {
+    "code": "JS4006",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4006",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4006",
+    "nameEn": "Anthropology",
+    "nameZh": "人類學",
+    "shortDescription": "an class=\"before_label\">Short Description Anthropology is the study of human variability and diversity, as informed by the four sub-fields of biological anthropology, archaeology, cultural anthropology, and linguistic anthropology. The Anthropology programme at The Chinese University of Hong Kong has strengths in cultural anthropology – defined by the methods of in-depth interviewing and immersive participant-observation, and also offers courses in archaeology and cultural heritage studies. Anthropology students come from both Arts and Science backgrounds, and they learn to think independently. Learning to appreciate and understand the various ways in which cultures may be organised, students will learn to see their own in a new light. Students learn how to conduct research, how to analyse evidence, and acquire strong verbal and written communication skills. Anthropology provides a broad humanities and social science training that prepares students for a wide variety of careers in cultural heritage management, liberal studies, business, journalism, and other cross-cultural work.",
+    "programmeWebsite": "http://www.cuhk.edu.hk/ant/undergr.htm",
+    "tuition": "HK$47,000",
+    "intake": 18,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 121,
+      "bandB": 184,
+      "bandC": 313,
+      "bandD": 426,
+      "bandE": 482,
+      "total": 1526
+    },
+    "offers2025": {
+      "bandA": 19,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 19
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/anthn/",
+    "introduction": "Explore the World and Yourself through Anthropology Are you curious, thoughtful and interested in people? Join us for an intellectual journey in the Anthropology Programme to understand the intricate threads of human existence, challenge preconceived assumptions, and embrace the complexities of cultural diversity. Focusing on social and cultural anthropology, as well as archaeology, our programme covers the theories and methodologies of anthropology, the ethnographies of Hong Kong, Asia and the rest of the world, and a wide range of contemporary social issues. Your academic journey will be enriched by fieldwork experience, internships, summer field trips, and your own final-year research project.",
+    "ranking": "#37 in Anthropology (QS World University Rankings by Subject 2023)",
+    "careerProspects": "Anthropology offers a broad and comparative perspective of human cultures and societies across time and space. The Anthropology Programme equips students with the analytical tools and marketable skills to engage with our increasingly multicultural, globalized and ever-changing world. Former students emphasize that in addition to factual knowledge, anthropology has provided them with the mindset and capability to understand and effectively engage with people from different backgrounds in various situations. Graduates of our",
+    "craftYourPath": "Cultivate a critical yet empathetic understanding of all things human and nurture a future of diverse possibilities in the Anthropology Programme.",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

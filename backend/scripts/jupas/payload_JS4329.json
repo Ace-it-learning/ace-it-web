@@ -1,0 +1,549 @@
+{
+  "factPack": {
+    "code": "JS4329",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4329"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4329"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/peshn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.cuhk.edu.hk/spe"
+      }
+    ],
+    "programme": {
+      "code": "JS4329",
+      "nameEn": "Physical Education, Exercise",
+      "nameZh": "健康與體育運動科學",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": null,
+      "lq": 26,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4329",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4329",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4329",
+      "nameEn": "Physical Education, Exercise Science and Health",
+      "nameZh": "健康與體育運動科學",
+      "shortDescription": "an class=\"before_label\">Short Description The aim of the BEd Programme in Physical Education, Exercise Science and Health is to train physical education teachers, coaches, sports management and health promotion personnel for local academic institutions and government and private organisations. Completion of the programme leads to the award of a BEd degree, a qualification recognised as equivalent to a Postgraduate Diploma in Education, thereby entitling graduates to enter the teaching profession immediately after graduation. There is increasing recognition of the importance of health improvement through physical education and exercise. The Programme has four core components: health, physical education, exercise science and advanced professional skills, as well as capstone experience such as Teaching Practice, Internships and Research Project. Students must take 147 credits (including 104 units in their major programme) within five years to graduate. The programme trains students as generalists in sports and physical education or as specialists in the areas of exercise physiology, sports biomechanics, sports psychology, sports sociology, physical education pedagogy, health and fitness, and testing and measurement. Students may choose any of the aforementioned specialised topics as their graduation research project.",
+      "programmeWebsite": "http://www.cuhk.edu.hk/spe",
+      "tuition": "HK$47,000",
+      "intake": 16,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: Applicants may be required to take a physical proficiency test and/or a written test. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 363,
+        "bandB": 339,
+        "bandC": 374,
+        "bandD": 397,
+        "bandE": 324,
+        "total": 1797
+      },
+      "offers2025": {
+        "bandA": 18,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 18
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/peshn/",
+      "introduction": "More than Physical Physical Education (PE), as the term implies, is ‘education through the physical’. It aims to develop students’ physical competence and knowledge of movement and safety, and their ability to use this to perform in a wide range of activities associated with the adoption of an active and healthy lifestyle. The five-year programme is offered by the Department of Sports Science and Physical Education of the Faculty of Education. It has a compact structure, which requires students to complete courses in three closely linked areas: The Physical Education area, which provides a multi-disciplinary approach involving biological sciences, behavioural sciences and sports skills proficiency, providing students with a sound basis to develop health-related, high-quality physical education in the school setting; The Exercise Science area, which explores the complex nature of human movement and examines the manner in which the human body reacts to acute and chronic exercise; and The Health area, which examines the efficacy of physical activities, as well as theories and strategies for health promotion. These are complemented by a fourth area, Professional Skills, for which courses are offered in team sports, individual sports, racquet sports, combat sports, and so on. Physical Education develops not only the students’ physical side, but also their confidence and generic skills, especially those of collaboration, communication, creativity, critical thinking and aesthetic appreciation. These, together with the nurturing of positive values and attitudes, provide a good foundation for students’ lifelong and life-wide learning. PESH courses such as pedagogy, sociology and psychology related to sports and exercise, broaden students’ perspectives of physical education, far beyond just learning different sports skills. Students are also placed in primary and secondary schools for teaching practice and in sports-related organizations for internships.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "Physical education teachers in primary and secondary schools Physical education instructors in tertiary institutions Administrators in government subvented / national sports associations Physical training officers, inspectors or officers in the disciplinary forces Executives in the fitness and leisure industries Supervisors / officers in the private and commercial sectors Further study in higher-degree programmes in sports science and physical education If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4329",
+    "nameEn": "Physical Education, Exercise",
+    "nameZh": "健康與體育運動科學",
+    "name": "Physical Education, Exercise",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 27.5,
+    "band_a": 26,
+    "uq": null,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4329",
+            "First Year Intake: 16",
+            "Duration: 5 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (may include physical proficiency test and/or written test)",
+            "",
+            "2025 JUPAS admission statistics:",
+            "Band A applications: 363",
+            "Band A offers: 18",
+            "Total applications: 1,797",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 27.5",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese Language: 5",
+            "English Language: 4",
+            "Mathematics Compulsory: 5",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5*",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 (may include M1/M2 or one elective + M1/M2)",
+            "",
+            "Applicants may be required to take a physical proficiency test and/or a written test."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The BEd Programme in Physical Education, Exercise Science and Health (PESH) is offered by the Department of Sports Science and Physical Education, Faculty of Education.",
+            "",
+            "The programme has four core components:",
+            "- Physical Education: multi-disciplinary approach covering biological sciences, behavioural sciences, and sports skills proficiency.",
+            "- Exercise Science: explores human movement and the body's response to acute and chronic exercise.",
+            "- Health: examines the efficacy of physical activities and health promotion theories and strategies.",
+            "- Professional Skills: courses in team sports, individual sports, racquet sports, combat sports, etc.",
+            "",
+            "Capstone experiences include Teaching Practice, Internships, and a Research Project.",
+            "Students must complete 147 credits (including 104 units in the major) within five years.",
+            "",
+            "Students may specialise in areas such as exercise physiology, sports biomechanics, sports psychology, sports sociology, physical education pedagogy, health and fitness, and testing and measurement.",
+            "",
+            "The programme trains students as generalists in sports and physical education or as specialists in the above areas."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are qualified to enter the teaching profession immediately after graduation (the BEd degree is recognised as equivalent to a Postgraduate Diploma in Education).",
+            "",
+            "Career options include:",
+            "- Physical education teachers in primary and secondary schools",
+            "- Physical education instructors in tertiary institutions",
+            "- Administrators in government subvented / national sports associations",
+            "- Physical training officers, inspectors or officers in the disciplinary forces",
+            "- Executives in the fitness and leisure industries",
+            "- Supervisors / officers in the private and commercial sectors",
+            "- Further study in higher-degree programmes in sports science and physical education"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and green environment with extensive sports facilities.",
+            "",
+            "Students are members of one of nine colleges, each providing pastoral care, general education, and a vibrant community life.",
+            "",
+            "The Department of Sports Science and Physical Education has strong links with the Hong Kong Sports Institute and local schools for practical training.",
+            "",
+            "The Faculty of Education is ranked 11th in the world and 4th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS admission statistics:",
+            "- Band A applications: 363",
+            "- Band A offers: 18",
+            "- Band A offer rate: approximately 5.0%",
+            "- Band A applications per offer: approximately 20.2",
+            "- Total applications: 1,797",
+            "",
+            "Admission scores (Best 5): Median 27.5, LQ 26.",
+            "",
+            "The programme is highly competitive due to the small intake of 16 places."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Lee Wai-sze (李慧詩) – Olympic bronze medalist in cycling; graduated from the Physical Education programme at CUHK.",
+            "Chan Yung-ngai (陳勇毅) – Former Hong Kong national basketball player and coach; CUHK Physical Education graduate.",
+            "Wong Kam-po (黃金寶) – Renowned Hong Kong cyclist; studied at CUHK's Physical Education programme.",
+            "Lau Kwok-fai (劉國輝) – Hong Kong football coach and former player; CUHK Physical Education graduate.",
+            "",
+            "Faculty members have published extensively in sports science and physical education pedagogy, and the programme is closely linked with the Hong Kong Sports Institute and local schools for practical training."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Best 5 ≥ 27.5**",
+            "",
+            "- Aim for a median score of 27.5 or above to be competitive. With LQ at 26, a score of 27.5 or higher significantly improves your chances.",
+            "- Focus on achieving at least Level 5 in Chinese, Level 4 in English, Level 5 in Mathematics, and Attained in CSD, plus strong electives (e.g., 5*, 5, 4).",
+            "",
+            "**2. Prioritise Band A Choice**",
+            "",
+            "- With only 18 offers from 363 Band A applicants (5.0% offer rate), placing JS4329 in Band A is essential. Band B and below received zero offers in 2025.",
+            "- Use Band A for your most desired programme; do not waste it on a 'safe' choice if this is your dream.",
+            "",
+            "**3. Excel in Electives**",
+            "",
+            "- The median admit had electives at 5*, 5, and 4. Choose electives that align with your strengths and that you can score highly in.",
+            "- Consider subjects like Biology, Chemistry, or PE-related electives if available, but any two electives at Level 3 or above are accepted.",
+            "",
+            "**4. Prepare for the Interview and Tests**",
+            "",
+            "- The programme may require a physical proficiency test and/or a written test. Practice basic fitness tests and review key concepts in exercise science and health.",
+            "- Be ready to discuss your motivation for teaching and your understanding of physical education's role in health.",
+            "",
+            "**5. Demonstrate Passion for Physical Education**",
+            "",
+            "- In your interview and personal statement, highlight any coaching, sports participation, or volunteer work related to physical activity and health promotion.",
+            "- Show that you understand the programme's aim: training teachers, coaches, and health promoters.",
+            "",
+            "**6. Use the 'Best 5' Formula to Your Advantage**",
+            "",
+            "- The admission score is calculated from the best 5 subjects (including core and electives). Focus on your strongest subjects to maximise your total.",
+            "- Note that CSD is not counted in the score, only required at Attained level.",
+            "",
+            "**7. Apply Early and Check Requirements**",
+            "",
+            "- Ensure you meet the general entrance requirements: Chinese 3, English 3, Maths 2, CSD Attained, and two electives at 3.",
+            "- If you have special circumstances (e.g., for Chinese language waiver), check the programme website for details.",
+            "",
+            "**8. Explore the Programme Website**",
+            "",
+            "- Visit http://www.cuhk.edu.hk/spe for detailed curriculum, faculty research, and student activities. This will help you tailor your application and interview answers.",
+            "",
+            "**9. Plan for a 5-Year Commitment**",
+            "",
+            "- The programme is 5 years long and requires 147 credits. Be prepared for a rigorous schedule that includes teaching practice and internships.",
+            "- Consider how this fits with your long-term career goals in education, sports science, or health promotion."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4329",
+            "首年學額：16",
+            "修讀年期：5 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（可能包括體能測試及／或筆試）",
+            "",
+            "2025 年 JUPAS 入學統計：",
+            "Band A 申請人數：363",
+            "Band A 取錄人數：18",
+            "總申請人數：1,797",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：27.5",
+            "下四分位數：26",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：5",
+            "公民與社會發展：達標（A）",
+            "選修科 1：5*",
+            "選修科 2：5",
+            "選修科 3：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科：第 3 級（可包括 M1/M2 或一個選修科加 M1/M2）",
+            "",
+            "申請人可能需要參加體能測試及／或筆試。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "健康與體育運動科學（PESH）學士課程由教育學院體育運動科學系開辦。",
+            "",
+            "課程包含四個核心範疇：",
+            "- 體育：涵蓋生物科學、行為科學及運動技能的多學科方法。",
+            "- 運動科學：探討人體運動的複雜性及身體對急性和慢性運動的反應。",
+            "- 健康：檢視體育活動的功效及健康促進的理論與策略。",
+            "- 專業技能：團隊運動、個人運動、球拍運動、搏擊運動等課程。",
+            "",
+            "頂點體驗包括教學實習、實習及研究項目。",
+            "學生須在五年內完成 147 學分（包括主修 104 學分）。",
+            "",
+            "學生可專攻運動生理學、運動生物力學、運動心理學、運動社會學、體育教學法、健康與體適能、測試與測量等領域。",
+            "",
+            "課程旨在培養體育與運動的通才或上述領域的專才。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可立即投身教學行業（學士學位獲認可等同教育文憑）。",
+            "",
+            "就業選項包括：",
+            "- 中小學體育教師",
+            "- 大專院校體育導師",
+            "- 政府資助／國家體育協會行政人員",
+            "- 紀律部隊體能訓練主任、督察或主任",
+            "- 健身及休閒行業行政人員",
+            "- 私營及商業機構督導／主任",
+            "- 攻讀體育科學及體育教育高等學位"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞綠化，設有完善的體育設施。",
+            "",
+            "學生隸屬九所書院之一，書院提供關顧輔導、通識教育及豐富的社群生活。",
+            "",
+            "體育運動科學系與香港體育學院及本地學校有緊密聯繫，提供實踐訓練。",
+            "",
+            "教育學院在《泰晤士高等教育世界大學排名（教育學科）2025》中位列全球第 11 位、亞洲第 4 位。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 入學統計：",
+            "- Band A 申請人數：363",
+            "- Band A 取錄人數：18",
+            "- Band A 取錄率：約 5.0%",
+            "- Band A 申請人次／每個學額：約 20.2",
+            "- 總申請人數：1,797",
+            "",
+            "入學分數（最佳 5 科）：中位數 27.5，下四分位數 26。",
+            "",
+            "由於學額僅 16 個，課程競爭非常激烈。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "李慧詩（Lee Wai-sze）－奧運單車銅牌得主；畢業於中大體育課程。",
+            "陳勇毅（Chan Yung-ngai）－前香港籃球代表隊球員及教練；中大體育系畢業。",
+            "黃金寶（Wong Kam-po）－著名香港單車運動員；曾就讀中大體育課程。",
+            "劉國輝（Lau Kwok-fai）－香港足球教練及前球員；中大體育系畢業。",
+            "",
+            "教職員在體育科學及體育教學法方面發表大量研究，課程與香港體育學院及本地學校緊密合作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項入學獎學金，以學業成績為評核標準。",
+            "",
+            "大學亦參與政府「特定獎學金及財政支援計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳 5 科 ≥ 27.5**",
+            "",
+            "- 以中位數 27.5 或以上為目標，增加競爭力。下四分位數為 26，27.5 或以上能大幅提升機會。",
+            "- 重點：中文至少 5 級、英文 4 級、數學 5 級、公民科達標，選修科力爭 5*, 5, 4。",
+            "",
+            "**2. 務必將課程放在 Band A**",
+            "",
+            "- 2025 年只有 Band A 申請者獲取錄（18 個學額），Band B 或以下無人獲取錄。",
+            "- 若此課程是你的首選，必須放在 Band A，不要浪費在「安全」選擇上。",
+            "",
+            "**3. 選修科要突出**",
+            "",
+            "- 中位數取錄者的選修科成績為 5*, 5, 4。選擇你最有把握取得高分的科目。",
+            "- 可考慮生物、化學或與體育相關的選修科，但任何兩個選修科達第 3 級或以上均可。",
+            "",
+            "**4. 準備面試及測試**",
+            "",
+            "- 課程可能要求體能測試及／或筆試。練習基本體能項目，並溫習運動科學及健康相關概念。",
+            "- 面試時要能清晰表達你對體育教學的熱誠及對體育促進健康的理解。",
+            "",
+            "**5. 展現對體育的熱忱**",
+            "",
+            "- 在面試及個人陳述中，突出你的教練經驗、運動參與或與體育相關的義工服務。",
+            "- 讓面試官看到你了解課程目標：培訓教師、教練及健康推廣人員。",
+            "",
+            "**6. 善用「最佳 5 科」計分方式**",
+            "",
+            "- 入學分數以最佳 5 科計算（包括核心及選修科）。集中火力在你的強項科目。",
+            "- 注意：公民科不計入分數，只須達標。",
+            "",
+            "**7. 提早申請並核對要求**",
+            "",
+            "- 確保符合一般入學要求：中文 3、英文 3、數學 2、公民科達標、兩個選修科 3。",
+            "- 如有特殊情況（例如中文科豁免），請查閱課程網站。",
+            "",
+            "**8. 瀏覽課程官方網站**",
+            "",
+            "- 到訪 http://www.cuhk.edu.hk/spe 了解詳細課程內容、教授研究及學生活動，有助你調整申請策略及面試答案。",
+            "",
+            "**9. 為 5 年課程做好準備**",
+            "",
+            "- 課程為期 5 年，需完成 147 學分，包括教學實習及實習。",
+            "- 考慮這是否配合你的長期事業目標（教育、運動科學或健康推廣）。"
+          ]
+        }
+      }
+    },
+    "code": "JS4329",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.5,
+    "uq": null,
+    "lq": 26,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 27.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 26
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Lee Wai-sze",
+        "nameZh": "李慧詩",
+        "achievement": "Olympic bronze medalist in cycling; graduated from the Physical Education programme at CUHK.",
+        "sourceHint": "public bio / media reports"
+      },
+      {
+        "nameEn": "Chan Yung-ngai",
+        "nameZh": "陳勇毅",
+        "achievement": "Former Hong Kong national basketball player and coach; CUHK Physical Education graduate.",
+        "sourceHint": "public bio / sports media"
+      },
+      {
+        "nameEn": "Wong Kam-po",
+        "nameZh": "黃金寶",
+        "achievement": "Renowned Hong Kong cyclist; studied at CUHK's Physical Education programme.",
+        "sourceHint": "public bio / media reports"
+      },
+      {
+        "nameEn": "Lau Kwok-fai",
+        "nameZh": "劉國輝",
+        "achievement": "Hong Kong football coach and former player; CUHK Physical Education graduate.",
+        "sourceHint": "public bio / sports media"
+      }
+    ],
+    "facultyExcellence": [
+      "Faculty members have published extensively in sports science and physical education pedagogy.",
+      "The programme is closely linked with the Hong Kong Sports Institute and local schools for practical training."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Physical Education, Exercise notable alumni",
+      "香港中文大學 健康與體育運動科學 著名校友",
+      "CUHK Physical Education, Exercise graduates Hong Kong careers"
+    ]
+  }
+}

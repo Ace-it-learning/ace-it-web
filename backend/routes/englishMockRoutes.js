@@ -220,21 +220,30 @@ router.post('/writing/submit', async (req, res) => {
         
         // 1. Get mock data
         const mockData = await EnglishMockService.getMockPaper(paperId);
+        if (!mockData) {
+            return res.status(404).json({ error: 'Paper not found' });
+        }
+
+        const responseRows = Array.isArray(responses) ? responses : [];
         
         // 2. Prepare userAnswers format for MockAssessmentService
         const userAnswers = {
-            partA_draft: responses.find(r => r.part === 'A')?.text || '',
-            partB_draft: responses.find(r => r.part === 'B')?.text || '',
-            selectedPartB: responses.find(r => r.part === 'B')
+            partA_draft: responseRows.find(r => r.part === 'A')?.text || '',
+            partB_draft: responseRows.find(r => r.part === 'B')?.text || '',
+            selectedPartB: responseRows.find(r => r.part === 'B')
         };
         
         // FETCH USER TIER
         let tier = 'free';
         const targetUid = uid || req.uid || req.body?.uid || req.query?.uid;
-        if (targetUid) {
-            const UserProfileService = require('../services/UserProfileService');
-            const profile = await UserProfileService.getProfile(targetUid);
-            tier = profile?.subscription_tier || 'free';
+        if (targetUid && targetUid !== 'guest') {
+            try {
+                const UserProfileService = require('../services/UserProfileService');
+                const profile = await UserProfileService.getProfile(targetUid);
+                tier = profile?.subscription_tier || 'free';
+            } catch (profileErr) {
+                console.warn('[Mock] getProfile failed for writing submit; using free tier:', profileErr.message);
+            }
         }
 
         // 3. Evaluate
@@ -243,25 +252,86 @@ router.post('/writing/submit', async (req, res) => {
             selectedPartB: userAnswers.selectedPartB
         }, tier);
 
-        // 4. Sync to Mastery Radar
+        const topicLabel = mockData.meta?.topic || 'Writing Mock';
+        const baseMaxXP = 400;
+        const awardedXP = Math.round(baseMaxXP * ((results.percentage || 0) / 100));
+
+        // 4. Persist to Cosmos + achievements timeline (same pattern as reading/listening mocks)
         if (targetUid && targetUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
             const targetWriteUid = targetUid;
+            let resultId = null;
+            try {
+                resultId = await UserProfileService.saveQuestResult(targetWriteUid, {
+                    ...results,
+                    paperId,
+                    type: 'WRITING',
+                    topic: topicLabel
+                });
+                if (resultId) results.resultId = resultId;
+            } catch (e) {
+                console.warn('[Mock] saveQuestResult (writing) failed:', e.message);
+            }
+            const scoreLabel = `${Math.round(results.percentage || 0)}%`;
+            const timelineEntry = {
+                type: 'practice',
+                title: `Mock Exam: ${topicLabel}`,
+                xp: awardedXP,
+                score: scoreLabel,
+                subject: 'english',
+                topic: topicLabel,
+                paper: 'writing',
+                resultId: resultId || null
+            };
+            try {
+                const GamificationService = require('../services/GamificationService');
+                const xpResult = await GamificationService.awardXP(targetWriteUid, awardedXP, 'writing', {
+                    title: timelineEntry.title,
+                    score: scoreLabel,
+                    topic: topicLabel,
+                    paper: 'writing',
+                    subject: 'english',
+                    resultId: resultId || null,
+                    alwaysRecordTimeline: true
+                });
+                results.xpAwarded = xpResult?.earned ?? awardedXP;
+                timelineEntry.xp = results.xpAwarded;
+                if (xpResult?.reason === 'daily_cap_reached' || xpResult?.success === false) {
+                    await UserProfileService.recordTimelineEvent(targetWriteUid, {
+                        ...timelineEntry,
+                        xp: 0,
+                        score: `${scoreLabel} (daily XP cap)`
+                    });
+                }
+            } catch (e) {
+                console.error('[Mock] Writing XP award failed:', e);
+                results.xpAwarded = awardedXP;
+                try {
+                    await UserProfileService.recordTimelineEvent(targetWriteUid, timelineEntry);
+                } catch (timelineErr) {
+                    console.warn('[Mock] Writing timeline fallback failed:', timelineErr.message);
+                }
+            }
             await UserProfileService.syncMockResultsToMastery(targetWriteUid, 'english', results);
             try {
                 await UserProfileService.saveMockSummary(targetWriteUid, {
                     paper: 'Paper 2',
-                    topic: mockData.meta?.topic || 'Writing Mock',
+                    paperId,
+                    mockId: paperId,
+                    topic: topicLabel,
                     score: results.totalScore,
                     total: results.possibleScore,
                     percentage: results.percentage,
                     level: results.level || results.predicted_level,
                     topMistakes: extractTopMistakeSkills(results.skillScores),
-                    achievedSkills: extractAchievedSkills(results.skillScores)
+                    achievedSkills: extractAchievedSkills(results.skillScores),
+                    completedAt: new Date().toISOString()
                 });
             } catch (e) {
                 console.warn("[Mock] saveMockSummary (writing) failed:", e.message);
             }
+        } else {
+            results.xpAwarded = awardedXP;
         }
 
         res.json(results);

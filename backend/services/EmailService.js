@@ -432,6 +432,159 @@ const sendWeeklyReport = async (recipients, reportData) => {
     }
 };
 
+/** Comma- or semicolon-separated list allowed, e.g. info@...,projectace2026@gmail.com */
+function parseContactInboxList() {
+    const raw =
+        process.env.CONTACT_INBOX_EMAIL ||
+        process.env.CONTACT_FORM_EMAIL ||
+        'info@aceit-learning.com';
+    return raw
+        .split(/[,;]/)
+        .map((s) => s.trim())
+        .filter((s) => s.includes('@'));
+}
+
+function escapeHtml(s) {
+    return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+const CONTACT_TYPE_LABELS = {
+    general: { en: 'General enquiry', zh: '一般查詢' },
+    technical: { en: 'Technical / account support', zh: '技術支援／帳戶問題' },
+    billing: { en: 'Billing & subscription', zh: '帳單及訂閱' },
+    feedback: { en: 'Feedback & suggestions', zh: '意見與建議' },
+    schools_b2b: { en: 'Schools, partners & B2B', zh: '學校、合作夥伴及企業方案' },
+    press: { en: 'Media & press', zh: '媒體查詢' },
+    hkdse_content: { en: 'HKDSE content & curriculum', zh: 'HKDSE 課程與內容' },
+    privacy_data: { en: 'Privacy & data', zh: '私隱與資料' }
+};
+
+function isValidReplyEmail(s) {
+    if (!s || typeof s !== 'string') return false;
+    const t = s.trim();
+    if (t.length > 254) return false;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t);
+}
+
+/**
+ * Sends a website contact form message to the operations inbox (Azure ACS or SMTP; otherwise simulated in dev).
+ * @param {{ enquiryType: string, message: string, language?: string, replyEmail: string, authUser?: { email?: string|null, name?: string|null }|null, uid?: string|null }} payload
+ */
+const sendContactEnquiry = async (payload) => {
+    const { enquiryType, message, language = 'en', replyEmail, authUser, uid } = payload || {};
+    const labels = CONTACT_TYPE_LABELS[enquiryType] || { en: enquiryType, zh: enquiryType };
+    const safeMsg = escapeHtml(message || '');
+    const replyNorm = isValidReplyEmail(replyEmail) ? replyEmail.trim() : '';
+    const reporter = authUser?.email ? escapeHtml(authUser.email) : '—';
+    const reporterName = authUser?.name ? escapeHtml(authUser.name) : '—';
+    const uidLine = uid ? escapeHtml(String(uid)) : '—';
+    const lang = language === 'zh' ? 'zh' : 'en';
+    const safeReply = escapeHtml(replyNorm);
+
+    const subject = `[Ace It! Contact] ${labels.en}`;
+
+    const htmlContent = `
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+<body style="font-family:Segoe UI,Roboto,sans-serif;font-size:15px;color:#1e293b;line-height:1.5;">
+  <h2 style="color:#ea580c;">New contact form message</h2>
+  <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:14px 16px;margin:0 0 16px;">
+    <div style="font-size:12px;font-weight:700;color:#9a3412;text-transform:uppercase;letter-spacing:0.06em;">Reply to this address</div>
+    <div style="font-size:18px;font-weight:800;color:#c2410c;"><a href="mailto:${safeReply}" style="color:#c2410c;text-decoration:none;">${safeReply}</a></div>
+    <div style="font-size:13px;color:#7c2d12;margin-top:6px;">Use “Reply” in your mail client — the message is also sent with Reply-To set to this address when supported.</div>
+  </div>
+  <p><strong>Enquiry type (EN):</strong> ${escapeHtml(labels.en)}<br/>
+     <strong>查詢類型（中文）:</strong> ${escapeHtml(labels.zh)}<br/>
+     <strong>Type key:</strong> ${escapeHtml(enquiryType)}<br/>
+     <strong>UI language:</strong> ${escapeHtml(lang)}</p>
+  <p><strong>Signed-in account email (if any):</strong> ${reporter}<br/>
+     <strong>Name:</strong> ${reporterName}<br/>
+     <strong>UID:</strong> ${uidLine}</p>
+  <hr style="border:none;border-top:1px solid #e2e8f0;"/>
+  <pre style="white-space:pre-wrap;font-family:inherit;margin:0;">${safeMsg}</pre>
+</body></html>`;
+
+    const toList = parseContactInboxList();
+    if (!replyNorm) {
+        return { success: false, error: 'Missing reply email address.' };
+    }
+    if (toList.length === 0) {
+        return { success: false, error: 'Contact inbox address is not configured.' };
+    }
+
+    try {
+        if (acsClient) {
+            const results = [];
+            for (const toEmail of toList) {
+                const poller = await acsClient.beginSend({
+                    senderAddress: SENDER_ADDRESS,
+                    content: {
+                        subject,
+                        html: htmlContent
+                    },
+                    recipients: {
+                        to: [{ address: toEmail }],
+                        ...(replyNorm ? { replyTo: [{ address: replyNorm }] } : {})
+                    }
+                });
+                const result = await poller.pollUntilDone();
+                console.log(`[EmailService] Contact message sent to ${toEmail}: ${result.id}`);
+                results.push({ email: toEmail, messageId: result.id, status: 'sent' });
+            }
+            return { success: true, deliveryMode: 'azure', results };
+        }
+
+        const smtpFrom = process.env.SMTP_FROM || process.env.SMTP_USER;
+        const host = process.env.SMTP_HOST;
+        if (host && smtpFrom) {
+            const nodemailer = require('nodemailer');
+            const transporter = nodemailer.createTransport({
+                host,
+                port: Number(process.env.SMTP_PORT || 587),
+                secure: String(process.env.SMTP_SECURE || '').toLowerCase() === 'true',
+                auth: process.env.SMTP_USER
+                    ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS || '' }
+                    : undefined
+            });
+            const replyTo = replyNorm || undefined;
+            const results = [];
+            for (const toEmail of toList) {
+                const info = await transporter.sendMail({
+                    from: smtpFrom,
+                    to: toEmail,
+                    replyTo,
+                    subject,
+                    html: htmlContent
+                });
+                results.push({ email: toEmail, messageId: info.messageId, status: 'sent' });
+            }
+            return { success: true, deliveryMode: 'smtp', results };
+        }
+
+        console.log('=====================================================');
+        console.log('[EmailService] Contact form SIMULATED (no ACS / no SMTP_HOST)');
+        console.log(`[EmailService] To: ${toList.join(', ')}`);
+        console.log(`[EmailService] Reply-To: ${replyNorm}`);
+        console.log(message);
+        console.log('=====================================================');
+        return {
+            success: true,
+            mock: true,
+            deliveryMode: 'simulated',
+            message:
+                'Email was not sent: configure AZURE_COMMUNICATION_CONNECTION_STRING or SMTP in backend .env.'
+        };
+    } catch (error) {
+        console.error('[EmailService] Contact enquiry failed:', error);
+        return { success: false, error: error.message };
+    }
+};
+
 module.exports = {
-    sendWeeklyReport
+    sendWeeklyReport,
+    sendContactEnquiry
 };

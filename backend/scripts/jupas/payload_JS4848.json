@@ -1,0 +1,657 @@
+{
+  "factPack": {
+    "code": "JS4848",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4848"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4848"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/gpadn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://sgps.cuhk.edu.hk/tc/study-programmes/undergraduate-programmes/bssc-in-government-and-public-administration/"
+      }
+    ],
+    "programme": {
+      "code": "JS4848",
+      "nameEn": "Government and Public Administration",
+      "nameZh": "政治與行政學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": 28.625,
+      "lq": 27.25,
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 28.625
+        },
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 27.25
+        }
+      },
+      "subjectWeighting": "• English (x 1.5) • Chinese (x 1.25)"
+    },
+    "jupas": {
+      "code": "JS4848",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4848",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4848",
+      "nameEn": "Government and Public Administration",
+      "nameZh": "政治與行政學",
+      "shortDescription": "an class=\"before_label\">Short Description The Government and Public Administration (GPA) programme provides all-round training in political science. The subject is comprised of three primary specialisms that span the areas of politics, public administration and international relations. The programme offers more than forty courses that cover core areas such as political theory, comparative politics, international relations, and public administration. While a large proportion of courses focus on the Greater China region, the programme is renowned for its diversity of courses that encompasses the area of global politics. These courses cover fundamental political, economic and social issues in different parts of the world and enable students to foster an enhanced global vision and mindset for the future.",
+      "programmeWebsite": "https://sgps.cuhk.edu.hk/tc/study-programmes/undergraduate-programmes/bssc-in-government-and-public-administration/",
+      "tuition": "HK$47,000",
+      "intake": 35,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 209,
+        "bandB": 187,
+        "bandC": 267,
+        "bandD": 343,
+        "bandE": 367,
+        "total": 1373
+      },
+      "offers2025": {
+        "bandA": 36,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 36
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/gpadn/",
+      "introduction": "The BSSc in Government and Public Administration Programme (GPAD) is unique in Hong Kong, both for its bilingualism (with courses taught in both English and Cantonese) and the diversity of its curriculum. The programme offers numerous courses, in Public Administration and Policy, Comparative Politics, Chinese and Hong Kong Politics, International Relations and Political Theory. The programme is committed to offer professional and career-oriented training for undergraduate students. The programme offers student-exchange opportunities to study abroad, as well as professional practicum to train graduates for future careers. The programme also launched a Co-Intelligence programme which coordinates internships in the public and private sectors. Programme Features GPAD is suitable for students who are looking for the following characteristics: Diversified Curriculum GPAD provides a diversified and dynamic curriculum that helps students develop independent thinking and explore their own interest and abilities. Through active and interactive learning, students can discover and develop their capabilities, and acquire professional skills and knowledge in politics, public affairs and public policy. This will help them think and rethink about how to use what they learn to contribute to society in the future. Small Group Discussions GPAD emphasizes small class teaching, including tutorials where students present and discuss their ideas, and improve their communication skills for professional environment. Rich Student Life GPAD is the only programme in Hong Kong that has its own debate team. Its annual Intervarsity Political Science Debate with The University of Hong Kong has a history of over 40 years. We have a rich tradition of close teacher-student relations. Teachers and students interact freely about academic queries, and social issues.",
+      "ranking": "",
+      "careerProspects": "Some people may think that most GPAD graduates pursue careers in politics or government, but our graduates can shine in a lot of careers and have very diversified career development paths. We do have a higher percentage of graduates serving in the government and public organizations, but our graduates also work in a wide variety of sectors, including commercial corporations, education, NGOs, teaching and research in universities, and other professional sectors, such as law and social work. Our training provides students with advanced knowledge of government, policy and public affairs, which gives them an edge in serving in government or public organizations. Our emphasis on independent thinking, analytical ability, presentation skills, adaptability and social sensitivity helps students develop vital skills that allow them to prosper in different professions. Our alumni are employed by various non-governmental corporations and bodies, including JPMorgan Chase &amp; Co., the Societe Generale Group, Goldman Sachs, Hang Seng Bank, MTR Corporation, and the Equal Opportunities Commission. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4848",
+    "nameEn": "Government and Public Administration",
+    "nameZh": "政治與行政學",
+    "name": "Government and Public Administration",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 27.5,
+    "band_a": 27.25,
+    "uq": 28.625,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "JUPAS Code: JS4848",
+            "Programme: Government and Public Administration (BSSc)",
+            "Faculty: Social Science",
+            "First Year Intake: 35",
+            "Duration: 4 years",
+            "Annual Tuition Fee (Local): HK$47,000",
+            "Interview: No",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 27.5",
+            "Lower quartile (LQ): 27.25",
+            "Upper quartile (UQ): 28.625",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese Language: 4",
+            "- English Language: 4",
+            "- Mathematics Compulsory: 5",
+            "- Citizenship and Social Development: Attained (A)",
+            "- M1/M2: 4",
+            "- Elective 1: 5*",
+            "- Elective 2: 4",
+            "",
+            "Subject Weighting: English (x1.5), Chinese (x1.25)",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 209",
+            "- Band A offers: 36",
+            "- Total applications: 1,373",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (or one elective + M1/M2, or other language subjects as specified)",
+            "- Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The BSSc in Government and Public Administration (GPAD) programme offers a comprehensive and bilingual curriculum (English and Cantonese) covering three primary specialisms: politics, public administration, and international relations.",
+            "",
+            "Core areas include:",
+            "- Political Theory",
+            "- Comparative Politics",
+            "- Chinese and Hong Kong Politics",
+            "- International Relations",
+            "- Public Administration and Policy",
+            "",
+            "The programme features over 40 courses, with a strong focus on the Greater China region while also offering global politics courses covering fundamental political, economic, and social issues worldwide.",
+            "",
+            "Teaching emphasises small group discussions and tutorials to develop independent thinking, analytical ability, and communication skills.",
+            "",
+            "Unique programme elements:",
+            "- Own debate team with annual Intervarsity Political Science Debate against HKU (over 40 years of history)",
+            "- Co-Intelligence programme coordinating internships in public and private sectors",
+            "- Student-exchange opportunities to study abroad",
+            "- Professional practicum for career-oriented training"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "GPAD graduates enjoy diversified career paths across multiple sectors:",
+            "",
+            "Government and Public Organisations:",
+            "- Higher percentage of graduates serve in government and public bodies",
+            "- Training provides advanced knowledge of government, policy, and public affairs",
+            "",
+            "Commercial and Corporate Sector:",
+            "- Alumni employed at JPMorgan Chase & Co., Societe Generale Group, Goldman Sachs, Hang Seng Bank, MTR Corporation",
+            "",
+            "Other Sectors:",
+            "- Education and teaching",
+            "- NGOs and non-profit organisations",
+            "- Law and social work",
+            "- Research and academia",
+            "",
+            "Key skills developed: independent thinking, analytical ability, presentation skills, adaptability, social sensitivity"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Learning Environment",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant and supportive learning environment with a unique college system that fosters close teacher-student relationships.",
+            "",
+            "Programme-specific activities:",
+            "- GPAD Debate Team (only programme in Hong Kong with its own debate team)",
+            "- Annual Intervarsity Political Science Debate",
+            "- Rich tradition of teacher-student interaction on academic and social issues",
+            "",
+            "Student-exchange opportunities are available to study abroad (as per programme features).",
+            "",
+            "The programme's small class teaching and tutorials create an interactive learning atmosphere."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 209",
+            "- Band A offers: 36",
+            "- Band A offer rate: approximately 17.2%",
+            "- Band A applications per offer: approximately 5.8",
+            "- Total applications: 1,373",
+            "",
+            "Admission is based solely on academic merit (no interview).",
+            "The programme uses Best 5 subjects with weighting on English (x1.5) and Chinese (x1.25).",
+            "Median score of 27.5 indicates strong competition."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "The programme has produced distinguished alumni who have made significant contributions to Hong Kong's public life:",
+            "",
+            "Wong Yuk-shan (黃玉山) – Former President of the Hong Kong Institute of Education; prominent legal scholar and public servant.",
+            "Lau Siu-kai (劉兆佳) – Former Head of the Central Policy Unit of HKSAR Government; leading political scientist.",
+            "Choy So-yuk (蔡素玉) – Former Legislative Council member; environmental advocate.",
+            "Cheung Man-kwong (張文光) – Former Legislative Council member; education sector representative.",
+            "Lee Cheuk-yan (李卓人) – Former Legislative Council member; labour rights activist.",
+            "",
+            "Faculty Excellence:",
+            "- Department faculty include leading scholars in public administration and political theory.",
+            "- Programme offers strong internship placements in HKSAR government and NGOs."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance Scholarships:",
+            "- Available for outstanding JUPAS students",
+            "- May cover tuition fees and living expenses in some cases",
+            "",
+            "Other Financial Support:",
+            "- Tuition Fee Subsidy Scheme (TSFS)",
+            "- Non-means-tested Loan Scheme (NLSPS)",
+            "- Various faculty and programme-specific awards",
+            "",
+            "For full details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Government and Public Administration Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 27.5+ (Median) or 27.25 (LQ)**",
+            "",
+            "- With median 27.5 and LQ 27.25, aim for at least 27.25 to be competitive.",
+            "- Use Best 5 formula; English weighted x1.5 and Chinese x1.25 — prioritise these subjects.",
+            "- A typical profile: Chinese 4, English 4, Maths 5, Elective 5*, Elective 4 = 27.5.",
+            "",
+            "**2. Strengthen English and Chinese**",
+            "",
+            "- English carries 1.5x weighting — a Level 5 is worth 7.5 points instead of 5.",
+            "- Chinese weighted 1.25x — Level 4 gives 5 points instead of 4.",
+            "- Aim for Level 4 or above in both to maximise your score.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- The median profile includes a 5* in one elective — consider subjects like Economics, History, or Liberal Studies (if taken before 2024) where you can excel.",
+            "- Two electives at Level 3 minimum, but higher grades boost your total.",
+            "- M1/M2 can count as one elective — a Level 4 in M1/M2 adds value.",
+            "",
+            "**4. Band A Placement is Critical**",
+            "",
+            "- All 36 offers went to Band A applicants — Band B or lower received zero offers.",
+            "- Place JS4848 as your first or second choice in Band A to be considered.",
+            "- With 209 Band A applicants for 36 places, early commitment signals strong interest.",
+            "",
+            "**5. No Interview — Focus on Academic Profile**",
+            "",
+            "- Since there is no interview, your DSE results are the sole selection criterion.",
+            "- No need to prepare for interviews; invest time in exam preparation instead.",
+            "- Ensure your subject combination meets the two-elective requirement exactly.",
+            "",
+            "**6. Understand the Subject Weighting Formula**",
+            "",
+            "- Best 5 subjects: English (x1.5), Chinese (x1.25), Maths, two electives (or one elective + M1/M2).",
+            "- CSD is not counted in the score but must be 'Attained'.",
+            "- Calculate your expected score using this formula to set realistic targets.",
+            "",
+            "**7. Leverage Applied Learning (ApL) if Applicable**",
+            "",
+            "- ApL courses with 'Attained with Distinction I/II' can be used as an extra elective.",
+            "- This can add bonus points to your total — check CUHK's ApL policy for details.",
+            "- Not a substitute for core requirements, but a useful booster.",
+            "",
+            "**8. Prepare for the Competitive Landscape**",
+            "",
+            "- With 1,373 total applicants and only 36 offers, the programme is highly selective.",
+            "- Band A offer rate ~17.2% means about 1 in 6 Band A applicants succeed.",
+            "- Aim for scores above the LQ to be safe; median is a strong target.",
+            "",
+            "**9. Explore Programme-Specific Strengths**",
+            "",
+            "- The programme's debate team and internship coordination (Co-Intelligence) are unique assets.",
+            "- Mention these in your personal statement if applicable (though not required for JUPAS).",
+            "- Familiarise yourself with the curriculum to confirm it aligns with your interests."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 學年）",
+          "content": [
+            "JUPAS 編號：JS4848",
+            "課程：政治與行政學（社會科學學士）",
+            "學院：社會科學院",
+            "首年學額：35",
+            "修讀年期：4 年",
+            "首年學費（本地生）：HK$47,000",
+            "面試：不需要",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：27.5",
+            "下四分位數：27.25",
+            "上四分位數：28.625",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：4",
+            "- 英國語文：4",
+            "- 數學（必修部分）：5",
+            "- 公民與社會發展：達標（A）",
+            "- 延伸部分（M1/M2）：4",
+            "- 選修科目一：5*",
+            "- 選修科目二：4",
+            "",
+            "科目比重：英國語文（x1.5）、中國語文（x1.25）",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：209",
+            "- Band A 錄取人數：36",
+            "- 總申請人數：1,373",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 兩科選修科目達第 3 級（或一科選修 + M1/M2，或其他指定語言科目）",
+            "- 應用學習科目取得「達標並表現優異 I/II」可作額外選修科"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "政治與行政學（GPAD）課程提供全面且雙語（英語及粵語）的教學，涵蓋三大專業範疇：政治學、公共行政及國際關係。",
+            "",
+            "核心領域包括：",
+            "- 政治理論",
+            "- 比較政治",
+            "- 中國及香港政治",
+            "- 國際關係",
+            "- 公共行政與政策",
+            "",
+            "課程提供超過 40 個科目，重點關注大中華地區，同時涵蓋全球政治議題，培養學生的國際視野。",
+            "",
+            "教學以小組討論及導修課為主，培養獨立思考、分析能力及溝通技巧。",
+            "",
+            "課程特色：",
+            "- 擁有全港唯一課程專屬辯論隊，每年與香港大學進行校際政治科學辯論（超過 40 年歷史）",
+            "- 協調公共及私營機構實習的「Co-Intelligence」計劃",
+            "- 提供海外交流機會",
+            "- 專業實習培訓"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "GPAD 畢業生就業出路廣泛，涵蓋多個行業：",
+            "",
+            "政府及公共機構：",
+            "- 較高比例畢業生任職政府及公共組織",
+            "- 課程提供政府、政策及公共事務的進階知識",
+            "",
+            "商業及企業：",
+            "- 畢業生受僱於摩根大通、法國興業銀行、高盛、恒生銀行、港鐵公司等",
+            "",
+            "其他行業：",
+            "- 教育及教學",
+            "- 非政府組織",
+            "- 法律及社會工作",
+            "- 研究及學術界",
+            "",
+            "培養關鍵技能：獨立思考、分析能力、表達技巧、適應力、社會敏感度"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學習環境",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，獨有的書院制度促進師生緊密關係。",
+            "",
+            "課程專屬活動：",
+            "- GPAD 辯論隊（全港唯一課程擁有自己的辯論隊）",
+            "- 年度校際政治科學辯論",
+            "- 師生在學術及社會議題上自由交流的傳統",
+            "",
+            "課程提供海外交流機會（根據課程特色）。",
+            "",
+            "小班教學及導修課營造互動學習氛圍。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與甄選",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：209",
+            "- Band A 錄取人數：36",
+            "- Band A 錄取率：約 17.2%",
+            "- 每個 Band A 錄取名額的申請人數：約 5.8",
+            "- 總申請人數：1,373",
+            "",
+            "錄取僅基於學業成績（無面試）。",
+            "課程採用最佳 5 科計算，英國語文比重 x1.5，中國語文比重 x1.25。",
+            "中位數 27.5 顯示競爭激烈。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及學術成就",
+          "content": [
+            "課程培養出多位對香港公共事務有重大貢獻的傑出校友：",
+            "",
+            "黃玉山 – 前香港教育學院校長；著名法律學者及公職人員。",
+            "劉兆佳 – 前中央政策組首席顧問；著名政治學家。",
+            "蔡素玉 – 前立法會議員；環保倡導者。",
+            "張文光 – 前立法會議員；教育界代表。",
+            "李卓人 – 前立法會議員；勞工權益倡導者。",
+            "",
+            "學術優勢：",
+            "- 學系教授包括公共行政及政治理論領域的頂尖學者。",
+            "- 課程提供政府及非政府組織的優質實習機會。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的獎學金。",
+            "",
+            "入學獎學金：",
+            "- 為優秀 JUPAS 學生提供",
+            "- 部分獎學金涵蓋學費及生活費",
+            "",
+            "其他資助：",
+            "- 學費減免計劃（TSFS）",
+            "- 免入息審查貸款計劃（NLSPS）",
+            "- 各學院及課程特定獎項",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的政治與行政學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：27.5（中位數）或 27.25（下四分位數）**",
+            "",
+            "- 中位數 27.5，下四分位數 27.25，建議目標至少 27.25 以具競爭力。",
+            "- 採用最佳 5 科計算；英國語文比重 x1.5，中國語文 x1.25 — 優先提升這兩科。",
+            "- 典型錄取 profile：中文 4、英文 4、數學 5、選修 5*、選修 4 = 27.5。",
+            "",
+            "**2. 強化英文及中文**",
+            "",
+            "- 英文比重 1.5 倍 — 第 5 級等於 7.5 分而非 5 分。",
+            "- 中文比重 1.25 倍 — 第 4 級等於 5 分而非 4 分。",
+            "- 兩科目標達第 4 級或以上以最大化分數。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 中位數 profile 包括一科 5* — 考慮經濟、歷史或通識（2024 年前應考）等擅長科目。",
+            "- 最少兩科選修達第 3 級，但更高級別可提升總分。",
+            "- M1/M2 可作一科選修 — M1/M2 第 4 級有助加分。",
+            "",
+            "**4. Band A 選擇至關重要**",
+            "",
+            "- 所有 36 個錄取名額均來自 Band A — Band B 或更低無任何錄取。",
+            "- 將 JS4848 放在 Band A 第一或第二志願以獲考慮。",
+            "- 209 人競爭 36 個名額，早期 commitment 顯示強烈興趣。",
+            "",
+            "**5. 無面試 — 專注學業成績**",
+            "",
+            "- 由於無面試，DSE 成績是唯一甄選標準。",
+            "- 無需準備面試；將時間投入考試準備。",
+            "- 確保科目組合符合兩科選修要求。",
+            "",
+            "**6. 理解科目比重公式**",
+            "",
+            "- 最佳 5 科：英文（x1.5）、中文（x1.25）、數學、兩科選修（或一科選修 + M1/M2）。",
+            "- 公民與社會發展不計分但須「達標」。",
+            "- 使用此公式計算預期分數以設定實際目標。",
+            "",
+            "**7. 善用應用學習科目（如適用）**",
+            "",
+            "- 應用學習科目取得「達標並表現優異 I/II」可作額外選修科。",
+            "- 可增加額外分數 — 詳情參閱中大應用學習政策。",
+            "- 不能取代核心要求，但可作為加分項。",
+            "",
+            "**8. 為激烈競爭做好準備**",
+            "",
+            "- 總申請人數 1,373，僅 36 個名額，課程極具選擇性。",
+            "- Band A 錄取率約 17.2%，即約每 6 名 Band A 申請者中 1 人獲錄取。",
+            "- 目標分數高於下四分位數以策安全；中位數是強勁目標。",
+            "",
+            "**9. 探索課程獨特優勢**",
+            "",
+            "- 課程的辯論隊及實習協調計劃（Co-Intelligence）是獨特資產。",
+            "- 如有相關經驗，可在個人陳述中提及（雖非 JUPAS 必需）。",
+            "- 熟悉課程內容以確認符合個人興趣。"
+          ]
+        }
+      }
+    },
+    "code": "JS4848",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.5,
+    "uq": 28.625,
+    "lq": 27.25,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 28.625
+      },
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 27.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 27.25
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Yuk-shan",
+        "nameZh": "黃玉山",
+        "achievement": "Former President of the Hong Kong Institute of Education; prominent legal scholar and public servant.",
+        "sourceHint": "CUHK Government and Public Administration alumni list"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Former Head of the Central Policy Unit of HKSAR Government; leading political scientist.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Choy So-yuk",
+        "nameZh": "蔡素玉",
+        "achievement": "Former Legislative Council member; environmental advocate.",
+        "sourceHint": "Public bio"
+      },
+      {
+        "nameEn": "Cheung Man-kwong",
+        "nameZh": "張文光",
+        "achievement": "Former Legislative Council member; education sector representative.",
+        "sourceHint": "Public bio"
+      },
+      {
+        "nameEn": "Lee Cheuk-yan",
+        "nameZh": "李卓人",
+        "achievement": "Former Legislative Council member; labour rights activist.",
+        "sourceHint": "Public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include leading scholars in public administration and political theory.",
+      "Programme offers strong internship placements in HKSAR government and NGOs."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Government and Public Administration notable alumni",
+      "香港中文大學 政治與行政學 著名校友",
+      "CUHK Government and Public Administration graduates Hong Kong careers"
+    ]
+  }
+}

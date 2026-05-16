@@ -53,7 +53,15 @@ const LoginPage = () => {
         return () => { cancelled = true; };
     }, [user, beginSignInFlow, retryEntraSession, initialized, loading, authError]);
 
-    if (user && user.emailVerified) {
+    const canEnterApp =
+        user &&
+        (user.emailVerified === true ||
+            USE_ENTRA ||
+            user.authProvider === 'entra' ||
+            ['localhost', '127.0.0.1'].includes(window.location.hostname) ||
+            window.location.hostname.endsWith('.localhost'));
+
+    if (canEnterApp) {
         return <Navigate to="/dashboard" replace />;
     }
 

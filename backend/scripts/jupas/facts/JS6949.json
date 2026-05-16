@@ -1,0 +1,66 @@
+{
+  "code": "JS6949",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6949"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.sbms.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6949",
+    "nameEn": "Bachelor of Biomedical Sciences",
+    "nameZh": "Bachelor of Biomedical Sciences",
+    "university": "香港大學",
+    "facultyZh": "李嘉誠醫學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "Best 6 Subjects",
+    "median": 40,
+    "uq": 41,
+    "lq": 39
+  },
+  "jupas": {
+    "code": "JS6949",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6949",
+    "nameEn": "Bachelor of Biomedical Sciences",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.sbms.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 53,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 128,
+      "bandB": 156,
+      "bandC": 260,
+      "bandD": 385,
+      "bandE": 349,
+      "total": 1278
+    },
+    "offers2025": {
+      "bandA": 33,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 33
+    },
+    "facultyPhone": "+852 3917 9259"
+  },
+  "admissionsSnippet": "Home | SBMS Skip to main content About Faculty Research Study News Join Us Give HKU HKUMed CPOS Alumni Intranet About School History Milestones Mission Director’s Message Aim Faculty Leadership People Contact Research Research Interests Facilities &amp; Equipment Study Undergraduate Taught Postgraduate Research Postgraduate Collaborations Scholarships News Press News Announcements Staff Awards RPG Student Awards UG Student Awards Events Knowledge Exchange Join Us Open Positions Endowed Professorships Internships Give L1-56, 1/F, Laboratory Block 21 Sassoon Road Pokfulam, Hong Kong sbms@hku.hk T +852 3917 9259 F +852 2817 0857 © 2026 School of Biomedical Sciences. All Rights Reserved Innovating Health, Inspiring Tomorrow Empowering global excellence in biomedical research, teaching and learning, innovation, and societal impact worldwide Scroll Down Full Video &times; News News HKUMed uncovers key mechanism of cancer drug resistance A research team from the School of Biomedical Sciences at the LKS Faculty of Medicine, the Universit... Read More HKUMed demonstrates that &#039;cloaked&#039; and safe human stem cells work, paving the way for off-the-shelf transplants without immune rejection Press HKUMed cracks gastric cancer’s ‘metabolic code’: Tumour growth slowed by 65%, plus a 6.3-fold kill rate with cholesterol inhibitors in neuron-infiltrated cases Press HKU Distinguished Scholars Elected as Members of Hong Kong Academy of Sciences News From genes to face and skull: HKUMed uncovers key causes of congenital craniofacial abnormalities to improve prenatal detection of cleft lip and skull malformations Press 10th Anniversary Research Symposium and Retreat News HKUMed reveals excess fat linked to liver cancer immunotherapy resistance: advocates healthier diets Press The 1st “Hong Kong InnoHealth Cup” Organised by HKUMed Successfully Concluded, as Reported by HKET Press Press HKUMed demonstrates that &#039;cloaked&#039; and safe human stem cells work, paving the way for off-the-shelf transplants without immune rejection Press HKUMed cracks gastric cancer’s ‘metabolic code’: Tumour growth slowed by 65%, plus a 6.3-fold kill rate with cholesterol inhibitors in neuron-infiltrated cases News HKU Distinguished Scholars Elected as Members of Hong Kong Academy of Sciences Press From genes to face and skull: HKUMed uncovers key causes of congenital craniofacial abnormalities to improve prenatal detection of cleft lip and skull malformations Study Study Undergraduate &amp; Postgraduate Undergraduate &amp; Postgraduate At the School of Biomedical Sciences we nurture talents and empower the next generation of scientists, doctors, innovators and healthcare professionals. Through our diverse, hands-on and dynamic study programs covering biomedicine, bioinformatics, clinical science and health technology, students develop essential skills to make fundamental discoveries and tackle current and emerging health challenges. Research Research Research Areas Research Areas Our faculty pushes the boundaries of knowledge in neuroscience, cancer, genomic sciences, immunology, stem cell biology and synthetic biology to advance cures and promote healthy aging. Backed by substantial funding and national initiatives, we drive innovative solutions to pressing health challenges and shape the future of global health sciences. About About Shaping the future of healthcare and society, SBMS pioneers innovative research, develops future leaders, and fosters entrepreneurship. Through exceptional teaching, research and industry engagement, we drive transformative solutions that make a global impact. Michael Häusser Director of School of Biomedical Sciences, The University of Hong Kong Learn More Michael Häusser Director of School of Biomedical Sciences, The University of Hong Kong Events Events Organoid stimulation by invasin and integrin antibodies Seminars Jul 7, 2026 Building fully automated cryo-EM data processing pipeline with foundation models Seminars May 29, 2026 Career talk for research postgraduate students and post-doctoral fellows by NOVUS Life Sciences Seminars May 28, 2026 Webinar: Introduction to the Master of Biomedical Innovation (MBioInno) Seminars May 15, 2026 Mechanism-Based Targeting of Tumor-Intrinsic Pathways to Enhance Cancer Immunotherapy Seminars May 14, 2026 Rapid 3D imaging of visual learning mechanisms in freely moving animals trained in immersive virtual reality Seminars May 13, 2026 Hong Kong Inter University Postdoctoral Symposium in Biomedical Sciences 2026 Seminars May 13, 2026 Engineering Chimeric Bifunctional Antibodies for Membrane Protein Degradation Seminars May 12, 2026 PDF Seminar Seminars May 12, 2026 Building embryo models via signalling reprogramming and advanced culture systems to enable the capture of organ progenitor cells Seminars May 11, 2026 Newsletter Subscribe About Faculty Research Study News Join Us Give HKU HKUMed CPOS Alumni Intranet L1-56, 1/F, Laboratory Block 21 Sassoon Road Pokfulam, Hong Kong sbms@hku.hk T +852 3917 9259 F +852 2817 0857 L1-56, 1/F, Laboratory Block 21 Sassoon Road Pokfulam, Hong Kong sbms@hku.hk T +852 3917 9259 F +852 2817 0857 © 2026 School of Biomedical Sciences. All Rights Reserved"
+}

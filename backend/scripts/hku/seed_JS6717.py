@@ -1,0 +1,282 @@
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+from azure.cosmos import CosmosClient
+
+COSMOS_ENDPOINT = os.getenv("AZURE_COSMOS_ENDPOINT")
+COSMOS_KEY = os.getenv("AZURE_COSMOS_KEY")
+COSMOS_DATABASE = os.getenv("AZURE_COSMOS_DATABASE", "aceit")
+
+client = CosmosClient(COSMOS_ENDPOINT, credential=COSMOS_KEY)
+database = client.get_database_client(COSMOS_DATABASE)
+container = database.get_container_client("jupas_programmes")
+
+# JS6717 - Bachelor of Social Sciences (BSocSc) / 社會科學學士
+# ALL DATA FROM OFFICIAL SOURCES — NO HALLUCINATION
+#
+# Source 1: JUPAS 2025 Admissions Scores PDF (af_2025_JUPAS.pdf)
+#   - Formula: Best 5 Subjects | Upper Quartile: 34 | Median: 31 | Lower Quartile: 29
+#
+# Source 2: JUPAS Website (https://www.jupas.edu.hk/en/programme/hku/JS6717)
+#   - Entry requirements, 2025 application/offer statistics, tuition, intake, interview
+#
+# Source 3: HKU Admissions Office
+#   (https://admissions.hku.hk/programmes/undergraduate-programmes/bachelor-of-social-sciences)
+#   - Programme structure, majors, careers, experiential learning
+
+programme = {
+    "code": "JS6717",
+    "nameEn": "Bachelor of Social Sciences",
+    "nameZh": "社會科學學士",
+    "name": "Bachelor of Social Sciences",
+    "university": "香港大學",
+    "faculty": "社會科學學院",
+    "median": 31,
+    "band_a": 29,
+    "uq": 34,
+    "category": "social_science",
+}
+
+details = {
+    "code": "JS6717",
+    "university": "香港大學",
+    "en": {
+        "sections": {
+            "admission": {
+                "title": "Eligibility & Admission Criteria (DSE)",
+                "content": [
+                    "**Admission Score Formula**: Best 5 Subjects. Programme score considers Category A subjects and may include Mathematics Extended Module 1 or 2 or Category C subject whichever is higher. Median 31, Lower Quartile 29, Upper Quartile 34 (2025 admission scores).",
+                    "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained (same as HKU general entrance requirements).",
+                    "**Elective Subjects**: ANY 1 SUBJECT (excluding Applied Learning, Other Language) at Level 3, PLUS ANY 1 SUBJECT (excluding Applied Learning) at Level 3; OR ANY 1 SUBJECT (excluding Applied Learning, Other Language) at Level 3 plus Mathematics Extended Module 1 or 2 at Level 3.",
+                    "**Notes**: Other Language subjects will be used as unspecified elective subjects. Applied Learning subjects are not counted as electives but may be considered as supporting information. HKDSE score conversion: 5**=8.5, 5*=7, 5=5.5 (see admissions.hku.hk/apply/jupas).",
+                    "**Interview**: Not required for standard JUPAS admission.",
+                    "**2025 Application Statistics**: Band A 406 applicants, Total 3,636 applicants.",
+                    "**2025 Offer Statistics (Main Round)**: 22 offers — all 22 to Band A applicants; 0 offers to Band B, C, D, or E.",
+                    "**First Year Intake**: 72 places.",
+                    "**Duration**: 4 years full-time.",
+                    "**First Year Tuition**: HK$47,000 (UGC-funded).",
+                ],
+            },
+            "curriculum": {
+                "title": "Programme Structure & Curriculum",
+                "content": [
+                    "**Programme Overview**: The Bachelor of Social Sciences (BSocSc) is for students interested in human behaviour and society, or future leaders in public service, education, industry and commerce. The flexible structure lets you choose your major after Year 1 **without quota constraint or selection**.",
+                    "**Year 1**: Explore the social sciences before declaring a major at the end of the first year.",
+                    "**Core majors (choose one)**: Computational Social Science; Geography; Politics and Public Administration; Social Policy and Social Development; Sociology.",
+                    "**Additional second major options (Faculty of Social Sciences)**: Cognitive Science; Counselling; Criminology; Geospatial Data Science; Media and Cultural Studies; Neuroscience; Psychology; Urban Governance.",
+                    "**Cross-faculty study**: Second major or minor from Faculties of Arts, Business and Economics, Engineering, Law, and Science. Additional Faculty minors include Human Resource Management; and Journalism, Media and Artificial Intelligence.",
+                    "**Experiential learning**: Off-campus learning emphasised — internships and overseas academic exchange to apply knowledge and enhance international exposure.",
+                    "**Degree**: Bachelor of Social Sciences (BSocSc), 4-year UGC-funded programme.",
+                ],
+            },
+            "career": {
+                "title": "Career Pathways & Prospects",
+                "content": [
+                    "**Career directions**: Graduates have pursued careers in **government, politics, public corporations, community organisations, the media, and the private sector**.",
+                    "**Further studies**: Postgraduate studies at renowned universities locally and worldwide.",
+                    "**Public service**: Policy research, civil service, and community organisations align with majors such as Politics and Public Administration and Social Policy and Social Development.",
+                    "**Research and data**: Computational Social Science and Geospatial Data Science majors support roles in policy analytics, survey research, and data-driven organisations.",
+                    "**People-focused professions**: Counselling, Social Policy, and Psychology-related pathways (via second major) support human services and education sectors — check specific professional registration requirements for regulated professions.",
+                ],
+            },
+            "campus": {
+                "title": "Campus Life & Student Experience",
+                "content": [
+                    "**Faculty**: Faculty of Social Sciences, The University of Hong Kong. Contact: +852 3917 1212.",
+                    "**Location**: HKU Main Campus, Pok Fu Lam — social sciences teaching and student facilities within the university’s historic campus setting.",
+                    "**Student life**: Faculty-based student societies and university-wide activities; exchange and internship opportunities as part of the programme’s off-campus learning emphasis.",
+                    "**International exposure**: Overseas academic exchange programmes supported by the Faculty and HKU.",
+                    "**University resources**: HKU libraries, learning commons, counselling and wellness services available to all undergraduates.",
+                ],
+            },
+            "competitiveness": {
+                "title": "Admission Competitiveness Analysis",
+                "content": [
+                    "**Overall Level**: High (★★★★☆). Median Best 5 score 31 (2025); competitive among HKU undergraduate programmes.",
+                    "**Score bands (2025, Best 5)**: Median 31 | Lower Quartile 29 | Upper Quartile 34. Aim at or above median for a realistic Band A chance.",
+                    "**Band A competition (2025)**: 406 Band A applicants for 22 main-round offers (~5.4% of Band A applicants received an offer in the main round). All 22 offers went to Band A — **0 offers to Bands B–E**.",
+                    "**Scale of applications**: 3,636 total applicants in 2025 — high demand, with first-year intake of 72 places; main-round offers (22) reflect selective admission in the first round.",
+                    "**No interview**: Selection is based on HKDSE scores, programme choice (Band A essential), and other HKU admissions considerations (e.g. OEA) — no programme interview for standard JUPAS entry.",
+                    "**Differentiators**: Strong Best 5 score, Band A choice, balanced core grades (English and Chinese at Level 3 minimum; higher English often advantageous for social science majors), and relevant OEA where applicable.",
+                ],
+            },
+            "alumni": {
+                "title": "Notable Alumni & Faculty",
+                "content": [
+                    "**Alumni network**: The Faculty of Social Sciences has **30,000+ alumni** worldwide.",
+                    "**Charis TIN (BSocSc)**: Featured on the Faculty Alumni Spotlight — highlights flexible major choice after Year 1, overseas exchange, and internships under Social Innovation and Global Citizenship.",
+                    "**LEUNG Yat Sing (BSocSc)**: Featured on Alumni Spotlight — completed a Social Innovation internship at Inner Edge (sports psychology consulting), applying classroom learning to real-world settings.",
+                    "**Kylie Yuet Ning POON (BSocSc)**: Featured on Alumni Spotlight — pursued interdisciplinary urban studies and aims to further studies in urban planning to contribute to Hong Kong’s liveability.",
+                    "**Faculty distinction**: QS World University Rankings 2026 — Faculty of Social Sciences ranks **22nd in the world** and **5th in Asia**; subject strengths include Geography (11th world), Sociology (24th world), and Social Policy (32nd world).",
+                    "**More stories**: Additional graduate voices are published on the Faculty of Social Sciences Alumni Spotlight page.",
+                ],
+            },
+            "scholarships": {
+                "title": "Scholarships & Financial Aid",
+                "content": [
+                    "**HKU scholarships**: HKU offers a broad range of merit-based scholarships for local undergraduates, including support for top-ranking JUPAS students. The highest HKDSE scorers may receive awards covering full tuition and living expenses.",
+                    "**Financial assistance**: Talented students experiencing financial difficulties may apply for additional financial assistance through HKU.",
+                    "**Government aid**: Eligible local students may apply for TSFS and NLSFT/NLSPS through the Student Finance Office.",
+                    "**Faculty awards**: Check the Faculty of Social Sciences and HKU Admissions websites for faculty-specific prizes and scholarships updated each admissions cycle.",
+                ],
+            },
+            "tips": {
+                "title": "Ace Sir's HKU BSocSc Strategy",
+                "content": [
+                    "**Score targeting**: Aim for **Best 5 ≥ 31** (2025 median). Minimum competitive floor around **LQ 29**; scoring **34+** (UQ) strengthens your profile.",
+                    "**Band A is essential**: In 2025, **100% of main-round offers were Band A** — place JS6717 in Band A. Lower bands received zero offers in the main round.",
+                    "**Subject mix**: Meet core minimums (Chi 3, Eng 3, Math 2, CSD Attained) and two electives at Level 3. M1/M2 can count toward electives per JUPAS rules — check https://admissions.hku.hk/apply/jupas for your combination.",
+                    "**Major planning**: Use Year 1 to explore — you declare your major after Year 1 with **no quota cap**. Research the five core majors and second-major options before applying so your personal statement/OEA aligns with your interest.",
+                    "**Backup programmes**: Consider JS6731 (Social Work, lower median ~28) or JS6705 (Psychology) if interested in people-focused careers; JS6810 (Government and Laws + LLB) if law/policy dual degree is your goal (separate programme, higher scores).",
+                    "**OEA**: HKU considers other experiences and achievements — document leadership, community service, or research relevant to social sciences.",
+                    "**No interview prep needed** for standard JUPAS — focus on maximising Best 5 and securing Band A placement.",
+                ],
+            },
+        }
+    },
+    "zh": {
+        "sections": {
+            "admission": {
+                "title": "入學要求與計分詳情 (DSE)",
+                "content": [
+                    "**入學計分公式**：最佳五科。計分考慮甲類科目，並可計數學延伸部分（M1/M2）或丙類科目（以較高者為準）。中位數31分，下四分位數29分，上四分位數34分（2025年入學分數）。",
+                    "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標（與港大一般入學要求相同）。",
+                    "**選修科目**：任何1科（不包括應用學習、其他語言）達第3級，另加任何1科（不包括應用學習）達第3級；或任何1科（不包括應用學習、其他語言）達第3級，加數學延伸部分（M1/M2）達第3級。",
+                    "**備註**：其他語言科目將作為非指定選修科。應用學習科目不作選修計算，但可作輔助資料。文憑試計分換算：5**=8.5、5*=7、5=5.5（詳見 admissions.hku.hk/apply/jupas）。",
+                    "**面試**：標準聯招入學不需要面試。",
+                    "**2025年申請統計**：Band A申請者406人，總申請者3,636人。",
+                    "**2025年取錄統計（正選輪）**：取錄22人——全部22人均為Band A；Band B、C、D、E均為0人。",
+                    "**首年學額**：72人。",
+                    "**修讀年期**：4年全日制。",
+                    "**首年學費**：港幣47,000元（教資會資助）。",
+                ],
+            },
+            "curriculum": {
+                "title": "課程結構與內容",
+                "content": [
+                    "**課程概覽**：社會科學學士適合對人類行為及社會感興趣、或有志於公共服務、教育、工商業的學生。課程結構靈活，**第一年後可選擇主修，不設學額上限或遴選**。",
+                    "**第一年**：修讀社會科學基礎，於年末申報主修。",
+                    "**五大核心主修（擇一）**：計算社會科學、地理學、政治學與公共行政學、社會政策與社會發展、社會學。",
+                    "**可選第二主修（社會科學學院）**：認知科學、輔導學、犯罪學、地理空間數據科學、媒體與文化研究、神經科學、心理學、城市治理。",
+                    "**跨學院修讀**：可於文學院、經管學院、工程學院、法律學院、理學院選修第二主修或副修。學院另提供人力資源管理；新聞、媒體及人工智能副修。",
+                    "**體驗式學習**：強調校外學習——實習及海外學術交流，以應用知識並擴闊國際視野。",
+                    "**學位**：社會科學學士（BSocSc），4年教資會資助課程。",
+                ],
+            },
+            "career": {
+                "title": "職業前景與出路",
+                "content": [
+                    "**就業方向**：畢業生從事**政府、政治、公營機構、社區組織、傳媒及私營機構**等工作。",
+                    "**升學**：於本地及海外知名大學修讀研究生課程。",
+                    "**公共服務**：政策研究、公務員及社區機構與政治學與公共行政、社會政策等主修相關。",
+                    "**研究與數據**：計算社會科學及地理空間數據科學主修支援政策分析、調查研究及數據機構職位。",
+                    "**以人為本的專業**：輔導、社會政策及心理學（第二主修）相關出路——受規管專業須查核相關註冊要求。",
+                ],
+            },
+            "campus": {
+                "title": "校園生活與學生體驗",
+                "content": [
+                    "**學院**：香港大學社會科學學院。聯絡電話：+852 3917 1212。",
+                    "**地點**：港大薄扶林主校園——社會科學教學及學生設施。",
+                    "**學生生活**：學院學會及全港大活動；課程強調實習及交流。",
+                    "**國際視野**：學院及港大支援海外學術交流。",
+                    "**大學資源**：圖書館、自修空間、輔導及身心健康服務。",
+                ],
+            },
+            "competitiveness": {
+                "title": "入學競爭力分析",
+                "content": [
+                    "**整體程度**：高（★★★★☆）。2025年最佳五科中位數31分，屬港大競爭較激烈的本科課程。",
+                    "**分數區間（2025，最佳五科）**：中位數31｜下四分位數29｜上四分位數34。Band A宜達中位數或以上。",
+                    "**Band A競爭（2025）**：406名Band A申請者競爭22個正選輪學額（約5.4% Band A申請者獲正選輪取錄）。**22個取錄全部為Band A**——Band B至E為0。",
+                    "**申請規模**：2025年共3,636人申請；首年學額72人。正選輪取錄22人反映首輪遴選嚴格。",
+                    "**無面試**：標準聯招以文憑試成績、課程選擇（Band A至關重要）及港大其他收生考慮（如OEA）為主。",
+                    "**成功要素**：最佳五科成績、Band A選科、達標核心科目（英、中第3級；更高英語水平對部分主修有利）及相關OEA。",
+                ],
+            },
+            "alumni": {
+                "title": "知名校友及教職員",
+                "content": [
+                    "**校友網絡**：社會科學學院擁有**逾30,000名校友**遍布全球。",
+                    "**Charis TIN（社會科學學士）**：學院「校友聚焦」專訪——第一年後靈活選擇主修，並參與海外交流及「社會創新與全球公民」主題下的實習。",
+                    "**梁日星 LEUNG Yat Sing（社會科學學士）**：學院「校友聚焦」專訪——於 Inner Edge（運動心理顧問公司）完成社會創新實習，將課堂知識應用於實務。",
+                    "**潘悦寧 Kylie Yuet Ning POON（社會科學學士）**：學院「校友聚焦」專訪——跨學科修讀城市相關課程，計劃升讀城市規劃，為香港宜居城市發展作出貢獻。",
+                    "**學院學術地位**：QS世界大學排名2026——社會科學學院**全球第22、亞洲第5**；地理學全球第11、社會學全球第24、社會政策全球第32。",
+                    "**更多個案**：學院網站「校友聚焦」專頁載有更多畢業生分享。",
+                ],
+            },
+            "scholarships": {
+                "title": "獎學金及經濟援助",
+                "content": [
+                    "**港大獎學金**：港大為本地本科生提供多項優異獎學金，包括予聯招成績優異者；最高成績考生可獲全額學費及生活費資助。",
+                    "**經濟援助**：有經濟困難的優秀學生可申請港大額外經濟援助。",
+                    "**政府資助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃。",
+                    "**學院獎項**：請查閱社會科學學院及港大招生網站最新獎學金資訊。",
+                ],
+            },
+            "tips": {
+                "title": "Ace Sir 港大社會科學學士攻略",
+                "content": [
+                    "**分數目標**：最佳五科**≥31分**（2025中位數）。競爭下限約**下四分位29分**；達**34分**（上四分位）較穩健。",
+                    "**Band A必需**：2025年**正選輪取錄100%為Band A**——務必將JS6717放於Band A。",
+                    "**選科組合**：達核心及兩科選修第3級要求。M1/M2可按聯招規則計入——詳查 https://admissions.hku.hk/apply/jupas 。",
+                    "**主修規劃**：第一年探索後申報主修，**不設學額上限**。申請前了解五大核心主修及第二主修，使OEA／個人陳述與興趣一致。",
+                    "**後備課程**：JS6731（社會工作，中位數約28）、JS6705（心理學）；有志雙學位法律可考JS6810（政治學與法學+法學士，分開課程、分數更高）。",
+                    "**OEA**：記錄與社會科學相關的領導、服務或研究經驗。",
+                    "**無需面試準備**（標準聯招）——專注提升最佳五科及Band A選科。",
+                ],
+            },
+        }
+    },
+}
+
+# Validate before upsert
+import json
+import subprocess
+
+payload_path = os.path.join(
+    os.path.dirname(__file__), "..", "jupas", "payload_JS6717.json"
+)
+with open(payload_path, "w", encoding="utf-8") as f:
+    json.dump(
+        {
+            "programme": programme,
+            "details": details,
+            "scores": {"median": 31, "uq": 34, "lq": 29},
+        },
+        f,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+validate_script = os.path.join(
+    os.path.dirname(__file__), "..", "jupas", "validateProgramme.js"
+)
+result = subprocess.run(
+    ["node", validate_script, payload_path],
+    capture_output=True,
+    text=True,
+)
+if result.returncode != 0:
+    print(result.stdout, result.stderr)
+    sys.exit(1)
+print(result.stdout.strip())
+
+container.upsert_item(
+    {**programme, "id": f"prog_{programme['code']}", "pk": "programmes", "type": "programme"}
+)
+container.upsert_item(
+    {
+        **details,
+        "id": f"detail_{details['code']}",
+        "pk": "details",
+        "type": "programme_detail",
+    }
+)
+
+print(f"[Seed] {programme['code']} - {programme['nameEn']} / {programme['nameZh']} - Done!")
+print("[Seed] All 8 sections (EN + ZH) from official JUPAS + HKU sources only")

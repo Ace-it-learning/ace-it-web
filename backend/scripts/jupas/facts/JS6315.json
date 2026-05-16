@@ -1,0 +1,66 @@
+{
+  "code": "JS6315",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6315"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.dase.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6315",
+    "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+    "nameZh": "Bachelor of Engineering in Mechanical Engineering",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 26,
+    "uq": 28,
+    "lq": 25
+  },
+  "jupas": {
+    "code": "JS6315",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6315",
+    "nameEn": "Bachelor of Engineering in Data and Systems Engineering",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.dase.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 327,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 80,
+      "bandB": 75,
+      "bandC": 149,
+      "bandD": 260,
+      "bandE": 216,
+      "total": 780
+    },
+    "offers2025": {
+      "bandA": 24,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 24
+    },
+    "facultyPhone": "+852 3917 2583"
+  },
+  "admissionsSnippet": "The University of Hong Kong - Department of Data and Systems Engineering Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to content HKU Faculty of Engineering Sitemap Facebook Instagram LinkedIn Open Search box Search GO Open menu About Us Introduction Vision &amp; Mission History Honours &amp; Awards Vacancies Contact Us Teaching and Learning Prospective Students Bachelor of Engineering in Data and Systems Engineering Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Current Students Bachelor of Engineering in Industrial Engineering and Logistics Management Bachelor of Engineering in Data and Systems Engineering Bachelor of Engineering in Engineering Science Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Industrial Engineering Association The Industrial Engineering Postgraduate and Scholar Association Research Research Areas Research Highlights Research Achievements Selected Publications Knowledge Exchange People Academic Staff Honorary and Adjunct Appointments / Part-time Appointments Administrative Staff Technical Staff Laboratories News &amp; Events Seminar Series Departmental Events Alumni Search box in menu Search website About Us Introduction Vision &amp; Mission History Honours &amp; Awards Vacancies Contact Us Teaching and Learning Prospective Students Bachelor of Engineering in Data and Systems Engineering Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Current Students Bachelor of Engineering in Industrial Engineering and Logistics Management Bachelor of Engineering in Data and Systems Engineering Bachelor of Engineering in Engineering Science Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Industrial Engineering Association The Industrial Engineering Postgraduate and Scholar Association Research Research Areas Research Highlights Research Achievements Selected Publications Knowledge Exchange People Academic Staff Honorary and Adjunct Appointments / Part-time Appointments Administrative Staff Technical Staff Laboratories News &amp; Events Seminar Series Departmental Events Alumni Facebook Instagram LinkedIn HKU Faculty of Engineering Sitemap Press 'Tab' to content Department of Data and Systems Engineering Announcement HKU Leads Hong Kong in Data Science: Ranked 18th Globally in QS 2026 Learn More Celebrating 50 Years of Excellence HKU IMSE 50th Anniversary Gala Dinner Learn More Scholarships For DASE Undergraduate Programme (BEng) Students Learn More Scholarships For DASE Taught Postgraduate Programme (MSc) Students Learn More Career Prospects Learn More Announcement Centralized Administration Hub at Faculty Office Learn More Alumni Contact Update Campaign HKU Engineering - Alumni Contact Update and Reconnect - Updating your contact information is just fingertip away! Learn More What's New More Announcement HKU Leads Hong Kong in Data Science: Ranked 18th Globally in QS 2026 Research Seminars Policies for Two-Stage Stochastic Resource Allocation Problems Date: April 15, 2026 (Wednesday) Time: 11:30 Venue: HW 828, Haking Wong Building, HKU Announcement **Get a Coffee Shop Gift Certificate** UG Student Feedback on Teaching and Learning (SFTL), Semester 2 of 2025-26 Research Seminars Digital Product Passport for Sustainable and Circular Supply Chain Management: A Structured Review of Use Cases Date: March 19, 2026 (Thursday) Time: 11:45 Venue: HW 828, Haking Wong Building, HKU Research Seminars Decompose-route-improve framework for solving large-scale vehicle routing problems with time windows Date: March 18, 2026 (Wednesday) Time: 10:00 Venue: The Tam Wing Fan Innovation Wing Two, HKU Events 【Register Now】XR Game Jam 2026, hosted by the Department of Data and Systems Engineering, The University of Hong Kong! Research Seminars Optimal Liability Design for Medical AI Date: January 12, 2026 (Monday) Time: 14:30 Venue: HW 828, Haking Wong Building, HKU &copy; 2026 Department of Data and Systems Engineering, The University of Hong Kong. All rights reserved."
+}

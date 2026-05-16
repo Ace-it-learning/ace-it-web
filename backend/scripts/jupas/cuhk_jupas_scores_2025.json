@@ -1,0 +1,3256 @@
+{
+  "_source": "af_2025_JUPAS.pdf (CUHK section, pdfplumber tables)",
+  "_columnOrder": "UQ | M (Median) | LQ — Programme Weighted Total",
+  "programmes": {
+    "JS4006": {
+      "code": "JS4006",
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 24.5
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "nameEn": "Anthropology",
+      "formula": "Best 5",
+      "median": 24,
+      "uq": 24.5,
+      "lq": 23
+    },
+    "JS4018": {
+      "code": "JS4018",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 30.4
+        },
+        "LQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 29.2
+        }
+      },
+      "nameEn": "Chinese Language and",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chinese (x 1.2)",
+      "median": 30.4,
+      "uq": null,
+      "lq": 29.2
+    },
+    "JS4032": {
+      "code": "JS4032",
+      "percentiles": {
+        "UQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "3",
+          "e3": "3",
+          "e4": "",
+          "total": 28.5
+        },
+        "M": {
+          "chi": "3",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26.5
+        }
+      },
+      "nameEn": "English",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5)",
+      "median": 27.25,
+      "uq": 28.5,
+      "lq": 26.5
+    },
+    "JS4044": {
+      "code": "JS4044",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "nameEn": "Fine Arts",
+      "formula": "Best 5",
+      "median": 26,
+      "uq": null,
+      "lq": 24.5
+    },
+    "JS4056": {
+      "code": "JS4056",
+      "percentiles": {
+        "UQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 26.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        }
+      },
+      "nameEn": "History",
+      "formula": "Best 5",
+      "median": 26.5,
+      "uq": 28,
+      "lq": 26
+    },
+    "JS4068": {
+      "code": "JS4068",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "nameEn": "Japanese Studies",
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": null,
+      "lq": 23
+    },
+    "JS4070": {
+      "code": "JS4070",
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "nameEn": "Linguistics",
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": 24.5,
+      "lq": 24.5
+    },
+    "JS4082": {
+      "code": "JS4082",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 22.5
+        }
+      },
+      "nameEn": "Music",
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": null,
+      "lq": 22.5
+    },
+    "JS4094": {
+      "code": "JS4094",
+      "percentiles": {
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 25
+        },
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "nameEn": "Philosophy",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chinese and English must be included",
+      "median": 24.5,
+      "uq": 25,
+      "lq": 23
+    },
+    "JS4100": {
+      "code": "JS4100",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "nameEn": "Public Humanities",
+      "formula": "Best 5",
+      "median": 23.5,
+      "uq": null,
+      "lq": 23
+    },
+    "JS4109": {
+      "code": "JS4109",
+      "percentiles": {
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 22
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 21.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 21
+        }
+      },
+      "nameEn": "Religious Studies",
+      "formula": "Best 5",
+      "median": 21.5,
+      "uq": 22,
+      "lq": 21
+    },
+    "JS4123": {
+      "code": "JS4123",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "2",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "nameEn": "Translation",
+      "formula": "Best 5",
+      "median": 23,
+      "uq": null,
+      "lq": 23
+    },
+    "JS4136": {
+      "code": "JS4136",
+      "percentiles": {
+        "UQ": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 24.75
+        },
+        "M": {
+          "chi": "4",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 24.25
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "",
+          "e3": "",
+          "e4": "",
+          "total": 24.25
+        }
+      },
+      "nameEn": "Chinese Studies",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.25)",
+      "median": 24.25,
+      "uq": 24.75,
+      "lq": 24.25
+    },
+    "JS4202": {
+      "code": "JS4202",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 41
+        }
+      },
+      "nameEn": "Integrated BBA",
+      "formula": "Best 5",
+      "median": 26,
+      "uq": 41,
+      "lq": 26
+    },
+    "JS4214": {
+      "code": "JS4214",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 38
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 36.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "nameEn": "Global Business Studies",
+      "formula": "Best 5",
+      "median": 38,
+      "uq": 24.5,
+      "lq": 36.5
+    },
+    "JS4226": {
+      "code": "JS4226",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 42.5
+        }
+      },
+      "nameEn": "Hospitality and Real Estate",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.25) • Mathematics (x 1.5)",
+      "median": 23.5,
+      "uq": 42.5,
+      "lq": 23
+    },
+    "JS4238": {
+      "code": "JS4238",
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 41.75
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 40.25
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 27.5
+        }
+      },
+      "nameEn": "Insurance, Financial and Actuarial Analysis",
+      "formula": "Best 5",
+      "subjectWeighting": "• The best one subject of Chemistry, Physics, Economics or ICT (x 1.25)",
+      "median": 41.75,
+      "uq": 27.5,
+      "lq": 40.25
+    },
+    "JS4240": {
+      "code": "JS4240",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 54.75
+        }
+      },
+      "nameEn": "Professional Accountancy",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 2)",
+      "median": 26,
+      "uq": 54.75,
+      "lq": 26
+    },
+    "JS4252": {
+      "code": "JS4252",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 51.75
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35
+        }
+      },
+      "nameEn": "Quantitative Finance",
+      "formula": "Best 5",
+      "subjectWeighting": "Physics or Economics (x 1.5)",
+      "median": 52.5,
+      "uq": 35,
+      "lq": 51.75
+    },
+    "JS4254": {
+      "code": "JS4254",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 35
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33.5
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 48
+        }
+      },
+      "nameEn": "Programme in Global Economics",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5)",
+      "median": 35,
+      "uq": 48,
+      "lq": 33.5
+    },
+    "JS4264": {
+      "code": "JS4264",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 37.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 36
+        }
+      },
+      "nameEn": "BBA(IBBA) – JD Double Degree",
+      "formula": "Best 5",
+      "subjectWeighting": "included",
+      "median": 37.5,
+      "uq": null,
+      "lq": 36
+    },
+    "JS4276": {
+      "code": "JS4276",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 57.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "",
+          "ls": "4",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5*",
+          "e4": "",
+          "total": 54.75
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.75
+        }
+      },
+      "nameEn": "Quantitative Finance and Risk Management Science",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.5)",
+      "median": 57.75,
+      "uq": 31.75,
+      "lq": 54.75
+    },
+    "JS4725": {
+      "code": "JS4725",
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "",
+          "e4": "",
+          "total": 65
+        }
+      },
+      "nameEn": "Biotechnology, Entrepreneurship",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 2)",
+      "median": 27.5,
+      "uq": 65,
+      "lq": 27.5
+    },
+    "JS4760": {
+      "code": "JS4760",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 35
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 34.75
+        }
+      },
+      "nameEn": "Interdisciplinary Data Analytics &",
+      "formula": "Selection Principle",
+      "subjectWeighting": "Subject Weighting",
+      "median": 35,
+      "uq": null,
+      "lq": 34.75
+    },
+    "JS4320": {
+      "code": "JS4320",
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "nameEn": "Human Movement Science and",
+      "formula": "Best 5",
+      "median": 26,
+      "uq": 29,
+      "lq": 24.5
+    },
+    "JS4329": {
+      "code": "JS4329",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        }
+      },
+      "nameEn": "Physical Education, Exercise",
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": null,
+      "lq": 26
+    },
+    "JS4331": {
+      "code": "JS4331",
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5",
+          "e4": "",
+          "total": 45
+        },
+        "M": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "N2 -\nPass",
+          "total": 42
+        },
+        "LQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 40.5
+        }
+      },
+      "nameEn": "BA (Chinese Language Studies) and BEd (Chinese Language Education)",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chinese (x 2) • Chinese must be included",
+      "median": 42,
+      "uq": 45,
+      "lq": 40.5
+    },
+    "JS4343": {
+      "code": "JS4343",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 39
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 37.5
+        }
+      },
+      "nameEn": "BA (English Studies) and BEd",
+      "formula": "Best 5",
+      "subjectWeighting": "• English must be included",
+      "median": 39,
+      "uq": null,
+      "lq": 37.5
+    },
+    "JS4361": {
+      "code": "JS4361",
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 57.5
+        },
+        "M": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 53.75
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 53
+        }
+      },
+      "nameEn": "BEd in Mathematics and Mathematics Education",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 2) • M1 or M2 (x 2) • Chinese or English (x 1.5) • The best one subject of Physics, Economics or ICT (x 1.5) • Mathematics and M1/M2 must be included",
+      "median": 53.75,
+      "uq": 57.5,
+      "lq": 53
+    },
+    "JS4372": {
+      "code": "JS4372",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 22
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 21.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.75
+        }
+      },
+      "nameEn": "BEd in Early Childhood Education",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.5)",
+      "median": 22,
+      "uq": 31.75,
+      "lq": 21.5
+    },
+    "JS4386": {
+      "code": "JS4386",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "",
+          "e3": "",
+          "e4": "",
+          "total": 30.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 30.25
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 59
+        }
+      },
+      "nameEn": "BSc in Learning Design and Technology",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 2)",
+      "median": 30.5,
+      "uq": 59,
+      "lq": 30.25
+    },
+    "JS4408": {
+      "code": "JS4408",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "nameEn": "Mechanical and Automation Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "• Biology, Chemistry, DAT, ICT (x 1.25)",
+      "median": 31.5,
+      "uq": null,
+      "lq": 30.5
+    },
+    "JS4412": {
+      "code": "JS4412",
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 44.5
+        },
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 42.875
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 40.375
+        }
+      },
+      "nameEn": "Computer Science and Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, DAT, ICT (x 1.5)",
+      "median": 42.875,
+      "uq": 44.5,
+      "lq": 40.375
+    },
+    "JS4416": {
+      "code": "JS4416",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 54.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 53
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 26.875
+        }
+      },
+      "nameEn": "Computational Data Science",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.25)",
+      "median": 54.5,
+      "uq": 26.875,
+      "lq": 53
+    },
+    "JS4428": {
+      "code": "JS4428",
+      "percentiles": {
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 48.75
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 47.375
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 45.625
+        }
+      },
+      "nameEn": "Financial Technology",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.25) • Chinese (x 1.25) • Mathematics (x 1.75) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, BAFS, Economics, ICT (x 1.5)",
+      "median": 47.375,
+      "uq": 48.75,
+      "lq": 45.625
+    },
+    "JS4434": {
+      "code": "JS4434",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 31.25
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "nameEn": "Electronic Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "• Physics (x 1.5)",
+      "median": 31.25,
+      "uq": null,
+      "lq": 30.5
+    },
+    "JS4446": {
+      "code": "JS4446",
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 40.375
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 39.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 38.125
+        }
+      },
+      "nameEn": "Information Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 2) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, DAT, ICT (x 1.5)",
+      "median": 39.25,
+      "uq": 40.375,
+      "lq": 38.125
+    },
+    "JS4458": {
+      "code": "JS4458",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 32.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 32.5
+        }
+      },
+      "nameEn": "Systems Engineering and Engineering Management",
+      "formula": "Best 5",
+      "subjectWeighting": "Economics, ICT (x 1.5)",
+      "median": 32.5,
+      "uq": null,
+      "lq": 32.5
+    },
+    "JS4460": {
+      "code": "JS4460",
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 44.5
+        },
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 42.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 41.25
+        }
+      },
+      "nameEn": "Biomedical Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5) • The best one subject of Mathematics or M1/M2 (x 1.5) • Biology, Chemistry, Physics (x 1.5)",
+      "median": 42.25,
+      "uq": 44.5,
+      "lq": 41.25
+    },
+    "JS4462": {
+      "code": "JS4462",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31
+        }
+      },
+      "nameEn": "Energy and Environmental Engineering",
+      "formula": "Best 5",
+      "subjectWeighting": "(x 1.5) • Economics, Geography (x 1.2)",
+      "median": 31.75,
+      "uq": null,
+      "lq": 31
+    },
+    "JS4468": {
+      "code": "JS4468",
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "3",
+          "e4": "",
+          "total": 55.75
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 52.375
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5*",
+          "e4": "",
+          "total": 50.375
+        }
+      },
+      "nameEn": "Artificial Intelligence: Systems and Technologies",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.25) • Chinese (x 1.25) • Mathematics (x 1.75) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, ICT (x 1.5)",
+      "median": 52.375,
+      "uq": 55.75,
+      "lq": 50.375
+    },
+    "JS4470": {
+      "code": "JS4470",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 26.375
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.625
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "nameEn": "Materials Science and",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chemistry, Physics (x 1.25)",
+      "median": 26.375,
+      "uq": 29,
+      "lq": 24.625
+    },
+    "JS4733": {
+      "code": "JS4733",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 63.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 52
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 48
+        }
+      },
+      "nameEn": "Mathematics and Information",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5)",
+      "median": 63.5,
+      "uq": 48,
+      "lq": 52
+    },
+    "JS4750": {
+      "code": "JS4750",
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 44.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 38.25
+        }
+      },
+      "nameEn": "Informatics & X Double Major",
+      "formula": "Best 5",
+      "subjectWeighting": "• Physics, Geography (x 2)",
+      "median": 44.25,
+      "uq": null,
+      "lq": 38.25
+    },
+    "JS4903": {
+      "code": "JS4903",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 36
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 34.5
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 37.5
+        }
+      },
+      "nameEn": "Bachelor of Laws",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 2)",
+      "median": 36,
+      "uq": 37.5,
+      "lq": 34.5
+    },
+    "JS4501": {
+      "code": "JS4501",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 37
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 36
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 41.5
+        }
+      },
+      "nameEn": "Medicine (MBChB) Programme",
+      "formula": "6 Graded",
+      "subjectWeighting": "Biology/Chemistry must be included",
+      "median": 37,
+      "uq": 41.5,
+      "lq": 36
+    },
+    "JS4502": {
+      "code": "JS4502",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 40.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 40
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 30.1
+        }
+      },
+      "nameEn": "Global Physician-Leadership",
+      "formula": "Note",
+      "subjectWeighting": "Biology/Chemistry must be included",
+      "median": 40.5,
+      "uq": 30.1,
+      "lq": 40
+    },
+    "JS4513": {
+      "code": "JS4513",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 28.6
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 28.3
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 33.5
+        }
+      },
+      "nameEn": "Nursing",
+      "formula": "Best 5",
+      "subjectWeighting": "Physics (x 1.2)",
+      "median": 28.6,
+      "uq": 33.5,
+      "lq": 28.3
+    },
+    "JS4525": {
+      "code": "JS4525",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 32
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 30.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 36.5
+        }
+      },
+      "nameEn": "Pharmacy",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5) • Mathematics (x 1.5)",
+      "median": 32,
+      "uq": 36.5,
+      "lq": 30.5
+    },
+    "JS4537": {
+      "code": "JS4537",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 32.75
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 32.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "nameEn": "Public Health",
+      "formula": "Best 5",
+      "subjectWeighting": "Economics or Health Management & Social Care (x 1.5)",
+      "median": 32.75,
+      "uq": 30.5,
+      "lq": 32.5
+    },
+    "JS4542": {
+      "code": "JS4542",
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "3",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 42.5
+        }
+      },
+      "nameEn": "Chinese Medicine",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5) • Biology (x 1.5)",
+      "median": 30.5,
+      "uq": 42.5,
+      "lq": 29
+    },
+    "JS4550": {
+      "code": "JS4550",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 41
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 39.5
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "nameEn": "Biomedical Sciences",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chinese, English, Mathematics and best of Biology/Chemistry must be included",
+      "median": 41,
+      "uq": 29,
+      "lq": 39.5
+    },
+    "JS4601": {
+      "code": "JS4601",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 37.75
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 36
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 52
+        }
+      },
+      "nameEn": "Science (broad-based)",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 2) • Mathematics (x 2)",
+      "median": 37.75,
+      "uq": 52,
+      "lq": 36
+    },
+    "JS4648": {
+      "code": "JS4648",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 47
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 45
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 57.75
+        }
+      },
+      "nameEn": "Earth and Environmental Sciences",
+      "formula": "Best 5",
+      "subjectWeighting": "• Biology, Chemistry, Physics (x 2) • Geography (x 1.5)",
+      "median": 47,
+      "uq": 57.75,
+      "lq": 45
+    },
+    "JS4682": {
+      "code": "JS4682",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 51.75
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.75
+        }
+      },
+      "nameEn": "Enrichment Mathematics",
+      "formula": "Best 5",
+      "subjectWeighting": "• M1 or M2 (x 3.5)",
+      "median": 52.5,
+      "uq": 52.75,
+      "lq": 51.75
+    },
+    "JS4690": {
+      "code": "JS4690",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "N3 -\nPass",
+          "e4": "",
+          "total": 46.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 43
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 44.5
+        }
+      },
+      "nameEn": "Enrichment Stream in Theoretical Physics",
+      "formula": "Best 5",
+      "subjectWeighting": "• Physics (x 2)",
+      "median": 46.75,
+      "uq": 44.5,
+      "lq": 43
+    },
+    "JS4719": {
+      "code": "JS4719",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 43
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 41.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 63.75
+        }
+      },
+      "nameEn": "Risk Management Science",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 2)",
+      "median": 43,
+      "uq": 63.75,
+      "lq": 41.5
+    },
+    "JS4801": {
+      "code": "JS4801",
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.65
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26.6
+        }
+      },
+      "nameEn": "Social Science (broad-based)",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.3)",
+      "median": 27.65,
+      "uq": null,
+      "lq": 26.6
+    },
+    "JS4812": {
+      "code": "JS4812",
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 28
+        },
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26.5
+        }
+      },
+      "nameEn": "Architectural Studies",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5)",
+      "median": 28,
+      "uq": 28,
+      "lq": 26.5
+    },
+    "JS4824": {
+      "code": "JS4824",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.75
+        }
+      },
+      "nameEn": "Economics",
+      "formula": "Best 5",
+      "subjectWeighting": "Economics or Physics (x 1.5)",
+      "median": 31.5,
+      "uq": null,
+      "lq": 30.75
+    },
+    "JS4836": {
+      "code": "JS4836",
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35.25
+        },
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 31.5
+        }
+      },
+      "nameEn": "Geography and Resource Management",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5) • Geography (x 1.5)",
+      "median": 33,
+      "uq": 35.25,
+      "lq": 31.5
+    },
+    "JS4838": {
+      "code": "JS4838",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "nameEn": "Urban Studies",
+      "formula": "Best 5",
+      "median": 26,
+      "uq": null,
+      "lq": 24.5
+    },
+    "JS4848": {
+      "code": "JS4848",
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 28.625
+        },
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 27.25
+        }
+      },
+      "nameEn": "Government and Public Administration",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5) • Chinese (x 1.25)",
+      "median": 27.5,
+      "uq": 28.625,
+      "lq": 27.25
+    },
+    "JS4850": {
+      "code": "JS4850",
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 28.95
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.8
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 31.55
+        }
+      },
+      "nameEn": "Journalism and Communication",
+      "formula": "Best 5",
+      "subjectWeighting": "• Chinese (x 1.3)",
+      "median": 28.95,
+      "uq": 31.55,
+      "lq": 27.8
+    },
+    "JS4858": {
+      "code": "JS4858",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29.15
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.2
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 36.75
+        }
+      },
+      "nameEn": "Global Communication",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.3)",
+      "median": 29.15,
+      "uq": 36.75,
+      "lq": 27.2
+    },
+    "JS4862": {
+      "code": "JS4862",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33.75
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 32.25
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "nameEn": "Psychology",
+      "formula": "Best 5",
+      "subjectWeighting": "• Mathematics (x 1.5)",
+      "median": 33.75,
+      "uq": 29,
+      "lq": 32.25
+    },
+    "JS4874": {
+      "code": "JS4874",
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        }
+      },
+      "nameEn": "Social Work",
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": 28,
+      "lq": 27.5
+    },
+    "JS4886": {
+      "code": "JS4886",
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26.5
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 26.5
+        }
+      },
+      "nameEn": "Sociology",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5)",
+      "median": 26.5,
+      "uq": 26.5,
+      "lq": 26.5
+    },
+    "JS4892": {
+      "code": "JS4892",
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 26.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 25.75
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "nameEn": "Global Studies",
+      "formula": "Best 5",
+      "subjectWeighting": "• English (x 1.5)",
+      "median": 26.5,
+      "uq": 24.5,
+      "lq": 25.75
+    },
+    "JS4893": {
+      "code": "JS4893",
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 23
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35
+        }
+      },
+      "nameEn": "Data Science and Policy Studies",
+      "formula": "Best 5",
+      "median": 23.5,
+      "uq": 35,
+      "lq": 23
+    }
+  }
+}

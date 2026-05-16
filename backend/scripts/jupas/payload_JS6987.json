@@ -1,0 +1,501 @@
+{
+  "factPack": {
+    "code": "JS6987",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6987"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.eee.hku.hk/study/undergraduate/undergraduate-admission/"
+      }
+    ],
+    "programme": {
+      "code": "JS6987",
+      "nameEn": "Bachelor of Engineering in Computer Engineering",
+      "nameZh": "工學學士(計算機工程/電機工程/電子工程)",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 28
+    },
+    "jupas": {
+      "code": "JS6987",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6987",
+      "nameEn": "Bachelor of Engineering in Computer Engineering",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.eee.hku.hk/study/undergraduate/undergraduate-admission/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 259,
+        "bandB": 174,
+        "bandC": 300,
+        "bandD": 368,
+        "bandE": 400,
+        "total": 1501
+      },
+      "offers2025": {
+        "bandA": 26,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 26
+      },
+      "facultyPhone": "+852 3917 7093"
+    },
+    "admissionsSnippet": "Undergraduate Admissions Site Map | HKU Portal | Staff Intranet | About ECE People Department Management Team Academic and Teaching Staff Honorary, Adjunct &#038; Visiting Staff Administrative &#038; Technical Staff External Advisors Alumni Study Undergraduate (BEng) Taught Postgraduate (MSc) Research Postgraduate (PhD/MPhil) Prospective Students Programmes Information Admissions Scholarships &amp; Funding Current Students Student Support Centre (UG / RPg) e.link (Department T&#038;L Website) MSc Moodle page E-system @ HKUECE-MSc Scholarships &amp; Funding Exchange Career Talks Alumni Contact Update Form Research Research Project Highlighs Research Interests Research Output News &amp; Events News Events Instagram Facebook Rednote (小紅書) Useful Links HKU Homepage HKU Faculty of Engineering Giving (Donation) Alumni Contact Update Form HKU Maps &#038; Facilities ECE Staff HKU Portal Intranet for Staff Contact Home Undergraduate Admissions  Home &gt; Study &gt; Undergraduate (BEng) Hong Kong local school students with Hong Kong Diploma of Secondary Education Examination (HKDSE) results should apply to the ECE programmes through the JUPAS admission scheme . Students with other qualifications, as well as overseas and Mainland students may also be admitted through our various Non-JUPAS schemes . JUPAS Through the Joint University Programmes Admissions System (JUPAS) ( http://www.jupas.edu.hk ), HKU admits secondary school students from local schools based on their local public examination results. Please check the JUPAS website for eligibility to apply, application procedures and information on the JUPAS scheme. For more information about JUPAS admission, you may also consult the Faculty of Engineering common admission website . &nbsp; Requirements JUPAS applicants should note for the additional programme entrance requirements. Details of can be find in HERE . Non-JUPAS International students, students from the Mainland China, as well as qualified local students who did not take part in the main-round JUPAS admission scheme may apply to our programme through the University-wide non-JUPAS admission scheme. Our department admits many high quality local students both into our first year and second year studies through this route every year. For more information and online application, please refers to the University Non-JUPAS undergraduate admission page. &nbsp; International Students If you are international students interested in our degree programme, please take some time to check out the University portal on international student admission . Apart form online application form, it also contains plenty of information about the learning and living environment at HKU. &nbsp; Mainland Students (内地本科生) If you are the Mainland students planning to study in our undergraduate degree programme, we encourage you to visit the University portal dedicated to admission of undergraduate students from the Mainland (内地本科生入学计划) . We admit many high quality undergraduate students from the Mainland China every year. Upon graduation, many of them continue to pursue higher degrees at HKU or at overseas institutions. News &#038; Events Student Support Centre Research Interests Privacy Policy Web Accessibility Contact Us Instagram Facebook  Rednote Copyright © Department of Electrical and Computer Engineering | Faculty of Engineering | The University of Hong Kong"
+  },
+  "programme": {
+    "code": "JS6987",
+    "nameEn": "Bachelor of Engineering in Computer Engineering",
+    "nameZh": "工學學士(計算機工程/電機工程/電子工程)",
+    "name": "Bachelor of Engineering in Computer Engineering",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 29,
+    "band_a": 28,
+    "uq": 31,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 327",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Core Subjects:**",
+            "- English Language: Level 3",
+            "- Chinese Language: Level 3",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Liberal Studies: Level 2",
+            "",
+            "**DSE Elective Subjects:**",
+            "- Any 2 elective subjects from Category A (including M1/M2) or Category C",
+            "",
+            "**Admission Score Formula:** Eng + Math + Best 3 Subjects",
+            "",
+            "**Weighting:** No specific weighting; all subjects counted equally in the formula.",
+            "",
+            "**Interview:** Required (shortlisted applicants only)",
+            "",
+            "**2025 Admission Scores:**",
+            "- Median: 29",
+            "- LQ: 28",
+            "- UQ: 31"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Engineering in Computer Engineering (JS6987) is a four-year full-time programme offered by the Department of Electrical and Electronic Engineering at HKU. It integrates hardware and software design, preparing students for careers in computing systems, embedded systems, and network engineering.",
+            "",
+            "**Year 1:** Foundation courses in mathematics, physics, programming, and introductory engineering. Students also take University Common Core courses.",
+            "",
+            "**Year 2:** Core courses in digital logic, computer architecture, data structures, algorithms, and operating systems. Students begin to specialise through elective choices.",
+            "",
+            "**Year 3:** Advanced topics such as computer networks, embedded systems, VLSI design, and software engineering. A capstone design project is undertaken.",
+            "",
+            "**Year 4:** Final-year project, advanced electives, and optional internship. Students may also pursue a minor or double major.",
+            "",
+            "**Unique Features:**",
+            "- Strong emphasis on both hardware and software co-design",
+            "- Access to state-of-the-art laboratories including the Embedded Systems Lab and VLSI Design Lab",
+            "- Opportunities for exchange programmes with partner universities worldwide",
+            "- Industry-linked final-year projects and internships"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Technology & Engineering:**",
+            "- Computer hardware engineer",
+            "- Embedded systems engineer",
+            "- Network architect",
+            "- Software developer",
+            "",
+            "**Research & Development:**",
+            "- R&D engineer in semiconductor or electronics firms",
+            "- Research assistant in university labs or government institutes",
+            "",
+            "**Consulting & Management:**",
+            "- Technology consultant",
+            "- IT project manager",
+            "",
+            "**Further Studies:**",
+            "- Master's or PhD in computer engineering, electrical engineering, or related fields",
+            "- Professional qualifications such as Chartered Engineer (CEng)"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus of The University of Hong Kong, Pokfulam Road, Hong Kong.",
+            "",
+            "**Facilities:**",
+            "- Modern lecture theatres and tutorial rooms",
+            "- Specialised laboratories: Embedded Systems Lab, VLSI Design Lab, Computer Networks Lab",
+            "- University libraries with extensive engineering collections",
+            "",
+            "**Student Activities:**",
+            "- Engineering Society and student chapters of IEEE",
+            "- Hackathons, coding competitions, and robotics workshops",
+            "- Sports facilities, cultural clubs, and hall life"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High. The programme attracts strong applicants with a median admission score of 29.",
+            "",
+            "**Band A Statistics (2025):**",
+            "- Band A applications: 259",
+            "- Band A offers: 26",
+            "- Band A offer rate: ~10.0%",
+            "",
+            "**Factors Influencing Competitiveness:**",
+            "1. High DSE scores required (Median 29, LQ 28, UQ 31)",
+            "2. Interview performance for shortlisted candidates",
+            "3. Strong performance in Mathematics and elective subjects (especially M1/M2, Physics, ICT)",
+            "4. Overall Band A choice ranking in JUPAS"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty Excellence:**",
+            "- The Department of Electrical and Electronic Engineering is home to world-class researchers in areas such as computer architecture, embedded systems, and networking.",
+            "- Faculty members have received numerous awards including IEEE Fellowships and HKU Outstanding Researcher Awards.",
+            "",
+            "**Rankings:**",
+            "- HKU Engineering is consistently ranked among the top engineering faculties in Asia and the world (e.g., QS World University Rankings by Subject).",
+            "",
+            "**Laboratories & Research Centres:**",
+            "- Embedded Systems Laboratory",
+            "- VLSI Design Laboratory",
+            "- Computer Networks and Distributed Systems Laboratory",
+            "",
+            "**Notable Alumni:**",
+            "- (No specific alumni names provided in the fact pack.)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded to outstanding JUPAS and non-JUPAS students based on academic merit.",
+            "- Examples: HKU Foundation Scholarships, Faculty of Engineering Scholarships.",
+            "",
+            "**Faculty of Engineering Scholarships:**",
+            "- Various scholarships for engineering students with excellent academic performance.",
+            "",
+            "**Departmental Scholarships:**",
+            "- Specific to Computer Engineering students, awarded based on GPA and contributions.",
+            "",
+            "**External Scholarships:**",
+            "- Students may also apply for government or private scholarships such as the HKSAR Government Scholarship."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Computer Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "Focus on English, Mathematics, and your best three electives. The admission formula is Eng + Math + Best 3 Subjects, so strong performance in these five subjects is critical.",
+            "- Aim for Level 5 or above in English and Mathematics.",
+            "- Choose electives that align with computer engineering: M1/M2, Physics, ICT, or Chemistry.",
+            "",
+            "**2. Excel in Mathematics (Compulsory + M1/M2)**",
+            "",
+            "Mathematics is weighted equally but is foundational for the programme. A high score in both Compulsory and M1/M2 can significantly boost your total.",
+            "- Practice past papers and focus on calculus, algebra, and probability.",
+            "- Consider taking M1 or M2 to demonstrate advanced mathematical ability.",
+            "",
+            "**3. Build a Strong Elective Profile**",
+            "",
+            "Your best three electives should include subjects relevant to engineering. Physics and ICT are particularly valued.",
+            "- If you take M1/M2, it counts as one elective.",
+            "- Avoid weak electives that may lower your best three average.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "Shortlisted candidates are interviewed. The interview assesses motivation, problem-solving, and communication skills.",
+            "- Practice explaining your interest in computer engineering.",
+            "- Be ready to discuss current technology trends (AI, IoT, cybersecurity).",
+            "- Prepare questions about the programme and HKU.",
+            "",
+            "**5. Optimise Your JUPAS Band A Choices**",
+            "",
+            "With a ~10% Band A offer rate, placing JS6987 in Band A is essential. Consider your backup options carefully.",
+            "- If your predicted score is 28-31, put JS6987 as Band A.",
+            "- Use Band B for related programmes (e.g., other HKU Engineering or Computer Science).",
+            "",
+            "**6. Leverage OEA (Other Experiences and Achievements)**",
+            "",
+            "OEA can strengthen your application, especially if your scores are borderline.",
+            "- Include relevant competitions (e.g., robotics, coding hackathons).",
+            "- Highlight leadership roles in STEM clubs or projects.",
+            "- Provide evidence of self-directed learning (online courses, personal projects).",
+            "",
+            "**7. Consider Your Backup Programmes**",
+            "",
+            "If your scores are below the LQ (28), have a solid backup plan.",
+            "- Consider JS6901 (Bachelor of Engineering) or JS6963 (Engineering with a Second Major).",
+            "- Also look at related programmes at other universities (e.g., CUHK Computer Engineering).",
+            "",
+            "**8. Understand the Programme Structure**",
+            "",
+            "Know the curriculum: foundation years, specialisation, capstone project, and exchange opportunities.",
+            "- Research the labs and faculty research areas to tailor your interview answers.",
+            "- Plan to take electives in your area of interest (e.g., embedded systems, VLSI).",
+            "",
+            "**9. Stay Updated on Admission Trends**",
+            "",
+            "Check the official HKU and JUPAS websites for any changes in requirements or scores.",
+            "- Monitor the 2025 admission scores (Median 29, LQ 28, UQ 31) as a benchmark.",
+            "- Attend HKU information sessions or open days if possible."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額:** 327",
+            "",
+            "**修讀年期:** 4年",
+            "",
+            "**首年學費:** HK$47,000",
+            "",
+            "**DSE核心科目:**",
+            "- 英文: 第3級",
+            "- 中文: 第3級",
+            "- 數學必修部分: 第3級",
+            "- 通識教育: 第2級",
+            "",
+            "**DSE選修科目:**",
+            "- 任何2個選修科目（來自甲類（包括M1/M2）或丙類）",
+            "",
+            "**入學分數公式:** 英文 + 數學 + 最佳3科",
+            "",
+            "**比重:** 無特定比重，所有科目按公式平等計算。",
+            "",
+            "**面試:** 需要（僅限獲篩選的申請人）",
+            "",
+            "**2025年入學分數:**",
+            "- 中位數: 29",
+            "- 下四分位數: 28",
+            "- 上四分位數: 31"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽:**",
+            "計算機工程工學士（JS6987）是香港大學電機電子工程系開辦的四年全日制課程。課程融合硬件與軟件設計，為學生在計算系統、嵌入式系統及網絡工程領域的職業生涯做好準備。",
+            "",
+            "**一年級:** 數學、物理、編程及工程入門基礎課程。學生亦需修讀大學核心課程。",
+            "",
+            "**二年級:** 數字邏輯、計算機架構、數據結構、算法及操作系統等核心課程。學生開始通過選修課進行專業化。",
+            "",
+            "**三年級:** 計算機網絡、嵌入式系統、VLSI設計及軟件工程等高級課題。學生需完成一個頂點設計項目。",
+            "",
+            "**四年級:** 畢業項目、高級選修課及可選實習。學生亦可修讀副修或雙主修。",
+            "",
+            "**獨特之處:**",
+            "- 強調硬件與軟件的協同設計",
+            "- 可使用先進實驗室，包括嵌入式系統實驗室及VLSI設計實驗室",
+            "- 與全球合作大學的交換計劃機會",
+            "- 與行業聯繫的畢業項目及實習"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**科技與工程:**",
+            "- 計算機硬件工程師",
+            "- 嵌入式系統工程師",
+            "- 網絡架構師",
+            "- 軟件開發人員",
+            "",
+            "**研究與開發:**",
+            "- 半導體或電子公司的研發工程師",
+            "- 大學實驗室或政府機構的研究助理",
+            "",
+            "**諮詢與管理:**",
+            "- 科技顧問",
+            "- IT項目經理",
+            "",
+            "**進修:**",
+            "- 計算機工程、電機工程或相關領域的碩士或博士學位",
+            "- 專業資格如特許工程師（CEng）"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點:** 香港大學主校園，香港薄扶林道。",
+            "",
+            "**設施:**",
+            "- 現代化演講廳及導修室",
+            "- 專業實驗室：嵌入式系統實驗室、VLSI設計實驗室、計算機網絡實驗室",
+            "- 大學圖書館擁有豐富的工程藏書",
+            "",
+            "**學生活動:**",
+            "- 工程學會及IEEE學生分會",
+            "- 黑客松、編程比賽及機械人工作坊",
+            "- 體育設施、文化學會及舍堂生活"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**競爭程度:** 高。該課程吸引眾多優秀申請人，中位入學分數為29分。",
+            "",
+            "**Band A統計（2025年）:**",
+            "- Band A申請人數: 259",
+            "- Band A錄取人數: 26",
+            "- Band A錄取率: ~10.0%",
+            "",
+            "**影響競爭力的因素:**",
+            "1. 需要較高的DSE分數（中位數29，下四分位數28，上四分位數31）",
+            "2. 獲篩選申請人的面試表現",
+            "3. 數學及選修科目（尤其是M1/M2、物理、資訊及通訊科技）的優異成績",
+            "4. 在JUPAS中的整體Band A選擇排名"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**學院卓越:**",
+            "- 電機電子工程系擁有世界級研究人員，專注於計算機架構、嵌入式系統及網絡等領域。",
+            "- 教職員屢獲殊榮，包括IEEE院士及港大傑出研究獎。",
+            "",
+            "**排名:**",
+            "- 港大工程學院在亞洲及全球工程學科排名中持續位居前列（例如QS世界大學學科排名）。",
+            "",
+            "**實驗室及研究中心:**",
+            "- 嵌入式系統實驗室",
+            "- VLSI設計實驗室",
+            "- 計算機網絡及分佈式系統實驗室",
+            "",
+            "**知名校友:**",
+            "- （資料庫中未提供具體校友姓名。）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金:**",
+            "- 根據學術成績頒發給優秀的JUPAS及非JUPAS學生。",
+            "- 例如：港大基金獎學金、工程學院獎學金。",
+            "",
+            "**工程學院獎學金:**",
+            "- 為學業成績優異的工程學生設立的各類獎學金。",
+            "",
+            "**學系獎學金:**",
+            "- 專為計算機工程學生設立，根據GPA及貢獻頒發。",
+            "",
+            "**外部獎學金:**",
+            "- 學生亦可申請政府或私人獎學金，如香港特別行政區政府獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的計算機工程策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "專注於英文、數學及最佳三科選修。入學公式為英文 + 數學 + 最佳3科，因此這五科的優異表現至關重要。",
+            "- 目標是英文及數學達到第5級或以上。",
+            "- 選擇與計算機工程相關的選修科：M1/M2、物理、資訊及通訊科技或化學。",
+            "",
+            "**2. 在數學（必修 + M1/M2）中脫穎而出**",
+            "",
+            "數學雖然平等計分，但對課程學習至關重要。在必修及M1/M2中取得高分可顯著提升總分。",
+            "- 練習歷屆試題，專注於微積分、代數及概率。",
+            "- 考慮修讀M1或M2以展示高階數學能力。",
+            "",
+            "**3. 建立強大的選修科目組合**",
+            "",
+            "最佳三科選修應包括與工程相關的科目。物理及資訊及通訊科技尤其受重視。",
+            "- 若修讀M1/M2，它會計入一個選修科。",
+            "- 避免選擇可能拉低最佳三科平均分的弱科。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "獲篩選的申請人需要面試。面試評估申請動機、解難能力及溝通技巧。",
+            "- 練習解釋你對計算機工程的興趣。",
+            "- 準備討論當前科技趨勢（人工智能、物聯網、網絡安全）。",
+            "- 準備關於課程及港大的問題。",
+            "",
+            "**5. 優化你的JUPAS Band A選擇**",
+            "",
+            "鑑於約10%的Band A錄取率，將JS6987放在Band A至關重要。仔細考慮備選方案。",
+            "- 若預測分數為28-31，將JS6987放在Band A。",
+            "- 使用Band B選擇相關課程（例如港大其他工程學或計算機科學）。",
+            "",
+            "**6. 善用OEA（其他經驗及成就）**",
+            "",
+            "OEA可增強你的申請，尤其當分數處於邊緣時。",
+            "- 包括相關比賽（例如機械人、編程黑客松）。",
+            "- 突出在STEM學會或項目中的領導角色。",
+            "- 提供自主學習的證據（網上課程、個人項目）。",
+            "",
+            "**7. 考慮你的備選課程**",
+            "",
+            "若分數低於下四分位數（28），需有穩妥的備選計劃。",
+            "- 考慮JS6901（工學學士）或JS6963（工程學及第二主修）。",
+            "- 亦考慮其他大學的相關課程（例如中大計算機工程）。",
+            "",
+            "**8. 了解課程結構**",
+            "",
+            "熟悉課程內容：基礎年、專業化、頂點項目及交流機會。",
+            "- 研究實驗室及教職員研究領域，以便在面試中對答如流。",
+            "- 計劃選修你感興趣的領域（例如嵌入式系統、VLSI）。",
+            "",
+            "**9. 緊貼入學趨勢**",
+            "",
+            "定期查看港大及JUPAS官方網站，了解要求或分數的變化。",
+            "- 以2025年入學分數（中位數29，下四分位數28，上四分位數31）作為基準。",
+            "- 盡可能參加港大資訊日或開放日。"
+          ]
+        }
+      }
+    },
+    "code": "JS6987",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 29,
+    "uq": 31,
+    "lq": 28
+  }
+}

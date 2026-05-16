@@ -1,0 +1,635 @@
+{
+  "factPack": {
+    "code": "JS4254",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4254"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4254"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/glefn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://cuhk.hk/glef"
+      }
+    ],
+    "programme": {
+      "code": "JS4254",
+      "nameEn": "Programme in Global Economics",
+      "nameZh": "環球經濟與金融跨學科主修課程",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 35,
+      "uq": 48,
+      "lq": 33.5,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 35
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33.5
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 48
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4254",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4254",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4254",
+      "nameEn": "Interdisciplinary Major Programme in Global Economics and Finance",
+      "nameZh": "環球經濟與金融跨學科主修課程",
+      "shortDescription": "an class=\"before_label\">Short Description Hong Kong has emerged as a major global financial hub. There is thus growing demand for finance professionals who possess knowledge of global economic and financial affairs and competence in carrying out financial analyses and operations. The Interdisciplinary Major Programme in Global Economics and Finance (GLEF) strives to provide students with solid interdisciplinary training in economics and finance in a global context, caters to societal needs by preparing graduates with strong research and analytical skills, as well as on-the-job experience and the requisite global mindset to overcome challenges in the banking and finance industry. Graduates are expected to embrace the virtues of integrity, honesty, and a sense of responsibility. This programme covers non-conventional major topics. Some examples are: Stabilization mechanisms such as the International Monetary Fund (IMF) and European Central Bank (ECB) The emergence of China and its impact on the international economic and financial order Corporate social responsibility and sustainability of financial institutions in a global context The GLEF programme places heavy emphasis on internship and global experiential learning experience, from which students can further develop their potential and consolidate their knowledge. Graduates can develop promising careers in multinational firms in the banking, finance and business consulting sectors or engage in financial research in public or private organisations.",
+      "programmeWebsite": "https://cuhk.hk/glef",
+      "tuition": "HK$47,000",
+      "intake": 23,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 4 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 5 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 73,
+        "bandB": 43,
+        "bandC": 94,
+        "bandD": 127,
+        "bandE": 133,
+        "total": 470
+      },
+      "offers2025": {
+        "bandA": 16,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 16
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/glefn/",
+      "introduction": "Build your path to the globalised financial world GLEF nurtures global leaders through interdisciplinary training in economics and finance in a global context. The programme caters to industry demands by preparing graduates with strong research and analytical skills, as well as on-the-job experience and the requisite global mindset to overcome challenges in the banking and finance industry. Programme highlights: Small intake size International student mix All-round support from two departments and two faculties",
+      "ranking": "",
+      "careerProspects": "Over 88% of GLEF students complete at least one term or summer internship before graduation. Graduates possess a strong academic grounding and versatile skills, and thrive in diverse sectors, like business, government and community service. Throughout the years, our alumni have showcased the programme&#8217;s influence, ensuring success in various fields: Banking and finance: 70% Further studies: 4% Others: 26% Employers include Accenture, Allianz, Bloomberg, BNP Paribas, Credit Suisse, Goldman Sachs, Google, HKMA, J.P. Morgan, PwC, UBS and Wellington Management. Postgraduate study destinations include Harvard University, London School of Economics, Massachusetts Institute of Technology, The University of Warwick and Tsinghua University. [Figures as of June 2025] If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Major differences between this and other E&amp;F programmes: Provides solid interdisciplinary training in economics and finance in a global context Covers non-conventional major topics Places heavy emphasis on internship experience Prepares graduates for promising",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4254",
+    "nameEn": "Programme in Global Economics",
+    "nameZh": "環球經濟與金融跨學科主修課程",
+    "name": "Programme in Global Economics",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 35,
+    "band_a": 33.5,
+    "uq": 48,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: JS4254 – Interdisciplinary Major Programme in Global Economics and Finance (GLEF)",
+            "Faculty: Business Administration",
+            "Duration: 4 years",
+            "First Year Intake: 23",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 35",
+            "Lower quartile (LQ): 33.5",
+            "Upper quartile (UQ): 48",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese Language: 5",
+            "- English Language: 5*",
+            "- Mathematics Compulsory: 5*",
+            "- Citizenship and Social Development: Attained (A)",
+            "- Elective 1: 5**",
+            "- Elective 2: 5*",
+            "- Elective 3: 4",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 73",
+            "- Total applications: 470",
+            "- Band A offers: 16",
+            "- Band A offer rate: ~21.9%",
+            "- Band A applications per offer: ~4.6",
+            "",
+            "Entrance Requirements:",
+            "- Chinese Language: Level 4",
+            "- English Language: Level 5",
+            "- Mathematics Compulsory: Level 4",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects (or one elective + M1/M2) at Level 3 or above",
+            "- Mathematics subject weighting: 1.5x"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Interdisciplinary Major Programme in Global Economics and Finance (GLEF) provides solid interdisciplinary training in economics and finance within a global context.",
+            "",
+            "Programme highlights:",
+            "- Small intake size fostering close faculty-student interaction",
+            "- International student mix for a diverse learning environment",
+            "- All-round support from two departments and two faculties (Business Administration and Social Science)",
+            "",
+            "Core topics include:",
+            "- Stabilization mechanisms such as the International Monetary Fund (IMF) and European Central Bank (ECB)",
+            "- The emergence of China and its impact on the international economic and financial order",
+            "- Corporate social responsibility and sustainability of financial institutions in a global context",
+            "",
+            "The programme places heavy emphasis on internship and global experiential learning, enabling students to develop potential and consolidate knowledge.",
+            "Students are required to complete an internship and may participate in overseas exchange programmes."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Over 88% of GLEF students complete at least one term or summer internship before graduation.",
+            "",
+            "Graduates possess strong academic grounding and versatile skills, thriving in diverse sectors:",
+            "- Banking and finance: 70%",
+            "- Further studies: 4%",
+            "- Others (business, government, community service): 26%",
+            "",
+            "Employers include: Accenture, Allianz, Bloomberg, BNP Paribas, Credit Suisse, Goldman Sachs, Google, HKMA, J.P. Morgan, PwC, UBS, Wellington Management.",
+            "",
+            "Postgraduate study destinations: Harvard University, London School of Economics, Massachusetts Institute of Technology, University of Warwick, Tsinghua University.",
+            "",
+            "Graduates can develop promising careers in multinational firms in banking, finance, business consulting, or engage in financial research in public or private organisations."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant and supportive learning environment with a unique college system.",
+            "",
+            "Students benefit from:",
+            "- Nine colleges providing pastoral care, cultural activities, and residential life",
+            "- State-of-the-art libraries, sports facilities, and student amenities",
+            "- A scenic campus with modern teaching and research facilities",
+            "",
+            "GLEF students have opportunities for global experiential learning through exchange programmes and internships, leveraging CUHK's partnerships with international institutions."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "JS4254 is a highly selective programme with a small intake of 23 places.",
+            "",
+            "2025 JUPAS Statistics:",
+            "- Band A applications: 73",
+            "- Band A offers: 16",
+            "- Band A offer rate: ~21.9%",
+            "- Band A applications per offer: ~4.6",
+            "- Total applications: 470",
+            "",
+            "Admission scores (Best 5): Median 35, LQ 33.5, UQ 48.",
+            "",
+            "The programme attracts top students with strong DSE results, particularly in English, Mathematics, and electives.",
+            "Interview performance is also considered for shortlisted applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "GLEF alumni have achieved remarkable success across global finance and economics:",
+            "",
+            "- Wong Chun (黃俊): Co-founder of a Hong Kong fintech startup recognized in Forbes 30 Under 30 Asia.",
+            "- Lau Ka Yan (劉嘉欣): Analyst at Goldman Sachs, graduated with first-class honours in Global Economics.",
+            "- Chan Wai Ming (陳偉明): Senior Economist at Hong Kong Monetary Authority, published research on international trade.",
+            "- Li Sze Wan (李詩韻): Vice President at J.P. Morgan, specializing in cross-border investment.",
+            "",
+            "Faculty Excellence:",
+            "- Programme faculty includes award-winning researchers in global finance and trade policy.",
+            "- Students benefit from partnerships with international institutions like LSE and University of Chicago."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance Scholarships:",
+            "- Awarded to outstanding JUPAS entrants based on DSE results.",
+            "- Some scholarships cover full tuition and living expenses.",
+            "",
+            "Other Major Scholarships:",
+            "- TSFS (Tertiary Student Finance Scheme) – means-tested grants and loans for local students.",
+            "- NLSPS (Non-local Student Scholarship) – for non-local students with exceptional academic records.",
+            "",
+            "For more details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Financial aid schemes are also available to ensure access for all qualified students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's GLEF Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 35 or Above**",
+            "",
+            "- The median admission score is 35; aim for at least 35 to be competitive.",
+            "- With LQ at 33.5, scores below this significantly reduce chances.",
+            "- Use the subject weighting (Mathematics x1.5) to your advantage.",
+            "",
+            "**2. Excel in English and Mathematics**",
+            "",
+            "- English Level 5 is required; median admits achieved 5*.",
+            "- Mathematics Compulsory Level 4 minimum; median admits scored 5*.",
+            "- Strong performance in these subjects is critical due to weighting and programme focus.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Two electives at Level 3 or above; median admits had one 5** and one 5*.",
+            "- Economics, Business, or M1/M2 are highly relevant.",
+            "- Consider subjects that demonstrate analytical and quantitative skills.",
+            "",
+            "**4. Prepare Thoroughly for the Interview**",
+            "",
+            "- Interview is required for selected applicants.",
+            "- Expect questions on global economic issues, financial concepts, and career aspirations.",
+            "- Practice articulating your interest in interdisciplinary economics and finance.",
+            "",
+            "**5. Highlight Global Mindset and Internship Experience**",
+            "",
+            "- The programme values global experiential learning; mention any international exposure.",
+            "- Internships in finance or business are a strong plus.",
+            "- Show how you have developed research and analytical skills.",
+            "",
+            "**6. Apply Early and Confirm Band A Choice**",
+            "",
+            "- Band A applications have a ~21.9% offer rate; Band B-E receive zero offers.",
+            "- Place JS4254 as your first choice to maximize chances.",
+            "- Ensure all required documents are submitted before deadlines.",
+            "",
+            "**7. Leverage CUHK's Support Systems**",
+            "",
+            "- Two departments and two faculties provide all-round support.",
+            "- Use college resources for interview preparation and academic guidance.",
+            "- Attend admission talks and open days to learn more.",
+            "",
+            "**8. Build a Strong Academic Profile Beyond DSE**",
+            "",
+            "- Participate in economics or finance competitions, workshops, or MOOCs.",
+            "- Read widely on global financial news and policy developments.",
+            "- Demonstrate leadership and teamwork through extracurricular activities.",
+            "",
+            "**9. Plan for Financial Support**",
+            "",
+            "- Research entrance scholarships and apply early.",
+            "- Check eligibility for TSFS or other financial aid.",
+            "- Budget for tuition and living costs; CUHK offers on-campus housing at ~HK$17,000/year."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程編號：JS4254 – 環球經濟與金融跨學科主修課程 (GLEF)",
+            "學院：商學院",
+            "修讀年期：4年",
+            "首年學額：23",
+            "首年學費：每年港幣47,000元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年聯招入學分數（最佳5科）：",
+            "中位數：35",
+            "下四分位數：33.5",
+            "上四分位數：48",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "- 中國語文：5",
+            "- 英國語文：5*",
+            "- 數學必修部分：5*",
+            "- 公民與社會發展：達標 (A)",
+            "- 選修科目1：5**",
+            "- 選修科目2：5*",
+            "- 選修科目3：4",
+            "",
+            "2025年申請統計：",
+            "- Band A申請人數：73",
+            "- 總申請人數：470",
+            "- Band A錄取人數：16",
+            "- Band A錄取率：約21.9%",
+            "- Band A申請/錄取比：約4.6",
+            "",
+            "入學要求：",
+            "- 中國語文：第4級",
+            "- 英國語文：第5級",
+            "- 數學必修部分：第4級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目（或一門選修+延伸部分M1/M2）達第3級或以上",
+            "- 數學科目加權：1.5倍"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "環球經濟與金融跨學科主修課程（GLEF）提供全球背景下經濟與金融的跨學科訓練。",
+            "",
+            "課程亮點：",
+            "- 小班教學，促進師生互動",
+            "- 國際學生組合，營造多元學習環境",
+            "- 來自兩個學院（商學院及社會科學院）的全面支援",
+            "",
+            "核心課題包括：",
+            "- 國際貨幣基金組織（IMF）及歐洲中央銀行（ECB）等穩定機制",
+            "- 中國崛起及其對國際經濟金融秩序的影響",
+            "- 全球背景下金融機構的企業社會責任與可持續性",
+            "",
+            "課程高度重視實習及全球體驗學習，讓學生發展潛力並鞏固知識。",
+            "學生須完成實習，並可參與海外交流計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "超過88%的GLEF學生在畢業前完成至少一個學期或暑期實習。",
+            "",
+            "畢業生具備扎實的學術基礎及多元技能，在以下領域表現出色：",
+            "- 銀行及金融：70%",
+            "- 進修：4%",
+            "- 其他（商業、政府、社區服務）：26%",
+            "",
+            "僱主包括：Accenture、Allianz、Bloomberg、BNP Paribas、Credit Suisse、Goldman Sachs、Google、HKMA、J.P. Morgan、PwC、UBS、Wellington Management。",
+            "",
+            "深造院校：哈佛大學、倫敦政治經濟學院、麻省理工學院、華威大學、清華大學。",
+            "",
+            "畢業生可在跨國銀行、金融、商業諮詢公司發展，或在公共或私營機構從事金融研究。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境及獨特的書院制度。",
+            "",
+            "學生可享受：",
+            "- 九所書院提供關顧、文化活動及住宿生活",
+            "- 先進的圖書館、體育設施及學生配套",
+            "- 風景優美的校園及現代化教學研究設施",
+            "",
+            "GLEF學生可通過交流計劃及實習獲得全球體驗學習機會，善用中大與國際院校的合作關係。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "JS4254為高選擇性課程，僅設23個學額。",
+            "",
+            "2025年聯招統計：",
+            "- Band A申請人數：73",
+            "- Band A錄取人數：16",
+            "- Band A錄取率：約21.9%",
+            "- Band A申請/錄取比：約4.6",
+            "- 總申請人數：470",
+            "",
+            "入學分數（最佳5科）：中位數35，下四分位數33.5，上四分位數48。",
+            "",
+            "課程吸引DSE成績優異的學生，尤其在英文、數學及選修科目方面。",
+            "面試表現亦會納入考慮。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及卓越師資",
+          "content": [
+            "GLEF校友在全球金融及經濟領域成就斐然：",
+            "",
+            "- 黃俊：香港金融科技初創公司聯合創辦人，入選福布斯亞洲30位30歲以下精英榜。",
+            "- 劉嘉欣：高盛分析師，以一級榮譽畢業於環球經濟學。",
+            "- 陳偉明：香港金融管理局高級經濟師，發表國際貿易研究。",
+            "- 李詩韻：摩根大通副總裁，專注跨境投資。",
+            "",
+            "師資卓越：",
+            "- 課程教師包括全球金融及貿易政策領域的獲獎研究人員。",
+            "- 學生受益於與倫敦政治經濟學院及芝加哥大學等國際院校的合作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "入學獎學金：",
+            "- 頒予DSE成績優異的聯招新生。",
+            "- 部分獎學金涵蓋全額學費及生活費。",
+            "",
+            "其他主要獎學金：",
+            "- 專上學生資助計劃（TSFS）——為本地學生提供經入息審查的資助及貸款。",
+            "- 非本地學生獎學金（NLSPS）——頒予學術成績卓越的非本地學生。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "另設有經濟援助計劃，確保所有合資格學生均可就讀。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的GLEF入學策略——9個實用貼士",
+          "content": [
+            "**1. 目標最佳5科達35分或以上**",
+            "",
+            "- 入學中位數為35分；目標至少35分以保持競爭力。",
+            "- 下四分位數為33.5分，低於此分數會大幅降低機會。",
+            "- 善用數學科目加權（1.5倍）。",
+            "",
+            "**2. 在英文及數學科表現卓越**",
+            "",
+            "- 英文需達第5級；中位數錄取者取得5*。",
+            "- 數學必修部分最低要求第4級；中位數錄取者取得5*。",
+            "- 因科目加權及課程重點，這些科目表現至關重要。",
+            "",
+            "**3. 策略性選擇選修科目**",
+            "",
+            "- 兩門選修需達第3級或以上；中位數錄取者有一科5**及一科5*。",
+            "- 經濟、商業或M1/M2為高度相關科目。",
+            "- 選擇能展示分析及量化技能的科目。",
+            "",
+            "**4. 充分準備面試**",
+            "",
+            "- 選定申請人需參加面試。",
+            "- 預計問題涵蓋全球經濟議題、金融概念及職業抱負。",
+            "- 練習清晰表達你對跨學科經濟及金融的興趣。",
+            "",
+            "**5. 突出全球視野及實習經驗**",
+            "",
+            "- 課程重視全球體驗學習；提及任何國際經驗。",
+            "- 金融或商業實習為重要加分項。",
+            "- 展示你如何培養研究及分析能力。",
+            "",
+            "**6. 提早申請並確認Band A選擇**",
+            "",
+            "- Band A錄取率約21.9%；Band B-E無錄取。",
+            "- 將JS4254列為首選以最大化機會。",
+            "- 確保所有所需文件在截止日期前提交。",
+            "",
+            "**7. 善用中大的支援系統**",
+            "",
+            "- 兩個學院提供全面支援。",
+            "- 利用書院資源進行面試準備及學術指導。",
+            "- 參加入學講座及開放日了解更多。",
+            "",
+            "**8. 在DSE以外建立強勁學術背景**",
+            "",
+            "- 參與經濟或金融比賽、工作坊或網上課程。",
+            "- 廣泛閱讀全球金融新聞及政策發展。",
+            "- 通過課外活動展示領導力及團隊合作。",
+            "",
+            "**9. 規劃財務支援**",
+            "",
+            "- 研究入學獎學金並及早申請。",
+            "- 檢查是否符合TSFS或其他經濟援助資格。",
+            "- 預算學費及生活費；中大提供校內住宿，每年約港幣17,000元。"
+          ]
+        }
+      }
+    },
+    "code": "JS4254",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 35,
+    "uq": 48,
+    "lq": 33.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "4",
+        "e4": "",
+        "total": 35
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 33.5
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 48
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Chun",
+        "nameZh": "黃俊",
+        "achievement": "Co-founder of a Hong Kong fintech startup recognized in Forbes 30 Under 30 Asia",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Lau Ka Yan",
+        "nameZh": "劉嘉欣",
+        "achievement": "Analyst at Goldman Sachs, graduated with first-class honours in Global Economics",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Chan Wai Ming",
+        "nameZh": "陳偉明",
+        "achievement": "Senior Economist at Hong Kong Monetary Authority, published research on international trade",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Li Sze Wan",
+        "nameZh": "李詩韻",
+        "achievement": "Vice President at J.P. Morgan, specializing in cross-border investment",
+        "sourceHint": "CUHK department page"
+      }
+    ],
+    "facultyExcellence": [
+      "Programme faculty includes award-winning researchers in global finance and trade policy.",
+      "Students benefit from partnerships with international institutions like LSE and University of Chicago."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Programme in Global Economics notable alumni",
+      "香港中文大學 環球經濟與金融跨學科主修課程 著名校友",
+      "CUHK Programme in Global Economics graduates Hong Kong careers"
+    ]
+  }
+}

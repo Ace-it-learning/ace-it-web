@@ -1,0 +1,116 @@
+{
+  "code": "JS4018",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4018"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4018"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/chlln/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://www.chi.cuhk.edu.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS4018",
+    "nameEn": "Chinese Language and",
+    "nameZh": "中國語言及文學",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 30.4,
+    "uq": null,
+    "lq": 29.2,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 30.4
+      },
+      "LQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 29.2
+      }
+    },
+    "subjectWeighting": "• Chinese (x 1.2)"
+  },
+  "jupas": {
+    "code": "JS4018",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4018",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4018",
+    "nameEn": "Chinese Language and Literature",
+    "nameZh": "中國語言及文學",
+    "shortDescription": "an class=\"before_label\">Short Description The Department of Chinese Language and Literature, which has the longest history at CUHK, is renowned for its excellence in preserving tradition and striving for innovation. The Department offers rigorous training in Chinese language and literature. The curriculum affords a close examination of the characteristic features of the Chinese language, an in-depth introduction to theories of language and linguistics, and critical study of classical and modern Chinese literature. Students are expected to acquire solid understanding of the field in general while specialising in their own areas of interest, such as Chinese phonology and grammar, Qin-Han textual studies, Tang-Song poetry, modern Chinese fiction, and creative writing— all under the guidance of our erudite faculty members. The Department has long been emphasising diversified learning. We are collaborating with the Department of Chinese Language and Literature at Peking University to offer a dual undergraduate degree programme starting from 2019/20, which could combine the advantages of the both institutions to strengthen the learning experience of our students. In the academic year 2022/23, a double major programme in partnership with the Department of Translation (CHLL&amp;TRANS) was introduced. This programme caters to students with a keen interest in both the theory and practice of C to E (Chinese to English) and E to C (English to Chinese) translation.",
+    "programmeWebsite": "https://www.chi.cuhk.edu.hk/",
+    "tuition": "HK$47,000",
+    "intake": 79,
+    "duration": "4 years",
+    "interview": null,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 324,
+      "bandB": 178,
+      "bandC": 306,
+      "bandD": 416,
+      "bandE": 366,
+      "total": 1590
+    },
+    "offers2025": {
+      "bandA": 79,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 79
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/chlln/",
+    "introduction": "Explore Your Journey with Our Chinese Language and Literature Programme The Department of Chinese Language and Literature offers rigorous training in Chinese language and literature. Our curriculum offers a detailed exploration of the unique characteristics of the Chinese language, an in-depth introduction to theories of language and linguistics, and critical study of ancient documents, and both classical and modern literature. Our students are expected to develop a strong foundational understanding of the field in general while specialising in their own areas of interest, providing a broad perspective, and they are free to choose and study topics of interest in various areas in Chinese language and literature. The programme has the following features: (1) core course requirements that establish a solid foundation for further study in Chinese language and literature; (2) more than 50 specialty courses, allowing students to tailor their academic journey and align it with their interests; (3) small-group teaching in creative-writing courses, fostering close teacher-student relationships; (4) a core course of independent research for final-year students, in which they learn research methodologies and critical approaches by planning and conducting research on a topic in preparation for a thesis written under the close supervision of a faculty member; and (5) writing courses that enhance the students’ creative-writing skills, resulting in our students consistently achieving recognition and awards in major literary competitions. Our graduates display an excellent command of both written and spoken Chinese, are well-versed in the great traditions of Chinese literature, and are thoroughly prepared to take on new challenges as they embark on their professional or academic careers.",
+    "ranking": "",
+    "careerProspects": "Our Chinese Language and Literature programme goes beyond traditional classroom learning, providing students with immersive experiences in the realm of Chinese language and literature. These experiences encompass global exchanges, internships, and study-abroad opportunities, allowing students to apply theoretical knowledge to real-world situations. Literary and philological concepts are brought to life through enriching internships, nurturing skills in critical analysis, effective communication and interpersonal relationships. As graduates, students emerge with a solid academic foundation and versatile skills that enable them to excel in a wide range of professional sectors, including business, government, media and community service. Their achievements stand as a testament to the programme&#8217;s capability to prepare individuals for excellence and accomplishment. Education Sector: approximately 82.1% enter education. Business Sector: about 10.3% enter business, excelling in management and publishing. Postgraduate Studies: around 44.4% pursue specialized fields through advanced studies. [Figures as of December 2023] For those with aspirations to advance their careers within the Chinese Language and Literature programme, postgraduate studies provide additional avenues for growth. Our dedicated faculty, deeply invested in our students&#8217; success, offer career consultation that provides individuals with vital skills and profound insights. Beyond traditional education, our programme in Chinese Language and Literature nurtures versatile professionals, prepared to excel in a dynamic world brimming with boundless opportunities. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "Craft your academic voyage in Chinese literature by shaping a curriculum that resonates with your literary passion. Evoke Your Inquisitiveness – Embrace a rich array of courses, and embark on a voyage of self-discovery through the world of Chinese literature. Pursue Literary Excellence – Immerse yourself deeply in your chosen realm of Chinese literary artistry, refining your expertise along the way. Diversified Programmes The Department is collaborating with the Department of Chinese Language and Literature at Peking University to offer a dual undergraduate degree programme starting in the 2019/20 academic year, which combines the advantages of both institutions to enhance the learning experience of our students. In the 2022/23 academic year, we expanded our offerings with a double major programme, in collaboration with CUHK’s Department of Translation. This programme caters for students with a keen interest in both the theory and practice of C to E (Chinese to English) and E to C (English to Chinese) translation. It&#8217;s designed to provide a comprehensive experience for students seeking expertise in translation within the context of Chinese literature and language studies.",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

@@ -255,9 +255,13 @@ class GamificationService {
                 }
             };
 
-            // Non-blocking history record
-            UserProfileService.recordTimelineEvent(uid, result.timelineEntry)
-                .catch(e => console.error("History record failed", e));
+            if (finalAmount > 0 || actionMetadata.alwaysRecordTimeline) {
+                try {
+                    await UserProfileService.recordTimelineEvent(uid, result.timelineEntry);
+                } catch (e) {
+                    console.error("History record failed", e);
+                }
+            }
 
             return result;
         };

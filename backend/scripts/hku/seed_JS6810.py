@@ -1,0 +1,341 @@
+import json
+import os
+import subprocess
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+from azure.cosmos import CosmosClient
+
+COSMOS_ENDPOINT = os.getenv("AZURE_COSMOS_ENDPOINT")
+COSMOS_KEY = os.getenv("AZURE_COSMOS_KEY")
+COSMOS_DATABASE = os.getenv("AZURE_COSMOS_DATABASE", "aceit")
+
+client = CosmosClient(COSMOS_ENDPOINT, credential=COSMOS_KEY)
+database = client.get_database_client(COSMOS_DATABASE)
+container = database.get_container_client("jupas_programmes")
+
+# JS6810 — BSocSc(Government and Laws) & LLB / 社會科學學士(政治學與法學)及法學士
+# Sources: JUPAS EN+TC, JUPAS 2025 scores (Best 6 | Median 37 | UQ 39 | LQ 36), HKU Admissions
+
+programme = {
+    "code": "JS6810",
+    "nameEn": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "nameZh": "社會科學學士(政治學與法學)及法學士",
+    "name": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "university": "香港大學",
+    "faculty": "社會科學學院",
+    "median": 37,
+    "band_a": 36,
+    "uq": 39,
+    "category": "law",
+}
+
+details = {
+    "code": "JS6810",
+    "university": "香港大學",
+    "en": {
+        "sections": {
+            "admission": {
+                "title": "Eligibility & Admission Criteria (DSE)",
+                "content": [
+                    "**Admission Score Formula**: Best 6 Subjects. Programme score considers Category A subjects and M1/M2 only. Median 37, Lower Quartile 36, Upper Quartile 39 (2025 admission scores).",
+                    "**Programme Entrance Requirements (higher than HKU general)**: Chinese Language **Level 4**, English Language **Level 5**, Mathematics (Compulsory Part) **Level 3**, Citizenship and Social Development Attained.",
+                    "**Elective Subjects**: ANY 1 SUBJECT (excluding Applied Learning) at Level 3, PLUS ANY 1 SUBJECT (excluding Applied Learning, Other Language) at Level 3; OR Mathematics Extended Module 1 or 2 at Level 3 plus ANY 1 SUBJECT (excluding Applied Learning, Other Language) at Level 3.",
+                    "**Notes**: Other Language subjects count as unspecified electives. Applied Learning may be supporting information only. HKDSE conversion: 5**=8.5, 5*=7, 5=5.5 (see admissions.hku.hk/apply/jupas).",
+                    "**Interview**: Yes — on a selective basis.",
+                    "**2025 Application Statistics**: Band A 94 applicants, Total 441 applicants.",
+                    "**2025 Offer Statistics (Main Round)**: 32 offers — all 32 to Band A applicants; 0 offers to Band B, C, D, or E.",
+                    "**First Year Intake**: 40 places.",
+                    "**Duration**: 5 years full-time (double degree pathway to LLB).",
+                    "**First Year Tuition**: HK$47,000 (UGC-funded for the standard curriculum years). **Note**: Study beyond the four-year norm for the LLB pathway may be on a self-financing basis with higher composition fees — see JUPAS programme page.",
+                ],
+            },
+            "curriculum": {
+                "title": "Programme Structure & Curriculum",
+                "content": [
+                    "**Programme Overview**: An integrated programme jointly offered by the Department of Politics and Public Administration and the Department of Law, combining multi-disciplinary training in **law and public affairs**.",
+                    "**Law & public affairs**: Study professional law subjects alongside social sciences — comparative politics, political philosophy and ethics, international relations, and public administration.",
+                    "**Flexible pathway (end of Year 2 Semester 2)**: Choose to (a) complete **BSocSc (Government and Laws)** with double majors in politics and legal studies after Year 4, or (b) continue the **five-year double degree** leading to **BSocSc (Government and Laws) and LLB**.",
+                    "**LLB & PCLL route**: The LLB award enables students intending to practise law to apply for the **Postgraduate Certificate in Laws (PCLL)** programme after graduation.",
+                    "**Departments**: Politics and Public Administration (Faculty of Social Sciences) + Faculty of Law teaching.",
+                    "**Experiential learning**: Mooting, policy projects, internships, and exchange opportunities vary by pathway — see faculty handbooks.",
+                    "**Degree**: BSocSc(Govt&Laws) & LLB (5-year track) or BSocSc(Govt&Laws) (4-year exit), UGC-funded subject to JUPAS fee notes.",
+                ],
+            },
+            "career": {
+                "title": "Career Pathways & Prospects",
+                "content": [
+                    "**Career breadth (JUPAS official)**: Alumni pursue careers in **law, public service, business, banking, education, journalism, tertiary education and research, the non-profit sector**, and more.",
+                    "**Legal practice**: LLB graduates may progress to PCLL and legal practice in Hong Kong (subject to professional admission requirements).",
+                    "**Public service & policy**: Government, public administration, policy research, and community organisations.",
+                    "**Private sector**: Business, banking, and consulting value the law–politics training combination.",
+                    "**Media & education**: Journalism, teaching, and research pathways.",
+                    "**Further studies**: Postgraduate study in law, political science, public policy, or related fields locally and overseas.",
+                ],
+            },
+            "campus": {
+                "title": "Campus Life & Student Experience",
+                "content": [
+                    "**Faculty**: Faculty of Social Sciences (with Faculty of Law for LLB components). Contact: +852 3917 2393.",
+                    "**Location**: HKU Main Campus, Pok Fu Lam — social sciences and law facilities.",
+                    "**Student life**: Politics and Law student societies, mooting and policy competitions, university halls, and campus-wide activities.",
+                    "**International exposure**: Exchange and off-campus learning supported by both faculties.",
+                    "**University resources**: Libraries, learning commons, counselling, and career services.",
+                ],
+            },
+            "competitiveness": {
+                "title": "Admission Competitiveness Analysis",
+                "content": [
+                    "**Competition Level**: VERY HIGH (★★★★★). Median Best 6 score **37** (2025); among the most selective HKU programmes.",
+                    "**Score bands (2025, Best 6)**: Median **37** | Lower Quartile **36** | Upper Quartile **39**. Aim at or above **median 37**; **39+** aligns with UQ.",
+                    "**Band A competition (2025)**: 94 Band A applicants for 32 main-round offers (~**34.0%** Band A offer rate). All 32 offers went to Band A — **0 offers to Bands B–E**.",
+                    "**Scale**: 441 total applicants; first-year intake **40** places — intense competition.",
+                    "**Higher DSE bar**: English **Level 5** and Chinese **Level 4** at programme entrance (stricter than general HKU minimums).",
+                    "**Interview**: Selective interviews — prepare motivation for law + public affairs and relevant OEA.",
+                    "**Critical factors**: Band A placement, Best 6 ≥ 37, strong English, and demonstrated interest in law/policy.",
+                ],
+            },
+            "alumni": {
+                "title": "Notable Alumni & Faculty",
+                "content": [
+                    "**Faculty of Social Sciences**: **30,000+ alumni** worldwide; QS World University Rankings 2026 — Faculty of Social Sciences **22nd globally**, **5th in Asia**.",
+                    "**Dual training**: Graduates hold interdisciplinary strengths in **government, law, and public administration** valued in Hong Kong and internationally.",
+                    "**Alumni destinations (official JUPAS)**: Law, public service, business, banking, education, journalism, research, and NGOs.",
+                    "**Faculty of Law**: HKU Law is a leading law school in Asia — LLB pathway connects to Hong Kong legal profession via PCLL.",
+                    "**Student voices**: See Faculty of Social Sciences **Alumni Spotlight** and Law faculty pages for graduate profiles.",
+                    "**Research & policy**: Graduates contribute to think tanks, government bureaux, and international organisations.",
+                ],
+            },
+            "scholarships": {
+                "title": "Scholarships & Financial Aid",
+                "content": [
+                    "**HKU scholarships**: Merit-based scholarships for outstanding JUPAS applicants; top HKDSE scorers may receive full tuition and living-expense support.",
+                    "**Financial assistance**: Additional aid for talented students in financial need.",
+                    "**Government aid**: TSFS and NLSFT/NLSPS through the Student Finance Office.",
+                    "**Self-financing years**: If you continue into LLB years beyond the standard UGC-funded period, check composition fees and means-tested / non-means-tested loan eligibility on JUPAS and HKU sites.",
+                    "**Faculty awards**: Check Faculty of Social Sciences and Faculty of Law websites for updated prizes and scholarships.",
+                ],
+            },
+            "tips": {
+                "title": "Ace Sir's HKU BSocSc(Govt&Laws) & LLB Strategy",
+                "content": [
+                    "**Ace Sir's HKU Government and Laws + LLB Strategy — 9 Actionable Tips:**",
+                    "",
+                    "**1. Band A is Mandatory**",
+                    "In 2025, **100% of main-round offers (32/32) went to Band A** applicants among 94 Band A choices. If JS6810 is your goal, you **must** place it in Band A — Bands B–E received zero offers.",
+                    "",
+                    "**2. Target Best 6 ≥ 37 (Know the Quartiles)**",
+                    "2025 admitted scores: **Median 37 | LQ 36 | UQ 39**. This is a **Best 6** formula counting Category A + M1/M2 only.",
+                    "Scoring reminder: 5**=8.5, 5*=7, 5=5.5, 4=4, 3=3. Six strong subjects at Level 4–5 typically land you near the competitive band; **39+** aligns with upper-quartile entrants.",
+                    "",
+                    "**3. English Level 5 is Your First Filter**",
+                    "General HKU entry is English 3; **this programme requires English 5**. Many strong students are eliminated before scores are even compared.",
+                    "Build: daily English news analysis (policy/legal angles), timed essay practice, oral presentation in class, and past-paper drilling for Paper 1 & 2.",
+                    "",
+                    "**4. Chinese Level 4 — Don't Underestimate It**",
+                    "Chinese 4 is higher than general HKU (Level 3). Legal and policy work in Hong Kong requires precise Chinese for statutes, consultation papers, and public communication.",
+                    "",
+                    "**5. Understand the Two Pathways Before You Apply**",
+                    "At the **end of Year 2 Semester 2**, you choose:",
+                    "- **4-year exit**: BSocSc (Government and Laws) with politics + legal studies majors — no LLB.",
+                    "- **5-year track**: BSocSc (Government and Laws) **and LLB** — required for **PCLL** and the barrister/solicitor route in Hong Kong.",
+                    "Years beyond the standard four-year UGC-funded period may be **self-financing** with higher composition fees — budget and discuss with family early.",
+                    "",
+                    "**6. Prepare for the Selective Interview**",
+                    "Not everyone is interviewed. If shortlisted, expect questions such as:",
+                    "- Why both **politics/public administration and law**, not JS6406 (LLB only)?",
+                    "- A current social or legal issue you care about — can you argue both sides?",
+                    "- How your OEA shows leadership, ethics, and service?",
+                    "- Do you understand what **PCLL** is and whether you genuinely want legal practice?",
+                    "Read one quality op-ed weekly; join debate, Model UN, or mooting if possible.",
+                    "",
+                    "**7. Build a Law + Policy OEA Portfolio**",
+                    "HKU weighs Other Experiences and Achievements. Strong examples:",
+                    "- Mock trial / mooting / debate championships",
+                    "- Internship at NGO, LegCo office, law firm (even short shadowing)",
+                    "- Community project addressing a local policy issue (document impact)",
+                    "- Legal education outreach or justice-related service",
+                    "Quality and reflection matter more than a long list of unrelated activities.",
+                    "",
+                    "**8. Know the Competition Reality**",
+                    "~**34%** of Band A applicants received a main-round offer (32 offers ÷ 94 Band A). Only **40** first-year places for **441** total applicants.",
+                    "You need **top-tier Best 6** plus **programme-specific subject floors** — not just meeting general HKU minimums.",
+                    "",
+                    "**9. Have a Backup Plan**",
+                    "JS6810 is among HKU's most selective programmes. Consider:",
+                    "- **JS6406** (LLB) — law-focused if your primary goal is legal practice",
+                    "- **JS6078** (BA & LLB) — alternative dual-degree law pathway",
+                    "- **JS6717** (BSocSc) — broader social sciences if scores are closer to median ~31",
+                    "- **JS6808** (BBA Law + LLB) — only if your scores are exceptionally high (historically much higher median)",
+                    "Choose backups that match your **true** career intent, not just lower scores.",
+                ],
+            },
+        }
+    },
+    "zh": {
+        "sections": {
+            "admission": {
+                "title": "入學要求與計分詳情 (DSE)",
+                "content": [
+                    "**入學計分公式**：最佳六科。計分考慮甲類科目及M1/M2。中位數37分，下四分位數36分，上四分位數39分（2025年入學分數）。",
+                    "**課程入學要求（高於港大一般要求）**：中國語文**第4級**、英國語文**第5級**、數學（必修部分）**第3級**、公民與社會發展科達標。",
+                    "**選修科目**：任何1科（不包括應用學習）達第3級，另加任何1科（不包括應用學習、其他語言）達第3級；或M1/M2達第3級加任何1科（不包括應用學習、其他語言）達第3級。",
+                    "**備註**：其他語言科目作非指定選修。應用學習可作輔助資料。文憑試換算：5**=8.5、5*=7、5=5.5。",
+                    "**面試**：需要——按遴選基準邀請。",
+                    "**2025年申請統計**：Band A申請者94人，總申請者441人。",
+                    "**2025年取錄統計（正選輪）**：取錄32人——全部32人均為Band A；Band B至E為0人。",
+                    "**首年學額**：40人。",
+                    "**修讀年期**：5年全日制（雙學位修讀法學士）。",
+                    "**首年學費**：港幣47,000元（教資會資助年期）。**注意**：修讀超逾四年標準學制的法學士部分可能須繳交較高自資學費——見聯招課程頁。",
+                ],
+            },
+            "curriculum": {
+                "title": "課程結構與內容",
+                "content": [
+                    "**課程概覽**：政治與公共行政學系與法律學院合辦的整合課程，提供**法律與公共事務**跨學科教育。",
+                    "**法律與公共事務**：修讀專業法律科目及社會科學（比較政治、政治哲學與倫理、國際關係、公共行政等）。",
+                    "**靈活路徑（第二年下學期末）**：（甲）四年後取得**社會科學學士（政治學與法學）**雙主修；或（乙）修畢**五年雙學位**，同時取得**社會科學學士（政治學與法學）及法學士**。",
+                    "**法學士與PCLL**：法學士學位為有意從事法律專業的學生提供修讀**法律深造證書（PCLL）**的基礎。",
+                    "**開辦單位**：政治與公共行政學系（社會科學學院）及法律學院。",
+                    "**體驗式學習**：模擬法庭、政策項目、實習及交流因路徑而異——見學院手冊。",
+                    "**學位**：BSocSc(Govt&Laws)及LLB（五年）或BSocSc(Govt&Laws)（四年退出）。",
+                ],
+            },
+            "career": {
+                "title": "職業前景與出路",
+                "content": [
+                    "**出路廣泛（聯招官方）**：畢業生投身**法律、公共服務、工商、銀行、教育、新聞、高等教育及研究、非牟利機構**等。",
+                    "**法律專業**：法學士畢業生可銜接PCLL及香港法律執業（須符合專業入職要求）。",
+                    "**公共服務及政策**：政府、公共行政、政策研究及社區機構。",
+                    "**私營機構**：工商及銀行業重視法律與政治學訓練。",
+                    "**傳媒及教育**：新聞、教學及研究。",
+                    "**升學**：於本地或海外修讀法律、政治學、公共政策等研究生課程。",
+                ],
+            },
+            "campus": {
+                "title": "校園生活與學生體驗",
+                "content": [
+                    "**學院**：社會科學學院（法學士部分由法律學院授課）。聯絡：+852 3917 2393。",
+                    "**地點**：薄扶林主校園。",
+                    "**學生生活**：政治及法律學會、模擬法庭及政策比賽、宿舍及全港大活動。",
+                    "**國際視野**：兩院均支援交流及校外學習。",
+                    "**大學資源**：圖書館、自修空間、輔導及就業服務。",
+                ],
+            },
+            "competitiveness": {
+                "title": "入學競爭力分析",
+                "content": [
+                    "**競爭程度**：極高（★★★★★）。2025年最佳六科中位數**37分**，屬港大最嚴苛課程之一。",
+                    "**分數區間（2025，最佳六科）**：中位數**37**｜下四分位數**36**｜上四分位數**39**。宜達中位數37分或以上。",
+                    "**Band A競爭（2025）**：94名Band A申請者競爭32個正選輪學額（約**34.0%** Band A錄取率）。**全部32個取錄均為Band A**。",
+                    "**申請規模**：441人申請；首年學額40人。",
+                    "**較高文憑試門檻**：英國語文**第5級**、中國語文**第4級**（高於港大一般入學要求）。",
+                    "**面試**：按遴選基準進行——須準備法律與公共事務志向及OEA。",
+                    "**成功要素**：Band A、最佳六科≥37、英語出色、法律/政策相關經驗。",
+                ],
+            },
+            "alumni": {
+                "title": "知名校友及教職員",
+                "content": [
+                    "**社會科學學院**：**逾30,000名校友**；QS 2026社會科學學院**全球第22、亞洲第5**。",
+                    "**跨學科優勢**：畢業生具**政府、法律及公共行政**綜合能力。",
+                    "**校友去向（聯招官方）**：法律、公共服務、工商、銀行、教育、新聞、研究及非牟利機構。",
+                    "**法律學院**：港大法律學院為亞洲頂尖法學府之一——法學士銜接PCLL及香港法律專業。",
+                    "**校友分享**：見社會科學學院「校友聚焦」及法律學院畢業生分享。",
+                    "**政策與研究**：畢業生於智庫、政府決策局及國際機構發展。",
+                ],
+            },
+            "scholarships": {
+                "title": "獎學金及經濟援助",
+                "content": [
+                    "**港大獎學金**：聯招成績優異者可獲優異獎學金；最高成績考生可獲全額學費及生活費資助。",
+                    "**經濟援助**：有經濟困難的優秀學生可申請額外援助。",
+                    "**政府資助**：TSFS及免入息審查貸款計劃。",
+                    "**自資年期**：修讀法學士超逾標準四年學制時，須查核學費及貸款安排。",
+                    "**學院獎項**：見社會科學學院及法律學院網站最新獎學金資訊。",
+                ],
+            },
+            "tips": {
+                "title": "Ace Sir 港大政治學與法學+法學士攻略",
+                "content": [
+                    "**Ace Sir 港大政治學與法學+法學士攻略 — 9個實戰貼士：**",
+                    "",
+                    "**1. 必須放 Band A**",
+                    "2025年正選輪**32個取錄全部來自Band A**（94名Band A申請者）。有志JS6810，**務必**將本課程放於Band A——Band B至E為零取錄。",
+                    "",
+                    "**2. 最佳六科目標≥37分（掌握四分位數）**",
+                    "2025年入學分數：**中位數37｜下四分位36｜上四分位39**。計分為**最佳六科**（甲類科目及M1/M2）。",
+                    "換算：5**=8.5、5*=7、5=5.5。六科穩定在第4–5級通常接近競爭區間；達**39分+**接近上四分位。",
+                    "",
+                    "**3. 英語第5級是第一道關卡**",
+                    "港大一般入學為英語第3級；**本課程要求第5級**。不少成績優異者因未達標而未被考慮。",
+                    "建議：每日閱讀英文時事（政策／法律角度）、限時作文、課堂口語發表及操卷。",
+                    "",
+                    "**4. 中國語文第4級不可輕視**",
+                    "高於一般港大（第3級）。政策及法律工作須精準中文理解法例、諮詢文件及公眾溝通。",
+                    "",
+                    "**5. 報考前弄清兩條修讀路徑**",
+                    "**第二年下學期末**選擇：",
+                    "- **四年退出**：社會科學學士（政治學與法學）雙主修——**無法學士**。",
+                    "- **五年雙學位**：同時取得社會科學學士（政治學與法學）**及法學士**——銜接**PCLL**及香港法律執業途徑。",
+                    "超逾四年標準學制部分可能為**自資**及較高學費——及早與家人規劃。",
+                    "",
+                    "**6. 準備選擇性面試**",
+                    "並非所有申請者獲面試。若獲邀，可能問及：",
+                    "- 為何選**政治與法律**而非JS6406（純法學士）？",
+                    "- 你關注的社會或法律議題——能否從兩方論述？",
+                    "- OEA如何展示領導力、品德與服務？",
+                    "- 是否了解**PCLL**及是否真正有志法律執業？",
+                    "每週閱讀一篇質素評論；參與辯論、模聯或模擬法庭。",
+                    "",
+                    "**7. 建立「法律+政策」OEA組合**",
+                    "港大重視其他經驗與成就。有力例子：",
+                    "- 模擬法庭／辯論／模聯比賽",
+                    "- 非政府機構、立法會議員辦公室、律所實習（即使短期）",
+                    "- 針對本地政策議題的社區項目（記錄成效）",
+                    "- 法律教育或公義相關服務",
+                    "重質不重量，反思比堆砌活動名稱更重要。",
+                    "",
+                    "**8. 認清競爭現實**",
+                    "約**34%** Band A申請者獲正選輪取錄（32÷94）。首年學額**40**，總申請**441**人。",
+                    "須**最佳六科頂尖**兼達**課程指定科目要求**——僅達一般港大最低線並不足夠。",
+                    "",
+                    "**9. 要有後備方案**",
+                    "JS6810屬港大最嚴苛課程之一。可考慮：",
+                    "- **JS6406**（法學士）——以法律執業為首要目標",
+                    "- **JS6078**（文學士及法學士）——另一雙學位法律路徑",
+                    "- **JS6717**（社會科學學士）——分數接近中位數約31時的較廣選擇",
+                    "- **JS6808**（工商管理學士（法律）及法學士）——僅當成績極高（歷年中位數更高）",
+                    "後備課程應符合**真正職業志向**，不只為求較低分數。",
+                ],
+            },
+        }
+    },
+}
+
+payload_path = os.path.join(os.path.dirname(__file__), "..", "jupas", "payload_JS6810.json")
+with open(payload_path, "w", encoding="utf-8") as f:
+    json.dump(
+        {"programme": programme, "details": details, "scores": {"median": 37, "uq": 39, "lq": 36}},
+        f,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+validate_script = os.path.join(os.path.dirname(__file__), "..", "jupas", "validateProgramme.js")
+result = subprocess.run(["node", validate_script, payload_path], capture_output=True, text=True)
+if result.returncode != 0:
+    print(result.stdout, result.stderr)
+    sys.exit(1)
+print(result.stdout.strip())
+
+container.upsert_item(
+    {**programme, "id": f"prog_{programme['code']}", "pk": "programmes", "type": "programme"}
+)
+container.upsert_item(
+    {**details, "id": f"detail_{details['code']}", "pk": "details", "type": "programme_detail"}
+)
+print(f"[Seed] {programme['code']} - {programme['nameEn']} / {programme['nameZh']} - Done!")

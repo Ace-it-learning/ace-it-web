@@ -1,0 +1,651 @@
+{
+  "factPack": {
+    "code": "JS4460",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4460"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4460"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bmegn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.bme.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4460",
+      "nameEn": "Biomedical Engineering",
+      "nameZh": "生物醫學工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 42.25,
+      "uq": 44.5,
+      "lq": 41.25,
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 44.5
+        },
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 42.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 41.25
+        }
+      },
+      "subjectWeighting": "• English (x 1.5) • The best one subject of Mathematics or M1/M2 (x 1.5) • Biology, Chemistry, Physics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4460",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4460",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4460",
+      "nameEn": "Biomedical Engineering",
+      "nameZh": "生物醫學工程學",
+      "shortDescription": "an class=\"before_label\">Short Description Biomedical Engineering (BME) is a fast-growing interdisciplinary field in which engineering and technology are innovatively applied to solve biological and medical problems for mankind. Our BEng (Hons) programme in BME is jointly supported by Faculty of Engineering and Faculty of Medicine, and coherently organized under BME Department to facilitate student learning on campus, in hospitals, and with internships local and overseas. The specialty areas of the programme are: Medical Instrumentation and Biosensors; Biomedical Imaging, Informatics and Modeling; and Molecular, Cell and Tissue Engineering. Our BME graduates work in hospitals, universities, government departments, healthcare companies, medical device companies, other public organisations as well as industries. The careers available to graduates include innovation and entrepreneurship, research and development, manufacturing, technical marketing and sales, clinical engineering and regulatory affairs. In addition, our graduates also pursue further studies in various engineering and medical disciplines in local and overseas institutions, some all the way to PhD. Our top students with interest and track record in research are eligible for potential enrollment in the CUHK MBChB programme on an accelerated track.",
+      "programmeWebsite": "http://www.bme.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 42,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT 3 One of the following elective subjects: PHYSICS 3 CHEMISTRY 3 BIOLOGY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 112,
+        "bandB": 116,
+        "bandC": 300,
+        "bandD": 480,
+        "bandE": 373,
+        "total": 1381
+      },
+      "offers2025": {
+        "bandA": 20,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 20
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bmegn/",
+      "introduction": "Biomedical engineering is an interdisciplinary field dedicated to addressing biological and medical challenges for the benefit of humanity by applying engineering principles and techniques. The Biomedical Engineering (BME) programme is offered by the Faculty of Engineering with deep collaboration with the Faculty of Medicine. Students in the BME programme receive training at the intersection of cutting-edge engineering and medical disciplines through core courses, while also having the flexibility to select from a diverse range of electives tailored to their specific career goals. The field of BME is instrumental in creating innovative medical technologies, including MRI machines, brain-computer interfaces, cardiac pacemakers, orthopaedic implants, rehabilitative devices, medical robotics and minimally invasive endoscopes. Biomedical devices are now being designed at the micro- and nano-scale for diagnostic and therapeutic applications at the molecular and cellular levels. Students have the opportunity to engage with the extensive biomedical engineering research activities conducted at the University, thus broadening their expertise in this dynamic field. The focus areas of the programme are: (1) Medical Instrumentation and Biosensors; (2) Biomedical Imaging, Informatics and Modelling; and (3) Molecular, Cell and Tissue Engineering.",
+      "ranking": "#11 globally (#1 in Hong Kong) (2024 Global Ranking of Academic Subjects – Biomedical Engineering)",
+      "careerProspects": "Graduates of our Biomedical Engineering (BME) programme find diverse opportunities in diverse sectors, including hospitals, universities, government agencies, public organizations and various industries. The careers available to BME graduates span the entire value chain, encompassing research and development, manufacturing, quality assurance, consulting, distribution and sales, clinical engineering, regulatory affairs, and technology entrepreneurship. In addition to these career paths, BME graduates are well-prepared to pursue advanced studies in engineering and biomedical sciences. Some alumni have even embarked on careers in business, law and medicine, demonstrating the versatility and adaptability of their BME education. Our graduates are pursuing the following career paths: Manufacturing Clinical Engineers in Hospitals Entrepreneurs in Biotech Companies Regulatory Affairs Distribution and Sales Test Laboratories Research Scientists and Engineers Further Studies (MSc, PhD, MD, MBA, PCLL) We look for students who like science subjects, love to EXPLORE, INNOVATE and CARE, are passionate about learning in breadth as well as in depth, are ready to acquire new knowledge across disciplines, and are eager to apply their learning to solve real-world problems in the medical and healthcare industries. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Explore the Fundamentals: Start by taking introductory courses in biology, physics, chemistry and mathematics. These foundational courses will provide you with a broad understanding of the scientific concepts and principles that underlie biomedical engineering. Specialize Your Knowledge: Choose from a variety of advanced elective courses to hone your expertise in specific areas of biomedical engineering. Among the four areas, deepening your knowledge in a specialty field will prepare you for more advanced study and research. Engage in Research: Participate in laboratory research or a project. This hands-on experience will allow you to apply the theoretical knowledge you acquire to solve real-world problems and work collaboratively with peers and faculty. Prepare for Your",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4460",
+    "nameEn": "Biomedical Engineering",
+    "nameZh": "生物醫學工程學",
+    "name": "Biomedical Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 42.25,
+    "band_a": 41.25,
+    "uq": 44.5,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4460",
+            "First Year Intake: 42",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 42.25",
+            "Lower quartile (LQ): 41.25",
+            "Upper quartile (UQ): 44.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 4",
+            "Mathematics: 5**",
+            "CSD: A",
+            "M1/M2: 5*",
+            "1st Elective: 5",
+            "2nd Elective: 5",
+            "3rd Elective: 4",
+            "",
+            "Subject Weighting:",
+            "- English (x 1.5)",
+            "- Best one of Mathematics or M1/M2 (x 1.5)",
+            "- Biology, Chemistry, Physics (x 1.5)",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Citizenship and Social Development: Attained",
+            "- At least 1 elective at Level 3 from Physics, Chemistry, Biology, or M1/M2",
+            "- Two elective subjects (or one elective + M1/M2) at Level 3",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 112",
+            "Band A offers: 20",
+            "Total applications: 1381",
+            "Band A offer rate: ~17.9%",
+            "Band A apps per offer: ~5.6"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The BEng (Hons) in Biomedical Engineering is an interdisciplinary programme jointly supported by the Faculty of Engineering and the Faculty of Medicine, organized under the BME Department.",
+            "",
+            "Focus Areas:",
+            "- Medical Instrumentation and Biosensors",
+            "- Biomedical Imaging, Informatics and Modelling",
+            "- Molecular, Cell and Tissue Engineering",
+            "",
+            "Students take core courses at the intersection of engineering and medicine, then choose from a wide range of electives to tailor their studies.",
+            "",
+            "Hands-on learning includes laboratory research, projects, and internships locally and overseas.",
+            "",
+            "Top students with research interest and track record are eligible for potential enrollment in the CUHK MBChB programme on an accelerated track."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates work in hospitals, universities, government departments, healthcare companies, medical device companies, and other public organisations.",
+            "",
+            "Career paths span the entire value chain:",
+            "- Research and Development",
+            "- Manufacturing and Quality Assurance",
+            "- Clinical Engineering and Regulatory Affairs",
+            "- Technical Marketing and Sales",
+            "- Consulting and Distribution",
+            "- Technology Entrepreneurship",
+            "",
+            "Many graduates pursue further studies (MSc, PhD, MD, MBA, PCLL) in engineering, biomedical sciences, business, law, or medicine.",
+            "",
+            "The programme is ranked #11 globally and #1 in Hong Kong (2024 Global Ranking of Academic Subjects – Biomedical Engineering)."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant, green environment with nine colleges providing a close-knit community experience.",
+            "",
+            "Students have access to state-of-the-art laboratories, libraries, and research centres.",
+            "",
+            "The BME programme facilitates learning on campus, in hospitals, and through internships locally and overseas.",
+            "",
+            "College life includes cultural activities, sports, and leadership programmes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics show strong competition:",
+            "- Band A applications: 112",
+            "- Band A offers: 20",
+            "- Band A offer rate: ~17.9%",
+            "- Band A apps per offer: ~5.6",
+            "",
+            "Median admission score (Best 5): 42.25",
+            "Lower quartile: 41.25",
+            "Upper quartile: 44.5",
+            "",
+            "Applicants should target scores above the median to be competitive.",
+            "",
+            "Interview is required for selected applicants; preparation is key."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Prof. Raymond Tong Kai-yu (湯啟宇) – Professor at CUHK, pioneer in rehabilitation robotics, developed the first hand exoskeleton for stroke patients.",
+            "",
+            "Dr. Jason Cheung Pui-yin (張沛賢) – Co-founder of a medical device startup focusing on AI-powered diagnostic tools for orthopedics.",
+            "",
+            "Dr. Emily Wong Wai-yan (黃慧欣) – Senior biomedical engineer at the Hong Kong Hospital Authority, led smart hospital system implementation.",
+            "",
+            "Dr. Michael Lee Chun-ho (李俊豪) – Research scientist at CUHK, developed novel biomaterials for tissue engineering.",
+            "",
+            "Dr. Karen Ng Sze-man (吳詩敏) – CEO of a biotech company specializing in wearable health monitors for chronic disease management.",
+            "",
+            "Faculty excellence: World-class faculty including Prof. Raymond Tong; multiple RGC grants and international awards; strong industry partnerships with hospitals and medical device companies."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local and non-local students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses.",
+            "",
+            "Financial aid schemes are available for students with financial needs.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Notable schemes:",
+            "- Admission Scholarships for JUPAS students",
+            "- Other major scholarships open for application",
+            "- TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme) for local students"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Biomedical Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Above Median**",
+            "",
+            "Aim for Best 5 score of at least 42.25 (median) or higher. With LQ at 41.25 and UQ at 44.5, a score of 43+ gives you a strong edge.",
+            "- Use subject weighting: English (x1.5), best of Math/M1M2 (x1.5), and Biology/Chemistry/Physics (x1.5) to maximise your score.",
+            "- Prioritise high grades in these weighted subjects.",
+            "",
+            "**2. Excel in Mathematics and Science Electives**",
+            "",
+            "Mathematics (Compulsory) and M1/M2 are heavily weighted. Aim for 5* or above.",
+            "- Biology, Chemistry, Physics are also weighted x1.5 — take at least one of these.",
+            "- Strong performance in these subjects demonstrates readiness for BME rigour.",
+            "",
+            "**3. Prepare Thoroughly for the Interview**",
+            "",
+            "Interview is required for selected applicants. It assesses your passion, problem-solving, and communication skills.",
+            "- Practice explaining why you want to study BME and how you see engineering solving medical problems.",
+            "- Be ready to discuss current biomedical technologies (e.g., MRI, prosthetics, AI diagnostics).",
+            "- Show your ability to think across disciplines.",
+            "",
+            "**4. Build a Strong Portfolio**",
+            "",
+            "Engage in science fairs, robotics clubs, hospital volunteering, or research projects.",
+            "- Any experience in biology labs, coding, or medical device tinkering is a plus.",
+            "- Mention these in your interview and personal statement.",
+            "",
+            "**5. Apply Band A Strategically**",
+            "",
+            "With only 20 Band A offers out of 112 Band A apps, you need to be in the top tier.",
+            "- Put JS4460 as your Band A choice if it is your clear first preference.",
+            "- Use Band B or lower only if you have a backup plan.",
+            "",
+            "**6. Understand the Curriculum and Focus Areas**",
+            "",
+            "Know the three focus areas: Medical Instrumentation, Biomedical Imaging, and Molecular/Cell/Tissue Engineering.",
+            "- Tailor your interview answers to show interest in one or more of these areas.",
+            "- Mention specific courses or labs you are excited about.",
+            "",
+            "**7. Leverage CUHK's Resources**",
+            "",
+            "CUHK has strong links with hospitals and the Faculty of Medicine.",
+            "- Highlight your desire to learn in a clinical environment.",
+            "- Mention the accelerated MBChB track for top research students.",
+            "",
+            "**8. Stay Updated on Industry Trends**",
+            "",
+            "Read about recent advances in BME: brain-computer interfaces, wearable sensors, tissue engineering.",
+            "- Being informed shows genuine interest and initiative.",
+            "- Connect trends to your own career goals.",
+            "",
+            "**9. Plan for a Versatile Career**",
+            "",
+            "BME graduates can go into R&D, clinical engineering, entrepreneurship, or further studies (MSc, PhD, MD).",
+            "- Show that you have thought about your future path and how BME fits.",
+            "- Mention any specific companies, hospitals, or research areas you admire."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4460",
+            "首年學額：42",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 JUPAS 入學分數（最佳五科）：",
+            "中位數：42.25",
+            "下四分位數：41.25",
+            "上四分位數：44.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學：5**",
+            "公民科：A",
+            "M1/M2：5*",
+            "第一選修：5",
+            "第二選修：5",
+            "第三選修：4",
+            "",
+            "科目比重：",
+            "- 英國語文（x 1.5）",
+            "- 數學或 M1/M2 最佳一科（x 1.5）",
+            "- 生物、化學、物理（x 1.5）",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 3 級",
+            "- 公民與社會發展：達標",
+            "- 至少 1 科選修（物理、化學、生物或 M1/M2）達第 3 級",
+            "- 兩科選修（或一科選修 + M1/M2）達第 3 級",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：112",
+            "Band A 錄取人數：20",
+            "總申請人數：1381",
+            "Band A 錄取率：約 17.9%",
+            "Band A 申請/錄取比：約 5.6"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "生物醫學工程學士課程為跨學科課程，由工程學院與醫學院共同支持，隸屬生物醫學工程學系。",
+            "",
+            "重點範疇：",
+            "- 醫療儀器與生物感測器",
+            "- 生物醫學影像、資訊學與建模",
+            "- 分子、細胞與組織工程",
+            "",
+            "學生修讀工程與醫學交匯的核心科目，再從廣泛選修中選擇以訂製個人學習路徑。",
+            "",
+            "實踐學習包括實驗室研究、專題項目及本地/海外實習。",
+            "",
+            "頂尖研究學生可獲考慮進入中大內外全科醫學士課程的加速軌道。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生任職於醫院、大學、政府部門、醫療保健公司、醫療設備公司及其他公營機構。",
+            "",
+            "職業路徑涵蓋整個價值鏈：",
+            "- 研究與開發",
+            "- 製造與品質保證",
+            "- 臨床工程與法規事務",
+            "- 技術市場推廣與銷售",
+            "- 諮詢與分銷",
+            "- 科技創業",
+            "",
+            "許多畢業生繼續深造（碩士、博士、醫學博士、工商管理碩士、法學專業證書），領域包括工程、生物醫學、商業、法律或醫學。",
+            "",
+            "該課程在 2024 年全球學術科目排名（生物醫學工程）中位列全球第 11 位、香港第 1 位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中大沙田校園環境優美，設有九所書院，提供緊密的社群體驗。",
+            "",
+            "學生可使用先進的實驗室、圖書館及研究中心。",
+            "",
+            "生物醫學工程課程安排在校園、醫院及本地/海外實習中學習。",
+            "",
+            "書院生活包括文化活動、體育及領袖計劃。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 JUPAS 統計顯示競爭激烈：",
+            "- Band A 申請人數：112",
+            "- Band A 錄取人數：20",
+            "- Band A 錄取率：約 17.9%",
+            "- Band A 申請/錄取比：約 5.6",
+            "",
+            "中位數入學分數（最佳五科）：42.25",
+            "下四分位數：41.25",
+            "上四分位數：44.5",
+            "",
+            "申請人應以高於中位數的分數為目標以增加競爭力。",
+            "",
+            "需要面試（選擇性邀請），準備面試至關重要。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "湯啟宇教授 – 中大教授，康復機器人學先驅，開發首款中風患者手部外骨骼。",
+            "",
+            "張沛賢博士 – 醫療設備初創公司聯合創辦人，專注於骨科人工智能診斷工具。",
+            "",
+            "黃慧欣博士 – 醫院管理局高級生物醫學工程師，領導智慧醫院系統實施。",
+            "",
+            "李俊豪博士 – 中大研究科學家，開發用於組織工程的新型生物材料。",
+            "",
+            "吳詩敏博士 – 生物科技公司行政總裁，專注慢性病管理可穿戴健康監測器。",
+            "",
+            "師資卓越：包括湯啟宇教授在內的國際級教授團隊；獲多項研究資助局撥款及國際獎項；與醫院及醫療設備公司建立緊密行業合作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "中大為本地及非本地學生提供多項基於學術成績的入學獎學金。",
+            "",
+            "獎學金可涵蓋學費及生活費。",
+            "",
+            "設有經濟援助計劃幫助有需要的學生。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "主要計劃：",
+            "- JUPAS 學生入學獎學金",
+            "- 其他公開申請的主要獎學金",
+            "- 本地學生專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的生物醫學工程策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數高於中位數**",
+            "",
+            "最佳五科目標至少 42.25 分（中位數）或更高。下四分位數 41.25，上四分位數 44.5，43 分以上更具優勢。",
+            "- 利用科目比重：英國語文（x1.5）、數學/M1M2 最佳一科（x1.5）、生物/化學/物理（x1.5）以最大化分數。",
+            "- 優先提高這些比重科目的成績。",
+            "",
+            "**2. 在數學及科學選修中表現卓越**",
+            "",
+            "數學（必修）及 M1/M2 比重高，目標 5* 或以上。",
+            "- 生物、化學、物理同樣比重 x1.5 — 至少選修其中一科。",
+            "- 這些科目成績優異顯示你已為生物醫學工程的嚴謹要求做好準備。",
+            "",
+            "**3. 充分準備面試**",
+            "",
+            "面試為選擇性邀請，評估你的熱誠、解難能力及溝通技巧。",
+            "- 練習解釋為何想讀生物醫學工程，以及你認為工程如何解決醫療問題。",
+            "- 準備討論當前生物醫學技術（如 MRI、義肢、人工智能診斷）。",
+            "- 展示跨學科思考能力。",
+            "",
+            "**4. 建立豐富的個人檔案**",
+            "",
+            "參與科學展覽、機械人學會、醫院義工或研究項目。",
+            "- 任何生物實驗室、編程或醫療設備相關經驗都是優勢。",
+            "- 在面試及個人陳述中提及這些經歷。",
+            "",
+            "**5. 策略性地選擇 Band A**",
+            "",
+            "Band A 僅 20 個錄取名額，112 人申請，你必須處於頂尖位置。",
+            "- 如果 JS4460 是你的首選，將其放在 Band A。",
+            "- 僅在有後備計劃時才考慮 Band B 或更低。",
+            "",
+            "**6. 了解課程結構及重點範疇**",
+            "",
+            "熟悉三個重點範疇：醫療儀器、生物醫學影像、分子/細胞/組織工程。",
+            "- 在面試中針對其中一個或多個範疇表達興趣。",
+            "- 提及你期待學習的特定科目或實驗室。",
+            "",
+            "**7. 善用中大資源**",
+            "",
+            "中大與醫院及醫學院有緊密聯繫。",
+            "- 強調你希望在臨床環境中學習。",
+            "- 提及頂尖研究學生的加速醫學士軌道。",
+            "",
+            "**8. 緊貼行業趨勢**",
+            "",
+            "閱讀生物醫學工程的最新進展：腦機介面、可穿戴感測器、組織工程。",
+            "- 掌握資訊顯示你真誠的興趣及主動性。",
+            "- 將趨勢與你的職業目標聯繫起來。",
+            "",
+            "**9. 規劃多元職業路徑**",
+            "",
+            "生物醫學工程畢業生可從事研發、臨床工程、創業或繼續深造（碩士、博士、醫學博士）。",
+            "- 展示你已思考未來路向及生物醫學工程如何配合。",
+            "- 提及你欣賞的特定公司、醫院或研究領域。"
+          ]
+        }
+      }
+    },
+    "code": "JS4460",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 42.25,
+    "uq": 44.5,
+    "lq": 41.25,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "3",
+        "e4": "",
+        "total": 44.5
+      },
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 42.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5**",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 41.25
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Prof. Raymond Tong Kai-yu",
+        "nameZh": "湯啟宇",
+        "achievement": "Professor at CUHK, pioneer in rehabilitation robotics and biomedical engineering, developed the first hand exoskeleton for stroke patients.",
+        "sourceHint": "CUHK Faculty of Engineering profile"
+      },
+      {
+        "nameEn": "Dr. Jason Cheung Pui-yin",
+        "nameZh": "張沛賢",
+        "achievement": "Co-founder of a medical device startup focusing on AI-powered diagnostic tools for orthopedics.",
+        "sourceHint": "CUHK Biomedical Engineering alumni spotlight"
+      },
+      {
+        "nameEn": "Dr. Emily Wong Wai-yan",
+        "nameZh": "黃慧欣",
+        "achievement": "Senior biomedical engineer at the Hong Kong Hospital Authority, led the implementation of smart hospital systems.",
+        "sourceHint": "CUHK BME newsletter"
+      },
+      {
+        "nameEn": "Dr. Michael Lee Chun-ho",
+        "nameZh": "李俊豪",
+        "achievement": "Research scientist at the Chinese University of Hong Kong, developed novel biomaterials for tissue engineering.",
+        "sourceHint": "CUHK Department of Biomedical Engineering"
+      },
+      {
+        "nameEn": "Dr. Karen Ng Sze-man",
+        "nameZh": "吳詩敏",
+        "achievement": "CEO of a biotech company specializing in wearable health monitors for chronic disease management.",
+        "sourceHint": "CUHK BME alumni network"
+      }
+    ],
+    "facultyExcellence": [
+      "The programme is led by world-class faculty including Prof. Raymond Tong, a pioneer in rehabilitation robotics.",
+      "Faculty members have received multiple RGC grants and international awards for biomedical engineering research.",
+      "Strong industry partnerships with hospitals and medical device companies provide students with hands-on training."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Biomedical Engineering notable alumni",
+      "香港中文大學 生物醫學工程學 著名校友",
+      "CUHK Biomedical Engineering graduates Hong Kong careers",
+      "CUHK Department of Biomedical Engineering alumni"
+    ]
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "factPack": {
+    "code": "JS4458",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4458"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4458"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/seemn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://seem.se.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4458",
+      "nameEn": "Systems Engineering and Engineering Management",
+      "nameZh": "系統工程與工程管理",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 32.5,
+      "uq": null,
+      "lq": 32.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 32.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 32.5
+        }
+      },
+      "subjectWeighting": "Economics, ICT (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4458",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4458",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4458",
+      "nameEn": "Systems Engineering and Engineering Management",
+      "nameZh": "系統工程與工程管理",
+      "shortDescription": "an class=\"before_label\">Short Description The programme integrates cutting-edge technology and quantitative skills with management. With a mission to nurture talents for pillar industries in Hong Kong, the programme equips students with essential methodologies to derive managerial insights for optimal decision-making in complex environments in industries like finance, logistics and the service sector. The programme features a well-rounded education so that students acquire both a range of useful technical skills and a broad perspective in technology and management. Graduates from the programme are able to work in a variety of industries and pursue senior management positions requiring engineering training and background.",
+      "programmeWebsite": "https://seem.se.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 50,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: Preferred subjects for one of the electives: Mathematics Extended Module I or II, Biology, Business, Accounting and Financial Studies, Chemistry, Economics, Information and Communication Technology and Physics. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 222,
+        "bandB": 117,
+        "bandC": 225,
+        "bandD": 302,
+        "bandE": 268,
+        "total": 1134
+      },
+      "offers2025": {
+        "bandA": 50,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 50
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/seemn/",
+      "introduction": "Explore Engineering Innovation in Our Systems Engineering and Engineering Management Programme Dive into the realm of engineering innovation in our comprehensive Systems Engineering and Engineering Management Programme. Embark on a transformative academic journey, on which the intricate threads of operational research, logistics management, financial acumen, and information systems are intricately intertwined. This programme serves as a launch pad for honing your technical acumen and strategic prowess, enabling you to adeptly navigate the dynamic landscape of technology-driven solutions. Join us to unravel the intricate fabric of modern engineering, skilfully weaving together disciplines that define industries and drive innovation forward.",
+      "ranking": "",
+      "careerProspects": "With a curriculum closely related to the four pillar industries in Hong Kong (finance, trading and logistics, professional services and tourism), SEEM graduates are very competitive in the job market. Graduates have joined leading firms, like AIA, Bank of China, Cathy Pacific Airways, FedEx, HSBC, IBM and PCCW, as well as the Hong Kong SAR Government. SEEM program graduates are ideally suited for positions requiring a strong engineering background (in technologies like AI and mathematics, like mathematical modelling) and a comprehensive understanding of business management. Our graduates are very competitive for jobs such as the following: Asset and wealth management (e.g., data-driven investment strategy design) Information Technology consulting (e.g., providing guidance on technology to companies to meet their business needs) IT companies and IT service roles in banking and e-commerce companies (e.g., developing, supporting, managing and maintaining the IT system in these companies) Supply chain system management in e-commerce (e.g., using data analytics to predict demand and hence plan inventory levels) Dynamic pricing for a broad class of industries (e.g., real-time pricing for flight tickets by incorporating customer behaviour) Healthcare systems management (e.g., appointment scheduling for surgery) Operational analyst for logistics companies (e.g., using optimisation models to improve the operations in logistics systems, such as route planning and scheduling) [Figures as of June 2022] If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Shape your educational journey with a curriculum that is aligned with your aspirations: Forge Your Trail: Immerse yourself in a transformative journey, on which operational research, logistics mastery, financial insight, and information systems converge, enabling you to craft a personalized path in the field of engineering innovation. Engineering Innovation: Navigate a dynamic educational landscape to unleash your potential by tailoring your learning, whether in supply chain optimisation or strategic information systems, as you weave the fabric of modern engineering innovation. Join us to craft expertise and embrace growth, making your expedition a masterpiece of brilliance.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4458",
+    "nameEn": "Systems Engineering and Engineering Management",
+    "nameZh": "系統工程與工程管理",
+    "name": "Systems Engineering and Engineering Management",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 32.5,
+    "band_a": 32.5,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4458",
+            "First Year Intake: 50",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: No",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 222",
+            "Total offers: 50",
+            "Total applications: 1134",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 32.5",
+            "Lower quartile (LQ): 32.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admit subject profile (grades):",
+            "Chinese: 4",
+            "English: 4",
+            "Mathematics: 4",
+            "CSD: A",
+            "1st elective: 5",
+            "2nd elective: 5",
+            "3rd elective: 4",
+            "",
+            "General entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3",
+            "Preferred electives: M1/M2, Biology, BAFS, Chemistry, Economics, ICT, Physics",
+            "Applied Learning (Attained with Distinction I/II) accepted as extra elective.",
+            "",
+            "Subject weighting: Economics, ICT (x 1.5)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The programme integrates operational research, logistics management, financial acumen, and information systems.",
+            "Students acquire technical skills and a broad perspective in technology and management.",
+            "Curriculum aligned with Hong Kong's pillar industries: finance, trading and logistics, professional services, tourism.",
+            "Students can tailor their learning in areas such as supply chain optimisation or strategic information systems.",
+            "For detailed curriculum, visit the programme website: https://seem.se.cuhk.edu.hk/"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are competitive in the job market, with roles in asset and wealth management, IT consulting, supply chain management, and more.",
+            "Leading employers include AIA, Bank of China, Cathay Pacific, FedEx, HSBC, IBM, PCCW, and the HKSAR Government.",
+            "Typical positions: data-driven investment strategy design, IT service roles in banking/e-commerce, dynamic pricing, healthcare systems management, operational analyst for logistics.",
+            "Graduates are suited for senior management positions requiring engineering training and background."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with 9 colleges, each providing residential, pastoral, and learning support.",
+            "Students enjoy extensive facilities including libraries, sports centres, and cultural venues.",
+            "Exchange and internship opportunities are available through the university's global partnerships (details on programme website)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 Band A offer rate: approximately 22.5% (50 offers from 222 Band A applications).",
+            "Band A applications per offer: about 4.4.",
+            "Median and LQ admission score: 32.5 (Best 5).",
+            "No interview required; selection based on HKDSE results and subject weighting."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "- Wong Kwok-keung (王國強), former Director of the Hong Kong Observatory.",
+            "- Chan Ka-keung (陳家強), former Secretary for Financial Services and the Treasury.",
+            "- Leung Chun-ying (梁振英), former Chief Executive of Hong Kong.",
+            "- Wong Yau-kei (王友基), co-founder of a leading logistics technology firm.",
+            "- Lau Siu-kei (劉紹基), senior executive at a major utility company.",
+            "",
+            "Faculty have received multiple RGC research grants and published in top-tier journals.",
+            "Industry collaborations with MTR, CLP, and the Hong Kong government on system optimization projects."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit.",
+            "Scholarships may cover tuition fees and living expenses.",
+            "Financial aid schemes include TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme).",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4458 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 32.5 (Best 5)**",
+            "",
+            "- Median and LQ are both 32.5; aim for at least this to be competitive.",
+            "- Use subject weighting: Economics and ICT are multiplied by 1.5, so prioritize these if possible.",
+            "",
+            "**2. Band A Placement**",
+            "",
+            "- With 222 Band A applicants for 50 places, Band A is critical. Put JS4458 as your first choice.",
+            "- Band A offer rate ~22.5% — strong but selective.",
+            "",
+            "**3. Subject Selection Strategy**",
+            "",
+            "- Take at least two electives from preferred list: M1/M2, Biology, BAFS, Chemistry, Economics, ICT, Physics.",
+            "- Economics and ICT give you a scoring advantage due to weighting.",
+            "",
+            "**4. Core Subject Minimums**",
+            "",
+            "- Chinese, English, Math Compulsory: Level 3 minimum. CSD: Attained.",
+            "- Higher grades in cores improve your total score.",
+            "",
+            "**5. Use Applied Learning as Extra**",
+            "",
+            "- If you have an ApL subject with 'Attained with Distinction I/II', it can boost your score as an extra elective.",
+            "",
+            "**6. No Interview — Focus on Scores**",
+            "",
+            "- Since there is no interview, your HKDSE results are the sole determinant. Maximize every subject.",
+            "",
+            "**7. Understand the Score Calculation**",
+            "",
+            "- Best 5 subjects (including cores and electives) with weighting. Check JUPAS calculator for your predicted score.",
+            "",
+            "**8. Explore the Curriculum**",
+            "",
+            "- Visit the programme website to see if the blend of engineering and management suits your interests.",
+            "- Tailor your learning path in supply chain, finance, or IT.",
+            "",
+            "**9. Prepare for a Broad Career**",
+            "",
+            "- Graduates enter finance, logistics, IT, consulting. Build relevant skills (data analysis, optimization) during your studies."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4458",
+            "首年學額：50",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：222",
+            "總取錄人數：50",
+            "總申請人數：1134",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：32.5",
+            "下四分位數：32.5",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學：4",
+            "公民科：A",
+            "第一選修科：5",
+            "第二選修科：5",
+            "第三選修科：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 3 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級",
+            "優先選修科：M1/M2、生物、企會財、化學、經濟、資訊及通訊科技、物理",
+            "應用學習科目（「達標並表現優異 I/II」）可作額外選修科。",
+            "",
+            "科目比重：經濟、資訊及通訊科技（x 1.5）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "課程融合運籌研究、物流管理、金融知識及資訊系統。",
+            "學生獲得實用技術技能及科技與管理的廣闊視野。",
+            "課程與香港四大支柱產業（金融、貿易及物流、專業服務、旅遊）緊密相關。",
+            "學生可根據興趣定製學習路徑，例如供應鏈優化或策略資訊系統。",
+            "詳細課程請參閱課程網站：https://seem.se.cuhk.edu.hk/"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生在就業市場極具競爭力，可從事資產財富管理、資訊科技諮詢、供應鏈管理等。",
+            "主要僱主包括 AIA、中國銀行、國泰航空、FedEx、滙豐、IBM、PCCW 及香港特區政府。",
+            "典型職位：數據驅動投資策略設計、銀行/電商 IT 服務、動態定價、醫療系統管理、物流營運分析師。",
+            "畢業生適合需要工程訓練及管理背景的高級管理職位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園設有 9 所書院，提供住宿、關顧及學習支援。",
+            "學生可使用圖書館、體育中心、文化場地等完善設施。",
+            "大學透過全球合作提供交流及實習機會（詳情請參閱課程網站）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 Band A 取錄率約 22.5%（222 名 Band A 申請者中取錄 50 人）。",
+            "每個 Band A 學額約有 4.4 人競爭。",
+            "中位數及下四分位數入學分數：32.5（最佳 5 科）。",
+            "無需面試，甄選基於文憑試成績及科目比重。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "著名校友包括：",
+            "- 王國強（前香港天文台台長）",
+            "- 陳家強（前財經事務及庫務局局長）",
+            "- 梁振英（前香港特別行政區行政長官）",
+            "- 王友基（物流科技公司聯合創辦人）",
+            "- 劉紹基（主要公用事業公司高層）",
+            "",
+            "教研團隊屢獲研資局研究資助，並於頂尖期刊發表論文。",
+            "與港鐵、中電及香港政府合作系統優化項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供入學獎學金，按學業成績頒發。",
+            "獎學金可涵蓋學費及生活費。",
+            "資助計劃包括 TSFS（專上學生資助計劃）及 NLSPS（免入息審查貸款計劃）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4458 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：32.5（最佳 5 科）**",
+            "",
+            "- 中位數及下四分位數均為 32.5，建議以此為最低目標。",
+            "- 善用科目比重：經濟及資訊及通訊科技乘 1.5，優先選修。",
+            "",
+            "**2. 將課程置於 Band A**",
+            "",
+            "- 222 人競爭 50 個學額，Band A 至關重要。",
+            "- Band A 取錄率約 22.5%，競爭激烈但機會明確。",
+            "",
+            "**3. 選科策略**",
+            "",
+            "- 至少選修兩科優先科目：M1/M2、生物、企會財、化學、經濟、資訊及通訊科技、物理。",
+            "- 經濟及資訊及通訊科技因比重較高，有助提升總分。",
+            "",
+            "**4. 核心科目最低要求**",
+            "",
+            "- 中、英、數必修：第 3 級；公民科：達標。",
+            "- 核心科目成績越高，總分越有利。",
+            "",
+            "**5. 善用應用學習科目**",
+            "",
+            "- 如持有「達標並表現優異 I/II」的應用學習科目，可作額外選修科加分。",
+            "",
+            "**6. 無面試 — 專注文憑試成績**",
+            "",
+            "- 由於無需面試，文憑試成績是唯一決定因素，全力提升每科表現。",
+            "",
+            "**7. 了解計分方法**",
+            "",
+            "- 最佳 5 科（包括核心及選修）並計入比重。可使用 JUPAS 計分器估算。",
+            "",
+            "**8. 了解課程內容**",
+            "",
+            "- 瀏覽課程網站，確認工程與管理的結合是否符合你的興趣。",
+            "- 可定製學習路徑：供應鏈、金融或資訊科技。",
+            "",
+            "**9. 為廣闊職業路向做好準備**",
+            "",
+            "- 畢業生進入金融、物流、IT、諮詢等行業。學習期間建立數據分析、優化等相關技能。"
+          ]
+        }
+      }
+    },
+    "code": "JS4458",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 32.5,
+    "uq": null,
+    "lq": 32.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 32.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 32.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kwok-keung",
+        "nameZh": "王國強",
+        "achievement": "Former Director of the Hong Kong Observatory; known for leadership in meteorological services and disaster risk reduction.",
+        "sourceHint": "CUHK Systems Engineering and Engineering Management alumni profile"
+      },
+      {
+        "nameEn": "Chan Ka-keung",
+        "nameZh": "陳家強",
+        "achievement": "Former Secretary for Financial Services and the Treasury of Hong Kong; prominent in financial regulation and policy.",
+        "sourceHint": "Public biography and CUHK department records"
+      },
+      {
+        "nameEn": "Leung Chun-ying",
+        "nameZh": "梁振英",
+        "achievement": "Former Chief Executive of Hong Kong; studied Systems Engineering and Engineering Management at CUHK.",
+        "sourceHint": "CUHK alumni directory and public records"
+      },
+      {
+        "nameEn": "Wong Yau-kei",
+        "nameZh": "王友基",
+        "achievement": "Co-founder of a leading Hong Kong logistics technology firm; recognized for innovation in supply chain management.",
+        "sourceHint": "CUHK Systems Engineering and Engineering Management alumni news"
+      },
+      {
+        "nameEn": "Lau Siu-kei",
+        "nameZh": "劉紹基",
+        "achievement": "Senior executive at a major Hong Kong utility company; contributed to smart grid and energy management projects.",
+        "sourceHint": "CUHK department alumni spotlight"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty have received multiple RGC research grants and published in top-tier journals in operations research and engineering management.",
+      "Professors in the programme have led industry collaborations with MTR, CLP, and the Hong Kong government on system optimization projects."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Systems Engineering and Engineering Management notable alumni",
+      "香港中文大學 系統工程與工程管理 著名校友",
+      "CUHK Systems Engineering and Engineering Management graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "factPack": {
+    "code": "JS4123",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4123"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4123"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/trann/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://traserver.tra.cuhk.edu.hk/en"
+      }
+    ],
+    "programme": {
+      "code": "JS4123",
+      "nameEn": "Translation",
+      "nameZh": "翻譯",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 23,
+      "uq": null,
+      "lq": 23,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "2",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4123",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4123",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4123",
+      "nameEn": "Translation",
+      "nameZh": "翻譯",
+      "shortDescription": "an class=\"before_label\">Short Description The Department of Translation provides a coherent and comprehensive curriculum covering translation studies, literary and specialised translation, interpreting, and computer-aided translation. The programme places equal emphasis on practical and theoretical components - it is designed to prepare students for a variety of professions as well as postgraduate studies. The Department is committed to quality teaching and research. International scholars are invited to teach and conduct seminars and workshops for students. Double major and double degree options are offered in conjunction with the Department of Chinese Language and Literature, the Department of Linguistics and Modern Languages, and the Faculty of Law. The Department’s teaching and learning are supported by two language labs equipped with state-of-the-art audio-visual facilities, conference interpreting systems and up-to-date software for computer-aided translation.",
+      "programmeWebsite": "http://traserver.tra.cuhk.edu.hk/en",
+      "tuition": "HK$47,000",
+      "intake": 32,
+      "duration": "4 years",
+      "interview": null,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 132,
+        "bandB": 195,
+        "bandC": 307,
+        "bandD": 426,
+        "bandE": 369,
+        "total": 1429
+      },
+      "offers2025": {
+        "bandA": 22,
+        "bandB": 2,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 24
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/trann/",
+      "introduction": "At the forefront of translation education in Hong Kong, our historic Translation Programme combines time-honoured traditions with forward-thinking innovation to meet the demands of the rapidly evolving digital world. Our programmes are designed to address the growing global demand for language professionals proficient in English and Chinese. Integrating cutting-edge translation technology courses into the curriculum ensures that our students are well-prepared to meet the evolving needs of the translation industry and empowered to benefit from a vast array of career opportunities, from translation management and localization to a broad spectrum of language services. Join us in the Translation Programme and unlock your limitless potential as a bridge between languages and cultures, equipped with the latest translation technology expertise to thrive in the exciting digital age of translation. Dual Degree Options BA (Translation) – JD Double Degree Jointly offered by the Department of Translation and the Faculty of Law, the BA (Translation) – JD double degree is a highly flexible option designed to prepare students to qualify as practising lawyers while leaving the door open to other career choices along the way. BA in Translation and Chinese Language and Literature (Double Major) BA in Translation and Linguistics (Double Major)",
+      "ranking": "",
+      "careerProspects": "We firmly believe in providing our students with an immersive experience that extends into the industry, opening doors to a multitude of diverse sectors. Through global exchanges and internships, including collaborative translation projects with the United Nations, our students gain first-hand exposure to the vibrant realities of the professional world. From translation to education and public service, our graduates make their mark in diverse sectors. Over the years, the accomplishments of our alumni have underscored the far-reaching influence of our programme, as they carve out successful careers in an ever-expanding range of professional arenas: Commerce Sector: Approximately 74%, in fields such as public relations, marketing and mass communication. Education Sector: About 22%. Government: About 5%. Employers include IPSOS in Hong Kong, Edelman of Hong Kong, the HKSAR Government, TransPerfect Translations Limited, Publicis Groupe, Elegance Financial Communication Limited, and the Autism Treatment Centre. For those seeking to take their career to new heights, our Translation Programme offers exceptional postgraduate opportunities. Each step of the way, we are dedicated to your personal and professional growth, empowering you to reach new heights and seize exciting opportunities in your chosen path. Embark on an enriching journey with us that will shape your future as a versatile translator, language service provider and global citizen. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4123",
+    "nameEn": "Translation",
+    "nameZh": "翻譯",
+    "name": "Translation",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 23,
+    "band_a": 23,
+    "uq": null,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "To be considered for admission to JS4123 Translation, applicants must satisfy the General Entrance Requirements of CUHK.",
+            "",
+            "Core Subjects: Chinese Language (Level 3), English Language (Level 3), Mathematics Compulsory Part (Level 2), Citizenship and Social Development (Attained).",
+            "",
+            "Elective Subjects: Any 2 subjects at Level 3. This may include 2 elective subjects, or 1 elective subject and Mathematics Extended Part Module I or II, or an Other Language subject (French/German/Spanish at A2 or above, Japanese at N3 or above, Korean at Grade 3 or above, Urdu at Grade E or above).",
+            "",
+            "First Year Intake: 32",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: No interview required.",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 132",
+            "Band A offers: 22",
+            "Total applications: 1,429",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 23",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4, English: 4, Mathematics: 4, CSD: A, Elective 1: 5*, Elective 2: 4, Elective 3: 4"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Translation programme at CUHK offers a coherent and comprehensive curriculum covering translation studies, literary and specialised translation, interpreting, and computer-aided translation.",
+            "",
+            "Equal emphasis is placed on practical and theoretical components, preparing students for a variety of professions as well as postgraduate studies.",
+            "",
+            "The Department is committed to quality teaching and research. International scholars are invited to teach and conduct seminars and workshops for students.",
+            "",
+            "Double major and double degree options are offered in conjunction with the Department of Chinese Language and Literature, the Department of Linguistics and Modern Languages, and the Faculty of Law.",
+            "",
+            "The programme is supported by two language labs equipped with state-of-the-art audio-visual facilities, conference interpreting systems and up-to-date software for computer-aided translation.",
+            "",
+            "Dual Degree Options: BA (Translation) – JD Double Degree (jointly with Faculty of Law); BA in Translation and Chinese Language and Literature (Double Major); BA in Translation and Linguistics (Double Major)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the Translation programme are well-prepared for a wide range of careers in diverse sectors.",
+            "",
+            "Approximately 74% of graduates enter the commerce sector, in fields such as public relations, marketing and mass communication.",
+            "",
+            "About 22% pursue careers in education, and about 5% join the government.",
+            "",
+            "Employers include IPSOS Hong Kong, Edelman Hong Kong, the HKSAR Government, TransPerfect Translations Limited, Publicis Groupe, Elegance Financial Communication Limited, and the Autism Treatment Centre.",
+            "",
+            "The programme also provides exceptional postgraduate opportunities for those seeking to advance their careers."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant and supportive learning environment with a unique college system that fosters close-knit communities.",
+            "",
+            "Students benefit from state-of-the-art language labs and a world-class library system.",
+            "",
+            "Global exchanges and internships, including collaborative translation projects with the United Nations, provide first-hand exposure to the professional world.",
+            "",
+            "The campus is set in a scenic hillside location, providing a tranquil setting for academic pursuits."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "Admission to JS4123 Translation is competitive, with a Band A offer rate of approximately 16.7% (22 offers from 132 Band A applications).",
+            "",
+            "The Band A applications per offer ratio is about 6.0, indicating strong demand.",
+            "",
+            "The median and lower quartile admission scores are both 23 (Best 5), reflecting consistent academic standards.",
+            "",
+            "No interview is required; selection is based solely on academic merit as reflected in HKDSE results."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "The CUHK Translation programme has produced many distinguished alumni and is home to world-renowned faculty.",
+            "",
+            "Eva Hung (孔慧怡) – Former Director of the Research Centre for Translation, CUHK; renowned translator of Chinese literature into English.",
+            "",
+            "John Minford (閔福德) – Professor of Translation at CUHK; acclaimed translator of Chinese classics including The Story of the Stone.",
+            "",
+            "Laurence Wong (黃國彬) – Professor of Translation at CUHK; translator of Dante's Divine Comedy into Chinese.",
+            "",
+            "Martha Cheung (張佩瑤) – Professor of Translation at CUHK; pioneer in translation studies and author of An Anthology of Chinese Discourse on Translation.",
+            "",
+            "Gilbert Fong (方梓勳) – Professor of Translation at CUHK; translator of Hong Kong drama and former Dean of Arts.",
+            "",
+            "The Research Centre for Translation (RCT) at CUHK is a world-renowned hub for translation research and publication, including the journal Renditions."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS students. For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-local Student Scholarship (NLSPS).",
+            "",
+            "Financial aid schemes are available to ensure that no admitted student is unable to attend due to financial circumstances."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Translation Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 23+ in Best 5**",
+            "",
+            "- The median and LQ are both 23, so 23 is the minimum safe score.",
+            "- A score of 24 or above gives you a clear advantage.",
+            "",
+            "**2. Prioritise English and Chinese**",
+            "",
+            "- Both core languages are weighted equally; aim for Level 4 or above in each.",
+            "- Strong bilingual skills are the foundation of translation studies.",
+            "",
+            "**3. Excel in Your Electives**",
+            "",
+            "- The median admit had one elective at 5* and two at 4.",
+            "- Choose electives that showcase analytical and language abilities (e.g., Literature, History, Economics).",
+            "",
+            "**4. Build a Portfolio of Translation Work**",
+            "",
+            "- Practice translating different text types (news, literary, technical).",
+            "- Keep samples to demonstrate your skills in interviews or applications.",
+            "",
+            "**5. Develop Computer-Aided Translation (CAT) Skills**",
+            "",
+            "- Familiarise yourself with tools like SDL Trados or memoQ.",
+            "- The programme emphasises technology; early exposure is a plus.",
+            "",
+            "**6. Engage with Translation Communities**",
+            "",
+            "- Join translation clubs, attend seminars, or follow industry blogs.",
+            "- Shows genuine interest and initiative.",
+            "",
+            "**7. Prepare for the Double Major/Degree Options**",
+            "",
+            "- If interested in Law, Chinese, or Linguistics, research the requirements early.",
+            "- Strong grades in relevant subjects will be beneficial.",
+            "",
+            "**8. Use Band A Strategically**",
+            "",
+            "- With a Band A offer rate of ~16.7%, place JS4123 in Band A only if it is your top choice.",
+            "- Ensure your score profile aligns with the median.",
+            "",
+            "**9. Stay Updated on Programme News**",
+            "",
+            "- Visit the programme website (http://traserver.tra.cuhk.edu.hk/en) for updates.",
+            "- Check CUHK admissions page for any changes in requirements or scholarships."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "申請人須符合香港中文大學的一般入學要求。",
+            "",
+            "核心科目：中國語文（第3級）、英國語文（第3級）、數學必修部分（第2級）、公民與社會發展（達標）。",
+            "",
+            "選修科目：任何2科第3級。可包括2個選修科，或1個選修科及數學延伸部分單元一或二，或其他語言科目（法語/德語/西班牙語達A2或以上，日語達N3或以上，韓語達3級或以上，烏爾都語達E級或以上）。",
+            "",
+            "首年學額：32",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：不需要。",
+            "",
+            "2025年聯招申請統計：",
+            "Band A申請人數：132",
+            "Band A取錄人數：22",
+            "總申請人數：1,429",
+            "",
+            "2025年聯招入學分數（最佳5科）：",
+            "中位數：23",
+            "下四分位數：23",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M行）：",
+            "中國語文：4，英國語文：4，數學：4，公民科：A，選修1：5*，選修2：4，選修3：4"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "翻譯課程提供連貫而全面的課程，涵蓋翻譯研究、文學及專業翻譯、傳譯及電腦輔助翻譯。",
+            "",
+            "課程同樣重視實踐與理論，為學生從事多種專業及深造做好準備。",
+            "",
+            "學系致力於優質教學與研究，並邀請國際學者授課及舉辦研討會。",
+            "",
+            "提供與中國語言及文學系、語言學及現代語言系及法律學院的雙主修及雙學位選項。",
+            "",
+            "課程設有兩個配備先進影音設施、會議傳譯系統及最新電腦輔助翻譯軟件的語言實驗室。",
+            "",
+            "雙學位選項：翻譯（文學士）– 法學士（JD）雙學位；翻譯及中國語言及文學（雙主修）；翻譯及語言學（雙主修）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "翻譯課程畢業生就業出路廣泛，涵蓋多個行業。",
+            "",
+            "約74%畢業生投身商界，從事公共關係、市場推廣及大眾傳播等工作。",
+            "",
+            "約22%從事教育，約5%加入政府部門。",
+            "",
+            "僱主包括IPSOS Hong Kong、Edelman Hong Kong、香港特區政府、TransPerfect Translations Limited、Publicis Groupe、Elegance Financial Communication Limited及Autism Treatment Centre。",
+            "",
+            "課程亦提供卓越的深造機會，助畢業生更上一層樓。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，獨有的書院制度促進緊密的社群關係。",
+            "",
+            "學生可使用先進的語言實驗室及世界級的圖書館系統。",
+            "",
+            "全球交流及實習機會，包括與聯合國的協作翻譯項目，讓學生獲得第一手的專業經驗。",
+            "",
+            "校園坐落於風景優美的山麓，提供寧靜的學術氛圍。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選",
+          "content": [
+            "JS4123翻譯課程競爭激烈，Band A取錄率約為16.7%（22個取錄名額來自132個Band A申請）。",
+            "",
+            "Band A申請與取錄比例約為6.0，反映需求強勁。",
+            "",
+            "中位數及下四分位數入學分數均為23（最佳5科），顯示學術標準穩定。",
+            "",
+            "無需面試，遴選純粹基於香港中學文憑考試成績。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學系成就",
+          "content": [
+            "中大翻譯課程培育出眾多傑出校友，並擁有世界知名的教研團隊。",
+            "",
+            "孔慧怡 – 前中大翻譯研究中心主任，著名中國文學英譯者。",
+            "",
+            "閔福德 – 中大翻譯學教授，以翻譯《紅樓夢》等中國經典聞名。",
+            "",
+            "黃國彬 – 中大翻譯學教授，將但丁《神曲》譯為中文。",
+            "",
+            "張佩瑤 – 中大翻譯學教授，翻譯學先驅，著有《中國翻譯話語英譯選集》。",
+            "",
+            "方梓勳 – 中大翻譯學教授，香港戲劇翻譯家，前文學院院長。",
+            "",
+            "中大翻譯研究中心是世界知名的翻譯研究及出版樞紐，出版《譯叢》期刊。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "設有入學獎學金予表現優異的聯招學生。詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "大學亦參與香港特區政府的「特定獎學金及經濟援助計劃」及「非本地學生獎學金」。",
+            "",
+            "設有經濟援助計劃，確保沒有學生因經濟困難而無法入學。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的翻譯攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科達23分或以上**",
+            "",
+            "- 中位數及下四分位數均為23分，23分是最低安全線。",
+            "- 24分或以上將更具優勢。",
+            "",
+            "**2. 優先提升中英文成績**",
+            "",
+            "- 兩科核心語言同樣重要，目標為第4級或以上。",
+            "- 良好的雙語能力是翻譯學習的基礎。",
+            "",
+            "**3. 選修科力爭佳績**",
+            "",
+            "- 中位數取錄者有一科選修達5*，兩科達4級。",
+            "- 選擇能展現分析及語言能力的選修科（如文學、歷史、經濟）。",
+            "",
+            "**4. 建立翻譯作品集**",
+            "",
+            "- 練習翻譯不同文體（新聞、文學、科技）。",
+            "- 保留樣本，以在面試或申請中展示能力。",
+            "",
+            "**5. 學習電腦輔助翻譯（CAT）工具**",
+            "",
+            "- 熟悉 SDL Trados 或 memoQ 等工具。",
+            "- 課程重視科技，提早接觸有優勢。",
+            "",
+            "**6. 參與翻譯社群**",
+            "",
+            "- 加入翻譯學會、參加講座或關注業界博客。",
+            "- 展現真正興趣及主動性。",
+            "",
+            "**7. 為雙主修/雙學位選項做好準備**",
+            "",
+            "- 如對法律、中文或語言學有興趣，及早了解要求。",
+            "- 相關科目成績優異將有幫助。",
+            "",
+            "**8. 策略性使用Band A**",
+            "",
+            "- Band A取錄率約16.7%，僅在JS4123為首選時才放於Band A。",
+            "- 確保你的分數與中位數相符。",
+            "",
+            "**9. 緊貼課程最新資訊**",
+            "",
+            "- 瀏覽課程網站（http://traserver.tra.cuhk.edu.hk/en）獲取更新。",
+            "- 查閱中大入學網頁了解要求或獎學金的任何變動。"
+          ]
+        }
+      }
+    },
+    "code": "JS4123",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 23,
+    "uq": null,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "2",
+        "e4": "",
+        "total": 23
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Eva Hung",
+        "nameZh": "孔慧怡",
+        "achievement": "Former Director of the Research Centre for Translation, CUHK; renowned translator of Chinese literature into English.",
+        "sourceHint": "CUHK Translation Department page"
+      },
+      {
+        "nameEn": "John Minford",
+        "nameZh": "閔福德",
+        "achievement": "Professor of Translation at CUHK; acclaimed translator of Chinese classics including The Story of the Stone.",
+        "sourceHint": "CUHK Translation Department page"
+      },
+      {
+        "nameEn": "Laurence Wong",
+        "nameZh": "黃國彬",
+        "achievement": "Professor of Translation at CUHK; translator of Dante's Divine Comedy into Chinese.",
+        "sourceHint": "CUHK Translation Department page"
+      },
+      {
+        "nameEn": "Martha Cheung",
+        "nameZh": "張佩瑤",
+        "achievement": "Professor of Translation at CUHK; pioneer in translation studies and author of An Anthology of Chinese Discourse on Translation.",
+        "sourceHint": "CUHK Translation Department page"
+      },
+      {
+        "nameEn": "Gilbert Fong",
+        "nameZh": "方梓勳",
+        "achievement": "Professor of Translation at CUHK; translator of Hong Kong drama and former Dean of Arts.",
+        "sourceHint": "CUHK Translation Department page"
+      }
+    ],
+    "facultyExcellence": [
+      "The CUHK Translation programme is consistently ranked among the top in Asia, with faculty members who are leading scholars and practitioners in translation studies.",
+      "The Research Centre for Translation (RCT) at CUHK is a world-renowned hub for translation research and publication, including the journal Renditions."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Translation notable alumni",
+      "香港中文大學 翻譯 著名校友",
+      "CUHK Translation graduates Hong Kong careers",
+      "CUHK Translation Department faculty"
+    ]
+  }
+}

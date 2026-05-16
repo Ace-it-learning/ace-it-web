@@ -103,7 +103,13 @@ const limiter = rateLimit({
     max: isProduction ? 150 : 10000,
     message: { error: "Too many requests. Please try again later." }
 });
+const contactLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    max: isProduction ? 10 : 200,
+    message: { error: 'Too many contact submissions. Please try again later.' }
+});
 app.use('/api/english/mock', englishMockRoutes);
+app.use('/api/contact', contactLimiter, require('./routes/contactRoutes'));
 app.use('/api/', limiter);
 
 // Request Tracing
@@ -152,7 +158,19 @@ app.use('/api', require('./routes/dataRoutes'));
 
 // --- COMPATIBILITY ALIASES (Frontend Support) ---
 app.get('/api/microskills/:uid', (req, res) => res.redirect(307, '/api/stats/microskills/' + req.params.uid));
-app.get('/api/quests/personalized', (req, res) => res.redirect(307, '/api/roadmap?uid=' + (req.query.uid || '')) );
+// Quest hub / roadmap modals expect a weekly plan (tasks[]), not the legacy personalized batch array.
+app.get('/api/quests/personalized', require('./middleware/requireResolvedUid').requireResolvedUid, async (req, res) => {
+    const { uid, subject } = req.query;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+    try {
+        const RoadmapService = require('./services/RoadmapService');
+        const plan = await RoadmapService.getCurrentPlan(uid, subject || 'english');
+        res.json(plan);
+    } catch (e) {
+        console.error('[server] /api/quests/personalized error:', e);
+        res.status(500).json({ error: 'Failed to fetch personalized quests' });
+    }
+});
 
 
 // Usage & Costing endpoints moved to statsRoutes and userRoutes in modular build.

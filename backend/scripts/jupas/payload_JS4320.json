@@ -1,0 +1,547 @@
+{
+  "factPack": {
+    "code": "JS4320",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4320"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4320"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/hmshn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.spe.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4320",
+      "nameEn": "Human Movement Science and",
+      "nameZh": "人體運動科學與健康研究",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26,
+      "uq": 29,
+      "lq": 24.5,
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4320",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4320",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4320",
+      "nameEn": "Human Movement Science and Health Studies",
+      "nameZh": "人體運動科學與健康研究",
+      "shortDescription": "an class=\"before_label\">Short Description The programme aims to provide an interdisciplinary learning experience to students who are interested in the scientific and medical aspects of human movement, coaching, health and rehabilitation, and research-oriented activities in academia. The Human Movement Science explores the causes and consequences of human movement across the lifespan, including the prevention and treatment of acute and chronic conditions that cause disorders of movement. The Health Studies teach students to develop and apply principles of exercise-based preventative intervention, management of health and wellbeing, and rehabilitation to individuals who are injured or physically impaired. Students will examine human movement from different perspectives, including injury prevention, exercise rehabilitation, biomechanics, exercise physiology, health and fitness, motor control and motor development to equip themselves to contribute to major medical advances and more effective models of health care. This programme prepares students for professional career in coaching, rehabilitation, sports therapy, health-related sector, sport-related industrial, or exercise scientist.",
+      "programmeWebsite": "http://www.spe.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Preferred subjects: Biology and Physics Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 159,
+        "bandB": 252,
+        "bandC": 304,
+        "bandD": 269,
+        "bandE": 241,
+        "total": 1225
+      },
+      "offers2025": {
+        "bandA": 14,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 14
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/hmshn/",
+      "introduction": "The programme is a four-year full-time degree programme, aims to provide an interdisciplinary learning experience to students who are interested in the scientific and medical aspects of human movement, coaching, health and rehabilitation, as well as research-oriented activities in academia. The Programme is characterized by two highly linked areas. Human Movement Science explores the causes and consequences of human movement across one’s lifespan, including the prevention and treatment of acute and chronic conditions that cause disorders of movement. Health Studies cover how to develop and apply principles of exercise-based preventative intervention, management of health and well-being, and rehabilitation to individuals who are injured or physically impaired (e.g., disability, chronic disease). In this Programme, students will examine human movement from a variety of perspectives, including injury prevention, exercise rehabilitation, biomechanics, exercise physiology, health and fitness, motor control and motor development to equip them with necessary knowledge to contribute to major medical advances and development of more effective models of health care. The Programme will also prepare students for professional careers in coaching, rehabilitation, sports therapy, health-related sector, and sport-related industrial or exercise scientist. Dual Degree Programme The Department of Sports Science and Physical Education offers an option for local students admitted to Bachelor of Science (Human Movement Science and Health Studies) Programme to apply for participating in a dual degree programme (DDP) with Beijing Sport University. This Dual Degree Programme (DDP) combine the strength from both institutions. In addition to the education and research excellence in sports science, CUHK will offer students the unique experience of integrated eastern and western educational disciplines and overseas exchange opportunities. At BSU, students can acquire knowledge about sports rehabilitation and receive the national-level sports training with the use of advanced sports facilities. Graduates from this DDP will be equipped with comprehensive knowledge and skills in sport and exercise science at the international level. They will be able to pursue career in sports science research, sports training, physical education, health education and administration, sport-related industrial and academic institutions at all levels. Students will study for 2 years at CUHK and BSU respectively and will obtain a bachelor’s degree each from the two institutions upon completion of the graduation requirements.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "Students can pursue a career in exercise, sport and allied health sciences, such as administrators in government subvented/national sports associations, physical training officers, inspectors or officers in disciplinary forces, executives in fitness and leisure industries, and supervisors/officers in private and commercial sectors. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4320",
+    "nameEn": "Human Movement Science and",
+    "nameZh": "人體運動科學與健康研究",
+    "name": "Human Movement Science and",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 26,
+    "band_a": 24.5,
+    "uq": 29,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4320",
+            "First Year Intake: 20",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26",
+            "Lower quartile (LQ): 24.5",
+            "Upper quartile (UQ): 29",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese Language: 3",
+            "English Language: 4",
+            "Mathematics Compulsory: 5*",
+            "Citizenship and Social Development: Attained (A)",
+            "Mathematics Extended Part (M1/M2): 5",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "",
+            "General entrance requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects at Level 3 (or one elective + M1/M2)",
+            "Preferred subjects: Biology and Physics",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 159",
+            "Band A offers: 14",
+            "Total applications: 1225",
+            "Band A offer rate: ~8.8%",
+            "Band A applications per offer: ~11.4"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The programme is a four-year full-time degree offered by the Faculty of Education, Department of Sports Science and Physical Education.",
+            "It provides an interdisciplinary learning experience in the scientific and medical aspects of human movement, coaching, health and rehabilitation, and research-oriented activities.",
+            "Two highly linked areas:",
+            "- Human Movement Science: explores causes and consequences of human movement across the lifespan, including prevention and treatment of acute and chronic conditions causing movement disorders.",
+            "- Health Studies: develops and applies principles of exercise-based preventative intervention, management of health and well-being, and rehabilitation for injured or physically impaired individuals.",
+            "Students examine human movement from perspectives including injury prevention, exercise rehabilitation, biomechanics, exercise physiology, health and fitness, motor control and motor development.",
+            "Dual Degree Programme:",
+            "- Option for local students to apply for a dual degree programme (DDP) with Beijing Sport University.",
+            "- Students study 2 years at CUHK and 2 years at BSU, earning a bachelor's degree from each institution.",
+            "- Combines strengths of both institutions: CUHK's sports science education and research excellence, BSU's sports rehabilitation and national-level sports training.",
+            "The programme prepares students for professional careers in coaching, rehabilitation, sports therapy, health-related sectors, sport-related industries, or as exercise scientists."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates can pursue careers in exercise, sport and allied health sciences.",
+            "Potential roles include:",
+            "- Administrators in government subvented/national sports associations",
+            "- Physical training officers",
+            "- Inspectors or officers in disciplinary forces",
+            "- Executives in fitness and leisure industries",
+            "- Supervisors/officers in private and commercial sectors",
+            "The programme also prepares students for further studies in sports science, physiotherapy, or health research.",
+            "DDP graduates are equipped for careers in sports science research, sports training, physical education, health education and administration, and sport-related industrial and academic institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and green environment with modern facilities.",
+            "The university has a unique college system, providing a close-knit community experience through various colleges.",
+            "Students have access to sports science laboratories, gymnasiums, and research facilities within the Department of Sports Science and Physical Education.",
+            "The Faculty of Education is ranked 11th in the world and 4th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+            "The dual degree programme with Beijing Sport University includes overseas exchange opportunities and exposure to eastern and western educational disciplines."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26",
+            "LQ: 24.5",
+            "UQ: 29",
+            "Band A applications: 159",
+            "Band A offers: 14",
+            "Band A offer rate: ~8.8%",
+            "Band A applications per offer: ~11.4",
+            "Total applications: 1225",
+            "The programme is highly competitive, with a strong emphasis on academic performance in science-related subjects."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "The programme is relatively new and has not yet produced widely recognized notable alumni.",
+            "Faculty members have published extensively in sports science, biomechanics, and health promotion.",
+            "Graduates have pursued careers in physiotherapy, sports coaching, and health research in Hong Kong.",
+            "The department's research strengths include exercise physiology, biomechanics, motor control, and health promotion."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students.",
+            "Scholarships may cover tuition fees and living expenses in some cases.",
+            "Local JUPAS students are eligible for various scholarships, including the CUHK Entrance Scholarship for outstanding HKDSE results.",
+            "Financial aid schemes such as the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available.",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Strategy**",
+            "",
+            "- Aim for a Best 5 score of at least 26 (median) to be competitive; 24.5 (LQ) is the minimum threshold.",
+            "- For a safe chance, target 29 (UQ) or above.",
+            "- Prioritize electives: Biology and Physics are preferred and can boost your application.",
+            "",
+            "**2. Subject Selection**",
+            "",
+            "- Choose Biology and Physics as electives if possible; they align with programme content.",
+            "- Mathematics Extended Part (M1/M2) can count as one elective and is valued.",
+            "- Ensure you meet the minimum requirements: Chinese 3, English 3, Maths 2, CSD Attained.",
+            "",
+            "**3. Band A Placement**",
+            "",
+            "- Place JS4320 in Band A to maximize interview chances and offer probability.",
+            "- In 2025, all 14 offers went to Band A applicants; Band B-E received zero offers.",
+            "",
+            "**4. Interview Preparation**",
+            "",
+            "- The interview is required for selected applicants; prepare to discuss your interest in human movement science and health studies.",
+            "- Be ready to talk about relevant experiences (sports, coaching, volunteering in health settings).",
+            "- Demonstrate interdisciplinary thinking: connect biology, physics, and health.",
+            "",
+            "**5. Personal Statement**",
+            "",
+            "- Highlight your passion for sports science, rehabilitation, or health promotion.",
+            "- Mention any relevant extracurricular activities, such as sports teams, coaching, or health-related volunteering.",
+            "- Show awareness of the dual degree programme with Beijing Sport University if interested.",
+            "",
+            "**6. Leverage Preferred Subjects**",
+            "",
+            "- If you have taken Biology and Physics, emphasize them in your application.",
+            "- Strong grades in these subjects can compensate for slightly lower scores in other areas.",
+            "",
+            "**7. Understand the Curriculum**",
+            "",
+            "- Familiarize yourself with the two key areas: Human Movement Science and Health Studies.",
+            "- Be prepared to discuss how your interests align with the programme's interdisciplinary approach.",
+            "",
+            "**8. Explore Dual Degree Option**",
+            "",
+            "- If interested, research the dual degree programme with Beijing Sport University.",
+            "- Mentioning this in your interview can show initiative and long-term planning.",
+            "",
+            "**9. Stay Updated**",
+            "",
+            "- Check the official CUHK admissions page and JUPAS website for any changes in requirements or deadlines.",
+            "- Monitor the programme website (http://www.spe.cuhk.edu.hk/) for updates."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4320",
+            "首年學額：20",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：26",
+            "下四分位數：24.5",
+            "上四分位數：29",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：3",
+            "英國語文：4",
+            "數學必修部分：5*",
+            "公民與社會發展：達標（A）",
+            "數學延伸部分（M1/M2）：5",
+            "選修科目一：5",
+            "選修科目二：4",
+            "",
+            "一般入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 2 級",
+            "公民與社會發展：達標",
+            "兩門選修科目達第 3 級（或一門選修 + M1/M2）",
+            "優先科目：生物及物理",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：159",
+            "Band A 錄取人數：14",
+            "總申請人數：1225",
+            "Band A 錄取率：約 8.8%",
+            "Band A 每錄取申請人數：約 11.4"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "本課程為教育學院體育運動科學系開辦的四年全日制學位課程。",
+            "提供跨學科學習體驗，涵蓋人體運動、教練學、健康與康復的科學及醫學層面，以及學術研究活動。",
+            "兩個緊密相連的領域：",
+            "- 人體運動科學：探討人體運動在整個生命歷程中的成因與後果，包括預防和治療導致運動障礙的急性和慢性疾病。",
+            "- 健康研究：發展及應用以運動為基礎的預防性干預、健康與福祉管理，以及為受傷或身體受損人士提供康復的原則。",
+            "學生從多個角度審視人體運動，包括傷害預防、運動康復、生物力學、運動生理學、健康與體適能、運動控制及運動發展。",
+            "雙學位課程：",
+            "- 本地學生可申請與北京體育大學合辦的雙學位課程（DDP）。",
+            "- 學生分別在 CUHK 及 BSU 各修讀兩年，畢業時可獲兩所院校頒發學士學位。",
+            "- 結合兩所院校的優勢：CUHK 的運動科學教育與研究實力，以及 BSU 的運動康復與國家級運動訓練。",
+            "課程為學生從事教練、康復、運動治療、健康相關行業、體育相關產業或運動科學家等專業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可從事運動、體育及相關健康科學領域的工作。",
+            "潛在職位包括：",
+            "- 政府資助/國家體育協會的行政人員",
+            "- 體能訓練主任",
+            "- 紀律部隊的督察或主任",
+            "- 健身及休閒行業的管理人員",
+            "- 私營及商業機構的督導/主任",
+            "課程亦為學生在運動科學、物理治療或健康研究方面深造做好準備。",
+            "雙學位課程畢業生具備國際水平的運動與運動科學知識及技能，可從事運動科學研究、運動訓練、體育教育、健康教育與行政，以及體育相關產業及學術機構的工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞綠化，設施現代化。",
+            "大學設有獨特的書院制度，透過不同書院提供緊密的社群體驗。",
+            "學生可使用體育運動科學系的運動科學實驗室、體育館及研究設施。",
+            "教育學院在《泰晤士高等教育世界大學排名》（教育學科）2025 年位列全球第 11 位、亞洲第 4 位。",
+            "與北京體育大學的雙學位課程包括海外交流機會，並融合東西方教育學科。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：26",
+            "下四分位數：24.5",
+            "上四分位數：29",
+            "Band A 申請人數：159",
+            "Band A 錄取人數：14",
+            "Band A 錄取率：約 8.8%",
+            "Band A 每錄取申請人數：約 11.4",
+            "總申請人數：1225",
+            "本課程競爭激烈，尤其重視科學相關科目的學業成績。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "本課程相對較新，尚未產生廣為人知的著名校友。",
+            "教職員在運動科學、生物力學及健康促進領域發表了大量學術論文。",
+            "畢業生已在香港從事物理治療、運動教練及健康研究等工作。",
+            "學系的研究優勢包括運動生理學、生物力學、運動控制及健康促進。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的入學獎學金。",
+            "部分獎學金可涵蓋學費及生活費。",
+            "本地 JUPAS 學生可申請多項獎學金，包括為 HKDSE 成績優異者設立的中大入學獎學金。",
+            "此外，亦設有「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）等資助計劃。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數策略**",
+            "",
+            "- 最佳五科目標分數至少達 26 分（中位數）以具競爭力；24.5 分（下四分位數）為最低門檻。",
+            "- 穩妥起見，目標定於 29 分（上四分位數）或以上。",
+            "- 優先選修生物及物理，可提升申請優勢。",
+            "",
+            "**2. 選科策略**",
+            "",
+            "- 盡可能選修生物及物理，與課程內容相符。",
+            "- 數學延伸部分（M1/M2）可視作一門選修科目，並受重視。",
+            "- 確保符合最低要求：中文 3 級、英文 3 級、數學 2 級、公民科達標。",
+            "",
+            "**3. Band A 選擇**",
+            "",
+            "- 將 JS4320 置於 Band A，以最大化面試機會及錄取概率。",
+            "- 2025 年所有 14 個錄取名額均來自 Band A 申請人；Band B-E 無人獲錄取。",
+            "",
+            "**4. 面試準備**",
+            "",
+            "- 面試為選定申請人而設；準備討論你對人體運動科學及健康研究的興趣。",
+            "- 準備談論相關經驗（運動、教練、健康相關義工服務）。",
+            "- 展現跨學科思維：連結生物、物理與健康。",
+            "",
+            "**5. 個人陳述**",
+            "",
+            "- 突出你對運動科學、康復或健康促進的熱忱。",
+            "- 提及相關課外活動，如運動隊伍、教練經驗或健康義工服務。",
+            "- 如有興趣，可提及與北京體育大學的雙學位課程。",
+            "",
+            "**6. 善用優先科目**",
+            "",
+            "- 如已修讀生物及物理，在申請中強調相關成績。",
+            "- 這些科目的優異成績可彌補其他範疇的略低分數。",
+            "",
+            "**7. 了解課程內容**",
+            "",
+            "- 熟悉兩個關鍵領域：人體運動科學及健康研究。",
+            "- 準備討論你的興趣如何與課程的跨學科方針相符。",
+            "",
+            "**8. 探索雙學位選項**",
+            "",
+            "- 如有興趣，研究與北京體育大學的雙學位課程。",
+            "- 在面試中提及此選項可展示你的主動性及長遠規劃。",
+            "",
+            "**9. 緊貼最新資訊**",
+            "",
+            "- 定期查看 CUHK 官方入學頁面及 JUPAS 網站，了解要求或截止日期的變更。",
+            "- 留意課程網站（http://www.spe.cuhk.edu.hk/）的最新消息。"
+          ]
+        }
+      }
+    },
+    "code": "JS4320",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": 29,
+    "lq": 24.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 29
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is relatively new and has not yet produced widely recognized notable alumni.",
+      "Faculty members have published extensively in sports science, biomechanics, and health promotion.",
+      "Graduates have pursued careers in physiotherapy, sports coaching, and health research in Hong Kong."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Human Movement Science and notable alumni",
+      "香港中文大學 人體運動科學與健康研究 著名校友",
+      "CUHK Human Movement Science and graduates Hong Kong careers"
+    ]
+  }
+}

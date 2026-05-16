@@ -1,0 +1,521 @@
+{
+  "factPack": {
+    "code": "JS4412",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4412"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4412"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bcsen/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.cse.cuhk.edu.hk/admission/cscin/"
+      }
+    ],
+    "programme": {
+      "code": "JS4412",
+      "nameEn": "Computer Science and Engineering",
+      "nameZh": "計算機科學與工程",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 42.875,
+      "uq": 44.5,
+      "lq": 40.375,
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 44.5
+        },
+        "M": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 42.875
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 40.375
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, DAT, ICT (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4412",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4412",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4412",
+      "nameEn": "Computer Science and Engineering",
+      "nameZh": "計算機科學與工程",
+      "shortDescription": "an class=\"before_label\">Short Description Computer Engineering (CENG) and Computer Science (CSCI) are four-year programmes offered by The Department of Computer Science and Engineering (CSE), which is the first computer science department in Hong Kong that started to launch its undergraduate major programme in 1978. While both CENG and CSCI are rigorously founded on problem solving by programming, data structure, and algorithm design, CENG distinguishes itself from others by offering specialized training for students in areas such as mobile embedded systems, microprocessors, VLSI design, hardware-aided security, and super-computing. On the other hand, CSCI focuses more on software innovation and offers diverse specialized areas such as artificial intelligence, bioinformatics, big data analytics, cloud computing, computer and network security, database and information systems, graphics and computer vision, and machine learning. Students will first be admitted to the CSE department through the department-based Computer Science and Engineering programme. After the first year of study, eligible students will be invited to declare their major in CENG or CSCI. Students with outstanding HKDSE results and good academic performance in the first year of study are guaranteed their first choice of major.",
+      "programmeWebsite": "https://www.cse.cuhk.edu.hk/admission/cscin/",
+      "tuition": "HK$47,000",
+      "intake": 113,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level One of the following elective subjects: BIOLOGY 3 PHYSICS 3 CHEMISTRY 3 INFORMATION AND COMMUNICATION TECHNOLOGY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 One of the following elective subjects: ANY 1 SUBJECT NOTE 3 NOTE: Preferred subjects: Mathematics Extended Module I or II, Biology, Chemistry, Design and Applied Technology, Information and Communication Technology and Physics. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 343,
+        "bandB": 228,
+        "bandC": 327,
+        "bandD": 458,
+        "bandE": 344,
+        "total": 1700
+      },
+      "offers2025": {
+        "bandA": 117,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 117
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bcsen/",
+      "introduction": "Computer Science and Engineering Starting in 2022, students who are interested in pursuing the Computer Engineering (CENG) or Computer Science (CSCI) programme can be directly admitted to the Department of Computer Science and Engineering through the Computer Science and Engineering (BCSEN) programme, a “department-based” admission arrangement. Upon completing their first year of study, BCSEN students will then declare their major in CENG or CSCI. Students with outstanding HKDSE results and good academic performance in their first year of study are guaranteed their first choice of major. While both CENG and CSCI are rigorously founded on problem solving by programming, data structure and algorithm design, CENG distinguishes itself from other programmes by offering specialized training for students in areas such as mobile embedded systems, microprocessors, VLSI design, hardware-aided security, and supercomputing. CSCI, in contrast, focuses more on software innovation and aims to train students with a flexible curriculum that covers diverse and specialized areas. (1) The Comeback of Computers – The CENG Programme The CENG programme was formally established when the Faculty of Engineering was inaugurated in 1991, with an emphasis on both computer hardware and software. It is accredited by the Hong Kong Institution of Engineers (HKIE). The CENGN curriculum comprises courses in the following areas: Applications: mobile embedded devices, computer graphics and multimedia processing Computer hardware: circuitry theory, logic system design, computer architecture and interfacing, and computer arithmetic Computer software: programming, data structure, operating systems, algorithms and software engineering Very large-scale integrated (VLSI) circuit design: Computer-aided design and applications System connectivity: computer networks, etc. (2) Gearing Up for Technological and Digitized Society – The CSCI Programme The CSCI programme, launched more than 40 years ago, was the first computer science programme in Hong Kong. It is accredited by the Hong Kong Institution of Engineers (HKIE) and has gained an international reputation for excellence in research and teaching. The CSCIN programme covers the following areas: Artificial Intelligence Big Data Analytics Bioinformatics Computer and Network Security Computer Systems and Networking Computer-aided Design Databases Digital Hardware Technologies Information Systems Internet Multimedia Technology Programming Languages Software Engineering Theoretical Computer Science",
+      "ranking": "#7 globally in Computer Science (#1 in Hong Kong) (US News and World Report Best Global Universities by Subject in 2025)",
+      "careerProspects": "Over the years, CSE has built up a large alumni network in the computer industry, not only in Hong Kong, but also in the US and Chinese Mainland. Many of our graduates have taken up important positions in various organizations and companies, such as the HKSAR government, HSBC, Intel, Microsoft, IBM and Google. Quite a number of our graduates have started their own businesses and become successful entrepreneurs. Others have continued their postgraduate studies and taken up teaching and research in prestigious institutions both locally and overseas. This network helps our graduates enjoy a comparative advantage in professional career development. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4412",
+    "nameEn": "Computer Science and Engineering",
+    "nameZh": "計算機科學與工程",
+    "name": "Computer Science and Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 42.875,
+    "band_a": 40.375,
+    "uq": 44.5,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "To be considered for JS4412 Computer Science and Engineering, you must meet the following minimum requirements:",
+            "",
+            "Core Subjects: Chinese Language Level 3, English Language Level 3, Mathematics Compulsory Part Level 4, Citizenship and Social Development Attained.",
+            "",
+            "Elective Subjects: At least one of Biology, Physics, Chemistry, Information and Communication Technology, or Mathematics Extended Module 1 or 2 at Level 3; plus one other elective at Level 3.",
+            "",
+            "First Year Intake: 113",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics: Band A applications 343, offers 117, total applications 1700.",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 42.875",
+            "Lower quartile (LQ): 40.375",
+            "Upper quartile (UQ): 44.5",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 3, English: 4, Mathematics: 5*, CSD: A, M1/M2: 5, 1st Elective: 5*, 2nd Elective: 5",
+            "",
+            "Subject Weighting: Mathematics (x1.5), M1/M2 (x1.75), Biology/Chemistry/Physics/DAT/ICT (x1.5)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Computer Science and Engineering programme is a department-based admission scheme that allows students to enter the Department of Computer Science and Engineering directly. After the first year, students declare their major in either Computer Engineering (CENG) or Computer Science (CSCI).",
+            "",
+            "CENG focuses on hardware-software integration, covering mobile embedded systems, microprocessors, VLSI design, hardware-aided security, and supercomputing. CSCI emphasizes software innovation, with specializations in artificial intelligence, big data analytics, bioinformatics, cloud computing, computer and network security, databases, graphics and computer vision, and machine learning.",
+            "",
+            "Both streams are founded on problem solving by programming, data structures, and algorithm design. The curriculum is accredited by the Hong Kong Institution of Engineers (HKIE).",
+            "",
+            "Students with outstanding HKDSE results and good first-year academic performance are guaranteed their first choice of major."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the Computer Science and Engineering programme have a strong alumni network in Hong Kong, the US, and Mainland China. Many hold key positions in the HKSAR government, HSBC, Intel, Microsoft, IBM, and Google.",
+            "",
+            "A number of alumni have become successful entrepreneurs, founding their own companies. Others pursue postgraduate studies and take up teaching and research roles at prestigious institutions locally and overseas.",
+            "",
+            "The programme's HKIE accreditation further enhances professional recognition and career mobility."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing unique residential, cultural, and pastoral support.",
+            "",
+            "Students benefit from state-of-the-art facilities, including computer labs, libraries, and research centres. The Department of Computer Science and Engineering organizes seminars, hackathons, and industry networking events.",
+            "",
+            "Exchange and internship opportunities are available through the university's global partnerships, though specific details are not listed in the official programme page."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, JS4412 received 1,700 total applications, with 343 in Band A. 117 offers were made to Band A applicants, yielding a Band A offer rate of approximately 34.1%.",
+            "",
+            "The Band A applications per offer ratio is about 2.9, indicating strong competition.",
+            "",
+            "Median admission score (Best 5) was 42.875, with LQ 40.375 and UQ 44.5. Achieving scores above the median significantly improves chances."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "The programme has produced distinguished academics and industry leaders:",
+            "",
+            "Irwin King (金國慶) – Professor at CUHK, known for machine learning and social computing research.",
+            "Michael R. Lyu (呂榮聰) – Professor at CUHK, renowned for software reliability and fault-tolerant computing.",
+            "John C.S. Lui (雷兆輝) – Professor at CUHK, expert in computer networks and performance evaluation.",
+            "Wong Kam-fai (黃錦輝) – Professor at CUHK, specialist in natural language processing and web mining.",
+            "James She (佘日峰) – Professor at HKUST, known for mobile computing and IoT; PhD from CUHK CSE.",
+            "",
+            "Faculty include IEEE Fellows and ACM Distinguished Scientists, with awards such as the ACM SIGMOD Test of Time Award."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local and non-local students based on academic merit. These may cover tuition fees and living expenses.",
+            "",
+            "JUPAS students are automatically considered for admission scholarships. Additional financial aid schemes include the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4412 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Above Median**",
+            "",
+            "- Aim for a Best 5 score of at least 43, with Mathematics at 5* or above and M1/M2 at 5 or above.",
+            "- Use the subject weighting: Mathematics (x1.5), M1/M2 (x1.75), and science/ICT (x1.5) to maximize your score.",
+            "",
+            "**2. Prioritize Mathematics and M1/M2**",
+            "",
+            "- Mathematics Compulsory Part requires Level 4 minimum, but Level 5* or above is typical for admitted students.",
+            "- M1 or M2 is heavily weighted (x1.75); aim for Level 5 or above.",
+            "",
+            "**3. Excel in English and Electives**",
+            "",
+            "- English Level 4 is the median; Level 5 or above strengthens your profile.",
+            "- Choose electives from Biology, Chemistry, Physics, ICT, or DAT to benefit from the x1.5 weighting.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview for selected applicants. Demonstrate passion for computing, problem-solving skills, and awareness of current tech trends.",
+            "- Practice explaining your projects or coding experience.",
+            "",
+            "**5. Apply in Band A**",
+            "",
+            "- All 117 offers in 2025 went to Band A applicants. Band A placement is critical.",
+            "- Use Band A to signal strong interest and maximize chances.",
+            "",
+            "**6. Leverage CSD Attained**",
+            "",
+            "- Citizenship and Social Development only requires 'Attained' (or Level 2 in Liberal Studies). It does not affect score calculation.",
+            "",
+            "**7. Consider Applied Learning Courses**",
+            "",
+            "- The programme accepts specific Applied Learning courses with 'Attained with Distinction I/II' as an extra elective for bonus points.",
+            "",
+            "**8. Research the Majors**",
+            "",
+            "- Understand the difference between CENG (hardware-focused) and CSCI (software-focused). Your choice after Year 1 should align with your interests and career goals.",
+            "",
+            "**9. Visit the Programme Website**",
+            "",
+            "- Check https://www.cse.cuhk.edu.hk/admission/cscin/ for updates on curriculum, events, and application tips."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "申請JS4412計算機科學與工程須符合以下最低要求：",
+            "",
+            "核心科目：中國語文第3級，英國語文第3級，數學必修部分第4級，公民與社會發展科達標。",
+            "",
+            "選修科目：至少一科生物、物理、化學、資訊及通訊科技或數學延伸部分單元一或二達第3級；另加一科選修達第3級。",
+            "",
+            "首年學額：113",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：有（選定申請人）",
+            "",
+            "2025年聯招申請統計：Band A申請343人，取錄117人，總申請1700人。",
+            "",
+            "2025年聯招入學分數（最佳五科）：",
+            "中位數：42.875",
+            "下四分位數：40.375",
+            "上四分位數：44.5",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：3，英國語文：4，數學：5*，公民科：A，M1/M2：5，第一選修：5*，第二選修：5",
+            "",
+            "科目比重：數學（x1.5），M1/M2（x1.75），生物/化學/物理/設計與應用科技/資訊及通訊科技（x1.5）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "計算機科學與工程課程為學系為本收生，學生直接入讀計算機科學與工程學系。第一年後，學生可選擇主修計算機工程（CENG）或計算機科學（CSCI）。",
+            "",
+            "CENG專注硬件與軟件整合，涵蓋流動嵌入式系統、微處理器、超大規模集成電路設計、硬件輔助安全及超級計算。CSCI強調軟件創新，提供人工智能、大數據分析、生物信息學、雲端計算、計算機及網絡安全、數據庫、圖像及計算機視覺、機器學習等專業範疇。",
+            "",
+            "兩個主修均以編程解難、數據結構及算法設計為基礎。課程獲香港工程師學會（HKIE）認可。",
+            "",
+            "文憑試成績優異及第一年學業成績良好的學生，可獲保證首選主修。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生校友網絡遍佈香港、美國及中國內地，不少任職於香港特區政府、滙豐銀行、英特爾、微軟、IBM及Google等機構。",
+            "",
+            "部分校友成功創業，亦有校友繼續深造，於本地及海外知名院校從事教學及研究。",
+            "",
+            "HKIE認證進一步提升專業認受性及職業流動性。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，各具獨特的住宿、文化及關顧支援。",
+            "",
+            "學生可使用先進的電腦實驗室、圖書館及研究中心。計算機科學與工程學系舉辦研討會、黑客松及業界交流活動。",
+            "",
+            "大學透過環球合作夥伴提供交流及實習機會，惟官方課程頁面未列具體詳情。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025年JS4412共收到1700份申請，其中Band A有343份。Band A申請人獲發117個學額，Band A取錄率約34.1%。",
+            "",
+            "Band A申請與學額比例約2.9，競爭激烈。",
+            "",
+            "中位數入學分數（最佳五科）為42.875，下四分位數40.375，上四分位數44.5。分數高於中位數可大幅提升機會。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "課程培育出多位傑出學者及業界領袖：",
+            "",
+            "金國慶（Irwin King）– 香港中文大學教授，專注機器學習及社交計算研究。",
+            "呂榮聰（Michael R. Lyu）– 香港中文大學教授，以軟件可靠性及容錯計算聞名。",
+            "雷兆輝（John C.S. Lui）– 香港中文大學教授，計算機網絡及性能評估專家。",
+            "黃錦輝（Wong Kam-fai）– 香港中文大學教授，自然語言處理及網絡挖掘專家。",
+            "佘日峰（James She）– 香港科技大學教授，流動計算及物聯網專家；中大計算機科學與工程博士。",
+            "",
+            "教職員包括IEEE院士及ACM傑出科學家，曾獲ACM SIGMOD時間考驗獎及IEEE計算機學會技術成就獎。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的入學獎學金，可涵蓋學費及生活費。",
+            "",
+            "聯招申請人會自動被考慮入學獎學金。其他資助計劃包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS4412策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數高於中位數**",
+            "",
+            "- 最佳五科目標至少43分，數學達5*或以上，M1/M2達5或以上。",
+            "- 利用科目比重：數學（x1.5）、M1/M2（x1.75）、科學/ICT（x1.5）以最大化分數。",
+            "",
+            "**2. 優先處理數學及M1/M2**",
+            "",
+            "- 數學必修部分最低要求第4級，但取錄者通常達5*或以上。",
+            "- M1或M2比重高（x1.75），目標第5級或以上。",
+            "",
+            "**3. 在英文及選修科表現出色**",
+            "",
+            "- 英文中位數為第4級，第5級或以上可增強競爭力。",
+            "- 選擇生物、化學、物理、ICT或設計與應用科技等選修科，以獲得x1.5比重。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 課程為選定申請人設有面試。展示對計算的熱誠、解難能力及對科技趨勢的認識。",
+            "- 練習介紹你的項目或編程經驗。",
+            "",
+            "**5. 將課程放在Band A**",
+            "",
+            "- 2025年所有學額均給予Band A申請人。Band A位置至關重要。",
+            "- 利用Band A表達強烈興趣，最大化機會。",
+            "",
+            "**6. 善用公民科達標**",
+            "",
+            "- 公民與社會發展科只需「達標」（或2023年前的通識教育第2級），不影響分數計算。",
+            "",
+            "**7. 考慮應用學習課程**",
+            "",
+            "- 課程接受特定應用學習課程，取得「達標並表現優異I/II」可作為額外選修科獲加分。",
+            "",
+            "**8. 了解主修選擇**",
+            "",
+            "- 了解CENG（硬件為主）與CSCI（軟件為主）的分別。第一年後的選擇應配合個人興趣及事業目標。",
+            "",
+            "**9. 瀏覽課程網站**",
+            "",
+            "- 到訪 https://www.cse.cuhk.edu.hk/admission/cscin/ 獲取課程、活動及申請貼士的最新資訊。"
+          ]
+        }
+      }
+    },
+    "code": "JS4412",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 42.875,
+    "uq": 44.5,
+    "lq": 40.375,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 44.5
+      },
+      "M": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 42.875
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 40.375
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Irwin King",
+        "nameZh": "金國慶",
+        "achievement": "Professor at CUHK, known for machine learning and social computing research; alumnus of the Computer Science and Engineering programme.",
+        "sourceHint": "CUHK CSE department page"
+      },
+      {
+        "nameEn": "Michael R. Lyu",
+        "nameZh": "呂榮聰",
+        "achievement": "Professor at CUHK, renowned for software reliability and fault-tolerant computing; earned his PhD from UCLA but is a long-time faculty member and graduate of the CSE programme.",
+        "sourceHint": "CUHK CSE department page"
+      },
+      {
+        "nameEn": "John C.S. Lui",
+        "nameZh": "雷兆輝",
+        "achievement": "Professor at CUHK, expert in computer networks and performance evaluation; alumnus of the Computer Science and Engineering programme.",
+        "sourceHint": "CUHK CSE department page"
+      },
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Professor at CUHK, specialist in natural language processing and web mining; graduate of the CSE programme.",
+        "sourceHint": "CUHK CSE department page"
+      },
+      {
+        "nameEn": "James She",
+        "nameZh": "佘日峰",
+        "achievement": "Professor at HKUST, known for mobile computing and IoT; earned his PhD from CUHK CSE.",
+        "sourceHint": "Public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The programme is taught by world-class faculty including IEEE Fellows and ACM Distinguished Scientists.",
+      "Faculty have won numerous awards such as the ACM SIGMOD Test of Time Award and the IEEE Computer Society Technical Achievement Award."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Computer Science and Engineering notable alumni",
+      "香港中文大學 計算機科學與工程 著名校友",
+      "CUHK Computer Science and Engineering graduates Hong Kong careers"
+    ]
+  }
+}

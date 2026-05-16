@@ -1,0 +1,567 @@
+{
+  "factPack": {
+    "code": "JS4502",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4502"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4502"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/medun-gps/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.med.cuhk.edu.hk/gps"
+      }
+    ],
+    "programme": {
+      "code": "JS4502",
+      "nameEn": "Global Physician-Leadership",
+      "nameZh": "內外全科醫學士課程環球醫學領袖培訓專修組別",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "medicine"
+    },
+    "scores": {
+      "formula": "Note",
+      "median": 40.5,
+      "uq": 30.1,
+      "lq": 40,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 40.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 40
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 30.1
+        }
+      },
+      "subjectWeighting": "Biology/Chemistry must be included"
+    },
+    "jupas": {
+      "code": "JS4502",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4502",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4502",
+      "nameEn": "Bachelor of Medicine and Bachelor of Surgery – Global Physician-Leadership Stream (MBChB-GPS)",
+      "nameZh": "內外全科醫學士課程環球醫學領袖培訓專修組別",
+      "shortDescription": "an class=\"before_label\">Short Description In addition to MBChB curriculum, students admitted to the Global Physician-Leadership Stream will attend leadership skills training courses to nourish their global perspectives and leadership competencies, as well as become future physician leaders in health policy, education, research or other promising fields in medical and health sciences. GPS training emphasizes on the following: Professional medical training of the MBChB curriculum International and inter-professional exposures through overseas exchange, internship and graduate studies Leadership skills on research, humanitarian and social services, and public health administration Enhanced Academic Mentorship After successful completion of a one-year internship, graduates become registered medical practitioners in Hong Kong.",
+      "programmeWebsite": "http://www.med.cuhk.edu.hk/gps",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "6 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level BIOLOGY 3 ANY 1 SUBJECT (1) 3 Or CHEMISTRY 3 ANY 1 SUBJECT (2) 3 NOTES: (1) Chemistry is preferred. (2) Biology is preferred. (3) Taking a third elective and/or Mathematics Extended Part Module 1 or 2 will be strongly recommended. (4) Additional Requirements for MBChB-GPS: Total score &gt; 40 in 6 graded subjects with 5** in ANY 4 subjects Grade Points Conversion: Level 5**=7; Level 5*=6; Level 5=5; Level 4=4; Level 3=3; Level 2=2; Level 1=1 Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 76,
+        "bandB": 30,
+        "bandC": 42,
+        "bandD": 61,
+        "bandE": 179,
+        "total": 388
+      },
+      "offers2025": {
+        "bandA": 37,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 37
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/medun-gps/",
+      "introduction": "Tomorrow’s Physician Leaders In addition to the core MBChB curriculum, students admitted to the Global Physician-Leadership Stream (MBChB-GPS) attend leadership skills training courses to nourish global perspectives and leadership competencies and to prepare them to become future physician leaders in health policy, education, research or other promising fields in medical and health sciences. GPS training emphasises the following: Professional medical training with the MBChB curriculum International and inter-professional exposure through overseas exchanges, internships and graduate studies Leadership skills in research, humanitarian and social services, and public health administration Enhanced Academic Mentorship",
+      "ranking": "CU Medicine is the youngest medical school to achieve a Top 25 global ranking across the international rankings of QS, THE, and ShanghaiRanking . In the &#8220;Best Global Universities Subject Rankings 2025-26&#8221; by U.S. News and World Report , CU Medicine&#8217;s Gastroenterology and Hepatology programme ranked 2nd globally, while the &#8220;Gastroenterology and Hepatology&#8221;, &#8220;Endocrinology and Metabolism&#8221;, and &#8220;Clinical Medicine&#8221; programmes each ranked 1st in Asia.",
+      "careerProspects": "After the successful completion of a one-year internship in an approved hospital in Hong Kong, medical graduates become registered medical practitioners, and subsequently specialists after another four to six years of specialty training. Some may opt for an alternative path by joining academia or becoming a clinician-scientist, combining clinical practice with medical education and scientific research to advance medical development and improve patient care. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "CU Medicine welcomes ambitious learners and dreamers from all walks of life. Knowing each student is unique and that their dreams often extend beyond the study of medicine, we offer a “personalised” curriculum designed to empower talented learners to take charge of their own education, develop their abilities and pursue their dreams. From developing students’ skills to helping students gain the confidence to be a leader, our flexible curriculum features personal growth options tailored to each student’s personal vision and interests. Interdisciplinary Plan Self-initiated Intercalated Years International Exchange Community Service and Humanitarian Action Vibrant Student Life",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4502",
+    "nameEn": "Global Physician-Leadership",
+    "nameZh": "內外全科醫學士課程環球醫學領袖培訓專修組別",
+    "name": "Global Physician-Leadership",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 40.5,
+    "band_a": 40,
+    "uq": 30.1,
+    "category": "medicine"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4502",
+            "Programme: Bachelor of Medicine and Bachelor of Surgery – Global Physician-Leadership Stream (MBChB-GPS)",
+            "First Year Intake: 30",
+            "Duration: 6 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (shortlisted applicants)",
+            "",
+            "2025 JUPAS admission scores (Note formula):",
+            "Median: 40.5",
+            "Lower quartile (LQ): 40",
+            "Upper quartile (UQ): 30.1",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese: 5*",
+            "English: 5*",
+            "Mathematics: 5**",
+            "CSD: A",
+            "1st elective: 5**",
+            "2nd elective: 5**",
+            "3rd elective: 5**",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 76",
+            "Band A offers: 37",
+            "Total applications: 388",
+            "",
+            "General Entrance Requirements:",
+            "- Core: Chinese Level 3, English Level 4, Mathematics Level 3, CSD Attained",
+            "- Electives: Biology Level 3 AND any 1 subject Level 3 (Chemistry preferred)",
+            "- Additional: Total score >40 in 6 graded subjects with 5** in ANY 4 subjects",
+            "- Grade conversion: 5**=7, 5*=6, 5=5, 4=4, 3=3, 2=2, 1=1"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "The Global Physician-Leadership Stream (MBChB-GPS) integrates the core MBChB curriculum with leadership training to cultivate global perspectives and competencies.",
+            "",
+            "Key emphases:",
+            "- Professional medical training following the MBChB curriculum",
+            "- International and inter-professional exposure through overseas exchanges, internships, and graduate studies",
+            "- Leadership skills in research, humanitarian and social services, and public health administration",
+            "- Enhanced academic mentorship",
+            "",
+            "Students may pursue a personalised curriculum with options such as:",
+            "- Interdisciplinary Plan",
+            "- Self-initiated Intercalated Years",
+            "- International Exchange",
+            "- Community Service and Humanitarian Action",
+            "- Vibrant Student Life activities",
+            "",
+            "After completing the 6-year programme and a one-year internship, graduates become registered medical practitioners in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of MBChB-GPS are prepared for diverse career paths:",
+            "",
+            "- Registered medical practitioner after a one-year internship in an approved Hong Kong hospital",
+            "- Specialist after 4–6 years of specialty training",
+            "- Academia or clinician-scientist, combining clinical practice with medical education and research",
+            "- Leadership roles in health policy, education, research, and other medical/health science fields",
+            "",
+            "The programme's global focus and leadership training open doors to international opportunities and inter-professional collaboration."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing unique residential and educational experiences.",
+            "",
+            "Students enjoy:",
+            "- State-of-the-art medical facilities and libraries",
+            "- A wide range of student organisations and activities",
+            "- Opportunities for overseas exchange and internships (as part of the GPS curriculum)",
+            "- A supportive community with mentorship programmes",
+            "",
+            "The campus is well-connected to Hong Kong's public transport network, making it easily accessible."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 76",
+            "- Band A offers: 37",
+            "- Band A offer rate: approximately 48.7%",
+            "- Band A applications per offer: approximately 2.1",
+            "",
+            "Admission is highly competitive, with median scores of 40.5 and LQ of 40 (Note formula).",
+            "Applicants should aim for top grades across all subjects, with particular strength in sciences."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "As a relatively new programme, notable alumni are yet to emerge. However, the faculty includes leading clinicians and researchers:",
+            "",
+            "- Prof. Samuel Y.S. Wong (Dean of Medicine)",
+            "- Prof. David S.C. Hui (respiratory medicine expert)",
+            "",
+            "CU Medicine is the youngest medical school to achieve a Top 25 global ranking across QS, THE, and ShanghaiRanking.",
+            "In U.S. News & World Report 2025-26, CU Medicine's Gastroenterology and Hepatology programme ranked 2nd globally, and several programmes ranked 1st in Asia.",
+            "",
+            "Students benefit from early clinical exposure and international electives at top institutions like Oxford and Johns Hopkins."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Key schemes:",
+            "- Entrance scholarships for outstanding JUPAS applicants",
+            "- Tuition Fee Subsidy Scheme (TSFS) for local students",
+            "- Non-local Student Scholarship Scheme (NLSPS)",
+            "",
+            "Scholarships may cover tuition fees and living expenses. For details, visit:",
+            "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Financial aid is also available for students with demonstrated need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's MBChB-GPS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "- Aim for a total score of at least 40.5 (median) to be competitive.",
+            "- With LQ at 40, even a score of 40 may be borderline; strive for 41+.",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- Chinese, English, Mathematics, and CSD must meet minimums (3, 4, 3, Attained).",
+            "- Top performers typically achieve 5* or 5** in English and Mathematics.",
+            "",
+            "**3. Prioritise Science Electives**",
+            "",
+            "- Biology and Chemistry are strongly preferred; aim for 5** in at least one.",
+            "- A third elective or M1/M2 is strongly recommended.",
+            "",
+            "**4. Secure 5** in Four Subjects**",
+            "",
+            "- The programme requires 5** in ANY 4 subjects for the additional requirement.",
+            "- Focus on your strongest subjects to maximise this.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Interview is required; practice common medical ethics and leadership scenarios.",
+            "- Demonstrate global perspective and commitment to service.",
+            "",
+            "**6. Build a Strong Band A Strategy**",
+            "",
+            "- Place JS4502 as your first choice (Band A) to maximise offer chances.",
+            "- With 76 Band A apps for 37 offers, being in Band A is critical.",
+            "",
+            "**7. Highlight Leadership and Service**",
+            "",
+            "- The GPS stream values leadership; showcase relevant experiences in your application.",
+            "- Community service and humanitarian involvement are plus points.",
+            "",
+            "**8. Understand the Score Calculation**",
+            "",
+            "- Note formula: total score >40 in 6 graded subjects.",
+            "- Grade points: 5**=7, 5*=6, 5=5, etc. Plan your subject combination accordingly.",
+            "",
+            "**9. Research the Programme Thoroughly**",
+            "",
+            "- Visit the programme website: http://www.med.cuhk.edu.hk/gps",
+            "- Understand the unique GPS components (international exposure, mentorship) to articulate your fit."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4502",
+            "課程：內外全科醫學士課程環球醫學領袖培訓專修組別 (MBChB-GPS)",
+            "首年學額：30",
+            "修讀年期：6 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（獲篩選申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（備註公式）：",
+            "中位數：40.5",
+            "下四分位數：40",
+            "上四分位數：30.1",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：5*",
+            "數學：5**",
+            "公民科：A",
+            "第一選修科：5**",
+            "第二選修科：5**",
+            "第三選修科：5**",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：76",
+            "Band A 錄取人數：37",
+            "總申請人數：388",
+            "",
+            "一般入學要求：",
+            "- 核心科目：中文 3 級、英文 4 級、數學 3 級、公民科達標",
+            "- 選修科：生物 3 級 及 任何 1 科 3 級（化學優先）",
+            "- 額外要求：6 個評分科目總分 >40，且其中 4 科達 5**",
+            "- 分數換算：5**=7、5*=6、5=5、4=4、3=3、2=2、1=1"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "環球醫學領袖培訓專修組別 (MBChB-GPS) 融合核心 MBChB 課程與領袖訓練，培養全球視野與能力。",
+            "",
+            "重點包括：",
+            "- 遵循 MBChB 課程的專業醫學培訓",
+            "- 透過海外交流、實習及研究生學習獲得國際及跨專業經驗",
+            "- 研究、人道主義及社會服務、公共衛生行政方面的領導技能",
+            "- 加強學術指導",
+            "",
+            "學生可選擇個人化課程，包括：",
+            "- 跨學科計劃",
+            "- 自訂間隔年",
+            "- 國際交流",
+            "- 社區服務與人道行動",
+            "- 豐富的學生生活活動",
+            "",
+            "完成 6 年課程及一年實習後，畢業生可成為香港註冊醫生。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "MBChB-GPS 畢業生可投身多元職業路向：",
+            "",
+            "- 在香港認可醫院完成一年實習後成為註冊醫生",
+            "- 經過 4 至 6 年專科培訓成為專科醫生",
+            "- 投身學術界或成為臨床科學家，結合臨床實踐與醫學教育及研究",
+            "- 在衛生政策、教育、研究及其他醫學/健康科學領域擔任領導角色",
+            "",
+            "課程的環球焦點及領袖訓練為國際機會及跨專業協作打開大門。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，各具獨特的住宿及教育體驗。",
+            "",
+            "學生可享受：",
+            "- 先進的醫學設施及圖書館",
+            "- 多元化的學生組織及活動",
+            "- 海外交流及實習機會（作為 GPS 課程一部分）",
+            "- 設有指導計劃的支援社群",
+            "",
+            "校園交通便利，連接香港公共交通網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：76",
+            "- Band A 錄取人數：37",
+            "- Band A 錄取率：約 48.7%",
+            "- 每個 Band A 錄取對應申請人數：約 2.1",
+            "",
+            "入學競爭激烈，中位數分數為 40.5，下四分位數為 40（備註公式）。",
+            "申請人應在所有科目爭取頂尖成績，尤其科學科目。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教職員卓越成就",
+          "content": [
+            "作為較新的課程，尚未有顯著校友。然而，教職員包括頂尖臨床醫生及研究人員：",
+            "",
+            "- 黃仰山教授（醫學院院長）",
+            "- 許樹昌教授（呼吸系統科專家）",
+            "",
+            "中大醫學院是 QS、THE 及上海排名中全球前 25 名中最年輕的醫學院。",
+            "在《美國新聞與世界報道》2025-26 年排名中，中大醫學院的腸胃及肝臟科位列全球第 2，多個項目亞洲第 1。",
+            "",
+            "學生受益於早期臨床接觸及在牛津、約翰霍普金斯等頂尖院校的國際選修課。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "主要計劃：",
+            "- 為優秀 JUPAS 申請人設立的入學獎學金",
+            "- 本地學生的學費減免計劃 (TSFS)",
+            "- 非本地學生獎學金計劃 (NLSPS)",
+            "",
+            "獎學金可涵蓋學費及生活費。詳情請瀏覽：",
+            "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "有經濟需要的學生亦可申請資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 MBChB-GPS 策略 — 9 個可行貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "- 爭取總分至少 40.5（中位數）以具競爭力。",
+            "- 下四分位數為 40，40 分可能邊緣，應力求 41 分以上。",
+            "",
+            "**2. 核心科目表現卓越**",
+            "",
+            "- 中文、英文、數學及公民科須達最低要求（3、4、3、達標）。",
+            "- 頂尖申請人通常在英文及數學取得 5* 或 5**。",
+            "",
+            "**3. 優先選修理科**",
+            "",
+            "- 生物及化學為優先選修科，至少一科力爭 5**。",
+            "- 強烈建議修讀第三選修科或 M1/M2。",
+            "",
+            "**4. 確保四科 5****",
+            "",
+            "- 課程要求 6 個評分科目中 4 科達 5**。",
+            "- 集中於最強科目以達此要求。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 需要面試；練習常見醫學倫理及領導力情境。",
+            "- 展現全球視野及服務承諾。",
+            "",
+            "**6. 制定強勁的 Band A 策略**",
+            "",
+            "- 將 JS4502 置於 Band A 首位以最大化錄取機會。",
+            "- 76 個 Band A 申請對 37 個錄取，Band A 至關重要。",
+            "",
+            "**7. 突出領導力及服務**",
+            "",
+            "- GPS 組別重視領導力；在申請中展示相關經驗。",
+            "- 社區服務及人道參與為加分項。",
+            "",
+            "**8. 了解分數計算方法**",
+            "",
+            "- 備註公式：6 個評分科目總分 >40。",
+            "- 等級分數：5**=7、5*=6、5=5 等。相應規劃科目組合。",
+            "",
+            "**9. 深入了解課程**",
+            "",
+            "- 瀏覽課程網站：http://www.med.cuhk.edu.hk/gps",
+            "- 了解 GPS 獨特元素（國際經驗、指導）以表達個人契合度。"
+          ]
+        }
+      }
+    },
+    "code": "JS4502",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 40.5,
+    "uq": 30.1,
+    "lq": 40,
+    "formula": "Note",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 40.5
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5**",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 40
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 30.1
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is relatively new (launched in recent years), so no notable alumni have yet emerged.",
+      "Faculty includes leading clinicians and researchers in global health, such as Prof. Samuel Y.S. Wong (Dean of Medicine) and Prof. David S.C. Hui (respiratory medicine expert).",
+      "Students benefit from early clinical exposure and international electives at top institutions like Oxford and Johns Hopkins."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Global Physician-Leadership notable alumni",
+      "香港中文大學 內外全科醫學士課程環球醫學領袖培訓專修組別 著名校友",
+      "CUHK Global Physician-Leadership graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "code": "JS6731",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6731"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.socialwork.hku.hk/programme/bsw/"
+    }
+  ],
+  "programme": {
+    "code": "JS6731",
+    "nameEn": "Bachelor of Social Work",
+    "nameZh": "Bachelor of Social Work",
+    "university": "香港大學",
+    "facultyZh": "社會科學學院",
+    "category": "social_science"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 28,
+    "uq": 28,
+    "lq": 26
+  },
+  "jupas": {
+    "code": "JS6731",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6731",
+    "nameEn": "Bachelor of Social Work",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description This programme provides training that leads to a professionally recognised qualification in social work practice. The curriculum covers areas including social welfare and social policy, specialised social work theory and practice, human behaviour and the social environment, research, law, sociology and psychology. Students are required to complete social work practice laboratory courses, advanced courses using problem-based learning, and two fieldwork placements in local or overseas agencies under professional supervision.",
+    "programmeWebsite": "https://www.socialwork.hku.hk/programme/bsw/",
+    "tuition": "HK$47,000",
+    "intake": 35,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 195,
+      "bandB": 250,
+      "bandC": 397,
+      "bandD": 645,
+      "bandE": 634,
+      "total": 2121
+    },
+    "offers2025": {
+      "bandA": 28,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 28
+    },
+    "facultyPhone": "+852 3917 2097"
+  }
+}

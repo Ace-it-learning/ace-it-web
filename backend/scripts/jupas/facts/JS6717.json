@@ -1,0 +1,37 @@
+{
+  "code": "JS6717",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_pdf",
+      "label": "JUPAS 2025 Admissions Scores PDF",
+      "url": "backend/data/JUPAS/af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6717"
+    }
+  ],
+  "programme": {
+    "code": "JS6717",
+    "university": "香港大學"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 31,
+    "uq": 34,
+    "lq": 29
+  },
+  "statistics2025": {
+    "applications": {
+      "bandA": 406,
+      "total": 3636
+    }
+  },
+  "programmeMeta": {
+    "intake": 72,
+    "duration": "4 years",
+    "interview": false
+  }
+}

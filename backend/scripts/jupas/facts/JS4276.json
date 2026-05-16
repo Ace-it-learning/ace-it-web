@@ -1,0 +1,129 @@
+{
+  "code": "JS4276",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4276"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4276"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/qfrmn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://www.qfrm.cuhk.edu.hk"
+    }
+  ],
+  "programme": {
+    "code": "JS4276",
+    "nameEn": "Quantitative Finance and Risk Management Science",
+    "nameZh": "計量金融學及風險管理科學",
+    "university": "香港中文大學",
+    "facultyZh": "商學院",
+    "category": "business"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 57.75,
+    "uq": 31.75,
+    "lq": 54.75,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 57.75
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5**",
+        "csd": "",
+        "ls": "4",
+        "m1m2": "5**",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5*",
+        "e4": "",
+        "total": 54.75
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 31.75
+      }
+    },
+    "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.5)"
+  },
+  "jupas": {
+    "code": "JS4276",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4276",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4276",
+    "nameEn": "Quantitative Finance and Risk Management Science",
+    "nameZh": "計量金融學及風險管理科學",
+    "shortDescription": "",
+    "programmeWebsite": "http://www.qfrm.cuhk.edu.hk",
+    "tuition": "HK$47,000",
+    "intake": 20,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 53,
+      "bandB": 37,
+      "bandC": 80,
+      "bandD": 132,
+      "bandE": 161,
+      "total": 463
+    },
+    "offers2025": {
+      "bandA": 17,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 17
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/qfrmn/",
+    "introduction": "Navigating Two Seas: Finance and Statistics The Interdisciplinary Major Programme in Quantitative Finance and Risk Management Science (QFRM) is jointly administered by the Department of Finance and the Department of Statistics and&nbsp;Data Science at The Chinese University of Hong Kong. It combines the strengths and features of two well-established and highly successful programmes from the respective departments: the Quantitative Finance programme and the Risk Management Science programme. The Programme is consistently one of the top programmes among all quantitatively related programmes in Hong Kong in terms of admission credentials. With our official tailor-made coaching schemes, students are also encouraged to participate in overseas exchanges and internships.",
+    "ranking": "",
+    "careerProspects": "By offering comprehensive academic and professional training, QFRM aims to nurture competent finance and risk-management professionals who can work in investment banking, corporate and commercial banking, consulting, accounting and financial services, and general management. QFRM also enables students to build up a solid theoretical background for pursuing further studies at the Master’s and PhD levels. The internship programme allows students to acquire on-the-job training with participating companies. Internships provide valuable opportunities for students to gain exposure to the professional environment outside the classroom. QFRM students, on average, complete three internships prior to graduation. Some examples of internship partners are: AIA / Bain &amp; Company / Bank of America Merrill Lynch / Bank of China / Bank of East Asia / Barclays Capital / BNP Paribas / CASH Algo / CFA Institute / Commerzbank / Credit Suisse / Ernst &amp; Young / Eurex Frankfurt AG / Goldman Sachs / Hang Seng Bank / HSBC / HKEX / Hong Kong Monetary Authority / Jane Street / J.P. Morgan &amp; Chase / Morgan Stanley / PWC / Royal Bank of Scotland / State Street Global Markets / Standard Chartered Bank / UBS Securities / Western Asset Management Company If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

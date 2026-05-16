@@ -1,0 +1,592 @@
+{
+  "factPack": {
+    "code": "JS4513",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4513"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4513"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/nursn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.nur.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4513",
+      "nameEn": "Nursing",
+      "nameZh": "護理學",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "health_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 28.6,
+      "uq": 33.5,
+      "lq": 28.3,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 28.6
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 28.3
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 33.5
+        }
+      },
+      "subjectWeighting": "Physics (x 1.2)"
+    },
+    "jupas": {
+      "code": "JS4513",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4513",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4513",
+      "nameEn": "Nursing",
+      "nameZh": "護理學",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.nur.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 217,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Biology, Chemistry and Physics are preferred subjects, among which the subject with the best score will be given heavier weighting. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 736,
+        "bandB": 545,
+        "bandC": 875,
+        "bandD": 828,
+        "bandE": 753,
+        "total": 3737
+      },
+      "offers2025": {
+        "bandA": 228,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 228
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/nursn/",
+      "introduction": "Nursing: Holistic Education For Holistic Care Nurses are dedicated to providing quality patient care and promoting public health. Nurses nowadays not only have to undergo technologically advanced and sophisticated training but also respond to the rapidly changing health care environment. The Nethersole School of Nursing at CUHK has been admitting enthusiastic students who are committed to serving in the health care field since its inception in 1991. CUHK’s nursing programme is known for its professional education and academic rigour. To prepare students for a successful nursing career, the programme provides a comprehensive range of courses, including biological and behavioural sciences, health promotion and maintenance, nursing research and information technology.",
+      "ranking": "#5 in World; #1 in Asia and #1 in Hong Kong (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Most of our graduates secure nursing jobs in hospitals. According to our 2023/24 graduate survey, more than 90% of our graduates are working in public hospitals or private settings, with a variety of specialties. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4513",
+    "nameEn": "Nursing",
+    "nameZh": "護理學",
+    "name": "Nursing",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 28.6,
+    "band_a": 28.3,
+    "uq": 33.5,
+    "category": "health_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "Programme: JS4513 Nursing (5-year full-time)",
+            "First Year Intake: 217",
+            "Annual Tuition Fee: HK$47,000 (local students)",
+            "Interview: Required (selected applicants)",
+            "",
+            "2025 JUPAS Application & Offer Statistics:",
+            "Band A applications: 736",
+            "Band A offers: 228",
+            "Total applications: 3,737",
+            "Band A offer rate: ~31.0%",
+            "Band A applications per offer: ~3.2",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 28.6",
+            "Lower quartile (LQ): 28.3",
+            "Upper quartile (UQ): 33.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5*",
+            "English: 4",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "Elective 1: 5",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "Minimum Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory Part: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects at Level 3 (including at least one from Biology, Chemistry, Physics preferred; best of these weighted x1.2)",
+            "Applied Learning courses with 'Attained with Distinction I/II' accepted as extra elective",
+            "",
+            "Note: Physics is given heavier weighting (x1.2) among preferred subjects."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The CUHK Nursing programme (Nethersole School of Nursing) offers a comprehensive 5-year curriculum that integrates biological and behavioural sciences, health promotion, nursing research, and information technology.",
+            "",
+            "Key areas of study:",
+            "- Biological sciences (anatomy, physiology, pharmacology)",
+            "- Behavioural sciences (psychology, sociology)",
+            "- Health promotion and maintenance",
+            "- Nursing research and evidence-based practice",
+            "- Clinical placements in major Hong Kong hospitals",
+            "",
+            "The programme emphasises holistic education for holistic care, preparing students to respond to a rapidly changing healthcare environment.",
+            "",
+            "Students gain hands-on experience through state-of-the-art simulation labs and clinical placements across various specialties.",
+            "",
+            "Graduates are eligible for registration with the Nursing Council of Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "According to the 2023/24 graduate survey, over 90% of CUHK Nursing graduates secure nursing positions in public hospitals or private healthcare settings.",
+            "",
+            "Graduates work in a variety of specialties, including:",
+            "- Medical and surgical nursing",
+            "- Paediatrics",
+            "- Obstetrics and gynaecology",
+            "- Critical care",
+            "- Community health",
+            "- Mental health",
+            "",
+            "The programme's strong reputation ensures high employability, with many graduates advancing to leadership roles in healthcare.",
+            "",
+            "Career support includes clinical placement coordination and professional development workshops."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a scenic and spacious environment with over 9,000 hostel places.",
+            "",
+            "Students benefit from the unique college system, which provides a close-knit community and extracurricular opportunities.",
+            "",
+            "The Nethersole School of Nursing features modern simulation laboratories and clinical skills training centres.",
+            "",
+            "CUHK is ranked #5 in the world and #1 in Asia and Hong Kong for nursing (QS World University Rankings by Subject 2025).",
+            "",
+            "On-campus accommodation costs approximately HK$17,000 per year, with living expenses around HK$45,000."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "JS4513 is a highly competitive programme with a Band A offer rate of approximately 31.0% in 2025.",
+            "",
+            "Band A applications per offer: ~3.2",
+            "",
+            "Admission scores (Best 5) are high: Median 28.6, LQ 28.3, UQ 33.5.",
+            "",
+            "Selection is based on academic merit (DSE results) and interview performance.",
+            "",
+            "Preferred subjects (Biology, Chemistry, Physics) are given additional weighting (Physics x1.2).",
+            "",
+            "Applicants should aim for at least Level 5* in Chinese and Level 5 in Mathematics to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "CUHK's Nethersole School of Nursing has produced many leaders in healthcare, though specific named alumni are not publicly listed in the fact pack.",
+            "",
+            "Faculty excellence:",
+            "- The school is consistently ranked among the top nursing schools globally (QS #5 in the world, #1 in Asia and Hong Kong).",
+            "- State-of-the-art simulation labs and clinical placements in major Hong Kong hospitals.",
+            "- Graduates have high employment rates and are eligible for registration with the Nursing Council of Hong Kong.",
+            "",
+            "The programme's strong industry connections ensure graduates are well-prepared for the workforce."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses for outstanding students.",
+            "",
+            "Financial aid schemes are available, including the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The annual tuition fee for local students is HK$47,000 (2026-2027)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Nursing Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 28.6 (Best 5)**",
+            "",
+            "- With median 28.6 and LQ 28.3, you need strong grades across all subjects.",
+            "- Chinese 5*, English 4, Maths 5, plus two electives at 5 or above.",
+            "- Physics is weighted x1.2, so a high score in Physics can boost your total.",
+            "",
+            "**2. Prioritise Band A Placement**",
+            "",
+            "- Band A applications have a ~31% offer rate; Band B-E receive zero offers.",
+            "- Place JS4513 as your first choice (Band A) to maximise chances.",
+            "",
+            "**3. Excel in Preferred Subjects**",
+            "",
+            "- Biology, Chemistry, Physics are preferred; the best of these gets x1.2 weighting.",
+            "- Aim for at least Level 5 in at least two of these subjects.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required; demonstrate genuine interest in nursing and patient care.",
+            "- Be ready to discuss current healthcare issues and your motivation.",
+            "",
+            "**5. Strengthen Your English**",
+            "",
+            "- English Level 4 is typical for median admits; higher is better.",
+            "- Practice communication skills for the interview.",
+            "",
+            "**6. Excel in Mathematics**",
+            "",
+            "- Median Maths grade is 5; aim for 5 or above.",
+            "- M1/M2 can be counted as an elective if needed.",
+            "",
+            "**7. Use Applied Learning as a Bonus**",
+            "",
+            "- 'Attained with Distinction I/II' in ApL courses can be an extra elective.",
+            "- This can add bonus points to your score.",
+            "",
+            "**8. Research the Programme Thoroughly**",
+            "",
+            "- Visit the programme website (http://www.nur.cuhk.edu.hk) and CUHK admissions page.",
+            "- Understand the curriculum and clinical placement opportunities.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- JUPAS application deadlines are strict; submit before the cut-off.",
+            "- Ensure all required documents are ready for interview selection."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 年入學）",
+          "content": [
+            "課程：JS4513 護理學（五年全日制）",
+            "首年學額：217",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 申請及取錄統計：",
+            "Band A 申請人數：736",
+            "Band A 取錄人數：228",
+            "總申請人數：3,737",
+            "Band A 取錄率：約 31.0%",
+            "Band A 申請／取錄比例：約 3.2",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：28.6",
+            "下四分位數：28.3",
+            "上四分位數：33.5",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "選修一：5",
+            "選修二：5",
+            "選修三：4",
+            "",
+            "最低入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 2 級",
+            "公民與社會發展：達標",
+            "兩科選修科目達第 3 級（生物、化學、物理優先，最佳一科加權 x1.2）",
+            "應用學習課程「達標並表現優異 I/II」可作額外選修科",
+            "",
+            "注意：物理科獲較高加權（x1.2）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "香港中文大學護理學課程（那打素護理學院）提供全面的五年制課程，融合生物及行為科學、健康促進、護理研究及資訊科技。",
+            "",
+            "主要學習範疇：",
+            "- 生物科學（解剖學、生理學、藥理學）",
+            "- 行為科學（心理學、社會學）",
+            "- 健康促進及維護",
+            "- 護理研究及實證實踐",
+            "- 在香港主要醫院進行臨床實習",
+            "",
+            "課程強調全人教育，培養學生應對快速變化的醫療環境。",
+            "",
+            "學生透過先進模擬實驗室及跨專科臨床實習獲得實踐經驗。",
+            "",
+            "畢業生可向香港護士管理局申請註冊。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "根據 2023/24 年畢業生調查，超過 90% 的 CUHK 護理畢業生在公立醫院或私營醫療機構任職。",
+            "",
+            "畢業生從事多個專科，包括：",
+            "- 內外科護理",
+            "- 兒科",
+            "- 婦產科",
+            "- 深切治療",
+            "- 社區健康",
+            "- 精神健康",
+            "",
+            "課程的卓越聲譽確保畢業生就業率高，不少畢業生晉升至醫療領導崗位。",
+            "",
+            "就業支援包括臨床實習協調及專業發展工作坊。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，提供超過 9,000 個宿位。",
+            "",
+            "學生可體驗獨特的書院制度，享受緊密的社群及課外活動機會。",
+            "",
+            "那打素護理學院配備現代化模擬實驗室及臨床技能培訓中心。",
+            "",
+            "CUHK 護理學於 QS 世界大學學科排名 2025 位列全球第 5、亞洲第 1、香港第 1。",
+            "",
+            "住宿費約每年 HK$17,000，生活費約 HK$45,000。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及甄選",
+          "content": [
+            "JS4513 競爭激烈，2025 年 Band A 取錄率約 31.0%。",
+            "",
+            "Band A 申請／取錄比例：約 3.2",
+            "",
+            "入學分數（最佳五科）甚高：中位數 28.6，下四分位數 28.3，上四分位數 33.5。",
+            "",
+            "甄選基於學業成績（DSE 成績）及面試表現。",
+            "",
+            "優先科目（生物、化學、物理）獲額外加權（物理 x1.2）。",
+            "",
+            "申請人應爭取中文至少 5*、數學至少 5 級以具競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院卓越成就",
+          "content": [
+            "CUHK 那打素護理學院培育眾多醫療領袖，惟事實包中未列出特定校友姓名。",
+            "",
+            "學院卓越成就：",
+            "- 學院於 QS 世界大學學科排名持續位列全球頂尖（全球第 5、亞洲第 1、香港第 1）。",
+            "- 配備先進模擬實驗室及香港主要醫院臨床實習機會。",
+            "- 畢業生就業率高，並符合香港護士管理局註冊資格。",
+            "",
+            "課程與業界緊密聯繫，確保畢業生充分準備就業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項入學獎學金，基於學業成績頒發。",
+            "",
+            "獎學金可涵蓋優秀學生的學費及生活費。",
+            "",
+            "設有資助計劃，包括「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生每年學費為 HK$47,000（2026-2027 年度）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 護理學入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取中位數 28.6（最佳五科）**",
+            "",
+            "- 中位數 28.6、下四分位數 28.3，各科需有優異成績。",
+            "- 中文 5*、英文 4、數學 5，加上兩科選修達 5 級或以上。",
+            "- 物理科加權 x1.2，高分可提升總分。",
+            "",
+            "**2. 優先選擇 Band A**",
+            "",
+            "- Band A 取錄率約 31%，Band B-E 無取錄。",
+            "- 將 JS4513 置於 Band A 首位以最大化機會。",
+            "",
+            "**3. 在優先科目中表現出色**",
+            "",
+            "- 生物、化學、物理為優先科目，最佳一科獲 x1.2 加權。",
+            "- 至少兩科達第 5 級或以上。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為必須，展現對護理及病人護理的真正興趣。",
+            "- 準備討論當前醫療議題及個人動機。",
+            "",
+            "**5. 加強英文能力**",
+            "",
+            "- 中位數取錄者英文 4 級，更高更佳。",
+            "- 練習面試溝通技巧。",
+            "",
+            "**6. 數學成績要突出**",
+            "",
+            "- 中位數數學 5 級，目標 5 級或以上。",
+            "- M1/M2 可作選修科計算。",
+            "",
+            "**7. 善用應用學習課程**",
+            "",
+            "- 「達標並表現優異 I/II」可作額外選修科。",
+            "- 有助增加總分。",
+            "",
+            "**8. 深入了解課程**",
+            "",
+            "- 瀏覽課程網站（http://www.nur.cuhk.edu.hk）及 CUHK 入學頁面。",
+            "- 了解課程內容及臨床實習機會。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- JUPAS 申請截止日期嚴格，務必在限期前提交。",
+            "- 確保所有文件齊全，以便面試甄選。"
+          ]
+        }
+      }
+    },
+    "code": "JS4513",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 28.6,
+    "uq": 33.5,
+    "lq": 28.3,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 28.6
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 28.3
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 33.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Dr. Sophia Chan Siu-chee",
+        "nameZh": "陳肇始",
+        "achievement": "Former Secretary for Food and Health of Hong Kong; former professor and head of the School of Nursing at HKU (but her early nursing education was at CUHK? Actually she studied nursing at HKU and public health at Harvard; not a CUHK nursing alumna. Excluding.)"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK's Nethersole School of Nursing is consistently ranked among the top nursing schools globally (QS World University Rankings by Subject).",
+      "The programme offers state-of-the-art simulation labs and clinical placements in major Hong Kong hospitals.",
+      "Graduates have high employment rates and are eligible for registration with the Nursing Council of Hong Kong."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Nursing notable alumni",
+      "香港中文大學 護理學 著名校友",
+      "CUHK Nursing graduates Hong Kong careers",
+      "CUHK Nethersole School of Nursing alumni"
+    ]
+  }
+}

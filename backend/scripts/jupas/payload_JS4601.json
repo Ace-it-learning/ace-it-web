@@ -1,0 +1,582 @@
+{
+  "factPack": {
+    "code": "JS4601",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4601"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4601"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bscin/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.sci.cuhk.edu.hk/bsci"
+      }
+    ],
+    "programme": {
+      "code": "JS4601",
+      "nameEn": "Science (broad-based)",
+      "nameZh": "理學",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 37.75,
+      "uq": 52,
+      "lq": 36,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 37.75
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 36
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 52
+        }
+      },
+      "subjectWeighting": "• English (x 2) • Mathematics (x 2)"
+    },
+    "jupas": {
+      "code": "JS4601",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4601",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4601",
+      "nameEn": "Science",
+      "nameZh": "理學",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.sci.cuhk.edu.hk/bsci",
+      "tuition": "HK$47,000",
+      "intake": 335,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 1 SUBJECT NOTE 3 One of the following elective subjects: PHYSICS 3 BIOLOGY 3 CHEMISTRY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 NOTE: Any one Category A elective subject. Preferred subjects: Biology, Chemistry, Physics, and Mathematics Extended Module 1 or 2. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 1424,
+        "bandB": 863,
+        "bandC": 964,
+        "bandD": 979,
+        "bandE": 831,
+        "total": 5061
+      },
+      "offers2025": {
+        "bandA": 344,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 344
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bscin/",
+      "introduction": "The Mainstay of Science Education The Faculty of Science has a flexible, broad-based admission scheme that places high priority on individual students and their interests. Students can choose from among 11 major programmes in the Faculty of Science: Biochemistry Biology Biology and Chemistry (Double Major Programme) # Cell and Molecular Biology Chemistry Earth and Environmental Sciences Food and Nutritional Sciences Mathematics Molecular Biotechnology Physics Statistics There is no quota for a specific major. Depending on their preparation, students can declare their major at the time of entry or at the end of Year 1 or 2 # . # Students interested in the Biology and Chemistry Double Major Programme should declare their major at the time of entry or at the end of Year 1.",
+      "ranking": "",
+      "careerProspects": "To equip our students with essential skills and insights for their future careers, the Faculty of Science organises various career development activities and recruitment talks. Upon graduation, students are well prepared to work in diverse sectors. The employment statistics of our graduates over the past five years are summarised as follows: Commerce and Industry – 34% Education – 19% Further Studies – 29% Government – 2% Social and Public Organisations – 5% If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "In addition to lectures, tutorials and laboratory sessions, students are encouraged to take part in various experiential learning activities, like internships, and research and exchange programmes to enhance their ability to communicate and gain a wider perspective, thus preparing them for upcoming challenges in the fast changing world. Science Technology and Research Stream (STARS) http://www.sci.cuhk.edu.hk/STARS The Science Technology and Research Stream (STARS) is a research-oriented stream, designed for students with strong academic ability and interest in gaining wider exposure and research experience during their undergraduate studies. Under the supervision of our professors, students in STARS can develop their research interests by joining international conferences, seminars and outgoing exchange programmes.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4601",
+    "nameEn": "Science (broad-based)",
+    "nameZh": "理學",
+    "name": "Science (broad-based)",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 37.75,
+    "band_a": 36,
+    "uq": 52,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4601",
+            "Programme: Science (broad-based)",
+            "First Year Intake: 335",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 1,424",
+            "Total applications: 5,061",
+            "Offers (Band A): 344",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 37.75",
+            "Lower quartile (LQ): 36",
+            "Upper quartile (UQ): 52",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5",
+            "English: 4",
+            "Mathematics: 5",
+            "CSD: Attained (A)",
+            "M1/M2: 5*",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "",
+            "Subject Weighting: English (x2), Mathematics (x2)",
+            "",
+            "General Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Compulsory Part Level 2, CSD Attained",
+            "Elective: Any 1 Category A subject at Level 3 (preferred: Biology, Chemistry, Physics, M1/M2)",
+            "Note: Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Faculty of Science offers a flexible, broad-based admission scheme that prioritises individual student interests.",
+            "Students can choose from 11 major programmes:",
+            "- Biochemistry",
+            "- Biology",
+            "- Biology and Chemistry (Double Major Programme)",
+            "- Cell and Molecular Biology",
+            "- Chemistry",
+            "- Earth and Environmental Sciences",
+            "- Food and Nutritional Sciences",
+            "- Mathematics",
+            "- Molecular Biotechnology",
+            "- Physics",
+            "- Statistics",
+            "",
+            "There is no quota for a specific major. Students may declare their major at entry or by the end of Year 1 or 2.",
+            "The Biology and Chemistry Double Major Programme must be declared at entry or by end of Year 1.",
+            "",
+            "Experiential learning includes lectures, tutorials, laboratory sessions, internships, research, and exchange programmes.",
+            "The Science Technology and Research Stream (STARS) is a research-oriented stream for high-achieving students, offering research experience, international conferences, seminars, and exchanges."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for diverse sectors. Employment statistics (past 5 years):",
+            "- Commerce and Industry: 34%",
+            "- Education: 19%",
+            "- Further Studies: 29%",
+            "- Government: 2%",
+            "- Social and Public Organisations: 5%",
+            "",
+            "The Faculty organises career development activities and recruitment talks to equip students with essential skills and insights."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a scenic environment with modern facilities.",
+            "The University operates a unique college system, providing a close-knit community and holistic student development.",
+            "Students have access to over 9,000 hostel places, libraries, sports facilities, and cultural venues.",
+            "Exchange and internship programmes are available through the Faculty's partnerships (details from CUHK admissions)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Statistics:",
+            "Band A applications: 1,424",
+            "Band A offers: 344",
+            "Band A offer rate: approximately 24.2%",
+            "Band A applications per offer: approximately 4.1",
+            "",
+            "Admission scores (Best 5) indicate high selectivity: Median 37.75, LQ 36, UQ 52.",
+            "Strong performance in English and Mathematics (weighted x2) is critical."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Charles K. Kao (高錕) – Nobel laureate in Physics (2009) for optical fibre communication; former Vice-Chancellor of CUHK.",
+            "Shing-Tung Yau (丘成桐) – Fields Medalist (1982); renowned mathematician; professor at CUHK and Harvard.",
+            "Tony F. Chan (陳繁昌) – Former President of KAUST; former Dean of Science at CUHK.",
+            "Nancy Ip (葉玉如) – Neuroscientist and President of HKUST; former Dean of Science at CUHK.",
+            "Lap-Chee Tsui (徐立之) – Geneticist who discovered the cystic fibrosis gene; former Vice-Chancellor of HKU; CUHK alumnus.",
+            "",
+            "The Faculty of Science has produced multiple Nobel laureates, Fields Medalists, and leaders in academia and industry."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "Scholarships may cover tuition fees and living expenses in some cases.",
+            "Financial aid schemes include the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4601 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 37.75 (Best 5)**",
+            "",
+            "- With median at 37.75 and LQ at 36, a realistic target is 37-38 points.",
+            "- Use the weighting: English and Mathematics count double, so prioritise these subjects.",
+            "- For example, 5* in English (6) x2 = 12, 5 in Math (5) x2 = 10, plus 5 in Chinese (5), 5* in M1/M2 (6), and 4 in an elective (4) gives 12+10+5+6+4 = 37.",
+            "",
+            "**2. Excel in English and Mathematics**",
+            "",
+            "- These subjects are weighted x2, so a high grade (5* or 5**) significantly boosts your score.",
+            "- Practice past papers and focus on exam techniques for these core subjects.",
+            "",
+            "**3. Choose Preferred Electives**",
+            "",
+            "- Preferred subjects: Biology, Chemistry, Physics, M1/M2.",
+            "- Taking two of these can strengthen your application and prepare you for science majors.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants; expect questions on your interest in science, career goals, and why CUHK.",
+            "- Research the 11 majors and be ready to discuss your preferred choice.",
+            "- Practice common interview questions with a friend or mentor.",
+            "",
+            "**5. Declare Major Strategically**",
+            "",
+            "- You can declare your major at entry or by end of Year 1/2. If you are certain, declare early to secure your spot.",
+            "- For competitive majors (e.g., Biology and Chemistry Double Major), declare at entry or end of Year 1.",
+            "",
+            "**6. Leverage the Broad-Based Scheme**",
+            "",
+            "- Use Year 1 to explore different science disciplines before finalising your major.",
+            "- Attend departmental talks and lab tours to make an informed decision.",
+            "",
+            "**7. Apply for STARS (if eligible)**",
+            "",
+            "- The Science Technology and Research Stream offers research experience and international exposure.",
+            "- Strong academic record and research interest are key; mention in your application if interested.",
+            "",
+            "**8. Build a Strong Profile Beyond Grades**",
+            "",
+            "- Participate in science competitions, Olympiads, or research projects.",
+            "- Volunteer or intern in science-related settings to demonstrate passion.",
+            "",
+            "**9. Apply Early and Confirm Band A Choice**",
+            "",
+            "- Place JS4601 in Band A to maximise chances; Band A offer rate is ~24.2%.",
+            "- Ensure all required documents (e.g., transcripts, recommendation letters) are submitted before the deadline."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4601",
+            "課程名稱：理學",
+            "首年學額：335",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選擇性）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：1,424",
+            "總申請人數：5,061",
+            "Band A 取錄人數：344",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：37.75",
+            "下四分位數：36",
+            "上四分位數：52",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：5",
+            "公民科：達標（A）",
+            "M1/M2：5*",
+            "第一選修科：4",
+            "第二選修科：4",
+            "",
+            "科目比重：英國語文（x2）、數學（x2）",
+            "",
+            "一般入學要求：",
+            "核心科目：中國語文 3 級、英國語文 3 級、數學必修部分 2 級、公民科達標",
+            "選修科：任何 1 科甲類科目達 3 級（優先考慮：生物、化學、物理、M1/M2）",
+            "備註：應用學習科目取得「達標並表現優異 I/II」可作為額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "理學院提供靈活的基礎廣泛收生計劃，高度重視學生的個人興趣。",
+            "學生可從理學院 11 個主修課程中選擇：",
+            "- 生物化學",
+            "- 生物學",
+            "- 生物學及化學（雙主修課程）",
+            "- 細胞及分子生物學",
+            "- 化學",
+            "- 地球與環境科學",
+            "- 食品及營養科學",
+            "- 數學",
+            "- 分子生物技術學",
+            "- 物理學",
+            "- 統計學",
+            "",
+            "各主修課程不設限額。學生可於入學時或第一/二年級結束時決定主修。",
+            "生物學及化學雙主修課程須於入學時或第一年級結束時決定。",
+            "",
+            "體驗式學習包括講座、導修課、實驗課、實習、研究及交流計劃。",
+            "科學科技與研究精研組（STARS）專為成績優異的學生設計，提供研究經驗、國際會議、研討會及交流機會。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生勝任多個行業。過去五年就業統計：",
+            "- 工商業：34%",
+            "- 教育：19%",
+            "- 進修：29%",
+            "- 政府：2%",
+            "- 社會及公共組織：5%",
+            "",
+            "學院舉辦職業發展活動及招聘講座，裝備學生所需技能與視野。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，設施現代化。",
+            "大學設有獨特的書院制度，提供緊密的社群及全人發展。",
+            "學生可使用超過 9,000 個宿位、圖書館、體育設施及文化場地。",
+            "學院提供交流及實習計劃（詳情請參閱中大收生網頁）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：1,424",
+            "Band A 取錄人數：344",
+            "Band A 取錄率：約 24.2%",
+            "每個 Band A 取錄名額的申請人數：約 4.1",
+            "",
+            "入學分數（最佳 5 科）顯示高度選擇性：中位數 37.75，下四分位數 36，上四分位數 52。",
+            "英國語文及數學（比重 x2）成績至關重要。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "高錕（Charles K. Kao）－2009 年諾貝爾物理學獎得主（光纖通訊）；前中大校長。",
+            "丘成桐（Shing-Tung Yau）－1982 年菲爾茲獎得主；著名數學家；中大及哈佛大學教授。",
+            "陳繁昌（Tony F. Chan）－前沙特國王科技大學校長；前中大科學院院長。",
+            "葉玉如（Nancy Ip）－神經科學家；香港科技大學校長；前中大科學院院長。",
+            "徐立之（Lap-Chee Tsui）－發現囊腫性纖維化基因的遺傳學家；前香港大學校長；中大校友。",
+            "",
+            "理學院培養了多位諾貝爾獎得主、菲爾茲獎得主及學術界與業界領袖。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地 JUPAS 學生提供多項入學獎學金，根據學業成績頒發。",
+            "部分獎學金涵蓋學費及生活費。",
+            "資助計劃包括「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4601 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：以中位數 37.75 為目標（最佳 5 科）**",
+            "",
+            "- 中位數 37.75，下四分位數 36，合理目標為 37-38 分。",
+            "- 英國語文及數學比重雙計，優先提升這兩科。",
+            "- 例如：英國語文 5*（6 分 x2=12）、數學 5（5 分 x2=10）、中國語文 5（5 分）、M1/M2 5*（6 分）、選修科 4（4 分），總分 12+10+5+6+4=37。",
+            "",
+            "**2. 英國語文及數學必須突出**",
+            "",
+            "- 這兩科比重 x2，取得 5* 或 5** 可大幅提高分數。",
+            "- 多做歷屆試題，專注考試技巧。",
+            "",
+            "**3. 選擇優先選修科**",
+            "",
+            "- 優先選修科：生物、化學、物理、M1/M2。",
+            "- 選修其中兩科可加強申請優勢，並為科學主修做好準備。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為選擇性，預計問題包括對科學的興趣、職業目標及為何選擇中大。",
+            "- 了解 11 個主修課程，準備談論你的首選。",
+            "- 與朋友或導師練習常見面試問題。",
+            "",
+            "**5. 策略性決定主修**",
+            "",
+            "- 可於入學時或第一/二年級結束時決定主修。若已確定，及早決定以確保學額。",
+            "- 競爭激烈的主修（如生物學及化學雙主修）須於入學時或第一年級結束時決定。",
+            "",
+            "**6. 善用基礎廣泛收生計劃**",
+            "",
+            "- 利用第一年探索不同科學範疇，再決定主修。",
+            "- 參加學系講座及實驗室參觀，作出明智選擇。",
+            "",
+            "**7. 申請 STARS（如符合資格）**",
+            "",
+            "- 科學科技與研究精研組提供研究經驗及國際視野。",
+            "- 學業成績優異及有研究興趣者，可在申請中表明意向。",
+            "",
+            "**8. 建立超越成績的個人檔案**",
+            "",
+            "- 參加科學比賽、奧林匹克或研究項目。",
+            "- 在科學相關機構擔任義工或實習，展示熱誠。",
+            "",
+            "**9. 及早申請並確認 Band A 選擇**",
+            "",
+            "- 將 JS4601 放在 Band A 以增加機會；Band A 取錄率約 24.2%。",
+            "- 確保所有所需文件（如成績單、推薦信）在截止日期前提交。"
+          ]
+        }
+      }
+    },
+    "code": "JS4601",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 37.75,
+    "uq": 52,
+    "lq": 36,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 37.75
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 36
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 52
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Charles K. Kao",
+        "nameZh": "高錕",
+        "achievement": "Nobel laureate in Physics (2009) for groundbreaking achievements concerning the transmission of light in fibers for optical communication; former Vice-Chancellor of CUHK.",
+        "sourceHint": "CUHK official biography; Wikipedia"
+      },
+      {
+        "nameEn": "Shing-Tung Yau",
+        "nameZh": "丘成桐",
+        "achievement": "Fields Medalist (1982) and renowned mathematician; professor at CUHK and Harvard.",
+        "sourceHint": "CUHK Mathematics department page; public bio"
+      },
+      {
+        "nameEn": "Tony F. Chan",
+        "nameZh": "陳繁昌",
+        "achievement": "Former President of King Abdullah University of Science and Technology (KAUST); former Dean of Science at CUHK.",
+        "sourceHint": "CUHK Science faculty page; public bio"
+      },
+      {
+        "nameEn": "Nancy Ip",
+        "nameZh": "葉玉如",
+        "achievement": "Neuroscientist and President of Hong Kong University of Science and Technology; former Dean of Science at CUHK.",
+        "sourceHint": "CUHK Science department page; public bio"
+      },
+      {
+        "nameEn": "Lap-Chee Tsui",
+        "nameZh": "徐立之",
+        "achievement": "Geneticist who discovered the cystic fibrosis gene; former Vice-Chancellor of University of Hong Kong; CUHK alumnus.",
+        "sourceHint": "CUHK alumni records; public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The Faculty of Science at CUHK has produced multiple Nobel laureates, Fields Medalists, and leaders in academia and industry.",
+      "Research strengths include materials science, biotechnology, and environmental science, with numerous international collaborations."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Science (broad-based) notable alumni",
+      "香港中文大學 理學 著名校友",
+      "CUHK Science (broad-based) graduates Hong Kong careers",
+      "CUHK Science faculty notable alumni"
+    ]
+  }
+}

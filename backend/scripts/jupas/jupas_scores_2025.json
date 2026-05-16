@@ -1,0 +1,446 @@
+{
+  "_source": "af_2025_JUPAS.pdf + update_hku_scores.py (columns: UQ | Median | LQ)",
+  "_columnOrder": "median, uq, lq — auto-corrected when uq < median",
+  "programmes": {
+    "JS6004": {
+      "code": "JS6004",
+      "nameEn": "Bachelor of Arts in Architectural Studies",
+      "formula": "Best 5 Subjects",
+      "median": 29,
+      "uq": 32,
+      "lq": 28
+    },
+    "JS6016": {
+      "code": "JS6016",
+      "nameEn": "Bachelor of Science in Surveying",
+      "formula": "Best 5 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 28
+    },
+    "JS6028": {
+      "code": "JS6028",
+      "nameEn": "Bachelor of Arts in Landscape Studies",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 38,
+      "lq": 31
+    },
+    "JS6042": {
+      "code": "JS6042",
+      "nameEn": "Bachelor of Arts in Urban Studies",
+      "formula": "Best 5 Subjects",
+      "median": 29,
+      "uq": 32,
+      "lq": 27
+    },
+    "JS6236": {
+      "code": "JS6236",
+      "nameEn": "Bachelor of Arts and Sciences in Design+",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 37,
+      "lq": 34
+    },
+    "JS6054": {
+      "code": "JS6054",
+      "nameEn": "Bachelor of Arts",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 37,
+      "lq": 34
+    },
+    "JS6274": {
+      "code": "JS6274",
+      "nameEn": "Bachelor of Arts in Global Creative Industries",
+      "formula": "2 x Eng + Best 4 Subjects",
+      "median": 33,
+      "uq": 33,
+      "lq": 32
+    },
+    "JS6286": {
+      "code": "JS6286",
+      "nameEn": "Bachelor of Arts in Humanities and Digital Technologies",
+      "formula": "Best 5 Subjects",
+      "median": 37,
+      "uq": 41,
+      "lq": 35
+    },
+    "JS6298": {
+      "code": "JS6298",
+      "nameEn": "Bachelor of Arts and Bachelor of Engineering in AI and Data Science",
+      "formula": "Best 5 Subjects",
+      "median": 42,
+      "uq": 44,
+      "lq": 42
+    },
+    "JS6755": {
+      "code": "JS6755",
+      "nameEn": "Bachelor of Business Administration",
+      "formula": "Best 5 Subjects",
+      "median": 37,
+      "uq": 37,
+      "lq": 36
+    },
+    "JS6767": {
+      "code": "JS6767",
+      "nameEn": "Bachelor of Economics / Bachelor of Economics and Finance",
+      "formula": "Best 5 Subjects",
+      "median": 40,
+      "uq": 40,
+      "lq": 39
+    },
+    "JS6781": {
+      "code": "JS6781",
+      "nameEn": "Bachelor of Business Administration in Accounting and Finance / Accounting Data Analytics",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 34
+    },
+    "JS6793": {
+      "code": "JS6793",
+      "nameEn": "Bachelor of Business Administration (Business Analytics)",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 34
+    },
+    "JS6808": {
+      "code": "JS6808",
+      "nameEn": "Bachelor of Business Administration (Law) and Bachelor of Laws",
+      "formula": "Best 6 Subjects",
+      "median": 46,
+      "uq": 49,
+      "lq": 45
+    },
+    "JS6846": {
+      "code": "JS6846",
+      "nameEn": "Bachelor of Science in Marketing Analytics and Technology",
+      "formula": "Best 5 Subjects",
+      "median": 33,
+      "uq": 34,
+      "lq": 32
+    },
+    "JS6860": {
+      "code": "JS6860",
+      "nameEn": "Bachelor of Finance in Asset Management and Private Banking",
+      "formula": "Best 5 Subjects",
+      "median": 47,
+      "uq": 48,
+      "lq": 46
+    },
+    "JS6884": {
+      "code": "JS6884",
+      "nameEn": "Bachelor of Science in Quantitative Finance",
+      "formula": "Best 5 Subjects",
+      "median": 51,
+      "uq": 55,
+      "lq": 50
+    },
+    "JS6896": {
+      "code": "JS6896",
+      "nameEn": "Bachelor of Business Administration (International Business and Global Management)",
+      "formula": "Best 5 Subjects",
+      "median": 54,
+      "uq": 56,
+      "lq": 53
+    },
+    "JS6107": {
+      "code": "JS6107",
+      "nameEn": "Bachelor of Dental Surgery",
+      "formula": "Best 6 Subjects",
+      "median": 48,
+      "uq": 50,
+      "lq": 47
+    },
+    "JS6066": {
+      "code": "JS6066",
+      "nameEn": "Bachelor of Education in Early Childhood Education and Special Education",
+      "formula": "Best 5 Subjects",
+      "median": 32,
+      "uq": 34,
+      "lq": 32
+    },
+    "JS6080": {
+      "code": "JS6080",
+      "nameEn": "Bachelor of Education in Chinese Language and Literature",
+      "formula": "1.5 x Chin + Best 5 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 34
+    },
+    "JS6092": {
+      "code": "JS6092",
+      "nameEn": "Bachelor of Education in English Language and Literature",
+      "formula": "Best 5 Subjects",
+      "median": 27,
+      "uq": 27,
+      "lq": 26
+    },
+    "JS6119": {
+      "code": "JS6119",
+      "nameEn": "Bachelor of Engineering in Data Science and Engineering",
+      "formula": "Best 5 Subjects",
+      "median": 44,
+      "uq": 46,
+      "lq": 43
+    },
+    "JS6157": {
+      "code": "JS6157",
+      "nameEn": "Bachelor of Engineering",
+      "formula": "Best 5 Subjects",
+      "median": 34,
+      "uq": 35,
+      "lq": 34
+    },
+    "JS6303": {
+      "code": "JS6303",
+      "nameEn": "Bachelor of Engineering Elite Programme",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 36,
+      "uq": 38,
+      "lq": 35
+    },
+    "JS6315": {
+      "code": "JS6315",
+      "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 26,
+      "uq": 28,
+      "lq": 25
+    },
+    "JS6339": {
+      "code": "JS6339",
+      "nameEn": "Bachelor of Engineering in Civil Engineering",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 27,
+      "uq": 28,
+      "lq": 26
+    },
+    "JS6353": {
+      "code": "JS6353",
+      "nameEn": "Bachelor of Engineering in Civil Engineering (existing)",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 28,
+      "uq": 29,
+      "lq": 27
+    },
+    "JS6377": {
+      "code": "JS6377",
+      "nameEn": "Bachelor of Engineering and Master of Science in Engineering in AI",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 33,
+      "uq": 34,
+      "lq": 31
+    },
+    "JS6937": {
+      "code": "JS6937",
+      "nameEn": "Global Engineering and Business Programme",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 32,
+      "uq": 34,
+      "lq": 30
+    },
+    "JS6987": {
+      "code": "JS6987",
+      "nameEn": "Bachelor of Engineering in Computer Engineering / Electrical Engineering / Electronic Engineering",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 28
+    },
+    "JS6078": {
+      "code": "JS6078",
+      "nameEn": "Bachelor of Arts and Bachelor of Laws",
+      "formula": "1.5 x Eng + Best 5 Subjects",
+      "median": 38,
+      "uq": 41,
+      "lq": 36
+    },
+    "JS6406": {
+      "code": "JS6406",
+      "nameEn": "Bachelor of Laws",
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 35
+    },
+    "JS6250": {
+      "code": "JS6250",
+      "nameEn": "Bachelor of Arts and Sciences in Global Health and Development",
+      "formula": "Best 5 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 28
+    },
+    "JS6418": {
+      "code": "JS6418",
+      "nameEn": "Bachelor of Nursing (Advanced Leadership Track)",
+      "formula": "Best 5 Subjects",
+      "median": 37,
+      "uq": 37,
+      "lq": 36
+    },
+    "JS6456": {
+      "code": "JS6456",
+      "nameEn": "Bachelor of Medicine and Bachelor of Surgery",
+      "formula": "Best 6 Subjects",
+      "median": 44,
+      "uq": 47,
+      "lq": 42
+    },
+    "JS6468": {
+      "code": "JS6468",
+      "nameEn": "Bachelor of Nursing",
+      "formula": "Best 5 Subjects",
+      "median": 27,
+      "uq": 28,
+      "lq": 26
+    },
+    "JS6482": {
+      "code": "JS6482",
+      "nameEn": "Bachelor of Chinese Medicine",
+      "formula": "Best 5 Subjects",
+      "median": 33,
+      "uq": 34,
+      "lq": 31
+    },
+    "JS6494": {
+      "code": "JS6494",
+      "nameEn": "Bachelor of Pharmacy",
+      "formula": "Best 6 Subjects",
+      "median": 39,
+      "uq": 41,
+      "lq": 38
+    },
+    "JS6949": {
+      "code": "JS6949",
+      "nameEn": "Bachelor of Biomedical Sciences",
+      "formula": "Best 6 Subjects",
+      "median": 40,
+      "uq": 41,
+      "lq": 39
+    },
+    "JS6688": {
+      "code": "JS6688",
+      "nameEn": "Science Master Class",
+      "formula": "Best 5 Subjects",
+      "median": 34,
+      "uq": 36,
+      "lq": 32
+    },
+    "JS6858": {
+      "code": "JS6858",
+      "nameEn": "Bachelor of Science and Bachelor of Laws",
+      "formula": "Best 6 Subjects",
+      "median": 54,
+      "uq": 56,
+      "lq": 50
+    },
+    "JS6901": {
+      "code": "JS6901",
+      "nameEn": "Bachelor of Science",
+      "formula": "Best 5 Subjects",
+      "median": 37,
+      "uq": 39,
+      "lq": 36
+    },
+    "JS6729": {
+      "code": "JS6729",
+      "nameEn": "Bachelor of Science in Actuarial Science",
+      "formula": "1.2 x Eng + 1.2 x Math + 1.2 x M1/M2 + Best 2 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 35
+    },
+    "JS6779": {
+      "code": "JS6779",
+      "nameEn": "Bachelor of Science in Statistical Decision Sciences",
+      "formula": "1.5 x Math + Best 4 Subjects",
+      "median": 33,
+      "uq": 33,
+      "lq": 31
+    },
+    "JS6999": {
+      "code": "JS6999",
+      "nameEn": "Bachelor of Arts and Sciences in Computing and Data Science",
+      "formula": "Best 5 Subjects",
+      "median": 41,
+      "uq": 44,
+      "lq": 39
+    },
+    "JS6602": {
+      "code": "JS6602",
+      "nameEn": "Bachelor of Arts and Sciences",
+      "formula": "Best 5 Subjects",
+      "median": 55,
+      "uq": 58,
+      "lq": 52
+    },
+    "JS6705": {
+      "code": "JS6705",
+      "nameEn": "Bachelor of Psychology",
+      "formula": "Best 5 Subjects",
+      "median": 31,
+      "uq": 31,
+      "lq": 29
+    },
+    "JS6717": {
+      "code": "JS6717",
+      "nameEn": "Bachelor of Social Sciences (median, UQ, LQ)",
+      "formula": "Best 5 Subjects",
+      "median": 31,
+      "uq": 34,
+      "lq": 29
+    },
+    "JS6731": {
+      "code": "JS6731",
+      "nameEn": "Bachelor of Social Work",
+      "formula": "Best 5 Subjects",
+      "median": 28,
+      "uq": 28,
+      "lq": 26
+    },
+    "JS6810": {
+      "code": "JS6810",
+      "nameEn": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+      "formula": "Best 6 Subjects",
+      "median": 37,
+      "uq": 39,
+      "lq": 36
+    },
+    "JS6822": {
+      "code": "JS6822",
+      "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+      "formula": "1.5 x Eng + Best 4 Subjects",
+      "median": 32,
+      "uq": 35,
+      "lq": 31
+    },
+    "JS6925": {
+      "code": "JS6925",
+      "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 29
+    },
+    "JS6224": {
+      "code": "JS6224",
+      "nameEn": "Bachelor of Arts and Sciences in Applied Artificial Intelligence",
+      "formula": "Best 5 Subjects",
+      "median": 53,
+      "uq": 57,
+      "lq": 51
+    },
+    "JS6248": {
+      "code": "JS6248",
+      "nameEn": "Bachelor of Arts and Sciences in Financial Technology",
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 34,
+      "uq": 35,
+      "lq": 32
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "code": "JS6066",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6066"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://web.edu.hku.hk/programme/babed_6066/"
+    }
+  ],
+  "programme": {
+    "code": "JS6066",
+    "nameEn": "Bachelor of Education in Early Childhood Education and Special Education",
+    "nameZh": "Bachelor of Education in Early Childhood Education and Special Education",
+    "university": "香港大學",
+    "facultyZh": "教育學院",
+    "category": "education"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 32,
+    "uq": 34,
+    "lq": 32
+  },
+  "jupas": {
+    "code": "JS6066",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6066",
+    "nameEn": "Bachelor of Arts and Bachelor of Education in Language Education - English",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description This double-degree curriculum is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language",
+    "programmeWebsite": "https://web.edu.hku.hk/programme/babed_6066/",
+    "tuition": "HK$47,000",
+    "intake": 17,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 127,
+      "bandB": 105,
+      "bandC": 154,
+      "bandD": 215,
+      "bandE": 202,
+      "total": 803
+    },
+    "offers2025": {
+      "bandA": 15,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 15
+    },
+    "facultyPhone": "+852 3917 2280"
+  },
+  "admissionsSnippet": "Bachelor of Arts and Bachelor of Education in Language Education — English | HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners Home Programmes Undergraduate Programmes Bachelor of Arts and Bachelor of Education in Language Education — English Programme Overview and Aims Programme Overview and Aims Curriculum Structure Admissions Requirements Career Prospects Sharing FAQ Programme Overview and Aims Enquiries Information Application &amp; Admissions Contact:&nbsp; Faculty of Education &nbsp; Phone +852 3917 2280 Fax Email [javascript protected email address] Office &nbsp; Arts Curriculum Contact: Faculty of Arts &nbsp; Phone +852 3917 8977 Fax Email [javascript protected email address] Office &nbsp; Academic Matters Contact: Dr Ruby Yang (Curriculum Coordinator) &nbsp; Phone +852 3917 2280 Fax Email babedeng @hku.hk Office Programme Pamphlet View and download The BA&amp;BEd(LangEd)-English &nbsp;has been jointly offered by the Faculty of Arts and Faculty of Education since 2005.&nbsp; This five-year double degree integrates specialist studies in English language and linguistics and professional studies in English language education.&nbsp; The programme combines rigorous academic study with experiential learning and practical application.&nbsp; Graduates of the BA&amp;BEd(LangEd)-English&nbsp;are able to meet the requirements for English language teachers in both primary and secondary schools as recommended by the HKSAR government. &nbsp; &nbsp;&nbsp; Powerpoint file for admissions&nbsp;talk (HKU Information Day for Undergraduate Admissions 2025 ) &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Programme Features Students will develop in-depth knowledge of English language and linguistics, literature, communication and language acquisition and will critically explore issues in language education specifically and education generally and develop personal strengths and commitment to education. The programme offers two degrees:&nbsp;a BA in English language and linguistics, and a BEd in English language education.&nbsp;It is equivalent to a BA plus a Postgraduate Diploma in Education, a professional teaching qualification recognized in Hong Kong schools.&nbsp; Graduates are fully exempted from the Government&#39;s Language Proficiency Requirement (English Language).&nbsp;&nbsp; Students may take a range of elective courses within the Faculty of Education or in other Faculties, and may combine elective courses to declare a minor subject. Students&nbsp;participate in an overseas immersion programme&nbsp;to increase global awareness, enhance language proficiency and enrich professional development. &nbsp; The Scholarship for&nbsp;Prospective English Teachers is set up by the Education Bureau (EDB) to attract persons proficient in English to pursue relevant local bachelor degree programmes which will qualify them to become English&nbsp;teachers on graduation.&nbsp;For details, please refer to&nbsp; EDB&#39;s website . &nbsp; JUPAS Information Sessions 2025&nbsp;- Thematic Talk Topic:&nbsp; Using AI for Materials Development in English Language Education By Dr&nbsp;Ruby Yang, Programme Coordi"
+}

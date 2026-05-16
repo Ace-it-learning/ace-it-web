@@ -1,0 +1,503 @@
+{
+  "factPack": {
+    "code": "JS6377",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6377"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.ugadmissions.engg.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6377",
+      "nameEn": "Bachelor of Engineering and Master of Science in Engineering in AI",
+      "nameZh": "工學學士與人工智能理學碩士聯合課程",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 33,
+      "uq": 34,
+      "lq": 31
+    },
+    "jupas": {
+      "code": "JS6377",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6377",
+      "nameEn": "Bachelor of Engineering and Master of Science in Engineering in Artificial Intelligence in Engineering",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.ugadmissions.engg.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "1 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 68,
+        "bandB": 68,
+        "bandC": 173,
+        "bandD": 186,
+        "bandE": 198,
+        "total": 693
+      },
+      "offers2025": {
+        "bandA": 13,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 13
+      },
+      "facultyPhone": "+852 3917 2803"
+    },
+    "admissionsSnippet": "--> Home | HKU Engineering Undergraduate Admissions top of page HKU Engineering Undergraduate&nbsp;Admissions Home Discover About HKU Engineering Why HKU Engineering Professional Recognition Our Departments Videos Programmes Overview of HKU Engineering Programmes JS6303 Engineering Elite Programme JS6377 BEng X + MScEng AIE JS6937 Global Engineering and Business JS6353 Civil Engineering JS6987 Electrical Engineering JS6315 Data and Systems Engineering JS6339 Mechanical Engineering Programmes offered by SCDS Programmes offered by SBME Programmes offered by i-School Apply JUPAS applicants International Qualifications applicants Mainland applicants Admissions Requirements Download HKUENGG Admissions Brochure Contact Contact Details HKU Campus Map More Use tab to navigate through the menu items. ADMISSIONS BROCHURE Programme&nbsp; information ADMISSIONS REQUIREMENTS STUDENT SHARING HKU Engineering Undergraduate&nbsp;Admissions Address : Room G01A, G/F, Haking Wong Building,&nbsp; The University of Hong Kong,&nbsp; Pokfulam Road, Hong Kong. Email :&nbsp; enggugad@hku.hk Copyright &copy; 2025 Faculty of Engineering, The University of Hong Kong. All rights reserved. bottom of page"
+  },
+  "programme": {
+    "code": "JS6377",
+    "nameEn": "Bachelor of Engineering and Master of Science in Engineering in AI",
+    "nameZh": "工學學士與人工智能理學碩士聯合課程",
+    "name": "Bachelor of Engineering and Master of Science in Engineering in AI",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 33,
+    "band_a": 31,
+    "uq": 34,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "**First Year Intake**",
+            "327",
+            "",
+            "**Duration**",
+            "1 years",
+            "",
+            "**First Year Tuition**",
+            "HK$47,000",
+            "",
+            "**2025 Admission Scores**",
+            "Formula: Eng + Math + Best 3 Subjects",
+            "Median: 33 | LQ: 31 | UQ: 34",
+            "",
+            "**Interview**",
+            "Required (performance considered in admission decision)",
+            "",
+            "**JUPAS Statistics (2025)**",
+            "Band A applications: 68",
+            "Band A offers: 13",
+            "Band A offer rate: ~19.1%",
+            "Total applications: 693"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview**",
+            "This is a 5-year integrated Bachelor of Engineering and Master of Science in Engineering in AI programme offered by the Faculty of Engineering at HKU. It combines foundational engineering disciplines with advanced AI specialisation, preparing students for leadership roles in AI-driven industries.",
+            "",
+            "**Year 1-2: Foundation**",
+            "Core courses in mathematics, programming, physics, and introductory engineering. Students build a strong base in algorithms, data structures, and systems thinking.",
+            "",
+            "**Year 3-4: BEng Specialisation**",
+            "Advanced engineering courses with AI focus areas such as machine learning, computer vision, robotics, and natural language processing. Students complete a capstone project.",
+            "",
+            "**Year 5: MScEng in AI**",
+            "Master-level coursework and a research dissertation. Topics include deep learning, reinforcement learning, AI ethics, and AI system design.",
+            "",
+            "**Unique Features**",
+            "- Integrated BEng + MSc pathway saves one year compared to separate degrees.",
+            "- Access to HKU AI labs and research centres.",
+            "- Industry internship opportunities and final-year project with real-world AI applications.",
+            "- Interdisciplinary electives from engineering, computer science, and data science."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**AI & Technology**",
+            "- AI Engineer / Machine Learning Engineer",
+            "- Data Scientist / Data Engineer",
+            "- Computer Vision Engineer",
+            "- Natural Language Processing Specialist",
+            "",
+            "**Engineering & Systems**",
+            "- Systems Architect / AI Solutions Architect",
+            "- Robotics Engineer",
+            "- Embedded AI Engineer",
+            "",
+            "**Research & Academia**",
+            "- PhD in AI or related fields",
+            "- Research assistant at HKU or other institutions",
+            "",
+            "**Business & Consulting**",
+            "- AI Consultant / Technology Consultant",
+            "- Product Manager (AI products)",
+            "- Entrepreneur / Startup Founder in AI"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location**",
+            "Main campus at Pokfulam Road, Hong Kong. Engineering facilities are concentrated in the Haking Wong Building and Chow Yei Ching Building.",
+            "",
+            "**Facilities**",
+            "State-of-the-art AI labs, computing clusters, and collaborative spaces. Access to HKU's main library and digital resources.",
+            "",
+            "**Student Organisations**",
+            "HKU Engineering Society, AI and Data Science Club, and various faculty-led project teams.",
+            "",
+            "**Support Services**",
+            "Academic advising, career counselling, and mentorship programmes through the Faculty of Engineering.",
+            "",
+            "**Housing**",
+            "On-campus halls and off-campus housing options available. First-year students may apply for residential halls."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level: High**",
+            "JS6377 is a highly competitive programme with a strong applicant pool.",
+            "",
+            "**Band A Statistics (2025)**",
+            "Band A applications: 68",
+            "Band A offers: 13",
+            "Band A offer rate: ~19.1%",
+            "",
+            "**Factors Influencing Admission**",
+            "1. DSE scores: Eng + Math + Best 3 Subjects (weighted equally).",
+            "2. Interview performance: assessed for motivation, problem-solving, and AI interest.",
+            "3. OEA (Other Experiences and Achievements): relevant projects, competitions, or work experience.",
+            "4. Subject choices: strong performance in Mathematics and elective subjects (e.g., Physics, ICT, M1/M2).",
+            "5. Overall Band A preference: placing JS6377 in Band A significantly increases chances."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty Excellence**",
+            "HKU Faculty of Engineering is renowned for its research in AI, robotics, and data science. Faculty members include recipients of international awards and fellowships.",
+            "",
+            "**Rankings**",
+            "HKU is consistently ranked among the top universities globally, with engineering disciplines placing in the top 50 worldwide.",
+            "",
+            "**Research Labs**",
+            "Students have access to the AI Lab, Robotics Lab, and Data Science Institute, working on cutting-edge projects.",
+            "",
+            "**Alumni**",
+            "Graduates of HKU Engineering have gone on to leadership roles in top tech companies, research institutions, and startups. Specific alumni names are not available in the fact pack."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships**",
+            "Awarded based on outstanding DSE results or other qualifications. Details available on the HKU Admissions website.",
+            "",
+            "**Faculty of Engineering Scholarships**",
+            "Merit-based scholarships for engineering students, including those in the AI programme.",
+            "",
+            "**External Scholarships**",
+            "Various government and private scholarships (e.g., HKSAR Government Scholarship, Sir Edward Youde Memorial Fund).",
+            "",
+            "**Need-Based Financial Aid**",
+            "HKU offers financial assistance schemes for students with demonstrated need.",
+            "",
+            "**Application**",
+            "No separate application required for most entrance scholarships; automatically considered upon admission."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's AI Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the DSE Core Subjects**",
+            "",
+            "Focus on English and Mathematics as they are weighted in the admission formula. Aim for Level 5 or above in both.",
+            "- Practice past papers and time management.",
+            "- For Math, ensure strong performance in M1/M2 if taken.",
+            "",
+            "**2. Choose Electives Strategically**",
+            "",
+            "Select subjects that align with AI: Physics, ICT, or Computer Science (if available).",
+            "- These subjects demonstrate quantitative and analytical ability.",
+            "- Avoid unrelated electives that may dilute your profile.",
+            "",
+            "**3. Excel in the Interview**",
+            "",
+            "The interview is a key differentiator. Prepare to discuss your motivation for AI and engineering.",
+            "- Research current AI trends and HKU's programme details.",
+            "- Practice problem-solving and ethical reasoning questions.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Participate in AI-related competitions, hackathons, or online courses.",
+            "- Examples: HKAI Lab competitions, robotics contests, or Coursera AI specialisations.",
+            "- Document your achievements in the OEA section of JUPAS.",
+            "",
+            "**5. Aim for Band A Placement**",
+            "",
+            "With a ~19.1% Band A offer rate, placing JS6377 in Band A is crucial.",
+            "- Use Band A for your top choice; Band B or lower significantly reduces chances.",
+            "- Consider backup programmes in Band B that also align with engineering.",
+            "",
+            "**6. Prepare for the Admission Formula**",
+            "",
+            "The formula is Eng + Math + Best 3 Subjects. Maximise your best 3 subjects.",
+            "- If you have a weaker subject, ensure your best 3 are strong.",
+            "- Use predicted scores to gauge your competitiveness.",
+            "",
+            "**7. Understand the Programme Structure**",
+            "",
+            "Know that this is a 5-year integrated BEng + MSc. Highlight your long-term commitment in the interview.",
+            "- Show interest in both undergraduate and master-level coursework.",
+            "- Mention the research dissertation as a draw.",
+            "",
+            "**8. Have a Backup Plan**",
+            "",
+            "Consider related programmes like JS6303 Engineering Elite Programme or JS6315 Data and Systems Engineering.",
+            "- These also lead to AI careers and have similar entry requirements.",
+            "- Ensure your backup choices are in Band B or C.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "Check the HKU Engineering admissions website for any updates on requirements or interview format.",
+            "- Follow HKU Engineering social media for tips and events.",
+            "- Attend admission talks or webinars if available."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額**",
+            "327",
+            "",
+            "**修讀年期**",
+            "1 年",
+            "",
+            "**首年學費**",
+            "HK$47,000",
+            "",
+            "**2025 年入學分數**",
+            "計算公式：英文 + 數學 + 最佳 3 科",
+            "中位數：33 | 下四分位數：31 | 上四分位數：34",
+            "",
+            "**面試**",
+            "需要（表現會納入取錄考慮）",
+            "",
+            "**JUPAS 統計（2025）**",
+            "Band A 申請人數：68",
+            "Band A 取錄人數：13",
+            "Band A 取錄率：約 19.1%",
+            "總申請人數：693"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**",
+            "此為香港大學工程學院開辦的 5 年制工學士及人工智能理學碩士綜合課程。結合基礎工程學科與人工智能專業知識，培養學生成為 AI 驅動行業的領袖。",
+            "",
+            "**第 1-2 年：基礎**",
+            "核心科目包括數學、編程、物理及工程導論。學生建立演算法、數據結構及系統思維的穩固基礎。",
+            "",
+            "**第 3-4 年：工學士專業**",
+            "進階工程課程，專注 AI 領域如機器學習、電腦視覺、機械人學及自然語言處理。學生需完成頂石項目。",
+            "",
+            "**第 5 年：人工智能理學碩士**",
+            "碩士課程及研究論文。主題包括深度學習、強化學習、AI 倫理及 AI 系統設計。",
+            "",
+            "**獨特之處**",
+            "- 綜合學士及碩士路徑，比分別修讀節省一年時間。",
+            "- 可使用港大 AI 實驗室及研究中心。",
+            "- 行業實習機會及真實 AI 應用畢業項目。",
+            "- 跨學科選修科，涵蓋工程、計算機科學及數據科學。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**人工智能與科技**",
+            "- AI 工程師 / 機器學習工程師",
+            "- 數據科學家 / 數據工程師",
+            "- 電腦視覺工程師",
+            "- 自然語言處理專家",
+            "",
+            "**工程與系統**",
+            "- 系統架構師 / AI 解決方案架構師",
+            "- 機械人工程師",
+            "- 嵌入式 AI 工程師",
+            "",
+            "**研究與學術**",
+            "- AI 或相關領域博士",
+            "- 港大或其他機構研究助理",
+            "",
+            "**商業與諮詢**",
+            "- AI 顧問 / 科技顧問",
+            "- 產品經理（AI 產品）",
+            "- 企業家 / AI 初創創辦人"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點**",
+            "主校園位於香港薄扶林道。工程學院設施集中在 Haking Wong 大樓及 Chow Yei Ching 大樓。",
+            "",
+            "**設施**",
+            "先進 AI 實驗室、計算集群及協作空間。可使用港大主圖書館及數碼資源。",
+            "",
+            "**學生組織**",
+            "港大工程學會、AI 及數據科學學會，以及多個學院主導的項目團隊。",
+            "",
+            "**支援服務**",
+            "學術指導、就業輔導及工程學院導師計劃。",
+            "",
+            "**住宿**",
+            "提供校內宿舍及校外住宿選擇。一年級學生可申請住宿書院。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：高**",
+            "JS6377 競爭激烈，申請者質素優良。",
+            "",
+            "**Band A 統計（2025）**",
+            "Band A 申請人數：68",
+            "Band A 取錄人數：13",
+            "Band A 取錄率：約 19.1%",
+            "",
+            "**影響取錄的因素**",
+            "1. DSE 成績：英文 + 數學 + 最佳 3 科（同等比重）。",
+            "2. 面試表現：評估動機、解難能力及對 AI 的興趣。",
+            "3. OEA（其他經驗及成就）：相關項目、比賽或工作經驗。",
+            "4. 選修科目：數學及相關選修科（如物理、資訊及通訊科技、M1/M2）成績優異。",
+            "5. Band A 選擇：將 JS6377 放在 Band A 能大幅提高機會。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**學院卓越**",
+            "港大工程學院在 AI、機械人學及數據科學研究方面享負盛名。教授團隊屢獲國際獎項及院士榮譽。",
+            "",
+            "**排名**",
+            "港大持續位列全球頂尖大學，工程學科排名全球前 50。",
+            "",
+            "**研究實驗室**",
+            "學生可使用 AI 實驗室、機械人實驗室及數據科學研究所，參與前沿項目。",
+            "",
+            "**校友**",
+            "港大工程畢業生於頂尖科技公司、研究機構及初創企業擔任領導角色。資料庫未有提供具體校友名稱。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金**",
+            "根據傑出 DSE 成績或其他學歷頒發。詳情請參閱港大入學網站。",
+            "",
+            "**工程學院獎學金**",
+            "為工程學生設立的獎學金，包括 AI 課程學生。",
+            "",
+            "**外部獎學金**",
+            "多項政府及私人獎學金（如香港特別行政區政府獎學金、尤德爵士紀念基金）。",
+            "",
+            "**需要為本財務資助**",
+            "港大為有需要學生提供經濟援助計劃。",
+            "",
+            "**申請**",
+            "大部分入學獎學金無需另行申請，取錄時自動考慮。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 AI 工程策略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握 DSE 核心科目**",
+            "",
+            "專注英文及數學，因為它們在入學公式中佔有比重。目標取得 5 級或以上。",
+            "- 練習歷屆試題及時間管理。",
+            "- 數學方面，如有修讀 M1/M2，確保表現優異。",
+            "",
+            "**2. 策略性選擇選修科**",
+            "",
+            "選擇與 AI 相關的科目：物理、資訊及通訊科技或電腦科學（如提供）。",
+            "- 這些科目展示量化及分析能力。",
+            "- 避免選擇無關的選修科，以免削弱個人檔案。",
+            "",
+            "**3. 在面試中脫穎而出**",
+            "",
+            "面試是關鍵區分因素。準備討論你對 AI 及工程的動機。",
+            "- 研究當前 AI 趨勢及港大課程細節。",
+            "- 練習解難及倫理推理問題。",
+            "",
+            "**4. 建立強大的 OEA 檔案**",
+            "",
+            "參與 AI 相關比賽、黑客松或網上課程。",
+            "- 例子：HKAI Lab 比賽、機械人競賽或 Coursera AI 專項課程。",
+            "- 在 JUPAS 的 OEA 部分記錄你的成就。",
+            "",
+            "**5. 目標放在 Band A**",
+            "",
+            "由於 Band A 取錄率約 19.1%，將 JS6377 放在 Band A 至關重要。",
+            "- 將 Band A 用於首選；Band B 或更低會大幅降低機會。",
+            "- 在 Band B 考慮同樣與工程相關的備選課程。",
+            "",
+            "**6. 了解入學計算公式**",
+            "",
+            "公式為英文 + 數學 + 最佳 3 科。盡量提升最佳 3 科的成績。",
+            "- 如有弱科，確保最佳 3 科表現強勁。",
+            "- 使用預測分數評估自己的競爭力。",
+            "",
+            "**7. 了解課程結構**",
+            "",
+            "知道這是 5 年制綜合學士及碩士課程。在面試中展示你的長期承諾。",
+            "- 表達對學士及碩士課程的興趣。",
+            "- 提及研究論文是吸引之處。",
+            "",
+            "**8. 制定備選計劃**",
+            "",
+            "考慮相關課程如 JS6303 工程精英課程或 JS6315 數據及系統工程。",
+            "- 這些課程同樣通往 AI 職業，入學要求相近。",
+            "- 確保備選課程放在 Band B 或 C。",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "定期查看港大工程學院入學網站，了解要求或面試形式的更新。",
+            "- 關注港大工程社交媒體獲取貼士及活動資訊。",
+            "- 如有，參加入學講座或網絡研討會。"
+          ]
+        }
+      }
+    },
+    "code": "JS6377",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 33,
+    "uq": 34,
+    "lq": 31
+  }
+}

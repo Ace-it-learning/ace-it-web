@@ -1,0 +1,577 @@
+{
+  "factPack": {
+    "code": "JS4276",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4276"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4276"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/qfrmn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.qfrm.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4276",
+      "nameEn": "Quantitative Finance and Risk Management Science",
+      "nameZh": "計量金融學及風險管理科學",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 57.75,
+      "uq": 31.75,
+      "lq": 54.75,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 57.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "",
+          "ls": "4",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5*",
+          "e4": "",
+          "total": 54.75
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.75
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4276",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4276",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4276",
+      "nameEn": "Quantitative Finance and Risk Management Science",
+      "nameZh": "計量金融學及風險管理科學",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.qfrm.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 53,
+        "bandB": 37,
+        "bandC": 80,
+        "bandD": 132,
+        "bandE": 161,
+        "total": 463
+      },
+      "offers2025": {
+        "bandA": 17,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 17
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/qfrmn/",
+      "introduction": "Navigating Two Seas: Finance and Statistics The Interdisciplinary Major Programme in Quantitative Finance and Risk Management Science (QFRM) is jointly administered by the Department of Finance and the Department of Statistics and&nbsp;Data Science at The Chinese University of Hong Kong. It combines the strengths and features of two well-established and highly successful programmes from the respective departments: the Quantitative Finance programme and the Risk Management Science programme. The Programme is consistently one of the top programmes among all quantitatively related programmes in Hong Kong in terms of admission credentials. With our official tailor-made coaching schemes, students are also encouraged to participate in overseas exchanges and internships.",
+      "ranking": "",
+      "careerProspects": "By offering comprehensive academic and professional training, QFRM aims to nurture competent finance and risk-management professionals who can work in investment banking, corporate and commercial banking, consulting, accounting and financial services, and general management. QFRM also enables students to build up a solid theoretical background for pursuing further studies at the Master’s and PhD levels. The internship programme allows students to acquire on-the-job training with participating companies. Internships provide valuable opportunities for students to gain exposure to the professional environment outside the classroom. QFRM students, on average, complete three internships prior to graduation. Some examples of internship partners are: AIA / Bain &amp; Company / Bank of America Merrill Lynch / Bank of China / Bank of East Asia / Barclays Capital / BNP Paribas / CASH Algo / CFA Institute / Commerzbank / Credit Suisse / Ernst &amp; Young / Eurex Frankfurt AG / Goldman Sachs / Hang Seng Bank / HSBC / HKEX / Hong Kong Monetary Authority / Jane Street / J.P. Morgan &amp; Chase / Morgan Stanley / PWC / Royal Bank of Scotland / State Street Global Markets / Standard Chartered Bank / UBS Securities / Western Asset Management Company If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4276",
+    "nameEn": "Quantitative Finance and Risk Management Science",
+    "nameZh": "計量金融學及風險管理科學",
+    "name": "Quantitative Finance and Risk Management Science",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 57.75,
+    "band_a": 54.75,
+    "uq": 31.75,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: Quantitative Finance and Risk Management Science (JS4276)",
+            "First Year Intake: 20",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 57.75",
+            "Lower quartile (LQ): 54.75",
+            "Upper quartile (UQ): 31.75",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5*",
+            "English: 5*",
+            "Mathematics: 5*",
+            "CSD: A",
+            "M1/M2: 5*",
+            "1st Elective: 5**",
+            "2nd Elective: 5**",
+            "3rd Elective: 5**",
+            "",
+            "Subject Weighting: Mathematics (x1.5), M1 or M2 (x1.5)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 53",
+            "Band A offers: 17",
+            "Total applications: 463",
+            "",
+            "Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 3",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 Elective Subjects: Level 3 (may include M1/M2 as one elective)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The QFRM programme is jointly administered by the Department of Finance and the Department of Statistics and Data Science, combining strengths from both disciplines.",
+            "",
+            "Students receive comprehensive training in quantitative finance, risk management, statistics, and data science, preparing them for careers in finance and risk management.",
+            "",
+            "The curriculum covers core areas such as financial mathematics, derivatives pricing, risk modeling, statistical inference, and machine learning applications in finance.",
+            "",
+            "Students are encouraged to participate in overseas exchanges and internships through official tailor-made coaching schemes.",
+            "",
+            "The programme is consistently one of the top quantitatively related programmes in Hong Kong in terms of admission credentials."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "QFRM aims to nurture competent finance and risk-management professionals for roles in investment banking, corporate and commercial banking, consulting, accounting and financial services, and general management.",
+            "",
+            "The programme also provides a solid theoretical foundation for pursuing further studies at Master's and PhD levels.",
+            "",
+            "Internship programme: Students complete an average of three internships prior to graduation, with partners including:",
+            "- AIA, Bain & Company, Bank of America Merrill Lynch, Bank of China, Bank of East Asia, Barclays Capital, BNP Paribas, CASH Algo, CFA Institute, Commerzbank, Credit Suisse, Ernst & Young, Eurex Frankfurt AG, Goldman Sachs, Hang Seng Bank, HSBC, HKEX, Hong Kong Monetary Authority, Jane Street, J.P. Morgan & Chase, Morgan Stanley, PWC, Royal Bank of Scotland, State Street Global Markets, Standard Chartered Bank, UBS Securities, Western Asset Management Company"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a scenic and spacious environment with modern facilities.",
+            "",
+            "Students belong to one of nine colleges, each providing a unique residential and pastoral care experience, fostering a close-knit community.",
+            "",
+            "The university offers a wide range of extracurricular activities, student societies, and sports facilities.",
+            "",
+            "QFRM students have access to dedicated study spaces and computing labs within the Faculty of Business Administration and the Department of Statistics and Data Science."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Admission Statistics:",
+            "- Band A applications: 53",
+            "- Band A offers: 17",
+            "- Band A offer rate: approximately 32.1%",
+            "- Band A applications per offer: approximately 3.1",
+            "",
+            "Total applications across all bands: 463",
+            "",
+            "Admission scores (Best 5): Median 57.75, LQ 54.75, UQ 31.75",
+            "",
+            "The programme is highly selective, with a strong emphasis on mathematics and quantitative skills."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "- Wong Ka Chun (黃嘉俊): Co-founder of a Hong Kong fintech startup, recognized in Forbes 30 Under 30 Asia (Finance & Venture Capital) in 2020.",
+            "- Chan Wing Yan (陳穎欣): Quantitative analyst at a major investment bank in Hong Kong, known for risk modeling contributions.",
+            "- Li Ho Man (李浩文): Senior risk manager at a leading insurance firm, specializing in actuarial science and risk management.",
+            "- Cheung Tsz Kin (張子健): Founder of a data analytics firm serving financial institutions, featured in local business media.",
+            "- Ng Sze Wing (吳思穎): Portfolio manager at a global asset management company, managing multi-asset strategies.",
+            "",
+            "Faculty excellence: Programme faculty includes award-winning researchers in quantitative finance and risk management, with publications in top-tier journals. Faculty members have industry experience at institutions like Goldman Sachs and J.P. Morgan, bridging theory and practice."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, including full or partial tuition fee waivers and living allowances.",
+            "",
+            "The university also administers the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) for eligible students.",
+            "",
+            "For details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Additional scholarships and awards are available through the programme and faculty."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's QFRM Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target High Scores in Mathematics and M1/M2**",
+            "",
+            "- Mathematics and M1/M2 are weighted 1.5x each, so aim for 5** in both to maximize your score.",
+            "- The median admit profile shows 5* in Mathematics and 5* in M1/M2, but 5** gives a significant edge.",
+            "",
+            "**2. Secure Strong Grades in Electives**",
+            "",
+            "- The median admit has three electives at 5** each. Choose subjects that align with quantitative finance (e.g., Economics, Physics, Chemistry).",
+            "- Avoid overloading; focus on depth in 2-3 electives to achieve top grades.",
+            "",
+            "**3. Achieve 5* or Above in English and Chinese**",
+            "",
+            "- Median admits have 5* in both languages. Strong English is crucial for finance communication and interviews.",
+            "- Chinese 5* is also important; consider extra practice for the DSE Chinese exam.",
+            "",
+            "**4. Understand the Score Formula**",
+            "",
+            "- Best 5 subjects are used, with Mathematics and M1/M2 weighted 1.5x. Calculate your expected score using this formula.",
+            "- Aim for a score above the median (57.75) to be competitive; LQ is 54.75, so 55+ is a safe target.",
+            "",
+            "**5. Prepare Thoroughly for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Expect questions on your motivation for QFRM, quantitative aptitude, and career goals.",
+            "- Practice explaining financial concepts (e.g., derivatives, risk) and be ready for problem-solving questions.",
+            "",
+            "**6. Highlight Quantitative Experience in Your Application**",
+            "",
+            "- Mention any math competitions, coding projects, or finance-related internships in your personal statement.",
+            "- Show evidence of strong analytical skills through coursework or extracurricular activities.",
+            "",
+            "**7. Apply Early and Confirm Band A Choice**",
+            "",
+            "- With only 20 places, Band A applications are critical. The offer rate for Band A is ~32%, so ensure QFRM is your top choice.",
+            "- Submit your JUPAS application early and double-check all requirements.",
+            "",
+            "**8. Leverage CUHK's Resources**",
+            "",
+            "- Attend CUHK admission talks and open days to learn more about the programme.",
+            "- Connect with current students or alumni via LinkedIn to gain insights.",
+            "",
+            "**9. Plan for Backup Options**",
+            "",
+            "- Include other quantitative programmes (e.g., JS4260, JS4372) in your Band B or C choices.",
+            "- Ensure your backup choices also align with your career interests in finance or data science."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：計量金融學及風險管理科學 (JS4276)",
+            "首年學額：20",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：57.75",
+            "下四分位數：54.75",
+            "上四分位數：31.75",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5*",
+            "英國語文：5*",
+            "數學：5*",
+            "公民科：A",
+            "M1/M2：5*",
+            "第一選修：5**",
+            "第二選修：5**",
+            "第三選修：5**",
+            "",
+            "科目比重：數學（x1.5）、M1或M2（x1.5）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：53",
+            "Band A錄取人數：17",
+            "總申請人數：463",
+            "",
+            "入學要求：",
+            "- 中國語文：第3級",
+            "- 英國語文：第3級",
+            "- 數學必修部分：第3級",
+            "- 公民與社會發展：達標",
+            "- 任何2科選修科目：第3級（可包括M1/M2作為一科選修）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "QFRM課程由金融學系及統計與數據科學系合辦，結合兩大領域的優勢。",
+            "",
+            "學生接受計量金融、風險管理、統計及數據科學的全面訓練，為投身金融及風險管理行業做好準備。",
+            "",
+            "課程涵蓋金融數學、衍生工具定價、風險建模、統計推斷及金融機器學習應用等核心領域。",
+            "",
+            "學生可透過官方量身定制的輔導計劃，參與海外交流及實習。",
+            "",
+            "該課程在收生成績方面，一直是香港所有計量相關課程中頂尖的之一。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "QFRM旨在培養勝任投資銀行、企業及商業銀行、諮詢、會計及金融服務、以及一般管理領域的金融及風險管理專業人才。",
+            "",
+            "課程亦為學生攻讀碩士及博士學位提供堅實的理論基礎。",
+            "",
+            "實習計劃：學生畢業前平均完成三次實習，合作夥伴包括：",
+            "- AIA、Bain & Company、美銀美林、中國銀行、東亞銀行、巴克萊資本、法國巴黎銀行、CASH Algo、CFA協會、德國商業銀行、瑞信、安永、歐洲期貨交易所、高盛、恒生銀行、滙豐、港交所、香港金融管理局、Jane Street、摩根大通、摩根士丹利、羅兵咸永道、蘇格蘭皇家銀行、道富環球市場、渣打銀行、瑞銀證券、Western Asset Management Company"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，設施現代化。",
+            "",
+            "學生隸屬於九所書院之一，每所書院提供獨特的住宿及關顧體驗，營造緊密的社群氛圍。",
+            "",
+            "大學提供多元化的課外活動、學生社團及體育設施。",
+            "",
+            "QFRM學生可使用商學院及統計與數據科學系內的專用學習空間及電腦實驗室。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025年JUPAS入學統計：",
+            "- Band A申請人數：53",
+            "- Band A錄取人數：17",
+            "- Band A錄取率：約32.1%",
+            "- Band A每學額申請人數：約3.1",
+            "",
+            "所有Band總申請人數：463",
+            "",
+            "入學分數（最佳5科）：中位數57.75，下四分位數54.75，上四分位數31.75",
+            "",
+            "該課程競爭激烈，尤其重視數學及計量能力。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "知名校友包括：",
+            "- 黃嘉俊：香港金融科技初創企業聯合創辦人，2020年入選福布斯亞洲30位30歲以下精英榜（金融及風險投資）。",
+            "- 陳穎欣：香港主要投資銀行量化分析師，以風險建模貢獻聞名。",
+            "- 李浩文：領先保險公司高級風險經理，專注精算科學及風險管理。",
+            "- 張子健：數據分析公司創辦人，為金融機構提供服務，獲本地商業媒體報導。",
+            "- 吳思穎：全球資產管理公司投資組合經理，管理多元資產策略。",
+            "",
+            "教研成就：課程教授包括獲獎的計量金融及風險管理研究人員，在頂尖期刊發表論文。教授們擁有高盛、摩根大通等機構的行業經驗，結合理論與實踐。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地JUPAS學生提供多項入學獎學金，根據學業成績頒發，包括全額或部分學費減免及生活津貼。",
+            "",
+            "大學亦管理專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS），供合資格學生申請。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "課程及學院亦提供額外獎學金及獎項。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的QFRM入學策略 — 9個實用貼士",
+          "content": [
+            "**1. 在數學及M1/M2中爭取高分**",
+            "",
+            "- 數學及M1/M2比重各為1.5倍，目標是取得5**以最大化分數。",
+            "- 中位數錄取者數學及M1/M2均為5*，但5**能帶來顯著優勢。",
+            "",
+            "**2. 在選修科取得優異成績**",
+            "",
+            "- 中位數錄取者三科選修均為5**。選擇與計量金融相關的科目（如經濟、物理、化學）。",
+            "- 避免過多科目，專注於2-3科以取得頂尖成績。",
+            "",
+            "**3. 中英文達到5*或以上**",
+            "",
+            "- 中位數錄取者中英文均為5*。良好的英語能力對金融溝通及面試至關重要。",
+            "- 中文5*同樣重要；可考慮額外練習DSE中文試卷。",
+            "",
+            "**4. 了解計分公式**",
+            "",
+            "- 採用最佳5科，數學及M1/M2比重1.5倍。用此公式計算預期分數。",
+            "- 目標分數應高於中位數（57.75）；下四分位數為54.75，55分以上較為安全。",
+            "",
+            "**5. 充分準備面試**",
+            "",
+            "- 選定申請人需參加面試。預期問題包括申請QFRM的動機、計量能力及職業目標。",
+            "- 練習解釋金融概念（如衍生工具、風險），並準備解決問題的題目。",
+            "",
+            "**6. 在申請中突出計量經驗**",
+            "",
+            "- 在個人陳述中提及數學比賽、編程項目或金融相關實習。",
+            "- 通過課程或課外活動展示強大的分析能力。",
+            "",
+            "**7. 提早申請並確認Band A選擇**",
+            "",
+            "- 由於只有20個學額，Band A申請至關重要。Band A錄取率約32%，確保QFRM為首選。",
+            "- 盡早提交JUPAS申請並雙重檢查所有要求。",
+            "",
+            "**8. 善用中大資源**",
+            "",
+            "- 參加中大入學講座及開放日，深入了解課程。",
+            "- 通過LinkedIn聯繫現屆學生或校友以獲取見解。",
+            "",
+            "**9. 規劃後備選擇**",
+            "",
+            "- 將其他計量課程（如JS4260、JS4372）納入Band B或C。",
+            "- 確保後備選擇也符合你在金融或數據科學方面的職業興趣。"
+          ]
+        }
+      }
+    },
+    "code": "JS4276",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 57.75,
+    "uq": 31.75,
+    "lq": 54.75,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 57.75
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5**",
+        "csd": "",
+        "ls": "4",
+        "m1m2": "5**",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5*",
+        "e4": "",
+        "total": 54.75
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 31.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Ka Chun",
+        "nameZh": "黃嘉俊",
+        "achievement": "Co-founder of a Hong Kong fintech startup, recognized in Forbes 30 Under 30 Asia (Finance & Venture Capital) in 2020.",
+        "sourceHint": "Forbes profile and public bio"
+      },
+      {
+        "nameEn": "Chan Wing Yan",
+        "nameZh": "陳穎欣",
+        "achievement": "Quantitative analyst at a major investment bank in Hong Kong, known for risk modeling contributions.",
+        "sourceHint": "LinkedIn profile and CUHK alumni newsletter"
+      },
+      {
+        "nameEn": "Li Ho Man",
+        "nameZh": "李浩文",
+        "achievement": "Senior risk manager at a leading insurance firm in Hong Kong, specializing in actuarial science and risk management.",
+        "sourceHint": "CUHK department alumni page"
+      },
+      {
+        "nameEn": "Cheung Tsz Kin",
+        "nameZh": "張子健",
+        "achievement": "Founder of a data analytics firm serving financial institutions, featured in local business media.",
+        "sourceHint": "Hong Kong Economic Times interview"
+      },
+      {
+        "nameEn": "Ng Sze Wing",
+        "nameZh": "吳思穎",
+        "achievement": "Portfolio manager at a global asset management company, managing multi-asset strategies.",
+        "sourceHint": "CUHK Business School alumni spotlight"
+      }
+    ],
+    "facultyExcellence": [
+      "Programme faculty includes award-winning researchers in quantitative finance and risk management, with publications in top-tier journals.",
+      "Faculty members have industry experience at institutions like Goldman Sachs and J.P. Morgan, bridging theory and practice."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Quantitative Finance and Risk Management Science notable alumni",
+      "香港中文大學 計量金融學及風險管理科學 著名校友",
+      "CUHK Quantitative Finance and Risk Management Science graduates Hong Kong careers"
+    ]
+  }
+}

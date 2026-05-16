@@ -1,0 +1,571 @@
+{
+  "factPack": {
+    "code": "JS4874",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4874"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4874"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/sowkn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://web.swk.cuhk.edu.hk/?id=451"
+      }
+    ],
+    "programme": {
+      "code": "JS4874",
+      "nameEn": "Social Work",
+      "nameZh": "社會工作",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": 28,
+      "lq": 27.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 28
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4874",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4874",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4874",
+      "nameEn": "Social Work",
+      "nameZh": "社會工作",
+      "shortDescription": "an class=\"before_label\">Short Description The Social Work programme aims to train students to be professional social workers who are knowledgeable, analytical and empathetic. The programme helps students achieve both conceptual and practical competence in comprehending social problems and helping people in a social context with increasing complexity. Its emphasis includes students' self-understanding, small group teaching, intensive fieldwork practicum, and international exposure with opportunities for overseas placement. Graduates are eligible to apply for 'Registered Social Worker' status and legally assume professional social work positions. Employment rates of our graduates are extremely favorable in the past years.",
+      "programmeWebsite": "http://web.swk.cuhk.edu.hk/?id=451",
+      "tuition": "HK$47,000",
+      "intake": 47,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 363,
+        "bandB": 297,
+        "bandC": 593,
+        "bandD": 893,
+        "bandE": 821,
+        "total": 2967
+      },
+      "offers2025": {
+        "bandA": 39,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 39
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/sowkn/",
+      "introduction": "Social Work Programme – The Path to the Helping Profession Accredited professionally by the Hong Kong Social Workers Registration Board (HKSWRB), the programme provides theoretical and practical knowledge, as well as analytical skills related to social work, at both the micro level (e.g. intervention skills training) and macro level (e.g. social policy advocacy) through a wide variety of teaching and learning activities, including lectures, tutorials, role plays, community-based learning, experiential learning and a practicum. Our programme offers one-to-one supervision of the two required social work field placements in social service organisations during the period of study. Students may apply to have one of the placements outside Hong Kong. Previous locations include Australia, Canada, the United Kingdom, Singapore and Taiwan. Students are eligible to be Registered Social Workers (RSW) of Hong Kong upon graduation.",
+      "ranking": "",
+      "careerProspects": "Our Social Work programme offers experiential learning beyond the classroom, including overseas placements and study-abroad opportunities. We emphasizes theory-practice integration with a solid knowledge foundation and diverse placement opportunities. Graduates have a strong academic grounding and versatile practical skills, allowing them to thrive in different fields of social work practice. In past years, the majority of our graduates entered the social service sector. The remaining graduates chose a variety of careers in the education sector or public administration, or pursued advanced studies. Employers include the HKSAR Government, the Hospital Authority, Caritas, Tung Wah Groups of Hospitals, Po Leung Kuk, The Evangelical Lutheran Church of Hong Kong, The Boys&#8217; &amp; Girls&#8217; Clubs Association of Hong Kong, the Hong Kong Family Welfare Society, and St. James Settlement. For those aspiring to elevate their career trajectory, postgraduate studies offer further opportunities. Our Faculty are committed to our students&#8217; success and conduct career workshops that equip our students with essential skills and insights. Our Social Work programme moulds well-rounded professionals who are ready to devote themselves to the betterment of the world – locally and globally. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Forge your educational odyssey by curating a curriculum that resonates with your vision. Unleash Your Curiosity – Embrace the array of courses and chart a voyage of self-discovery. Pathway to Mastery – Immerse yourself deeply in your chosen expertise, including social work practice for specific clientele(s), such as family, children, youth, older adults or people with special needs, or focus on macro social issues and policies. Put your enthusiasm for human service and well-being to work through our Social Work Programme.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4874",
+    "nameEn": "Social Work",
+    "nameZh": "社會工作",
+    "name": "Social Work",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 27.5,
+    "band_a": 27.5,
+    "uq": 28,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: Social Work (JS4874)",
+            "First Year Intake: 47",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 363",
+            "Band A offers: 39",
+            "Total applications: 2,967",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 27.5",
+            "Lower quartile (LQ): 27.5",
+            "Upper quartile (UQ): 28",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese Language: 4",
+            "English Language: 5",
+            "Mathematics Compulsory: 5*",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Any 2 Elective Subjects: Level 3 each (may include M1/M2 or one Applied Learning subject with 'Attained with Distinction I/II')",
+            "",
+            "Note: Applicants with very special circumstances may be granted waivers of Chinese Language requirement on a case-by-case basis."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Social Work programme at CUHK is professionally accredited by the Hong Kong Social Workers Registration Board (HKSWRB). It provides comprehensive theoretical and practical knowledge, as well as analytical skills at both micro level (e.g., intervention skills training) and macro level (e.g., social policy advocacy).",
+            "",
+            "Teaching and learning activities include lectures, tutorials, role plays, community-based learning, experiential learning, and a practicum. The programme offers one-to-one supervision for two required social work field placements in social service organisations. Students may apply to have one placement outside Hong Kong; previous locations include Australia, Canada, the United Kingdom, Singapore, and Taiwan.",
+            "",
+            "Students can tailor their studies by focusing on specific clientele groups such as family, children, youth, older adults, or people with special needs, or by concentrating on macro social issues and policies.",
+            "",
+            "Upon graduation, students are eligible to apply for Registered Social Worker (RSW) status in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the Social Work programme have a strong academic grounding and versatile practical skills, allowing them to thrive in various fields of social work practice.",
+            "",
+            "In past years, the majority of graduates entered the social service sector. Others chose careers in education, public administration, or pursued advanced studies.",
+            "",
+            "Employers include: HKSAR Government, Hospital Authority, Caritas, Tung Wah Groups of Hospitals, Po Leung Kuk, The Evangelical Lutheran Church of Hong Kong, The Boys' & Girls' Clubs Association of Hong Kong, Hong Kong Family Welfare Society, and St. James Settlement.",
+            "",
+            "The programme also prepares students for postgraduate studies, and the Faculty conducts career workshops to equip students with essential skills and insights."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with over 9,000 hostel places.",
+            "",
+            "The University operates a unique college system, providing students with a close-knit community and holistic development opportunities.",
+            "",
+            "Students can participate in overseas placements and study-abroad opportunities as part of the Social Work programme, with previous placements in Australia, Canada, the UK, Singapore, and Taiwan.",
+            "",
+            "The campus also offers a wide range of extracurricular activities, student organisations, and support services."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS data, the programme received 363 Band A applications and made 39 Band A offers, resulting in a Band A offer rate of approximately 10.7%.",
+            "",
+            "The number of Band A applications per Band A offer is about 9.3, indicating strong competition.",
+            "",
+            "The median admission score (Best 5) was 27.5, with the lower quartile also at 27.5 and the upper quartile at 28.",
+            "",
+            "Applicants are advised to aim for scores at or above the median to be competitive. The programme requires an interview for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Chow Yuen-man (周婉文) – Former Director of Social Welfare of Hong Kong, leading the implementation of social welfare policies.",
+            "",
+            "Lau Siu-kai (劉兆佳) – Renowned sociologist and former Head of the Central Policy Unit, HKSAR Government; professor at CUHK.",
+            "",
+            "Wong Hung (黃洪) – Associate Professor at CUHK Social Work Department, expert in poverty and social policy.",
+            "",
+            "Chua Hoi-wai (蔡海偉) – Chief Executive of the Hong Kong Council of Social Service, leading NGO advocacy.",
+            "",
+            "Lee Cheuk-yan (李卓人) – Former legislator and labour activist, co-founder of the Hong Kong Confederation of Trade Unions.",
+            "",
+            "Faculty Excellence: CUHK Social Work Department is consistently ranked among top social work programmes in Asia. Faculty members have led major research on poverty, mental health, and child welfare in Hong Kong."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students. Some scholarships cover tuition fees and living expenses.",
+            "",
+            "Local JUPAS students may be eligible for entrance scholarships. Other major scholarships include the Hong Kong Scholarship for Excellence Scheme and various faculty-specific awards.",
+            "",
+            "Financial aid schemes are also available, including the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Social Work Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 27.5 or Above**",
+            "",
+            "- The median and LQ for 2025 were both 27.5 (Best 5). To be safe, aim for at least 27.5, ideally 28 or higher.",
+            "- Focus on your best 5 subjects; strong performance in English and Mathematics (e.g., Level 5 or above) is advantageous.",
+            "",
+            "**2. Prioritise Band A Choice**",
+            "",
+            "- With only 39 Band A offers out of 363 Band A applicants, placing this programme in Band A is crucial.",
+            "- Use Band A to signal strong interest; the programme considers Band A applicants first.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview for selected applicants. Prepare to discuss your motivation for social work, relevant experiences, and understanding of social issues.",
+            "- Practice common interview questions and demonstrate empathy, analytical thinking, and commitment to the profession.",
+            "",
+            "**4. Strengthen Your Elective Subjects**",
+            "",
+            "- The programme requires any 2 elective subjects at Level 3. However, competitive applicants often have higher grades (e.g., Level 5 or above).",
+            "- Subjects like Economics, Geography, or Liberal Studies (if taken before 2024) can provide relevant background.",
+            "",
+            "**5. Gain Relevant Experience**",
+            "",
+            "- Volunteer work or internships in social service organisations can strengthen your application and interview performance.",
+            "- Highlight any experience working with diverse groups (e.g., elderly, children, disadvantaged communities).",
+            "",
+            "**6. Understand the Profession**",
+            "",
+            "- Research the role of a Registered Social Worker in Hong Kong. Familiarise yourself with current social issues and policies.",
+            "- Show awareness of the challenges and rewards of the profession.",
+            "",
+            "**7. Leverage CUHK's Resources**",
+            "",
+            "- CUHK offers one-to-one supervision for field placements and opportunities for overseas placements. Mentioning these in your interview can demonstrate your research.",
+            "- Explore the college system and campus life to show your fit with CUHK.",
+            "",
+            "**8. Plan for Post-Graduation**",
+            "",
+            "- Graduates are eligible for RSW status. Consider your career path: government, NGOs, education, or further studies.",
+            "- The programme's career workshops and alumni network can provide guidance.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "- Check the official JUPAS and CUHK admission websites regularly for any updates on requirements, interview dates, or score calculations.",
+            "- Ensure you meet all general entrance requirements, including Citizenship and Social Development (Attained)."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：社會工作 (JS4874)",
+            "首年學額：47",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025年聯招申請統計：",
+            "Band A申請人數：363",
+            "Band A取錄人數：39",
+            "總申請人數：2,967",
+            "",
+            "2025年聯招入學分數（最佳5科）：",
+            "中位數：27.5",
+            "下四分位數：27.5",
+            "上四分位數：28",
+            "",
+            "中位數取錄者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：5",
+            "數學（必修部分）：5*",
+            "公民與社會發展：達標 (A)",
+            "選修科目一：5",
+            "選修科目二：4",
+            "選修科目三：4",
+            "",
+            "一般入學要求：",
+            "中國語文：第3級",
+            "英國語文：第3級",
+            "數學（必修部分）：第2級",
+            "公民與社會發展：達標",
+            "任何2科選修科目：第3級（可包括M1/M2或一個應用學習科目並取得「達標並表現優異 I/II」）",
+            "",
+            "備註：特殊情況下，申請人可獲豁免中文科要求，按個別情況考慮。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "社會工作課程獲香港社會工作者註冊局（HKSWRB）專業認可。課程提供全面的理論與實踐知識，以及微觀（如介入技巧訓練）和宏觀（如社會政策倡導）層面的分析能力。",
+            "",
+            "教學活動包括講座、導修課、角色扮演、社區學習、體驗學習及實習。課程為兩次在社會服務機構進行的必修實習提供一對一督導。學生可申請其中一次實習在香港以外進行；過往地點包括澳洲、加拿大、英國、新加坡及台灣。",
+            "",
+            "學生可根據個人興趣專注於特定服務對象（如家庭、兒童、青少年、長者或特殊需要人士），或集中探討宏觀社會議題及政策。",
+            "",
+            "畢業後，學生可申請成為香港註冊社會工作者（RSW）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "社會工作畢業生具備扎實的學術基礎和多樣的實踐技能，能夠在社會工作的不同領域中脫穎而出。",
+            "",
+            "過往大部分畢業生投身社會服務界，其餘則選擇教育、公共行政或繼續深造。",
+            "",
+            "僱主包括：香港特區政府、醫院管理局、明愛、東華三院、保良局、香港基督教信義會、香港小童群益會、香港家庭福利會及聖雅各福群會。",
+            "",
+            "課程亦為學生升讀研究生課程做好準備，學院定期舉辦職業工作坊，裝備學生必要的技能和見解。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，提供超過9,000個宿位。",
+            "",
+            "大學設有獨特的書院制度，為學生提供緊密的社群及全人發展機會。",
+            "",
+            "社會工作課程學生可參與海外實習及交流機會，過往實習地點包括澳洲、加拿大、英國、新加坡及台灣。",
+            "",
+            "校園亦提供豐富的課外活動、學生組織及支援服務。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "根據2025年聯招數據，課程收到363份Band A申請，發出39個Band A取錄，Band A取錄率約為10.7%。",
+            "",
+            "每約9.3名Band A申請者競爭一個Band A學額，競爭激烈。",
+            "",
+            "中位數入學分數（最佳5科）為27.5，下四分位數同為27.5，上四分位數為28。",
+            "",
+            "申請人應以中位數或以上為目標。課程需要面試，獲選申請人將獲邀請。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院成就",
+          "content": [
+            "周婉文（Chow Yuen-man）－前社會福利署署長，領導社會福利政策的實施。",
+            "",
+            "劉兆佳（Lau Siu-kai）－著名社會學家、前中央政策組首席顧問，中大教授。",
+            "",
+            "黃洪（Wong Hung）－中大社會工作系副教授，貧窮及社會政策專家。",
+            "",
+            "蔡海偉（Chua Hoi-wai）－香港社會服務聯會行政總裁，領導非政府組織倡導工作。",
+            "",
+            "李卓人（Lee Cheuk-yan）－前立法會議員及勞工活動家，香港職工會聯盟聯合創辦人。",
+            "",
+            "學院成就：中大社會工作系持續被評為亞洲頂尖社會工作課程之一。教職員在貧窮、精神健康及兒童福利等領域領導重要研究。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學提供多項基於學術成績的獎學金，涵蓋本地及非本地學生。部分獎學金包括學費及生活費。",
+            "",
+            "本地聯招學生可申請入學獎學金。其他主要獎學金包括香港卓越獎學金計劃及各學院獎項。",
+            "",
+            "資助計劃包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的社會工作策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取27.5分或以上**",
+            "",
+            "- 2025年中位數及下四分位數均為27.5（最佳5科）。穩妥起見，目標應設於27.5分，最好達28分或以上。",
+            "- 專注於最佳5科；英文及數學成績優異（例如第5級或以上）將具優勢。",
+            "",
+            "**2. 優先選擇Band A**",
+            "",
+            "- 363名Band A申請者中僅39人獲取錄，將此課程放在Band A至關重要。",
+            "- 使用Band A表達強烈興趣；課程會優先考慮Band A申請人。",
+            "",
+            "**3. 準備面試**",
+            "",
+            "- 課程需要面試，獲選申請人將獲邀請。準備討論你對社會工作的動機、相關經驗及對社會議題的理解。",
+            "- 練習常見面試問題，展現同理心、分析能力及對專業的承擔。",
+            "",
+            "**4. 加強選修科目**",
+            "",
+            "- 課程要求任何2科選修科目達第3級。但具競爭力的申請人通常有更高分數（例如第5級或以上）。",
+            "- 經濟、地理或通識教育（如於2024年前應考）等科目可提供相關背景。",
+            "",
+            "**5. 獲取相關經驗**",
+            "",
+            "- 在社會服務機構的義工工作或實習可強化申請及面試表現。",
+            "- 突出與不同群體（如長者、兒童、弱勢社群）合作的經驗。",
+            "",
+            "**6. 了解專業**",
+            "",
+            "- 研究香港註冊社會工作者的角色。熟悉當前社會議題及政策。",
+            "- 展現對專業挑戰與回報的認識。",
+            "",
+            "**7. 善用中大資源**",
+            "",
+            "- 中大為實習提供一對一督導，並有海外實習機會。在面試中提及這些可顯示你已做足功課。",
+            "- 探索書院制度及校園生活，展現你與中大的契合度。",
+            "",
+            "**8. 規劃畢業後路向**",
+            "",
+            "- 畢業後可申請註冊社會工作者資格。考慮你的職業路向：政府、非政府組織、教育或繼續進修。",
+            "- 課程的職業工作坊及校友網絡可提供指引。",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "- 定期查閱官方聯招及中大入學網站，了解最新要求、面試日期或分數計算方法。",
+            "- 確保符合所有一般入學要求，包括公民與社會發展科（達標）。"
+          ]
+        }
+      }
+    },
+    "code": "JS4874",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.5,
+    "uq": 28,
+    "lq": 27.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 27.5
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 27.5
+      },
+      "UQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 28
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Chow Yuen-man",
+        "nameZh": "周婉文",
+        "achievement": "Former Director of Social Welfare of Hong Kong, leading the implementation of social welfare policies.",
+        "sourceHint": "public bio, government records"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Renowned sociologist and former Head of the Central Policy Unit, HKSAR Government; professor at CUHK.",
+        "sourceHint": "CUHK department page, public bio"
+      },
+      {
+        "nameEn": "Wong Hung",
+        "nameZh": "黃洪",
+        "achievement": "Associate Professor at CUHK Social Work Department, expert in poverty and social policy.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Chua Hoi-wai",
+        "nameZh": "蔡海偉",
+        "achievement": "Chief Executive of the Hong Kong Council of Social Service, leading NGO advocacy.",
+        "sourceHint": "public bio, HKCSS website"
+      },
+      {
+        "nameEn": "Lee Cheuk-yan",
+        "nameZh": "李卓人",
+        "achievement": "Former legislator and labour activist, co-founder of the Hong Kong Confederation of Trade Unions.",
+        "sourceHint": "public bio, media reports"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Social Work Department is consistently ranked among top social work programmes in Asia.",
+      "Faculty members have led major research on poverty, mental health, and child welfare in Hong Kong."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Social Work notable alumni",
+      "香港中文大學 社會工作 著名校友",
+      "CUHK Social Work graduates Hong Kong careers"
+    ]
+  }
+}

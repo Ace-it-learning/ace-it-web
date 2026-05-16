@@ -1,0 +1,66 @@
+{
+  "code": "JS6054",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6054"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://ug.arts.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6054",
+    "nameEn": "Bachelor of Arts",
+    "nameZh": "Bachelor of Arts",
+    "university": "香港大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 35,
+    "uq": 37,
+    "lq": 34
+  },
+  "jupas": {
+    "code": "JS6054",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6054",
+    "nameEn": "Bachelor of Arts",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://ug.arts.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 217,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 1047,
+      "bandB": 336,
+      "bandC": 455,
+      "bandD": 505,
+      "bandE": 512,
+      "total": 2855
+    },
+    "offers2025": {
+      "bandA": 143,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 143
+    },
+    "facultyPhone": "+852 3917 8977"
+  },
+  "admissionsSnippet": "--> Faculty of Arts - HKU - Undergraduate Degree Programmes top of page APPLY NOW Home UG Programmes Undergraduate Admissions HKU Arts Elite Scheme BA - JS6054 BA(HDT) - JS6286 BA&amp;BEng(AI&amp;DataSc) - JS6298 Dual Degree Programmes Other Degree Programmes Prospects Alumni sharing Scholarships Internships Exchange Experience at Arts The Faculty School of Chinese School of English School of Humanities School of Modern Languages and Cultures Centre of Buddhist Studies Contact Us More Use tab to navigate through the menu items. About HKU Arts The Faculty of Arts is one of the flagship faculties of the University of Hong Kong and one of the finest humanities faculties in the region and internationally. &nbsp; &nbsp; HKU Arts graduates emerge with analytical, linguistic, critical and creative skills, a deep engagement with culture and global awareness, all of which create the foundation for effective leadership and success in a wide range of professional and life endeavours.&nbsp; ​ Our graduates are well equipped to pursue careers in business, government, education, finance, sales and marketing, media, publishing, translation, hospitality and tourism, and in the non-profit and cultural sectors. Faculty Website HKU Arts Ranking https://undergraduateawards.com/2025-winners/ 1/45 Copyright &copy; 2026 Faculty of Arts, The University of Hong Kong. All rights reserved. bottom of page"
+}

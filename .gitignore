@@ -61,5 +61,11 @@ Thumbs.db
 # Local tooling binaries (do not commit)
 stripe.exe
 
+# JUPAS reference PDFs (large; keep locally for scripts — not needed in repo)
+backend/data/JUPAS/
+
+# DB / migration snapshots and dedupe dumps (local only — do not publish)
+backend/backups/
+
 # Backup Archives
 *.zip

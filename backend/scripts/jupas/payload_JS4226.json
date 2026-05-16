@@ -1,0 +1,581 @@
+{
+  "factPack": {
+    "code": "JS4226",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4226"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4226"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/htmgb/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://hre.bschool.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4226",
+      "nameEn": "Hospitality and Real Estate",
+      "nameZh": "酒店旅遊及房地產",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 23.5,
+      "uq": 42.5,
+      "lq": 23,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 23.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 42.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.25) • Mathematics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4226",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4226",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4226",
+      "nameEn": "Hospitality and Real Estate",
+      "nameZh": "酒店旅遊及房地產",
+      "shortDescription": "",
+      "programmeWebsite": "https://hre.bschool.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 58,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 413,
+        "bandB": 319,
+        "bandC": 463,
+        "bandD": 652,
+        "bandE": 600,
+        "total": 2447
+      },
+      "offers2025": {
+        "bandA": 53,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 53
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/htmgb/",
+      "introduction": "A Pioneer Business Degree with a Hospitality and Real Estate Focus The Hospitality and Real Estate programme (HRE) is positioned as a business programme with an industry focus on hospitality and real estate. Our school is the first in the Asia-Pacific region to integrate hospitality and real estate research and education. It helps students develop a keen eye for asset investment and service standards, and gain the holistic ability to steer high-level projects that bring value to their clients. HRE offers two major streams (Hospitality or Real Estate) and prepares students to work in diversified industries in lodging, MICE, theme parks and attractions, travel and tourism, valuation, leasing and transactions, consultancy, real estate development, finance and asset management. The HRE programme offers a rich curriculum integrating theory with experiential learning opportunities. HRE puts students right in the heart of the fast-paced hospitality and real estate industries. Our teaching hotel, the Hyatt Regency Shatin, the Hyatt Learning Center, a demonstration kitchen, and two SHTM-managed restaurants provide an ideal learning environment for theory–practice integration. Professional Recognition Nurturing leaders with professional accreditation (RICS) Offering a rich curriculum combining theory with experiential learning opportunities, HRE puts students right in the heart of the fast-paced hospitality, tourism and real estate industries. HRE is also a RICS accredited degree. RICS is a globally recognised professional institution of chartered surveyors. Through connections with key professionals and real service environments, and participation in high-level lectures and presentations by experienced practitioners, students learn the latest trends while building their own dynamic professional network.",
+      "ranking": "",
+      "careerProspects": "The BBA in Hospitality and Real Estate is the only programme in the region that integrates hospitality and real estate with a business focus. It leverages Hong Kong as a leader in the hospitality and real estate industries in Asia to deliver a world-class programme. Put differently, real estate development and management represent the “hardware”, whereas hospitality service ensures the quality of “software” in the value-creating process of service industries. HRE graduates thrive across all facets of the real estate and hospitality industries. They work in hotel groups, recreation, real estate development, banking, consulting, Meetings, Incentives, Conventions and Exhibitions (MICE), commercial and retail, investment and finance, IT and e-commerce, and more. Hospitality: Approximately 29% work in hotels, theme parks, MICE, airline, travel and tourism-related companies Real Estate: About 25% pursue careers in valuation, leasing and transactions, workplace solutions, consultancy, asset management and capital markets. Finance: About 15% work in accounting, finance and investment banks Commercial and Retail: Another 20% work in luxury commercial and retail Others: About 11% started their own company, contribute to the education industry or continued their education Employers in the hospitality industry include the Airport Authority, the HK Tourism Board, the HKTDC, Disneyland, Four Seasons Hotel, Marriott Hotels, Hyatt Hotels, Langham Hospitality Group, Mandarin Oriental Group, Rosewood Hotel Group, Swire Hotels and The Peninsula Hotels. Employers in Real Estate include CBRE, Colliers, Cushman and Wakefield, HSBC, JP Morgan, JLL, Knight Frank, Link REITs, MTRC, Sino Group, Sung Hung Kai Properties, Hang Lung Properties and Swire Properties. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Diversified career path with a competitive edge HRE nurtures tomorrow’s leaders for diversified industries in lodging, MICE, theme parks, travel and tourism, valuation, leasing and transactions, consultancy, real estate development, finance and asset management. HRE offers two major streams for students. The Real Estate stream focuses on planning, developing and investing in assets such as buildings and properties. The Hospitality stream focuses on the service marketing element – how to improve service quality, ensure customer satisfaction, and optimise organisational performance.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4226",
+    "nameEn": "Hospitality and Real Estate",
+    "nameZh": "酒店旅遊及房地產",
+    "name": "Hospitality and Real Estate",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 23.5,
+    "band_a": 23,
+    "uq": 42.5,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: JS4226 Hospitality and Real Estate (BBA)",
+            "First Year Intake: 58",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 23.5",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): 42.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese Language: 5*",
+            "- English Language: 3",
+            "- Mathematics Compulsory: 4",
+            "- Citizenship and Social Development: Attained (A)",
+            "- Elective 1: 5",
+            "- Elective 2: 4",
+            "",
+            "Subject Weighting: English (x1.25), Mathematics (x1.5)",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (may include M1/M2 or an Applied Learning subject with 'Attained with Distinction I/II')",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 413",
+            "- Band A offers: 53",
+            "- Total applications: 2,447"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Hospitality and Real Estate (HRE) programme is a pioneer business degree with an industry focus on hospitality and real estate. It is the first in the Asia-Pacific region to integrate hospitality and real estate research and education.",
+            "",
+            "Students develop a keen eye for asset investment and service standards, gaining the holistic ability to steer high-level projects that bring value to clients.",
+            "",
+            "The programme offers two major streams:",
+            "- Hospitality Stream: Focuses on service marketing, improving service quality, customer satisfaction, and optimising organisational performance.",
+            "- Real Estate Stream: Focuses on planning, developing, and investing in assets such as buildings and properties.",
+            "",
+            "The curriculum integrates theory with experiential learning opportunities. Teaching facilities include the Hyatt Regency Shatin (teaching hotel), the Hyatt Learning Center, a demonstration kitchen, and two SHTM-managed restaurants.",
+            "",
+            "Professional Recognition: The programme is RICS accredited (Royal Institution of Chartered Surveyors), a globally recognised professional institution for chartered surveyors.",
+            "",
+            "Students learn through connections with key professionals, real service environments, and high-level lectures by experienced practitioners."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "HRE graduates thrive across all facets of the real estate and hospitality industries. The programme leverages Hong Kong's leadership in these sectors to deliver world-class career preparation.",
+            "",
+            "Career distribution (approximate):",
+            "- Hospitality (29%): Hotels, theme parks, MICE, airline, travel and tourism-related companies.",
+            "- Real Estate (25%): Valuation, leasing and transactions, workplace solutions, consultancy, asset management and capital markets.",
+            "- Finance (15%): Accounting, finance and investment banks.",
+            "- Commercial and Retail (20%): Luxury commercial and retail.",
+            "- Others (11%): Entrepreneurship, education, or further studies.",
+            "",
+            "Employers in Hospitality: Airport Authority, HK Tourism Board, HKTDC, Disneyland, Four Seasons Hotel, Marriott Hotels, Hyatt Hotels, Langham Hospitality Group, Mandarin Oriental Group, Rosewood Hotel Group, Swire Hotels, The Peninsula Hotels.",
+            "",
+            "Employers in Real Estate: CBRE, Colliers, Cushman and Wakefield, HSBC, JP Morgan, JLL, Knight Frank, Link REITs, MTRC, Sino Group, Sung Hung Kai Properties, Hang Lung Properties, Swire Properties."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern facilities.",
+            "",
+            "The University operates a unique college system, providing students with a close-knit community, pastoral care, and co-curricular activities. All undergraduates belong to one of nine colleges.",
+            "",
+            "The HRE programme benefits from on-campus teaching hotels and restaurants, including the Hyatt Regency Shatin, which serves as a real-world learning laboratory.",
+            "",
+            "Students have access to extensive library resources, sports facilities, and student organisations. The Business School also organises networking events, company visits, and mentorship programmes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 413",
+            "- Band A offers: 53",
+            "- Band A offer rate: approximately 12.8%",
+            "- Band A applications per offer: approximately 7.8",
+            "",
+            "The programme is selective, with a median admission score of 23.5 (Best 5) and a lower quartile of 23. The upper quartile of 42.5 reflects strong competition at the top end.",
+            "",
+            "Interview performance is considered for shortlisted applicants, adding an extra layer of selection beyond academic scores.",
+            "",
+            "The programme's unique integration of hospitality and real estate, combined with RICS accreditation, attracts high-calibre students from across Hong Kong."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme benefits from CUHK Business School's strong industry connections and a faculty with research expertise in tourism economics, real estate finance, and service quality management.",
+            "",
+            "Graduates are well-prepared for leadership roles in hotel management, real estate development, and consulting firms in Hong Kong and globally.",
+            "",
+            "The programme's RICS accreditation and partnerships with leading employers ensure that alumni are highly sought after in the job market.",
+            "",
+            "Notable alumni include professionals holding senior positions at major hotel groups, real estate consultancies, and financial institutions in Hong Kong and overseas."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit. These scholarships may cover tuition fees and living expenses.",
+            "",
+            "The University also administers the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS) for eligible students.",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Additional scholarships and awards are available through the Business School and individual colleges."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Hospitality and Real Estate Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "Aim for at least 23.5 points in Best 5. With a median of 23.5 and LQ of 23, every point counts. Use the subject weighting (English x1.25, Maths x1.5) to your advantage.",
+            "- Prioritise English and Mathematics to maximise weighted scores.",
+            "- If your Chinese is strong (e.g., 5*), it can compensate for a lower English grade.",
+            "",
+            "**2. Excel in English and Mathematics**",
+            "",
+            "English is weighted at 1.25 and Mathematics at 1.5. A high grade in these subjects significantly boosts your total.",
+            "- For English, focus on reading comprehension and writing fluency.",
+            "- For Mathematics, practice problem-solving and data interpretation.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "The median admit profile shows Elective 1 at 5 and Elective 2 at 4. Pick electives that align with business, economics, or geography.",
+            "- Economics, Business, Accounting, and Geography are relevant.",
+            "- Avoid overloading with unrelated subjects; depth matters more than breadth.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "The programme requires an interview for selected applicants. Demonstrate your passion for hospitality and real estate.",
+            "- Research current trends in Hong Kong's property market and tourism industry.",
+            "- Prepare examples of leadership or customer service experience.",
+            "- Show awareness of the programme's unique integration of both fields.",
+            "",
+            "**5. Apply as Band A**",
+            "",
+            "All 53 offers in 2025 went to Band A applicants. Band B or lower had zero offers. Place JS4226 as your first choice to maximise chances.",
+            "- Band A applications per offer: ~7.8, so competition is intense.",
+            "- Use Band A to signal strong interest.",
+            "",
+            "**6. Leverage the RICS Accreditation**",
+            "",
+            "The programme is RICS accredited, which is a global mark of quality. Mention this in your interview and personal statement.",
+            "- RICS accreditation opens doors to chartered surveyor careers.",
+            "- It also indicates rigorous academic standards.",
+            "",
+            "**7. Gain Relevant Experience**",
+            "",
+            "Participate in internships, part-time work, or volunteering in hospitality or real estate. Even shadowing a professional helps.",
+            "- Visit hotels, property agencies, or attend industry seminars.",
+            "- Document your experiences for your interview and application.",
+            "",
+            "**8. Use the Subject Weighting to Your Advantage**",
+            "",
+            "English (x1.25) and Mathematics (x1.5) mean that a 5 in English counts as 6.25, and a 5 in Maths counts as 7.5. Plan your study time accordingly.",
+            "- If you are weaker in English, consider extra tutoring.",
+            "- For Maths, aim for at least a 4 to stay competitive.",
+            "",
+            "**9. Stay Informed and Network**",
+            "",
+            "Follow CUHK Business School and HRE programme news. Attend open days and information sessions.",
+            "- Connect with current students or alumni via LinkedIn.",
+            "- Ask questions about the curriculum, internships, and career support."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程編號：JS4226 酒店旅遊及房地產（工商管理學士）",
+            "首年學額：58",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年聯招入學分數（最佳五科）：",
+            "中位數：23.5",
+            "下四分位數：23",
+            "上四分位數：42.5",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "- 中國語文：5*",
+            "- 英國語文：3",
+            "- 數學（必修部分）：4",
+            "- 公民與社會發展：達標（A）",
+            "- 選修科目一：5",
+            "- 選修科目二：4",
+            "",
+            "科目比重：英國語文（x1.25）、數學（x1.5）",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第3級",
+            "- 英國語文：第3級",
+            "- 數學（必修部分）：第2級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目達第3級（可包括M1/M2或應用學習科目「達標並表現優異I/II」）",
+            "",
+            "2025年申請統計：",
+            "- Band A申請人數：413",
+            "- Band A取錄人數：53",
+            "- 總申請人數：2,447"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "酒店旅遊及房地產課程是一項先驅性的商學位，專注於酒店旅遊及房地產行業。它是亞太區首個將酒店旅遊及房地產研究與教育結合的課程。",
+            "",
+            "學生將培養對資產投資和服務標準的敏銳眼光，獲得引領高層次項目、為客戶創造價值的全面能力。",
+            "",
+            "課程提供兩個主修方向：",
+            "- 酒店旅遊方向：專注服務營銷、提升服務質素、顧客滿意度及優化機構表現。",
+            "- 房地產方向：專注規劃、發展及投資建築物及物業等資產。",
+            "",
+            "課程結合理論與體驗式學習機會。教學設施包括香港沙田凱悅酒店（教學酒店）、凱悅學習中心、示範廚房及兩間由酒店旅遊及房地產學院管理的餐廳。",
+            "",
+            "專業認可：課程獲皇家特許測量師學會（RICS）認證，RICS是全球認可的專業特許測量師機構。",
+            "",
+            "學生透過與業界專家的聯繫、真實服務環境及資深從業員的高層次講座學習最新趨勢，同時建立個人專業網絡。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "酒店旅遊及房地產課程畢業生在房地產及酒店旅遊行業的各個領域均表現出色。課程利用香港在這些領域的領導地位，提供世界級的就業準備。",
+            "",
+            "就業分佈（約數）：",
+            "- 酒店旅遊（29%）：酒店、主題公園、會議展覽及獎勵旅遊、航空、旅遊相關公司。",
+            "- 房地產（25%）：估值、租賃及交易、工作場所解決方案、顧問、資產管理及資本市場。",
+            "- 金融（15%）：會計、金融及投資銀行。",
+            "- 商業及零售（20%）：奢侈品商業及零售。",
+            "- 其他（11%）：創業、教育或繼續進修。",
+            "",
+            "酒店旅遊行業僱主：機場管理局、香港旅遊發展局、香港貿易發展局、迪士尼樂園、四季酒店、萬豪酒店、凱悅酒店、朗廷酒店集團、文華東方酒店集團、瑰麗酒店集團、太古酒店、半島酒店。",
+            "",
+            "房地產行業僱主：世邦魏理仕、高力國際、戴德梁行、滙豐銀行、摩根大通、仲量聯行、萊坊、領展房地產投資信託基金、港鐵公司、信和集團、新鴻基地產、恒隆地產、太古地產。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，設施現代化。",
+            "",
+            "大學實行獨特的書院制度，為學生提供緊密的社群、關顧輔導及課外活動。所有本科生均隸屬於九所書院之一。",
+            "",
+            "酒店旅遊及房地產課程受益於校內的教學酒店及餐廳，包括香港沙田凱悅酒店，作為真實世界的學習實驗室。",
+            "",
+            "學生可使用豐富的圖書館資源、體育設施及學生組織。商學院亦舉辦聯誼活動、企業參觀及師友計劃。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據2025年聯招統計：",
+            "- Band A申請人數：413",
+            "- Band A取錄人數：53",
+            "- Band A取錄率：約12.8%",
+            "- 每個Band A取錄名額的申請人數：約7.8",
+            "",
+            "課程具選擇性，中位數入學分數為23.5（最佳五科），下四分位數為23。上四分位數42.5反映頂尖申請人的激烈競爭。",
+            "",
+            "面試表現對獲選申請人而言是額外的篩選因素。",
+            "",
+            "課程獨特地結合酒店旅遊及房地產，加上RICS認證，吸引全港高質素學生申請。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教職員卓越成就",
+          "content": [
+            "課程受益於香港中文大學商學院的強大業界聯繫，以及教職員在旅遊經濟學、房地產金融及服務質素管理方面的研究專長。",
+            "",
+            "畢業生已準備好在香港及全球的酒店管理、房地產開發及顧問公司擔任領導角色。",
+            "",
+            "課程的RICS認證及與主要僱主的合作關係，確保校友在就業市場上備受追捧。",
+            "",
+            "知名校友包括在香港及海外主要酒店集團、房地產顧問公司及金融機構擔任高級職位的專業人士。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "香港中文大學為本地聯招學生提供多項基於學業成績的入學獎學金，部分獎學金涵蓋學費及生活費。",
+            "",
+            "大學亦為合資格學生提供專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "商學院及個別書院亦提供額外獎學金及獎項。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的酒店旅遊及房地產策略 — 9個實用貼士",
+          "content": [
+            "**1. 以中位數分數為目標**",
+            "",
+            "力求最佳五科至少23.5分。中位數23.5、下四分位數23，每一分都關鍵。善用科目比重（英文x1.25、數學x1.5）。",
+            "- 優先提升英文及數學以最大化加權分數。",
+            "- 若中文成績優異（如5*），可彌補英文較低分數。",
+            "",
+            "**2. 在英文及數學科表現出色**",
+            "",
+            "英文比重1.25，數學比重1.5。這些科目取得高分能大幅提升總分。",
+            "- 英文方面，專注閱讀理解及寫作流暢度。",
+            "- 數學方面，練習解題及數據詮釋。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "中位數錄取者選修一為5級、選修二為4級。選擇與商業、經濟或地理相關的科目。",
+            "- 經濟、商業、會計及地理均相關。",
+            "- 避免過多不相關科目；深度比廣度更重要。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "課程要求獲選申請人進行面試。展示你對酒店旅遊及房地產的熱誠。",
+            "- 研究香港物業市場及旅遊業的最新趨勢。",
+            "- 準備領導或客戶服務經驗的例子。",
+            "- 顯示你對課程獨特結合兩個領域的認識。",
+            "",
+            "**5. 將課程列為Band A首選**",
+            "",
+            "2025年所有53個取錄名額均給予Band A申請人。Band B或更低沒有取錄。將JS4226列為首選以最大化機會。",
+            "- 每個Band A取錄名額約有7.8人申請，競爭激烈。",
+            "- 使用Band A表達強烈興趣。",
+            "",
+            "**6. 善用RICS認證**",
+            "",
+            "課程獲RICS認證，這是全球質素標誌。在面試及個人陳述中提及此點。",
+            "- RICS認證開拓特許測量師職業道路。",
+            "- 亦反映嚴謹的學術標準。",
+            "",
+            "**7. 獲取相關經驗**",
+            "",
+            "參與酒店旅遊或房地產的實習、兼職或義工服務。即使是跟隨專業人士觀摩也有幫助。",
+            "- 參觀酒店、地產代理或參加行業研討會。",
+            "- 記錄你的經驗，用於面試及申請。",
+            "",
+            "**8. 利用科目比重優勢**",
+            "",
+            "英文（x1.25）及數學（x1.5）意味著英文5級等於6.25分，數學5級等於7.5分。相應分配學習時間。",
+            "- 若英文較弱，考慮額外補習。",
+            "- 數學方面，目標至少4級以保持競爭力。",
+            "",
+            "**9. 保持資訊流通及建立人脈**",
+            "",
+            "關注香港中文大學商學院及酒店旅遊及房地產課程的最新消息。參加開放日及資訊講座。",
+            "- 透過LinkedIn與現屆學生或校友聯繫。",
+            "- 詢問關於課程、實習及就業支援的問題。"
+          ]
+        }
+      }
+    },
+    "code": "JS4226",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 23.5,
+    "uq": 42.5,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 23.5
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "3",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 42.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "Programme integrates hospitality, real estate, and business management, leveraging CUHK Business School's strong industry connections.",
+      "Faculty includes scholars with research in tourism economics, real estate finance, and service quality management.",
+      "Graduates are prepared for roles in hotel management, real estate development, and consulting firms in Hong Kong and globally."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Hospitality and Real Estate notable alumni",
+      "香港中文大學 酒店旅遊及房地產 著名校友",
+      "CUHK Hospitality and Real Estate graduates Hong Kong careers"
+    ]
+  }
+}

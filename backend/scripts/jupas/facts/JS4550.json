@@ -1,0 +1,129 @@
+{
+  "code": "JS4550",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4550"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4550"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/bmscn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://biomedsci.sbs.cuhk.edu.hk"
+    }
+  ],
+  "programme": {
+    "code": "JS4550",
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "university": "香港中文大學",
+    "facultyZh": "醫學院",
+    "category": "medicine"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 41,
+    "uq": 29,
+    "lq": 39.5,
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 41
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 39.5
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 29
+      }
+    },
+    "subjectWeighting": "• Chinese, English, Mathematics and best of Biology/Chemistry must be included"
+  },
+  "jupas": {
+    "code": "JS4550",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4550",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4550",
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "shortDescription": "an class=\"before_label\">Short Description This programme aims to provide graduates with an integrated and holistic training in biomedical sciences. Adopting a multi-disciplinary approach and coupling theories with practical and hands-on training, the programme will produce solidly trained graduates for diversified career paths in scientific research, health system policy and management, or clinical, pharmaceutical, diagnostics and healthcare related professions, as well as leaders with global perspective. Upon completion of the Programme, graduates will have: had a strong, broad-based foundation and advanced specialised knowledge in selected areas of biomedical sciences and research; developed a broad range of skills and values, including a capacity for lifelong learning and conducting biomedical research; acquired skills to apply critical and creative thinking to analyse problems, to identify ethical dilemmas relating to biomedical sciences and research, and to offer feasible solutions; demonstrated good understanding of the policy issues and strategic management pertaining to public health, pharmaceutical industry, diseases and medicine; been equipped with practical and hands-on training and exposure to real-life scenarios through experiences in a biomedical research laboratory or within an industrial setting; developed effective interpersonal and communication skills.",
+    "programmeWebsite": "http://biomedsci.sbs.cuhk.edu.hk",
+    "tuition": "HK$47,000",
+    "intake": 18,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT NOTE 3 One of the following elective subjects: CHEMISTRY 3 BIOLOGY 3 NOTE: The subject can be any elective subject (Category A) or Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 95,
+      "bandB": 163,
+      "bandC": 340,
+      "bandD": 504,
+      "bandE": 442,
+      "total": 1544
+    },
+    "offers2025": {
+      "bandA": 14,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 14
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/bmscn/",
+    "introduction": "Make a Positive Impact on Society by Starting Your Biomedical Sciences Voyage The BSc in Biomedical Sciences is a multi-disciplinary, comprehensive and integrative Programme that best illustrates the relevance of biomedical sciences in the clinical, pharmaceutical and healthcare settings. The curriculum closely follows modern medical trends, including innovative treatments for, and diagnosis of, diseases and new solutions to address global health demands. Our courses are delivered by leading scientists in the School of Biomedical Sciences, guest speakers from the Clinical Departments of the Faculty of Medicine, and industry experts who share their views on how biomedical advances impact modern medicine.",
+    "ranking": "Our unique curriculum arrangement which provides diverse preparation for",
+    "careerProspects": "The Biomedical Sciences programme equips students with solid knowledge of biomedical sciences and exposes them to innovations and developments in the industry. It is our mission to ensure that our students are well prepared to enter to the ever-evolving biomedical industry. Graduate Studies Our graduates also have a strong track record in securing master&#8217;s and doctoral degrees in biomedical sciences with a specialised area of interest at CUHK and other renowned universities, including the University of Oxford, Imperial College London, University College London and King&#8217;s College. Career Options There is strong demand for biomedical graduates in the thriving biomedical sciences and healthcare-related industries. Our graduates are very well received by our industry partners, including pharmaceutical, diagnostic and biomedical companies, many of which are located in Hong Kong Science and Technology Park or related industry clusters. Industry, Medical Media Patent attorneys, scientists in biotechnology/biopharmaceutical companies, bioinformaticians, medical writers and media communication specialists. Health Services, Policy and Management Administrators in the government and hospital sectors, quality management personnel for advanced therapy products, and medical genetics or molecular genetics lab professionals. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "Solid and Practical Training Our curriculum emphasizes practicality and experiential learning. In addition to exposing students to exciting scientific advances, we guide students to explore the bioethical implications of emerging technologies and research in medicine. Courses are co-taught by experts in the field and clinical departments from the Faculty of Medicine, equipping students with a strong foundation in knowledge and principles of biomedical science, while demonstrating its relevance to clinical applications. Personalized Learning Experiences We emphasize student-centred, personalized learning experiences. The Major Electives are arranged in three unique Concentration Areas, supplemented by relevant Experiential Learning activities. This unique range of courses is the first of its kind to be included in a biomedical science‐based undergraduate programme in Hong Kong, offering a range of options for students who are interested in research, health policy, pharmaceutical manufacturing management and healthcare services. Based on their individual interests, students can choose from a diversity of experience and",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

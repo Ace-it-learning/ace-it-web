@@ -1,0 +1,66 @@
+{
+  "code": "JS6298",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6298"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://aihum.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6298",
+    "nameEn": "Bachelor of Arts and Bachelor of Engineering in AI and Data Science",
+    "nameZh": "Bachelor of Arts and Bachelor of Engineering in AI and Data Science",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 42,
+    "uq": 44,
+    "lq": 42
+  },
+  "jupas": {
+    "code": "JS6298",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6298",
+    "nameEn": "Bachelor of Arts and Bachelor of Engineering in Artificial Intelligence and Data Science",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description The five-year BA &amp; BEng in AI and Data Science double degree programme offers a unique opportunity to combine advanced technical training in AI and data science with critical insights from the humanities. From the first year, students are encouraged to explore both fields, pursuing their own interests while being introduced to core disciplines in AI, data science, and the humanities. By the end of Year 1, students will have a solid foundation in AI and data science, the humanities, and their intersection. The interdisciplinary and flexible curriculum from Year 2 onward allows students to develop their individual study plan within a structured yet adaptable framework. Alongside the primary programme of study, students may also pursue additional minors or electives to broaden their academic experience. Throughout the programme, students will have opportunities to engage in internships, research projects, and international exchanges, enhancing their understanding of how AI and emerging technologies intersect with human culture, ethics, and society.",
+    "programmeWebsite": "https://aihum.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 20,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 88,
+      "bandB": 80,
+      "bandC": 154,
+      "bandD": 188,
+      "bandE": 185,
+      "total": 695
+    },
+    "offers2025": {
+      "bandA": 12,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 12
+    },
+    "facultyPhone": "+852 3917 8977"
+  },
+  "admissionsSnippet": "FacArts AI Data &#8211; AI Data / BA &amp; BEng programme website FacArts AI Data Home Programme People News & Events Admissions Admissions Programme People News & Events Partners Projects --> World's First AI + Humanities Double Degree Watch Video Bachelor of Arts and Bachelor of Engineering in Artificial Intelligence and Data Science Programme Introduction The future of our world lies at the intersection of technology and humanity From Big Tech companies, banks, insurers, institutional investors, and FinTech companies, to the consulting industry, the culture and creative industry, the gaming industry, and governments, everyone wants people who can bring cutting-edge technologies and profound humanistic insights together, not to mention the boundless opportunities in the startup world. Jointly supported by the new School of Computing and Data Science and the Faculty of Arts and with a unique emphasis on application-driven internships and projects at industry partners and research institutions, this Programme is designed to raise highly sought-after future leaders. CODE 6298 STUDY PERIOD 5-year ABBREVIATION BA&amp;BEng(AI&amp;DataSc) FACULTY Faculty of Arts &amp; Faculty of Engineering Learn More What You'll Learn The curriculum is carefully designed to provide both breadth and depth. Students will master advanced knowledge in: Artificial Intelligence Students gain a solid foundation in the science and engineering of intelligent systems. They study how algorithms learn, reason, and act, exploring models that enable perception and autonomous decision-making. The programme links theoretical rigor with applied innovation, preparing graduates to design and advance next-generation AI technologies. Data Science Students develop strong analytical and computational thinking. They learn to extract patterns from complex data, model uncertainty, and turn information into actionable insight. With training in quantitative reasoning and computational design, they are equipped to lead data- driven innovation across science and technology. Humanities The humanities form an equal academic field alongside engineering. Students explore how meaning and value are created, and how artificial intelligence transforms human experience. This critical perspective enables graduates to connect human insight with technological vision and to lead with reflection and responsibility in an AI-driven world. Learn More Real-World Experience Learning goes beyond the classroom. Students will benefit from internships with leading technology firms, financial institutions, consulting companies, and research centres, gaining first-hand exposure to the industries shaping the future. Graduates will enjoy unparalleled career flexibility and long-term growth prospects. Traditional pathways include roles such as AI developer, software engineer, data scientist, data engineer, and machine learning specialist. Yet the programme also prepares students for dynamic careers at the intersection of technology and society: investment banking, fintech innovation, management consulting, cultural and creative industries, technology entrepreneurship, policy development, and AI ethics consultancy. With their dual expertise, graduates will be uniquely positioned to shape industries, influence public debate, and lead organisations where technology meets human needs. Learn More What's New Discover upcoming talks, panels, internships, and research showcases at the intersection of technology and the humanities. AIHU1001 Final Presentation: AI Solutions for Humanitarian Challenges November 17, 2025 Welcome Session: Building the Pioneer Community October 27, 2025 Information Day: AI for Every Mind October 25, 2025 Arts Job &#038; Internship Event: Bridging Talent and Industry October 21, 2025 AIHU1001 Midterm Debate: The Ethics of AI Explainability October 20, 2025 All News People Meet the interdisciplinary team behind BA&amp;BEng(AI&amp;DataSc)—scholars and practitioners at the forefront of AI, data science, and the humanities. Programme Team Professor Boris BABIC Programme Directors (Arts) Professor Ruibang LUO Programme Director (CDS) Dr. Kangyu Wang Lecturer Advisory Board Members Internal Professor Rachel Sterken Chairperson of the Department of Philosophy Associate Dean in the Faculty of Arts Internal Professor Herman Cappelen Chair Professor of Philosophy Director of AI &amp; Humanities Lab Internal Professor Ma Yi Professor, Chair of Artificial Intelligence; Director of School of Computing and Data Science (HKU CDS); Director of HKU Musketeers Foundation Institute of Data Science (HKU IDS); Professor, Department of Electrical Engineering and Computer Sciences, UC Berkeley Internal Professor Zhiwu Chen Chair Professor of Finance Cheng Yu-Tung Professor in Finance, Director, Centre for Quantitative History, Director, Hong Kong Institute for Humanities and Social Sciences, HKU Council Member External Professor Zheng Zhang Professor, School of Computing and Data Science Senior Principal Scientist, Founding Director, Amazon Web Service (AWS) Shanghai AI Lab Prof. Boris BABIC Programme Directors (Arts) Prof. Ruibang LUO Programme Director (CDS) Dr. Kangyu Wang Lecturer Advisory Board Members Internal Prof. Rachel Sterken Chairperson of the Department of Philosophy, Associate Dean in the Faculty of Arts Internal Prof. Herman Cappelen Chair Professor of Philosophy Director of AI &amp; Humanities Lab Internal Prof. Ma Yi Professor, Chair of Artificial Intelligence; Director of School of Computing and Data Science (HKU CDS); Director of HKU Musketeers Foundation Institute of Data Science (HKU IDS); Professor, Department of Electrical Engineering and Computer Sciences, UC Berkeley Internal Prof. Zhiwu Chen Chair Professor of Finance Cheng Yu-Tung Professor in Finance, Director, Centre for Quantitative History, Director, Hong Kong Institute for Humanities and Social Sciences, HKU Council Member External Prof. Zheng Zhang Professor, School of Computing and Dat"
+}

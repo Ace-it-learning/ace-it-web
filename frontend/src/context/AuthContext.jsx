@@ -9,6 +9,8 @@ import {
     consumePostRedirectAuthResult,
     getMsalSilentRedirectUri
 } from '../entraMsalSingleton';
+import { fetchWithAuth } from '../utils/apiAuth';
+import { apiUrl, getApiBase } from '../utils/apiBase';
 import {
     signInWithPopup,
     signOut,
@@ -61,19 +63,25 @@ export const AuthProvider = ({ children }) => {
     const [initialized, setInitialized] = useState(false); // New state to track if onAuthStateChanged fired
     const [authError, setAuthError] = useState(null);
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    const API_URL = getApiBase() || 'http://localhost:3001';
 
     /** Bumps on StrictMode remount cleanup so stale Entra bootstrap runs skip setState */
     const entraInitGeneration = useRef(0);
 
-    const fetchProfile = async (uid) => {
+    const fetchProfile = async (uid, authUser = null) => {
         if (!uid || uid === 'guest') {
             setProfile(null);
             return;
         }
         setIsProfileLoading(true);
         try {
-            const res = await fetch(`${API_URL}/api/user/profile/${uid}`);
+            const subject = authUser || user;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000);
+            const res = await fetchWithAuth(subject, apiUrl(`/api/user/profile/${uid}`), {
+                signal: controller.signal,
+            });
+            clearTimeout(timeoutId);
             if (res.ok) {
                 const data = await res.json();
                 setProfile(data);
@@ -118,7 +126,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const resolveIdentityWithToken = async (token, msUser) => {
-        const identityRes = await fetch(`${API_URL}/api/user/resolve-identity`, {
+        const identityRes = await fetch(apiUrl('/api/user/resolve-identity'), {
             headers: { Authorization: `Bearer ${token}` }
         });
         if (!identityRes.ok) {
@@ -164,7 +172,7 @@ export const AuthProvider = ({ children }) => {
             getIdToken: async () => token
         };
         setUser(mappedUser);
-        await fetchProfile(mappedUser.uid);
+        await fetchProfile(mappedUser.uid, mappedUser);
     };
 
     const retryEntraSession = useCallback(async () => {

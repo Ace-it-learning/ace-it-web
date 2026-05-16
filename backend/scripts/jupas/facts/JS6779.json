@@ -1,0 +1,66 @@
+{
+  "code": "JS6779",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6779"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://saasweb.hku.hk/programme"
+    }
+  ],
+  "programme": {
+    "code": "JS6779",
+    "nameEn": "Bachelor of Science in Statistical Decision Sciences",
+    "nameZh": "Bachelor of Science in Statistical Decision Sciences",
+    "university": "香港大學",
+    "facultyZh": "理學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "1.5 x Math + Best 4 Subjects",
+    "median": 33,
+    "uq": 33,
+    "lq": 31
+  },
+  "jupas": {
+    "code": "JS6779",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6779",
+    "nameEn": "Statistical Decision Sciences",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://saasweb.hku.hk/programme",
+    "tuition": "HK$47,000",
+    "intake": 30,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 177,
+      "bandB": 51,
+      "bandC": 73,
+      "bandD": 106,
+      "bandE": 126,
+      "total": 533
+    },
+    "offers2025": {
+      "bandA": 38,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 38
+    },
+    "facultyPhone": "+852 3917 2466"
+  },
+  "admissionsSnippet": "Study Programmes | Department of Statistics and Actuarial Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Search Search Open Menu Keyword Search Clear Search Close Search Box Search Close Mobile Menu Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Home Study Programmes Undergraduate Programmes We offer two different degree programmes (with honours) at undergraduate level.&nbsp; Bachelor of Science in Actuarial Science (code: 6729) is a long-standing, accredited programme which provides formal academic training to students who wish to join the actuarial profession. Students will be exempted from various professional examinations upon graduation. Statistical Decision Sciences (code: 6779) offers three specialized Professional Cores under the accredited degree Bachelor of Statistics (BStat) . Students can choose to specialize in Decision Analytics, Risk Management or Statistics, and freely switch Professional Cores during studies. BStat graduates are qualified to become a Graduate Statistician (GradStat) designated by the Royal Statistical Society. Discover More Full-time (4 years) 6729 BSc(ActuarSc) Bachelor of Science in Actuarial Science Discover More Full-time (4 years) 6779 SDS | BStat(DA) Bachelor of Statistics (Decision Analytics) Discover More Full-time (4 years) 6779 SDS | BStat(RM) Bachelor of Statistics (Risk Management) Discover More Full-time (4 years) 6779 SDS | BStat(ST) Bachelor of Statistics (Statistics) Taught Postgraduate Programmes Discover More Full-time (1 year) Part-time (2 years) MStat Master of Statistics Discover More Full-time (1.5 years) Part-time (2.5 years) MDASC Master of Data Science Discover More Full-time (1.5 years) MSc(AI) Master of Science in Artificial Intelligence [Joint Programme hosted by Department of Mathematics] Research Postgraduate Programmes Discover More Full-time (2 years) Part-time (3 years) MPhil Master of Philosophy Discover More Full-time (3 or 4 years) Part-time (4.5 or 6 years) PhD Doctor of Philosophy Scholarship Opportunities Explore more university scholarships – click here . Discover additional school scholarships – click here . Discover More Discover More Taught Postgraduate Subject to Approval Belt and Road Scholarship in Statistics and Data Science (Taught Postgraduate) Allowance Range See Purpose and Scope Key Benefits waiver of the composition fees of the MDASC or MStat programme (i.e. HK$309,000 and HK$218,000 respectively in 2024-25); an additional allowance of HK$10,000 to cover the cost of living and travel expenses. Discover More Undergraduate Dr Patrick S C Poon Scholarship in Actuarial Science Allowance Range HK$200,000 to HK$240,000 each Key Benefits Entrance Scholarships for New Students based on the candidates’ entrance records attained from HKDSE Discover More Undergraduate Dr Patrick S C Poon Scholarship in Statistics Allowance Range HK$50,000 each Key Benefits First Major (Professional Core) &nbsp;in Decision Analytics, Risk Management or Statistics Merit-based Scholarships for Current Students Discover More Taught Postgraduate Subject to Approval Entrance Scholarship for the Master of Data Science Allowance Range HK$20,000 each Key Benefits Entrance Scholarships for New Students A maximum of 10 scholarships shall be awarded annually to new students of the MDASC programme on the basis of academic merit Discover More Taught Postgraduate Entrance Scholarship for the Master of Statistics Allowance Range HK$20,000 each Key Benefits Entrance Scholarships for New Students *for students who are in financial need Discover More Undergraduate Ho Kam Chiu Lo Lai Ching Memorial Scholarship Allowance Range HK$20,000 each Key Benefits BSc (Major in DA/RM/ST) or BStat Enrichment Scholarships for Current Students Discover More Undergraduate Hong Kong Federation of Insurers Scholarship Allowance Range HK$20,000 each Key Benefits Merit-based Scholarships for Current Students *for students who are in financial need Discover More Undergraduate Statistical Decision Sciences (6779) Entrance Scholarship Allowance Range HK$50,000 to HK$100,000 each Key Benefits Entrance Scholarships for New Students Discover More Undergraduate Subject to Approval Statistics and Actuarial Science (SAAS) Scholarships Allowance Range HK$10,000 to HK$50,000 each Key Benefits Entrance Scholarships for New Students Merit-based Scholarships for Current Students View All Our Students Discover All Students’ Sharings Discover More GALINA Chakheeva Current student, 2025-26 entry BStat &quot;I am excited to be part of the HKU’s BStat in Statistical Decision Sciences first cohort that perfectly combines my passion for data science with my career aspirations. I chose this program because of its professional core in Decision making, which lies at the heart of modern data sci"
+}

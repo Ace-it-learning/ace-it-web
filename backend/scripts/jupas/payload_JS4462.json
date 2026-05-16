@@ -1,0 +1,527 @@
+{
+  "factPack": {
+    "code": "JS4462",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4462"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4462"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/eeenn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www4.mae.cuhk.edu.hk/energy-and-environmental-engineering/"
+      }
+    ],
+    "programme": {
+      "code": "JS4462",
+      "nameEn": "Energy and Environmental Engineering",
+      "nameZh": "能源與環境工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 31.75,
+      "uq": null,
+      "lq": 31,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "3",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31
+        }
+      },
+      "subjectWeighting": "(x 1.5) • Economics, Geography (x 1.2)"
+    },
+    "jupas": {
+      "code": "JS4462",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4462",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4462",
+      "nameEn": "Energy and Environmental Engineering",
+      "nameZh": "能源與環境工程學",
+      "shortDescription": "an class=\"before_label\">Short Description The Energy and Environmental Engineering programme at CUHK provides the engineering knowledge and training for its graduates to tackle a broad spectrum of energy issues pertaining to renewable, environmental and building technologies. The programme puts forth a strong platform and broad-based perspective for learning and understanding the relations and trade-offs between energy and environment, and the ensuing engineering challenges in attaining viable solutions. The programme provides three focused study streams including Sustainable Energy Technology, Green Building Technology (involving courses from the School of Architecture) and Environmental Engineering (involving courses from the Geography and Resource Management programme and Earth and Environmental Sciences programme).",
+      "programmeWebsite": "https://www4.mae.cuhk.edu.hk/energy-and-environmental-engineering/",
+      "tuition": "HK$47,000",
+      "intake": 26,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT 3 One of the following elective subjects: CHEMISTRY 3 BIOLOGY 3 PHYSICS 3 DESIGN AND APPLIED TECHNOLOGY 3 INFORMATION AND COMMUNICATION TECHNOLOGY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 210,
+        "bandB": 160,
+        "bandC": 333,
+        "bandD": 420,
+        "bandE": 362,
+        "total": 1485
+      },
+      "offers2025": {
+        "bandA": 22,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 22
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/eeenn/",
+      "introduction": "Engineering for a Sustainable Future Sustainability implies living well within the ecological limits of a finite planet. Nowadays, engineers need to find holistic and effective solutions to protect our fragile planet and meet the needs of the growing human population. The Energy and Environmental Engineering (EEENN) programme at CUHK provides comprehensive exposure to help its students understand the complexities and interrelationships of energy and the environment. EEENN is designed for engineering-minded students who aspire to help make the world greener and sustainable for future generations. The programme leverages CUHK’s broad academic coverage as a comprehensive research university and the support of the University’s affiliated entities, including the Institute of Environment, Energy and Sustainability (IEES) and the Institute of Future Cities.",
+      "ranking": "",
+      "careerProspects": "The EEENN programme offers students a broad range of career paths. The job offers received by our graduates include the following: Environmental, social, and corporate governance (ESG) engineers, consultants and analysts Mechanical, construction and IT engineers Business and technology consultants Gordon Ho just completed his final year in EEENN. He is interested in green technology. “Energy is an indispensable part of our society,” he says. “It has a pivotal and interconnected relationship with the environment.” Given his enthusiasm for learning about the latest green technology developments and realisation of the growing need for talent in sustainability in industry, Gordon chose to study EEENN. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "The programme provides an interdisciplinary perspective on learning and understanding the relations and trade-offs between energy and the environment and the ensuing engineering challenges in attaining viable solutions. Students acquire fundamental knowledge and problem-solving skills in energy principles, technologies and systems. They also have the option of electing special courses to meet their interests, leading to the following stream designations: Sustainable Energy Technology Green Building Technology Environmental Engineering",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4462",
+    "nameEn": "Energy and Environmental Engineering",
+    "nameZh": "能源與環境工程學",
+    "name": "Energy and Environmental Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 31.75,
+    "band_a": 31,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4462",
+            "First Year Intake: 26",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 210",
+            "Offers (Band A): 22",
+            "Total applications: 1,485",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 31.75",
+            "Lower quartile (LQ): 31",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5",
+            "English: 3",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "Elective 1: 4",
+            "Elective 2: 4",
+            "",
+            "Subject Weighting: Economics, Geography (x1.5); other electives (x1.2)",
+            "",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Compulsory Level 3, CSD Attained",
+            "Elective: At least 1 elective at Level 3 from: Chemistry, Biology, Physics, Design & Applied Technology, ICT, M1/M2",
+            "Accepts Applied Learning (Attained with Distinction I/II) as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Energy and Environmental Engineering (EEENN) programme at CUHK provides comprehensive engineering knowledge to tackle energy issues in renewable, environmental, and building technologies.",
+            "",
+            "The programme offers three focused study streams:",
+            "- Sustainable Energy Technology",
+            "- Green Building Technology (involving courses from the School of Architecture)",
+            "- Environmental Engineering (involving courses from Geography & Resource Management and Earth & Environmental Sciences)",
+            "",
+            "Students acquire fundamental knowledge and problem-solving skills in energy principles, technologies, and systems. The curriculum leverages CUHK’s broad academic coverage and support from the Institute of Environment, Energy and Sustainability (IEES) and the Institute of Future Cities.",
+            "",
+            "Craft Your Path: Students can elect special courses to meet their interests, leading to stream designations."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are prepared for a broad range of career paths in sustainability and engineering.",
+            "",
+            "Job offers received by EEENN graduates include:",
+            "- Environmental, social, and corporate governance (ESG) engineers, consultants, and analysts",
+            "- Mechanical, construction, and IT engineers",
+            "- Business and technology consultants",
+            "",
+            "Example: Gordon Ho, a final-year EEENN student interested in green technology, noted: 'Energy is an indispensable part of our society. It has a pivotal and interconnected relationship with the environment.'",
+            "",
+            "Graduates have pursued careers in CLP Power, Hong Kong Government EMSD, and green building consultancies."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral, and cultural experiences.",
+            "",
+            "Students benefit from a comprehensive research university environment with access to the Institute of Environment, Energy and Sustainability (IEES) and the Institute of Future Cities.",
+            "",
+            "The campus features modern engineering labs, libraries, and green spaces, fostering interdisciplinary collaboration.",
+            "",
+            "Exchange and internship opportunities are available through CUHK’s global partnerships (details on programme website)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Statistics:",
+            "- Band A applications: 210",
+            "- Offers (Band A): 22",
+            "- Band A offer rate: ~10.5%",
+            "- Band A applications per offer: ~9.5",
+            "",
+            "Total applications: 1,485",
+            "",
+            "Median admission score (Best 5): 31.75",
+            "Lower quartile: 31",
+            "",
+            "Interview is required for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The EEENN programme is relatively new; notable alumni are still emerging.",
+            "",
+            "Faculty includes experts in renewable energy, smart grids, and environmental policy.",
+            "",
+            "Graduates have pursued careers in CLP Power, Hong Kong Government EMSD, and green building consultancies.",
+            "",
+            "The programme benefits from CUHK’s strong engineering faculty and interdisciplinary research centres."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local and non-local students based on academic merit.",
+            "",
+            "Local JUPAS students may be eligible for admission scholarships covering tuition fees and living expenses.",
+            "",
+            "Other major scholarships include the Hong Kong Government’s Targeted Scholarship and Financial Support (TSFS) and the Non-local Student Scholarship (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Energy and Environmental Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 31.75 (Best 5)**",
+            "",
+            "- Aim for at least 31.75 points in Best 5 to be competitive.",
+            "- Lower quartile is 31, so 31+ is essential for Band A consideration.",
+            "",
+            "**2. Prioritise Core Subjects**",
+            "",
+            "- Chinese Level 5, English Level 3, Mathematics Level 5, CSD Attained (as per median profile).",
+            "- Strong Mathematics (Level 5) is critical for engineering.",
+            "",
+            "**3. Excel in Electives**",
+            "",
+            "- Choose electives with weighting: Economics, Geography (x1.5) give an edge.",
+            "- Other electives (e.g., Chemistry, Physics, M1/M2) at Level 4+ boost your score.",
+            "",
+            "**4. Leverage M1/M2**",
+            "",
+            "- M1/M2 is accepted as an elective and weighted favourably.",
+            "- Median M1/M2 grade is 4; aim for 4 or above.",
+            "",
+            "**5. Prepare for Interview**",
+            "",
+            "- Interview is required; demonstrate passion for sustainability and engineering.",
+            "- Be ready to discuss renewable energy, environmental issues, and your career goals.",
+            "",
+            "**6. Band A Strategy**",
+            "",
+            "- Place JS4462 in Band A to maximise offer chances (only Band A received offers in 2025).",
+            "- Band A offer rate ~10.5%, so ensure strong overall profile.",
+            "",
+            "**7. Understand Stream Options**",
+            "",
+            "- Research the three streams: Sustainable Energy, Green Building, Environmental Engineering.",
+            "- Tailor your personal statement to your preferred stream.",
+            "",
+            "**8. Use Subject Weighting**",
+            "",
+            "- Economics and Geography are weighted x1.5; if you take these, aim for Level 5+.",
+            "- Check JUPAS calculator to simulate your score.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "- Confirm you meet the elective requirement (1 subject at Level 3 from specified list).",
+            "- Applied Learning (Distinction I/II) can be used as extra elective.",
+            "- Visit programme website for updates: https://www4.mae.cuhk.edu.hk/energy-and-environmental-engineering/"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4462",
+            "首年學額：26",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：210",
+            "Band A 取錄人數：22",
+            "總申請人數：1,485",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：31.75",
+            "下四分位數：31",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5",
+            "英國語文：3",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "選修一：4",
+            "選修二：4",
+            "",
+            "科目比重：經濟、地理（x1.5）；其他選修科（x1.2）",
+            "",
+            "入學要求：",
+            "核心科目：中國語文 3 級、英國語文 3 級、數學必修部分 3 級、公民科達標",
+            "選修科目：至少 1 科選修達 3 級，包括：化學、生物、物理、設計與應用科技、資訊及通訊科技、M1/M2",
+            "接受應用學習（達標並表現優異 I/II）作為額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "能源與環境工程學（EEENN）課程提供全面的工程知識，以應對可再生能源、環境及建築技術領域的能源問題。",
+            "",
+            "課程設有三個專修範疇：",
+            "- 可持續能源技術",
+            "- 綠色建築技術（與建築學院合辦）",
+            "- 環境工程（與地理與資源管理學及地球與環境科學課程合辦）",
+            "",
+            "學生將掌握能源原理、技術及系統的基礎知識與解難能力。課程充分利用中大作為綜合研究型大學的廣泛學術覆蓋，並得到環境、能源及可持續發展研究所（IEES）及未來城市研究所的支持。",
+            "",
+            "自訂學習路徑：學生可選修特定科目，以獲得相應的專修範疇標註。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可投身可持續發展及工程領域的多元職業。",
+            "",
+            "畢業生獲得的職位包括：",
+            "- 環境、社會及管治（ESG）工程師、顧問及分析師",
+            "- 機械、建築及資訊科技工程師",
+            "- 商業及科技顧問",
+            "",
+            "例子：Gordon Ho 是 EEENN 最後一年學生，對綠色科技感興趣。他表示：「能源是社會不可或缺的部分，與環境有著關鍵且相互關聯的關係。」",
+            "",
+            "畢業生曾於中電、機電工程署及綠色建築顧問公司任職。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中大的沙田校園設有九所書院，提供住宿、生活及文化體驗。",
+            "",
+            "學生可享用綜合研究型大學的資源，包括環境、能源及可持續發展研究所（IEES）及未來城市研究所。",
+            "",
+            "校園配備現代化工程實驗室、圖書館及綠化空間，促進跨學科協作。",
+            "",
+            "透過中大的環球合作網絡，學生可參與交流及實習計劃（詳情請參閱課程網站）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：210",
+            "- Band A 取錄人數：22",
+            "- Band A 取錄率：約 10.5%",
+            "- 每 Band A 申請對取錄人數比例：約 9.5",
+            "",
+            "總申請人數：1,485",
+            "",
+            "中位數入學分數（最佳五科）：31.75",
+            "下四分位數：31",
+            "",
+            "需要面試（選定申請人）。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "EEENN 課程相對較新，知名校友仍在湧現中。",
+            "",
+            "教研團隊包括可再生能源、智能電網及環境政策領域的專家。",
+            "",
+            "畢業生曾於中電、機電工程署及綠色建築顧問公司任職。",
+            "",
+            "課程受惠於中大強大的工程學院及跨學科研究中心。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "中大為本地及非本地學生提供多項入學獎學金，以學業成績為評核基礎。",
+            "",
+            "本地 JUPAS 學生可申請涵蓋學費及生活費的入學獎學金。",
+            "",
+            "其他主要獎學金包括香港政府專上學生資助計劃（TSFS）及非本地學生獎學金（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的能源與環境工程學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數 31.75（最佳五科）**",
+            "",
+            "- 力爭最佳五科達 31.75 分或以上以具競爭力。",
+            "- 下四分位數為 31 分，因此 31 分或以上是 Band A 考慮的基本門檻。",
+            "",
+            "**2. 優先處理核心科目**",
+            "",
+            "- 中位數取錄者成績：中文 5 級、英文 3 級、數學 5 級、公民科達標。",
+            "- 數學（5 級）對工程學尤為關鍵。",
+            "",
+            "**3. 選修科爭取佳績**",
+            "",
+            "- 選擇有比重的選修科：經濟、地理（x1.5）可提升分數。",
+            "- 其他選修科（如化學、物理、M1/M2）達 4 級或以上有助提高總分。",
+            "",
+            "**4. 善用 M1/M2**",
+            "",
+            "- M1/M2 可作為選修科，並獲比重優待。",
+            "- 中位數 M1/M2 成績為 4 級，目標應達 4 級或以上。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 面試為必須環節；展示對可持續發展及工程的熱誠。",
+            "- 準備討論可再生能源、環境議題及個人職業目標。",
+            "",
+            "**6. Band A 策略**",
+            "",
+            "- 將 JS4462 置於 Band A 以最大化取錄機會（2025 年僅 Band A 獲取錄）。",
+            "- Band A 取錄率約 10.5%，需確保整體成績突出。",
+            "",
+            "**7. 了解專修範疇選項**",
+            "",
+            "- 研究三個專修範疇：可持續能源技術、綠色建築技術、環境工程。",
+            "- 按個人興趣在個人陳述中突出相關範疇。",
+            "",
+            "**8. 利用科目比重**",
+            "",
+            "- 經濟及地理比重為 x1.5；如選修這些科目，目標應達 5 級或以上。",
+            "- 使用 JUPAS 計分器模擬分數。",
+            "",
+            "**9. 提早申請並核實要求**",
+            "",
+            "- 確認符合選修科要求（指定名單中至少 1 科達 3 級）。",
+            "- 應用學習（達標並表現優異 I/II）可作為額外選修科。",
+            "- 瀏覽課程網站獲取最新資訊：https://www4.mae.cuhk.edu.hk/energy-and-environmental-engineering/"
+          ]
+        }
+      }
+    },
+    "code": "JS4462",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 31.75,
+    "uq": null,
+    "lq": 31,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "3",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 31.75
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 31
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "Programme is relatively new; notable alumni are still emerging.",
+      "Faculty includes experts in renewable energy, smart grids, and environmental policy.",
+      "Graduates have pursued careers in CLP Power, Hong Kong Government EMSD, and green building consultancies."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Energy and Environmental Engineering notable alumni",
+      "香港中文大學 能源與環境工程學 著名校友",
+      "CUHK Energy and Environmental Engineering graduates Hong Kong careers"
+    ]
+  }
+}

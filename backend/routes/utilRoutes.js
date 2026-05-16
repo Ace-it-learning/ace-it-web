@@ -138,12 +138,25 @@ router.get('/schools', async (req, res) => {
  * GET /api/health
  * Standard health check for Cloud Run and monitoring
  */
-router.get('/health', (req, res) => {
-    res.json({ 
-        status: "operational", 
+router.get('/health', async (req, res) => {
+    const payload = {
+        status: 'operational',
         timestamp: new Date().toISOString(),
         environment: process.env.NODE_ENV || 'development'
-    });
+    };
+    const { isAzureData } = require('../config/runtime');
+    if (isAzureData()) {
+        try {
+            const c = await getContainer('chat_messages', '/pk');
+            await c.items.query({ query: 'SELECT VALUE COUNT(1) FROM c' }).fetchAll();
+            payload.cosmos = 'ok';
+        } catch (err) {
+            payload.status = 'degraded';
+            payload.cosmos = 'error';
+            payload.cosmosError = err.message;
+        }
+    }
+    res.json(payload);
 });
 
 router.get('/trigger-weekly', async (req, res) => {

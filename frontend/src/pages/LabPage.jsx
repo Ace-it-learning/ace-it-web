@@ -19,6 +19,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { useAvatar } from '../context/AvatarContext';
 import { motion, Reorder } from 'framer-motion';
 import { isCheatEnabled } from '../utils/devAccess';
+import { getGrammarMaxXp, getGrammarPhaseLabel, grammarRuleKeyPoints } from '../utils/grammarLabUtils';
 
 // --- Dictionary Popover Component ---
 const DictionaryPopover = ({ data, position, onClose, onAddToNotebook, loading }) => {
@@ -489,13 +490,6 @@ const LabPage = () => {
         return lvlStr || '3';
     });
 
-    const missionXp = location.state?.taskXp || location.state?.xp || (
-        currentLevel === '7' ? 350 : 
-        currentLevel === '6' ? 250 : 
-        currentLevel === '5' ? 200 : 
-        currentLevel === '4' ? 150 : 100
-    );
-
     const [loading, setLoading] = useState(true);
     const [lessonData, setLessonData] = useState(null);
     const [step, setStep] = useState(searchParams.get('step') || 'EXPLORE'); // EXPLORE, PRACTICE, SUCCESS
@@ -509,6 +503,19 @@ const LabPage = () => {
     const [maxCombo, setMaxCombo] = useState(0);
     const [grammarMistakes, setGrammarMistakes] = useState([]);
     const [bossChecked, setBossChecked] = useState(false);
+
+    const isGrammarMission = Boolean(
+        topic?.startsWith('grammar_') || location.state?.isGrammarLab || lessonData?.type === 'GRAMMAR'
+    );
+
+    const missionXp = location.state?.taskXp || location.state?.xp || (
+        isGrammarMission ? getGrammarMaxXp(currentLevel) : (
+            currentLevel === '7' ? 350 :
+            currentLevel === '6' ? 250 :
+            currentLevel === '5' ? 200 :
+            currentLevel === '4' ? 150 : 100
+        )
+    );
 
     // Focus Mode to hide global navbar and show custom mission header
     const { setIsFocusMode } = useAvatar();
@@ -560,8 +567,9 @@ const LabPage = () => {
     // Formatting the topic for display
     // Formatting the topic for display
     const isWritingTopic = topic && topic.startsWith('writing_');
+    const skillLang = language === 'zh' ? 'zh' : 'en';
     const displayTopic = topic
-        ? (isWritingTopic ? `Writing Skill: ${getSkillName(topic)}` : getSkillName(topic))
+        ? (isWritingTopic ? `Writing Skill: ${getSkillName(topic, skillLang)}` : getSkillName(topic, skillLang))
         : "Learning Lab";
 
     // Reset scaffold data only when passage ACTUALLY changes to something different
@@ -1486,9 +1494,7 @@ const LabPage = () => {
                         </div>
                         <div className="hidden md:block px-2 py-0.5 bg-indigo-50 dark:bg-indigo-900/30 rounded border border-indigo-100 dark:border-indigo-800">
                             <span className="text-[9px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest whitespace-nowrap">
-                                {grammarSubStep === 'LEARN' ? 'Rule' :
-                                 grammarSubStep === 'IDENTIFY' ? 'Spotter' :
-                                 grammarSubStep === 'DRILL' ? 'Drill' : 'Final'}
+                                {getGrammarPhaseLabel(grammarSubStep, topic)}
                             </span>
                         </div>
                     </div>
@@ -1600,12 +1606,31 @@ const LabPage = () => {
                                             <Award size={32} className="fill-current" />
                                             <span className="text-4xl font-black">+{missionXp}</span>
                                         </div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mt-1">{t('lab.xp_points')}</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mt-1">
+                                            {isGrammarMission ? t('lab.grammar_xp_up_to') : t('lab.xp_points')}
+                                        </span>
                                     </div>
                                 </div>
                                 <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl font-medium">
-                                    {t('lab.lab_intro')}
+                                    {isGrammarMission ? t('lab.grammar_intro') : t('lab.lab_intro')}
                                 </p>
+                                {isGrammarMission && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 8 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className="flex flex-wrap gap-3 max-w-3xl"
+                                    >
+                                        {['grammar_phase_rules', 'grammar_phase_identify', 'grammar_phase_drill', 'grammar_phase_final'].map((key, idx) => (
+                                            <span
+                                                key={key}
+                                                className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-indigo-800 rounded-2xl text-sm font-bold text-indigo-700 dark:text-indigo-300 shadow-sm"
+                                            >
+                                                <span className="size-6 rounded-lg bg-indigo-600 text-white text-xs font-black flex items-center justify-center">{idx + 1}</span>
+                                                {t(`lab.${key}`)}
+                                            </span>
+                                        ))}
+                                    </motion.div>
+                                )}
                             </div>
 
                             {/* Main Lesson Block */}
@@ -1708,6 +1733,72 @@ const LabPage = () => {
                                                     ))}
                                                 </div>
                                             </section>
+                                        </div>
+                                    ) : isGrammarMission ? (
+                                        <div className="space-y-12">
+                                            <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                                                <div className="prose prose-xl prose-indigo dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                                                    {lessonData?.conceptual_explanation}
+                                                </div>
+                                            </section>
+
+                                            {(lessonData?.rule_cards || []).length > 0 && (
+                                                <section className="space-y-6">
+                                                    <h2 className="text-2xl font-black text-gray-900 dark:text-white px-2">
+                                                        {t('lab.grammar_core_rules')}
+                                                    </h2>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        {lessonData.rule_cards.map((rule, idx) => (
+                                                            <div
+                                                                key={idx}
+                                                                className="p-6 md:p-8 bg-white dark:bg-gray-900 rounded-[2rem] border-2 border-indigo-100 dark:border-indigo-900/50 shadow-sm"
+                                                            >
+                                                                <h3 className="text-lg font-black text-indigo-700 dark:text-indigo-300 mb-3">{rule.name}</h3>
+                                                                <p className="text-xs font-black text-indigo-500 uppercase tracking-widest mb-2">{t('lab.grammar_formula')}</p>
+                                                                <p className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{rule.formula}</p>
+                                                                <p className="text-sm text-red-700 dark:text-red-300 font-medium mb-2 line-clamp-2">✗ {rule.incorrect}</p>
+                                                                <p className="text-sm text-green-700 dark:text-green-300 font-bold line-clamp-2">✓ {rule.correct}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </section>
+                                            )}
+
+                                            {(() => {
+                                                const briefingKeyPoints = (lessonData?.key_points?.length > 0)
+                                                    ? lessonData.key_points
+                                                    : grammarRuleKeyPoints(lessonData?.rule_cards);
+                                                if (!briefingKeyPoints.length) return null;
+                                                return (
+                                                    <div className="space-y-4">
+                                                        <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest px-2">{t('lab.key_competencies')}</h4>
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                            {briefingKeyPoints.map((pt, idx) => (
+                                                                <div key={idx} className="flex items-center gap-4 p-5 bg-gray-50 dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 rounded-2xl">
+                                                                    <div className="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+                                                                        <CheckCircle2 size={18} className="text-green-600 dark:text-green-500" />
+                                                                    </div>
+                                                                    <span className="text-base font-bold dark:text-white">{pt}</span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })()}
+
+                                            {(lessonData?.suggested_next_steps || []).length > 0 && (
+                                                <section className="p-8 bg-amber-50 dark:bg-amber-900/20 rounded-[2.5rem] border border-amber-100 dark:border-amber-800">
+                                                    <h4 className="text-xs font-black text-amber-600 uppercase tracking-widest mb-4">{t('lab.grammar_next_steps')}</h4>
+                                                    <ul className="space-y-2">
+                                                        {lessonData.suggested_next_steps.map((stepText, idx) => (
+                                                            <li key={idx} className="text-sm font-bold text-amber-900 dark:text-amber-200 flex gap-2">
+                                                                <span className="text-amber-500">•</span>
+                                                                {stepText}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </section>
+                                            )}
                                         </div>
                                     ) : (
                                         <section className="bg-white dark:bg-gray-900 p-8 md:p-14 rounded-[3rem] shadow-sm border border-gray-100 dark:border-gray-800">
@@ -1964,7 +2055,9 @@ const LabPage = () => {
                                                     <AlertTriangle size={20} />
                                                     Final Submission: The Proofreader
                                                 </div>
-                                                <h3 className="text-4xl font-black dark:text-white">Find 3 errors in this report.</h3>
+                                                <h3 className="text-4xl font-black dark:text-white">
+                                                    Find {lessonData.boss_fight?.errors?.length || 3} error{(lessonData.boss_fight?.errors?.length || 3) === 1 ? '' : 's'} in this report.
+                                                </h3>
                                             </div>
 
                                             <div className="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-[3rem] shadow-2xl border-2 border-red-100 dark:border-red-900/20 relative overflow-hidden">

@@ -1,0 +1,493 @@
+{
+  "factPack": {
+    "code": "JS6016",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6016"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.arch.hku.hk/bsurv/"
+      }
+    ],
+    "programme": {
+      "code": "JS6016",
+      "nameEn": "Bachelor of Science in Surveying",
+      "nameZh": "理學士(測量學)",
+      "university": "香港大學",
+      "facultyZh": "建築學院",
+      "category": "design"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 29,
+      "uq": 31,
+      "lq": 28
+    },
+    "jupas": {
+      "code": "JS6016",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6016",
+      "nameEn": "Bachelor of Science in Surveying",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.arch.hku.hk/bsurv/",
+      "tuition": "HK$47,000",
+      "intake": 43,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 134,
+        "bandB": 86,
+        "bandC": 147,
+        "bandD": 234,
+        "bandE": 244,
+        "total": 845
+      },
+      "offers2025": {
+        "bandA": 67,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 67
+      },
+      "facultyPhone": "+852 3917 2149"
+    },
+    "admissionsSnippet": "Bachelor of Science in Surveying | HKU Faculty of Architecture /assets/fancybox/jquery.fancybox.pack.js\" type=\"text/javascript\"> Search HOME About Events People Admissions Programmes Departments and Divisions International Collaborations Research Knowledge Exchange Resources Alumni Faculty Intranet Contact About History HKUrbanLabs Asia’s Global University Faculty Newsletter News Dean's Roundup Location Events All Events Exhibitions Podcast Public Lecture Series Seminars Subscribe People Faculty Office Honorary Professors Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Awards and Prizes Admissions Admission by Programmes Tuition & Fees FAQs for Undergraduate Admissions FAQs for Taught Postgraduate Programmes Programmes Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Conservation Design+ Summer Programmes Executive Education Departments and Divisions Department of Architecture Department of Real Estate and Construction Department of Urban Planning and Design Division of Landscape Architecture International Collaborations Introduction Student Exchange International Partners Mainland China Engagement Global Citizenship Research Introduction The Future of Cities Research Centres Research Projects Publications Research Postgraduate Programme Research Design Portfolios Undergraduate and Master's thesis opportunities in FoA Knowledge Exchange Introduction Awards Media Highlights Contact Resources The Kenneth Frampton Architectural Book Collection The Brian Brace Taylor Book Collection Stephen Garmey Book Collection on Constructivist Art and Architecture Scholarships and Prizes Academic Calendar Student Handbooks Student Wellness Resources Student Associations Fabrication & Media Laboratories Alumni Featured Alumni Alumni Associations Alumni Update Architecture Introduction Bachelor of Arts in Architectural Studies Master of Architecture Master of Architecture (Design) MPhil and PhD Master of Science in Advanced Architectural Design Major/Minor in Architectural Studies Artist-in-Residence Program Gallery Research Projects Real Estate and Construction Introduction Head's Message Bachelor of Science in Surveying Master of Science in Construction Project Management Master of Science in Real Estate Master of Science in Digital Management of Built Assets (formerly Master of Science in Integrated Project Delivery) MPhil and PhD Research and Related Links Gallery Research and Knowledge Exchange Projects Urban Planning and Design Introduction Admissions Bachelor of Arts in Urban Studies Master of Digital Urban Management Master of Science in Urban Analytics Master of Science in Urban Design and Transport Master of Science in Urban Planning Master of Urban Design Master of Urban Studies and Housing Management Master of Arts in Transport Policy and Planning MPhil and PhD Gallery Research Projects Landscape Architecture Introduction Bachelor of Arts in Landscape Studies Master of Landscape Architecture Postgraduate Diploma in Landscape Architecture Master of Science in Sustainable Environmental Design MPhil and PhD Students' Awards Gallery Research Projects Conservation Introduction Master of Science in Conservation Built Heritage Research Collaborative (BHRC) News and Events Design+ Introduction Bachelor of Arts & Sciences in Design+ MPhil and PhD Career Discovery in Design Gallery Summer Programmes Introduction HKU Design+ Academy for the Talented (non-residential programme) Eco-cities and the Chinese Dream International Summer Programme in Architecture A Visual Diary of Paris, Lyon, Marseille Nature in the City: Beyond the Concrete Jungle Career Discovery in Architecture (Hong Kong) Career Discovery in Architecture [Shanghai] Summer Career Discovery in Landscape Architecture Galapagos: Envisioning Sustainable Futures Department of Urban Planning and Design Introduction What's New Staff Publications Newsletter The Future of Cities Introduction 01 Rural 02 Informal 03 Aged 04 Microbial 05 Nerves 06 Arteries 07 Mind 08 Heart 09 Hypercity 10 Inequality 11 Borders 12 Singularity Research Centres Architecture, Urbanism, and the Humanities Initiative Building Simplexity Lab Built Heritage Research Collaborative Centre for Chinese Architecture and Urbanism Centre of Urban Studies and Urban Planning Fabrication and Material Technologies Lab Future Urbanity & Sustainable Environment (FUSE) Lab Green, FinTech, and Property Lab Healthy High Density Cities Lab iLab Meta BIM Research Lab Real Estate Lab Ronald Coase Centre for Property Rights Research Rural Urban Lab Social Infrastructure for Equity and Wellbeing Sustainable High Density Cities Lab S tructur AI Lab Urban Ecologies Design Lab Urban Environments & Human Health Lab Research Postgraduate Programme Standard Forms Guidelines for RPG students Events for RPG students Contacts Student Associations Architectural Society (AS) Architectural Students’ Association (ASA) Surveying Society (SS) Fabrication & Media Laboratories Introduction Machinery & Methods Projects People Blog Bachelor of Arts in Architectural Studies Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Program Contact Master of Architecture Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Programme Scholarship Contact Master of Architecture (Design) Introduction Admissions Regulations, Syllabus & Timetables Contacts MPhil and PhD Introduction Admissions Programme of Study People Research Students News and Events Institutional Affiliations Master of Science in Advanced Architectural Design Introduction Admissions Regulations & Syllabus Contact Bachelor of Science in Surveying Introduction Admissions Alumni Story Studio Virtual Tour of REC Regulations, Syllabus & Timetables Professional Accreditation Internships International Exchange Consultation Session FAQs Contact Master of Science in Construction Project Management Overview Admissi"
+  },
+  "programme": {
+    "code": "JS6016",
+    "nameEn": "Bachelor of Science in Surveying",
+    "nameZh": "理學士(測量學)",
+    "name": "Bachelor of Science in Surveying",
+    "university": "香港大學",
+    "faculty": "建築學院",
+    "median": 29,
+    "band_a": 28,
+    "uq": 31,
+    "category": "design"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements and Scores",
+          "content": [
+            "**First Year Intake:** 43",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Chinese Language, Mathematics, Liberal Studies",
+            "- Elective: Any 2 elective subjects",
+            "",
+            "**Admission Formula:** Best 5 Subjects",
+            "",
+            "**2025 Admission Scores:**",
+            "- Median: 29 | LQ: 28 | UQ: 31",
+            "",
+            "**Interview:** Required (shortlisted candidates only)",
+            "",
+            "**Weighting:** No specific weighting; all subjects considered equally in Best 5"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Bachelor of Science in Surveying is a 4-year full-time programme offered by the Faculty of Architecture at HKU. It provides comprehensive training in land and construction surveying, real estate, and project management.",
+            "",
+            "**Year 1:** Foundation courses in surveying, mathematics, information technology, and introduction to the built environment.",
+            "",
+            "**Year 2:** Core surveying subjects including geodesy, cadastral surveying, engineering surveying, and photogrammetry.",
+            "",
+            "**Year 3:** Advanced topics such as remote sensing, GIS, land administration, and construction project management. Students may also choose electives from related disciplines.",
+            "",
+            "**Year 4:** Capstone project, professional practice, and elective courses. Students can specialize in areas like spatial data science or real estate development.",
+            "",
+            "**Unique Features:**",
+            "- Professional accreditation pathway (HKIS, RICS)",
+            "- Internship opportunities with leading surveying firms",
+            "- International exchange programmes with partner universities",
+            "- Access to state-of-the-art surveying labs and equipment"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for diverse roles in the surveying and built environment sectors.",
+            "",
+            "**Land and Engineering Surveying:**",
+            "- Land surveyor",
+            "- Engineering surveyor",
+            "- Geospatial analyst",
+            "",
+            "**Real Estate and Construction:**",
+            "- Property valuer",
+            "- Construction project manager",
+            "- Facilities manager",
+            "",
+            "**Government and Public Sector:**",
+            "- Lands Department surveyor",
+            "- Planning Department officer",
+            "- Transport Department analyst",
+            "",
+            "**Further Studies and Research:**",
+            "- Master's in surveying, real estate, or urban planning",
+            "- PhD in geomatics or spatial science"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "Students enjoy HKU's vibrant campus in Pokfulam, with access to modern facilities and a supportive learning environment.",
+            "",
+            "**Surveying Labs:** Dedicated labs equipped with total stations, GPS, drones, and 3D scanners for hands-on training.",
+            "",
+            "**Library Resources:** Extensive collections in surveying, real estate, and construction management.",
+            "",
+            "**Student Societies:** Surveying Society organizes academic talks, site visits, and social events.",
+            "",
+            "**Sports and Recreation:** Gym, sports fields, and over 30 sports clubs.",
+            "",
+            "**Accommodation:** On-campus halls and off-campus housing options available."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High – JS6016 is a popular choice among Band A applicants.",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 134",
+            "- Band A offers: 67",
+            "- Band A offer rate: ~50.0%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Best 5) – strong performance in Mathematics and elective subjects preferred",
+            "2. Interview performance – communication and problem-solving skills assessed",
+            "3. OEA (Other Experiences and Achievements) – relevant work experience or competitions",
+            "4. Subject choice – taking Physics or M1/M2 is advantageous",
+            "",
+            "**Overall Band A offer rate:** ~50.0% (based on 2025 statistics)"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "HKU's Faculty of Architecture is renowned for its research and teaching in surveying and the built environment.",
+            "",
+            "**Faculty Achievements:**",
+            "- Leading research in geospatial science, smart cities, and sustainable construction",
+            "- Strong industry connections with professional bodies like HKIS and RICS",
+            "",
+            "**Rankings:**",
+            "- HKU consistently ranks among the top universities globally in architecture and built environment subjects",
+            "",
+            "**Notable Alumni:**",
+            "- (No specific alumni names provided in fact pack)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "HKU offers various scholarships to support outstanding students.",
+            "",
+            "**Entrance Scholarships:**",
+            "- Based on DSE results (e.g., HKU Foundation Scholarships)",
+            "- Up to full tuition coverage for top scorers",
+            "",
+            "**Faculty Scholarships:**",
+            "- Faculty of Architecture scholarships for surveying students",
+            "- Awarded based on academic merit and extracurricular involvement",
+            "",
+            "**Need-Based Financial Aid:**",
+            "- Government grants and loans available through FASP",
+            "- HKU bursaries for students with financial need",
+            "",
+            "**External Scholarships:**",
+            "- Scholarships from professional bodies like HKIS"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Surveying Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritize Mathematics and Science Subjects**",
+            "",
+            "Strong DSE scores in Mathematics (Core) and an elective science (e.g., Physics) are highly valued. Aim for Level 5 or above in these subjects to boost your Best 5 score.",
+            "- Mathematics is fundamental to surveying calculations",
+            "- Physics helps in understanding measurement principles",
+            "",
+            "**2. Target a Best 5 Score of 29 or Higher**",
+            "",
+            "With a median of 29 and LQ of 28, you need a competitive score. Focus on your top 5 subjects and avoid weak links.",
+            "- Use past papers to identify weak areas",
+            "- Consider retaking if you fall short",
+            "",
+            "**3. Prepare Thoroughly for the Interview**",
+            "",
+            "The interview is a key differentiator. Practice common questions about your motivation for surveying and problem-solving scenarios.",
+            "- Research current trends in surveying (e.g., drone technology)",
+            "- Prepare examples of teamwork and leadership",
+            "",
+            "**4. Strengthen Your OEA Profile**",
+            "",
+            "Relevant experiences like surveying summer camps, engineering competitions, or part-time work in construction can set you apart.",
+            "- Join HKU's summer programmes if available",
+            "- Volunteer for community mapping projects",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "Select electives that align with surveying – M1/M2, Physics, Geography, or Economics. Avoid unrelated subjects that may dilute your profile.",
+            "- M1/M2 demonstrate quantitative skills",
+            "- Geography shows spatial awareness",
+            "",
+            "**6. Apply Early and Confirm Band A Choice**",
+            "",
+            "JS6016 is competitive; placing it in Band A maximizes your chance. Ensure your JUPAS choices are finalized before the deadline.",
+            "- Band A applicants receive priority in interview selection",
+            "- Late changes may reduce consideration",
+            "",
+            "**7. Build a Strong Backup Plan**",
+            "",
+            "Consider related programmes like JS6012 (Bachelor of Arts in Architectural Studies) or JS6048 (Bachelor of Science in Construction Management) as alternatives.",
+            "- These share similar foundational courses",
+            "- Transfer opportunities may exist after Year 1",
+            "",
+            "**8. Attend Open Days and Info Sessions**",
+            "",
+            "HKU's Faculty of Architecture holds admissions talks and campus tours. Attend to learn about the programme and network with professors.",
+            "- Ask about internship placements",
+            "- Get tips from current students",
+            "",
+            "**9. Stay Updated on Professional Accreditation**",
+            "",
+            "The programme leads to HKIS and RICS accreditation. Mention this in your interview to show long-term commitment.",
+            "- Accreditation enhances employability",
+            "- Check HKIS website for latest requirements"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及分數",
+          "content": [
+            "**首年學額：** 43",
+            "",
+            "**修讀年期：** 4年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**文憑試科目要求：**",
+            "- 核心科目：英文、中文、數學、通識教育",
+            "- 選修科目：任何2個選修科",
+            "",
+            "**入學計分公式：** 最佳5科",
+            "",
+            "**2025年入學分數：**",
+            "- 中位數：29 | 最低分數：28 | 最高分數：31",
+            "",
+            "**面試：** 需要（獲篩選的申請人）",
+            "",
+            "**科目比重：** 無特定比重，所有科目在最佳5科中同等考慮"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "測量學理學士是一個為期4年的全日制課程，由香港大學建築學院開辦。課程提供土地及建築測量、房地產和項目管理的全面培訓。",
+            "",
+            "**一年級：** 測量學、數學、資訊科技及建築環境導論等基礎科目。",
+            "",
+            "**二年級：** 核心測量科目，包括大地測量學、地籍測量、工程測量學及攝影測量學。",
+            "",
+            "**三年級：** 高級課題如遙感、地理信息系統、土地行政及建築項目管理。學生亦可選修相關學科的科目。",
+            "",
+            "**四年級：** 畢業專題、專業實務及選修科。學生可專注於空間數據科學或房地產發展等領域。",
+            "",
+            "**獨特之處：**",
+            "- 專業認證途徑（HKIS、RICS）",
+            "- 與頂尖測量公司的實習機會",
+            "- 與合作大學的國際交流計劃",
+            "- 使用先進測量實驗室及設備"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生已準備好投身測量及建築環境領域的多樣化職位。",
+            "",
+            "**土地及工程測量：**",
+            "- 土地測量師",
+            "- 工程測量師",
+            "- 地理空間分析師",
+            "",
+            "**房地產及建築：**",
+            "- 物業估價師",
+            "- 建築項目經理",
+            "- 設施經理",
+            "",
+            "**政府及公營機構：**",
+            "- 地政總署測量師",
+            "- 規劃署主任",
+            "- 運輸署分析師",
+            "",
+            "**深造及研究：**",
+            "- 測量學、房地產或城市規劃碩士",
+            "- 地理信息學或空間科學博士"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "學生可享受港大在薄扶林的活力校園，並使用現代化設施和支援性學習環境。",
+            "",
+            "**測量實驗室：** 配備全站儀、GPS、無人機及3D掃描器的專用實驗室，提供實踐訓練。",
+            "",
+            "**圖書館資源：** 測量學、房地產及建築管理方面的豐富館藏。",
+            "",
+            "**學生學會：** 測量學會舉辦學術講座、實地考察及社交活動。",
+            "",
+            "**體育及康樂：** 健身室、運動場及超過30個體育學會。",
+            "",
+            "**住宿：** 提供校內宿舍及校外住宿選擇。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高 – JS6016是Band A申請人的熱門選擇。",
+            "",
+            "**2025年Band A統計：**",
+            "- Band A申請人數：134",
+            "- Band A取錄人數：67",
+            "- Band A取錄率：約50.0%",
+            "",
+            "**影響取錄的因素：**",
+            "1. 文憑試分數（最佳5科）－數學及選修科成績優異者優先",
+            "2. 面試表現－評估溝通及解難能力",
+            "3. OEA（其他經驗及成就）－相關工作經驗或比賽",
+            "4. 選修科目－修讀物理或M1/M2有優勢",
+            "",
+            "**整體Band A取錄率：** 約50.0%（根據2025年統計）"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "港大建築學院在測量及建築環境領域的研究和教學享負盛名。",
+            "",
+            "**學院成就：**",
+            "- 在空間科學、智慧城市及可持續建築方面領先研究",
+            "- 與HKIS及RICS等專業機構有緊密聯繫",
+            "",
+            "**排名：**",
+            "- 港大在建築及建築環境學科全球排名持續靠前",
+            "",
+            "**知名校友：**",
+            "- （事實包中未提供具體校友姓名）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "港大提供多種獎學金以支持優秀學生。",
+            "",
+            "**入學獎學金：**",
+            "- 根據文憑試成績（如港大基金獎學金）",
+            "- 頂尖考生可獲全額學費減免",
+            "",
+            "**學院獎學金：**",
+            "- 建築學院為測量學生設立的獎學金",
+            "- 根據學術成績及課外活動頒發",
+            "",
+            "**需要為本的資助：**",
+            "- 透過FASP提供的政府助學金及貸款",
+            "- 港大為有經濟需要的學生提供助學金",
+            "",
+            "**外部獎學金：**",
+            "- 來自HKIS等專業機構的獎學金"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的測量學入學策略 — 9個實用貼士",
+          "content": [
+            "**1. 優先處理數學及科學科目**",
+            "",
+            "文憑試數學（核心）及選修科學（如物理）成績優異非常重要。目標是取得5級或以上，以提升最佳5科分數。",
+            "- 數學是測量計算的基礎",
+            "- 物理有助理解測量原理",
+            "",
+            "**2. 目標最佳5科29分或以上**",
+            "",
+            "中位數為29，最低分數為28，你需要具競爭力的分數。專注於你的最佳5科，避免弱項。",
+            "- 利用歷屆試題找出弱點",
+            "- 考慮重考以提升分數",
+            "",
+            "**3. 充分準備面試**",
+            "",
+            "面試是關鍵區分因素。練習常見問題，例如你對測量的動機及解難場景。",
+            "- 研究測量最新趨勢（如無人機技術）",
+            "- 準備團隊合作及領導力的例子",
+            "",
+            "**4. 強化你的OEA檔案**",
+            "",
+            "相關經驗如測量夏令營、工程比賽或建築兼職工作可讓你脫穎而出。",
+            "- 如有機會，參加港大的暑期課程",
+            "- 參與社區地圖繪製項目義工",
+            "",
+            "**5. 策略性選擇選修科**",
+            "",
+            "選擇與測量相關的選修科 – M1/M2、物理、地理或經濟。避免無關科目稀釋你的檔案。",
+            "- M1/M2展示量化技能",
+            "- 地理展示空間意識",
+            "",
+            "**6. 提早申請並確認Band A選擇**",
+            "",
+            "JS6016競爭激烈；將其放在Band A可最大化機會。確保在截止日期前確定JUPAS選擇。",
+            "- Band A申請人在面試篩選中獲優先考慮",
+            "- 遲來的更改可能減少考慮",
+            "",
+            "**7. 建立穩固的後備計劃**",
+            "",
+            "考慮相關課程如JS6012（建築文學士）或JS6048（建築管理理學士）作為替代。",
+            "- 這些課程共享相似基礎科目",
+            "- 一年級後可能有轉系機會",
+            "",
+            "**8. 參加開放日及資訊講座**",
+            "",
+            "港大建築學院舉辦入學講座及校園導賞。參加以了解課程並與教授交流。",
+            "- 詢問實習安排",
+            "- 從現屆學生獲取貼士",
+            "",
+            "**9. 緊貼專業認證最新資訊**",
+            "",
+            "課程可獲HKIS及RICS認證。在面試中提及此點以展示長期承諾。",
+            "- 認證提升就業能力",
+            "- 查閱HKIS網站了解最新要求"
+          ]
+        }
+      }
+    },
+    "code": "JS6016",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 29,
+    "uq": 31,
+    "lq": 28
+  }
+}

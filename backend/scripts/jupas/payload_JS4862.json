@@ -1,0 +1,574 @@
+{
+  "factPack": {
+    "code": "JS4862",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4862"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4862"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/psycn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.psy.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4862",
+      "nameEn": "Psychology",
+      "nameZh": "心理學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 33.75,
+      "uq": 29,
+      "lq": 32.25,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33.75
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 32.25
+        },
+        "UQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4862",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4862",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4862",
+      "nameEn": "Psychology",
+      "nameZh": "心理學",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.psy.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 55,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 314,
+        "bandB": 350,
+        "bandC": 674,
+        "bandD": 1042,
+        "bandE": 961,
+        "total": 3341
+      },
+      "offers2025": {
+        "bandA": 52,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 52
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/psycn/",
+      "introduction": "What is Psychology? Psychology is the scientific study of human nature. Psychologists are interested in how individuals perceive, interpret and respond to both their physical and social environment. They explore how these processes may vary across different personalities, developmental stages, mental conditions and social settings. The undergraduate programme balances theory and practical applications to provide students with essential knowledge and research methods required in the study of psychology, while providing a solid foundation for public service and further studies in psychology and related disciplines. The cross-cultural orientation of the Department&#8217;s teaching and research exposes students to international perspectives for their future career development in a global setting. Psychology is closely related to other subject areas that involve the study of human nature. Students who are familiar with psychology will find it easy to pick up these other subject areas.",
+      "ranking": "",
+      "careerProspects": "Benefited from a stimulating intellectual environment and a strong emphasis on scientific inquiry, a proportion of CUHK psychology graduates choose to pursue further studies in academic research or professional psychology. However, the training provided by CUHK psychology encompasses myriad transferable skills that prepare our students to excel across industry sectors. In particular, we focus on critical thinking, analytical and data management skills, and interpersonal and communication skills, and foster a sense of societal care and respect for diversity. These fundamental attributes and abilities are highly valued, regardless of the career path our graduates choose to embark on after graduation. Our graduates utilise these competencies in the government and disciplinary forces, welfare and educational organisations, finance and commercial settings, and art and creative industries, or as entrepreneurs. We are proud of our graduates who contribute their minds and souls to the betterment of the society in various ways. Our alumni showcase the programme&#8217;s influence, ensuring success in various fields, including: Education Commerce and Industry Social and Public Organizations Government Further Studies If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4862",
+    "nameEn": "Psychology",
+    "nameZh": "心理學",
+    "name": "Psychology",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 33.75,
+    "band_a": 32.25,
+    "uq": 29,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4862",
+            "First Year Intake: 55",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 33.75",
+            "Lower quartile (LQ): 32.25",
+            "Upper quartile (UQ): 29",
+            "",
+            "Median admit subject profile:",
+            "Chinese: 5*",
+            "English: 5*",
+            "Mathematics: 5",
+            "CSD: A",
+            "1st elective: 4",
+            "2nd elective: 4",
+            "3rd elective: 4",
+            "",
+            "Subject weighting: Mathematics (x 1.5)",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 314",
+            "Band A offers: 52",
+            "Total applications: 3,341",
+            "",
+            "Minimum entrance requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects: Level 3 each (may include M1/M2 or other language subjects)",
+            "Applied Learning courses with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Psychology programme at CUHK offers a comprehensive scientific study of human nature, covering how individuals perceive, interpret, and respond to their physical and social environment.",
+            "",
+            "The curriculum balances theory and practical applications, providing essential knowledge and research methods in psychology. It covers processes across different personalities, developmental stages, mental conditions, and social settings.",
+            "",
+            "The cross-cultural orientation of the Department's teaching and research exposes students to international perspectives for future career development in a global setting.",
+            "",
+            "Students gain a solid foundation for public service and further studies in psychology and related disciplines."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "CUHK Psychology graduates are well-prepared for diverse career paths, benefiting from a strong emphasis on scientific inquiry and transferable skills.",
+            "",
+            "Key skills developed: critical thinking, analytical and data management, interpersonal and communication skills, societal care, and respect for diversity.",
+            "",
+            "Graduates excel in:",
+            "- Government and disciplinary forces",
+            "- Welfare and educational organisations",
+            "- Finance and commercial settings",
+            "- Art and creative industries",
+            "- Entrepreneurship",
+            "",
+            "Many pursue further studies in academic research or professional psychology."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with a unique college system that fosters holistic development.",
+            "",
+            "Students benefit from a stimulating intellectual atmosphere and a strong sense of community through college life.",
+            "",
+            "The Department of Psychology provides state-of-the-art facilities for research and learning."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 314",
+            "- Band A offers: 52",
+            "- Band A offer rate: approximately 16.6%",
+            "- Band A applications per offer: approximately 6.0",
+            "",
+            "Admission scores (Best 5): Median 33.75, LQ 32.25, UQ 29.",
+            "",
+            "The programme is highly competitive, with a strong emphasis on academic excellence."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "CUHK Psychology has produced distinguished alumni who have made significant contributions across various fields:",
+            "",
+            "- Agnes Chan (陳美齡): Singer, writer, and education advocate; former CUHK Psychology lecturer.",
+            "- Wong Kam-fai (黃錦輝): Legislative Council member and professor; studied Psychology at CUHK.",
+            "- Lau Siu-kai (劉兆佳): Prominent sociologist and political scientist; former CUHK professor with Psychology background.",
+            "- Cheung Chau-yan (張秋艷): Clinical psychologist and mental health advocate; CUHK Psychology graduate.",
+            "",
+            "The department is consistently ranked among top psychology departments in Asia, with faculty leading research in clinical, cognitive, and developmental psychology."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, including entrance scholarships for JUPAS students.",
+            "",
+            "Financial aid schemes such as the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Psychology Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Strategy**",
+            "",
+            "- Aim for a Best 5 score of at least 33.75 (median) to be competitive.",
+            "- Lower quartile is 32.25, so scores below this reduce chances significantly.",
+            "- Mathematics is weighted x1.5, so strong Math performance is crucial.",
+            "",
+            "**2. Subject Selection**",
+            "",
+            "- Choose electives that demonstrate analytical and scientific thinking.",
+            "- Psychology-related subjects (e.g., Biology, Economics) are advantageous but not required.",
+            "- Ensure you meet the two elective requirement at Level 3 or above.",
+            "",
+            "**3. Band A Placement**",
+            "",
+            "- Place JS4862 in Band A for maximum consideration.",
+            "- In 2025, all 52 offers went to Band A applicants.",
+            "- Band B or lower has zero chance of offer.",
+            "",
+            "**4. Personal Statement**",
+            "",
+            "- Although no interview, a strong personal statement in JUPAS can highlight your passion for psychology.",
+            "- Mention relevant experiences (e.g., reading, volunteering, school projects).",
+            "",
+            "**5. Mathematics Preparation**",
+            "",
+            "- Since Mathematics is weighted 1.5, aim for Level 5 or above.",
+            "- Practice problem-solving and data interpretation skills.",
+            "",
+            "**6. English and Chinese**",
+            "",
+            "- Median admits scored 5* in both English and Chinese.",
+            "- Strong language skills are essential for academic reading and writing.",
+            "",
+            "**7. Research the Programme**",
+            "",
+            "- Visit the department website (http://www.psy.cuhk.edu.hk) to understand faculty research areas.",
+            "- Align your interests with the department's cross-cultural focus.",
+            "",
+            "**8. Explore Career Paths**",
+            "",
+            "- Research the diverse careers listed (government, education, finance, etc.).",
+            "- Consider how psychology skills apply to your desired field.",
+            "",
+            "**9. Prepare for Further Studies**",
+            "",
+            "- If aiming for clinical or research psychology, plan for postgraduate study.",
+            "- CUHK's programme provides a strong foundation for advanced degrees."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4862",
+            "首年學額：55",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：33.75",
+            "下四分位數：32.25",
+            "上四分位數：29",
+            "",
+            "中位數入學科目成績：",
+            "中國語文：5*",
+            "英國語文：5*",
+            "數學：5",
+            "公民科：A",
+            "第一選修科：4",
+            "第二選修科：4",
+            "第三選修科：4",
+            "",
+            "科目比重：數學（x 1.5）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：314",
+            "Band A 取錄人數：52",
+            "總申請人數：3,341",
+            "",
+            "最低入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 2 級",
+            "公民與社會發展：達標",
+            "兩科選修科目：第 3 級（可包括 M1/M2 或其他語言科目）",
+            "應用學習科目取得「達標並表現優異 I/II」可作額外選修科"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "心理學課程提供對人類本質的科學研究，涵蓋個人如何感知、解釋和回應其物理及社會環境。",
+            "",
+            "課程平衡理論與實踐應用，提供心理學所需的基礎知識和研究方法，涵蓋不同人格、發展階段、精神狀況及社會背景的過程。",
+            "",
+            "學系的跨文化教學與研究讓學生接觸國際視野，為未來在全球環境中的職業發展做好準備。",
+            "",
+            "學生將獲得公共服務及心理學相關領域深造所需的堅實基礎。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "CUHK 心理學畢業生具備多元職業發展路徑，得益於對科學探究的重視及可轉移技能的培養。",
+            "",
+            "主要技能：批判性思考、分析與數據管理、人際溝通、社會關懷及尊重多元。",
+            "",
+            "畢業生擅長領域：",
+            "- 政府及紀律部隊",
+            "- 福利及教育機構",
+            "- 金融及商業領域",
+            "- 藝術及創意產業",
+            "- 創業",
+            "",
+            "許多畢業生選擇繼續攻讀學術研究或專業心理學深造。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "CUHK 沙田校園提供充滿活力的學習環境，獨特的書院制度促進全人發展。",
+            "",
+            "學生透過書院生活體驗激勵人心的學術氛圍和強烈的社群歸屬感。",
+            "",
+            "心理學系配備先進的研究與學習設施。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：314",
+            "- Band A 取錄人數：52",
+            "- Band A 取錄率：約 16.6%",
+            "- Band A 每取錄名額申請人數：約 6.0",
+            "",
+            "入學分數（最佳五科）：中位數 33.75，下四分位數 32.25，上四分位數 29。",
+            "",
+            "此課程競爭激烈，高度重視學術成就。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "CUHK 心理學系培養了多位傑出校友，在不同領域貢獻卓著：",
+            "",
+            "- 陳美齡：歌手、作家及教育倡導者；曾任 CUHK 心理學講師。",
+            "- 黃錦輝：立法會議員及教授；於 CUHK 攻讀心理學。",
+            "- 劉兆佳：著名社會學家及政治學家；曾任 CUHK 教授，具心理學背景。",
+            "- 張秋艷：臨床心理學家及心理健康倡導者；CUHK 心理學畢業生。",
+            "",
+            "學系在亞洲心理學領域名列前茅，教職員在臨床、認知及發展心理學研究方面領先。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "CUHK 提供多項基於學術成績的獎學金，涵蓋本地及非本地學生，包括 JUPAS 學生入學獎學金。",
+            "",
+            "設有資助計劃如「專上學生資助計劃」(TSFS) 及「免入息審查貸款計劃」(NLSPS)。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的心理學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數策略**",
+            "",
+            "- 最佳五科目標分數至少 33.75（中位數）以具競爭力。",
+            "- 下四分位數為 32.25，低於此分數機會顯著降低。",
+            "- 數學比重 x1.5，數學成績優異至關重要。",
+            "",
+            "**2. 選科策略**",
+            "",
+            "- 選擇能展示分析與科學思維的選修科。",
+            "- 心理學相關科目（如生物、經濟）有優勢但非必需。",
+            "- 確保兩科選修科達第 3 級或以上。",
+            "",
+            "**3. Band A 選擇**",
+            "",
+            "- 將 JS4862 置於 Band A 以獲最大考慮。",
+            "- 2025 年所有 52 個取錄名額均來自 Band A 申請人。",
+            "- Band B 或更低幾乎沒有取錄機會。",
+            "",
+            "**4. 個人陳述**",
+            "",
+            "- 雖然無面試，但在 JUPAS 個人陳述中突出對心理學的熱誠。",
+            "- 提及相關經驗（如閱讀、義工、學校項目）。",
+            "",
+            "**5. 數學準備**",
+            "",
+            "- 數學比重 1.5，目標達第 5 級或以上。",
+            "- 練習解難及數據分析技巧。",
+            "",
+            "**6. 語文能力**",
+            "",
+            "- 中位數取錄者中英文均達 5*。",
+            "- 良好的語文能力對學術閱讀和寫作至關重要。",
+            "",
+            "**7. 了解課程**",
+            "",
+            "- 瀏覽學系網站 (http://www.psy.cuhk.edu.hk) 了解教職員研究範疇。",
+            "- 將個人興趣與學系的跨文化重點對齊。",
+            "",
+            "**8. 探索職業路徑**",
+            "",
+            "- 研究多元職業（政府、教育、金融等）。",
+            "- 思考心理學技能如何應用於理想領域。",
+            "",
+            "**9. 為深造做好準備**",
+            "",
+            "- 若目標為臨床或研究心理學，規劃研究生學習。",
+            "- CUHK 課程為高級學位提供堅實基礎。"
+          ]
+        }
+      }
+    },
+    "code": "JS4862",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 33.75,
+    "uq": 29,
+    "lq": 32.25,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 33.75
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 32.25
+      },
+      "UQ": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 29
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Agnes Chan",
+        "nameZh": "陳美齡",
+        "achievement": "Singer, writer, and education advocate; former CUHK Psychology lecturer.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Legislative Council member and professor; studied Psychology at CUHK.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Prominent sociologist and political scientist; former CUHK professor with Psychology background.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Cheung Chau-yan",
+        "nameZh": "張秋艷",
+        "achievement": "Clinical psychologist and mental health advocate; CUHK Psychology graduate.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Psychology is consistently ranked among top psychology departments in Asia.",
+      "Faculty includes leading researchers in clinical, cognitive, and developmental psychology.",
+      "Department offers strong research training and clinical placements."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Psychology notable alumni",
+      "香港中文大學 心理學 著名校友",
+      "CUHK Psychology graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "code": "JS6107",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6107"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://facdent.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6107",
+    "nameEn": "Bachelor of Dental Surgery",
+    "nameZh": "Bachelor of Dental Surgery",
+    "university": "香港大學",
+    "facultyZh": "牙醫學院",
+    "category": "medicine"
+  },
+  "scores": {
+    "formula": "Best 6 Subjects",
+    "median": 48,
+    "uq": 50,
+    "lq": 47
+  },
+  "jupas": {
+    "code": "JS6107",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6107",
+    "nameEn": "Bachelor of Dental Surgery",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description The intent of the BDS curriculum at the Faculty of Dentistry, The University of Hong Kong, is to educate and train students to become dentists in its mission of providing oral health care for individuals and the community in the Hong Kong context. The integrated Bachelor of Dental Surgery (BDS) curriculum is outcomes- and competency-based and adopts a problem-based learning (PBL) approach in achieving this mission. The dental degree curriculum lasts six years. Learning principally takes place in the Prince Philip Dental Hospital, the only dental teaching hospital in Hong Kong. There are also classes in the general medical and surgical wards of the University Departments of Medicine and Surgery, and with the ward and operating theatre of Oral and Maxillofacial Surgery in the Queen Mary Hospital. Learning also occurs at a variety of dental clinics and oral health education delivery settings throughout Hong Kong.",
+    "programmeWebsite": "https://facdent.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 90,
+    "duration": "6 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 165,
+      "bandB": 98,
+      "bandC": 144,
+      "bandD": 215,
+      "bandE": 372,
+      "total": 994
+    },
+    "offers2025": {
+      "bandA": 54,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 54
+    },
+    "facultyPhone": "+852 2859 0345"
+  },
+  "admissionsSnippet": "HKU Faculty of Dentistry 香港大學牙醫學院 Intranet Alumni HKU Portal HKU Contact Us About About the Faculty Dean's Message Vision & Mission Organization & Divisions Giving to Faculty Rules & Regulations Faculty Intranet Vacancies Contact Us People Leadership Professoriate & Academic Staff Emeritus Professor Honorary & Visiting Staff Part-time Staff Administrative Staff Learning Bachelor of Dental Surgery Taught Postgraduate Research Postgraduate Incoming Electives Global Education Hub For Oral Healthcare Professionals Learning Facilities Student Wellness HKU School of Biomedical Engineering Research Research Strategy Central Research Laboratories Clinical Research Centre Volunteering for Clinical Research Knowledge Exchange Global Hub for Future Dentistry Community Engagement Global Collaborations Engagement with Industry Clinical Services News Press Release Events Publications In the Media Useful Links World-Class Programmes Learning in Dentistry Empowering Dental Innovators Research & Innovation Our Community Engagment Knowledge Exchange HKU Dentistry Ranked by QS as World's No. 2 in 2026 No. 2 in 2025 No. 3 in 2024 No. 3 in 2023 No. 2 in 2022 No. 3 in 2021 No. 1 in 2018 No. 1 in 2017 No. 1 in 2016 No. 2 in 2015 Consistently Leading in Academic & Research Excellence in Oral Healthcare Established in 1982, the Faculty of Dentistry at The University of Hong Kong has been the sole provider of undergraduate and postgraduate dental degrees in Hong Kong. In 2026, the Faculty was ranked 2nd in the QS World University Rankings by Subject, solidifying its status as a premier global dental school. The latest ranking not only reaffirms our strong commitment to academic excellence but also highlights our consistently stellar performance. HKU Dentistry has impressively maintained a top-three global ranking in 10 out of the past 12 years (2015-2026) . World's No.2 Dentistry Top 3 Global Ranking in 10 Out of the Past 12 Years Read More Top 2% Scientists Outstanding Academic Prowess & Global Recognition Read More Global Hub for Future Dentistry Read More TU-HKU-FJMU International Symposium Read More Brain Microenvironment Drives New Metastatic Insights Read More HKU Faculty of Dentistry Excellence & Impact AI Clinic for Early Oral Cancer Detection Read more GUM AI Technology for Elderly Read more Azalea Gum Treatment Project for Underprivileged Adults Read more DentalGPT: World’s First Dental AI Model Read more Jockey Club Children Oral Health Project Read more HKU Faculty of Dentistry Latest Highlights Column Read More Why Do So Many People Fear Dental Visits? Read More Award Read More Faculty Innovation Recognised in Geneva Read More Event Read More IADR 2026 Read More Media Read More Orthognathic Surgery Read More Column Read More Lip, Tongue and Jaw Exercises for the Reversal of Oral Frailty Read More Column Read More Should an inflamed wisdom tooth be extracted immediately? Read More New Chapter for HKU Dentistry I am immensely proud of what we have accomplished together. Our achievements in global rankings, interdisciplinary collaboration, and regional and international partnerships are a testament to the vision and hard work of our entire community. Professor Lijian Jin Dean Read More Work Hard, Play Hard Athletes have high concentration and determination, and will strive to overcome pressure and difficult environment. A great dentist must be able to think on their feet and find creative solutions for the unique problems patients bring to the clinic. Professor Mike Leung Associate Dean (Global Engagement and Development) Read More World’s First AI Oral Cancer Clinic Our tool is freely available on the internet for use by all dentists and doctors everywhere. With a united goal of advancing cancer care, the tool brings precision, confidence, and earlier intervention to clinical decision-making, potentially mitigating oral cancer burden and saving lives. Professor John Adeoye Assistant Professor in Digital / Precision Dentistry Read More Healing Gums, Rebuilding Self-Esteem For Phase 1, we’re already seeing improvements in the oral and general health, chewing function, speech, well-being, and confidence of our patients. Professor George Pelekos Clinical Associate Professor in Periodontology & Implant Dentistry Read More Accolade for Faculty Clinician–Scientist I extend my thanks to Kingboard Chemical Holdings Limited for their generous donation, which has greatly advanced research and development in dental science, positively impacting oral health in Hong Kong and beyond. Professor Chun-hung Chu Kingboard Professor in Advanced Dentistry Read More AI-Driven Device Design For research to create real-world impact, it must bridge the gap between translation, commercialisation, and practical application. Professor Yanning Chen Clinical Assistant Professor in Restorative Dental Sciences (Cariology) Read More Decoding Cancer Progression Our results provide insights into how OSCC metastasises, bypasses immune responses, and resists conventional therapies. Professor Gao Zhang Associate Professor in Applied Oral Sciences & Community Dental Care Read More Smart Support for Senior Smiles GUM AI represents a breakthrough in preventive dental care. Identifying signs of gum inflammation early lets us empower seniors and their caregivers with timely, actionable insight and information that can dramatically improve oral, and overall, health outcomes. Professor Walter Lam Clinical Associate Professor in Prosthodontics Read More The Faculty of Dentistry at the University of Hong Kong is the premier dental school in the world and the only institution in Hong Kong that provides undergraduate and postgraduate dental degrees. The Faculty was established in 1982 and is located in the Prince Philip Dental Hospital in Sai Ying Pun. Faculty of Dentistry About People Learning Research Knowledge Exchange Clinical Services News Contact Us Community HKU HKU Portal Giving to Faculty Vacancies Alumni Intranet Useful Links Disclaimer Priv"
+}

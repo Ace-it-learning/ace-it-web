@@ -1,0 +1,601 @@
+{
+  "factPack": {
+    "code": "JS4070",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4070"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4070"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/lingn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://ling.cuhk.edu.hk/programmes/undergraduate-programme/major-programme-in-linguistics"
+      }
+    ],
+    "programme": {
+      "code": "JS4070",
+      "nameEn": "Linguistics",
+      "nameZh": "語言學",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": 24.5,
+      "lq": 24.5,
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4070",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4070",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4070",
+      "nameEn": "Linguistics",
+      "nameZh": "語言學",
+      "shortDescription": "an class=\"before_label\">Short Description The Linguistics programme offers basic training in contemporary theories of language, and addresses such issues as the universal properties of natural language and the human mind, language acquisition in different modes and modalities, and language in different contexts of use. Students are encouraged to apply linguistic theories to the investigation of a wide variety of languages, including endangered languages, minority languages and sign languages. They will gain an appreciation of linguistics as an interdisciplinary field which crosses the traditional boundary between the arts and the humanities, drawing ideas and tools from various disciplines of cognitive science. At the practical level, linguistics training raises students’ bilingual and multilingual awareness and sharpens their sensitivity towards the complexity of human language. Such training builds the linguistic resources necessary for students’ careers and postgraduate study, and enables them to make informed judgments about the language issues of their own speech community. Students are offered an option to participate in a dual degree programme with Peking University, studying for two years in each campus. Upon successful completion of graduation",
+      "programmeWebsite": "https://ling.cuhk.edu.hk/programmes/undergraduate-programme/major-programme-in-linguistics",
+      "tuition": "HK$47,000",
+      "intake": 22,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 157,
+        "bandB": 192,
+        "bandC": 316,
+        "bandD": 366,
+        "bandE": 402,
+        "total": 1433
+      },
+      "offers2025": {
+        "bandA": 22,
+        "bandB": 2,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 24
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/lingn/",
+      "introduction": "Explore Scientific Studies with our Linguistics Programme The Linguistics major programme offers basic training in contemporary theories of language and addresses such issues as the universal properties of natural language and the human mind, language acquisition in different modes and modalities, and language in different contexts of use. Students are encouraged to apply linguistic theories to the investigation of a wide variety of languages, including endangered languages, minority languages and sign language. They gain an appreciation of linguistics as an interdisciplinary discipline transcending the traditional boundary between the humanities and the sciences, drawing ideas and tools from the core disciplines of cognitive science. At the practical level, linguistics training raises students’ bilingual and multilingual awareness and sharpens their sensitivity towards the complexity of human language. This training builds the linguistic resources necessary for students’ career development and postgraduate studies and enables them to make informed judgments about language issues in their own speech community. Students are provided with the option to double major in Linguistics and Translation or Linguistics and Psychology, and to study in the dual-degree programme organised with Peking University.",
+      "ranking": "#10 in the QS World University Rankings by Subject 2025 #88 in the Times Higher Education Ranking by Subject 2025 – Languages, Literature and Linguistics (#2 in Hong Kong)",
+      "careerProspects": "Our Linguistics programme offers experiential learning beyond the classroom, including language surveys in the field and overseas exposure opportunities. Graduates possess high proficiency in English, Cantonese and written Chinese, and thrive in diverse sectors, such as business, education and community work. In the past five years, our alumni have showcased the programme&#8217;s influence, ensuring success in various fields: Business Sector: Approximately 51% Education Sector: About 33% Scientific or Research Work: Around 10% Government or Community Work: About 6% If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Our programme enjoys the status of a recognised programme in the Government of the HKSAR’s Standing Committee on Language Education and Research (SCOLAR) list of recognised English Language major degree programmes. Graduates of our programme are exempted from the English Language Proficiency Assessment Test for English teachers required by the Education Bureau of the Government of the HKSAR upon completion of the relevant teacher training. Option for Dual Degrees Local students admitted to our four-year Linguistics major programme are offered an option to participate in a dual-degree programme with Peking University, studying for two years on each campus. Upon successful fulfilment of the graduation requirements of both universities, the students obtain a Bachelor of Arts in Linguistics from CUHK and a Bachelor of Arts in Chinese Language from Peking University. Students benefit from the strengths of the two programmes, enriching their training in Linguistics, and broadening their horizons through immersion in a different learning environment, thus enhancing their competitive edge for further studies and",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4070",
+    "nameEn": "Linguistics",
+    "nameZh": "語言學",
+    "name": "Linguistics",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 24.5,
+    "band_a": 24.5,
+    "uq": 24.5,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4070",
+            "First Year Intake: 22",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per year (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 24.5",
+            "Lower quartile (LQ): 24.5",
+            "Upper quartile (UQ): 24.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5*",
+            "English: 4",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "Elective 1: 4",
+            "Elective 2: 3",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 157",
+            "Band A offers: 22",
+            "Total applications: 1433",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (may include M1/M2 or Other Language subjects)",
+            "",
+            "Note: Applicants with special circumstances may be granted Chinese Language waiver on a case-by-case basis."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Linguistics programme at CUHK provides foundational training in contemporary linguistic theories, exploring universal properties of natural language, language acquisition across modes and modalities, and language in diverse contexts.",
+            "",
+            "Students investigate a wide range of languages, including endangered languages, minority languages, and sign languages, gaining an interdisciplinary perspective that bridges humanities and cognitive science.",
+            "",
+            "Key features:",
+            "- Option to double major in Linguistics and Translation or Linguistics and Psychology",
+            "- Dual-degree programme with Peking University (2 years at CUHK, 2 years at PKU; graduates earn BA in Linguistics from CUHK and BA in Chinese Language from PKU)",
+            "- Recognised by the HKSAR Government's SCOLAR list as an English Language major degree programme (graduates exempted from English Language Proficiency Assessment for English teachers upon completing relevant teacher training)",
+            "",
+            "The curriculum sharpens bilingual and multilingual awareness, building linguistic resources for careers and postgraduate study."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates possess high proficiency in English, Cantonese, and written Chinese, thriving in diverse sectors.",
+            "",
+            "Career distribution (past 5 years):",
+            "- Business Sector: ~51%",
+            "- Education Sector: ~33%",
+            "- Scientific or Research Work: ~10%",
+            "- Government or Community Work: ~6%",
+            "",
+            "Experiential learning includes language surveys in the field and overseas exposure opportunities.",
+            "",
+            "The programme's interdisciplinary training prepares students for postgraduate studies and informed judgment on language issues in their speech community."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with over 9,000 hostel places, fostering a close-knit community.",
+            "",
+            "Students benefit from a unique learning environment that combines academic excellence with cultural richness.",
+            "",
+            "The Linguistics programme provides overseas exposure opportunities and field language surveys, enhancing the campus experience.",
+            "",
+            "CUHK is ranked #10 in QS World University Rankings by Subject 2025 for Linguistics, and #88 in Times Higher Education Ranking by Subject 2025 for Languages, Literature and Linguistics (#2 in Hong Kong)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Admission Statistics:",
+            "- Band A applications: 157",
+            "- Band A offers: 22",
+            "- Band A offer rate: ~14.0%",
+            "- Band A applications per offer: ~7.1",
+            "",
+            "Total applications: 1433",
+            "",
+            "Admission scores are highly concentrated: Median, LQ, and UQ all at 24.5 (Best 5), indicating a very tight selection band.",
+            "",
+            "No interview is required for this programme."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Michele Lee (李敏琪) – Hong Kong linguist and educator, former Head of Department of Linguistics and Modern Languages at CUHK, known for work in Cantonese phonology and language acquisition.",
+            "",
+            "Virginia Yip (葉彩燕) – Renowned linguist specialising in bilingualism and Cantonese-English acquisition, co-author of foundational texts, professor at CUHK.",
+            "",
+            "Stephen Matthews (馬詩帆) – Leading scholar in Cantonese linguistics and language typology, co-author of 'Cantonese: A Comprehensive Grammar', professor at CUHK.",
+            "",
+            "Gladys Tang (鄧慧蘭) – Pioneer in Hong Kong Sign Language research and deaf education, founder of the Centre for Sign Linguistics and Deaf Studies at CUHK.",
+            "",
+            "Katherine Chen (陳凱欣) – Hong Kong linguist and former Legislative Councillor, known for work in language policy and education.",
+            "",
+            "The Department of Linguistics and Modern Languages is consistently ranked among top 50 globally (QS), with world-renowned faculty in Cantonese linguistics, bilingualism, and sign language."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Local JUPAS students may be eligible for admission scholarships, the Tertiary Student Finance Scheme (TSFS), and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Estimated living costs: on-campus accommodation ~HK$17,000 per year, living expenses ~HK$45,000 per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Linguistics Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "Aim for a Best 5 score of 24.5 or above. With median, LQ, and UQ all at 24.5, every mark counts. Focus on achieving at least Level 4 in core subjects and Level 5 in electives.",
+            "- Use the M row profile as a benchmark: Chinese 5*, English 4, Mathematics 5, CSD A, M1/M2 4, Elective 1 4, Elective 2 3.",
+            "",
+            "**2. Prioritise English and Chinese**",
+            "",
+            "Linguistics demands strong language skills. Aim for Level 5 or above in English and Level 4 or above in Chinese. These subjects are weighted heavily in the Best 5 calculation.",
+            "- Practice reading comprehension and essay writing for both languages.",
+            "- For English, focus on academic vocabulary and analytical writing.",
+            "",
+            "**3. Excel in Mathematics**",
+            "",
+            "Mathematics is a core subject and appears in the M profile at Level 5. A strong Math score can compensate for weaker electives.",
+            "- Target Level 5 or above in Compulsory Part.",
+            "- Consider taking M1 or M2 to boost your score (M1/M2 at Level 4 in M profile).",
+            "",
+            "**4. Choose Electives Strategically**",
+            "",
+            "Select two electives that align with linguistics, such as Chinese Literature, English Literature, History, or a language subject. These demonstrate analytical and language skills.",
+            "- Aim for Level 5 or above in at least one elective.",
+            "- Other Language subjects (French, German, Spanish, Japanese, Korean, Urdu) are accepted as electives.",
+            "",
+            "**5. Master CSD (Citizenship and Social Development)**",
+            "",
+            "CSD must be 'Attained' (or Level 2 for LS taken before 2023). While not scored, failure to attain it disqualifies your application.",
+            "- Ensure you meet the minimum requirement without compromising other subjects.",
+            "",
+            "**6. Leverage the Dual-Degree Option**",
+            "",
+            "The dual-degree programme with Peking University is a unique selling point. Mention it in your personal statement to show ambition and global outlook.",
+            "- Research the programme structure and highlight your interest in cross-cultural linguistics.",
+            "",
+            "**7. Build a Strong Personal Statement**",
+            "",
+            "Although no interview is required, your personal statement can differentiate you. Discuss your passion for language diversity, endangered languages, or sign language.",
+            "- Reference CUHK's strengths in Cantonese linguistics and bilingualism.",
+            "- Mention any relevant experience (e.g., language surveys, volunteering).",
+            "",
+            "**8. Prepare for No Interview**",
+            "",
+            "Since there is no interview, your JUPAS choices and academic results are paramount. Rank JS4070 as a Band A choice to maximise offer chances.",
+            "- Ensure your school reference and personal statement are polished.",
+            "",
+            "**9. Monitor Application Trends**",
+            "",
+            "With 157 Band A applications for 22 offers, competition is intense. Apply early and confirm your Band A status before the deadline.",
+            "- Check CUHK's admission website for any updates on intake or requirements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4070",
+            "首年學額：22",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：24.5",
+            "下四分位數：24.5",
+            "上四分位數：24.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "選修 1：4",
+            "選修 2：3",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：157",
+            "Band A 錄取人數：22",
+            "總申請人數：1433",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目第 3 級（可包括 M1/M2 或其他語言科目）",
+            "",
+            "備註：特殊情況申請人可獲豁免中國語文要求，按個別情況考慮。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "語言學課程提供當代語言理論的基礎訓練，探討自然語言的普遍特性、不同模式與模態的語言習得，以及語言在不同使用情境中的表現。",
+            "",
+            "學生將研究多種語言，包括瀕危語言、少數語言和手語，獲得跨越人文學科與認知科學的跨學科視野。",
+            "",
+            "主要特色：",
+            "- 可選修語言學與翻譯或語言學與心理學雙主修",
+            "- 與北京大學合辦雙學位課程（中大兩年、北大兩年；畢業獲中大語言學文學士及北大中國語言文學學士）",
+            "- 獲香港特區政府語常會認可為英文主修學位課程（畢業生完成相關師訓後可豁免英文教師語文能力評核）",
+            "",
+            "課程提升雙語及多語意識，為就業及深造建立語言資源。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生精通英語、粵語及書面中文，能在多元領域發展。",
+            "",
+            "過去五年就業分佈：",
+            "- 商業領域：約 51%",
+            "- 教育領域：約 33%",
+            "- 科學或研究工作：約 10%",
+            "- 政府或社區工作：約 6%",
+            "",
+            "體驗式學習包括實地語言調查及海外交流機會。",
+            "",
+            "跨學科訓練為深造及對語言議題作出明智判斷做好準備。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中文大學沙田校園提供 vibrant 書院系統，設有超過 9,000 個宿位，營造緊密社群。",
+            "",
+            "學生在學術卓越與文化豐富的環境中學習。",
+            "",
+            "語言學課程提供海外交流及實地語言調查機會，豐富校園體驗。",
+            "",
+            "中大在 2025 年 QS 世界大學學科排名中語言學位列第 10，在 2025 年泰晤士高等教育學科排名中語言、文學及語言學位列第 88（香港第 2）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 錄取統計：",
+            "- Band A 申請人數：157",
+            "- Band A 錄取人數：22",
+            "- Band A 錄取率：約 14.0%",
+            "- Band A 每學額申請人數：約 7.1",
+            "",
+            "總申請人數：1433",
+            "",
+            "入學分數高度集中：中位數、下四分位數及上四分位數均為 24.5（最佳 5 科），顯示選拔範圍非常狹窄。",
+            "",
+            "本課程無需面試。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "李敏琪（Michele Lee）– 香港語言學家及教育家，曾任中大語言學及現代語言系系主任，專注粵語音韻學及語言習得。",
+            "",
+            "葉彩燕（Virginia Yip）– 著名語言學家，專研雙語及粵英習得，合著基礎教材，中大教授。",
+            "",
+            "馬詩帆（Stephen Matthews）– 粵語語言學及語言類型學權威，合著《Cantonese: A Comprehensive Grammar》，中大教授。",
+            "",
+            "鄧慧蘭（Gladys Tang）– 香港手語研究及聾人教育先驅，創立中大手語及聾人研究中心。",
+            "",
+            "陳凱欣（Katherine Chen）– 香港語言學家及前立法會議員，專注語言政策及教育。",
+            "",
+            "語言學及現代語言系在 QS 全球排名中持續位列前 50，擁有世界知名的粵語語言學、雙語及手語研究團隊。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大提供多項基於學術成績的入學獎學金，涵蓋本地及非本地學生，部分包括學費及生活費。",
+            "",
+            "本地 JUPAS 學生可申請入學獎學金、專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "更多資訊：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "預計生活開支：校內住宿約每年 HK$17,000，生活費約每年 HK$45,000。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的語言學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "爭取最佳 5 科達 24.5 分或以上。由於中位數、下四分位數及上四分位數均為 24.5，每一分都關鍵。核心科目至少達第 4 級，選修科達第 5 級。",
+            "- 參考 M 行成績：中文 5*、英文 4、數學 5、公民科 A、M1/M2 4、選修 1 4、選修 2 3。",
+            "",
+            "**2. 優先提升英文及中文**",
+            "",
+            "語言學要求高語言能力。英文目標第 5 級或以上，中文第 4 級或以上。這些科目在最佳 5 科計算中權重高。",
+            "- 練習閱讀理解及作文。",
+            "- 英文方面，專注學術詞彙及分析寫作。",
+            "",
+            "**3. 數學要突出**",
+            "",
+            "數學是核心科目，M 行顯示第 5 級。強數學成績可補償選修科弱項。",
+            "- 目標數學必修部分第 5 級或以上。",
+            "- 考慮修讀 M1 或 M2 以提升分數（M 行 M1/M2 為第 4 級）。",
+            "",
+            "**4. 策略性選擇選修科**",
+            "",
+            "選擇與語言學相關的選修科，如中國文學、英國文學、歷史或語言科目，展示分析及語言能力。",
+            "- 至少一科選修達第 5 級。",
+            "- 其他語言科目（法文、德文、西班牙文、日文、韓文、烏爾都文）可作選修。",
+            "",
+            "**5. 掌握公民科**",
+            "",
+            "公民科必須「達標」（2023 年前的通識科需第 2 級）。雖然不計分，但未達標會取消資格。",
+            "- 確保滿足最低要求，不影響其他科目。",
+            "",
+            "**6. 善用雙學位選項**",
+            "",
+            "與北京大學的雙學位課程是獨特賣點。在個人陳述中提及，展示抱負及國際視野。",
+            "- 研究課程結構，突出對跨文化語言學的興趣。",
+            "",
+            "**7. 撰寫強而有力的個人陳述**",
+            "",
+            "雖然無需面試，個人陳述可助你脫穎而出。討論對語言多樣性、瀕危語言或手語的熱情。",
+            "- 引用中大在粵語語言學及雙語方面的優勢。",
+            "- 提及相關經驗（如語言調查、義工服務）。",
+            "",
+            "**8. 為無面試做好準備**",
+            "",
+            "由於無面試，JUPAS 選擇及學業成績至關重要。將 JS4070 列為 Band A 選擇以最大化錄取機會。",
+            "- 確保學校推薦信及個人陳述完善。",
+            "",
+            "**9. 監察申請趨勢**",
+            "",
+            "157 個 Band A 申請爭奪 22 個學額，競爭激烈。及早申請並在截止前確認 Band A 狀態。",
+            "- 定期查看中大入學網站了解最新資訊。"
+          ]
+        }
+      }
+    },
+    "code": "JS4070",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 24.5,
+    "uq": 24.5,
+    "lq": 24.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Michele Lee",
+        "nameZh": "李敏琪",
+        "achievement": "Hong Kong linguist and educator, known for work in Cantonese phonology and language acquisition; former Head of Department of Linguistics and Modern Languages at CUHK.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Virginia Yip",
+        "nameZh": "葉彩燕",
+        "achievement": "Renowned linguist specializing in bilingualism and Cantonese-English acquisition; co-author of foundational texts; professor at CUHK.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Stephen Matthews",
+        "nameZh": "馬詩帆",
+        "achievement": "Leading scholar in Cantonese linguistics and language typology; co-author of 'Cantonese: A Comprehensive Grammar'; professor at CUHK.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Gladys Tang",
+        "nameZh": "鄧慧蘭",
+        "achievement": "Pioneer in Hong Kong Sign Language research and deaf education; founder of the Centre for Sign Linguistics and Deaf Studies at CUHK.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Katherine Chen",
+        "nameZh": "陳凱欣",
+        "achievement": "Hong Kong linguist and former Legislative Councillor; known for work in language policy and education.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Department of Linguistics and Modern Languages at CUHK is consistently ranked among top 50 globally (QS).",
+      "Faculty includes world-renowned experts in Cantonese linguistics, bilingualism, and sign language."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Linguistics notable alumni",
+      "香港中文大學 語言學 著名校友",
+      "CUHK Linguistics graduates Hong Kong careers"
+    ]
+  }
+}

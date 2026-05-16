@@ -1,0 +1,532 @@
+{
+  "factPack": {
+    "code": "JS4006",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4006"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4006"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/anthn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.cuhk.edu.hk/ant/undergr.htm"
+      }
+    ],
+    "programme": {
+      "code": "JS4006",
+      "nameEn": "Anthropology",
+      "nameZh": "人類學",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 24,
+      "uq": 24.5,
+      "lq": 23,
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 24.5
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 23
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4006",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4006",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4006",
+      "nameEn": "Anthropology",
+      "nameZh": "人類學",
+      "shortDescription": "an class=\"before_label\">Short Description Anthropology is the study of human variability and diversity, as informed by the four sub-fields of biological anthropology, archaeology, cultural anthropology, and linguistic anthropology. The Anthropology programme at The Chinese University of Hong Kong has strengths in cultural anthropology – defined by the methods of in-depth interviewing and immersive participant-observation, and also offers courses in archaeology and cultural heritage studies. Anthropology students come from both Arts and Science backgrounds, and they learn to think independently. Learning to appreciate and understand the various ways in which cultures may be organised, students will learn to see their own in a new light. Students learn how to conduct research, how to analyse evidence, and acquire strong verbal and written communication skills. Anthropology provides a broad humanities and social science training that prepares students for a wide variety of careers in cultural heritage management, liberal studies, business, journalism, and other cross-cultural work.",
+      "programmeWebsite": "http://www.cuhk.edu.hk/ant/undergr.htm",
+      "tuition": "HK$47,000",
+      "intake": 18,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 121,
+        "bandB": 184,
+        "bandC": 313,
+        "bandD": 426,
+        "bandE": 482,
+        "total": 1526
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/anthn/",
+      "introduction": "Explore the World and Yourself through Anthropology Are you curious, thoughtful and interested in people? Join us for an intellectual journey in the Anthropology Programme to understand the intricate threads of human existence, challenge preconceived assumptions, and embrace the complexities of cultural diversity. Focusing on social and cultural anthropology, as well as archaeology, our programme covers the theories and methodologies of anthropology, the ethnographies of Hong Kong, Asia and the rest of the world, and a wide range of contemporary social issues. Your academic journey will be enriched by fieldwork experience, internships, summer field trips, and your own final-year research project.",
+      "ranking": "#37 in Anthropology (QS World University Rankings by Subject 2023)",
+      "careerProspects": "Anthropology offers a broad and comparative perspective of human cultures and societies across time and space. The Anthropology Programme equips students with the analytical tools and marketable skills to engage with our increasingly multicultural, globalized and ever-changing world. Former students emphasize that in addition to factual knowledge, anthropology has provided them with the mindset and capability to understand and effectively engage with people from different backgrounds in various situations. Graduates of our",
+      "craftYourPath": "Cultivate a critical yet empathetic understanding of all things human and nurture a future of diverse possibilities in the Anthropology Programme.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4006",
+    "nameEn": "Anthropology",
+    "nameZh": "人類學",
+    "name": "Anthropology",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 24,
+    "band_a": 23,
+    "uq": 24.5,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (JUPAS JS4006)",
+          "content": [
+            "Programme: Anthropology (JS4006)",
+            "First Year Intake: 18",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: No",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 24",
+            "Lower quartile (LQ): 23",
+            "Upper quartile (UQ): 24.5",
+            "",
+            "Median Admitted Subject Profile (M row):",
+            "Chinese Language: 5*",
+            "English Language: 3",
+            "Mathematics Compulsory: 3",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5*",
+            "Elective 2: 4",
+            "",
+            "General Entrance Requirements:",
+            "Core: Chinese Language Level 3, English Language Level 3, Mathematics Compulsory Part Level 2, Citizenship and Social Development Attained.",
+            "Electives: Any 2 subjects at Level 3 (may include Mathematics Extended Part M1/M2, or other language subjects).",
+            "Applied Learning courses with 'Attained with Distinction I/II' accepted as extra elective.",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 121",
+            "Band A offers: 19",
+            "Total applications: 1526",
+            "Band A offer rate: ~15.7%",
+            "Band A applications per offer: ~6.4"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Anthropology programme at CUHK focuses on social and cultural anthropology and archaeology, covering theories, methodologies, ethnographies of Hong Kong, Asia, and the world, and contemporary social issues.",
+            "Students engage in fieldwork experience, internships, summer field trips, and a final-year research project.",
+            "The curriculum cultivates critical thinking, independent research, and strong communication skills.",
+            "Courses are taught by internationally recognized anthropologists with expertise in Chinese society, migration, and cultural heritage.",
+            "The programme is ranked #37 in Anthropology globally (QS World University Rankings by Subject 2023)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Anthropology graduates are prepared for diverse careers in cultural heritage management, liberal studies, business, journalism, and cross-cultural work.",
+            "The programme equips students with analytical tools and marketable skills to engage with a multicultural, globalized world.",
+            "Former students emphasize that anthropology provides the mindset and capability to understand and effectively engage with people from different backgrounds.",
+            "Graduates have pursued roles in education, research, NGOs, government, and the private sector."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a scenic and vibrant learning environment.",
+            "Students are part of a unique college system that fosters community and holistic development.",
+            "The university provides extensive library resources, research centres, and cultural facilities.",
+            "Anthropology students benefit from fieldwork opportunities and summer field trips organized by the department."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "Admission is based on HKDSE results (Best 5 subjects). No interview is required.",
+            "2025 statistics: Band A applications 121, offers 19, Band A offer rate ~15.7%.",
+            "Median admission score: 24, LQ: 23, UQ: 24.5.",
+            "Applicants should aim for strong results in Chinese and at least one elective (median admitted profile: Chinese 5*, Elective 1 5*).",
+            "The programme attracts students from both Arts and Science backgrounds."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Gordon Mathews (麥高登) – Professor of Anthropology at CUHK, author of 'Ghetto at the Center of the World', expert on Hong Kong social issues.",
+            "Joseph Bosco (白思和) – Former CUHK Anthropology professor, known for research on Chinese society, religion, and economic anthropology.",
+            "Tan Chee-Beng (陳志明) – Distinguished anthropologist, former chair of CUHK Anthropology, expert on Chinese diaspora and ethnic relations.",
+            "Siumi Maria Tam (譚少薇) – Professor at CUHK Anthropology, research on gender, migration, and Hong Kong culture.",
+            "Tracey L.-D. Lu (呂烈丹) – Professor at CUHK Anthropology, specialist in Chinese archaeology and heritage studies.",
+            "Faculty have published extensively in top anthropology journals and led major research projects in Hong Kong and Asia."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "Scholarships may cover tuition fees and living expenses for outstanding students.",
+            "Financial aid schemes are available for students with financial needs.",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Anthropology Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Understand the Score Formula**",
+            "",
+            "- JS4006 uses Best 5 subjects. Median 24, LQ 23, UQ 24.5. Aim for at least 24 points.",
+            "- Chinese and one elective carry significant weight (median profile: Chinese 5*, Elective 1 5*).",
+            "",
+            "**2. Prioritize Chinese Language**",
+            "",
+            "- The median admitted student scored 5* in Chinese. A strong Chinese result is crucial.",
+            "- Practice essay writing and classical Chinese to boost your grade.",
+            "",
+            "**3. Excel in at Least One Elective**",
+            "",
+            "- The median profile shows Elective 1 at 5*. Choose an elective you are passionate about and aim high.",
+            "- History, Geography, or Liberal Studies can complement anthropology.",
+            "",
+            "**4. Maintain Solid English and Math**",
+            "",
+            "- English Level 3 is required, but median admitted scored 3. Math Level 2 minimum, median 3.",
+            "- Don't neglect these; they contribute to your total score.",
+            "",
+            "**5. Use CSD as a Baseline**",
+            "",
+            "- Citizenship and Social Development only requires 'Attained'. It does not affect your score calculation.",
+            "- Focus your energy on the five counted subjects.",
+            "",
+            "**6. Consider Applied Learning Courses**",
+            "",
+            "- CUHK accepts specific ApL courses with 'Attained with Distinction I/II' as an extra elective.",
+            "- This can boost your score if you have a relevant ApL background.",
+            "",
+            "**7. Apply in Band A**",
+            "",
+            "- In 2025, all 19 offers went to Band A applicants. Band A application is essential.",
+            "- Band A offer rate ~15.7%, so your HKDSE results must be competitive.",
+            "",
+            "**8. Prepare for No Interview**",
+            "",
+            "- There is no interview. Your entire application rests on your HKDSE scores.",
+            "- Ensure your school reference and personal statement (if any) are strong, but scores are key.",
+            "",
+            "**9. Research the Programme Thoroughly**",
+            "",
+            "- Visit the programme website: http://www.cuhk.edu.hk/ant/undergr.htm",
+            "- Understand the curriculum, fieldwork opportunities, and career paths to articulate your interest in your application."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（JUPAS JS4006）",
+          "content": [
+            "課程：人類學（JS4006）",
+            "首年學額：18",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：24",
+            "下四分位數：23",
+            "上四分位數：24.5",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：5*",
+            "英國語文：3",
+            "數學必修部分：3",
+            "公民與社會發展：達標（A）",
+            "選修科目1：5*",
+            "選修科目2：4",
+            "",
+            "一般入學要求：",
+            "核心科目：中國語文第3級、英國語文第3級、數學必修部分第2級、公民與社會發展達標。",
+            "選修科目：任何2科第3級（可包括數學延伸部分M1/M2或其他語言科目）。",
+            "應用學習課程取得「達標並表現優異I/II」可作為額外選修科。",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：121",
+            "Band A錄取人數：19",
+            "總申請人數：1526",
+            "Band A錄取率：約15.7%",
+            "Band A每學額申請人數：約6.4"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "人類學課程專注於社會文化人類學及考古學，涵蓋理論、方法論、香港、亞洲及世界的民族誌，以及當代社會議題。",
+            "學生參與田野調查、實習、暑期實地考察及畢業專題研究。",
+            "課程培養批判性思維、獨立研究及溝通能力。",
+            "由國際知名的人類學家授課，專長包括中國社會、移民及文化遺產。",
+            "課程在QS世界大學學科排名2023中位列全球第37位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "人類學畢業生可從事文化遺產管理、通識教育、商業、新聞及跨文化工作。",
+            "課程提供分析工具及市場技能，以應對多元文化及全球化的世界。",
+            "校友強調人類學提供理解及與不同背景人士有效互動的心態與能力。",
+            "畢業生於教育、研究、非政府組織、政府及私營機構任職。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，學習氛圍濃厚。",
+            "學生參與獨特的書院制度，促進社群及全人發展。",
+            "大學提供豐富的圖書館資源、研究中心及文化設施。",
+            "人類學學生可參與系方組織的田野調查及暑期實地考察。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及甄選",
+          "content": [
+            "入學基於HKDSE成績（最佳5科），無需面試。",
+            "2025年統計：Band A申請121人，錄取19人，Band A錄取率約15.7%。",
+            "中位數錄取分數：24，下四分位數：23，上四分位數：24.5。",
+            "申請人應在中文及至少一科選修科取得優異成績（中位數錄取者：中文5*，選修1 5*）。",
+            "課程吸引文科及理科背景的學生。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及教研成就",
+          "content": [
+            "麥高登（Gordon Mathews）– 香港中文大學人類學教授，著有《世界中心的貧民窟》，香港社會問題專家。",
+            "白思和（Joseph Bosco）– 前中大人類學教授，研究中國社會、宗教及經濟人類學。",
+            "陳志明（Tan Chee-Beng）– 著名人類學家，前中大人類學系主任，華人離散及族群關係專家。",
+            "譚少薇（Siumi Maria Tam）– 中大人類學教授，研究性別、移民及香港文化。",
+            "呂烈丹（Tracey L.-D. Lu）– 中大人類學教授，中國考古學及文化遺產研究專家。",
+            "教研人員在頂尖人類學期刊及書籍發表大量著作，並領導香港及亞洲的重大研究項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地JUPAS學生提供多項入學獎學金，根據學業成績頒發。",
+            "獎學金可涵蓋學費及生活費，給予優秀學生。",
+            "設有經濟援助計劃，幫助有需要的學生。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "大學亦參與政府專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的人類學入學策略 — 9個實用貼士",
+          "content": [
+            "**1. 了解計分方法**",
+            "",
+            "- JS4006採用最佳5科，中位數24，下四分位數23，上四分位數24.5。目標至少24分。",
+            "- 中文及一科選修科比重較高（中位數錄取者：中文5*，選修1 5*）。",
+            "",
+            "**2. 優先提升中文成績**",
+            "",
+            "- 中位數錄取者中文達5*，中文成績至關重要。",
+            "- 多練習作文及文言文，提升等級。",
+            "",
+            "**3. 在選修科取得佳績**",
+            "",
+            "- 中位數錄取者選修1達5*。選擇有興趣的選修科，力爭高分。",
+            "- 歷史、地理或通識教育有助銜接人類學。",
+            "",
+            "**4. 保持英文及數學水平**",
+            "",
+            "- 英文要求第3級，中位數錄取者為3。數學最低第2級，中位數為3。",
+            "- 不要忽略這些科目，它們影響總分。",
+            "",
+            "**5. 將公民科視為基本門檻**",
+            "",
+            "- 公民與社會發展只需「達標」，不計入分數。",
+            "- 集中精力於五個計分科目。",
+            "",
+            "**6. 考慮應用學習課程**",
+            "",
+            "- 中大接受特定應用學習課程取得「達標並表現優異I/II」作為額外選修科。",
+            "- 如有相關背景，可提升分數。",
+            "",
+            "**7. 於Band A申請**",
+            "",
+            "- 2025年所有19個錄取名額均來自Band A申請人。Band A申請至關重要。",
+            "- Band A錄取率約15.7%，HKDSE成績必須具競爭力。",
+            "",
+            "**8. 無需準備面試**",
+            "",
+            "- 課程不設面試，申請完全基於HKDSE成績。",
+            "- 確保學校推薦信及個人陳述（如有）有力，但成績是關鍵。",
+            "",
+            "**9. 深入了解課程**",
+            "",
+            "- 瀏覽課程網站：http://www.cuhk.edu.hk/ant/undergr.htm",
+            "- 了解課程內容、田野調查機會及就業出路，在申請中表達你的興趣。"
+          ]
+        }
+      }
+    },
+    "code": "JS4006",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 24,
+    "uq": 24.5,
+    "lq": 23,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 24.5
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 23
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Gordon Mathews",
+        "nameZh": "麥高登",
+        "achievement": "Professor of Anthropology at CUHK; author of 'Ghetto at the Center of the World' and expert on Hong Kong social issues.",
+        "sourceHint": "CUHK Department of Anthropology faculty page"
+      },
+      {
+        "nameEn": "Joseph Bosco",
+        "nameZh": "白思和",
+        "achievement": "Former CUHK Anthropology professor; known for research on Chinese society, religion, and economic anthropology.",
+        "sourceHint": "CUHK Department of Anthropology alumni/faculty records"
+      },
+      {
+        "nameEn": "Tan Chee-Beng",
+        "nameZh": "陳志明",
+        "achievement": "Distinguished anthropologist; former chair of CUHK Anthropology; expert on Chinese diaspora and ethnic relations.",
+        "sourceHint": "CUHK Department of Anthropology emeritus page"
+      },
+      {
+        "nameEn": "Siumi Maria Tam",
+        "nameZh": "譚少薇",
+        "achievement": "Professor at CUHK Anthropology; research on gender, migration, and Hong Kong culture.",
+        "sourceHint": "CUHK Department of Anthropology faculty page"
+      },
+      {
+        "nameEn": "Tracey L.-D. Lu",
+        "nameZh": "呂烈丹",
+        "achievement": "Professor at CUHK Anthropology; specialist in Chinese archaeology and heritage studies.",
+        "sourceHint": "CUHK Department of Anthropology faculty page"
+      }
+    ],
+    "facultyExcellence": [
+      "The programme is taught by internationally recognized anthropologists with expertise in Chinese society, migration, and cultural heritage.",
+      "Faculty have published extensively in top anthropology journals and books, and have led major research projects in Hong Kong and Asia."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Anthropology notable alumni",
+      "香港中文大學 人類學 著名校友",
+      "CUHK Anthropology graduates Hong Kong careers",
+      "CUHK Department of Anthropology faculty"
+    ]
+  }
+}

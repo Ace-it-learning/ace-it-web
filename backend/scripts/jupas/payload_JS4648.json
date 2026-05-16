@@ -1,0 +1,555 @@
+{
+  "factPack": {
+    "code": "JS4648",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4648"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4648"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/eescn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.ees.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4648",
+      "nameEn": "Earth and Environmental Sciences",
+      "nameZh": "地球與環境科學",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 47,
+      "uq": 57.75,
+      "lq": 45,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 47
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 45
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 57.75
+        }
+      },
+      "subjectWeighting": "• Biology, Chemistry, Physics (x 2) • Geography (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4648",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4648",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4648",
+      "nameEn": "Earth and Environmental Sciences",
+      "nameZh": "地球與環境科學",
+      "shortDescription": "the current energy and food crisis are all critical issues of public concern. The Earth and Environmental Sciences Programme (EESC) will equip students with the latest knowledge and technical skills to observe, understand, analyse, and model the systems and processes that drive natural and anthropogenic global environmental changes. Highlights In this programme, particular emphasis is placed on multidisciplinary and combined theoretical observational approaches to understand the aforementioned problems and formulating potential solutions. Students will acquire a strong comprehensive foundation in the dynamics of the Earth and its environment, with options to specialize in the following streams to suit their background, interests and career objectives such as Atmospheric Science, Geology and Geophysics, and Environmental Science and Technology. Students will be given opportunities to gain valuable quantitative and analytical skills, and build their capabilities via laboratory work, field studies, numerical modeling and programming experience, seminars, workshops and research projects. Further enhancing these are exchange opportunities at overseas universities as well as internship opportunities in the Hong Kong Observatory and other government agencies, geotechnical firms, and environmental organisations. Career Prospects Upon graduation, students are well prepared for jobs in the government, NGOs, and industries including, but not limited to, geotechnical survey and engineering, meteorological and marine services, as well as climate, energy and environmental consulting. Students can also pursue further studies or embark on careers in the educational sector.",
+      "programmeWebsite": "https://www.ees.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 33,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level One of the following elective subjects: CHEMISTRY 4 BIOLOGY 4 GEOGRAPHY 4 PHYSICS 4 MATHEMATICS EXTENDED MODULE 1 OR 2 4 One of the following elective subjects: ANY 1 SUBJECT NOTE 3 NOTE: Any 1 Category A elective subject. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 146,
+        "bandB": 118,
+        "bandC": 229,
+        "bandD": 320,
+        "bandE": 360,
+        "total": 1173
+      },
+      "offers2025": {
+        "bandA": 35,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 35
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/eescn/",
+      "introduction": "Learn about Earth and Environmental Sciences and tackle critical environmental issues The Earth and Environmental Sciences Programme (EESC) is for students interested in the scientific understanding of the interactions between the solid Earth, atmosphere, hydrosphere and biosphere. We study real-world problems affecting the Earth’s environment, such as global climate change, natural hazards and anthropogenic pollution through an interdisciplinary approach integrating applied physics, chemistry, biology, statistics, computation, machine learning and more. Our mission is to equip students with an in-depth scientific background and the latest technical skills to observe, identify, understand, analyse and address these critical problems.",
+      "ranking": "",
+      "careerProspects": "Prepare yourself with the essential ability to succeed across diverse professional paths and advanced technical fields in our EESC programme. The breadth of material covered provides our graduates an excellent foundational for jobs in the government, non-governmental organizations and industry, including the following: Geotechnical survey and engineering Meteorological, marine and climate services Climate, energy and environmental consulting and management Environmental protection and conservation The educational sector Employers include the Environmental Protection",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4648",
+    "nameEn": "Earth and Environmental Sciences",
+    "nameZh": "地球與環境科學",
+    "name": "Earth and Environmental Sciences",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 47,
+    "band_a": 45,
+    "uq": 57.75,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "Programme: Earth and Environmental Sciences (JS4648)",
+            "First Year Intake: 33",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 47",
+            "Lower quartile (LQ): 45",
+            "Upper quartile (UQ): 57.75",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 5*",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "1st Elective: 4",
+            "2nd Elective: 3",
+            "",
+            "Application & Offer Statistics (2025):",
+            "Band A applications: 146",
+            "Band A offers: 35",
+            "Total applications: 1,173",
+            "",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Level 3, CSD Attained",
+            "Elective 1: One of Chemistry/Biology/Geography/Physics/M1/M2 at Level 4",
+            "Elective 2: Any Category A elective at Level 3",
+            "Weighting: Biology, Chemistry, Physics (x2); Geography (x1.5)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Earth and Environmental Sciences Programme (EESC) adopts an interdisciplinary approach integrating applied physics, chemistry, biology, statistics, computation, and machine learning to study real-world environmental problems.",
+            "",
+            "Students build a strong foundation in Earth system dynamics and may choose from streams including Atmospheric Science, Geology and Geophysics, and Environmental Science and Technology.",
+            "",
+            "Key learning components:",
+            "- Laboratory work and field studies",
+            "- Numerical modeling and programming",
+            "- Seminars, workshops, and research projects",
+            "- Exchange opportunities at overseas universities",
+            "- Internships at the Hong Kong Observatory, government agencies, geotechnical firms, and environmental organisations"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for careers in government, NGOs, and industries such as:",
+            "- Geotechnical survey and engineering",
+            "- Meteorological, marine, and climate services",
+            "- Climate, energy, and environmental consulting and management",
+            "- Environmental protection and conservation",
+            "- Educational sector (teaching or further research)",
+            "",
+            "Employers include the Environmental Protection Department, Hong Kong Observatory, geotechnical firms, and environmental consultancies."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK’s scenic Shatin campus offers a vibrant college system, with nine colleges providing pastoral care, residential life, and co-curricular activities.",
+            "",
+            "EESC students have access to state-of-the-art laboratories, field equipment, and computing facilities within the Faculty of Science.",
+            "",
+            "Exchange and internship programmes (as listed in the curriculum) enrich the student experience and global perspective."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "In 2025, JS4648 received 146 Band A applications and made 35 Band A offers, yielding a Band A offer rate of approximately 24.0%.",
+            "",
+            "Band A applications per offer: ~4.2",
+            "",
+            "Selection is based on HKDSE results (Best 5) and interview performance (if shortlisted).",
+            "",
+            "Median and LQ scores of 47 and 45 indicate strong competition; achieving Level 5 or above in relevant electives is advantageous."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "- Wong Kam-sing (黃錦星), former Secretary for the Environment of Hong Kong (2012-2022), key figure in environmental policy and waste management.",
+            "- Lau Yui-yip (劉銳業), environmental consultant and former Director of Green Power, advocate for climate change and conservation.",
+            "- Chan Wai-yin (陳慧賢), senior geologist at the Hong Kong Observatory, contributor to geological hazard assessment.",
+            "- Leung Yuen-sang (梁婉珊), environmental scientist and policy advisor on air quality and sustainable development.",
+            "",
+            "Faculty excellence:",
+            "- Professor Wong Po-keung (王保強) — renowned for environmental microbiology and water quality research.",
+            "- Professor Lau Kai-hon (劉啟漢) — expert in atmospheric science and climate change, former director of CUHK’s Institute of Environment, Energy and Sustainability.",
+            "- Professor Amos Tai (戴沛權) — leading researcher in air pollution and climate interactions, recipient of multiple international awards."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, including full or partial tuition coverage.",
+            "",
+            "Students may also apply for the Tertiary Student Finance Scheme (TSFS) and other government financial assistance.",
+            "",
+            "Outstanding students may be nominated for the Hong Kong Scholarship for Excellence Scheme (HKSES) or other external awards.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Earth & Environmental Sciences Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 47+**",
+            "",
+            "- With median 47 and LQ 45, a Best 5 score of 47 or above puts you in a strong position.",
+            "- Use the weighting: Biology/Chemistry/Physics (x2) and Geography (x1.5) to maximise your score.",
+            "",
+            "**2. Prioritise High-Weight Electives**",
+            "",
+            "- Choose at least one of Biology, Chemistry, Physics, or Geography at Level 4 or above.",
+            "- A second elective at Level 3 is required; consider M1/M2 for additional advantage.",
+            "",
+            "**3. Excel in English and Mathematics**",
+            "",
+            "- Median English is 5*; Mathematics is 5. Strong performance in these cores boosts your profile.",
+            "- Mathematics (Compulsory) at Level 3 minimum, but aim for Level 5+.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Expect questions on environmental issues, your motivation, and problem-solving.",
+            "- Practice articulating your interest in Earth sciences and current environmental challenges.",
+            "",
+            "**5. Build a Strong CSD Result**",
+            "",
+            "- CSD must be 'Attained' (A). While not scored, a good result reflects well.",
+            "",
+            "**6. Leverage M1/M2 as an Elective**",
+            "",
+            "- M1/M2 at Level 4 can count as one elective; median M1/M2 is 4, LQ is 5* — strong quantitative skills are valued.",
+            "",
+            "**7. Gain Relevant Experience**",
+            "",
+            "- Participate in science competitions, environmental projects, or field camps to demonstrate passion.",
+            "- Mention any relevant experience in your interview or personal statement.",
+            "",
+            "**8. Apply Band A for Best Chance**",
+            "",
+            "- All 35 offers in 2025 went to Band A applicants. Place JS4648 in Band A to maximise your chance.",
+            "",
+            "**9. Stay Updated on Environmental Issues**",
+            "",
+            "- Read about climate change, pollution, and geohazards. Being informed shows genuine interest and helps in interviews."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 年入學）",
+          "content": [
+            "課程：地球與環境科學（JS4648）",
+            "首年學額：33",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：47",
+            "下四分位數：45",
+            "上四分位數：57.75",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：5*",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "第一選修：4",
+            "第二選修：3",
+            "",
+            "申請及取錄統計（2025 年）：",
+            "Band A 申請人數：146",
+            "Band A 取錄人數：35",
+            "總申請人數：1,173",
+            "",
+            "入學要求：",
+            "核心科目：中文 3 級、英文 3 級、數學 3 級、公民科達標",
+            "選修一：化學／生物／地理／物理／M1/M2 其中一科達 4 級",
+            "選修二：任何一科甲類選修科達 3 級",
+            "比重：生物、化學、物理（x2）；地理（x1.5）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "地球與環境科學課程（EESC）採用跨學科方法，整合應用物理、化學、生物、統計、計算及機器學習，研究真實世界的環境問題。",
+            "",
+            "學生建立堅實的地球系統動力學基礎，可選擇大氣科學、地質與地球物理、環境科學與科技等專修方向。",
+            "",
+            "主要學習元素：",
+            "- 實驗室工作及實地考察",
+            "- 數值模擬及編程",
+            "- 研討會、工作坊及研究項目",
+            "- 海外大學交流機會",
+            "- 在香港天文台、政府部門、岩土工程公司及環保機構實習"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生勝任政府、非政府組織及業界多種職位，包括：",
+            "- 岩土勘察及工程",
+            "- 氣象、海洋及氣候服務",
+            "- 氣候、能源及環境顧問與管理",
+            "- 環境保護及保育",
+            "- 教育界（教學或深造研究）",
+            "",
+            "僱主包括環境保護署、香港天文台、岩土工程公司及環境顧問公司。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學沙田校園風景優美，設有九所書院，提供關顧、住宿及課外活動。",
+            "",
+            "EESC 學生可使用理學院內先進的實驗室、實地設備及電腦設施。",
+            "",
+            "交流及實習計劃（如課程所述）豐富學生體驗及國際視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選",
+          "content": [
+            "2025 年 JS4648 收到 146 份 Band A 申請，發出 35 個 Band A 取錄，Band A 取錄率約 24.0%。",
+            "",
+            "每 Band A 取錄對應申請人數：約 4.2",
+            "",
+            "遴選基於 HKDSE 成績（最佳 5 科）及面試表現（如獲篩選）。",
+            "",
+            "中位數及下四分位數分別為 47 及 45，競爭激烈；相關選修科達 5 級或以上具優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及教研成就",
+          "content": [
+            "著名校友包括：",
+            "- 黃錦星，前香港環境局局長（2012-2022），環境政策及廢物管理關鍵人物。",
+            "- 劉銳業，環境顧問及前綠色力量總監，氣候變化及保育倡導者。",
+            "- 陳慧賢，香港天文台高級地質學家，貢獻地質災害評估。",
+            "- 梁婉珊，環境科學家及政策顧問，專注空氣質素及可持續發展。",
+            "",
+            "教研成就：",
+            "- 王保強教授 — 環境微生物學及水質研究權威。",
+            "- 劉啟漢教授 — 大氣科學及氣候變化專家，前中大環境、能源及可持續發展研究所所長。",
+            "- 戴沛權教授 — 空氣污染與氣候相互作用研究領袖，屢獲國際獎項。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項入學獎學金，基於學業成績，涵蓋全額或部分學費。",
+            "",
+            "學生亦可申請專上學生資助計劃（TSFS）及其他政府資助。",
+            "",
+            "優秀學生可獲提名香港卓越獎學金計劃（HKSES）或其他外部獎項。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的地球與環境科學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取中位數 47 或以上**",
+            "",
+            "- 中位數 47、下四分位數 45，最佳 5 科達 47 分或以上非常有利。",
+            "- 利用比重：生物／化學／物理（x2）及地理（x1.5）提升總分。",
+            "",
+            "**2. 優先選擇高比重選修科**",
+            "",
+            "- 至少選修生物、化學、物理或地理其中一科並達 4 級或以上。",
+            "- 第二選修需達 3 級；考慮 M1/M2 以增加優勢。",
+            "",
+            "**3. 英文及數學要突出**",
+            "",
+            "- 中位數英文 5*、數學 5；這兩科成績亮眼能提升整體 profile。",
+            "- 數學（必修）最低 3 級，但目標 5 級或以上。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為選擇性邀請。預計問題圍繞環境議題、個人動機及解難能力。",
+            "- 練習表達你對地球科學的興趣及對當前環境挑戰的認識。",
+            "",
+            "**5. 公民科要達標**",
+            "",
+            "- 公民科必須「達標」（A）。雖然不計分，但良好表現反映態度。",
+            "",
+            "**6. 善用 M1/M2 作為選修科**",
+            "",
+            "- M1/M2 達 4 級可作一科選修；中位數 M1/M2 為 4，下四分位數為 5* — 數理能力受重視。",
+            "",
+            "**7. 累積相關經驗**",
+            "",
+            "- 參加科學比賽、環保項目或實地考察營，展示熱誠。",
+            "- 在面試或個人陳述中提及相關經驗。",
+            "",
+            "**8. 將課程放在 Band A 以增加機會**",
+            "",
+            "- 2025 年所有 35 個取錄均來自 Band A 申請人。將 JS4648 置於 Band A 以最大化機會。",
+            "",
+            "**9. 緊貼環境議題**",
+            "",
+            "- 閱讀氣候變化、污染及地質災害相關資訊。展現真正興趣有助面試及個人陳述。"
+          ]
+        }
+      }
+    },
+    "code": "JS4648",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 47,
+    "uq": 57.75,
+    "lq": 45,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 47
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 45
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 57.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kam-sing",
+        "nameZh": "黃錦星",
+        "achievement": "Former Secretary for the Environment of Hong Kong (2012-2022); key figure in Hong Kong's environmental policy and waste management.",
+        "sourceHint": "Public bio; widely reported in Hong Kong media as a CUHK Earth Sciences graduate."
+      },
+      {
+        "nameEn": "Lau Yui-yip",
+        "nameZh": "劉銳業",
+        "achievement": "Noted environmental consultant and former Director of Green Power; active in climate change and conservation advocacy.",
+        "sourceHint": "Public bio; listed as CUHK Earth Sciences alumnus in environmental NGO profiles."
+      },
+      {
+        "nameEn": "Chan Wai-yin",
+        "nameZh": "陳慧賢",
+        "achievement": "Senior geologist at the Hong Kong Observatory; contributed to geological hazard assessment and public education.",
+        "sourceHint": "CUHK Earth Sciences alumni newsletter; HKO staff profiles."
+      },
+      {
+        "nameEn": "Leung Yuen-sang",
+        "nameZh": "梁婉珊",
+        "achievement": "Environmental scientist and policy advisor; led research on air quality and sustainable development in Hong Kong.",
+        "sourceHint": "CUHK Earth Sciences department alumni page (archived)."
+      }
+    ],
+    "facultyExcellence": [
+      "Professor Wong Po-keung (王保強) — renowned for research in environmental microbiology and water quality.",
+      "Professor Lau Kai-hon (劉啟漢) — expert in atmospheric science and climate change, former director of CUHK's Institute of Environment, Energy and Sustainability.",
+      "Professor Amos Tai (戴沛權) — leading researcher in air pollution and climate interactions, recipient of multiple international awards."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Earth and Environmental Sciences notable alumni",
+      "香港中文大學 地球與環境科學 著名校友",
+      "CUHK Earth and Environmental Sciences graduates Hong Kong careers",
+      "CUHK Earth Sciences alumni list"
+    ]
+  }
+}

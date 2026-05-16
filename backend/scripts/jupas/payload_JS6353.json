@@ -1,0 +1,487 @@
+{
+  "factPack": {
+    "code": "JS6353",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6353"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.civil.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6353",
+      "nameEn": "Bachelor of Engineering in Civil Engineering (existing)",
+      "nameZh": "工學學士(土木工程)",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 28,
+      "uq": 29,
+      "lq": 27
+    },
+    "jupas": {
+      "code": "JS6353",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6353",
+      "nameEn": "Bachelor of Engineering in Civil Engineering",
+      "nameZh": "",
+      "shortDescription": "the benefit of humankind. Civil Engineers are responsible for the design, construction, and management of our infrastructure and built environment, ensuring that our buildings, roads, railways, bridges, slopes, dams, and tunnels, are safe and sustainable. They also oversee stormwater drainage systems to prevent flooding, collect and properly treat wastewater to protect the environment, and ensure that all infrastructure components function in a safe, effective, and sustainable manner. Our programme aims to equip students with a solid foundation in the modern civil engineering profession through five core areas: Structural Engineering, Geotechnical Engineering, Environmental Engineering, Transportation Engineering, and Infrastructure Construction Management. Contemporary technologies such as building information modeling, modular integrated construction, advanced building materials, and artificial intelligence are incorporated into the curriculum, enabling graduates to offer innovative solutions to practical problems through planning, design, construction, management, and control. Our programme emphasizes active learning, capstone experiences, hands-on activities, internships, exchange and research-based studies. These opportunities allow students to develop lifelong learning skills that will help them excel in their careers as competent Civil Engineers.",
+      "programmeWebsite": "https://www.civil.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 313,
+        "bandB": 192,
+        "bandC": 303,
+        "bandD": 310,
+        "bandE": 294,
+        "total": 1412
+      },
+      "offers2025": {
+        "bandA": 70,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 70
+      },
+      "facultyPhone": "+852 3917 2286"
+    },
+    "admissionsSnippet": "Department of Civil Engineering, HKU | &nbsp; &nbsp; | HKU | Faculty of Engineering | Student Intranet | Project Mingde | Related Sites | About Our Missions Welcome Message Contact Us People Civil People Home Academic Staff Honorary &amp; Adjunct Staffs Administrative Staff Teaching &amp; Research Staff Technical Staff &amp; Lab Contact MPhil/PhD Students Post-docs Research Staff Expertise Facilities Research Centres Research Projects Prospective Student Undergraduate Programmes Postgraduate Programmes Studying Here Services --> Current Student Undergraduate Programmes Postgraduate Programmes Student Intranet News and Events News Newsletter &amp; Brochure Events &amp; Seminars Job Openings --> &nbsp; Learn More &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; More &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; Click for more details &nbsp; &nbsp; &nbsp; More Project Mingde • Nurture students through experiential learning in real-life building projects • Provide education and infrastructure to impoverished areas in China and Southeast Asia Click to enter Project Mingde Title Since the establishment of the University of Hong Kong and the Faculty of Engineering in 1912, the Department of Civil Engineering has nurtured many brilliant leaders in the civil engineering discipline and made significant contributions to local and overseas communities. More Previous Next &nbsp; Home Portfolio 3 Students &nbsp;Undergraduate &nbsp;Taught Postgraduate &nbsp;Research Postgraduate BEng in Civil Engineering MSc programmes MSc(Eng) in Civil Engineering MSc(Eng) in Infrastructure Engineering and Management MPhil / PhD Research &nbsp;Staff Expertise &nbsp;Facilities &nbsp;Research Centres &nbsp;Research Projects Our diverse research encompasses: Construction Engineering &amp; Management Geotechnical Engineering Structural Engineering Transportation Engineering Water &amp; Environmental Engineering News &amp; Events &nbsp;News &nbsp;Newsletter &amp; Brochure &nbsp;Events &amp; Seminars &nbsp;Job Openings We host a variety of seminars, workshops, conferences and courses. Check out our latest news, events and seminars! &nbsp; Studying Here: Geotechnical Engineering &amp; Transportation Engineering Civil Engineering Programmes &nbsp; &nbsp; HK PhD Fellowship Scheme &nbsp; &nbsp; &nbsp; Civil Lab Tour Fung Tsoi Ying HKIE Scholarship Video 2025 &nbsp; &nbsp; Copyright &copy; 2020 Department of Civil Engineering, Faculty of Engineering, The University of Hong Kong. All Rights Reserved."
+  },
+  "programme": {
+    "code": "JS6353",
+    "nameEn": "Bachelor of Engineering in Civil Engineering (existing)",
+    "nameZh": "工學學士(土木工程)",
+    "name": "Bachelor of Engineering in Civil Engineering (existing)",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 28,
+    "band_a": 27,
+    "uq": 29,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements and Statistics",
+          "content": [
+            "**First Year Intake:** 327",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Chinese Language, Mathematics, Liberal Studies",
+            "- Elective: Any 2 elective subjects",
+            "",
+            "**Admission Formula:** Eng + Math + Best 3 Subjects",
+            "",
+            "**Interview:** Required (performance considered in admission decision)",
+            "",
+            "**2025 Admission Scores:**",
+            "- Median: 28 | LQ: 27 | UQ: 29",
+            "",
+            "**Note:** Meeting minimum requirements does not guarantee admission; selection is competitive based on overall profile."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The BEng in Civil Engineering programme provides a solid foundation in five core areas: Structural Engineering, Geotechnical Engineering, Environmental Engineering, Transportation Engineering, and Infrastructure Construction Management.",
+            "",
+            "**Year 1:** Foundational courses in mathematics, physics, engineering mechanics, and introduction to civil engineering.",
+            "",
+            "**Year 2:** Core subjects including structural analysis, fluid mechanics, geotechnical engineering, and construction materials.",
+            "",
+            "**Year 3:** Advanced courses in structural design, transportation engineering, environmental engineering, and project management.",
+            "",
+            "**Year 4:** Capstone design project, elective specialisations, and internship opportunities.",
+            "",
+            "**Unique Features:**",
+            "- Integration of contemporary technologies: Building Information Modeling (BIM), Modular Integrated Construction (MiC), advanced building materials, and artificial intelligence.",
+            "- Emphasis on active learning, hands-on activities, and research-based studies.",
+            "- Opportunities for exchange programmes and internships to develop lifelong learning skills.",
+            "- Project Mingde: experiential learning through real-life building projects in impoverished areas."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for professional careers in civil engineering and related fields.",
+            "",
+            "**Engineering and Design:**",
+            "- Structural engineer, geotechnical engineer, transportation engineer, environmental engineer",
+            "- Design and analysis of buildings, bridges, tunnels, and infrastructure",
+            "",
+            "**Construction and Project Management:**",
+            "- Construction manager, project coordinator, site engineer",
+            "- Overseeing construction projects, ensuring safety and quality",
+            "",
+            "**Government and Public Sector:**",
+            "- Civil engineer in government departments (e.g., Highways Department, Drainage Services Department)",
+            "- Policy development, infrastructure planning, and regulatory compliance",
+            "",
+            "**Consulting and Research:**",
+            "- Engineering consultant, research assistant, academic researcher",
+            "- Providing technical expertise and innovative solutions"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "HKU's main campus is located in Pokfulam, Hong Kong, offering a vibrant and historic learning environment.",
+            "",
+            "**Facilities:**",
+            "- State-of-the-art civil engineering laboratories for structural, geotechnical, environmental, and transportation testing.",
+            "- Computer labs with industry-standard software (e.g., BIM, finite element analysis).",
+            "- Library with extensive engineering resources and study spaces.",
+            "",
+            "**Student Life:**",
+            "- Active student societies and engineering clubs.",
+            "- Opportunities for internships, exchange programmes, and community service through Project Mingde.",
+            "- Sports facilities, cultural events, and student accommodation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Selection Factors",
+          "content": [
+            "The programme is highly competitive, with a strong applicant pool.",
+            "",
+            "**2025 Application Statistics:**",
+            "- Band A applicants: 313",
+            "- Total applicants: 1,412",
+            "- Band A offers: 70",
+            "- Band A offer rate: ~22.4%",
+            "",
+            "**Key Selection Factors:**",
+            "1. Academic performance (DSE scores, especially English, Mathematics, and best 3 subjects).",
+            "2. Interview performance (communication skills, motivation, problem-solving).",
+            "3. Other learning experiences (OEA) and achievements.",
+            "4. Personal statement and references.",
+            "",
+            "**Competition Level:** High – applicants are advised to achieve scores above the median (28) to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The Department of Civil Engineering at HKU has a long history of excellence since 1912.",
+            "",
+            "**Faculty:**",
+            "- World-renowned professors and researchers in structural, geotechnical, environmental, and transportation engineering.",
+            "- Active research centres covering construction engineering, geotechnical engineering, structural engineering, transportation, and water/environmental engineering.",
+            "",
+            "**Rankings:**",
+            "- HKU consistently ranks among the top universities globally in engineering and technology.",
+            "",
+            "**Notable Alumni:**",
+            "- Graduates have become leaders in the civil engineering profession in Hong Kong and overseas.",
+            "- Alumni contribute to major infrastructure projects and hold senior positions in government and industry."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "HKU offers a range of scholarships for outstanding students.",
+            "",
+            "**Entrance Scholarships:**",
+            "- Based on DSE results and overall profile.",
+            "- Examples: HKU Foundation Scholarships, Faculty of Engineering Scholarships.",
+            "",
+            "**Merit-Based Scholarships:**",
+            "- Awarded to students with exceptional academic performance during the programme.",
+            "",
+            "**Need-Based Financial Aid:**",
+            "- Government grants and loans, HKU bursaries.",
+            "",
+            "**External Scholarships:**",
+            "- Hong Kong Scholarship for Excellence Scheme, Sir Edward Youde Memorial Scholarships."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Civil Engineering Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "Focus on English and Mathematics as they are double-counted in the formula. Aim for Level 5 or above in both.",
+            "- Practice past papers and time management.",
+            "- Strengthen problem-solving skills in Mathematics.",
+            "",
+            "**2. Excel in Your Best 3 Electives**",
+            "",
+            "Choose electives that align with civil engineering, such as Physics, M1/M2, or Chemistry.",
+            "- High scores in relevant subjects demonstrate aptitude.",
+            "- Avoid spreading too thin; focus on depth.",
+            "",
+            "**3. Prepare Thoroughly for the Interview**",
+            "",
+            "The interview is a key factor. Show genuine interest in civil engineering and awareness of current infrastructure issues.",
+            "- Research common interview questions and practice responses.",
+            "- Discuss your motivation and any relevant experiences.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Other Learning Experiences (OEA) can set you apart. Include activities related to engineering, leadership, or community service.",
+            "- Participate in engineering competitions, workshops, or internships.",
+            "- Highlight teamwork and problem-solving in your OEA submission.",
+            "",
+            "**5. Aim for Scores Above the Median**",
+            "",
+            "With a median of 28, target 29 or higher to be competitive. Use the formula to calculate your expected score.",
+            "- Identify weak areas and improve them early.",
+            "- Consider retaking subjects if necessary.",
+            "",
+            "**6. Understand the Programme's Unique Features**",
+            "",
+            "Familiarise yourself with Project Mingde, BIM, MiC, and AI integration. Mention these in your application to show alignment.",
+            "- Show how your interests match the programme's strengths.",
+            "- Demonstrate awareness of industry trends.",
+            "",
+            "**7. Apply to Backup Programmes Strategically**",
+            "",
+            "Choose related programmes (e.g., other engineering disciplines) as backups. Ensure they have lower entry requirements.",
+            "- Consider programmes at other universities or HKU's Faculty of Engineering.",
+            "- Maintain a balanced list of choices.",
+            "",
+            "**8. Leverage School Resources**",
+            "",
+            "Seek guidance from teachers, career counsellors, and alumni. Attend information sessions and open days.",
+            "- Ask for feedback on your application materials.",
+            "- Use mock interviews to improve performance.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "Check the official JUPAS website and HKU's programme page for any updates on requirements or deadlines.",
+            "- Subscribe to newsletters or follow social media channels.",
+            "- Plan ahead to avoid last-minute stress."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計數據",
+          "content": [
+            "**首年學額：** 327",
+            "",
+            "**修讀年期：** 4年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**DSE科目要求：**",
+            "- 核心科目：英國語文、中國語文、數學、通識教育",
+            "- 選修科目：任何2個選修科目",
+            "",
+            "**入學計算公式：** 英國語文 + 數學 + 最佳3科",
+            "",
+            "**面試：** 需要（表現會納入取錄考慮）",
+            "",
+            "**2025年入學分數：**",
+            "- 中位數：28 | 下四分位數：27 | 上四分位數：29",
+            "",
+            "**備註：** 達到最低要求並不保證入學，遴選過程具競爭性，會綜合考慮整體表現。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "土木工程工學士課程提供五大核心領域的堅實基礎：結構工程、岩土工程、環境工程、交通工程及基建建造管理。",
+            "",
+            "**一年級：** 數學、物理、工程力學及土木工程導論等基礎課程。",
+            "",
+            "**二年級：** 結構分析、流體力學、岩土工程及建築材料等核心科目。",
+            "",
+            "**三年級：** 結構設計、交通工程、環境工程及項目管理等進階課程。",
+            "",
+            "**四年級：** 頂石設計項目、選修專題及實習機會。",
+            "",
+            "**課程特色：**",
+            "- 融入建築信息模擬（BIM）、組裝合成建築法（MiC）、先進建築材料及人工智能等當代科技。",
+            "- 強調主動學習、實踐活動及研究為本的學習。",
+            "- 提供交流計劃及實習機會，培養終身學習技能。",
+            "- 明德工程：透過真實建築項目在貧困地區進行體驗式學習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備勝任土木工程及相關領域專業工作的能力。",
+            "",
+            "**工程與設計：**",
+            "- 結構工程師、岩土工程師、交通工程師、環境工程師",
+            "- 建築物、橋樑、隧道及基礎設施的設計與分析",
+            "",
+            "**建造與項目管理：**",
+            "- 建造經理、項目統籌、地盤工程師",
+            "- 監督建造項目，確保安全與質量",
+            "",
+            "**政府與公共機構：**",
+            "- 政府部門（如路政署、渠務署）的土木工程師",
+            "- 政策制定、基建規劃及法規合規",
+            "",
+            "**顧問與研究：**",
+            "- 工程顧問、研究助理、學術研究員",
+            "- 提供專業技術及創新解決方案"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "香港大學主校園位於香港薄扶林，提供充滿活力且歷史悠久的學習環境。",
+            "",
+            "**設施：**",
+            "- 先進的土木工程實驗室，用於結構、岩土、環境及交通測試。",
+            "- 配備業界標準軟件（如BIM、有限元分析）的電腦實驗室。",
+            "- 圖書館擁有豐富的工程資源及自修空間。",
+            "",
+            "**學生生活：**",
+            "- 活躍的學生學會及工程學會。",
+            "- 實習、交流計劃及透過明德工程參與社區服務的機會。",
+            "- 體育設施、文化活動及學生宿舍。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與遴選因素",
+          "content": [
+            "本課程競爭激烈，申請人數眾多。",
+            "",
+            "**2025年申請統計：**",
+            "- Band A申請人數：313",
+            "- 總申請人數：1,412",
+            "- Band A取錄人數：70",
+            "- Band A取錄率：約22.4%",
+            "",
+            "**主要遴選因素：**",
+            "1. 學業成績（DSE分數，尤其英國語文、數學及最佳3科）。",
+            "2. 面試表現（溝通能力、動機、解難能力）。",
+            "3. 其他學習經歷（OEA）及成就。",
+            "4. 個人陳述及推薦信。",
+            "",
+            "**競爭程度：** 高 – 申請人應爭取高於中位數（28）的分數以增加競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "香港大學土木工程系自1912年成立以來，擁有悠久的卓越歷史。",
+            "",
+            "**教研團隊：**",
+            "- 世界知名的教授及研究人員，專注於結構、岩土、環境及交通工程。",
+            "- 活躍的研究中心涵蓋建造工程、岩土工程、結構工程、交通及水/環境工程。",
+            "",
+            "**排名：**",
+            "- 港大在工程及科技領域持續位居全球頂尖大學之列。",
+            "",
+            "**知名校友：**",
+            "- 畢業生已成為香港及海外土木工程專業的領袖。",
+            "- 校友參與重大基建項目，並在政府及業界擔任高層職位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及經濟援助",
+          "content": [
+            "港大為優秀學生提供多種獎學金。",
+            "",
+            "**入學獎學金：**",
+            "- 根據DSE成績及整體表現頒發。",
+            "- 例子：港大基金獎學金、工程學院獎學金。",
+            "",
+            "** merit-based 獎學金：**",
+            "- 頒予課程期間學業成績卓越的學生。",
+            "",
+            "** need-based 經濟援助：**",
+            "- 政府資助及貸款、港大助學金。",
+            "",
+            "**外部獎學金：**",
+            "- 香港卓越獎學金計劃、尤德爵士紀念基金獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的土木工程入學策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "專注英國語文及數學，因它們在公式中佔雙倍比重。目標取得5級或以上。",
+            "- 練習歷屆試題及時間管理。",
+            "- 加強數學的解難能力。",
+            "",
+            "**2. 在最佳3科選修科中表現出色**",
+            "",
+            "選擇與土木工程相關的選修科，如物理、M1/M2或化學。",
+            "- 相關科目高分顯示你的能力。",
+            "- 避免分散精力，專注深度。",
+            "",
+            "**3. 充分準備面試**",
+            "",
+            "面試是關鍵因素。展示對土木工程的真正興趣及對當前基建議題的認識。",
+            "- 研究常見面試問題並練習回答。",
+            "- 討論你的動機及相關經驗。",
+            "",
+            "**4. 建立強大的OEA檔案**",
+            "",
+            "其他學習經歷（OEA）能讓你脫穎而出。包括與工程、領導力或社區服務相關的活動。",
+            "- 參加工程比賽、工作坊或實習。",
+            "- 在OEA提交中突出團隊合作及解難能力。",
+            "",
+            "**5. 目標分數高於中位數**",
+            "",
+            "中位數為28，目標29或以上以增加競爭力。使用公式計算預期分數。",
+            "- 及早識別弱項並改進。",
+            "- 如有需要，考慮重考科目。",
+            "",
+            "**6. 了解課程的獨特之處**",
+            "",
+            "熟悉明德工程、BIM、MiC及人工智能整合。在申請中提及以展示契合度。",
+            "- 顯示你的興趣如何與課程優勢匹配。",
+            "- 展示對行業趨勢的認識。",
+            "",
+            "**7. 策略性地申請後備課程**",
+            "",
+            "選擇相關課程（如其他工程學科）作為後備。確保其入學要求較低。",
+            "- 考慮其他大學或港大工程學院的課程。",
+            "- 保持選擇清單的平衡。",
+            "",
+            "**8. 善用學校資源**",
+            "",
+            "尋求老師、升學輔導員及校友的指導。參加資訊講座及開放日。",
+            "- 就申請材料徵求意見。",
+            "- 利用模擬面試改善表現。",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "查閱官方JUPAS網站及港大課程頁面，了解要求或截止日期的任何變更。",
+            "- 訂閱通訊或關注社交媒體頻道。",
+            "- 提前規劃，避免最後關頭的壓力。"
+          ]
+        }
+      }
+    },
+    "code": "JS6353",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 28,
+    "uq": 29,
+    "lq": 27
+  }
+}

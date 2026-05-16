@@ -160,7 +160,7 @@ const MathRoadmapModal = ({ isOpen, onClose }) => {
             setLoading(true);
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             // NEW: Use unified Factory Model personalized endpoint
-            const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
+            const res = await fetch(`${API_URL}/api/quests/personalized?uid=${user.uid}&subject=maths`);
             if (res.ok) {
                 const data = await res.json();
                 setPlan(data);

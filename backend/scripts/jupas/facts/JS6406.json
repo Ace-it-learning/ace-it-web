@@ -1,0 +1,66 @@
+{
+  "code": "JS6406",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6406"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.law.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6406",
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "Bachelor of Laws",
+    "university": "香港大學",
+    "facultyZh": "法律學院",
+    "category": "law"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 35,
+    "uq": 36,
+    "lq": 35
+  },
+  "jupas": {
+    "code": "JS6406",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6406",
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.law.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 92,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 264,
+      "bandB": 108,
+      "bandC": 148,
+      "bandD": 238,
+      "bandE": 255,
+      "total": 1013
+    },
+    "offers2025": {
+      "bandA": 66,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 66
+    },
+    "facultyPhone": "+852 3917 2951"
+  },
+  "admissionsSnippet": "Home - Faculty of Law, The University of Hong Kong --> --> --> --> r --> T T T --> div class=\"social_icon\"> --> ☰ Menu --> About Us History Dean’s Message Centres and Institute Asian Institute of International Financial Law Centre for Comparative and Public Law Centre for Interdisciplinary Legal Studies Centre for Medical Ethics and Law Centre for Private Law Law and Technology Centre Philip K.H. Wong Centre for Chinese Law Job Openings Contact Us Our Building Law Anthem HKU Law at 50 Souvenirs Named Lecture Series (in alphabetical order) Des Voeux Chambers Cambridge-HKU Visiting Fellowship HKU-Boase Cohen &#038; Collins Criminal Law Lecture HKU-Temple Chambers Law Lecture Series Faculty Academic Staff Dean and Faculty Office Current Students Teaching Resources Academic Resources Support Center Calendar and Timetables Courses offered and Course Descriptions Student intranet Moodle Pathway Programmes Pathway Programme with King’s College London(KCL) Pathway Programme with the University of New South Wales (UNSW) Pathway Programme with the University of California, Berkeley (Berkeley Law) Joint Legal Education Programme with the Peter A. Allard School of Law at UBC Career Resources Centre Scholarships &#038; Prizes Summer Programmes Social Justice Summer Internship Summer Programmes in China Outgoing Exchange Programme Introduction Partner Universities Scholarships for Law Students Self-funding Visiting Student Scheme Application Forms Useful Information Contact Details Well-Being in Law Research Introduction Faculty Publications @ HKU Hub Faculty SSRN Faculty Grants Fellowship and Visiting Schemes HKU Law Outstanding Early Career Visiting Fellowship Scheme Visiting Scholars Scheme HKU ASEAN Academic Fellowship Scheme Libraries and Resources Resources Lui Che Woo Law Library Main Library Research Integrity Greater China Engagement Experiential Learning English 繁體中文 Events &#038; Media Events Press Releases Faculty in the News Faculty Newsletters HKU Law Video Archive Prospective Students Undergraduate Programmes Introduction LLB BBA (LAW) &#038;LLB BSocSc (Govt &#038; Laws) &#038; LLB BA &#038; LLB BSc &#038; LLB Frequently Asked Questions Undergraduate Prospectus HKU Information Day Postgraduate Programmes LLM / MCL EMBL Juris Doctor PCLL Dual Degree Programmes Double Master Degree Programme with Peking University HKU-PKU Dual Degree Programme in Law HKU-UCL Dual Degree Programme in Law JD/LLM Joint Degree Programme with University of Pennsylvania Joint Legal Education Programme with the Peter A. Allard School of Law at UBC LLB/MLaw Double Degree Programme with University of Zurich Research Programmes Introduction Major Research Area Guidelines and Forms for Current Students PhD MPhil SJD Research Postgraduate Students RPG Graduates Tuition Fees International Exchange Programmes International and Greater China Partnerships Incoming Exchange &#038; Visiting Programme Visiting and PRC Students Alumni HKU Law Alumni Association About the Association Constitution Activities and Events Law Mentorship Programme Annual Reports Membership, Fees &#038; Application Form HKU Law Alumni Charity Limited Memory Lane HKULAA Souvenirs Programme-based Alumni Groups HKU LLM(ADR) Alumni Association Contact Update Knowledge Exchange and Impact Introduction KE Awards Research Consultancies Media Enquiries KE Initiatives Continuing Legal Education The Honourable Andrew Li Online Exhibition Free Legal Advice Scheme Giving to HKU Law Featured News Free Legal Advice Scheme on HKU Campus for Tai Po Fire Incident more details Featured News 215th Congregation more details Featured News HKU Law Alumni Choir Concert \"Celebrating Love\" more details Featured News HKU Law 55th Anniversary Thanksgiving Dinner more details Featured News Faculty of Law Monthly e-Newsletter more details --> Latest News E-Newsletter --> view all Faculty News | APR 30, 2026 Introduction to HKU Law Series (XI) Professor Craig Purshouse Faculty News | APR 13, 2026 Congratulations to our alumni Faculty News | JAN 13, 2026 Congratulations to Colleagues Faculty News | DEC 13, 2025 HKU-PKU Annual Conference on Legal Studies 2025 Upcoming Events May 15 2026 --> CCL Talk: Breaking into the Space Sector: Law, Policy, and Emerging Opportunities 1:30 pm - 2:30 pm May 15 2026 --> CCL Talk : In Their Own Voices: An Examination of Substantive Justice on Satisfaction with the Police 12:00 pm - 1:00 pm view all events HKU Legal Scholarship Blog --> visit blog Faculty Publications at HKU Hub Faculty SSRN Hong Kong Law Journal Asian Institute of International Financial Law Philip K.H. Wong Centre for Chinese Law Centre for Comparative and Public Law Centre for Medical Ethics and Law Law & Technology Centre The Centre for Interdisciplinary Legal Studies Centre for Private Law --> --> 10/F, Cheng Yu Tung Tower, Centennial Campus, The University of Hong Kong, Pokfulam Road, Hong Kong Call (852) 3917-2951 Contact Us &copy; 2026 Faculty of Law, The University of Hong Kong. All rights reserved. Staff Area Staff News Sharing -->"
+}

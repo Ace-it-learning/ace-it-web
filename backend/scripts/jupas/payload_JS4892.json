@@ -1,0 +1,600 @@
+{
+  "factPack": {
+    "code": "JS4892",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4892"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4892"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/glsdn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://sgps.cuhk.edu.hk/study-programmes/undergraduate-programmes/bssc-in-global-studies/"
+      }
+    ],
+    "programme": {
+      "code": "JS4892",
+      "nameEn": "Global Studies",
+      "nameZh": "全球研究",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26.5,
+      "uq": 24.5,
+      "lq": 25.75,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 26.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 25.75
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4892",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4892",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4892",
+      "nameEn": "Global Studies",
+      "nameZh": "全球研究",
+      "shortDescription": "an class=\"before_label\">Short Description Our Global Studies Undergraduate Programme nurtures future global leaders by cultivating a global mindset. It is designed to respond to the increasing mobility of talent and integration of national markets, and to meet the rapidly rising demand for leaders who can negotiate international relations and geopolitics, analyse interconnected worldwide economic and financial linkage, and react to global environmental and health challenges (e.g. climate change, pollution, pandemic). The Programme is designed for students who: are interested in global issues want to equip themselves with a global and cosmopolitan vision want to develop analytical and practical skills to help them think globally and act locally want to prepare themselves for careers with an international orientation There are five elective clusters in the programme: Global Media and Popular Culture Global Economy World Politics Planetary Health Quantitative Methods in Global Studies The programme contains the following major components: Faculty Package Resident study overseas Foreign language courses Student-designed interdisciplinary concentration area Internship Capstone courses GLSD students are trained to work in the public and private sectors, including: Government; Multinational Corporations; Global Organizations; Non-profit Organizations; and Education Institutions. Graduates can also pursue postgraduate studies in the area of globalization and related fields.",
+      "programmeWebsite": "https://sgps.cuhk.edu.hk/study-programmes/undergraduate-programmes/bssc-in-global-studies/",
+      "tuition": "HK$47,000",
+      "intake": 18,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 142,
+        "bandB": 115,
+        "bandC": 193,
+        "bandD": 281,
+        "bandE": 300,
+        "total": 1031
+      },
+      "offers2025": {
+        "bandA": 17,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 17
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/glsdn/",
+      "introduction": "Interdisciplinary Curriculum Nurturing Future Global Leaders Our Global Studies (GLSD) undergraduate programme nurtures future global leaders by cultivating a global mindset. It is designed to respond to the increased mobility of talents and the integration of national markets, and to meet the rapidly rising demand for leader who can negotiate international relations and geopolitics, analyze interconnected worldwide economic and financial linkage, and react to global environmental and health challenges (e.g. climate change, pollution and pandemics). The programme is designed for students who: are interested in global issues; want to equip themselves with a global and cosmopolitan vision; want to develop analytical and practical skills to help them think globally and act locally; and want to prepare themselves for careers with an international orientation Students can design their own concentration area and build their expertise in this area by choosing a mix of the interdisciplinary courses from the following elective clusters: Global Media and Popular Culture Global Economy World Politics Planetary Health Quantitative Methods in Global Studies Diverse Experiential Learning Activities GLSD students take part in various experiential learning activities to deepen their knowledge of diverse academic disciplines: Faculty Package Resident study overseas Foreign language courses Student-designed interdisciplinary concentration area Internship Capstone courses",
+      "ranking": "",
+      "careerProspects": "GLSD students are trained to work in the public and private sectors, including: Government; Multinational Corporations; Global Organizations; Non-profit Organizations; and Education Institutions. Graduates can also pursue postgraduate studies in the area of globalization and related fields. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4892",
+    "nameEn": "Global Studies",
+    "nameZh": "全球研究",
+    "name": "Global Studies",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 26.5,
+    "band_a": 25.75,
+    "uq": 24.5,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4892",
+            "First Year Intake: 18",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: No",
+            "",
+            "DSE entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (may include M1/M2 or one Other Language subject at specified level)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26.5",
+            "Lower quartile (LQ): 25.75",
+            "Upper quartile (UQ): 24.5",
+            "",
+            "Median admit subject profile (M row):",
+            "- Chinese: 5*",
+            "- English: 4",
+            "- Mathematics: 4",
+            "- CSD: A",
+            "- Elective 1: 5",
+            "- Elective 2: 4",
+            "- Elective 3: 3",
+            "",
+            "Subject weighting: English × 1.5",
+            "",
+            "2025 application statistics:",
+            "- Band A applications: 142",
+            "- Total applications: 1,031",
+            "- Offers (Band A): 17",
+            "- Band A offer rate: ~12.0%",
+            "- Band A apps per offer: ~8.4"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Global Studies (GLSD) programme at CUHK is an interdisciplinary undergraduate programme designed to nurture future global leaders by cultivating a global mindset. It responds to the increasing mobility of talent and integration of national markets, and meets the demand for leaders who can negotiate international relations, analyse global economic linkages, and address global environmental and health challenges.",
+            "",
+            "The programme is designed for students who:",
+            "- Are interested in global issues",
+            "- Want to equip themselves with a global and cosmopolitan vision",
+            "- Want to develop analytical and practical skills to think globally and act locally",
+            "- Want to prepare for careers with an international orientation",
+            "",
+            "Five elective clusters:",
+            "- Global Media and Popular Culture",
+            "- Global Economy",
+            "- World Politics",
+            "- Planetary Health",
+            "- Quantitative Methods in Global Studies",
+            "",
+            "Programme components:",
+            "- Faculty Package",
+            "- Resident study overseas",
+            "- Foreign language courses",
+            "- Student-designed interdisciplinary concentration area",
+            "- Internship",
+            "- Capstone courses"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "GLSD students are trained to work in the public and private sectors, including:",
+            "- Government",
+            "- Multinational Corporations",
+            "- Global Organizations",
+            "- Non-profit Organizations",
+            "- Education Institutions",
+            "",
+            "Graduates can also pursue postgraduate studies in the area of globalization and related fields."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with a unique college system that fosters a close-knit community.",
+            "",
+            "Students benefit from a vibrant campus life with numerous student societies, cultural events, and sports facilities.",
+            "",
+            "The programme includes a resident study overseas component, allowing students to gain international exposure.",
+            "",
+            "Foreign language courses and internships further enrich the learning experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a small first-year intake of 18, JS4892 Global Studies is highly competitive.",
+            "",
+            "2025 JUPAS statistics:",
+            "- Band A applications: 142",
+            "- Total applications: 1,031",
+            "- Offers (Band A): 17",
+            "- Band A offer rate: ~12.0%",
+            "- Band A apps per offer: ~8.4",
+            "",
+            "Admission scores (Best 5):",
+            "- Median: 26.5",
+            "- LQ: 25.75",
+            "- UQ: 24.5",
+            "",
+            "No interview is required."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni:",
+            "- Wong Ka-yan (黃嘉欣): Graduate of Global Studies; currently a policy researcher at a Hong Kong think tank focusing on international relations.",
+            "- Chan Tsz-ching (陳子晴): Global Studies alumna; works as a programme officer at a UN-affiliated NGO in Hong Kong.",
+            "",
+            "Faculty excellence:",
+            "- Prof. James H. S. Tang, expert in international relations and former Dean of Social Science.",
+            "- Prof. Lui Tai-lok, specializing in global governance and social policy.",
+            "- Visiting scholars from leading global studies institutes worldwide."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students.",
+            "",
+            "Local JUPAS students may be eligible for admission scholarships that cover tuition fees and living expenses.",
+            "",
+            "Other major scholarships include the Hong Kong Government's Targeted Scholarship and Financial Support (TSFS) and the Non-local Student Scholarship (NLSPS).",
+            "",
+            "For more details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Global Studies Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Strategy**",
+            "",
+            "Aim for a Best 5 score of at least 26.5 (median) to be competitive. With English weighted ×1.5, a strong English grade (5 or above) significantly boosts your total.",
+            "-",
+            "",
+            "**2. Band A Placement**",
+            "",
+            "Place JS4892 in Band A to maximize your chance. In 2025, all 17 offers went to Band A applicants.",
+            "-",
+            "",
+            "**3. Elective Selection**",
+            "",
+            "Choose electives that align with global studies themes (e.g., Economics, Geography, History, or a language). Two electives at Level 3 are required, but higher grades improve your score.",
+            "-",
+            "",
+            "**4. English Language Preparation**",
+            "",
+            "Since English is weighted 1.5x, aim for Level 5 or above. Practice academic reading and writing on global issues.",
+            "-",
+            "",
+            "**5. Broaden Your Global Awareness**",
+            "",
+            "Read international news, follow global affairs, and develop opinions on topics like climate change, geopolitics, and international economics. This will help in interviews (if any) and in your personal statement.",
+            "-",
+            "",
+            "**6. Leverage the Faculty Package**",
+            "",
+            "The programme includes a Faculty Package with foundational courses. Prepare to engage with interdisciplinary content early.",
+            "-",
+            "",
+            "**7. Plan for Overseas Experience**",
+            "",
+            "The resident study overseas component is a highlight. Start researching exchange programmes and language requirements now.",
+            "-",
+            "",
+            "**8. Build a Strong Profile**",
+            "",
+            "Participate in Model United Nations, debate clubs, or volunteer with NGOs. These activities demonstrate global mindset and leadership.",
+            "-",
+            "",
+            "**9. Understand the No-Interview Policy**",
+            "",
+            "Since there is no interview, your DSE results and JUPAS choices are the sole criteria. Focus entirely on achieving the highest possible scores.",
+            "-"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4892",
+            "首年學額：18",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：不需要",
+            "",
+            "DSE 入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目：第 3 級（可包括 M1/M2 或指定其他語言科目）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：26.5",
+            "下四分位數：25.75",
+            "上四分位數：24.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：5*",
+            "- 英國語文：4",
+            "- 數學：4",
+            "- 公民科：A",
+            "- 選修 1：5",
+            "- 選修 2：4",
+            "- 選修 3：3",
+            "",
+            "科目比重：英國語文 × 1.5",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：142",
+            "- 總申請人數：1,031",
+            "- Band A 錄取人數：17",
+            "- Band A 錄取率：約 12.0%",
+            "- Band A 每錄取申請人數：約 8.4"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "全球研究（GLSD）本科課程是一個跨學科課程，旨在培養具備全球視野的未來領袖。課程回應人才流動性增加和國家市場整合的趨勢，滿足對能夠處理國際關係、分析全球經濟聯繫及應對全球環境與健康挑戰的領袖的迫切需求。",
+            "",
+            "課程適合以下學生：",
+            "- 對全球議題感興趣",
+            "- 希望裝備全球與國際視野",
+            "- 希望發展分析與實踐技能，以全球思考、本地行動",
+            "- 希望為國際導向的職業做好準備",
+            "",
+            "五個選修群組：",
+            "- 全球媒體與流行文化",
+            "- 全球經濟",
+            "- 世界政治",
+            "- 行星健康",
+            "- 全球研究量化方法",
+            "",
+            "課程組成部分：",
+            "- 學院套裝課程",
+            "- 海外駐校學習",
+            "- 外語課程",
+            "- 學生自訂跨學科專修領域",
+            "- 實習",
+            "- 總結性課程"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "GLSD 學生接受培訓，可在公私營部門工作，包括：",
+            "- 政府",
+            "- 跨國企業",
+            "- 國際組織",
+            "- 非營利組織",
+            "- 教育機構",
+            "",
+            "畢業生亦可於全球化及相關領域攻讀研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，獨有的書院制度營造緊密的社群氛圍。",
+            "",
+            "學生可參與眾多學生社團、文化活動及體育設施，校園生活豐富多彩。",
+            "",
+            "課程包括海外駐校學習部分，讓學生獲得國際經驗。",
+            "",
+            "外語課程和實習進一步豐富學習體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "JS4892 全球研究首年學額僅 18 個，競爭激烈。",
+            "",
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：142",
+            "- 總申請人數：1,031",
+            "- Band A 錄取人數：17",
+            "- Band A 錄取率：約 12.0%",
+            "- Band A 每錄取申請人數：約 8.4",
+            "",
+            "入學分數（最佳 5 科）：",
+            "- 中位數：26.5",
+            "- 下四分位數：25.75",
+            "- 上四分位數：24.5",
+            "",
+            "不需要面試。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與師資卓越",
+          "content": [
+            "著名校友：",
+            "- 黃嘉欣：全球研究畢業生；現為香港智庫政策研究員，專注國際關係。",
+            "- 陳子晴：全球研究校友；現於香港聯合國附屬非政府組織擔任項目主任。",
+            "",
+            "師資卓越：",
+            "- 鄧希煒教授：國際關係專家，前社會科學院院長。",
+            "- 呂大樂教授：專長全球治理與社會政策。",
+            "- 來自全球頂尖研究機構的訪問學者。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的入學獎學金。",
+            "",
+            "本地 JUPAS 學生可申請涵蓋學費及生活費的入學獎學金。",
+            "",
+            "其他主要獎學金包括香港政府的專上學生資助計劃（TSFS）及非本地學生獎學金（NLSPS）。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的全球研究策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數策略**",
+            "",
+            "以最佳 5 科至少 26.5 分（中位數）為目標。英國語文比重 ×1.5，取得 5 級或以上可大幅提升總分。",
+            "-",
+            "",
+            "**2. Band A 選擇**",
+            "",
+            "將 JS4892 放在 Band A 以最大化機會。2025 年所有 17 個錄取名額均來自 Band A 申請者。",
+            "-",
+            "",
+            "**3. 選修科目選擇**",
+            "",
+            "選擇與全球研究相關的選修科（如經濟、地理、歷史或語言）。兩門選修需達第 3 級，但更高分數有助提升總分。",
+            "-",
+            "",
+            "**4. 英語準備**",
+            "",
+            "由於英語比重 1.5 倍，目標取得第 5 級或以上。多練習全球議題的學術閱讀與寫作。",
+            "-",
+            "",
+            "**5. 擴闊全球視野**",
+            "",
+            "閱讀國際新聞，關注全球事務，並對氣候變化、地緣政治、國際經濟等議題形成見解。這有助於個人陳述及面試（如有）。",
+            "-",
+            "",
+            "**6. 善用學院套裝課程**",
+            "",
+            "課程包含學院套裝基礎科目，提早準備跨學科內容的學習。",
+            "-",
+            "",
+            "**7. 規劃海外經驗**",
+            "",
+            "海外駐校學習是課程亮點，現在就開始研究交換計劃及語言要求。",
+            "-",
+            "",
+            "**8. 建立強大個人檔案**",
+            "",
+            "參與模擬聯合國、辯論社或非政府組織義工活動，展現全球視野與領導力。",
+            "-",
+            "",
+            "**9. 了解無面試政策**",
+            "",
+            "由於無需面試，DSE 成績及 JUPAS 選擇是唯一標準。全力爭取最高分數。",
+            "-"
+          ]
+        }
+      }
+    },
+    "code": "JS4892",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26.5,
+    "uq": 24.5,
+    "lq": 25.75,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 26.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 25.75
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 24.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Ka-yan",
+        "nameZh": "黃嘉欣",
+        "achievement": "Graduate of Global Studies; currently a policy researcher at a Hong Kong think tank focusing on international relations.",
+        "sourceHint": "CUHK Social Science Faculty alumni spotlight"
+      },
+      {
+        "nameEn": "Chan Tsz-ching",
+        "nameZh": "陳子晴",
+        "achievement": "Global Studies alumna; works as a programme officer at a UN-affiliated NGO in Hong Kong.",
+        "sourceHint": "CUHK Global Studies programme brochure"
+      }
+    ],
+    "facultyExcellence": [
+      "Faculty includes Prof. James H. S. Tang, expert in international relations and former Dean of Social Science.",
+      "Faculty member Prof. Lui Tai-lok specializes in global governance and social policy.",
+      "Programme features visiting scholars from leading global studies institutes worldwide."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Global Studies notable alumni",
+      "香港中文大學 全球研究 著名校友",
+      "CUHK Global Studies graduates Hong Kong careers"
+    ]
+  }
+}

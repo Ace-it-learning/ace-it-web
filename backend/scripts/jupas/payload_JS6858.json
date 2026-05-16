@@ -1,0 +1,485 @@
+{
+  "factPack": {
+    "code": "JS6858",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6858"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.scifac.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6858",
+      "nameEn": "Bachelor of Science and Bachelor of Laws",
+      "nameZh": "理學士及法學士",
+      "university": "香港大學",
+      "facultyZh": "法律學院",
+      "category": "law"
+    },
+    "scores": {
+      "formula": "Best 6 Subjects",
+      "median": 54,
+      "uq": 56,
+      "lq": 50
+    },
+    "jupas": {
+      "code": "JS6858",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6858",
+      "nameEn": "Bachelor of Science and Bachelor of Laws",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The Programme: First of its kind in Hong Kong for students who intend to develop expertise in both science and law; Cultivates legal and scientific mindset for academic talents; Copes with the soaring demand of patent practitioners and legal professionals in the technology industry; Feeds into the development of STEM talents who are capable of handling a wide variety of innovation-related matters such as patent applications.",
+      "programmeWebsite": "https://www.scifac.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 47,
+        "bandB": 34,
+        "bandC": 75,
+        "bandD": 90,
+        "bandE": 90,
+        "total": 336
+      },
+      "offers2025": {
+        "bandA": 18,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 18
+      },
+      "facultyPhone": "+852 3917 2683"
+    },
+    "admissionsSnippet": "Faculty of Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content HKU Home Contact Us facebook Twitter Instagram Youtube Xiaohongshu Search search Staff Intranet About Us Dean's Message Faculty Vision Meet Our Mascot HKU Statistics Departments Faculty Members Faculty Management Team Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Faculty Office Staff Science Distinguished Visiting Scholars Scheme Facilities &amp; Infrastructure Strategic Moves, Quick Facts and Achievements Quick Facts &amp; Figures Awards and Achievements Emeritus Professors Souvenirs Photo Gallery Prospective Students Undergraduate Programme Science Core Programmes Why HKU Science? Rankings and Achievements Science Education Nowadays Special Features for Science curricula Excellence in Research Unique Facilities 6901 BSc Programme Features Intensive Majors Accreditations Articulation Pathways Young Scientist Scheme (YSS) What is YSS? Pathway of YSS World Class Research Experiences International Exchange, Visiting &amp; Summer Study Eligibility FAQ YSS Connect Participant List Activities Common Science Experience - Science Foundation Courses FAQ 6688 Science Master Class 6858 BSc&amp;LLB 6119 BEd&amp;BSc Programmes offered by Affiliated Schools School of Biomedical Engineering 6925 BEng(BME) School of Computing and Data Science 6224 BASc(AppliedAI) 6248 BASc(FinTech) 6729 BSc(ActuarSc) 6779 Statistical Decision Sciences 6999 Computing and Data Science School of Innovation 6602 BSc(I&amp;T) Young Scientist Scheme (YSS) Students' Life &amp; Experience Diverse Learning Experiences Minor in Science Entrepreneurship Admissions One-stop Platform for Science Undergraduate Admissions Admissions Requirements and Application Direct Admissions Scheme for Associate Degree and Higher Diploma Graduates Taught Postgraduate Programme Why HKU Science? Postgraduate Studies Planning MSc in the field of Applied Geosciences MSc in the field of Chemical Technologies for Health and Materials MSc in Environmental Management MSc in the field of Food Safety and Toxicology MSc in the field of Food Industry: Management and Marketing MSc in the field of Physics MSc in the field of Space Science MSc in Artificial Intelligence MSc in Integrative Marine Ecology and Conservation Programme offered by Affiliated Schools School of Computing and Data Science MSc in Computer Science Master of Data Science MSc in Electronic Commerce and Internet Computing MSc in Financial Technology and Data Analytics Master of Statistics School of Innovation MSc in Innovation and Technology Tips for new comers Research Postgraduate Programme Why HKU Science? Studying RPg at HKU Science Programme Information Master of Philosophy (MPhil) Doctor of Philosophy (PhD) Joint PhD Degree Programme with other University Joint Educational Placement for PhD between other Universities Stipend and Support Research Postgraduate Fellowship / Scholarship How to Apply? Research@HKU Science Departments Other Useful Resources Building a Research Career Hear from Our Students FAQ Current Students Undergraduate Programmes About the programmes BSc BSc Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BSc&amp;MRes BSc&amp;LLB BSc(ActuarSc) (For 2024-25 intake or before) BSc(ActuarSc) Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BASc(AppliedAI) (For 2024-25 intake or before) BASc BEd&amp;BSc Academic Matters Syllabuses (Majors, Minors &amp; Courses) Programme Learning Outcomes Academic Advising Academic Advising System of the University Academic Advising Office of the University Academic Advisers (AAs) for the First Year Students Course Selection Advisers (CSAs) Student Peer Advisers Responsibility of Student Other Assistances Leave of Absence Induction Day for BSc Freshmen Information Session for BSc(AC) Freshmen Consultation Session for BSc II &amp; BSc(AC) II and above Students Tips for Choosing Your Major Staff Handbook for UG Academic Advising (for internal access only)- Academic Advisory Office Induction Information for Freshmen Terminology, Major / Minor Declaration, Course Registration &amp; Capstone Requirement Course Registration Course Selection Procedures Workflow for Course Selection Important Dates for Course Selection Exercise Equivalency of HKDSE &amp; Other Qualifications- Course Selection Procedures Declaration of Major / Minor - BSc - BSc(Actuarial Science) Students Taking Double Majors, Major-Minor or Double Minors with Overlapping Course Requirements Capstone Requirement Syllabuses (Majors, Minors &amp; Courses) - Check Course Details - Check Science Major / Minor / Programme Structure - Check Capstone Requirements for Each Major / Programme - Past Syllabuses and Regulations Overlapping Course Requirements Assessment Grading System Examination Examination Timetables Announcement of Examination Results Absence from Examination Arrangement for Supplementary Examination Appeal on Examination Results Progression and Discontinuation Feedback Policy Academic Honesty Progression of Study Credit Accumulation &amp; Transfer Credit Unit Statement Advanced Standing, Credit Transfer &amp; Course Exemption Academic Conduct and Honesty University Regulations Dean's Honours List, Prizes &amp; Scholarships FAQs Forms (Science Online Application Submission System) Student Experiential Learning and Enrichment Opportunities Exchange Study Undergraduate Research Undergraduate Research Fellowship Programme (URFP) Application Details Application Form (URFP) Application Form (University Research Internship Awards) List of Participants Summer Research Fellowship (SRF) &amp; Overseas Research Fellowship (ORF) Schemes for Science Students Research Colloquium for Science Undergraduate Students Other Opportunities List of Experiential Learning Ambassadors and Student Sharing Young Scientist Scheme Useful Resources Handbooks Calendar &amp; Timetab"
+  },
+  "programme": {
+    "code": "JS6858",
+    "nameEn": "Bachelor of Science and Bachelor of Laws",
+    "nameZh": "理學士及法學士",
+    "name": "Bachelor of Science and Bachelor of Laws",
+    "university": "香港大學",
+    "faculty": "法律學院",
+    "median": 54,
+    "band_a": 50,
+    "uq": 56,
+    "category": "law"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:**",
+            "20",
+            "",
+            "**Duration:**",
+            "5 years",
+            "",
+            "**First Year Tuition:**",
+            "HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Formula: Best 6 Subjects",
+            "Median: 54 | LQ: 50 | UQ: 56",
+            "",
+            "**Programme Entrance Requirements:**",
+            "General Entrance Requirements of HKU.",
+            "",
+            "**Interview:**",
+            "Yes (may be required for shortlisted applicants)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "First of its kind in Hong Kong, this double-degree programme integrates scientific and legal education, preparing students for careers at the intersection of science and law.",
+            "",
+            "**Year 1–2:**",
+            "Foundation courses in both Science (e.g., biology, chemistry, physics, mathematics) and Law (e.g., legal system, constitutional law, criminal law).",
+            "",
+            "**Year 3–4:**",
+            "Advanced Science major(s) and Law core courses (e.g., contract, tort, property, commercial law).",
+            "",
+            "**Year 5:**",
+            "Capstone project or dissertation, elective courses, and professional training.",
+            "",
+            "**Unique Features:**",
+            "- Dual expertise in science and law",
+            "- Copes with soaring demand for patent practitioners and legal professionals in technology",
+            "- Feeds into STEM talent development for innovation-related matters (e.g., patent applications)",
+            "- Access to HKU's state-of-the-art labs and moot court facilities"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Legal & Regulatory:**",
+            "- Patent attorney / intellectual property lawyer",
+            "- Technology transfer officer",
+            "- Regulatory affairs specialist (e.g., pharmaceuticals, biotech)",
+            "",
+            "**Science & Research:**",
+            "- Research scientist in interdisciplinary fields",
+            "- Science policy advisor",
+            "- Forensic scientist",
+            "",
+            "**Business & Consulting:**",
+            "- Legal consultant for tech firms",
+            "- Compliance officer (data privacy, environmental law)",
+            "- Entrepreneur in science-based startups",
+            "",
+            "**Further Studies:**",
+            "- PCLL (Postgraduate Certificate in Laws) for legal practice",
+            "- Master's/PhD in science or law"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:**",
+            "Main campus of The University of Hong Kong, Pokfulam Road, Hong Kong.",
+            "",
+            "**Facilities:**",
+            "- Science laboratories (chemistry, biology, physics, computing)",
+            "- Moot court and law library",
+            "- Centennial Campus with modern learning spaces",
+            "",
+            "**Student Activities:**",
+            "- Science and Law societies",
+            "- Mooting competitions and science fairs",
+            "- Exchange programmes with partner universities worldwide"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** Very High",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "Band A applications: 47",
+            "Band A offers: 18",
+            "Band A offer rate: ~38.3%",
+            "Total applications: 336",
+            "",
+            "**Key Factors for Success:**",
+            "1. Strong DSE results in both Science and English subjects",
+            "2. Clear motivation for combining science and law",
+            "3. Interview performance (if shortlisted)",
+            "4. OEA (Other Experiences and Achievements) demonstrating relevant interests"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:**",
+            "HKU Faculty of Science and Faculty of Law are both world-renowned.",
+            "",
+            "**Rankings:**",
+            "HKU consistently ranks among the top universities globally in both Science and Law.",
+            "",
+            "**Labs & Facilities:**",
+            "Access to cutting-edge research labs in science and a dedicated law library.",
+            "",
+            "**Notable Alumni:**",
+            "Alumni of this programme have pursued careers as patent attorneys, legal consultants, and research scientists."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "Awarded based on academic merit (e.g., DSE results).",
+            "",
+            "**Faculty of Science Scholarships:**",
+            "Various scholarships for outstanding Science students.",
+            "",
+            "**Faculty of Law Scholarships:**",
+            "Scholarships for law students with excellent performance.",
+            "",
+            "**External Scholarships:**",
+            "Government and private scholarships available for interdisciplinary studies."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BSc&LLB Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the DSE Core Subjects**",
+            "",
+            "Focus on English, Mathematics, and Liberal Studies (or equivalent). Strong English is critical for law.",
+            "- Aim for Level 5** or above in English and Mathematics.",
+            "- Liberal Studies should be at least Level 5 to demonstrate analytical skills.",
+            "",
+            "**2. Excel in Science Electives**",
+            "",
+            "Choose at least two Science electives (e.g., Physics, Chemistry, Biology) and aim for Level 5* or above.",
+            "- Depth in science subjects shows readiness for the science component.",
+            "- Consider taking M1/M2 to strengthen quantitative skills.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "The interview may assess your motivation, critical thinking, and ability to link science and law.",
+            "- Practice discussing current issues in technology and law (e.g., AI regulation, patent disputes).",
+            "- Be ready to explain why you want to combine science and law.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Other Experiences and Achievements (OEA) can set you apart.",
+            "- Participate in science competitions, law-related activities (e.g., mock trial), or internships.",
+            "- Highlight leadership roles and community service.",
+            "",
+            "**5. Understand the Admission Formula**",
+            "",
+            "Scores are based on Best 6 Subjects. Plan your subject combination to maximize your score.",
+            "- Include both Science and non-Science subjects to show breadth.",
+            "- Use the median (54) and LQ (50) as benchmarks.",
+            "",
+            "**6. Apply for Backup Programmes**",
+            "",
+            "JS6858 is highly competitive. Consider related programmes as backups.",
+            "- JS6901 BSc (Science) as a strong science foundation.",
+            "- JS6406 LLB (Law) if you lean more towards law.",
+            "- JS6688 Science Master Class for a research-intensive science path.",
+            "",
+            "**7. Leverage HKU's Resources**",
+            "",
+            "Attend admission talks and open days to learn more about the programme.",
+            "- Contact the Faculty of Science or Faculty of Law for specific queries.",
+            "- Use the programme website (scifac.hku.hk) for updates.",
+            "",
+            "**8. Develop Time Management Skills**",
+            "",
+            "The 5-year double degree is demanding. Start building effective study habits early.",
+            "- Balance science labs and law readings.",
+            "- Use summer breaks for internships or research projects.",
+            "",
+            "**9. Stay Informed About Industry Trends**",
+            "",
+            "Understand the growing demand for science-law professionals.",
+            "- Follow developments in patent law, biotech regulation, and data privacy.",
+            "- Network with professionals through HKU alumni events."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：**",
+            "20",
+            "",
+            "**修讀年期：**",
+            "5年",
+            "",
+            "**首年學費：**",
+            "HK$47,000",
+            "",
+            "**2025年入學分數：**",
+            "計算公式：最佳6科",
+            "中位數：54 | 下四分位數：50 | 上四分位數：56",
+            "",
+            "**課程入學要求：**",
+            "符合香港大學一般入學要求。",
+            "",
+            "**面試：**",
+            "需要（可能適用於入圍申請人）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "此雙學位課程為香港首創，融合科學與法律教育，培養學生在科學與法律交匯領域的專業能力。",
+            "",
+            "**第一至二年：**",
+            "科學（如生物、化學、物理、數學）及法律（如法律制度、憲法、刑法）基礎課程。",
+            "",
+            "**第三至四年：**",
+            "進階科學主修及法律核心課程（如合約法、侵權法、財產法、商業法）。",
+            "",
+            "**第五年：**",
+            "專題研習或論文、選修課程及專業培訓。",
+            "",
+            "**獨特特色：**",
+            "- 同時掌握科學與法律專業知識",
+            "- 應對科技行業對專利從業員及法律專業人士的急增需求",
+            "- 培養能處理創新相關事務（如專利申請）的STEM人才",
+            "- 可使用港大先進實驗室及模擬法庭設施"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**法律及規管：**",
+            "- 專利律師 / 知識產權律師",
+            "- 技術轉移主任",
+            "- 規管事務專家（如製藥、生物科技）",
+            "",
+            "**科學及研究：**",
+            "- 跨學科研究科學家",
+            "- 科學政策顧問",
+            "- 法證科學家",
+            "",
+            "**商業及諮詢：**",
+            "- 科技公司法律顧問",
+            "- 合規主任（數據私隱、環境法）",
+            "- 科學相關初創企業家",
+            "",
+            "**進修途徑：**",
+            "- 法學專業證書（PCLL）以執業為律師",
+            "- 科學或法律碩士/博士課程"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：**",
+            "香港大學主校園，香港薄扶林道。",
+            "",
+            "**設施：**",
+            "- 科學實驗室（化學、生物、物理、電腦）",
+            "- 模擬法庭及法律圖書館",
+            "- 百周年校園配備現代化學習空間",
+            "",
+            "**學生活動：**",
+            "- 科學及法律學會",
+            "- 模擬法庭比賽及科學展覽",
+            "- 與全球夥伴大學的交流計劃"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**競爭程度：** 極高",
+            "",
+            "**2025年聯招統計：**",
+            "Band A申請人數：47",
+            "Band A取錄人數：18",
+            "Band A取錄率：約38.3%",
+            "總申請人數：336",
+            "",
+            "**成功關鍵因素：**",
+            "1. 在科學及英文科目取得優異DSE成績",
+            "2. 清晰表達結合科學與法律的動機",
+            "3. 面試表現（如獲篩選）",
+            "4. 其他經驗及成就（OEA）展現相關興趣"
+          ]
+        },
+        "alumni": {
+          "title": "校友及成就",
+          "content": [
+            "**學院卓越：**",
+            "港大理學院及法律學院均享譽全球。",
+            "",
+            "**排名：**",
+            "港大在科學及法律領域持續位列世界頂尖。",
+            "",
+            "**實驗室及設施：**",
+            "可使用尖端科學研究實驗室及專屬法律圖書館。",
+            "",
+            "**知名校友：**",
+            "本課程校友從事專利律師、法律顧問及研究科學家等職業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：**",
+            "根據學術成績（如DSE成績）頒發。",
+            "",
+            "**理學院獎學金：**",
+            "為優秀科學學生設有多項獎學金。",
+            "",
+            "**法律學院獎學金：**",
+            "為表現卓越的法律學生設有獎學金。",
+            "",
+            "**外部獎學金：**",
+            "政府及私人機構為跨學科學習提供獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的理學士及法學士策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握DSE核心科目**",
+            "",
+            "專注英文、數學及通識教育（或同等科目）。優秀的英文能力對法律學習至關重要。",
+            "- 目標在英文及數學取得5**或以上。",
+            "- 通識教育至少達5級，以展示分析能力。",
+            "",
+            "**2. 在科學選修科表現出色**",
+            "",
+            "選擇至少兩科科學選修科（如物理、化學、生物），目標取得5*或以上。",
+            "- 科學科目的深度顯示你已為科學部分做好準備。",
+            "- 考慮修讀M1/M2以加強量化技能。",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "面試可能評估你的動機、批判性思考及連結科學與法律的能力。",
+            "- 練習討論科技與法律的當前議題（如人工智能規管、專利糾紛）。",
+            "- 準備解釋為何想結合科學與法律。",
+            "",
+            "**4. 建立豐富的OEA檔案**",
+            "",
+            "其他經驗及成就（OEA）能讓你脫穎而出。",
+            "- 參與科學比賽、法律相關活動（如模擬法庭）或實習。",
+            "- 突出領導角色及社區服務。",
+            "",
+            "**5. 了解入學計算公式**",
+            "",
+            "分數以最佳6科計算。規劃你的科目組合以最大化分數。",
+            "- 同時包含科學及非科學科目以展示廣度。",
+            "- 以中位數（54）及下四分位數（50）作為參考。",
+            "",
+            "**6. 申請後備課程**",
+            "",
+            "JS6858競爭激烈。考慮相關課程作為後備。",
+            "- JS6901理學士作為堅實的科學基礎。",
+            "- JS6406法學士若你更傾向法律。",
+            "- JS6688科學大師班作為研究密集型科學路徑。",
+            "",
+            "**7. 善用港大資源**",
+            "",
+            "參加入學講座及開放日以了解更多課程資訊。",
+            "- 聯絡理學院或法律學院查詢具體問題。",
+            "- 使用課程網站（scifac.hku.hk）獲取最新資訊。",
+            "",
+            "**8. 培養時間管理技巧**",
+            "",
+            "為期5年的雙學位課程要求甚高。及早建立有效的學習習慣。",
+            "- 平衡科學實驗室及法律閱讀。",
+            "- 利用暑假進行實習或研究項目。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "了解科學法律專業人士的需求增長。",
+            "- 關注專利法、生物科技規管及數據私隱的發展。",
+            "- 透過港大校友活動與專業人士建立網絡。"
+          ]
+        }
+      }
+    },
+    "code": "JS6858",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 54,
+    "uq": 56,
+    "lq": 50
+  }
+}

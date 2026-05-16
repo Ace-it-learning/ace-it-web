@@ -1,0 +1,116 @@
+{
+  "code": "JS4824",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4824"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4824"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/ecotu/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://admission.econ.cuhk.edu.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS4824",
+    "nameEn": "Economics",
+    "nameZh": "經濟學",
+    "university": "香港中文大學",
+    "facultyZh": "社會科學院",
+    "category": "social_science"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 31.5,
+    "uq": null,
+    "lq": 30.75,
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 31.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 30.75
+      }
+    },
+    "subjectWeighting": "Economics or Physics (x 1.5)"
+  },
+  "jupas": {
+    "code": "JS4824",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4824",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4824",
+    "nameEn": "Economics",
+    "nameZh": "經濟學",
+    "shortDescription": "",
+    "programmeWebsite": "http://admission.econ.cuhk.edu.hk/",
+    "tuition": "HK$47,000",
+    "intake": 62,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: Please refer to https://admission.econ.cuhk.edu.hk/ug/ddp-economics/admissions/jupas/ for details of the additional requirements of the CUHK-Tsinghua University Dual Undergraduate Degree Programme in Economics . Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 323,
+      "bandB": 207,
+      "bandC": 378,
+      "bandD": 518,
+      "bandE": 441,
+      "total": 1867
+    },
+    "offers2025": {
+      "bandA": 55,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 55
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/ecotu/",
+    "introduction": "Looking Far, Thinking Wide Launched in 2021, the CUHK–Tsinghua University Dual Undergraduate Degree Programme in Economics (DDP) is a much-anticipated collaboration between Asia&#8217;s two top universities, with the aim of broadening students&#8217; horizons through flexible exchange arrangements. CUHK and Tsinghua University have joined hands to offer a four-year, full-time undergraduate programme in Economics that examines international economic issues as well as erudition on the Chinese economy. The potential and implications for DDP graduates are incredibly exciting and pioneering. The medium of instruction of major courses is English. Prospective students are expected to spend half of the time in Tsinghua University. While CUHK covers crucial international economic issues, the Tsinghua programme provides further variety in several advanced fields of economics. Today, financial and economic sectors around the world value candidates who are highly skilled and educated, especially those who have a deep understanding of China&#8217;s economy and financial markets. By merging institutional strengths in economics, the DDP empowers students to develop insightful perspectives and analytical competence in unprecedented ways. Each year, 24 undergraduates join the cohort, receiving high-calibre education from acclaimed faculty members. First-year JUPAS and non-JUPAS students admitted are eligible to apply for admission scholarships. To help new students adapt to the DDP and their learning environment, a management committee, staffed by experienced teachers and administrators from both CUHK and Tsinghua University, has been established. We welcome and look forward to recruiting students who are keen on learning advanced logical reasoning and quantitative economic analysis. As the students will navigate both Chinese Mainland and Hong Kong economies, prospective students should be broad-minded and open to new ideas, challenges and environments. DDP students will acquire valuable, comprehensive economic knowledge that will help them in their future careers and in their daily lives.",
+    "ranking": "CUHK: #37 in Economics and Econometrics in the world (#8 in Asia) Tsinghua University: #18 in Economics and Econometrics in the world (#2 in Asia) (QS World University Rankings by Subject 2025)",
+    "careerProspects": "The DDP sharpens students&#8217; logical and critical thinking, broadens their outlook, hones their ability to adapt to new environments, and ultimately, nurtures them to become all-round leaders with vast global networks. Graduates will be set up for success in all career destinations, particularly in fields such as finance, economic consulting, commerce and government policy. The quantitative and analytical focus of the course also allows students to confidently pursue careers that require sophisticated economic analyses. Those who wish to pursue further studies in economics will be well-equipped as the DDP programme lays a solid foundation of principal economic theories. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "Employers in the financial field tend to hire people who are multi-talented. In view of this, the DDP offers students a wide array of elective courses, covering areas such as advanced economic research and financial market analysis. In the DDP programme, students will acquire valuable, comprehensive economic knowledge that will help them in their future",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

@@ -1,0 +1,552 @@
+{
+  "factPack": {
+    "code": "JS4416",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4416"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4416"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/cdasn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.cdas.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4416",
+      "nameEn": "Computational Data Science",
+      "nameZh": "計算數據科學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 54.5,
+      "uq": 26.875,
+      "lq": 53,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 54.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 53
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 26.875
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.25)"
+    },
+    "jupas": {
+      "code": "JS4416",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4416",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4416",
+      "nameEn": "Computational Data Science",
+      "nameZh": "計算數據科學",
+      "shortDescription": "an class=\"before_label\">Short Description The Computational Data Science (CDASN) programme is designed to manufacture mathematical, technical, and analytical skills to create solutions to lead data-driven decision-making. Data scientists build intelligent systems to understand, interpret, manage and derive key knowledge from big data sets. It aims to equip students with the latest in large-scale data processing, computational statistics, machine learning, data mining, and data visualisation, while also developing the skills to effectively communicate data insights to key stakeholders, etc. Such capabilities enable students to develop cutting-edge massive data analytics and management solutions that are of practical interest to academics, industry, and society.",
+      "programmeWebsite": "https://www.cdas.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 19,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: Preferred subjects: Mathematics Extended Module I or II, Biology, Chemistry, Economics, Information and Communication Technology and Physics. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 53,
+        "bandB": 63,
+        "bandC": 158,
+        "bandD": 229,
+        "bandE": 198,
+        "total": 701
+      },
+      "offers2025": {
+        "bandA": 11,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 11
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/cdasn/",
+      "introduction": "Make Data-Driven The data-driven era has created strong interest in and a need for analysing, storing, distributing and sharing massive amounts of data using sophisticated data analytics and machine-learning algorithms and methodologies, with applications in multiple disciplines, including science, social science, finance, public health, medicine, engineering and telecommunications. We have witnessed huge demand for data analysts in both local and global employment markets. However, designing proper data-driven solutions for analysing and interpreting massive amounts of information remains a non-trivial challenge, since it requires in-depth knowledge of both computing methodologies and statistical principles for problem solving, data collection, data modelling and analysis, and scientific experimental design. The CDAS programme is designed to develop mathematical, technical and analytical skills to create solutions to lead data-driven decision making. It aims to equip students with the capabilities of applying both: (1) high-performance parallel and distributed computing for big data manipulation, and (2) data-driven statistical procedures, methodologies and theories for mining patterns, making predictions, and discovering patterns and insights from large and complex datasets. Therefore, the curriculum of the CDAS programme provides students with a solid foundation in data structure and algorithms, parallel and distributed computing system programming, statistical modelling and analysis, and large-scale statistical inferences. The CDAS programme emphasizes the computational foundations of data science, providing an in-depth understanding of algorithms and data structures for storing, manipulating, visualizing, interpreting and learning from large datasets. Four specialized streams are offered for students to choose application fields according to their interests: Computational Data Science Computational Physics Computational Medicine Computational Social Science",
+      "ranking": "#10 globally in Computer Science (#1 in Hong Kong) (US News and World Report Best Global Universities by Subject in 2023) #6 in Statistics in Asia (51-75 globally) (Academic Ranking of World Universities by academic subject in 2022)",
+      "careerProspects": "Computational data science is a rapidly evolving interdisciplinary field that is in high demand. Future graduates will be prepared for careers that create order and derive meaning from huge amounts of data. This programme prepares graduates for careers that require deep knowledge and skills in machine learning, database management, and high-performance computing, with an adequate statistics background. Future alumni can work as business intelligence analysts, data mining engineers, data modelers, data scientists, engineers and developers, data warehouse architects, research analysts, etc. The CDAS programme aims to admit high calibre students who demonstrate outstanding ability in English, mathematics and science. An excellent academic background, together with a problem-solving mindset, is essential for understanding the knowledge and tackling future challenges related to global issues. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4416",
+    "nameEn": "Computational Data Science",
+    "nameZh": "計算數據科學",
+    "name": "Computational Data Science",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 54.5,
+    "band_a": 53,
+    "uq": 26.875,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4416",
+            "First Year Intake: 19",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students, 2026-2027 annual)",
+            "Interview: Yes (performance in interview may be considered for admission)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 54.5",
+            "Lower quartile (LQ): 53",
+            "Upper quartile (UQ): 26.875",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5",
+            "English: 4",
+            "Mathematics: 5*",
+            "CSD: A",
+            "M1/M2: 5*",
+            "1st Elective: 5*",
+            "2nd Elective: 5*",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 4",
+            "- Mathematics Compulsory Part: Level 4",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 Elective Subjects: Level 3 (Preferred subjects: M1/M2, Biology, Chemistry, Economics, ICT, Physics)",
+            "",
+            "Subject Weighting: Mathematics (x 1.25)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 53",
+            "Band A offers: 11",
+            "Total applications: 701"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Computational Data Science (CDAS) programme is jointly offered by the Department of Computer Science and Engineering and the Department of Statistics.",
+            "",
+            "The curriculum provides a solid foundation in data structure and algorithms, parallel and distributed computing system programming, statistical modelling and analysis, and large-scale statistical inferences.",
+            "",
+            "Four specialized streams are offered:",
+            "- Computational Data Science",
+            "- Computational Physics",
+            "- Computational Medicine",
+            "- Computational Social Science",
+            "",
+            "Students learn to apply both high-performance parallel and distributed computing for big data manipulation, and data-driven statistical procedures for mining patterns, making predictions, and discovering insights from large and complex datasets.",
+            "",
+            "The programme emphasizes the computational foundations of data science, with in-depth understanding of algorithms and data structures for storing, manipulating, visualizing, interpreting and learning from large datasets."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Computational data science is a rapidly evolving interdisciplinary field in high demand. Graduates will be prepared for careers that create order and derive meaning from huge amounts of data.",
+            "",
+            "Career paths include:",
+            "- Business Intelligence Analyst",
+            "- Data Mining Engineer",
+            "- Data Modeler",
+            "- Data Scientist",
+            "- Data Engineer and Developer",
+            "- Data Warehouse Architect",
+            "- Research Analyst",
+            "",
+            "The programme prepares graduates for careers requiring deep knowledge in machine learning, database management, and high-performance computing, with an adequate statistics background."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges providing pastoral care and whole-person education.",
+            "",
+            "Students benefit from state-of-the-art facilities, including high-performance computing labs and data visualization studios.",
+            "",
+            "The university's location in Shatin provides easy access to Hong Kong's innovation and technology hubs."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 53",
+            "- Band A offers: 11",
+            "- Band A offer rate: approximately 20.8%",
+            "- Band A applications per offer: approximately 4.8",
+            "",
+            "The programme is highly competitive, with a median admission score of 54.5 (Best 5).",
+            "",
+            "Applicants should aim for strong results in Mathematics and elective subjects, particularly M1/M2, to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is jointly offered by the Department of Computer Science and Engineering and the Department of Statistics, combining rigorous training in machine learning, big data analytics, and statistical modeling.",
+            "",
+            "Faculty members include leading researchers in AI and data science, with publications in top venues such as NeurIPS, ICML, and JMLR.",
+            "",
+            "The curriculum is designed in consultation with industry partners to ensure relevance to Hong Kong's data-driven economy."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Admission scholarships are available for JUPAS students with outstanding HKDSE results.",
+            "",
+            "The university also provides financial aid schemes, including the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 54.5**",
+            "",
+            "- Aim for a Best 5 score of at least 54.5 to match the 2025 median.",
+            "- Focus on Mathematics (weighted x1.25) and M1/M2 for maximum points.",
+            "",
+            "**2. Secure Strong English (Level 4+)**",
+            "",
+            "- English requirement is Level 4, higher than the general entrance level.",
+            "- Prepare for DSE English Paper 4 (Speaking) to boost overall grade.",
+            "",
+            "**3. Excel in Mathematics and M1/M2**",
+            "",
+            "- Mathematics is weighted at 1.25, so a high grade significantly boosts your score.",
+            "- M1/M2 is a preferred subject and can be counted as an elective.",
+            "",
+            "**4. Choose Preferred Electives**",
+            "",
+            "- Preferred subjects: M1/M2, Biology, Chemistry, Economics, ICT, Physics.",
+            "- Taking two of these increases your chances of meeting the score threshold.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Interview is required; practice explaining your interest in data science and problem-solving approach.",
+            "- Be ready to discuss current trends in AI and big data.",
+            "",
+            "**6. Band A Strategy**",
+            "",
+            "- With only 53 Band A applications and 11 offers, Band A placement is critical.",
+            "- Place JS4416 as your first choice to maximize consideration.",
+            "",
+            "**7. Understand the Score Formula**",
+            "",
+            "- Best 5 subjects are used; include Mathematics and M1/M2 if taken.",
+            "- CSD is not counted in the score calculation.",
+            "",
+            "**8. Leverage the Four Streams**",
+            "",
+            "- The programme offers streams in Computational Data Science, Physics, Medicine, and Social Science.",
+            "- Mention your preferred stream in the interview to show focus.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "- Ensure you meet the general entrance requirements, especially English Level 4.",
+            "- Submit your JUPAS application before the deadline and review any updates on the programme website."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4416",
+            "首年學額：19",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生，2026-2027 年度）",
+            "面試：需要（面試表現可能影響取錄決定）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：54.5",
+            "下四分位數：53",
+            "上四分位數：26.875",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：5*",
+            "公民科：A",
+            "M1/M2：5*",
+            "第一選修科：5*",
+            "第二選修科：5*",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 4 級",
+            "- 數學必修部分：第 4 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科：第 3 級（優先考慮科目：M1/M2、生物、化學、經濟、資訊及通訊科技、物理）",
+            "",
+            "科目比重：數學（x 1.25）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：53",
+            "Band A 取錄人數：11",
+            "總申請人數：701"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "計算數據科學課程由計算機科學與工程學系及統計學系合辦。",
+            "",
+            "課程提供數據結構與算法、並行與分佈式計算系統編程、統計建模與分析、大規模統計推斷的堅實基礎。",
+            "",
+            "設有四個專業分流：",
+            "- 計算數據科學",
+            "- 計算物理",
+            "- 計算醫學",
+            "- 計算社會科學",
+            "",
+            "學生將學習應用高效能並行與分佈式計算處理大數據，以及數據驅動的統計程序進行模式挖掘、預測，並從大型複雜數據集中發現見解。",
+            "",
+            "課程強調數據科學的計算基礎，深入理解用於存儲、操作、可視化、解釋和學習大數據集的算法與數據結構。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "計算數據科學是一個快速發展的跨學科領域，需求極高。畢業生將準備好從事從海量數據中創造秩序並提取意義的職業。",
+            "",
+            "就業方向包括：",
+            "- 商業智能分析師",
+            "- 數據挖掘工程師",
+            "- 數據建模師",
+            "- 數據科學家",
+            "- 數據工程師與開發者",
+            "- 數據倉庫架構師",
+            "- 研究分析師",
+            "",
+            "課程為畢業生從事需要機器學習、數據庫管理及高效能計算深度知識的職業做好準備，並具備充足的統計學背景。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，九所書院提供關顧及全人教育。",
+            "",
+            "學生可使用先進設施，包括高效能計算實驗室及數據可視化工作室。",
+            "",
+            "大學位於沙田，方便連接香港的創新科技樞紐。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：53",
+            "- Band A 取錄人數：11",
+            "- Band A 取錄率：約 20.8%",
+            "- 每個 Band A 取錄對應申請人數：約 4.8",
+            "",
+            "課程競爭激烈，中位數入學分數為 54.5（最佳 5 科）。",
+            "",
+            "申請人應在數學及選修科（尤其 M1/M2）取得優異成績，以提升競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系成就",
+          "content": [
+            "課程由計算機科學與工程學系及統計學系合辦，結合機器學習、大數據分析及統計建模的嚴謹訓練。",
+            "",
+            "教職員包括人工智能及數據科學領域的頂尖研究人員，在 NeurIPS、ICML、JMLR 等頂級會議及期刊發表論文。",
+            "",
+            "課程與業界夥伴共同設計，確保與香港數據驅動經濟的相關性。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "為 JUPAS 學生設有入學獎學金，頒予文憑試成績優異者。",
+            "",
+            "大學亦提供資助計劃，包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數 54.5**",
+            "",
+            "- 最佳 5 科目標至少 54.5 分，以匹配 2025 年中位數。",
+            "- 重點提升數學（比重 x1.25）及 M1/M2 以獲取最高分數。",
+            "",
+            "**2. 確保英文成績達第 4 級或以上**",
+            "",
+            "- 英文要求為第 4 級，高於一般入學門檻。",
+            "- 準備文憑試英文卷四（說話）以提升整體等級。",
+            "",
+            "**3. 在數學及 M1/M2 取得優異成績**",
+            "",
+            "- 數學比重為 1.25，高分可大幅提升總分。",
+            "- M1/M2 為優先考慮科目，可計作選修科。",
+            "",
+            "**4. 選擇優先選修科**",
+            "",
+            "- 優先科目：M1/M2、生物、化學、經濟、資訊及通訊科技、物理。",
+            "- 選修其中兩科可增加達標機會。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 面試為必須環節；練習表達你對數據科學的興趣及解難方法。",
+            "- 準備討論人工智能及大數據的最新趨勢。",
+            "",
+            "**6. Band A 策略**",
+            "",
+            "- 僅 53 人申請 Band A，取錄 11 人，Band A 位置至關重要。",
+            "- 將 JS4416 置於首志願以獲最大考慮。",
+            "",
+            "**7. 了解計分方式**",
+            "",
+            "- 採用最佳 5 科；如修讀 M1/M2 應包括在內。",
+            "- 公民科不計入分數計算。",
+            "",
+            "**8. 善用四個分流**",
+            "",
+            "- 課程提供計算數據科學、物理、醫學及社會科學分流。",
+            "- 面試時提及你的首選分流以展示專注方向。",
+            "",
+            "**9. 提早申請並核實要求**",
+            "",
+            "- 確保符合一般入學要求，尤其英文第 4 級。",
+            "- 在截止日期前提交 JUPAS 申請，並定期查看課程網站更新。"
+          ]
+        }
+      }
+    },
+    "code": "JS4416",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 54.5,
+    "uq": 26.875,
+    "lq": 53,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 54.5
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 53
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 26.875
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is jointly offered by the Department of Computer Science and Engineering and the Department of Statistics, combining rigorous training in machine learning, big data analytics, and statistical modeling.",
+      "Faculty members include leading researchers in AI and data science, with publications in top venues such as NeurIPS, ICML, and JMLR.",
+      "The curriculum is designed in consultation with industry partners to ensure relevance to Hong Kong's data-driven economy."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Computational Data Science notable alumni",
+      "香港中文大學 計算數據科學 著名校友",
+      "CUHK Computational Data Science graduates Hong Kong careers",
+      "CUHK JS4416 alumni"
+    ]
+  }
+}

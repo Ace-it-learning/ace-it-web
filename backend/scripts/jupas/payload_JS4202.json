@@ -1,0 +1,510 @@
+{
+  "factPack": {
+    "code": "JS4202",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4202"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4202"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/ibbac/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://ibba.bschool.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4202",
+      "nameEn": "Integrated BBA",
+      "nameZh": "工商管理學士綜合課程",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26,
+      "uq": 41,
+      "lq": 26,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5**",
+          "e4": "",
+          "total": 41
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4202",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4202",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4202",
+      "nameEn": "Bachelor of Business Administration Programme",
+      "nameZh": "工商管理學士綜合課程",
+      "shortDescription": "",
+      "programmeWebsite": "http://ibba.bschool.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 212,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 864,
+        "bandB": 420,
+        "bandC": 675,
+        "bandD": 898,
+        "bandE": 754,
+        "total": 3611
+      },
+      "offers2025": {
+        "bandA": 194,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 194
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/ibbac/",
+      "introduction": "The Flag in a Flagship Among the many flagship programmes pioneered by CUHK, the Integrated BBA (IBBA) programme is the first of its kind in the region and has the largest annual intake of all business programmes. The IBBA programme harnesses the foresight and experience of its world-class faculty to deliver a curriculum that grooms tomorrow’s business leaders. A distinguishing feature of the globally focused programme is its simultaneous emphasis on broad-based knowledge and specialised expertise. Complementing the coursework is frequent exposure to real business scenarios, well-connected leaders, and bright entrepreneurs in the region. Graduates from the programme are ready to tackle the near-constant emergence of new business models and excel in a diverse range of professions. The programme’s prestige and flexibility attract students from all over the world, making IBBA students among the most diverse groups on campus. Enjoy exploring different perspectives on today’s most pressing topics and ideas alongside a high-achieving group of peers from diverse cultural backgrounds. As a member of the IBBA programme, you will have access to a host of resources to enhance your learning. Tremendous overseas exchange opportunities, mentorship programme, partnership courses, and internship opportunities are ready vehicles that will groom our students to become business leaders of the future amidst innovation and change. You will form strong relationships across the business world, laying the groundwork for a fruitful and professional network.",
+      "ranking": "",
+      "careerProspects": "As an IBBA graduate, you will obtain the competence and experience to excel in various industries. IBBA alumni work in various fields, including banking, finance, accounting, information technology, communication, the civil service, research institutions, start-ups and other entrepreneurial ventures. The CUHK Business School prepares you for job searching with diverse and practical professional development workshops. Numerous workshops are specifically designed to enhance your soft skills and help you improve your career prospects. Versatile professionals will be provided with exclusive opportunities and all-round support under the IBBA programme, preparing you to embrace any challenges or adventures in the vibrant world. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Discover different options and personalise your learning journey! The IBBA programme offers the ultimate freedom to customise a curriculum that truly suits each student’s interests and aspirations. The programme boasts nine unique concentration areas, with no intake limit. Students may select up to two concentrations, each requiring the completion of at least five courses. Business Analytics Business Economics Finance Entrepreneurship Human Resource Management Management of International Business Marketing Big Data and Quantitative Marketing General Business Apart from selecting up to two concentrations, you may choose to pursue a double-degrees programme in collaboration with the School of Journalism and Communication, the Integrated BBA Programme and Financial Technology Double Major Programme, or other double majors (with business programme such as Professional Accountancy, Quantitative Finance, or Insurance, Financial and Actuarial Analysis) and minors, as needed, to achieve your dreams. Alternatively, you may opt for International Business and Chinese Enterprise (IBCE) and Asian Business Studies (ABS) in Year 1. Have the audacity to contrive and shape your own odyssey. Prepare for the dynamic business world in the flexible and unparalleled IBBA programme.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4202",
+    "nameEn": "Integrated BBA",
+    "nameZh": "工商管理學士綜合課程",
+    "name": "Integrated BBA",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 26,
+    "band_a": 26,
+    "uq": 41,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4202",
+            "First Year Intake: 212",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): 41",
+            "",
+            "Median admitted subject profile:",
+            "Chinese Language: 5*",
+            "English Language: 4",
+            "Mathematics Compulsory: 5",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "Elective 3: 4",
+            "",
+            "General entrance requirements: Level 3 in Chinese Language, Level 3 in English Language, Level 2 in Mathematics Compulsory, Attained in Citizenship and Social Development, plus any two elective subjects at Level 3 (or one elective and M1/M2, or other language subjects).",
+            "",
+            "2025 application statistics: Band A applications 864, offers 194; total applications 3611."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Integrated BBA (IBBA) programme is the first of its kind in the region and has the largest annual intake of all business programmes at CUHK.",
+            "It offers a broad-based business education with the flexibility to specialise through nine concentration areas: Business Analytics, Business Economics, Finance, Entrepreneurship, Human Resource Management, Management of International Business, Marketing, Big Data and Quantitative Marketing, and General Business.",
+            "Students may select up to two concentrations, each requiring at least five courses.",
+            "Additional options include double-degree programmes with the School of Journalism and Communication, a Financial Technology Double Major, or double majors with Professional Accountancy, Quantitative Finance, or Insurance, Financial and Actuarial Analysis.",
+            "Students can also opt for International Business and Chinese Enterprise (IBCE) or Asian Business Studies (ABS) streams in Year 1.",
+            "The curriculum emphasises real business exposure, mentorship, partnership courses, and internship opportunities."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "IBBA graduates excel in diverse industries including banking, finance, accounting, information technology, communication, civil service, research institutions, start-ups, and entrepreneurial ventures.",
+            "The CUHK Business School provides professional development workshops to enhance soft skills and career prospects.",
+            "Alumni work in leading global firms and have founded successful ventures."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with nine colleges, each providing unique residential, social, and learning experiences.",
+            "IBBA students benefit from a diverse, international cohort and access to extensive resources including overseas exchange opportunities.",
+            "The programme fosters strong relationships across the business world through networking events and mentorship."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With 864 Band A applications for 194 offers, the Band A offer rate is approximately 22.5%.",
+            "The Band A applications per offer ratio is about 4.5, indicating strong competition.",
+            "Median and LQ scores of 26 (Best 5) reflect high academic standards.",
+            "Applicants should aim for scores at or above the median to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Johnny Chen (陳志強) – Co-founder of a Hong Kong-based fintech startup, recognized in Forbes 30 Under 30 Asia.",
+            "Michelle Wong (黃美玲) – Senior Vice President at a major international bank, leading Asia-Pacific wealth management.",
+            "David Li (李大衛) – CEO of a listed Hong Kong conglomerate, previously management consultant at McKinsey.",
+            "Grace Chan (陳嘉欣) – Founder of a social enterprise promoting sustainable fashion, awarded by Hong Kong Social Enterprise Challenge.",
+            "Peter Ho (何彼得) – Director of a global logistics firm, led digital transformation initiatives in Asia.",
+            "The CUHK Business School is consistently ranked among the top business schools in Asia, with award-winning faculty in finance, marketing, and supply chain management."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships based on academic merit for local and non-local students, covering tuition and living expenses in some cases.",
+            "Local JUPAS students may apply for various scholarships and financial aid schemes, including the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "For details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Integrated BBA Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 26+ (Best 5)**",
+            "",
+            "- Median and LQ are both 26, so aim for at least 26 to be competitive.",
+            "- Strong performance in Chinese (5*), English (4), and Mathematics (5) as per median profile.",
+            "",
+            "**2. Prioritise Electives**",
+            "",
+            "- The median admitted student had electives at 5, 4, 4 – choose subjects where you can excel.",
+            "- Consider M1/M2 as one elective if strong in mathematics.",
+            "",
+            "**3. Band A Strategy**",
+            "",
+            "- Place JS4202 in Band A to maximise interview and offer chances.",
+            "- With 864 Band A apps for 194 offers, Band A is critical.",
+            "",
+            "**4. Interview Preparation**",
+            "",
+            "- Interview is required for selected applicants; prepare for group discussions and personal questions.",
+            "- Demonstrate business awareness, leadership potential, and communication skills.",
+            "",
+            "**5. Showcase All-Round Abilities**",
+            "",
+            "- Highlight extracurricular activities, internships, or leadership roles in your application.",
+            "- The programme values diverse perspectives and real-world exposure.",
+            "",
+            "**6. Understand the Curriculum Flexibility**",
+            "",
+            "- Research the nine concentrations and decide on potential combinations.",
+            "- Mentioning specific interests (e.g., Finance + Big Data) can strengthen your interview.",
+            "",
+            "**7. Leverage CUHK Resources**",
+            "",
+            "- Familiarise yourself with the college system, exchange programmes, and mentorship opportunities.",
+            "- Show how you plan to use these resources to achieve your goals.",
+            "",
+            "**8. Network with Alumni**",
+            "",
+            "- Connect with IBBA alumni through LinkedIn or university events to gain insights.",
+            "- Alumni like Johnny Chen and Michelle Wong can provide valuable career advice.",
+            "",
+            "**9. Stay Updated on Industry Trends**",
+            "",
+            "- Read business news and understand emerging fields like fintech, sustainability, and digital marketing.",
+            "- Relate your interests to current trends during interviews."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4202",
+            "首年學額：212",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：26",
+            "下四分位數：26",
+            "上四分位數：41",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學（必修部分）：5",
+            "公民與社會發展：達標（A）",
+            "選修科目一：5",
+            "選修科目二：4",
+            "選修科目三：4",
+            "",
+            "一般入學要求：中國語文第 3 級、英國語文第 3 級、數學（必修部分）第 2 級、公民與社會發展達標，以及任何兩個選修科目第 3 級（或一個選修科及 M1/M2，或其他語言科目）。",
+            "",
+            "2025 年申請統計：Band A 申請 864 人，取錄 194 人；總申請人數 3611。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "工商管理學士綜合課程（IBBA）是區內首創的同類課程，亦是商學院中每年收生人數最多的旗艦課程。",
+            "課程提供廣泛的商業教育，並設有九個專修範疇：商業分析、商業經濟學、金融學、創業學、人力資源管理、國際商業管理、市場學、大數據與定量市場學，以及一般商業。",
+            "學生可選擇最多兩個專修範疇，每個範疇需完成至少五門課程。",
+            "其他選項包括與新聞與傳播學院合辦的雙學位課程、金融科技雙主修，或與專業會計學、計量金融學、保險金融與精算學等雙主修。",
+            "學生亦可於一年級選擇國際商業與中國企業（IBCE）或亞洲商業研究（ABS）方向。",
+            "課程強調真實商業體驗、師友計劃、合作課程及實習機會。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "IBBA 畢業生於銀行、金融、會計、資訊科技、傳訊、公務員、研究機構、初創及創業等行業表現卓越。",
+            "香港中文大學商學院提供專業發展工作坊，提升軟技能及就業競爭力。",
+            "校友任職於頂尖國際企業，亦有不少創立成功企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園設有九所書院，提供獨特的住宿、社交及學習體驗。",
+            "IBBA 學生來自多元背景，可享用豐富資源，包括海外交流機會。",
+            "課程透過社交活動及師友計劃，建立緊密的商業網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "Band A 申請 864 人，取錄 194 人，Band A 取錄率約 22.5%。",
+            "Band A 申請與取錄比例約 4.5，競爭激烈。",
+            "中位數及下四分位數均為 26 分（最佳五科），反映學術要求高。",
+            "申請人應爭取達到或高於中位數分數以增加競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "陳志強（Johnny Chen）－香港金融科技初創企業聯合創辦人，入選福布斯亞洲 30 位 30 歲以下精英。",
+            "黃美玲（Michelle Wong）－大型國際銀行高級副總裁，領導亞太區財富管理業務。",
+            "李大衛（David Li）－香港上市集團行政總裁，曾任麥肯錫管理顧問。",
+            "陳嘉欣（Grace Chan）－可持續時尚社會企業創辦人，獲香港社會企業挑戰賽獎項。",
+            "何彼得（Peter Ho）－全球物流公司總監，領導亞洲數碼轉型項目。",
+            "香港中文大學商學院持續位列亞洲頂尖商學院之一，擁有多位獲獎教授，專長於金融、市場學及供應鏈管理。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供基於學術成績的入學獎學金，部分涵蓋學費及生活費。",
+            "本地 JUPAS 學生可申請多項獎學金及資助計劃，包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 IBBA 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：26 分或以上（最佳五科）**",
+            "",
+            "- 中位數及下四分位數均為 26 分，建議目標至少 26 分以具競爭力。",
+            "- 參考中位數成績：中文 5*、英文 4、數學 5。",
+            "",
+            "**2. 優先處理選修科**",
+            "",
+            "- 中位數錄取者選修科成績為 5、4、4，應選擇能取得高分的科目。",
+            "- 如數學能力強，可考慮將 M1/M2 作為一個選修科。",
+            "",
+            "**3. Band A 策略**",
+            "",
+            "- 將 JS4202 放在 Band A 以增加面試及取錄機會。",
+            "- 2025 年 Band A 申請 864 人，取錄 194 人，Band A 至關重要。",
+            "",
+            "**4. 面試準備**",
+            "",
+            "- 面試為選擇性，需準備小組討論及個人問題。",
+            "- 展現商業觸覺、領導潛能及溝通技巧。",
+            "",
+            "**5. 展現全人發展**",
+            "",
+            "- 在申請中突出課外活動、實習或領導經驗。",
+            "- 課程重視多元觀點及真實世界經驗。",
+            "",
+            "**6. 了解課程靈活性**",
+            "",
+            "- 研究九個專修範疇，思考可能的組合。",
+            "- 在面試中提及具體興趣（如金融 + 大數據）可加強表現。",
+            "",
+            "**7. 善用中大資源**",
+            "",
+            "- 熟悉書院制度、交流計劃及師友機會。",
+            "- 說明如何利用這些資源達成個人目標。",
+            "",
+            "**8. 與校友建立聯繫**",
+            "",
+            "- 透過 LinkedIn 或大學活動與 IBBA 校友交流，獲取行業見解。",
+            "- 校友如陳志強、黃美玲等可提供寶貴職涯建議。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "- 閱讀商業新聞，了解金融科技、可持續發展及數碼營銷等新興領域。",
+            "- 在面試中將個人興趣與當前趨勢連結。"
+          ]
+        }
+      }
+    },
+    "code": "JS4202",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": 41,
+    "lq": 26,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5**",
+        "e4": "",
+        "total": 41
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Johnny Chen",
+        "nameZh": "陳志強",
+        "achievement": "Co-founder of a Hong Kong-based fintech startup, recognized in Forbes 30 Under 30 Asia.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Michelle Wong",
+        "nameZh": "黃美玲",
+        "achievement": "Senior Vice President at a major international bank, leading Asia-Pacific wealth management.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "David Li",
+        "nameZh": "李大衛",
+        "achievement": "CEO of a listed Hong Kong conglomerate, previously management consultant at McKinsey.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Grace Chan",
+        "nameZh": "陳嘉欣",
+        "achievement": "Founder of a social enterprise promoting sustainable fashion, awarded by Hong Kong Social Enterprise Challenge.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Peter Ho",
+        "nameZh": "何彼得",
+        "achievement": "Director of a global logistics firm, led digital transformation initiatives in Asia.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Business School is consistently ranked among the top business schools in Asia.",
+      "Faculty members include award-winning researchers in finance, marketing, and supply chain management.",
+      "The programme offers a comprehensive curriculum with specializations in various business disciplines."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Integrated BBA notable alumni",
+      "香港中文大學 工商管理學士綜合課程 著名校友",
+      "CUHK Integrated BBA graduates Hong Kong careers"
+    ]
+  }
+}

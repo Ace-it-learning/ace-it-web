@@ -1,0 +1,66 @@
+{
+  "code": "JS6274",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6274"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://hkums.hku.hk/gcin/"
+    }
+  ],
+  "programme": {
+    "code": "JS6274",
+    "nameEn": "Bachelor of Arts in Global Creative Industries",
+    "nameZh": "Bachelor of Arts in Global Creative Industries",
+    "university": "香港大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "2 x Eng + Best 4 Subjects",
+    "median": 33,
+    "uq": 33,
+    "lq": 32
+  },
+  "jupas": {
+    "code": "JS6274",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6274",
+    "nameEn": "Bachelor of Arts in Global Creative Industries",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://hkums.hku.hk/gcin/",
+    "tuition": "HK$47,000",
+    "intake": 20,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 89,
+      "bandB": 89,
+      "bandC": 133,
+      "bandD": 178,
+      "bandE": 176,
+      "total": 665
+    },
+    "offers2025": {
+      "bandA": 14,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 14
+    },
+    "facultyPhone": "+852 3917 3328"
+  },
+  "admissionsSnippet": "Bachelor of Arts in Global Creative Industries - School of Future Media About Welcome to the School of Future Media Director’s Message Divisions Journalism and Media Studies Centre Documentary and AI Filmmaking Global Creative Industries Scholarships History Contact Us Programme Undergraduate Bachelor of Journalism, Media &#038; AI Bachelor of Arts in Global Creative Industries Postgraduate Master of Arts in Creative AI Film &#038; Media Master of Journalism Master of Journalism – Documentary Filmmaking Specialisation Research Postgraduate People Faculty &#038; Staff Open Positions News &#038; Events News &#038; Events Newsletter Professional Learning Employment Prospects Internships JMSC network GCIN Industry Experiences Student Projects Capstone Videos Annie Lab Alumni ✕ Bachelor of Arts in Global Creative Industries &nbsp; About the programme Admissions Concentrations Industry Experiences Scholarships Resources for new students &nbsp; About the programme Admissions Concentrations Industry Experiences Scholarships Resources for new students Why Study GCIN Explore the global intersection of creativity and commerce, prepare for diverse careers through specialized pathways and hands-on experiences. The BA (GCIN) offers a future-ready, interdisciplinary education that connects arts with business, culture, and technology, equipping students with industry insights for emerging creative careers. It explores how cultural, economic, social, and policy forces drive the convergence of creativity and commerce. &nbsp; Why Study GCIN Explore the global intersection of creativity and commerce, prepare for diverse careers through specialized pathways and hands-on experiences. The BA (GCIN) offers a future-ready, interdisciplinary education that connects arts with business, culture, and technology, equipping students with industry insights for emerging creative careers. It explores how cultural, economic, social, and policy forces drive the convergence of creativity and commerce. &nbsp; Concentrations Gaming & Digital Communities In this stream, students will receive a broad education in game studies and the global digital gaming industry. From game engines and gameplay mechanics to storytelling and UI/UX design, students will learn about different aspects of digital game creation. For their final year project, students will have the option to create a digital prototype game. Film & Media Communications Students in this stream receive a broad humanities education, beginning with film studies (including film history and theory), global flows of moving image production and reception, and selected training in the technical aspects of moving image production, such as editing, VR film, or virtual film production. Students have the option of creating a substantial moving image output for their final-year capstone project. Music & Performance Arts Through interdisciplinary learning, students will investigate various forms of music and performing arts and examine how they intersect with issues of gender, cultural politics, and emerging media. Students can choose from a diverse range of elective courses, including sound design, global subcultures, mega-events, and arts administration, as well as music business, entrepreneurship, and the role of AI in the future of creativity. Visual Arts, Heritage, and Museum This pathway fully utilises prestigious galleries including Gagosian, Hauser & Wirth, White Cube, and Pace, along with the Art History Department and University Museum and Art Gallery (UMAG) at HKU. Students in this stream will study art history and museum studies, specialising in art forms that align with their interests. Concentrations Gaming & Digital Communities In this stream, students will receive a broad education in game studies and the global digital gaming industry. From game engines and gameplay mechanics to storytelling and UI/UX design, students will learn about different aspects of digital game creation. For their final year project, students will have the option to create a digital prototype game. Film & Media Communications Students in this stream receive a broad humanities education, beginning with film studies (including film history and theory), global flows of moving image production and reception, and selected training in the technical aspects of moving image production, such as editing, VR film, or virtual film production. Students have the option of creating a substantial moving image output for their final-year capstone project. Music & Performance Arts Through interdisciplinary learning, students will investigate various forms of music and performing arts and examine how they intersect with issues of gender, cultural politics, and emerging media. Students can choose from a diverse range of elective courses, including sound design, global subcultures, mega-events, and arts administration, as well as music business, entrepreneurship, and the role of AI in the future of creativity. Visual Arts, Heritage, and Museum This pathway fully utilises prestigious galleries including Gagosian, Hauser & Wirth, White Cube, and Pace, along with the Art History Department and University Museum and Art Gallery (UMAG) at HKU. Students in this stream will study art history and museum studies, specialising in art forms that align with their interests. HKU School of Future Media Room 121, Eliot Hall, The University of Hong Kong, Pok Fu Lam, Hong Kong General enquiries: Tel: +852 3917 1155 Email: schofm@hku.hk Follow us Arrangements during bad weather : - The Tropical Cyclone Warning Signal No. 8 or above is in effect - The Black Rainstorm Signal is in effect - There are other severe weather conditions HKU students should refer to Guidelines for STUDENTS about classes and examinations Copyright © 2026 School of Future Media (香港大學未來媒體學院). All Rights Reserved."
+}

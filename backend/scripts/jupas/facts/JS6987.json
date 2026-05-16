@@ -1,0 +1,66 @@
+{
+  "code": "JS6987",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6987"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.eee.hku.hk/study/undergraduate/undergraduate-admission/"
+    }
+  ],
+  "programme": {
+    "code": "JS6987",
+    "nameEn": "Bachelor of Engineering in Computer Engineering",
+    "nameZh": "Bachelor of Engineering in Computer Engineering",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 29,
+    "uq": 31,
+    "lq": 28
+  },
+  "jupas": {
+    "code": "JS6987",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6987",
+    "nameEn": "Bachelor of Engineering in Computer Engineering",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.eee.hku.hk/study/undergraduate/undergraduate-admission/",
+    "tuition": "HK$47,000",
+    "intake": 327,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 259,
+      "bandB": 174,
+      "bandC": 300,
+      "bandD": 368,
+      "bandE": 400,
+      "total": 1501
+    },
+    "offers2025": {
+      "bandA": 26,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 26
+    },
+    "facultyPhone": "+852 3917 7093"
+  },
+  "admissionsSnippet": "Undergraduate Admissions Site Map | HKU Portal | Staff Intranet | About ECE People Department Management Team Academic and Teaching Staff Honorary, Adjunct &#038; Visiting Staff Administrative &#038; Technical Staff External Advisors Alumni Study Undergraduate (BEng) Taught Postgraduate (MSc) Research Postgraduate (PhD/MPhil) Prospective Students Programmes Information Admissions Scholarships &amp; Funding Current Students Student Support Centre (UG / RPg) e.link (Department T&#038;L Website) MSc Moodle page E-system @ HKUECE-MSc Scholarships &amp; Funding Exchange Career Talks Alumni Contact Update Form Research Research Project Highlighs Research Interests Research Output News &amp; Events News Events Instagram Facebook Rednote (小紅書) Useful Links HKU Homepage HKU Faculty of Engineering Giving (Donation) Alumni Contact Update Form HKU Maps &#038; Facilities ECE Staff HKU Portal Intranet for Staff Contact Home Undergraduate Admissions  Home &gt; Study &gt; Undergraduate (BEng) Hong Kong local school students with Hong Kong Diploma of Secondary Education Examination (HKDSE) results should apply to the ECE programmes through the JUPAS admission scheme . Students with other qualifications, as well as overseas and Mainland students may also be admitted through our various Non-JUPAS schemes . JUPAS Through the Joint University Programmes Admissions System (JUPAS) ( http://www.jupas.edu.hk ), HKU admits secondary school students from local schools based on their local public examination results. Please check the JUPAS website for eligibility to apply, application procedures and information on the JUPAS scheme. For more information about JUPAS admission, you may also consult the Faculty of Engineering common admission website . &nbsp; Requirements JUPAS applicants should note for the additional programme entrance requirements. Details of can be find in HERE . Non-JUPAS International students, students from the Mainland China, as well as qualified local students who did not take part in the main-round JUPAS admission scheme may apply to our programme through the University-wide non-JUPAS admission scheme. Our department admits many high quality local students both into our first year and second year studies through this route every year. For more information and online application, please refers to the University Non-JUPAS undergraduate admission page. &nbsp; International Students If you are international students interested in our degree programme, please take some time to check out the University portal on international student admission . Apart form online application form, it also contains plenty of information about the learning and living environment at HKU. &nbsp; Mainland Students (内地本科生) If you are the Mainland students planning to study in our undergraduate degree programme, we encourage you to visit the University portal dedicated to admission of undergraduate students from the Mainland (内地本科生入学计划) . We admit many high quality undergraduate students from the Mainland China every year. Upon graduation, many of them continue to pursue higher degrees at HKU or at overseas institutions. News &#038; Events Student Support Centre Research Interests Privacy Policy Web Accessibility Contact Us Instagram Facebook  Rednote Copyright © Department of Electrical and Computer Engineering | Faculty of Engineering | The University of Hong Kong"
+}

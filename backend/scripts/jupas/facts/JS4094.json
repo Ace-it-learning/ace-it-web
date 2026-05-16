@@ -1,0 +1,129 @@
+{
+  "code": "JS4094",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4094"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4094"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/philn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "http://phil.arts.cuhk.edu.hk"
+    }
+  ],
+  "programme": {
+    "code": "JS4094",
+    "nameEn": "Philosophy",
+    "nameZh": "哲學",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24.5,
+    "uq": 25,
+    "lq": 23,
+    "percentiles": {
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "3",
+        "e1": "5",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 25
+      },
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 23
+      }
+    },
+    "subjectWeighting": "• Chinese and English must be included"
+  },
+  "jupas": {
+    "code": "JS4094",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4094",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4094",
+    "nameEn": "Philosophy",
+    "nameZh": "哲學",
+    "shortDescription": "an class=\"before_label\">Short Description The Department of Philosophy offers a diverse, balanced curriculum incorporating Eastern and Western philosophical traditions that meets international standards while maintaining national and regional relevance. The undergraduate curriculum aims to give students a strong liberal arts education, prepare them for advanced work in philosophy, and train them in critical thinking and communication skills applicable to a wide variety of professions. Students majoring in philosophy must complete a minimum of 72 course units. The core courses consist of Introduction to Philosophy, Logic, History of Chinese Philosophy I &amp; II, History of Western Philosophy I &amp; II, Philosophy and Human Conditions, Ethics, Epistemology and Metaphysics, and a capstone course in which students write an undergraduate thesis. In addition to these, students are required to take at least two courses in each of the three main areas, namely Chinese/Eastern Philosophy, Western Philosophy, and Philosophical Problems. The objective of this requirement is to ensure a well-rounded and balanced academic experience.",
+    "programmeWebsite": "http://phil.arts.cuhk.edu.hk",
+    "tuition": "HK$47,000",
+    "intake": 19,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 180,
+      "bandB": 207,
+      "bandC": 352,
+      "bandD": 480,
+      "bandE": 502,
+      "total": 1721
+    },
+    "offers2025": {
+      "bandA": 22,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 22
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/philn/",
+    "introduction": "Develop Wisdom through Our Philosophy Programme The word &#8220;philosophy&#8221; literally means &#8220;love of wisdom.&#8221; We offer a comprehensive programme that combines Eastern and Western philosophical traditions. Our programme provides an unparalleled intellectual adventure, encouraging critical and creative reflection on fundamental questions across various areas of human concern – from morality and the sciences to arts and politics. Through active participation in classroom and tutorial discussions, you will have the opportunity to ask critical questions, provide comments on others&#8217; presentations, put forth your original ideas, and engage with challenges. Our programme not only prepares you for advanced research in philosophy, but also equips you with essential skills for critical reading, analytical thinking and clear communication – qualities highly valued by potential employers. Join our community dedicated to the pursuit of wisdom!",
+    "ranking": "#51–100 in Philosophy (#1 in Hong Kong) (QS World University Rankings by Subject 2023)",
+    "careerProspects": ". Career Prospects We have offered the Annual Internship Programme for undergraduate students since 2014. We collaborate closely with our diverse alumni network, consisting of professionals from various fields, to arrange internship opportunities in a wide range of industries, including culture, publishing, advertising, film and television, theatre and education. Participating students not only acquire valuable work experience, but also develop skills and networks that are beneficial for their future career growth. Since philosophy students are specifically trained to engage in extensive reading and writing, they typically possess highly sought-after skills that make them marketable in a wide range of careers. Customer Service: 14.3% IT: Multimedia and Digital Entertainment: 14.3% Retail Management: 14.3% Sales/ Marketing: 28.6% Teaching: Primary: 28.6% [Figures as of 2024] Studying philosophy enhances students’ ability to reason, understand different perspectives and communicate clearly. Our programme equips students with the intellectual ability crucial for self-realization and successful careers. If you are interested in this programme, please review the application requirements and deadlines that are specific to the respective admission scheme to increase your chances of being accepted. APPLY NOW",
+    "craftYourPath": "The programme integrates Eastern and Western, including Chinese, Analytic, and Continental philosophies, offering a balanced and thorough understanding. Enhances critical thinking, analytical skills, and clear communication through extensive reading, rigorous writing, and in-depth tutorial discussions. Offers individual research projects under expert supervision, providing opportunities to further study in MPhil or PhD programmes. International exchange opportunities broaden global perspectives, and alumni networks enhance",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

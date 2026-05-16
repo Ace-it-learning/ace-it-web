@@ -1,0 +1,501 @@
+{
+  "factPack": {
+    "code": "JS6236",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6236"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.arch.hku.hk/design/"
+      }
+    ],
+    "programme": {
+      "code": "JS6236",
+      "nameEn": "Bachelor of Arts and Sciences in Design+",
+      "nameZh": "文理學士(設計＋)",
+      "university": "香港大學",
+      "facultyZh": "建築學院",
+      "category": "design"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 35,
+      "uq": 37,
+      "lq": 34
+    },
+    "jupas": {
+      "code": "JS6236",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6236",
+      "nameEn": "Bachelor of Arts and Sciences in Design+",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description Design+ is designed to produce highly effective, adaptive, and creative graduates who can lead across multiple disciplinary subjects, and will become known globally for their distinctive qualities of creativity, analytical ability, critical thinking, and innovative problem-solving. Cutting across traditional disciplinary boundaries, the programme is structured around design thinking as a distinct foundational approach to interdisciplinary studies, innovation, and enterprise. The degree prepares students to be innovators and creative leaders, entraining students who want to capitalise on both entrepreneurial and creative abilities. Combining insights, theory, research, methods and practices that embrace design thinking, functional design and process design, the academic focus provides students with a blend of thinking tools that will equip them for the challenges facing all sectors of society. A central pedagogical feature of the degree programme, and a central graduate quality, is the ability to balance analytical forward-thinking approaches to problem solving with solution-first imagination-based problem solving.",
+      "programmeWebsite": "https://www.arch.hku.hk/design/",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 29,
+        "bandB": 32,
+        "bandC": 83,
+        "bandD": 134,
+        "bandE": 167,
+        "total": 445
+      },
+      "offers2025": {
+        "bandA": 2,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 2
+      },
+      "facultyPhone": "+852 3917 2149"
+    },
+    "admissionsSnippet": "Design+ | HKU Faculty of Architecture /assets/fancybox/jquery.fancybox.pack.js\" type=\"text/javascript\"> Search HOME About Events People Admissions Programmes Departments and Divisions International Collaborations Research Knowledge Exchange Resources Alumni Faculty Intranet Contact About History HKUrbanLabs Asia’s Global University Faculty Newsletter News Dean's Roundup Location Events All Events Exhibitions Podcast Public Lecture Series Seminars Subscribe People Faculty Office Honorary Professors Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Awards and Prizes Admissions Admission by Programmes Tuition & Fees FAQs for Undergraduate Admissions FAQs for Taught Postgraduate Programmes Programmes Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Conservation Design+ Summer Programmes Executive Education Departments and Divisions Department of Architecture Department of Real Estate and Construction Department of Urban Planning and Design Division of Landscape Architecture International Collaborations Introduction Student Exchange International Partners Mainland China Engagement Global Citizenship Research Introduction The Future of Cities Research Centres Research Projects Publications Research Postgraduate Programme Research Design Portfolios Undergraduate and Master's thesis opportunities in FoA Knowledge Exchange Introduction Awards Media Highlights Contact Resources The Kenneth Frampton Architectural Book Collection The Brian Brace Taylor Book Collection Stephen Garmey Book Collection on Constructivist Art and Architecture Scholarships and Prizes Academic Calendar Student Handbooks Student Wellness Resources Student Associations Fabrication & Media Laboratories Alumni Featured Alumni Alumni Associations Alumni Update Architecture Introduction Bachelor of Arts in Architectural Studies Master of Architecture Master of Architecture (Design) MPhil and PhD Master of Science in Advanced Architectural Design Major/Minor in Architectural Studies Artist-in-Residence Program Gallery Research Projects Real Estate and Construction Introduction Head's Message Bachelor of Science in Surveying Master of Science in Construction Project Management Master of Science in Real Estate Master of Science in Digital Management of Built Assets (formerly Master of Science in Integrated Project Delivery) MPhil and PhD Research and Related Links Gallery Research and Knowledge Exchange Projects Urban Planning and Design Introduction Admissions Bachelor of Arts in Urban Studies Master of Digital Urban Management Master of Science in Urban Analytics Master of Science in Urban Design and Transport Master of Science in Urban Planning Master of Urban Design Master of Urban Studies and Housing Management Master of Arts in Transport Policy and Planning MPhil and PhD Gallery Research Projects Landscape Architecture Introduction Bachelor of Arts in Landscape Studies Master of Landscape Architecture Postgraduate Diploma in Landscape Architecture Master of Science in Sustainable Environmental Design MPhil and PhD Students' Awards Gallery Research Projects Conservation Introduction Master of Science in Conservation Built Heritage Research Collaborative (BHRC) News and Events Design+ Introduction Bachelor of Arts & Sciences in Design+ MPhil and PhD Career Discovery in Design Gallery Summer Programmes Introduction HKU Design+ Academy for the Talented (non-residential programme) Eco-cities and the Chinese Dream International Summer Programme in Architecture A Visual Diary of Paris, Lyon, Marseille Nature in the City: Beyond the Concrete Jungle Career Discovery in Architecture (Hong Kong) Career Discovery in Architecture [Shanghai] Summer Career Discovery in Landscape Architecture Galapagos: Envisioning Sustainable Futures Department of Urban Planning and Design Introduction What's New Staff Publications Newsletter The Future of Cities Introduction 01 Rural 02 Informal 03 Aged 04 Microbial 05 Nerves 06 Arteries 07 Mind 08 Heart 09 Hypercity 10 Inequality 11 Borders 12 Singularity Research Centres Architecture, Urbanism, and the Humanities Initiative Building Simplexity Lab Built Heritage Research Collaborative Centre for Chinese Architecture and Urbanism Centre of Urban Studies and Urban Planning Fabrication and Material Technologies Lab Future Urbanity & Sustainable Environment (FUSE) Lab Green, FinTech, and Property Lab Healthy High Density Cities Lab iLab Meta BIM Research Lab Real Estate Lab Ronald Coase Centre for Property Rights Research Rural Urban Lab Social Infrastructure for Equity and Wellbeing Sustainable High Density Cities Lab S tructur AI Lab Urban Ecologies Design Lab Urban Environments & Human Health Lab Research Postgraduate Programme Standard Forms Guidelines for RPG students Events for RPG students Contacts Student Associations Architectural Society (AS) Architectural Students’ Association (ASA) Surveying Society (SS) Fabrication & Media Laboratories Introduction Machinery & Methods Projects People Blog Bachelor of Arts in Architectural Studies Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Program Contact Master of Architecture Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Programme Scholarship Contact Master of Architecture (Design) Introduction Admissions Regulations, Syllabus & Timetables Contacts MPhil and PhD Introduction Admissions Programme of Study People Research Students News and Events Institutional Affiliations Master of Science in Advanced Architectural Design Introduction Admissions Regulations & Syllabus Contact Bachelor of Science in Surveying Introduction Admissions Alumni Story Studio Virtual Tour of REC Regulations, Syllabus & Timetables Professional Accreditation Internships International Exchange Consultation Session FAQs Contact Master of Science in Construction Project Management Overview Admissions Regulations, Syllabus"
+  },
+  "programme": {
+    "code": "JS6236",
+    "nameEn": "Bachelor of Arts and Sciences in Design+",
+    "nameZh": "文理學士(設計＋)",
+    "name": "Bachelor of Arts and Sciences in Design+",
+    "university": "香港大學",
+    "faculty": "建築學院",
+    "median": 35,
+    "band_a": 34,
+    "uq": 37,
+    "category": "design"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "**First Year Intake:** 20",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**Programme Entrance Requirements:**",
+            "- Core Subjects: Level 3 or above in English Language, Chinese Language, Mathematics, and Liberal Studies / Citizenship and Social Development",
+            "- Elective Subjects: Any 2 elective subjects at Level 3 or above",
+            "- Preferred Electives: No specific subject requirements, but a broad academic background is advantageous",
+            "",
+            "**Selection Criteria:**",
+            "- HKDSE results (Best 5 Subjects) – 100% weighting",
+            "- Interview may be conducted for shortlisted candidates",
+            "",
+            "**2025 Admission Scores (Best 5):**",
+            "- Median: 35 | LQ: 34 | UQ: 37",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "- Band A applications: 29",
+            "- Band A offers: 2",
+            "- Band A offer rate: ~6.9%"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview:**",
+            "Bachelor of Arts and Sciences in Design+ is an interdisciplinary programme that integrates design thinking, functional design, and process design. It prepares students to become innovators and creative leaders who can tackle complex societal challenges across multiple sectors.",
+            "",
+            "**Year 1:** Foundation courses in design thinking, creativity, and interdisciplinary studies. Students explore core concepts in arts, sciences, and design methodologies.",
+            "",
+            "**Year 2:** Specialisation pathways in areas such as urban design, digital media, entrepreneurship, or sustainable innovation. Students engage in project-based learning and collaborative workshops.",
+            "",
+            "**Year 3:** Advanced studio work, research methods, and elective courses. Opportunities for internships or exchange programmes with partner institutions.",
+            "",
+            "**Year 4:** Capstone project or thesis, professional portfolio development, and career preparation. Graduates showcase their work in a final exhibition.",
+            "",
+            "**Unique Features:**",
+            "- Design thinking as a foundational approach to interdisciplinary studies",
+            "- Emphasis on balancing analytical problem-solving with solution-first imagination",
+            "- Central pedagogical feature: ability to lead across multiple disciplines",
+            "- Strong connection to HKU Faculty of Architecture's resources and labs"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Creative Industries:**",
+            "- Design consultant, creative director, user experience (UX) designer",
+            "- Brand strategist, innovation manager, product designer",
+            "",
+            "**Technology & Entrepreneurship:**",
+            "- Startup founder, business development manager, innovation lead",
+            "- Digital media producer, technology analyst, design researcher",
+            "",
+            "**Urban & Environmental Design:**",
+            "- Urban planner, sustainable design specialist, community engagement officer",
+            "- Policy advisor in design-driven public sector roles",
+            "",
+            "**Further Studies:**",
+            "- Master's programmes in design, architecture, urban planning, business, or related fields",
+            "- Research degrees (MPhil/PhD) in interdisciplinary design studies"
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Main Campus:** HKU Main Campus, Pokfulam Road, Hong Kong",
+            "",
+            "**Faculty of Architecture Facilities:**",
+            "- Fabrication & Media Laboratories: 3D printing, laser cutting, CNC machining, digital fabrication",
+            "- Design studios and collaborative workspaces",
+            "- Computer labs with design software (CAD, BIM, graphic design tools)",
+            "",
+            "**Library & Resources:**",
+            "- HKU Libraries with extensive collections in design, architecture, and arts",
+            "- Special collections: Kenneth Frampton Architectural Book Collection, Brian Brace Taylor Book Collection",
+            "",
+            "**Student Support:**",
+            "- Academic advising, career services, wellness resources",
+            "- Student associations: Architectural Society, Architectural Students’ Association"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection Factors",
+          "content": [
+            "**Competition Level:** Very High",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 29",
+            "- Band A offers: 2",
+            "- Band A offer rate: ~6.9%",
+            "",
+            "**Key Selection Factors (in order of importance):**",
+            "1. HKDSE Best 5 score (minimum 34, median 35)",
+            "2. Interview performance (if shortlisted)",
+            "3. Portfolio or evidence of creative/analytical ability (if submitted)",
+            "4. Broad academic background and interdisciplinary interest",
+            "",
+            "**Tips for Applicants:**",
+            "- Aim for at least 34 points in Best 5 to be competitive",
+            "- Prepare a strong portfolio showcasing design thinking or problem-solving projects",
+            "- Demonstrate genuine interest in interdisciplinary studies through personal statement or interview"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty of Architecture:**",
+            "- Renowned for research in urban design, sustainable architecture, and digital fabrication",
+            "- Home to multiple research centres: Healthy High Density Cities Lab, Urban Ecologies Design Lab, Fabrication and Material Technologies Lab",
+            "",
+            "**Rankings & Recognition:**",
+            "- HKU consistently ranked among top universities globally in architecture and built environment subjects",
+            "- Faculty members are leaders in their fields, with numerous awards and publications",
+            "",
+            "**Notable Alumni:**",
+            "- (No specific alumni names provided in fact pack)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on academic merit (HKDSE scores, interview performance)",
+            "- Full and partial tuition scholarships available for outstanding candidates",
+            "",
+            "**Faculty of Architecture Scholarships:**",
+            "- Various scholarships and prizes for design students (details on faculty website)",
+            "- Support for overseas exchange and research projects",
+            "",
+            "**Government Financial Assistance:**",
+            "- HKDSE students may apply for means-tested grants and loans through the Student Finance Office (SFO)",
+            "- Non-means-tested loans also available",
+            "",
+            "**Application:**",
+            "- No separate application required for most scholarships; automatically considered upon admission",
+            "- Some scholarships require additional essays or portfolios"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Design+ Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Best 5 Formula**",
+            "",
+            "Focus on your top 5 HKDSE subjects. With median 35, aim for at least 34 to be competitive. Prioritise subjects where you can score highest, even if they are not directly design-related.",
+            "- Use past papers to identify your strongest subjects",
+            "- Allocate study time proportionally to maximise your Best 5 total",
+            "",
+            "**2. Build a Strong Portfolio Early**",
+            "",
+            "Even though not mandatory, a portfolio showcasing design thinking, creativity, or problem-solving can strengthen your application. Include projects from school, competitions, or personal work.",
+            "- Document process sketches, prototypes, and final outcomes",
+            "- Highlight interdisciplinary projects (e.g., combining art with technology)",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "Shortlisted candidates will be interviewed. Prepare to discuss your motivation, design philosophy, and how you approach complex problems.",
+            "- Practice articulating your thought process clearly",
+            "- Be ready to critique a design or propose solutions to a given scenario",
+            "",
+            "**4. Demonstrate Interdisciplinary Interest**",
+            "",
+            "Design+ values candidates who can bridge arts, sciences, and technology. Show this through your subject choices, extracurriculars, or personal projects.",
+            "- Take elective subjects that span different fields (e.g., Visual Arts + Physics)",
+            "- Participate in cross-disciplinary workshops or hackathons",
+            "",
+            "**5. Research the Programme Thoroughly**",
+            "",
+            "Understand the unique structure of Design+ — it's not a traditional design degree. Read the curriculum, faculty research, and student projects on the programme website.",
+            "- Note specific courses or labs that interest you",
+            "- Mention these in your personal statement or interview",
+            "",
+            "**6. Prepare for the OEA (Other Experiences and Achievements)**",
+            "",
+            "Your OEA should highlight leadership, creativity, and teamwork. Include design-related activities, community projects, or innovation competitions.",
+            "- Quantify achievements where possible (e.g., 'Led a team of 5 to win a design competition')",
+            "- Reflect on what you learned from each experience",
+            "",
+            "**7. Consider Backup Choices**",
+            "",
+            "With only 20 places and a ~6.9% offer rate, have solid backup options. Consider other design-related programmes at HKU or other universities, such as JS6004 (Bachelor of Arts in Architectural Studies) or JS6016 (Bachelor of Arts in Urban Studies).",
+            "- Ensure your backup choices also align with your strengths and interests",
+            "- Apply to programmes with similar entry requirements to maximise chances",
+            "",
+            "**8. Stay Updated on Admission Changes**",
+            "",
+            "Check the JUPAS website and HKU admissions page regularly for any updates on requirements, interview dates, or scholarship deadlines.",
+            "- Set reminders for key dates (e.g., JUPAS application deadline, interview invitations)",
+            "- Follow HKU Faculty of Architecture social media for news",
+            "",
+            "**9. Seek Feedback and Mentorship**",
+            "",
+            "Talk to current students or alumni of Design+ if possible. Their insights can help you tailor your application and understand the programme culture.",
+            "- Attend HKU open days or information sessions",
+            "- Ask teachers or mentors to review your portfolio and personal statement"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 學年）",
+          "content": [
+            "**首年學額：** 20",
+            "",
+            "**修讀年期：** 4 年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**入學要求：**",
+            "- 核心科目：英文、中文、數學、通識／公民與社會發展達第 3 級或以上",
+            "- 選修科目：任何 2 科選修達第 3 級或以上",
+            "- 優先選修科：無特定要求，但廣泛學術背景有優勢",
+            "",
+            "**遴選準則：**",
+            "- HKDSE 成績（最佳 5 科）– 100% 比重",
+            "- 部分申請人需面試",
+            "",
+            "**2025 年入學分數（最佳 5 科）：**",
+            "- 中位數：35 | 下四分位數：34 | 上四分位數：37",
+            "",
+            "**2025 年 JUPAS 統計：**",
+            "- Band A 申請人數：29",
+            "- Band A 取錄人數：2",
+            "- Band A 取錄率：約 6.9%"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程簡介：**",
+            "Bachelor of Arts and Sciences in Design+ 是一個跨學科課程，融合設計思維、功能設計與流程設計，培養學生成為能夠應對社會各領域挑戰的創新領袖。",
+            "",
+            "**一年級：** 設計思維、創意及跨學科基礎課程。學生探索藝術、科學與設計方法論的核心概念。",
+            "",
+            "**二年級：** 專業分流，可選城市設計、數碼媒體、創業或可持續創新等方向。學生參與項目式學習及協作工作坊。",
+            "",
+            "**三年級：** 高階工作室、研究方法及選修課程。有機會參與實習或交換計劃。",
+            "",
+            "**四年級：** 畢業專題或論文、專業作品集準備及職業規劃。畢業生於最終展覽展示作品。",
+            "",
+            "**課程特色：**",
+            "- 以設計思維作為跨學科學習的基礎方法",
+            "- 強調分析性解難與想像力主導解難的平衡",
+            "- 核心教學特色：能夠領導多個學科領域",
+            "- 與港大建築學院資源及實驗室緊密聯繫"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**創意產業：**",
+            "- 設計顧問、創意總監、用戶體驗設計師",
+            "- 品牌策略師、創新經理、產品設計師",
+            "",
+            "**科技與創業：**",
+            "- 初創創辦人、業務發展經理、創新主管",
+            "- 數碼媒體製作人、科技分析師、設計研究員",
+            "",
+            "**城市與環境設計：**",
+            "- 城市規劃師、可持續設計專家、社區參與主任",
+            "- 設計驅動的公共政策顧問",
+            "",
+            "**深造途徑：**",
+            "- 設計、建築、城市規劃、商業等相關碩士課程",
+            "- 跨學科設計研究博士課程（MPhil/PhD）"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**主校園：** 香港大學本部，薄扶林道",
+            "",
+            "**建築學院設施：**",
+            "- 製造與媒體實驗室：3D 打印、激光切割、CNC 加工、數碼製造",
+            "- 設計工作室及協作空間",
+            "- 配備設計軟件（CAD、BIM、圖像設計工具）的電腦室",
+            "",
+            "**圖書館及資源：**",
+            "- 港大圖書館擁有豐富的設計、建築及藝術館藏",
+            "- 特藏：Kenneth Frampton 建築書藏、Brian Brace Taylor 書藏",
+            "",
+            "**學生支援：**",
+            "- 學術輔導、就業服務、身心健康資源",
+            "- 學生組織：建築學會、建築學生會"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選因素",
+          "content": [
+            "**競爭程度：** 極高",
+            "",
+            "**2025 年 Band A 統計：**",
+            "- Band A 申請人數：29",
+            "- Band A 取錄人數：2",
+            "- Band A 取錄率：約 6.9%",
+            "",
+            "**主要遴選因素（按重要性排序）：**",
+            "1. HKDSE 最佳 5 科分數（最低 34，中位數 35）",
+            "2. 面試表現（如獲篩選）",
+            "3. 作品集或創意／分析能力證明（如提交）",
+            "4. 廣泛學術背景及跨學科興趣",
+            "",
+            "**申請提示：**",
+            "- 目標最佳 5 科至少 34 分以具競爭力",
+            "- 準備突出設計思維或解難項目的作品集",
+            "- 透過個人陳述或面試展示對跨學科的真正興趣"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**建築學院：**",
+            "- 在城市設計、可持續建築及數碼製造研究方面享負盛名",
+            "- 設有多個研究中心：健康高密度城市實驗室、城市生態設計實驗室、製造與材料科技實驗室",
+            "",
+            "**排名與認可：**",
+            "- 港大在建築及建造環境學科持續位列全球頂尖",
+            "- 學院教授屢獲獎項及發表重要研究",
+            "",
+            "**知名校友：**",
+            "- （資料庫未提供具體校友名稱）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**港大入學獎學金：**",
+            "- 根據學術成績（HKDSE 分數、面試表現）頒發",
+            "- 為優秀申請人提供全額或部分學費獎學金",
+            "",
+            "**建築學院獎學金：**",
+            "- 設有多項設計學生獎學金及獎項（詳情見學院網站）",
+            "- 支援海外交流及研究項目",
+            "",
+            "**政府資助：**",
+            "- HKDSE 學生可經學生資助處申請入息審查資助及貸款",
+            "- 亦提供免入息審查貸款",
+            "",
+            "**申請方法：**",
+            "- 大部分獎學金無需另行申請，取錄時自動考慮",
+            "- 部分獎學金需額外提交論文或作品集"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 Design+ 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握最佳 5 科計分法**",
+            "",
+            "專注於你的最佳 5 科 HKDSE 科目。中位數 35 分，目標至少 34 分才具競爭力。優先選擇你能取得最高分的科目，即使與設計無直接關係。",
+            "- 利用歷屆試題找出你的強項科目",
+            "- 按最佳 5 科總分分配溫習時間",
+            "",
+            "**2. 及早建立優秀作品集**",
+            "",
+            "雖然非強制，但作品集能展示設計思維、創意或解難能力，有助申請。包括學校項目、比賽或個人作品。",
+            "- 記錄過程草圖、原型及最終成果",
+            "- 突出跨學科項目（例如結合藝術與科技）",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "獲篩選的申請人需面試。準備討論你的動機、設計理念及如何處理複雜問題。",
+            "- 練習清晰表達思考過程",
+            "- 準備評論設計或為指定情境提出解決方案",
+            "",
+            "**4. 展示跨學科興趣**",
+            "",
+            "Design+ 重視能連結藝術、科學與科技的申請人。透過科目選擇、課外活動或個人項目展示這點。",
+            "- 選修涵蓋不同領域的科目（例如視覺藝術 + 物理）",
+            "- 參與跨學科工作坊或黑客松",
+            "",
+            "**5. 深入了解課程**",
+            "",
+            "明白 Design+ 的獨特結構——它不是傳統設計學位。閱讀課程網站上的課程內容、教授研究及學生項目。",
+            "- 記下你感興趣的特定科目或實驗室",
+            "- 在個人陳述或面試中提及這些",
+            "",
+            "**6. 準備 OEA（其他經驗及成就）**",
+            "",
+            "你的 OEA 應突出領導力、創意及團隊合作。包括設計相關活動、社區項目或創新比賽。",
+            "- 盡量量化成就（例如「帶領 5 人團隊贏得設計比賽」）",
+            "- 反思每個經驗的學習",
+            "",
+            "**7. 考慮後備選擇**",
+            "",
+            "由於只有 20 個學額及約 6.9% 取錄率，必須有穩妥的後備選擇。考慮港大或其他大學的設計相關課程，例如 JS6004（建築文學士）或 JS6016（城市研究文學士）。",
+            "- 確保後備選擇也符合你的強項與興趣",
+            "- 申請入學要求相近的課程以增加機會",
+            "",
+            "**8. 緊貼入學資訊更新**",
+            "",
+            "定期查看 JUPAS 網站及港大入學頁面，了解要求、面試日期或獎學金截止日期的任何更新。",
+            "- 設定重要日期提醒（例如 JUPAS 申請截止、面試邀請）",
+            "- 關注港大建築學院社交媒體獲取最新消息",
+            "",
+            "**9. 尋求意見及指導**",
+            "",
+            "如可能，與 Design+ 的現屆學生或校友交流。他們的見解有助你調整申請策略及了解課程文化。",
+            "- 參加港大開放日或資訊講座",
+            "- 請老師或導師審閱你的作品集及個人陳述"
+          ]
+        }
+      }
+    },
+    "code": "JS6236",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 35,
+    "uq": 37,
+    "lq": 34
+  }
+}

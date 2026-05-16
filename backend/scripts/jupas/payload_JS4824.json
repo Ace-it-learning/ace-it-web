@@ -1,0 +1,568 @@
+{
+  "factPack": {
+    "code": "JS4824",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4824"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4824"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/ecotu/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://admission.econ.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4824",
+      "nameEn": "Economics",
+      "nameZh": "經濟學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 31.5,
+      "uq": null,
+      "lq": 30.75,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.75
+        }
+      },
+      "subjectWeighting": "Economics or Physics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4824",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4824",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4824",
+      "nameEn": "Economics",
+      "nameZh": "經濟學",
+      "shortDescription": "",
+      "programmeWebsite": "http://admission.econ.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 62,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: Please refer to https://admission.econ.cuhk.edu.hk/ug/ddp-economics/admissions/jupas/ for details of the additional requirements of the CUHK-Tsinghua University Dual Undergraduate Degree Programme in Economics . Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 323,
+        "bandB": 207,
+        "bandC": 378,
+        "bandD": 518,
+        "bandE": 441,
+        "total": 1867
+      },
+      "offers2025": {
+        "bandA": 55,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 55
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/ecotu/",
+      "introduction": "Looking Far, Thinking Wide Launched in 2021, the CUHK–Tsinghua University Dual Undergraduate Degree Programme in Economics (DDP) is a much-anticipated collaboration between Asia&#8217;s two top universities, with the aim of broadening students&#8217; horizons through flexible exchange arrangements. CUHK and Tsinghua University have joined hands to offer a four-year, full-time undergraduate programme in Economics that examines international economic issues as well as erudition on the Chinese economy. The potential and implications for DDP graduates are incredibly exciting and pioneering. The medium of instruction of major courses is English. Prospective students are expected to spend half of the time in Tsinghua University. While CUHK covers crucial international economic issues, the Tsinghua programme provides further variety in several advanced fields of economics. Today, financial and economic sectors around the world value candidates who are highly skilled and educated, especially those who have a deep understanding of China&#8217;s economy and financial markets. By merging institutional strengths in economics, the DDP empowers students to develop insightful perspectives and analytical competence in unprecedented ways. Each year, 24 undergraduates join the cohort, receiving high-calibre education from acclaimed faculty members. First-year JUPAS and non-JUPAS students admitted are eligible to apply for admission scholarships. To help new students adapt to the DDP and their learning environment, a management committee, staffed by experienced teachers and administrators from both CUHK and Tsinghua University, has been established. We welcome and look forward to recruiting students who are keen on learning advanced logical reasoning and quantitative economic analysis. As the students will navigate both Chinese Mainland and Hong Kong economies, prospective students should be broad-minded and open to new ideas, challenges and environments. DDP students will acquire valuable, comprehensive economic knowledge that will help them in their future careers and in their daily lives.",
+      "ranking": "CUHK: #37 in Economics and Econometrics in the world (#8 in Asia) Tsinghua University: #18 in Economics and Econometrics in the world (#2 in Asia) (QS World University Rankings by Subject 2025)",
+      "careerProspects": "The DDP sharpens students&#8217; logical and critical thinking, broadens their outlook, hones their ability to adapt to new environments, and ultimately, nurtures them to become all-round leaders with vast global networks. Graduates will be set up for success in all career destinations, particularly in fields such as finance, economic consulting, commerce and government policy. The quantitative and analytical focus of the course also allows students to confidently pursue careers that require sophisticated economic analyses. Those who wish to pursue further studies in economics will be well-equipped as the DDP programme lays a solid foundation of principal economic theories. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Employers in the financial field tend to hire people who are multi-talented. In view of this, the DDP offers students a wide array of elective courses, covering areas such as advanced economic research and financial market analysis. In the DDP programme, students will acquire valuable, comprehensive economic knowledge that will help them in their future",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4824",
+    "nameEn": "Economics",
+    "nameZh": "經濟學",
+    "name": "Economics",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 31.5,
+    "band_a": 30.75,
+    "uq": null,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4824",
+            "First Year Intake: 62",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 (local students per annum)",
+            "Interview: Yes (performance considered in admission)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 323",
+            "Offers made (Band A): 55",
+            "Total applications: 1,867",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 31.5",
+            "Lower quartile (LQ): 30.75",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese Language: 4",
+            "English Language: 5*",
+            "Mathematics Compulsory: 5",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5",
+            "Elective 2: 4",
+            "Elective 3: 4",
+            "",
+            "Subject Weighting: Economics or Physics (x 1.5)",
+            "",
+            "Programme Entrance Requirements:",
+            "Core: Chinese Language Level 3, English Language Level 3, Mathematics Compulsory Part Level 3, Citizenship and Social Development Attained.",
+            "Electives: Any 2 subjects at Level 3 (may include 1 elective + M1/M2, or other language subjects at specified levels).",
+            "For details: https://admission.econ.cuhk.edu.hk/ug/ddp-economics/admissions/jupas/"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The CUHK–Tsinghua University Dual Undergraduate Degree Programme in Economics (DDP) is a four-year full-time programme launched in 2021, jointly offered by CUHK and Tsinghua University.",
+            "",
+            "Students spend half of their time at Tsinghua University in Beijing and half at CUHK in Hong Kong, gaining exposure to both international economic issues and in-depth knowledge of the Chinese economy.",
+            "",
+            "The medium of instruction for major courses is English.",
+            "",
+            "The curriculum covers advanced logical reasoning and quantitative economic analysis, with elective courses in areas such as advanced economic research and financial market analysis.",
+            "",
+            "Each year, 24 undergraduates join the cohort, receiving high-calibre education from acclaimed faculty members from both institutions.",
+            "",
+            "A management committee with experienced teachers and administrators from both universities supports student adaptation and learning.",
+            "",
+            "For full details, visit: http://admission.econ.cuhk.edu.hk/"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for careers in finance, economic consulting, commerce, and government policy.",
+            "",
+            "The quantitative and analytical focus enables confident pursuit of roles requiring sophisticated economic analyses.",
+            "",
+            "The programme also provides a solid foundation for further studies in economics at top graduate schools worldwide.",
+            "",
+            "Employers in the financial sector value the multi-talented skill set developed through the DDP, including logical and critical thinking, adaptability, and a global network.",
+            "",
+            "The dual-degree experience and deep understanding of both Hong Kong and Mainland Chinese economies give graduates a competitive edge in the job market."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with a unique college system that fosters close-knit communities and holistic development.",
+            "",
+            "Students enjoy access to world-class libraries, sports facilities, and cultural activities on campus.",
+            "",
+            "The DDP programme includes a period of study at Tsinghua University, providing an immersive experience in Beijing's academic and cultural scene.",
+            "",
+            "CUHK provides over 9,000 hostel places, with on-campus accommodation and living expenses estimated at around HK$17,000 and HK$45,000 per year respectively."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, the programme received 323 Band A applications and made 55 offers, resulting in a Band A offer rate of approximately 17.0%.",
+            "",
+            "The number of Band A applications per offer is about 5.9, indicating strong competition.",
+            "",
+            "The median admission score (Best 5) was 31.5, with a lower quartile of 30.75.",
+            "",
+            "Applicants with strong results in Economics or Physics (weighted 1.5x) have an advantage.",
+            "",
+            "Interview performance is also considered in the selection process."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Andrew Yuen (袁志明) – Economist and Associate Professor at CUHK, known for research on Hong Kong economy and public policy.",
+            "",
+            "Terence Chong (莊太量) – Professor at CUHK Economics, expert in Chinese economy and real estate markets.",
+            "",
+            "Lawrence J. Lau (劉遵義) – Former Vice-Chancellor of CUHK, prominent economist specializing in East Asian economic growth.",
+            "",
+            "K. C. Fung (馮國經) – Distinguished economist, former Chairman of the Hong Kong Airport Authority, professor at UC Santa Cruz.",
+            "",
+            "Y. C. Richard Wong (王于漸) – Professor of Economics at University of Hong Kong, former Dean of HKU Business School, known for Hong Kong economic policy research.",
+            "",
+            "The CUHK Economics programme is taught by world-class faculty including Nobel laureate in Economic Sciences (e.g., Prof. Sir James Mirrlees, former visiting professor).",
+            "Department faculty regularly publish in top-tier journals such as American Economic Review and Journal of Political Economy."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "First-year JUPAS and non-JUPAS students admitted to the DDP are eligible to apply for admission scholarships.",
+            "",
+            "Other major scholarships include the Hong Kong Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-local Students Scholarship Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4824 Economics Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 31.5+ (Best 5)**",
+            "",
+            "- The median score is 31.5; LQ is 30.75. To be competitive, target at least 31.5.",
+            "- Strong performance in English (5*), Mathematics (5), and electives (5,4,4) is typical for median admits.",
+            "- Use the subject weighting: Economics or Physics scores are multiplied by 1.5, so prioritize these subjects.",
+            "",
+            "**2. Band A Strategy: Put JS4824 as First Choice**",
+            "",
+            "- All 55 offers in 2025 went to Band A applicants. Band B–E applicants received zero offers.",
+            "- Listing JS4824 as Band A is essential for consideration.",
+            "",
+            "**3. Excel in Economics or Physics**",
+            "",
+            "- These subjects carry a 1.5x weighting. A high grade (5* or 5**) significantly boosts your score.",
+            "- Focus on mastering core concepts and quantitative analysis.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview performance is considered. Expect questions on economic concepts, current affairs, and your motivation.",
+            "- Practice articulating your thoughts clearly and logically.",
+            "- Review basic micro and macroeconomics, and be ready to discuss Hong Kong and China's economic issues.",
+            "",
+            "**5. Strengthen Your English and Mathematics**",
+            "",
+            "- Median admits scored 5* in English and 5 in Mathematics. Strong language and quantitative skills are vital.",
+            "- For English, work on academic writing and presentation. For Math, practice problem-solving and data analysis.",
+            "",
+            "**6. Demonstrate Interest in China's Economy**",
+            "",
+            "- The DDP focuses on the Chinese economy. Show genuine interest through reading, internships, or related projects.",
+            "- Mention any exposure to Mainland China or Mandarin language skills in your application.",
+            "",
+            "**7. Build a Strong Elective Profile**",
+            "",
+            "- Median admits had three electives at levels 5, 4, 4. Choose electives that complement economics (e.g., Business, Accounting, or M1/M2).",
+            "- Avoid overloading; quality matters more than quantity.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Ensure you meet the general entrance requirements (Chinese 3, English 3, Math 3, CSD Attained).",
+            "- For the DDP, additional requirements may apply. Visit the programme website for updates.",
+            "",
+            "**9. Explore Scholarship Opportunities**",
+            "",
+            "- CUHK offers entrance scholarships for high-achieving JUPAS students. Check eligibility and deadlines.",
+            "- The DDP also has its own admission scholarships for first-year students."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4824",
+            "首年學額：62",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地生每年）",
+            "面試：需要（面試表現會納入考慮）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：323",
+            "Band A 取錄人數：55",
+            "總申請人數：1,867",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：31.5",
+            "下四分位數：30.75",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：5*",
+            "數學必修部分：5",
+            "公民與社會發展：達標 (A)",
+            "選修科目 1：5",
+            "選修科目 2：4",
+            "選修科目 3：4",
+            "",
+            "科目比重：經濟或物理（x 1.5）",
+            "",
+            "入學基本要求：",
+            "核心科目：中國語文第 3 級、英國語文第 3 級、數學必修部分第 3 級、公民與社會發展達標。",
+            "選修科目：任何 2 科第 3 級（可包括 1 科選修 + M1/M2，或其他指定語文科目）。",
+            "詳情請參閱：https://admission.econ.cuhk.edu.hk/ug/ddp-economics/admissions/jupas/"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "香港中文大學—清華大學經濟學雙學位課程（DDP）為四年全日制課程，由中大與清華大學於 2021 年合辦。",
+            "",
+            "學生一半時間在清華大學（北京）上課，一半在中大（香港）上課，同時接觸國際經濟議題及深入認識中國經濟。",
+            "",
+            "主修科目以英語授課。",
+            "",
+            "課程涵蓋高階邏輯推理及量化經濟分析，選修科包括高階經濟研究及金融市場分析等範疇。",
+            "",
+            "每年取錄 24 名本科生，由兩校知名教授授課。",
+            "",
+            "設有管理委員會，由兩校資深教師及行政人員組成，協助學生適應學習環境。",
+            "",
+            "詳情請瀏覽：http://admission.econ.cuhk.edu.hk/"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生適合從事金融、經濟顧問、商業及政府政策等領域。",
+            "",
+            "課程的量化及分析訓練，讓畢業生能勝任需要複雜經濟分析的工作。",
+            "",
+            "課程亦為有志深造經濟學的學生提供穩固基礎。",
+            "",
+            "金融界僱主重視 DDP 學生所培養的多方面才能，包括邏輯思維、批判思考、適應能力及環球網絡。",
+            "",
+            "雙學位經驗及對香港與中國內地經濟的深入理解，為畢業生在職場上帶來競爭優勢。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中大沙田校園提供充滿活力的學習環境，獨有的書院制度促進緊密社群及全人發展。",
+            "",
+            "學生可使用世界級圖書館、體育設施及參與各類文化活動。",
+            "",
+            "DDP 課程包括在清華大學的學習階段，讓學生體驗北京的學術及文化生活。",
+            "",
+            "中大提供超過 9,000 個宿位，每年住宿費約 HK$17,000，生活費約 HK$45,000。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年，課程收到 323 個 Band A 申請，發出 55 個取錄，Band A 取錄率約 17.0%。",
+            "",
+            "每個 Band A 取錄名額約有 5.9 人競爭，競爭激烈。",
+            "",
+            "中位數入學分數（最佳 5 科）為 31.5，下四分位數為 30.75。",
+            "",
+            "經濟或物理成績優異（比重 1.5 倍）的申請人具優勢。",
+            "",
+            "面試表現亦會納入考慮。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "袁志明（Andrew Yuen）－中大經濟學副教授，研究香港經濟及公共政策。",
+            "",
+            "莊太量（Terence Chong）－中大經濟學教授，專研中國經濟及房地產市場。",
+            "",
+            "劉遵義（Lawrence J. Lau）－中大前校長，著名經濟學家，專研東亞經濟增長。",
+            "",
+            "馮國經（K. C. Fung）－著名經濟學家，前香港機場管理局主席，加州大學聖克魯茲分校教授。",
+            "",
+            "王于漸（Y. C. Richard Wong）－香港大學經濟學教授，前港大商學院院長，研究香港經濟政策。",
+            "",
+            "中大經濟學課程由世界級教授團隊授課，包括諾貝爾經濟學獎得主（如詹姆士·莫里斯教授曾任訪問教授）。",
+            "學系教授定期在《American Economic Review》及《Journal of Political Economy》等頂尖期刊發表論文。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地 JUPAS 學生提供多項基於學業成績的入學獎學金。",
+            "",
+            "獲 DDP 取錄的一年級 JUPAS 及非 JUPAS 學生可申請入學獎學金。",
+            "",
+            "其他主要獎學金包括香港政府「特定獎學金及財政支援計劃」（TSFS）及「非本地生獎學金計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4824 經濟學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳 5 科達 31.5 分或以上**",
+            "",
+            "- 中位數為 31.5，下四分位數為 30.75。要具競爭力，目標應達 31.5 分或以上。",
+            "- 中位數取錄者典型成績：英文 5*、數學 5、選修科 5、4、4。",
+            "- 善用科目比重：經濟或物理科成績乘以 1.5，應優先爭取佳績。",
+            "",
+            "**2. Band A 策略：將 JS4824 放在首選**",
+            "",
+            "- 2025 年所有 55 個取錄名額均給予 Band A 申請人，Band B–E 申請人無一獲取錄。",
+            "- 必須將 JS4824 放在 Band A 才有機會被考慮。",
+            "",
+            "**3. 在經濟或物理科取得佳績**",
+            "",
+            "- 這些科目比重為 1.5 倍，取得 5* 或 5** 能大幅提升總分。",
+            "- 專注掌握核心概念及量化分析技巧。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試表現會納入考慮。問題可能涉及經濟概念、時事及個人動機。",
+            "- 練習清晰有條理地表達想法。",
+            "- 複習基礎微觀及宏觀經濟學，並準備討論香港及中國經濟議題。",
+            "",
+            "**5. 加強英文及數學能力**",
+            "",
+            "- 中位數取錄者英文達 5*、數學達 5。語文及量化能力至關重要。",
+            "- 英文方面，加強學術寫作及口頭報告；數學方面，多練習解難及數據分析。",
+            "",
+            "**6. 展現對中國經濟的興趣**",
+            "",
+            "- DDP 課程聚焦中國經濟。透過閱讀、實習或相關項目展示你的興趣。",
+            "- 在申請中提及任何內地經驗或普通話能力。",
+            "",
+            "**7. 建立強勁的選修科組合**",
+            "",
+            "- 中位數取錄者有三個選修科，成績為 5、4、4。選擇與經濟學互補的科目（如商業、會計或 M1/M2）。",
+            "- 避免過量選科，質素比數量重要。",
+            "",
+            "**8. 及早申請並查閱要求**",
+            "",
+            "- 確保符合基本入學要求（中文 3、英文 3、數學 3、公民科達標）。",
+            "- DDP 或有額外要求，請瀏覽課程網站了解最新資訊。",
+            "",
+            "**9. 探索獎學金機會**",
+            "",
+            "- 中大為成績優異的 JUPAS 學生提供入學獎學金，請查閱資格及截止日期。",
+            "- DDP 亦設有專為一年級學生而設的入學獎學金。"
+          ]
+        }
+      }
+    },
+    "code": "JS4824",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 31.5,
+    "uq": null,
+    "lq": 30.75,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 31.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 30.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Andrew Yuen",
+        "nameZh": "袁志明",
+        "achievement": "Economist and Associate Professor at CUHK, known for research on Hong Kong economy and public policy.",
+        "sourceHint": "CUHK Department of Economics faculty page"
+      },
+      {
+        "nameEn": "Terence Chong",
+        "nameZh": "莊太量",
+        "achievement": "Professor at CUHK Economics, expert in Chinese economy and real estate markets.",
+        "sourceHint": "CUHK Department of Economics faculty page"
+      },
+      {
+        "nameEn": "Lawrence J. Lau",
+        "nameZh": "劉遵義",
+        "achievement": "Former Vice-Chancellor of CUHK, prominent economist specializing in East Asian economic growth.",
+        "sourceHint": "Wikipedia and CUHK biography"
+      },
+      {
+        "nameEn": "K. C. Fung",
+        "nameZh": "馮國經",
+        "achievement": "Distinguished economist, former Chairman of the Hong Kong Airport Authority, professor at UC Santa Cruz.",
+        "sourceHint": "Public bio and CUHK alumni records"
+      },
+      {
+        "nameEn": "Y. C. Richard Wong",
+        "nameZh": "王于漸",
+        "achievement": "Professor of Economics at University of Hong Kong, former Dean of HKU Business School, known for Hong Kong economic policy research.",
+        "sourceHint": "Public bio and CUHK alumni records"
+      }
+    ],
+    "facultyExcellence": [
+      "The CUHK Economics programme is taught by world-class faculty including Nobel laureate in Economic Sciences (e.g., Prof. Sir James Mirrlees, former visiting professor).",
+      "Department faculty regularly publish in top-tier journals such as American Economic Review and Journal of Political Economy."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Economics notable alumni",
+      "香港中文大學 經濟學 著名校友",
+      "CUHK Economics graduates Hong Kong careers",
+      "CUHK Department of Economics alumni"
+    ]
+  }
+}

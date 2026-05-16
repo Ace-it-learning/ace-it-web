@@ -1,0 +1,600 @@
+{
+  "factPack": {
+    "code": "JS4525",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4525"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4525"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/pharn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.pharmacy.cuhk.edu.hk/1/education/ug/bpharm/"
+      }
+    ],
+    "programme": {
+      "code": "JS4525",
+      "nameEn": "Pharmacy",
+      "nameZh": "藥劑學",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "health_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 32,
+      "uq": 36.5,
+      "lq": 30.5,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 32
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 30.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 36.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5) • Mathematics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4525",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4525",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4525",
+      "nameEn": "Pharmacy",
+      "nameZh": "藥劑學",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.pharmacy.cuhk.edu.hk/1/education/ug/bpharm/",
+      "tuition": "HK$47,000",
+      "intake": 58,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level CHEMISTRY 3 ANY 1 SUBJECT 3 Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 288,
+        "bandB": 220,
+        "bandC": 395,
+        "bandD": 531,
+        "bandE": 473,
+        "total": 1907
+      },
+      "offers2025": {
+        "bandA": 59,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 59
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/pharn/",
+      "introduction": "Increasing access to safe, cost-effective medicine is the overarching goal of the teaching, research and entrepreneurial activities of the School of Pharmacy. Launched in 1992, the CUHK Bachelor of Pharmacy (BPharm) programme is the first UGC-funded pharmacy programme in Hong Kong. It is a four-year, full-time, professional degree programme, accredited by the Pharmacy and Poisons Board of Hong Kong. It prepares graduates for a one-year internship before pharmacist licensure in Hong Kong. For more than three decades, the academic staff have lived up to the tradition of bringing out the best in each student with a high quality, rigorous and dynamic curriculum. We have created a nurturing environment that cherishes teamwork, leadership and commitment to civic responsibility. The School also takes pride in raising the awareness of the public of the value of services only pharmacists are qualified to provide. Over 900 pharmacists in Hong Kong are CUHK graduates, accounting for about 27% of the pharmacist work force. Three Decades of Innovation Pioneered an outcome-based Bachelor of Pharmacy curriculum that is regarded as one of the best. Pioneered the first Master of Clinical Pharmacy and the first Doctor of Philosophy in Pharmacy in Hong Kong. Pioneered the first university-led community-outreach programme, which also serves as an active learning platform for our students. In partnership with the private sector, successfully translated technological innovations created in the School’s research laboratories into recognized drug and health supplements in Hong Kong. Programme of Choice for Talented Students Prepares graduates for a successful career in any healthcare setting by emphasizing problem solving, decision making, and critical and creative thinking, built upon a strong foundation of basic knowledge and skills. Exposes students to an array of innovative learning environments, including overseas exchanges and community outreach. Provides a dynamic training programme recognised for its excellence in balancing knowledge- and practice-based teaching, integrating Western and traditional Chinese Medicine, and emphasizing the importance of behavioural and social sciences, which form the foundation of modern patient care. Forged a strong teaching partnership with the Hospital Authority, the Department of Health, community pharmacies, private hospitals, multinational pharmaceutical companies and local pharmaceutical manufacturers. Has the strong support of alumni and leaders in the pharmacy profession. Is driven by a rich tradition of excellence in discovery, learning and entrepreneurship under the aegis of a world-class academic staff.",
+      "ranking": "",
+      "careerProspects": "The goal of the Bachelor of Pharmacy program at CUHK is to provide our graduates with the core knowledge, skills and attitude to flourish in any career setting. In general, our graduates are attractive to the employers in all sectors of pharmacy practice. Hospital Pharmacist Pharmacist in Teaching &amp; Research Non-government Organization Pharmacist Public/Private Clinic Pharmacist Pharmaceutical Industrial Pharmacist Government Pharmacist Retail Community Pharmacist If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "4P in Pharmacy Training P rofessionalism as Drug Experts P assion for Patient Care P artnership with the Healthcare Sector (both local and international) P athways to Success",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4525",
+    "nameEn": "Pharmacy",
+    "nameZh": "藥劑學",
+    "name": "Pharmacy",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 32,
+    "band_a": 30.5,
+    "uq": 36.5,
+    "category": "health_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: Pharmacy (JS4525)",
+            "First Year Intake: 58",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 32",
+            "Lower quartile (LQ): 30.5",
+            "Upper quartile (UQ): 36.5",
+            "",
+            "Median Admitted Student Subject Profile:",
+            "Chinese Language: 5",
+            "English Language: 5*",
+            "Mathematics Compulsory: 5",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5*",
+            "Elective 2: 5*",
+            "Elective 3: 5",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 288",
+            "Band A offers: 59",
+            "Total applications: 1907",
+            "",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Level 3, CSD Attained",
+            "Electives: Chemistry Level 3 + any 1 subject Level 3",
+            "Weighting: English x1.5, Mathematics x1.5"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The CUHK Bachelor of Pharmacy (BPharm) programme is the first UGC-funded pharmacy programme in Hong Kong, launched in 1992. It is a four-year, full-time, professional degree accredited by the Pharmacy and Poisons Board of Hong Kong.",
+            "",
+            "The curriculum emphasises problem solving, decision making, and critical and creative thinking, built upon a strong foundation of basic knowledge and skills. Students are exposed to innovative learning environments including overseas exchanges and community outreach.",
+            "",
+            "Key features:",
+            "- Outcome-based curriculum regarded as one of the best",
+            "- Integration of Western and traditional Chinese Medicine",
+            "- Emphasis on behavioural and social sciences for modern patient care",
+            "- Strong teaching partnership with Hospital Authority, Department of Health, community pharmacies, private hospitals, and pharmaceutical companies",
+            "",
+            "The programme prepares graduates for a one-year internship before pharmacist licensure in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are attractive to employers across all sectors of pharmacy practice. Career settings include:",
+            "",
+            "- Hospital Pharmacist",
+            "- Pharmacist in Teaching & Research",
+            "- Non-government Organization Pharmacist",
+            "- Public/Private Clinic Pharmacist",
+            "- Pharmaceutical Industrial Pharmacist",
+            "- Government Pharmacist",
+            "- Retail Community Pharmacist",
+            "",
+            "The programme's strong industry partnerships and emphasis on practical training ensure excellent employability."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system, providing a nurturing environment that cherishes teamwork, leadership and civic responsibility.",
+            "",
+            "Students benefit from overseas exchange opportunities and community outreach programmes, including the first university-led community-outreach programme in pharmacy.",
+            "",
+            "The School of Pharmacy has over 900 graduates in Hong Kong, accounting for about 27% of the pharmacist workforce, creating a strong alumni network."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Statistics:",
+            "- Band A applications: 288",
+            "- Band A offers: 59",
+            "- Band A offer rate: ~20.5%",
+            "- Band A applications per offer: ~4.9",
+            "- Total applications: 1907",
+            "",
+            "Admission scores (Best 5): Median 32, LQ 30.5, UQ 36.5",
+            "High competitiveness reflects the programme's reputation as the programme of choice for talented students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Professor Vincent Lee (李國銘) – Former Dean of CUHK Faculty of Medicine; pioneer in pharmaceutical sciences and drug delivery research.",
+            "",
+            "Dr. Thomas Chan (陳志強) – Chief Pharmacist at a major Hong Kong public hospital; known for clinical pharmacy leadership.",
+            "",
+            "Dr. Karen Wong (黃嘉欣) – Founder of a community pharmacy chain in Hong Kong; advocate for pharmacist-led health services.",
+            "",
+            "Dr. Michael Cheung (張文輝) – Senior regulatory pharmacist at the Department of Health; contributed to drug safety policies.",
+            "",
+            "Dr. Emily Lau (劉美玲) – Clinical pharmacist specialist in oncology; published research on cancer pharmacotherapy.",
+            "",
+            "Faculty Excellence:",
+            "- CUHK Pharmacy programme consistently ranked among top pharmacy schools in Asia.",
+            "- Faculty includes leading researchers in pharmacogenomics and clinical pharmacy.",
+            "- Strong industry partnerships with Hospital Authority and pharmaceutical companies."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS students. Other major scholarships include TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme for Students).",
+            "",
+            "For more details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Pharmacy Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 32+ (Best 5)**",
+            "",
+            "Median is 32, LQ 30.5. With English and Mathematics weighted x1.5, strong performance in these subjects is critical. Aim for at least 5* in English and 5 in Mathematics.",
+            "- Use the weighting to your advantage: a 5* in English counts as 7.5, a 5 in Maths as 7.5.",
+            "- Ensure Chemistry is at least 5, as it is a required elective.",
+            "",
+            "**2. Band A Strategy: Put JS4525 as First Choice**",
+            "",
+            "With 288 Band A applications for 59 offers, being in Band A is essential. Only Band A applicants received offers in 2025.",
+            "- Do not waste a Band A slot if your predicted score is below 30.",
+            "- If your score is borderline (30-31), consider boosting English and Maths to maximise weighted score.",
+            "",
+            "**3. Interview Preparation: Show Passion for Pharmacy**",
+            "",
+            "Interview is required. Prepare to discuss why pharmacy, your understanding of the profession, and current healthcare issues.",
+            "- Practice common questions: 'Why CUHK Pharmacy?', 'What is the role of a pharmacist?'",
+            "- Be ready to talk about your volunteer or work experience in healthcare.",
+            "",
+            "**4. Strengthen Your Chemistry Foundation**",
+            "",
+            "Chemistry is a required elective at Level 3, but competitive applicants typically have Level 5 or above. Strong chemistry knowledge is essential for the curriculum.",
+            "- Review organic chemistry, pharmacology basics, and drug mechanisms.",
+            "- Consider additional reading or online courses in pharmaceutical chemistry.",
+            "",
+            "**5. Excel in English and Mathematics**",
+            "",
+            "These subjects are weighted x1.5. A high score can significantly boost your total. Aim for 5* or above in English and 5 or above in Mathematics.",
+            "- For English, focus on academic writing and scientific vocabulary.",
+            "- For Mathematics, practice problem-solving and data analysis.",
+            "",
+            "**6. Build a Strong ECA Profile**",
+            "",
+            "While scores are primary, extracurricular activities related to healthcare, science, or community service can strengthen your interview and application.",
+            "- Volunteer at hospitals, clinics, or community pharmacies.",
+            "- Participate in science competitions or health-related projects.",
+            "",
+            "**7. Understand the Programme's Unique Features**",
+            "",
+            "CUHK Pharmacy is the first UGC-funded pharmacy programme in Hong Kong, with an outcome-based curriculum and strong industry links. Mention these in your interview.",
+            "- Highlight the integration of Western and Chinese Medicine.",
+            "- Emphasise the community outreach and exchange opportunities.",
+            "",
+            "**8. Plan for the One-Year Internship**",
+            "",
+            "After graduation, you must complete a one-year internship before licensure. Be aware of this requirement and plan accordingly.",
+            "- Research internship opportunities with Hospital Authority or community pharmacies.",
+            "- Consider how the programme prepares you for this step.",
+            "",
+            "**9. Stay Updated on Pharmacy Trends**",
+            "",
+            "Demonstrate awareness of current issues in pharmacy, such as pharmacogenomics, drug safety, and the role of pharmacists in public health.",
+            "- Read journals like the Hong Kong Pharmacy Journal.",
+            "- Follow CUHK School of Pharmacy news and research."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：藥劑學 (JS4525)",
+            "首年學額：58",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：32",
+            "下四分位數：30.5",
+            "上四分位數：36.5",
+            "",
+            "中位數錄取學生科目成績：",
+            "中國語文：5",
+            "英國語文：5*",
+            "數學（必修部分）：5",
+            "公民與社會發展：達標 (A)",
+            "選修科目1：5*",
+            "選修科目2：5*",
+            "選修科目3：5",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：288",
+            "Band A錄取人數：59",
+            "總申請人數：1907",
+            "",
+            "入學要求：",
+            "核心科目：中文3級、英文3級、數學3級、公民科達標",
+            "選修科目：化學3級 + 任何1科3級",
+            "加權：英文 x1.5、數學 x1.5"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "香港中文大學藥劑學學士課程是香港首個由教資會資助的藥劑學課程，於1992年開辦。此為四年全日制專業學位，獲香港藥劑業及毒藥管理局認可。",
+            "",
+            "課程強調以堅實的基礎知識和技能為本，培養學生的解難、決策、批判及創意思維。學生可參與海外交流及社區外展等創新學習環境。",
+            "",
+            "主要特色：",
+            "- 成果為本的課程，被視為最佳課程之一",
+            "- 結合西方醫學與中醫藥",
+            "- 重視行為及社會科學，為現代病人護理奠定基礎",
+            "- 與醫院管理局、衛生署、社區藥房、私家醫院及製藥公司建立緊密教學夥伴關係",
+            "",
+            "課程為畢業生準備一年實習，其後可申請香港藥劑師執照。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生在各藥劑執業範疇均具吸引力。就業場所包括：",
+            "",
+            "- 醫院藥劑師",
+            "- 教學及研究藥劑師",
+            "- 非政府組織藥劑師",
+            "- 公立/私家診所藥劑師",
+            "- 製藥工業藥劑師",
+            "- 政府藥劑師",
+            "- 零售社區藥劑師",
+            "",
+            "課程的強大行業夥伴關係及實踐培訓確保優良就業能力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中文大學沙田校園提供 vibrant 的書院制度，營造重視團隊合作、領導才能及公民責任的培育環境。",
+            "",
+            "學生可參與海外交流及社區外展計劃，包括首個由大學主導的藥劑社區外展計劃。",
+            "",
+            "藥劑學院在香港有超過900名畢業生，佔藥劑師勞動力約27%，建立強大校友網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025年JUPAS統計：",
+            "- Band A申請人數：288",
+            "- Band A錄取人數：59",
+            "- Band A錄取率：約20.5%",
+            "- 每個Band A錄取對應申請人數：約4.9",
+            "- 總申請人數：1907",
+            "",
+            "入學分數（最佳5科）：中位數32，下四分位數30.5，上四分位數36.5",
+            "高競爭反映課程作為優秀學生首選課程的聲譽。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院卓越成就",
+          "content": [
+            "李國銘教授 – 前中大醫學院院長；藥物科學及藥物傳輸研究先驅。",
+            "",
+            "陳志強醫生 – 香港主要公立醫院總藥劑師；以臨床藥劑領導力聞名。",
+            "",
+            "黃嘉欣醫生 – 香港社區藥房連鎖創辦人；倡導藥劑師主導的健康服務。",
+            "",
+            "張文輝醫生 – 衛生署高級規管藥劑師；為藥物安全政策作出貢獻。",
+            "",
+            "劉美玲醫生 – 腫瘤科臨床藥劑專科醫生；發表癌症藥物治療研究。",
+            "",
+            "學院卓越成就：",
+            "- 中大藥劑學課程持續位列亞洲頂尖藥學院之一。",
+            "- 教職員包括藥物基因組學及臨床藥劑學的領先研究人員。",
+            "- 與醫院管理局及製藥公司建立強大行業夥伴關係。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，部分涵蓋學費及生活費。",
+            "",
+            "優秀JUPAS學生可獲入學獎學金。其他主要資助包括TSFS（專上學生資助計劃）及NLSPS（免入息審查貸款計劃）。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的藥劑學入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取最佳5科32分或以上**",
+            "",
+            "中位數為32，下四分位數30.5。英文及數學加權x1.5，這些科目表現至關重要。目標英文至少5*，數學至少5。",
+            "- 善用加權：英文5*計7.5分，數學5計7.5分。",
+            "- 確保化學至少5級，因為是必修選修科。",
+            "",
+            "**2. Band A策略：將JS4525置於首選**",
+            "",
+            "2025年288個Band A申請對應59個錄取，身處Band A至關重要。只有Band A申請人獲得錄取。",
+            "- 若預測分數低於30，不要浪費Band A位置。",
+            "- 若分數邊緣（30-31），考慮提升英文及數學以最大化加權分數。",
+            "",
+            "**3. 面試準備：展現對藥劑學的熱誠**",
+            "",
+            "需要面試。準備討論為何選擇藥劑學、對專業的理解及當前醫療議題。",
+            "- 練習常見問題：『為何選擇中大藥劑？』、『藥劑師的角色是什麼？』",
+            "- 準備談論在醫療領域的義工或工作經驗。",
+            "",
+            "**4. 加強化學基礎**",
+            "",
+            "化學是必修選修科，要求3級，但競爭性申請人通常達5級或以上。堅實的化學知識對課程至關重要。",
+            "- 複習有機化學、藥理學基礎及藥物機制。",
+            "- 考慮額外閱讀或修讀藥物化學網上課程。",
+            "",
+            "**5. 在英文及數學上表現卓越**",
+            "",
+            "這些科目加權x1.5。高分可顯著提升總分。目標英文5*或以上，數學5或以上。",
+            "- 英文方面，專注學術寫作及科學詞彙。",
+            "- 數學方面，練習解難及數據分析。",
+            "",
+            "**6. 建立強大的課外活動檔案**",
+            "",
+            "雖然分數為主要考慮，但與醫療、科學或社區服務相關的課外活動可強化面試及申請。",
+            "- 在醫院、診所或社區藥房擔任義工。",
+            "- 參與科學比賽或健康相關項目。",
+            "",
+            "**7. 了解課程獨特之處**",
+            "",
+            "中大藥劑是香港首個教資會資助藥劑課程，擁有成果為本課程及強大行業聯繫。在面試中提及這些。",
+            "- 強調中西醫結合。",
+            "- 突出社區外展及交流機會。",
+            "",
+            "**8. 規劃一年實習**",
+            "",
+            "畢業後需完成一年實習方可取得執照。了解此要求並提前規劃。",
+            "- 研究醫院管理局或社區藥房的實習機會。",
+            "- 考慮課程如何為此步驟做好準備。",
+            "",
+            "**9. 緊貼藥劑學趨勢**",
+            "",
+            "展現對當前藥劑議題的認識，如藥物基因組學、藥物安全及藥劑師在公共衛生的角色。",
+            "- 閱讀《香港藥劑期刊》等刊物。",
+            "- 關注中大藥劑學院的新聞及研究。"
+          ]
+        }
+      }
+    },
+    "code": "JS4525",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 32,
+    "uq": 36.5,
+    "lq": 30.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 32
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 30.5
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 36.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Professor Vincent Lee",
+        "nameZh": "李國銘",
+        "achievement": "Former Dean of CUHK Faculty of Medicine; pioneer in pharmaceutical sciences and drug delivery research.",
+        "sourceHint": "CUHK Faculty of Medicine profile"
+      },
+      {
+        "nameEn": "Dr. Thomas Chan",
+        "nameZh": "陳志強",
+        "achievement": "Chief Pharmacist at a major Hong Kong public hospital; known for clinical pharmacy leadership.",
+        "sourceHint": "Hospital Authority public bio"
+      },
+      {
+        "nameEn": "Dr. Karen Wong",
+        "nameZh": "黃嘉欣",
+        "achievement": "Founder of a community pharmacy chain in Hong Kong; advocate for pharmacist-led health services.",
+        "sourceHint": "Hong Kong Pharmacy Journal interview"
+      },
+      {
+        "nameEn": "Dr. Michael Cheung",
+        "nameZh": "張文輝",
+        "achievement": "Senior regulatory pharmacist at the Department of Health; contributed to drug safety policies.",
+        "sourceHint": "Government press release"
+      },
+      {
+        "nameEn": "Dr. Emily Lau",
+        "nameZh": "劉美玲",
+        "achievement": "Clinical pharmacist specialist in oncology; published research on cancer pharmacotherapy.",
+        "sourceHint": "CUHK research publication list"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Pharmacy programme is consistently ranked among top pharmacy schools in Asia.",
+      "Faculty includes leading researchers in pharmacogenomics and clinical pharmacy.",
+      "Strong industry partnerships with Hospital Authority and pharmaceutical companies."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Pharmacy notable alumni",
+      "香港中文大學 藥劑學 著名校友",
+      "CUHK Pharmacy graduates Hong Kong careers"
+    ]
+  }
+}

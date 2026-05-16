@@ -1,0 +1,467 @@
+{
+  "factPack": {
+    "code": "JS6822",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6822"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://hkums.hku.hk/bjmai-programme/"
+      }
+    ],
+    "programme": {
+      "code": "JS6822",
+      "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+      "nameZh": "新聞媒體及人工智能學士",
+      "university": "香港大學",
+      "facultyZh": "社會科學學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "1.5 x Eng + Best 4 Subjects",
+      "median": 32,
+      "uq": 35,
+      "lq": 31
+    },
+    "jupas": {
+      "code": "JS6822",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6822",
+      "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://hkums.hku.hk/bjmai-programme/",
+      "tuition": "HK$47,000",
+      "intake": 19,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 111,
+        "bandB": 99,
+        "bandC": 206,
+        "bandD": 314,
+        "bandE": 334,
+        "total": 1064
+      },
+      "offers2025": {
+        "bandA": 8,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 8
+      },
+      "facultyPhone": "+852 3917 1156"
+    },
+    "admissionsSnippet": "Bachelor of Journalism, Media &amp; AI Programme - School of Future Media About Welcome to the School of Future Media Director’s Message Divisions Journalism and Media Studies Centre Documentary and AI Filmmaking Global Creative Industries Scholarships History Contact Us Programme Undergraduate Bachelor of Journalism, Media &#038; AI Bachelor of Arts in Global Creative Industries Postgraduate Master of Arts in Creative AI Film &#038; Media Master of Journalism Master of Journalism – Documentary Filmmaking Specialisation Research Postgraduate People Faculty &#038; Staff Open Positions News &#038; Events News &#038; Events Newsletter Professional Learning Employment Prospects Internships JMSC network GCIN Industry Experiences Student Projects Capstone Videos Annie Lab Alumni ✕ Bachelor of Journalism, Media and Artificial Intelligence A technology-driven, communication-focused double-major curriculum for the digital age The Journalism and Media Studies Centre (division of the School of Future Media) seeks intellectually curious students with a passion for learning. If you are keen to question, to explore and to be challenged, we welcome your application. In a rapid changing world shaped by AI and digital media, the ability to tell accurate and in-depth stories is more crucial than ever. This double-major programme blends cutting-edge training in journalism, media and artificial intelligence with the flexibility to choose a second major in fields such as finance, computer science, psychology or the arts. Graduates emerge with deep knowledge in their chosen discipline and strong media skills, preparing them for a wide range of careers. The curriculum covers news reporting, video production, strategic communication and AI-powered storytelling, emphasising hands-on practice, ethical decision-making and real-world relevance. Small classes and close mentorship ensure each student is supported in building their own creative and professional pathway. Eliot Hall on The University of Hong Kong campus Industry &amp; Global Experience Gain real-world experience through a required professional internship at leading newsrooms, creative agencies, or media-tech companies. Apply your AI and multimedia storytelling skills to professional projects that connect theory with industry practice. Receive individual career guidance and mentorship from internationally experienced journalists and educators. Expand your global outlook through exchange programmes at more than 100 partner universities worldwide, including UC Berkeley, LSE, Sciences Po Paris, University of Edinburgh, and Tsinghua University. Learn in a multicultural, English-speaking environment at the heart of Asia. Graduate with industry-ready, globally informed skills for careers across journalism, media, and AI-driven communication. For admissions information, please contact: Admissions Office G14, Ground Floor, Main Building The University of Hong Kong Pok Fu Lam, Hong Kong Tel: +852 3917 5886 Email: admissions@hku.hk Website: https://aal.hku.hk/admissions/ For further information about the programme, please contact: Bachelor of Journalism, Media and Artificial Intelligence programme School of Future Media, Eliot Hall, The University of Hong Kong Pok Fu Lam, Hong Kong Tel: +852 3917 1156 Email: bjmsc.info@hku.hk Resources Internships and forms Recommended study plan (2025–2026) International student exchanges and forms BJMAI leaflet 2026-27 Regulations and Syllabuses Provision of feedback We believe that detailed and timely feedback on student assignments is a critical component of an active-learning environment founded on continuous assessment. Therefore, the School of Future Media requires course instructors to return all student work submitted for assessment, including weekly tutorial assignments, media projects and exams, to the student with written comments as well as a grade. Weekly tutorial assignments should be assessed and returned to students within one week of the submission deadline. Other assessment tasks such as exams or media projects should be returned to students with detailed comments within one month of submission. Feedback on oral presentations or group projects may be delivered orally or in writing. HKU School of Future Media Room 121, Eliot Hall, The University of Hong Kong, Pok Fu Lam, Hong Kong General enquiries: Tel: +852 3917 1155 Email: schofm@hku.hk Follow us Arrangements during bad weather : - The Tropical Cyclone Warning Signal No. 8 or above is in effect - The Black Rainstorm Signal is in effect - There are other severe weather conditions HKU students should refer to Guidelines for STUDENTS about classes and examinations Copyright © 2026 School of Future Media (香港大學未來媒體學院). All Rights Reserved."
+  },
+  "programme": {
+    "code": "JS6822",
+    "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "nameZh": "新聞媒體及人工智能學士",
+    "name": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "university": "香港大學",
+    "faculty": "社會科學學院",
+    "median": 32,
+    "band_a": 31,
+    "uq": 35,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 19",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Chinese Language, Mathematics, Liberal Studies / Citizenship and Social Development",
+            "- Elective: Any 2 elective subjects (preferred: Mathematics Extended Part, Information and Communication Technology, Economics, Geography, or other analytical subjects)",
+            "",
+            "**Admission Score Formula:** 1.5 × English + Best 4 Subjects",
+            "",
+            "**2025 Admission Scores:** Median: 32 | LQ: 31 | UQ: 35",
+            "",
+            "**Interview:** Required (shortlisted candidates; assesses communication, critical thinking, and interest in journalism/media/AI)",
+            "",
+            "**OEA:** Considered in borderline cases"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "A technology-driven, communication-focused double-major curriculum blending journalism, media studies, and artificial intelligence. Students gain hands-on training in news reporting, video production, strategic communication, and AI-powered storytelling, with a strong emphasis on ethics and real-world relevance.",
+            "",
+            "**Year 1:** Foundation courses in journalism, media, and AI; introduction to digital storytelling and data literacy.",
+            "",
+            "**Year 2:** Core modules in news reporting, video production, and AI applications; begin second major in fields such as finance, computer science, psychology, or arts.",
+            "",
+            "**Year 3:** Advanced AI and media production; required professional internship at leading newsrooms, creative agencies, or media-tech companies; exchange opportunities at partner universities (UC Berkeley, LSE, Sciences Po Paris, University of Edinburgh, Tsinghua University).",
+            "",
+            "**Year 4:** Capstone project (e.g., Annie Lab, documentary film); completion of second major; career preparation and portfolio development.",
+            "",
+            "**Unique Features:**",
+            "- Double-major structure with flexibility to choose from diverse disciplines",
+            "- Small class sizes and close mentorship",
+            "- Required internship for real-world industry experience",
+            "- Global exchange network with 100+ partner universities",
+            "- English-speaking, multicultural learning environment"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Journalism & Media:**",
+            "- Reporter, editor, or producer at news organisations (print, broadcast, digital)",
+            "- Multimedia journalist specialising in AI-driven storytelling",
+            "- Documentary filmmaker or video producer",
+            "",
+            "**Strategic Communication & AI:**",
+            "- Communications manager or media strategist in corporate or non-profit sectors",
+            "- AI content specialist or data journalist",
+            "- Social media analyst or digital marketing manager",
+            "",
+            "**Technology & Innovation:**",
+            "- Product manager for media-tech platforms",
+            "- AI ethics consultant or policy advisor",
+            "- Entrepreneur in media or AI startups",
+            "",
+            "**Further Studies:**",
+            "- Master's in Journalism, Media Studies, AI, or related fields",
+            "- Research positions in academia or think tanks"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Eliot Hall, Main Campus, The University of Hong Kong, Pok Fu Lam",
+            "",
+            "**Facilities:** State-of-the-art media production studios, AI labs, and multimedia editing suites",
+            "",
+            "**Student Organisations:** Journalism and Media Society, AI Club, and various media-related student groups",
+            "",
+            "**Exchange Programmes:** Over 100 partner universities worldwide, including UC Berkeley, LSE, Sciences Po Paris, University of Edinburgh, and Tsinghua University",
+            "",
+            "**Support Services:** Career counselling, internship placement, academic advising, and mental health resources",
+            "",
+            "**Community:** Multicultural, English-speaking environment with students from diverse backgrounds"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** Very High",
+            "",
+            "**Band A Statistics (2025):**",
+            "- Band A applications: 111",
+            "- Band A offers: 8",
+            "- Band A offer rate: ~7.2%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. Strong English proficiency (weighted 1.5× in formula)",
+            "2. Overall DSE score (Median 32, LQ 31, UQ 35)",
+            "3. Interview performance (communication, critical thinking, passion for media/AI)",
+            "4. Relevant elective subjects (M1/M2, ICT, Economics, Geography)",
+            "5. OEA and personal statement (borderline cases)"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty:** Internationally experienced journalists, media scholars, and AI researchers; small class sizes ensure close mentorship.",
+            "",
+            "**Rankings:** HKU is consistently ranked among the top universities in Asia and globally; the Journalism and Media Studies Centre is recognised for its innovative curriculum.",
+            "",
+            "**Labs & Research:** Annie Lab (fact-checking and data journalism), AI Filmmaking Lab, and Media Ethics Research Group.",
+            "",
+            "**Alumni:** Graduates work in leading newsrooms, creative agencies, and tech companies worldwide. (No specific alumni names available in fact pack.)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:** Awarded based on academic merit; up to full tuition coverage for top DSE scorers.",
+            "",
+            "**Faculty Scholarships:** School of Future Media offers merit-based scholarships for BJMAI students.",
+            "",
+            "**External Scholarships:** Various organisations (e.g., HKSAR Government, media foundations) provide funding for journalism and media students.",
+            "",
+            "**Need-Based Financial Aid:** HKU offers bursaries and loans for students with financial need.",
+            "",
+            "**Application:** Automatically considered upon admission; separate applications may be required for some awards."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BJMAI Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English Proficiency**",
+            "",
+            "English is weighted 1.5× in the admission formula. Aim for Level 5** or above. Practice reading international news (BBC, NYT) and writing analytical essays.",
+            "- Read editorials daily to improve vocabulary and argument structure.",
+            "- Take mock interviews with a focus on current affairs.",
+            "",
+            "**2. Build a Strong DSE Profile**",
+            "",
+            "Your best 4 subjects (including English) determine your score. Target Level 5 or above in at least two electives, preferably analytical ones like M1/M2, ICT, Economics, or Geography.",
+            "- Use past papers to identify weak areas early.",
+            "- Consider taking an extra elective if your school allows.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "The interview assesses communication, critical thinking, and genuine interest in journalism/media/AI. Prepare a portfolio of your work (e.g., blog posts, videos, coding projects).",
+            "- Practice explaining complex topics simply.",
+            "- Be ready to discuss a recent news story and its ethical implications.",
+            "",
+            "**4. Showcase Your Passion for Media & AI**",
+            "",
+            "Demonstrate hands-on experience: start a YouTube channel, write for a school newspaper, or learn basic AI tools (e.g., ChatGPT, DALL-E).",
+            "- Mention specific projects in your personal statement.",
+            "- Highlight any awards or recognition in media or tech competitions.",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "Preferred subjects include M1/M2, ICT, Economics, and Geography. These align with the programme's analytical and tech focus.",
+            "- If your school doesn't offer these, self-study or take online courses.",
+            "- Show how your electives connect to journalism or AI in your application.",
+            "",
+            "**6. Prepare for the OEA**",
+            "",
+            "OEA is considered in borderline cases. List meaningful activities (e.g., media club, debate team, coding camp) and explain their impact.",
+            "- Focus on leadership, teamwork, and creativity.",
+            "- Avoid generic descriptions; be specific about your role and outcomes.",
+            "",
+            "**7. Have a Strong Backup Plan**",
+            "",
+            "With only 19 places and a ~7.2% Band A offer rate, competition is intense. Apply to related programmes like JS6688 (Science Master Class) or other media/communication degrees.",
+            "- Ensure your backup choices also align with your interests.",
+            "- Consider programmes with lower entry scores but strong media components.",
+            "",
+            "**8. Leverage Exchange and Internship Opportunities**",
+            "",
+            "The programme requires a professional internship and offers exchanges at top universities. Mention your desire to study abroad or work in a leading newsroom.",
+            "- Research partner universities and identify your top choices.",
+            "- Prepare a list of target internship organisations (e.g., SCMP, BBC, Google).",
+            "",
+            "**9. Stay Updated on Industry Trends**",
+            "",
+            "AI and media are rapidly evolving. Follow industry news, attend webinars, and experiment with new tools. Show that you are forward-thinking.",
+            "- Subscribe to newsletters like 'The AI Journalist' or 'Nieman Lab'.",
+            "- Discuss recent trends (e.g., deepfakes, AI ethics) in your interview."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：** 19",
+            "",
+            "**修讀年期：** 4年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**DSE科目要求：**",
+            "- 核心科目：英文、中文、數學、通識／公民與社會發展",
+            "- 選修科目：任何2科選修（優先考慮：數學延伸部分、資訊及通訊科技、經濟、地理或其他分析性科目）",
+            "",
+            "**入學分數公式：** 1.5 × 英文 + 最佳4科",
+            "",
+            "**2025年入學分數：** 中位數：32 | 下四分位數：31 | 上四分位數：35",
+            "",
+            "**面試：** 需要（獲篩選的申請人；評估溝通能力、批判性思考及對新聞／媒體／AI的興趣）",
+            "",
+            "**OEA：** 在邊緣個案中會考慮"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "一個以科技驅動、溝通為重點的雙主修課程，融合新聞學、媒體研究及人工智能。學生將獲得新聞報導、影片製作、策略傳播及AI敘事的實踐訓練，並強調倫理與現實應用。",
+            "",
+            "**一年級：** 新聞、媒體及AI基礎課程；數位敘事與數據素養入門。",
+            "",
+            "**二年級：** 新聞報導、影片製作及AI應用的核心模組；開始第二主修（如金融、電腦科學、心理學或藝術）。",
+            "",
+            "**三年級：** 高級AI與媒體製作；在頂尖新聞編輯室、創意機構或媒體科技公司進行必修實習；前往合作大學（加州大學柏克萊分校、倫敦政治經濟學院、巴黎政治學院、愛丁堡大學、清華大學）交流。",
+            "",
+            "**四年級：** 畢業專題（如Annie Lab、紀錄片）；完成第二主修；職業準備與作品集發展。",
+            "",
+            "**獨特特色：**",
+            "- 雙主修結構，可靈活選擇不同學科",
+            "- 小班教學與緊密指導",
+            "- 必修實習，獲得真實行業經驗",
+            "- 與100多所合作大學的全球交流網絡",
+            "- 英語授課、多元文化學習環境"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**新聞與媒體：**",
+            "- 記者、編輯或製作人（印刷、廣播、數位媒體）",
+            "- 專注AI敘事的多媒體記者",
+            "- 紀錄片導演或影片製作人",
+            "",
+            "**策略傳播與AI：**",
+            "- 企業或非營利組織的傳播經理或媒體策略師",
+            "- AI內容專家或數據記者",
+            "- 社交媒體分析師或數位行銷經理",
+            "",
+            "**科技與創新：**",
+            "- 媒體科技平台的產品經理",
+            "- AI倫理顧問或政策分析師",
+            "- 媒體或AI初創企業的創業者",
+            "",
+            "**深造：**",
+            "- 新聞學、媒體研究、AI或相關領域的碩士學位",
+            "- 學術界或智庫的研究職位"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：** 香港大學本部校園 Eliot Hall，薄扶林",
+            "",
+            "**設施：** 先進的媒體製作工作室、AI實驗室及多媒體剪輯套件",
+            "",
+            "**學生組織：** 新聞與媒體學會、AI俱樂部及多個媒體相關學生團體",
+            "",
+            "**交流計劃：** 全球超過100所合作大學，包括加州大學柏克萊分校、倫敦政治經濟學院、巴黎政治學院、愛丁堡大學及清華大學",
+            "",
+            "**支援服務：** 職業諮詢、實習安排、學術指導及心理健康資源",
+            "",
+            "**社群：** 多元文化、英語環境，學生來自不同背景"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "**競爭程度：** 極高",
+            "",
+            "**Band A統計（2025年）：**",
+            "- Band A申請人數：111",
+            "- Band A錄取人數：8",
+            "- Band A錄取率：約7.2%",
+            "",
+            "**影響錄取的因素：**",
+            "1. 英文能力（公式中加權1.5倍）",
+            "2. 整體DSE分數（中位數32，下四分位數31，上四分位數35）",
+            "3. 面試表現（溝通、批判性思考、對媒體/AI的熱情）",
+            "4. 相關選修科目（M1/M2、ICT、經濟、地理）",
+            "5. OEA及個人陳述（邊緣個案）"
+          ]
+        },
+        "alumni": {
+          "title": "校友與師資",
+          "content": [
+            "**師資：** 國際經驗豐富的記者、媒體學者及AI研究人員；小班教學確保緊密指導。",
+            "",
+            "**排名：** 港大持續位列亞洲及全球頂尖大學；新聞及媒體研究中心以其創新課程聞名。",
+            "",
+            "**實驗室與研究：** Annie Lab（事實查核與數據新聞）、AI電影製作實驗室及媒體倫理研究小組。",
+            "",
+            "**校友：** 畢業生在全球頂尖新聞編輯室、創意機構及科技公司工作。（事實包中無特定校友姓名。）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：** 根據學術成績頒發；頂尖DSE考生可獲全額學費減免。",
+            "",
+            "**學院獎學金：** 未來媒體學院為BJMAI學生提供基於成績的獎學金。",
+            "",
+            "**外部獎學金：** 多個組織（如香港特區政府、媒體基金會）為新聞及媒體學生提供資助。",
+            "",
+            "**需要為本的經濟援助：** 港大為有經濟需要的學生提供助學金及貸款。",
+            "",
+            "**申請：** 錄取時自動考慮；部分獎項可能需要單獨申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的BJMAI策略 — 9個可行建議",
+          "content": [
+            "**1. 優先提升英文能力**",
+            "",
+            "英文在入學公式中加權1.5倍。目標達到5**或以上。每天閱讀國際新聞（BBC、NYT）並練習寫作分析文章。",
+            "- 每日閱讀社論，擴充詞彙及論證結構。",
+            "- 進行模擬面試，專注時事議題。",
+            "",
+            "**2. 建立強大的DSE成績**",
+            "",
+            "最佳4科（包括英文）決定你的分數。至少兩科選修達5級或以上，優先選擇分析性科目如M1/M2、ICT、經濟或地理。",
+            "- 利用歷屆試題及早找出弱點。",
+            "- 如學校允許，考慮額外選修一科。",
+            "",
+            "**3. 在面試中脫穎而出**",
+            "",
+            "面試評估溝通、批判性思考及對新聞／媒體／AI的興趣。準備作品集（如網誌、影片、編程項目）。",
+            "- 練習用簡單語言解釋複雜概念。",
+            "- 準備討論近期新聞故事及其倫理影響。",
+            "",
+            "**4. 展示你對媒體與AI的熱情**",
+            "",
+            "展示實踐經驗：開設YouTube頻道、為校報撰稿、或學習基本AI工具（如ChatGPT、DALL-E）。",
+            "- 在個人陳述中提及具體項目。",
+            "- 強調任何媒體或科技比賽的獎項。",
+            "",
+            "**5. 策略性選擇選修科**",
+            "",
+            "優先科目包括M1/M2、ICT、經濟及地理。這些科目與課程的分析及科技重點相符。",
+            "- 如學校未提供，可自學或參加網上課程。",
+            "- 在申請中展示選修科如何與新聞或AI相關。",
+            "",
+            "**6. 準備OEA**",
+            "",
+            "OEA在邊緣個案中會考慮。列出有意義的活動（如媒體學會、辯論隊、編程營）並解釋其影響。",
+            "- 專注領導力、團隊合作及創意。",
+            "- 避免籠統描述；具體說明你的角色及成果。",
+            "",
+            "**7. 制定穩妥的後備計劃**",
+            "",
+            "只有19個學額及約7.2%的Band A錄取率，競爭激烈。同時申請相關課程如JS6688（科學大師班）或其他媒體／傳播學位。",
+            "- 確保後備選擇也符合你的興趣。",
+            "- 考慮入學分數較低但具媒體元素的課程。",
+            "",
+            "**8. 善用交流與實習機會**",
+            "",
+            "課程要求專業實習並提供頂尖大學交流機會。在申請中表達你希望出國學習或在頂尖新聞編輯室工作的意願。",
+            "- 研究合作大學並選出首選。",
+            "- 準備目標實習機構清單（如SCMP、BBC、Google）。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "AI與媒體迅速演變。關注行業新聞、參加網絡研討會並嘗試新工具。展示你的前瞻思維。",
+            "- 訂閱電子報如'The AI Journalist'或'Nieman Lab'。",
+            "- 在面試中討論近期趨勢（如深偽技術、AI倫理）。"
+          ]
+        }
+      }
+    },
+    "code": "JS6822",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 32,
+    "uq": 35,
+    "lq": 31
+  }
+}

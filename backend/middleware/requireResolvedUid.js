@@ -15,14 +15,18 @@ function ensureUidInRequest(req, uid) {
 }
 
 function requireResolvedUid(req, res, next) {
-    const uid = extractUid(req);
+    const clientUid = extractUid(req);
+    // When Entra (or similar) resolved req.uid, always use it — client query uid may be stale.
+    const uid = (isProviderAuthEnabled() && req.uid) ? req.uid : clientUid;
     if (!uid || uid === 'guest') {
         return res.status(401).json({ error: 'Unauthorized: Missing resolved uid' });
     }
-    if (isProviderAuthEnabled() && req.uid && uid !== req.uid) {
-        return res.status(403).json({ error: 'Forbidden: uid mismatch' });
+    if (isProviderAuthEnabled() && req.uid && clientUid && clientUid !== req.uid) {
+        console.warn(
+            `[requireResolvedUid] Client uid ${clientUid} overridden by token uid ${req.uid}`
+        );
     }
-    ensureUidInRequest(req, req.uid || uid);
+    ensureUidInRequest(req, uid);
     return next();
 }
 

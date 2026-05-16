@@ -1,0 +1,465 @@
+{
+  "factPack": {
+    "code": "JS6303",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6303"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.ugadmissions.engg.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6303",
+      "nameEn": "Bachelor of Engineering Elite Programme",
+      "nameZh": "工學學士精英課程",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 36,
+      "uq": 38,
+      "lq": 35
+    },
+    "jupas": {
+      "code": "JS6303",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6303",
+      "nameEn": "Bachelor of Engineering Elite Programme",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The Faculty of Engineering aims to nurture highly talented and top-performing engineering students to be future leaders in frontier technology developments and rapidly advancing industries. The training flexibility and curriculum elements for these students are beyond the traditional engineering education",
+      "programmeWebsite": "https://www.ugadmissions.engg.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 103,
+        "bandB": 67,
+        "bandC": 108,
+        "bandD": 133,
+        "bandE": 124,
+        "total": 535
+      },
+      "offers2025": {
+        "bandA": 18,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 18
+      },
+      "facultyPhone": "+852 3917 2803"
+    },
+    "admissionsSnippet": "--> Home | HKU Engineering Undergraduate Admissions top of page HKU Engineering Undergraduate&nbsp;Admissions Home Discover About HKU Engineering Why HKU Engineering Professional Recognition Our Departments Videos Programmes Overview of HKU Engineering Programmes JS6303 Engineering Elite Programme JS6377 BEng X + MScEng AIE JS6937 Global Engineering and Business JS6353 Civil Engineering JS6987 Electrical Engineering JS6315 Data and Systems Engineering JS6339 Mechanical Engineering Programmes offered by SCDS Programmes offered by SBME Programmes offered by i-School Apply JUPAS applicants International Qualifications applicants Mainland applicants Admissions Requirements Download HKUENGG Admissions Brochure Contact Contact Details HKU Campus Map More Use tab to navigate through the menu items. ADMISSIONS BROCHURE Programme&nbsp; information ADMISSIONS REQUIREMENTS STUDENT SHARING HKU Engineering Undergraduate&nbsp;Admissions Address : Room G01A, G/F, Haking Wong Building,&nbsp; The University of Hong Kong,&nbsp; Pokfulam Road, Hong Kong. Email :&nbsp; enggugad@hku.hk Copyright &copy; 2025 Faculty of Engineering, The University of Hong Kong. All rights reserved. bottom of page"
+  },
+  "programme": {
+    "code": "JS6303",
+    "nameEn": "Bachelor of Engineering Elite Programme",
+    "nameZh": "工學學士精英課程",
+    "name": "Bachelor of Engineering Elite Programme",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 36,
+    "band_a": 35,
+    "uq": 38,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 327",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "- Formula: Eng + Math + Best 3 Subjects",
+            "- Median: 36 | LQ: 35 | UQ: 38",
+            "",
+            "**DSE Subject Requirements:**",
+            "- Core: English Language, Mathematics Compulsory Part",
+            "- Electives: Best 3 subjects (including at least one from: Biology, Chemistry, Physics, Combined Science, or Mathematics Extended Part Module 1 or 2)",
+            "- Weighting: No specific weighting; all subjects counted equally in Best 3",
+            "",
+            "**Interview:** May be required for some applicants; performance considered in selection.",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "- Band A applications: 103",
+            "- Band A offers: 18",
+            "- Band A offer rate: ~17.5%"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Engineering Elite Programme is designed for high-achieving students who aspire to become leaders in frontier technology and rapidly advancing industries. It offers a flexible, enriched curriculum beyond traditional engineering education.",
+            "",
+            "**Year 1:** Foundation courses in mathematics, physics, and engineering principles, plus a common core for all engineering students.",
+            "",
+            "**Year 2:** Specialisation pathways in Civil, Electrical, Mechanical, Computer, or Data and Systems Engineering; students select a major.",
+            "",
+            "**Year 3:** Advanced major courses, interdisciplinary projects, and optional overseas exchange or internship.",
+            "",
+            "**Year 4:** Capstone design project, elective courses, and research or industry-focused final year project.",
+            "",
+            "**Unique Features:**",
+            "- Small class sizes with personalised mentorship",
+            "- Early research exposure through faculty-led projects",
+            "- Industry partnerships for internships and final year projects",
+            "- Option to pursue a double major or minor in related fields"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Engineering & Technology:**",
+            "- Design and development engineer in civil, electrical, mechanical, or software sectors",
+            "- Research and development roles in emerging tech (AI, robotics, smart infrastructure)",
+            "",
+            "**Management & Consulting:**",
+            "- Engineering management trainee programmes in multinational corporations",
+            "- Technology consulting at firms like Accenture, McKinsey, or BCG",
+            "",
+            "**Entrepreneurship & Innovation:**",
+            "- Start-up founder or innovation lead in engineering ventures",
+            "- Technology transfer and patent development roles",
+            "",
+            "**Further Studies:**",
+            "- MSc or PhD in specialised engineering fields",
+            "- MBA for engineering management careers"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus at Pokfulam, Hong Kong, with state-of-the-art engineering labs and facilities.",
+            "",
+            "**Facilities:** Haking Wong Building houses engineering lecture theatres, computer labs, and student common rooms.",
+            "",
+            "**Student Societies:** Engineering Society organises academic, social, and career events throughout the year.",
+            "",
+            "**Sports & Recreation:** Access to University sports facilities including gym, swimming pool, and sports fields.",
+            "",
+            "**Accommodation:** On-campus halls available; off-campus housing options in nearby areas.",
+            "",
+            "**Support Services:** Academic advising, career counselling, and mental health support provided by the University."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High – The Elite Programme attracts top DSE performers across Hong Kong.",
+            "",
+            "**Band A Statistics (2025):**",
+            "- Band A applications: 103",
+            "- Band A offers: 18",
+            "- Band A offer rate: ~17.5%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Eng + Math + Best 3) – strong performance in mathematics and science electives is critical.",
+            "2. Interview performance – if shortlisted, communication and problem-solving skills are assessed.",
+            "3. Choice of electives – preference for students with at least one science or M1/M2 subject.",
+            "4. Overall academic profile – consistent high achievement across all subjects."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:** HKU Engineering is consistently ranked among the top engineering faculties in Asia, with strong research output in civil, electrical, and computer engineering.",
+            "",
+            "**Research Centres:** The faculty hosts several research centres including the Centre for Advances in Reliability and Safety (CAiRS) and the Intelligent Systems Lab.",
+            "",
+            "**Global Rankings:** HKU Engineering programmes are highly regarded internationally, with strong industry connections and graduate employability.",
+            "",
+            "**Alumni Network:** Graduates of the Elite Programme join a network of successful engineers, entrepreneurs, and leaders in technology and business sectors worldwide."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:** Awarded to top DSE scorers; details available on the HKU Admissions website.",
+            "",
+            "**Faculty of Engineering Scholarships:** Merit-based scholarships for outstanding engineering students, including the Engineering Elite Scholarship.",
+            "",
+            "**External Scholarships:** Students may apply for HKSAR Government Scholarships, Sir Edward Youde Memorial Scholarships, and other external awards.",
+            "",
+            "**Need-Based Financial Aid:** The University offers bursaries and loans for students with financial need.",
+            "",
+            "**Renewable Scholarships:** Some scholarships are renewable based on academic performance each year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Elite Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "Focus on English and Mathematics Compulsory – they are the only two cores counted in the formula. Aim for Level 5 or above in both.",
+            "- Use past papers and timed practice to build speed and accuracy.",
+            "- For English, work on comprehension and writing skills; for Maths, ensure all topics are covered.",
+            "",
+            "**2. Choose Science Electives Wisely**",
+            "",
+            "Select at least one science subject (Physics, Chemistry, Biology, Combined Science) or M1/M2. These are preferred and can boost your Best 3.",
+            "- Physics and M2 are particularly valued for engineering pathways.",
+            "- Avoid taking too many arts subjects if they dilute your science profile.",
+            "",
+            "**3. Aim for a High Best 3 Score**",
+            "",
+            "Your Best 3 subjects should ideally all be at Level 5 or above. Use your strongest electives to maximise the total.",
+            "- Identify your top three subjects early and allocate extra revision time to them.",
+            "- Consider dropping weaker subjects if allowed, to focus on your best.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "If shortlisted, the interview may assess your motivation, problem-solving, and communication skills.",
+            "- Practice explaining engineering concepts in simple terms.",
+            "- Be ready to discuss current technology trends and why you want to join the Elite Programme.",
+            "",
+            "**5. Build a Strong OEA Profile**",
+            "",
+            "Other Experiences and Achievements (OEA) can differentiate you. Highlight leadership, competitions, or projects.",
+            "- Include any engineering-related competitions (e.g., robotics, maths olympiad).",
+            "- Show sustained commitment to STEM activities outside school.",
+            "",
+            "**6. Use Band A Strategically**",
+            "",
+            "With a ~17.5% offer rate, Band A placement is crucial. Put JS6303 as your first choice if it is your top preference.",
+            "- If your predicted score is near the median (36), still apply – the programme values well-rounded profiles.",
+            "- Consider a backup engineering programme in Band B or C.",
+            "",
+            "**7. Consider Backup Options**",
+            "",
+            "Have a solid backup plan. Other HKU engineering programmes (e.g., JS6377, JS6353) have slightly lower cutoffs.",
+            "- Research each programme's curriculum and career outcomes to ensure fit.",
+            "- Apply to at least one programme with a lower median score as a safety.",
+            "",
+            "**8. Leverage Summer Programmes**",
+            "",
+            "Attend HKU Engineering summer workshops or online courses to demonstrate interest and gain exposure.",
+            "- These can strengthen your OEA and interview talking points.",
+            "- Check the Faculty website for available programmes.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "Check the official HKU Engineering Admissions website regularly for any changes in requirements or deadlines.",
+            "- Follow their social media for announcements.",
+            "- Contact the admissions office if you have specific questions."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：** 327",
+            "",
+            "**修讀年期：** 4年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**2025年入學分數：**",
+            "- 計算公式：英文 + 數學 + 最佳3科",
+            "- 中位數：36 | 下四分位數：35 | 上四分位數：38",
+            "",
+            "**文憑試科目要求：**",
+            "- 核心科目：英國語文、數學必修部分",
+            "- 選修科目：最佳3科（須包括至少一科：生物、化學、物理、組合科學、或數學延伸部分單元一或二）",
+            "- 比重：無特定比重，所有科目在最佳3科中同等計算",
+            "",
+            "**面試：** 部分申請人或需面試，表現會納入考慮。",
+            "",
+            "**2025年聯招統計：**",
+            "- Band A申請人數：103",
+            "- Band A取錄人數：18",
+            "- Band A取錄率：約17.5%"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "工程精英課程專為成績優異的學生而設，旨在培養他們成為前沿科技及快速發展行業的領袖。課程提供靈活且豐富的學習內容，超越傳統工程教育。",
+            "",
+            "**一年級：** 數學、物理及工程原理基礎課程，並修讀工程學院共同核心科目。",
+            "",
+            "**二年級：** 選擇專業方向，包括土木、電機、機械、計算機或數據與系統工程。",
+            "",
+            "**三年級：** 進階專業課程、跨學科項目，以及可選的海外交流或實習。",
+            "",
+            "**四年級：** 頂石設計項目、選修課程，以及研究或行業導向的畢業專題。",
+            "",
+            "**課程特色：**",
+            "- 小班教學，提供個人化指導",
+            "- 早期參與教授主導的研究項目",
+            "- 與業界合作提供實習及畢業項目機會",
+            "- 可選修雙主修或副修相關領域"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**工程與科技：**",
+            "- 土木、電機、機械或軟件領域的設計及開發工程師",
+            "- 新興科技（人工智能、機械人、智慧基建）研發職位",
+            "",
+            "**管理與諮詢：**",
+            "- 跨國企業的工程管理培訓生計劃",
+            "- 科技諮詢（如Accenture、McKinsey、BCG）",
+            "",
+            "**創業與創新：**",
+            "- 工程初創企業創辦人或創新主管",
+            "- 技術轉移及專利開發",
+            "",
+            "**深造：**",
+            "- 工程專業碩士或博士",
+            "- 工程管理方向的工商管理碩士"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：** 主校園位於香港薄扶林，配備先進工程實驗室及設施。",
+            "",
+            "**設施：** 黃克競樓設有工程講堂、電腦實驗室及學生休息室。",
+            "",
+            "**學生組織：** 工程學會全年舉辦學術、社交及就業活動。",
+            "",
+            "**體育與休閒：** 可使用大學體育設施，包括健身室、游泳池及運動場。",
+            "",
+            "**住宿：** 提供校內宿舍，校外住宿選擇亦鄰近校園。",
+            "",
+            "**支援服務：** 大學提供學術指導、就業輔導及心理健康支援。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高——精英課程吸引全港頂尖文憑試考生。",
+            "",
+            "**Band A統計（2025年）：**",
+            "- Band A申請人數：103",
+            "- Band A取錄人數：18",
+            "- Band A取錄率：約17.5%",
+            "",
+            "**影響取錄的因素：**",
+            "1. 文憑試分數（英文 + 數學 + 最佳3科）——數學及科學選修科表現尤為關鍵。",
+            "2. 面試表現——如獲篩選，溝通及解難能力會被評估。",
+            "3. 選修科目選擇——優先考慮至少修讀一科科學或M1/M2的學生。",
+            "4. 整體學術表現——所有科目持續取得佳績。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與成就",
+          "content": [
+            "**學院卓越：** 港大工程學院在亞洲工程學院中名列前茅，在土木、電機及計算機工程領域研究成果豐碩。",
+            "",
+            "**研究中心：** 學院設有多個研究中心，包括可靠性與安全促進中心（CAiRS）及智能系統實驗室。",
+            "",
+            "**國際排名：** 港大工程課程在國際上享有盛譽，畢業生就業能力強，與業界聯繫緊密。",
+            "",
+            "**校友網絡：** 精英課程畢業生加入由成功工程師、企業家及科技商業領袖組成的校友網絡。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：** 頒予頂尖文憑試考生，詳情請參閱港大招生網站。",
+            "",
+            "**工程學院獎學金：** 為傑出工程學生設立的績優獎學金，包括工程精英獎學金。",
+            "",
+            "**校外獎學金：** 學生可申請香港政府獎學金、尤德爵士紀念基金獎學金及其他外部獎項。",
+            "",
+            "**需要為本資助：** 大學為有經濟需要的學生提供助學金及貸款。",
+            "",
+            "**可續期獎學金：** 部分獎學金可根據每年學業成績續期。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的精英工程策略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "專注於英文及數學必修部分——它們是計分公式中僅有的兩個核心科目。目標是取得5級或以上。",
+            "- 利用歷屆試題及限時練習提升速度與準確度。",
+            "- 英文方面加強理解與寫作；數學則確保涵蓋所有課題。",
+            "",
+            "**2. 謹慎選擇科學選修科**",
+            "",
+            "至少選修一科科學（物理、化學、生物、組合科學）或M1/M2。這些科目受優先考慮，並能提升最佳3科分數。",
+            "- 物理及M2對工程方向尤其有價值。",
+            "- 避免選修過多文科科目，以免削弱科學背景。",
+            "",
+            "**3. 爭取最佳3科高分**",
+            "",
+            "最佳3科應盡量達到5級或以上。利用最強的選修科最大化總分。",
+            "- 及早識別你的最強三科，並分配更多溫習時間。",
+            "- 如允許，可考慮放棄較弱科目以集中精力。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "如獲篩選，面試可能評估你的動機、解難能力及溝通技巧。",
+            "- 練習用簡單語言解釋工程概念。",
+            "- 準備討論當前科技趨勢及你為何想加入精英課程。",
+            "",
+            "**5. 建立出色的OEA檔案**",
+            "",
+            "其他經驗與成就（OEA）可讓你脫穎而出。突出領導力、比賽或項目。",
+            "- 包括任何工程相關比賽（如機械人、數學奧林匹克）。",
+            "- 展示課外持續參與STEM活動。",
+            "",
+            "**6. 策略性使用Band A**",
+            "",
+            "取錄率約17.5%，Band A位置至關重要。如JS6303是你的首選，應放在第一志願。",
+            "- 即使預測分數接近中位數（36），仍可申請——課程重視全面發展的學生。",
+            "- 在Band B或C考慮備選工程課程。",
+            "",
+            "**7. 考慮備選方案**",
+            "",
+            "制定穩妥的備選計劃。其他港大工程課程（如JS6377、JS6353）分數要求稍低。",
+            "- 研究每個課程的結構及就業前景，確保適合自己。",
+            "- 至少申請一個中位數較低的課程作為安全選擇。",
+            "",
+            "**8. 善用暑期課程**",
+            "",
+            "參加港大工程暑期工作坊或網上課程，展示興趣並增進認識。",
+            "- 這些經歷可強化OEA及面試話題。",
+            "- 查閱學院網站了解可參加的課程。",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "定期瀏覽港大工程招生官方網站，留意要求或截止日期的變動。",
+            "- 關注他們的社交媒體以獲取公告。",
+            "- 如有具體問題，可直接聯絡招生辦公室。"
+          ]
+        }
+      }
+    },
+    "code": "JS6303",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 36,
+    "uq": 38,
+    "lq": 35
+  }
+}

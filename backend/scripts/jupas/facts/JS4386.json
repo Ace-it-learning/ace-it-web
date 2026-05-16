@@ -1,0 +1,129 @@
+{
+  "code": "JS4386",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4386"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4386"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/ldten/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://www.fed.cuhk.edu.hk/ldte"
+    }
+  ],
+  "programme": {
+    "code": "JS4386",
+    "nameEn": "BSc in Learning Design and Technology",
+    "nameZh": "理學士（學習設計與科技）",
+    "university": "香港中文大學",
+    "facultyZh": "教育學院",
+    "category": "education"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 30.5,
+    "uq": 59,
+    "lq": 30.25,
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "",
+        "e3": "",
+        "e4": "",
+        "total": 30.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 30.25
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 59
+      }
+    },
+    "subjectWeighting": "• Mathematics (x 2)"
+  },
+  "jupas": {
+    "code": "JS4386",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4386",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4386",
+    "nameEn": "B.Sc. in Learning Design and Technology",
+    "nameZh": "理學士（學習設計與科技）",
+    "shortDescription": "an class=\"icon-arrow-up-black\"> The BSc in Learning Design and Technology is a 4-year integrative programme jointly offered by the Faculties of Education, Engineering and Science. Its design is based on the latest re-formulation of the science of education in which education is cast as \"a metadiscipline or discipline of disciplines\" to equip learners with knowledge, competencies, and leadership to facilitate learning and development in and beyond the formal education settings. Graduates of the programme will be equipped with multi-disciplinary knowledge in education, technology, and science with education and learning sciences serving as the unifying threads. Not only will students be provided with internship opportunities to consolidate theory-practice integration, but they will also carry out research projects to synthesize multi-disciplinary knowledge and action-science competencies. Programme features: Integrative, multi-disciplinary programme in education, technology and science Theory driven, action-science oriented, and lab-based learning approach Integrated STEM education with technology-based and multi-media instruction in multicultural contexts Service learning competencies through education and community engagement Research in technology, science and transdisciplinary studies in and beyond STEM education Articulation with the PGDE in technology- and/or science-related teaching and other research-based postgraduate programmes in education and/or technology-related disciplines",
+    "programmeWebsite": "https://www.fed.cuhk.edu.hk/ldte",
+    "tuition": "HK$47,000",
+    "intake": 19,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: Preferred subjects: Mathematics Extended Module I or II, Biology, Business, Accounting and Financial Studies, Chemistry, Design and Applied Technology, Economics, Geography, Information and Communication Technology, Physics, and Technology and Living (Food Science &amp; Technology). REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 189,
+      "bandB": 139,
+      "bandC": 198,
+      "bandD": 267,
+      "bandE": 200,
+      "total": 993
+    },
+    "offers2025": {
+      "bandA": 16,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 16
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/ldten/",
+    "introduction": "Nurturing the Next Generation of Learning Technology Specialists The BSc in Learning Design and Technology (LDTE) is a four-year integrative programme jointly offered by the Faculties of Education, Engineering and Science. Its design is based on the latest re-formulation of the science of education, which casts education as &#8220;a metadiscipline or discipline of disciplines&#8221; to equip learners with knowledge, competencies and leadership to facilitate learning and development in and beyond formal education settings. Programme Features: Integrative, multi-disciplinary programme in education, technology and science Theory driven, action-science oriented, and lab-based learning approach Integrated STEM education with technology-based, multi-media instruction in multicultural contexts Service learning competencies through education and community engagement Research in technology, science and transdisciplinary studies in and beyond STEM education Articulation with teacher professional programmes in technology- and/or science-related teaching and other research-based postgraduate programmes in education- and/or technology-related disciplines",
+    "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+    "careerProspects": "Graduates of the programme can pursue professional careers in schools, school-sponsoring bodies, universities, government sectors, non-governmental organizations (especially those specializing in solving social problems through education), and education-related companies and industries in local, regional and global settings, including the Greater Bay Area. They are equipped to serve in a variety of settings where there is an interface between education and STEM, including industry, businesses, schools, non-governmental organizations, and other new and emerging education-related industries and fields. Additionally, graduates who want to pursue a teaching career can continue their study in professional teacher programmes to obtain a technology- and/or science-related teaching qualification. LDTE-related careers Learning designers / strategists Learning technology specialists Multimedia learning specialists Technology-supported learning environment designers STEM education designers Science / technology teachers Educational product developers E-learning consultants / trainers Technology managers / officers Educational data analysts Education officers / administrators / researchers Learning design is a fast-growing profession that applies to all sectors. In the rapidly evolving education landscape, no effort should be spared to nurture the next generation of learning technology specialists who possess in-depth theoretical and practical knowledge of learning design and have mastered state-of-the-art technology and professional skills to shape the future of education. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

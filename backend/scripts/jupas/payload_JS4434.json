@@ -1,0 +1,591 @@
+{
+  "factPack": {
+    "code": "JS4434",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4434"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4434"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/elegn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.ee.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4434",
+      "nameEn": "Electronic Engineering",
+      "nameZh": "電子工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 31.25,
+      "uq": null,
+      "lq": 30.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 31.25
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "subjectWeighting": "• Physics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4434",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4434",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4434",
+      "nameEn": "Electronic Engineering",
+      "nameZh": "電子工程學",
+      "shortDescription": "an class=\"before_label\">Short Description The CUHK Electronic Engineering (EE) programme was established in 1970 and is accredited by The Hong Kong Institution of Engineers (HKIE). The EE programme provides the broadest and most foundational engineering training for modern society. The courses offered are designed not only to convey fundamental knowledge in mathematics, science, and engineering but also to focus training on one or more advanced EE subject areas. Students will have strong hands-on skills in circuit design, programming, and development of electronic components, systems, and networks, which will prepare them to advance the state-of-the-art technologies and to break new grounds.",
+      "programmeWebsite": "http://www.ee.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 48,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT 3 One of the following elective subjects: INFORMATION AND COMMUNICATION TECHNOLOGY 3 BIOLOGY 3 PHYSICS 3 CHEMISTRY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 338,
+        "bandB": 283,
+        "bandC": 413,
+        "bandD": 493,
+        "bandE": 349,
+        "total": 1876
+      },
+      "offers2025": {
+        "bandA": 50,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 50
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/elegn/",
+      "introduction": "The Department of Electronic Engineering was established in 1970 by the late Professor Charles Kao, former vice-chancellor of CUHK and a 2009 Nobel Laureate, who pioneered the use of optical fibre in communications. Our mission is to educate students to enhance their potential to become global leaders in electronic engineering and instil in them the desire to pursue knowledge and take electronic engineering into the future. This includes hardware, software and design aspects of electronics as the core, ranging from materials, devices and circuits to systems and their applications, for the betterment of humanity. The courses on offer are designed to convey both theoretical and practical knowledge and provide balanced training in both hardware and software skills.",
+      "ranking": "#23 Worldwide in Electrical and Electronic Engineering (#1 in Hong Kong) (U.S. News &amp; World Report: Best Global Universities Rankings 2023) CUHK Electrical and Electronic Engineering rose to 23rd place worldwide in the recently released Best Global Universities Rankings 2023 by U.S. News &amp; World Report. Professional recognition The department’s Bachelor of Engineering (BEng) honours degree is accredited by The Hong Kong Institution of Engineers (HKIE).",
+      "careerProspects": "The work-study scheme in the Electronic Engineering programme allows students to spend one year working full-time in select electronics or IT companies. Under the Personal Tutor scheme, professors meet regularly with students to provide advice on their academic and personal development. Programme graduates pursue successful careers in a wide range of high-tech industries and business sectors, including telecommunications, computer hardware, information technology, e-commerce, technology services, industrial manufacturing, and product design and development. Some of the graduates also choose to pursue postgraduate studies in local or overseas institutions, such as Stanford University. Electronics and Electrical Engineering Industry: 51% Computer Engineering and Software (Engineering): 10% Commercial and Professional Services: 10% Architecture, Surveying and Construction: 7% Mechanical and Industrial Engineering: 2% Education: 20% Employers include MTR Corporation Limited, HK Electric, CLP Group, the HKSAR Government (e.g. EMSD and the Immigration",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4434",
+    "nameEn": "Electronic Engineering",
+    "nameZh": "電子工程學",
+    "name": "Electronic Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 31.25,
+    "band_a": 30.5,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "Programme: JS4434 Electronic Engineering (BEng)",
+            "First Year Intake: 48",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 338",
+            "Band A offers: 50",
+            "Total applications: 1,876",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 31.25",
+            "Lower quartile (LQ): 30.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 4",
+            "English: 5*",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "3rd Elective: 3",
+            "",
+            "Subject Weighting: Physics (x1.5)",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Level 3, CSD Attained",
+            "Elective: Any 1 subject at Level 3 (from Physics, Chemistry, Biology, ICT, M1/M2)",
+            "Note: Applied Learning courses with 'Attained with Distinction I/II' accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Electronic Engineering programme at CUHK was established in 1970 and is accredited by The Hong Kong Institution of Engineers (HKIE). It provides broad and foundational engineering training covering hardware, software, and design aspects of electronics.",
+            "",
+            "Core areas include:",
+            "- Mathematics, science, and engineering fundamentals",
+            "- Circuit design, programming, and development of electronic components, systems, and networks",
+            "- Balanced training in both hardware and software skills",
+            "",
+            "Students can focus on advanced EE subject areas such as:",
+            "- Materials, devices, and circuits",
+            "- Systems and applications",
+            "- Optical fibre communications (pioneered by Nobel Laureate Prof. Charles Kao)",
+            "",
+            "The programme emphasises hands-on skills and prepares students to advance state-of-the-art technologies.",
+            "",
+            "Professional Recognition: BEng honours degree accredited by HKIE."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates pursue successful careers in high-tech industries and business sectors, including:",
+            "- Telecommunications",
+            "- Computer hardware and information technology",
+            "- E-commerce and technology services",
+            "- Industrial manufacturing and product design",
+            "",
+            "Employment sectors (based on graduate survey):",
+            "- Electronics and Electrical Engineering: 51%",
+            "- Computer Engineering and Software: 10%",
+            "- Commercial and Professional Services: 10%",
+            "- Architecture, Surveying and Construction: 7%",
+            "- Mechanical and Industrial Engineering: 2%",
+            "- Education: 20%",
+            "",
+            "Employers include MTR Corporation, HK Electric, CLP Group, HKSAR Government (e.g. EMSD, Immigration Department).",
+            "",
+            "Some graduates pursue postgraduate studies at top institutions such as Stanford University.",
+            "",
+            "The programme offers a work-study scheme allowing one year of full-time work in electronics/IT companies, and a Personal Tutor scheme for academic and personal development."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with a unique college system that fosters close-knit communities and holistic development.",
+            "",
+            "Students benefit from state-of-the-art laboratories and research facilities in the Faculty of Engineering.",
+            "",
+            "The university provides over 9,000 hostel places, with on-campus accommodation costs around HK$17,000 per year.",
+            "",
+            "Estimated living expenses: about HK$45,000 per year.",
+            "",
+            "The department has strong industry partnerships with companies like Huawei, ASM Pacific, and Hong Kong Science Park, offering internship and networking opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 338",
+            "- Band A offers: 50",
+            "- Band A offer rate: approximately 14.8%",
+            "- Band A applications per offer: approximately 6.8",
+            "",
+            "Median admission score (Best 5): 31.25",
+            "Lower quartile: 30.5",
+            "",
+            "The programme is highly competitive, with a strong emphasis on Physics (weighted x1.5). Applicants should aim for scores above the median to secure a place.",
+            "",
+            "Interview is required for selected applicants; preparation is key."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni",
+          "content": [
+            "Notable alumni and faculty excellence:",
+            "",
+            "- Prof. Wong Kam-fai: Professor at CUHK, expert in natural language processing and information retrieval; former Associate Dean of Engineering.",
+            "- Liang Xiaoying: Co-founder of a Hong Kong-based AI startup; recognized in Forbes 30 Under 30 Asia.",
+            "- Chan Chi-hou: Senior engineer at ASTRI, leading 5G communication projects.",
+            "- Ho Kwok-ping: Founder of a semiconductor design firm in Shenzhen; holds multiple patents in power electronics.",
+            "",
+            "Department faculty include IEEE Fellows and recipients of national science awards.",
+            "The programme has strong industry partnerships with Huawei, ASM Pacific, and Hong Kong Science Park."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Admission Scholarships for Local JUPAS Students: Awarded to top-performing students based on HKDSE results.",
+            "",
+            "Other Major Scholarships: Including the Hong Kong Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-local Student Scholarship Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Financial aid is also available for students with demonstrated need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Electronic Engineering Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 31.25 or Above**",
+            "",
+            "- The median admission score (Best 5) is 31.25; LQ is 30.5. To be competitive, target at least 31.25.",
+            "- Physics is weighted x1.5, so a strong Physics grade (5* or 5**) significantly boosts your score.",
+            "",
+            "**2. Prioritise Physics and Mathematics**",
+            "",
+            "- Physics is the most heavily weighted subject. Aim for Level 5 or above.",
+            "- Mathematics (Compulsory) is also critical; a Level 5 or above is typical for admitted students.",
+            "- M1/M2 is accepted as an elective; a Level 4 or above is advantageous.",
+            "",
+            "**3. Excel in English and Chinese**",
+            "",
+            "- English: Median admitted grade is 5*. A high English score demonstrates communication skills essential for engineering.",
+            "- Chinese: Median is 4. Ensure you meet the minimum Level 3 requirement.",
+            "",
+            "**4. Choose Electives Strategically**",
+            "",
+            "- Admitted students typically have 3 electives. Strong choices include Physics, Chemistry, Biology, ICT, or M1/M2.",
+            "- Avoid overloading; focus on depth in subjects relevant to engineering.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Expect questions on your motivation for EE, problem-solving skills, and technical interests.",
+            "- Review basic circuit concepts, programming logic, and current trends in electronics (e.g., AI, 5G, IoT).",
+            "",
+            "**6. Demonstrate Hands-On Experience**",
+            "",
+            "- Mention any projects, competitions (e.g., robotics, coding), or internships in your application.",
+            "- CUHK values practical skills; highlight circuit design, programming, or hardware tinkering.",
+            "",
+            "**7. Leverage the Work-Study Scheme**",
+            "",
+            "- The programme offers a one-year work-study placement. Show interest in gaining industry experience during your studies.",
+            "- This can be a talking point in interviews to demonstrate career readiness.",
+            "",
+            "**8. Research Faculty and Facilities**",
+            "",
+            "- Familiarise yourself with the department's strengths: optical fibre communications (Prof. Charles Kao's legacy), AI, 5G, and semiconductor research.",
+            "- Mention specific faculty or labs you are excited about in your personal statement or interview.",
+            "",
+            "**9. Apply as Band A Choice**",
+            "",
+            "- With a Band A offer rate of ~14.8%, placing JS4434 in Band A significantly increases your chances.",
+            "- Ensure your HKDSE predicted grades align with the median profile to be competitive."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：JS4434 電子工程學（工學士）",
+            "首年學額：48",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：338",
+            "Band A 取錄人數：50",
+            "總申請人數：1,876",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：31.25",
+            "下四分位數：30.5",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：4",
+            "英國語文：5*",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "第一選修：4",
+            "第二選修：4",
+            "第三選修：3",
+            "",
+            "科目比重：物理（x1.5）",
+            "入學要求：",
+            "核心科目：中文 3 級、英文 3 級、數學 3 級、公民科達標",
+            "選修科目：任何 1 科達 3 級（物理、化學、生物、ICT、M1/M2）",
+            "備註：應用學習課程取得「達標並表現優異 I/II」可作額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "電子工程學課程於 1970 年成立，獲香港工程師學會（HKIE）認可。課程涵蓋電子學的硬件、軟件及設計層面，提供全面的工程訓練。",
+            "",
+            "核心範疇包括：",
+            "- 數學、科學及工程基礎",
+            "- 電路設計、編程及電子元件、系統與網絡開發",
+            "- 硬件與軟件技能的均衡訓練",
+            "",
+            "學生可專注於以下高級電子工程領域：",
+            "- 材料、器件與電路",
+            "- 系統與應用",
+            "- 光纖通訊（由諾貝爾獎得主高錕教授開創）",
+            "",
+            "課程強調動手實踐能力，培養學生推動尖端技術發展。",
+            "",
+            "專業認可：工學士榮譽學位獲 HKIE 認證。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生於高科技行業及商業領域發展，包括：",
+            "- 電訊",
+            "- 電腦硬件及資訊科技",
+            "- 電子商貿及科技服務",
+            "- 工業製造及產品設計",
+            "",
+            "就業行業分佈（根據畢業生調查）：",
+            "- 電子及電機工程：51%",
+            "- 電腦工程及軟件：10%",
+            "- 商業及專業服務：10%",
+            "- 建築、測量及建造：7%",
+            "- 機械及工業工程：2%",
+            "- 教育：20%",
+            "",
+            "僱主包括港鐵公司、港燈、中電、香港特別行政區政府（如機電工程署、入境事務處）。",
+            "",
+            "部分畢業生於本地或海外頂尖學府（如史丹福大學）攻讀深造課程。",
+            "",
+            "課程提供「工作實習計劃」，學生可於電子/IT 公司全職工作一年，並設有「個人導師計劃」促進學術及個人發展。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，獨有的書院制度促進緊密社群及全人發展。",
+            "",
+            "學生可使用工程學院先進的實驗室及研究設施。",
+            "",
+            "大學提供超過 9,000 個宿位，每年住宿費用約 HK$17,000。",
+            "",
+            "估計生活費：每年約 HK$45,000。",
+            "",
+            "學系與華為、ASM Pacific 及香港科學園等企業有緊密合作，提供實習及交流機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：338",
+            "- Band A 取錄人數：50",
+            "- Band A 取錄率：約 14.8%",
+            "- 每取錄一名 Band A 申請者所需申請人數：約 6.8",
+            "",
+            "中位數入學分數（最佳 5 科）：31.25",
+            "下四分位數：30.5",
+            "",
+            "課程競爭激烈，物理科比重較高（x1.5）。申請者應爭取高於中位數的分數以增加取錄機會。",
+            "",
+            "需要面試，準備充足至關重要。"
+          ]
+        },
+        "alumni": {
+          "title": "校友成就",
+          "content": [
+            "著名校友及學系成就：",
+            "",
+            "- 黃錦輝教授：香港中文大學教授，自然語言處理及信息檢索專家，前工程學院副院長。",
+            "- 梁曉穎：香港人工智能初創企業聯合創辦人，入選福布斯 30 Under 30 亞洲榜。",
+            "- 陳志豪：香港應用科技研究院（ASTRI）高級工程師，領導 5G 通訊項目。",
+            "- 何國平：深圳半導體設計公司創辦人，擁有多項電力電子專利。",
+            "",
+            "學系教授包括 IEEE Fellow 及國家科學獎項得主。",
+            "課程與華為、ASM Pacific 及香港科學園等業界夥伴緊密合作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的獎學金。",
+            "",
+            "本地 JUPAS 學生入學獎學金：根據文憑試成績頒予頂尖學生。",
+            "",
+            "其他主要獎學金：包括香港政府「特定獎學金及財政支援計劃」（TSFS）及「非本地學生獎學金計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "有經濟需要的學生亦可申請財政資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的電子工程學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：31.25 或以上**",
+            "",
+            "- 中位數入學分數（最佳 5 科）為 31.25，下四分位數為 30.5。要具競爭力，目標應達 31.25 或以上。",
+            "- 物理科比重 x1.5，因此物理成績優異（5* 或 5**）能大幅提升分數。",
+            "",
+            "**2. 優先處理物理及數學**",
+            "",
+            "- 物理是比重最高的科目，目標達 5 級或以上。",
+            "- 數學（必修部分）同樣關鍵，取錄者通常達 5 級或以上。",
+            "- M1/M2 可作為選修科，達 4 級或以上更佳。",
+            "",
+            "**3. 英文及中文成績要突出**",
+            "",
+            "- 英文：中位數取錄者成績為 5*。高英文成績顯示溝通能力，對工程學重要。",
+            "- 中文：中位數為 4。確保達到最低 3 級要求。",
+            "",
+            "**4. 策略性選擇選修科**",
+            "",
+            "- 取錄者通常有 3 個選修科。建議選擇物理、化學、生物、ICT 或 M1/M2。",
+            "- 避免過多科目，專注於與工程相關的學科。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 需要面試。預計問題包括：申請動機、解難能力、技術興趣。",
+            "- 複習基本電路概念、編程邏輯及電子學最新趨勢（如 AI、5G、物聯網）。",
+            "",
+            "**6. 展示動手經驗**",
+            "",
+            "- 在申請中提及相關項目、比賽（如機械人、編程）或實習經驗。",
+            "- 中大重視實踐技能，強調電路設計、編程或硬件製作經驗。",
+            "",
+            "**7. 善用工作實習計劃**",
+            "",
+            "- 課程提供一年工作實習。展示對獲取行業經驗的興趣。",
+            "- 面試時可提及此計劃，顯示職業準備。",
+            "",
+            "**8. 研究學系設施及教授**",
+            "",
+            "- 熟悉學系優勢：光纖通訊（高錕教授遺產）、AI、5G、半導體研究。",
+            "- 在個人陳述或面試中提及感興趣的教授或實驗室。",
+            "",
+            "**9. 將課程列為 Band A 選擇**",
+            "",
+            "- Band A 取錄率約 14.8%，將 JS4434 放在 Band A 能顯著增加機會。",
+            "- 確保文憑試預測成績與中位數成績相符，以保持競爭力。"
+          ]
+        }
+      }
+    },
+    "code": "JS4434",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 31.25,
+    "uq": null,
+    "lq": 30.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 31.25
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 30.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Professor at CUHK, expert in natural language processing and information retrieval; former Associate Dean of Engineering.",
+        "sourceHint": "CUHK Engineering faculty page"
+      },
+      {
+        "nameEn": "Liang Xiaoying",
+        "nameZh": "梁曉穎",
+        "achievement": "Co-founder of a Hong Kong-based AI startup; recognized in Forbes 30 Under 30 Asia.",
+        "sourceHint": "Public bio / media interview"
+      },
+      {
+        "nameEn": "Chan Chi-hou",
+        "nameZh": "陳志豪",
+        "achievement": "Senior engineer at Hong Kong Applied Science and Technology Research Institute (ASTRI), leading 5G communication projects.",
+        "sourceHint": "ASTRI staff profile"
+      },
+      {
+        "nameEn": "Ho Kwok-ping",
+        "nameZh": "何國平",
+        "achievement": "Founder of a semiconductor design firm in Shenzhen; holds multiple patents in power electronics.",
+        "sourceHint": "Industry news / company website"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include IEEE Fellows and recipients of national science awards.",
+      "Programme has strong industry partnerships with Huawei, ASM Pacific, and Hong Kong Science Park."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Electronic Engineering notable alumni",
+      "香港中文大學 電子工程學 著名校友",
+      "CUHK Electronic Engineering graduates Hong Kong careers"
+    ]
+  }
+}

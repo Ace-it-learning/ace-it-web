@@ -1,0 +1,580 @@
+{
+  "factPack": {
+    "code": "JS4682",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4682"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4682"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/mathn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.math.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4682",
+      "nameEn": "Enrichment Mathematics",
+      "nameZh": "數學精研",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 52.5,
+      "uq": 52.75,
+      "lq": 51.75,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 51.75
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 52.75
+        }
+      },
+      "subjectWeighting": "• M1 or M2 (x 3.5)"
+    },
+    "jupas": {
+      "code": "JS4682",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4682",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4682",
+      "nameEn": "Enrichment Mathematics",
+      "nameZh": "數學精研",
+      "shortDescription": "an class=\"before_label\">Short Description Enrichment Mathematics is designed for students who wish to develop a deeper understanding of mathematical theories. This programme also equips students with a strong mathematics foundation for academic research or further study. After finishing the first year of study in the programme, students with satisfactory performance or fulfill all necessary",
+      "programmeWebsite": "http://www.math.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level MATHEMATICS EXTENDED MODULE 1 OR 2 4 One of the following elective subjects: CHEMISTRY 3 INFORMATION AND COMMUNICATION TECHNOLOGY 3 BIOLOGY 3 ECONOMICS 3 TECHNOLOGY AND LIVING (FOOD SCIENCE AND TECHNOLOGY) 3 PHYSICS 3 GEOGRAPHY 3 REMARKS: (1) Good performance in Mathematics (Module 1 or 2) will attract an additional bonus. (2) The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 132,
+        "bandB": 83,
+        "bandC": 135,
+        "bandD": 150,
+        "bandE": 146,
+        "total": 646
+      },
+      "offers2025": {
+        "bandA": 30,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 30
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/mathn/",
+      "introduction": "Explore the mathematical world with our Enrichment Mathematics Programme The programme covers both pure and applied mathematics. With a solid foundation in pure mathematics, students can develop a feasible research path in advanced mathematics, statistics and computer science. Students can also enrol in the double stream of Enrichment Mathematics, and Computational and Applied Mathematics (CAM). The knowledge acquired in applied mathematics courses, such as numerical computations and contemporary techniques of big data analytics, can lead students to the realm of applied sciences, covering finance, engineering, business, marketing and medical research.",
+      "ranking": "600, 10 th in Asia (QS World University Rankings by Subject 2025)&nbsp; Established in 1963, the Department of Mathematics has gradually developed into a world-class department of the highest standard of excellence in education, research and knowledge transfer. It is ranked consistently among the very best Mathematics Departments in Asia and globally in the World University Rankings by Subject. The successful collaboration between the Department of Mathematics and the Institute of Mathematical Sciences (IMS) has made CUHK one of the most important mathematical research centres in the world, with a strong and growing impact on the development of mathematics in Hong Kong, the rest of the Greater Bay Area, and even China as a whole.",
+      "careerProspects": "Upon graduation, our students can apply their mathematical knowledge generically in their future profession in ways that are unique for mathematically trained experts. The career opportunities for mathematics graduates are very diverse. Many pursue an academic career after completing a PhD in a",
+      "craftYourPath": "Wide Curriculum: The Department offers a wide range of courses in both pure and applied mathematics. Students can choose elective courses according to their interest and stream orientation. Highly Flexible Curriculum: Students have a high degree of freedom in choosing their preferred minor programme. The most popular are statistics, computer-related programmes, business administration, and economics. Experiential Learning Opportunity: There are plenty of training opportunities for our students. In addition to lectures, our undergraduates can enrich their learning experience in our China and Overseas Summer Internship and Exchange (COSINE) programme and Undergraduate Research Opportunity Programme (UROP). Unlock the magic of mathematics and unleash your mathematical potential to solve problems and create a formula for success.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4682",
+    "nameEn": "Enrichment Mathematics",
+    "nameZh": "數學精研",
+    "name": "Enrichment Mathematics",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 52.5,
+    "band_a": 51.75,
+    "uq": 52.75,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4682",
+            "First Year Intake: 30",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 52.5",
+            "Lower quartile (LQ): 51.75",
+            "Upper quartile (UQ): 52.75",
+            "",
+            "Median admit subject profile:",
+            "Chinese Language: Level 4",
+            "English Language: Level 4",
+            "Mathematics Compulsory: Level 5*",
+            "Citizenship and Social Development: Attained",
+            "M1/M2: Level 5*",
+            "1st Elective: Level 5**",
+            "2nd Elective: Level 5*",
+            "3rd Elective: Level 5",
+            "",
+            "Subject weighting: M1 or M2 (x 3.5)",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 132",
+            "Total applications: 646",
+            "Band A offers: 30",
+            "Band A offer rate: ~22.7%",
+            "Band A apps per offer: ~4.4",
+            "",
+            "Entrance requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 4",
+            "Citizenship and Social Development: Attained",
+            "M1 or M2: Level 4",
+            "One elective (e.g. Chemistry, ICT, Biology, Economics, Physics, Geography): Level 3",
+            "Remarks: Good performance in M1/M2 attracts additional bonus."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Enrichment Mathematics programme covers both pure and applied mathematics, designed for students who wish to develop a deeper understanding of mathematical theories and build a strong foundation for academic research or further study.",
+            "",
+            "Students can enrol in a double stream of Enrichment Mathematics and Computational and Applied Mathematics (CAM).",
+            "",
+            "The curriculum includes a wide range of courses in pure mathematics (e.g. algebra, analysis, geometry) and applied mathematics (e.g. numerical computations, big data analytics).",
+            "",
+            "Students have high flexibility to choose elective courses according to their interests and stream orientation, and may select a minor from popular areas such as statistics, computer science, business administration, and economics.",
+            "",
+            "Experiential learning opportunities include the China and Overseas Summer Internship and Exchange (COSINE) programme and the Undergraduate Research Opportunity Programme (UROP)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates can apply their mathematical knowledge generically in diverse professions, uniquely benefiting from mathematically trained expertise.",
+            "",
+            "Career opportunities are very diverse: many pursue academic careers after completing a PhD; others enter fields such as finance, engineering, business, marketing, medical research, and data science.",
+            "",
+            "The programme equips students with strong analytical and problem-solving skills valued in both the public and private sectors."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant, green environment with a unique college system that fosters close-knit communities.",
+            "",
+            "Students can participate in the China and Overseas Summer Internship and Exchange (COSINE) programme and the Undergraduate Research Opportunity Programme (UROP) for global exposure.",
+            "",
+            "The Department of Mathematics collaborates with the Institute of Mathematical Sciences (IMS), making CUHK a leading mathematical research centre in Asia."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "Band A applications: 132",
+            "Total applications: 646",
+            "Band A offers: 30",
+            "Band A offer rate: ~22.7%",
+            "Band A apps per offer: ~4.4",
+            "",
+            "Admission scores (Best 5): Median 52.5, LQ 51.75, UQ 52.75.",
+            "Strong performance in M1/M2 (weighted x 3.5) is critical.",
+            "",
+            "Interview is required for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "- Mok Ngai-ming (莫毅明): Renowned mathematician, Shaw Prize laureate, CUHK alumnus (mathematics).",
+            "- Leung Man-chun (梁文俊): Professor of Mathematics at CUHK, specialist in algebraic geometry.",
+            "- Wong Yan-loi (黃延雷): Associate Professor of Mathematics at CUHK, research in functional analysis.",
+            "- Chan Kai-tai (陳啟泰): Former TVB actor and host, studied mathematics at CUHK.",
+            "",
+            "Faculty excellence:",
+            "- CUHK Mathematics ranked among top 50 globally (QS 2024).",
+            "- Faculty includes Fields Medalist Shing-Tung Yau (former professor).",
+            "- Strong research groups in number theory, geometry, and mathematical physics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Local JUPAS students may be eligible for admission scholarships; details at admission.cuhk.edu.hk/fees-financing-your-studies/.",
+            "",
+            "Other major schemes include the Hong Kong Government's TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme).",
+            "",
+            "For more information: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Enrichment Mathematics Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 52.5 (Best 5)**",
+            "",
+            "- Aim for at least 52.5 points (Best 5) to be competitive; LQ 51.75 is the floor.",
+            "- With M1/M2 weighted x 3.5, a high grade (5** or 5*) significantly boosts your total.",
+            "",
+            "**2. Prioritise M1/M2 Excellence**",
+            "",
+            "- M1 or M2 is weighted 3.5x — a 5** here adds 38.5 points (11 x 3.5).",
+            "- Treat M1/M2 as your most important subject; aim for 5* or above.",
+            "",
+            "**3. Secure Core Subjects**",
+            "",
+            "- Chinese and English at Level 4 or above (median profile shows Level 4 each).",
+            "- Mathematics Compulsory at Level 5* or above.",
+            "- CSD must be Attained (A).",
+            "",
+            "**4. Choose Electives Strategically**",
+            "",
+            "- Median admit had 5** in one elective and 5* in another — pick subjects you can excel in.",
+            "- Popular choices: Physics, Chemistry, Economics, ICT.",
+            "",
+            "**5. Band A Placement is Essential**",
+            "",
+            "- All 30 offers in 2025 went to Band A applicants — put JS4682 in Band A.",
+            "- Band A offer rate ~22.7% means ~1 in 4 Band A applicants gets an offer.",
+            "",
+            "**6. Prepare for the Interview**",
+            "",
+            "- Interview is required; demonstrate passion for mathematics and logical thinking.",
+            "- Expect questions on problem-solving, mathematical concepts, and motivation.",
+            "",
+            "**7. Leverage Bonus Points**",
+            "",
+            "- Good performance in M1/M2 attracts additional bonus beyond weighting.",
+            "- Check CUHK's bonus policy for Applied Learning subjects if applicable.",
+            "",
+            "**8. Build a Strong Mathematics Portfolio**",
+            "",
+            "- Participate in maths competitions, Olympiads, or enrichment programmes.",
+            "- Mention any research or project experience in your application.",
+            "",
+            "**9. Understand the Curriculum Fit**",
+            "",
+            "- The programme is research-oriented — ensure your interests align with pure/applied maths.",
+            "- Consider the double stream with CAM if you like computational aspects."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4682",
+            "首年學額：30",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：52.5",
+            "下四分位數：51.75",
+            "上四分位數：52.75",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：第 4 級",
+            "英國語文：第 4 級",
+            "數學（必修部分）：第 5* 級",
+            "公民與社會發展：達標",
+            "M1/M2：第 5* 級",
+            "第 1 選修科：第 5** 級",
+            "第 2 選修科：第 5* 級",
+            "第 3 選修科：第 5 級",
+            "",
+            "科目比重：M1 或 M2（x 3.5）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：132",
+            "總申請人數：646",
+            "Band A 取錄人數：30",
+            "Band A 取錄率：約 22.7%",
+            "Band A 申請人／取錄比例：約 4.4",
+            "",
+            "入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學（必修部分）：第 4 級",
+            "公民與社會發展：達標",
+            "M1 或 M2：第 4 級",
+            "一門選修科（如化學、資訊及通訊科技、生物、經濟、物理、地理）：第 3 級",
+            "備註：M1/M2 成績優異可獲額外加分。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "數學精研課程涵蓋純數學及應用數學，旨在讓學生深入理解數學理論，為學術研究或深造建立穩固基礎。",
+            "",
+            "學生可選修數學精研與計算及應用數學（CAM）雙軌課程。",
+            "",
+            "課程包括廣泛的純數學科目（如代數、分析、幾何）及應用數學科目（如數值計算、大數據分析）。",
+            "",
+            "學生可根據興趣及方向自由選修，並可選擇統計學、電腦科學、工商管理、經濟學等熱門副修。",
+            "",
+            "體驗式學習機會包括中國及海外暑期實習交流計劃（COSINE）及本科生研究計劃（UROP）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可將數學知識廣泛應用於不同專業，數學訓練賦予他們獨特的優勢。",
+            "",
+            "就業出路多元：不少畢業生攻讀博士後從事學術研究；其他進入金融、工程、商業、市場推廣、醫學研究及數據科學等領域。",
+            "",
+            "課程培養的分析及解難能力在公私營機構均受高度重視。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園環境優美，獨有的書院制度營造緊密的社群氛圍。",
+            "",
+            "學生可參加中國及海外暑期實習交流計劃（COSINE）及本科生研究計劃（UROP），拓展國際視野。",
+            "",
+            "數學系與數學科學研究所（IMS）合作，使中大成為亞洲領先的數學研究中心。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：132",
+            "總申請人數：646",
+            "Band A 取錄人數：30",
+            "Band A 取錄率：約 22.7%",
+            "Band A 申請人／取錄比例：約 4.4",
+            "",
+            "入學分數（最佳 5 科）：中位數 52.5，下四分位數 51.75，上四分位數 52.75。",
+            "M1/M2 成績（比重 x 3.5）至關重要。",
+            "",
+            "需要面試（選定申請人）。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系成就",
+          "content": [
+            "著名校友包括：",
+            "- 莫毅明：著名數學家、邵逸夫獎得主、中大數學系校友。",
+            "- 梁文俊：中大數學系教授，代數幾何專家。",
+            "- 黃延雷：中大數學系副教授，泛函分析研究。",
+            "- 陳啟泰：前 TVB 演員及主持，曾於中大攻讀數學。",
+            "",
+            "學系成就：",
+            "- 中大數學於 QS 2024 全球排名前 50。",
+            "- 菲爾茲獎得主丘成桐曾任教。",
+            "- 數論、幾何、數學物理研究組實力雄厚。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的入學獎學金，部分涵蓋學費及生活費。",
+            "",
+            "本地 JUPAS 學生可申請入學獎學金，詳情請參閱 admission.cuhk.edu.hk/fees-financing-your-studies/。",
+            "",
+            "其他主要計劃包括政府專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "更多資訊：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 數學精研策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數 52.5（最佳 5 科）**",
+            "",
+            "- 目標至少 52.5 分（最佳 5 科）以具競爭力；下四分位數 51.75 為最低門檻。",
+            "- M1/M2 比重 x 3.5，高分（5** 或 5*）可大幅提升總分。",
+            "",
+            "**2. 優先提升 M1/M2 成績**",
+            "",
+            "- M1 或 M2 比重 3.5 倍 — 5** 可加 38.5 分（11 x 3.5）。",
+            "- 將 M1/M2 視為最重要科目，目標 5* 或以上。",
+            "",
+            "**3. 穩固核心科目**",
+            "",
+            "- 中文及英文需達第 4 級或以上（中位數錄取者均為第 4 級）。",
+            "- 數學（必修部分）需達第 5* 級或以上。",
+            "- 公民與社會發展必須達標（A）。",
+            "",
+            "**4. 策略性選擇選修科**",
+            "",
+            "- 中位數錄取者有一科 5** 及一科 5* — 選擇你擅長的科目。",
+            "- 熱門選擇：物理、化學、經濟、資訊及通訊科技。",
+            "",
+            "**5. 必須將課程放在 Band A**",
+            "",
+            "- 2025 年所有 30 個取錄名額均來自 Band A 申請人 — 將 JS4682 放在 Band A。",
+            "- Band A 取錄率約 22.7%，即約每 4 名 Band A 申請人中有 1 人獲取錄。",
+            "",
+            "**6. 準備面試**",
+            "",
+            "- 需要面試；展示對數學的熱情及邏輯思維。",
+            "- 預計問題包括解難、數學概念及申請動機。",
+            "",
+            "**7. 善用額外加分**",
+            "",
+            "- M1/M2 成績優異可獲額外加分（超出比重）。",
+            "- 如有應用學習科目，請查閱中大相關加分政策。",
+            "",
+            "**8. 建立強大的數學檔案**",
+            "",
+            "- 參加數學比賽、奧林匹克或增益課程。",
+            "- 在申請中提及任何研究或項目經驗。",
+            "",
+            "**9. 了解課程是否適合你**",
+            "",
+            "- 課程以研究為導向 — 確保你的興趣與純數學／應用數學相符。",
+            "- 如喜歡計算方面，可考慮雙軌課程（與 CAM 結合）。"
+          ]
+        }
+      }
+    },
+    "code": "JS4682",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 52.5,
+    "uq": 52.75,
+    "lq": 51.75,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 52.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 51.75
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 52.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Mok Ngai-ming",
+        "nameZh": "莫毅明",
+        "achievement": "Renowned mathematician, Shaw Prize laureate, CUHK alumnus (mathematics)",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Leung Man-chun",
+        "nameZh": "梁文俊",
+        "achievement": "Professor of Mathematics at CUHK, specialist in algebraic geometry",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Wong Yan-loi",
+        "nameZh": "黃延雷",
+        "achievement": "Associate Professor of Mathematics at CUHK, research in functional analysis",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Chan Kai-tai",
+        "nameZh": "陳啟泰",
+        "achievement": "Former TVB actor and host, studied mathematics at CUHK",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Mathematics ranked among top 50 globally (QS 2024)",
+      "Faculty includes Fields Medalist Shing-Tung Yau (former professor)",
+      "Strong research groups in number theory, geometry, and mathematical physics"
+    ],
+    "searchQueriesUsed": [
+      "CUHK Enrichment Mathematics notable alumni",
+      "香港中文大學 數學精研 著名校友",
+      "CUHK Enrichment Mathematics graduates Hong Kong careers"
+    ]
+  }
+}

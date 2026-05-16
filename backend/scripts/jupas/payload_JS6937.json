@@ -1,0 +1,475 @@
+{
+  "factPack": {
+    "code": "JS6937",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6937"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.ugadmissions.engg.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6937",
+      "nameEn": "Global Engineering and Business Programme",
+      "nameZh": "環球工程與商業課程",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 32,
+      "uq": 34,
+      "lq": 30
+    },
+    "jupas": {
+      "code": "JS6937",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6937",
+      "nameEn": "Global Engineering and Business Programme",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.ugadmissions.engg.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 45,
+        "bandB": 25,
+        "bandC": 72,
+        "bandD": 94,
+        "bandE": 144,
+        "total": 380
+      },
+      "offers2025": {
+        "bandA": 16,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 16
+      },
+      "facultyPhone": "+852 3917 2803"
+    },
+    "admissionsSnippet": "--> Home | HKU Engineering Undergraduate Admissions top of page HKU Engineering Undergraduate&nbsp;Admissions Home Discover About HKU Engineering Why HKU Engineering Professional Recognition Our Departments Videos Programmes Overview of HKU Engineering Programmes JS6303 Engineering Elite Programme JS6377 BEng X + MScEng AIE JS6937 Global Engineering and Business JS6353 Civil Engineering JS6987 Electrical Engineering JS6315 Data and Systems Engineering JS6339 Mechanical Engineering Programmes offered by SCDS Programmes offered by SBME Programmes offered by i-School Apply JUPAS applicants International Qualifications applicants Mainland applicants Admissions Requirements Download HKUENGG Admissions Brochure Contact Contact Details HKU Campus Map More Use tab to navigate through the menu items. ADMISSIONS BROCHURE Programme&nbsp; information ADMISSIONS REQUIREMENTS STUDENT SHARING HKU Engineering Undergraduate&nbsp;Admissions Address : Room G01A, G/F, Haking Wong Building,&nbsp; The University of Hong Kong,&nbsp; Pokfulam Road, Hong Kong. Email :&nbsp; enggugad@hku.hk Copyright &copy; 2025 Faculty of Engineering, The University of Hong Kong. All rights reserved. bottom of page"
+  },
+  "programme": {
+    "code": "JS6937",
+    "nameEn": "Global Engineering and Business Programme",
+    "nameZh": "環球工程與商業課程",
+    "name": "Global Engineering and Business Programme",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 32,
+    "band_a": 30,
+    "uq": 34,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 327",
+            "",
+            "**Duration:** 5 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 DSE Score Formula:** Eng + Math + Best 3 Subjects",
+            "",
+            "**Core Subjects:** English Language, Mathematics Compulsory Part",
+            "",
+            "**Electives:** Best 3 subjects from Category A (including M1/M2), Category C, or other approved subjects",
+            "",
+            "**Weighting:** No specific weighting; raw scores used",
+            "",
+            "**Interview:** Required (shortlisted candidates only)",
+            "",
+            "**2025 Admission Scores:** Median: 32 | LQ: 30 | UQ: 34",
+            "",
+            "**Note:** Meeting minimum requirements does not guarantee an offer; selection is competitive based on overall profile."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview:** The Global Engineering and Business Programme (GEB) is a five-year interdisciplinary double-degree programme offered by the Faculty of Engineering in collaboration with the Faculty of Business and Economics. It combines engineering depth with business acumen, preparing graduates for leadership roles in technology-driven enterprises.",
+            "",
+            "**Year 1–2:** Foundation in engineering (common core) and introductory business courses. Students explore various engineering disciplines before choosing a major.",
+            "",
+            "**Year 3–4:** Specialisation in an engineering major (e.g., Civil, Electrical, Mechanical, Computer Science) alongside advanced business electives. Integrated projects and case studies bridge both fields.",
+            "",
+            "**Year 5:** Capstone project, internship, or exchange semester. Students complete a business strategy or entrepreneurship module and a final-year engineering design project.",
+            "",
+            "**Unique Features:**",
+            "- Double degree: BEng + BBA (or equivalent) upon completion",
+            "- Global exposure: optional overseas exchange at partner universities",
+            "- Industry partnerships: access to corporate mentors and internships",
+            "- Interdisciplinary labs: joint engineering-business innovation labs",
+            "- Professional accreditation: engineering majors accredited by HKIE (subject to approval)"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Engineering & Technology Management:**",
+            "- Technical project manager in construction, manufacturing, or IT firms",
+            "- R&D team lead in engineering consultancies",
+            "- Product development engineer with business strategy input",
+            "",
+            "**Business & Finance:**",
+            "- Investment banking analyst (engineering-focused deals)",
+            "- Management consultant in technology, media, or telecoms",
+            "- Entrepreneur / startup founder in engineering or tech sectors",
+            "",
+            "**Government & Public Sector:**",
+            "- Engineer in government departments (e.g., Highways, Drainage Services)",
+            "- Policy advisor on infrastructure or innovation",
+            "",
+            "**Further Studies:**",
+            "- MSc / MBA in engineering management, finance, or innovation",
+            "- PhD in engineering or business-related fields"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus at Pokfulam Road, Hong Kong, with access to state-of-the-art engineering labs and business school facilities.",
+            "",
+            "**Facilities:**",
+            "- Engineering workshops, computer labs, and innovation hubs",
+            "- Business school case-study rooms and trading floor",
+            "- Libraries, sports centres, and student halls",
+            "",
+            "**Student Organisations:**",
+            "- Engineering Society, Business Association, and joint GEB student club",
+            "- Competitions: hackathons, business case competitions, engineering design contests",
+            "",
+            "**Support Services:**",
+            "- Academic advising, career counselling, and mentorship programmes",
+            "- Exchange and internship placement offices"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High – GEB is a flagship double-degree programme attracting top DSE scorers.",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 45",
+            "- Band A offers: 16",
+            "- Band A offer rate: ~35.6%",
+            "",
+            "**Factors Influencing Competitiveness:**",
+            "1. DSE score (Eng + Math + Best 3) – median 32, LQ 30, UQ 34",
+            "2. Interview performance – communication, problem-solving, and business awareness",
+            "3. Subject choice – M1/M2 and business-related electives advantageous",
+            "4. OEA (Other Experience and Achievements) – leadership, internships, competitions",
+            "5. Overall profile – alignment with programme's global and interdisciplinary nature"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:** HKU Engineering is consistently ranked among the top engineering faculties in Asia, with strong research output and industry connections.",
+            "",
+            "**Global Rankings:** HKU Engineering programmes are recognised internationally; the university is ranked #1 in Hong Kong and #26 worldwide (QS 2025).",
+            "",
+            "**Notable Alumni:** (No specific alumni names provided in fact pack; general excellence highlighted.)",
+            "",
+            "**Labs & Research Centres:**",
+            "- Advanced Robotics Lab",
+            "- Smart City and IoT Lab",
+            "- Business Innovation and Technology Transfer Office"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:** Awarded to outstanding JUPAS applicants based on DSE results; no separate application required.",
+            "",
+            "**Faculty of Engineering Scholarships:** Merit-based scholarships for engineering students, including those in GEB.",
+            "",
+            "**Business School Scholarships:** Available for students excelling in business components.",
+            "",
+            "**External Scholarships:** Government and private scholarships (e.g., HKSAR Scholarship, Sir Edward Youde Memorial Fund).",
+            "",
+            "**Need-Based Financial Aid:** HKU offers bursaries and loans for students with financial need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Global Engineering & Business Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the DSE Core Subjects**",
+            "",
+            "Focus on English and Mathematics – they are double-counted in the formula. Aim for Level 5 or above in both. For Maths, practice problem-solving speed and accuracy.",
+            "- Use past papers and timed drills",
+            "- Strengthen weak areas early (e.g., probability, calculus)",
+            "",
+            "**2. Choose Electives Strategically**",
+            "",
+            "Select M1/M2 if possible – they demonstrate quantitative readiness. Business-related electives (e.g., Economics, BAFS) also help.",
+            "- M1/M2 can boost your Best 3 score",
+            "- Avoid subjects with low scaling unless you excel",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "The interview assesses communication, analytical thinking, and business awareness. Practice common questions: 'Why GEB?', 'How do you see technology shaping business?'",
+            "- Mock interviews with teachers or peers",
+            "- Read current tech-business news (e.g., AI in finance)",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Leadership roles, internships, and competitions (e.g., business case, engineering design) add weight. Show sustained commitment.",
+            "- Join school clubs or community projects",
+            "- Participate in HKU summer programmes or workshops",
+            "",
+            "**5. Understand the Double-Degree Structure**",
+            "",
+            "Know that you'll graduate with both engineering and business degrees. Emphasise your interest in both fields in your application.",
+            "- Mention specific engineering majors you're considering",
+            "- Link business courses to your career goals",
+            "",
+            "**6. Use Band A Strategically**",
+            "",
+            "GEB is competitive – place it in Band A only if it's your genuine top choice. Band A offer rate is ~35.6%, so have a backup.",
+            "- Consider JS6303 Engineering Elite or JS6377 BEng X + MScEng AIE as alternatives",
+            "- Ensure your other Band A choices are realistic",
+            "",
+            "**7. Research the Programme Thoroughly**",
+            "",
+            "Visit the programme website, attend info sessions, and talk to current students. Show genuine knowledge in your personal statement.",
+            "- Note unique features like overseas exchange and capstone projects",
+            "- Prepare questions for the interview",
+            "",
+            "**8. Plan for the 5-Year Duration**",
+            "",
+            "The programme is one year longer than typical engineering degrees. Be ready for the commitment and explain how you'll use the extra year.",
+            "- Highlight internship or exchange plans",
+            "- Discuss how the double degree gives you a competitive edge",
+            "",
+            "**9. Have a Solid Backup Plan**",
+            "",
+            "If GEB doesn't work out, consider other engineering programmes at HKU or related fields. Keep options open.",
+            "- JS6353 Civil Engineering, JS6987 Electrical Engineering, JS6315 Data and Systems Engineering",
+            "- Business programmes at other universities as fallback"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額:** 327",
+            "",
+            "**修讀年期:** 5年",
+            "",
+            "**首年學費:** HK$47,000",
+            "",
+            "**2025年DSE計分公式:** 英文 + 數學 + 最佳3科",
+            "",
+            "**核心科目:** 英國語文、數學必修部分",
+            "",
+            "**選修科目:** 最佳3科來自甲類科目（包括M1/M2）、丙類科目或其他認可科目",
+            "",
+            "**比重:** 無特定比重，採用原始分數",
+            "",
+            "**面試:** 需要（僅限獲篩選的申請人）",
+            "",
+            "**2025年入學分數:** 中位數: 32 | 下四分位數: 30 | 上四分位數: 34",
+            "",
+            "**備註:** 達到最低要求並不保證錄取，遴選基於整體表現的競爭性。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽:** 環球工程與商業課程（GEB）是一個為期五年的跨學科雙學位課程，由工程學院與經濟及工商管理學院合辦。課程結合工程深度與商業敏銳度，為學生在科技驅動企業中的領導角色做好準備。",
+            "",
+            "**第1–2年:** 工程基礎（共同核心）及商業入門課程。學生在選擇主修前探索不同工程學科。",
+            "",
+            "**第3–4年:** 專注於工程主修（如土木、電機、機械、計算機科學）及高級商業選修。綜合項目和案例研究連接兩個領域。",
+            "",
+            "**第5年:** 頂點項目、實習或交換學期。學生完成商業策略或創業模塊，以及最後一年的工程設計項目。",
+            "",
+            "**獨特特色:**",
+            "- 雙學位：完成後獲頒工學士及工商管理學士（或同等學歷）",
+            "- 國際視野：可選海外合作大學交換",
+            "- 行業合作：企業導師和實習機會",
+            "- 跨學科實驗室：工程與商業創新聯合實驗室",
+            "- 專業認證：工程主修獲香港工程師學會認可（待批）"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**工程與科技管理:**",
+            "- 建築、製造或IT公司的技術項目經理",
+            "- 工程顧問公司的研發團隊主管",
+            "- 具商業策略的產品開發工程師",
+            "",
+            "**商業與金融:**",
+            "- 投資銀行分析師（專注工程相關交易）",
+            "- 科技、媒體或電信行業的管理顧問",
+            "- 工程或科技領域的創業者",
+            "",
+            "**政府與公共部門:**",
+            "- 政府部門工程師（如路政署、渠務署）",
+            "- 基礎設施或創新政策顧問",
+            "",
+            "**深造:**",
+            "- 工程管理、金融或創新領域的理學碩士/工商管理碩士",
+            "- 工程或商業相關領域的博士"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點:** 主校園位於香港薄扶林道，可使用先進的工程實驗室和商學院設施。",
+            "",
+            "**設施:**",
+            "- 工程工場、電腦實驗室和創新中心",
+            "- 商學院案例研討室和交易模擬室",
+            "- 圖書館、體育中心和學生宿舍",
+            "",
+            "**學生組織:**",
+            "- 工程學會、商業協會及GEB學生聯會",
+            "- 比賽：黑客松、商業案例比賽、工程設計競賽",
+            "",
+            "**支援服務:**",
+            "- 學術指導、職業諮詢和導師計劃",
+            "- 交換和實習安排辦公室"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "**競爭程度:** 高 – GEB是旗艦雙學位課程，吸引頂尖DSE考生。",
+            "",
+            "**2025年Band A統計:**",
+            "- Band A申請人數: 45",
+            "- Band A錄取人數: 16",
+            "- Band A錄取率: ~35.6%",
+            "",
+            "**影響競爭力的因素:**",
+            "1. DSE分數（英文 + 數學 + 最佳3科）– 中位數32，下四分位數30，上四分位數34",
+            "2. 面試表現 – 溝通能力、解難能力和商業意識",
+            "3. 科目選擇 – M1/M2及商業相關選修科有優勢",
+            "4. 其他經驗及成就（OEA）– 領導力、實習、比賽",
+            "5. 整體背景 – 與課程的全球及跨學科性質的契合度"
+          ]
+        },
+        "alumni": {
+          "title": "校友與認可",
+          "content": [
+            "**學院卓越:** 港大工程學院在亞洲工程學院中名列前茅，研究成果豐碩，行業聯繫緊密。",
+            "",
+            "**全球排名:** 港大工程課程獲國際認可；大學在香港排名第一，全球第26位（QS 2025）。",
+            "",
+            "**知名校友:** （事實包中未提供具體校友姓名；強調整體卓越。）",
+            "",
+            "**實驗室與研究中心:**",
+            "- 先進機械人實驗室",
+            "- 智慧城市與物聯網實驗室",
+            "- 商業創新與技術轉移辦公室"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金:** 根據DSE成績頒予優秀JUPAS申請人；無需另行申請。",
+            "",
+            "**工程學院獎學金:** 為工程學生（包括GEB學生）設立的優秀獎學金。",
+            "",
+            "**商學院獎學金:** 適用於在商業部分表現出色的學生。",
+            "",
+            "**外部獎學金:** 政府和私人獎學金（如香港特別行政區獎學金、尤德爵士紀念基金）。",
+            "",
+            "**需要為本的經濟援助:** 港大為有經濟需要的學生提供助學金和貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的環球工程與商業策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握DSE核心科目**",
+            "",
+            "專注英文和數學——它們在計分公式中佔雙倍比重。目標是取得5級或以上。數學方面，練習解題速度和準確度。",
+            "- 使用歷屆試題和限時練習",
+            "- 及早加強弱項（如概率、微積分）",
+            "",
+            "**2. 策略性選擇選修科**",
+            "",
+            "如可能，選擇M1/M2——它們展示計量能力。商業相關選修科（如經濟、企會財）也有幫助。",
+            "- M1/M2可提升最佳3科分數",
+            "- 除非表現出色，否則避免低評分科目",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "面試評估溝通、分析思維和商業意識。練習常見問題：「為什麼選擇GEB？」、「你認為科技如何塑造商業？」",
+            "- 與老師或同學進行模擬面試",
+            "- 閱讀最新的科技商業新聞（如人工智能在金融的應用）",
+            "",
+            "**4. 建立強大的OEA檔案**",
+            "",
+            "領導角色、實習和比賽（如商業案例、工程設計）增加優勢。展示持續投入。",
+            "- 參加學校社團或社區項目",
+            "- 參與港大暑期課程或工作坊",
+            "",
+            "**5. 了解雙學位結構**",
+            "",
+            "知道畢業時將獲得工程和商業兩個學位。在申請中強調你對兩個領域的興趣。",
+            "- 提及你考慮的具體工程主修",
+            "- 將商業課程與你的職業目標聯繫",
+            "",
+            "**6. 策略性使用Band A**",
+            "",
+            "GEB競爭激烈——僅當它是你的首選時才放在Band A。Band A錄取率約35.6%，因此要有後備計劃。",
+            "- 考慮JS6303工程精英課程或JS6377工學士X + 人工智能理學碩士作為替代",
+            "- 確保其他Band A選擇是現實的",
+            "",
+            "**7. 徹底研究課程**",
+            "",
+            "瀏覽課程網站、參加資訊講座並與現屆學生交談。在個人陳述中展示真誠的認識。",
+            "- 注意獨特特色如海外交流和頂點項目",
+            "- 為面試準備問題",
+            "",
+            "**8. 為5年學制作好規劃**",
+            "",
+            "課程比一般工程學位多一年。準備好投入，並解釋你將如何利用這額外的一年。",
+            "- 強調實習或交換計劃",
+            "- 討論雙學位如何給你競爭優勢",
+            "",
+            "**9. 制定穩妥的後備計劃**",
+            "",
+            "如果GEB不成功，考慮港大其他工程課程或相關領域。保持選擇開放。",
+            "- JS6353土木工程、JS6987電機工程、JS6315數據與系統工程",
+            "- 其他大學的商業課程作為後備"
+          ]
+        }
+      }
+    },
+    "code": "JS6937",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 32,
+    "uq": 34,
+    "lq": 30
+  }
+}

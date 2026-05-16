@@ -1,0 +1,577 @@
+{
+  "factPack": {
+    "code": "JS4733",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4733"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4733"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/miegn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.ie.cuhk.edu.hk/mieg"
+      }
+    ],
+    "programme": {
+      "code": "JS4733",
+      "nameEn": "Mathematics and Information",
+      "nameZh": "數學與信息工程學",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 63.5,
+      "uq": 48,
+      "lq": 52,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5**",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 63.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 52
+        },
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 48
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4733",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4733",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4733",
+      "nameEn": "Mathematics and Information Engineering",
+      "nameZh": "數學與信息工程學",
+      "shortDescription": "an class=\"before_label\">Short Description Mathematics and Information Engineering is an interdisciplinary programme designed to equip gifted students with solid fundamental knowledge in mathematics as well as information and computer sciences. This selective programme provides a strong foundation for further studies in the broad area of EECS (Electrical Engineering and Computer Science) and Math. It also equips students to pursue careers in related sectors. This programme, jointly offered by Faculty of Engineering and Faculty of Science, is managed by the Department of Information Engineering and the Department of Mathematics. For details of the undergraduate curriculum, please click here. https://www.ie.cuhk.edu.hk/mieg",
+      "programmeWebsite": "https://www.ie.cuhk.edu.hk/mieg",
+      "tuition": "HK$47,000",
+      "intake": 12,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 5 Elective Subject(s) Minimum Level MATHEMATICS EXTENDED MODULE 1 OR 2 5 ANY 1 SUBJECT NOTE 4 NOTE: Preferred subjects: Physics, Biology, Chemistry, and Information and Communication Technology. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 28,
+        "bandB": 65,
+        "bandC": 122,
+        "bandD": 135,
+        "bandE": 156,
+        "total": 506
+      },
+      "offers2025": {
+        "bandA": 5,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 5
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/miegn/",
+      "introduction": "The Best of Both Worlds Intuition and rigour are both needed to solve important problems. In this programme, we teach students rigorous mathematical reasoning, and develop their intuition by equipping them with engineering techniques in information sciences. Information sciences identifies a variety of key problems based on real needs, and the mathematical training provides them with essential tools to solve these problems. The Mathematics and Information Engineering (MIEGN) programme is jointly administered by the Department of Information Engineering in the Faculty of Engineering and the Department of Mathematics in the Faculty of Science of CUHK. This is a demanding programme, which is carefully designed for students with an aptitude for mathematics and information sciences, and an appetite for pursuing graduate studies.",
+      "ranking": "",
+      "careerProspects": "The MIEGN programme prepares students for further studies, pursuing research and/or careers that require mathematical sophistication, such as engineering, finance and data science. The programme is ideal for students who want to pursue higher studies in information science and related disciplines, such as computer science, electrical engineering and mathematics. The career prospects of graduates of this programme are promising thanks to the unique combination of abstract mathematical thinking ability and solid engineering know-how they develop for tackling problems. Career opportunities are available in a diversity of fields, including the following: Research – Students can pursue postgraduate studies in areas related to mathematics, information engineering or computer science. Information analysis – Graduates can work in analysing and processing information in quantifiable forms for the finance and banking industries. Engineering – Engineering careers related to networking, security and system management are open to graduates in this field. A significant proportion of graduates from this small programme have pursued graduate studies in",
+      "craftYourPath": "Not sure what the future holds? Are artificial intelligence and machine learning here to stay? Or is quantum computing going to be the next big thing? Is cybersecurity and the design and safety of computer networks going to be ever more important in this connected age? Are we near the fundamental limits of rates for reliable communication? What if you could choose a major that could prepare you for any or all of these eventualities? One thing is clear: all of them require solutions that demand logical thinking and a solid understanding of the mathematical principles on which the current information systems are built. We cannot be prescient, but we can be best prepared for the future by equipping ourselves with foundational knowledge. A broad foundation yields greater choices for your future. Our alumni have pursued graduate studies in diverse fields, such as electrical engineering, computer science and engineering, mathematics and finance. To craft your path, you need to choose your elective courses wisely (of course, we have experienced academic mentors to guide you) so that you can tailor the curriculum to prepare you for your future goals.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4733",
+    "nameEn": "Mathematics and Information",
+    "nameZh": "數學與信息工程學",
+    "name": "Mathematics and Information",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 63.5,
+    "band_a": 52,
+    "uq": 48,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4733",
+            "First Year Intake: 12",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 63.5",
+            "Lower quartile (LQ): 52",
+            "Upper quartile (UQ): 48",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese: 5*",
+            "English: 5**",
+            "Mathematics: 5**",
+            "CSD: A",
+            "M1/M2: 5**",
+            "Elective 1: 5*",
+            "Elective 2: 5*",
+            "Elective 3: 5",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 4",
+            "- Mathematics Compulsory Part: Level 5",
+            "- Citizenship and Social Development: Attained",
+            "- Mathematics Extended Module 1 or 2: Level 5",
+            "- One elective subject (preferred: Physics, Biology, Chemistry, ICT)",
+            "",
+            "Subject weighting: Mathematics (x 1.5)",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 28",
+            "Band A offers: 5",
+            "Total applications: 506"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Mathematics and Information Engineering programme is jointly offered by the Faculty of Engineering (Department of Information Engineering) and the Faculty of Science (Department of Mathematics).",
+            "",
+            "It is an interdisciplinary programme designed to equip gifted students with solid fundamental knowledge in mathematics as well as information and computer sciences.",
+            "",
+            "The curriculum covers rigorous mathematical reasoning and engineering techniques in information sciences, preparing students for further studies in EECS (Electrical Engineering and Computer Science) and Math.",
+            "",
+            "Students learn to solve real-world problems by combining mathematical rigour with engineering intuition.",
+            "",
+            "For detailed curriculum, visit: https://www.ie.cuhk.edu.hk/mieg"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for further studies and careers requiring mathematical sophistication, such as engineering, finance, and data science.",
+            "",
+            "Career opportunities include:",
+            "- Research: postgraduate studies in mathematics, information engineering, or computer science",
+            "- Information analysis: finance and banking industries",
+            "- Engineering: networking, security, system management",
+            "",
+            "A significant proportion of graduates from this small programme have pursued graduate studies in diverse fields.",
+            "",
+            "The unique combination of abstract mathematical thinking and solid engineering know-how makes graduates highly sought after."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with state-of-the-art facilities.",
+            "",
+            "Students benefit from the College system, which provides a close-knit community and holistic development opportunities.",
+            "",
+            "The programme's interdisciplinary nature allows students to access resources from both the Faculty of Engineering and the Faculty of Science.",
+            "",
+            "Exchange and internship opportunities are available, though specific details should be confirmed with the programme office."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a small intake of 12, the programme is highly selective.",
+            "",
+            "2025 JUPAS statistics:",
+            "- Band A applications: 28",
+            "- Band A offers: 5",
+            "- Band A offer rate: ~17.9%",
+            "- Band A applications per offer: ~5.6",
+            "",
+            "Median admission score (Best 5): 63.5",
+            "Lower quartile: 52",
+            "Upper quartile: 48",
+            "",
+            "Applicants should aim for excellent DSE results, particularly in Mathematics and English."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme combines rigorous mathematics training with cutting-edge information engineering, producing graduates well-prepared for data science, AI, and quantitative finance careers.",
+            "",
+            "Faculty members include internationally recognized researchers in applied mathematics, optimization, and information theory, with strong ties to industry and academia.",
+            "",
+            "Students benefit from CUHK's interdisciplinary environment and access to state-of-the-art research facilities in both mathematics and engineering.",
+            "",
+            "Alumni have pursued graduate studies at top institutions worldwide in fields such as electrical engineering, computer science, mathematics, and finance."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "The university also provides the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) for eligible students.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Scholarships may cover tuition fees and living expenses, making it easier for students to pursue their education at CUHK."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4733 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target High DSE Scores**",
+            "",
+            "Aim for at least 5* in Mathematics Compulsory and M1/M2, and Level 4+ in English. The median admit scored 63.5 (Best 5), so plan to exceed LQ of 52.",
+            "- Use the subject weighting: Mathematics (x 1.5) gives you an edge.",
+            "- Prioritize Mathematics and English for maximum score contribution.",
+            "",
+            "**2. Understand the Interview Process**",
+            "",
+            "Since the programme requires an interview, prepare to discuss your mathematical reasoning and interest in information sciences.",
+            "- Practice explaining complex concepts simply.",
+            "- Be ready to solve problems on the spot.",
+            "",
+            "**3. Build a Strong Foundation in Mathematics**",
+            "",
+            "The programme demands rigorous mathematical training. Strengthen your algebra, calculus, and probability skills.",
+            "- Take additional M1/M2 practice beyond school syllabus.",
+            "- Explore competition-level problems to sharpen logic.",
+            "",
+            "**4. Develop Programming and Engineering Intuition**",
+            "",
+            "Information engineering requires coding and system thinking. Learn Python, C++, or basic algorithms.",
+            "- Join coding clubs or online courses (e.g., Coursera, edX).",
+            "- Work on small projects to apply theory.",
+            "",
+            "**5. Research the Programme Thoroughly**",
+            "",
+            "Visit the programme website (https://www.ie.cuhk.edu.hk/mieg) and understand the curriculum.",
+            "- Note the joint nature (Engineering + Science) and tailor your application accordingly.",
+            "- Mention specific courses or professors in your personal statement.",
+            "",
+            "**6. Prepare a Strong Band A Application**",
+            "",
+            "With only 28 Band A applicants in 2025, every detail matters. Ensure your JUPAS choices reflect genuine interest.",
+            "- Write a compelling personal statement linking math and information engineering.",
+            "- Highlight any relevant projects, competitions, or work experience.",
+            "",
+            "**7. Leverage CUHK's College System**",
+            "",
+            "CUHK's colleges offer additional support and community. Research colleges that align with your interests.",
+            "- Some colleges have stronger STEM communities.",
+            "- Attend college open days or info sessions.",
+            "",
+            "**8. Plan for Further Studies**",
+            "",
+            "The programme is designed for students aiming for graduate studies. Start thinking about research areas early.",
+            "- Read papers in information theory, machine learning, or applied math.",
+            "- Connect with professors during office hours.",
+            "",
+            "**9. Manage Your Time and Stress**",
+            "",
+            "Balancing DSE preparation with interview prep and extracurriculars is challenging. Create a study schedule.",
+            "- Use past DSE papers and mock interviews.",
+            "- Practice mindfulness or exercise to stay focused."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4733",
+            "首年學額：12",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選拔性）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：63.5",
+            "下四分位數：52",
+            "上四分位數：48",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：5**",
+            "數學：5**",
+            "公民科：A",
+            "M1/M2：5**",
+            "選修 1：5*",
+            "選修 2：5*",
+            "選修 3：5",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 4 級",
+            "- 數學必修部分：第 5 級",
+            "- 公民與社會發展：達標",
+            "- 數學延伸部分單元一或二：第 5 級",
+            "- 一個選修科目（優先考慮：物理、生物、化學、資訊及通訊科技）",
+            "",
+            "科目比重：數學（x 1.5）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：28",
+            "Band A 錄取人數：5",
+            "總申請人數：506"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "數學與信息工程學課程由工程學院（信息工程學系）及理學院（數學系）合辦。",
+            "",
+            "這是一個跨學科課程，旨在為有天賦的學生提供數學及信息與計算機科學的堅實基礎。",
+            "",
+            "課程涵蓋嚴謹的數學推理及信息科學的工程技術，為學生在電子工程與計算機科學（EECS）及數學領域的深造做好準備。",
+            "",
+            "學生將學習結合數學嚴謹性與工程直覺來解決現實問題。",
+            "",
+            "詳細課程請參閱：https://www.ie.cuhk.edu.hk/mieg"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備深造及從事需要數學素養的職業（如工程、金融、數據科學）的條件。",
+            "",
+            "就業機會包括：",
+            "- 研究：數學、信息工程或計算機科學領域的研究生學習",
+            "- 信息分析：金融及銀行業",
+            "- 工程：網絡、安全及系統管理",
+            "",
+            "該小規模課程的相當一部分畢業生已在多個領域攻讀研究生。",
+            "",
+            "抽象數學思維與堅實工程知識的獨特結合使畢業生備受青睞。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境及先進設施。",
+            "",
+            "學生受益於書院制度，獲得緊密的社群及全人發展機會。",
+            "",
+            "課程的跨學科性質讓學生可同時使用工程學院及理學院的資源。",
+            "",
+            "交流及實習機會可供申請，具體詳情請向課程辦公室查詢。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "由於學額僅 12 個，課程極具選擇性。",
+            "",
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：28",
+            "- Band A 錄取人數：5",
+            "- Band A 錄取率：約 17.9%",
+            "- 每個 Band A 錄取對應申請人數：約 5.6",
+            "",
+            "中位數入學分數（最佳 5 科）：63.5",
+            "下四分位數：52",
+            "上四分位數：48",
+            "",
+            "申請人應在 DSE 取得優異成績，尤其是數學及英國語文。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系成就",
+          "content": [
+            "課程結合嚴謹的數學訓練與前沿的信息工程，培養出勝任數據科學、人工智能及量化金融職業的畢業生。",
+            "",
+            "教職員包括應用數學、優化理論及信息理論領域的國際知名研究人員，與業界及學術界聯繫緊密。",
+            "",
+            "學生受益於中大跨學科環境，並可使用數學及工程領域的頂尖研究設施。",
+            "",
+            "校友已在全球頂尖院校攻讀電機工程、計算機科學、數學及金融等領域的研究生課程。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學術成績的入學獎學金。",
+            "",
+            "大學亦提供專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）予合資格學生。",
+            "",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "獎學金可涵蓋學費及生活費，幫助學生在中大追求學業。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4733 策略 — 9 個可行貼士",
+          "content": [
+            "**1. 設定高 DSE 分數目標**",
+            "",
+            "目標在數學必修及 M1/M2 取得至少 5*，英國語文第 4 級或以上。中位數錄取者分數為 63.5（最佳 5 科），應超越下四分位數 52。",
+            "- 利用科目比重：數學（x 1.5）可帶來優勢。",
+            "- 優先提升數學及英國語文以最大化分數貢獻。",
+            "",
+            "**2. 了解面試流程**",
+            "",
+            "由於課程需要面試，請準備討論你的數學推理能力及對信息科學的興趣。",
+            "- 練習用簡單語言解釋複雜概念。",
+            "- 準備即場解決問題。",
+            "",
+            "**3. 建立堅實的數學基礎**",
+            "",
+            "課程要求嚴謹的數學訓練。加強代數、微積分及概率技能。",
+            "- 在學校課程外額外練習 M1/M2。",
+            "- 探索競賽級題目以鍛煉邏輯。",
+            "",
+            "**4. 培養編程及工程直覺**",
+            "",
+            "信息工程需要編碼及系統思維。學習 Python、C++ 或基本算法。",
+            "- 加入編程社團或參加在線課程（如 Coursera、edX）。",
+            "- 通過小型項目應用理論。",
+            "",
+            "**5. 深入研究課程**",
+            "",
+            "瀏覽課程網站（https://www.ie.cuhk.edu.hk/mieg）了解課程結構。",
+            "- 注意課程的合辦性質（工程 + 科學），並在申請中體現。",
+            "- 在個人陳述中提及具體課程或教授。",
+            "",
+            "**6. 準備強而有力的 Band A 申請**",
+            "",
+            "2025 年僅 28 名 Band A 申請者，每個細節都重要。確保 JUPAS 選擇反映真實興趣。",
+            "- 撰寫具說服力的個人陳述，連結數學與信息工程。",
+            "- 突出相關項目、競賽或工作經驗。",
+            "",
+            "**7. 善用中大的書院制度**",
+            "",
+            "中大的書院提供額外支援及社群。研究與你興趣相符的書院。",
+            "- 部分書院擁有較強的 STEM 社群。",
+            "- 參加書院開放日或資訊講座。",
+            "",
+            "**8. 為深造做好規劃**",
+            "",
+            "課程專為有志攻讀研究生的學生設計。及早思考研究領域。",
+            "- 閱讀信息理論、機器學習或應用數學的論文。",
+            "- 在辦公時間與教授交流。",
+            "",
+            "**9. 管理時間與壓力**",
+            "",
+            "平衡 DSE 準備、面試準備及課外活動具挑戰性。制定學習時間表。",
+            "- 使用歷屆 DSE 試題及模擬面試。",
+            "- 練習正念或運動以保持專注。"
+          ]
+        }
+      }
+    },
+    "code": "JS4733",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 63.5,
+    "uq": 48,
+    "lq": 52,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5**",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 63.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 52
+      },
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 48
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme combines rigorous mathematics training with cutting-edge information engineering, producing graduates well-prepared for data science, AI, and quantitative finance careers.",
+      "Faculty members include internationally recognized researchers in applied mathematics, optimization, and information theory, with strong ties to industry and academia.",
+      "Students benefit from CUHK's interdisciplinary environment and access to state-of-the-art research facilities in both mathematics and engineering."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Mathematics and Information notable alumni",
+      "香港中文大學 數學與信息工程學 著名校友",
+      "CUHK Mathematics and Information graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "code": "JS6999",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6999"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://cds.hku.hk/admissions/"
+    }
+  ],
+  "programme": {
+    "code": "JS6999",
+    "nameEn": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "nameZh": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "university": "香港大學",
+    "facultyZh": "文學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 41,
+    "uq": 44,
+    "lq": 39
+  },
+  "jupas": {
+    "code": "JS6999",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6999",
+    "nameEn": "Computing and Data Science",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://cds.hku.hk/admissions/",
+    "tuition": "HK$47,000",
+    "intake": 91,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 454,
+      "bandB": 218,
+      "bandC": 295,
+      "bandD": 338,
+      "bandE": 353,
+      "total": 1658
+    },
+    "offers2025": {
+      "bandA": 68,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 68
+    },
+    "facultyPhone": "+852 3917 2180"
+  },
+  "admissionsSnippet": "Admissions - HKU School of Computing and Data Science (HKUCDS) Admissions - HKU School of Computing and Data Science (HKUCDS) --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos Top Contact HKU CDS About About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Groups Awards / Fundings Highlights Centers / Laboratories Groups Awards / Fundings News and Events News Events Social Media Channels News Events Social Media Channels Connect with Us Instagram Linkedin Youtube Contact Us Address: Room 206 Chow Yei Ching Building, The University of Hong Kong, Pokfulam Email: askcds@hku.hk Tel: (+852) 3917-2180 Fax: (+852) 2559-8447 Copyright © 2025 School of Computing and Data Science, The University of Hong Kong. All rights reserved. Disclaimer Privacy Policy Sitemap Current Students Undergraduate programmes Taught Postgraduate Programmes Research Postgraduate Programmes Knowledge Exchange All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Alumni All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Giving to CDS All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page People School Leadership Team Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Research Students School Advisory Board Alumni All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. Our Alumni Request Info Visit Apply Search FAQ How to apply? How much does it cost? Where is it? What is the Academic Calendar? Top Searches: Campus Tuition Fees Scholarships Application Schedule Sports Graduate Programs"
+}

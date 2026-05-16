@@ -1,0 +1,503 @@
+{
+  "factPack": {
+    "code": "JS4550",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4550"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4550"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bmscn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://biomedsci.sbs.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4550",
+      "nameEn": "Biomedical Sciences",
+      "nameZh": "生物醫學",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "medicine"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 41,
+      "uq": 29,
+      "lq": 39.5,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 41
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 39.5
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 29
+        }
+      },
+      "subjectWeighting": "• Chinese, English, Mathematics and best of Biology/Chemistry must be included"
+    },
+    "jupas": {
+      "code": "JS4550",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4550",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4550",
+      "nameEn": "Biomedical Sciences",
+      "nameZh": "生物醫學",
+      "shortDescription": "an class=\"before_label\">Short Description This programme aims to provide graduates with an integrated and holistic training in biomedical sciences. Adopting a multi-disciplinary approach and coupling theories with practical and hands-on training, the programme will produce solidly trained graduates for diversified career paths in scientific research, health system policy and management, or clinical, pharmaceutical, diagnostics and healthcare related professions, as well as leaders with global perspective. Upon completion of the Programme, graduates will have: had a strong, broad-based foundation and advanced specialised knowledge in selected areas of biomedical sciences and research; developed a broad range of skills and values, including a capacity for lifelong learning and conducting biomedical research; acquired skills to apply critical and creative thinking to analyse problems, to identify ethical dilemmas relating to biomedical sciences and research, and to offer feasible solutions; demonstrated good understanding of the policy issues and strategic management pertaining to public health, pharmaceutical industry, diseases and medicine; been equipped with practical and hands-on training and exposure to real-life scenarios through experiences in a biomedical research laboratory or within an industrial setting; developed effective interpersonal and communication skills.",
+      "programmeWebsite": "http://biomedsci.sbs.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 18,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT NOTE 3 One of the following elective subjects: CHEMISTRY 3 BIOLOGY 3 NOTE: The subject can be any elective subject (Category A) or Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 95,
+        "bandB": 163,
+        "bandC": 340,
+        "bandD": 504,
+        "bandE": 442,
+        "total": 1544
+      },
+      "offers2025": {
+        "bandA": 14,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 14
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bmscn/",
+      "introduction": "Make a Positive Impact on Society by Starting Your Biomedical Sciences Voyage The BSc in Biomedical Sciences is a multi-disciplinary, comprehensive and integrative Programme that best illustrates the relevance of biomedical sciences in the clinical, pharmaceutical and healthcare settings. The curriculum closely follows modern medical trends, including innovative treatments for, and diagnosis of, diseases and new solutions to address global health demands. Our courses are delivered by leading scientists in the School of Biomedical Sciences, guest speakers from the Clinical Departments of the Faculty of Medicine, and industry experts who share their views on how biomedical advances impact modern medicine.",
+      "ranking": "Our unique curriculum arrangement which provides diverse preparation for",
+      "careerProspects": "The Biomedical Sciences programme equips students with solid knowledge of biomedical sciences and exposes them to innovations and developments in the industry. It is our mission to ensure that our students are well prepared to enter to the ever-evolving biomedical industry. Graduate Studies Our graduates also have a strong track record in securing master&#8217;s and doctoral degrees in biomedical sciences with a specialised area of interest at CUHK and other renowned universities, including the University of Oxford, Imperial College London, University College London and King&#8217;s College. Career Options There is strong demand for biomedical graduates in the thriving biomedical sciences and healthcare-related industries. Our graduates are very well received by our industry partners, including pharmaceutical, diagnostic and biomedical companies, many of which are located in Hong Kong Science and Technology Park or related industry clusters. Industry, Medical Media Patent attorneys, scientists in biotechnology/biopharmaceutical companies, bioinformaticians, medical writers and media communication specialists. Health Services, Policy and Management Administrators in the government and hospital sectors, quality management personnel for advanced therapy products, and medical genetics or molecular genetics lab professionals. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Solid and Practical Training Our curriculum emphasizes practicality and experiential learning. In addition to exposing students to exciting scientific advances, we guide students to explore the bioethical implications of emerging technologies and research in medicine. Courses are co-taught by experts in the field and clinical departments from the Faculty of Medicine, equipping students with a strong foundation in knowledge and principles of biomedical science, while demonstrating its relevance to clinical applications. Personalized Learning Experiences We emphasize student-centred, personalized learning experiences. The Major Electives are arranged in three unique Concentration Areas, supplemented by relevant Experiential Learning activities. This unique range of courses is the first of its kind to be included in a biomedical science‐based undergraduate programme in Hong Kong, offering a range of options for students who are interested in research, health policy, pharmaceutical manufacturing management and healthcare services. Based on their individual interests, students can choose from a diversity of experience and",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4550",
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "name": "Biomedical Sciences",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 41,
+    "band_a": 39.5,
+    "uq": 29,
+    "category": "medicine"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "To be considered for JS4550 Biomedical Sciences, you must meet the following DSE requirements:",
+            "Core Subjects: Chinese Language Level 3, English Language Level 3, Mathematics Compulsory Part Level 3, Citizenship and Social Development 'Attained'.",
+            "Elective Subjects: At least one elective at Level 3, which must be Chemistry or Biology. A second elective (any Category A subject, or M1/M2, or an Applied Learning course with 'Attained with Distinction I/II') is also required.",
+            "First Year Intake: 18",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "2025 JUPAS Application Statistics: Band A applications: 95; Total applications: 1,544; Offers made: 14 (all Band A).",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 41",
+            "Lower quartile (LQ): 39.5",
+            "Upper quartile (UQ): 29",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5*",
+            "English: 5",
+            "Mathematics: 5*",
+            "CSD: A",
+            "1st Elective: 5*",
+            "2nd Elective: 5",
+            "3rd Elective: 5",
+            "Subject Weighting: Chinese, English, Mathematics and the best of Biology/Chemistry must be included in the score calculation."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The BSc in Biomedical Sciences is a multi-disciplinary, comprehensive programme that integrates modern medical trends with innovative treatments, disease diagnosis, and global health solutions.",
+            "Courses are delivered by leading scientists from the School of Biomedical Sciences, guest speakers from clinical departments of the Faculty of Medicine, and industry experts.",
+            "The curriculum emphasizes practicality and experiential learning, with major electives arranged in three unique Concentration Areas, supplemented by relevant Experiential Learning activities.",
+            "Students gain a strong foundation in biomedical science principles while exploring bioethical implications of emerging technologies and research in medicine.",
+            "This programme is the first of its kind in Hong Kong to offer such a diverse range of options for students interested in research, health policy, pharmaceutical manufacturing management, and healthcare services."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for diverse career paths in the thriving biomedical and healthcare-related industries.",
+            "Career options include:",
+            "- Industry & Medical Media: Patent attorneys, scientists in biotechnology/biopharmaceutical companies, bioinformaticians, medical writers, and media communication specialists.",
+            "- Health Services, Policy & Management: Administrators in government and hospital sectors, quality management personnel for advanced therapy products, and medical genetics or molecular genetics lab professionals.",
+            "Graduates also have a strong track record in securing master's and doctoral degrees at renowned universities, including the University of Oxford, Imperial College London, University College London, and King's College London."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant and supportive learning environment with a unique college system that fosters holistic development.",
+            "Students benefit from state-of-the-art facilities, including modern laboratories and research centres within the Faculty of Medicine.",
+            "The university provides a range of on-campus accommodation options and a rich array of extracurricular activities, clubs, and societies."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "JS4550 is a highly competitive programme. In 2025, the Band A offer rate was approximately 14.7% (14 offers from 95 Band A applications).",
+            "The Band A applications per offer ratio was about 6.8, indicating strong demand.",
+            "With a median admission score of 41 (Best 5) and a lower quartile of 39.5, applicants need excellent DSE results, particularly in sciences, to be competitive.",
+            "The programme's small intake of 18 places further intensifies competition."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "The programme is backed by world-class faculty in stem cell biology, cancer genomics, and neuroscience, closely integrated with the Faculty of Medicine's clinical and translational research strengths.",
+            "Notable figures associated with CUHK Biomedical Sciences include:",
+            "- Professor David Ho (何大一): Renowned AIDS researcher, Time Person of the Year 1996; honorary alumnus.",
+            "- Dr. Joseph Lau (劉澤星): Leading epidemiologist and public health expert; former Dean of CUHK Medicine, contributed to COVID-19 response.",
+            "- Professor Francis Chan (陳家亮): Gastroenterologist and former Dean of CUHK Medicine; pioneer in colorectal cancer research.",
+            "- Dr. Vivian Taam Wong (黃譚智媛): Former Director of Health of Hong Kong; advocate for public health and biomedical policy."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, which can cover tuition fees and living expenses.",
+            "Students may also apply for the Tertiary Student Finance Scheme (TSFS) and other government financial assistance.",
+            "The Non-local Students Scholarship Scheme (NLSPS) is available for eligible non-local students.",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4550 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 41+**",
+            "",
+            "- The median score is 41 (Best 5). To be a safe candidate, target a total of 41 or above. The lower quartile is 39.5, so anything below 39.5 is risky.",
+            "- Focus on achieving at least 5* in Chinese, Mathematics, and your best science elective.",
+            "",
+            "**2. Prioritize Science Electives**",
+            "",
+            "- Chemistry and Biology are the preferred electives. Aim for at least 5* in one of them, as they are weighted in the score calculation.",
+            "- A second science elective (e.g., Physics, Combined Science) can strengthen your profile.",
+            "",
+            "**3. Excel in English and Mathematics**",
+            "",
+            "- Both English and Mathematics are core subjects. A Level 5 or above is typical for successful applicants. For Mathematics, a 5* is seen in the median profile.",
+            "- Strong English skills are crucial for understanding scientific literature and communicating in a global context.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview. Prepare to discuss your motivation for biomedical sciences, your understanding of current research trends, and your career aspirations.",
+            "- Be ready to answer questions about ethical dilemmas in medicine and your problem-solving approach.",
+            "",
+            "**5. Demonstrate Passion Beyond Academics**",
+            "",
+            "- Engage in science-related extracurricular activities, such as science Olympiads, research internships, or volunteering in healthcare settings.",
+            "- Show genuine interest through reading scientific journals or attending public lectures.",
+            "",
+            "**6. Craft a Strong Band A Choice**",
+            "",
+            "- Place JS4550 as your Band A choice to maximize your chance of being considered for an interview and offer.",
+            "- In 2025, all 14 offers went to Band A applicants. Band B or lower had zero offers.",
+            "",
+            "**7. Understand the Curriculum**",
+            "",
+            "- Familiarize yourself with the three Concentration Areas and Experiential Learning components. Mentioning specific interests in your interview can set you apart.",
+            "- Show awareness of the programme's unique multi-disciplinary approach.",
+            "",
+            "**8. Leverage CUHK's Resources**",
+            "",
+            "- Research the School of Biomedical Sciences and its faculty. Mentioning a specific professor's work can demonstrate your initiative.",
+            "- Explore the university's college system and how it can enrich your university life.",
+            "",
+            "**9. Plan for a Backup**",
+            "",
+            "- Given the high competition, have a solid Band B and C choice. Consider other science or health-related programmes at CUHK or other universities.",
+            "- Ensure your backup choices also align with your interests and career goals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "申請JS4550生物醫學課程，必須符合以下文憑試要求：",
+            "核心科目：中國語文第3級、英國語文第3級、數學必修部分第3級、公民與社會發展「達標」。",
+            "選修科目：至少一科選修科達第3級，並須為化學或生物。另外需要第二個選修科（任何甲類科目、數學延伸部分單元一/二、或應用學習科目並取得「達標並表現優異 I/II」）。",
+            "首年學額：18",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：需要（選擇性）",
+            "2025年聯招申請統計：Band A申請人數：95；總申請人數：1,544；錄取人數：14（全部來自Band A）。",
+            "2025年聯招入學分數（最佳5科）：",
+            "中位數：41",
+            "下四分位數：39.5",
+            "上四分位數：29",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：5*",
+            "英國語文：5",
+            "數學：5*",
+            "公民科：A",
+            "第一選修科：5*",
+            "第二選修科：5",
+            "第三選修科：5",
+            "科目比重：計算分數時必須包括中國語文、英國語文、數學及最佳之生物/化學科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "生物醫學理學士是一個跨學科、全面的課程，融合現代醫學趨勢、創新治療、疾病診斷和全球健康解決方案。",
+            "課程由生物醫學學院的頂尖科學家、醫學院臨床部門的客座講師以及行業專家授課。",
+            "課程強調實踐性和體驗式學習，主修選修科分為三個獨特的專修範疇，並輔以相關的體驗式學習活動。",
+            "學生將建立堅實的生物醫學科學基礎，同時探索新興技術和醫學研究的生物倫理影響。",
+            "此課程是香港首個為對研究、健康政策、藥品生產管理和醫療服務感興趣的學生提供如此多元化選擇的本科課程。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生已為投身蓬勃發展的生物醫學和醫療保健相關行業做好充分準備。",
+            "就業選擇包括：",
+            "- 行業及醫學媒體：專利律師、生物科技/生物製藥公司科學家、生物信息學家、醫學作家及媒體傳播專家。",
+            "- 健康服務、政策及管理：政府及醫院部門行政人員、先進療法產品品質管理人員、醫學遺傳學或分子遺傳學實驗室專業人員。",
+            "畢業生亦在牛津大學、倫敦帝國學院、倫敦大學學院及倫敦國王學院等知名學府攻讀碩士及博士學位方面有良好記錄。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學的沙田校園提供充滿活力且支援性強的學習環境，獨特的書院制度促進學生的全人發展。",
+            "學生可使用醫學院內的先進實驗室和研究中心等頂尖設施。",
+            "大學提供多種住宿選擇，以及豐富的課外活動、學會和社團。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "JS4550是一個競爭非常激烈的課程。2025年，Band A錄取率約為14.7%（95個Band A申請中錄取14人）。",
+            "Band A申請與錄取比例約為6.8，顯示需求強勁。",
+            "鑑於中位數入學分數為41（最佳5科），下四分位數為39.5，申請人需要優秀的文憑試成績，尤其是科學科目，才具競爭力。",
+            "課程僅提供18個學額，進一步加劇了競爭。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及卓越師資",
+          "content": [
+            "該課程得到幹細胞生物學、癌症基因組學和神經科學領域的世界級教師支持，並與醫學院的臨床及轉化研究優勢緊密結合。",
+            "與香港中文大學生物醫學相關的知名人士包括：",
+            "- 何大一教授：著名愛滋病研究人員，1996年《時代》雜誌年度人物；榮譽校友。",
+            "- 劉澤星醫生：頂尖流行病學家和公共衛生專家；前香港中文大學醫學院院長，為應對COVID-19作出貢獻。",
+            "- 陳家亮教授：腸胃科醫生及前香港中文大學醫學院院長；大腸癌研究先驅。",
+            "- 黃譚智媛醫生：前香港衛生署署長；公共衛生及生物醫學政策倡導者。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地聯招學生提供多項基於學業成績的入學獎學金，可涵蓋學費及生活費。",
+            "學生亦可申請專上學生資助計劃（TSFS）及其他政府資助。",
+            "非本地學生獎學金計劃（NLSPS）適用於合資格的非本地學生。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4550 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭 41 分或以上**",
+            "",
+            "- 中位數為 41 分（最佳 5 科）。為求穩妥，應以總分 41 或以上為目標。下四分位數為 39.5，低於此分數風險較高。",
+            "- 重點在中文、數學及最佳科學選修科取得至少 5*。",
+            "",
+            "**2. 優先處理科學選修科**",
+            "",
+            "- 化學和生物是首選選修科。至少在其中一科取得 5*，因為它們在計分時有比重。",
+            "- 第二個科學選修科（例如物理、組合科學）可增強你的個人檔案。",
+            "",
+            "**3. 在英文和數學科表現出色**",
+            "",
+            "- 英文和數學均為核心科目。成功申請者通常取得第 5 級或以上。數學科方面，中位數成績為 5*。",
+            "- 良好的英語能力對於理解科學文獻和在環球背景下溝通至關重要。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 課程需要面試。準備好闡述你對生物醫學的動機、對當前研究趨勢的理解以及你的職業抱負。",
+            "- 準備回答有關醫學倫理困境的問題以及你的解難方法。",
+            "",
+            "**5. 在學業以外展現熱誠**",
+            "",
+            "- 參與科學相關的課外活動，例如科學奧林匹克、研究實習或在醫療機構做義工。",
+            "- 通過閱讀科學期刊或參加公開講座來展示真正的興趣。",
+            "",
+            "**6. 精心選擇 Band A 志願**",
+            "",
+            "- 將 JS4550 放在 Band A，以增加獲得面試和錄取的機會。",
+            "- 2025 年，所有 14 個錄取名額均給予 Band A 申請人。Band B 或更低志願沒有錄取。",
+            "",
+            "**7. 了解課程內容**",
+            "",
+            "- 熟悉三個專修範疇和體驗式學習部分。在面試中提及具體興趣可以讓你脫穎而出。",
+            "- 展示你對課程獨特的跨學科方法的認識。",
+            "",
+            "**8. 善用中文大學的資源**",
+            "",
+            "- 研究生物醫學學院及其教師。提及某位教授的研究工作可以顯示你的主動性。",
+            "- 探索大學的書院制度以及它如何豐富你的大學生活。",
+            "",
+            "**9. 制定後備計劃**",
+            "",
+            "- 鑑於競爭激烈，請準備穩妥的 Band B 和 C 選擇。考慮中文大學或其他大學的其他科學或健康相關課程。",
+            "- 確保你的後備選擇也符合你的興趣和職業目標。"
+          ]
+        }
+      }
+    },
+    "code": "JS4550",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 41,
+    "uq": 29,
+    "lq": 39.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 41
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 39.5
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 29
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Professor David Ho",
+        "nameZh": "何大一",
+        "achievement": "Renowned AIDS researcher, Time Person of the Year 1996; honorary alumnus associated with CUHK Biomedical Sciences",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Dr. Joseph Lau",
+        "nameZh": "劉澤星",
+        "achievement": "Leading epidemiologist and public health expert; former Dean of CUHK Medicine, contributed to COVID-19 response",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Professor Francis Chan",
+        "nameZh": "陳家亮",
+        "achievement": "Gastroenterologist and former Dean of CUHK Medicine; pioneer in colorectal cancer research",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Dr. Vivian Taam Wong",
+        "nameZh": "黃譚智媛",
+        "achievement": "Former Director of Health of Hong Kong; advocate for public health and biomedical policy",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Biomedical Sciences faculty includes world-class researchers in stem cell biology, cancer genomics, and neuroscience.",
+      "The programme is closely integrated with the Faculty of Medicine's clinical and translational research strengths."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Biomedical Sciences notable alumni",
+      "香港中文大學 生物醫學 著名校友",
+      "CUHK Biomedical Sciences graduates Hong Kong careers"
+    ]
+  }
+}

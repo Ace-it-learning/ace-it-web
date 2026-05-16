@@ -1,0 +1,571 @@
+{
+  "factPack": {
+    "code": "JS4240",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4240"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4240"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/paccn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://pacc.bschool.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4240",
+      "nameEn": "Professional Accountancy",
+      "nameZh": "專業會計學",
+      "university": "香港中文大學",
+      "facultyZh": "商學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26,
+      "uq": 54.75,
+      "lq": 26,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 26
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 54.75
+        }
+      },
+      "subjectWeighting": "• English (x 2)"
+    },
+    "jupas": {
+      "code": "JS4240",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4240",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4240",
+      "nameEn": "Professional Accountancy",
+      "nameZh": "專業會計學",
+      "shortDescription": "",
+      "programmeWebsite": "https://pacc.bschool.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 122,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 384,
+        "bandB": 237,
+        "bandC": 358,
+        "bandD": 453,
+        "bandE": 424,
+        "total": 1856
+      },
+      "offers2025": {
+        "bandA": 111,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 111
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/paccn/",
+      "introduction": "Paving your university journey with our Professional Accountancy Programme The BBA in Professional Accountancy (PACC) Programme was the first accounting degree programme offered in Hong Kong. Our curriculum is designed to nurture dynamic, well-rounded business professionals who will be in demand in the market long into the future. A remarkable component of the PACC Programme is the vast array of experiential learning opportunities we offer. Internships, exchanges, career workshops, study trips and case competitions are thoughtfully designed to deepen students’ knowledge and understanding of the industry. All PACC graduates are eligible to apply for the Qualification Programme (QP) of the Hong Kong Institute of Certified Public Accountants (HKICPA) and other accounting professional examinations. Our graduates are highly sought-after by recruiters from international accounting firms and other businesses. Unleash your potential with our unique feature – A diverse choice of streams The PACC Programme strives to go above and beyond, offering opportunities for students to specialise in accounting or related fields. The curriculum of the PACC Programme offers students the option to specialise in various streams to shape themselves into future business professionals with a global mindset. The streams we offer include Global Accounting, Global Tax and Governance, Finance for Accountants, and Accounting Analytics.",
+      "ranking": "",
+      "careerProspects": "The PACC Programme opens the door to a huge variety of opportunities and leads to rewarding careers. PACC graduates are ideally suited for careers in accounting firms, banks, finance companies, commercial firms and the public sector. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4240",
+    "nameEn": "Professional Accountancy",
+    "nameZh": "專業會計學",
+    "name": "Professional Accountancy",
+    "university": "香港中文大學",
+    "faculty": "商學院",
+    "median": 26,
+    "band_a": 26,
+    "uq": 54.75,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "JUPAS Code: JS4240",
+            "First Year Intake: 122",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 26",
+            "Lower quartile (LQ): 26",
+            "Upper quartile (UQ): 54.75",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5",
+            "English: 4",
+            "Mathematics: 5*",
+            "CSD: A",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "M1/M2: 5",
+            "",
+            "Application & Offer Statistics (2025):",
+            "Band A applications: 384",
+            "Band A offers: 111",
+            "Total applications: 1,856",
+            "",
+            "Entrance Requirements:",
+            "Core: Chinese Level 3, English Level 3, Mathematics Level 3, CSD Attained",
+            "Electives: Any 2 subjects at Level 3 (including M1/M2 as one elective)",
+            "Weighting: English x 2",
+            "Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Streams",
+          "content": [
+            "The BBA in Professional Accountancy (PACC) is the first accounting degree programme in Hong Kong, designed to nurture dynamic, well-rounded business professionals.",
+            "",
+            "The curriculum offers a diverse choice of streams for specialisation:",
+            "- Global Accounting",
+            "- Global Tax and Governance",
+            "- Finance for Accountants",
+            "- Accounting Analytics",
+            "",
+            "Experiential learning is a key component: internships, exchanges, career workshops, study trips, and case competitions.",
+            "",
+            "All PACC graduates are eligible to apply for the HKICPA Qualification Programme (QP) and other professional accounting examinations.",
+            "",
+            "Programme duration: 4 years (full-time)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "PACC graduates are highly sought-after by recruiters from international accounting firms, banks, finance companies, commercial firms, and the public sector.",
+            "",
+            "Typical career paths include:",
+            "- Auditor / Tax Consultant / Financial Analyst in Big Four firms",
+            "- Corporate accountant in multinational corporations",
+            "- Roles in investment banking, consulting, and regulatory bodies",
+            "",
+            "The programme's strong industry connections and accreditation (HKICPA, ACCA, CPA Australia, CIMA) ensure global recognition and career mobility."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing residential, pastoral, and cultural experiences.",
+            "",
+            "Students have access to state-of-the-art business school facilities, including trading rooms, collaborative spaces, and the CUHK Business School library.",
+            "",
+            "Exchange programmes and internships are integral to the PACC experience, with opportunities at partner universities worldwide and leading accounting firms.",
+            "",
+            "The campus is well-connected by public transport and offers extensive sports, arts, and student organisation activities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "In 2025, JS4240 received 384 Band A applications and made 111 offers, resulting in a Band A offer rate of approximately 28.9%.",
+            "",
+            "Band A applications per offer: ~3.5",
+            "",
+            "Admission is competitive, with median and LQ scores both at 26 (Best 5). The UQ of 54.75 reflects the high achievers admitted.",
+            "",
+            "English is weighted double, so strong English performance is crucial.",
+            "",
+            "Interview performance is considered for selected applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "CUHK's School of Accountancy has produced many leaders in the accounting profession:",
+            "",
+            "- Wong Tin-yau (黃天祐): Former Chairman of HKICPA, current CEO of the Accounting and Financial Reporting Council (AFRC).",
+            "- Clement Chan Kam-wing (陳錦榮): Managing Partner of BDO Hong Kong, former President of HKICPA.",
+            "- Edward Chow Kwong-fai (周光暉): Former Chairman of the HKEX Listing Committee, senior partner at KPMG.",
+            "- Susanna Chiu Lai-kuen (趙麗娟): Former President of HKICPA, partner at PwC.",
+            "- Peter Wong Wai-yee (黃偉宜): Former Chairman of HKICPA, partner at Deloitte.",
+            "",
+            "Faculty includes award-winning researchers with strong ties to Big Four firms and professional bodies."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover full or partial tuition fees, and some include living expenses.",
+            "",
+            "Students can also apply for the Hong Kong Government's Targeted Scholarship and Financial Support (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4240 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 26 Points (Best 5)**",
+            "",
+            "- Median and LQ both at 26; aim for at least 26 to be competitive.",
+            "- Use the subject weightings: English is double-weighted, so a high English grade significantly boosts your score.",
+            "",
+            "**2. Prioritise English and Mathematics**",
+            "",
+            "- English is weighted x2; a Level 5 or above is ideal.",
+            "- Mathematics (Compulsory) at Level 5* or above strengthens your profile.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Two electives at Level 3 or above; M1/M2 can count as one elective.",
+            "- Consider Business, Economics, or Accounting-related subjects if available.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants; practice common accounting and business ethics questions.",
+            "- Demonstrate motivation, analytical thinking, and knowledge of the profession.",
+            "",
+            "**5. Highlight Your CSD Attained Grade**",
+            "",
+            "- CSD must be 'Attained' (A); this is a minimum requirement, not a differentiator.",
+            "",
+            "**6. Leverage Applied Learning (ApL) Subjects**",
+            "",
+            "- ApL subjects with 'Attained with Distinction I/II' can earn bonus points as an extra elective.",
+            "",
+            "**7. Apply for Band A in JUPAS**",
+            "",
+            "- Band A applicants have the highest chance; in 2025, all offers went to Band A.",
+            "",
+            "**8. Research the Streams**",
+            "",
+            "- Familiarise yourself with the four streams (Global Accounting, Global Tax and Governance, Finance for Accountants, Accounting Analytics) to discuss in interview.",
+            "",
+            "**9. Visit the Programme Website**",
+            "",
+            "- Explore https://pacc.bschool.cuhk.edu.hk/ for detailed curriculum, faculty, and student resources."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "JUPAS 編號：JS4240",
+            "首年學額：122",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：26",
+            "下四分位數：26",
+            "上四分位數：54.75",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5",
+            "英國語文：4",
+            "數學：5*",
+            "公民科：A",
+            "第一選修科：4",
+            "第二選修科：4",
+            "M1/M2：5",
+            "",
+            "2025 年申請及取錄統計：",
+            "Band A 申請人數：384",
+            "Band A 取錄人數：111",
+            "總申請人數：1,856",
+            "",
+            "入學要求：",
+            "核心科目：中文 3 級、英文 3 級、數學 3 級、公民科達標",
+            "選修科目：任何兩科達 3 級（包括 M1/M2 作為一科選修）",
+            "比重：英文 x 2",
+            "應用學習科目取得「達標並表現優異 I/II」可作為額外選修科"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構及專修範疇",
+          "content": [
+            "專業會計學工商管理學士（PACC）是香港首個會計學位課程，旨在培育具備環球視野的商業專才。",
+            "",
+            "課程提供多個專修範疇（Streams）供學生選擇：",
+            "- 環球會計",
+            "- 環球稅務與治理",
+            "- 會計金融",
+            "- 會計分析",
+            "",
+            "體驗式學習是課程重點：實習、交流、職業工作坊、考察團及個案比賽。",
+            "",
+            "所有 PACC 畢業生均符合資格報考香港會計師公會（HKICPA）專業資格課程（QP）及其他專業會計考試。",
+            "",
+            "修讀年期：4 年（全日制）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "PACC 畢業生深受國際會計師事務所、銀行、金融機構、商業機構及公營機構僱主歡迎。",
+            "",
+            "典型職業路徑包括：",
+            "- 四大會計師事務所核數師/稅務顧問/財務分析師",
+            "- 跨國企業會計師",
+            "- 投資銀行、顧問及監管機構職位",
+            "",
+            "課程的強大行業網絡及專業認證（HKICPA、ACCA、CPA Australia、CIMA）確保畢業生具備國際認可及職業流動性。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，提供住宿、關顧及文化體驗。",
+            "",
+            "學生可使用商學院先進設施，包括交易室、協作空間及商學院圖書館。",
+            "",
+            "交流計劃及實習是 PACC 課程的重要部分，學生可前往全球合作院校及頂尖會計師事務所。",
+            "",
+            "校園交通便利，並提供豐富的體育、藝術及學生組織活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及甄選",
+          "content": [
+            "2025 年，JS4240 收到 384 份 Band A 申請，發出 111 個取錄，Band A 取錄率約 28.9%。",
+            "",
+            "每 Band A 取錄對應申請人數：約 3.5 人",
+            "",
+            "入學競爭激烈，中位數及下四分位數均為 26 分（最佳五科）。上四分位數 54.75 反映高分考生。",
+            "",
+            "英文科比重雙計，英文成績優異至關重要。",
+            "",
+            "面試表現會影響選定申請人的取錄結果。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院成就",
+          "content": [
+            "香港中文大學會計學院培育眾多會計專業領袖：",
+            "",
+            "- 黃天祐：前香港會計師公會會長，現任會計及財務匯報局（AFRC）行政總裁。",
+            "- 陳錦榮：BDO 香港董事總經理，前香港會計師公會會長。",
+            "- 周光暉：前香港交易所上市委員會主席，KPMG 資深合夥人。",
+            "- 趙麗娟：前香港會計師公會會長，PricewaterhouseCoopers 合夥人。",
+            "- 黃偉宜：前香港會計師公會會長，Deloitte 合夥人。",
+            "",
+            "學院教授屢獲研究獎項，與四大會計師事務所及專業機構聯繫緊密。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項入學獎學金，根據學業成績頒發。",
+            "",
+            "獎學金可涵蓋全額或部分學費，部分包括生活費。",
+            "",
+            "學生亦可申請香港政府的「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4240 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：26 分（最佳五科）**",
+            "",
+            "- 中位數及下四分位數均為 26 分；目標至少 26 分以具競爭力。",
+            "- 善用科目比重：英文科雙計，英文成績高可大幅提升分數。",
+            "",
+            "**2. 優先提升英文及數學**",
+            "",
+            "- 英文科比重 x2，理想成績為 5 級或以上。",
+            "- 數學（必修部分）達 5* 或以上可增強優勢。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 兩科選修需達 3 級或以上；M1/M2 可視為一科選修。",
+            "- 如學校提供，可選修商業、經濟或會計相關科目。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為選定申請人必須環節；練習常見會計及商業倫理問題。",
+            "- 展示動機、分析能力及對專業的認識。",
+            "",
+            "**5. 確保公民科達標**",
+            "",
+            "- 公民科必須「達標」（A），此為最低要求，非區分因素。",
+            "",
+            "**6. 善用應用學習科目（ApL）**",
+            "",
+            "- ApL 科目取得「達標並表現優異 I/II」可作為額外選修科獲取加分。",
+            "",
+            "**7. 將 JS4240 放在 Band A**",
+            "",
+            "- Band A 申請人機會最高；2025 年所有取錄均來自 Band A。",
+            "",
+            "**8. 了解四個專修範疇**",
+            "",
+            "- 熟悉環球會計、環球稅務與治理、會計金融、會計分析四個範疇，以便面試時討論。",
+            "",
+            "**9. 瀏覽課程網站**",
+            "",
+            "- 到訪 https://pacc.bschool.cuhk.edu.hk/ 查閱詳細課程、教授及學生資源。"
+          ]
+        }
+      }
+    },
+    "code": "JS4240",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": 54.75,
+    "lq": 26,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 26
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "4",
+        "e4": "",
+        "total": 54.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Tin-yau",
+        "nameZh": "黃天祐",
+        "achievement": "Former Chairman of the Hong Kong Institute of Certified Public Accountants (HKICPA) and current CEO of the Accounting and Financial Reporting Council (AFRC).",
+        "sourceHint": "Public bio and HKICPA records"
+      },
+      {
+        "nameEn": "Clement Chan Kam-wing",
+        "nameZh": "陳錦榮",
+        "achievement": "Managing Partner of BDO Hong Kong and former President of HKICPA.",
+        "sourceHint": "BDO Hong Kong website and HKICPA past presidents list"
+      },
+      {
+        "nameEn": "Edward Chow Kwong-fai",
+        "nameZh": "周光暉",
+        "achievement": "Former Chairman of the Hong Kong Stock Exchange Listing Committee and senior partner at KPMG.",
+        "sourceHint": "Hong Kong Stock Exchange announcements and KPMG alumni profiles"
+      },
+      {
+        "nameEn": "Susanna Chiu Lai-kuen",
+        "nameZh": "趙麗娟",
+        "achievement": "Former President of HKICPA and partner at PricewaterhouseCoopers.",
+        "sourceHint": "HKICPA past presidents list and PwC Hong Kong alumni"
+      },
+      {
+        "nameEn": "Peter Wong Wai-yee",
+        "nameZh": "黃偉宜",
+        "achievement": "Former Chairman of the Hong Kong Institute of Certified Public Accountants and partner at Deloitte.",
+        "sourceHint": "HKICPA past presidents list and Deloitte Hong Kong alumni"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK School of Accountancy is consistently ranked among the top accounting programs globally.",
+      "Faculty includes award-winning researchers and practitioners with strong ties to Big Four firms.",
+      "The programme is accredited by HKICPA, ACCA, CPA Australia, and CIMA."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Professional Accountancy notable alumni",
+      "香港中文大學 專業會計學 著名校友",
+      "CUHK Professional Accountancy graduates Hong Kong careers",
+      "CUHK School of Accountancy alumni HKICPA president"
+    ]
+  }
+}

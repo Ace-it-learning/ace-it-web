@@ -1,0 +1,495 @@
+{
+  "factPack": {
+    "code": "JS6729",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6729"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://saasweb.hku.hk/programme/as.php"
+      }
+    ],
+    "programme": {
+      "code": "JS6729",
+      "nameEn": "Bachelor of Science in Actuarial Science",
+      "nameZh": "理學士(精算學)",
+      "university": "香港大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "1.2 x Eng + 1.2 x Math + 1.2 x M1/M2 + Best 2 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 35
+    },
+    "jupas": {
+      "code": "JS6729",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6729",
+      "nameEn": "Bachelor of Science in Actuarial Science",
+      "nameZh": "",
+      "shortDescription": "the UK’s Institute and Faculty of Actuaries. HKU is also a Center of Actuarial Excellence designated by the Society of Actuaries of the US. The programme provides formal academic training to students who wish to join the actuarial profession. It is specifically designed to prepare students to sit the early actuarial examinations of the professional bodies for actuaries, thus allowing them to readily join the actuarial profession with internationally-recognised qualifications upon graduation. Although actuarial science is a separate discipline with its own area of knowledge, modern actuarial training requires multidisciplinary knowledge in probability, statistics, big data analytics, economics, investment, finance, law, taxation and accounting. The HKU Actuarial Science curriculum reflects this requirement by incorporating various interdisciplinary courses into the basic yet comprehensive actuarial training. The HKU BSc(ActuarSc) programme aims to equip students with a solid background in actuarial science, and enable them to develop the confidence and analytical skills needed to define and tackle problems in actuarial science and related fields. Students should also be able to evaluate and measure various kinds of risk using effective quantitative methods, and become proficient in formulating and communicating practicable business strategies with professionalism as well as accuracy.",
+      "programmeWebsite": "https://saasweb.hku.hk/programme/as.php",
+      "tuition": "HK$47,000",
+      "intake": 50,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 254,
+        "bandB": 113,
+        "bandC": 177,
+        "bandD": 212,
+        "bandE": 216,
+        "total": 972
+      },
+      "offers2025": {
+        "bandA": 44,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 44
+      },
+      "facultyPhone": "+852 3917 2466"
+    },
+    "admissionsSnippet": "Bachelor of Science in Actuarial Science [BSc(ActuarSc)] | Department of Statistics and Actuarial Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Search Search Open Menu Keyword Search Clear Search Close Search Box Search Close Mobile Menu Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Home Study Programmes Undergraduate Programmes Bachelor of Science in Actuarial Science [BSc(ActuarSc)] Programme Code &amp; Mode of Study 6729 | Full-time: 4 years Credit Required for Graduation 240 Credits Programme Brochure Information Day Presentation Deck Student Testimonials Admission for 2026 Aims &amp; Features Admission Requirements Internship Programme Career Development Why Choose HKU Actuarial Science Scholarships Prev Next Aims &amp; Features Admission Requirements Internship Programme Career Development Why Choose HKU Actuarial Science Scholarships Aims &amp; Features Actuarial Science is a separate discipline with its own area of knowledge requiring multidisciplinary knowledge in probability, statistics, data science, economics, investment, finance, law, taxation and accounting. Based on the evaluation of the financial, economic and business implications of future contingent events, actuarial science proves to be very useful in the business world, including the insurance industry as well as the banking and finance fields. &nbsp; The HKU Bachelor of Science in Actuarial Science (Programme Code: 6729) is the only programme in Hong Kong accredited by the UK’s Institute and Faculty of Actuaries. It provides formal academic training to students who wish to join the actuarial profession. The programme is designed to provide specialist training in actuarial science and prepare students for the professional examinations towards being qualified as an actuary with internationally-recognised qualifications. Students will learn to tackle different problems in actuarial science and related fields using effective quantitative methods, and become proficient in formulating and communicating practicable business strategies. &nbsp; In addition, the HKU Department of Statistics and Actuarial Science has introduced the Internship Programme and Career Advising Programme to help students seize career opportunities readily. Students will gain insight into the challenging world and daily activities of an actuary while strengthening their technical, analytical and communication skills. Mentorship, company visits, career fair and other professional preparation activities are organised to further students’ learning beyond classrooms. Center of Actuarial Excellence The Department of Statistics and Actuarial Science, the University of Hong Kong has been designated a Center of Actuarial Excellence (CAE) by the US Society of Actuaries (SOA) since December 2011.&nbsp; &nbsp; This prestigious designation is awarded to schools that demonstrate excellence in Actuarial Science by meeting strict criteria on curriculum quality, number and quality of graduates, qualified faculty, ties with business, and beneficial research and scholarship.&nbsp; &nbsp; Over the years, the Department has dedicated itself to world-class standards of research, teaching and learning, and it is now highly regarded as an international centre of research and learning in the field of statistics and actuarial science. &nbsp; &nbsp; &nbsp; Accreditation Under an accreditation agreement with the Institute and Faculty of Actuaries (IFoA), the University of Hong Kong joins the ranks of select institutions worldwide that offer the maximum exemptions (CS1, CS2, CM1, CM2, CB1, and CB2) approved by the Institute and Faculty of Actuaries (IFoA), United Kingdom.&nbsp; &nbsp; The University of Hong Kong has previously obtained accreditation for IFoA subjects CT1-CT8 from the UK’s only chartered professional body dedicated to educating, developing and regulating actuaries based both in the UK and internationally. With the new accreditation, students who graduate with a BSc(ActuarSc) degree from the University of Hong Kong with the required marks in specified subjects will be exempted from taking various IFoA subjects in the new curriculum, as they begin their journey towards qualifying as an actuary.&nbsp; SOA - University-Earned Credit (UEC) Program The University‐Earned Credit (UEC) program of the Society of Actuaries (SOA) allows university students to become eligible for SOA exam credit by attaining a designated UEC mark on university courses at approved Centers of Actuarial Excellence (CAE).&nbsp; &nbsp; The University of Hong Kong (HKU), as one of the CAE designated by the SOA, obtained the UEC status approved by the SOA in July 2022, as one of the 13 inaugural UEC participants. Students who have taken the approved courses at HKU (not by credit transfer) and receiv"
+  },
+  "programme": {
+    "code": "JS6729",
+    "nameEn": "Bachelor of Science in Actuarial Science",
+    "nameZh": "理學士(精算學)",
+    "name": "Bachelor of Science in Actuarial Science",
+    "university": "香港大學",
+    "faculty": "理學院",
+    "median": 35,
+    "band_a": 35,
+    "uq": 36,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements and Scores",
+          "content": [
+            "**First Year Intake:** 50",
+            "",
+            "**Duration:** 4 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 JUPAS Admission Scores:**",
+            "- Formula: 1.2 x Eng + 1.2 x Math + 1.2 x M1/M2 + Best 2 Subjects",
+            "- Median: 35 | LQ: 35 | UQ: 36",
+            "",
+            "**Core Subjects:** English Language, Mathematics Compulsory Part",
+            "**Electives:** M1 or M2 (weighted 1.2), plus best 2 other subjects",
+            "",
+            "**Interview:** Not required",
+            "",
+            "**2025 Band A Statistics:** 254 Band A applications, 44 offers (Band A offer rate ~17.3%)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview:**",
+            "The BSc(ActuarSc) is the only programme in Hong Kong accredited by the UK’s Institute and Faculty of Actuaries (IFoA). It provides formal academic training for students aiming to join the actuarial profession, with a curriculum that integrates probability, statistics, data science, economics, investment, finance, law, taxation, and accounting.",
+            "",
+            "**Year 1-2 Foundation:**",
+            "- Core courses in calculus, linear algebra, probability, statistics, economics, and accounting.",
+            "- Introduction to actuarial science and financial mathematics.",
+            "",
+            "**Year 3-4 Specialisation:**",
+            "- Advanced actuarial modelling, risk theory, survival models, and stochastic processes.",
+            "- Electives in data analytics, finance, and insurance.",
+            "- Capstone project or dissertation option.",
+            "",
+            "**Unique Features:**",
+            "- **IFoA Accreditation:** Maximum exemptions (CS1, CS2, CM1, CM2, CB1, CB2) for graduates meeting required marks.",
+            "- **SOA University-Earned Credit (UEC):** HKU is one of 13 inaugural UEC participants, allowing exam credit via designated courses.",
+            "- **Center of Actuarial Excellence (CAE):** Designated by the US Society of Actuaries since 2011.",
+            "- **Internship Programme & Career Advising:** Mentorship, company visits, career fairs, and professional preparation activities."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Actuarial & Insurance:**",
+            "- Actuary in life, non-life, or health insurance companies.",
+            "- Risk management and pricing roles.",
+            "- Reinsurance and pension consulting.",
+            "",
+            "**Banking & Finance:**",
+            "- Quantitative analyst, risk manager, or financial modeller.",
+            "- Investment banking, asset management, and corporate treasury.",
+            "",
+            "**Data Science & Analytics:**",
+            "- Data scientist or business analyst in tech, consulting, or finance.",
+            "- Roles leveraging statistical modelling and big data.",
+            "",
+            "**Government & Regulatory Bodies:**",
+            "- Actuarial roles in the Insurance Authority, Mandatory Provident Fund Schemes Authority, or Hong Kong Monetary Authority.",
+            "",
+            "**Further Studies:**",
+            "- Postgraduate research in actuarial science, statistics, or finance.",
+            "- Professional qualifications (Fellow of IFoA or SOA)."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Main Campus (Pokfulam):**",
+            "- State-of-the-art lecture theatres, libraries, and computing facilities.",
+            "- Access to the HKU Main Library and the Statistics and Actuarial Science Resource Centre.",
+            "",
+            "**Departmental Facilities:**",
+            "- Dedicated computer labs with actuarial software (e.g., Excel, R, Python, and specialised modelling tools).",
+            "- Study spaces and common rooms for group work.",
+            "",
+            "**Student Organisations:**",
+            "- Actuarial Science Society organises networking events, study groups, and career talks.",
+            "- Opportunities to join HKU-wide clubs, sports teams, and cultural societies.",
+            "",
+            "**Accommodation:**",
+            "- On-campus halls and residential colleges available (application required).",
+            "- Off-campus housing options in Western District and Kennedy Town."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High",
+            "",
+            "**2025 JUPAS Band A Statistics:**",
+            "- Band A applications: 254",
+            "- Band A offers: 44",
+            "- Band A offer rate: ~17.3%",
+            "",
+            "**Factors Influencing Competitiveness:**",
+            "1. **High DSE Score Requirement:** Median 35 points (weighted formula) – among the highest in HKU science programmes.",
+            "2. **Strong Quantitative Background:** Weighting on English, Math, and M1/M2 favours students with strong analytical skills.",
+            "3. **Limited Intake:** Only 50 places per year, intensifying competition.",
+            "4. **Professional Accreditation:** IFoA and SOA exemptions attract top students seeking direct entry into the actuarial profession.",
+            "5. **No Interview:** Selection is purely based on academic merit, making DSE scores the sole determinant."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "**Faculty Excellence:**",
+            "- The Department of Statistics and Actuarial Science has been a Center of Actuarial Excellence (CAE) designated by the US Society of Actuaries since 2011.",
+            "- Faculty members are active researchers in actuarial science, statistics, and data science, with publications in top journals.",
+            "",
+            "**Alumni Network:**",
+            "- Graduates work in leading insurance companies, banks, and consulting firms in Hong Kong and globally.",
+            "- Many have achieved Fellowship status with IFoA or SOA.",
+            "",
+            "**Rankings & Recognition:**",
+            "- HKU is consistently ranked among the top universities in Asia and the world.",
+            "- The programme is the only one in Hong Kong accredited by IFoA, reinforcing its reputation."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on academic merit (e.g., DSE scores, HKDSE results).",
+            "- Includes full or partial tuition waivers and living allowances.",
+            "",
+            "**Faculty/Departmental Scholarships:**",
+            "- BSc(ActuarSc) Programme Scholarship for outstanding students.",
+            "- SOA and IFoA exam fee reimbursement for high achievers.",
+            "",
+            "**External Scholarships:**",
+            "- Hong Kong Government Scholarships, Sir Edward Youde Memorial Scholarships, and other public funds.",
+            "- Students are encouraged to apply for relevant awards.",
+            "",
+            "**Application:**",
+            "- No separate application required for most entrance scholarships; automatically considered upon JUPAS admission.",
+            "- Some departmental scholarships require a separate application or nomination."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Actuarial Science Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Formula**",
+            "",
+            "Your DSE score is calculated as 1.2 x Eng + 1.2 x Math + 1.2 x M1/M2 + Best 2 Subjects. Prioritise English, Math, and M1/M2 to maximise your weighted total.",
+            "- Aim for at least Level 5 in English and Math, and Level 5 or above in M1/M2.",
+            "- Even if your best 2 subjects are slightly lower, strong performance in the weighted trio can compensate.",
+            "",
+            "**2. Target a Score of 35+**",
+            "",
+            "With median and LQ both at 35, and UQ at 36, you need a weighted score of at least 35 to be competitive. Plan your study schedule to hit this benchmark.",
+            "- Use past papers to simulate the weighted calculation and identify weak areas.",
+            "- Consider retaking subjects if you fall short of Level 5 in English or Math.",
+            "",
+            "**3. Excel in M1/M2**",
+            "",
+            "M1 or M2 is weighted 1.2, making it as important as English and Math. A strong performance here can significantly boost your total.",
+            "- Focus on calculus and statistics topics (M1) or advanced algebra and calculus (M2).",
+            "- Practice problem-solving under timed conditions.",
+            "",
+            "**4. Build a Strong Best 2 Subjects**",
+            "",
+            "Your best 2 subjects (excluding English, Math, M1/M2) should be at least Level 5. Choose subjects that align with actuarial science, such as Economics, Physics, or Chemistry.",
+            "- Economics is particularly relevant for the CB1 and CB2 IFoA exemptions.",
+            "- Avoid subjects with low scaling unless you are confident of top grades.",
+            "",
+            "**5. Prepare for No Interview**",
+            "",
+            "Since there is no interview, your entire application rests on your DSE scores. There is no opportunity to impress through personal statements or interviews.",
+            "- Double-check your JUPAS choices to ensure JS6729 is in Band A.",
+            "- Ensure your school reference and OEA (if any) are accurate but note they are not used for selection.",
+            "",
+            "**6. Use OEA Strategically (Even Though Not Used)**",
+            "",
+            "While OEA is not a factor in admission for this programme, a strong OEA can support your overall JUPAS profile for other choices. Keep it concise and relevant.",
+            "- Highlight leadership, community service, or academic achievements.",
+            "- Do not rely on OEA to compensate for lower scores.",
+            "",
+            "**7. Have a Backup Plan**",
+            "",
+            "Given the high competitiveness (~17.3% Band A offer rate), you should have alternative programmes in Band A and B.",
+            "- Consider other HKU science programmes (e.g., JS6688 Science Master Class, JS6705 Bachelor of Science) or related programmes at other universities.",
+            "- Ensure your backup choices also have realistic score requirements.",
+            "",
+            "**8. Understand the Professional Exemptions**",
+            "",
+            "The programme offers IFoA exemptions (CS1, CS2, CM1, CM2, CB1, CB2) and SOA UEC credits. This is a major advantage – make sure you meet the required marks in specified courses.",
+            "- Plan your course selection to maximise exemption eligibility.",
+            "- Attend departmental briefings on accreditation pathways.",
+            "",
+            "**9. Stay Updated on Admission Changes**",
+            "",
+            "JUPAS requirements and scores can change yearly. Check the official HKU programme page and JUPAS website for the latest information.",
+            "- Follow HKU Admissions social media for announcements.",
+            "- Attend HKU Information Day (usually October) to ask questions directly."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及分數",
+          "content": [
+            "**首年學額：** 50",
+            "",
+            "**修讀年期：** 4年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**2025年JUPAS入學分數：**",
+            "- 計算公式：1.2 x 英文 + 1.2 x 數學 + 1.2 x M1/M2 + 最佳2科",
+            "- 中位數：35 | 下四分位數：35 | 上四分位數：36",
+            "",
+            "**核心科目：** 英文、數學必修部分",
+            "**選修科目：** M1或M2（加權1.2），另加最佳2科",
+            "",
+            "**面試：** 不需要",
+            "",
+            "**2025年Band A統計：** 254人申請Band A，44人獲取錄（Band A取錄率約17.3%）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "BSc(ActuarSc)是香港唯一獲英國精算師學會（IFoA）認可的課程。課程提供正規學術訓練，整合概率、統計、數據科學、經濟、投資、金融、法律、稅務及會計等知識。",
+            "",
+            "**第一至二年基礎：**",
+            "- 核心科目包括微積分、線性代數、概率、統計、經濟及會計。",
+            "- 精算科學及金融數學入門。",
+            "",
+            "**第三至四年專業化：**",
+            "- 高級精算模型、風險理論、生存模型及隨機過程。",
+            "- 數據分析、金融及保險選修科。",
+            "- 畢業專題或論文選項。",
+            "",
+            "**獨特特色：**",
+            "- **IFoA認證：** 畢業生符合指定成績可獲最多6科豁免（CS1, CS2, CM1, CM2, CB1, CB2）。",
+            "- **SOA大學學分（UEC）：** 港大為首批13所UEC參與院校之一，指定課程可獲考試學分。",
+            "- **精算卓越中心（CAE）：** 自2011年起獲美國精算師學會指定。",
+            "- **實習及職業輔導計劃：** 師友計劃、公司參觀、職業博覽及專業準備活動。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**精算及保險：**",
+            "- 人壽、非人壽或醫療保險公司的精算師。",
+            "- 風險管理及定價職位。",
+            "- 再保險及退休金顧問。",
+            "",
+            "**銀行及金融：**",
+            "- 量化分析師、風險經理或金融模型師。",
+            "- 投資銀行、資產管理及企業財資。",
+            "",
+            "**數據科學及分析：**",
+            "- 科技、諮詢或金融行業的數據科學家或商業分析師。",
+            "- 運用統計模型及大數據的職位。",
+            "",
+            "**政府及監管機構：**",
+            "- 保險業監管局、強積金管理局或金管局的精算職位。",
+            "",
+            "**進修：**",
+            "- 精算科學、統計或金融的研究深造。",
+            "- 考取IFoA或SOA院士資格。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "**主校園（薄扶林）：**",
+            "- 先進的演講廳、圖書館及電腦設施。",
+            "- 可使用港大主圖書館及統計及精算學資源中心。",
+            "",
+            "**學系設施：**",
+            "- 專用電腦實驗室，配備Excel、R、Python及專業建模軟件。",
+            "- 小組討論及自修空間。",
+            "",
+            "**學生組織：**",
+            "- 精算科學學會舉辦聯誼活動、學習小組及職業講座。",
+            "- 可參加港大各類學會、運動隊及文化團體。",
+            "",
+            "**住宿：**",
+            "- 可申請入住校園宿舍及住宿學院。",
+            "- 西環及堅尼地城一帶有校外住宿選擇。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高",
+            "",
+            "**2025年JUPAS Band A統計：**",
+            "- Band A申請人數：254",
+            "- Band A取錄人數：44",
+            "- Band A取錄率：約17.3%",
+            "",
+            "**影響競爭因素：**",
+            "1. **高DSE分數要求：** 中位數35分（加權公式）——屬港大理學院最高之一。",
+            "2. **重視數理背景：** 英文、數學及M1/M2加權，偏愛分析能力強的學生。",
+            "3. **學額有限：** 每年僅50個名額，競爭激烈。",
+            "4. **專業認證：** IFoA及SOA豁免吸引頂尖學生直接進入精算行業。",
+            "5. **無面試：** 純以學業成績揀選，DSE分數為唯一決定因素。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學術成就",
+          "content": [
+            "**學術成就：**",
+            "- 統計及精算學系自2011年起獲美國精算師學會指定為精算卓越中心（CAE）。",
+            "- 教職員活躍於精算、統計及數據科學研究，論文發表於頂尖期刊。",
+            "",
+            "**校友網絡：**",
+            "- 畢業生任職於香港及全球頂尖保險公司、銀行及顧問公司。",
+            "- 多人已取得IFoA或SOA院士資格。",
+            "",
+            "**排名及認可：**",
+            "- 港大持續位列亞洲及世界頂尖大學。",
+            "- 本課程為香港唯一獲IFoA認可的課程，聲譽卓著。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：**",
+            "- 根據學業成績（如DSE分數）頒發。",
+            "- 包括全額或部分學費減免及生活津貼。",
+            "",
+            "**學院/學系獎學金：**",
+            "- BSc(ActuarSc)課程獎學金予優秀學生。",
+            "- SOA及IFoA考試費用報銷予成績優異者。",
+            "",
+            "**校外獎學金：**",
+            "- 香港政府獎學金、尤德爵士紀念基金獎學金等。",
+            "- 鼓勵學生申請相關獎項。",
+            "",
+            "**申請方法：**",
+            "- 大部分入學獎學金無需另行申請，JUPAS取錄時自動考慮。",
+            "- 部分學系獎學金需另行申請或提名。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的精算科學策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握加權公式**",
+            "",
+            "DSE分數計算為1.2 x 英文 + 1.2 x 數學 + 1.2 x M1/M2 + 最佳2科。優先提升英文、數學及M1/M2的成績以最大化總分。",
+            "- 目標：英文及數學達5級或以上，M1/M2達5級或以上。",
+            "- 即使最佳2科稍弱，加權三科表現突出仍可補救。",
+            "",
+            "**2. 目標分數35+**",
+            "",
+            "中位數及下四分位數均為35，上四分位數36，你需要加權分數至少35才有競爭力。制定溫習計劃以達標。",
+            "- 用歷屆試題模擬加權計算，找出弱項。",
+            "- 若英文或數學未達5級，考慮重考。",
+            "",
+            "**3. 在M1/M2中脫穎而出**",
+            "",
+            "M1或M2加權1.2，與英文及數學同等重要。優異表現可大幅提升總分。",
+            "- 重點溫習微積分及統計（M1）或高級代數及微積分（M2）。",
+            "- 限時練習解題。",
+            "",
+            "**4. 建立強勁的最佳2科**",
+            "",
+            "最佳2科（不包括英文、數學、M1/M2）應達5級或以上。選擇與精算相關的科目，如經濟、物理或化學。",
+            "- 經濟學尤其有助於IFoA的CB1及CB2豁免。",
+            "- 除非有信心奪星，否則避免選取評分較低的科目。",
+            "",
+            "**5. 為無面試做好準備**",
+            "",
+            "由於無面試，整個申請取決於DSE分數。沒有機會透過個人陳述或面試加分。",
+            "- 確認JUPAS選擇中JS6729位於Band A。",
+            "- 確保學校推薦信及OEA（如有）準確，但注意它們不影響揀選。",
+            "",
+            "**6. 策略性運用OEA（即使不被考慮）**",
+            "",
+            "雖然OEA不影響此課程的取錄，但一份出色的OEA可支援其他JUPAS選擇。保持簡潔及相關。",
+            "- 突出領導才能、社區服務或學術成就。",
+            "- 不要依賴OEA來彌補分數不足。",
+            "",
+            "**7. 制定後備計劃**",
+            "",
+            "由於競爭激烈（Band A取錄率約17.3%），你應在Band A及B中選擇其他課程。",
+            "- 考慮港大其他理學課程（如JS6688科學大師班、JS6705理學士）或其他大學的相關課程。",
+            "- 確保後備選擇也有合理的分數要求。",
+            "",
+            "**8. 了解專業豁免**",
+            "",
+            "本課程提供IFoA豁免（CS1, CS2, CM1, CM2, CB1, CB2）及SOA UEC學分。這是一大優勢——確保你在指定科目達到所需分數。",
+            "- 規劃選科以最大化豁免資格。",
+            "- 參加學系舉辦的認證途徑簡介會。",
+            "",
+            "**9. 緊貼入學資訊更新**",
+            "",
+            "JUPAS要求及分數每年可能變動。查閱官方港大課程頁面及JUPAS網站獲取最新資訊。",
+            "- 關注港大招生社交媒體以獲取公告。",
+            "- 參加港大資訊日（通常在10月）直接提問。"
+          ]
+        }
+      }
+    },
+    "code": "JS6729",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 35,
+    "uq": 36,
+    "lq": 35
+  }
+}

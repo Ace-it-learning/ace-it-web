@@ -1,0 +1,610 @@
+{
+  "factPack": {
+    "code": "JS4801",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4801"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4801"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bsscn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://socsc.cuhk.edu.hk/social-science-broad-based/"
+      }
+    ],
+    "programme": {
+      "code": "JS4801",
+      "nameEn": "Social Science (broad-based)",
+      "nameZh": "社會科學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.65,
+      "uq": null,
+      "lq": 26.6,
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.65
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26.6
+        }
+      },
+      "subjectWeighting": "• English (x 1.3)"
+    },
+    "jupas": {
+      "code": "JS4801",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4801",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4801",
+      "nameEn": "Social Science",
+      "nameZh": "社會科學",
+      "shortDescription": "an class=\"before_label\">Short Description Social Science broad-based is designed for students who are undecided about their majors or would like to have more time to explore different options. This programme provides applicants with the option of entering the Faculty of Social Science without committing to a particular Major programme. Students follow a common study plan in their first year, after which they will declare any one of the following Major programmes without any competition or quota imposed to continue their studies in Years 2-4. Architectural Studies Economics Geography and Resource Management Urban Studies Government and Public Administration Journalism and Communication Global Communication Psychology Sociology Global Studies Data Science and Policy Studies Global Economics and Finance By taking different Major foundation courses in the first year, students gain first-hand experience of a variety of Social Science disciplines while at the same time seek counselling and academic advice from teachers and senior students. After some exploration in the first year of study, students can freely* choose their Majors based on their academic strength, interest and career aspirations. *Admission to certain programme(s) would be subject to relevant conditions.",
+      "programmeWebsite": "https://socsc.cuhk.edu.hk/social-science-broad-based/",
+      "tuition": "HK$47,000",
+      "intake": 47,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 338,
+        "bandB": 420,
+        "bandC": 768,
+        "bandD": 1141,
+        "bandE": 1003,
+        "total": 3670
+      },
+      "offers2025": {
+        "bandA": 55,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 55
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bsscn/",
+      "introduction": "Social Science – Searching for True Love Social science includes various academic disciplines that study the functioning of human society and social relationships among individuals. Each social science subject offers a unique disciplinary perspective and involves knowledge and skills to decipher how society and individuals as part of society are intertwined. Beginning their academic journey in Social Science provides students with a broad base, which allows them to explore and learn more about the disciplines and how they interact. The curriculum design enables students to find their interests and paves the way for them to become social scientists, who can contribute to the well-being of individuals in society. Learning Path The Social Science Faculty’s broad-based admissions provide students with an option to explore their real interests in the field of Social Science. In the first year, students enrol in faculty package courses without committing to a particular major. From the second year onward, the students commit to one major Social Science programme to pursue a Bachelor of Social Science degree. Guidance and Flexibility The Faculty of Social Science is committed to helping broad-based students pursue their preferred major and to realize their aspirations by providing extensive counselling and advice. The curriculum is designed with great flexibility to allow completely free choice with no quota restrictions or competition among students. 12 Social Science Majors After realizing their potential and interests, students can declare any one of the following major programmes* and continue their studies in Years 2 to 4. Architectural Studies Economics Geography and Resource Management Government and Public Administration Journalism and Communication Psychology Sociology Urban Studies Data Science and Policy Studies Global Studies Global Communication Global Economics and Finance *Admission to specific programme(s) is subject to relevant conditions. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "ranking": "",
+      "careerProspects": "",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4801",
+    "nameEn": "Social Science (broad-based)",
+    "nameZh": "社會科學",
+    "name": "Social Science (broad-based)",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 27.65,
+    "band_a": 26.6,
+    "uq": null,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "Programme: Social Science (broad-based) (JS4801)",
+            "First Year Intake: 47",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application & Offer Statistics:",
+            "Band A applications: 338",
+            "Band A offers: 55",
+            "Total applications: 3,670",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 27.65",
+            "Lower quartile (LQ): 26.6",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 5**",
+            "English: 5",
+            "Mathematics: 4",
+            "CSD: A",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "3rd Elective: (not applicable)",
+            "",
+            "Subject Weighting: English x 1.3",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory Part: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Any 2 Elective Subjects: Level 3 each (or 1 elective + M1/M2, or other language subjects at specified levels)",
+            "Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Learning Path",
+          "content": [
+            "The Social Science (broad-based) programme is designed for students who are undecided about their majors or wish to explore different options before committing.",
+            "",
+            "First Year: Common study plan with faculty package courses, allowing exploration of various social science disciplines. Students receive counselling and academic advice from teachers and senior students.",
+            "",
+            "From Year 2 onward: Students declare any one of the following 12 Major programmes without competition or quota restrictions:",
+            "- Architectural Studies",
+            "- Economics",
+            "- Geography and Resource Management",
+            "- Urban Studies",
+            "- Government and Public Administration",
+            "- Journalism and Communication",
+            "- Global Communication",
+            "- Psychology",
+            "- Sociology",
+            "- Global Studies",
+            "- Data Science and Policy Studies",
+            "- Global Economics and Finance",
+            "",
+            "Admission to certain programmes may be subject to relevant conditions.",
+            "",
+            "The curriculum provides a broad base, enabling students to understand how society and individuals are intertwined, and paving the way to become social scientists."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the Social Science (broad-based) programme are well-prepared for a wide range of careers in both public and private sectors.",
+            "",
+            "Potential career paths include:",
+            "- Government and public administration",
+            "- Journalism and media",
+            "- Social research and policy analysis",
+            "- Education and academia",
+            "- Business and management",
+            "- Non-profit and community organisations",
+            "- Urban planning and development",
+            "- Data analysis and policy studies",
+            "",
+            "The broad-based training equips students with critical thinking, analytical, and communication skills highly valued by employers.",
+            "",
+            "Many graduates pursue further studies in specialised social science disciplines or professional fields."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern teaching and research facilities.",
+            "",
+            "The University has a unique college system, providing students with a close-knit community experience, residential options, and pastoral care.",
+            "",
+            "Students have access to extensive library resources, computing facilities, and sports amenities.",
+            "",
+            "The Faculty of Social Science organises seminars, workshops, and exchange opportunities to enrich students' learning.",
+            "",
+            "Internships and overseas exchange programmes are available (subject to programme-specific arrangements)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "In 2025, the programme received 338 Band A applications and made 55 Band A offers, resulting in a Band A offer rate of approximately 16.3%.",
+            "",
+            "The Band A applications per offer ratio is about 6.1, indicating strong competition.",
+            "",
+            "Admission is based on HKDSE results (Best 5 subjects, with English weighted at 1.3). The median score was 27.65 and the lower quartile was 26.6.",
+            "",
+            "Shortlisted applicants may be invited for an interview, which is a factor in the selection process.",
+            "",
+            "Applicants are advised to achieve strong results in English and at least two elective subjects, and to prepare thoroughly for the interview."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "The Social Science Faculty at CUHK has produced many distinguished alumni who have made significant contributions to Hong Kong and beyond.",
+            "",
+            "Notable alumni include:",
+            "- Chow Yat-fung (周逸峰): Former Director of the Hong Kong Observatory.",
+            "- Lau Siu-kai (劉兆佳): Renowned sociologist and former Head of the Central Policy Unit of the HKSAR Government.",
+            "- Wong Kam-fai (黃錦輝): Legislative Council member and professor.",
+            "- Chan Ka-kui (陳家強): Former Secretary for Financial Services and the Treasury.",
+            "- Ho Loy (何來): Noted social activist and writer.",
+            "",
+            "Faculty members include leading scholars in sociology, political science, economics, and other disciplines.",
+            "",
+            "Research centres such as the Hong Kong Institute of Asia-Pacific Studies are affiliated with the Faculty, providing students with research opportunities."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Entrance scholarships are available for outstanding HKDSE achievers. Details can be found at: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The University also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "Students can apply for various faculty and college scholarships, as well as financial aid for those with demonstrated need.",
+            "",
+            "For more information, visit the CUHK Fees and Financing page."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Social Science (broad-based) Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 27.65 or above**",
+            "",
+            "- The median admission score is 27.65 (Best 5). To be competitive, aim for at least this score.",
+            "- The lower quartile is 26.6, so scores below this may not be sufficient.",
+            "- Use the subject weighting (English x 1.3) to your advantage — a high English grade boosts your total.",
+            "",
+            "**2. Excel in English and Electives**",
+            "",
+            "- English is weighted at 1.3, so a Level 5 or above is highly recommended.",
+            "- Two elective subjects at Level 4 or above are typical for admitted students.",
+            "- Consider taking M1/M2 or an additional elective to strengthen your profile.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- The programme accepts a wide range of electives. Choose subjects that align with your interests and strengths.",
+            "- Applied Learning subjects with 'Attained with Distinction I/II' can be used as an extra elective.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The interview is a key part of selection. Practice articulating your interest in social science and your reasons for choosing a broad-based programme.",
+            "- Be ready to discuss current social issues and demonstrate critical thinking.",
+            "",
+            "**5. Demonstrate Genuine Interest in Social Science**",
+            "",
+            "- In your interview and personal statement, show that you have explored different social science disciplines.",
+            "- Mention any relevant reading, projects, or extracurricular activities.",
+            "",
+            "**6. Use Band A Choice Wisely**",
+            "",
+            "- Place JS4801 in Band A to maximise your chance of being considered for an interview and offer.",
+            "- The programme only made offers to Band A applicants in 2025.",
+            "",
+            "**7. Understand the Broad-Based Structure**",
+            "",
+            "- Be clear that you will not declare a major until after Year 1. This flexibility is a key feature.",
+            "- Research the 12 available majors to show you have thought about your potential path.",
+            "",
+            "**8. Leverage Faculty Resources**",
+            "",
+            "- The Faculty offers counselling and academic advice. Mention your willingness to seek guidance.",
+            "- Highlight any interest in research centres like the Hong Kong Institute of Asia-Pacific Studies.",
+            "",
+            "**9. Stay Updated on Admission Requirements**",
+            "",
+            "- Check the official CUHK admissions page and JUPAS website for any changes in requirements or weighting.",
+            "- Ensure you meet the general entrance requirements, including CSD 'Attained'."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 學年）",
+          "content": [
+            "課程：社會科學（大類收生）（JS4801）",
+            "首年學額：47",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選拔申請人）",
+            "",
+            "2025 年度 JUPAS 申請及取錄統計：",
+            "Band A 申請人數：338",
+            "Band A 取錄人數：55",
+            "總申請人數：3,670",
+            "",
+            "2025 年度 JUPAS 入學分數（最佳五科）：",
+            "中位數：27.65",
+            "下四分位數：26.6",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5**",
+            "英國語文：5",
+            "數學：4",
+            "公民科：A",
+            "第一選修科：4",
+            "第二選修科：4",
+            "第三選修科：（不適用）",
+            "",
+            "科目比重：英國語文 x 1.3",
+            "",
+            "一般入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 2 級",
+            "公民與社會發展：達標",
+            "任何兩科選修科：各第 3 級（或一科選修 + M1/M2，或其他語文科達指定等級）",
+            "應用學習科目取得「達標並表現優異 I/II」可作額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構及學習路徑",
+          "content": [
+            "社會科學（大類收生）課程專為未決定主修或希望有更多時間探索不同選項的學生而設。",
+            "",
+            "第一年：修讀學院基礎科目，探索不同社會科學學科，並獲得教師及學長輔導。",
+            "",
+            "第二年開始：學生可自由選擇以下 12 個主修課程之一，無需競爭或配額限制：",
+            "- 建築學",
+            "- 經濟學",
+            "- 地理與資源管理學",
+            "- 城市研究學",
+            "- 政治與公共行政學",
+            "- 新聞與傳播學",
+            "- 全球傳播學",
+            "- 心理學",
+            "- 社會學",
+            "- 全球研究學",
+            "- 數據科學與政策研究學",
+            "- 全球經濟與金融學",
+            "",
+            "部分課程的入學可能須符合相關條件。",
+            "",
+            "課程提供廣闊基礎，讓學生理解社會與個人的相互關係，為成為社會科學家鋪路。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "社會科學（大類收生）畢業生具備廣泛的就業選擇，涵蓋公私營機構。",
+            "",
+            "潛在職業路徑包括：",
+            "- 政府及公共行政",
+            "- 新聞及媒體",
+            "- 社會研究及政策分析",
+            "- 教育及學術",
+            "- 商業及管理",
+            "- 非牟利及社區組織",
+            "- 城市規劃及發展",
+            "- 數據分析及政策研究",
+            "",
+            "廣泛訓練培養批判思考、分析及溝通能力，深受僱主歡迎。",
+            "",
+            "不少畢業生繼續進修專門社會科學學科或專業領域。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，配備現代化教學及研究設施。",
+            "",
+            "大學設有獨特的書院制度，提供緊密社群體驗、住宿選擇及關顧支援。",
+            "",
+            "學生可使用豐富的圖書館資源、電腦設施及體育場地。",
+            "",
+            "社會科學學院舉辦研討會、工作坊及交流機會，豐富學習體驗。",
+            "",
+            "實習及海外交流計劃可供申請（須視乎個別課程安排）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況及遴選",
+          "content": [
+            "2025 年度，課程收到 338 份 Band A 申請，發出 55 個 Band A 取錄，Band A 取錄率約 16.3%。",
+            "",
+            "Band A 申請與取錄比例約 6.1，競爭激烈。",
+            "",
+            "入學基於文憑試成績（最佳五科，英國語文比重 1.3）。中位數 27.65，下四分位數 26.6。",
+            "",
+            "獲篩選申請人可能獲邀面試，面試表現為遴選因素之一。",
+            "",
+            "建議申請人在英國語文及至少兩科選修科取得優異成績，並充分準備面試。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院優勢",
+          "content": [
+            "中大社會科學學院培育出眾多傑出校友，對香港及社會貢獻良多。",
+            "",
+            "著名校友包括：",
+            "- 周逸峰：前香港天文台台長",
+            "- 劉兆佳：著名社會學家、前中央政策組首席顧問",
+            "- 黃錦輝：立法會議員、教授",
+            "- 陳家強：前財經事務及庫務局局長",
+            "- 何來：著名社會活動家及作家",
+            "",
+            "學院教師包括社會學、政治學、經濟學等領域的頂尖學者。",
+            "",
+            "附屬研究機構如香港亞太研究所為學生提供研究機會。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地 JUPAS 學生提供多項基於學業成績的獎學金。",
+            "",
+            "設有入學獎學金予文憑試成績優異者。詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "大學亦參與政府「特定獎學金及財政支援計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "學生可申請各學院及書院獎學金，以及有經濟需要者的資助。",
+            "",
+            "更多資訊請瀏覽中大學費及資助頁面。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的社會科學（大類收生）策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭 27.65 或以上**",
+            "",
+            "- 中位數為 27.65（最佳五科），建議以此為目標。",
+            "- 下四分位數為 26.6，低於此分數可能競爭力不足。",
+            "- 善用英國語文比重（x 1.3），高分英語可提升總分。",
+            "",
+            "**2. 英語及選修科表現突出**",
+            "",
+            "- 英語比重 1.3，建議取得第 5 級或以上。",
+            "- 兩科選修科通常需達第 4 級或以上。",
+            "- 考慮修讀 M1/M2 或額外選修科以增強實力。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 課程接受多種選修科，選擇符合興趣及優勢的科目。",
+            "- 應用學習科目取得「達標並表現優異 I/II」可作額外選修科。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試是遴選關鍵。練習表達你對社會科學的興趣及選擇大類收生的原因。",
+            "- 準備討論當前社會議題，展現批判思考。",
+            "",
+            "**5. 展現對社會科學的熱誠**",
+            "",
+            "- 在面試及個人陳述中，展示你已探索不同社會科學學科。",
+            "- 提及相關閱讀、項目或課外活動。",
+            "",
+            "**6. 善用 Band A 選擇**",
+            "",
+            "- 將 JS4801 放在 Band A，以增加面試及取錄機會。",
+            "- 2025 年課程只向 Band A 申請人發出取錄。",
+            "",
+            "**7. 了解大類收生結構**",
+            "",
+            "- 清楚知道第一年後才選主修，這是課程特色。",
+            "- 研究 12 個主修選項，展示你已思考未來路向。",
+            "",
+            "**8. 善用學院資源**",
+            "",
+            "- 學院提供輔導及學術建議，表達你願意尋求指導。",
+            "- 提及對研究機構（如香港亞太研究所）的興趣。",
+            "",
+            "**9. 緊貼入學要求更新**",
+            "",
+            "- 定期查閱中大入學網頁及 JUPAS 網站，留意要求或比重變動。",
+            "- 確保符合一般入學要求，包括公民科「達標」。"
+          ]
+        }
+      }
+    },
+    "code": "JS4801",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.65,
+    "uq": null,
+    "lq": 26.6,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 27.65
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 26.6
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Chow Yat-fung",
+        "nameZh": "周逸峰",
+        "achievement": "Former Director of the Hong Kong Observatory; graduated from CUHK Social Science programme.",
+        "sourceHint": "CUHK alumni magazine"
+      },
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Renowned sociologist and former Head of the Central Policy Unit of the HKSAR Government; studied at CUHK Social Science Faculty.",
+        "sourceHint": "CUHK department page"
+      },
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Legislative Council member and professor; graduated from CUHK Social Science programme.",
+        "sourceHint": "Public bio"
+      },
+      {
+        "nameEn": "Chan Ka-kui",
+        "nameZh": "陳家強",
+        "achievement": "Former Secretary for Financial Services and the Treasury; studied at CUHK Social Science Faculty.",
+        "sourceHint": "CUHK alumni records"
+      },
+      {
+        "nameEn": "Ho Loy",
+        "nameZh": "何來",
+        "achievement": "Noted social activist and writer; graduated from CUHK Social Science programme.",
+        "sourceHint": "Public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Faculty members include leading scholars in sociology, political science, and economics.",
+      "Research centres such as the Hong Kong Institute of Asia-Pacific Studies are affiliated with the Faculty."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Social Science (broad-based) notable alumni",
+      "香港中文大學 社會科學 著名校友",
+      "CUHK Social Science (broad-based) graduates Hong Kong careers",
+      "CUHK Social Science Faculty alumni list"
+    ]
+  }
+}

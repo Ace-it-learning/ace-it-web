@@ -1,0 +1,513 @@
+{
+  "factPack": {
+    "code": "JS6066",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6066"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://web.edu.hku.hk/programme/babed_6066/"
+      }
+    ],
+    "programme": {
+      "code": "JS6066",
+      "nameEn": "Bachelor of Education in Early Childhood Education and Special Education",
+      "nameZh": "文學士及教育學士(語文教育) - 英文教育",
+      "university": "香港大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 32,
+      "uq": 34,
+      "lq": 32
+    },
+    "jupas": {
+      "code": "JS6066",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6066",
+      "nameEn": "Bachelor of Arts and Bachelor of Education in Language Education - English",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description This double-degree curriculum is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language",
+      "programmeWebsite": "https://web.edu.hku.hk/programme/babed_6066/",
+      "tuition": "HK$47,000",
+      "intake": 17,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 127,
+        "bandB": 105,
+        "bandC": 154,
+        "bandD": 215,
+        "bandE": 202,
+        "total": 803
+      },
+      "offers2025": {
+        "bandA": 15,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 15
+      },
+      "facultyPhone": "+852 3917 2280"
+    },
+    "admissionsSnippet": "Bachelor of Arts and Bachelor of Education in Language Education — English | HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners Home Programmes Undergraduate Programmes Bachelor of Arts and Bachelor of Education in Language Education — English Programme Overview and Aims Programme Overview and Aims Curriculum Structure Admissions Requirements Career Prospects Sharing FAQ Programme Overview and Aims Enquiries Information Application &amp; Admissions Contact:&nbsp; Faculty of Education &nbsp; Phone +852 3917 2280 Fax Email [javascript protected email address] Office &nbsp; Arts Curriculum Contact: Faculty of Arts &nbsp; Phone +852 3917 8977 Fax Email [javascript protected email address] Office &nbsp; Academic Matters Contact: Dr Ruby Yang (Curriculum Coordinator) &nbsp; Phone +852 3917 2280 Fax Email babedeng @hku.hk Office Programme Pamphlet View and download The BA&amp;BEd(LangEd)-English &nbsp;has been jointly offered by the Faculty of Arts and Faculty of Education since 2005.&nbsp; This five-year double degree integrates specialist studies in English language and linguistics and professional studies in English language education.&nbsp; The programme combines rigorous academic study with experiential learning and practical application.&nbsp; Graduates of the BA&amp;BEd(LangEd)-English&nbsp;are able to meet the requirements for English language teachers in both primary and secondary schools as recommended by the HKSAR government. &nbsp; &nbsp;&nbsp; Powerpoint file for admissions&nbsp;talk (HKU Information Day for Undergraduate Admissions 2025 ) &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Programme Features Students will develop in-depth knowledge of English language and linguistics, literature, communication and language acquisition and will critically explore issues in language education specifically and education generally and develop personal strengths and commitment to education. The programme offers two degrees:&nbsp;a BA in English language and linguistics, and a BEd in English language education.&nbsp;It is equivalent to a BA plus a Postgraduate Diploma in Education, a professional teaching qualification recognized in Hong Kong schools.&nbsp; Graduates are fully exempted from the Government&#39;s Language Proficiency Requirement (English Language).&nbsp;&nbsp; Students may take a range of elective courses within the Faculty of Education or in other Faculties, and may combine elective courses to declare a minor subject. Students&nbsp;participate in an overseas immersion programme&nbsp;to increase global awareness, enhance language proficiency and enrich professional development. &nbsp; The Scholarship for&nbsp;Prospective English Teachers is set up by the Education Bureau (EDB) to attract persons proficient in English to pursue relevant local bachelor degree programmes which will qualify them to become English&nbsp;teachers on graduation.&nbsp;For details, please refer to&nbsp; EDB&#39;s website . &nbsp; JUPAS Information Sessions 2025&nbsp;- Thematic Talk Topic:&nbsp; Using AI for Materials Development in English Language Education By Dr&nbsp;Ruby Yang, Programme Coordi"
+  },
+  "programme": {
+    "code": "JS6066",
+    "nameEn": "Bachelor of Education in Early Childhood Education and Special Education",
+    "nameZh": "文學士及教育學士(語文教育) - 英文教育",
+    "name": "Bachelor of Education in Early Childhood Education and Special Education",
+    "university": "香港大學",
+    "faculty": "教育學院",
+    "median": 32,
+    "band_a": 32,
+    "uq": 34,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 17",
+            "",
+            "**Duration:** 5 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Median: 32 | LQ: 32 | UQ: 34",
+            "",
+            "**Formula:** Best 5 Subjects",
+            "",
+            "**Core Subjects:**",
+            "- English Language",
+            "- Mathematics Compulsory Part",
+            "- Liberal Studies",
+            "",
+            "**Elective Subjects:**",
+            "- Any 2 elective subjects (including M1/M2)",
+            "",
+            "**Weighting:**",
+            "- English Language: x1.5",
+            "- Best 4 other subjects: x1",
+            "",
+            "**Interview:** Required (shortlisted candidates)",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "- Band A applications: 127",
+            "- Band A offers: 15",
+            "- Band A offer rate: ~11.8%"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "This double-degree programme is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language proficiency requirements for English language teachers in both primary and secondary schools as recommended by the HKSAR government.",
+            "",
+            "**Year 1-2:** Foundation in English language, linguistics, literature, and introductory education studies.",
+            "",
+            "**Year 3-4:** Advanced disciplinary courses in English language and linguistics, plus professional education courses including curriculum design, assessment, and pedagogy.",
+            "",
+            "**Year 5:** Teaching practicum, capstone project, and elective courses. Students may also declare a minor subject.",
+            "",
+            "**Unique Features:**",
+            "- Overseas immersion programme to enhance language proficiency and global awareness.",
+            "- Graduates are fully exempted from the Government's Language Proficiency Requirement (English Language).",
+            "- Equivalent to a BA plus a Postgraduate Diploma in Education (PGDE).",
+            "- Scholarship for Prospective English Teachers (EDB) available.",
+            "- Students can take elective courses across faculties."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Education Sector:**",
+            "- English language teacher in primary and secondary schools (government-aided, DSS, international schools)",
+            "- Curriculum developer or education officer in the Education Bureau",
+            "- Educational consultant or teacher trainer",
+            "",
+            "**Language and Communication:**",
+            "- Editor, copywriter, or content creator in publishing/media",
+            "- Corporate communication specialist or public relations officer",
+            "- Translator or interpreter",
+            "",
+            "**Further Studies:**",
+            "- Master's in Education (MEd), Applied Linguistics, or TESOL",
+            "- PhD in Education or Linguistics",
+            "- Postgraduate Diploma in Education (if not already obtained)"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Main Campus:** HKU Main Campus, Pokfulam Road",
+            "",
+            "**Facilities:**",
+            "- Education Library with extensive teaching resources",
+            "- Language learning labs and multimedia studios",
+            "- Student common rooms and collaborative spaces",
+            "",
+            "**Student Activities:**",
+            "- Education Society and English Society",
+            "- Overseas immersion programme (e.g., UK, Australia, Canada)",
+            "- Teaching practicum placements in local schools",
+            "",
+            "**Support Services:**",
+            "- Academic advising by programme coordinators",
+            "- Career counselling and job placement services",
+            "- Scholarships and financial aid (e.g., EDB Scholarship for Prospective English Teachers)"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High",
+            "",
+            "**2025 JUPAS Band A Statistics:**",
+            "- Band A applications: 127",
+            "- Band A offers: 15",
+            "- Band A offer rate: ~11.8%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Best 5 Subjects, with English Language weighted x1.5)",
+            "2. Interview performance (shortlisted candidates only)",
+            "3. OEA (Other Experiences and Achievements) – relevant language/teaching experience is an advantage",
+            "4. Choice of programme in JUPAS (Band A preferred)",
+            "",
+            "**Tips for Applicants:**",
+            "- Aim for at least Level 5 in English Language and strong results in other subjects.",
+            "- Prepare for interview: demonstrate passion for English language education and awareness of current issues.",
+            "- Highlight any teaching-related volunteer work or language competitions in OEA."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty Excellence:**",
+            "- The Faculty of Education is ranked among the top education faculties in Asia.",
+            "- Faculty members are active researchers in language education, linguistics, and curriculum development.",
+            "",
+            "**Research Centres & Labs:**",
+            "- Centre for Applied English Studies",
+            "- Language and Literacy Education Academic Unit",
+            "",
+            "**Alumni Achievements:**",
+            "- Graduates are highly sought after by local and international schools.",
+            "- Many alumni have become English panel heads, curriculum leaders, or education officers.",
+            "- Some have pursued further studies at top universities worldwide."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**Scholarship for Prospective English Teachers (EDB):**",
+            "- Offered by the Education Bureau to attract proficient English speakers to become English teachers.",
+            "- Covers tuition fees and provides a living allowance.",
+            "- Recipients are required to teach in Hong Kong schools for a specified period after graduation.",
+            "",
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on academic merit (e.g., DSE results).",
+            "- Includes full or partial tuition waivers.",
+            "",
+            "**Faculty of Education Scholarships:**",
+            "- Various scholarships for outstanding students in education programmes.",
+            "- Examples: Faculty of Education Scholarship, Dr. the Hon. Sir Sze-yuen Chung Scholarship."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BA&BEd(LangEd)-English Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the English Language**",
+            "",
+            "Achieve at least Level 5 in English Language DSE; aim for Level 5** or above.",
+            "- English is weighted x1.5, so a high score significantly boosts your Best 5 total.",
+            "- Read widely: academic articles, editorials, and literary texts to enhance vocabulary and critical thinking.",
+            "",
+            "**2. Strengthen Your Best 5 Subjects**",
+            "",
+            "Focus on your top 5 subjects including English, but ensure breadth across core and electives.",
+            "- Mathematics and Liberal Studies are core; aim for Level 4 or above.",
+            "- Choose electives that align with your strengths (e.g., Literature, History, Economics).",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "The interview is a key differentiator; shortlisted candidates must demonstrate passion and awareness.",
+            "- Practice discussing current issues in English language education (e.g., AI in the classroom, bilingualism).",
+            "- Prepare a personal statement explaining why you want to be an English teacher.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Highlight experiences that show commitment to education and language.",
+            "- Volunteer as a tutor or teaching assistant in local schools.",
+            "- Participate in English debating, public speaking, or writing competitions.",
+            "",
+            "**5. Use Band A Strategically**",
+            "",
+            "Place JS6066 in Band A to maximize your chance of an offer.",
+            "- In 2025, only Band A applicants received offers (15 out of 127).",
+            "- Band B or lower applicants were not considered.",
+            "",
+            "**6. Consider Backup Programmes**",
+            "",
+            "Have a backup plan in case you are not admitted.",
+            "- Consider other education programmes (e.g., JS6080 BEd in Early Childhood Education).",
+            "- Alternatively, apply for BA programmes in English or Linguistics and pursue PGDE later.",
+            "",
+            "**7. Understand the Double-Degree Advantage**",
+            "",
+            "This programme combines a BA and BEd, saving you one year compared to doing them separately.",
+            "- You graduate with two degrees and a professional teaching qualification.",
+            "- You are exempted from the Language Proficiency Requirement for English teachers.",
+            "",
+            "**8. Explore the Overseas Immersion**",
+            "",
+            "The overseas immersion programme is a unique feature that enhances your global perspective.",
+            "- Plan financially and academically to make the most of this opportunity.",
+            "- Use the experience to build a network and improve language fluency.",
+            "",
+            "**9. Stay Updated on Admission Trends**",
+            "",
+            "Monitor JUPAS statistics and programme updates.",
+            "- The median score in 2025 was 32; aim for at least 33 to be competitive.",
+            "- Check the HKU Faculty of Education website for any changes in requirements or interview format."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額:** 17",
+            "",
+            "**修讀年期:** 5年",
+            "",
+            "**首年學費:** HK$47,000",
+            "",
+            "**2025年入學分數:**",
+            "中位數: 32 | 下四分位數: 32 | 上四分位數: 34",
+            "",
+            "**計算公式:** 最佳5科",
+            "",
+            "**核心科目:**",
+            "- 英國語文",
+            "- 數學必修部分",
+            "- 通識教育",
+            "",
+            "**選修科目:**",
+            "- 任何2科選修科（包括M1/M2）",
+            "",
+            "**比重:**",
+            "- 英國語文: x1.5",
+            "- 最佳4科其他科目: x1",
+            "",
+            "**面試:** 需要（獲篩選的申請人）",
+            "",
+            "**2025年聯招統計:**",
+            "- Band A申請人數: 127",
+            "- Band A取錄人數: 15",
+            "- Band A取錄率: ~11.8%"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽:**",
+            "此雙學位課程由教育學院及文學院合辦，學生可在五年內獲得兩個學位，並符合香港特別行政區政府建議的中小學英語教師語文能力要求。",
+            "",
+            "**第一至二年:** 英語語言、語言學、文學及基礎教育研究。",
+            "",
+            "**第三至四年:** 進階英語語言及語言學課程，以及專業教育課程，包括課程設計、評估及教學法。",
+            "",
+            "**第五年:** 教學實習、總結性項目及選修科。學生亦可申報副修科目。",
+            "",
+            "**獨特之處:**",
+            "- 海外沉浸課程，提升語言能力及全球視野。",
+            "- 畢業生可獲豁免政府英語語文能力要求。",
+            "- 相當於學士學位加學位教師教育文憑。",
+            "- 教育局「準英語教師獎學金」可供申請。",
+            "- 學生可跨學院選修科目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**教育領域:**",
+            "- 中小學英語教師（資助、直資、國際學校）",
+            "- 課程發展主任或教育局教育主任",
+            "- 教育顧問或教師培訓員",
+            "",
+            "**語言及傳訊:**",
+            "- 編輯、撰稿員或內容創作者（出版/媒體）",
+            "- 企業傳訊專員或公共關係主任",
+            "- 翻譯員或傳譯員",
+            "",
+            "**進修途徑:**",
+            "- 教育碩士、應用語言學或英語教學碩士",
+            "- 教育學或語言學博士",
+            "- 學位教師教育文憑（如未持有）"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**主校園:** 香港大學本部，薄扶林道",
+            "",
+            "**設施:**",
+            "- 教育圖書館，藏有豐富教學資源",
+            "- 語言學習實驗室及多媒體工作室",
+            "- 學生共用空間及協作區",
+            "",
+            "**學生活動:**",
+            "- 教育學會及英文學會",
+            "- 海外沉浸課程（如英國、澳洲、加拿大）",
+            "- 本地學校教學實習",
+            "",
+            "**支援服務:**",
+            "- 課程統籌主任學術指導",
+            "- 就業輔導及職位配對服務",
+            "- 獎學金及經濟援助（如教育局準英語教師獎學金）"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度:** 高",
+            "",
+            "**2025年聯招Band A統計:**",
+            "- Band A申請人數: 127",
+            "- Band A取錄人數: 15",
+            "- Band A取錄率: ~11.8%",
+            "",
+            "**影響取錄的因素:**",
+            "1. 文憑試成績（最佳5科，英國語文比重x1.5）",
+            "2. 面試表現（僅獲篩選申請人）",
+            "3. 其他學習經歷及成就（OEA）——相關語言/教學經驗有優勢",
+            "4. 聯招課程選擇次序（Band A優先）",
+            "",
+            "**申請提示:**",
+            "- 目標英國語文達5級或以上，其他科目成績優異。",
+            "- 面試準備：展現對英語教育的熱誠及對當前議題的認識。",
+            "- 在OEA中突出教學相關義工服務或語言比賽經驗。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**學院卓越:**",
+            "- 教育學院位列亞洲頂尖教育學院之一。",
+            "- 學院教員在語言教育、語言學及課程發展方面活躍研究。",
+            "",
+            "**研究中心及實驗室:**",
+            "- 應用英語中心",
+            "- 語言與語文教育學術單位",
+            "",
+            "**校友成就:**",
+            "- 畢業生深受本地及國際學校歡迎。",
+            "- 不少校友已成為英文科主任、課程領袖或教育主任。",
+            "- 部分校友於世界頂尖大學繼續進修。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**教育局準英語教師獎學金:**",
+            "- 由教育局設立，吸引英語能力優秀者投身英語教學。",
+            "- 涵蓋學費及提供生活津貼。",
+            "- 獲獎者須於畢業後在港學校任教指定年期。",
+            "",
+            "**香港大學入學獎學金:**",
+            "- 根據學術成績（如文憑試成績）頒發。",
+            "- 包括全額或部分學費減免。",
+            "",
+            "**教育學院獎學金:**",
+            "- 多項獎學金供教育課程優秀學生申請。",
+            "- 例子：教育學院獎學金、施子清博士獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 BA&BEd(LangEd)-English 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 精通英國語文**",
+            "",
+            "在文憑試英國語文科取得至少5級，目標5**或以上。",
+            "- 英國語文比重x1.5，高分可大幅提升最佳5科總分。",
+            "- 廣泛閱讀：學術文章、社論及文學作品，增強詞彙及批判思維。",
+            "",
+            "**2. 強化最佳5科**",
+            "",
+            "專注於包括英國語文在內的5科，但確保核心及選修科均衡。",
+            "- 數學及通識為核心科，目標4級或以上。",
+            "- 選擇與你優勢相符的選修科（如文學、歷史、經濟）。",
+            "",
+            "**3. 準備面試**",
+            "",
+            "面試是關鍵區分因素；獲篩選申請人須展現熱誠及認識。",
+            "- 練習討論英語教育當前議題（如課室AI、雙語現象）。",
+            "- 準備個人陳述，解釋為何想成為英語教師。",
+            "",
+            "**4. 建立豐富的OEA檔案**",
+            "",
+            "突出顯示對教育及語言的承諾的經歷。",
+            "- 在本地學校擔任義工導師或教學助理。",
+            "- 參與英語辯論、演講或寫作比賽。",
+            "",
+            "**5. 策略性使用Band A**",
+            "",
+            "將JS6066放在Band A以最大化取錄機會。",
+            "- 2025年只有Band A申請人獲取錄（127人中15人）。",
+            "- Band B或更低申請人不獲考慮。",
+            "",
+            "**6. 考慮後備課程**",
+            "",
+            "制定後備計劃以防萬一。",
+            "- 考慮其他教育課程（如JS6080幼兒教育學士）。",
+            "- 或申請英文或語言學文學士，之後再修讀PGDE。",
+            "",
+            "**7. 了解雙學位優勢**",
+            "",
+            "此課程結合文學士及教育學士，比分開修讀節省一年。",
+            "- 畢業時獲得兩個學位及專業教學資格。",
+            "- 獲豁免英語教師語文能力要求。",
+            "",
+            "**8. 探索海外沉浸課程**",
+            "",
+            "海外沉浸課程是獨特之處，能擴闊全球視野。",
+            "- 在財政及學術上做好規劃，充分利用此機會。",
+            "- 利用此經歷建立人脈及提升語言流利度。",
+            "",
+            "**9. 緊貼收生趨勢**",
+            "",
+            "監察聯招統計及課程更新。",
+            "- 2025年中位數為32；目標33或以上以保持競爭力。",
+            "- 查閱港大教育學院網站，了解要求或面試形式的任何變更。"
+          ]
+        }
+      }
+    },
+    "code": "JS6066",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 32,
+    "uq": 34,
+    "lq": 32
+  }
+}

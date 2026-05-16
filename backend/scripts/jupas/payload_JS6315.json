@@ -1,0 +1,469 @@
+{
+  "factPack": {
+    "code": "JS6315",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6315"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.dase.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6315",
+      "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+      "nameZh": "工學學士(數據與系統工程)",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 26,
+      "uq": 28,
+      "lq": 25
+    },
+    "jupas": {
+      "code": "JS6315",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6315",
+      "nameEn": "Bachelor of Engineering in Data and Systems Engineering",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.dase.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 327,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 80,
+        "bandB": 75,
+        "bandC": 149,
+        "bandD": 260,
+        "bandE": 216,
+        "total": 780
+      },
+      "offers2025": {
+        "bandA": 24,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 24
+      },
+      "facultyPhone": "+852 3917 2583"
+    },
+    "admissionsSnippet": "The University of Hong Kong - Department of Data and Systems Engineering Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to content HKU Faculty of Engineering Sitemap Facebook Instagram LinkedIn Open Search box Search GO Open menu About Us Introduction Vision &amp; Mission History Honours &amp; Awards Vacancies Contact Us Teaching and Learning Prospective Students Bachelor of Engineering in Data and Systems Engineering Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Current Students Bachelor of Engineering in Industrial Engineering and Logistics Management Bachelor of Engineering in Data and Systems Engineering Bachelor of Engineering in Engineering Science Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Industrial Engineering Association The Industrial Engineering Postgraduate and Scholar Association Research Research Areas Research Highlights Research Achievements Selected Publications Knowledge Exchange People Academic Staff Honorary and Adjunct Appointments / Part-time Appointments Administrative Staff Technical Staff Laboratories News &amp; Events Seminar Series Departmental Events Alumni Search box in menu Search website About Us Introduction Vision &amp; Mission History Honours &amp; Awards Vacancies Contact Us Teaching and Learning Prospective Students Bachelor of Engineering in Data and Systems Engineering Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Current Students Bachelor of Engineering in Industrial Engineering and Logistics Management Bachelor of Engineering in Data and Systems Engineering Bachelor of Engineering in Engineering Science Master of Science in Engineering in Industrial Engineering and Logistics Management Master of Science in Engineering in Robotics and Intelligent Systems MPhil/PhD Industrial Engineering Association The Industrial Engineering Postgraduate and Scholar Association Research Research Areas Research Highlights Research Achievements Selected Publications Knowledge Exchange People Academic Staff Honorary and Adjunct Appointments / Part-time Appointments Administrative Staff Technical Staff Laboratories News &amp; Events Seminar Series Departmental Events Alumni Facebook Instagram LinkedIn HKU Faculty of Engineering Sitemap Press 'Tab' to content Department of Data and Systems Engineering Announcement HKU Leads Hong Kong in Data Science: Ranked 18th Globally in QS 2026 Learn More Celebrating 50 Years of Excellence HKU IMSE 50th Anniversary Gala Dinner Learn More Scholarships For DASE Undergraduate Programme (BEng) Students Learn More Scholarships For DASE Taught Postgraduate Programme (MSc) Students Learn More Career Prospects Learn More Announcement Centralized Administration Hub at Faculty Office Learn More Alumni Contact Update Campaign HKU Engineering - Alumni Contact Update and Reconnect - Updating your contact information is just fingertip away! Learn More What's New More Announcement HKU Leads Hong Kong in Data Science: Ranked 18th Globally in QS 2026 Research Seminars Policies for Two-Stage Stochastic Resource Allocation Problems Date: April 15, 2026 (Wednesday) Time: 11:30 Venue: HW 828, Haking Wong Building, HKU Announcement **Get a Coffee Shop Gift Certificate** UG Student Feedback on Teaching and Learning (SFTL), Semester 2 of 2025-26 Research Seminars Digital Product Passport for Sustainable and Circular Supply Chain Management: A Structured Review of Use Cases Date: March 19, 2026 (Thursday) Time: 11:45 Venue: HW 828, Haking Wong Building, HKU Research Seminars Decompose-route-improve framework for solving large-scale vehicle routing problems with time windows Date: March 18, 2026 (Wednesday) Time: 10:00 Venue: The Tam Wing Fan Innovation Wing Two, HKU Events 【Register Now】XR Game Jam 2026, hosted by the Department of Data and Systems Engineering, The University of Hong Kong! Research Seminars Optimal Liability Design for Medical AI Date: January 12, 2026 (Monday) Time: 14:30 Venue: HW 828, Haking Wong Building, HKU &copy; 2026 Department of Data and Systems Engineering, The University of Hong Kong. All rights reserved."
+  },
+  "programme": {
+    "code": "JS6315",
+    "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+    "nameZh": "工學學士(數據與系統工程)",
+    "name": "Bachelor of Engineering in Mechanical Engineering",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 26,
+    "band_a": 25,
+    "uq": 28,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:**",
+            "327",
+            "",
+            "**Duration:**",
+            "4 years",
+            "",
+            "**First Year Tuition:**",
+            "HK$47,000",
+            "",
+            "**2025 DSE Score Formula:**",
+            "Eng + Math + Best 3 Subjects",
+            "",
+            "**2025 Admission Scores:**",
+            "Median: 26 | LQ: 25 | UQ: 28",
+            "",
+            "**Interview:**",
+            "Required (performance considered in admission decision)",
+            "",
+            "**Programme Entrance Requirements:**",
+            "General Entrance Requirements of HKU apply. Specific subject requirements may be detailed on the programme website."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "This programme equips students with a solid foundation in mechanical engineering, covering core areas such as solid mechanics, fluid dynamics, thermodynamics, materials science, and manufacturing processes.",
+            "",
+            "**Year 1:** Foundational courses in mathematics, physics, computing, and introductory engineering principles.",
+            "",
+            "**Year 2:** Core mechanical engineering subjects including mechanics of solids, fluid mechanics, thermodynamics, and engineering materials.",
+            "",
+            "**Year 3:** Advanced core and elective courses in areas like mechanical design, control systems, and energy systems. Students may also begin a capstone project.",
+            "",
+            "**Year 4:** Specialisation through technical electives, a final-year capstone project, and optional internship or exchange opportunities.",
+            "",
+            "**Unique Features:**",
+            "- Strong emphasis on hands-on laboratory work and design projects.",
+            "- Opportunities for interdisciplinary study within the Faculty of Engineering.",
+            "- Access to state-of-the-art laboratories and research facilities.",
+            "- Capstone project allows students to solve real-world engineering problems."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for a wide range of careers in mechanical engineering and related fields.",
+            "",
+            "**Engineering & Design:**",
+            "- Mechanical design engineer in manufacturing, automotive, or aerospace industries.",
+            "- Product development engineer focusing on new product design and testing.",
+            "",
+            "**Energy & Environment:**",
+            "- Energy engineer working on power generation, renewable energy systems, or HVAC.",
+            "- Environmental engineer addressing pollution control and sustainable design.",
+            "",
+            "**Advanced Manufacturing & Automation:**",
+            "- Manufacturing engineer optimising production processes and quality control.",
+            "- Automation engineer designing robotic systems and automated production lines.",
+            "",
+            "**Research & Development:**",
+            "- R&D engineer in industrial or government research labs.",
+            "- Pursuing postgraduate studies (MSc, PhD) in mechanical engineering or related fields."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "Students enjoy a vibrant campus life at HKU's main campus in Pokfulam, with access to world-class facilities.",
+            "",
+            "**Libraries:** The Main Library and the Engineering Library provide extensive collections and study spaces.",
+            "",
+            "**Laboratories:** Dedicated mechanical engineering labs for fluid mechanics, thermodynamics, materials testing, and manufacturing.",
+            "",
+            "**Sports & Recreation:** University sports facilities including gymnasiums, swimming pool, and sports fields.",
+            "",
+            "**Student Organisations:** The Engineering Society and various interest clubs offer networking and social events.",
+            "",
+            "**Accommodation:** On-campus halls and off-campus housing options are available for students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High – JS6315 is a popular programme within HKU Engineering.",
+            "",
+            "**2025 Band A Statistics:**",
+            "- Band A applications: 80",
+            "- Band A offers: 24",
+            "- Band A offer rate: ~30.0%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE scores (Eng + Math + Best 3 Subjects) – the primary filter.",
+            "2. Interview performance – can distinguish candidates with similar scores.",
+            "3. Subject choices – relevant electives (e.g., Physics, M1/M2) are advantageous.",
+            "4. Other experiences (OEA, competitions) – considered holistically."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "The programme is backed by the Faculty of Engineering's strong reputation and research output.",
+            "",
+            "**Faculty Excellence:** HKU Engineering is consistently ranked among the top engineering faculties in Asia.",
+            "",
+            "**Research Impact:** Faculty members lead cutting-edge research in areas such as robotics, energy systems, and advanced materials.",
+            "",
+            "**Laboratories:** Students have access to well-equipped labs including the Mechanical Engineering Laboratory and the Centre for Advanced Structural Materials.",
+            "",
+            "**Alumni Network:** Graduates join a global network of HKU Engineering alumni, many of whom hold leadership positions in industry and academia."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "A range of scholarships are available for outstanding students.",
+            "",
+            "**HKU Entrance Scholarships:** Awarded based on DSE results and overall profile.",
+            "",
+            "**Faculty of Engineering Scholarships:** Specific scholarships for engineering students with high academic achievement.",
+            "",
+            "**Departmental Scholarships:** The Department of Mechanical Engineering offers merit-based awards.",
+            "",
+            "**External Scholarships:** Students may also apply for scholarships from the HKSAR Government and other organisations."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS6315 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "Focus on English, Mathematics, and your best three electives. A strong performance in these five subjects is the foundation of your application.",
+            "- Prioritise Mathematics and Physics (if taken) as they are directly relevant to mechanical engineering.",
+            "- Aim for at least Level 5 in English and Mathematics to be competitive.",
+            "",
+            "**2. Choose Electives Wisely**",
+            "",
+            "Select electives that demonstrate your aptitude for engineering and analytical thinking.",
+            "- Physics, Chemistry, and M1/M2 are highly recommended.",
+            "- Avoid overly soft subjects that may not be weighted favourably.",
+            "",
+            "**3. Prepare Thoroughly for the Interview**",
+            "",
+            "The interview is a key differentiator. Show your passion for mechanical engineering and problem-solving skills.",
+            "- Practice common engineering interview questions and think about real-world applications.",
+            "- Be ready to discuss your project experiences or engineering-related hobbies.",
+            "",
+            "**4. Build a Strong OEA Profile**",
+            "",
+            "Your Other Experiences and Achievements (OEA) can set you apart from other applicants.",
+            "- Include participation in engineering competitions, science fairs, or relevant internships.",
+            "- Highlight leadership roles and teamwork experiences.",
+            "",
+            "**5. Understand the Score Formula**",
+            "",
+            "Your admission score is calculated as Eng + Math + Best 3 Subjects. Plan your study strategy accordingly.",
+            "- Allocate more revision time to these five subjects.",
+            "- If you have a weaker subject, consider dropping it from your best 3 calculation.",
+            "",
+            "**6. Aim for a High Band A Position**",
+            "",
+            "With a ~30% Band A offer rate, being in Band A is crucial. Ensure JS6315 is among your top choices.",
+            "- Place JS6315 in Band A if it is your preferred programme.",
+            "- Use Band B and C for realistic backups.",
+            "",
+            "**7. Have Solid Backup Choices**",
+            "",
+            "Given the competition, prepare alternative programmes that align with your interests.",
+            "- Consider other engineering programmes at HKU or other universities.",
+            "- Choose backups that also value strong math and science backgrounds.",
+            "",
+            "**8. Leverage School Resources**",
+            "",
+            "Use your school's career counselling and academic support services to strengthen your application.",
+            "- Seek feedback on your personal statement and interview skills.",
+            "- Attend university information sessions and open days.",
+            "",
+            "**9. Stay Updated on Programme Details**",
+            "",
+            "Check the official HKU and JUPAS pages regularly for any changes in requirements or deadlines.",
+            "- Bookmark the programme website and JUPAS page.",
+            "- Follow HKU Engineering social media for updates and tips."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：**",
+            "327",
+            "",
+            "**修讀年期：**",
+            "4年",
+            "",
+            "**首年學費：**",
+            "HK$47,000",
+            "",
+            "**2025年DSE計分公式：**",
+            "英文 + 數學 + 最佳3科",
+            "",
+            "**2025年入學分數：**",
+            "中位數：26 | 下四分位數：25 | 上四分位數：28",
+            "",
+            "**面試：**",
+            "需要（面試表現會納入取錄考慮）",
+            "",
+            "**課程入學要求：**",
+            "符合香港大學的一般入學要求。具體科目要求請參閱課程網站。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "本課程為學生提供機械工程的堅實基礎，涵蓋固體力學、流體力學、熱力學、材料科學及製造過程等核心領域。",
+            "",
+            "**一年級：** 數學、物理、電腦科學及工程入門等基礎課程。",
+            "",
+            "**二年級：** 核心機械工程科目，包括固體力學、流體力學、熱力學及工程材料。",
+            "",
+            "**三年級：** 進階核心及選修科目，如機械設計、控制系統及能源系統。學生可開始進行畢業專題項目。",
+            "",
+            "**四年級：** 透過技術選修科、畢業專題項目及實習或交流機會進行專門化。",
+            "",
+            "**課程特色：**",
+            "- 強調動手實驗及設計項目。",
+            "- 提供工程學院內的跨學科學習機會。",
+            "- 可使用先進實驗室及研究設施。",
+            "- 畢業專題讓學生解決真實工程問題。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備廣泛的機械工程及相關領域的就業能力。",
+            "",
+            "**工程與設計：**",
+            "- 製造業、汽車或航空航天業的機械設計工程師。",
+            "- 產品開發工程師，專注新產品設計與測試。",
+            "",
+            "**能源與環境：**",
+            "- 能源工程師，從事發電、可再生能源系統或暖通空調工作。",
+            "- 環境工程師，處理污染控制及可持續設計。",
+            "",
+            "**先進製造與自動化：**",
+            "- 製造工程師，優化生產流程及品質控制。",
+            "- 自動化工程師，設計機械人系統及自動化生產線。",
+            "",
+            "**研究與開發：**",
+            "- 在工業或政府研究實驗室擔任研發工程師。",
+            "- 攻讀機械工程或相關領域的研究生課程（碩士、博士）。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "學生可享受香港大學薄扶林主校園的活力校園生活，並使用世界級設施。",
+            "",
+            "**圖書館：** 主圖書館及工程圖書館提供豐富藏書及自修空間。",
+            "",
+            "**實驗室：** 設有專用機械工程實驗室，涵蓋流體力學、熱力學、材料測試及製造等範疇。",
+            "",
+            "**體育與康樂：** 大學體育設施包括健身室、游泳池及運動場。",
+            "",
+            "**學生組織：** 工程學會及各類興趣學會提供聯誼及社交活動。",
+            "",
+            "**住宿：** 提供校內宿舍及校外住宿選擇。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高 – JS6315是港大工程學院的熱門課程。",
+            "",
+            "**2025年Band A統計：**",
+            "- Band A申請人數：80",
+            "- Band A取錄人數：24",
+            "- Band A取錄率：約30.0%",
+            "",
+            "**影響取錄的因素：**",
+            "1. DSE分數（英文 + 數學 + 最佳3科）——主要篩選條件。",
+            "2. 面試表現——有助區分分數相近的申請人。",
+            "3. 選修科目——相關選修科（如物理、M1/M2）具優勢。",
+            "4. 其他經驗（OEA、比賽）——作綜合考慮。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與成就",
+          "content": [
+            "本課程獲工程學院卓越聲譽及研究成果支持。",
+            "",
+            "**學院卓越：** 港大工程學院在亞洲工程學院中名列前茅。",
+            "",
+            "**研究影響力：** 教職員在機械人學、能源系統及先進材料等領域領導前沿研究。",
+            "",
+            "**實驗室：** 學生可使用設備完善的實驗室，包括機械工程實驗室及先進結構材料中心。",
+            "",
+            "**校友網絡：** 畢業生加入港大工程學院的全球校友網絡，許多人在業界及學術界擔任領導職位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "設有多項獎學金予優秀學生申請。",
+            "",
+            "**港大入學獎學金：** 根據DSE成績及整體表現頒發。",
+            "",
+            "**工程學院獎學金：** 專為成績優異的工程學生而設。",
+            "",
+            "**學系獎學金：** 機械工程學系提供基於成績的獎項。",
+            "",
+            "**校外獎學金：** 學生亦可申請香港特區政府及其他機構的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS6315策略 — 9個可行貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "專注於英文、數學及最佳三科選修科。這五科的優異表現是申請的基礎。",
+            "- 優先處理數學及物理（如有修讀），因為它們與機械工程直接相關。",
+            "- 目標在英文及數學取得至少5級，以保持競爭力。",
+            "",
+            "**2. 明智選擇選修科**",
+            "",
+            "選擇能展示你工程及分析能力的選修科。",
+            "- 強烈建議修讀物理、化學及M1/M2。",
+            "- 避免選修過於軟性的科目，以免影響評分。",
+            "",
+            "**3. 充分準備面試**",
+            "",
+            "面試是重要的區分因素。展示你對機械工程的熱情及解難能力。",
+            "- 練習常見的工程面試問題，思考真實世界的應用。",
+            "- 準備討論你的項目經驗或與工程相關的興趣。",
+            "",
+            "**4. 建立強大的OEA檔案**",
+            "",
+            "其他經驗與成就（OEA）能讓你從其他申請人中脫穎而出。",
+            "- 包括參與工程比賽、科學展覽或相關實習。",
+            "- 突出領導角色及團隊合作經驗。",
+            "",
+            "**5. 理解計分公式**",
+            "",
+            "你的入學分數計算為英文 + 數學 + 最佳3科。相應地規劃溫習策略。",
+            "- 將更多溫習時間分配給這五科。",
+            "- 如有較弱科目，可考慮不將其納入最佳3科計算。",
+            "",
+            "**6. 爭取高Band A位置**",
+            "",
+            "鑑於約30%的Band A取錄率，身處Band A至關重要。確保JS6315是你的首選之一。",
+            "- 如果JS6315是你的首選課程，請將其放在Band A。",
+            "- 使用Band B及C作為實際的後備選擇。",
+            "",
+            "**7. 準備穩妥的後備選擇**",
+            "",
+            "考慮競爭情況，準備與你興趣相符的其他課程。",
+            "- 考慮港大或其他大學的其他工程課程。",
+            "- 選擇同樣重視數學及科學背景的後備課程。",
+            "",
+            "**8. 善用學校資源**",
+            "",
+            "使用學校的就業輔導及學術支援服務來強化你的申請。",
+            "- 就個人陳述及面試技巧尋求反饋。",
+            "- 參加大學資訊日及開放日。",
+            "",
+            "**9. 緊貼課程最新資訊**",
+            "",
+            "定期查看官方港大及JUPAS頁面，以了解要求或截止日期的任何變更。",
+            "- 將課程網站及JUPAS頁面加入書籤。",
+            "- 關注港大工程學院的社交媒體以獲取最新資訊及貼士。"
+          ]
+        }
+      }
+    },
+    "code": "JS6315",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": 28,
+    "lq": 25
+  }
+}

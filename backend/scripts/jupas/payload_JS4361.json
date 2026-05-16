@@ -1,0 +1,551 @@
+{
+  "factPack": {
+    "code": "JS4361",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4361"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4361"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bmedn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.fed.cuhk.edu.hk/bmed/"
+      }
+    ],
+    "programme": {
+      "code": "JS4361",
+      "nameEn": "BEd in Mathematics and Mathematics Education",
+      "nameZh": "教育學士(數學及數學教育)",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 53.75,
+      "uq": 57.5,
+      "lq": 53,
+      "percentiles": {
+        "UQ": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 57.5
+        },
+        "M": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 53.75
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 53
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 2) • M1 or M2 (x 2) • Chinese or English (x 1.5) • The best one subject of Physics, Economics or ICT (x 1.5) • Mathematics and M1/M2 must be included"
+    },
+    "jupas": {
+      "code": "JS4361",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4361",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4361",
+      "nameEn": "B.Ed. in Mathematics and Mathematics Education",
+      "nameZh": "教育學士(數學及數學教育)",
+      "shortDescription": "an class=\"before_label\">Short Description This double-major programme is offered by the Faculty of Education in collaboration with the Department of Mathematics. It aims to nurture professional Mathematics teachers by providing them with broad-based and subject-specific knowledge and sound pedagogical skills. Upon fulfilment of the programme",
+      "programmeWebsite": "https://www.fed.cuhk.edu.hk/bmed/",
+      "tuition": "HK$47,000",
+      "intake": 12,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level ANY 1 SUBJECT 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 113,
+        "bandB": 89,
+        "bandC": 206,
+        "bandD": 199,
+        "bandE": 206,
+        "total": 813
+      },
+      "offers2025": {
+        "bandA": 14,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 14
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bmedn/",
+      "introduction": "Nurturing Mathematics Teachers with a Professional Attitude The B.Ed. (Mathematics and Mathematics Education) is an interdisciplinary programme co-organized by the Faculty of Education and the Department of Mathematics of CUHK. It is a double major undergraduate programme, in which students learn solid mathematical knowledge and receive integrated teacher training in both theory and practice. Teachers in the programme are well known scholars in mathematics, mathematics education or educational studies. By means of lectures, experiential learning, and teaching practice in secondary schools, the students acquire both mathematics and teacher professional knowledge, develop transferable skills in research and practice, and are equipped to assume leadership roles in mathematics teaching. Graduates are awarded a Bachelor of Education degree with a double major in Mathematics and Mathematics Education, including a qualification equivalent to a Postgraduate Diploma in Education, and are qualified to teach in secondary schools.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "The majority of BMED graduates join the teaching profession. With experience over time, some have assumed leading roles in mathematics teaching in secondary schools. With their solid knowledge and skills developed in this programme, some graduates have pursued careers in a wide range of professions, such as academic research, science and technology, finance and banking, the civil service and publishing. The programme also lays a firm foundation for graduates who desire to pursue advanced studies in mathematics, mathematics education, or related areas. In addition to knowledge and skills, we value developing students’ attitudes and professionalism. This is perhaps what our students treasure the most about the BMED programme. More BMED students’ views can be accessed on&nbsp; YouTube . If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Students enrolled in the BMED programme learn both mathematics and educational theories. The programme design is stimulating and rewarding; its interdisciplinary nature equips our students with both subject matter and pedagogical knowledge and skills, thereby advancing their interests and passion in the fields of mathematics and education. The BMED programme also offers courses for students to enhance their subject-specific skills, such as the teaching and learning of geometry, statistics and calculus; tasks designs in STEM education; and contemporary issues in mathematics education. These courses enable them to reflect on what it means to teach and learn mathematics in the 21st century. The students’ development in all areas of mathematics and mathematics education is significant and rigorous, enabling them to see and teach mathematics from an advanced perspective.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4361",
+    "nameEn": "BEd in Mathematics and Mathematics Education",
+    "nameZh": "教育學士(數學及數學教育)",
+    "name": "BEd in Mathematics and Mathematics Education",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 53.75,
+    "band_a": 53,
+    "uq": 57.5,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4361",
+            "Programme: BEd in Mathematics and Mathematics Education",
+            "First Year Intake: 12",
+            "Duration: 5 years",
+            "Tuition Fee: HK$47,000 per annum (2026-2027 for local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 53.75",
+            "Lower quartile (LQ): 53",
+            "Upper quartile (UQ): 57.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 3",
+            "Mathematics: 5**",
+            "CSD: A",
+            "M1/M2: 5**",
+            "1st Elective: 5",
+            "2nd Elective: 5",
+            "",
+            "Subject Weighting:",
+            "- Mathematics (x 2)",
+            "- M1 or M2 (x 2)",
+            "- Chinese or English (x 1.5)",
+            "- Best one of Physics, Economics or ICT (x 1.5)",
+            "- Mathematics and M1/M2 must be included",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 4",
+            "- Citizenship and Social Development: Attained",
+            "- One elective: Level 3 (including M1/M2 at Level 3)",
+            "- Two other electives: Level 3 each (or one elective + M1/M2 + other language)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 113",
+            "Band A offers: 14",
+            "Total applications: 813",
+            "Band A offer rate: ~12.4%",
+            "Band A apps per offer: ~8.1"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "This double-major programme is offered by the Faculty of Education in collaboration with the Department of Mathematics. It aims to nurture professional Mathematics teachers by providing broad-based and subject-specific knowledge and sound pedagogical skills.",
+            "",
+            "Students learn solid mathematical knowledge and receive integrated teacher training in both theory and practice. The programme design is stimulating and rewarding; its interdisciplinary nature equips students with both subject matter and pedagogical knowledge and skills, advancing their interests and passion in mathematics and education.",
+            "",
+            "The BMED programme also offers courses for students to enhance their subject-specific skills, such as the teaching and learning of geometry, statistics and calculus; tasks designs in STEM education; and contemporary issues in mathematics education. These courses enable students to reflect on what it means to teach and learn mathematics in the 21st century.",
+            "",
+            "By means of lectures, experiential learning, and teaching practice in secondary schools, students acquire both mathematics and teacher professional knowledge, develop transferable skills in research and practice, and are equipped to assume leadership roles in mathematics teaching.",
+            "",
+            "Graduates are awarded a Bachelor of Education degree with a double major in Mathematics and Mathematics Education, including a qualification equivalent to a Postgraduate Diploma in Education, and are qualified to teach in secondary schools."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "The majority of BMED graduates join the teaching profession. With experience over time, some have assumed leading roles in mathematics teaching in secondary schools.",
+            "",
+            "With their solid knowledge and skills developed in this programme, some graduates have pursued careers in a wide range of professions, such as academic research, science and technology, finance and banking, the civil service and publishing.",
+            "",
+            "The programme also lays a firm foundation for graduates who desire to pursue advanced studies in mathematics, mathematics education, or related areas.",
+            "",
+            "In addition to knowledge and skills, the programme values developing students’ attitudes and professionalism. More BMED students’ views can be accessed on YouTube."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant and supportive learning environment with nine colleges, each providing unique residential, pastoral, and cultural experiences.",
+            "",
+            "Students benefit from state-of-the-art facilities, libraries, and sports amenities, as well as a wide range of student societies and activities.",
+            "",
+            "The Faculty of Education is located on the main campus, fostering close interaction between students and faculty."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a first-year intake of only 12, JS4361 is a highly selective programme.",
+            "",
+            "In 2025, the programme received 113 Band A applications and made 14 offers, resulting in a Band A offer rate of approximately 12.4%.",
+            "",
+            "The median admission score (Best 5) was 53.75, with a lower quartile of 53 and an upper quartile of 57.5, indicating strong competition.",
+            "",
+            "Applicants should aim for excellent results in Mathematics and M1/M2, as these subjects are weighted double.",
+            "",
+            "The programme also requires an interview, which is an important factor in the selection process."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The programme is offered by the Faculty of Education, which is consistently ranked among the top education faculties in Asia.",
+            "",
+            "Faculty members have received multiple Teaching Excellence Awards and are active in research on mathematics education, curriculum development, and pedagogical innovation.",
+            "",
+            "Graduates of the programme are highly sought after in Hong Kong secondary schools, with many becoming heads of mathematics departments or curriculum leaders."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students. These scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university.",
+            "",
+            "For local JUPAS students, there are admission scholarships for outstanding achievers. Other major scholarships include the Hong Kong Scholarship for Excellence Scheme and various faculty-specific awards.",
+            "",
+            "Financial aid schemes are also available for students in need. For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "Aim for a Best 5 score of at least 53.75 (median). With a lower quartile of 53, you need strong performance in weighted subjects.",
+            "- Focus on Mathematics and M1/M2 (each weighted x2).",
+            "- Secure at least Level 5** in Mathematics and Level 5* in M1/M2.",
+            "",
+            "**2. Excel in Weighted Electives**",
+            "",
+            "Physics, Economics, or ICT are weighted x1.5. Choose one and aim for Level 5 or above.",
+            "- This can significantly boost your total score.",
+            "",
+            "**3. Master the Core Subjects**",
+            "",
+            "Chinese and English are weighted x1.5 (the better of the two). Achieve at least Level 4 in Chinese and Level 3 in English.",
+            "- A higher English grade can compensate for a lower Chinese grade.",
+            "",
+            "**4. Prepare Thoroughly for the Interview**",
+            "",
+            "The interview is a key selection criterion. Demonstrate your passion for teaching mathematics and your understanding of educational issues.",
+            "- Practice explaining mathematical concepts clearly.",
+            "- Be ready to discuss why you want to become a mathematics teacher.",
+            "",
+            "**5. Build a Strong Academic Profile**",
+            "",
+            "Take additional mathematics-related courses or competitions to showcase your interest and ability.",
+            "- Participation in the Hong Kong Mathematics Olympiad or similar can strengthen your application.",
+            "",
+            "**6. Understand the Programme Structure**",
+            "",
+            "Familiarize yourself with the double-major curriculum and the teaching practice component. Show that you are committed to both mathematics and education.",
+            "- Mention specific courses or teaching experiences that align with the programme.",
+            "",
+            "**7. Gain Relevant Experience**",
+            "",
+            "Volunteer or work in educational settings, such as tutoring or teaching assistant roles. This demonstrates your practical interest in teaching.",
+            "- Reflect on these experiences in your personal statement and interview.",
+            "",
+            "**8. Write a Compelling Personal Statement**",
+            "",
+            "Highlight your motivation for teaching mathematics, your academic strengths, and any relevant experiences. Be specific and sincere.",
+            "- Connect your personal story to the programme’s mission of nurturing professional mathematics teachers.",
+            "",
+            "**9. Apply Early and Strategically**",
+            "",
+            "Place JS4361 in Band A to maximize your chance of being considered. Ensure all required documents are submitted on time.",
+            "- Check the JUPAS website for any updates on application deadlines and requirements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4361",
+            "課程：教育學士(數學及數學教育)",
+            "首年學額：12",
+            "修讀年期：5年",
+            "首年學費：港幣47,000元（2026-2027年度本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：53.75",
+            "下四分位數：53",
+            "上四分位數：57.5",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：3",
+            "數學：5**",
+            "公民科：A",
+            "M1/M2：5**",
+            "第一選修科：5",
+            "第二選修科：5",
+            "",
+            "科目比重：",
+            "- 數學（x 2）",
+            "- M1或M2（x 2）",
+            "- 中文或英文（x 1.5）",
+            "- 物理、經濟或資訊及通訊科技最佳一科（x 1.5）",
+            "- 必須包括數學及M1/M2",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第3級",
+            "- 英國語文：第3級",
+            "- 數學必修部分：第4級",
+            "- 公民與社會發展：達標",
+            "- 一科選修：第3級（包括M1/M2第3級）",
+            "- 另外兩科選修：各第3級（或一科選修+M1/M2+其他語言）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：113",
+            "Band A錄取人數：14",
+            "總申請人數：813",
+            "Band A錄取率：約12.4%",
+            "Band A每錄取申請人數：約8.1"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "本雙主修課程由教育學院與數學系合辦，旨在培養專業數學教師，提供廣泛的學科知識和紮實的教學技能。",
+            "",
+            "學生學習堅實的數學知識，並接受理論與實踐相結合的綜合教師培訓。課程設計富有挑戰性，跨學科性質使學生同時掌握學科內容和教學知識與技能，提升他們對數學和教育的興趣與熱情。",
+            "",
+            "BMED課程還提供提升學科特定技能的科目，例如幾何、統計和微積分的教學與學習；STEM教育中的任務設計；以及數學教育的當代議題。這些課程使學生能夠反思21世紀教與學數學的意義。",
+            "",
+            "通過講座、體驗式學習和中學教學實習，學生獲得數學和教師專業知識，發展研究和實踐的可轉移技能，並具備在數學教學中擔任領導角色的能力。",
+            "",
+            "畢業生將獲頒教育學士學位，主修數學及數學教育，相當於完成學位教師教育文憑課程，並符合資格在中學任教。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "大部分BMED畢業生投身教學專業。隨著經驗積累，部分畢業生在中學數學教學中擔任領導角色。",
+            "",
+            "憑藉課程培養的堅實知識和技能，部分畢業生從事廣泛的職業，如學術研究、科學與科技、金融與銀行、公務員及出版等。",
+            "",
+            "課程亦為有志於數學、數學教育或相關領域深造之畢業生奠定堅實基礎。",
+            "",
+            "除了知識和技能，課程重視培養學生的態度和專業精神。更多BMED學生的觀點可在YouTube上觀看。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力且支援性強的學習環境，設有九所書院，各提供獨特的住宿、關顧及文化體驗。",
+            "",
+            "學生可使用先進設施、圖書館及體育設施，並參與多元化的學生社團及活動。",
+            "",
+            "教育學院位於主校園，促進師生緊密互動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "JS4361首年學額僅12個，屬高度競爭課程。",
+            "",
+            "2025年，課程收到113份Band A申請，發出14個錄取，Band A錄取率約12.4%。",
+            "",
+            "中位數入學分數（最佳5科）為53.75，下四分位數53，上四分位數57.5，反映競爭激烈。",
+            "",
+            "申請人應在數學及M1/M2取得優異成績，因這些科目比重加倍。",
+            "",
+            "課程亦設有面試，是甄選過程中的重要因素。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院卓越成就",
+          "content": [
+            "本課程由教育學院開辦，該學院在亞洲教育學院中持續名列前茅。",
+            "",
+            "學院教師屢獲教學卓越獎項，並積極從事數學教育、課程發展及教學創新研究。",
+            "",
+            "課程畢業生深受香港中學歡迎，不少成為數學科主任或課程領導。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金，部分涵蓋學費及生活費，讓學生更容易在這所世界級大學追求學業。",
+            "",
+            "本地JUPAS學生可申請入學獎學金，表揚傑出成就。其他主要獎學金包括香港卓越獎學金計劃及各學院特定獎項。",
+            "",
+            "有需要學生亦可申請資助計劃。詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JUPAS策略 — 9個實用貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "最佳5科目標分數至少53.75（中位數）。下四分位數為53，需在比重較高科目表現出色。",
+            "- 專注數學及M1/M2（各比重x2）。",
+            "- 數學至少達5**級，M1/M2至少達5*級。",
+            "",
+            "**2. 在比重選修科表現卓越**",
+            "",
+            "物理、經濟或資訊及通訊科技比重x1.5，選定一科並爭取第5級或以上。",
+            "- 這可大幅提升總分。",
+            "",
+            "**3. 掌握核心科目**",
+            "",
+            "中文及英文比重x1.5（取較佳者）。中文至少第4級，英文至少第3級。",
+            "- 較高的英文成績可彌補中文的不足。",
+            "",
+            "**4. 充分準備面試**",
+            "",
+            "面試是關鍵甄選標準。展現你對數學教學的熱誠及對教育議題的理解。",
+            "- 練習清晰解釋數學概念。",
+            "- 準備討論為何想成為數學教師。",
+            "",
+            "**5. 建立強勁學術背景**",
+            "",
+            "參加額外數學相關課程或比賽，展示你的興趣和能力。",
+            "- 參與香港數學奧林匹克等活動可加強申請。",
+            "",
+            "**6. 了解課程結構**",
+            "",
+            "熟悉雙主修課程及教學實習部分。展示你對數學及教育兩方面的承擔。",
+            "- 提及與課程相關的特定科目或教學經驗。",
+            "",
+            "**7. 獲取相關經驗**",
+            "",
+            "在教育環境中擔任義工或工作，如補習或教學助理。這展示你對教學的實際興趣。",
+            "- 在個人陳述及面試中反思這些經驗。",
+            "",
+            "**8. 撰寫具說服力的個人陳述**",
+            "",
+            "突出你對數學教學的動機、學術優勢及相關經驗。要具體且真誠。",
+            "- 將你的個人故事與課程培育專業數學教師的使命聯繫起來。",
+            "",
+            "**9. 及早及策略性申請**",
+            "",
+            "將JS4361放在Band A以增加被考慮的機會。確保所有所需文件按時提交。",
+            "- 查閱JUPAS網站了解申請截止日期及要求的最新資訊。"
+          ]
+        }
+      }
+    },
+    "code": "JS4361",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 53.75,
+    "uq": 57.5,
+    "lq": 53,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 57.5
+      },
+      "M": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 53.75
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 53
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is offered by the Faculty of Education, which is consistently ranked among the top education faculties in Asia.",
+      "Faculty members have received multiple Teaching Excellence Awards and are active in research on mathematics education, curriculum development, and pedagogical innovation.",
+      "Graduates of the programme are highly sought after in Hong Kong secondary schools, with many becoming heads of mathematics departments or curriculum leaders."
+    ],
+    "searchQueriesUsed": [
+      "CUHK BEd in Mathematics and Mathematics Education notable alumni",
+      "香港中文大學 教育學士(數學及數學教育) 著名校友",
+      "CUHK BEd in Mathematics and Mathematics Education graduates Hong Kong careers"
+    ]
+  }
+}

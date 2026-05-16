@@ -42,11 +42,24 @@ class JupasProgrammeService {
     }
 
     /**
-     * Get a single programme by code
+     * Get a single programme by code (may use cached catalogue — use getProgrammeByCodeFresh after seed scripts)
      */
     async getProgrammeByCode(code) {
         const all = await this.getAllProgrammes();
         return all.find(p => p.code === code) || null;
+    }
+
+    /**
+     * Get programme summary directly from Cosmos (bypasses in-memory catalogue cache)
+     */
+    async getProgrammeByCodeFresh(code) {
+        const container = await this.getContainer();
+        const query = {
+            query: "SELECT * FROM c WHERE c.type = 'programme' AND c.code = @code",
+            parameters: [{ name: "@code", value: code }],
+        };
+        const { resources } = await container.items.query(query).fetchAll();
+        return resources[0] || null;
     }
 
     /**
@@ -92,6 +105,8 @@ class JupasProgrammeService {
             updatedAt: new Date().toISOString()
         };
         await container.items.upsert(doc);
+        // Invalidate catalogue cache when details change (Python seed scripts bypass upsertProgramme)
+        CacheService.setDbCache(this.cacheKey, null, 0);
         return doc;
     }
 

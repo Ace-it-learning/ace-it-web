@@ -1,0 +1,563 @@
+{
+  "factPack": {
+    "code": "JS4750",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4750"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4750"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/asein/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.sci.cuhk.edu.hk/aseidm"
+      }
+    ],
+    "programme": {
+      "code": "JS4750",
+      "nameEn": "Informatics & X Double Major",
+      "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 44.25,
+      "uq": null,
+      "lq": 38.25,
+      "percentiles": {
+        "M": {
+          "chi": "3",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 44.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 38.25
+        }
+      },
+      "subjectWeighting": "• Physics, Geography (x 2)"
+    },
+    "jupas": {
+      "code": "JS4750",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4750",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4750",
+      "nameEn": "Aerospace Science and Earth Informatics & X Double Major Programme",
+      "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+      "shortDescription": "The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK (SZ)). The programme aims to unravel the mysteries of outer space and our own planet. This highly interdisciplinary undergraduate major combines the realms of aerospace science and Earth informatics, equipping students to harness the power of data and invent innovative solutions to explore the outer space and to safeguard our planet Earth. Students will pursue a major in Aerospace Science and Earth Informatics at CUHK along with another major from among specific academic disciplines (Engineering, Science and Social Science) offered by either CUHK or CUHK(SZ). They will attend classes and participate in learning and research activities at both campuses. Major programmes offered by CUHK: Earth and Environmental Sciences Energy and Environmental Engineering Geography and Resource Management (in collaboration with the Institute of Space and Earth Information Science) Mechanical and Automation Engineering Physics Major programmes offered by CUHK(SZ): Data Science and Big Data Technology Electrical and Computer Engineering New Energy Science and Engineering Physics Urban Management Students will be prepared to step into a world of ample career opportunities, with skills and knowledge sought after by aerospace companies, space agencies, environmental consulting firms, geographic information system (GIS) companies, government agencies, research institutes, and NGOs. Students will also be ready for advanced studies in the Earth and planetary sciences, space physics, climate science, aerospace engineering, information technology, and data science.",
+      "programmeWebsite": "https://www.sci.cuhk.edu.hk/aseidm",
+      "tuition": "HK$47,000",
+      "intake": 27,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics Extended Module 1 or 2. (2) Preferred subjects: Mathematics Extended Module 1 or 2, Physics, and Geography. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 60,
+        "bandB": 65,
+        "bandC": 126,
+        "bandD": 130,
+        "bandE": 126,
+        "total": 507
+      },
+      "offers2025": {
+        "bandA": 17,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 17
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/asein/",
+      "introduction": "The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK(SZ)) have launched a comprehensive Collaborative Double Major Programme with Aerospace Science and Earth Informatics (ASEI) as one of the majors. CUHK students enrolled in the four-year programme will pursue a major in Aerospace Science and Earth Informatics at CUHK along with another major from among specific academic disciplines (engineering, science and social science) offered by either CUHK or CUHK(SZ). They will attend classes and participate in learning and research activities at both the Hong Kong campus and Shenzhen campus. Major programmes offered by CUHK: • Earth and Environmental Sciences • Energy and Environmental Engineering • Geography and Resource Management (in collaboration with the Institute of Space and Earth Information Science) • Mechanical and Automation Engineering • Physics Major programmes offered by CUHK(SZ): • Data Science and Big Data Technology • Electrical and Computer Engineering • New Energy Science and Engineering • Physics • Urban Management",
+      "ranking": "",
+      "careerProspects": "Students will be prepared to step into a world of ample career opportunities, with skills and knowledge sought after by aerospace companies, space agencies, environmental consulting firms, geographic information system (GIS) companies, government agencies, research institutes, and NGOs. Students will also be ready for advanced studies in the Earth and planetary sciences, space physics, climate science, aerospace engineering, information technology, and data science. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4750",
+    "nameEn": "Informatics & X Double Major",
+    "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+    "name": "Informatics & X Double Major",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 44.25,
+    "band_a": 38.25,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS catalogue code: JS4750",
+            "Programme: Aerospace Science and Earth Informatics & X Double Major (Informatics & X Double Major)",
+            "First Year Intake: 27",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants may be invited)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 44.25",
+            "Lower quartile (LQ): 38.25",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admit subject profile (M row):",
+            "- Chinese Language: 3",
+            "- English Language: 5*",
+            "- Mathematics Compulsory: 5",
+            "- Citizenship and Social Development: Attained (A)",
+            "- Mathematics Extended Module 1 or 2: 5",
+            "- 1st Elective: 5*",
+            "- 2nd Elective: 5",
+            "- 3rd Elective: 4",
+            "",
+            "Lower quartile subject profile (LQ row):",
+            "- Chinese Language: 4",
+            "- English Language: 4",
+            "- Mathematics Compulsory: 5",
+            "- Citizenship and Social Development: Attained (A)",
+            "- Mathematics Extended Module 1 or 2: 4",
+            "- 1st Elective: 5*",
+            "- 2nd Elective: 5",
+            "",
+            "Subject weighting: Physics, Geography (x 2)",
+            "",
+            "Entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 (may include M1/M2 as one elective)",
+            "- Preferred subjects: M1/M2, Physics, Geography",
+            "",
+            "2025 application statistics:",
+            "- Band A applications: 60",
+            "- Band A offers: 17",
+            "- Total applications: 507",
+            "- Band A offer rate: ~28.3%",
+            "- Band A apps per offer: ~3.5"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "This is a collaborative double major programme between CUHK and CUHK (Shenzhen).",
+            "Students pursue a major in Aerospace Science and Earth Informatics at CUHK, plus a second major from a list of disciplines offered by either CUHK or CUHK(SZ).",
+            "Classes and research activities take place on both the Hong Kong and Shenzhen campuses.",
+            "",
+            "Major programmes offered by CUHK:",
+            "- Earth and Environmental Sciences",
+            "- Energy and Environmental Engineering",
+            "- Geography and Resource Management (in collaboration with the Institute of Space and Earth Information Science)",
+            "- Mechanical and Automation Engineering",
+            "- Physics",
+            "",
+            "Major programmes offered by CUHK(SZ):",
+            "- Data Science and Big Data Technology",
+            "- Electrical and Computer Engineering",
+            "- New Energy Science and Engineering",
+            "- Physics",
+            "- Urban Management",
+            "",
+            "The curriculum combines aerospace science, Earth informatics, and data-driven problem-solving, preparing students to explore outer space and protect our planet."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are equipped with interdisciplinary skills sought after by:",
+            "- Aerospace companies and space agencies",
+            "- Environmental consulting firms",
+            "- Geographic Information System (GIS) companies",
+            "- Government agencies and research institutes",
+            "- NGOs focused on climate and sustainability",
+            "",
+            "The programme also prepares students for advanced studies in:",
+            "- Earth and planetary sciences",
+            "- Space physics and climate science",
+            "- Aerospace engineering",
+            "- Information technology and data science"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and green environment with a unique college system.",
+            "Students in this programme will experience both the CUHK Shatin campus and the CUHK (Shenzhen) campus, gaining cross-border exposure.",
+            "College life provides opportunities for holistic development, including residential education, cultural activities, and student societies.",
+            "The programme leverages the Institute of Space and Earth Information Science, which has contributed to lunar exploration and satellite data analysis."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "- Band A applications: 60",
+            "- Band A offers: 17",
+            "- Total applications: 507",
+            "- Band A offer rate: ~28.3%",
+            "- Band A apps per offer: ~3.5",
+            "",
+            "Admission scores (Best 5):",
+            "- Median: 44.25",
+            "- LQ: 38.25",
+            "- UQ: null",
+            "",
+            "The programme is highly selective, with a strong emphasis on Physics and Geography (weighted x2).",
+            "Applicants with strong performance in M1/M2, Physics, and Geography are at an advantage."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The programme is newly launched (first intake 2022/23), so no graduates have yet become notable alumni.",
+            "Faculty includes experts from CUHK's Institute of Space and Earth Information Science, which has contributed to lunar exploration and satellite data analysis.",
+            "The programme is jointly offered by the Faculty of Engineering and the Faculty of Science, leveraging strong interdisciplinary research."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local and non-local students based on academic merit.",
+            "Local JUPAS students may be eligible for admission scholarships that cover tuition fees and living expenses.",
+            "The university also participates in the HKSAR Government's Targeted Scholarship and Financial Support Scheme (TSFS) and the Non-local Student Scholarship Scheme (NLSPS).",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4750 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "- Aim for a Best 5 score of at least 44.25 (median) to be competitive.",
+            "- With LQ at 38.25, a score above 40 is essential for a realistic chance.",
+            "",
+            "**2. Prioritise Weighted Subjects**",
+            "",
+            "- Physics and Geography are weighted x2 — strong grades here significantly boost your score.",
+            "- If you take both, even a 5* can make a big difference.",
+            "",
+            "**3. Excel in Mathematics Extended Part**",
+            "",
+            "- M1/M2 is a preferred subject and appears in the median profile at Level 5.",
+            "- A high grade in M1/M2 demonstrates quantitative readiness for the programme.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- The programme requires an interview — practice articulating your interest in aerospace and Earth informatics.",
+            "- Be ready to discuss how you would contribute to interdisciplinary research.",
+            "",
+            "**5. Build a Strong Elective Profile**",
+            "",
+            "- The median admit had three electives at 5*, 5, and 4 — aim for at least two strong electives.",
+            "- Choose electives that align with the programme's focus (e.g., Physics, Geography, ICT).",
+            "",
+            "**6. Understand the Double Major Structure**",
+            "",
+            "- Research the available second majors at CUHK and CUHK(SZ) to show genuine interest.",
+            "- Mention specific combinations (e.g., ASEI + Data Science) in your interview.",
+            "",
+            "**7. Leverage Cross-Campus Opportunities**",
+            "",
+            "- Highlight your willingness to study in both Hong Kong and Shenzhen.",
+            "- This demonstrates adaptability and a global mindset.",
+            "",
+            "**8. Use Band A Strategically**",
+            "",
+            "- With only 60 Band A applicants and 17 offers, Band A placement is critical.",
+            "- Ensure JS4750 is your top choice if you meet the score thresholds.",
+            "",
+            "**9. Stay Updated on Programme Developments**",
+            "",
+            "- As a new programme, check the official website (https://www.sci.cuhk.edu.hk/aseidm) for updates.",
+            "- Follow CUHK admissions social media for any changes in requirements or intake."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4750",
+            "課程名稱：航天科學與地球信息學及Ｘ雙主修課程",
+            "首年學額：27",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選擇性邀請）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：44.25",
+            "下四分位數：38.25",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：3",
+            "- 英國語文：5*",
+            "- 數學（必修部分）：5",
+            "- 公民與社會發展：達標 (A)",
+            "- 數學延伸部分單元一或二：5",
+            "- 第一選修科：5*",
+            "- 第二選修科：5",
+            "- 第三選修科：4",
+            "",
+            "下四分位數錄取者科目成績（LQ 行）：",
+            "- 中國語文：4",
+            "- 英國語文：4",
+            "- 數學（必修部分）：5",
+            "- 公民與社會發展：達標 (A)",
+            "- 數學延伸部分單元一或二：4",
+            "- 第一選修科：5*",
+            "- 第二選修科：5",
+            "",
+            "科目比重：物理、地理（x 2）",
+            "",
+            "入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（可包括 M1/M2 作為一個選修科）",
+            "- 優先科目：M1/M2、物理、地理",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：60",
+            "- Band A 錄取人數：17",
+            "- 總申請人數：507",
+            "- Band A 錄取率：約 28.3%",
+            "- Band A 每錄取申請人數：約 3.5"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "此為香港中文大學與香港中文大學（深圳）合辦的雙主修課程。",
+            "學生在中大修讀航天科學與地球信息學主修，並從中大或港中大（深圳）提供的指定學科中選擇第二主修。",
+            "課堂及研究活動在港深兩地校園進行。",
+            "",
+            "中大提供的主修課程：",
+            "- 地球與環境科學",
+            "- 能源與環境工程學",
+            "- 地理與資源管理學（與太空與地球信息科學研究所合辦）",
+            "- 機械與自動化工程學",
+            "- 物理學",
+            "",
+            "港中大（深圳）提供的主修課程：",
+            "- 數據科學與大數據技術",
+            "- 電子與計算機工程",
+            "- 新能源科學與工程",
+            "- 物理學",
+            "- 城市管理",
+            "",
+            "課程結合航天科學、地球信息學及數據驅動解難，培養學生探索太空及保護地球的能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備跨學科技能，受以下機構青睞：",
+            "- 航天公司及太空機構",
+            "- 環境顧問公司",
+            "- 地理信息系統（GIS）公司",
+            "- 政府部門及研究機構",
+            "- 關注氣候與可持續發展的非政府組織",
+            "",
+            "課程亦為以下領域的深造做好準備：",
+            "- 地球與行星科學",
+            "- 太空物理與氣候科學",
+            "- 航天工程",
+            "- 資訊科技與數據科學"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "中大主校園位於沙田，環境寬敞綠化，並設有獨特的書院制度。",
+            "本課程學生將同時體驗中大沙田校園及港中大（深圳）校園，獲得跨境學習機會。",
+            "書院生活提供全人發展機會，包括住宿教育、文化活動及學生社團。",
+            "課程依托太空與地球信息科學研究所，該所曾參與月球探測及衛星數據分析。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：60",
+            "- Band A 錄取人數：17",
+            "- 總申請人數：507",
+            "- Band A 錄取率：約 28.3%",
+            "- Band A 每錄取申請人數：約 3.5",
+            "",
+            "入學分數（最佳 5 科）：",
+            "- 中位數：44.25",
+            "- 下四分位數：38.25",
+            "- 上四分位數：null",
+            "",
+            "課程競爭激烈，尤其重視物理及地理（比重 x 2）。",
+            "在 M1/M2、物理及地理表現優異的申請者具優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學系成就",
+          "content": [
+            "本課程為新開辦課程（首屆 2022/23 學年），暫未有畢業生成為知名校友。",
+            "教學團隊包括中大太空與地球信息科學研究所的專家，該所曾參與月球探測及衛星數據分析。",
+            "課程由工程學院及理學院合辦，具備強大的跨學科研究實力。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大提供多項入學獎學金，根據學業成績頒發予本地及非本地學生。",
+            "本地 JUPAS 學生可申請涵蓋學費及生活費的入學獎學金。",
+            "大學亦參與政府「特定獎學金及財政支援計劃」（TSFS）及「非本地學生獎學金計劃」（NLSPS）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4750 策略 — 9 個可行貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "- 最佳 5 科成績應達 44.25（中位數）以具競爭力。",
+            "- 下四分位數為 38.25，分數高於 40 才有較大機會。",
+            "",
+            "**2. 優先處理比重科目**",
+            "",
+            "- 物理及地理比重 x 2，優異成績可大幅提升總分。",
+            "- 若同時修讀兩科，5* 級別尤為有利。",
+            "",
+            "**3. 數學延伸部分要突出**",
+            "",
+            "- M1/M2 為優先科目，中位數錄取者達第 5 級。",
+            "- 高分 M1/M2 展示數理能力，符合課程要求。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 課程需要面試，練習表達你對航天及地球信息學的興趣。",
+            "- 準備討論你如何為跨學科研究作出貢獻。",
+            "",
+            "**5. 建立強勁選修科組合**",
+            "",
+            "- 中位數錄取者有三個選修科（5*, 5, 4），目標至少兩個強選修。",
+            "- 選擇與課程相關的選修科（如物理、地理、資訊及通訊科技）。",
+            "",
+            "**6. 了解雙主修結構**",
+            "",
+            "- 研究中大及港中大（深圳）提供的第二主修選項，展現真誠興趣。",
+            "- 面試時提及具體組合（如航天科學與地球信息學 + 數據科學）。",
+            "",
+            "**7. 善用跨境校園機會**",
+            "",
+            "- 強調你願意在港深兩地學習，展示適應力及國際視野。",
+            "",
+            "**8. 策略性使用 Band A**",
+            "",
+            "- 僅 60 人申請 Band A，17 人獲錄取，Band A 位置至關重要。",
+            "- 若分數達標，確保 JS4750 為首選。",
+            "",
+            "**9. 緊貼課程最新發展**",
+            "",
+            "- 作為新課程，定期瀏覽官方網站（https://www.sci.cuhk.edu.hk/aseidm）獲取更新。",
+            "- 關注中大招生社交媒體，了解要求或學額變動。"
+          ]
+        }
+      }
+    },
+    "code": "JS4750",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 44.25,
+    "uq": null,
+    "lq": 38.25,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 44.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 38.25
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is newly launched (first intake 2022/23), so no graduates have yet become notable alumni.",
+      "Faculty includes experts from CUHK's Institute of Space and Earth Information Science, which has contributed to lunar exploration and satellite data analysis.",
+      "The programme is jointly offered by the Faculty of Engineering and the Faculty of Science, leveraging strong interdisciplinary research."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Informatics & X Double Major notable alumni",
+      "香港中文大學 航天科學與地球信息學及Ｘ雙主修課程 著名校友",
+      "CUHK Informatics & X Double Major graduates Hong Kong careers",
+      "CUHK JS4750 alumni"
+    ]
+  }
+}

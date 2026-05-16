@@ -1,0 +1,551 @@
+{
+  "factPack": {
+    "code": "JS4331",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4331"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4331"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/cledn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.fed.cuhk.edu.hk/cled/"
+      }
+    ],
+    "programme": {
+      "code": "JS4331",
+      "nameEn": "BA (Chinese Language Studies) and BEd (Chinese Language Education)",
+      "nameZh": "文學士 (中國語文研究) 及教育學士 (中國語文教育)",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 42,
+      "uq": 45,
+      "lq": 40.5,
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "5",
+          "e4": "",
+          "total": 45
+        },
+        "M": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "N2 -\nPass",
+          "total": 42
+        },
+        "LQ": {
+          "chi": "5**",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 40.5
+        }
+      },
+      "subjectWeighting": "• Chinese (x 2) • Chinese must be included"
+    },
+    "jupas": {
+      "code": "JS4331",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4331",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4331",
+      "nameEn": "B.A. (Chinese Language Studies) and B.Ed. (Chinese Language Education)",
+      "nameZh": "文學士 (中國語文研究) 及教育學士 (中國語文教育)",
+      "shortDescription": "an class=\"before_label\">Short Description This 5-year co-terminal double-degree programme offered by the Faculty integrates academic and professional training over the course of five years, and prepares students to become professional Chinese language teachers. The courses offered by the Department of Chinese Language and Literature enrich students’ knowledge of Chinese language and literature, while the educational studies courses offered by the Faculty of Education develop their pedagogical content knowledge, teaching skills and ability to conduct educational research. The programme also includes school experience and teaching practice in local schools to ensure that students are able to put theories into practice. Students also have the opportunity to join an eight- to ten-week overseas language immersion programme. Partially subsidised by the HKSAR Government, this immersion programme helps students improve their Chinese language proficiency, sample Chinese culture and expand their experience of overseas educational practices. Upon fulfilment of the programme",
+      "programmeWebsite": "https://www.fed.cuhk.edu.hk/cled/",
+      "tuition": "HK$47,000",
+      "intake": 12,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 4 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 93,
+        "bandB": 92,
+        "bandC": 186,
+        "bandD": 235,
+        "bandE": 249,
+        "total": 855
+      },
+      "offers2025": {
+        "bandA": 12,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 12
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/cledn/",
+      "introduction": "This five-year co-terminal double-degree programme offered by the Faculty of Education integrates academic and professional training over the course of five years, and prepares students to become professional Chinese language teachers. The courses offered by the Department of Chinese Language and Literature enrich students’ knowledge of Chinese language and literature, and the educational studies courses offered by the Faculty of Education develop their pedagogical content knowledge, teaching skills and ability to conduct educational research. The programme also includes school experience and teaching practice in local schools to ensure that students have an opportunity to put theory into practice.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "Students have the opportunity to join an eight- to ten-week overseas language immersion programme. Partially subsidised by the HKSAR Government, this immersion programme helps students improve their Chinese language proficiency, increases their exposure to Chinese culture, and expands their experience with overseas educational practices. The students sit for the Putonghua Proficiency Test (PSC), administered by the National Language Commission of China, to obtain the qualification required to be a certified Putonghua teacher in Hong Kong. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Upon fulfilment of the programme requirements, students are simultaneously awarded two degrees—a Bachelor of Arts (BA) and a Bachelor of Education (BEd)—which together are recognised as equivalent to a Postgraduate Diploma in Education (PGDE), ensuring that our students meet the professional requirements needed to obtain qualified teacher status. Graduates of the programme are fully qualified to teach Chinese in local primary and secondary schools.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4331",
+    "nameEn": "BA (Chinese Language Studies) and BEd (Chinese Language Education)",
+    "nameZh": "文學士 (中國語文研究) 及教育學士 (中國語文教育)",
+    "name": "BA (Chinese Language Studies) and BEd (Chinese Language Education)",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 42,
+    "band_a": 40.5,
+    "uq": 45,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4331",
+            "First Year Intake: 12",
+            "Duration: 5 years",
+            "Tuition: HK$47,000 (local students, 2026-2027)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 93",
+            "Total applications: 855",
+            "Band A offers: 12",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 42",
+            "Lower quartile (LQ): 40.5",
+            "Upper quartile (UQ): 45",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese: 5**",
+            "- English: 5",
+            "- Mathematics: 3",
+            "- CSD: A",
+            "- Elective 1: 5*",
+            "- Elective 2: 5*",
+            "- Elective 3: 5",
+            "- Elective 4: N2 - Pass",
+            "",
+            "Subject Weighting: Chinese (x 2); Chinese must be included in the best 5.",
+            "",
+            "Entrance Requirements:",
+            "- Chinese Language: Level 4",
+            "- English Language: Level 3",
+            "- Mathematics (Compulsory): Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 (may include M1/M2 or other language subjects)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "This 5-year co-terminal double-degree programme integrates academic and professional training, preparing students to become professional Chinese language teachers.",
+            "",
+            "Courses offered by the Department of Chinese Language and Literature enrich students’ knowledge of Chinese language and literature.",
+            "",
+            "Educational studies courses offered by the Faculty of Education develop pedagogical content knowledge, teaching skills, and ability to conduct educational research.",
+            "",
+            "The programme includes school experience and teaching practice in local schools to ensure students can put theory into practice.",
+            "",
+            "Students have the opportunity to join an 8- to 10-week overseas language immersion programme, partially subsidised by the HKSAR Government, to improve Chinese language proficiency, sample Chinese culture, and expand experience of overseas educational practices.",
+            "",
+            "Upon fulfilment of programme requirements, students are simultaneously awarded two degrees—a Bachelor of Arts (BA) and a Bachelor of Education (BEd)—which together are recognised as equivalent to a Postgraduate Diploma in Education (PGDE), ensuring graduates meet professional requirements to obtain qualified teacher status."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are fully qualified to teach Chinese in local primary and secondary schools.",
+            "",
+            "The programme prepares students to sit for the Putonghua Proficiency Test (PSC), administered by the National Language Commission of China, to obtain the qualification required to be a certified Putonghua teacher in Hong Kong.",
+            "",
+            "The double-degree structure (BA + BEd) is recognised as equivalent to a PGDE, giving graduates a competitive edge in the education job market.",
+            "",
+            "Career paths include Chinese language teacher in primary/secondary schools, curriculum developer, educational researcher, or further studies in education or Chinese linguistics."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with state-of-the-art facilities, libraries, and cultural venues.",
+            "",
+            "Students belong to one of nine colleges, each providing pastoral care, general education, and a close-knit community.",
+            "",
+            "The Faculty of Education is ranked 11th in the world and 4th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+            "",
+            "The overseas language immersion programme (8-10 weeks) allows students to experience Chinese culture abroad and improve language skills."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS Statistics:",
+            "- Band A applications: 93",
+            "- Band A offers: 12",
+            "- Band A offer rate: ~12.9%",
+            "- Band A applications per offer: ~7.8",
+            "- Total applications: 855",
+            "",
+            "Admission Scores (Best 5):",
+            "Median: 42, LQ: 40.5, UQ: 45",
+            "",
+            "With a small intake of 12, the programme is highly competitive. Strong performance in Chinese (weighted x2) and electives is essential."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme integrates Chinese language studies with professional teacher training, producing educators who are both subject experts and certified teachers.",
+            "",
+            "Graduates are highly sought after in Hong Kong's education sector, with many becoming Chinese language teachers in primary and secondary schools.",
+            "",
+            "The programme is jointly offered by the Faculty of Education and the Department of Chinese Language and Literature, ensuring a strong academic foundation.",
+            "",
+            "The Faculty of Education's world-class ranking (11th globally, 4th in Asia) reflects its research and teaching excellence."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local JUPAS students, which may cover tuition fees and living expenses.",
+            "",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available for eligible local students.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The overseas language immersion programme is partially subsidised by the HKSAR Government."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4331 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median**",
+            "",
+            "Aim for a Best 5 score of at least 42 (median). With Chinese weighted x2, a 5** in Chinese gives a strong foundation.",
+            "- Use the median subject profile as a benchmark: Chinese 5**, English 5, Math 3, CSD A, electives 5*/5.",
+            "",
+            "**2. Prioritise Chinese Language**",
+            "",
+            "Chinese is weighted x2 and must be included in the best 5. A high grade (5* or 5**) is almost mandatory.",
+            "- Dedicate extra revision time to Chinese reading and writing.",
+            "",
+            "**3. Excel in Electives**",
+            "",
+            "The median admit had two electives at 5* and one at 5. Strong elective results boost your total score.",
+            "- Choose electives that align with your strengths and are recognised by the programme.",
+            "",
+            "**4. Secure English at Level 5**",
+            "",
+            "The median English grade is 5. While the minimum is Level 3, a higher score improves competitiveness.",
+            "- Practice English writing and speaking regularly.",
+            "",
+            "**5. Don't Neglect Mathematics**",
+            "",
+            "The median Math grade is 3 (minimum Level 2). Even a modest score can be compensated by strong Chinese and electives.",
+            "- Focus on core topics to meet the minimum requirement.",
+            "",
+            "**6. Prepare for the Interview**",
+            "",
+            "Interviews are conducted for selected applicants. Demonstrate passion for Chinese language education and teaching.",
+            "- Research current issues in Hong Kong education and prepare to discuss your motivation.",
+            "",
+            "**7. Apply Band A**",
+            "",
+            "All 12 offers in 2025 went to Band A applicants. Place JS4331 in Band A to maximise your chance.",
+            "- Band A offer rate is ~12.9%, while Band B-E received zero offers.",
+            "",
+            "**8. Leverage the Overseas Immersion**",
+            "",
+            "Mention the 8-10 week overseas language immersion programme in your interview to show you value practical experience.",
+            "- This programme is partially subsidised and enhances language proficiency and cultural exposure.",
+            "",
+            "**9. Understand the Double-Degree Advantage**",
+            "",
+            "Graduates receive both BA and BEd, equivalent to a PGDE, making them fully qualified to teach Chinese in local schools.",
+            "- This unique structure saves one year compared to a separate BA + PGDE path."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4331",
+            "首年學額：12",
+            "修讀年期：5 年",
+            "首年學費：HK$47,000（本地學生，2026-2027）",
+            "面試：是（選定申請人）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：93",
+            "總申請人數：855",
+            "Band A 取錄人數：12",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：42",
+            "下四分位數：40.5",
+            "上四分位數：45",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "- 中國語文：5**",
+            "- 英國語文：5",
+            "- 數學：3",
+            "- 公民與社會發展：A",
+            "- 選修科 1：5*",
+            "- 選修科 2：5*",
+            "- 選修科 3：5",
+            "- 選修科 4：N2 - 及格",
+            "",
+            "科目比重：中國語文（x 2）；中國語文必須包含在最佳 5 科內。",
+            "",
+            "入學要求：",
+            "- 中國語文：第 4 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（可包括 M1/M2 或其他語言科目）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "此五年制雙學位課程結合學術與專業培訓，培養學生成為專業的中國語文教師。",
+            "",
+            "中國語言及文學系開設的課程豐富學生對中國語文及文學的知識。",
+            "",
+            "教育學院的教育研習課程發展學生的教學內容知識、教學技巧及進行教育研究的能力。",
+            "",
+            "課程包括本地學校的學校體驗及教學實習，確保學生能將理論付諸實踐。",
+            "",
+            "學生有機會參加為期 8 至 10 週的海外語言沉浸課程，獲香港特區政府部分資助，以提升中文水平、體驗中國文化及擴闊海外教育實踐經驗。",
+            "",
+            "完成課程要求後，學生將同時獲頒文學士及教育學士雙學位，相當於學位教師教育文憑（PGDE），確保畢業生符合取得合格教師資格的專業要求。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生完全符合資格在香港本地中小學任教中文。",
+            "",
+            "課程幫助學生準備參加由國家語言文字工作委員會舉辦的普通話水平測試（PSC），以取得在香港成為認證普通話教師的資格。",
+            "",
+            "雙學位結構（文學士 + 教育學士）被視為等同 PGDE，讓畢業生在教育就業市場上具競爭優勢。",
+            "",
+            "職業路向包括中小學中文教師、課程發展人員、教育研究人員，或繼續進修教育或中國語言學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，配備先進設施、圖書館及文化場地。",
+            "",
+            "學生隸屬於九所書院之一，每所書院提供關顧輔導、通識教育及緊密的社群網絡。",
+            "",
+            "教育學院在《泰晤士高等教育世界大學排名》（教育學科）2025 年位列全球第 11 位、亞洲第 4 位。",
+            "",
+            "海外語言沉浸課程（8-10 週）讓學生有機會在海外體驗中國文化及提升語言能力。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：93",
+            "- Band A 取錄人數：12",
+            "- Band A 取錄率：約 12.9%",
+            "- 每個 Band A 取錄對應申請人數：約 7.8",
+            "- 總申請人數：855",
+            "",
+            "入學分數（最佳 5 科）：",
+            "中位數：42，下四分位數：40.5，上四分位數：45",
+            "",
+            "由於學額僅 12 個，課程競爭激烈。中國語文（比重 x 2）及選修科成績尤為關鍵。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "此課程結合中國語文研究與專業教師培訓，培養出兼具學科知識及認證教師資格的畢業生。",
+            "",
+            "畢業生在香港教育界備受歡迎，許多成為中小學的中國語文教師。",
+            "",
+            "課程由教育學院及中國語言及文學系合辦，確保堅實的學術基礎。",
+            "",
+            "教育學院的世界級排名（全球第 11 位、亞洲第 4 位）反映其研究與教學卓越。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學業成績的入學獎學金，可涵蓋學費及生活費。",
+            "",
+            "合資格的本地學生可申請「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "海外語言沉浸課程獲香港特區政府部分資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4331 策略 — 9 個可行貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "力求最佳 5 科成績達 42 分（中位數）。中國語文比重 x 2，取得 5** 能奠定堅實基礎。",
+            "- 參考中位數取錄者科目成績：中文 5**、英文 5、數學 3、公民 A、選修 5*/5。",
+            "",
+            "**2. 優先處理中國語文**",
+            "",
+            "中國語文比重 x 2 且必須包含在最佳 5 科內。高分（5* 或 5**）幾乎是必須的。",
+            "- 分配額外時間複習中文閱讀及寫作。",
+            "",
+            "**3. 在選修科中表現出色**",
+            "",
+            "中位數取錄者擁有兩個 5* 及一個 5 的選修成績。強勁的選修成績能提升總分。",
+            "- 選擇與你優勢相符且課程認可的選修科。",
+            "",
+            "**4. 確保英文達第 5 級**",
+            "",
+            "中位數英文成績為 5。雖然最低要求為第 3 級，但更高分數能提升競爭力。",
+            "- 定期練習英文寫作及口語。",
+            "",
+            "**5. 不要忽視數學**",
+            "",
+            "中位數數學成績為 3（最低要求第 2 級）。即使分數一般，也可由強勁的中文及選修科補償。",
+            "- 專注核心課題以滿足最低要求。",
+            "",
+            "**6. 為面試做好準備**",
+            "",
+            "面試會為選定申請人進行。展示你對中國語文教育的熱誠及教學抱負。",
+            "- 研究香港教育的最新議題，並準備討論你的動機。",
+            "",
+            "**7. 將課程放在 Band A**",
+            "",
+            "2025 年所有 12 個取錄名額均來自 Band A 申請人。將 JS4331 放在 Band A 以最大化機會。",
+            "- Band A 取錄率約 12.9%，而 Band B-E 則沒有取錄。",
+            "",
+            "**8. 善用海外沉浸課程**",
+            "",
+            "在面試中提及 8-10 週的海外語言沉浸課程，以顯示你重視實踐經驗。",
+            "- 此課程獲部分資助，能提升語言能力及文化視野。",
+            "",
+            "**9. 了解雙學位優勢**",
+            "",
+            "畢業生同時獲頒文學士及教育學士，相當於 PGDE，完全符合資格在本地學校任教中文。",
+            "- 此獨特結構比分別修讀 BA + PGDE 節省一年時間。"
+          ]
+        }
+      }
+    },
+    "code": "JS4331",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 42,
+    "uq": 45,
+    "lq": 40.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "5",
+        "e4": "",
+        "total": 45
+      },
+      "M": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "N2 -\nPass",
+        "total": 42
+      },
+      "LQ": {
+        "chi": "5**",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 40.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme integrates Chinese language studies with professional teacher training, producing educators who are both subject experts and certified teachers.",
+      "Graduates are highly sought after in Hong Kong's education sector, with many becoming Chinese language teachers in primary and secondary schools.",
+      "The programme is jointly offered by the Faculty of Education and the Department of Chinese Language and Literature, ensuring a strong academic foundation."
+    ],
+    "searchQueriesUsed": [
+      "CUHK BA (Chinese Language Studies) and BEd (Chinese Language Education) notable alumni",
+      "香港中文大學 文學士 (中國語文研究) 及教育學士 (中國語文教育) 著名校友",
+      "CUHK BA (Chinese Language Studies) and BEd (Chinese Language Education) graduates Hong Kong careers"
+    ]
+  }
+}

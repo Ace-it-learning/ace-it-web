@@ -1,0 +1,66 @@
+{
+  "code": "JS6078",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6078"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://arts.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6078",
+    "nameEn": "Bachelor of Arts and Bachelor of Laws",
+    "nameZh": "Bachelor of Arts and Bachelor of Laws",
+    "university": "香港大學",
+    "facultyZh": "法律學院",
+    "category": "law"
+  },
+  "scores": {
+    "formula": "1.5 x Eng + Best 5 Subjects",
+    "median": 38,
+    "uq": 41,
+    "lq": 36
+  },
+  "jupas": {
+    "code": "JS6078",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6078",
+    "nameEn": "Bachelor of Arts and Bachelor of Laws",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description This double degree programme in arts and law provides students with the opportunity to pursue their studies in arts and the law, and to explore the connections between the two. On completion of the five-year programme, students will be awarded two degrees - Bachelor of Arts and Bachelor of Laws. In addition to preparing students for legal practice, the programme cultivates an appreciation of the narrative dimensions and rhetoric of law and of the overlaps between literary and legal histories. The curriculum provides a solid foundation for legal practice as well as a wide variety of careers beyond the law, including journalism, media and communications, the arts and culture, and politics.",
+    "programmeWebsite": "https://arts.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 20,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 43,
+      "bandB": 32,
+      "bandC": 71,
+      "bandD": 88,
+      "bandE": 88,
+      "total": 322
+    },
+    "offers2025": {
+      "bandA": 21,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 21
+    },
+    "facultyPhone": "+852 3917 8977"
+  },
+  "admissionsSnippet": "Home - arts.hku.hk Skip to content About Us Admissions Current Students Research Arts Impact News &#038; Events Resources for staff More About Us Vision and Mission Units Schools and Departments Research Centres Arts Infrastructure Faculty Office Arts Tech Lab Black Box Theatre; Music Studios; Heritage House Quick Facts and Achievements Admissions Undergraduate Programme Admissions Teaching Stars @HKUArts Students Life HKU Arts Elite Scheme Exchange Scholarships Taught Postgraduate Admissions Grants under the Professional Development Incentive Grant Scheme for Language Teachers Application Research Postgraduate Admissions Young Global Arts Leaders Current Students Undergraduate Programmes BA BA(HDT) BA&#038;BEng(AI&#038;DataSc) BA&#038;LLB Regulations and Syllabuses Incoming Exchange &#038; Visiting Students Undergraduate Academic Matters Course Selection Notices Assessment &#038; Honours Classification Awards &#038; Scholarships Useful Forms Academic Advising Student Academic Advisers Taught Postgraduate Programmes Research Postgraduate Programmes Career Development Career Events, Training, and Preparation HKUArts Industry Experience Partnering with HKUArts Enhancing Student Employability with HKUArts Financial Support Student Advising and Career Consultation Available e-Resources Student Experiential Learning Internship &amp; Career Development Initiatives Student Exchange &#038; Short-term Study Abroad Programmes Local and Overseas Field Trips Financial Support Internships Student Wellness SEN Support Self-Assessment Activities / Events Useful Resources Wellness Contact Entrepreneurship and Innovation @HKUArts MEPop Digerati and HAGG History Applied Research Rankings and Global Recognition Research Strengths Research Centres and Initiatives Centre for the Humanities and Medicine Institute of Transnational History of China AI&amp;Humanity Lab Centre for the Study of Globalisation and Cultures Research and Impact Initiative on Communication in Healthcare China, Humanities and Global Studies Hub Modern East Asian Literature Research Cluster (MEAL) Society of Fellows Honours and Awards Visiting Researchers Arts Impact Knowledge Exchange Partnering with HKUArts Being Human Festival News &#038; Events Resources for staff Apply NOW 2 Arts UG Scholarships (by July 2026) Unlock Your Career Potential with FirstResume Undergraduate Information Sessions (May 7-8, 2026) Recruitment of Student Academic Advisers 2026-27 A LEGACY of Excellence A Vision for the Future Explore a BA in Global Creative Industries Arts Technology Lab: Strengthening AI Proficiency News Events More [APPLY NOW!] Two Scholarships for Arts UG Students (Academic year 2025-26) 17 April 2026 More Congratulations to Professor Geng Song (宋耕教授) on receiving the HKU Outstanding Research Student Supervisor Award 04 May 2026 More [APPLY NOW!] Two Scholarships for Arts UG Students (Academic year 2025-26) 17 April 2026 More Michael Schindhelm Delivers Public Lecture “AI and the Future of the University” at HKU 19 March 2026 More Renowned Artist Xu Bing Delivers Public Lecture Titled “How Do We Make Art Today” at HKU 18 March 2026 More HKU Alumni Day 2026: Faculty of Arts hosts Faculty booth and co-organises Black Box Open House with School of English 14 March 2026 More Masterclass of “Between Wen and Wu: Mythologizing Hong Kong Ghettos — A Conversation with Dir. Soi Cheang” and Film Screening &amp; Post-Screening Discussion of Mad Fate at HKU attracted an Industry Professional and International Audience 04 February 2026 More Screening and Post-screening Talk of Dream Home (International Version) at HKU Drew a Full House 29 January 2026 More HKU Faculty of Arts to launch pioneering Music Entrepreneurship &amp; Popular Practice Initiative 01 September 2025 More The 217th Congregation 20 April 2026 More The 217th Congregation 20 April 2026 More HKU Arts Undergraduate Information Sessions (May 7-8, 2026) 10 April 2026 More Digital Philology in Practice: A Study of the Xi’an Stele of Jingzhao Prefectural School Property in the Jin Dynasty 10 April 2026 More New Directions in Eileen Chang Studies Lecture Series &#8211; How would Nora be a Mother?: The Absent “New Mother” in May Fourth China 06 March 2026 More The Possibilities and Pitfalls of Creative Non-fiction 06 February 2026 More Conflict, Novelty and Print: The Birth of News Writing in the West 05 February 2026 More International Conference Chinese Chan Buddhism: Innovation and Inheritance in Translocal Contexts 11 January 2026 More The 215th Congregation: Information 04 December 2025 More Welcome to HKU Arts Prospective Students Current Students Alumni Public Prospective Students Prospective Students Current Students Alumni Public Considering each application with care Admissions Undergraduate Taught Postgraduate Research Postgraduate Considering each application with care Admissions Undergraduate Taught Postgraduate Research Postgraduate Supporting every step of your journey with care Career Development Wellness Support Exchange Programmes Internships Supporting every step of your journey with care Career Development Wellness Support Exchange Programmes Internships Treasuring every chapter of your legacy and success Internship Partners Knowledge Exchange Virtual Tour Financial Aid Overview Treasuring every chapter of your legacy and success Internship Partners Knowledge Exchange Virtual Tour Financial Aid Overview Engaging with our communities with care Schools and Departments Research Centres and Initiatives Ranking and Global Recognition Find an Expert Engaging with our communities with care Schools and Departments Research Centres and Initiatives Ranking and Global Recognition Find an Expert Our Vision To advance innovative, high-impact, and leading-edge research within and across the humanities and other disciplines, through a research strategy underpinning the Faculty’s distinctive brand of Asia-West scholarship and supporting its role as an international ‘forum’ ; To innovate thr"
+}

@@ -1,0 +1,116 @@
+{
+  "code": "JS4082",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4082"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4082"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/muscn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://www.arts.cuhk.edu.hk/~music"
+    }
+  ],
+  "programme": {
+    "code": "JS4082",
+    "nameEn": "Music",
+    "nameZh": "音樂",
+    "university": "香港中文大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 24.5,
+    "uq": null,
+    "lq": 22.5,
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 22.5
+      }
+    },
+    "subjectWeighting": null
+  },
+  "jupas": {
+    "code": "JS4082",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4082",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4082",
+    "nameEn": "Music",
+    "nameZh": "音樂",
+    "shortDescription": "an class=\"before_label\">Short Description The BA in Music programme at CUHK provides instruction in the study of music as a humanistic discipline and offers extensive opportunities for the development of practical skills. The Music Department’s teaching team offers a wide range of expertise and has for decades nurtured important musicians of Chinese and Western music traditions. The Department’s library and archival collections are among the most important in Asia. It has its own symphony orchestra, wind orchestra, and choir, in addition to ensembles devoted to Chinese music, jazz, early music, and new music.",
+    "programmeWebsite": "https://www.arts.cuhk.edu.hk/~music",
+    "tuition": "HK$47,000",
+    "intake": 26,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Music is preferred but not required. REMARKS: Applicants are strongly advised to state their academic interest and musical experience in the \"Additional Information\" of their JUPAS application. As a reference, students should have attained a level of proficiency in their main instrument / voice at or above ABRSM / Trinity College London Grade 8 (or equivalent). Audition video and written entrance test will be required. Students should include, if possible the following supporting documents: (a) letters of recommendation from music teachers / music professionals; (b) results and certificates of graded music examinations; (c) list of repertoire studied in the last 2 years; (d) composition portfolio (if available). Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 223,
+      "bandB": 109,
+      "bandC": 138,
+      "bandD": 166,
+      "bandE": 204,
+      "total": 840
+    },
+    "offers2025": {
+      "bandA": 21,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 21
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/muscn/",
+    "introduction": "Finding Your Muse Do you love music? Would you like to channel your musical creativity through performance or composition? Are you interested in acquiring a deeper understanding of how music of different cultures and traditions reflects society, expresses emotions, and enriches human existence? Are you ready to make music your profession rather than just a hobby? At CUHK Music we foster a community of passionate students who possess the talent, discipline and intellectual curiosity to succeed in music. The undergraduate programme has a dual focus on the study of music both as a humanistic discipline and as a practical skill. Academic courses are taught by world-class scholars and span a wide range of genres and styles. Performance and composition courses are offered by some of Hong Kong&#8217;s leading musicians, including members of the Hong Kong Philharmonic Orchestra, the Hong Kong Sinfonietta, and the Hong Kong Chinese Orchestra. Whether you have already decided what kind of musical career you want to pursue or wish to expand your horizons before deciding on a specialisation, our programme will nurture and support you along your musical journey. Are you interested in being a part of the CUHK music community and joining like-minded classmates to grow together in music?",
+    "ranking": "",
+    "careerProspects": "Over half of our graduates pursue postgraduate studies in performance, composition or scholarly research. Among them, about 70% have been admitted to top universities and conservatories in the UK, US and Europe, and about 30% have studied locally. CUHK Music graduates have a good track record in competing for overseas postgraduate scholarships offered by the HKSAR Government, the Hong Kong Jockey Club and other major funding bodies. Graduates who join the work force after completion of the B.A. degree have taken up careers in school teaching, arts administration and broadcasting. CUHK’s",
+    "craftYourPath": "The four-year BA in Music programme offers a choice of four study streams: composition, pedagogy, performance and research (selected at the end of Year 2). In the first two years of study, students take core courses in music theory, history, and one-to-one applied music lessons, which provide a strong foundation for later specialisation. In Year 3, the students focus more on their selected stream, and in Year 4 complete capstone courses that culminate in a composition portfolio, pedagogy project, solo recital or research thesis. Students may also choose electives on diverse topics, including electronic music, conducting, ensembles, and advanced academic courses in Western and Chinese music history, theory and analysis, as well as world music.",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

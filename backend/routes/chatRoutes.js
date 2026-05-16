@@ -675,7 +675,11 @@ router.get('/history/:agentId', requireResolvedUid, async (req, res) => {
         res.json(filteredHistory);
     } catch (e) {
         console.error("History Fetch Error:", e);
-        res.status(500).json({ error: "Failed to fetch history" });
+        const isCosmos = /cosmos|AZURE_COSMOS/i.test(String(e?.message || ''));
+        res.status(500).json({
+            error: "Failed to fetch history",
+            ...(isCosmos ? { hint: "Cosmos DB connection or credentials may be misconfigured on the server." } : {})
+        });
     }
 });
 

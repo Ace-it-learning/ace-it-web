@@ -780,7 +780,7 @@ const MICRO_SKILLS = {
         description_zh: '邀請他人參與對話（外交手腕）'
     },
 
-    // GRAMMAR LAB (8 modules)
+    // GRAMMAR LAB (13 modules)
     // Accuracy Track
     grammar_accuracy_sva: {
         id: 'grammar_accuracy_sva',
@@ -822,6 +822,16 @@ const MICRO_SKILLS = {
         description: 'Selecting the correct noun, verb, adjective, or adverb.',
         description_zh: '根據語境選擇正確的名詞、動詞、形容詞或副詞。'
     },
+    grammar_accuracy_pronoun: {
+        id: 'grammar_accuracy_pronoun',
+        name: 'Pronoun Reference',
+        name_zh: '代詞指代',
+        paper: PAPERS.GRAMMAR,
+        category: 'Accuracy Track',
+        group: SKILL_GROUPS.CORE,
+        description: 'Ensuring pronouns clearly refer to the correct nouns.',
+        description_zh: '確保代詞清晰地指代正確的名詞。'
+    },
     // Elite Track
     grammar_elite_inversion: {
         id: 'grammar_elite_inversion',
@@ -862,6 +872,46 @@ const MICRO_SKILLS = {
         group: SKILL_GROUPS.ADVANCED,
         description: 'Sophisticated linking of complex arguments.',
         description_zh: '在複雜論點之間建立高層次的邏輯銜接。'
+    },
+    grammar_elite_nominal: {
+        id: 'grammar_elite_nominal',
+        name: 'Nominal Clauses',
+        name_zh: '名詞性從句',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Using entire clauses as subjects or objects.',
+        description_zh: '將整個從句用作主語或賓語。'
+    },
+    grammar_elite_relative: {
+        id: 'grammar_elite_relative',
+        name: 'Advanced Relative Clauses',
+        name_zh: '高級關係從句',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Sophisticated noun modification using prepositions and quantity.',
+        description_zh: '使用介詞與數量詞進行高層次的名詞修飾。'
+    },
+    grammar_elite_modals: {
+        id: 'grammar_elite_modals',
+        name: 'Modal Nuance',
+        name_zh: '情態動詞辨析',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Expressing precise degrees of certainty, obligation, and advice.',
+        description_zh: '表達精確的確定性、義務及建議程度。'
+    },
+    grammar_elite_passive: {
+        id: 'grammar_elite_passive',
+        name: 'Passive Variations',
+        name_zh: '被動語態變體',
+        paper: PAPERS.GRAMMAR,
+        category: 'Elite Track',
+        group: SKILL_GROUPS.ADVANCED,
+        description: 'Using advanced passive structures for objectivity and emphasis.',
+        description_zh: '使用高級被動結構以增強客觀性與強調。'
     },
 };
 

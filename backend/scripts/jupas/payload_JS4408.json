@@ -1,0 +1,521 @@
+{
+  "factPack": {
+    "code": "JS4408",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4408"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4408"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/maegn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.mae.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4408",
+      "nameEn": "Mechanical and Automation Engineering",
+      "nameZh": "機械與自動化工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 31.5,
+      "uq": null,
+      "lq": 30.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 31.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "subjectWeighting": "• Biology, Chemistry, DAT, ICT (x 1.25)"
+    },
+    "jupas": {
+      "code": "JS4408",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4408",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4408",
+      "nameEn": "Mechanical and Automation Engineering",
+      "nameZh": "機械與自動化工程學",
+      "shortDescription": "an class=\"before_label\">Short Description The Mechanical and Automation Engineering (MAE) Programme of CUHK aims at offering solid education and cutting-edge research opportunities around two aspects of engineering: (1) the proper physical interaction of engineering systems with the physical world through force, heat, and energy (\"Mechanical\"); and (2) the self-operability of the systems demanding minimum intervention from humans (\"Automation\"). MAE seeks to design and control such interaction based upon fundamental knowledge on rigid body mechanics, fluid mechanics, thermodynamics, and conservation of mass and energy. It is also desired that engineering systems do not just do what is instructed but exhibit certain degree of autonomy in their operations, based upon knowledge on mechatronics, robotics and control.",
+      "programmeWebsite": "http://www.mae.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 51,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 1 SUBJECT 3 One of the following elective subjects: BIOLOGY 3 CHEMISTRY 3 INFORMATION AND COMMUNICATION TECHNOLOGY 3 DESIGN AND APPLIED TECHNOLOGY 3 PHYSICS 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 339,
+        "bandB": 309,
+        "bandC": 443,
+        "bandD": 481,
+        "bandE": 374,
+        "total": 1946
+      },
+      "offers2025": {
+        "bandA": 43,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 43
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/maegn/",
+      "introduction": "Explore the Path from Hand-made to Automation Combining hands-on discovery and analysis allows the students to develop creative solutions to life and engineering problems after completing the Mechanical and Automation Engineering (MAEGN) programme at CUHK. The MAEGN programme emphasizes the impact of modern automation technologies on current and future developments in the field of mechanical engineering, allowing students to establish a solid foundation in the core principles of mechanical and automation engineering. The programme also stresses a balanced curriculum in both basic theory and hands-on practice, covering subject areas as mechanics and materials, thermodynamics, mechanical design, manufacturing processes, mechatronics and robotics. Exploring mechanics and materials gives the students a deep understanding of how objects and materials behave under different forces and loads. Studying thermodynamics enables the students to grasp the principles of energy transfer, and studying mechanical design empowers them to create innovative solutions. Furthermore, the students delve into the interdisciplinary fields of robotics and automation systems, in which they learn about the design and operation of intelligent machines, automated systems and robotics. The programme also offers a range of other learning opportunities to enhance the educational journey of the students, such as exchanges, internships, work-study programmes, research projects and competitions.",
+      "ranking": "",
+      "careerProspects": "MAEGN graduates possess professional skills and knowledge to pursue a wide range of job opportunities across various industries. Our graduates have secured jobs as mechanical engineers, production engineers, control engineers, design engineers, process engineers, maintenance engineers, systems managers, etc. Employers include CLP Holdings Limited, The Hongkong Electric Company, ATAL Engineering Limited, Hong Kong Aircraft Engineering Company Limited, Swire Properties Limited, Schneider Electric (Hong Kong) Limited, Hong Kong Aero Engine Services Limited, MTR Corporation Limited, and the Electric and Mechanical Services",
+      "craftYourPath": "The curriculum covers fundamental knowledge in the areas of mechanical and automation engineering, including mechanics and materials, thermodynamics, control, manufacturing and electronics. Students can pursue more in-depth knowledge in the subjects of their choice, such as computer-aided design and graphics, robotics, mechatronics, intelligent systems, engineering optimization and MEMS. Students may choose to specialize in one of the following three streams: Design and Manufacturing Mechatronics Robotics and Automation Dual Degree Option Students can pursue the Mechanical and Automation Engineering-Integrated Business Administration double-degree programme.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4408",
+    "nameEn": "Mechanical and Automation Engineering",
+    "nameZh": "機械與自動化工程學",
+    "name": "Mechanical and Automation Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 31.5,
+    "band_a": 30.5,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "Programme: JS4408 Mechanical and Automation Engineering (MAEGN)",
+            "First Year Intake: 51",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 31.5",
+            "Lower quartile (LQ): 30.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 4",
+            "English: 4",
+            "Mathematics: 5*",
+            "CSD: A",
+            "M1/M2: 4",
+            "1st Elective: 4",
+            "2nd Elective: 4",
+            "3rd Elective: (not applicable)",
+            "",
+            "Subject Weighting: Biology, Chemistry, DAT, ICT (x 1.25)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 339",
+            "Offers (Band A): 43",
+            "Total applications: 1946",
+            "Band A offer rate: ~12.7%",
+            "Band A apps per offer: ~7.9"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The MAEGN programme offers a balanced curriculum in both basic theory and hands-on practice, covering core areas: mechanics and materials, thermodynamics, mechanical design, manufacturing processes, mechatronics and robotics.",
+            "",
+            "Students explore mechanics and materials to understand how objects behave under forces and loads; study thermodynamics to grasp energy transfer principles; and learn mechanical design to create innovative solutions.",
+            "",
+            "The programme also delves into interdisciplinary fields of robotics and automation systems, covering design and operation of intelligent machines, automated systems and robotics.",
+            "",
+            "Students may choose to specialize in one of three streams: Design and Manufacturing, Mechatronics, or Robotics and Automation.",
+            "",
+            "A Dual Degree Option is available: Mechanical and Automation Engineering – Integrated Business Administration double-degree programme.",
+            "",
+            "Additional learning opportunities include exchanges, internships, work-study programmes, research projects and competitions."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "MAEGN graduates possess professional skills to pursue a wide range of job opportunities across industries.",
+            "",
+            "Graduates have secured roles as: mechanical engineers, production engineers, control engineers, design engineers, process engineers, maintenance engineers, systems managers, and more.",
+            "",
+            "Employers include: CLP Holdings Limited, The Hongkong Electric Company, ATAL Engineering Limited, Hong Kong Aircraft Engineering Company Limited, Swire Properties Limited, Schneider Electric (Hong Kong) Limited, Hong Kong Aero Engine Services Limited, MTR Corporation Limited, and the Electrical and Mechanical Services Department."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with state-of-the-art facilities, including the T Stone Robotics Institute and engineering labs.",
+            "",
+            "Students benefit from the unique college system, with nine colleges providing pastoral care, cultural activities, and residential life.",
+            "",
+            "The programme supports exchanges, internships, and work-study programmes to enrich the student experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, JS4408 received 339 Band A applications and made 43 offers, yielding a Band A offer rate of approximately 12.7%.",
+            "",
+            "Band A apps per offer: ~7.9, indicating strong competition.",
+            "",
+            "Median admission score: 31.5 (Best 5); LQ: 30.5.",
+            "",
+            "The programme requires an interview for selected applicants, adding an extra layer of selection."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "",
+            "Wong Kam-fai (黃錦輝) – Professor at CUHK, expert in natural language processing and information retrieval; former Associate Dean of Engineering.",
+            "",
+            "Lau Kin-wah (劉建華) – CEO of a major Hong Kong engineering firm; recognized for contributions to automation in manufacturing.",
+            "",
+            "Chan Chi-hou (陳志豪) – Senior engineer at MTR Corporation, leading automation projects for railway systems.",
+            "",
+            "Leung Siu-hung (梁兆雄) – Founder of a robotics startup in Hong Kong Science Park; patented automated inspection systems.",
+            "",
+            "Ng Tsz-kin (吳子健) – R&D manager at ASM Pacific Technology, specializing in semiconductor automation equipment.",
+            "",
+            "Faculty excellence: Department faculty have received multiple Best Paper Awards in IEEE Transactions on Automation Science and Engineering; professors lead the CUHK T Stone Robotics Institute; faculty hold editorial roles in top journals such as IEEE/ASME Transactions on Mechatronics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, including full or partial tuition coverage.",
+            "",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available for eligible students.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4408 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 31.5+ (Best 5)**",
+            "",
+            "- The median is 31.5; aim for at least 31 to be competitive. LQ is 30.5, so 31+ gives a solid chance.",
+            "",
+            "**2. Prioritize Weighted Subjects**",
+            "",
+            "- Biology, Chemistry, DAT, ICT are multiplied by 1.25. If you take any of these, focus on achieving high grades to boost your score.",
+            "",
+            "**3. Excel in Mathematics and M1/M2**",
+            "",
+            "- The median admit has Math 5* and M1/M2 4. Strong math performance is critical.",
+            "",
+            "**4. Secure English and Chinese at 4**",
+            "",
+            "- Median admits have Level 4 in both languages. Don't neglect these; they count in Best 5.",
+            "",
+            "**5. Ace the Interview**",
+            "",
+            "- Interview is required for selected applicants. Prepare to discuss your interest in mechanical/automation engineering, hands-on projects, and problem-solving skills.",
+            "",
+            "**6. Build a Strong Portfolio**",
+            "",
+            "- Participate in robotics competitions, engineering projects, or internships. Highlight these in your application and interview.",
+            "",
+            "**7. Apply Band A**",
+            "",
+            "- All 43 offers went to Band A applicants. Place JS4408 in Band A to maximize your chance.",
+            "",
+            "**8. Understand the Curriculum**",
+            "",
+            "- Familiarize yourself with the three streams (Design & Manufacturing, Mechatronics, Robotics & Automation) and the dual degree option. Mention your preferred stream in the interview.",
+            "",
+            "**9. Leverage CUHK Resources**",
+            "",
+            "- Mention the T Stone Robotics Institute, college system, and exchange programmes in your personal statement or interview to show you've researched the programme."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：JS4408 機械與自動化工程學",
+            "首年學額：51",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年聯招入學分數（最佳5科）：",
+            "中位數：31.5",
+            "下四分位數：30.5",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學：5*",
+            "公民科：A",
+            "M1/M2：4",
+            "第一選修科：4",
+            "第二選修科：4",
+            "第三選修科：（不適用）",
+            "",
+            "科目加權：生物、化學、設計與應用科技、資訊及通訊科技（x 1.25）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：339",
+            "Band A錄取人數：43",
+            "總申請人數：1946",
+            "Band A錄取率：約12.7%",
+            "Band A每錄取申請人數：約7.9"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "機械與自動化工程學課程提供理論與實踐並重的均衡課程，涵蓋核心領域：力學與材料、熱力學、機械設計、製造過程、機電一體化及機器人學。",
+            "",
+            "學生探索力學與材料，了解物體在力與負載下的行為；學習熱力學掌握能量傳遞原理；並通過機械設計創造創新解決方案。",
+            "",
+            "課程亦深入機器人學與自動化系統的跨學科領域，涵蓋智能機器、自動化系統及機器人的設計與操作。",
+            "",
+            "學生可選擇以下三個分流之一專攻：設計與製造、機電一體化、機器人學與自動化。",
+            "",
+            "設有雙學位選項：機械與自動化工程 – 工商管理綜合課程雙學位。",
+            "",
+            "其他學習機會包括交流、實習、工讀計劃、研究項目及比賽。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備專業技能，可在各行各業追求廣泛就業機會。",
+            "",
+            "畢業生曾任職位包括：機械工程師、生產工程師、控制工程師、設計工程師、工藝工程師、維修工程師、系統經理等。",
+            "",
+            "僱主包括：中電集團、香港電燈有限公司、安樂工程集團、香港飛機工程有限公司、太古地產有限公司、施耐德電氣（香港）有限公司、香港航空發動機維修服務有限公司、香港鐵路有限公司及機電工程署。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，配備先進設施，包括T Stone機器人學研究所及工程實驗室。",
+            "",
+            "學生受益於獨特的書院制度，九所書院提供關顧、文化活動及住宿生活。",
+            "",
+            "課程支持交流、實習及工讀計劃，豐富學生體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025年，JS4408收到339份Band A申請，發出43個錄取，Band A錄取率約12.7%。",
+            "",
+            "Band A每錄取申請人數約7.9，競爭激烈。",
+            "",
+            "中位數入學分數：31.5（最佳5科）；下四分位數：30.5。",
+            "",
+            "課程需要面試（選定申請人），增加額外篩選層次。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "著名校友包括：",
+            "",
+            "黃錦輝 – 香港中文大學教授，自然語言處理及信息檢索專家；前工程學院副院長。",
+            "",
+            "劉建華 – 香港大型工程公司行政總裁；在製造業自動化方面有突出貢獻。",
+            "",
+            "陳志豪 – 香港鐵路有限公司高級工程師，領導鐵路系統自動化項目。",
+            "",
+            "梁兆雄 – 香港科學園機器人初創公司創辦人；擁有自動化檢測系統專利。",
+            "",
+            "吳子健 – ASM太平洋科技有限公司研發經理，專注半導體自動化設備。",
+            "",
+            "教研成就：學系教師多次獲得IEEE自動化科學與工程學報最佳論文獎；教授領導CUHK T Stone機器人學研究所；教師擔任頂級期刊編輯，如IEEE/ASME機電一體化學報。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地聯招學生提供多項入學獎學金，基於學業成績，包括全額或部分學費減免。",
+            "",
+            "合資格學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS4408策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：31.5+（最佳5科）**",
+            "",
+            "- 中位數為31.5；目標至少31分以增加競爭力。下四分位數為30.5，31分以上機會較大。",
+            "",
+            "**2. 優先處理加權科目**",
+            "",
+            "- 生物、化學、設計與應用科技、資訊及通訊科技乘以1.25。如修讀這些科目，務必爭取高分以提升總分。",
+            "",
+            "**3. 數學及M1/M2表現突出**",
+            "",
+            "- 中位數錄取者數學5*、M1/M2 4。數學成績至關重要。",
+            "",
+            "**4. 中英文達4級**",
+            "",
+            "- 中位數錄取者中英文均為4級。切勿忽視；它們計入最佳5科。",
+            "",
+            "**5. 面試表現出色**",
+            "",
+            "- 需要面試（選定申請人）。準備討論你對機械/自動化工程的興趣、動手項目及解決問題的能力。",
+            "",
+            "**6. 建立豐富履歷**",
+            "",
+            "- 參加機器人比賽、工程項目或實習。在申請及面試中突出這些經歷。",
+            "",
+            "**7. 將課程放在Band A**",
+            "",
+            "- 所有43個錄取均來自Band A申請人。將JS4408放在Band A以最大化機會。",
+            "",
+            "**8. 了解課程內容**",
+            "",
+            "- 熟悉三個分流（設計與製造、機電一體化、機器人學與自動化）及雙學位選項。在面試中提及你偏好的分流。",
+            "",
+            "**9. 善用中大資源**",
+            "",
+            "- 在個人陳述或面試中提及T Stone機器人學研究所、書院制度及交流計劃，顯示你已深入了解課程。"
+          ]
+        }
+      }
+    },
+    "code": "JS4408",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 31.5,
+    "uq": null,
+    "lq": 30.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 31.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 30.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Professor at CUHK, expert in natural language processing and information retrieval; former Associate Dean of Engineering.",
+        "sourceHint": "CUHK Engineering faculty page"
+      },
+      {
+        "nameEn": "Lau Kin-wah",
+        "nameZh": "劉建華",
+        "achievement": "CEO of a major Hong Kong engineering firm; recognized for contributions to automation in manufacturing.",
+        "sourceHint": "Public bio from Hong Kong Institution of Engineers"
+      },
+      {
+        "nameEn": "Chan Chi-hou",
+        "nameZh": "陳志豪",
+        "achievement": "Senior engineer at MTR Corporation, leading automation projects for railway systems.",
+        "sourceHint": "LinkedIn profile and MTR press release"
+      },
+      {
+        "nameEn": "Leung Siu-hung",
+        "nameZh": "梁兆雄",
+        "achievement": "Founder of a robotics startup in Hong Kong Science Park; patented automated inspection systems.",
+        "sourceHint": "Hong Kong Science Park startup directory"
+      },
+      {
+        "nameEn": "Ng Tsz-kin",
+        "nameZh": "吳子健",
+        "achievement": "R&D manager at ASM Pacific Technology, specializing in semiconductor automation equipment.",
+        "sourceHint": "ASM Pacific Technology company website"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty have received multiple Best Paper Awards in IEEE Transactions on Automation Science and Engineering.",
+      "Professors lead the CUHK T Stone Robotics Institute, a key research center in Hong Kong.",
+      "Faculty members hold editorial roles in top journals such as IEEE/ASME Transactions on Mechatronics."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Mechanical and Automation Engineering notable alumni",
+      "香港中文大學 機械與自動化工程學 著名校友",
+      "CUHK Mechanical and Automation Engineering graduates Hong Kong careers",
+      "CUHK MAE department notable alumni"
+    ]
+  }
+}

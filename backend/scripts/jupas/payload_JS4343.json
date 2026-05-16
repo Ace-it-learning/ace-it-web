@@ -1,0 +1,477 @@
+{
+  "factPack": {
+    "code": "JS4343",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4343"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4343"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/eledn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.fed.cuhk.edu.hk/~ede4343"
+      }
+    ],
+    "programme": {
+      "code": "JS4343",
+      "nameEn": "BA (English Studies) and BEd",
+      "nameZh": "文學士(英國語文研究)及教育學士(英國語文教育)",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 39,
+      "uq": null,
+      "lq": 37.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 39
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 37.5
+        }
+      },
+      "subjectWeighting": "• English must be included"
+    },
+    "jupas": {
+      "code": "JS4343",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4343",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4343",
+      "nameEn": "B.A. (English Studies) and B.Ed. (English Language Education)",
+      "nameZh": "文學士(英國語文研究)及教育學士(英國語文教育)",
+      "shortDescription": "an class=\"before_label\">Short Description The co-terminal double degree programme is a five-year full-time undergraduate programme offered by the Faculty of Education, in collaboration with the Department of English and the English Language Teaching Unit of the Faculty of Arts. We aim at nurturing effective and qualified English language teachers for local primary and secondary schools. The programme focuses on three major disciplines: the study of English language and literature, educational issues, and English language teaching methodology. Students are afforded opportunities to integrate theories and classroom practices in school experiences and teaching practicums in both primary and secondary schools. Students will participate in an 8-week overseas immersion programme with the financial support of the HKSAR Government to further enhance students’ English language proficiency, enrich their understanding of the cultures of English-speaking communities, and expand their experience of overseas educational practices. The two research-based courses embedded in the programme will help students synthesise subject knowledge and independent inquiry, and equip students with informed decisions in their future classroom. Graduates of the programme will be awarded two degrees: Bachelor of Arts and Bachelor of Education, including a recognition as equivalent to a Postgraduate Diploma in Education qualification. They are also considered to have met the HKSAR Government’s Language Proficiency Requirement, and are recognized as subject trained teachers of English in local primary and secondary schools by the Education Bureau.",
+      "programmeWebsite": "http://www.fed.cuhk.edu.hk/~ede4343",
+      "tuition": "HK$47,000",
+      "intake": 12,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 112,
+        "bandB": 84,
+        "bandC": 156,
+        "bandD": 200,
+        "bandE": 169,
+        "total": 721
+      },
+      "offers2025": {
+        "bandA": 12,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 12
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/eledn/",
+      "introduction": "Explore Your Teaching Journey with Our English Studies and English Language Education Programme The five-year B.A. (English Studies) and B.Ed. (English Language Education) Co-terminal Double Degree Programme (ELED Programme) is offered by the Faculty of Education, in collaboration with the Department of English and the English Language Teaching Unit of the Faculty of Arts. We aspire to nurture professional English teachers with conceptual and theoretical knowledge in subject matter, curricula and pedagogy; to develop reflective English teachers with a comprehensive view and insights into educational issues in the local and global contexts; and to produce effective English teachers with solid application skills for communication, teaching and research. The ELED programme offers inbound and outbound experiential learning and community-engagement opportunities to promote an enriched student experience, to develop students’ potential and widen their horizons, and to foster their leadership and whole-personal development. The compulsory 8- to 10-week overseas immersion programme further enhances students’ English language proficiency, enriches their understanding of the cultures of English-speaking communities, and expands their exposure to overseas educational practices.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "Graduates will be awarded two degrees: a Bachelor of Arts and a Bachelor of Education, including recognition as equivalent to a Postgraduate Diploma in Education qualification. Graduates are also considered to have met the HKSAR Government’s Language Proficiency Requirement and are recognized as subject trained teachers of English in local primary and secondary schools by the Education Bureau. The majority of our graduates teach English in local primary or secondary schools. They have a significant impact on the education field, and some of them have taken up senior management, leadership or principal roles in the local school sector or government",
+      "craftYourPath": "Start a rewarding and impactful future career in English language education in a supportive environment that fosters intellectual growth and provides diverse academic pathways. Explore and Engage – Embark on a transformative journey, going beyond the traditional boundaries of education to explore inspiring and innovative pedagogical practices. Unleash Your Potential – Harness the power of experiential learning, using theoretical knowledge to enhance practical skills. Connect and Contribute – Build connections with local educational practitioners in Hong Kong through the teaching practicum and contribute to engaging classroom practices.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4343",
+    "nameEn": "BA (English Studies) and BEd",
+    "nameZh": "文學士(英國語文研究)及教育學士(英國語文教育)",
+    "name": "BA (English Studies) and BEd",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 39,
+    "band_a": 37.5,
+    "uq": null,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4343",
+            "First Year Intake: 12",
+            "Duration: 5 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission statistics:",
+            "Band A applications: 112",
+            "Band A offers: 12",
+            "Total applications: 721",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 39",
+            "Lower quartile (LQ): 37.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admitted subject profile:",
+            "Chinese: 4",
+            "English: 5**",
+            "Mathematics: 5",
+            "Citizenship and Social Development: A",
+            "1st elective: 5",
+            "2nd elective: 5",
+            "3rd elective: 5",
+            "",
+            "General entrance requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 4",
+            "Mathematics Compulsory Part: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Any 2 elective subjects: Level 3",
+            "",
+            "Note: English must be included in the score calculation."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "This co-terminal double degree programme is jointly offered by the Faculty of Education, the Department of English, and the English Language Teaching Unit of the Faculty of Arts.",
+            "The curriculum focuses on three major disciplines: the study of English language and literature, educational issues, and English language teaching methodology.",
+            "Students integrate theories and classroom practices through school experiences and teaching practicums in both primary and secondary schools.",
+            "An 8-week overseas immersion programme, financially supported by the HKSAR Government, enhances English proficiency and cultural understanding.",
+            "Two research-based courses help students synthesise subject knowledge and independent inquiry.",
+            "Graduates receive two degrees: Bachelor of Arts and Bachelor of Education, recognised as equivalent to a Postgraduate Diploma in Education."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are recognised as subject-trained teachers of English in local primary and secondary schools by the Education Bureau.",
+            "They have met the HKSAR Government's Language Proficiency Requirement.",
+            "The majority of graduates teach English in local primary or secondary schools.",
+            "Some graduates have taken up senior management, leadership, or principal roles in the local school sector or government.",
+            "Career paths also include publishing, media, and other fields requiring strong English and education expertise."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing unique residential and extracurricular experiences.",
+            "Students benefit from a comprehensive college system that fosters whole-person development.",
+            "The Faculty of Education is ranked 11th in the world and 4th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+            "The programme includes inbound and outbound experiential learning and community-engagement opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, the programme received 112 Band A applications and made 12 offers, resulting in a Band A offer rate of approximately 10.7%.",
+            "The Band A applications per offer ratio was about 9.3.",
+            "The median admission score was 39 (Best 5), with a lower quartile of 37.5.",
+            "Applicants should aim for strong English results (Level 5** or above) and solid performance in other subjects to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The programme is jointly offered by the Faculty of Education and the Department of English, combining rigorous English studies with professional teacher training.",
+            "Graduates are highly sought after in Hong Kong's education sector, with many becoming English language teachers in local and international schools.",
+            "The curriculum emphasizes both literary analysis and applied linguistics, preparing students for diverse careers in education, publishing, and media.",
+            "Faculty members are leading researchers in English language education and applied linguistics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students.",
+            "Scholarships may cover tuition fees and living expenses.",
+            "Students can also apply for the HKSAR Government's Targeted Scholarship and Financial Support (TSFS) and the Non-local Student Scholarship (NLSPS).",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4343 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 39+**",
+            "",
+            "- Aim for a Best 5 score of at least 39 (median) to be competitive.",
+            "- With LQ at 37.5, a score of 38 or above gives a strong chance.",
+            "",
+            "**2. English is King**",
+            "",
+            "- English must be included in the score calculation and carries heavy weight.",
+            "- Target Level 5** or above in English Language.",
+            "",
+            "**3. Excel in Electives**",
+            "",
+            "- The median admitted student had three electives at Level 5.",
+            "- Choose electives that align with your strengths and interests.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required; demonstrate passion for English teaching.",
+            "- Be ready to discuss educational issues and your teaching philosophy.",
+            "",
+            "**5. Showcase Language Proficiency**",
+            "",
+            "- Highlight any additional language qualifications or experiences.",
+            "- The overseas immersion component values cultural adaptability.",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "- Familiarise yourself with the three disciplines: English studies, education, and teaching methodology.",
+            "- Relate your experiences to these areas in your application.",
+            "",
+            "**7. Leverage School Experience**",
+            "",
+            "- Any teaching or tutoring experience is a plus.",
+            "- Mention volunteer work or leadership in educational settings.",
+            "",
+            "**8. Research the Faculty**",
+            "",
+            "- Know that CUHK Education is ranked 11th globally (THE 2025).",
+            "- Mention specific faculty research interests if possible.",
+            "",
+            "**9. Plan for the 5-Year Journey**",
+            "",
+            "- The double degree is intensive; show commitment and time management skills.",
+            "- Discuss how you will balance academic studies, practicum, and immersion."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4343",
+            "首年學額：12",
+            "修讀年期：5 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 入學統計：",
+            "Band A 申請人數：112",
+            "Band A 取錄人數：12",
+            "總申請人數：721",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：39",
+            "下四分位數：37.5",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績：",
+            "中國語文：4",
+            "英國語文：5**",
+            "數學：5",
+            "公民與社會發展：A",
+            "第一選修科：5",
+            "第二選修科：5",
+            "第三選修科：5",
+            "",
+            "一般入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 4 級",
+            "數學必修部分：第 2 級",
+            "公民與社會發展：達標",
+            "任何 2 個選修科：第 3 級",
+            "",
+            "注意：英國語文必須納入分數計算。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "此雙學位課程由教育學院、英文系及文學院英語教學單位合辦。",
+            "課程專注三大範疇：英語語言及文學研究、教育議題、英語教學法。",
+            "學生透過中小學的學校體驗及教學實習，結合理論與課堂實踐。",
+            "獲香港特區政府資助的 8 週海外沉浸課程，提升英語能力及文化理解。",
+            "兩門研究為本課程幫助學生綜合學科知識與獨立探究。",
+            "畢業生將獲頒文學士及教育學士雙學位，並獲認可等同教育文憑。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生獲教育局認可為本地中小學的英文科受訓教師。",
+            "已符合香港特區政府的語文能力要求。",
+            "大部分畢業生於本地中小學任教英語。",
+            "部分畢業生已擔任學校高層管理、領導或校長職位，或於政府部門工作。",
+            "就業出路亦包括出版、媒體及其他需要英語及教育專業知識的領域。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，各具獨特的住宿及課外體驗。",
+            "全面的書院制度促進全人發展。",
+            "教育學院在《泰晤士高等教育世界大學排名（教育學科）2025》中位列全球第 11 位、亞洲第 4 位。",
+            "課程包括本地及海外的體驗學習及社區參與機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年，課程收到 112 個 Band A 申請，發出 12 個取錄，Band A 取錄率約 10.7%。",
+            "Band A 申請與取錄比例約為 9.3。",
+            "中位數入學分數為 39（最佳 5 科），下四分位數為 37.5。",
+            "申請人應爭取優異的英語成績（第 5** 級或以上）及其他科目的穩定表現。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "課程由教育學院及英文系合辦，結合嚴謹的英語研究與專業教師培訓。",
+            "畢業生在香港教育界備受歡迎，許多成為本地及國際學校的英語教師。",
+            "課程強調文學分析及應用語言學，為學生從事教育、出版、媒體等多元職業做好準備。",
+            "教職員均為英語教育及應用語言學領域的頂尖研究人員。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的入學獎學金。",
+            "獎學金可涵蓋學費及生活開支。",
+            "學生亦可申請香港特區政府的「指定獎學金及財政支援計劃」（TSFS）及「非本地學生獎學金」（NLSPS）。",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4343 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：39+**",
+            "",
+            "- 最佳 5 科目標分數至少 39（中位數）以具競爭力。",
+            "- 下四分位數為 37.5，38 分或以上機會甚高。",
+            "",
+            "**2. 英語是關鍵**",
+            "",
+            "- 英國語文必須納入分數計算，且權重極高。",
+            "- 目標英國語文達第 5** 級或以上。",
+            "",
+            "**3. 選修科要出色**",
+            "",
+            "- 中位數取錄者有三個選修科達第 5 級。",
+            "- 選擇與你優勢及興趣相符的選修科。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 需要面試，展現你對英語教學的熱誠。",
+            "- 準備討論教育議題及你的教學理念。",
+            "",
+            "**5. 展示語文能力**",
+            "",
+            "- 突出任何額外的語文資格或經驗。",
+            "- 海外沉浸部分重視文化適應能力。",
+            "",
+            "**6. 了解課程內容**",
+            "",
+            "- 熟悉三大範疇：英語研究、教育、教學法。",
+            "- 在申請中將你的經歷與這些範疇聯繫。",
+            "",
+            "**7. 善用學校經驗**",
+            "",
+            "- 任何教學或補習經驗都是優勢。",
+            "- 提及教育相關的義工服務或領導角色。",
+            "",
+            "**8. 研究學院背景**",
+            "",
+            "- 知道中大教育學院全球排名第 11（THE 2025）。",
+            "- 如可能，提及特定教職員的研究興趣。",
+            "",
+            "**9. 規劃五年之旅**",
+            "",
+            "- 雙學位課程密集，展現承擔及時間管理能力。",
+            "- 討論如何平衡學術學習、實習及沉浸課程。"
+          ]
+        }
+      }
+    },
+    "code": "JS4343",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 39,
+    "uq": null,
+    "lq": 37.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5**",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 39
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5**",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 37.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is jointly offered by the Faculty of Education and the Department of English, combining rigorous English studies with professional teacher training.",
+      "Graduates are highly sought after in Hong Kong's education sector, with many becoming English language teachers in local and international schools.",
+      "The curriculum emphasizes both literary analysis and applied linguistics, preparing students for diverse careers in education, publishing, and media."
+    ],
+    "searchQueriesUsed": [
+      "CUHK BA (English Studies) and BEd notable alumni",
+      "香港中文大學 文學士(英國語文研究)及教育學士(英國語文教育) 著名校友",
+      "CUHK BA (English Studies) and BEd graduates Hong Kong careers"
+    ]
+  }
+}

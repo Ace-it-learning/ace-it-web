@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { Trophy, Calendar, Star, ArrowLeft, Award, ShoppingBag, Eye } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { apiUrl } from '../utils/apiBase';
 
 const AchievementTimeline = () => {
     const { user } = useAuth();
     const { t } = useLanguage();
     const navigate = useNavigate();
+    const location = useLocation();
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState(null);
@@ -15,30 +17,42 @@ const AchievementTimeline = () => {
     useEffect(() => {
         if (!user) return;
 
-        const fetchData = async () => {
-            try {
-                const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        let cancelled = false;
 
-                // Parallel Fetch: Timeline + Stats
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const uid = encodeURIComponent(user.uid);
                 const [timelineRes, statsRes] = await Promise.all([
-                    fetch(`${API_URL}/api/timeline?uid=${user.uid}`),
-                    fetch(`${API_URL}/api/stats?uid=${user.uid}`)
+                    fetch(apiUrl(`/api/timeline?uid=${uid}`)),
+                    fetch(apiUrl(`/api/stats?uid=${uid}`))
                 ]);
 
-                const timelineData = await timelineRes.json();
-                const statsData = await statsRes.json();
+                const timelineData = timelineRes.ok ? await timelineRes.json() : [];
+                const statsData = statsRes.ok ? await statsRes.json() : null;
 
-                setEvents(timelineData);
-                setStats(statsData);
+                if (!cancelled) {
+                    setEvents(Array.isArray(timelineData) ? timelineData : []);
+                    setStats(statsData);
+                }
             } catch (e) {
                 console.error("Data fetch failed", e);
             } finally {
-                setLoading(false);
+                if (!cancelled) setLoading(false);
             }
         };
 
         fetchData();
-    }, [user]);
+
+        const onFocus = () => {
+            if (location.pathname === '/achievements') fetchData();
+        };
+        window.addEventListener('focus', onFocus);
+        return () => {
+            cancelled = true;
+            window.removeEventListener('focus', onFocus);
+        };
+    }, [user, location.pathname]);
 
     const getEventTitle = (event) => {
         const key = `timeline.events.${event.id}`;

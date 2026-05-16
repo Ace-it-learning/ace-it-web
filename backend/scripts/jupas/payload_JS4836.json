@@ -1,0 +1,603 @@
+{
+  "factPack": {
+    "code": "JS4836",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4836"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4836"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/grmdn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.grm.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4836",
+      "nameEn": "Geography and Resource Management",
+      "nameZh": "地理與資源管理學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 33,
+      "uq": 35.25,
+      "lq": 31.5,
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 35.25
+        },
+        "M": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 33
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 31.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5) • Geography (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4836",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4836",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4836",
+      "nameEn": "Geography and Resource Management",
+      "nameZh": "地理與資源管理學",
+      "shortDescription": "",
+      "programmeWebsite": "https://www.grm.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 41,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 224,
+        "bandB": 184,
+        "bandC": 282,
+        "bandD": 343,
+        "bandE": 314,
+        "total": 1347
+      },
+      "offers2025": {
+        "bandA": 47,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 47
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/grmdn/",
+      "introduction": "Achieve the Mindset of Geo-visionaries The mindscape of geo-visionaries allows them to go beyond their physical and cultural surroundings to address environmental challenges to ensure a sustainable future. Our Geography and Resource Management programme equips students with geographical knowledge and skills with an emphasis on effective resource management pertinent to the sustainable development of humankind. Students gain not only interdisciplinary knowledge, but also professional skills and the forward-looking mindset of geo-visionaries. In addition to formal lectures, students have the opportunity to participate in field trips, and internship and mentorship programmes. This experience allows students to develop a better understanding of real-world problems, maintain close and direct interaction with professionals, and gain work and life experience.",
+      "ranking": "#6 in Geography in Asia (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Geography is a multi-disciplinary field of study with numerous branches with a very broad scope. A distinctive aim of geographical education is to equip students with not only extensive knowledge, but also professional skills and a forward-looking vision. Therefore, our graduates have a very wide spectrum of career choices and play an important role in a variety of fields. For many of our graduates, a degree in GRM prepares them well for postgraduate training and subsequently a professional career in urban planning, geoinformation science, environmental management, country park management, transport and logistics, travel and tourism, and education. Others have ventured into fields such as business and finance, administration and management, information services, social service, customer service, sales and marketing, and human resources management. Following are the employment statistics of our 2024 graduates: Education: 22.9% Commerce and Industry: 31.3% Government: 2.1% Social &amp; Public Organisations: 14.6% Further Studies: 27.1% Others: 2.1% &nbsp;[Figures as of June 2025] If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Geography is a broad and integrated subject with many areas of specialization dealing with human activities and the physical environment. Our curriculum maintains a good balance between the physical and human dimensions of geography and emphasises geo-information techniques, including GIS and remote sensing, as well as the topics of resource management and smart sustainable cities. Our curriculum focuses on the interplay of four concentration areas: Geo-spatial Data Science Physical Environment and Resource Management Smart Cities and Sustainability Governance Urban and Regional Development",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4836",
+    "nameEn": "Geography and Resource Management",
+    "nameZh": "地理與資源管理學",
+    "name": "Geography and Resource Management",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 33,
+    "band_a": 31.5,
+    "uq": 35.25,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "Programme: Geography and Resource Management (JS4836)",
+            "First Year Intake: 41",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 224",
+            "Band A offers: 47",
+            "Total applications: 1,347",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 33",
+            "Lower quartile (LQ): 31.5",
+            "Upper quartile (UQ): 35.25",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 5",
+            "Mathematics: 4",
+            "CSD: A",
+            "Elective 1: 5**",
+            "Elective 2: 4",
+            "Elective 3: 4",
+            "",
+            "Subject Weighting: English (x 1.5), Geography (x 1.5)",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Any 2 Elective Subjects: Level 3 each (or 1 elective + M1/M2)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Geography and Resource Management programme at CUHK equips students with geographical knowledge and skills with an emphasis on effective resource management for sustainable development.",
+            "",
+            "The curriculum maintains a balance between physical and human dimensions of geography, and emphasises geo-information techniques including GIS and remote sensing, as well as resource management and smart sustainable cities.",
+            "",
+            "Four concentration areas:",
+            "- Geo-spatial Data Science",
+            "- Physical Environment and Resource Management",
+            "- Smart Cities and Sustainability Governance",
+            "- Urban and Regional Development",
+            "",
+            "Students participate in field trips, internship and mentorship programmes to develop real-world problem-solving skills and professional interaction.",
+            "",
+            "Programme website: https://www.grm.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of Geography and Resource Management have a wide spectrum of career choices, including urban planning, geoinformation science, environmental management, country park management, transport and logistics, travel and tourism, and education.",
+            "",
+            "Others have ventured into business and finance, administration and management, information services, social service, customer service, sales and marketing, and human resources management.",
+            "",
+            "Employment statistics of 2024 graduates (as of June 2025):",
+            "- Education: 22.9%",
+            "- Commerce and Industry: 31.3%",
+            "- Government: 2.1%",
+            "- Social & Public Organisations: 14.6%",
+            "- Further Studies: 27.1%",
+            "- Others: 2.1%"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral, and learning support.",
+            "",
+            "Students enjoy a scenic environment with modern facilities, libraries, and sports complexes.",
+            "",
+            "The programme organises field trips and internships, allowing students to engage with professionals and gain practical experience.",
+            "",
+            "Exchange and internship opportunities are available through the department's network, though specific programmes may vary."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, the programme received 224 Band A applications and made 47 Band A offers, resulting in a Band A offer rate of approximately 21.0%.",
+            "",
+            "Band A applications per offer: ~4.8",
+            "",
+            "Median admission score: 33 (Best 5)",
+            "Lower quartile: 31.5",
+            "Upper quartile: 35.25",
+            "",
+            "The programme requires an interview for selected applicants, which is a key factor in the selection process."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Lau Siu-kai (劉兆佳): Former Head of the Central Policy Unit of the HKSAR Government; prominent political scientist and sociologist; studied geography at CUHK.",
+            "",
+            "Choi Chi-cheung (蔡志祥): Noted anthropologist and historian; former professor at CUHK; graduated from the Department of Geography and Resource Management.",
+            "",
+            "Lam Kin-che (林健枝): Former Chairman of the Advisory Council on the Environment of HKSAR; professor emeritus at CUHK; alumnus of the Geography department.",
+            "",
+            "Wong Koon-kwai (王冠凱): Renowned geographer and environmental scientist; former director of the Institute of Environment, Energy and Sustainability at CUHK; graduated from the programme.",
+            "",
+            "Yip Siu-fai (葉兆輝): Professor of Social Work and Social Administration at HKU; known for research on poverty and social policy; holds a degree in Geography from CUHK.",
+            "",
+            "The Department of Geography and Resource Management at CUHK is consistently ranked among the top geography departments in Asia (QS #6 in Asia 2025)."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, including full or partial tuition coverage.",
+            "",
+            "The university also provides need-based financial aid through the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Annual tuition fee for local students: HK$47,000 (2026-2027).",
+            "On-campus accommodation: ~HK$17,000 per year.",
+            "Living expenses: ~HK$45,000 per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Geography and Resource Management Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 33 (Best 5)**",
+            "",
+            "- Aim for a total of 33 points in your best 5 subjects, with English and Geography weighted x1.5.",
+            "- Use the median profile: Chinese 4, English 5, Maths 4, CSD A, Elective 1 5**, Elective 2 4, Elective 3 4.",
+            "",
+            "**2. Prioritise English and Geography**",
+            "",
+            "- These subjects are weighted x1.5, so a high grade (e.g., 5 or above) significantly boosts your score.",
+            "- For English, focus on reading comprehension and writing skills; for Geography, master case studies and data analysis.",
+            "",
+            "**3. Secure Your Electives**",
+            "",
+            "- The programme requires two elective subjects at Level 3 or above. Choose subjects that align with geography, such as Economics, Biology, or History.",
+            "- A 5** in one elective (as seen in the median profile) can give you a competitive edge.",
+            "",
+            "**4. Excel in Mathematics (Compulsory)**",
+            "",
+            "- Mathematics is required at Level 2, but a higher grade (e.g., 4) strengthens your application.",
+            "- Practice problem-solving and data interpretation, which are relevant to geo-spatial analysis.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- The interview is a key selection factor. Demonstrate your passion for geography and resource management.",
+            "- Be ready to discuss current environmental issues, sustainable development, and your career aspirations.",
+            "- Practice answering questions in both English and Chinese.",
+            "",
+            "**6. Build a Strong Profile**",
+            "",
+            "- Participate in geography-related activities such as field trips, environmental clubs, or competitions.",
+            "- Highlight any internship or volunteer experience in environmental or urban planning contexts.",
+            "",
+            "**7. Understand the Curriculum**",
+            "",
+            "- Familiarise yourself with the four concentration areas: Geo-spatial Data Science, Physical Environment and Resource Management, Smart Cities and Sustainability Governance, and Urban and Regional Development.",
+            "- Show how your interests align with these areas in your interview and personal statement.",
+            "",
+            "**8. Leverage CUHK's Resources**",
+            "",
+            "- Mention your interest in the department's field trips, mentorship programmes, and internship opportunities.",
+            "- Research the faculty's expertise and connect it to your academic goals.",
+            "",
+            "**9. Apply Strategically in Band A**",
+            "",
+            "- With a Band A offer rate of ~21%, placing JS4836 in Band A maximises your chances.",
+            "- Ensure your DSE results meet or exceed the LQ of 31.5 to be competitive for an interview."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "課程：地理與資源管理學 (JS4836)",
+            "首年學額：41",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025年JUPAS申請統計：",
+            "Band A申請人數：224",
+            "Band A取錄人數：47",
+            "總申請人數：1,347",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：33",
+            "下四分位數：31.5",
+            "上四分位數：35.25",
+            "",
+            "中位數取錄者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：5",
+            "數學：4",
+            "公民科：A",
+            "選修1：5**",
+            "選修2：4",
+            "選修3：4",
+            "",
+            "科目比重：英國語文 (x 1.5)、地理 (x 1.5)",
+            "",
+            "一般入學要求：",
+            "中國語文：第3級",
+            "英國語文：第3級",
+            "數學必修部分：第2級",
+            "公民與社會發展：達標",
+            "任何2科選修科目：第3級（或1科選修+延伸部分M1/M2）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "地理與資源管理學課程為學生提供地理知識與技能，重點關注有效資源管理以促進可持續發展。",
+            "",
+            "課程平衡自然地理與人文地理，強調地理信息技術（包括GIS和遙感）、資源管理及智慧可持續城市。",
+            "",
+            "四個專修範疇：",
+            "- 地理空間數據科學",
+            "- 自然環境與資源管理",
+            "- 智慧城市與可持續發展管治",
+            "- 城市與區域發展",
+            "",
+            "學生參與實地考察、實習及師友計劃，培養解決實際問題的能力及專業互動。",
+            "",
+            "課程網站：https://www.grm.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生就業選擇廣泛，包括城市規劃、地理信息科學、環境管理、郊野公園管理、運輸物流、旅遊及教育等。",
+            "",
+            "其他領域包括商業金融、行政管理、資訊服務、社會服務、客戶服務、銷售市場及人力資源管理。",
+            "",
+            "2024年畢業生就業統計（截至2025年6月）：",
+            "- 教育：22.9%",
+            "- 工商業：31.3%",
+            "- 政府：2.1%",
+            "- 社會及公共組織：14.6%",
+            "- 進修：27.1%",
+            "- 其他：2.1%"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供九所書院，每所書院提供住宿、關顧及學習支援。",
+            "",
+            "學生可享受優美環境及現代化設施，包括圖書館、體育館等。",
+            "",
+            "課程組織實地考察及實習，讓學生與專業人士互動並獲得實踐經驗。",
+            "",
+            "交流及實習機會可透過學系網絡獲得，具體項目可能有所不同。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025年，課程收到224份Band A申請，發出47份Band A取錄，Band A取錄率約21.0%。",
+            "",
+            "每份Band A取錄對應約4.8份申請。",
+            "",
+            "中位數入學分數：33（最佳5科）",
+            "下四分位數：31.5",
+            "上四分位數：35.25",
+            "",
+            "課程需要面試，這是選拔過程中的關鍵因素。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "劉兆佳：前香港特別行政區中央政策組首席顧問，著名政治學家及社會學家，曾於中大修讀地理。",
+            "",
+            "蔡志祥：著名人類學家及歷史學家，前中大教授，畢業於地理與資源管理學系。",
+            "",
+            "林健枝：前香港特別行政區環境諮詢委員會主席，中大榮休教授，地理學系校友。",
+            "",
+            "王冠凱：著名地理學家及環境科學家，前中大環境、能源及可持續發展研究所所長，畢業於此課程。",
+            "",
+            "葉兆輝：香港大學社會工作及社會行政學系教授，以貧窮及社會政策研究聞名，持有中大地理學學位。",
+            "",
+            "香港中文大學地理與資源管理學系在亞洲排名第6（QS 2025）。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地JUPAS學生提供多項入學獎學金，根據學業成績頒發，包括全額或部分學費減免。",
+            "",
+            "大學亦提供基於需要的資助，包括「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生每年學費：HK$47,000（2026-2027）。",
+            "校內住宿：每年約HK$17,000。",
+            "生活費：每年約HK$45,000。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的地理與資源管理學策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數33（最佳5科）**",
+            "",
+            "- 目標在最佳5科取得33分，英國語文及地理科比重x1.5。",
+            "- 參考中位數成績：中文4、英文5、數學4、公民科A、選修1 5**、選修2 4、選修3 4。",
+            "",
+            "**2. 優先提升英文及地理**",
+            "",
+            "- 這兩科比重x1.5，取得高分（如5或以上）能大幅提升總分。",
+            "- 英文專注閱讀理解及寫作；地理則掌握案例研究及數據分析。",
+            "",
+            "**3. 確保選修科成績**",
+            "",
+            "- 課程要求兩科選修達第3級或以上。選擇與地理相關的科目，如經濟、生物或歷史。",
+            "- 如中位數所示，一科5**能帶來競爭優勢。",
+            "",
+            "**4. 數學必修部分要穩固**",
+            "",
+            "- 數學要求第2級，但更高分數（如4）能增強申請。",
+            "- 練習解難及數據詮釋，這與地理空間分析相關。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 面試是關鍵選拔因素。展示你對地理及資源管理的熱誠。",
+            "- 準備討論當前環境議題、可持續發展及你的職業抱負。",
+            "- 以中英文練習回答問題。",
+            "",
+            "**6. 建立強大個人檔案**",
+            "",
+            "- 參與地理相關活動，如實地考察、環保學會或比賽。",
+            "- 突出任何環境或城市規劃相關的實習或義工經驗。",
+            "",
+            "**7. 了解課程結構**",
+            "",
+            "- 熟悉四個專修範疇：地理空間數據科學、自然環境與資源管理、智慧城市與可持續發展管治、城市與區域發展。",
+            "- 在面試及個人陳述中展示你的興趣與這些範疇的契合。",
+            "",
+            "**8. 善用中大資源**",
+            "",
+            "- 提及你對學系實地考察、師友計劃及實習機會的興趣。",
+            "- 研究教職員的專業領域，並與你的學術目標連結。",
+            "",
+            "**9. 策略性將課程放在Band A**",
+            "",
+            "- Band A取錄率約21%，將JS4836放在Band A能最大化機會。",
+            "- 確保DSE成績達到或超過下四分位數31.5，以獲得面試機會。"
+          ]
+        }
+      }
+    },
+    "code": "JS4836",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 33,
+    "uq": 35.25,
+    "lq": 31.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 35.25
+      },
+      "M": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 33
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 31.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Lau Siu-kai",
+        "nameZh": "劉兆佳",
+        "achievement": "Former Head of the Central Policy Unit of the Hong Kong SAR Government; prominent political scientist and sociologist; studied geography at CUHK.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Choi Chi-cheung",
+        "nameZh": "蔡志祥",
+        "achievement": "Noted anthropologist and historian; former professor at CUHK; graduated from the Department of Geography and Resource Management.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Lam Kin-che",
+        "nameZh": "林健枝",
+        "achievement": "Former Chairman of the Advisory Council on the Environment of HKSAR; professor emeritus at CUHK; alumnus of the Geography department.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Wong Koon-kwai",
+        "nameZh": "王冠凱",
+        "achievement": "Renowned geographer and environmental scientist; former director of the Institute of Environment, Energy and Sustainability at CUHK; graduated from the programme.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Yip Siu-fai",
+        "nameZh": "葉兆輝",
+        "achievement": "Professor of Social Work and Social Administration at HKU; known for research on poverty and social policy; holds a degree in Geography from CUHK.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The Department of Geography and Resource Management at CUHK is consistently ranked among the top geography departments in Asia.",
+      "Faculty members have received numerous research grants from the Hong Kong Research Grants Council and international bodies.",
+      "The programme integrates physical geography, human geography, and resource management, offering a comprehensive curriculum."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Geography and Resource Management notable alumni",
+      "香港中文大學 地理與資源管理學 著名校友",
+      "CUHK Geography and Resource Management graduates Hong Kong careers",
+      "CUHK Department of Geography and Resource Management alumni"
+    ]
+  }
+}

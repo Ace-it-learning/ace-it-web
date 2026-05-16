@@ -1,0 +1,445 @@
+{
+  "factPack": {
+    "code": "JS4760",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4760"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4760"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/indan/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.sci.cuhk.edu.hk/idadm"
+      }
+    ],
+    "programme": {
+      "code": "JS4760",
+      "nameEn": "Interdisciplinary Data Analytics &",
+      "nameZh": "跨學科數據分析及Ｘ雙主修課程",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Selection Principle",
+      "median": 35,
+      "uq": null,
+      "lq": 34.75,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 35
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 34.75
+        }
+      },
+      "subjectWeighting": "Subject Weighting"
+    },
+    "jupas": {
+      "code": "JS4760",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4760",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4760",
+      "nameEn": "Interdisciplinary Data Analytics & X Double Major Programme",
+      "nameZh": "跨學科數據分析及Ｘ雙主修課程",
+      "shortDescription": "an class=\"before_label\">Short Description The Bachelor of Science in Interdisciplinary Data Analytics &amp; X is a comprehensive Collaborative Double Major Programme jointly offered by The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK (SZ)). Students will pursue a first major in Interdisciplinary Data Analytics offered by CUHK, and a second major among specific academic disciplines (business, engineering and science) offered by either CUHK or CUHK(SZ). Major programmes offered by CUHK: Information Engineering Integrated BBA Mathematics Statistics Systems Engineering and Engineering Management Major programmes offered by CUHK(SZ): Computer Science and Engineering Electrical and Computer Engineering Financial Engineering Marketing and Communication Mathematics and Applied Mathematics Statistics The programme encompasses a wide spectrum of subject knowledge and skills in business, engineering and science, with real-life application of big data and business analytics for innovation and development, and in-depth study of a chosen subject. It offers exposure to the Greater Bay Area (GBA) cities, and is ideally suited for students interested in pursuing a career in leading national organizations and multi-national enterprises committed to developing markets in the GBA or Mainland China.",
+      "programmeWebsite": "https://www.sci.cuhk.edu.hk/idadm",
+      "tuition": "HK$47,000",
+      "intake": 28,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics Extended Module 1 or 2. (2) Preferred subjects: Mathematics Extended Module 1 or 2, Economics, and ICT. (3) Taking Mathematics Extended Module 1 or 2 will be strongly recommended. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 105,
+        "bandB": 47,
+        "bandC": 80,
+        "bandD": 116,
+        "bandE": 101,
+        "total": 449
+      },
+      "offers2025": {
+        "bandA": 28,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 28
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/indan/",
+      "introduction": "CUHK x CUHK(SZ) “2+2” Collaborative Double Major Programme In this first-of-its-kind collaborative double-major programme, The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK(SZ)) jointly launched a new Greater Bay Area (GBA) “2+2” degree programme – Interdisciplinary Data Analytics &amp; X Double Major Programme (IDADM) – providing students with an immersive educational experience in the emerging southern Chinese megalopolis and contributing to the region’s talent pool. IDADM students will pursue two majors: Interdisciplinary Data Analytics, offered by CUHK, and another major from among specific academic disciplines (science, engineering and business), offered by either CUHK or CUHK(SZ). Major programmes offered by CUHK: • Information Engineering • Integrated BBA • Mathematics • Statistics • Systems Engineering and Engineering Management Major programmes offered by CUHK(SZ): • Computer Science and Engineering • Electrical and Computer Engineering • Financial Engineering • Marketing and Communication • Mathematics and Applied Mathematics • Statistics In the four-year programme, IDADM students will attend classes and participate in learning and research activities on both the CUHK Hong Kong and Shenzhen campuses.",
+      "ranking": "",
+      "careerProspects": "The programme is ideally suited for students interested in pursuing a career in leading national organisations and multinational enterprises committed to developing markets in the GBA or the rest of Chinese Mainland: Students acquire a broad base of knowledge in science, engineering and business with the ability to integrate interdisciplinary knowledge for innovation and technology development. They develop effective analytical and communication skills focusing on the public, non-public and NGOs sectors. They study with other students from diverse backgrounds and exposure to cities in the GBA and other parts of Asia, engaging in collaboration and teamwork. They build strong industry and personal networks. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "The programme in Interdisciplinary Data Analytics encompasses a wide spectrum of subject knowledge and skills in business, engineering and science, with real-life applications of big data and business analytics for innovation and development. The other major in a related discipline enables in-depth studies. The programme also includes credit-bearing field trip(s) in the GBA and other parts of Asia. Guaranteed admission to CUHK’s flagship Co-operative Education Programme provides IDADM students with full-time paid work experience in CUHK’s established industry network in the region.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4760",
+    "nameEn": "Interdisciplinary Data Analytics &",
+    "nameZh": "跨學科數據分析及Ｘ雙主修課程",
+    "name": "Interdisciplinary Data Analytics &",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 35,
+    "band_a": 34.75,
+    "uq": null,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "DSE Core Subjects Minimum Level: Chinese Language 3, English Language 3, Mathematics Compulsory Part 3, Citizenship and Social Development Attained.",
+            "Elective Subjects: Any 2 subjects at Level 3. May include 2 electives or 1 elective + M1/M2. Preferred subjects: M1/M2, Economics, ICT. M1/M2 strongly recommended.",
+            "First Year Intake: 28. Duration: 4 years. Tuition: HK$47,000 (local). Interview: Yes (shortlisted candidates).",
+            "2025 JUPAS Application Statistics: Band A applications 105, Band B 47, Band C 80, Band D 116, Band E 101, Total 449.",
+            "2025 JUPAS Offers: Band A 28, Band B 0, Band C 0, Band D 0, Band E 0, Total 28.",
+            "2025 JUPAS Admission Scores (Selection Principle):",
+            "Median: 35",
+            "Lower quartile (LQ): 34.75",
+            "Upper quartile (UQ): null",
+            "Median Admit Subject Profile: Chinese 4, English 4, Mathematics 5*, CSD A, M1/M2 5, Elective 1 5, Elective 2 4.",
+            "LQ Admit Subject Profile: Chinese 4, English 3, Mathematics 5, CSD A, M1/M2 5*, Elective 1 4, Elective 2 3.",
+            ""
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Programme Structure",
+          "content": [
+            "The Bachelor of Science in Interdisciplinary Data Analytics & X is a Collaborative Double Major Programme jointly offered by CUHK and CUHK (Shenzhen).",
+            "Students pursue a first major in Interdisciplinary Data Analytics (CUHK) and a second major from specific disciplines (business, engineering, science) offered by either CUHK or CUHK(SZ).",
+            "CUHK major options: Information Engineering, Integrated BBA, Mathematics, Statistics, Systems Engineering and Engineering Management.",
+            "CUHK(SZ) major options: Computer Science and Engineering, Electrical and Computer Engineering, Financial Engineering, Marketing and Communication, Mathematics and Applied Mathematics, Statistics.",
+            "The programme features a '2+2' structure with classes and research activities on both Hong Kong and Shenzhen campuses.",
+            "Includes credit-bearing field trips in the GBA and other parts of Asia.",
+            "Guaranteed admission to CUHK’s Co-operative Education Programme for full-time paid work experience.",
+            ""
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are ideally suited for careers in leading national organisations and multinational enterprises committed to developing markets in the GBA or Mainland China.",
+            "Students acquire broad knowledge in science, engineering and business with ability to integrate interdisciplinary knowledge for innovation and technology development.",
+            "Develop effective analytical and communication skills for public, non-public and NGOs sectors.",
+            "Build strong industry and personal networks through exposure to GBA cities and diverse peers.",
+            ""
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK’s Shatin campus offers a vibrant college system with 9 colleges providing holistic education and residential life.",
+            "Students enjoy access to state-of-the-art libraries, sports facilities, and research centres.",
+            "The programme includes learning activities on both CUHK Hong Kong and Shenzhen campuses, offering a unique cross-border experience.",
+            "Credit-bearing field trips in the GBA and Asia enhance cultural and professional exposure.",
+            ""
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "2025 Band A application-to-offer ratio: 105 applications for 28 offers, approximately 3.8 applicants per offer.",
+            "Band A offer rate: 28/105 ≈ 26.7%.",
+            "Median admission score: 35; LQ: 34.75 (Selection Principle).",
+            "Interview is required for shortlisted candidates.",
+            "Strongly recommended to include M1/M2 and preferred electives (Economics, ICT) to boost competitiveness.",
+            ""
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme is a new dual-major launched in 2022, so no notable alumni have graduated yet.",
+            "Faculty includes experts from Engineering, Business, and Science faculties with strong industry connections.",
+            "Students have won awards in data analytics competitions (e.g., HSBC Data Science Challenge).",
+            ""
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships based on academic merit for local and non-local students, covering tuition and living expenses.",
+            "JUPAS students may be eligible for the CUHK Admission Scholarship Scheme.",
+            "Government schemes: TSFS (means-tested) and NLSPS (non-means-tested) available for local students.",
+            "For details: admission.cuhk.edu.hk/fees-financing-your-studies/",
+            ""
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4760 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 35+**",
+            "",
+            "- Aim for a total score of at least 35 (median) to be competitive. With LQ at 34.75, a score of 35 or above gives you a strong chance.",
+            "- Use the Selection Principle: your best 5 subjects (including core and electives) are considered. Prioritise high grades in Mathematics and M1/M2.",
+            "",
+            "**2. Mathematics & M1/M2 Are Key**",
+            "",
+            "- Median admit profile shows Mathematics 5* and M1/M2 5. A strong performance in these subjects is critical.",
+            "- If you take M1/M2, ensure you score at least 5 to match the median profile.",
+            "",
+            "**3. Strengthen Your Electives**",
+            "",
+            "- Preferred electives: M1/M2, Economics, ICT. Aim for Level 5 or above in at least two electives.",
+            "- The median profile shows Elective 1 at 5 and Elective 2 at 4. Try to exceed these benchmarks.",
+            "",
+            "**4. English & Chinese: Meet the Threshold**",
+            "",
+            "- Minimum English 3, Chinese 3. Median admits achieved English 4, Chinese 4. A higher grade in English can boost your overall score.",
+            "- For Chinese, Level 4 is typical among admits. Do not neglect this subject.",
+            "",
+            "**5. CSD: Attained is Enough**",
+            "",
+            "- Citizenship and Social Development only requires 'Attained'. It does not contribute to the score calculation, so focus your effort on other subjects.",
+            "",
+            "**6. Prepare for the Interview**",
+            "",
+            "- Interview is required for shortlisted candidates. Expect questions on your interest in data analytics, cross-disciplinary learning, and the GBA.",
+            "- Demonstrate knowledge of the programme's '2+2' structure and your motivation for studying across Hong Kong and Shenzhen.",
+            "",
+            "**7. Band A Placement is Crucial**",
+            "",
+            "- All 28 offers in 2025 went to Band A applicants. Place JS4760 as your first choice (Band A) to be considered.",
+            "- Use Band B-E for safer options, but only Band A gives you a realistic chance here.",
+            "",
+            "**8. Leverage the Co-operative Education Programme**",
+            "",
+            "- Guaranteed admission to CUHK’s Co-operative Education Programme provides paid work experience. Mention this in your interview to show you understand the programme’s unique benefits.",
+            "",
+            "**9. Explore the GBA Advantage**",
+            "",
+            "- The programme includes field trips and study on both campuses. Highlight your interest in the Greater Bay Area’s development and how you plan to build a career there.",
+            "- Research companies in the GBA that align with your second major (e.g., tech firms for Computer Science, banks for Financial Engineering).",
+            ""
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "DSE核心科目最低要求：中國語文3級、英國語文3級、數學必修部分3級、公民與社會發展達標。",
+            "選修科目：任何2科達3級。可包括2個選修科或1個選修科+延伸數學M1/M2。優先考慮科目：M1/M2、經濟、資訊及通訊科技。強烈建議修讀M1/M2。",
+            "首年學額：28。修讀年期：4年。首年學費：港幣47,000元（本地生）。面試：需要（獲篩選申請人）。",
+            "2025年聯招申請統計：Band A 105人、Band B 47人、Band C 80人、Band D 116人、Band E 101人，總申請449人。",
+            "2025年聯招取錄：Band A 28人、Band B 0人、Band C 0人、Band D 0人、Band E 0人，總取錄28人。",
+            "2025年聯招入學分數（擇優原則）：",
+            "中位數：35",
+            "下四分位數：34.75",
+            "上四分位數：null",
+            "中位數取錄者科目成績：中國語文4、英國語文4、數學5*、公民科A、M1/M2 5、選修一5、選修二4。",
+            "下四分位數取錄者科目成績：中國語文4、英國語文3、數學5、公民科A、M1/M2 5*、選修一4、選修二3。",
+            ""
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "跨學科數據分析及Ｘ雙主修課程是由香港中文大學（中大）與香港中文大學（深圳）合辦的協作雙主修課程。",
+            "學生將修讀中大提供的跨學科數據分析主修，以及由中大或港中大（深圳）提供的特定學科（商科、工程、科學）第二主修。",
+            "中大主修選項：信息工程學、綜合工商管理、數學、統計學、系統工程與工程管理學。",
+            "港中大（深圳）主修選項：計算機科學與工程、電子與計算機工程、金融工程、市場營銷與傳播、數學與應用數學、統計學。",
+            "課程採用「2+2」結構，學生在香港及深圳兩個校園上課及參與研究活動。",
+            "包括大灣區及亞洲其他地區的學分制實地考察。",
+            "保證入讀中大的旗艦合作教育計劃，獲得全職有薪工作經驗。",
+            ""
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生非常適合在領先的國家機構及致力於開拓大灣區或中國內地市場的跨國企業發展事業。",
+            "學生獲得科學、工程和商業的廣泛知識，能夠整合跨學科知識進行創新和技術開發。",
+            "培養有效的分析和溝通技巧，適用於公共、非公共及非政府組織。",
+            "通過接觸大灣區城市及多元同儕，建立強大的行業及個人網絡。",
+            ""
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "中大的沙田校園提供充滿活力的書院系統，設有9所書院，提供全人教育和住宿生活。",
+            "學生可使用先進的圖書館、體育設施及研究中心。",
+            "課程包括在香港及深圳兩個校園的學習活動，提供獨特的跨境體驗。",
+            "大灣區及亞洲的學分制實地考察豐富文化及專業視野。",
+            ""
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選",
+          "content": [
+            "2025年Band A申請與取錄比例：105份申請對28個學額，約3.8人競爭一個學額。",
+            "Band A取錄率：28/105 ≈ 26.7%。",
+            "中位入學分數：35；下四分位數：34.75（擇優原則）。",
+            "需要面試（獲篩選申請人）。",
+            "強烈建議修讀M1/M2及優先選修科（經濟、資訊及通訊科技）以提升競爭力。",
+            ""
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "本課程為2022年新開辦的雙主修課程，尚未有知名校友畢業。",
+            "教學團隊包括工程、商科及科學學院的專家，與業界聯繫緊密。",
+            "學生曾在數據分析比賽中獲獎（例如滙豐數據科學挑戰賽）。",
+            ""
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大提供基於學術成績的入學獎學金，涵蓋本地及非本地學生的學費及生活費。",
+            "聯招學生可申請中大入學獎學金計劃。",
+            "政府資助：TSFS（需入息審查）及NLSPS（免入息審查）供本地學生申請。",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/",
+            ""
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS4760策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：35分或以上**",
+            "",
+            "- 爭取總分至少35分（中位數）以具競爭力。下四分位數為34.75，35分或以上機會較大。",
+            "- 採用擇優原則：計算最佳5科（包括核心及選修）。重點提升數學及M1/M2成績。",
+            "",
+            "**2. 數學及M1/M2是關鍵**",
+            "",
+            "- 中位取錄者數學5*、M1/M2 5。這些科目表現至關重要。",
+            "- 如修讀M1/M2，目標至少5級以符合中位數水平。",
+            "",
+            "**3. 強化選修科**",
+            "",
+            "- 優先選修科：M1/M2、經濟、資訊及通訊科技。目標至少兩科達5級或以上。",
+            "- 中位數顯示選修一5級、選修二4級，盡量超越此基準。",
+            "",
+            "**4. 英文及中文：達到門檻**",
+            "",
+            "- 最低要求英文3級、中文3級。中位取錄者英文4級、中文4級。英文成績較高可提升總分。",
+            "- 中文方面，取錄者普遍達4級，切勿忽視。",
+            "",
+            "**5. 公民科：達標即可**",
+            "",
+            "- 公民與社會發展只需「達標」，不計入分數計算，集中精力於其他科目。",
+            "",
+            "**6. 準備面試**",
+            "",
+            "- 獲篩選申請人需參加面試。預期問題包括你對數據分析的興趣、跨學科學習及大灣區的認識。",
+            "- 展示你對課程「2+2」結構的了解，以及在香港和深圳兩地學習的動機。",
+            "",
+            "**7. Band A選擇至關重要**",
+            "",
+            "- 2025年所有28個學額均給予Band A申請人。將JS4760放在Band A首位才獲考慮。",
+            "- Band B-E可選較穩妥的課程，但只有Band A才有實際機會。",
+            "",
+            "**8. 善用合作教育計劃**",
+            "",
+            "- 保證入讀中大合作教育計劃，提供有薪工作經驗。面試時提及此點，顯示你了解課程獨特優勢。",
+            "",
+            "**9. 探索大灣區優勢**",
+            "",
+            "- 課程包括實地考察及兩校園學習。強調你對大灣區發展的興趣，以及如何規劃在該區發展事業。",
+            "- 研究與你第二主修相關的大灣區企業（例如計算機科學對應科技公司，金融工程對應銀行）。",
+            ""
+          ]
+        }
+      }
+    },
+    "code": "JS4760",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 35,
+    "uq": null,
+    "lq": 34.75,
+    "formula": "Selection Principle",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 35
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 34.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is a new dual-major launched in 2022, so no notable alumni have graduated yet.",
+      "Faculty includes experts from Engineering, Business, and Science faculties with strong industry connections.",
+      "Students have won awards in data analytics competitions (e.g., HSBC Data Science Challenge)."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Interdisciplinary Data Analytics & notable alumni",
+      "香港中文大學 跨學科數據分析及Ｘ雙主修課程 著名校友",
+      "CUHK Interdisciplinary Data Analytics & graduates Hong Kong careers"
+    ]
+  }
+}

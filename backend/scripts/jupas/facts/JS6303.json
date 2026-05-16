@@ -1,0 +1,66 @@
+{
+  "code": "JS6303",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6303"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.ugadmissions.engg.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6303",
+    "nameEn": "Bachelor of Engineering Elite Programme",
+    "nameZh": "Bachelor of Engineering Elite Programme",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Eng + Math + Best 3 Subjects",
+    "median": 36,
+    "uq": 38,
+    "lq": 35
+  },
+  "jupas": {
+    "code": "JS6303",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6303",
+    "nameEn": "Bachelor of Engineering Elite Programme",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description The Faculty of Engineering aims to nurture highly talented and top-performing engineering students to be future leaders in frontier technology developments and rapidly advancing industries. The training flexibility and curriculum elements for these students are beyond the traditional engineering education",
+    "programmeWebsite": "https://www.ugadmissions.engg.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 327,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 103,
+      "bandB": 67,
+      "bandC": 108,
+      "bandD": 133,
+      "bandE": 124,
+      "total": 535
+    },
+    "offers2025": {
+      "bandA": 18,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 18
+    },
+    "facultyPhone": "+852 3917 2803"
+  },
+  "admissionsSnippet": "--> Home | HKU Engineering Undergraduate Admissions top of page HKU Engineering Undergraduate&nbsp;Admissions Home Discover About HKU Engineering Why HKU Engineering Professional Recognition Our Departments Videos Programmes Overview of HKU Engineering Programmes JS6303 Engineering Elite Programme JS6377 BEng X + MScEng AIE JS6937 Global Engineering and Business JS6353 Civil Engineering JS6987 Electrical Engineering JS6315 Data and Systems Engineering JS6339 Mechanical Engineering Programmes offered by SCDS Programmes offered by SBME Programmes offered by i-School Apply JUPAS applicants International Qualifications applicants Mainland applicants Admissions Requirements Download HKUENGG Admissions Brochure Contact Contact Details HKU Campus Map More Use tab to navigate through the menu items. ADMISSIONS BROCHURE Programme&nbsp; information ADMISSIONS REQUIREMENTS STUDENT SHARING HKU Engineering Undergraduate&nbsp;Admissions Address : Room G01A, G/F, Haking Wong Building,&nbsp; The University of Hong Kong,&nbsp; Pokfulam Road, Hong Kong. Email :&nbsp; enggugad@hku.hk Copyright &copy; 2025 Faculty of Engineering, The University of Hong Kong. All rights reserved. bottom of page"
+}

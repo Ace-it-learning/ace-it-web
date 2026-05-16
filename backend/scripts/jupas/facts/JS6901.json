@@ -1,0 +1,66 @@
+{
+  "code": "JS6901",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6901"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.scifac.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6901",
+    "nameEn": "Bachelor of Science",
+    "nameZh": "Bachelor of Science",
+    "university": "香港大學",
+    "facultyZh": "理學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 37,
+    "uq": 39,
+    "lq": 36
+  },
+  "jupas": {
+    "code": "JS6901",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6901",
+    "nameEn": "Bachelor of Science",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.scifac.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 253,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 864,
+      "bandB": 697,
+      "bandC": 881,
+      "bandD": 952,
+      "bandE": 811,
+      "total": 4205
+    },
+    "offers2025": {
+      "bandA": 164,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 164
+    },
+    "facultyPhone": "+852 3917 2683"
+  },
+  "admissionsSnippet": "Faculty of Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content HKU Home Contact Us facebook Twitter Instagram Youtube Xiaohongshu Search search Staff Intranet About Us Dean's Message Faculty Vision Meet Our Mascot HKU Statistics Departments Faculty Members Faculty Management Team Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Faculty Office Staff Science Distinguished Visiting Scholars Scheme Facilities &amp; Infrastructure Strategic Moves, Quick Facts and Achievements Quick Facts &amp; Figures Awards and Achievements Emeritus Professors Souvenirs Photo Gallery Prospective Students Undergraduate Programme Science Core Programmes Why HKU Science? Rankings and Achievements Science Education Nowadays Special Features for Science curricula Excellence in Research Unique Facilities 6901 BSc Programme Features Intensive Majors Accreditations Articulation Pathways Young Scientist Scheme (YSS) What is YSS? Pathway of YSS World Class Research Experiences International Exchange, Visiting &amp; Summer Study Eligibility FAQ YSS Connect Participant List Activities Common Science Experience - Science Foundation Courses FAQ 6688 Science Master Class 6858 BSc&amp;LLB 6119 BEd&amp;BSc Programmes offered by Affiliated Schools School of Biomedical Engineering 6925 BEng(BME) School of Computing and Data Science 6224 BASc(AppliedAI) 6248 BASc(FinTech) 6729 BSc(ActuarSc) 6779 Statistical Decision Sciences 6999 Computing and Data Science School of Innovation 6602 BSc(I&amp;T) Young Scientist Scheme (YSS) Students' Life &amp; Experience Diverse Learning Experiences Minor in Science Entrepreneurship Admissions One-stop Platform for Science Undergraduate Admissions Admissions Requirements and Application Direct Admissions Scheme for Associate Degree and Higher Diploma Graduates Taught Postgraduate Programme Why HKU Science? Postgraduate Studies Planning MSc in the field of Applied Geosciences MSc in the field of Chemical Technologies for Health and Materials MSc in Environmental Management MSc in the field of Food Safety and Toxicology MSc in the field of Food Industry: Management and Marketing MSc in the field of Physics MSc in the field of Space Science MSc in Artificial Intelligence MSc in Integrative Marine Ecology and Conservation Programme offered by Affiliated Schools School of Computing and Data Science MSc in Computer Science Master of Data Science MSc in Electronic Commerce and Internet Computing MSc in Financial Technology and Data Analytics Master of Statistics School of Innovation MSc in Innovation and Technology Tips for new comers Research Postgraduate Programme Why HKU Science? Studying RPg at HKU Science Programme Information Master of Philosophy (MPhil) Doctor of Philosophy (PhD) Joint PhD Degree Programme with other University Joint Educational Placement for PhD between other Universities Stipend and Support Research Postgraduate Fellowship / Scholarship How to Apply? Research@HKU Science Departments Other Useful Resources Building a Research Career Hear from Our Students FAQ Current Students Undergraduate Programmes About the programmes BSc BSc Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BSc&amp;MRes BSc&amp;LLB BSc(ActuarSc) (For 2024-25 intake or before) BSc(ActuarSc) Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BASc(AppliedAI) (For 2024-25 intake or before) BASc BEd&amp;BSc Academic Matters Syllabuses (Majors, Minors &amp; Courses) Programme Learning Outcomes Academic Advising Academic Advising System of the University Academic Advising Office of the University Academic Advisers (AAs) for the First Year Students Course Selection Advisers (CSAs) Student Peer Advisers Responsibility of Student Other Assistances Leave of Absence Induction Day for BSc Freshmen Information Session for BSc(AC) Freshmen Consultation Session for BSc II &amp; BSc(AC) II and above Students Tips for Choosing Your Major Staff Handbook for UG Academic Advising (for internal access only)- Academic Advisory Office Induction Information for Freshmen Terminology, Major / Minor Declaration, Course Registration &amp; Capstone Requirement Course Registration Course Selection Procedures Workflow for Course Selection Important Dates for Course Selection Exercise Equivalency of HKDSE &amp; Other Qualifications- Course Selection Procedures Declaration of Major / Minor - BSc - BSc(Actuarial Science) Students Taking Double Majors, Major-Minor or Double Minors with Overlapping Course Requirements Capstone Requirement Syllabuses (Majors, Minors &amp; Courses) - Check Course Details - Check Science Major / Minor / Programme Structure - Check Capstone Requirements for Each Major / Programme - Past Syllabuses and Regulations Overlapping Course Requirements Assessment Grading System Examination Examination Timetables Announcement of Examination Results Absence from Examination Arrangement for Supplementary Examination Appeal on Examination Results Progression and Discontinuation Feedback Policy Academic Honesty Progression of Study Credit Accumulation &amp; Transfer Credit Unit Statement Advanced Standing, Credit Transfer &amp; Course Exemption Academic Conduct and Honesty University Regulations Dean's Honours List, Prizes &amp; Scholarships FAQs Forms (Science Online Application Submission System) Student Experiential Learning and Enrichment Opportunities Exchange Study Undergraduate Research Undergraduate Research Fellowship Programme (URFP) Application Details Application Form (URFP) Application Form (University Research Internship Awards) List of Participants Summer Research Fellowship (SRF) &amp; Overseas Research Fellowship (ORF) Schemes for Science Students Research Colloquium for Science Undergraduate Students Other Opportunities List of Experiential Learning Ambassadors and Student Sharing Young Scientist Scheme Useful Resources Handbooks Calendar &amp; Timetab"
+}

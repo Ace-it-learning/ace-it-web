@@ -1,0 +1,525 @@
+{
+  "factPack": {
+    "code": "JS4264",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4264"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4264"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bajdn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://bba-jd.bschool.cuhk.edu.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS4264",
+      "nameEn": "BBA(IBBA) – JD Double Degree",
+      "nameZh": "工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程",
+      "university": "香港中文大學",
+      "facultyZh": "商學院及法律學院",
+      "category": "business"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 37.5,
+      "uq": null,
+      "lq": 36,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 37.5
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 36
+        }
+      },
+      "subjectWeighting": "included"
+    },
+    "jupas": {
+      "code": "JS4264",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4264",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4264",
+      "nameEn": "Bachelor of Business Administration (Integrated BBA Programme) and Juris Doctor Double Degree Programme",
+      "nameZh": "工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程",
+      "shortDescription": "an class=\"before_label\">Short Description Combining the strengths of CUHK Business School and CUHK LAW, the BBA-JD Double Degree Programme prepares students to assume leading roles in a variety of work sectors including but not limited to the legal profession, commerce, business and government service. The BBA-JD is a through-train and well-structured programme that allows students to graduate with an undergraduate and a postgraduate degrees in 5 years (as opposed to the 6 years for completion of an undergraduate degree and a JD degree separately). At the same time, students have flexibility to opt out and graduate with either a BBA degree, or a BBA degree with a Minor in Law. The rigorous but flexible approach gives students to customise their study options according to their interests, strengths and needs.",
+      "programmeWebsite": "https://bba-jd.bschool.cuhk.edu.hk/",
+      "tuition": "HK$47,000",
+      "intake": 25,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 4 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 5 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 62,
+        "bandB": 65,
+        "bandC": 120,
+        "bandD": 169,
+        "bandE": 171,
+        "total": 587
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bajdn/",
+      "introduction": "Unparalleled and Interdisciplinary Learning Experience The BBA-JD Programme, the first of its kind in Asia, is a five-year through-train full-time programme designed for students who seek cross-disciplinary knowledge with parallel concentration on legal and business studies. It features a unique combination of business and law courses, allowing students to acquire knowledge and practical skills in these two complementary disciplines. On completing the Programme, students will graduate with an undergraduate (BBA) degree and a postgraduate (JD) degree. These double-degree credentials allow BBA-JD graduates to be well-equipped to assume leadership roles in business and other sectors, including government, community service, law enforcement, education and the media. Solid Foundation in Both Business and Law The BBA-JD is an elite programme that provides students with a well-structured inter-disciplinary curriculum to study both business and law in depth. Students have to study 172 units of the BBA major, undergraduate law (LLB), JD and University core courses. The Programme offers a blended, balanced and seamless integration of business and law education from the first year of study. Students can pursue the Integrated BBA Programme curriculum with a business concentration of their choice and take several undergraduate law courses in the junior years. Starting in the fourth year, they gradually concentrate more on legal studies by taking JD courses. Flexible Option – Completion of the BBA (Minor in Law) in Four Years The BBA-JD Programme provides flexibility for students to opt out of the double-degree track and complete their studies in four years with a BBA degree, or a BBA degree with a minor in law, subject to fulfilling the relevant graduation requirements, allowing them to tailor their study options according to their interests, strengths and needs.",
+      "ranking": "",
+      "careerProspects": "The BBA-JD Programme equips its graduates with diverse and versatile skills for both business and law, preparing them for the rapid changes and evolving challenges in Hong Kong, Chinese Mainland and global markets. Graduates will enjoy a wide range of career prospects and advancement opportunities in areas such as: Banking, financial services and regulatory authorities The legal profession, including law firms, barrister’s chambers and company legal",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4264",
+    "nameEn": "BBA(IBBA) – JD Double Degree",
+    "nameZh": "工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程",
+    "name": "BBA(IBBA) – JD Double Degree",
+    "university": "香港中文大學",
+    "faculty": "商學院及法律學院",
+    "median": 37.5,
+    "band_a": 36,
+    "uq": null,
+    "category": "business"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (JUPAS JS4264)",
+          "content": [
+            "Programme: BBA(IBBA) – JD Double Degree (JS4264)",
+            "University: The Chinese University of Hong Kong (CUHK)",
+            "Faculty: Business School & Faculty of Law",
+            "First Year Intake: 25",
+            "Duration: 5 years",
+            "Tuition Fee (2026-2027): HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 37.5",
+            "Lower quartile (LQ): 36",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese: 4",
+            "English: 5*",
+            "Mathematics: 5",
+            "CSD: A",
+            "1st Elective: 5*",
+            "2nd Elective: 5*",
+            "3rd Elective: (not applicable)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 62",
+            "Band A offers: 19",
+            "Total applications: 587",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 4",
+            "English Language: Level 5",
+            "Mathematics (Compulsory): Level 3",
+            "Citizenship and Social Development: Attained",
+            "Two Elective Subjects (or 1 elective + M1/M2): Level 3 each"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The BBA-JD Double Degree Programme is the first of its kind in Asia, offering a five-year through-train curriculum that seamlessly integrates business and law education.",
+            "",
+            "Students complete 172 units covering BBA major courses, undergraduate law (LLB) courses, JD courses, and University core requirements.",
+            "",
+            "In the junior years, students pursue the Integrated BBA Programme with a chosen business concentration and take several undergraduate law courses. From the fourth year, they focus increasingly on JD-level legal studies.",
+            "",
+            "Flexibility: Students may opt out of the double-degree track and graduate in four years with a BBA degree, or a BBA degree with a Minor in Law, subject to fulfilling graduation requirements.",
+            "",
+            "The curriculum is designed to provide a solid foundation in both business and law, preparing graduates for leadership roles in diverse sectors."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the BBA-JD Programme are equipped with versatile skills for both business and law, enabling them to thrive in rapidly changing markets in Hong Kong, Mainland China, and globally.",
+            "",
+            "Career opportunities include:",
+            "- Banking, financial services, and regulatory authorities",
+            "- The legal profession (law firms, barrister's chambers, company legal departments)",
+            "- Government service, community service, law enforcement, education, and media",
+            "",
+            "The double-degree credential provides a competitive edge for leadership roles in commerce, business, and the legal sector."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with state-of-the-art learning facilities.",
+            "",
+            "Students benefit from the unique College System, which provides a close-knit community, pastoral care, and extracurricular opportunities.",
+            "",
+            "The programme is jointly offered by CUHK Business School and CUHK LAW, both of which provide dedicated resources, libraries, and networking events.",
+            "",
+            "Exchange and internship opportunities are available through the Business School and Law Faculty, though specific details should be confirmed with the programme office."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "With only 25 first-year places, JS4264 is a highly selective programme.",
+            "",
+            "2025 JUPAS Statistics:",
+            "- Band A applications: 62",
+            "- Band A offers: 19",
+            "- Band A offer rate: ~30.6%",
+            "- Band A applications per offer: ~3.3",
+            "",
+            "Admission is based on academic merit (Best 5 subjects), interview performance, and overall profile.",
+            "",
+            "The median admission score of 37.5 (Best 5) indicates that successful applicants typically achieve top grades, especially in English and electives."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The BBA-JD programme benefits from the combined expertise of CUHK Business School and CUHK LAW, both renowned for their research and teaching excellence.",
+            "",
+            "Faculty members are leading scholars and practitioners in business and law, providing students with cutting-edge knowledge and industry insights.",
+            "",
+            "Graduates have gone on to successful careers in top law firms, financial institutions, and government bodies in Hong Kong and internationally.",
+            "",
+            "The programme's interdisciplinary nature and strong alumni network offer valuable mentorship and career advancement opportunities."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for outstanding JUPAS students, including those admitted to JS4264.",
+            "",
+            "Scholarships are awarded based on academic merit and may cover full or partial tuition fees. Some also include living allowances.",
+            "",
+            "Local students may apply for the Hong Kong Government's TSFS (Tertiary Student Finance Scheme) and NLSPS (Non-means-tested Loan Scheme).",
+            "",
+            "For details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The annual tuition fee for local students is HK$47,000 (2026-2027). Non-local students pay HK$214,000 per annum."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS JS4264 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 37.5+ (Best 5)**",
+            "",
+            "- The median is 37.5; aim for at least 37 to be competitive. LQ is 36, but a higher score improves your chances.",
+            "- Focus on English (5* or above) and two electives (5* each) as they are heavily weighted.",
+            "",
+            "**2. Excel in English Language**",
+            "",
+            "- English is a core requirement (min. Level 5) and a key differentiator. Aim for 5* or 5**.",
+            "- Practice reading comprehension and essay writing under timed conditions.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Select two electives that align with business or law (e.g., Economics, Business, Accounting, History, Literature).",
+            "- M1/M2 can count as one elective; a strong grade (5 or above) is advantageous.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required; it assesses motivation, analytical thinking, and communication skills.",
+            "- Be ready to discuss current affairs in business and law, and why you want the double degree.",
+            "",
+            "**5. Demonstrate Interest in Both Fields**",
+            "",
+            "- Show genuine passion for both business and law through extracurriculars, reading, or work experience.",
+            "- Mention any relevant internships, competitions, or volunteer work in your application.",
+            "",
+            "**6. Understand the Curriculum Flexibility**",
+            "",
+            "- Know that you can opt out to a BBA or BBA with Law minor. This shows you have a clear plan.",
+            "- Mention this flexibility in your interview to demonstrate foresight.",
+            "",
+            "**7. Leverage CUHK's College System**",
+            "",
+            "- Research CUHK's colleges and mention how you would contribute to college life.",
+            "- Colleges offer scholarships, housing, and community – use this to enrich your application.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Ensure you meet the minimum subject requirements (Chinese 4, English 5, Math 3, CSD Attained).",
+            "- Submit your JUPAS application before the deadline and rank JS4264 as Band A.",
+            "",
+            "**9. Seek Advice from Current Students**",
+            "",
+            "- Contact CUHK Business School or Law Faculty for student ambassador programs.",
+            "- Attend admission talks or open days to get insider tips and network."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（JUPAS JS4264）",
+          "content": [
+            "課程：工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程（JS4264）",
+            "院校：香港中文大學",
+            "學院：商學院及法律學院",
+            "首年學額：25",
+            "修讀年期：5年",
+            "首年學費（2026-2027）：港幣47,000元（本地學生）",
+            "面試：需要（選拔性）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：37.5",
+            "下四分位數：36",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績（M行）：",
+            "中國語文：4",
+            "英國語文：5*",
+            "數學：5",
+            "公民科：A",
+            "第一選修科：5*",
+            "第二選修科：5*",
+            "第三選修科：（不適用）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：62",
+            "Band A錄取人數：19",
+            "總申請人數：587",
+            "",
+            "一般入學要求：",
+            "中國語文：第4級",
+            "英國語文：第5級",
+            "數學（必修部分）：第3級",
+            "公民與社會發展：達標",
+            "兩門選修科目（或1門選修+延伸部分M1/M2）：第3級"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "工商管理學士及法律博士雙學位課程是亞洲首創的五年制直通課程，融合商業與法律教育。",
+            "",
+            "學生需修讀172學分，涵蓋工商管理學士主修課程、本科法律課程、法律博士課程及大學核心課程。",
+            "",
+            "初年級學生修讀綜合工商管理學士課程（可選商業專修範疇）及若干本科法律科目；四年級起專注法律博士階段的學習。",
+            "",
+            "靈活選項：學生可選擇退出雙學位軌道，在四年內取得工商管理學士學位，或附設法律副修的工商管理學士學位（須滿足畢業要求）。",
+            "",
+            "課程旨在為學生提供商業與法律的堅實基礎，培養勝任各行業領導角色的畢業生。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "雙學位畢業生具備商業與法律的多元技能，能夠應對香港、中國內地及全球市場的快速變化與挑戰。",
+            "",
+            "就業領域包括：",
+            "- 銀行、金融服務及監管機構",
+            "- 法律專業（律師事務所、大律師辦事處、企業法律部門）",
+            "- 政府服務、社區服務、執法、教育及媒體",
+            "",
+            "雙學位資歷為畢業生在商業、法律及公共服務領域擔任領導角色提供競爭優勢。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，配備先進的學習設施。",
+            "",
+            "學生可體驗獨特的書院制度，享受緊密的社群支援、關顧輔導及課外活動機會。",
+            "",
+            "課程由商學院及法律學院合辦，兩院均提供專門資源、圖書館及聯網活動。",
+            "",
+            "交流及實習機會可通過商學院及法律學院獲得，具體詳情請向課程辦公室查詢。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與遴選",
+          "content": [
+            "JS4264僅提供25個首年學額，競爭激烈。",
+            "",
+            "2025年JUPAS統計：",
+            "- Band A申請人數：62",
+            "- Band A錄取人數：19",
+            "- Band A錄取率：約30.6%",
+            "- 每個Band A學額的申請人數：約3.3",
+            "",
+            "錄取基於學業成績（最佳5科）、面試表現及整體背景。",
+            "",
+            "中位數入學分數37.5（最佳5科）顯示成功申請者通常取得頂尖成績，尤其英語及選修科。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院卓越成就",
+          "content": [
+            "雙學位課程匯聚香港中文大學商學院及法律學院的頂尖師資與研究實力。",
+            "",
+            "教授團隊包括商業及法律領域的知名學者和業界專家，為學生提供前沿知識與行業視野。",
+            "",
+            "畢業生在香港及國際頂尖律師事務所、金融機構及政府部門取得成功事業。",
+            "",
+            "課程的跨學科特色及強大校友網絡為學生提供寶貴的指導與職業發展機會。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "香港中文大學為優秀的JUPAS學生提供多項入學獎學金，包括JS4264錄取者。",
+            "",
+            "獎學金根據學業成績頒發，可涵蓋全額或部分學費，部分更包括生活津貼。",
+            "",
+            "本地學生可申請政府的「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生每年學費為港幣47,000元（2026-2027）；非本地學生為港幣214,000元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JUPAS JS4264策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：37.5或以上（最佳5科）**",
+            "",
+            "- 中位數為37.5，建議至少取得37分以提高競爭力。下四分位數為36，但更高分數更有利。",
+            "- 重點提升英語（5*或以上）及兩門選修科（各5*），因它們權重較高。",
+            "",
+            "**2. 英語必須卓越**",
+            "",
+            "- 英語是核心要求（最低第5級），也是重要區分因素。目標5*或5**。",
+            "- 限時練習閱讀理解及議論文寫作。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 選擇與商業或法律相關的選修科（如經濟、商業、會計、歷史、文學）。",
+            "- 延伸部分M1/M2可視作一門選修科，取得第5級或以上有優勢。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試為必須環節，評估申請動機、分析能力及溝通技巧。",
+            "- 準備討論商業及法律時事，並清晰表達為何選擇雙學位。",
+            "",
+            "**5. 展現對兩個領域的熱誠**",
+            "",
+            "- 通過課外活動、閱讀或工作經驗展示對商業及法律的真正興趣。",
+            "- 在申請中提及相關實習、比賽或義工經歷。",
+            "",
+            "**6. 了解課程的靈活性**",
+            "",
+            "- 知道可選擇退出雙學位軌道，改為取得工商管理學士或附法律副修學位。這顯示你有清晰規劃。",
+            "- 在面試中提及此靈活性，展現前瞻性。",
+            "",
+            "**7. 善用書院制度**",
+            "",
+            "- 研究中文大學的書院，並說明你如何貢獻書院生活。",
+            "- 書院提供獎學金、住宿及社群，可豐富你的申請。",
+            "",
+            "**8. 提早申請並核實要求**",
+            "",
+            "- 確保滿足最低科目要求（中文4、英文5、數學3、公民科達標）。",
+            "- 在截止日期前提交JUPAS申請，並將JS4264列為Band A。",
+            "",
+            "**9. 向現屆學生請教**",
+            "",
+            "- 聯絡商學院或法律學院的學生大使計劃。",
+            "- 參加招生講座或開放日，獲取內部資訊及建立人脈。"
+          ]
+        }
+      }
+    },
+    "code": "JS4264",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 37.5,
+    "uq": null,
+    "lq": 36,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 37.5
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 36
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is jointly offered by CUHK Business School and Faculty of Law, combining rigorous business training with legal education.",
+      "Students benefit from interdisciplinary faculty expertise and access to both schools' resources and networks.",
+      "Graduates are well-prepared for careers in corporate law, finance, and regulatory fields."
+    ],
+    "searchQueriesUsed": [
+      "CUHK BBA(IBBA) – JD Double Degree notable alumni",
+      "香港中文大學 工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程 著名校友",
+      "CUHK BBA(IBBA) – JD Double Degree graduates Hong Kong careers"
+    ]
+  }
+}

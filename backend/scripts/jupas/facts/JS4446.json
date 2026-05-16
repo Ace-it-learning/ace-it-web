@@ -1,0 +1,129 @@
+{
+  "code": "JS4446",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4446"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4446"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/iergn/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://www.ie.cuhk.edu.hk/ierg"
+    }
+  ],
+  "programme": {
+    "code": "JS4446",
+    "nameEn": "Information Engineering",
+    "nameZh": "信息工程學",
+    "university": "香港中文大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 39.25,
+    "uq": 40.375,
+    "lq": 38.125,
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 40.375
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 39.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 38.125
+      }
+    },
+    "subjectWeighting": "• Mathematics (x 2) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, DAT, ICT (x 1.5)"
+  },
+  "jupas": {
+    "code": "JS4446",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4446",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4446",
+    "nameEn": "Information Engineering",
+    "nameZh": "信息工程學",
+    "shortDescription": "an class=\"before_label\">Short Description Information Engineering discipline deals with the generation, transmission, analysis, and use of information, data, and knowledge in systems for building a smart and secure information society. The comprehensive yet flexible curriculum unlocks a broad spectrum of career opportunities in various sectors to our students, such as: Data generation/coordination: Internet-of-things/Cyber-physical systems Transmission: Wireless and optical (beyond-5G) communications, computer networks Analysis: Artificial intelligence, big-data analytics, computer vision Processing: Multimedia, cloud computing Protection: Cybersecurity, cryptography, privacy, blockchain, e-payment Theoretical aspects: Information theory, signal processing, machine learning, control theory Details at: https://www.ie.cuhk.edu.hk/ierg/",
+    "programmeWebsite": "https://www.ie.cuhk.edu.hk/ierg",
+    "tuition": "HK$47,000",
+    "intake": 67,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level One of the following elective subjects: PHYSICS 3 BIOLOGY 3 CHEMISTRY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 One of the following elective subjects: ANY 1 SUBJECT NOTE 3 NOTE: Preferred subjects: Mathematics Extended Module I or II, Physics, Biology, Chemistry, Design and Applied Technology, and Information and Communication Technology. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 352,
+      "bandB": 180,
+      "bandC": 247,
+      "bandD": 344,
+      "bandE": 294,
+      "total": 1417
+    },
+    "offers2025": {
+      "bandA": 63,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 63
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/iergn/",
+    "introduction": "Nurturing Engineering Leaders for Building a Connected and Secure Smart Society of the Future The study of Information Engineering (IE) encompasses elements of Computer Science, Electronic Engineering, Data Science, Information Security, Information Theory, Telecommunications Networking, and Artificial Intelligence, and their integration. The knowledge and skills the students gain will find wide applications in emerging areas such as Artificial Intelligence of Things, Big Data Analytics, B5G/6G, Cloud/Edge Computing, Computer Vision, Cryptocurrency, Industry 4.0, the Metaverse and Smart Cities. The multi-disciplinary nature of our programme is what makes it unique and rewarding. The IE department was established in 1989 as the first IE department and remains one of a kind in Hong Kong. The department is devoted to nurturing and educating engineering leaders for the information world of today and tomorrow. The professors are dedicated educators and world-class researchers, many of whom had extensive experience with leading research institutions worldwide before joining the department. The department has a strong presence in top-tier venues in the global scientific community, as well as strong connections in the local IT industry in Hong Kong.",
+    "ranking": "#26 in the Computer Science and Electrical Engineering (QS World University Rankings by Subject) We have a world class faculty whose research sits at the intersection of EE and CS.",
+    "careerProspects": "Each year, we have about 100 graduates, each armed with solid engineering knowledge and superior problem-solving ability. Our graduates, trained to devise innovative solutions for practical challenges, are in high demand across diverse industry sectors. About 90% of our graduates transition into the commerce and industry sectors, securing positions in renowned companies like Deloitte, PwC, HSBC, JP Morgan Chase, Manulife, Zurich Insurance, HKT, Huawei, IBM, PCCW Solutions, Accenture, Cherrypicks and Lenovo. Whether in international or local firms, our graduates are highly esteemed for their specialized knowledge and analytical prowess, positioning them to thrive in their chosen fields. About 10% of our graduates opt for the education sector, taking up roles as educators in secondary schools or advancing their studies in graduate schools globally. These graduates exemplify a passion for imparting their knowledge and skills, thereby nurturing future generations of engineers. In summary, our graduates have charted successful career paths across diverse industry sectors, which is a testament to their achievements and fills us with pride.&nbsp; If this programme captures your interest, we encourage you to thoroughly review the application requirements and deadlines specific to the respective admission scheme. Doing so will enhance your chances of gaining acceptance. APPLY NOW",
+    "craftYourPath": "During the first two years of study, the students undergo training designed to establish and bolster their foundational knowledge in Engineering Mathematics and Engineering Basics. This includes courses in Calculus, Linear Algebra, Discrete Mathematics and Complex Variables. To reinforce their understanding of engineering principles, the students also take subjects such as Signals and Systems, Basic Analog and Digital Circuits, Data Structures, System Programming and Computer Networks. Equipped with this foundational knowledge, students are prepared to delve into more advanced engineering subjects, like Microcontrollers and Embedded Systems, Information and Software Engineering Practices, and Information Infrastructure Design. Additionally, a diverse range of elective courses helps nurture the students’ individual interests and align their studies with their professional goals. The programme features five distinct Specialization Streams: 1) Big Data: Systems and Applications, 2) Telecommunications, 3) Cyber Security, 4) Networked Systems and Applications, and 5) Information Science. This provides students with ample flexibility to tailor their academic journey according to their",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

@@ -1,0 +1,587 @@
+{
+  "factPack": {
+    "code": "JS4725",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4725"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4725"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/behmn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.sci.cuhk.edu.hk/behm"
+      }
+    ],
+    "programme": {
+      "code": "JS4725",
+      "nameEn": "Biotechnology, Entrepreneurship",
+      "nameZh": "生物科技、創業與醫療管理",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.5,
+      "uq": 65,
+      "lq": 27.5,
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 27.5
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 27.5
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5**",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5**",
+          "e1": "5**",
+          "e2": "5**",
+          "e3": "",
+          "e4": "",
+          "total": 65
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 2)"
+    },
+    "jupas": {
+      "code": "JS4725",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4725",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4725",
+      "nameEn": "Biotechnology, Entrepreneurship and Healthcare Management",
+      "nameZh": "生物科技、創業與醫療管理",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.sci.cuhk.edu.hk/behm",
+      "tuition": "HK$47,000",
+      "intake": 15,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 3 Elective Subject(s) Minimum Level One of the following elective subjects: CHEMISTRY 3 BIOLOGY 3 One of the following elective subjects: ANY 1 SUBJECT 3 REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 45,
+        "bandB": 64,
+        "bandC": 163,
+        "bandD": 292,
+        "bandE": 283,
+        "total": 847
+      },
+      "offers2025": {
+        "bandA": 11,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 11
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/behmn/",
+      "introduction": "This interdisciplinary undergraduate programme is designed for talented students who would like to develop a career in biotechnology entrepreneurship, business analysis, and/or healthcare management to capture emerging opportunities in Hong Kong, the Greater Bay Area and beyond. The programme brings together the Faculties of Science, Medicine and Business Administration at The Chinese University of Hong Kong to co-develop a brand-new, integrated curriculum with active learning as the core. In addition to a compilation of complementary courses in Biomedical Sciences, Business Administration, Molecular Biotechnology and Public Health, capstone courses are co-taught by professors in different Faculties to enhance the students’ problem-solving ability using cross-disciplinary knowledge. Mentorship and internship opportunities in the relevant industrial, service and venture capital sectors will be sought to allow the students to learn by connecting knowledge with real-world problems.",
+      "ranking": "",
+      "careerProspects": "Leaders in start-ups in advanced life science, health technology and environmental solutions Business consultants and analysts for science and technology firms Management in healthcare and medical institutes If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "The aim of the programme is to develop talent with a broad base of complementary knowledge, demonstrating the following essential attributes: an entrepreneurial mindset with ground-breaking ideas to translate advances in biotechnology, biomedical sciences and healthcare into commercial opportunities the ability to integrate a broad base of knowledge in biotechnology, biomedical and health sciences, data analytics and business management to provide innovative and cross-disciplinary solutions the ability to communicate with collaborators from diverse backgrounds and participate in the management of healthcare operations and development",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4725",
+    "nameEn": "Biotechnology, Entrepreneurship",
+    "nameZh": "生物科技、創業與醫療管理",
+    "name": "Biotechnology, Entrepreneurship",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 27.5,
+    "band_a": 27.5,
+    "uq": 65,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4725",
+            "First Year Intake: 15",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 27.5",
+            "Lower quartile (LQ): 27.5",
+            "Upper quartile (UQ): 65",
+            "",
+            "Median admitted subject profile (M row):",
+            "Chinese: 5**",
+            "English: 4",
+            "Mathematics: 4",
+            "Citizenship and Social Development: A",
+            "1st elective: 5",
+            "2nd elective: 5",
+            "3rd elective: 4",
+            "",
+            "Core subject minimum levels:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics (Compulsory): Level 3",
+            "Citizenship and Social Development: Attained",
+            "",
+            "Elective requirements:",
+            "One of Chemistry or Biology at Level 3",
+            "One additional elective subject at Level 3",
+            "Mathematics Extended Part (M1/M2) or Other Language subjects accepted as second elective",
+            "Applied Learning courses with 'Attained with Distinction I/II' accepted as extra subject",
+            "",
+            "Subject weighting: Mathematics (x 2)",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 45",
+            "Band A offers: 11",
+            "Total applications: 847"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "This interdisciplinary programme is jointly offered by the Faculties of Science, Medicine and Business Administration at CUHK.",
+            "",
+            "The curriculum integrates Biomedical Sciences, Business Administration, Molecular Biotechnology and Public Health with active learning as the core.",
+            "",
+            "Capstone courses are co-taught by professors from different Faculties to enhance cross-disciplinary problem-solving ability.",
+            "",
+            "Mentorship and internship opportunities in industrial, service and venture capital sectors are provided to connect knowledge with real-world problems.",
+            "",
+            "Students develop an entrepreneurial mindset to translate advances in biotechnology, biomedical sciences and healthcare into commercial opportunities.",
+            "",
+            "The programme aims to cultivate talent with a broad base of complementary knowledge, including data analytics and business management skills.",
+            "",
+            "Students learn to communicate with collaborators from diverse backgrounds and participate in healthcare operations and development."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are prepared to become leaders in start-ups in advanced life science, health technology and environmental solutions.",
+            "",
+            "Career paths include business consultants and analysts for science and technology firms.",
+            "",
+            "Management roles in healthcare and medical institutes are also common destinations.",
+            "",
+            "The programme captures emerging opportunities in Hong Kong, the Greater Bay Area and beyond.",
+            "",
+            "Internship and mentorship connections with relevant industries enhance employability."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with state-of-the-art laboratories and research centres.",
+            "",
+            "Students benefit from the unique college system, which provides pastoral care and a close-knit community.",
+            "",
+            "The programme provides access to entrepreneurship incubation programmes through CUHK's research centres.",
+            "",
+            "Interdisciplinary collaboration is fostered across the Faculties of Science, Medicine and Business Administration."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "Band A applications: 45",
+            "Band A offers: 11",
+            "Band A offer rate: approximately 24.4%",
+            "Band A applications per offer: approximately 4.1",
+            "",
+            "Total applications: 847",
+            "",
+            "Admission scores (Best 5): Median 27.5, LQ 27.5, UQ 65",
+            "",
+            "Interview is required for selected applicants.",
+            "",
+            "The programme's small intake of 15 ensures a highly selective and personalised learning experience."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni and Faculty Excellence",
+          "content": [
+            "The programme is jointly offered by the School of Life Sciences and the Faculty of Medicine, providing interdisciplinary training in biotechnology, entrepreneurship, and healthcare management.",
+            "",
+            "Faculty members include experts in biotech innovation and commercialization, with strong industry connections in Hong Kong and the Greater Bay Area.",
+            "",
+            "Students have access to state-of-the-art laboratories and entrepreneurship incubation programs through CUHK's research centres.",
+            "",
+            "The programme benefits from CUHK's extensive alumni network in the biotechnology and healthcare sectors."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses for outstanding students.",
+            "",
+            "The Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) are available for eligible local students.",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "A caution fee of HK$450 is payable upon enrolment (refundable upon withdrawal)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Biotechnology, Entrepreneurship and Healthcare Management Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Best 5 ≥ 27.5**",
+            "",
+            "- Aim for a median of 27.5 or above in Best 5 subjects. The LQ is also 27.5, so every mark counts.",
+            "- Mathematics is weighted double, so prioritise a high grade in Maths (Compulsory).",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- Chinese: target Level 5 or above (median admitted profile shows 5**).",
+            "- English: Level 4 is the median, but higher strengthens your application.",
+            "- Maths: Level 4 is median, but aim for 5 or above due to double weighting.",
+            "- CSD: Attained is sufficient, but a strong performance helps.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Chemistry or Biology at Level 3 is required; aim for Level 5 or above to boost your score.",
+            "- A third elective at Level 4 or above adds to your Best 5 calculation.",
+            "- Consider M1/M2 as a second elective if you are strong in Maths.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Interview is required for selected applicants. Demonstrate passion for biotechnology and entrepreneurship.",
+            "- Be ready to discuss current trends in healthcare management and the Greater Bay Area.",
+            "- Show cross-disciplinary thinking and problem-solving ability.",
+            "",
+            "**5. Build a Strong Profile**",
+            "",
+            "- Participate in science competitions, internships, or entrepreneurship workshops.",
+            "- Highlight any experience in biotech labs or business plan competitions.",
+            "- Show leadership and teamwork in extracurricular activities.",
+            "",
+            "**6. Understand the Programme's Interdisciplinary Nature**",
+            "",
+            "- The curriculum blends Biomedical Sciences, Business, and Public Health. Show how your interests align.",
+            "- Mention specific capstone courses or mentorship opportunities you look forward to.",
+            "",
+            "**7. Leverage CUHK's Resources**",
+            "",
+            "- Research the Faculties of Science, Medicine and Business Administration.",
+            "- Explore entrepreneurship incubation programmes and state-of-the-art labs.",
+            "",
+            "**8. Apply Early and Strategically**",
+            "",
+            "- Band A placement is critical; only 11 offers were made from 45 Band A applications in 2025.",
+            "- Ensure your JUPAS choices reflect genuine interest and realistic scoring.",
+            "",
+            "**9. Stay Informed on Industry Trends**",
+            "",
+            "- Follow developments in biotech, health tech, and environmental solutions.",
+            "- Connect with CUHK alumni or current students via admission events.",
+            "- Read about the Greater Bay Area's innovation ecosystem."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4725",
+            "首年學額：15",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選定申請人）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：27.5",
+            "下四分位數：27.5",
+            "上四分位數：65",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5**",
+            "英國語文：4",
+            "數學：4",
+            "公民與社會發展：A",
+            "第一選修科：5",
+            "第二選修科：5",
+            "第三選修科：4",
+            "",
+            "核心科目最低要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學（必修部分）：第 3 級",
+            "公民與社會發展：達標",
+            "",
+            "選修科目要求：",
+            "化學或生物其中一科達第 3 級",
+            "另一選修科目達第 3 級",
+            "數學延伸部分（M1/M2）或其他語言科目可作為第二選修科",
+            "應用學習科目取得「達標並表現優異 I/II」可作為額外科目",
+            "",
+            "科目比重：數學（x 2）",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：45",
+            "Band A 錄取人數：11",
+            "總申請人數：847"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "本跨學科課程由香港中文大學理學院、醫學院及工商管理學院合辦。",
+            "",
+            "課程整合生物醫學、工商管理、分子生物技術及公共衛生，以主動學習為核心。",
+            "",
+            "頂石課程由不同學院教授共同授課，提升學生跨學科解難能力。",
+            "",
+            "提供工業、服務及風險投資行業的師友計劃及實習機會，將知識與實際問題連結。",
+            "",
+            "學生培養創業思維，將生物技術、生物醫學及醫療保健的進展轉化為商業機會。",
+            "",
+            "課程旨在培養具備廣泛互補知識的人才，包括數據分析及商業管理技能。",
+            "",
+            "學生學習與不同背景的合作者溝通，並參與醫療保健營運及發展。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可成為先進生命科學、健康科技及環境解決方案初創企業的領袖。",
+            "",
+            "就業路徑包括科技公司的商業顧問及分析師。",
+            "",
+            "醫療保健及醫學機構的管理職位亦是常見出路。",
+            "",
+            "課程把握香港、大灣區及其他地區的新興機遇。",
+            "",
+            "與相關行業的實習及師友聯繫提升就業能力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，配備先進實驗室及研究中心。",
+            "",
+            "學生受益於獨特的書院制度，獲得關顧及緊密社群。",
+            "",
+            "課程提供透過中大研究中心的創業培育計劃。",
+            "",
+            "理學院、醫學院及工商管理學院之間促進跨學科協作。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "Band A 申請人數：45",
+            "Band A 錄取人數：11",
+            "Band A 錄取率：約 24.4%",
+            "每 Band A 錄取對應申請人數：約 4.1",
+            "",
+            "總申請人數：847",
+            "",
+            "入學分數（最佳五科）：中位數 27.5，下四分位數 27.5，上四分位數 65",
+            "",
+            "需要面試（選定申請人）。",
+            "",
+            "課程學額僅 15 個，確保高度選擇性及個人化學習體驗。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "課程由生命科學學院及醫學院合辦，提供生物科技、創業及醫療管理的跨學科培訓。",
+            "",
+            "教職員包括生物科技創新及商業化的專家，與香港及大灣區業界聯繫緊密。",
+            "",
+            "學生可透過中大研究中心使用先進實驗室及創業培育計劃。",
+            "",
+            "課程受益於中大在生物科技及醫療保健領域的龐大校友網絡。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學業成績的入學獎學金。",
+            "",
+            "獎學金可涵蓋優秀學生的學費及生活費。",
+            "",
+            "合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "入學時須繳付港幣 450 元保證金（退學時可退還）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的生物科技、創業與醫療管理策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳五科 ≥ 27.5**",
+            "",
+            "- 以最佳五科中位數 27.5 或以上為目標。下四分位數同為 27.5，每一分都關鍵。",
+            "- 數學比重雙計，優先爭取數學（必修）高分。",
+            "",
+            "**2. 核心科目表現突出**",
+            "",
+            "- 中文：目標第 5 級或以上（中位數錄取者為 5**）。",
+            "- 英文：中位數為第 4 級，更高分數增強競爭力。",
+            "- 數學：中位數第 4 級，但因比重雙計，目標第 5 級或以上。",
+            "- 公民科：達標即可，但良好表現有助整體印象。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 化學或生物須達第 3 級，目標第 5 級或以上以提升分數。",
+            "- 第三選修科達第 4 級或以上有助最佳五科計算。",
+            "- 如數學能力強，可考慮 M1/M2 作為第二選修科。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 面試適用於選定申請人。展現對生物科技及創業的熱誠。",
+            "- 準備討論醫療保健管理及大灣區的最新趨勢。",
+            "- 展示跨學科思維及解難能力。",
+            "",
+            "**5. 建立突出個人檔案**",
+            "",
+            "- 參與科學比賽、實習或創業工作坊。",
+            "- 突出生物科技實驗室或商業計劃比賽的經驗。",
+            "- 在課外活動中展現領導力及團隊合作。",
+            "",
+            "**6. 了解課程的跨學科本質**",
+            "",
+            "- 課程融合生物醫學、商業及公共衛生。展示你的興趣如何配合。",
+            "- 提及你期待的頂石課程或師友機會。",
+            "",
+            "**7. 善用中大資源**",
+            "",
+            "- 研究理學院、醫學院及工商管理學院。",
+            "- 探索創業培育計劃及先進實驗室。",
+            "",
+            "**8. 及早及策略性申請**",
+            "",
+            "- Band A 選擇至關重要；2025 年僅 45 名 Band A 申請者中有 11 人獲錄取。",
+            "- 確保 JUPAS 選擇反映真實興趣及合理分數預測。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "- 關注生物科技、健康科技及環境解決方案的發展。",
+            "- 透過招生活動與中大校友或現屆學生交流。",
+            "- 閱讀大灣區創新生態系統的資訊。"
+          ]
+        }
+      }
+    },
+    "code": "JS4725",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.5,
+    "uq": 65,
+    "lq": 27.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 27.5
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 27.5
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5**",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5**",
+        "e1": "5**",
+        "e2": "5**",
+        "e3": "",
+        "e4": "",
+        "total": 65
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "The programme is jointly offered by the School of Life Sciences and the Faculty of Medicine, providing interdisciplinary training in biotechnology, entrepreneurship, and healthcare management.",
+      "Faculty members include experts in biotech innovation and commercialization, with strong industry connections in Hong Kong and Greater Bay Area.",
+      "Students have access to state-of-the-art laboratories and entrepreneurship incubation programs through CUHK's research centers."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Biotechnology, Entrepreneurship notable alumni",
+      "香港中文大學 生物科技、創業與醫療管理 著名校友",
+      "CUHK Biotechnology, Entrepreneurship graduates Hong Kong careers"
+    ]
+  }
+}

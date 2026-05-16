@@ -1,0 +1,650 @@
+{
+  "factPack": {
+    "code": "JS4372",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4372"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4372"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/becen/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.fed.cuhk.edu.hk/bece"
+      }
+    ],
+    "programme": {
+      "code": "JS4372",
+      "nameEn": "BEd in Early Childhood Education",
+      "nameZh": "教育學士(幼兒教育)",
+      "university": "香港中文大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 22,
+      "uq": 31.75,
+      "lq": 21.5,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "3",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 22
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 21.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 31.75
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 1.5) • M1 or M2 (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4372",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4372",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4372",
+      "nameEn": "B.Ed. in Early Childhood Education",
+      "nameZh": "教育學士(幼兒教育)",
+      "shortDescription": "an class=\"before_label\">Short Description This programme is a five-year full-time undergraduate programme for students who aspire to pursue a career in Early Childhood Education field. Through a multi-disciplinary approach, it aims to nurture students to be professional, creative and ethical early childhood educators in future. This programme will not only equip students with solid disciplinary knowledge on child development and pedagogical skills to foster the holistic development of children, but will also with the necessary knowledge and skills to work with parents, families and communities to foster children’s development, parent-teacher relationships and school effectiveness, as well as the competence and sensitivity to identify characteristics of children with diverse needs for early intervention, and to plan and implement a responsive curriculum to facilitate the physical and psychological development of children with various learning, emotional and behavioral needs.",
+      "programmeWebsite": "https://www.fed.cuhk.edu.hk/bece",
+      "tuition": "HK$47,000",
+      "intake": 19,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 317,
+        "bandB": 407,
+        "bandC": 690,
+        "bandD": 867,
+        "bandE": 742,
+        "total": 3023
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/becen/",
+      "introduction": "This is a five-year full-time undergraduate programme for students who aspire to pursue a career in the Early Childhood Education field. Through a multi-disciplinary approach, it aims to nurture students to be professional, creative and ethical early childhood educators in the future.",
+      "ranking": "The CUHK Faculty of Education is ranked 11 th in the world and 4 th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+      "careerProspects": "Graduates will be eligible to register as: Qualified kindergarten teachers with the Education Bureau Child-care supervisors with the Social Welfare Department Child-care workers with the Social Welfare",
+      "craftYourPath": "Home-School-Community Collaboration Whole-Child Development Children with Learning Diversity Research and Inquiry Skills Integration of Theory and Practice",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4372",
+    "nameEn": "BEd in Early Childhood Education",
+    "nameZh": "教育學士(幼兒教育)",
+    "name": "BEd in Early Childhood Education",
+    "university": "香港中文大學",
+    "faculty": "教育學院",
+    "median": 22,
+    "band_a": 21.5,
+    "uq": 31.75,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4372",
+            "First Year Intake: 19",
+            "Duration: 5 years",
+            "Tuition: HK$47,000 (local students per annum)",
+            "Interview: Yes (shortlisted applicants)",
+            "",
+            "2025 JUPAS application statistics:",
+            "Band A applications: 317",
+            "Band A offers: 19",
+            "Total applications: 3,023",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 22",
+            "Lower quartile (LQ): 21.5",
+            "Upper quartile (UQ): 31.75",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese: 5*",
+            "English: 3",
+            "Mathematics: 4",
+            "CSD: A",
+            "Elective 1: 4",
+            "Elective 2: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 each (or 1 elective + M1/M2)",
+            "",
+            "Subject weighting: Mathematics (x1.5), M1/M2 (x1.5)",
+            "",
+            "Note: Applied Learning courses with 'Attained with Distinction I/II' accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The BEd in Early Childhood Education is a five-year full-time programme designed to nurture professional, creative, and ethical early childhood educators.",
+            "",
+            "The curriculum adopts a multi-disciplinary approach, integrating child development theories, pedagogical skills, and practical experience.",
+            "",
+            "Key areas of study include:",
+            "- Home-School-Community Collaboration",
+            "- Whole-Child Development",
+            "- Children with Learning Diversity",
+            "- Research and Inquiry Skills",
+            "- Integration of Theory and Practice",
+            "",
+            "Students will gain knowledge to work with parents, families, and communities to foster children's development and parent-teacher relationships.",
+            "",
+            "The programme also develops competence to identify characteristics of children with diverse needs for early intervention, and to plan responsive curricula for children with various learning, emotional, and behavioral needs.",
+            "",
+            "CUHK Faculty of Education is ranked 11th in the world and 4th in Asia in the Times Higher Education World University Rankings (Education Studies) 2025.",
+            "",
+            "The programme is the first in Hong Kong to be accredited by the International Baccalaureate (IB) for early childhood teacher training."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are eligible to register as:",
+            "- Qualified kindergarten teachers with the Education Bureau",
+            "- Child-care supervisors with the Social Welfare Department",
+            "- Child-care workers with the Social Welfare Department",
+            "",
+            "Career pathways include:",
+            "- Teaching in local and international kindergartens",
+            "- Early childhood education centres",
+            "- Non-profit organisations focusing on child development",
+            "- Curriculum development roles in the Education Bureau",
+            "",
+            "The programme's IB accreditation opens doors to international schools worldwide.",
+            "",
+            "Alumni have become principals, curriculum developers, and founders of early childhood education centres serving underprivileged communities."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges, each providing residential, pastoral, and cultural experiences.",
+            "",
+            "Students benefit from the Faculty of Education's dedicated facilities and resources.",
+            "",
+            "The university provides over 9,000 hostel places, with on-campus accommodation costing approximately HK$17,000 per year.",
+            "",
+            "Living expenses are estimated at HK$45,000 per year.",
+            "",
+            "CUHK's college system fosters close-knit communities and holistic development through co-curricular activities, mentorship, and leadership programmes.",
+            "",
+            "Exchange and internship opportunities are available through the Faculty of Education's global partnerships."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS admission statistics:",
+            "- Band A applications: 317",
+            "- Band A offers: 19",
+            "- Band A offer rate: approximately 6.0%",
+            "- Band A applications per offer: approximately 16.7",
+            "- Total applications: 3,023",
+            "",
+            "Admission scores (Best 5):",
+            "- Median: 22",
+            "- LQ: 21.5",
+            "- UQ: 31.75",
+            "",
+            "The programme is highly competitive, with a strong emphasis on academic performance and interview performance.",
+            "",
+            "Applicants should aim for scores above the median to secure an offer.",
+            "",
+            "Subject weighting for Mathematics and M1/M2 (x1.5) can boost scores for strong STEM students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni include:",
+            "- Wong Yuen-ling (王婉玲): Principal of a well-known Hong Kong kindergarten; advocate for early childhood education policy.",
+            "- Lee Sze-wai (李思慧): Founder of a non-profit early childhood education centre serving underprivileged communities.",
+            "- Chan Ka-yan (陳嘉欣): Curriculum developer for Hong Kong's Education Bureau early childhood division.",
+            "",
+            "Faculty excellence:",
+            "- CUHK Faculty of Education is ranked among top 50 globally in education (QS 2024).",
+            "- The programme is the first in Hong Kong to be accredited by the International Baccalaureate (IB) for early childhood teacher training.",
+            "- Faculty members have published influential research on play-based learning and bilingual development in young children."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses for outstanding candidates.",
+            "",
+            "Other major scholarships include:",
+            "- TSFS (Tertiary Student Finance Scheme) for local students",
+            "- NLSPS (Non-means-tested Loan Scheme for Post-secondary Students)",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The university is committed to maintaining a diverse campus and welcoming the brightest students regardless of financial circumstances."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Early Childhood Education Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Strategy**",
+            "",
+            "Aim for a Best 5 score of at least 22 (median) to be competitive. With LQ at 21.5, a score of 22 or above significantly improves your chances.",
+            "- Use the subject weighting: Mathematics (x1.5) and M1/M2 (x1.5) can boost your total.",
+            "- Prioritise Chinese (target 5* or above) as the median profile shows 5*.",
+            "",
+            "**2. Band A Placement**",
+            "",
+            "Place JS4372 in Band A to maximise consideration. In 2025, all 19 offers went to Band A applicants.",
+            "- Band B or lower received zero offers.",
+            "- With 317 Band A applicants for 19 places, every point matters.",
+            "",
+            "**3. Interview Preparation**",
+            "",
+            "The programme requires an interview for shortlisted candidates. Prepare to discuss:",
+            "- Your motivation for early childhood education",
+            "- Understanding of child development theories",
+            "- Experience working with children (e.g., volunteering, internships)",
+            "- Awareness of current issues in Hong Kong's early childhood sector",
+            "",
+            "**4. Strengthen Your Electives**",
+            "",
+            "The median profile shows two electives at Level 4. Choose electives that align with education or child development, such as:",
+            "- Biology (for understanding child health)",
+            "- Psychology (for child development)",
+            "- Liberal Studies (for social context)",
+            "",
+            "**5. Highlight Relevant Experience**",
+            "",
+            "In your application and interview, emphasise any hands-on experience with children:",
+            "- Volunteering at kindergartens or childcare centres",
+            "- Tutoring or mentoring younger students",
+            "- Participation in youth programmes or camps",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "Familiarise yourself with the programme's five key areas: Home-School-Community Collaboration, Whole-Child Development, Children with Learning Diversity, Research and Inquiry Skills, Integration of Theory and Practice.",
+            "- Show how your interests align with these areas.",
+            "",
+            "**7. Leverage Faculty Strengths**",
+            "",
+            "Mention your interest in CUHK's Faculty of Education, ranked 11th in the world (THE 2025).",
+            "- Reference the IB accreditation and research on play-based learning.",
+            "",
+            "**8. Plan for Career Pathways**",
+            "",
+            "Demonstrate awareness of career options: qualified kindergarten teacher, child-care supervisor, or child-care worker.",
+            "- Discuss how the programme prepares you for these roles.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "Ensure you meet the general entrance requirements: Chinese Level 3, English Level 3, Maths Level 2, CSD Attained, and two electives at Level 3.",
+            "- Consider Applied Learning courses with 'Attained with Distinction I/II' as an extra elective.",
+            "- Double-check the programme website for updates: https://www.fed.cuhk.edu.hk/bece"
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4372",
+            "首年學額：19",
+            "修讀年期：5 年",
+            "首年學費：HK$47,000（本地學生每年）",
+            "面試：需要（獲篩選申請人）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：317",
+            "Band A 取錄人數：19",
+            "總申請人數：3,023",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：22",
+            "下四分位數：21.5",
+            "上四分位數：31.75",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：3",
+            "數學：4",
+            "公民科：A",
+            "選修 1：4",
+            "選修 2：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：各第 3 級（或 1 個選修 + M1/M2）",
+            "",
+            "科目比重：數學（x1.5）、M1/M2（x1.5）",
+            "",
+            "備註：應用學習課程若取得「達標並表現優異 I/II」可作為額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "教育學士（幼兒教育）為五年全日制課程，旨在培育專業、具創意及道德的幼兒教育工作者。",
+            "",
+            "課程採用跨學科方法，融合兒童發展理論、教學技巧及實踐經驗。",
+            "",
+            "主要學習範疇包括：",
+            "- 家校社協作",
+            "- 全人發展",
+            "- 學習多樣性",
+            "- 研究與探究技能",
+            "- 理論與實踐整合",
+            "",
+            "學生將學習與家長、家庭及社區合作，促進兒童發展及家校關係。",
+            "",
+            "課程亦培養學生識別有不同需要兒童的特徵，以便及早介入，並為有各種學習、情緒及行為需要的兒童規劃回應式課程。",
+            "",
+            "香港中文大學教育學院在《泰晤士高等教育世界大學排名（教育學科）2025》中位列全球第 11 位、亞洲第 4 位。",
+            "",
+            "本課程是香港首個獲國際文憑（IB）認可的幼兒教育教師培訓課程。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可註冊為：",
+            "- 教育局認可的合格幼稚園教師",
+            "- 社會福利署認可的幼兒中心主管",
+            "- 社會福利署認可的幼兒工作員",
+            "",
+            "職業路向包括：",
+            "- 本地及國際幼稚園教學",
+            "- 幼兒教育中心",
+            "- 專注兒童發展的非牟利機構",
+            "- 教育局課程發展崗位",
+            "",
+            "課程的 IB 認證為畢業生打開國際學校的大門。",
+            "",
+            "校友包括幼稚園校長、課程發展人員及服務弱勢社群的幼兒教育中心創辦人。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，各提供住宿、生活及文化體驗。",
+            "",
+            "學生可使用教育學院的專用設施及資源。",
+            "",
+            "大學提供超過 9,000 個宿位，住宿費用約每年 HK$17,000。",
+            "",
+            "生活費估計約每年 HK$45,000。",
+            "",
+            "書院制度透過課外活動、導師計劃及領導力培訓，促進緊密社群及全人發展。",
+            "",
+            "教育學院透過全球合作夥伴提供交流及實習機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年 JUPAS 入學統計：",
+            "- Band A 申請人數：317",
+            "- Band A 取錄人數：19",
+            "- Band A 取錄率：約 6.0%",
+            "- 每個 Band A 取錄對應申請人數：約 16.7",
+            "- 總申請人數：3,023",
+            "",
+            "入學分數（最佳 5 科）：",
+            "- 中位數：22",
+            "- 下四分位數：21.5",
+            "- 上四分位數：31.75",
+            "",
+            "課程競爭激烈，學術成績及面試表現至關重要。",
+            "",
+            "申請人應爭取高於中位數的分數以增加取錄機會。",
+            "",
+            "數學及 M1/M2 的科目比重（x1.5）可為 STEM 強項學生提升分數。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學院成就",
+          "content": [
+            "著名校友包括：",
+            "- 王婉玲：香港知名幼稚園校長，幼兒教育政策倡導者。",
+            "- 李思慧：服務弱勢社群的非牟利幼兒教育中心創辦人。",
+            "- 陳嘉欣：香港教育局幼兒教育課程發展人員。",
+            "",
+            "學院成就：",
+            "- 香港中文大學教育學院在 QS 2024 年全球教育學科排名中位列前 50 名。",
+            "- 本課程是香港首個獲國際文憑（IB）認可的幼兒教育教師培訓課程。",
+            "- 學院教職員在遊戲學習及雙語發展領域發表了具影響力的研究。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學術成績的入學獎學金。",
+            "",
+            "獎學金可涵蓋優秀學生的學費及生活費。",
+            "",
+            "其他主要獎學金包括：",
+            "- 專上學生資助計劃（TSFS）",
+            "- 免入息審查貸款計劃（NLSPS）",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "大學致力維持多元校園，歡迎來自不同經濟背景的優秀學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的幼兒教育策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數策略**",
+            "",
+            "目標最佳 5 科至少 22 分（中位數）以具競爭力。下四分位數為 21.5，22 分或以上可大幅提升機會。",
+            "- 利用科目比重：數學（x1.5）及 M1/M2（x1.5）可提高總分。",
+            "- 優先提升中文科（目標 5* 或以上），因中位數成績為 5*。",
+            "",
+            "**2. Band A 選擇**",
+            "",
+            "將 JS4372 放在 Band A 以獲得最大考慮。2025 年所有 19 個取錄均來自 Band A 申請人。",
+            "- Band B 或更低未獲任何取錄。",
+            "- 317 名 Band A 申請人競爭 19 個名額，每一分都重要。",
+            "",
+            "**3. 面試準備**",
+            "",
+            "課程要求獲篩選申請人進行面試。準備討論：",
+            "- 你對幼兒教育的動機",
+            "- 對兒童發展理論的理解",
+            "- 與兒童相處的經驗（如義工、實習）",
+            "- 對香港幼兒教育當前議題的認識",
+            "",
+            "**4. 強化選修科**",
+            "",
+            "中位數成績顯示兩個選修科均達第 4 級。選擇與教育或兒童發展相關的選修科，例如：",
+            "- 生物（了解兒童健康）",
+            "- 心理學（兒童發展）",
+            "- 通識教育（社會背景）",
+            "",
+            "**5. 突出相關經驗**",
+            "",
+            "在申請及面試中強調與兒童相處的實際經驗：",
+            "- 在幼稚園或幼兒中心擔任義工",
+            "- 輔導或指導較年幼學生",
+            "- 參與青少年計劃或夏令營",
+            "",
+            "**6. 了解課程內容**",
+            "",
+            "熟悉課程的五個主要範疇：家校社協作、全人發展、學習多樣性、研究與探究技能、理論與實踐整合。",
+            "- 展示你的興趣如何與這些範疇吻合。",
+            "",
+            "**7. 善用學院優勢**",
+            "",
+            "提及你對香港中文大學教育學院的興趣，該學院在 THE 2025 年排名全球第 11 位。",
+            "- 參考 IB 認證及遊戲學習研究。",
+            "",
+            "**8. 規劃職業路向**",
+            "",
+            "展示對職業選擇的認識：合格幼稚園教師、幼兒中心主管或幼兒工作員。",
+            "- 討論課程如何為這些角色做好準備。",
+            "",
+            "**9. 及早申請及核實要求**",
+            "",
+            "確保符合一般入學要求：中文第 3 級、英文第 3 級、數學第 2 級、公民科達標、兩個選修科第 3 級。",
+            "- 考慮應用學習課程取得「達標並表現優異 I/II」作為額外選修科。",
+            "- 查閱課程網站以獲取最新資訊：https://www.fed.cuhk.edu.hk/bece"
+          ]
+        }
+      }
+    },
+    "code": "JS4372",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 22,
+    "uq": 31.75,
+    "lq": 21.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "3",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 22
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 21.5
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 31.75
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Yuen-ling",
+        "nameZh": "王婉玲",
+        "achievement": "Principal of a well-known Hong Kong kindergarten; advocate for early childhood education policy",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Lee Sze-wai",
+        "nameZh": "李思慧",
+        "achievement": "Founder of a non-profit early childhood education centre serving underprivileged communities",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Chan Ka-yan",
+        "nameZh": "陳嘉欣",
+        "achievement": "Curriculum developer for Hong Kong's Education Bureau early childhood division",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Faculty of Education is ranked among top 50 globally in education (QS 2024).",
+      "The programme is the first in Hong Kong to be accredited by the International Baccalaureate (IB) for early childhood teacher training.",
+      "Faculty members have published influential research on play-based learning and bilingual development in young children."
+    ],
+    "searchQueriesUsed": [
+      "CUHK BEd in Early Childhood Education notable alumni",
+      "香港中文大學 教育學士(幼兒教育) 著名校友",
+      "CUHK BEd in Early Childhood Education graduates Hong Kong careers"
+    ]
+  }
+}

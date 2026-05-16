@@ -1,0 +1,556 @@
+{
+  "factPack": {
+    "code": "JS4537",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4537"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4537"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/phpcn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.bsc.sphpc.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4537",
+      "nameEn": "Public Health",
+      "nameZh": "公共衞生",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "medicine"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 32.75,
+      "uq": 30.5,
+      "lq": 32.5,
+      "percentiles": {
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 32.75
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 32.5
+        },
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 30.5
+        }
+      },
+      "subjectWeighting": "Economics or Health Management & Social Care (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4537",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4537",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4537",
+      "nameEn": "Public Health",
+      "nameZh": "公共衞生",
+      "shortDescription": "an class=\"before_label\">Short Description With the emergence of SARS, MERS, Ebola and recent COVID-19, all people dedicated to working in a public health discipline play an important role in providing advice to the government for public health measures and public education in mitigating the risk of infection spread locally and globally. At the vanguard of public health education, the JC School of Public Health and Primary Care of the Faculty of Medicine launched the first public health undergraduate programme in Hong Kong, Bachelor of Science in Public Health (BSc in Public Health), in 2009. Besides infectious diseases, there is a range of public health issues threatening our health and the health system including climate changes, increasing epidemiology of chronic diseases, challenges with the ageing population, occupational safety, drug abuse, internet addiction, mental health, unhealthy lifestyle, and sustainability of healthcare financing and service provision, etc. The BSc in Public Health Programme curriculum provides students who have an interest in public health with the latest knowledge and valuable insights into population health issues. Concepts that students will learn and experience include the following: social determinants of health, environmental impact on health, healthy lifestyles, public health law and ethics, biostatistics and epidemiology, emergency preparedness and disaster response, infectious diseases, and health care system and policy.",
+      "programmeWebsite": "https://www.bsc.sphpc.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 148,
+        "bandB": 196,
+        "bandC": 366,
+        "bandD": 581,
+        "bandE": 564,
+        "total": 1855
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/phpcn/",
+      "introduction": "Championing Public Health through Education The Bachelor of Science in Public Health (BScPH) programme equips students with a broad understanding of public health issues, preparing them for diverse careers in this specialised field. Our programme empowers students through experiential learning activities, enhancing their skills and knowledge. Our interdisciplinary approach combines scientific and social sciences to tackle complex health challenges. The curriculum covers various disciplines, including biostatistics, environmental health, social and behavioural sciences, health service management, health economics and law. This four-year programme offers specialised tracks in health protection, health improvement and health services. Students can choose elective courses from these tracks to suit their career planning goals.",
+      "ranking": "",
+      "careerProspects": "Graduates have a comprehensive understanding of health, society and health policies, making them adaptable professionals with specialised knowledge in epidemiology, biostatistics and health promotion. Over the past five years, our alumni have made an impact in various sectors: Employment in Public and Education Institutes: Approximately 31% shape health policies, address health disparities, and engage in health-related research in universities. Employment in NGOs and the Private Sector: Another 38% implement health programmes, promote equity, and manage private health services. Further Study: About 31% pursue advanced studies in various specialized fields (e.g. PhD in Public Health, Medicine, Physiotherapy, Dietetics and Nursing etc). Our graduates are sought after by governmental organisations, such as the Food and Health Bureau, the Environmental Hygiene",
+      "craftYourPath": "The BScPH programme offers a flexible but personalised learning journey. Students establish a strong foundation in essential public health principles during their first year of study. In Year 2, they shape their personalised learning journey based on their interests and",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4537",
+    "nameEn": "Public Health",
+    "nameZh": "公共衞生",
+    "name": "Public Health",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 32.75,
+    "band_a": 32.5,
+    "uq": 30.5,
+    "category": "medicine"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS Code: JS4537",
+            "First Year Intake: 30",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: No",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 148",
+            "Offers made (Band A): 19",
+            "Total applications: 1,855",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 32.75",
+            "Lower quartile (LQ): 32.5",
+            "Upper quartile (UQ): 30.5",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "Chinese Language: 5*",
+            "English Language: 4",
+            "Mathematics Compulsory: 4",
+            "Citizenship and Social Development: Attained (A)",
+            "Mathematics Extended Part (M1/M2): 5",
+            "Elective 1: 5",
+            "Elective 2: 5",
+            "Elective 3: 4",
+            "",
+            "Subject Weighting: Economics or Health Management & Social Care (x 1.5)",
+            "",
+            "General Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "Citizenship and Social Development: Attained",
+            "Two elective subjects at Level 3 (or one elective + M1/M2)",
+            "Specific Applied Learning courses (Attained with Distinction I/II) accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The Bachelor of Science in Public Health (BScPH) programme is the first public health undergraduate programme in Hong Kong, launched in 2009 by the JC School of Public Health and Primary Care, Faculty of Medicine.",
+            "",
+            "The curriculum provides a broad understanding of public health issues, covering biostatistics, epidemiology, environmental health, social and behavioural sciences, health service management, health economics, and public health law and ethics.",
+            "",
+            "Students establish a strong foundation in Year 1, then shape a personalised learning journey from Year 2 onwards through three specialised tracks:",
+            "- Health Protection (e.g., infectious disease control, emergency preparedness)",
+            "- Health Improvement (e.g., health promotion, lifestyle interventions)",
+            "- Health Services (e.g., healthcare policy, financing)",
+            "",
+            "Experiential learning is emphasised, including case studies, field visits, and a capstone project.",
+            "The programme also addresses contemporary issues such as climate change, chronic diseases, ageing population, mental health, and healthcare sustainability."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are well-prepared for diverse careers in public health, with a comprehensive understanding of health, society, and health policies.",
+            "",
+            "Employment sectors (based on alumni over the past five years):",
+            "- Public and Education Institutes (approx. 31%): shaping health policies, addressing health disparities, engaging in health-related research in universities.",
+            "- NGOs and Private Sector (approx. 38%): implementing health programmes, promoting equity, managing private health services.",
+            "- Further Study (approx. 31%): pursuing advanced degrees in Public Health (PhD), Medicine, Physiotherapy, Dietetics, Nursing, and other specialised fields.",
+            "",
+            "Graduates are sought after by government bodies such as the Food and Health Bureau and the Environmental Hygiene Department, as well as international organisations and research institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern facilities.",
+            "",
+            "The university's unique college system provides a close-knit community experience, with nine colleges offering residential, pastoral, and co-curricular support.",
+            "",
+            "Students have access to extensive library resources, sports facilities, and student organisations.",
+            "The JC School of Public Health and Primary Care is situated within the Faculty of Medicine, fostering interdisciplinary collaboration.",
+            "",
+            "Exchange and internship opportunities are available through the programme's network, though specific details should be confirmed with the department."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 148",
+            "- Band A offers: 19",
+            "- Band A offer rate: approximately 12.8%",
+            "- Band A applications per offer: approximately 7.8",
+            "",
+            "The programme is highly competitive, with a median admission score of 32.75 (Best 5).",
+            "Applicants with strong results in Economics or Health Management & Social Care (weighted x1.5) may have an advantage.",
+            "",
+            "No interview is required; selection is based solely on academic merit and JUPAS score calculation."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme benefits from the strong reputation of the JC School of Public Health and Primary Care, which is part of CUHK's Faculty of Medicine.",
+            "",
+            "Faculty members include leading experts in infectious disease modelling, health policy, environmental health, and global health.",
+            "The school collaborates with the WHO Collaborating Centre for Infectious Disease Epidemiology and Control.",
+            "",
+            "Notable figures associated with CUHK's public health sphere include:",
+            "- Professor Gabriel Leung (梁卓偉), former Dean of the Li Ka Shing Faculty of Medicine at HKU and a leading epidemiologist.",
+            "- Dr. David Ho (何大一), renowned AIDS researcher and Time Person of the Year 1996, who has honorary ties with CUHK.",
+            "",
+            "Alumni have made significant contributions to public health in Hong Kong and globally, working in government, NGOs, academia, and healthcare."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit, which may cover tuition fees and living expenses.",
+            "",
+            "For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "Financial aid schemes include the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS), available to eligible local students.",
+            "",
+            "Students are encouraged to explore the full list of scholarships and awards on the CUHK Admissions website."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Public Health Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "Aim for a Best 5 score of at least 32.75 (median). With a lower quartile of 32.5, every point counts. Focus on achieving high grades in your best five subjects.",
+            "-",
+            "**2. Leverage Weighted Subjects**",
+            "",
+            "Economics and Health Management & Social Care are weighted x1.5. If you take these, prioritise them to boost your score significantly.",
+            "-",
+            "**3. Excel in Core Subjects**",
+            "",
+            "Chinese and English at Level 4 or above are typical for successful applicants. Mathematics should be at least Level 4, and CSD must be Attained.",
+            "-",
+            "**4. Choose Electives Strategically**",
+            "",
+            "Select electives that align with public health (e.g., Biology, Chemistry, Economics, Geography). Strong performance in three electives (Level 5 or above) is common among median admits.",
+            "-",
+            "**5. Consider M1/M2**",
+            "",
+            "Mathematics Extended Part (M1 or M2) can count as an elective. A high grade (e.g., 5) can strengthen your application, especially if you are strong in quantitative subjects.",
+            "-",
+            "**6. Apply in Band A**",
+            "",
+            "All 19 offers in 2025 went to Band A applicants. To maximise your chance, place JS4537 in your Band A choices.",
+            "-",
+            "**7. Prepare for No Interview**",
+            "",
+            "Since there is no interview, your JUPAS score is the sole determinant. Focus entirely on exam performance and subject selection.",
+            "-",
+            "**8. Research the Programme**",
+            "",
+            "Visit the programme website (https://www.bsc.sphpc.cuhk.edu.hk) and CUHK admissions page to understand the curriculum and tailor your personal statement if needed (though not required for JUPAS).",
+            "-",
+            "**9. Stay Informed on Public Health Issues**",
+            "",
+            "Demonstrate genuine interest by reading about current public health challenges (e.g., COVID-19, climate health, ageing). This can help in interviews for other programmes or in your personal statement for non-JUPAS applications."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4537",
+            "首年學額：30",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：不需要",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：148",
+            "Band A 錄取人數：19",
+            "總申請人數：1,855",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：32.75",
+            "下四分位數：32.5",
+            "上四分位數：30.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學（必修部分）：4",
+            "公民與社會發展：達標（A）",
+            "數學延伸部分（M1/M2）：5",
+            "選修科目 1：5",
+            "選修科目 2：5",
+            "選修科目 3：4",
+            "",
+            "科目比重：經濟或健康管理與社會關懷（x 1.5）",
+            "",
+            "一般入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學（必修部分）：第 2 級",
+            "公民與社會發展：達標",
+            "兩門選修科目達第 3 級（或一門選修 + M1/M2）",
+            "接受特定應用學習課程（「達標並表現優異 I/II」）作為額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "公共衞生理學士（BScPH）課程是香港首個公共衞生本科課程，由醫學院賽馬會公共衞生及基層醫療學院於 2009 年開辦。",
+            "",
+            "課程提供對公共衞生議題的廣泛理解，涵蓋生物統計學、流行病學、環境健康、社會及行為科學、醫療服務管理、健康經濟學，以及公共衞生法律與倫理。",
+            "",
+            "學生在第一年建立穩固基礎，從第二年開始根據興趣透過三個專業範疇規劃個人化學習路徑：",
+            "- 健康保護（例如傳染病控制、應急準備）",
+            "- 健康促進（例如健康推廣、生活方式干預）",
+            "- 健康服務（例如醫療政策、融資）",
+            "",
+            "課程強調體驗式學習，包括個案研究、實地考察和專題研習。",
+            "課程亦涵蓋氣候變化、慢性疾病、人口老化、精神健康及醫療可持續性等當代議題。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生對健康、社會及健康政策有全面理解，能勝任公共衞生領域的多樣化職業。",
+            "",
+            "就業領域（根據過去五年校友數據）：",
+            "- 公共及教育機構（約 31%）：制定健康政策、解決健康不平等、參與大學健康相關研究。",
+            "- 非政府組織及私營機構（約 38%）：推行健康計劃、促進公平、管理私營醫療服務。",
+            "- 繼續進修（約 31%）：攻讀公共衞生博士、醫學、物理治療、營養學、護理學等進階學位。",
+            "",
+            "畢業生受政府部門（如食物及衞生局、環境衞生署）、國際組織及研究機構青睞。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，設施現代化。",
+            "",
+            "獨特的書院制度提供緊密的社群體驗，九所書院提供住宿、 pastoral 及課外活動支援。",
+            "",
+            "學生可使用豐富的圖書館資源、體育設施及學生組織。",
+            "賽馬會公共衞生及基層醫療學院位於醫學院內，促進跨學科合作。",
+            "",
+            "課程透過其網絡提供交流及實習機會，具體詳情請向學系查詢。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：148",
+            "- Band A 錄取人數：19",
+            "- Band A 錄取率：約 12.8%",
+            "- 每個 Band A 錄取對應申請人數：約 7.8",
+            "",
+            "課程競爭激烈，中位數入學分數為 32.75（最佳 5 科）。",
+            "在經濟或健康管理與社會關懷（比重 x1.5）取得優異成績的申請人可能具有優勢。",
+            "",
+            "無需面試；甄選完全基於學業成績及 JUPAS 分數計算。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院卓越成就",
+          "content": [
+            "課程受益於賽馬會公共衞生及基層醫療學院的強大聲譽，該學院為中大醫學院的一部分。",
+            "",
+            "教職員包括傳染病建模、健康政策、環境健康及全球健康領域的頂尖專家。",
+            "學院與世界衞生組織傳染病流行病學及控制合作中心合作。",
+            "",
+            "與中大公共衞生領域相關的知名人士包括：",
+            "- 梁卓偉教授，前香港大學李嘉誠醫學院院長，著名流行病學家。",
+            "- 何大一博士，著名愛滋病研究員，《時代》雜誌 1996 年風雲人物，與中大有榮譽聯繫。",
+            "",
+            "校友在香港及全球公共衞生領域作出重大貢獻，任職於政府、非政府組織、學術界及醫療機構。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項基於學業成績的入學獎學金，可能涵蓋學費及生活費。",
+            "",
+            "更多資訊請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "資助計劃包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS），合資格本地學生可申請。",
+            "",
+            "學生應瀏覽中大入學網站上的完整獎學金及獎項列表。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的公共衞生策略 — 9 個實用貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "力求最佳 5 科取得至少 32.75 分（中位數）。下四分位數為 32.5，每一分都至關重要。專注於最佳五科取得高分。",
+            "-",
+            "**2. 善用加權科目**",
+            "",
+            "經濟及健康管理與社會關懷比重為 x1.5。如修讀這些科目，優先爭取佳績以大幅提升分數。",
+            "-",
+            "**3. 核心科目表現出色**",
+            "",
+            "成功申請者通常在中英文取得第 4 級或以上，數學至少第 4 級，公民科須達標。",
+            "-",
+            "**4. 策略性選擇選修科**",
+            "",
+            "選擇與公共衞生相關的選修科（如生物、化學、經濟、地理）。中位數錄取者常見在三門選修科取得第 5 級或以上。",
+            "-",
+            "**5. 考慮 M1/M2**",
+            "",
+            "數學延伸部分（M1 或 M2）可作為選修科。取得高分（如 5 級）可增強申請，尤其對數理能力強的學生。",
+            "-",
+            "**6. 將課程放在 Band A**",
+            "",
+            "2025 年所有 19 個錄取名額均給予 Band A 申請人。將 JS4537 放在 Band A 以最大化機會。",
+            "-",
+            "**7. 無面試準備**",
+            "",
+            "由於無需面試，JUPAS 分數是唯一決定因素。全力專注於考試表現及科目選擇。",
+            "-",
+            "**8. 深入了解課程**",
+            "",
+            "瀏覽課程網站（https://www.bsc.sphpc.cuhk.edu.hk）及中大入學頁面，了解課程內容，如有需要可準備個人陳述（JUPAS 不強制要求）。",
+            "-",
+            "**9. 關注公共衞生議題**",
+            "",
+            "透過閱讀當前公共衞生挑戰（如 COVID-19、氣候健康、人口老化）展現真誠興趣。這有助於其他課程的面試或非 JUPAS 申請的個人陳述。"
+          ]
+        }
+      }
+    },
+    "code": "JS4537",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 32.75,
+    "uq": 30.5,
+    "lq": 32.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 32.75
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "3",
+        "e4": "",
+        "total": 32.5
+      },
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 30.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Gabriel Leung",
+        "nameZh": "梁卓偉",
+        "achievement": "Former Dean of Li Ka Shing Faculty of Medicine, University of Hong Kong; leading epidemiologist and public health expert",
+        "sourceHint": "public bio, widely reported"
+      },
+      {
+        "nameEn": "David Ho",
+        "nameZh": "何大一",
+        "achievement": "Renowned AIDS researcher, Time Person of the Year 1996; honorary alumnus or visiting professor, not a graduate of this programme",
+        "sourceHint": "honorary ties, not a graduate"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK Public Health programme is part of the Faculty of Medicine, which has strong research output in epidemiology and global health.",
+      "Faculty members include experts in infectious disease modelling, health policy, and environmental health.",
+      "The programme collaborates with the WHO Collaborating Centre for Infectious Disease Epidemiology and Control."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Public Health notable alumni",
+      "香港中文大學 公共衞生 著名校友",
+      "CUHK Public Health graduates Hong Kong careers"
+    ]
+  }
+}

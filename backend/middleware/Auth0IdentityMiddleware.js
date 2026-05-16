@@ -141,9 +141,12 @@ class IdentityMiddleware {
 
             if (uid) {
                 req.uid = uid;
-                if (req.body && (!req.body.uid || req.body.uid === 'guest')) req.body.uid = uid;
-                if (req.query && (!req.query.uid || req.query.uid === 'guest')) req.query.uid = uid;
-                if (req.params && (!req.params.uid || req.params.uid === 'guest')) req.params.uid = uid;
+                // Server-resolved uid is authoritative (prevents stale client uid → 403 on Entra).
+                if (req.body) req.body.uid = uid;
+                if (req.query) req.query.uid = uid;
+                if (req.params && Object.prototype.hasOwnProperty.call(req.params, 'uid')) {
+                    req.params.uid = uid;
+                }
             }
 
             next();

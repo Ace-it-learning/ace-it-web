@@ -1,0 +1,499 @@
+{
+  "factPack": {
+    "code": "JS6119",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6119"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://www.scifac.hku.hk/"
+      }
+    ],
+    "programme": {
+      "code": "JS6119",
+      "nameEn": "Bachelor of Engineering in Data Science and Engineering",
+      "nameZh": "教育學士及理學士",
+      "university": "香港大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5 Subjects",
+      "median": 44,
+      "uq": 46,
+      "lq": 43
+    },
+    "jupas": {
+      "code": "JS6119",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6119",
+      "nameEn": "Bachelor of Education and Bachelor of Science",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description The Faculty of Education in collaboration with the Faculty of Science offers an inter-disciplinary five-year honours degree focusing on the study and teaching of the science subjects in the local primary# and senior secondary school curriculum. The double-degree curriculum integrates academic and professional studies at-depth in science education. Students complete a Science major programme in the Faculty of Science, and Education Professional Core courses in the Faculty of Education. Professional aspects of the double degree are phased in gradually over the five years, including pedagogical, psychological and sociological courses, and teaching practice in Hong Kong primary# and secondary schools. The curriculum focuses on the teaching of the science subjects in local mainstream schools. #Subject to approval, the curriculum is undergoing a revamp to include training for teaching primary science in addition to the existing training for teaching secondary science. The proposed changes are planned to be implemented for the 2026-27 cohort. Under the revamped curriculum, the Year 4 Professional Practicum will be on primary science.",
+      "programmeWebsite": "https://www.scifac.hku.hk/",
+      "tuition": "HK$47,000",
+      "intake": 16,
+      "duration": "5 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 116,
+        "bandB": 122,
+        "bandC": 195,
+        "bandD": 298,
+        "bandE": 313,
+        "total": 1044
+      },
+      "offers2025": {
+        "bandA": 15,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 15
+      },
+      "facultyPhone": "+852 3917 4659"
+    },
+    "admissionsSnippet": "Faculty of Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content HKU Home Contact Us facebook Twitter Instagram Youtube Xiaohongshu Search search Staff Intranet About Us Dean's Message Faculty Vision Meet Our Mascot HKU Statistics Departments Faculty Members Faculty Management Team Teaching Staff Teaching Staff Profile Looking for Thesis Supervisor Faculty Office Staff Science Distinguished Visiting Scholars Scheme Facilities &amp; Infrastructure Strategic Moves, Quick Facts and Achievements Quick Facts &amp; Figures Awards and Achievements Emeritus Professors Souvenirs Photo Gallery Prospective Students Undergraduate Programme Science Core Programmes Why HKU Science? Rankings and Achievements Science Education Nowadays Special Features for Science curricula Excellence in Research Unique Facilities 6901 BSc Programme Features Intensive Majors Accreditations Articulation Pathways Young Scientist Scheme (YSS) What is YSS? Pathway of YSS World Class Research Experiences International Exchange, Visiting &amp; Summer Study Eligibility FAQ YSS Connect Participant List Activities Common Science Experience - Science Foundation Courses FAQ 6688 Science Master Class 6858 BSc&amp;LLB 6119 BEd&amp;BSc Programmes offered by Affiliated Schools School of Biomedical Engineering 6925 BEng(BME) School of Computing and Data Science 6224 BASc(AppliedAI) 6248 BASc(FinTech) 6729 BSc(ActuarSc) 6779 Statistical Decision Sciences 6999 Computing and Data Science School of Innovation 6602 BSc(I&amp;T) Young Scientist Scheme (YSS) Students' Life &amp; Experience Diverse Learning Experiences Minor in Science Entrepreneurship Admissions One-stop Platform for Science Undergraduate Admissions Admissions Requirements and Application Direct Admissions Scheme for Associate Degree and Higher Diploma Graduates Taught Postgraduate Programme Why HKU Science? Postgraduate Studies Planning MSc in the field of Applied Geosciences MSc in the field of Chemical Technologies for Health and Materials MSc in Environmental Management MSc in the field of Food Safety and Toxicology MSc in the field of Food Industry: Management and Marketing MSc in the field of Physics MSc in the field of Space Science MSc in Artificial Intelligence MSc in Integrative Marine Ecology and Conservation Programme offered by Affiliated Schools School of Computing and Data Science MSc in Computer Science Master of Data Science MSc in Electronic Commerce and Internet Computing MSc in Financial Technology and Data Analytics Master of Statistics School of Innovation MSc in Innovation and Technology Tips for new comers Research Postgraduate Programme Why HKU Science? Studying RPg at HKU Science Programme Information Master of Philosophy (MPhil) Doctor of Philosophy (PhD) Joint PhD Degree Programme with other University Joint Educational Placement for PhD between other Universities Stipend and Support Research Postgraduate Fellowship / Scholarship How to Apply? Research@HKU Science Departments Other Useful Resources Building a Research Career Hear from Our Students FAQ Current Students Undergraduate Programmes About the programmes BSc BSc Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BSc&amp;MRes BSc&amp;LLB BSc(ActuarSc) (For 2024-25 intake or before) BSc(ActuarSc) Degree Curriculum Graduation Requirements &amp; Honours Classification Degree Regulations BASc(AppliedAI) (For 2024-25 intake or before) BASc BEd&amp;BSc Academic Matters Syllabuses (Majors, Minors &amp; Courses) Programme Learning Outcomes Academic Advising Academic Advising System of the University Academic Advising Office of the University Academic Advisers (AAs) for the First Year Students Course Selection Advisers (CSAs) Student Peer Advisers Responsibility of Student Other Assistances Leave of Absence Induction Day for BSc Freshmen Information Session for BSc(AC) Freshmen Consultation Session for BSc II &amp; BSc(AC) II and above Students Tips for Choosing Your Major Staff Handbook for UG Academic Advising (for internal access only)- Academic Advisory Office Induction Information for Freshmen Terminology, Major / Minor Declaration, Course Registration &amp; Capstone Requirement Course Registration Course Selection Procedures Workflow for Course Selection Important Dates for Course Selection Exercise Equivalency of HKDSE &amp; Other Qualifications- Course Selection Procedures Declaration of Major / Minor - BSc - BSc(Actuarial Science) Students Taking Double Majors, Major-Minor or Double Minors with Overlapping Course Requirements Capstone Requirement Syllabuses (Majors, Minors &amp; Courses) - Check Course Details - Check Science Major / Minor / Programme Structure - Check Capstone Requirements for Each Major / Programme - Past Syllabuses and Regulations Overlapping Course Requirements Assessment Grading System Examination Examination Timetables Announcement of Examination Results Absence from Examination Arrangement for Supplementary Examination Appeal on Examination Results Progression and Discontinuation Feedback Policy Academic Honesty Progression of Study Credit Accumulation &amp; Transfer Credit Unit Statement Advanced Standing, Credit Transfer &amp; Course Exemption Academic Conduct and Honesty University Regulations Dean's Honours List, Prizes &amp; Scholarships FAQs Forms (Science Online Application Submission System) Student Experiential Learning and Enrichment Opportunities Exchange Study Undergraduate Research Undergraduate Research Fellowship Programme (URFP) Application Details Application Form (URFP) Application Form (University Research Internship Awards) List of Participants Summer Research Fellowship (SRF) &amp; Overseas Research Fellowship (ORF) Schemes for Science Students Research Colloquium for Science Undergraduate Students Other Opportunities List of Experiential Learning Ambassadors and Student Sharing Young Scientist Scheme Useful Resources Handbooks Calendar &amp; Timetab"
+  },
+  "programme": {
+    "code": "JS6119",
+    "nameEn": "Bachelor of Engineering in Data Science and Engineering",
+    "nameZh": "教育學士及理學士",
+    "name": "Bachelor of Engineering in Data Science and Engineering",
+    "university": "香港大學",
+    "faculty": "工程學院",
+    "median": 44,
+    "band_a": 43,
+    "uq": 46,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission",
+          "content": [
+            "**First Year Intake:** 16",
+            "",
+            "**Duration:** 5 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Formula: Best 5 Subjects",
+            "Median: 44 | LQ: 43 | UQ: 46",
+            "",
+            "**Programme Entrance Requirements:**",
+            "General Entrance Requirements of HKU apply.",
+            "",
+            "**Interview:** Not required.",
+            "",
+            "**2025 JUPAS Statistics:**",
+            "Band A applications: 116",
+            "Band A offers: 15",
+            "Band A offer rate: ~12.9%"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Engineering in Data Science and Engineering (JS6119) is a five-year double-degree programme offered jointly by the Faculty of Education and the Faculty of Science. It integrates academic studies in science with professional training in education, preparing students to become science teachers in local primary and secondary schools.",
+            "",
+            "**Year 1–2:** Foundation courses in science (e.g., Biology, Chemistry, Physics, Mathematics) and introductory education studies.",
+            "",
+            "**Year 3:** Advanced science major courses and pedagogical, psychological, and sociological foundations of education.",
+            "",
+            "**Year 4:** Professional practicum in primary science teaching (subject to approval) and continued education core courses.",
+            "",
+            "**Year 5:** Capstone project, advanced education studies, and teaching practice in secondary schools.",
+            "",
+            "**Unique Features:**",
+            "- Interdisciplinary curriculum combining a Science major with a professional teaching qualification.",
+            "- Hands-on teaching practice in both primary and secondary school settings.",
+            "- Emphasis on science education innovation and curriculum design.",
+            "- Access to HKU's state-of-the-art science laboratories and education research centres."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Education Sector:**",
+            "- Science teacher in local primary and secondary schools",
+            "- Curriculum developer for science education",
+            "- Education policy analyst or advisor",
+            "",
+            "**Science & Research:**",
+            "- Laboratory technician or research assistant in universities or research institutes",
+            "- Science communicator or outreach officer",
+            "",
+            "**Further Studies:**",
+            "- Postgraduate degrees in Education (e.g., PGDE, MEd, PhD)",
+            "- Master's or PhD in Science disciplines",
+            "",
+            "**Other Pathways:**",
+            "- Educational technology specialist",
+            "- Science textbook author or editor",
+            "- Non-profit programme manager in science education"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus of The University of Hong Kong, Pokfulam Road, Hong Kong.",
+            "",
+            "**Facilities:**",
+            "- State-of-the-art science laboratories (Chemistry, Physics, Biology)",
+            "- Education Resource Centre with teaching aids and simulation classrooms",
+            "- University libraries with extensive science and education collections",
+            "",
+            "**Student Activities:**",
+            "- Science Society and Education Society student organisations",
+            "- Teaching practice placements in partner schools",
+            "- Exchange programmes with overseas universities (e.g., University of Cambridge, University of Toronto)",
+            "",
+            "**Support Services:**",
+            "- Academic advising and course selection guidance",
+            "- Career counselling and job placement assistance",
+            "- Scholarships and financial aid for outstanding students"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High. The programme attracts strong applicants with a clear interest in science education.",
+            "",
+            "**2025 JUPAS Band A Statistics:**",
+            "- Band A applications: 116",
+            "- Band A offers: 15",
+            "- Band A offer rate: ~12.9%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. HKDSE results (Best 5 Subjects score) – the primary criterion.",
+            "2. Strong performance in science-related electives (e.g., Biology, Chemistry, Physics, Combined Science).",
+            "3. Demonstrated interest in teaching and education (e.g., through OEA or personal statement).",
+            "4. Overall academic profile and interview performance (if applicable).",
+            "",
+            "**Tips for Applicants:**",
+            "- Aim for a Best 5 score of 44 or above to be competitive.",
+            "- Highlight any teaching-related experience or volunteer work in your OEA.",
+            "- Prepare a compelling personal statement explaining your motivation to become a science teacher."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:** The programme is jointly offered by the Faculty of Education (ranked 1st in Asia for Education) and the Faculty of Science (top 50 globally).",
+            "",
+            "**Research Strength:** HKU's Faculty of Science is home to world-class research centres, including the State Key Laboratory of Synthetic Chemistry and the Centre for Theoretical and Computational Physics.",
+            "",
+            "**Alumni Network:** Graduates of the BEd&BSc programme have gone on to become influential science educators, curriculum leaders, and education policymakers in Hong Kong and beyond.",
+            "",
+            "**Notable Alumni:** (No specific alumni names provided in the fact pack.)"
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded to outstanding JUPAS entrants based on HKDSE results.",
+            "- Up to full tuition coverage for top scorers.",
+            "",
+            "**Faculty of Education Scholarships:**",
+            "- Specific scholarships for BEd&BSc students demonstrating academic excellence and commitment to teaching.",
+            "",
+            "**Faculty of Science Scholarships:**",
+            "- Science Faculty Scholarships for students with exceptional performance in science courses.",
+            "",
+            "**External Scholarships:**",
+            "- HKSAR Government Scholarship Fund",
+            "- Sir Edward Youde Memorial Scholarships",
+            "",
+            "**Application:** Most scholarships are automatically considered upon admission; some require separate applications."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's BEd&BSc Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Best 5 Formula**",
+            "",
+            "Your admission score is based on your best 5 HKDSE subjects. Prioritise subjects where you can achieve the highest grades, especially core subjects (English, Chinese, Mathematics) and science electives.",
+            "- Focus on improving your weakest core subject to maximise your Best 5 total.",
+            "- Use past papers to identify patterns and common question types.",
+            "",
+            "**2. Excel in Science Electives**",
+            "",
+            "Strong performance in Biology, Chemistry, or Physics is highly valued. Aim for at least Level 5* in your chosen science electives.",
+            "- Consider taking Combined Science if you have broad interests.",
+            "- Join science Olympiads or competitions to strengthen your profile.",
+            "",
+            "**3. Demonstrate Teaching Passion in OEA**",
+            "",
+            "Your Other Experience and Achievements (OEA) should highlight any teaching, tutoring, or mentoring experience.",
+            "- Include volunteer work at schools or educational NGOs.",
+            "- Mention leadership roles in student societies or community projects.",
+            "",
+            "**4. Prepare a Compelling Personal Statement**",
+            "",
+            "Explain why you want to become a science teacher and how the BEd&BSc programme aligns with your goals.",
+            "- Be specific about your teaching philosophy and the impact you want to make.",
+            "- Reference HKU's unique double-degree structure and teaching practicum opportunities.",
+            "",
+            "**5. Ace the Interview (if invited)**",
+            "",
+            "Although not required for all applicants, an interview may be conducted for borderline cases. Prepare to discuss your motivation, teaching experience, and views on science education.",
+            "- Practice common questions: 'Why do you want to teach science?' and 'How would you engage students in science?'",
+            "- Show enthusiasm and a clear understanding of the programme's structure.",
+            "",
+            "**6. Build a Strong Academic Profile**",
+            "",
+            "Beyond HKDSE, maintain high grades in school and participate in academic enrichment activities.",
+            "- Attend science lectures or workshops offered by HKU or other universities.",
+            "- Consider taking online courses in education or pedagogy.",
+            "",
+            "**7. Understand the Programme's Unique Features**",
+            "",
+            "The BEd&BSc is a five-year double degree that qualifies you to teach both primary and secondary science. Emphasise this in your application.",
+            "- Mention the integrated curriculum and the opportunity to complete a Science major.",
+            "- Highlight the teaching practicum in both primary and secondary schools.",
+            "",
+            "**8. Plan Your Backup Choices**",
+            "",
+            "Given the competitive nature of JS6119, have alternative programmes in mind. Consider other education-related programmes or pure science degrees.",
+            "- JS6688 Science Master Class (if you are interested in research)",
+            "- JS6901 BSc (if you want a pure science degree)",
+            "- Other universities' BEd programmes (e.g., CUHK, EdUHK)",
+            "",
+            "**9. Stay Updated on Admission Requirements**",
+            "",
+            "Check the official HKU admissions website regularly for any changes in entrance requirements or interview policies.",
+            "- Follow HKU's social media channels for updates.",
+            "- Attend HKU information sessions or open days to ask questions directly."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學資訊",
+          "content": [
+            "**首年學額：** 16",
+            "",
+            "**修讀年期：** 5年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**2025年入學分數：**",
+            "計算公式：最佳5科",
+            "中位數：44 | 下四分位數：43 | 上四分位數：46",
+            "",
+            "**入學要求：**",
+            "符合香港大學一般入學要求。",
+            "",
+            "**面試：** 不需要。",
+            "",
+            "**2025年JUPAS統計：**",
+            "Band A申請人數：116",
+            "Band A錄取人數：15",
+            "Band A錄取率：約12.9%"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽：**",
+            "數據科學與工程工學士（JS6119）是一個為期五年的雙學位課程，由教育學院和理學院合辦。課程融合科學學術研究與教育專業培訓，培養學生成為本地中小學的科學教師。",
+            "",
+            "**第一至二年：** 科學基礎課程（如生物、化學、物理、數學）及教育學入門。",
+            "",
+            "**第三年：** 進階科學主修課程及教育學、心理學、社會學基礎。",
+            "",
+            "**第四年：** 小學科學教學實習（待審批）及持續教育核心課程。",
+            "",
+            "**第五年：** 畢業專題、進階教育學研究及中學教學實踐。",
+            "",
+            "**課程特色：**",
+            "- 跨學科課程，結合科學主修與專業教師資格。",
+            "- 在小學和中學環境中進行實踐教學。",
+            "- 強調科學教育創新與課程設計。",
+            "- 可使用港大先進的科學實驗室及教育研究中心。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**教育領域：**",
+            "- 本地中小學科學教師",
+            "- 科學教育課程開發人員",
+            "- 教育政策分析師或顧問",
+            "",
+            "**科學與研究：**",
+            "- 大學或研究機構的實驗室技術員或研究助理",
+            "- 科學傳播或外展主任",
+            "",
+            "**進修途徑：**",
+            "- 教育學深造課程（如PGDE、教育碩士、教育博士）",
+            "- 科學碩士或博士課程",
+            "",
+            "**其他出路：**",
+            "- 教育科技專家",
+            "- 科學教科書作者或編輯",
+            "- 非牟利機構科學教育項目經理"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：** 香港大學主校園，香港薄扶林道。",
+            "",
+            "**設施：**",
+            "- 先進科學實驗室（化學、物理、生物）",
+            "- 教育資源中心，配備教學輔助工具和模擬教室",
+            "- 大學圖書館，藏書豐富的科學與教育資源",
+            "",
+            "**學生活動：**",
+            "- 科學學會及教育學會學生組織",
+            "- 合作學校的教學實習安排",
+            "- 海外交流計劃（如劍橋大學、多倫多大學）",
+            "",
+            "**支援服務：**",
+            "- 學術指導及選課諮詢",
+            "- 就業輔導及職位配對",
+            "- 為優秀學生提供獎學金及經濟援助"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高。課程吸引對科學教育有明確興趣的優秀申請者。",
+            "",
+            "**2025年JUPAS Band A統計：**",
+            "- Band A申請人數：116",
+            "- Band A錄取人數：15",
+            "- Band A錄取率：約12.9%",
+            "",
+            "**影響錄取的因素：**",
+            "1. 香港中學文憑考試成績（最佳5科分數）——主要標準。",
+            "2. 科學相關選修科（如生物、化學、物理、組合科學）成績優異。",
+            "3. 對教學和教育的明確興趣（可通過OEA或個人陳述展示）。",
+            "4. 整體學術背景及面試表現（如適用）。",
+            "",
+            "**申請提示：**",
+            "- 目標最佳5科分數達44或以上以增加競爭力。",
+            "- 在OEA中突出任何教學相關經驗或義工工作。",
+            "- 撰寫具說服力的個人陳述，解釋你成為科學教師的動機。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與成就",
+          "content": [
+            "**學院卓越：** 該課程由教育學院（亞洲排名第一）和理學院（全球前50名）合辦。",
+            "",
+            "**研究實力：** 港大理學院擁有多個世界級研究中心，包括合成化學國家重點實驗室和理論與計算物理中心。",
+            "",
+            "**校友網絡：** 教育學士及理學士課程的畢業生已成為香港及海外極具影響力的科學教育工作者、課程領導者和教育政策制定者。",
+            "",
+            "**知名校友：**（資料包中未提供具體校友姓名。）"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：**",
+            "- 根據香港中學文憑考試成績頒發予優秀的JUPAS入學學生。",
+            "- 最高可獲全額學費減免。",
+            "",
+            "**教育學院獎學金：**",
+            "- 專為教育學士及理學士學生設立的獎學金，表彰學術卓越及對教學的承諾。",
+            "",
+            "**理學院獎學金：**",
+            "- 理學院獎學金，頒予科學課程表現優異的學生。",
+            "",
+            "**外部獎學金：**",
+            "- 香港特別行政區政府獎學金",
+            "- 尤德爵士紀念基金獎學金",
+            "",
+            "**申請：** 大部分獎學金在錄取時自動考慮；部分需另行申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的教育學士及理學士策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握最佳5科公式**",
+            "",
+            "入學分數基於最佳5科香港中學文憑考試成績。優先提升核心科目（英文、中文、數學）及科學選修科的成績。",
+            "- 專注改善最弱的核心科目，以最大化最佳5科總分。",
+            "- 使用歷屆試題識別題型模式及常見問題。",
+            "",
+            "**2. 在科學選修科中脫穎而出**",
+            "",
+            "生物、化學或物理的優異成績備受重視。目標在科學選修科取得至少5*級。",
+            "- 若興趣廣泛，可考慮修讀組合科學。",
+            "- 參加科學奧林匹克競賽或比賽以增強個人檔案。",
+            "",
+            "**3. 在OEA中展示教學熱誠**",
+            "",
+            "其他經驗及成就（OEA）應突出任何教學、補習或指導經驗。",
+            "- 包括在學校或教育非政府組織的義工工作。",
+            "- 提及學生組織或社區項目的領導角色。",
+            "",
+            "**4. 撰寫具說服力的個人陳述**",
+            "",
+            "解釋為何想成為科學教師，以及教育學士及理學士課程如何配合你的目標。",
+            "- 具體說明你的教學理念及期望帶來的影響。",
+            "- 提及港大獨特的雙學位結構及教學實習機會。",
+            "",
+            "**5. 在面試中表現出色（如獲邀請）**",
+            "",
+            "雖然並非所有申請者都需要面試，但邊緣個案可能會被邀請。準備討論你的動機、教學經驗及對科學教育的看法。",
+            "- 練習常見問題：「為何想教科學？」及「如何讓學生對科學產生興趣？」",
+            "- 展現熱誠及對課程結構的清晰理解。",
+            "",
+            "**6. 建立強大的學術背景**",
+            "",
+            "除了文憑試，在校內保持優異成績，並參與學術增潤活動。",
+            "- 參加港大或其他大學舉辦的科學講座或工作坊。",
+            "- 考慮修讀教育學或教學法的網上課程。",
+            "",
+            "**7. 了解課程的獨特之處**",
+            "",
+            "教育學士及理學士是一個五年制雙學位，讓你具備教授中小學科學的資格。在申請中強調這一點。",
+            "- 提及綜合課程及完成科學主修的機會。",
+            "- 突出在小學和中學的教學實習。",
+            "",
+            "**8. 規劃後備選擇**",
+            "",
+            "鑑於JS6119競爭激烈，請考慮其他相關課程。可考慮其他教育相關課程或純科學學位。",
+            "- JS6688 科學大師班（如對研究感興趣）",
+            "- JS6901 理學士（如想修讀純科學學位）",
+            "- 其他大學的教育學士課程（如中大、教大）",
+            "",
+            "**9. 緊貼入學要求更新**",
+            "",
+            "定期查看港大官方入學網站，了解入學要求或面試政策的任何變更。",
+            "- 關注港大的社交媒體帳號以獲取最新資訊。",
+            "- 參加港大資訊日或開放日，直接提問。"
+          ]
+        }
+      }
+    },
+    "code": "JS6119",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 44,
+    "uq": 46,
+    "lq": 43
+  }
+}

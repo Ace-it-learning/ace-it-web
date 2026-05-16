@@ -1,0 +1,66 @@
+{
+  "code": "JS6157",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6157"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://web.edu.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6157",
+    "nameEn": "Bachelor of Engineering",
+    "nameZh": "Bachelor of Engineering",
+    "university": "香港大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 34,
+    "uq": 35,
+    "lq": 34
+  },
+  "jupas": {
+    "code": "JS6157",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6157",
+    "nameEn": "Bachelor of Science in Speech-Language Pathology",
+    "nameZh": "",
+    "shortDescription": "This intensive programme provides students with the knowledge, skills and practical experience necessary to become a scientific, effective and adaptive speech-language pathologist. Courses cover subject knowledge in acquisition, development and disorders in human communication, speech and language, and swallowing, as well as knowledge in other related disciplines, such as medical science, psychology, English and Cantonese linguistics and hearing sciences. The curriculum employs a student-centred translational learning approach. Students will be engaged in lectures, self-directed learning, case-based learning, small group learning, and clinical practice. Students will complete a final-year research project in the fifth year. The programme emphasises integration and application of knowledge and scientific evidence in clinical practice. Clinical teaching is provided by both University staff and practicing clinicians from the community. Students receive over 300 hours of supervised clinical practicum, conducted predominately in Cantonese. Students may have opportunities to receive interdisciplinary and international service training. Note: Students must be able to communicate fluently in Cantonese. *Formerly known as Bachelor of Science in Speech and Hearing Sciences.",
+    "programmeWebsite": "https://web.edu.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 48,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 183,
+      "bandB": 105,
+      "bandC": 199,
+      "bandD": 270,
+      "bandE": 279,
+      "total": 1036
+    },
+    "offers2025": {
+      "bandA": 42,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 42
+    },
+    "facultyPhone": "+852 3917 6044"
+  },
+  "admissionsSnippet": "HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners HKU - Faculty of Education News See All News Shaping the Future of Education with AI: Community Engagement with King’s College Professor Kevin W. H. Tai receives the Study UK Alumni Awards 2026 for Social Action Professor Paul Campbell receives 2026 Emerging Scholar Award from the Educational Change SIG of AERA Education Summit 2026 Unites Global Leaders on the Future of Intelligence and Education in Hong Kong Emotional Management and Communication Skills Workshop for Early Childhood Educators HKU Faculty of Education hosts Dialogue on Reimagining Higher Education Governance in Hong Kong Shared Commitment to Education: Visit by School of Education, USJ Macao HKU Education ranked 5th Globally in Quacquarelli Symonds (QS) World University Rankings by Subject 2026 Professor Timothy Hew and Mr Wang Sikai awarded Silver Medal at the 51st International Exhibition of Inventions of Geneva Faculty of Education Students shine at The 13th Hong Kong Outstanding Prospective Teachers Award Professor Timothy Hew honoured with the Kintoy Professorship in Educational Technology Education Mentorship Programme 2026 Inauguration Ceremony HKU Alumni Day 2026 Professor Jimmy de la Torre selected as 2026 AERA Fellow Inspiring the Future: Fusing Higher Education Pedagogy with AI Literacy Shaping the Future of Education with AI: Community Engagement with King’s College Professor Kevin W. H. Tai receives the Study UK Alumni Awards 2026 for Social Action Professor Paul Campbell receives 2026 Emerging Scholar Award from the Educational Change SIG of AERA Education Summit 2026 Unites Global Leaders on the Future of Intelligence and Education in Hong Kong Emotional Management and Communication Skills Workshop for Early Childhood Educators HKU Faculty of Education hosts Dialogue on Reimagining Higher Education Governance in Hong Kong Shared Commitment to Education: Visit by School of Education, USJ Macao HKU Education ranked 5th Globally in Quacquarelli Symonds (QS) World University Rankings by Subject 2026 Professor Timothy Hew and Mr Wang Sikai awarded Silver Medal at the 51st International Exhibition of Inventions of Geneva Faculty of Education Students shine at The 13th Hong Kong Outstanding Prospective Teachers Award Professor Timothy Hew honoured with the Kintoy Professorship in Educational Technology Education Mentorship Programme 2026 Inauguration Ceremony HKU Alumni Day 2026 Professor Jimmy de la Torre selected as 2026 AERA Fellow Inspiring the Future: Fusing Higher Education Pedagogy with AI Literacy See All News In the Media See All Media Coverage 信報 - 他們擔心人工智能：合理嗎? (程介明教授) May 01, 2026 (Fri) 信報 - 教育：真的需要擔心嗎? (程介明教授) April 24, 2026 (Fri) 巴士的報 - 2026教育峰會匯聚環球領袖 共議香港人工智能與教育的未來 April 24, 2026 (Fri) See All Media Coverage Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes By Research Events See All Events 18 May AI in Education in OECD Countries: Research Evidence and Insights for Policy Initiatives Event time 12:00 pm - 01:00 pm Speaker Dr St&eacute;phanVincent-Lancrin Event type Seminar 18 May "
+}

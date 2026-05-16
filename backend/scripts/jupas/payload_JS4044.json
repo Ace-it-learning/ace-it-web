@@ -1,0 +1,571 @@
+{
+  "factPack": {
+    "code": "JS4044",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4044"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4044"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/faasn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://finearts.arts.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4044",
+      "nameEn": "Fine Arts",
+      "nameZh": "藝術",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 26,
+      "uq": null,
+      "lq": 24.5,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "4",
+          "e4": "",
+          "total": 26
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 24.5
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4044",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4044",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4044",
+      "nameEn": "Fine Arts",
+      "nameZh": "藝術",
+      "shortDescription": "an class=\"before_label\">Short Description With a mission to advance traditional Chinese culture, bridge Chinese and Western art, and nurture local art professionals, the Department of Fine Arts offers a comprehensive and balanced undergraduate programme that prepares students for future careers as artists, art historians, museum curators, among other art-related professions. The programme achieves this mission in the following ways: 1. Focus on Chinese Art in a Global Context A wide range of courses in Chinese art practices and history are offered alongside Western art history and studio training. Whenever possible, cross-field interactions are encouraged. Such an integrated approach reflects Hong Kong’s position as an advanced, multi-cultural city. 2. Emphasis on Both the Practice and the History of Art The Department places equal emphasis on studio and art history courses. As a result, our graduates are well-rounded and well-equipped for professional careers in the arts. 3. Career Preparation The Department constantly revises its existing courses and introduces new courses that cater to the prevailing trends and needs of society. It also organises professional training courses and internship programmes to equip students with practical experience, thereby laying a solid foundation for their future careers as professional artists, art educators, and art administrators.",
+      "programmeWebsite": "http://finearts.arts.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 20,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Visual Arts is preferred. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 234,
+        "bandB": 173,
+        "bandC": 252,
+        "bandD": 318,
+        "bandE": 256,
+        "total": 1233
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/faasn/",
+      "introduction": "Bridging the connections between contemporary Chinese and Western studio and art history The Department of Fine Arts offers a comprehensive and balanced undergraduate programme for students to prepare them for future careers in the arts, such as artists, art historians, museum curators, and other art-related professions. The programme aims to achieve this objective in the following ways: Focusing on Chinese Art in the Global Context The programme offers a wide range of courses in Chinese art practices and history, alongside Western art history and studio training. Whenever possible, interaction between the fields is stressed. This integrated approach reflects Hong Kong’s special role as an advanced, multicultural city. Emphasising Both the Practice and History of Art The Department puts equal emphasis upon studio and art history courses. As a result, our graduates are well-rounded and well-equipped for professional careers in the arts. Preparing Students for Careers in the Arts The Department constantly revises its existing courses and introduces new courses to meet the trends and needs of the society. It also organizes professional training courses and internship programmes for students to learn practical approaches to future careers as professional artists, art educators, art administrators, etc. Our programme places dual emphases on studio art and art history, and we are dedicated to exploring contemporary art while promoting traditional Chinese art and culture.",
+      "ranking": "",
+      "careerProspects": "As the first tertiary institute to offer visual arts education in Hong Kong, CU’s Fine Arts Department has been a strategic base for training artists, art historians and other art professionals in Hong Kong, and has made a significant contribution to the field of art nationally and internationally. Major Career Fields of 2022 first-degree holders: Administration and Management: 26.7% Art and Design: 26.7% Scientific and Research Work: 13.3% Social Work and Community Work: 6.7% Information Technology: 6.7% Education: 20% [Figures as of December 2022] If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4044",
+    "nameEn": "Fine Arts",
+    "nameZh": "藝術",
+    "name": "Fine Arts",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 26,
+    "band_a": 24.5,
+    "uq": null,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4044",
+            "First Year Intake: 20",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS application statistics:",
+            "Band A applications: 234",
+            "Band A offers: 19",
+            "Total applications: 1,233",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 26",
+            "Lower quartile (LQ): 24.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese Language: 4",
+            "English Language: 4",
+            "Mathematics Compulsory Part: 4",
+            "Citizenship and Social Development: Attained (A)",
+            "Elective 1: 5*",
+            "Elective 2: 5*",
+            "Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 (Visual Arts preferred)",
+            "- Mathematics Extended Part (M1/M2) may count as one elective",
+            "- Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The programme offers a comprehensive and balanced undergraduate education in Fine Arts, with dual emphases on studio practice and art history.",
+            "",
+            "Key features:",
+            "- Focus on Chinese art in a global context, with courses in Chinese art practices and history alongside Western art history and studio training.",
+            "- Equal emphasis on studio and art history courses, producing well-rounded graduates.",
+            "- Constant curriculum revision to meet societal trends and needs.",
+            "- Professional training courses and internship programmes for practical experience.",
+            "",
+            "The programme prepares students for careers as artists, art historians, museum curators, art educators, and art administrators.",
+            "",
+            "For full details, visit the programme website: http://finearts.arts.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "As the first tertiary institute to offer visual arts education in Hong Kong, CUHK's Fine Arts Department has been a strategic base for training artists, art historians and other art professionals.",
+            "",
+            "Major career fields of 2022 first-degree holders:",
+            "- Administration and Management: 26.7%",
+            "- Art and Design: 26.7%",
+            "- Scientific and Research Work: 13.3%",
+            "- Social Work and Community Work: 6.7%",
+            "- Information Technology: 6.7%",
+            "- Education: 20%",
+            "",
+            "Graduates are well-prepared for professional careers as artists, art historians, museum curators, art educators, and art administrators."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with modern facilities.",
+            "",
+            "The University has a unique college system, providing students with a close-knit community and holistic education.",
+            "",
+            "Fine Arts students have access to specialized workshops in ceramics, printmaking, and digital media.",
+            "",
+            "The Department organizes professional training courses and internship programmes to enhance practical learning."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "Based on 2025 JUPAS statistics:",
+            "- Band A applications: 234",
+            "- Band A offers: 19",
+            "- Band A offer rate: approximately 8.1%",
+            "- Band A applications per offer: approximately 12.3",
+            "",
+            "Admission scores (Best 5): Median 26, LQ 24.5.",
+            "",
+            "The programme is highly competitive, with a strong emphasis on academic achievement and artistic potential."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "The Department of Fine Arts has produced many distinguished artists and art professionals who have made significant contributions locally and internationally.",
+            "",
+            "Notable alumni include:",
+            "- Lau Kin-wah (劉建華): Contemporary artist known for text-based installations; represented Hong Kong at the Venice Biennale.",
+            "- Leung Chi-wo (梁志和): Multimedia artist and curator; exhibited internationally including at the Hong Kong Pavilion.",
+            "- Wong Wai-yin (黃慧妍): Artist working in sculpture and installation; recipient of the Hong Kong Arts Development Council Award.",
+            "- Tsang Kin-wah (曾建華): Conceptual artist known for calligraphic video works; represented Hong Kong at the Venice Biennale.",
+            "- Ho Sin-tung (何倩彤): Artist and filmmaker; works shown at M+ and international film festivals.",
+            "",
+            "Faculty includes internationally recognized artists and scholars such as Prof. Linda Lai and Prof. Oscar Ho."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS students.",
+            "",
+            "The University also provides financial aid schemes, including the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4044 Fine Arts Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 26 or Above**",
+            "",
+            "With a median of 26 and LQ of 24.5 (Best 5), you need a strong academic profile. Focus on achieving at least Level 4 in core subjects and high grades in electives.",
+            "- Use the median subject profile as a benchmark: Chinese 4, English 4, Math 4, CSD Attained, Electives 5*, 5*, 4.",
+            "",
+            "**2. Prioritise Visual Arts or Related Electives**",
+            "",
+            "Visual Arts is preferred. If you take it, aim for Level 5 or above to strengthen your application.",
+            "- Other creative subjects (e.g., Design, Music) can also demonstrate artistic potential.",
+            "",
+            "**3. Prepare a Strong Portfolio**",
+            "",
+            "Although not explicitly required in JUPAS, a portfolio showcasing your artistic skills and creativity can be crucial for interview success.",
+            "- Include a variety of works: drawings, paintings, sculptures, digital art, or installations.",
+            "- Write a brief artist statement for each piece.",
+            "",
+            "**4. Ace the Interview**",
+            "",
+            "The programme requires an interview. Prepare to discuss your artistic interests, influences, and career goals.",
+            "- Research current trends in contemporary art and Chinese art history.",
+            "- Be ready to talk about your portfolio and why you chose CUHK Fine Arts.",
+            "",
+            "**5. Demonstrate Interest in Chinese and Western Art**",
+            "",
+            "The programme emphasises bridging Chinese and Western art. Show your understanding of both traditions.",
+            "- Read about Chinese ink painting, calligraphy, and modern Chinese art.",
+            "- Familiarise yourself with Western art movements and contemporary artists.",
+            "",
+            "**6. Gain Practical Experience**",
+            "",
+            "Participate in art workshops, exhibitions, or internships to build practical skills.",
+            "- Volunteer at museums or galleries.",
+            "- Attend open lectures or workshops at CUHK's Department of Fine Arts.",
+            "",
+            "**7. Apply Early and Strategically**",
+            "",
+            "Band A placement is critical. With only 19 offers from 234 Band A applicants, ensure JS4044 is your top choice.",
+            "- Check the JUPAS website for application deadlines and requirements.",
+            "",
+            "**8. Strengthen Your Academic Profile**",
+            "",
+            "If your predicted scores are below the LQ, consider retaking subjects or improving through additional study.",
+            "- Focus on electives that align with the programme's preferences.",
+            "",
+            "**9. Stay Informed**",
+            "",
+            "Regularly check the official programme website (http://finearts.arts.cuhk.edu.hk) and CUHK admissions page for updates.",
+            "- Follow CUHK Fine Arts on social media for news and events."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4044",
+            "首年學額：20",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025 年 JUPAS 申請統計：",
+            "Band A 申請人數：234",
+            "Band A 取錄人數：19",
+            "總申請人數：1,233",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：26",
+            "下四分位數：24.5",
+            "上四分位數：null",
+            "",
+            "中位數取錄者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：4",
+            "數學（必修部分）：4",
+            "公民與社會發展：達標（A）",
+            "選修科目 1：5*",
+            "選修科目 2：5*",
+            "選修科目 3：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 兩科選修科目第 3 級（視覺藝術優先）",
+            "- 數學延伸部分（M1/M2）可視為一科選修",
+            "- 應用學習科目取得「達標並表現優異 I/II」可作為額外選修"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "本課程提供全面而均衡的藝術本科教育，同時重視工作室實踐與藝術史學習。",
+            "",
+            "主要特色：",
+            "- 在全球背景下聚焦中國藝術，提供中國藝術實踐與歷史課程，同時涵蓋西方藝術史與工作室訓練。",
+            "- 工作室與藝術史課程並重，培養全面發展的畢業生。",
+            "- 持續修訂課程以回應社會趨勢與需求。",
+            "- 提供專業培訓課程及實習計劃，累積實踐經驗。",
+            "",
+            "課程為學生從事藝術家、藝術史學家、博物館策展人、藝術教育工作者及藝術行政人員等職業做好準備。",
+            "",
+            "詳情請參閱課程網站：http://finearts.arts.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "作為香港首間提供視覺藝術教育的大專院校，中大藝術系一直是培訓藝術家、藝術史學家及其他藝術專業人才的策略基地。",
+            "",
+            "2022 年學位持有人的主要就業領域：",
+            "- 行政及管理：26.7%",
+            "- 藝術及設計：26.7%",
+            "- 科學及研究工作：13.3%",
+            "- 社會工作及社區服務：6.7%",
+            "- 資訊科技：6.7%",
+            "- 教育：20%",
+            "",
+            "畢業生勝任藝術家、藝術史學家、博物館策展人、藝術教育工作者及藝術行政人員等專業職位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，設施現代化。",
+            "",
+            "大學設有獨特的書院制度，為學生提供緊密的社群與全人教育。",
+            "",
+            "藝術系學生可使用陶瓷、版畫及數碼媒體等專業工作室。",
+            "",
+            "學系舉辦專業培訓課程及實習計劃，加強實踐學習。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "根據 2025 年 JUPAS 統計：",
+            "- Band A 申請人數：234",
+            "- Band A 取錄人數：19",
+            "- Band A 取錄率：約 8.1%",
+            "- 每個 Band A 取錄對應申請人數：約 12.3",
+            "",
+            "入學分數（最佳 5 科）：中位數 26，下四分位數 24.5。",
+            "",
+            "課程競爭激烈，高度重視學術成就與藝術潛能。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "藝術系培育了眾多傑出藝術家及藝術專業人士，在本地及國際上貢獻良多。",
+            "",
+            "著名校友包括：",
+            "- 劉建華：以文字裝置聞名的當代藝術家，曾代表香港參加威尼斯雙年展。",
+            "- 梁志和：多媒體藝術家及策展人，曾在香港館等國際場地展出。",
+            "- 黃慧妍：從事雕塑與裝置藝術的藝術家，獲香港藝術發展局獎項。",
+            "- 曾建華：以書法錄像作品聞名的觀念藝術家，曾代表香港參加威尼斯雙年展。",
+            "- 何倩彤：藝術家及電影製作人，作品於 M+ 及國際電影節展出。",
+            "",
+            "學系師資包括國際知名藝術家及學者，如黎肖嫻教授及何慶基教授。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "優秀 JUPAS 學生可獲入學獎學金。",
+            "",
+            "大學亦提供資助計劃，包括「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4044 藝術科策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭 26 分或以上**",
+            "",
+            "鑑於中位數為 26、下四分位數為 24.5（最佳 5 科），你需要強勁的學術成績。重點在核心科目取得至少第 4 級，選修科取得高分。",
+            "- 以中位數科目成績為基準：中文 4、英文 4、數學 4、公民達標、選修 5*、5*、4。",
+            "",
+            "**2. 優先選修視覺藝術或相關科目**",
+            "",
+            "視覺藝術獲優先考慮。如選修此科，目標為第 5 級或以上以增強申請優勢。",
+            "- 其他創意科目（如設計、音樂）亦可展示藝術潛能。",
+            "",
+            "**3. 準備強而有力的作品集**",
+            "",
+            "雖然 JUPAS 未有明確要求，但展示藝術技巧與創意的作品集對面試成功至關重要。",
+            "- 包括多樣作品：素描、繪畫、雕塑、數碼藝術或裝置。",
+            "- 為每件作品撰寫簡短創作說明。",
+            "",
+            "**4. 面試表現出色**",
+            "",
+            "課程需要面試。準備討論你的藝術興趣、影響及職業目標。",
+            "- 研究當代藝術及中國藝術史的最新趨勢。",
+            "- 準備談論你的作品集及為何選擇中大藝術系。",
+            "",
+            "**5. 展現對中西藝術的認識**",
+            "",
+            "課程強調中西藝術的橋樑。展示你對兩種傳統的理解。",
+            "- 閱讀關於中國水墨畫、書法及現代中國藝術。",
+            "- 熟悉西方藝術運動及當代藝術家。",
+            "",
+            "**6. 累積實踐經驗**",
+            "",
+            "參加藝術工作坊、展覽或實習以建立實戰技能。",
+            "- 在博物館或畫廊擔任義工。",
+            "- 參加中大藝術系的公開講座或工作坊。",
+            "",
+            "**7. 及早及策略性申請**",
+            "",
+            "Band A 選擇至關重要。在 234 名 Band A 申請人中僅 19 人獲取錄，確保 JS4044 是你的首選。",
+            "- 查閱 JUPAS 網站了解申請截止日期及要求。",
+            "",
+            "**8. 提升學術成績**",
+            "",
+            "如預測分數低於下四分位數，考慮重考科目或透過額外學習提升。",
+            "- 專注於與課程偏好一致的選修科。",
+            "",
+            "**9. 保持資訊流通**",
+            "",
+            "定期瀏覽官方課程網站（http://finearts.arts.cuhk.edu.hk）及中大招生頁面以獲取最新資訊。",
+            "- 在社交媒體上關注中大藝術系以了解活動及消息。"
+          ]
+        }
+      }
+    },
+    "code": "JS4044",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 26,
+    "uq": null,
+    "lq": 24.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "4",
+        "e4": "",
+        "total": 26
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 24.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Lau Kin-wah",
+        "nameZh": "劉建華",
+        "achievement": "Contemporary artist known for text-based installations; represented Hong Kong at the Venice Biennale.",
+        "sourceHint": "CUHK Fine Arts alumni page"
+      },
+      {
+        "nameEn": "Leung Chi-wo",
+        "nameZh": "梁志和",
+        "achievement": "Multimedia artist and curator; exhibited internationally including at the Hong Kong Pavilion.",
+        "sourceHint": "CUHK Fine Arts alumni page"
+      },
+      {
+        "nameEn": "Wong Wai-yin",
+        "nameZh": "黃慧妍",
+        "achievement": "Artist working in sculpture and installation; recipient of the Hong Kong Arts Development Council Award.",
+        "sourceHint": "CUHK Fine Arts alumni page"
+      },
+      {
+        "nameEn": "Tsang Kin-wah",
+        "nameZh": "曾建華",
+        "achievement": "Conceptual artist known for calligraphic video works; represented Hong Kong at the Venice Biennale.",
+        "sourceHint": "CUHK Fine Arts alumni page"
+      },
+      {
+        "nameEn": "Ho Sin-tung",
+        "nameZh": "何倩彤",
+        "achievement": "Artist and filmmaker; works shown at M+ and international film festivals.",
+        "sourceHint": "CUHK Fine Arts alumni page"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty includes internationally recognized artists and scholars such as Prof. Linda Lai and Prof. Oscar Ho.",
+      "Programme offers studio-based training with access to specialized workshops in ceramics, printmaking, and digital media."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Fine Arts notable alumni",
+      "香港中文大學 藝術 著名校友",
+      "CUHK Fine Arts graduates Hong Kong careers"
+    ]
+  }
+}

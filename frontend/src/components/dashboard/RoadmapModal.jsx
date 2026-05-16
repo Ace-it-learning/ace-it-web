@@ -8,6 +8,7 @@ import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySk
 import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
 import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/masteryUtils';
 import { LISTENING_MISSION_SHELLS } from '../../data/listeningMissionShells';
+import { getGrammarMaxXp, getGrammarLevelOptionLabel } from '../../utils/grammarLabUtils';
 
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
     const { user, profile } = useAuth();
@@ -135,7 +136,7 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
             setLoading(true);
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
             // NEW: Fetch from Factory Model's personalized endpoint
-            const res = await fetchWithTimeout(`${API_URL}/api/quests/personalized?uid=${user.uid}`);
+            const res = await fetchWithTimeout(`${API_URL}/api/quests/personalized?uid=${user.uid}&subject=english`);
             if (res.ok) {
                 const data = await res.json();
                 setPlan(data);
@@ -453,11 +454,13 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
             // REDIRECTION LOGIC FOR GRAMMAR LAB
             if (task.type === 'GRAMMAR_LAB') {
                 const targetLevel = task.level || '5';
+                const taskXp = getGrammarMaxXp(targetLevel);
                 navigate(`/lab?topic=${task.topic}&level=${targetLevel}&taskId=${task.id}`, { 
                     state: { 
                         topic: task.topic, 
                         taskId: task.id,
-                        xp: 50,
+                        xp: taskXp,
+                        taskXp,
                         isGrammarLab: true,
                         autoStart: {
                             topic: task.topic,
@@ -997,6 +1000,9 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
                                             const isElite = id.includes('_elite_');
                                             const trackLabel = isElite ? t('roadmap.elite_track') : t('roadmap.accuracy_track');
                                             const trackColor = isElite ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700";
+                                            const missionLevel = selectedLevels[id] || (isElite ? '7' : '5');
+                                            const maxXp = getGrammarMaxXp(missionLevel);
+                                            const levelLang = language === 'zh' ? 'zh' : 'en';
                                             
                                             return (
                                                 <div 
@@ -1012,8 +1018,8 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
                                                             topic: id,
                                                             title: skill[language]?.name || id,
                                                             type: 'GRAMMAR_LAB',
-                                                            xp: 50,
-                                                            level: selectedLevels[id] || (id.includes('_elite_') ? '7' : '5')
+                                                            xp: maxXp,
+                                                            level: missionLevel
                                                         });
                                                     }}
                                                     className="group bg-white p-5 rounded-2xl border-2 border-slate-100 hover:border-amber-300 hover:shadow-xl transition-all cursor-pointer flex flex-col"
@@ -1025,18 +1031,19 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
                                                         <div className="flex items-center gap-2 px-3 py-1 bg-white border border-amber-200 rounded-lg shadow-sm" onClick={(e) => e.stopPropagation()}>
                                                             <Target size={12} className="text-amber-600" />
                                                             <select
-                                                                value={selectedLevels[id] || (isElite ? '7' : '5')}
+                                                                value={missionLevel}
                                                                 onChange={(e) => setSelectedLevels({ ...selectedLevels, [id]: e.target.value })}
                                                                 className="bg-transparent text-[10px] font-black text-amber-600 focus:outline-none cursor-pointer uppercase"
                                                             >
-                                                                <option value="3">Level 3</option>
-                                                                <option value="4">Level 4</option>
-                                                                <option value="5">Level 5</option>
-                                                                <option value="7">Level 7</option>
+                                                                {['3', '4', '5', '6', '7'].map((lvl) => (
+                                                                    <option key={lvl} value={lvl}>
+                                                                        {getGrammarLevelOptionLabel(lvl, levelLang)}
+                                                                    </option>
+                                                                ))}
                                                             </select>
                                                         </div>
                                                         <div className="text-[11px] font-black text-amber-600 bg-amber-50 px-2 py-1 rounded-lg">
-                                                            +50 XP
+                                                            {language === 'zh' ? `最高 ${maxXp} XP` : `Up to ${maxXp} XP`}
                                                         </div>
                                                     </div>
                                                     

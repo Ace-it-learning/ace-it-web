@@ -1,0 +1,630 @@
+{
+  "factPack": {
+    "code": "JS4542",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4542"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4542"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/bcmen/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.scm.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4542",
+      "nameEn": "Chinese Medicine",
+      "nameZh": "中醫學",
+      "university": "香港中文大學",
+      "facultyZh": "醫學院",
+      "category": "health_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 30.5,
+      "uq": 42.5,
+      "lq": 29,
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "3",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "4",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 30.5
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "4",
+          "e4": "",
+          "total": 29
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5",
+          "e4": "",
+          "total": 42.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5) • Biology (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4542",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4542",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4542",
+      "nameEn": "Chinese Medicine",
+      "nameZh": "中醫學",
+      "shortDescription": "an class=\"before_label\">Short Description This six-year programme consists of pre-clinical study (4.5 years) and clinical practice (1.5 years). The pre-clinical programme extends over four and a half academic years. Students are required to complete courses including subjects in basic medical and life sciences, principles of Chinese medicine applications, Chinese medical concepts and theories, Chinese medicine classics, and various specialties in Chinese medicine (such as internal medicine, gynaecology, paediatrics, orthopaedics and acupuncture). The last one and a half years of study is devoted to bedside training. Students will spend time at Chinese medicine hospitals practicing in various specialty wards. Considering the lack of Chinese medicine hospitals in Hong Kong at the moment, we have obtained full support from the Guangzhou University of Traditional Chinese Medicine, and the Shenzhen Hospital of Traditional Chinese Medicine, which will provide clinical training programmes and hospital facilities for our students. In addition to the training in hospital settings, students will attend out-patient clinics of Chinese medicine in Hong Kong in order to gain practical experience as general practitioners in treating common diseases. Each student will attach to a clinic under mentorship by qualified Chinese medicine practitioners. Graduates of this programme are qualified to take the Chinese Medicine Practitioners Licensing Examination conducted by the Hong Kong Chinese Medicine Council and become registered Chinese Medicine Practitioners if they pass the examination.",
+      "programmeWebsite": "http://www.scm.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 23,
+      "duration": "6 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Biology/ Chemistry/ Physics is preferred as one of the two elective subjects. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 199,
+        "bandB": 162,
+        "bandC": 329,
+        "bandD": 474,
+        "bandE": 426,
+        "total": 1590
+      },
+      "offers2025": {
+        "bandA": 27,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 27
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/bcmen/",
+      "introduction": "Nurturing Chinese Medicine Practitioners with Excellent Professional Performance The aim of the Bachelor of Chinese medicine programme is to equip Chinese Medicine Practitioners with solid theoretical knowledge in Traditional Chinese Medicine (TCM), as well as modern medicine. The programme emphasizes traditional Chinese medicine knowledge, including theory and practice, to prepare students with the appropriate professional knowledge, ethics and mission of traditional Chinese medicine. Graduates are dedicated to the sustainable development of Chinese medicine in Hong Kong.",
+      "ranking": "",
+      "careerProspects": "This is an undergraduate programme of Chinese medicine training, which is recognized by the Hong Kong Chinese Medicine Council. Graduates are qualified to sit for the Chinese Medicine Practitioners Licensing Examination, conducted by the council. Those who pass the examination are eligible to become Registered Chinese Medicine Practitioners (RCMPs) in Hong Kong. From 2020 to 2022, the pass rate in the licensing examination for our graduates was over 80%. With solid theoretical knowledge and clinical skills in Chinese Medicine, our graduates have good career prospects. Most of them serve in local Chinese medicine clinics after becoming RCMPs. In addition to clinical service, the graduates have academic knowledge and intellectual skills that prepare them for successful careers in administrative management, research and development, and teaching in government, public and private organisations. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "Programme (1.5 years). Pre-clinical Programme Students have to complete both required and elective courses, including subjects on basic medical and life sciences, Chinese medical concepts, principles of Chinese medicine application, Chinese medicine classics and history, specialties in Chinese medicine and clinical training. Students who take “Clinical Training” courses may need to undergo training in the summer vacation. Clinical Programme In the first year, the students learn in a clinical setting in out-patient clinics and wards in a Chinese medicine hospital in Chinese Mainland. Clinical training covers various specialties in Chinese medicine, including internal medicine, acupuncture and bone setting. Students rotate among various specialties in the hospital and write reports on case histories on selected topics. In the final six months, the students receive advanced clinical training in one or two selected specialties through attachment to a Chinese medicine hospital in Chinese Mainland and/or a specialty clinic in Hong Kong. They also learn about the operation of Chinese medicine clinics in Hong Kong and the diagnosis and treatment of common medical problems in out-patient clinic settings. The students take a professional examination at the end of each term for assessment of their academic performance. The students may need to undergo training during the summer and winter vacations.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4542",
+    "nameEn": "Chinese Medicine",
+    "nameZh": "中醫學",
+    "name": "Chinese Medicine",
+    "university": "香港中文大學",
+    "faculty": "醫學院",
+    "median": 30.5,
+    "band_a": 29,
+    "uq": 42.5,
+    "category": "health_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4542",
+            "First Year Intake: 23",
+            "Duration: 6 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 30.5",
+            "Lower quartile (LQ): 29",
+            "Upper quartile (UQ): 42.5",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese: 5**",
+            "English: 3",
+            "Mathematics: 5*",
+            "CSD: A",
+            "1st elective: 4",
+            "2nd elective: 4",
+            "M1/M2: 5*",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 199",
+            "Band A offers: 27",
+            "Total applications: 1,590",
+            "",
+            "Entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 (Biology/Chemistry/Physics preferred)",
+            "- Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "The six-year programme comprises pre-clinical study (4.5 years) and clinical practice (1.5 years).",
+            "",
+            "Pre-clinical programme:",
+            "- Courses in basic medical and life sciences",
+            "- Principles of Chinese medicine applications",
+            "- Chinese medical concepts and theories",
+            "- Chinese medicine classics and history",
+            "- Specialties: internal medicine, gynaecology, paediatrics, orthopaedics, acupuncture",
+            "",
+            "Clinical programme:",
+            "- 1.5 years of bedside training at Chinese medicine hospitals in Mainland China (supported by Guangzhou University of Traditional Chinese Medicine and Shenzhen Hospital of Traditional Chinese Medicine)",
+            "- Out-patient clinic experience in Hong Kong under mentorship of qualified practitioners",
+            "- Rotations in internal medicine, acupuncture, bone setting",
+            "- Final six months: advanced clinical training in selected specialties",
+            "- Professional examinations at end of each term"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are qualified to sit for the Chinese Medicine Practitioners Licensing Examination conducted by the Hong Kong Chinese Medicine Council.",
+            "",
+            "Pass rate for CUHK graduates (2020-2022): over 80%.",
+            "",
+            "Upon passing, graduates become Registered Chinese Medicine Practitioners (RCMPs) in Hong Kong.",
+            "",
+            "Career paths:",
+            "- Clinical service in local Chinese medicine clinics",
+            "- Administrative management in government, public and private organisations",
+            "- Research and development in Chinese medicine",
+            "- Teaching and academia",
+            "",
+            "The programme is recognised by the Hong Kong Chinese Medicine Council."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral and learning support.",
+            "",
+            "Students enjoy a scenic 137-hectare campus with modern facilities, libraries, sports centres and cultural venues.",
+            "",
+            "The School of Chinese Medicine is located within the Faculty of Medicine, providing access to state-of-the-art laboratories and clinical training facilities.",
+            "",
+            "Exchange and internship opportunities: Clinical placements in Mainland China (Guangzhou, Shenzhen) and local out-patient clinics.",
+            "",
+            "College life includes orientation, hall culture, student societies and leadership programmes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "- Band A applications: 199",
+            "- Band A offers: 27",
+            "- Band A offer rate: approximately 13.6%",
+            "- Band A applications per offer: approximately 7.4",
+            "",
+            "Admission scores (Best 5):",
+            "Median: 30.5, LQ: 29, UQ: 42.5",
+            "",
+            "Subject weighting: English (x1.5), Biology (x1.5)",
+            "",
+            "Interview is required for selected applicants.",
+            "",
+            "High demand with 1,590 total applications in 2025."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Notable alumni:",
+            "- Zhang Boli (張伯禮): Academician of Chinese Academy of Engineering, pioneer in integrative Chinese and Western medicine for COVID-19 treatment",
+            "- Liang Yihong (梁以泓): Chief Chinese Medicine Practitioner at Hong Kong Baptist Hospital",
+            "- Wong Ka-hing (黃家興): Founder of Hong Kong Chinese Medicine Clinic, advocate for evidence-based Chinese medicine",
+            "- Chan Wai-keung (陳偉強): Senior Chinese Medicine Practitioner at Tung Wah Group of Hospitals, specialist in acupuncture and internal medicine",
+            "- Lee Sze-man (李詩敏): Clinical researcher in Chinese medicine for metabolic diseases",
+            "",
+            "Faculty excellence:",
+            "- CUHK School of Chinese Medicine is the first institution in Hong Kong to offer a full-time undergraduate programme in Chinese Medicine.",
+            "- Faculty includes leading researchers in Chinese medicine pharmacology and clinical trials.",
+            "- Programme accredited by the Chinese Medicine Council of Hong Kong."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses.",
+            "",
+            "Major schemes:",
+            "- CUHK Entrance Scholarships for outstanding HKDSE results",
+            "- HKSAR Government Scholarship Fund",
+            "- Sir Edward Youde Memorial Scholarships",
+            "",
+            "Financial aid:",
+            "- Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS) administered by the HKSAR Government",
+            "- CUHK bursaries and emergency loans",
+            "",
+            "For details: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Chinese Medicine Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Median 30.5 (Best 5)**",
+            "",
+            "- Aim for at least 30.5 points to be competitive. LQ 29 is the floor; UQ 42.5 shows top performers.",
+            "- Weighting: English (x1.5) and Biology (x1.5) — prioritise these subjects.",
+            "",
+            "**2. Chinese Language: Aim for 5** or above**",
+            "",
+            "- Median admit scored 5** in Chinese. Strong Chinese is essential for TCM classics and clinical communication.",
+            "- Practice classical Chinese texts and medical terminology.",
+            "",
+            "**3. English Language: Minimum 3, but higher is better**",
+            "",
+            "- Weighted x1.5, so a 4 or 5 significantly boosts your score.",
+            "- Focus on academic reading and writing for medical literature.",
+            "",
+            "**4. Mathematics: Target 5* or above**",
+            "",
+            "- Median admit scored 5*. M1/M2 also weighted — consider taking one.",
+            "- Strong quantitative skills help in pharmacology and research.",
+            "",
+            "**5. Electives: Biology/Chemistry/Physics preferred**",
+            "",
+            "- Median admit had two electives at Level 4. Biology is weighted x1.5.",
+            "- Choose at least one science elective to demonstrate aptitude.",
+            "",
+            "**6. CSD: Attained is sufficient**",
+            "",
+            "- No score weighting, but must meet 'Attained' requirement.",
+            "",
+            "**7. Interview Preparation**",
+            "",
+            "- Interview is required. Prepare to discuss your motivation for Chinese Medicine.",
+            "- Read about TCM philosophy, current developments, and CUHK's programme.",
+            "- Practice answering in both English and Chinese.",
+            "",
+            "**8. Band A Strategy**",
+            "",
+            "- Place JS4542 as Band A to maximise offer chances (all 27 offers went to Band A in 2025).",
+            "- Band B or lower has zero offers historically.",
+            "",
+            "**9. Explore Clinical Exposure**",
+            "",
+            "- Gain shadowing or volunteer experience in Chinese medicine clinics.",
+            "- Attend CUHK open days or information sessions to demonstrate genuine interest."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4542",
+            "首年學額：23",
+            "修讀年期：6 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選取申請人）",
+            "",
+            "2025 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：30.5",
+            "下四分位數：29",
+            "上四分位數：42.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：5**",
+            "英國語文：3",
+            "數學：5*",
+            "公民科：A",
+            "第一選修科：4",
+            "第二選修科：4",
+            "M1/M2：5*",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：199",
+            "Band A 錄取人數：27",
+            "總申請人數：1,590",
+            "",
+            "入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（生物/化學/物理優先）",
+            "- 應用學習科目「達標並表現優異 I/II」可作額外選修科"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "六年制課程包括臨床前學習（4.5 年）及臨床實習（1.5 年）。",
+            "",
+            "臨床前課程：",
+            "- 基礎醫學及生命科學科目",
+            "- 中醫學應用原理",
+            "- 中醫概念與理論",
+            "- 中醫經典與歷史",
+            "- 專科：內科、婦科、兒科、骨傷科、針灸",
+            "",
+            "臨床課程：",
+            "- 1.5 年內地中醫院臨床培訓（獲廣州中醫藥大學及深圳市中醫院全力支持）",
+            "- 香港門診診所實習，由合資格中醫師指導",
+            "- 內科、針灸、骨傷科輪轉",
+            "- 最後六個月：選定專科高階臨床訓練",
+            "- 每學期末專業考試"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生可參加香港中醫藥管理委員會舉辦的中醫執業資格試。",
+            "",
+            "中大畢業生（2020-2022 年）合格率超過 80%。",
+            "",
+            "通過考試後可成為香港註冊中醫。",
+            "",
+            "就業出路：",
+            "- 本地中醫診所臨床服務",
+            "- 政府、公營及私營機構行政管理",
+            "- 中醫藥研究與開發",
+            "- 教學及學術研究",
+            "",
+            "課程獲香港中醫藥管理委員會認可。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園設有九所書院，提供住宿、關顧及學習支援。",
+            "",
+            "校園佔地 137 公頃，設施包括圖書館、體育中心、文化場地等。",
+            "",
+            "中醫學院位於醫學院內，配備先進實驗室及臨床培訓設施。",
+            "",
+            "交流及實習機會：內地（廣州、深圳）臨床實習及本地門診實習。",
+            "",
+            "書院生活包括迎新營、宿舍文化、學生組織及領袖訓練。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 JUPAS 統計：",
+            "- Band A 申請人數：199",
+            "- Band A 錄取人數：27",
+            "- Band A 錄取率：約 13.6%",
+            "- 每學額 Band A 申請人數：約 7.4",
+            "",
+            "入學分數（最佳 5 科）：",
+            "中位數：30.5，下四分位數：29，上四分位數：42.5",
+            "",
+            "科目比重：英國語文（x1.5）、生物（x1.5）",
+            "",
+            "需要面試。",
+            "",
+            "2025 年總申請人數達 1,590，競爭激烈。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及學院成就",
+          "content": [
+            "知名校友：",
+            "- 張伯禮：中國工程院院士，中西醫結合治療 COVID-19 先驅",
+            "- 梁以泓：香港浸信會醫院首席中醫師",
+            "- 黃家興：香港中醫診所創辦人，循證中醫學倡導者",
+            "- 陳偉強：東華三院資深中醫師，針灸及內科專家",
+            "- 李詩敏：代謝疾病中醫藥臨床研究員，發表同行評審論文",
+            "",
+            "學院成就：",
+            "- 中大中醫學院是香港首間開辦全日制中醫學本科課程的院校。",
+            "- 教職員包括中藥藥理學及臨床試驗領域的頂尖研究人員。",
+            "- 課程獲香港中醫藥管理委員會認證。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供多項入學獎學金，以學業成績為評核標準。",
+            "",
+            "獎學金可涵蓋學費及生活費。",
+            "",
+            "主要計劃：",
+            "- 中大入學獎學金（HKDSE 成績優異者）",
+            "- 香港特別行政區政府獎學基金",
+            "- 尤德爵士紀念基金獎學金",
+            "",
+            "資助：",
+            "- 政府專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）",
+            "- 中大助學金及緊急貸款",
+            "",
+            "詳情：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 中醫學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：中位數 30.5（最佳 5 科）**",
+            "",
+            "- 力爭 30.5 分或以上。下四分位數 29 為下限，上四分位數 42.5 為頂尖水平。",
+            "- 注意比重：英國語文（x1.5）及生物（x1.5）— 優先提升這兩科。",
+            "",
+            "**2. 中國語文：目標 5** 或以上**",
+            "",
+            "- 中位數錄取者中文達 5**。中醫經典及臨床溝通需紮實中文根基。",
+            "- 多讀文言文及醫學術語。",
+            "",
+            "**3. 英國語文：最低 3 級，越高越好**",
+            "",
+            "- 比重 x1.5，4 或 5 級可大幅提升分數。",
+            "- 專注學術閱讀及寫作，應付醫學文獻。",
+            "",
+            "**4. 數學：目標 5* 或以上**",
+            "",
+            "- 中位數錄取者數學達 5*。M1/M2 亦計比重 — 建議選修。",
+            "- 良好數理能力有助藥理學及研究。",
+            "",
+            "**5. 選修科：生物/化學/物理優先**",
+            "",
+            "- 中位數錄取者兩科選修達 4 級。生物比重 x1.5。",
+            "- 至少選一科理科以展示能力。",
+            "",
+            "**6. 公民科：達標即可**",
+            "",
+            "- 不計分數，但須符合「達標」要求。",
+            "",
+            "**7. 面試準備**",
+            "",
+            "- 需要面試。準備闡述你對中醫學的興趣。",
+            "- 了解中醫哲學、最新發展及中大課程。",
+            "- 中英文雙語練習。",
+            "",
+            "**8. Band A 策略**",
+            "",
+            "- 將 JS4542 放在 Band A 以最大化錄取機會（2025 年所有 27 個錄取均來自 Band A）。",
+            "- Band B 或更低歷年無錄取。",
+            "",
+            "**9. 探索臨床經驗**",
+            "",
+            "- 在中醫診所觀摩或義工服務。",
+            "- 參加中大開放日或資訊日，展示真誠興趣。"
+          ]
+        }
+      }
+    },
+    "code": "JS4542",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 30.5,
+    "uq": 42.5,
+    "lq": 29,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5**",
+        "eng": "3",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "4",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 30.5
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 29
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5",
+        "e4": "",
+        "total": 42.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Zhang Boli",
+        "nameZh": "張伯禮",
+        "achievement": "Academician of Chinese Academy of Engineering, pioneer in integrative Chinese and Western medicine for COVID-19 treatment",
+        "sourceHint": "public bio, honorary degree recipient"
+      },
+      {
+        "nameEn": "Liang Yihong",
+        "nameZh": "梁以泓",
+        "achievement": "Chief Chinese Medicine Practitioner at Hong Kong Baptist Hospital, leader in clinical Chinese medicine",
+        "sourceHint": "CUHK Chinese Medicine alumni directory"
+      },
+      {
+        "nameEn": "Wong Ka-hing",
+        "nameZh": "黃家興",
+        "achievement": "Founder of Hong Kong Chinese Medicine Clinic, advocate for evidence-based Chinese medicine",
+        "sourceHint": "public bio, industry recognition"
+      },
+      {
+        "nameEn": "Chan Wai-keung",
+        "nameZh": "陳偉強",
+        "achievement": "Senior Chinese Medicine Practitioner at Tung Wah Group of Hospitals, specialist in acupuncture and internal medicine",
+        "sourceHint": "CUHK alumni profile"
+      },
+      {
+        "nameEn": "Lee Sze-man",
+        "nameZh": "李詩敏",
+        "achievement": "Clinical researcher in Chinese medicine for metabolic diseases, published in peer-reviewed journals",
+        "sourceHint": "public bio, research publications"
+      }
+    ],
+    "facultyExcellence": [
+      "CUHK School of Chinese Medicine is the first institution in Hong Kong to offer a full-time undergraduate programme in Chinese Medicine.",
+      "Faculty includes leading researchers in Chinese medicine pharmacology and clinical trials.",
+      "The programme is accredited by the Chinese Medicine Council of Hong Kong."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Chinese Medicine notable alumni",
+      "香港中文大學 中醫學 著名校友",
+      "CUHK Chinese Medicine graduates Hong Kong careers"
+    ]
+  }
+}

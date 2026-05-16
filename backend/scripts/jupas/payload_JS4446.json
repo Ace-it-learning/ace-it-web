@@ -1,0 +1,591 @@
+{
+  "factPack": {
+    "code": "JS4446",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4446"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4446"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/iergn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.ie.cuhk.edu.hk/ierg"
+      }
+    ],
+    "programme": {
+      "code": "JS4446",
+      "nameEn": "Information Engineering",
+      "nameZh": "信息工程學",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 39.25,
+      "uq": 40.375,
+      "lq": 38.125,
+      "percentiles": {
+        "UQ": {
+          "chi": "4",
+          "eng": "5",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 40.375
+        },
+        "M": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5",
+          "e2": "4",
+          "e3": "",
+          "e4": "",
+          "total": 39.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "3",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "4",
+          "e2": "3",
+          "e3": "",
+          "e4": "",
+          "total": 38.125
+        }
+      },
+      "subjectWeighting": "• Mathematics (x 2) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, DAT, ICT (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4446",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4446",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4446",
+      "nameEn": "Information Engineering",
+      "nameZh": "信息工程學",
+      "shortDescription": "an class=\"before_label\">Short Description Information Engineering discipline deals with the generation, transmission, analysis, and use of information, data, and knowledge in systems for building a smart and secure information society. The comprehensive yet flexible curriculum unlocks a broad spectrum of career opportunities in various sectors to our students, such as: Data generation/coordination: Internet-of-things/Cyber-physical systems Transmission: Wireless and optical (beyond-5G) communications, computer networks Analysis: Artificial intelligence, big-data analytics, computer vision Processing: Multimedia, cloud computing Protection: Cybersecurity, cryptography, privacy, blockchain, e-payment Theoretical aspects: Information theory, signal processing, machine learning, control theory Details at: https://www.ie.cuhk.edu.hk/ierg/",
+      "programmeWebsite": "https://www.ie.cuhk.edu.hk/ierg",
+      "tuition": "HK$47,000",
+      "intake": 67,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level One of the following elective subjects: PHYSICS 3 BIOLOGY 3 CHEMISTRY 3 MATHEMATICS EXTENDED MODULE 1 OR 2 3 One of the following elective subjects: ANY 1 SUBJECT NOTE 3 NOTE: Preferred subjects: Mathematics Extended Module I or II, Physics, Biology, Chemistry, Design and Applied Technology, and Information and Communication Technology. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 352,
+        "bandB": 180,
+        "bandC": 247,
+        "bandD": 344,
+        "bandE": 294,
+        "total": 1417
+      },
+      "offers2025": {
+        "bandA": 63,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 63
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/iergn/",
+      "introduction": "Nurturing Engineering Leaders for Building a Connected and Secure Smart Society of the Future The study of Information Engineering (IE) encompasses elements of Computer Science, Electronic Engineering, Data Science, Information Security, Information Theory, Telecommunications Networking, and Artificial Intelligence, and their integration. The knowledge and skills the students gain will find wide applications in emerging areas such as Artificial Intelligence of Things, Big Data Analytics, B5G/6G, Cloud/Edge Computing, Computer Vision, Cryptocurrency, Industry 4.0, the Metaverse and Smart Cities. The multi-disciplinary nature of our programme is what makes it unique and rewarding. The IE department was established in 1989 as the first IE department and remains one of a kind in Hong Kong. The department is devoted to nurturing and educating engineering leaders for the information world of today and tomorrow. The professors are dedicated educators and world-class researchers, many of whom had extensive experience with leading research institutions worldwide before joining the department. The department has a strong presence in top-tier venues in the global scientific community, as well as strong connections in the local IT industry in Hong Kong.",
+      "ranking": "#26 in the Computer Science and Electrical Engineering (QS World University Rankings by Subject) We have a world class faculty whose research sits at the intersection of EE and CS.",
+      "careerProspects": "Each year, we have about 100 graduates, each armed with solid engineering knowledge and superior problem-solving ability. Our graduates, trained to devise innovative solutions for practical challenges, are in high demand across diverse industry sectors. About 90% of our graduates transition into the commerce and industry sectors, securing positions in renowned companies like Deloitte, PwC, HSBC, JP Morgan Chase, Manulife, Zurich Insurance, HKT, Huawei, IBM, PCCW Solutions, Accenture, Cherrypicks and Lenovo. Whether in international or local firms, our graduates are highly esteemed for their specialized knowledge and analytical prowess, positioning them to thrive in their chosen fields. About 10% of our graduates opt for the education sector, taking up roles as educators in secondary schools or advancing their studies in graduate schools globally. These graduates exemplify a passion for imparting their knowledge and skills, thereby nurturing future generations of engineers. In summary, our graduates have charted successful career paths across diverse industry sectors, which is a testament to their achievements and fills us with pride.&nbsp; If this programme captures your interest, we encourage you to thoroughly review the application requirements and deadlines specific to the respective admission scheme. Doing so will enhance your chances of gaining acceptance. APPLY NOW",
+      "craftYourPath": "During the first two years of study, the students undergo training designed to establish and bolster their foundational knowledge in Engineering Mathematics and Engineering Basics. This includes courses in Calculus, Linear Algebra, Discrete Mathematics and Complex Variables. To reinforce their understanding of engineering principles, the students also take subjects such as Signals and Systems, Basic Analog and Digital Circuits, Data Structures, System Programming and Computer Networks. Equipped with this foundational knowledge, students are prepared to delve into more advanced engineering subjects, like Microcontrollers and Embedded Systems, Information and Software Engineering Practices, and Information Infrastructure Design. Additionally, a diverse range of elective courses helps nurture the students’ individual interests and align their studies with their professional goals. The programme features five distinct Specialization Streams: 1) Big Data: Systems and Applications, 2) Telecommunications, 3) Cyber Security, 4) Networked Systems and Applications, and 5) Information Science. This provides students with ample flexibility to tailor their academic journey according to their",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4446",
+    "nameEn": "Information Engineering",
+    "nameZh": "信息工程學",
+    "name": "Information Engineering",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 39.25,
+    "band_a": 38.125,
+    "uq": 40.375,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "First Year Intake: 67",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per year (local students)",
+            "Interview: Yes (shortlisted candidates)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 39.25",
+            "Lower quartile (LQ): 38.125",
+            "Upper quartile (UQ): 40.375",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5*",
+            "English: 4",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 4",
+            "1st Elective: 5",
+            "2nd Elective: 4",
+            "",
+            "Subject Weighting:",
+            "- Mathematics (x 2)",
+            "- M1 or M2 (x 1.75)",
+            "- Biology, Chemistry, Physics, DAT, ICT (x 1.5)",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 352",
+            "Band A offers: 63",
+            "Total applications: 1,417",
+            "Band A offer rate: ~17.9%",
+            "Band A apps per offer: ~5.6"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Information Engineering programme at CUHK is a comprehensive, flexible curriculum covering data generation, transmission, analysis, and use in systems for a smart and secure information society.",
+            "",
+            "Core areas include:",
+            "- Data generation/coordination: Internet-of-Things, Cyber-physical systems",
+            "- Transmission: Wireless and optical (beyond-5G) communications, computer networks",
+            "- Analysis: Artificial intelligence, big-data analytics, computer vision",
+            "- Processing: Multimedia, cloud computing",
+            "- Protection: Cybersecurity, cryptography, privacy, blockchain, e-payment",
+            "- Theoretical aspects: Information theory, signal processing, machine learning, control theory",
+            "",
+            "First two years build foundational knowledge in Engineering Mathematics (Calculus, Linear Algebra, Discrete Mathematics, Complex Variables) and Engineering Basics (Signals and Systems, Basic Analog and Digital Circuits, Data Structures, System Programming, Computer Networks).",
+            "",
+            "Advanced courses include Microcontrollers and Embedded Systems, Information and Software Engineering Practices, and Information Infrastructure Design.",
+            "",
+            "Five Specialization Streams:",
+            "1) Big Data: Systems and Applications",
+            "2) Telecommunications",
+            "3) Cyber Security",
+            "4) Networked Systems and Applications",
+            "5) Information Science",
+            "",
+            "The programme is multi-disciplinary, combining Computer Science, Electronic Engineering, Data Science, Information Security, Information Theory, Telecommunications Networking, and Artificial Intelligence."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are in high demand across diverse industry sectors, with about 90% entering commerce and industry.",
+            "",
+            "Employers include: Deloitte, PwC, HSBC, JP Morgan Chase, Manulife, Zurich Insurance, HKT, Huawei, IBM, PCCW Solutions, Accenture, Cherrypicks, Lenovo.",
+            "",
+            "About 10% pursue education sector roles (secondary school educators) or graduate studies globally.",
+            "",
+            "Career sectors:",
+            "- Data generation/coordination: IoT, CPS",
+            "- Transmission: Wireless/optical communications, computer networks",
+            "- Analysis: AI, big-data analytics, computer vision",
+            "- Processing: Multimedia, cloud computing",
+            "- Protection: Cybersecurity, cryptography, blockchain, e-payment",
+            "- Theoretical: Information theory, signal processing, machine learning, control theory"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a vibrant and comprehensive learning environment.",
+            "",
+            "Students benefit from the unique College System, which provides pastoral care, whole-person development, and a close-knit community.",
+            "",
+            "The Faculty of Engineering provides state-of-the-art laboratories and research facilities.",
+            "",
+            "The department has strong connections with the local IT industry and global research institutions."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "With a Band A offer rate of approximately 17.9% and 5.6 Band A applications per offer, JS4446 is highly competitive.",
+            "",
+            "Selection is based on HKDSE results (Best 5) and interview performance (for shortlisted candidates).",
+            "",
+            "The programme seeks students with strong analytical and problem-solving skills, particularly in Mathematics and Science.",
+            "",
+            "Preferred subjects: Mathematics Extended Module I or II, Physics, Biology, Chemistry, Design and Applied Technology, Information and Communication Technology."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Professor Wong Kam-fai (黃錦輝): Professor at CUHK, expert in information retrieval and natural language processing; former Associate Dean of Engineering.",
+            "",
+            "Ir Dr. Albert Wong (黃廣揚): CEO of Hong Kong Science and Technology Parks Corporation; former senior executive in technology and innovation.",
+            "",
+            "Dr. Thomas Tang (鄧智傑): Co-founder of a successful AI startup in Hong Kong; recognized in Forbes 30 Under 30 Asia.",
+            "",
+            "Faculty Excellence:",
+            "- Department faculty include IEEE Fellows and recipients of national research awards.",
+            "- Strong industry connections with leading tech firms in Hong Kong and globally."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships for local JUPAS students based on academic merit.",
+            "",
+            "Scholarships may cover tuition fees and living expenses.",
+            "",
+            "Financial aid schemes are available for students with financial needs.",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for Median 39.25 (Best 5)**",
+            "",
+            "- With median 39.25 and LQ 38.125, your target should be at least 39 to be competitive.",
+            "- Use the subject weighting: Mathematics (x2), M1/M2 (x1.75), and science/ICT (x1.5) to maximize your score.",
+            "",
+            "**2. Prioritize Mathematics and M1/M2**",
+            "",
+            "- Mathematics is weighted double, so a high grade (5 or above) is crucial.",
+            "- M1 or M2 is weighted 1.75 — aim for at least 5.",
+            "",
+            "**3. Excel in Science/ICT Electives**",
+            "",
+            "- Biology, Chemistry, Physics, DAT, ICT are weighted 1.5 — target Level 5 or above.",
+            "- These subjects demonstrate your technical aptitude.",
+            "",
+            "**4. Secure Strong English and Chinese**",
+            "",
+            "- English and Chinese minimum Level 3, but higher grades boost your score.",
+            "- Median admit had English 4 and Chinese 5* — aim for at least 4 in English and 5 in Chinese.",
+            "",
+            "**5. Prepare Thoroughly for the Interview**",
+            "",
+            "- Interview is required for shortlisted candidates — practice technical and general questions.",
+            "- Show passion for information engineering and awareness of current tech trends.",
+            "",
+            "**6. Build a Strong Band A Strategy**",
+            "",
+            "- With only 63 Band A offers from 352 applicants, Band A placement is critical.",
+            "- Put JS4446 as your first choice if it aligns with your career goals.",
+            "",
+            "**7. Leverage the Specialization Streams**",
+            "",
+            "- Research the five streams (Big Data, Telecom, Cyber Security, Networked Systems, Information Science) and mention your interest in the interview.",
+            "- This shows you have a clear academic plan.",
+            "",
+            "**8. Use the Subject Weighting to Your Advantage**",
+            "",
+            "- Calculate your weighted score using the formula: Math x2 + M1/M2 x1.75 + best elective x1.5 + other electives.",
+            "- Aim for a weighted total of at least 38.125 (LQ) to be safe.",
+            "",
+            "**9. Stay Updated on Industry Trends**",
+            "",
+            "- Follow developments in AI, 5G/6G, cybersecurity, and IoT.",
+            "- Relate your interests to the programme's focus areas in the interview and personal statement."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "首年學額：67",
+            "修讀年期：4年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（獲篩選申請人）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：39.25",
+            "下四分位數：38.125",
+            "上四分位數：40.375",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5*",
+            "英國語文：4",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：4",
+            "第一選修科：5",
+            "第二選修科：4",
+            "",
+            "科目比重：",
+            "- 數學（x 2）",
+            "- M1或M2（x 1.75）",
+            "- 生物、化學、物理、設計與應用科技、資訊及通訊科技（x 1.5）",
+            "",
+            "2025年申請統計：",
+            "Band A申請人數：352",
+            "Band A錄取人數：63",
+            "總申請人數：1,417",
+            "Band A錄取率：約17.9%",
+            "Band A申請/錄取比：約5.6"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "香港中文大學信息工程學課程提供全面而靈活的課程，涵蓋數據生成、傳輸、分析及應用，以構建智能及安全的信息社會。",
+            "",
+            "核心領域包括：",
+            "- 數據生成/協調：物聯網、信息物理系統",
+            "- 傳輸：無線及光纖（超5G）通訊、計算機網絡",
+            "- 分析：人工智能、大數據分析、計算機視覺",
+            "- 處理：多媒體、雲計算",
+            "- 保護：網絡安全、密碼學、私隱、區塊鏈、電子支付",
+            "- 理論方面：信息論、信號處理、機器學習、控制理論",
+            "",
+            "首兩年建立工程數學（微積分、線性代數、離散數學、複變函數）及工程基礎（信號與系統、基本模擬與數字電路、數據結構、系統編程、計算機網絡）的基礎知識。",
+            "",
+            "高級課程包括微控制器與嵌入式系統、信息與軟件工程實踐、信息基礎設施設計。",
+            "",
+            "五個專業分流：",
+            "1) 大數據：系統與應用",
+            "2) 電信",
+            "3) 網絡安全",
+            "4) 網絡系統與應用",
+            "5) 信息科學",
+            "",
+            "課程為跨學科，結合計算機科學、電子工程、數據科學、信息安全、信息論、電信網絡及人工智能。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生在各行業需求極高，約90%投身商業及工業界。",
+            "",
+            "僱主包括：德勤、羅兵咸永道、滙豐、摩根大通、宏利、蘇黎世保險、HKT、華為、IBM、PCCW Solutions、埃森哲、Cherrypicks、聯想。",
+            "",
+            "約10%畢業生選擇教育界（中學教師）或到海外深造。",
+            "",
+            "就業領域：",
+            "- 數據生成/協調：物聯網、信息物理系統",
+            "- 傳輸：無線/光纖通訊、計算機網絡",
+            "- 分析：人工智能、大數據分析、計算機視覺",
+            "- 處理：多媒體、雲計算",
+            "- 保護：網絡安全、密碼學、區塊鏈、電子支付",
+            "- 理論：信息論、信號處理、機器學習、控制理論"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學主校園位於沙田，提供充滿活力及全面的學習環境。",
+            "",
+            "學生受益於獨特的書院制度，提供關顧輔導、全人發展及緊密的社群。",
+            "",
+            "工程學院提供先進的實驗室及研究設施。",
+            "",
+            "學系與本地資訊科技業界及全球研究機構有緊密聯繫。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及甄選",
+          "content": [
+            "JS4446的Band A錄取率約17.9%，每個錄取名額約有5.6個Band A申請，競爭激烈。",
+            "",
+            "甄選基於HKDSE成績（最佳5科）及面試表現（獲篩選申請人）。",
+            "",
+            "課程尋求具備優秀分析及解難能力的學生，尤其在數學及科學方面。",
+            "",
+            "優先科目：數學延伸部分單元一或二、物理、生物、化學、設計與應用科技、資訊及通訊科技。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及卓越師資",
+          "content": [
+            "黃錦輝教授：香港中文大學教授，信息檢索及自然語言處理專家；前工程學院副院長。",
+            "",
+            "黃廣揚工程師博士：香港科技園公司行政總裁；前科技及創新界高層管理人員。",
+            "",
+            "鄧智傑博士：香港成功人工智能初創企業聯合創辦人；獲福布斯30位30歲以下精英（亞洲）。",
+            "",
+            "卓越師資：",
+            "- 學系教授包括IEEE院士及國家級研究獎項得主。",
+            "- 與香港及全球頂尖科技公司有緊密業界聯繫。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地JUPAS學生提供多項入學獎學金，基於學業成績。",
+            "",
+            "獎學金可涵蓋學費及生活費。",
+            "",
+            "設有經濟援助計劃，幫助有需要的學生。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JUPAS策略 — 9個實用貼士",
+          "content": [
+            "**1. 目標分數：以中位數39.25（最佳5科）為目標**",
+            "",
+            "- 中位數39.25，下四分位數38.125，你的目標應至少達39分才具競爭力。",
+            "- 利用科目比重：數學（x2）、M1/M2（x1.75）、科學/資訊科技（x1.5）以最大化分數。",
+            "",
+            "**2. 優先處理數學及M1/M2**",
+            "",
+            "- 數學比重雙倍，取得5級或以上至關重要。",
+            "- M1或M2比重1.75，目標至少5級。",
+            "",
+            "**3. 在科學/資訊科技選修科表現出色**",
+            "",
+            "- 生物、化學、物理、設計與應用科技、資訊及通訊科技比重1.5，目標5級或以上。",
+            "- 這些科目展示你的技術能力。",
+            "",
+            "**4. 確保英文及中文成績優異**",
+            "",
+            "- 英文及中文最低要求3級，但更高級別可提升分數。",
+            "- 中位數錄取者英文4級、中文5*，目標英文至少4級、中文5級。",
+            "",
+            "**5. 充分準備面試**",
+            "",
+            "- 獲篩選申請人需面試，練習技術及一般問題。",
+            "- 展示對信息工程的熱誠及對當前科技趨勢的認識。",
+            "",
+            "**6. 制定強勁的Band A策略**",
+            "",
+            "- 僅63個Band A錄取名額，352人申請，Band A選擇至關重要。",
+            "- 若課程符合你的職業目標，應將其列為首選。",
+            "",
+            "**7. 善用專業分流**",
+            "",
+            "- 研究五個分流（大數據、電信、網絡安全、網絡系統、信息科學），並在面試中提及你的興趣。",
+            "- 這顯示你有清晰的學術計劃。",
+            "",
+            "**8. 利用科目比重計算分數**",
+            "",
+            "- 使用公式計算加權分數：數學x2 + M1/M2 x1.75 + 最佳選修科x1.5 + 其他選修科。",
+            "- 目標加權總分至少38.125（下四分位數）以確保安全。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "- 關注人工智能、5G/6G、網絡安全及物聯網的發展。",
+            "- 在面試及個人陳述中將你的興趣與課程重點領域聯繫起來。"
+          ]
+        }
+      }
+    },
+    "code": "JS4446",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 39.25,
+    "uq": 40.375,
+    "lq": 38.125,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "4",
+        "eng": "5",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 40.375
+      },
+      "M": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5",
+        "e2": "4",
+        "e3": "",
+        "e4": "",
+        "total": 39.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "3",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "4",
+        "e2": "3",
+        "e3": "",
+        "e4": "",
+        "total": 38.125
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Wong Kam-fai",
+        "nameZh": "黃錦輝",
+        "achievement": "Professor at CUHK, expert in information retrieval and natural language processing; former Associate Dean of Engineering.",
+        "sourceHint": "CUHK Engineering faculty page"
+      },
+      {
+        "nameEn": "Ir Dr. Albert Wong",
+        "nameZh": "黃廣揚",
+        "achievement": "CEO of Hong Kong Science and Technology Parks Corporation; former senior executive in technology and innovation.",
+        "sourceHint": "Public bio, HKSTP website"
+      },
+      {
+        "nameEn": "Dr. Thomas Tang",
+        "nameZh": "鄧智傑",
+        "achievement": "Co-founder of a successful AI startup in Hong Kong; recognized in Forbes 30 Under 30 Asia.",
+        "sourceHint": "Forbes profile, startup news"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include IEEE Fellows and recipients of national research awards.",
+      "Programme has strong industry connections with leading tech firms in Hong Kong and globally."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Information Engineering notable alumni",
+      "香港中文大學 信息工程學 著名校友",
+      "CUHK Information Engineering graduates Hong Kong careers"
+    ]
+  }
+}

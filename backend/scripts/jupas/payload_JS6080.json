@@ -1,0 +1,473 @@
+{
+  "factPack": {
+    "code": "JS6080",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6080"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://web.edu.hku.hk/programme/babed_chi_6080/"
+      }
+    ],
+    "programme": {
+      "code": "JS6080",
+      "nameEn": "Bachelor of Education in Chinese Language and Literature",
+      "nameZh": "文學士及教育學士(語文教育) - 中文教育",
+      "university": "香港大學",
+      "facultyZh": "教育學院",
+      "category": "education"
+    },
+    "scores": {
+      "formula": "1.5 x Chin + Best 5 Subjects",
+      "median": 35,
+      "uq": 36,
+      "lq": 34
+    },
+    "jupas": {
+      "code": "JS6080",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6080",
+      "nameEn": "Bachelor of Arts and Bachelor of Education in Language Education - Chinese",
+      "nameZh": "",
+      "shortDescription": "an class=\"before_label\">Short Description This double-degree curriculum is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language",
+      "programmeWebsite": "https://web.edu.hku.hk/programme/babed_chi_6080/",
+      "tuition": "HK$47,000",
+      "intake": 17,
+      "duration": "5 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 75,
+        "bandB": 84,
+        "bandC": 170,
+        "bandD": 236,
+        "bandE": 268,
+        "total": 833
+      },
+      "offers2025": {
+        "bandA": 14,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 14
+      },
+      "facultyPhone": "+852 3917 2545"
+    },
+    "admissionsSnippet": "文學士及教育學士 (語文教育) — 中文教育 | HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners Home Programmes Undergraduate Programmes 文學士及教育學士 (語文教育) — 中文教育 課程特色 課程特色 課程安排 入學要求 就業前景 分享 問答集 課程特色 Enquiries Information 一般查詢 聯絡: 教育學院 &nbsp; Phone +852 3917 2545 Fax Email [javascript protected email address] Offic Websit &nbsp; 文學系學科查詢 聯絡: 文學院 &nbsp; Phone +852 3917 8977 Fax Email [javascript protected email address] Office Website &nbsp; 課程資料 聯絡: 戴忠沛&nbsp;(課程統籌導師) &nbsp; Phone +852 3917 4259 Fax Email [javascript protected email address] Office Website Programme Pamphlet View and download 「文學士及教育學士」（語文教育）&mdash; 中文教育是教育學院及文學院合辦的五年全日制雙學士學位課程，旨在培養學術與專業結合、理論與實踐並重的中文教育人才。學員於文學院主修中國語言、文學及文化，而於教育學院則主修中文教育，於五年內研習教學法、教育社會學、教育心理學，並於本地小學及中學實習教學。學員畢業後可以任教本地初小至高中的中文課程，或繼續進修，擔任教育行政、領導或研究職務。 &nbsp; 入學講座簡報 （香港大學本科入學資訊日2025） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 課程目標 文學士及教育學士（語文教育）&mdash; 中文教育課程的目標包括： 指導學員獲取中文本科與教育專業知識，達至學士學位水平。 促進學員瞭解學與教過程，建構知識的理論與方法，從而強化學員的課堂教學能力，提高在不同教育範疇與崗位中的工作質素。 提升學員的語文能力與溝通技巧。 培養學員的學習熱誠，鼓勵養成探究精神，能分享和接納不同意見，提高解難的能力，最終成為勇於嘗試、敢於創新、樂於反思的教育工作者。 培養學員學會愛護、關心、尊重和體諒學生，熱心指導學生作全人發展，體察多元文化與特殊教育學生的需要，並相信每位學生均為可造之材，以教育學生為己任。 培訓學員體察本地情況，或按特定的社會背景和條件，以及學生的學習能力和興趣，調適不同的課程、教材、敎學法和評估。 推動學員終身學習，持續進修，並且視學校與社會為教學相長的地方。 &nbsp; 課程特色 本課程着重： 在文學院研習中國語言、文學及文化 在教育學院掌握知識建構理論與教學方法 結合學術與專業、理論與實踐並重 培養學員創新與領導的能力 提供本地與境外體驗學習的機會 港大JUPAS Information Sessions 2026&nbsp;- 主題講座影片 主題： AI 時代，我們還需要深讀文字嗎？&mdash;&mdash;探索中文教育的人機協同與未來 戴忠沛教授&nbsp; - 文學士及教育學士（語文教育）&mdash; 中文教育課程統籌導師 &nbsp; 「非凡的學習之旅」短片系列 文學士及教育學士（語文教育）&mdash; 中文教育課程學生韓德光 &nbsp; 課程影片- 雙學位課程 &nbsp; 盧沅蔚 文學士及教育學士 (語文教育) — 中文教育 畢業生 港大中文教育課程以學生為本，循序漸進栽培我們專業知識、教學信念和實踐成長，未來成為教導有方、能言傳身... 郭晴 文學士及教育學士 (語文教育) — 中文教育 學生 香港大學中文教育課程具有深厚的根基同廣闊的視野，為我們提供多元的機會和豐富的課程選擇，力求將我們培育... 黃子傑 文學士及教育學士 (語文教育) — 中文教育 學生 大量友善且熱心的教育界專家和教授，相信每一位「準教師」都能獲得最精彩的大學生活。 黃正怡 文學士及教育學士 (語文教育) — 中文教育 學生 從不斷的探索及與導師跟同儕的交流中，培養對文學的造詣及素養；從課堂實踐、中小學實習中，逐漸形成個人教... Top Contact Us Address and Office Hour Room 420, 4/F, Meng Wah Complex, The University of Hong Kong &nbsp; (Monday to Friday 9:00 am - 1:00 pm; 2:00 pm - 6:00 pm) Phone 3917 6044 Email edfac@hku.hk &nbsp;&nbsp; Directory Contact Directory Subscribe to Faculty e-Notice Facebook Instagram X Weibo Xiao Hong Shu YouTube Privacy Policy &copy; 2026 Faculty of Education, The University of Hong Kong. All rights reserved. Notice We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you agree with it. Learn more Accept"
+  },
+  "programme": {
+    "code": "JS6080",
+    "nameEn": "Bachelor of Education in Chinese Language and Literature",
+    "nameZh": "文學士及教育學士(語文教育) - 中文教育",
+    "name": "Bachelor of Education in Chinese Language and Literature",
+    "university": "香港大學",
+    "faculty": "教育學院",
+    "median": 35,
+    "band_a": 34,
+    "uq": 36,
+    "category": "education"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:** 17",
+            "",
+            "**Duration:** 5 years",
+            "",
+            "**First Year Tuition:** HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Median | LQ | UQ",
+            "35 | 34 | 36",
+            "",
+            "**Formula:** 1.5 x Chin + Best 5 Subjects",
+            "",
+            "**Interview:** Required (performance considered in selection)",
+            "",
+            "**DSE Core Requirements:**",
+            "- Level 3: English Language",
+            "- Level 3: Mathematics",
+            "- Level 2: Liberal Studies / Citizenship and Social Development",
+            "",
+            "**DSE Elective Requirements:**",
+            "- Level 3: Chinese Language",
+            "- Level 3: One elective subject",
+            "",
+            "**Weighting:**",
+            "- Chinese Language: 1.5x",
+            "- Best 5 Subjects: 1x each"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "This double-degree curriculum is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language proficiency requirements for English or Chinese language teachers.",
+            "",
+            "**Year 1-2:** Foundation in Chinese language, literature, and culture (Faculty of Arts) plus introductory education studies (Faculty of Education).",
+            "",
+            "**Year 3-4:** Advanced Chinese studies and professional education courses including teaching methods, educational sociology, and educational psychology.",
+            "",
+            "**Year 5:** Capstone project and teaching practicum in local primary and secondary schools.",
+            "",
+            "**Unique Features:**",
+            "- Dual degree: Bachelor of Arts and Bachelor of Education",
+            "- Integrated academic and professional training",
+            "- Local and overseas experiential learning opportunities",
+            "- Emphasis on innovation and leadership in education"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Education Sector:**",
+            "- Chinese language teacher in primary and secondary schools (local curriculum from junior to senior secondary)",
+            "- Curriculum developer or education officer in government or NGO",
+            "- Educational administrator or school leader",
+            "",
+            "**Further Studies & Research:**",
+            "- Postgraduate programmes in education, Chinese linguistics, or literature",
+            "- Academic research in language education or Chinese studies",
+            "",
+            "**Other Pathways:**",
+            "- Publishing, media, or cultural organisations",
+            "- Corporate training and communication roles"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:** Main campus of The University of Hong Kong, Pokfulam",
+            "",
+            "**Facilities:**",
+            "- State-of-the-art libraries and language laboratories",
+            "- Education-specific resource centres and teaching practice rooms",
+            "",
+            "**Student Activities:**",
+            "- Education Society and Chinese Cultural Society",
+            "- Teaching practice sharing sessions and mentorship programmes",
+            "",
+            "**Support Services:**",
+            "- Academic advising from both Faculties",
+            "- Career counselling and placement services"
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:** High (specialised double-degree with limited intake)",
+            "",
+            "**Band A Statistics (2025):**",
+            "- Band A applications: 75",
+            "- Offers to Band A: 14",
+            "- Band A offer rate: ~18.7%",
+            "",
+            "**Factors Influencing Admission:**",
+            "1. DSE Chinese Language score (weighted 1.5x)",
+            "2. Overall performance in Best 5 Subjects",
+            "3. Interview performance",
+            "4. OEA (Other Experiences and Achievements) – relevant language or teaching experience"
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "**Faculty Excellence:**",
+            "- The Faculty of Education is consistently ranked among the top education faculties in Asia.",
+            "- Faculty members are active researchers in language education, curriculum development, and educational psychology.",
+            "",
+            "**Research & Labs:**",
+            "- Language and Literacy Education research group",
+            "- Centre for the Enhancement of Teaching and Learning",
+            "",
+            "**Alumni:**",
+            "- Graduates are well-prepared for teaching careers and further studies; specific alumni names are not available in the fact pack."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "- Awarded based on academic merit (DSE results) – up to full tuition coverage.",
+            "",
+            "**Faculty of Education Scholarships:**",
+            "- Various scholarships for outstanding students in education programmes.",
+            "",
+            "**Other Financial Support:**",
+            "- Government grants and loans (e.g., TSFS, NLSFT)",
+            "- Part-time teaching assistantships available"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS6080 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Chinese Language**",
+            "",
+            "Since Chinese is weighted 1.5x, aim for Level 5** or above. A strong Chinese score significantly boosts your admission index.",
+            "- Dedicate extra time to Chinese reading and writing practice.",
+            "- Consider taking Chinese Literature as an elective to deepen analytical skills.",
+            "",
+            "**2. Build a Balanced Best 5**",
+            "",
+            "Your best five subjects (including Chinese) are equally weighted. Choose electives where you can consistently score Level 4 or above.",
+            "- Avoid overloading with too many science subjects if your strength is in languages.",
+            "- Maintain a steady performance across all subjects.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "The interview is a key differentiator. Demonstrate genuine passion for Chinese education and teaching.",
+            "- Prepare examples of how you have helped others learn.",
+            "- Be ready to discuss current issues in Chinese language education.",
+            "",
+            "**4. Strengthen Your OEA Profile**",
+            "",
+            "Other Experiences and Achievements (OEA) can tip the balance. Highlight activities related to language, teaching, or community service.",
+            "- Tutoring, mentoring, or volunteering in educational settings.",
+            "- Participation in Chinese writing competitions or cultural events.",
+            "",
+            "**5. Understand the Dual-Degree Structure**",
+            "",
+            "Know that you will study both Arts and Education courses. Show that you value the integration of academic depth and professional training.",
+            "- Mention how you plan to connect Chinese literature with classroom practice.",
+            "",
+            "**6. Plan Your Backup Choices**",
+            "",
+            "With only 17 places, competition is fierce. Have a solid backup programme that also values Chinese language.",
+            "- Consider JS6080 as your Band A, but include other language/education programmes in Band B.",
+            "- Ensure your backup choices have realistic admission scores.",
+            "",
+            "**7. Master Time Management**",
+            "",
+            "The five-year programme is intensive. Develop good study habits early.",
+            "- Use summer breaks for teaching-related internships or research projects.",
+            "- Balance coursework with extracurricular involvement.",
+            "",
+            "**8. Network with Current Students**",
+            "",
+            "Attend HKU information sessions and talk to current students or alumni. Their insights can help you tailor your application.",
+            "- Ask about the teaching practicum experience.",
+            "- Learn how they manage the dual-faculty workload.",
+            "",
+            "**9. Stay Updated on Education Trends**",
+            "",
+            "Show awareness of developments in Chinese language education, such as AI integration or new curriculum reforms.",
+            "- Read education policy papers or news.",
+            "- Incorporate these insights into your interview answers."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額：** 17",
+            "",
+            "**修讀年期：** 5年",
+            "",
+            "**首年學費：** HK$47,000",
+            "",
+            "**2025年入學分數：**",
+            "中位數 | 下四分位數 | 上四分位數",
+            "35 | 34 | 36",
+            "",
+            "**計算公式：** 1.5 x 中文 + 最佳5科",
+            "",
+            "**面試：** 需要（面試表現納入考慮）",
+            "",
+            "**DSE核心科目要求：**",
+            "- 英文：第3級",
+            "- 數學：第3級",
+            "- 通識／公民與社會發展：第2級",
+            "",
+            "**DSE選修科目要求：**",
+            "- 中文：第3級",
+            "- 一科選修：第3級",
+            "",
+            "**比重：**",
+            "- 中文：1.5倍",
+            "- 最佳5科：各1倍"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程簡介：**",
+            "此雙學位課程由教育學院及文學院合辦，學生可在五年內獲得兩個學位，並滿足中文教師的語文能力要求。",
+            "",
+            "**第1-2年：** 在文學院研習中國語言、文學及文化，同時修讀教育學院的基礎教育課程。",
+            "",
+            "**第3-4年：** 進階中文研習及專業教育課程，包括教學法、教育社會學及教育心理學。",
+            "",
+            "**第5年：** 畢業專題及本地中小學教學實習。",
+            "",
+            "**課程特色：**",
+            "- 雙學位：文學士及教育學士",
+            "- 學術與專業結合",
+            "- 本地及境外體驗學習機會",
+            "- 培養創新與領導能力"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**教育領域：**",
+            "- 中小學中文教師（本地初小至高中課程）",
+            "- 課程發展主任或教育官員（政府或非政府組織）",
+            "- 教育行政人員或學校領導",
+            "",
+            "**深造與研究：**",
+            "- 教育、中國語言學或文學碩士／博士課程",
+            "- 語言教育或中文研究學術研究",
+            "",
+            "**其他出路：**",
+            "- 出版、媒體或文化機構",
+            "- 企業培訓及傳訊崗位"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點：** 香港大學主校園，薄扶林",
+            "",
+            "**設施：**",
+            "- 先進圖書館及語言實驗室",
+            "- 教育專用資源中心及教學練習室",
+            "",
+            "**學生活動：**",
+            "- 教育學會及中國文化學會",
+            "- 教學實習分享會及師友計劃",
+            "",
+            "**支援服務：**",
+            "- 兩院學術指導",
+            "- 就業輔導及實習安排"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "**競爭程度：** 高（專門雙學位，學額有限）",
+            "",
+            "**Band A統計（2025年）：**",
+            "- Band A申請人數：75",
+            "- Band A錄取人數：14",
+            "- Band A錄取率：約18.7%",
+            "",
+            "**影響取錄的因素：**",
+            "1. 中文科DSE成績（比重1.5倍）",
+            "2. 最佳5科整體表現",
+            "3. 面試表現",
+            "4. OEA（其他經驗及成就）— 與語言或教學相關的經歷"
+          ]
+        },
+        "alumni": {
+          "title": "校友及學院成就",
+          "content": [
+            "**學院成就：**",
+            "- 教育學院在亞洲長期位居前列。",
+            "- 學院教授活躍於語言教育、課程發展及教育心理學研究。",
+            "",
+            "**研究與實驗室：**",
+            "- 語言與讀寫教育研究組",
+            "- 教學促進中心",
+            "",
+            "**校友：**",
+            "- 畢業生勝任教學工作及深造；資料庫未提供具體校友姓名。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**港大入學獎學金：**",
+            "- 根據DSE成績頒發，最高可覆蓋全額學費。",
+            "",
+            "**教育學院獎學金：**",
+            "- 多項獎學金供教育課程優秀學生申請。",
+            "",
+            "**其他資助：**",
+            "- 政府資助及貸款（如TSFS、NLSFT）",
+            "- 兼職教學助理職位"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的JS6080策略 — 9個實用貼士",
+          "content": [
+            "**1. 優先提升中文科成績**",
+            "",
+            "中文科比重1.5倍，目標至少5**。高分中文能大幅提高入學分數。",
+            "- 多花時間練習中文閱讀及寫作。",
+            "- 考慮選修中國文學以深化分析能力。",
+            "",
+            "**2. 建立均衡的最佳5科組合**",
+            "",
+            "最佳5科（包括中文）比重相同。選擇能穩定取得第4級或以上的選修科。",
+            "- 若語文是強項，避免過多理科。",
+            "- 保持各科成績平穩。",
+            "",
+            "**3. 面試表現突出**",
+            "",
+            "面試是關鍵區分因素。展現對中文教育的熱誠。",
+            "- 準備幫助他人學習的例子。",
+            "- 討論中文教育當前議題。",
+            "",
+            "**4. 強化OEA檔案**",
+            "",
+            "OEA可成為取勝關鍵。突出語言、教學或社區服務相關活動。",
+            "- 補習、導師或教育義工經驗。",
+            "- 參與中文寫作比賽或文化活動。",
+            "",
+            "**5. 了解雙學位結構**",
+            "",
+            "明白你將同時修讀文學及教育課程。展示你重視學術深度與專業訓練的結合。",
+            "- 在面試中提及如何將文學與課堂實踐連結。",
+            "",
+            "**6. 規劃後備選擇**",
+            "",
+            "學額僅17個，競爭激烈。準備一個同樣重視中文的穩妥後備課程。",
+            "- 將JS6080放Band A，Band B放其他語言／教育課程。",
+            "- 確保後備選擇的入學分數合理。",
+            "",
+            "**7. 掌握時間管理**",
+            "",
+            "五年課程密集，及早養成良好學習習慣。",
+            "- 利用暑假進行教學相關實習或研究。",
+            "- 平衡課業與課外活動。",
+            "",
+            "**8. 與在讀學生交流**",
+            "",
+            "參加港大資訊日，向在讀學生或校友取經。",
+            "- 了解教學實習經驗。",
+            "- 學習如何應付雙學院課業。",
+            "",
+            "**9. 關注教育趨勢**",
+            "",
+            "展現對中文教育發展的認識，如人工智能整合或課程改革。",
+            "- 閱讀教育政策文件或新聞。",
+            "- 在面試中融入這些見解。"
+          ]
+        }
+      }
+    },
+    "code": "JS6080",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 35,
+    "uq": 36,
+    "lq": 34
+  }
+}

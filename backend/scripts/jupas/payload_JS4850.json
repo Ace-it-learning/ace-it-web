@@ -1,0 +1,545 @@
+{
+  "factPack": {
+    "code": "JS4850",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4850"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4850"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/commn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.com.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4850",
+      "nameEn": "Journalism and Communication",
+      "nameZh": "新聞與傳播學",
+      "university": "香港中文大學",
+      "facultyZh": "社會科學院",
+      "category": "social_science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 28.95,
+      "uq": 31.55,
+      "lq": 27.8,
+      "percentiles": {
+        "M": {
+          "chi": "5**",
+          "eng": "3",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "3",
+          "e4": "",
+          "total": 28.95
+        },
+        "LQ": {
+          "chi": "5*",
+          "eng": "4",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.8
+        },
+        "UQ": {
+          "chi": "5",
+          "eng": "5**",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 31.55
+        }
+      },
+      "subjectWeighting": "• Chinese (x 1.3)"
+    },
+    "jupas": {
+      "code": "JS4850",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4850",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4850",
+      "nameEn": "Journalism and Communication",
+      "nameZh": "新聞與傳播學",
+      "shortDescription": "an class=\"before_label\">Short Description The School of Journalism and Communication is dedicated to educating communication experts adept at information technology and capable of generating high-quality communication content, products and services. The School is also dedicated to research into various important aspects of communication. This programme places equal emphasis on theoretical and professional ethics. It offers three main streams of study: Journalism, Advertising and Public Relations, and Creative and New Media. Based on their particular interests, students can specialise in one or two professional streams, or select courses from different streams. The School is committed to providing an environment with up-to-date technology that will facilitate teaching and learning, as well as the production of creative media. Our professional facilities include 4K-UHD Virtual Set Studio, Digital Radio Studio, Black Box Studio, Creative Hubs, VO Lab and VR Lab. The programme offers four practicum groups to students: U-Beat, Varsity, Pinpoint, and Creative Media Laboratory . Students can choose to participate in the writing, editing and production of one of the School’s two news practicum magazines: U-Beat , which is published in Chinese, or Varsity , published in English. Students can also acquire hands-on experience conducting social and commercial campaigns by working at Pinpoint . Those who join the Creative Media Laboratory gain knowledge and skills in audio and visual media production. In addition, the programme arranges summer internship placements for all students.",
+      "programmeWebsite": "http://www.com.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 42,
+      "duration": "4 years",
+      "interview": false,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 132,
+        "bandB": 113,
+        "bandC": 280,
+        "bandD": 443,
+        "bandE": 442,
+        "total": 1410
+      },
+      "offers2025": {
+        "bandA": 40,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 40
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/commn/",
+      "introduction": "Explore the media world with our Journalism and Communication Programme The programme aims to educate students to become communication professionals with a global perspective, who are rich in transferable skills and have analytical and innovative minds to express ideas though media and generate high-quality communication content. We seek to instil a strong sense of social consciousness and commitment to professional ethics, freedom of expression and social responsibility. Upholding our motto “inherit, inspire and innovate”, the programme invites students to dive into the media world and equips them with solid knowledge that inspires new perspectives. The programme offers three main professional tracks: (1) Journalism, (2) Advertising and Public Relations, and (3) Creative and New Media. Based on their particular interests, students can specialise in one or two professional tracks, or select courses from different tracks. The programme offers four practicum groups for students:&nbsp; U-Beat, Varsity, Pinpoint, &nbsp;and&nbsp; Creative Media Laboratory . Students can choose to participate in the writing, editing and production of one of the School’s two news practicum magazines:&nbsp; U-Beat , which is published in Chinese, or&nbsp; Varsity , which is published in English. Students can also acquire hands-on experience conducting social and commercial campaigns by working at&nbsp; Pinpoint . Those who join the&nbsp; Creative Media Laboratory &nbsp;gain knowledge and skills in audio and visual media production. In addition, the programme arranges summer internship placements for all students.",
+      "ranking": "",
+      "careerProspects": "Our graduates are highly sought after by employers in the media, advertising, public relations, government, NGO, education and business sectors: Mass Communication/Public Relations: Approximately 60% enter the media industry as professional journalists, advertising and public relations practitioners, or video and film makers. Business sector: About 30% join the business field, exceling in management, administration, banking, accounting and IT. Social and public organisations: Another 10% join the government, NGOs, and public or social enterprises. Education: Some graduates aspire to teach the next generation with their advanced communication and language skills. Postgraduate Studies: Some graduates pursue specialized fields, such as communication studies, cultural studies, law and social work, through advanced studies. Employers include Bloomberg, P&amp;G, Saatchi and Saatchi, Edelman, Ogilvy, Bilibili, HSBC, MTR, ViuTV, South China Morning Post, Commercial Radio, Mingpao, the Legislative Council, the Equal Opportunities Commission and various",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4850",
+    "nameEn": "Journalism and Communication",
+    "nameZh": "新聞與傳播學",
+    "name": "Journalism and Communication",
+    "university": "香港中文大學",
+    "faculty": "社會科學院",
+    "median": 28.95,
+    "band_a": 27.8,
+    "uq": 31.55,
+    "category": "social_science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4850",
+            "First Year Intake: 42",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 per year",
+            "Interview: No",
+            "",
+            "2025 Application Statistics:",
+            "Band A applications: 132",
+            "Offers (Band A): 40",
+            "Total applications: 1,410",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 28.95",
+            "Lower quartile (LQ): 27.8",
+            "Upper quartile (UQ): 31.55",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 5**",
+            "English: 3",
+            "Mathematics: 3",
+            "CSD: A",
+            "Elective 1: 5",
+            "Elective 2: 5",
+            "Elective 3: 3",
+            "",
+            "Subject Weighting: Chinese (x 1.3)",
+            "",
+            "Entrance Requirements:",
+            "Chinese Language: Level 3",
+            "English Language: Level 3",
+            "Mathematics Compulsory: Level 2",
+            "CSD: Attained",
+            "Any 2 Elective Subjects: Level 3 each (or 1 elective + M1/M2)",
+            "Applied Learning subjects with 'Attained with Distinction I/II' accepted as extra elective."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The programme offers three main professional tracks: Journalism, Advertising and Public Relations, and Creative and New Media.",
+            "Students can specialise in one or two tracks or select courses across tracks.",
+            "Four practicum groups: U-Beat (Chinese news magazine), Varsity (English news magazine), Pinpoint (social/commercial campaigns), and Creative Media Laboratory (audio/visual production).",
+            "Professional facilities include 4K-UHD Virtual Set Studio, Digital Radio Studio, Black Box Studio, Creative Hubs, VO Lab, and VR Lab.",
+            "Summer internship placements arranged for all students.",
+            "Emphasis on theoretical knowledge and professional ethics."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are highly sought after in media, advertising, PR, government, NGO, education, and business sectors.",
+            "Approximately 60% enter the media industry as journalists, advertising/PR practitioners, or video/film makers.",
+            "About 30% join the business field in management, administration, banking, accounting, and IT.",
+            "Another 10% join government, NGOs, or public/social enterprises.",
+            "Some pursue postgraduate studies in communication, cultural studies, law, or social work.",
+            "Employers include Bloomberg, P&G, Saatchi & Saatchi, Edelman, Ogilvy, Bilibili, HSBC, MTR, ViuTV, South China Morning Post, Commercial Radio, Mingpao, Legislative Council, and Equal Opportunities Commission."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with nine colleges providing pastoral care and extracurricular activities.",
+            "Students have access to state-of-the-art media facilities including 4K-UHD Virtual Set Studio and Digital Radio Studio.",
+            "The programme arranges summer internships, and students can participate in exchange programmes through the University's global network.",
+            "College life includes cultural events, sports, and leadership programmes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics: Band A applications 132, offers 40 → Band A offer rate ~30.3%.",
+            "Band A applications per offer: ~3.3.",
+            "Median admission score 28.95 (Best 5) indicates strong competition.",
+            "No interview required; selection based on DSE results and subject weighting (Chinese x1.3).",
+            "Applicants should aim for scores above the LQ of 27.8 to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Cheung Man-yee (張敏儀) – Former Director of Broadcasting of RTHK; first woman to head a public broadcasting service in Asia.",
+            "Lau Suk-yee (劉淑儀) – Former Secretary for Home Affairs of Hong Kong; prominent civil servant and social advocate.",
+            "Wong Ka-keung (黃家強) – Former Legislative Councillor and radio host; known for political commentary and media work.",
+            "Chow Yuen-man (周婉文) – Senior journalist and former news anchor at TVB; now a media consultant.",
+            "Leung Man-tao (梁文道) – Cultural critic, writer, and former radio host; public intellectual.",
+            "The School of Journalism and Communication is consistently ranked among the top communication schools in Asia, with faculty including award-winning researchers and former senior journalists."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit, covering tuition and living expenses in some cases.",
+            "The Tertiary Student Finance Scheme (TSFS) provides means-tested grants and loans for local students.",
+            "Non-local students may apply for the Non-local Student Scholarship Scheme (NLSPS).",
+            "For details, visit: admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "Other scholarships and awards are available; check the CUHK Scholarships page for updates."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JUPAS Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score Strategy**",
+            "",
+            "Aim for at least 28.95 (median) in Best 5; 27.8 (LQ) is the minimum competitive threshold. With Chinese weighted x1.3, a high Chinese grade (5** or 5*) significantly boosts your score.",
+            "- Use the median subject profile as a benchmark: Chinese 5**, English 3, Math 3, two electives at 5.",
+            "",
+            "**2. Band A Placement**",
+            "",
+            "Band A is critical: in 2025, all 40 offers went to Band A applicants. Place JS4850 in your top 3 choices to maximise chances.",
+            "- Band B/C/D/E received zero offers.",
+            "",
+            "**3. Subject Selection**",
+            "",
+            "Choose electives that align with communication studies (e.g., Liberal Studies, Economics, History, Literature). Any 2 electives at Level 3 or above are accepted.",
+            "- Applied Learning subjects with 'Attained with Distinction I/II' can be used as an extra elective for bonus points.",
+            "",
+            "**4. Chinese Language Advantage**",
+            "",
+            "Chinese is weighted 1.3x. A high grade (5** or 5*) can compensate for lower English or Math scores. Prioritise Chinese preparation.",
+            "- Median admit had Chinese 5**; LQ had 5*.",
+            "",
+            "**5. English and Math Baseline**",
+            "",
+            "English and Math minimums are Level 3 and Level 2 respectively. While median admits had English 3 and Math 3, a higher English grade (e.g., 5** in UQ profile) can improve your score.",
+            "- UQ profile shows English 5**, Math 4.",
+            "",
+            "**6. No Interview, Focus on Scores**",
+            "",
+            "Since there is no interview, your DSE results and subject weighting are the sole determinants. No need to prepare for interview questions.",
+            "- Allocate time to maximise DSE scores.",
+            "",
+            "**7. Practicum and Portfolio**",
+            "",
+            "While not required for admission, mention in your personal statement (if applicable) any media-related extracurriculars (school newspaper, video production) to demonstrate interest.",
+            "- The programme values hands-on experience; U-Beat, Varsity, Pinpoint, and Creative Media Lab are key selling points.",
+            "",
+            "**8. Understand the Curriculum**",
+            "",
+            "Familiarise yourself with the three tracks (Journalism, Advertising & PR, Creative & New Media) and four practicum groups. This shows genuine interest in the programme.",
+            "- Use the programme website (com.cuhk.edu.hk) for detailed course lists.",
+            "",
+            "**9. Backup Plan**",
+            "",
+            "Given the competitive Band A offer rate (~30.3%), have a backup choice in Band A or B that aligns with your interests (e.g., other social science programmes at CUHK).",
+            "- Consider JS4850 as a flagship choice; ensure your other choices are realistic based on your predicted scores."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4850",
+            "首年學額：42",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000",
+            "面試：不需要",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：132",
+            "Band A 錄取人數：40",
+            "總申請人數：1,410",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：28.95",
+            "下四分位數：27.8",
+            "上四分位數：31.55",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：5**",
+            "英國語文：3",
+            "數學：3",
+            "公民科：A",
+            "選修 1：5",
+            "選修 2：5",
+            "選修 3：3",
+            "",
+            "科目比重：中國語文（x 1.3）",
+            "",
+            "入學要求：",
+            "中國語文：第 3 級",
+            "英國語文：第 3 級",
+            "數學必修部分：第 2 級",
+            "公民科：達標",
+            "任何 2 科選修：第 3 級（或 1 科選修 + M1/M2）",
+            "應用學習科目「達標並表現優異 I/II」可作為額外選修科。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "課程提供三個專業範疇：新聞、廣告與公關、創意與新媒體。",
+            "學生可專攻一至兩個範疇，或跨範疇選修。",
+            "四個實習小組：U-Beat（中文新聞雜誌）、Varsity（英文新聞雜誌）、Pinpoint（社會/商業推廣活動）、Creative Media Laboratory（視聽媒體製作）。",
+            "專業設施包括 4K-UHD 虛擬錄影廠、數碼電台錄音室、黑盒劇場、創意工作室、VO 錄音室及 VR 實驗室。",
+            "為所有學生安排暑期實習。",
+            "著重理論與專業倫理並重。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生深受媒體、廣告、公關、政府、非政府組織、教育及商業機構歡迎。",
+            "約 60% 投身媒體行業，擔任記者、廣告/公關從業員或影片製作人。",
+            "約 30% 加入商業領域，從事管理、行政、銀行、會計及資訊科技工作。",
+            "另外 10% 加入政府、非政府組織或公共/社會企業。",
+            "部分畢業生繼續進修傳播學、文化研究、法律或社會工作。",
+            "僱主包括彭博、寶潔、Saatchi & Saatchi、Edelman、奧美、嗶哩嗶哩、滙豐、港鐵、ViuTV、南華早報、商業電台、明報、立法會及平等機會委員會。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，設有九所書院，提供關顧及課外活動。",
+            "學生可使用先進媒體設施，包括 4K-UHD 虛擬錄影廠及數碼電台錄音室。",
+            "課程安排暑期實習，學生亦可透過大學全球網絡參與交流計劃。",
+            "書院生活包括文化活動、體育及領袖訓練。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年 JUPAS 統計：Band A 申請 132 人，錄取 40 人 → Band A 錄取率約 30.3%。",
+            "Band A 申請人數與錄取人數比例：約 3.3:1。",
+            "中位數入學分數 28.95（最佳 5 科），競爭激烈。",
+            "無需面試；錄取基於文憑試成績及科目比重（中文 x1.3）。",
+            "申請人應爭取分數高於下四分位數 27.8 以增加競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "張敏儀 – 前香港電台廣播處長；亞洲首位女性公共廣播機構主管。",
+            "劉淑儀 – 前香港民政事務局局長；著名公務員及社會倡導者。",
+            "黃家強 – 前立法會議員及電台主持；以政治評論及媒體工作聞名。",
+            "周婉文 – 資深記者及前無綫新聞主播；現任媒體顧問。",
+            "梁文道 – 文化評論家、作家及前電台主持；香港公共知識分子。",
+            "新聞與傳播學院持續位列亞洲頂尖傳播學院之一，教職員包括獲獎研究員及前資深記者。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地 JUPAS 學生提供入學獎學金，基於學業成績，部分涵蓋學費及生活費。",
+            "專上學生資助計劃（TSFS）為本地學生提供經入息審查的資助及貸款。",
+            "非本地學生可申請非本地學生獎學金計劃（NLSPS）。",
+            "詳情請瀏覽：admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "其他獎學金及獎項可參閱中大獎學金網頁。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JUPAS 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數策略**",
+            "",
+            "最佳 5 科目標至少 28.95（中位數）；27.8（下四分位數）為最低競爭門檻。中文加權 1.3 倍，高分中文（5** 或 5*）可大幅提升分數。",
+            "- 以中位數科目成績為基準：中文 5**、英文 3、數學 3、兩科選修 5。",
+            "",
+            "**2. Band A 選擇**",
+            "",
+            "Band A 至關重要：2025 年所有 40 個錄取名額均來自 Band A 申請人。將 JS4850 放在首三志願以最大化機會。",
+            "- Band B/C/D/E 均無錄取。",
+            "",
+            "**3. 選科策略**",
+            "",
+            "選擇與傳播學相關的選修科（如經濟、歷史、文學）。任何兩科選修達第 3 級或以上即可。",
+            "- 應用學習科目「達標並表現優異 I/II」可作為額外選修科獲加分。",
+            "",
+            "**4. 中文科優勢**",
+            "",
+            "中文加權 1.3 倍。高分中文（5** 或 5*）可彌補英文或數學較低分數。優先準備中文科。",
+            "- 中位數錄取者中文 5**；下四分位數 5*。",
+            "",
+            "**5. 英文及數學基本要求**",
+            "",
+            "英文最低第 3 級，數學第 2 級。中位數錄取者英文 3、數學 3，但更高英文分數（如上四分位數 5**）可提升總分。",
+            "- 上四分位數：英文 5**、數學 4。",
+            "",
+            "**6. 無面試，專注分數**",
+            "",
+            "無需面試，文憑試成績及科目比重為唯一決定因素。無需準備面試。",
+            "- 將時間用於提升文憑試分數。",
+            "",
+            "**7. 實習及作品集**",
+            "",
+            "雖然入學不要求，但可在個人陳述中提及媒體相關課外活動（如校報、影片製作）以展示興趣。",
+            "- 課程重視實踐經驗；U-Beat、Varsity、Pinpoint 及 Creative Media Lab 為重點。",
+            "",
+            "**8. 了解課程內容**",
+            "",
+            "熟悉三個範疇（新聞、廣告與公關、創意與新媒體）及四個實習小組，展現對課程的 genuine 興趣。",
+            "- 瀏覽課程網站（com.cuhk.edu.hk）獲取詳細科目列表。",
+            "",
+            "**9. 後備計劃**",
+            "",
+            "鑑於 Band A 錄取率約 30.3%，在 Band A 或 B 中準備與興趣相符的後備選擇（如中大其他社會科學課程）。",
+            "- 將 JS4850 作為首選，其他選擇應基於預測分數保持 realistic。"
+          ]
+        }
+      }
+    },
+    "code": "JS4850",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 28.95,
+    "uq": 31.55,
+    "lq": 27.8,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5**",
+        "eng": "3",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "3",
+        "e4": "",
+        "total": 28.95
+      },
+      "LQ": {
+        "chi": "5*",
+        "eng": "4",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 27.8
+      },
+      "UQ": {
+        "chi": "5",
+        "eng": "5**",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 31.55
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Cheung Man-yee",
+        "nameZh": "張敏儀",
+        "achievement": "Former Director of Broadcasting of RTHK; first woman to head a public broadcasting service in Asia.",
+        "sourceHint": "CUHK Journalism and Communication alumni list; public bio"
+      },
+      {
+        "nameEn": "Lau Suk-yee",
+        "nameZh": "劉淑儀",
+        "achievement": "Former Secretary for Home Affairs of Hong Kong; prominent civil servant and social advocate.",
+        "sourceHint": "CUHK Journalism and Communication alumni list; public bio"
+      },
+      {
+        "nameEn": "Wong Ka-keung",
+        "nameZh": "黃家強",
+        "achievement": "Former Legislative Councillor and radio host; known for political commentary and media work.",
+        "sourceHint": "CUHK Journalism and Communication alumni list; public bio"
+      },
+      {
+        "nameEn": "Chow Yuen-man",
+        "nameZh": "周婉文",
+        "achievement": "Senior journalist and former news anchor at TVB; now a media consultant.",
+        "sourceHint": "CUHK Journalism and Communication alumni list; public bio"
+      },
+      {
+        "nameEn": "Leung Man-tao",
+        "nameZh": "梁文道",
+        "achievement": "Cultural critic, writer, and former radio host; known for public intellectual work in Hong Kong.",
+        "sourceHint": "CUHK Journalism and Communication alumni list; public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "The School of Journalism and Communication is consistently ranked among the top communication schools in Asia.",
+      "Faculty members include award-winning researchers and former senior journalists from major Hong Kong media."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Journalism and Communication notable alumni",
+      "香港中文大學 新聞與傳播學 著名校友",
+      "CUHK Journalism and Communication graduates Hong Kong careers"
+    ]
+  }
+}

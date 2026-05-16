@@ -1,0 +1,481 @@
+{
+  "factPack": {
+    "code": "JS6248",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme page",
+        "url": "https://www.jupas.edu.hk/en/programme/hku/JS6248"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores",
+        "note": "median/uq/lq from official PDF extract"
+      },
+      {
+        "id": "hku_admissions",
+        "label": "HKU programme page",
+        "url": "https://cds.hku.hk/admissions"
+      }
+    ],
+    "programme": {
+      "code": "JS6248",
+      "nameEn": "Bachelor of Arts and Sciences in Financial Technology",
+      "nameZh": "文理學士(金融科技)",
+      "university": "香港大學",
+      "facultyZh": "文學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Eng + Math + Best 3 Subjects",
+      "median": 34,
+      "uq": 35,
+      "lq": 32
+    },
+    "jupas": {
+      "code": "JS6248",
+      "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6248",
+      "nameEn": "Bachelor of Arts and Sciences in Financial Technology",
+      "nameZh": "",
+      "shortDescription": "",
+      "programmeWebsite": "https://cds.hku.hk/admissions",
+      "tuition": "HK$47,000",
+      "intake": 24,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+      "stats2025": {
+        "bandA": 104,
+        "bandB": 41,
+        "bandC": 117,
+        "bandD": 161,
+        "bandE": 164,
+        "total": 587
+      },
+      "offers2025": {
+        "bandA": 22,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 22
+      },
+      "facultyPhone": "+852 3917 3146"
+    },
+    "admissionsSnippet": "Admissions - HKU School of Computing and Data Science (HKUCDS) Admissions - HKU School of Computing and Data Science (HKUCDS) --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> --> About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos About About CDS Director’s Message Leadership Team Staff Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Research Groups Awards / Fundings News and Events News Events AI Blog CDS in Media Social Media Channels Contact Us Alumni Events News back menu Photo Gallery Dept Videos Top Contact HKU CDS About About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings About CDS Director’s Message Leadership Team Staff Facilities &amp; Resources Job Openings Departments Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Department of AI &#038; Data Science Department of Computer Science Department of Statistics &#038; Actuarial Science Programmes Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Research Highlights Centers / Laboratories Groups Awards / Fundings Highlights Centers / Laboratories Groups Awards / Fundings News and Events News Events Social Media Channels News Events Social Media Channels Connect with Us Instagram Linkedin Youtube Contact Us Address: Room 206 Chow Yei Ching Building, The University of Hong Kong, Pokfulam Email: askcds@hku.hk Tel: (+852) 3917-2180 Fax: (+852) 2559-8447 Copyright © 2025 School of Computing and Data Science, The University of Hong Kong. All rights reserved. Disclaimer Privacy Policy Sitemap Current Students Undergraduate programmes Taught Postgraduate Programmes Research Postgraduate Programmes Knowledge Exchange All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Alumni All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page Giving to CDS All donations to the Student Emergency Fund will directly support our students as they adapt to changing circumstances. Visit Page People School Leadership Team Academic Staff Honorary and Adjunct Staff Research and Other Staff Administrative Staff Research Students School Advisory Board Alumni All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. Our Alumni Request Info Visit Apply Search FAQ How to apply? How much does it cost? Where is it? What is the Academic Calendar? Top Searches: Campus Tuition Fees Scholarships Application Schedule Sports Graduate Programs"
+  },
+  "programme": {
+    "code": "JS6248",
+    "nameEn": "Bachelor of Arts and Sciences in Financial Technology",
+    "nameZh": "文理學士(金融科技)",
+    "name": "Bachelor of Arts and Sciences in Financial Technology",
+    "university": "香港大學",
+    "faculty": "文學院",
+    "median": 34,
+    "band_a": 32,
+    "uq": 35,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "**First Year Intake:**",
+            "24",
+            "",
+            "**Duration:**",
+            "4 years",
+            "",
+            "**First Year Tuition:**",
+            "HK$47,000",
+            "",
+            "**2025 Admission Scores:**",
+            "Formula: Eng + Math + Best 3 Subjects",
+            "Median: 34 | LQ: 32 | UQ: 35",
+            "",
+            "**Interview:**",
+            "Yes (selective, shortlisted candidates only)",
+            "",
+            "**JUPAS Programme Code:**",
+            "JS6248"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview:**",
+            "The Bachelor of Arts and Sciences in Financial Technology (BASc(FinTech)) is a cross-disciplinary programme offered by the School of Computing and Data Science (HKUCDS). It integrates arts, sciences, and technology to equip students with the skills needed for the fintech industry.",
+            "",
+            "**Year 1:**",
+            "Foundation courses in computing, data science, and financial technology fundamentals.",
+            "",
+            "**Year 2:**",
+            "Core modules in blockchain, artificial intelligence, and quantitative finance.",
+            "",
+            "**Year 3:**",
+            "Advanced electives and a capstone project in fintech innovation.",
+            "",
+            "**Year 4:**",
+            "Internship or research track, plus a final-year dissertation.",
+            "",
+            "**Unique Features:**",
+            "- Cross-faculty collaboration with Arts, Science, and Engineering.",
+            "- Hands-on projects with industry partners.",
+            "- Access to HKUCDS labs and research centres."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Financial Technology:**",
+            "- Fintech analyst",
+            "- Blockchain developer",
+            "- Digital payments specialist",
+            "",
+            "**Data Science & Analytics:**",
+            "- Data scientist",
+            "- Quantitative analyst",
+            "- Risk management consultant",
+            "",
+            "**Consulting & Strategy:**",
+            "- Technology consultant",
+            "- Business analyst (fintech focus)",
+            "",
+            "**Further Studies:**",
+            "- Master's in Financial Technology, Data Science, or related fields"
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Location:**",
+            "Main campus at Pokfulam, Hong Kong.",
+            "",
+            "**Facilities:**",
+            "State-of-the-art computing labs, collaborative spaces, and libraries.",
+            "",
+            "**Student Activities:**",
+            "Fintech societies, hackathons, and industry networking events.",
+            "",
+            "**Support Services:**",
+            "Academic advising, career counselling, and mental health resources."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Competition Level:**",
+            "High – limited intake of 24 places attracts strong applicants.",
+            "",
+            "**Band A Statistics (2025):**",
+            "Band A applications: 104",
+            "Band A offers: 22",
+            "Band A offer rate: ~21.2%",
+            "",
+            "**Key Factors for Success:**",
+            "1. Strong DSE results in English and Mathematics.",
+            "2. Relevant subject electives (e.g., Economics, ICT).",
+            "3. Interview performance (if shortlisted).",
+            "4. Demonstrated interest in fintech through OEA or activities."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Recognition",
+          "content": [
+            "**Faculty Excellence:**",
+            "Programme delivered by HKU School of Computing and Data Science, known for research in AI, data science, and fintech.",
+            "",
+            "**Rankings:**",
+            "HKU is consistently ranked among the top universities globally.",
+            "",
+            "**Labs & Centres:**",
+            "Access to HKUCDS research groups and industry partnerships.",
+            "",
+            "**Notable Alumni:**",
+            "No specific alumni names available in the fact pack."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**HKU Entrance Scholarships:**",
+            "Merit-based awards for outstanding DSE results.",
+            "",
+            "**Faculty Scholarships:**",
+            "School of Computing and Data Science scholarships for top students.",
+            "",
+            "**External Scholarships:**",
+            "Various government and private sector scholarships available.",
+            "",
+            "**Financial Aid:**",
+            "Need-based assistance through HKU's financial aid office."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's FinTech Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "Focus on English and Mathematics as they are weighted in the admission formula.",
+            "- Aim for Level 5 or above in both.",
+            "- Consider taking M1/M2 to strengthen quantitative skills.",
+            "",
+            "**2. Choose Relevant Electives**",
+            "",
+            "Select subjects that align with fintech, such as Economics, ICT, or Business.",
+            "- These demonstrate interest and aptitude.",
+            "- High scores in these can boost your best 3 subjects.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "If shortlisted, be ready to discuss fintech trends and your motivation.",
+            "- Practice common questions on blockchain, AI in finance.",
+            "- Show genuine passion through examples.",
+            "",
+            "**4. Optimize Your OEA**",
+            "",
+            "Use the Other Experiences and Achievements section to highlight fintech-related activities.",
+            "- Include hackathons, coding projects, or finance clubs.",
+            "- Link experiences to programme goals.",
+            "",
+            "**5. Build a Strong Backup Plan**",
+            "",
+            "Given the high competition, apply to related programmes like JS6688 or JS6901.",
+            "- Ensure your choices are realistic based on predicted scores.",
+            "- Consider programmes with lower cutoffs as safety.",
+            "",
+            "**6. Understand the Formula**",
+            "",
+            "Admission score = Eng + Math + Best 3 Subjects. Maximize your best 3.",
+            "- Prioritize subjects where you can achieve high grades.",
+            "- Avoid overloading with too many subjects.",
+            "",
+            "**7. Research the Programme**",
+            "",
+            "Know the unique features of BASc(FinTech) at HKU.",
+            "- Mention specific labs or projects in your interview.",
+            "- Show how you fit the cross-disciplinary nature.",
+            "",
+            "**8. Network and Seek Guidance**",
+            "",
+            "Talk to current students or alumni for insights.",
+            "- Attend HKU open days or info sessions.",
+            "- Use online forums to learn about the application process.",
+            "",
+            "**9. Stay Updated on Fintech**",
+            "",
+            "Read news about digital currencies, regtech, and insurtech.",
+            "- This knowledge can set you apart in interviews.",
+            "- It also prepares you for the programme's curriculum."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "**首年學額:**",
+            "24",
+            "",
+            "**修讀年期:**",
+            "4年",
+            "",
+            "**首年學費:**",
+            "港幣47,000元",
+            "",
+            "**2025年入學分數:**",
+            "計算公式：英文 + 數學 + 最佳3科",
+            "中位數：34 | 下四分位數：32 | 上四分位數：35",
+            "",
+            "**面試:**",
+            "有（選擇性，僅限獲篩選的申請人）",
+            "",
+            "**JUPAS課程編號:**",
+            "JS6248"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程簡介:**",
+            "金融科技文學士及理學士（BASc(FinTech)）是香港大學計算與數據科學學院（HKUCDS）提供的跨學科課程，融合文科、理科與科技，培養學生在金融科技行業所需的技能。",
+            "",
+            "**一年級:**",
+            "計算機、數據科學及金融科技基礎課程。",
+            "",
+            "**二年級:**",
+            "區塊鏈、人工智能及量化金融核心模塊。",
+            "",
+            "**三年級:**",
+            "高級選修課及金融科技創新專題項目。",
+            "",
+            "**四年級:**",
+            "實習或研究軌道，以及畢業論文。",
+            "",
+            "**獨特之處:**",
+            "- 與文學院、理學院及工程學院跨學院合作。",
+            "- 與行業夥伴進行實踐項目。",
+            "- 可使用HKUCDS實驗室及研究中心。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**金融科技:**",
+            "- 金融科技分析師",
+            "- 區塊鏈開發者",
+            "- 數字支付專家",
+            "",
+            "**數據科學與分析:**",
+            "- 數據科學家",
+            "- 量化分析師",
+            "- 風險管理顧問",
+            "",
+            "**諮詢與策略:**",
+            "- 科技顧問",
+            "- 商業分析師（金融科技方向）",
+            "",
+            "**進修:**",
+            "- 金融科技、數據科學或相關領域碩士學位"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**地點:**",
+            "香港薄扶林主校園。",
+            "",
+            "**設施:**",
+            "先進的計算機實驗室、協作空間及圖書館。",
+            "",
+            "**學生活動:**",
+            "金融科技學會、黑客松及行業交流活動。",
+            "",
+            "**支援服務:**",
+            "學術指導、職業諮詢及心理健康資源。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "**競爭程度:**",
+            "高 – 僅24個學額吸引眾多優秀申請者。",
+            "",
+            "**Band A統計（2025年）:**",
+            "Band A申請人數：104",
+            "Band A錄取人數：22",
+            "Band A錄取率：約21.2%",
+            "",
+            "**成功關鍵因素:**",
+            "1. 英文及數學DSE成績優異。",
+            "2. 相關選修科目（如經濟、資訊及通訊科技）。",
+            "3. 面試表現（如獲篩選）。",
+            "4. 通過OEA或活動展示對金融科技的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "校友與認可",
+          "content": [
+            "**學院卓越:**",
+            "課程由香港大學計算與數據科學學院開設，以人工智能、數據科學及金融科技研究聞名。",
+            "",
+            "**排名:**",
+            "香港大學持續位列全球頂尖大學。",
+            "",
+            "**實驗室與中心:**",
+            "可使用HKUCDS研究小組及行業合作夥伴資源。",
+            "",
+            "**知名校友:**",
+            "事實包中未提供具體校友姓名。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**香港大學入學獎學金:**",
+            "根據DSE優異成績頒發的擇優獎學金。",
+            "",
+            "**學院獎學金:**",
+            "計算與數據科學學院為頂尖學生提供的獎學金。",
+            "",
+            "**外部獎學金:**",
+            "多種政府及私營機構獎學金可供申請。",
+            "",
+            "**經濟援助:**",
+            "透過港大經濟援助辦公室提供按需資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir的金融科技策略 — 9個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "專注於英文和數學，因為它們在入學公式中佔有權重。",
+            "- 目標達到5級或以上。",
+            "- 考慮修讀M1/M2以加強量化技能。",
+            "",
+            "**2. 選擇相關選修科**",
+            "",
+            "選擇與金融科技相關的科目，如經濟、資訊及通訊科技或商業。",
+            "- 這些科目能展示你的興趣和能力。",
+            "- 高分數可提升最佳3科的成績。",
+            "",
+            "**3. 準備面試**",
+            "",
+            "如獲篩選，準備討論金融科技趨勢及你的動機。",
+            "- 練習常見問題，如區塊鏈、人工智能在金融中的應用。",
+            "- 通過實例展示真誠的熱情。",
+            "",
+            "**4. 優化OEA**",
+            "",
+            "利用「其他經驗及成就」部分突出金融科技相關活動。",
+            "- 包括黑客松、編程項目或金融學會。",
+            "- 將經驗與課程目標聯繫起來。",
+            "",
+            "**5. 建立穩妥的後備計劃**",
+            "",
+            "考慮競爭激烈，申請相關課程如JS6688或JS6901。",
+            "- 確保選擇基於預測分數的現實性。",
+            "- 考慮錄取分數較低的課程作為安全選擇。",
+            "",
+            "**6. 理解計算公式**",
+            "",
+            "入學分數 = 英文 + 數學 + 最佳3科。最大化你的最佳3科。",
+            "- 優先考慮能取得高分的科目。",
+            "- 避免選修過多科目。",
+            "",
+            "**7. 研究課程內容**",
+            "",
+            "了解港大BASc(FinTech)的獨特之處。",
+            "- 在面試中提及具體實驗室或項目。",
+            "- 展示你如何適應跨學科性質。",
+            "",
+            "**8. 建立人脈並尋求指導**",
+            "",
+            "與現有學生或校友交流以獲取見解。",
+            "- 參加港大開放日或資訊講座。",
+            "- 利用網上論壇了解申請流程。",
+            "",
+            "**9. 緊貼金融科技發展**",
+            "",
+            "閱讀關於數字貨幣、監管科技及保險科技的新聞。",
+            "- 這些知識能在面試中讓你脫穎而出。",
+            "- 同時為課程內容做好準備。"
+          ]
+        }
+      }
+    },
+    "code": "JS6248",
+    "university": "香港大學"
+  },
+  "scores": {
+    "median": 34,
+    "uq": 35,
+    "lq": 32
+  }
+}

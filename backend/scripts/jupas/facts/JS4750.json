@@ -1,0 +1,116 @@
+{
+  "code": "JS4750",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme (EN)",
+      "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4750"
+    },
+    {
+      "id": "jupas_tc",
+      "label": "JUPAS programme (TC)",
+      "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4750"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores (CUHK)",
+      "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+    },
+    {
+      "id": "cuhk_admissions",
+      "label": "CUHK Undergraduate Admissions programme page",
+      "url": "https://admission.cuhk.edu.hk/programme/asein/"
+    },
+    {
+      "id": "jupas_programme_website",
+      "label": "Programme website (from JUPAS)",
+      "url": "https://www.sci.cuhk.edu.hk/aseidm"
+    }
+  ],
+  "programme": {
+    "code": "JS4750",
+    "nameEn": "Informatics & X Double Major",
+    "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+    "university": "香港中文大學",
+    "facultyZh": "工程學院",
+    "category": "engineering"
+  },
+  "scores": {
+    "formula": "Best 5",
+    "median": 44.25,
+    "uq": null,
+    "lq": 38.25,
+    "percentiles": {
+      "M": {
+        "chi": "3",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "4",
+        "e4": "",
+        "total": 44.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 38.25
+      }
+    },
+    "subjectWeighting": "• Physics, Geography (x 2)"
+  },
+  "jupas": {
+    "code": "JS4750",
+    "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4750",
+    "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4750",
+    "nameEn": "Aerospace Science and Earth Informatics & X Double Major Programme",
+    "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+    "shortDescription": "The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK (SZ)). The programme aims to unravel the mysteries of outer space and our own planet. This highly interdisciplinary undergraduate major combines the realms of aerospace science and Earth informatics, equipping students to harness the power of data and invent innovative solutions to explore the outer space and to safeguard our planet Earth. Students will pursue a major in Aerospace Science and Earth Informatics at CUHK along with another major from among specific academic disciplines (Engineering, Science and Social Science) offered by either CUHK or CUHK(SZ). They will attend classes and participate in learning and research activities at both campuses. Major programmes offered by CUHK: Earth and Environmental Sciences Energy and Environmental Engineering Geography and Resource Management (in collaboration with the Institute of Space and Earth Information Science) Mechanical and Automation Engineering Physics Major programmes offered by CUHK(SZ): Data Science and Big Data Technology Electrical and Computer Engineering New Energy Science and Engineering Physics Urban Management Students will be prepared to step into a world of ample career opportunities, with skills and knowledge sought after by aerospace companies, space agencies, environmental consulting firms, geographic information system (GIS) companies, government agencies, research institutes, and NGOs. Students will also be ready for advanced studies in the Earth and planetary sciences, space physics, climate science, aerospace engineering, information technology, and data science.",
+    "programmeWebsite": "https://www.sci.cuhk.edu.hk/aseidm",
+    "tuition": "HK$47,000",
+    "intake": 27,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics Extended Module 1 or 2. (2) Preferred subjects: Mathematics Extended Module 1 or 2, Physics, and Geography. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+    "stats2025": {
+      "bandA": 60,
+      "bandB": 65,
+      "bandC": 126,
+      "bandD": 130,
+      "bandE": 126,
+      "total": 507
+    },
+    "offers2025": {
+      "bandA": 17,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 17
+    },
+    "facultyPhone": ""
+  },
+  "cuhkAdmission": {
+    "url": "https://admission.cuhk.edu.hk/programme/asein/",
+    "introduction": "The Chinese University of Hong Kong (CUHK) and The Chinese University of Hong Kong (Shenzhen) (CUHK(SZ)) have launched a comprehensive Collaborative Double Major Programme with Aerospace Science and Earth Informatics (ASEI) as one of the majors. CUHK students enrolled in the four-year programme will pursue a major in Aerospace Science and Earth Informatics at CUHK along with another major from among specific academic disciplines (engineering, science and social science) offered by either CUHK or CUHK(SZ). They will attend classes and participate in learning and research activities at both the Hong Kong campus and Shenzhen campus. Major programmes offered by CUHK: • Earth and Environmental Sciences • Energy and Environmental Engineering • Geography and Resource Management (in collaboration with the Institute of Space and Earth Information Science) • Mechanical and Automation Engineering • Physics Major programmes offered by CUHK(SZ): • Data Science and Big Data Technology • Electrical and Computer Engineering • New Energy Science and Engineering • Physics • Urban Management",
+    "ranking": "",
+    "careerProspects": "Students will be prepared to step into a world of ample career opportunities, with skills and knowledge sought after by aerospace companies, space agencies, environmental consulting firms, geographic information system (GIS) companies, government agencies, research institutes, and NGOs. Students will also be ready for advanced studies in the Earth and planetary sciences, space physics, climate science, aerospace engineering, information technology, and data science. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+    "craftYourPath": "",
+    "moreInfo": "",
+    "faqHints": ""
+  },
+  "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+  "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+}

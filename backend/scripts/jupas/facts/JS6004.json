@@ -1,0 +1,66 @@
+{
+  "code": "JS6004",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6004"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.arch.hku.hk/baas/"
+    }
+  ],
+  "programme": {
+    "code": "JS6004",
+    "nameEn": "Bachelor of Arts in Architectural Studies",
+    "nameZh": "Bachelor of Arts in Architectural Studies",
+    "university": "香港大學",
+    "facultyZh": "建築學院",
+    "category": "design"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 29,
+    "uq": 32,
+    "lq": 28
+  },
+  "jupas": {
+    "code": "JS6004",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6004",
+    "nameEn": "Bachelor of Arts in Architectural Studies",
+    "nameZh": "",
+    "shortDescription": "The Bachelor of Arts in Architectural Studies [BA(AS)] is a four-year, full-time programme that introduces students to architecture as a cultural discipline. It is the first degree needed to qualify as an architect, and it provides an excellent general education that gives students the confidence to pursue related careers both within the design professions and further afield. The course of study is centred on research-based learning in the design studio and is structured to foster a sense of community, develop deep knowledge of the discipline, and encourage creativity. Design studios look at diverse contemporary issues relevant to Hong Kong and the world and are structured by thematic platforms that introduce students to a range of methodologies and approaches to the territorial, social, technological, urban and environmental issues that address architecture as a cultural discipline. The BA(AS) programme offers numerous opportunities for knowledge exchange and international experience, such as semester exchanges with leading international schools of architecture, study trips to foundational sites of architecture and urbanism, and hands-on experience through summer field studies workshops. Courses in the programme are offered in the areas of Architectural Design, History and Theory of Architecture, Technology, and Visual Communication.",
+    "programmeWebsite": "https://www.arch.hku.hk/baas/",
+    "tuition": "HK$47,000",
+    "intake": 54,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 85,
+      "bandB": 60,
+      "bandC": 107,
+      "bandD": 165,
+      "bandE": 180,
+      "total": 597
+    },
+    "offers2025": {
+      "bandA": 33,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 33
+    },
+    "facultyPhone": "+852 3917 2149"
+  },
+  "admissionsSnippet": "Bachelor of Arts in Architectural Studies | HKU Faculty of Architecture /assets/fancybox/jquery.fancybox.pack.js\" type=\"text/javascript\"> Search HOME About Events People Admissions Programmes Departments and Divisions International Collaborations Research Knowledge Exchange Resources Alumni Faculty Intranet Contact About History HKUrbanLabs Asia’s Global University Faculty Newsletter News Dean's Roundup Location Events All Events Exhibitions Podcast Public Lecture Series Seminars Subscribe People Faculty Office Honorary Professors Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Awards and Prizes Admissions Admission by Programmes Tuition & Fees FAQs for Undergraduate Admissions FAQs for Taught Postgraduate Programmes Programmes Architecture Real Estate and Construction Urban Planning and Design Landscape Architecture Conservation Design+ Summer Programmes Executive Education Departments and Divisions Department of Architecture Department of Real Estate and Construction Department of Urban Planning and Design Division of Landscape Architecture International Collaborations Introduction Student Exchange International Partners Mainland China Engagement Global Citizenship Research Introduction The Future of Cities Research Centres Research Projects Publications Research Postgraduate Programme Research Design Portfolios Undergraduate and Master's thesis opportunities in FoA Knowledge Exchange Introduction Awards Media Highlights Contact Resources The Kenneth Frampton Architectural Book Collection The Brian Brace Taylor Book Collection Stephen Garmey Book Collection on Constructivist Art and Architecture Scholarships and Prizes Academic Calendar Student Handbooks Student Wellness Resources Student Associations Fabrication & Media Laboratories Alumni Featured Alumni Alumni Associations Alumni Update Architecture Introduction Bachelor of Arts in Architectural Studies Master of Architecture Master of Architecture (Design) MPhil and PhD Master of Science in Advanced Architectural Design Major/Minor in Architectural Studies Artist-in-Residence Program Gallery Research Projects Real Estate and Construction Introduction Head's Message Bachelor of Science in Surveying Master of Science in Construction Project Management Master of Science in Real Estate Master of Science in Digital Management of Built Assets (formerly Master of Science in Integrated Project Delivery) MPhil and PhD Research and Related Links Gallery Research and Knowledge Exchange Projects Urban Planning and Design Introduction Admissions Bachelor of Arts in Urban Studies Master of Digital Urban Management Master of Science in Urban Analytics Master of Science in Urban Design and Transport Master of Science in Urban Planning Master of Urban Design Master of Urban Studies and Housing Management Master of Arts in Transport Policy and Planning MPhil and PhD Gallery Research Projects Landscape Architecture Introduction Bachelor of Arts in Landscape Studies Master of Landscape Architecture Postgraduate Diploma in Landscape Architecture Master of Science in Sustainable Environmental Design MPhil and PhD Students' Awards Gallery Research Projects Conservation Introduction Master of Science in Conservation Built Heritage Research Collaborative (BHRC) News and Events Design+ Introduction Bachelor of Arts & Sciences in Design+ MPhil and PhD Career Discovery in Design Gallery Summer Programmes Introduction HKU Design+ Academy for the Talented (non-residential programme) Eco-cities and the Chinese Dream International Summer Programme in Architecture A Visual Diary of Paris, Lyon, Marseille Nature in the City: Beyond the Concrete Jungle Career Discovery in Architecture (Hong Kong) Career Discovery in Architecture [Shanghai] Summer Career Discovery in Landscape Architecture Galapagos: Envisioning Sustainable Futures Department of Urban Planning and Design Introduction What's New Staff Publications Newsletter The Future of Cities Introduction 01 Rural 02 Informal 03 Aged 04 Microbial 05 Nerves 06 Arteries 07 Mind 08 Heart 09 Hypercity 10 Inequality 11 Borders 12 Singularity Research Centres Architecture, Urbanism, and the Humanities Initiative Building Simplexity Lab Built Heritage Research Collaborative Centre for Chinese Architecture and Urbanism Centre of Urban Studies and Urban Planning Fabrication and Material Technologies Lab Future Urbanity & Sustainable Environment (FUSE) Lab Green, FinTech, and Property Lab Healthy High Density Cities Lab iLab Meta BIM Research Lab Real Estate Lab Ronald Coase Centre for Property Rights Research Rural Urban Lab Social Infrastructure for Equity and Wellbeing Sustainable High Density Cities Lab S tructur AI Lab Urban Ecologies Design Lab Urban Environments & Human Health Lab Research Postgraduate Programme Standard Forms Guidelines for RPG students Events for RPG students Contacts Student Associations Architectural Society (AS) Architectural Students’ Association (ASA) Surveying Society (SS) Fabrication & Media Laboratories Introduction Machinery & Methods Projects People Blog Bachelor of Arts in Architectural Studies Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Program Contact Master of Architecture Introduction Admissions Regulations, Syllabus & Timetables International Student Exchange Programme Scholarship Contact Master of Architecture (Design) Introduction Admissions Regulations, Syllabus & Timetables Contacts MPhil and PhD Introduction Admissions Programme of Study People Research Students News and Events Institutional Affiliations Master of Science in Advanced Architectural Design Introduction Admissions Regulations & Syllabus Contact Bachelor of Science in Surveying Introduction Admissions Alumni Story Studio Virtual Tour of REC Regulations, Syllabus & Timetables Professional Accreditation Internships International Exchange Consultation Session FAQs Contact Master of Science in Construction Project Management Overvie"
+}

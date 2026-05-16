@@ -1,0 +1,66 @@
+{
+  "code": "JS6286",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6286"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.hdt.arts.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6286",
+    "nameEn": "Bachelor of Arts in Humanities and Digital Technologies",
+    "nameZh": "Bachelor of Arts in Humanities and Digital Technologies",
+    "university": "香港大學",
+    "facultyZh": "文學院",
+    "category": "arts"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 37,
+    "uq": 41,
+    "lq": 35
+  },
+  "jupas": {
+    "code": "JS6286",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6286",
+    "nameEn": "Bachelor of Arts in Humanities and Digital Technologies",
+    "nameZh": "",
+    "shortDescription": "",
+    "programmeWebsite": "https://www.hdt.arts.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 30,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 66,
+      "bandB": 40,
+      "bandC": 53,
+      "bandD": 80,
+      "bandE": 92,
+      "total": 331
+    },
+    "offers2025": {
+      "bandA": 12,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 12
+    },
+    "facultyPhone": "+852 3917 8977"
+  },
+  "admissionsSnippet": "--> Faculty of Arts | Humanities and Digital Technologies, HKU top of page Home Admissions Why BA(HDT) Programme Leaflet Dual Degree Programmes Scholarships Career Opportunities People Teachers Student Testimonials Projects Events Programme Curriculum Structure Internship Final-year Project Important Information FAQs for Current Students More... Use tab to navigate through the menu items. Apply Now Contact Us FOLLOW US Read More &nbsp; Bachelor of Arts in Humanities and Digital Technologies Welcome to the Bachelor of Arts in Humanities and Digital Technologies. This unique programme is designed for students who are eager to understand and shape a world undergoing rapid digital transformation. Our innovative and forward-looking course of study seamlessly integrates the insights of humanities disciplines with the advancements of digital technology, providing a learning experience that transcends traditional academic boundaries.This is the first programme dedicated to the digital humanities in Asia, which aims to rival and interact with similar initiatives in top universities like UChicago, UCLA, or King&rsquo;s College London. The BA(HDT) programme recognises that digital literacy is paramount for exploring both historical phenomena and contemporary digital culture. Our hands-on approach equips students with coding skills and technological proficiency essential for examining social and cultural dynamics. In addition to digital tools and methods, our curriculum covers the cultural, ethical, and societal impact of emerging technologies such as big data, generative artificial intelligence, blockchain, and the metaverse.&nbsp; ​ We emphasize group projects and problem-solving exercises, which help students develop strong collaborative skills crucial for modern work environments, as well as a distinctive portfolio that showcases their skills and abilities. Our curriculum is thus designed to ensure that students are not mere observers but active participants in the digital world. &nbsp; Graduates of the BA(HDT) programme leave with a deep understanding of how technology interweaves with human culture, history, and society. They&rsquo;re ready to lead innovation in a mindful manner, and thrive across a range of diverse fields, contributing to a world where technology enhances rather than diminishes our humanity. News &amp; Sharing &nbsp; Student Testimonials Read more Past Events Read more HKU Research Output Prize 2024-25 Read more Bachelor of Arts in Humanities and Digital Technologies Tel: 852-3917 8977&nbsp; Email: bahdt@hku.hk Address: Faculty of Arts General Office, Room 4.05, 4/F Run Run Shaw Tower, Centennial Campus The University of Hong Kong &copy; 2024 by the Faculty of Arts, The University of Hong Kong. bottom of page"
+}

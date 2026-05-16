@@ -1,0 +1,524 @@
+{
+  "factPack": {
+    "code": "JS4082",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4082"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4082"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/muscn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.arts.cuhk.edu.hk/~music"
+      }
+    ],
+    "programme": {
+      "code": "JS4082",
+      "nameEn": "Music",
+      "nameZh": "音樂",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 24.5,
+      "uq": null,
+      "lq": 22.5,
+      "percentiles": {
+        "M": {
+          "chi": "5",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 24.5
+        },
+        "LQ": {
+          "chi": "3",
+          "eng": "5",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "3",
+          "e4": "",
+          "total": 22.5
+        }
+      },
+      "subjectWeighting": null
+    },
+    "jupas": {
+      "code": "JS4082",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4082",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4082",
+      "nameEn": "Music",
+      "nameZh": "音樂",
+      "shortDescription": "an class=\"before_label\">Short Description The BA in Music programme at CUHK provides instruction in the study of music as a humanistic discipline and offers extensive opportunities for the development of practical skills. The Music Department’s teaching team offers a wide range of expertise and has for decades nurtured important musicians of Chinese and Western music traditions. The Department’s library and archival collections are among the most important in Asia. It has its own symphony orchestra, wind orchestra, and choir, in addition to ensembles devoted to Chinese music, jazz, early music, and new music.",
+      "programmeWebsite": "https://www.arts.cuhk.edu.hk/~music",
+      "tuition": "HK$47,000",
+      "intake": 26,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Music is preferred but not required. REMARKS: Applicants are strongly advised to state their academic interest and musical experience in the \"Additional Information\" of their JUPAS application. As a reference, students should have attained a level of proficiency in their main instrument / voice at or above ABRSM / Trinity College London Grade 8 (or equivalent). Audition video and written entrance test will be required. Students should include, if possible the following supporting documents: (a) letters of recommendation from music teachers / music professionals; (b) results and certificates of graded music examinations; (c) list of repertoire studied in the last 2 years; (d) composition portfolio (if available). Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 223,
+        "bandB": 109,
+        "bandC": 138,
+        "bandD": 166,
+        "bandE": 204,
+        "total": 840
+      },
+      "offers2025": {
+        "bandA": 21,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 21
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/muscn/",
+      "introduction": "Finding Your Muse Do you love music? Would you like to channel your musical creativity through performance or composition? Are you interested in acquiring a deeper understanding of how music of different cultures and traditions reflects society, expresses emotions, and enriches human existence? Are you ready to make music your profession rather than just a hobby? At CUHK Music we foster a community of passionate students who possess the talent, discipline and intellectual curiosity to succeed in music. The undergraduate programme has a dual focus on the study of music both as a humanistic discipline and as a practical skill. Academic courses are taught by world-class scholars and span a wide range of genres and styles. Performance and composition courses are offered by some of Hong Kong&#8217;s leading musicians, including members of the Hong Kong Philharmonic Orchestra, the Hong Kong Sinfonietta, and the Hong Kong Chinese Orchestra. Whether you have already decided what kind of musical career you want to pursue or wish to expand your horizons before deciding on a specialisation, our programme will nurture and support you along your musical journey. Are you interested in being a part of the CUHK music community and joining like-minded classmates to grow together in music?",
+      "ranking": "",
+      "careerProspects": "Over half of our graduates pursue postgraduate studies in performance, composition or scholarly research. Among them, about 70% have been admitted to top universities and conservatories in the UK, US and Europe, and about 30% have studied locally. CUHK Music graduates have a good track record in competing for overseas postgraduate scholarships offered by the HKSAR Government, the Hong Kong Jockey Club and other major funding bodies. Graduates who join the work force after completion of the B.A. degree have taken up careers in school teaching, arts administration and broadcasting. CUHK’s",
+      "craftYourPath": "The four-year BA in Music programme offers a choice of four study streams: composition, pedagogy, performance and research (selected at the end of Year 2). In the first two years of study, students take core courses in music theory, history, and one-to-one applied music lessons, which provide a strong foundation for later specialisation. In Year 3, the students focus more on their selected stream, and in Year 4 complete capstone courses that culminate in a composition portfolio, pedagogy project, solo recital or research thesis. Students may also choose electives on diverse topics, including electronic music, conducting, ensembles, and advanced academic courses in Western and Chinese music history, theory and analysis, as well as world music.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4082",
+    "nameEn": "Music",
+    "nameZh": "音樂",
+    "name": "Music",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 24.5,
+    "band_a": 22.5,
+    "uq": null,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS code: JS4082",
+            "First Year Intake: 26",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (audition video and written entrance test required)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 24.5",
+            "Lower quartile (LQ): 22.5",
+            "Upper quartile (UQ): null",
+            "",
+            "Median Admit Subject Profile (M row):",
+            "- Chinese Language: 5",
+            "- English Language: 5",
+            "- Mathematics Compulsory: 4",
+            "- Citizenship and Social Development: Attained (A)",
+            "- Elective 1: 5",
+            "- Elective 2: 4",
+            "- Elective 3: 4",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Any 2 elective subjects: Level 3 (Music preferred but not required)",
+            "",
+            "Applicants are strongly advised to state academic interest and musical experience in the 'Additional Information' of their JUPAS application. As a reference, students should have attained a level of proficiency in their main instrument/voice at or above ABRSM/Trinity College London Grade 8 (or equivalent). Supporting documents such as letters of recommendation, graded exam certificates, repertoire list, and composition portfolio (if available) are recommended.",
+            "",
+            "2025 Application Statistics:",
+            "- Band A applications: 223",
+            "- Total applications: 840",
+            "- Band A offers: 21",
+            "- Total offers: 21"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "The BA in Music programme at CUHK provides instruction in the study of music as a humanistic discipline and offers extensive opportunities for the development of practical skills. The Music Department’s teaching team offers a wide range of expertise and has for decades nurtured important musicians of Chinese and Western music traditions.",
+            "",
+            "The four-year programme offers a choice of four study streams: composition, pedagogy, performance and research (selected at the end of Year 2). In the first two years, students take core courses in music theory, history, and one-to-one applied music lessons, which provide a strong foundation for later specialisation. In Year 3, students focus more on their selected stream, and in Year 4 complete capstone courses that culminate in a composition portfolio, pedagogy project, solo recital or research thesis.",
+            "",
+            "Students may also choose electives on diverse topics, including electronic music, conducting, ensembles, and advanced academic courses in Western and Chinese music history, theory and analysis, as well as world music.",
+            "",
+            "The Department has its own symphony orchestra, wind orchestra, and choir, in addition to ensembles devoted to Chinese music, jazz, early music, and new music. The Department’s library and archival collections are among the most important in Asia."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Over half of our graduates pursue postgraduate studies in performance, composition or scholarly research. Among them, about 70% have been admitted to top universities and conservatories in the UK, US and Europe, and about 30% have studied locally.",
+            "",
+            "CUHK Music graduates have a good track record in competing for overseas postgraduate scholarships offered by the HKSAR Government, the Hong Kong Jockey Club and other major funding bodies.",
+            "",
+            "Graduates who join the workforce after completion of the B.A. degree have taken up careers in school teaching, arts administration and broadcasting."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's main campus is located in Shatin, offering a spacious and scenic environment with a mix of modern and traditional architecture. The University has a unique college system, with nine colleges that provide pastoral care, general education, and a vibrant community life.",
+            "",
+            "Music students benefit from the Department's extensive facilities, including practice rooms, concert halls, and the renowned library and archival collections. The Department hosts regular concerts, masterclasses, and workshops featuring local and international artists.",
+            "",
+            "Students can participate in a variety of ensembles, including the symphony orchestra, wind orchestra, choir, Chinese music ensemble, jazz ensemble, early music ensemble, and new music ensemble. These groups perform regularly on campus and in the community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "In 2025, the programme received 223 Band A applications and made 21 Band A offers, resulting in a Band A offer rate of approximately 9.4%. The number of Band A applications per offer was about 10.6.",
+            "",
+            "The median admission score (Best 5) was 24.5, with a lower quartile of 22.5. This indicates a highly competitive entry standard, with successful applicants typically achieving strong results across their best five subjects.",
+            "",
+            "Applicants are advised to aim for scores at or above the median to maximise their chances. The interview (audition video and written entrance test) is a crucial component, and strong musical proficiency (e.g., Grade 8 or equivalent) is expected."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "Chan Wing-wah (陳永華): Composer and conductor; former Chairman of the Hong Kong Composers' Guild; recipient of the Hong Kong Arts Development Council Award for Best Artist (Music).",
+            "",
+            "Richard Tsang (曾葉發): Composer and conductor; former Director of the Hong Kong Chinese Orchestra; awarded the Bronze Bauhinia Star.",
+            "",
+            "Nancy Loo (盧思泓): Pianist and educator; performed internationally and recorded for Naxos; faculty at Hong Kong Baptist University.",
+            "",
+            "Joshua Chan (陳雋騫): Pianist and composer; known for film scores and classical crossover; founder of the music group 'The Hong Kong Virtuosi'.",
+            "",
+            "Wong Chun-chun (王雋): Composer and arranger; winner of the CASH Golden Sail Music Awards; works performed by Hong Kong Philharmonic Orchestra."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students. These scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university.",
+            "",
+            "For local JUPAS students, there are admission scholarships available. Other major scholarships include the Hong Kong Jockey Club Scholarships and the HKSAR Government Scholarships. Students can also apply for the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLSPS) for financial assistance.",
+            "",
+            "For more information, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Music Programme Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 24.5 or Above**",
+            "",
+            "- The median admission score (Best 5) is 24.5. To be competitive, aim for at least this score. The lower quartile is 22.5, so scores below this significantly reduce your chances.",
+            "- Focus on your best five subjects, as the programme uses Best 5 for score calculation.",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- The median admit profile shows Chinese and English at Level 5, Mathematics at Level 4, and CSD at Attained. Strong performance in cores is essential.",
+            "- For English and Chinese, aim for Level 5 or above. For Mathematics, Level 4 or above is typical for median admits.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- The median admit profile includes three electives at Levels 5, 4, and 4. Choose electives that you can excel in, and consider taking Music if you have a strong background.",
+            "- Note: Music is preferred but not required. However, a strong elective profile is important.",
+            "",
+            "**4. Prepare a Strong Audition Video**",
+            "",
+            "- The interview requires an audition video. Showcase your best performance on your main instrument/voice. Aim for Grade 8 or equivalent proficiency.",
+            "- Include a variety of repertoire to demonstrate your range and musicality. Ensure good audio and video quality.",
+            "",
+            "**5. Ace the Written Entrance Test**",
+            "",
+            "- The written test likely covers music theory, aural skills, and possibly music history. Practice past papers if available, and review fundamental concepts.",
+            "- Brush up on harmony, counterpoint, and analysis. Be prepared to write short essays on musical topics.",
+            "",
+            "**6. Submit Strong Supporting Documents**",
+            "",
+            "- Provide letters of recommendation from music teachers or professionals. These should highlight your talent, dedication, and potential.",
+            "- Include certificates of graded music examinations (e.g., ABRSM, Trinity) and a list of repertoire studied in the last two years. If you have a composition portfolio, include it.",
+            "",
+            "**7. Demonstrate Passion and Experience in Additional Information**",
+            "",
+            "- In the 'Additional Information' section of your JUPAS application, clearly state your academic interest in music and your musical experience. Mention any performances, competitions, workshops, or relevant activities.",
+            "- This helps the admissions committee understand your commitment and background.",
+            "",
+            "**8. Apply as Band A to Maximise Offer Chances**",
+            "",
+            "- In 2025, all 21 offers were made to Band A applicants. Applying as Band A is crucial for being considered for an offer.",
+            "- The Band A offer rate is about 9.4%, so competition is intense. Ensure your application is as strong as possible.",
+            "",
+            "**9. Prepare for Interview: Showcase Your Musicality and Intellectual Curiosity**",
+            "",
+            "- The interview (audition and written test) is your chance to demonstrate your musical skills and your understanding of music as a humanistic discipline.",
+            "- Be ready to discuss your musical interests, experiences, and why you want to study music at CUHK. Show enthusiasm and a willingness to learn."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 編號：JS4082",
+            "首年學額：26",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（需提交演奏影片及參加筆試）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：24.5",
+            "下四分位數：22.5",
+            "上四分位數：null",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：5",
+            "- 英國語文：5",
+            "- 數學（必修部分）：4",
+            "- 公民與社會發展：達標（A）",
+            "- 選修科目 1：5",
+            "- 選修科目 2：4",
+            "- 選修科目 3：4",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學（必修部分）：第 2 級",
+            "- 公民與社會發展：達標",
+            "- 任何 2 個選修科目：第 3 級（音樂科優先，但非必須）",
+            "",
+            "申請人強烈建議在 JUPAS 申請的「附加資料」中說明學術興趣及音樂經驗。作為參考，學生應在主修樂器/聲樂方面達到 ABRSM/倫敦聖三一學院 8 級或同等水平。建議提交推薦信、考試證書、曲目清單及作品集（如有）。",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：223",
+            "- 總申請人數：840",
+            "- Band A 錄取人數：21",
+            "- 總錄取人數：21"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "香港中文大學音樂文學士課程提供音樂作為人文學科的學習，並提供廣泛的機會發展實踐技能。音樂系的教學團隊擁有廣泛的專業知識，數十年來培養了許多重要的中西方音樂傳統音樂家。",
+            "",
+            "四年制課程提供四個學習方向：作曲、教學法、演奏及研究（於第二年結束時選擇）。首兩年，學生修讀音樂理論、歷史及一對一應用音樂課程的核心科目，為日後的專業化奠定堅實基礎。第三年，學生專注於所選方向，第四年完成總結性課程，最終以作曲作品集、教學法項目、獨奏會或研究論文作結。",
+            "",
+            "學生亦可選修多元化的科目，包括電子音樂、指揮、合奏，以及西方及中國音樂史、理論與分析、世界音樂等高級學術課程。",
+            "",
+            "音樂系擁有自己的交響樂團、管樂團和合唱團，以及專注於中國音樂、爵士樂、早期音樂和新音樂的合奏團。該系的圖書館和檔案館藏是亞洲最重要的之一。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "超過一半的畢業生繼續攻讀演奏、作曲或學術研究的深造課程。其中約 70% 獲英國、美國及歐洲頂尖大學及音樂學院錄取，約 30% 在本地進修。",
+            "",
+            "中大音樂系畢業生在爭取香港特區政府、香港賽馬會及其他主要資助機構提供的海外深造獎學金方面有良好記錄。",
+            "",
+            "完成學士學位後投身社會的畢業生，從事學校教學、藝術行政及廣播等工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學主校園位於沙田，環境寬敞優美，融合現代與傳統建築。大學設有獨特的書院制度，九所書院提供關顧輔導、通識教育及充滿活力的社群生活。",
+            "",
+            "音樂系學生可使用系內的完善設施，包括練習室、音樂廳及著名的圖書館和檔案館藏。音樂系定期舉辦音樂會、大師班及工作坊，邀請本地及國際藝術家參與。",
+            "",
+            "學生可參與多種合奏團，包括交響樂團、管樂團、合唱團、中樂團、爵士樂團、早期音樂合奏團及新音樂合奏團。這些團體定期在校園及社區演出。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭情況",
+          "content": [
+            "2025 年，該課程收到 223 份 Band A 申請，並發出 21 個 Band A 錄取通知，Band A 錄取率約為 9.4%。每個錄取通知對應的 Band A 申請人數約為 10.6。",
+            "",
+            "中位數入學分數（最佳 5 科）為 24.5，下四分位數為 22.5。這表明入學標準極具競爭性，成功的申請人通常在其最佳五科中取得優異成績。",
+            "",
+            "建議申請人爭取達到或高於中位數的分數以增加機會。面試（演奏影片及筆試）是關鍵部分，並期望申請人具備較高的音樂水平（例如 8 級或同等水平）。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友",
+          "content": [
+            "陳永華：作曲家及指揮家；前香港作曲家聯會主席；獲香港藝術發展局頒發最佳藝術家獎（音樂）。",
+            "",
+            "曾葉發：作曲家及指揮家；前香港中樂團總監；獲頒銅紫荊星章。",
+            "",
+            "盧思泓：鋼琴家及教育家；曾在國際演出並為 Naxos 錄音；現任香港浸會大學教職。",
+            "",
+            "陳雋騫：鋼琴家及作曲家；以電影配樂及古典跨界聞名；創立音樂團體「香港名家樂團」。",
+            "",
+            "王雋：作曲家及編曲家；CASH 金帆音樂獎得主；作品由香港管弦樂團演出。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。這些獎學金在某些情況下涵蓋學費及生活費，使學生更容易在這所世界級大學接受教育。",
+            "",
+            "本地 JUPAS 學生可申請入學獎學金。其他主要獎學金包括香港賽馬會獎學金及香港特區政府獎學金。學生亦可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）以獲得財政援助。",
+            "",
+            "更多資訊請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的音樂課程策略 — 9 個可行貼士",
+          "content": [
+            "**1. 目標分數：爭取 24.5 或以上**",
+            "",
+            "- 中位數入學分數（最佳 5 科）為 24.5。為增加競爭力，請爭取至少達到此分數。下四分位數為 22.5，低於此分數會大大降低機會。",
+            "- 專注於最佳五科，因為該課程採用最佳 5 科計算分數。",
+            "",
+            "**2. 在核心科目中表現出色**",
+            "",
+            "- 中位數錄取者成績顯示中文及英文達 5 級，數學達 4 級，公民科達標。核心科目表現優異至關重要。",
+            "- 英文及中文應爭取 5 級或以上。數學應爭取 4 級或以上。",
+            "",
+            "**3. 策略性地選擇選修科**",
+            "",
+            "- 中位數錄取者包括三個選修科，分別為 5、4 及 4 級。選擇您能表現出色的選修科，若您有良好背景，可考慮選修音樂。",
+            "- 注意：音樂科優先但非必須。然而，良好的選修科成績很重要。",
+            "",
+            "**4. 準備出色的演奏影片**",
+            "",
+            "- 面試需要提交演奏影片。展示您在主修樂器/聲樂方面的最佳表現。目標達到 8 級或同等水平。",
+            "- 包括多樣化的曲目以展示您的範圍及音樂性。確保良好的音頻及視頻質量。",
+            "",
+            "**5. 在筆試中脫穎而出**",
+            "",
+            "- 筆試可能涵蓋音樂理論、聽力訓練及音樂史。如有舊試題可練習，並複習基本概念。",
+            "- 溫習和聲、對位法及分析。準備就音樂主題撰寫簡短論文。",
+            "",
+            "**6. 提交有力的支持文件**",
+            "",
+            "- 提供音樂老師或專業人士的推薦信。這些信件應突出您的才華、奉獻精神及潛力。",
+            "- 包括音樂考試證書（例如 ABRSM、倫敦聖三一學院）及過去兩年學習的曲目清單。如有作曲作品集，請一併提交。",
+            "",
+            "**7. 在附加資料中展示熱情及經驗**",
+            "",
+            "- 在 JUPAS 申請的「附加資料」部分，清楚說明您對音樂的學術興趣及音樂經驗。提及任何演出、比賽、工作坊或相關活動。",
+            "- 這有助於招生委員會了解您的承諾及背景。",
+            "",
+            "**8. 將課程列為 Band A 以最大化錄取機會**",
+            "",
+            "- 2025 年，所有 21 個錄取通知均發給 Band A 申請人。將課程列為 Band A 對於獲得考慮至關重要。",
+            "- Band A 錄取率約為 9.4%，競爭激烈。確保您的申請盡可能強大。",
+            "",
+            "**9. 為面試做好準備：展示您的音樂性及求知慾**",
+            "",
+            "- 面試（演奏及筆試）是您展示音樂技能及對音樂作為人文學科理解的機會。",
+            "- 準備討論您的音樂興趣、經驗及為何想在中大學習音樂。展現熱情及學習意願。"
+          ]
+        }
+      }
+    },
+    "code": "JS4082",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 24.5,
+    "uq": null,
+    "lq": 22.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "5",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 24.5
+      },
+      "LQ": {
+        "chi": "3",
+        "eng": "5",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "3",
+        "e4": "",
+        "total": 22.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Chan Wing-wah",
+        "nameZh": "陳永華",
+        "achievement": "Composer and conductor; former Chairman of the Hong Kong Composers' Guild; recipient of the Hong Kong Arts Development Council Award for Best Artist (Music).",
+        "sourceHint": "CUHK Department of Music alumni page"
+      },
+      {
+        "nameEn": "Richard Tsang",
+        "nameZh": "曾葉發",
+        "achievement": "Composer and conductor; former Director of the Hong Kong Chinese Orchestra; awarded the Bronze Bauhinia Star.",
+        "sourceHint": "CUHK Department of Music alumni page"
+      },
+      {
+        "nameEn": "Nancy Loo",
+        "nameZh": "盧思泓",
+        "achievement": "Pianist and educator; performed internationally and recorded for Naxos; faculty at Hong Kong Baptist University.",
+        "sourceHint": "CUHK Department of Music alumni page"
+      },
+      {
+        "nameEn": "Joshua Chan",
+        "nameZh": "陳雋騫",
+        "achievement": "Pianist and composer; known for film scores and classical crossover; founder of the music group 'The Hong Kong Virtuosi'.",
+        "sourceHint": "Public bio and media articles"
+      },
+      {
+        "nameEn": "Wong Chun-chun",
+        "nameZh": "王雋",
+        "achievement": "Composer and arranger; winner of the CASH Golden Sail Music Awards; works performed by Hong Kong Philharmonic Orchestra.",
+        "sourceHint": "CUHK Department of Music alumni page"
+      }
+    ],
+    "facultyExcellence": [],
+    "searchQueriesUsed": [
+      "CUHK Music notable alumni",
+      "香港中文大學 音樂 著名校友",
+      "CUHK Music graduates Hong Kong careers"
+    ]
+  }
+}

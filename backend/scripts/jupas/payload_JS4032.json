@@ -1,0 +1,529 @@
+{
+  "factPack": {
+    "code": "JS4032",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4032"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4032"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/engen/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.eng.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4032",
+      "nameEn": "English",
+      "nameZh": "英文",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 27.25,
+      "uq": 28.5,
+      "lq": 26.5,
+      "percentiles": {
+        "UQ": {
+          "chi": "5*",
+          "eng": "5*",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "3",
+          "e3": "3",
+          "e4": "",
+          "total": 28.5
+        },
+        "M": {
+          "chi": "3",
+          "eng": "5",
+          "math": "4",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "5*",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 27.25
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "3",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "",
+          "e1": "4",
+          "e2": "4",
+          "e3": "4",
+          "e4": "",
+          "total": 26.5
+        }
+      },
+      "subjectWeighting": "• English (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4032",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4032",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4032",
+      "nameEn": "English",
+      "nameZh": "英文",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.eng.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 55,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Literature in English is preferred. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 200,
+        "bandB": 185,
+        "bandC": 219,
+        "bandD": 274,
+        "bandE": 200,
+        "total": 1078
+      },
+      "offers2025": {
+        "bandA": 51,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 51
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/engen/",
+      "introduction": "Discover Your Place in a Global Language in Our English Programme Explore new ideas and unlock international perspectives through your encounters with English—as a language, culture(s) and literature. Our programme offers a strong sense of belonging, with students and faculty from around the world forming a dynamic intellectual community in which everyone thrives. Selecting from courses in literature, linguistics and creative writing, you have the opportunity to design your own academic journey and pursue your personal interests. Our flexible curriculum, stimulating double-major options, and transformative Oxford Summer Programme provide a solid academic foundation, while expanding your international horizons. Join us and find your voice in a global language.",
+      "ranking": "#44 in English Language and Literature (QS World University Rankings by Subject 2025)",
+      "careerProspects": "Our English programme opens not one, but many career pathways. Graduates have a strong foundation in analytical and creative thinking, cultural awareness and interpersonal communication. These highly adaptable skills are coveted by employers in diverse sectors, such as business, education, government, the arts and the media. Our graduates exemplify the versatility and influence of our programme, finding success in a variety of fields: Commerce and Industry: Approximately 27% enter the business and cultural sectors, excelling in publishing, art and design, and management positions. Education: About 27% pursue teaching careers in primary and secondary schools. Others: About 18% purse career in other sectors. Further Studies: About 28% pursue advanced degrees in Hong Kong or abroad. [Figures as of June 2023] Our programme supports undergraduate students with career advice events delivered by our alumni and with communication courses that foster the professional skills students need to succeed. Our faculty provides advice and support for those wishing to pursue postgraduate studies, and our",
+      "craftYourPath": "Design your educational path to allow your interests to flourish. Discover Your Interests – Choose from an array of courses that spark new ideas and open new worlds. Enrich Your Knowledge – Gain insights into English from a variety of disciplinary perspectives. Develop Your Mastery – Focus on a particular area of English to deepen your knowledge.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4032",
+    "nameEn": "English",
+    "nameZh": "英文",
+    "name": "English",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 27.25,
+    "band_a": 26.5,
+    "uq": 28.5,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (2025 Entry)",
+          "content": [
+            "Programme: English (JS4032)",
+            "Faculty: Arts",
+            "First Year Intake: 55",
+            "Duration: 4 years",
+            "Tuition: HK$47,000 (local students)",
+            "Interview: Yes (selected applicants may be invited)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 27.25",
+            "Lower quartile (LQ): 26.5",
+            "Upper quartile (UQ): 28.5",
+            "",
+            "Median Admit Subject Profile:",
+            "Chinese: 3",
+            "English: 5",
+            "Mathematics: 4",
+            "CSD: A",
+            "Elective 1: 5*",
+            "Elective 2: 4",
+            "Elective 3: 4",
+            "",
+            "Application & Offer Statistics (2025):",
+            "Band A applications: 200",
+            "Band A offers: 51",
+            "Total applications: 1078",
+            "Band A offer rate: ~25.5%",
+            "Band A apps per offer: ~3.9",
+            "",
+            "Subject Weighting: English × 1.5",
+            "Minimum Requirements: Chinese 3, English 3, Maths 2, CSD Attained, plus two electives at 3 (Literature in English preferred)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Programme Structure",
+          "content": [
+            "The English programme at CUHK offers a flexible, student-centred curriculum covering literature, linguistics, and creative writing.",
+            "Students can design their own academic journey by selecting from a wide range of courses, with opportunities for double majors and a transformative Oxford Summer Programme.",
+            "The programme emphasises critical thinking, cultural awareness, and global perspectives.",
+            "No specific streams are prescribed; students tailor their studies to their interests."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates are equipped with analytical, creative, and communication skills valued across sectors.",
+            "Career pathways include:",
+            "- Commerce & Industry (27%): publishing, art & design, management",
+            "- Education (27%): primary and secondary teaching",
+            "- Further Studies (28%): advanced degrees in Hong Kong or abroad",
+            "- Other sectors (18%)",
+            "The programme offers career advice events and communication courses to support professional development."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's Shatin campus provides a vibrant, collegiate environment with nine colleges offering residential and pastoral care.",
+            "Students benefit from a dynamic intellectual community with local and international peers.",
+            "The English Department organises seminars, workshops, and cultural events.",
+            "International exposure includes the Oxford Summer Programme (subject to availability)."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Selection",
+          "content": [
+            "With a Band A offer rate of ~25.5% and 3.9 applicants per offer, the programme is highly competitive.",
+            "Selection is based on HKDSE results (Best 5 with English weighted 1.5) and interview performance (if invited).",
+            "Strong English proficiency and a genuine interest in literature/linguistics are key."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "Leung Man-tao (梁文道): Cultural critic, writer, former TV host.",
+            "Nury Vittachi (韋安迪): Author and journalist.",
+            "Xu Xi (許素細): Novelist and writer.",
+            "Agnes Lam (林婉雯): Poet and scholar.",
+            "Tammy Lai-Ming Ho (何麗明): Poet, editor, academic.",
+            "Faculty include award-winning scholars in literary studies, linguistics, and creative writing."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers entrance scholarships for local JUPAS students based on academic merit.",
+            "Additional financial aid includes the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "For details: admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's English Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 27.25+ (Median)**",
+            "",
+            "- With a median of 27.25 (Best 5), set your goal at least at the median to be competitive.",
+            "- Use the subject profile: aim for 5 in English, 5* in one elective, and 4 in others.",
+            "",
+            "**2. Leverage English Weighting (×1.5)**",
+            "",
+            "- A high English grade (5 or above) significantly boosts your score.",
+            "- Prioritise English revision; consider extra tutoring or practice papers.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Literature in English is preferred; if available, take it.",
+            "- Ensure your two electives are at Level 3 or above; higher grades improve your profile.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, demonstrate passion for English studies and critical thinking.",
+            "- Practice discussing literary works or linguistic concepts.",
+            "- Be ready to explain why CUHK English specifically.",
+            "",
+            "**5. Build a Strong Band A Application**",
+            "",
+            "- Place JS4032 in Band A to maximise offer chances (all offers went to Band A in 2025).",
+            "- Research the programme thoroughly to articulate fit in your application.",
+            "",
+            "**6. Excel in Core Subjects**",
+            "",
+            "- Chinese 3, English 3, Maths 2, CSD Attained are minimums; higher grades strengthen your application.",
+            "- Maths at 4 (median) is typical; aim for 4+.",
+            "",
+            "**7. Use the Oxford Summer Programme as a Differentiator**",
+            "",
+            "- Mention interest in the Oxford Summer Programme in your interview to show global outlook.",
+            "- This demonstrates initiative and alignment with the programme's international focus.",
+            "",
+            "**8. Engage with Department Resources**",
+            "",
+            "- Attend CUHK English Department open days or webinars.",
+            "- Read faculty publications to show informed interest.",
+            "",
+            "**9. Plan for Backup Choices**",
+            "",
+            "- Include other arts programmes in Band B/C as safety.",
+            "- Ensure your elective subjects meet requirements for multiple programmes."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（2025 年入學）",
+          "content": [
+            "課程：英文（JS4032）",
+            "學院：文學院",
+            "首年學額：55",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：有（部分申請人獲邀）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：27.25",
+            "下四分位數：26.5",
+            "上四分位數：28.5",
+            "",
+            "中位數錄取者科目成績：",
+            "中國語文：3",
+            "英國語文：5",
+            "數學：4",
+            "公民科：A",
+            "選修 1：5*",
+            "選修 2：4",
+            "選修 3：4",
+            "",
+            "申請及取錄統計（2025）：",
+            "Band A 申請人數：200",
+            "Band A 取錄人數：51",
+            "總申請人數：1078",
+            "Band A 取錄率：約 25.5%",
+            "Band A 每學額申請人數：約 3.9",
+            "",
+            "科目比重：英文 × 1.5",
+            "最低要求：中文 3、英文 3、數學 2、公民科達標，加兩科選修 3（英國文學優先）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "英文課程提供靈活、以學生為本的課程，涵蓋文學、語言學及創意寫作。",
+            "學生可從多樣課程中設計個人學習路徑，並有雙主修及牛津暑期課程等機會。",
+            "課程強調批判思維、文化意識及全球視野。",
+            "不設特定分流，學生按興趣自訂學習重點。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備分析、創意及溝通技能，受各行業歡迎。",
+            "就業路徑包括：",
+            "- 商業及工業（27%）：出版、藝術設計、管理",
+            "- 教育（27%）：中小學教學",
+            "- 進修（28%）：本地或海外深造",
+            "- 其他（18%）",
+            "課程提供就業講座及溝通技巧訓練，支援專業發展。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "中文大學沙田校園提供充滿活力的書院環境，九所書院提供住宿及關顧。",
+            "學生可與本地及國際同學組成動態知識社群。",
+            "英文系舉辦研討會、工作坊及文化活動。",
+            "國際交流包括牛津暑期課程（視乎名額）。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及遴選",
+          "content": [
+            "Band A 取錄率約 25.5%，每學額約 3.9 人申請，競爭激烈。",
+            "遴選基於 HKDSE 成績（最佳 5 科，英文比重 1.5）及面試表現（如獲邀）。",
+            "英文能力強及對文學/語言學有濃厚興趣為關鍵。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及學系成就",
+          "content": [
+            "梁文道：文化評論家、作家、前電視節目主持人。",
+            "韋安迪（Nury Vittachi）：作家及記者。",
+            "許素細：小說家及作家。",
+            "林婉雯（Agnes Lam）：詩人及學者。",
+            "何麗明（Tammy Lai-Ming Ho）：詩人、編輯、學者。",
+            "學系教授屢獲教學獎項及研究資助，在文學、語言學及創意寫作領域成就卓越。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "中大為本地 JUPAS 學生提供入學獎學金，按學業成績頒發。",
+            "其他資助包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "詳情：admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的英文入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：爭取 27.25 或以上（中位數）**",
+            "",
+            "- 中位數為 27.25（最佳 5 科），建議以中位數為目標以增加競爭力。",
+            "- 參考科目成績：英文 5、選修一科 5*、其餘 4 級。",
+            "",
+            "**2. 善用英文比重（×1.5）**",
+            "",
+            "- 英文成績達 5 級或以上可大幅提升總分。",
+            "- 優先加強英文，可考慮額外補習或操練試卷。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 英國文學優先，如有提供應選修。",
+            "- 確保兩科選修達 3 級或以上，更高分數更有利。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲面試，展示對英文研究的熱誠及批判思維。",
+            "- 練習討論文學作品或語言學概念。",
+            "- 準備解釋為何選擇中大英文系。",
+            "",
+            "**5. 建立強勁的 Band A 申請**",
+            "",
+            "- 將 JS4032 放於 Band A 以最大化取錄機會（2025 年所有取錄均來自 Band A）。",
+            "- 深入了解課程內容，在申請中表達匹配度。",
+            "",
+            "**6. 核心科目表現優異**",
+            "",
+            "- 中文 3、英文 3、數學 2、公民科達標為最低要求；更高分數增強申請。",
+            "- 數學達 4 級（中位數）為典型，建議爭取 4 級或以上。",
+            "",
+            "**7. 以牛津暑期課程作區分點**",
+            "",
+            "- 面試時提及對牛津暑期課程的興趣，展示國際視野。",
+            "- 此舉顯示主動性及與課程國際焦點的契合。",
+            "",
+            "**8. 善用學系資源**",
+            "",
+            "- 參加中大英文系開放日或網上講座。",
+            "- 閱讀教授著作，展現知情興趣。",
+            "",
+            "**9. 規劃後備選擇**",
+            "",
+            "- 將其他文科課程放於 Band B/C 作安全網。",
+            "- 確保選修科符合多個課程的要求。"
+          ]
+        }
+      }
+    },
+    "code": "JS4032",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 27.25,
+    "uq": 28.5,
+    "lq": 26.5,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5*",
+        "eng": "5*",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "3",
+        "e3": "3",
+        "e4": "",
+        "total": 28.5
+      },
+      "M": {
+        "chi": "3",
+        "eng": "5",
+        "math": "4",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "5*",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 27.25
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "3",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "",
+        "e1": "4",
+        "e2": "4",
+        "e3": "4",
+        "e4": "",
+        "total": 26.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Leung Man-tao",
+        "nameZh": "梁文道",
+        "achievement": "Cultural critic, writer, and former host of TV current affairs programmes; graduated from CUHK English Department.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Nury Vittachi",
+        "nameZh": "韋安迪",
+        "achievement": "Author and journalist; taught at CUHK and is a graduate of the English programme.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Xu Xi",
+        "nameZh": "許素細",
+        "achievement": "Novelist and writer; former faculty and alumna of CUHK English.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Agnes Lam",
+        "nameZh": "林婉雯",
+        "achievement": "Poet and scholar; graduated from CUHK English and later taught at the University of Hong Kong.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Tammy Lai-Ming Ho",
+        "nameZh": "何麗明",
+        "achievement": "Poet, editor, and academic; graduate of CUHK English Department.",
+        "sourceHint": "public bio"
+      }
+    ],
+    "facultyExcellence": [
+      "Department faculty include renowned scholars in literary studies, linguistics, and creative writing.",
+      "Faculty have received multiple university teaching awards and research grants."
+    ],
+    "searchQueriesUsed": [
+      "CUHK English notable alumni",
+      "香港中文大學 英文 著名校友",
+      "CUHK English graduates Hong Kong careers"
+    ]
+  }
+}

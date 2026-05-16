@@ -1,0 +1,66 @@
+{
+  "code": "JS6080",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6080"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://web.edu.hku.hk/programme/babed_chi_6080/"
+    }
+  ],
+  "programme": {
+    "code": "JS6080",
+    "nameEn": "Bachelor of Education in Chinese Language and Literature",
+    "nameZh": "Bachelor of Education in Chinese Language and Literature",
+    "university": "香港大學",
+    "facultyZh": "教育學院",
+    "category": "education"
+  },
+  "scores": {
+    "formula": "1.5 x Chin + Best 5 Subjects",
+    "median": 35,
+    "uq": 36,
+    "lq": 34
+  },
+  "jupas": {
+    "code": "JS6080",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6080",
+    "nameEn": "Bachelor of Arts and Bachelor of Education in Language Education - Chinese",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description This double-degree curriculum is jointly offered by the Faculty of Education and the Faculty of Arts. It allows students to obtain two degrees in five years and to meet the language",
+    "programmeWebsite": "https://web.edu.hku.hk/programme/babed_chi_6080/",
+    "tuition": "HK$47,000",
+    "intake": 17,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 75,
+      "bandB": 84,
+      "bandC": 170,
+      "bandD": 236,
+      "bandE": 268,
+      "total": 833
+    },
+    "offers2025": {
+      "bandA": 14,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 14
+    },
+    "facultyPhone": "+852 3917 2545"
+  },
+  "admissionsSnippet": "文學士及教育學士 (語文教育) — 中文教育 | HKU - Faculty of Education Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Prospective Students Current Students Staff Alumni SUP Partners HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search Open Menu About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News Events Press Releases In the Media Newsletters Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund HKU Home HKU Portal Share to Facebook X LinkedIn Weibo WhatsApp WeChat Email Open Search Box Search Box Search About the Faculty About the Faculty About the Faculty Dean's Message Vision, Mission and Commitments Academic Units Language and Literacy Education Human Communication, Learning, and Development Mathematics, Science, and Technology Social Contexts and Policies of Education Academy for Leadership in Teacher Education (ALiTE) In-service Teacher Education Programme (INSTEP) Education Policy Unit Research Centres and Consortia People Dean, Associate Deans and Assistant Deans Faculty Academics Research Students Faculty Administrative Staff Career Opportunities News and Events News and Events News and Events News Events Press Releases In the Media Newsletters Programmes Programmes Programmes Undergraduate Programmes Postgraduate Programmes by Coursework Postgraduate Programmes by Research Experiential Learning Research Research Research Research Expertise Research Stories Research Centres and Consortia Research Labs Research Postgraduate Studies Research Student Profiles Research Integrity Ethics Application Knowledge Exchange Knowledge Exchange Knowledge Exchange Knowledge Exchange Spotlights Speech, Language and Hearing Clinic UNESCO Chair Education Column Giving to the Faculty Giving to the Faculty Giving to the Faculty Donation Stories Endowed Professorships Faculty of Education Development Fund Prospective Students Current Students Staff Alumni SUP Partners Home Programmes Undergraduate Programmes 文學士及教育學士 (語文教育) — 中文教育 課程特色 課程特色 課程安排 入學要求 就業前景 分享 問答集 課程特色 Enquiries Information 一般查詢 聯絡: 教育學院 &nbsp; Phone +852 3917 2545 Fax Email [javascript protected email address] Offic Websit &nbsp; 文學系學科查詢 聯絡: 文學院 &nbsp; Phone +852 3917 8977 Fax Email [javascript protected email address] Office Website &nbsp; 課程資料 聯絡: 戴忠沛&nbsp;(課程統籌導師) &nbsp; Phone +852 3917 4259 Fax Email [javascript protected email address] Office Website Programme Pamphlet View and download 「文學士及教育學士」（語文教育）&mdash; 中文教育是教育學院及文學院合辦的五年全日制雙學士學位課程，旨在培養學術與專業結合、理論與實踐並重的中文教育人才。學員於文學院主修中國語言、文學及文化，而於教育學院則主修中文教育，於五年內研習教學法、教育社會學、教育心理學，並於本地小學及中學實習教學。學員畢業後可以任教本地初小至高中的中文課程，或繼續進修，擔任教育行政、領導或研究職務。 &nbsp; 入學講座簡報 （香港大學本科入學資訊日2025） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 課程目標 文學士及教育學士（語文教育）&mdash; 中文教育課程的目標包括： 指導學員獲取中文本科與教育專業知識，達至學士學位水平。 促進學員瞭解學與教過程，建構知識的理論與方法，從而強化學員的課堂教學能力，提高在不同教育範疇與崗位中的工作質素。 提升學員的語文能力與溝通技巧。 培養學員的學習熱誠，鼓勵養成探究精神，能分享和接納不同意見，提高解難的能力，最終成為勇於嘗試、敢於創新、樂於反思的教育工作者。 培養學員學會愛護、關心、尊重和體諒學生，熱心指導學生作全人發展，體察多元文化與特殊教育學生的需要，並相信每位學生均為可造之材，以教育學生為己任。 培訓學員體察本地情況，或按特定的社會背景和條件，以及學生的學習能力和興趣，調適不同的課程、教材、敎學法和評估。 推動學員終身學習，持續進修，並且視學校與社會為教學相長的地方。 &nbsp; 課程特色 本課程着重： 在文學院研習中國語言、文學及文化 在教育學院掌握知識建構理論與教學方法 結合學術與專業、理論與實踐並重 培養學員創新與領導的能力 提供本地與境外體驗學習的機會 港大JUPAS Information Sessions 2026&nbsp;- 主題講座影片 主題： AI 時代，我們還需要深讀文字嗎？&mdash;&mdash;探索中文教育的人機協同與未來 戴忠沛教授&nbsp; - 文學士及教育學士（語文教育）&mdash; 中文教育課程統籌導師 &nbsp; 「非凡的學習之旅」短片系列 文學士及教育學士（語文教育）&mdash; 中文教育課程學生韓德光 &nbsp; 課程影片- 雙學位課程 &nbsp; 盧沅蔚 文學士及教育學士 (語文教育) — 中文教育 畢業生 港大中文教育課程以學生為本，循序漸進栽培我們專業知識、教學信念和實踐成長，未來成為教導有方、能言傳身... 郭晴 文學士及教育學士 (語文教育) — 中文教育 學生 香港大學中文教育課程具有深厚的根基同廣闊的視野，為我們提供多元的機會和豐富的課程選擇，力求將我們培育... 黃子傑 文學士及教育學士 (語文教育) — 中文教育 學生 大量友善且熱心的教育界專家和教授，相信每一位「準教師」都能獲得最精彩的大學生活。 黃正怡 文學士及教育學士 (語文教育) — 中文教育 學生 從不斷的探索及與導師跟同儕的交流中，培養對文學的造詣及素養；從課堂實踐、中小學實習中，逐漸形成個人教... Top Contact Us Address and Office Hour Room 420, 4/F, Meng Wah Complex, The University of Hong Kong &nbsp; (Monday to Friday 9:00 am - 1:00 pm; 2:00 pm - 6:00 pm) Phone 3917 6044 Email edfac@hku.hk &nbsp;&nbsp; Directory Contact Directory Subscribe to Faculty e-Notice Facebook Instagram X Weibo Xiao Hong Shu YouTube Privacy Policy &copy; 2026 Faculty of Education, The University of Hong Kong. All rights reserved. Notice We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you agree with it. Learn more Accept"
+}

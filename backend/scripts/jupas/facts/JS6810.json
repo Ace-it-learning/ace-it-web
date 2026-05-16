@@ -1,0 +1,65 @@
+{
+  "code": "JS6810",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6810"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://ppa.hku.hk/programmes/ug/gl/"
+    }
+  ],
+  "programme": {
+    "code": "JS6810",
+    "nameEn": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "nameZh": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "university": "香港大學",
+    "facultyZh": "社會科學學院",
+    "category": "law"
+  },
+  "scores": {
+    "formula": "Best 6 Subjects",
+    "median": 39,
+    "uq": 37,
+    "lq": 36
+  },
+  "jupas": {
+    "code": "JS6810",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6810",
+    "nameEn": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description This integrated programme, jointly offered by the Department of Politics and Public Administration and the Department of Law, is designed to provide students with a multi-disciplinary education in law and public affairs. Students will be able to study professional law subjects as well as social sciences courses in areas like comparative politics, political philosophy and ethics, international relations, and public administration. This programme is considerably flexible. At the end of the second semester of the second year, students will be able to decide whether to finish a Bachelor of Social Sciences (Government and Laws) with double majors in politics and legal studies after completing the fourth year of study, or to complete the five-year double degree programme which leads to the award of a Bachelor of Laws (LLB) degree in addition to the Bachelor of Social Sciences (Government and Laws) degree. The LLB, in particular, enables students intending to pursue a legal career to apply for the Postgraduate Certificate in Laws (PCLL) programme. Alumni pursue careers not only in law and public service but also business, banking, education, journalism, tertiary education and research, the non-profit sector, and so on.",
+    "programmeWebsite": "https://ppa.hku.hk/programmes/ug/gl/",
+    "tuition": "HK$47,000",
+    "intake": 40,
+    "duration": "5 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 94,
+      "bandB": 46,
+      "bandC": 83,
+      "bandD": 100,
+      "bandE": 118,
+      "total": 441
+    },
+    "offers2025": {
+      "bandA": 32,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 32
+    },
+    "facultyPhone": "+852 3917 2393"
+  }
+}

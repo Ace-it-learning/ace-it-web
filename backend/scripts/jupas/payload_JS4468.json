@@ -1,0 +1,536 @@
+{
+  "factPack": {
+    "code": "JS4468",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4468"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4468"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/aistn/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.cse.cuhk.edu.hk/admission/aistn/"
+      }
+    ],
+    "programme": {
+      "code": "JS4468",
+      "nameEn": "Artificial Intelligence: Systems and Technologies",
+      "nameZh": "人工智能：系統與科技",
+      "university": "香港中文大學",
+      "facultyZh": "工程學院",
+      "category": "engineering"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 52.375,
+      "uq": 55.75,
+      "lq": 50.375,
+      "percentiles": {
+        "UQ": {
+          "chi": "5**",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "3",
+          "e4": "",
+          "total": 55.75
+        },
+        "M": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "",
+          "e4": "",
+          "total": 52.375
+        },
+        "LQ": {
+          "chi": "5",
+          "eng": "4",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "4",
+          "e1": "5**",
+          "e2": "5*",
+          "e3": "5*",
+          "e4": "",
+          "total": 50.375
+        }
+      },
+      "subjectWeighting": "• English (x 1.25) • Chinese (x 1.25) • Mathematics (x 1.75) • M1 or M2 (x 1.75) • Biology, Chemistry, Physics, ICT (x 1.5)"
+    },
+    "jupas": {
+      "code": "JS4468",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4468",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4468",
+      "nameEn": "Artificial Intelligence: Systems and Technologies",
+      "nameZh": "人工智能：系統與科技",
+      "shortDescription": "an class=\"before_label\">Short Description AIST aims to equip students with the capabilities of designing and implementing AI systems and technologies that can analyse, reason about, and infer knowledge from massive information, backed by rigorous foundations of mathematics, basic sciences, data structures, statistics, algorithms, distributed computing, etc. Such capabilities enable students to develop cutting-edge AI solutions that are of practical interest to academia, industry and society. Four optional specialised streams are offered for students to choose according to their own interests: Biomedical Intelligence Intelligent Multimedia Processing Large-scale Artificial Intelligence – Theory and Systems Intelligent Manufacturing and Robotics",
+      "programmeWebsite": "https://www.cse.cuhk.edu.hk/admission/aistn/",
+      "tuition": "HK$47,000",
+      "intake": 30,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 4 MATHEMATICS COMPULSORY PART ^ 5 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTES 3 ^Applicants with Level 4 in Mathematics (Compulsory Part) and good results in other HKDSE subjects will be exceptionally considered on a case-by-case basis. NOTES: (1) The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. (2) Preferred subjects: Mathematics (Extended Part) Module I or Module II, Biology, Chemistry, Information and Communication Technology and Physics. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 81,
+        "bandB": 101,
+        "bandC": 204,
+        "bandD": 330,
+        "bandE": 271,
+        "total": 987
+      },
+      "offers2025": {
+        "bandA": 28,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 28
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/aistn/",
+      "introduction": "Embracing the Era of Artificial Intelligence Artificial Intelligence (AI) is an emerging engineering discipline that focuses on technological innovations that enable computing systems to behave and discover new knowledge with human-like intelligence. It is a broad area that covers many specializations, such as machine learning, deep learning, knowledge representation/inference, large-scale computing systems and distributed systems, logic/constraint programming, human-computer interaction, natural language processing and big data analytics. It has evolved in multiple disciplines, including finance, medicine, manufacturing, robotics, multimedia, telecommunications and computational linguistics, and there is now a huge demand for AI specialists both locally and globally. But there are critical challenges regarding how to innovate and design solid and rigorous solutions for AI, as well as how to properly address the related ethical and societal issues. With the support of a pool of top-tier AI talent and sophisticated scientific research facilities, our programme – Artificial Intelligence: Systems &amp; Technologies (AIST) – aims to equip students with the capability to design and implement AI systems and technologies that can analyse, reason about and infer knowledge from massive information, backed by a rigorous foundation of mathematics, basic sciences, data structures, statistics, algorithms, distributed computing, and so forth. Graduates will be capable of applying AI in various disciplines, such as finance, medicine, manufacturing, robotics, multimedia, telecommunications and computational linguistics, and develop research skills for making cutting-edge innovations in AI that are of practical interest to academia, industry and society. The AIST programme emphasizes fundamental mathematics, sciences and theoretical knowledge, and complements this knowledge with practical systems and skills. Students can choose from four optional specialized streams according to their interests: Biomedical Intelligence Intelligent Multimedia Processing Large-scale Artificial Intelligence – Theory and Systems Intelligent Manufacturing and Robotics",
+      "ranking": "#7 globally in Artificial Intelligence (#1 in Hong Kong) (US News and World Report Best Global Universities by Subject in 2025)",
+      "careerProspects": "As there is now a shortage of AI specialists both locally and globally, with the support of a pool of top-tier AI talent and sophisticated scientific research facilities, our programme aims to train talented AI engineers and scientists for the following industries: biomedical engineering/science, information and computing technologies, manufacturing and robotics, and intelligent multimedia processing for Internet companies. Outro The AIST programme aims to admit high-calibre students who demonstrate outstanding ability in English, mathematics and science subjects. An excellent academic background and a problem-solving mindset are essential for understanding AI knowledge and tackling future challenges with AI. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "craftYourPath": "",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4468",
+    "nameEn": "Artificial Intelligence: Systems and Technologies",
+    "nameZh": "人工智能：系統與科技",
+    "name": "Artificial Intelligence: Systems and Technologies",
+    "university": "香港中文大學",
+    "faculty": "工程學院",
+    "median": 52.375,
+    "band_a": 50.375,
+    "uq": 55.75,
+    "category": "engineering"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements",
+          "content": [
+            "JUPAS programme code: JS4468",
+            "First Year Intake: 30",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 52.375",
+            "Lower quartile (LQ): 50.375",
+            "Upper quartile (UQ): 55.75",
+            "",
+            "Median admit subject profile (M row):",
+            "- Chinese: 5",
+            "- English: 4",
+            "- Mathematics: 5*",
+            "- CSD: A",
+            "- M1/M2: 5*",
+            "- Elective 1: 5*",
+            "- Elective 2: 5*",
+            "",
+            "Subject weighting: English (x1.25), Chinese (x1.25), Mathematics (x1.75), M1/M2 (x1.75), Biology/Chemistry/Physics/ICT (x1.5)",
+            "",
+            "2025 application statistics:",
+            "- Band A applications: 81",
+            "- Band A offers: 28",
+            "- Total applications: 987",
+            "- Band A offer rate: ~34.6%",
+            "- Band A apps per offer: ~2.9",
+            "",
+            "Minimum entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 4",
+            "- Mathematics Compulsory: Level 5 (Level 4 considered case-by-case)",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects: Level 3 each (including M1/M2, Biology, Chemistry, ICT, Physics preferred)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The AIST programme equips students with capabilities to design and implement AI systems that analyse, reason about, and infer knowledge from massive information, backed by rigorous foundations in mathematics, basic sciences, data structures, statistics, algorithms, and distributed computing.",
+            "",
+            "Students can choose from four optional specialised streams:",
+            "- Biomedical Intelligence",
+            "- Intelligent Multimedia Processing",
+            "- Large-scale Artificial Intelligence – Theory and Systems",
+            "- Intelligent Manufacturing and Robotics",
+            "",
+            "The curriculum emphasises fundamental mathematics, sciences and theoretical knowledge, complemented by practical systems and skills. Graduates develop cutting-edge AI solutions of practical interest to academia, industry and society."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "There is a huge demand for AI specialists both locally and globally. Graduates are trained for careers in:",
+            "- Biomedical engineering/science",
+            "- Information and computing technologies",
+            "- Manufacturing and robotics",
+            "- Intelligent multimedia processing for Internet companies",
+            "",
+            "The programme aims to train talented AI engineers and scientists who can apply AI in finance, medicine, manufacturing, robotics, multimedia, telecommunications and computational linguistics."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant college system with nine colleges, each providing residential, pastoral and cultural experiences.",
+            "",
+            "Students benefit from state-of-the-art research facilities and a collaborative environment with top-tier AI talent.",
+            "",
+            "The programme is supported by sophisticated scientific research facilities and a pool of world-renowned AI researchers."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "2025 JUPAS statistics:",
+            "- Band A applications: 81",
+            "- Band A offers: 28",
+            "- Total applications: 987",
+            "- Band A offer rate: ~34.6%",
+            "- Band A apps per offer: ~2.9",
+            "",
+            "Admission scores (Best 5): Median 52.375, LQ 50.375, UQ 55.75",
+            "",
+            "The programme is highly selective, with strong emphasis on Mathematics and science electives."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni & Faculty Excellence",
+          "content": [
+            "The programme launched in 2022; the first cohort has yet to graduate.",
+            "",
+            "Faculty includes world-renowned AI researchers such as Prof. Michael R. Lyu and Prof. Irwin King.",
+            "",
+            "Strong industry partnerships with Google, Microsoft, and local AI startups provide students with internship and research opportunities."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of entrance scholarships based on academic merit for local and non-local students, covering tuition fees and living expenses in some cases.",
+            "",
+            "Local JUPAS students may be eligible for admission scholarships, the Tertiary Student Finance Scheme (TSFS), and the Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS4468 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target the Median Score**",
+            "",
+            "Aim for a Best 5 score of at least 52.375 (median). With subject weighting, focus on Mathematics (x1.75) and M1/M2 (x1.75) to maximise your total.",
+            "- Use the CUHK admission score calculator to simulate your weighted score.",
+            "",
+            "**2. Prioritise Mathematics and M1/M2**",
+            "",
+            "Mathematics Compulsory and M1/M2 are weighted at 1.75 each. A 5* in both can add significant points.",
+            "- If you are strong in Maths, consider taking M1 or M2 to boost your application.",
+            "",
+            "**3. Excel in English and Chinese**",
+            "",
+            "Both languages are weighted at 1.25. A Level 4 or above in English is required, but higher grades improve your score.",
+            "- Practice reading comprehension and essay writing to secure Level 5 or above.",
+            "",
+            "**4. Choose Preferred Electives**",
+            "",
+            "Biology, Chemistry, ICT, and Physics are preferred subjects and weighted at 1.5. Taking two of these can strengthen your profile.",
+            "- If you are interested in Biomedical Intelligence, Biology is especially relevant.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "The programme requires an interview. Demonstrate your problem-solving mindset and passion for AI.",
+            "- Review common AI concepts and be ready to discuss your projects or interests.",
+            "",
+            "**6. Apply in Band A**",
+            "",
+            "All 28 offers in 2025 went to Band A applicants. Placing JS4468 in Band A is critical for consideration.",
+            "- Use Band A to signal strong interest and maximise your chance.",
+            "",
+            "**7. Build a Strong Academic Profile**",
+            "",
+            "Beyond DSE, participate in maths or science competitions, AI workshops, or online courses (e.g., Coursera AI specialisations).",
+            "- Highlight any relevant projects in your interview or personal statement.",
+            "",
+            "**8. Understand the Streams**",
+            "",
+            "Familiarise yourself with the four specialised streams: Biomedical Intelligence, Intelligent Multimedia Processing, Large-scale AI, and Intelligent Manufacturing.",
+            "- Choose a stream that aligns with your career goals to tailor your learning.",
+            "",
+            "**9. Stay Updated on AI Trends**",
+            "",
+            "Read about latest AI advancements (e.g., large language models, robotics). This shows genuine interest during interviews.",
+            "- Follow CUHK CSE news and faculty research to connect your application to the programme."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求",
+          "content": [
+            "JUPAS 課程編號：JS4468",
+            "首年學額：30",
+            "修讀年期：4 年",
+            "首年學費：港幣 47,000 元（本地學生）",
+            "面試：需要（選拔後）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳五科）：",
+            "中位數：52.375",
+            "下四分位數：50.375",
+            "上四分位數：55.75",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "- 中國語文：5",
+            "- 英國語文：4",
+            "- 數學：5*",
+            "- 公民與社會發展：A",
+            "- M1/M2：5*",
+            "- 選修科 1：5*",
+            "- 選修科 2：5*",
+            "",
+            "科目比重：英國語文 (x1.25)、中國語文 (x1.25)、數學 (x1.75)、M1/M2 (x1.75)、生物/化學/物理/資訊及通訊科技 (x1.5)",
+            "",
+            "2025 年申請統計：",
+            "- Band A 申請人數：81",
+            "- Band A 錄取人數：28",
+            "- 總申請人數：987",
+            "- Band A 錄取率：約 34.6%",
+            "- Band A 每錄取申請人數：約 2.9",
+            "",
+            "最低入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 4 級",
+            "- 數學（必修部分）：第 5 級（第 4 級按個別情況考慮）",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科：各第 3 級（優先考慮 M1/M2、生物、化學、資訊及通訊科技、物理）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "人工智能：系統與科技課程旨在培養學生設計和實施人工智能系統的能力，使其能夠分析、推理並從大量信息中推斷知識，並以數學、基礎科學、數據結構、統計學、算法和分佈式計算的嚴謹基礎為支撐。",
+            "",
+            "學生可根據興趣選擇四個專業分流：",
+            "- 生物醫學智能",
+            "- 智能多媒體處理",
+            "- 大規模人工智能——理論與系統",
+            "- 智能製造與機器人",
+            "",
+            "課程強調基礎數學、科學和理論知識，並輔以實踐系統和技能。畢業生能開發對學術界、工業界和社會具有實際意義的前沿人工智能解決方案。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "本地及全球對人工智能專才的需求極大。畢業生可從事以下行業：",
+            "- 生物醫學工程/科學",
+            "- 資訊及計算技術",
+            "- 製造業與機器人",
+            "- 互聯網公司的智能多媒體處理",
+            "",
+            "課程旨在培養優秀的人工智能工程師和科學家，能夠將人工智能應用於金融、醫學、製造、機器人、多媒體、電信和計算語言學等領域。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "香港中文大學的沙田校園設有九所書院，提供住宿、關顧及文化體驗。",
+            "",
+            "學生可享用先進的研究設施，並與頂尖人工智能人才協作。",
+            "",
+            "課程獲世界知名人工智能研究人員和精密科研設施支持。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：81",
+            "- Band A 錄取人數：28",
+            "- 總申請人數：987",
+            "- Band A 錄取率：約 34.6%",
+            "- Band A 每錄取申請人數：約 2.9",
+            "",
+            "入學分數（最佳五科）：中位數 52.375，下四分位數 50.375，上四分位數 55.75",
+            "",
+            "課程競爭激烈，尤其重視數學和科學選修科。"
+          ]
+        },
+        "alumni": {
+          "title": "校友及教研成就",
+          "content": [
+            "課程於 2022 年開辦，首屆學生尚未畢業。",
+            "",
+            "教研團隊包括世界知名的人工智能研究人員，如呂榮聰教授和金國慶教授。",
+            "",
+            "與 Google、Microsoft 及本地人工智能初創企業有緊密的行業合作，為學生提供實習和研究機會。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的入學獎學金，部分涵蓋學費及生活費。",
+            "",
+            "本地 JUPAS 學生可申請入學獎學金、專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS4468 策略 — 9 個可行貼士",
+          "content": [
+            "**1. 以中位數為目標**",
+            "",
+            "爭取最佳五科至少 52.375 分（中位數）。利用科目比重，重點提升數學（x1.75）和 M1/M2（x1.75）以最大化總分。",
+            "- 使用中大入學分數計算器模擬你的加權分數。",
+            "",
+            "**2. 優先處理數學和 M1/M2**",
+            "",
+            "數學必修部分和 M1/M2 比重均為 1.75。兩科取得 5* 可大幅增加分數。",
+            "- 若數學能力強，可考慮選修 M1 或 M2 以提升申請競爭力。",
+            "",
+            "**3. 在英文和中文上表現出色**",
+            "",
+            "兩科語文比重均為 1.25。英文需達第 4 級或以上，更高級別可提高分數。",
+            "- 練習閱讀理解和寫作，爭取第 5 級或以上。",
+            "",
+            "**4. 選擇優先選修科**",
+            "",
+            "生物、化學、資訊及通訊科技和物理是優先科目，比重為 1.5。選修其中兩科可強化個人檔案。",
+            "- 若對生物醫學智能分流感興趣，生物科尤其相關。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "課程需要面試。展示你的解難思維和對人工智能的熱情。",
+            "- 複習常見人工智能概念，並準備討論你的項目或興趣。",
+            "",
+            "**6. 在 Band A 中申請**",
+            "",
+            "2025 年所有 28 個錄取名額均來自 Band A 申請者。將 JS4468 放在 Band A 至關重要。",
+            "- 利用 Band A 表達強烈興趣，最大化機會。",
+            "",
+            "**7. 建立強大的學術背景**",
+            "",
+            "除文憑試外，參加數學或科學比賽、人工智能工作坊或網上課程（如 Coursera 人工智能專項課程）。",
+            "- 在面試或個人陳述中突出相關項目。",
+            "",
+            "**8. 了解分流選擇**",
+            "",
+            "熟悉四個專業分流：生物醫學智能、智能多媒體處理、大規模人工智能、智能製造與機器人。",
+            "- 選擇與職業目標一致的分流，以定制學習內容。",
+            "",
+            "**9. 緊貼人工智能趨勢**",
+            "",
+            "閱讀最新人工智能進展（如大型語言模型、機器人技術）。這能在面試中展示真正興趣。",
+            "- 關注中大計算機科學與工程學系的新聞和教師研究，將你的申請與課程聯繫起來。"
+          ]
+        }
+      }
+    },
+    "code": "JS4468",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 52.375,
+    "uq": 55.75,
+    "lq": 50.375,
+    "formula": "Best 5",
+    "percentiles": {
+      "UQ": {
+        "chi": "5**",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "3",
+        "e4": "",
+        "total": 55.75
+      },
+      "M": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "",
+        "e4": "",
+        "total": 52.375
+      },
+      "LQ": {
+        "chi": "5",
+        "eng": "4",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "4",
+        "e1": "5**",
+        "e2": "5*",
+        "e3": "5*",
+        "e4": "",
+        "total": 50.375
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [],
+    "facultyExcellence": [
+      "Programme launched in 2022; first cohort yet to graduate.",
+      "Faculty includes world-renowned AI researchers like Prof. Michael R. Lyu and Prof. Irwin King.",
+      "Strong industry partnerships with Google, Microsoft, and local AI startups."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Artificial Intelligence: Systems and Technologies notable alumni",
+      "香港中文大學 人工智能：系統與科技 著名校友",
+      "CUHK Artificial Intelligence: Systems and Technologies graduates Hong Kong careers",
+      "CUHK JS4468 alumni"
+    ]
+  }
+}

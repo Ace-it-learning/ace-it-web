@@ -1,0 +1,66 @@
+{
+  "code": "JS6729",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6729"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://saasweb.hku.hk/programme/as.php"
+    }
+  ],
+  "programme": {
+    "code": "JS6729",
+    "nameEn": "Bachelor of Science in Actuarial Science",
+    "nameZh": "Bachelor of Science in Actuarial Science",
+    "university": "香港大學",
+    "facultyZh": "理學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "1.2 x Eng + 1.2 x Math + 1.2 x M1/M2 + Best 2 Subjects",
+    "median": 35,
+    "uq": 36,
+    "lq": 35
+  },
+  "jupas": {
+    "code": "JS6729",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6729",
+    "nameEn": "Bachelor of Science in Actuarial Science",
+    "nameZh": "",
+    "shortDescription": "the UK’s Institute and Faculty of Actuaries. HKU is also a Center of Actuarial Excellence designated by the Society of Actuaries of the US. The programme provides formal academic training to students who wish to join the actuarial profession. It is specifically designed to prepare students to sit the early actuarial examinations of the professional bodies for actuaries, thus allowing them to readily join the actuarial profession with internationally-recognised qualifications upon graduation. Although actuarial science is a separate discipline with its own area of knowledge, modern actuarial training requires multidisciplinary knowledge in probability, statistics, big data analytics, economics, investment, finance, law, taxation and accounting. The HKU Actuarial Science curriculum reflects this requirement by incorporating various interdisciplinary courses into the basic yet comprehensive actuarial training. The HKU BSc(ActuarSc) programme aims to equip students with a solid background in actuarial science, and enable them to develop the confidence and analytical skills needed to define and tackle problems in actuarial science and related fields. Students should also be able to evaluate and measure various kinds of risk using effective quantitative methods, and become proficient in formulating and communicating practicable business strategies with professionalism as well as accuracy.",
+    "programmeWebsite": "https://saasweb.hku.hk/programme/as.php",
+    "tuition": "HK$47,000",
+    "intake": 50,
+    "duration": "4 years",
+    "interview": false,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 254,
+      "bandB": 113,
+      "bandC": 177,
+      "bandD": 212,
+      "bandE": 216,
+      "total": 972
+    },
+    "offers2025": {
+      "bandA": 44,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 44
+    },
+    "facultyPhone": "+852 3917 2466"
+  },
+  "admissionsSnippet": "Bachelor of Science in Actuarial Science [BSc(ActuarSc)] | Department of Statistics and Actuarial Science, HKU Notice: JavaScript is not enabled. Please enable JavaScript to view this site. Skip to main content Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Search Search Open Menu Keyword Search Clear Search Close Search Box Search Close Mobile Menu Study Programmes Admissions Undergraduate Programmes Taught Postgraduate Programmes Research Postgraduate Programmes Scholarships Student Sharing Research Research Groups Research Interests RPG Research Outputs RPG Awards Current Students Curricular Information SAAS Professional Development (SAAS-PD) Internship / Job Online-application System People Academic and Research Staff Honorary/Adjunct Staff Research Students News and Events News Seminars Public Lectures Conferences/Workshops Other Event About Us Introduction Awards and Honours History Facilities and Resources Alumni Network Contact Us Home Study Programmes Undergraduate Programmes Bachelor of Science in Actuarial Science [BSc(ActuarSc)] Programme Code &amp; Mode of Study 6729 | Full-time: 4 years Credit Required for Graduation 240 Credits Programme Brochure Information Day Presentation Deck Student Testimonials Admission for 2026 Aims &amp; Features Admission Requirements Internship Programme Career Development Why Choose HKU Actuarial Science Scholarships Prev Next Aims &amp; Features Admission Requirements Internship Programme Career Development Why Choose HKU Actuarial Science Scholarships Aims &amp; Features Actuarial Science is a separate discipline with its own area of knowledge requiring multidisciplinary knowledge in probability, statistics, data science, economics, investment, finance, law, taxation and accounting. Based on the evaluation of the financial, economic and business implications of future contingent events, actuarial science proves to be very useful in the business world, including the insurance industry as well as the banking and finance fields. &nbsp; The HKU Bachelor of Science in Actuarial Science (Programme Code: 6729) is the only programme in Hong Kong accredited by the UK’s Institute and Faculty of Actuaries. It provides formal academic training to students who wish to join the actuarial profession. The programme is designed to provide specialist training in actuarial science and prepare students for the professional examinations towards being qualified as an actuary with internationally-recognised qualifications. Students will learn to tackle different problems in actuarial science and related fields using effective quantitative methods, and become proficient in formulating and communicating practicable business strategies. &nbsp; In addition, the HKU Department of Statistics and Actuarial Science has introduced the Internship Programme and Career Advising Programme to help students seize career opportunities readily. Students will gain insight into the challenging world and daily activities of an actuary while strengthening their technical, analytical and communication skills. Mentorship, company visits, career fair and other professional preparation activities are organised to further students’ learning beyond classrooms. Center of Actuarial Excellence The Department of Statistics and Actuarial Science, the University of Hong Kong has been designated a Center of Actuarial Excellence (CAE) by the US Society of Actuaries (SOA) since December 2011.&nbsp; &nbsp; This prestigious designation is awarded to schools that demonstrate excellence in Actuarial Science by meeting strict criteria on curriculum quality, number and quality of graduates, qualified faculty, ties with business, and beneficial research and scholarship.&nbsp; &nbsp; Over the years, the Department has dedicated itself to world-class standards of research, teaching and learning, and it is now highly regarded as an international centre of research and learning in the field of statistics and actuarial science. &nbsp; &nbsp; &nbsp; Accreditation Under an accreditation agreement with the Institute and Faculty of Actuaries (IFoA), the University of Hong Kong joins the ranks of select institutions worldwide that offer the maximum exemptions (CS1, CS2, CM1, CM2, CB1, and CB2) approved by the Institute and Faculty of Actuaries (IFoA), United Kingdom.&nbsp; &nbsp; The University of Hong Kong has previously obtained accreditation for IFoA subjects CT1-CT8 from the UK’s only chartered professional body dedicated to educating, developing and regulating actuaries based both in the UK and internationally. With the new accreditation, students who graduate with a BSc(ActuarSc) degree from the University of Hong Kong with the required marks in specified subjects will be exempted from taking various IFoA subjects in the new curriculum, as they begin their journey towards qualifying as an actuary.&nbsp; SOA - University-Earned Credit (UEC) Program The University‐Earned Credit (UEC) program of the Society of Actuaries (SOA) allows university students to become eligible for SOA exam credit by attaining a designated UEC mark on university courses at approved Centers of Actuarial Excellence (CAE).&nbsp; &nbsp; The University of Hong Kong (HKU), as one of the CAE designated by the SOA, obtained the UEC status approved by the SOA in July 2022, as one of the 13 inaugural UEC participants. Students who have taken the approved courses at HKU (not by credit transfer) and receiv"
+}

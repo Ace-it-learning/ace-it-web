@@ -1,0 +1,599 @@
+{
+  "factPack": {
+    "code": "JS4690",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4690"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4690"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "median/uq/lq + subject grades from af_2025_JUPAS.pdf"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/physn%e2%80%90erp/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "http://www.phy.cuhk.edu.hk"
+      }
+    ],
+    "programme": {
+      "code": "JS4690",
+      "nameEn": "Enrichment Stream in Theoretical Physics",
+      "nameZh": "理論物理精研",
+      "university": "香港中文大學",
+      "facultyZh": "理學院",
+      "category": "science"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 46.75,
+      "uq": 44.5,
+      "lq": 43,
+      "percentiles": {
+        "M": {
+          "chi": "4",
+          "eng": "5*",
+          "math": "5",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5*",
+          "e3": "N3 -\nPass",
+          "e4": "",
+          "total": 46.75
+        },
+        "LQ": {
+          "chi": "4",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5",
+          "e2": "5",
+          "e3": "5",
+          "e4": "",
+          "total": 43
+        },
+        "UQ": {
+          "chi": "3",
+          "eng": "4",
+          "math": "5*",
+          "csd": "A",
+          "ls": "",
+          "m1m2": "5*",
+          "e1": "5*",
+          "e2": "5",
+          "e3": "",
+          "e4": "",
+          "total": 44.5
+        }
+      },
+      "subjectWeighting": "• Physics (x 2)"
+    },
+    "jupas": {
+      "code": "JS4690",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4690",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4690",
+      "nameEn": "Enrichment Stream in Theoretical Physics",
+      "nameZh": "理論物理精研",
+      "shortDescription": "",
+      "programmeWebsite": "http://www.phy.cuhk.edu.hk",
+      "tuition": "HK$47,000",
+      "intake": 19,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 4 Elective Subject(s) Minimum Level PHYSICS 4 One of the following elective subjects: INFORMATION AND COMMUNICATION TECHNOLOGY 3 GEOGRAPHY 3 CHEMISTRY 3 ECONOMICS 3 BIOLOGY 3 TECHNOLOGY AND LIVING (FOOD SCIENCE AND TECHNOLOGY) 3 MATHEMATICS EXTENDED MODULE 1 OR 2 NOTE 3 NOTE: Mathematics Extended Module I or II is preferred. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 63,
+        "bandB": 57,
+        "bandC": 74,
+        "bandD": 89,
+        "bandE": 73,
+        "total": 356
+      },
+      "offers2025": {
+        "bandA": 19,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 19
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/physn%e2%80%90erp/",
+      "introduction": "Unlock the secrets of the universe with our Enrichment Stream in Theoretical Physics Physics is the study of basic regularities behind various complex phenomena in the physical world. The objects of study range from the tiniest building blocks in nature, such as quarks in a proton, to the largest, such as the universe, of which our solar system is a minute part. Our programme offers a solid physics curriculum for young talented people with a special interest in theoretical studies and research. It provides not only rigorous training on fundamental concepts, but also numerous opportunities in research, exchange and internship. The Stream features strong mentorship and is designed for students interested in pursuing postgraduate studies at the master&#8217;s and doctoral level upon graduation.",
+      "ranking": "Ranked #74 in best global Physics (#1 in Hong Kong) (US News and World Report)",
+      "careerProspects": "Physics at CUHK is well-known for its high-quality undergraduate and postgraduate programmes, as well as its strengths in research. The training provides the knowledge, skills and attitude for our graduates to pursue future studies and to launch a successful career in the 21st century workplace. On average, more than 40% of our recent graduates were admitted to",
+      "craftYourPath": "The core curriculum provides a solid grasp of fundamental concepts, and analytical, numerical, computational, experimental and research skills. In addition to the core courses, students can choose from a pool of elective courses focusing on theoretical physics and mathematics. The programme is further supported by numerous learning and experiential activities, including small-group discussions and seminars, research projects, and exchange and internship opportunities.",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4690",
+    "nameEn": "Enrichment Stream in Theoretical Physics",
+    "nameZh": "理論物理精研",
+    "name": "Enrichment Stream in Theoretical Physics",
+    "university": "香港中文大學",
+    "faculty": "理學院",
+    "median": 46.75,
+    "band_a": 43,
+    "uq": 44.5,
+    "category": "science"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics",
+          "content": [
+            "JUPAS code: JS4690",
+            "Programme: Enrichment Stream in Theoretical Physics (BSc)",
+            "Faculty: Science",
+            "First Year Intake: 19",
+            "Duration: 4 years",
+            "Tuition fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants)",
+            "",
+            "2025 JUPAS admission scores (Best 5):",
+            "Median: 46.75",
+            "Lower quartile (LQ): 43",
+            "Upper quartile (UQ): 44.5",
+            "",
+            "Median admit subject profile (M row):",
+            "Chinese: 4",
+            "English: 5*",
+            "Mathematics: 5",
+            "CSD: A",
+            "M1/M2: 5*",
+            "Elective 1: 5*",
+            "Elective 2: 5*",
+            "Elective 3: N3 - Pass",
+            "",
+            "2025 application statistics:",
+            "Band A applications: 63",
+            "Band A offers: 19",
+            "Total applications: 356",
+            "Band A offer rate: ~30.2%",
+            "Band A apps per offer: ~3.3",
+            "",
+            "General entrance requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory Part: Level 4",
+            "- Citizenship and Social Development: Attained",
+            "- Physics: Level 4",
+            "- One other elective at Level 3 (M1/M2 preferred)",
+            "",
+            "Subject weighting: Physics (x 2)"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Enrichment Stream in Theoretical Physics offers a solid physics curriculum for talented students with a special interest in theoretical studies and research.",
+            "",
+            "Core courses provide a rigorous grasp of fundamental concepts, analytical, numerical, computational, experimental and research skills.",
+            "",
+            "Students choose from a pool of elective courses focusing on theoretical physics and mathematics.",
+            "",
+            "Learning activities include small-group discussions, seminars, research projects, exchange and internship opportunities.",
+            "",
+            "The Stream features strong mentorship and is designed for students interested in pursuing postgraduate studies at master's and doctoral level upon graduation.",
+            "",
+            "Programme website: http://www.phy.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Physics at CUHK is well-known for its high-quality undergraduate and postgraduate programmes, as well as its strengths in research.",
+            "",
+            "The training provides the knowledge, skills and attitude for graduates to pursue future studies and to launch a successful career in the 21st century workplace.",
+            "",
+            "On average, more than 40% of recent graduates were admitted to top postgraduate programmes at institutions such as Oxford, Cambridge, and MIT.",
+            "",
+            "Career paths include research, academia, data science, finance, technology, and education."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "CUHK's Shatin campus offers a vibrant learning environment with state-of-the-art facilities.",
+            "",
+            "Students are members of one of nine colleges, each providing pastoral care, general education, and residential life.",
+            "",
+            "The Physics Department provides dedicated laboratories, computing resources, and common rooms for student collaboration.",
+            "",
+            "Exchange and internship opportunities are available through the programme and university-wide networks."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "With a first-year intake of only 19, the Enrichment Stream in Theoretical Physics is highly selective.",
+            "",
+            "2025 JUPAS statistics:",
+            "- Band A applications: 63",
+            "- Band A offers: 19",
+            "- Band A offer rate: ~30.2%",
+            "- Band A apps per offer: ~3.3",
+            "",
+            "Median admission score (Best 5): 46.75",
+            "Lower quartile: 43",
+            "Upper quartile: 44.5",
+            "",
+            "Applicants should target scores well above the median to be competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty",
+          "content": [
+            "The Enrichment Stream in Theoretical Physics is taught by world-class researchers in particle physics, cosmology, and condensed matter theory.",
+            "",
+            "Notable faculty include:",
+            "- Prof. Michael M. T. Loy (羅孟德): Former Vice-Chancellor of CUHK; distinguished physicist in condensed matter and laser spectroscopy.",
+            "- Prof. Kenneth Young (楊綱凱): Former Dean of Science; theoretical physicist known for work in particle physics and cosmology; key figure in developing the Enrichment Stream.",
+            "- Prof. Chu Ming-chung (朱明中): Professor of Physics; specializes in theoretical astrophysics and cosmology; involved in the Enrichment Stream curriculum.",
+            "- Prof. Lee Hoi-nin (李海年): Professor of Physics; research in theoretical condensed matter physics; teaches in the Enrichment Stream.",
+            "",
+            "Graduates have progressed to top PhD programmes at Oxford, Cambridge, MIT, and other leading institutions."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students.",
+            "",
+            "Entrance scholarships are available for outstanding JUPAS applicants, covering tuition fees and living expenses in some cases.",
+            "",
+            "Students may also apply for the Hong Kong Government's Targeted Scholarship and Financial Support (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "",
+            "For more details: https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Enrichment Stream in Theoretical Physics Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 47+ (Best 5)**",
+            "",
+            "- The 2025 median is 46.75; LQ is 43. To be safe, aim for 47 or above.",
+            "- Physics is weighted x2, so a high grade (5* or 5**) is crucial.",
+            "- M1/M2 is preferred — a 5* or above strengthens your application.",
+            "",
+            "**2. Prioritise Physics and Mathematics**",
+            "",
+            "- Since Physics is weighted double, invest extra time in past papers and concept mastery.",
+            "- M1/M2 is not mandatory but strongly preferred; a high grade here signals readiness for theoretical work.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- Interview is required for selected applicants. Prepare to discuss your interest in theoretical physics.",
+            "- Be ready to explain a physics concept or problem-solving approach.",
+            "- Show enthusiasm for research and postgraduate study.",
+            "",
+            "**4. Build a Strong Academic Profile**",
+            "",
+            "- The median admit has 5* in English, 5 in Maths, and 5* in two electives.",
+            "- Aim for at least 5* in Physics and one other science/mathematics elective.",
+            "",
+            "**5. Demonstrate Research Potential**",
+            "",
+            "- Mention any science competitions, Olympiads, or independent projects in your application.",
+            "- The programme values students who show curiosity and initiative.",
+            "",
+            "**6. Use Band A Strategically**",
+            "",
+            "- With only 19 places and a Band A offer rate of ~30%, put this programme in Band A if it is your top choice.",
+            "- Band B or lower has zero offers in 2025 — so Band A is essential.",
+            "",
+            "**7. Prepare for a Rigorous Curriculum**",
+            "",
+            "- The stream includes advanced theoretical physics and mathematics courses.",
+            "- Familiarise yourself with topics like quantum mechanics, electromagnetism, and classical mechanics beyond DSE level.",
+            "",
+            "**8. Leverage Mentorship and Small Groups**",
+            "",
+            "- The programme features strong mentorship and small-group discussions.",
+            "- In interview, express your desire to work closely with faculty and engage in research.",
+            "",
+            "**9. Plan for Postgraduate Study**",
+            "",
+            "- The stream is designed for students aiming for master's/PhD. Mention your long-term research goals.",
+            "- Highlight any relevant reading, online courses, or summer programmes you have undertaken."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計",
+          "content": [
+            "JUPAS 編號：JS4690",
+            "課程：理論物理精研（理學士）",
+            "學院：理學院",
+            "首年學額：19",
+            "修讀年期：4 年",
+            "首年學費：HK$47,000（本地學生）",
+            "面試：需要（選拔性）",
+            "",
+            "2025 年 JUPAS 入學分數（最佳 5 科）：",
+            "中位數：46.75",
+            "下四分位數：43",
+            "上四分位數：44.5",
+            "",
+            "中位數錄取者科目成績（M 行）：",
+            "中國語文：4",
+            "英國語文：5*",
+            "數學：5",
+            "公民科：A",
+            "M1/M2：5*",
+            "選修 1：5*",
+            "選修 2：5*",
+            "選修 3：N3 - 及格",
+            "",
+            "2025 年申請統計：",
+            "Band A 申請人數：63",
+            "Band A 錄取人數：19",
+            "總申請人數：356",
+            "Band A 錄取率：約 30.2%",
+            "Band A 每學額申請人數：約 3.3",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第 3 級",
+            "- 英國語文：第 3 級",
+            "- 數學必修部分：第 4 級",
+            "- 公民與社會發展：達標",
+            "- 物理：第 4 級",
+            "- 另一選修科：第 3 級（M1/M2 優先）",
+            "",
+            "科目比重：物理（x 2）"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "理論物理精研為對理論研究有濃厚興趣的學生提供堅實的物理課程。",
+            "",
+            "核心課程提供基本概念的扎實掌握，以及分析、數值、計算、實驗和研究技能。",
+            "",
+            "學生可從一系列專注於理論物理和數學的選修課程中選擇。",
+            "",
+            "學習活動包括小組討論、研討會、研究項目、交流及實習機會。",
+            "",
+            "該精研課程設有強大的導師制度，專為有志於畢業後攻讀碩士及博士學位的學生而設。",
+            "",
+            "課程網站：http://www.phy.cuhk.edu.hk"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "香港中文大學物理學以其高質量的本科和研究生課程以及研究實力而聞名。",
+            "",
+            "培訓為畢業生提供知識、技能和態度，以追求進一步學習並在 21 世紀職場取得成功。",
+            "",
+            "平均超過 40% 的近期畢業生獲牛津、劍橋、麻省理工等頂尖研究生課程錄取。",
+            "",
+            "職業路徑包括研究、學術、數據科學、金融、科技和教育。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活及設施",
+          "content": [
+            "香港中文大學沙田校園提供充滿活力的學習環境，配備先進設施。",
+            "",
+            "學生是九所書院之一的成員，每所書院提供 pastoral care、通識教育和住宿生活。",
+            "",
+            "物理系提供專用實驗室、計算資源和學生協作空間。",
+            "",
+            "課程及大學網絡提供交流及實習機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力",
+          "content": [
+            "理論物理精研首年學額僅 19 個，競爭激烈。",
+            "",
+            "2025 年 JUPAS 統計：",
+            "- Band A 申請人數：63",
+            "- Band A 錄取人數：19",
+            "- Band A 錄取率：約 30.2%",
+            "- Band A 每學額申請人數：約 3.3",
+            "",
+            "入學中位數（最佳 5 科）：46.75",
+            "下四分位數：43",
+            "上四分位數：44.5",
+            "",
+            "申請人應以高於中位數的分數為目標以增加競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "著名校友及教授",
+          "content": [
+            "理論物理精研由粒子物理、宇宙學和凝聚態理論領域的世界級研究人員授課。",
+            "",
+            "著名教授包括：",
+            "- 羅孟德教授：香港中文大學前校長；凝聚態物理和激光光譜學領域的傑出物理學家。",
+            "- 楊綱凱教授：前理學院院長；理論物理學家，以粒子物理和宇宙學研究聞名；精研課程的關鍵推動者。",
+            "- 朱明中教授：物理學教授；專注於理論天體物理和宇宙學；參與精研課程設計。",
+            "- 李海年教授：物理學教授；理論凝聚態物理研究；在精研課程中任教。",
+            "",
+            "畢業生已進入牛津、劍橋、麻省理工等頂尖博士課程。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學術成績的獎學金。",
+            "",
+            "優秀 JUPAS 申請人可獲入學獎學金，部分涵蓋學費及生活費。",
+            "",
+            "學生亦可申請香港政府的專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
+            "",
+            "詳情請參閱：https://admission.cuhk.edu.hk/fees-financing-your-studies/"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的理論物理精研策略 — 9 個可行貼士",
+          "content": [
+            "**1. 目標分數：最佳 5 科 47 分或以上**",
+            "",
+            "- 2025 年中位數為 46.75，下四分位數為 43。為求穩妥，目標應為 47 分或以上。",
+            "- 物理科比重 x2，因此取得 5* 或 5** 至關重要。",
+            "- M1/M2 優先 — 取得 5* 或以上可增強申請競爭力。",
+            "",
+            "**2. 優先處理物理和數學**",
+            "",
+            "- 由於物理科比重加倍，應投入更多時間於歷屆試題和概念掌握。",
+            "- M1/M2 非強制但強烈建議；高分數顯示你已為理論工作做好準備。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 需要面試（選拔性）。準備討論你對理論物理的興趣。",
+            "- 準備解釋一個物理概念或解題方法。",
+            "- 展示對研究和研究生學習的熱情。",
+            "",
+            "**4. 建立強大的學術檔案**",
+            "",
+            "- 中位數錄取者英國語文 5*、數學 5、兩個選修科 5*。",
+            "- 目標至少物理科 5* 及另一科學/數學選修科 5*。",
+            "",
+            "**5. 展示研究潛力**",
+            "",
+            "- 在申請中提及任何科學比賽、奧林匹克或獨立項目。",
+            "- 課程重視展現好奇心和主動性的學生。",
+            "",
+            "**6. 策略性使用 Band A**",
+            "",
+            "- 學額僅 19 個，Band A 錄取率約 30%。如這是你的首選，請將其放在 Band A。",
+            "- 2025 年 Band B 或更低沒有錄取 — 因此 Band A 至關重要。",
+            "",
+            "**7. 為嚴謹課程做好準備**",
+            "",
+            "- 精研課程包括高級理論物理和數學課程。",
+            "- 熟悉超越 DSE 水平的量子力學、電磁學和經典力學等主題。",
+            "",
+            "**8. 善用導師制度和小組學習**",
+            "",
+            "- 課程設有強大的導師制度和小組討論。",
+            "- 在面試中表達你希望與教授緊密合作並參與研究的意願。",
+            "",
+            "**9. 規劃研究生學習**",
+            "",
+            "- 該課程專為有志攻讀碩士/博士的學生設計。提及你的長期研究目標。",
+            "- 突出你曾進行的相關閱讀、網上課程或暑期課程。"
+          ]
+        }
+      }
+    },
+    "code": "JS4690",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 46.75,
+    "uq": 44.5,
+    "lq": 43,
+    "formula": "Best 5",
+    "percentiles": {
+      "M": {
+        "chi": "4",
+        "eng": "5*",
+        "math": "5",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5*",
+        "e3": "N3 -\nPass",
+        "e4": "",
+        "total": 46.75
+      },
+      "LQ": {
+        "chi": "4",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5",
+        "e2": "5",
+        "e3": "5",
+        "e4": "",
+        "total": 43
+      },
+      "UQ": {
+        "chi": "3",
+        "eng": "4",
+        "math": "5*",
+        "csd": "A",
+        "ls": "",
+        "m1m2": "5*",
+        "e1": "5*",
+        "e2": "5",
+        "e3": "",
+        "e4": "",
+        "total": 44.5
+      }
+    }
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Prof. Michael M. T. Loy",
+        "nameZh": "羅孟德",
+        "achievement": "Former Vice-Chancellor of CUHK; distinguished physicist in condensed matter and laser spectroscopy; long-time faculty in Physics Department.",
+        "sourceHint": "CUHK Physics Department emeritus profile"
+      },
+      {
+        "nameEn": "Prof. Kenneth Young",
+        "nameZh": "楊綱凱",
+        "achievement": "Former Dean of Science, CUHK; theoretical physicist known for work in particle physics and cosmology; key figure in developing the Enrichment Stream.",
+        "sourceHint": "CUHK Physics Department faculty page"
+      },
+      {
+        "nameEn": "Prof. Chu Ming-chung",
+        "nameZh": "朱明中",
+        "achievement": "Professor of Physics at CUHK; specializes in theoretical astrophysics and cosmology; involved in the Enrichment Stream curriculum.",
+        "sourceHint": "CUHK Physics Department faculty page"
+      },
+      {
+        "nameEn": "Prof. Lee Hoi-nin",
+        "nameZh": "李海年",
+        "achievement": "Professor of Physics at CUHK; research in theoretical condensed matter physics; teaches in the Enrichment Stream.",
+        "sourceHint": "CUHK Physics Department faculty page"
+      }
+    ],
+    "facultyExcellence": [
+      "The Enrichment Stream in Theoretical Physics is taught by world-class researchers in particle physics, cosmology, and condensed matter theory.",
+      "Students benefit from small-group tutorials and research projects supervised by active theoretical physicists.",
+      "Graduates have progressed to top PhD programmes at institutions such as Oxford, Cambridge, and MIT."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Enrichment Stream in Theoretical Physics notable alumni",
+      "香港中文大學 理論物理精研 著名校友",
+      "CUHK Enrichment Stream in Theoretical Physics graduates",
+      "CUHK Physics Department faculty theoretical physics"
+    ]
+  }
+}

@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import {
-    GraduationCap, Target, Sparkles, Info, ShieldCheck,
-    BookOpen, TrendingUp, Award
+    GraduationCap, Sparkles, Info, ShieldCheck
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -32,6 +30,8 @@ const DreamSubjectsPage = () => {
         en: {
             title: 'Dream Subjects',
             subtitle: 'Set your Top 20 dream programs. Ace Sir will track the gap to your target.',
+            predictedBest5Line: (points) =>
+                `Your predicted Best 5 total is ${points} points.`,
             searchPlaceholder: 'Search Programs (Code or Name)...',
             allCategories: 'All Areas',
             allUniversities: 'All Universities',
@@ -67,14 +67,13 @@ const DreamSubjectsPage = () => {
             description: 'Set your Top 20 dream programs, Ace Sir will track the gap to your target',
             standardHint: "Using standard scoring (1-7)",
             bonusHint: "Using university bonus scale (5**=8.5, 5*=7, 5=5.5)",
-            baselineHint: "Based on your Eng + Math data and self-reported electives",
-            selectedStats: 'Selected',
-            best5Stats: 'Est. Best 5',
-            maxLimit: 'Max 20'
+            baselineHint: "Based on your Eng + Math data and self-reported electives"
         },
         zh: {
             title: '我的夢想學科',
             subtitle: '設定你嘅 Top 20 心儀課程，Ace Sir 會幫你追蹤同目標嘅距離',
+            predictedBest5Prefix: '根據你嘅科目目標，',
+            predictedBest5Emphasis: (points) => `預計 Best 5 總分為 ${points} 分`,
             searchPlaceholder: '搜尋課程 (編號或名稱)...',
             allCategories: '全部範疇',
             allUniversities: '全部大學',
@@ -110,10 +109,7 @@ const DreamSubjectsPage = () => {
             description: '設定你嘅 Top 20 心儀課程，Ace Sir 會幫你追蹤同目標嘅距離',
             standardHint: "正在使用標準計分機制 (1-7)",
             bonusHint: "正在使用大學加分機制 (5**=8.5, 5*=7, 5=5.5)",
-            baselineHint: "基於英文 + 數學數據，加埋你自報嘅其他科目",
-            selectedStats: '已選擇',
-            best5Stats: '預計 Best 5',
-            maxLimit: '最多 20'
+            baselineHint: "基於英文 + 數學數據，加埋你自報嘅其他科目"
         }
     };
 
@@ -239,66 +235,42 @@ const DreamSubjectsPage = () => {
     return (
         <div className="min-h-screen bg-slate-50 selection:bg-indigo-100 italic-none">
             {/* Header Area */}
-            <div className="bg-white border-b border-slate-200 px-8 py-10">
+            <div className="bg-white border-b border-slate-200 px-4 py-4 sm:px-6 sm:py-5 md:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex items-center justify-between mb-8">
-                        <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <ShieldCheck className="text-indigo-600" size={18} />
+                    <div className="flex items-center justify-between">
+                        <div className="min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                                <ShieldCheck className="text-indigo-600 shrink-0" size={18} />
                                 <span className="text-xs font-black text-indigo-600 uppercase tracking-[0.2em]">
                                     {language === 'zh' ? 'JUPAS 課程規劃' : 'JUPAS Programme Planner'}
                                 </span>
                             </div>
-                            <h1 className="text-5xl font-extrabold text-slate-900 tracking-tight">
+                            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                                 {t.title}
                             </h1>
-                            <p className="text-slate-500 mt-2 font-medium text-lg">
-                                {t.subtitle}
+                            <p className="text-slate-500 mt-1.5 font-medium text-base sm:text-lg leading-snug">
+                                {t.subtitle}{' '}
+                                {language === 'zh' ? (
+                                    <>
+                                        {t.predictedBest5Prefix}
+                                        <strong className="font-bold text-slate-700">
+                                            {t.predictedBest5Emphasis(estimatedBest5)}
+                                        </strong>
+                                        。
+                                    </>
+                                ) : (
+                                    <strong className="font-bold text-slate-700">
+                                        {t.predictedBest5Line(estimatedBest5)}
+                                    </strong>
+                                )}
                             </p>
-                        </div>
-                    </div>
-
-                    {/* Stats Summary Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 flex items-start gap-4">
-                            <div className="p-3 bg-white rounded-xl shadow-sm text-indigo-600">
-                                <BookOpen size={20} />
-                            </div>
-                            <div>
-                                <h3 className="text-base font-black text-indigo-900 uppercase">{t.selectedStats}</h3>
-                                <p className="text-sm text-indigo-700 mt-1 font-medium">
-                                    {dreamPrograms.length} / 20 {language === 'zh' ? '個課程' : 'programs'}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 flex items-start gap-4">
-                            <div className="p-3 bg-white rounded-xl shadow-sm text-emerald-600">
-                                <Target size={20} />
-                            </div>
-                            <div>
-                                <h3 className="text-base font-black text-emerald-900 uppercase">{t.best5Stats}</h3>
-                                <p className="text-sm text-emerald-700 mt-1 font-medium">
-                                    {estimatedBest5} {language === 'zh' ? '分' : 'pts'} ({scoringScale === 'bonus' ? 'Bonus' : 'Standard'})
-                                </p>
-                            </div>
-                        </div>
-                        <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 flex items-start gap-4">
-                            <div className="p-3 bg-white rounded-xl shadow-sm text-amber-600">
-                                <Award size={20} />
-                            </div>
-                            <div>
-                                <h3 className="text-base font-black text-amber-900 uppercase">{t.maxLimit}</h3>
-                                <p className="text-sm text-amber-700 mt-1 font-medium">
-                                    {language === 'zh' ? '可選擇最多 20 個心儀課程' : 'Up to 20 dream programmes'}
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Content Area */}
-            <div className="max-w-7xl mx-auto px-8 py-12">
+            <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8">
                 {loading ? (
                     <div className="flex items-center justify-center py-20">
                         <div className="animate-pulse space-y-4 text-center">
@@ -368,7 +340,7 @@ const DreamSubjectsPage = () => {
             </div>
 
             {/* Footer Bar */}
-            <div className="bg-white border-t border-slate-200 px-8 py-6">
+            <div className="bg-white border-t border-slate-200 px-4 py-4 sm:px-6 md:px-8">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
                         <Info className="w-3 h-3" />

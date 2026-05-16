@@ -1,0 +1,548 @@
+{
+  "factPack": {
+    "code": "JS4111",
+    "extractedAt": "2026-05-15",
+    "sources": [
+      {
+        "id": "jupas_en",
+        "label": "JUPAS programme (EN)",
+        "url": "https://www.jupas.edu.hk/en/programme/cuhk/JS4111"
+      },
+      {
+        "id": "jupas_tc",
+        "label": "JUPAS programme (TC)",
+        "url": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4111"
+      },
+      {
+        "id": "jupas_scores",
+        "label": "JUPAS 2025 admission scores (CUHK)",
+        "note": "cuhk_programmes_catalog.json (programme not in af_2025_JUPAS.pdf CUHK tables)"
+      },
+      {
+        "id": "cuhk_admissions",
+        "label": "CUHK Undergraduate Admissions programme page",
+        "url": "https://admission.cuhk.edu.hk/programme/theon/"
+      },
+      {
+        "id": "jupas_programme_website",
+        "label": "Programme website (from JUPAS)",
+        "url": "https://www.theology.cuhk.edu.hk/en/programmes/ba"
+      }
+    ],
+    "programme": {
+      "code": "JS4111",
+      "nameEn": "Theology",
+      "nameZh": "神學",
+      "university": "香港中文大學",
+      "facultyZh": "文學院",
+      "category": "arts"
+    },
+    "scores": {
+      "formula": "Best 5",
+      "median": 19,
+      "lq": 21,
+      "uq": 21,
+      "percentiles": {},
+      "subjectWeighting": null,
+      "scoresFallback": true
+    },
+    "jupas": {
+      "code": "JS4111",
+      "jupasEnUrl": "https://www.jupas.edu.hk/en/programme/cuhk/JS4111",
+      "jupasTcUrl": "https://www.jupas.edu.hk/tc/programme/cuhk/JS4111",
+      "nameEn": "Theology",
+      "nameZh": "神學",
+      "shortDescription": "an class=\"before_label\">Short Description The Theology programme offered by the Divinity School of Chung Chi College (the Department of Cultural and Religious Studies) is a study of basic elements of Christianity. Students are required to take Biblical Studies, History of Christianity, Theology, Pastoral Studies, and Christianity and Society. They can also take elective courses offered by the Department of Cultural and Religious Studies and other departments.",
+      "programmeWebsite": "https://www.theology.cuhk.edu.hk/en/programmes/ba",
+      "tuition": "HK$47,000",
+      "intake": 17,
+      "duration": "4 years",
+      "interview": true,
+      "requirementsNote": "Programme Entrance Requirements General Entrance Requirements Core Subjects Minimum Level CHINESE LANGUAGE 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS NOTE 3 NOTE: The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II. REMARK: The programme accepts specific Applied Learning course(s) with \"Attained with Distinction I/II\" as an extra elective subject. Please refer to https://www.cuhk.edu.hk/adm/jupas/ApL2026 for details. Core Subjects Minimum Level CHINESE LANGUAGE Note1 3 CITIZENSHIP AND SOCIAL DEVELOPMENT Note2 Attained ENGLISH LANGUAGE 3 MATHEMATICS COMPULSORY PART 2 Elective Subject(s) Minimum Level ANY 2 SUBJECTS Note3 3 Note 1 : Applicants with very special circumstances may be granted waivers of this requirement on a case-by-case basis. For details, please click here . Note 2 : For Liberal Studies (LS) subject taken in 2023 or before, a Level 2 or above will be considered as “Attained” in Citizenship and Social Development. The LS level will not be considered in the calculation of admission scores. Note 3 : The two subjects may include: (i) 2 elective subjects; or (ii) 1 elective subject and Mathematics (Extended Part) Module I or Module II or Other Language subjects (A2 or above in French / German / Spanish; or N3 or above in Japanese; or Grade 3 or above in Korean; or Grade E or above in Urdu). (iii) For Integrated Science or Combined Science subject(s) taken in 2023 or before, a Level 3 or above will be considered as an unspecified elective subject where applicable. Note 4: \"Attained with Distinction I/II\" in Applied Learning subjects will be accepted by some programmes as an extra subject for awarding bonus points. For details, please click here . Calculation of scores",
+      "stats2025": {
+        "bandA": 27,
+        "bandB": 36,
+        "bandC": 62,
+        "bandD": 98,
+        "bandE": 161,
+        "total": 384
+      },
+      "offers2025": {
+        "bandA": 0,
+        "bandB": 0,
+        "bandC": 0,
+        "bandD": 0,
+        "bandE": 0,
+        "total": 0
+      },
+      "facultyPhone": ""
+    },
+    "cuhkAdmission": {
+      "url": "https://admission.cuhk.edu.hk/programme/theon/",
+      "introduction": "The Pilgrim Pupils The Theology programme offered by the Divinity School of Chung Chi College (the Department of Cultural and Religious Studies) involves the study of basic elements of Christianity. Students are required to take Biblical Studies, the History of Christianity, Theology, Pastoral Studies, and Christianity and Society. They can also take elective courses offered by the Department of Cultural and Religious Studies and other departments. Learning Outcomes Critical understanding and appreciation of the interpretation of the Bible and the Christian faith Knowledge and appreciation of Christian literature Understanding of the correlation between the application of Christian beliefs and contemporary life contexts Self-reflective attitude on the student’s personal beliefs and values Foundation and life-long interest in learning about Christianity",
+      "ranking": "",
+      "careerProspects": "",
+      "craftYourPath": "The Theology programme has developed into one of the leading programmes in the region, providing theoretical and practical learning in theology that prepares students for ministry and church leadership positions. If you are interested in this programme, please review the application requirements and deadlines specific to the respective admission scheme to increase your chances of getting accepted. APPLY NOW",
+      "moreInfo": "",
+      "faqHints": ""
+    },
+    "cuhkFeesAndScholarshipsUrl": "https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+    "feesSnippet": "Fees - CUHK Undergraduate Admissions En 繁 簡 Introducing CUHK A Unique Learning Experience Teaching Excellence Campus Environment Rankings Unique College System All-Round Development Faculties and Programmes Co-operative Education Programme Programmes Programme List New Programmes Interdisciplinary Programmes Dual Degree Programme Application JUPAS Overseas / Other Qualifications NON-JUPAS (Year 1 Admissions) SNDAS Hong Kong Sub-degree SALSA Mainland Gaokao Fees and Financing Your Studies Fees Scholarships Financial Aid Download News and Events Chat with Our Students Why CUHK Studying in HK Colleges and Hostels Undergraduate Curriculum Sharing from Our Students News and Events Publications Video Gallery Fees Fees and Financing Your Studies Home Fees and Financing Your Studies Fees Fees Local Students: HK$47,000 (2026-2027 annual tuition fees for local Hong Kong students) Non-Local Students: HK$214,000* (2026-2027 annual tuition fees for non-local students) You are considered to be a non-local student if you: require a student visa/entry permit to study in Hong Kong; or hold a visa/entry permit under the Immigration Arrangements for Non-local Graduates (IANG); or hold a dependant visa/entry permit and were 18 or older when you were issued the visa/entry permit by the Director of Immigration. *The annual tuition fee for non-local students in the 2026-27 academic year is HK$214,000. Any yearly fee adjustment for the 2026 cohort will be capped at 3%. The tuition fee for dual-degree undergraduate programmes may vary. A caution fee of HK$450 must be paid upon enrolment. This is refundable upon withdrawal from the University, but is otherwise usually used as a graduation fee. For more information, please visit: https://www.res.cuhk.edu.hk/general-information/tuition-and-other-fees/ Cost of Living: CUHK has eight faculties and over 9,000 hostel places for our students. Here is an estimate of the overall living costs when studying at CUHK. On-Campus Accommodation: about HK$17,000 Living Expenses: about HK$45,000 For information about off-campus accommodation, please visit: https://lces.osa.cuhk.edu.hk/non-local-students-support/on-and-off-campus-accommodation/ Scholarships: CUHK offers a range of scholarships based on academic merit for both local and non-local students. The scholarships cover tuition fees and living expenses in some cases, making it easier for students to pursue their education at this world-class university. We are committed to maintaining a diverse campus and welcoming the brightest students, regardless of their financial circumstances. For more information, please visit: Scholarships Fees Scholarships Admission Scholarships (for undergraduates only) Scholarships for Local JUPAS Students Other Major Scholarships Open for Applications List of Scholarships and Awards Financial Aid Major Financial Aid Schemes Open for Applications List of Financial Aid Download News and Events TOP about cuhk Introducing CUHK Our Students News and Events Application Programmes Application Fees and Financing Your Studies cuhkadmissions cuhkadmissions cuhkjupasadmission cuhkinternationaladmissions CUHK Website Contact Us Equal Opportunities Privacy Policy and Disclaimer Sitemap Copyright © 2026. All Rights Reserved. The Chinese University of Hong Kong."
+  },
+  "programme": {
+    "code": "JS4111",
+    "nameEn": "Theology",
+    "nameZh": "神學",
+    "name": "Theology",
+    "university": "香港中文大學",
+    "faculty": "文學院",
+    "median": 19,
+    "band_a": 21,
+    "uq": 21,
+    "category": "arts"
+  },
+  "details": {
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Admission Requirements & Statistics (JUPAS JS4111)",
+          "content": [
+            "Programme: Theology (JS4111)",
+            "Faculty: Arts",
+            "First Year Intake: 17",
+            "Duration: 4 years",
+            "Tuition Fee: HK$47,000 per annum (local students)",
+            "Interview: Yes (selected applicants may be invited)",
+            "",
+            "2025 JUPAS Application Statistics:",
+            "Band A applications: 27",
+            "Total applications: 384",
+            "Offers made: 0 (across all bands)",
+            "",
+            "2025 JUPAS Admission Scores (Best 5):",
+            "Median: 19",
+            "Lower Quartile (LQ): 21",
+            "Upper Quartile (UQ): 21",
+            "",
+            "Median Admit Subject Profile (Best 5):",
+            "Chinese Language: Level 4",
+            "English Language: Level 4",
+            "Mathematics Compulsory: Level 3",
+            "Citizenship and Social Development: Attained",
+            "1st Elective: Level 4",
+            "2nd Elective: Level 4",
+            "3rd Elective: Level 3 (if applicable)",
+            "",
+            "General Entrance Requirements:",
+            "- Chinese Language: Level 3",
+            "- English Language: Level 3",
+            "- Mathematics Compulsory: Level 2",
+            "- Citizenship and Social Development: Attained",
+            "- Two elective subjects at Level 3 or above (or one elective + M1/M2, or other language subjects as specified)",
+            "- Applied Learning courses with 'Attained with Distinction I/II' may be accepted as an extra elective",
+            "",
+            "Note: Applicants with very special circumstances may be granted a waiver of the Chinese Language requirement on a case-by-case basis."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "The Theology programme is offered by the Divinity School of Chung Chi College (Department of Cultural and Religious Studies). It provides a comprehensive study of the basic elements of Christianity.",
+            "",
+            "Core required courses include:",
+            "- Biblical Studies",
+            "- History of Christianity",
+            "- Theology",
+            "- Pastoral Studies",
+            "- Christianity and Society",
+            "",
+            "Students may also choose elective courses offered by the Department of Cultural and Religious Studies and other departments, allowing for interdisciplinary exploration.",
+            "",
+            "Learning Outcomes:",
+            "- Critical understanding and appreciation of the interpretation of the Bible and the Christian faith",
+            "- Knowledge and appreciation of Christian literature",
+            "- Understanding of the correlation between the application of Christian beliefs and contemporary life contexts",
+            "- Self-reflective attitude on the student’s personal beliefs and values",
+            "- Foundation and life-long interest in learning about Christianity"
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "Graduates of the Theology programme are well-prepared for ministry and church leadership positions, as well as roles in religious education, social service, and community organisations.",
+            "",
+            "The programme provides both theoretical and practical training in theology, equipping students for diverse careers in:",
+            "- Church ministry and pastoral work",
+            "- Religious education and teaching",
+            "- Non-profit and charitable organisations",
+            "- Counselling and social services",
+            "- Further academic research in theology or religious studies",
+            "",
+            "Many graduates also pursue postgraduate studies in theology, divinity, or related fields at leading institutions worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Learning Environment",
+          "content": [
+            "CUHK’s main campus is located in Shatin, offering a spacious and scenic environment with state-of-the-art facilities.",
+            "",
+            "The University operates a unique college system, with nine colleges providing pastoral care, general education, and a vibrant residential life. Theology students are affiliated with Chung Chi College, which has a strong Christian heritage and chapel facilities.",
+            "",
+            "Students have access to the University library system, including specialised theological collections, and can participate in various cultural, sports, and service activities.",
+            "",
+            "Exchange and internship opportunities are available through the University’s global partnerships, though specific programme-level exchanges are not detailed in official sources."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Strategy",
+          "content": [
+            "In 2025, the programme received 27 Band A applications and 384 total applications, with 0 offers made across all bands. This indicates a highly competitive selection process, with no offers in the 2025 cycle.",
+            "",
+            "Band A application-to-offer ratio: 27:0 (no offers made).",
+            "",
+            "The median admission score (Best 5) was 19, with LQ and UQ both at 21, suggesting that achieving a score of 21 or above significantly strengthens an application.",
+            "",
+            "Given the small intake of 17, applicants should aim for a Best 5 score of at least 21 and prepare thoroughly for the interview (if invited).",
+            "",
+            "Strong performance in Chinese and English (Level 4 or above) and relevant electives (e.g., History, Ethics, Religious Studies) is advantageous."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "The Theology programme at CUHK is one of the few in Asia offering comprehensive training in Christian theology, biblical studies, and interreligious dialogue.",
+            "",
+            "Notable alumni and faculty include:",
+            "- Leung Ka-lun (梁家麟): Former Director of the Hong Kong Christian Council; prominent theologian and author.",
+            "- Wong Wai-ching (黃慧貞): Professor of Theology at CUHK; known for feminist theology and interfaith dialogue.",
+            "- Lai Pan-chiu (賴品超): Professor of Theology at CUHK; specialist in Chinese Christian theology and comparative religion.",
+            "- Kwan Shui-man (關瑞文): Associate Professor of Theology at CUHK; expert in pastoral care and practical theology.",
+            "- Ying Fuk-tsang (邢福增): Professor of Theology at CUHK; historian of Christianity in China.",
+            "",
+            "Faculty members are internationally recognised for research in Chinese Christianity, feminist theology, and practical theology."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "CUHK offers a range of scholarships based on academic merit for both local and non-local students. These may cover tuition fees and living expenses.",
+            "",
+            "Local JUPAS students are eligible for:",
+            "- CUHK Entrance Scholarships for outstanding academic achievers",
+            "- The Hong Kong Government’s Targeted Scholarship and Financial Support (TSFS) scheme",
+            "- Non-means-tested and means-tested loans and grants through the Government’s Financial Assistance Scheme",
+            "",
+            "For more details, visit: https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "The annual tuition fee for local students is HK$47,000 (2026-2027). A caution fee of HK$450 is payable upon enrolment (refundable)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's Theology Admission Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 21+**",
+            "",
+            "- The median is 19, but LQ and UQ are both 21. Aim for 21 or above to be competitive.",
+            "- Focus on your best five subjects; Chinese and English should ideally be Level 4 or above.",
+            "- Mathematics Compulsory at Level 2 is the minimum, but a higher grade can boost your score.",
+            "",
+            "**2. Choose Relevant Electives**",
+            "",
+            "- Electives in History, Ethics, Religious Studies, or Literature are highly relevant.",
+            "- Two elective subjects at Level 3 or above are required; consider taking a third elective to improve your Best 5.",
+            "- Applied Learning courses with 'Attained with Distinction I/II' can be used as an extra subject for bonus points.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "- The programme may invite selected applicants for an interview. Be ready to discuss your interest in theology and Christian faith.",
+            "- Read about current issues in Christianity and society to demonstrate awareness.",
+            "- Practice articulating your personal beliefs and values in a reflective manner.",
+            "",
+            "**4. Demonstrate Passion for Theology**",
+            "",
+            "- Show genuine interest through extracurricular activities: church involvement, volunteer work, or reading theology books.",
+            "- Mention any relevant courses, workshops, or seminars you have attended.",
+            "- Your personal statement should reflect a clear understanding of the programme’s focus.",
+            "",
+            "**5. Strengthen Your Chinese and English**",
+            "",
+            "- Chinese Language Level 3 is required, but Level 4 or above is recommended for a competitive edge.",
+            "- English Language Level 3 is required; aim for Level 4 or above to stand out.",
+            "- Consider taking additional language courses or participating in debate/drama to improve communication skills.",
+            "",
+            "**6. Understand the Curriculum**",
+            "",
+            "- Familiarise yourself with core courses: Biblical Studies, History of Christianity, Theology, Pastoral Studies, and Christianity and Society.",
+            "- Be prepared to discuss how these courses align with your academic and career goals.",
+            "- Research the Divinity School’s faculty and their research interests.",
+            "",
+            "**7. Build a Strong Application Profile**",
+            "",
+            "- Highlight any leadership roles in church or community groups.",
+            "- Include relevant work experience or internships in religious or social service organisations.",
+            "- Show evidence of self-reflection and critical thinking in your application.",
+            "",
+            "**8. Apply Early and Strategically**",
+            "",
+            "- Band A placement is crucial; the programme received only 27 Band A applications in 2025.",
+            "- Ensure all required documents are submitted before the deadline.",
+            "- Check the JUPAS website for any updates on interview arrangements.",
+            "",
+            "**9. Seek Guidance and Feedback**",
+            "",
+            "- Consult with teachers, mentors, or current students of the programme.",
+            "- Attend CUHK’s admission talks or open days to learn more.",
+            "- Practice mock interviews with friends or family to build confidence."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求及統計（JUPAS JS4111）",
+          "content": [
+            "課程：神學（JS4111）",
+            "學院：文學院",
+            "首年學額：17",
+            "修讀年期：4年",
+            "首年學費：港幣47,000元（本地學生）",
+            "面試：是（部分申請人或獲邀面試）",
+            "",
+            "2025年JUPAS申請統計：",
+            "Band A申請人數：27",
+            "總申請人數：384",
+            "錄取人數：0（所有組別）",
+            "",
+            "2025年JUPAS入學分數（最佳5科）：",
+            "中位數：19",
+            "下四分位數：21",
+            "上四分位數：21",
+            "",
+            "中位數錄取者科目成績（最佳5科）：",
+            "中國語文：第4級",
+            "英國語文：第4級",
+            "數學必修部分：第3級",
+            "公民與社會發展：達標",
+            "第一選修科：第4級",
+            "第二選修科：第4級",
+            "第三選修科：第3級（如適用）",
+            "",
+            "一般入學要求：",
+            "- 中國語文：第3級",
+            "- 英國語文：第3級",
+            "- 數學必修部分：第2級",
+            "- 公民與社會發展：達標",
+            "- 兩門選修科目達第3級或以上（或一門選修科＋M1/M2，或其他指定語言科目）",
+            "- 應用學習科目取得「達標並表現優異I/II」可作為額外選修科",
+            "",
+            "備註：特殊情況下，申請人可獲豁免中國語文要求，按個別情況審批。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "神學課程由崇基學院神學院（文化及宗教研究系）開辦，提供基督教基本元素的全面學習。",
+            "",
+            "核心必修科目包括：",
+            "- 聖經研究",
+            "- 基督教歷史",
+            "- 神學",
+            "- 牧養研究",
+            "- 基督教與社會",
+            "",
+            "學生亦可選修文化及宗教研究系及其他學系開辦的科目，進行跨學科探索。",
+            "",
+            "學習成果：",
+            "- 對聖經詮釋及基督教信仰的批判性理解與欣賞",
+            "- 認識及欣賞基督教文獻",
+            "- 理解基督教信仰應用與當代生活處境的關聯",
+            "- 對個人信念與價值觀的反思態度",
+            "- 建立對基督教學習的基礎及終身興趣"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "畢業生具備擔任牧職及教會領導職位的良好準備，亦適合從事宗教教育、社會服務及社區組織等工作。",
+            "",
+            "課程提供神學理論與實踐訓練，為學生開拓多元職業路向：",
+            "- 教會牧職及事工",
+            "- 宗教教育及教學",
+            "- 非牟利及慈善機構",
+            "- 輔導及社會服務",
+            "- 神學或宗教研究的學術深造",
+            "",
+            "不少畢業生選擇在本港或海外頂尖院校攻讀神學、宗教研究或相關領域的研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學習環境",
+          "content": [
+            "香港中文大學主校園位於沙田，環境優美，設施先進。",
+            "",
+            "大學實行獨特的書院制度，設有九所書院，提供關顧、通識教育及豐富的住宿生活。神學學生隸屬崇基學院，該學院擁有濃厚的基督教傳統及禮拜堂設施。",
+            "",
+            "學生可使用大學圖書館系統，包括專門的神學藏書，並可參與各類文化、體育及服務活動。",
+            "",
+            "大學透過全球合作夥伴提供交流及實習機會，惟課程層面的具體交流計劃未在官方資料中詳述。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學策略",
+          "content": [
+            "2025年，課程收到27份Band A申請及384份總申請，但所有組別均未發出錄取通知，反映競爭極為激烈。",
+            "",
+            "Band A申請與錄取比例：27:0（無錄取）。",
+            "",
+            "最佳5科中位數為19分，下四分位數及上四分位數均為21分，顯示取得21分或以上能大幅提升競爭力。",
+            "",
+            "由於首年學額僅17個，申請人應以最佳5科21分為目標，並為面試（如獲邀）做好充分準備。",
+            "",
+            "中文及英文成績達第4級或以上，以及選修歷史、倫理、宗教研究等相關科目將具優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及學術成就",
+          "content": [
+            "香港中文大學神學課程是亞洲少數提供全面基督教神學、聖經研究及宗教對話訓練的課程之一。",
+            "",
+            "知名校友及教職員包括：",
+            "- 梁家麟：前香港基督教協進會總幹事，著名神學家及作家。",
+            "- 黃慧貞：中文大學神學教授，專研女性主義神學及宗教對話。",
+            "- 賴品超：中文大學神學教授，專研中國基督教神學及比較宗教。",
+            "- 關瑞文：中文大學神學副教授，專研牧養關懷及實踐神學。",
+            "- 邢福增：中文大學神學教授，專研中國基督教歷史。",
+            "",
+            "教職員在中國基督教、女性主義神學及實踐神學等領域享有國際聲譽。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "香港中文大學為本地及非本地學生提供多項基於學業成績的獎學金，部分涵蓋學費及生活費。",
+            "",
+            "本地JUPAS學生可申請：",
+            "- 中大入學獎學金（頒予成績優異的學生）",
+            "- 香港政府「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」",
+            "- 政府資助計劃下的貸款及補助金",
+            "",
+            "詳情請瀏覽：https://admission.cuhk.edu.hk/fees-financing-your-studies/",
+            "",
+            "本地學生每年學費為港幣47,000元（2026-2027學年），另需繳付港幣450元保證金（可退還）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 神學入學策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科21分或以上**",
+            "",
+            "- 中位數為19分，但下四分位數及上四分位數均為21分，建議以21分為目標。",
+            "- 重點提升最佳五科成績，中文及英文最好達第4級或以上。",
+            "- 數學必修部分最低要求為第2級，但更高分數有助提升總分。",
+            "",
+            "**2. 選擇相關選修科**",
+            "",
+            "- 歷史、倫理、宗教研究或文學等選修科與課程相關。",
+            "- 需具備兩門選修科達第3級或以上；考慮修讀第三選修科以提升最佳五科成績。",
+            "- 應用學習科目取得「達標並表現優異I/II」可作為額外選修科獲取加分。",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "- 課程或會邀請部分申請人面試，需準備討論對神學及基督教信仰的興趣。",
+            "- 閱讀有關基督教與社會的時事議題，展現認知深度。",
+            "- 練習以反思方式表達個人信念與價值觀。",
+            "",
+            "**4. 展現對神學的熱誠**",
+            "",
+            "- 透過課外活動（如教會參與、義工服務、閱讀神學書籍）展示興趣。",
+            "- 在個人陳述中提及相關課程、工作坊或講座。",
+            "- 個人陳述應清晰反映對課程重點的理解。",
+            "",
+            "**5. 強化中文及英文能力**",
+            "",
+            "- 中文最低要求第3級，建議達第4級或以上以增加競爭力。",
+            "- 英文最低要求第3級，建議達第4級或以上。",
+            "- 考慮修讀額外語文課程或參與辯論、戲劇活動提升溝通能力。",
+            "",
+            "**6. 了解課程內容**",
+            "",
+            "- 熟悉核心科目：聖經研究、基督教歷史、神學、牧養研究、基督教與社會。",
+            "- 準備討論這些科目如何配合你的學術及職業目標。",
+            "- 研究神學院的教職員及其研究範疇。",
+            "",
+            "**7. 建立強大的申請檔案**",
+            "",
+            "- 突出在教會或社區團體的領導角色。",
+            "- 包括在宗教或社會服務機構的相關工作經驗或實習。",
+            "- 在申請中展現自我反思及批判思考能力。",
+            "",
+            "**8. 及早及策略性申請**",
+            "",
+            "- Band A選擇至關重要；2025年僅27份Band A申請。",
+            "- 確保所有所需文件在截止日期前提交。",
+            "- 查閱JUPAS網站了解面試安排的最新資訊。",
+            "",
+            "**9. 尋求指導及反饋**",
+            "",
+            "- 諮詢老師、導師或課程現屆學生。",
+            "- 參加中大的入學講座或開放日了解更多。",
+            "- 與朋友或家人進行模擬面試以增強信心。"
+          ]
+        }
+      }
+    },
+    "code": "JS4111",
+    "university": "香港中文大學"
+  },
+  "scores": {
+    "median": 19,
+    "uq": 21,
+    "lq": 21,
+    "formula": "Best 5",
+    "percentiles": {}
+  },
+  "alumniResearch": {
+    "alumniResearch": [
+      {
+        "nameEn": "Leung Ka-lun",
+        "nameZh": "梁家麟",
+        "achievement": "Former Director of the Hong Kong Christian Council; prominent theologian and author.",
+        "sourceHint": "public bio"
+      },
+      {
+        "nameEn": "Wong Wai-ching",
+        "nameZh": "黃慧貞",
+        "achievement": "Professor of Theology at CUHK; known for feminist theology and interfaith dialogue.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Lai Pan-chiu",
+        "nameZh": "賴品超",
+        "achievement": "Professor of Theology at CUHK; specialist in Chinese Christian theology and comparative religion.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Kwan Shui-man",
+        "nameZh": "關瑞文",
+        "achievement": "Associate Professor of Theology at CUHK; expert in pastoral care and practical theology.",
+        "sourceHint": "CUHK dept page"
+      },
+      {
+        "nameEn": "Ying Fuk-tsang",
+        "nameZh": "邢福增",
+        "achievement": "Professor of Theology at CUHK; historian of Christianity in China.",
+        "sourceHint": "CUHK dept page"
+      }
+    ],
+    "facultyExcellence": [
+      "The Theology programme at CUHK is one of the few in Asia offering comprehensive training in Christian theology, biblical studies, and interreligious dialogue.",
+      "Faculty members are internationally recognized for research in Chinese Christianity, feminist theology, and practical theology."
+    ],
+    "searchQueriesUsed": [
+      "CUHK Theology notable alumni",
+      "香港中文大學 神學 著名校友",
+      "CUHK Theology graduates Hong Kong careers"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "code": "JS6250",
+  "extractedAt": "2026-05-15",
+  "sources": [
+    {
+      "id": "jupas_en",
+      "label": "JUPAS programme page",
+      "url": "https://www.jupas.edu.hk/en/programme/hku/JS6250"
+    },
+    {
+      "id": "jupas_scores",
+      "label": "JUPAS 2025 admission scores",
+      "note": "median/uq/lq from official PDF extract"
+    },
+    {
+      "id": "hku_admissions",
+      "label": "HKU programme page",
+      "url": "https://www.ghd.sph.hku.hk/"
+    }
+  ],
+  "programme": {
+    "code": "JS6250",
+    "nameEn": "Bachelor of Arts and Sciences in Global Health and Development",
+    "nameZh": "Bachelor of Arts and Sciences in Global Health and Development",
+    "university": "香港大學",
+    "facultyZh": "文學院",
+    "category": "science"
+  },
+  "scores": {
+    "formula": "Best 5 Subjects",
+    "median": 29,
+    "uq": 31,
+    "lq": 28
+  },
+  "jupas": {
+    "code": "JS6250",
+    "jupasUrl": "https://www.jupas.edu.hk/en/programme/hku/JS6250",
+    "nameEn": "Bachelor of Arts and Sciences in Global Health and Development",
+    "nameZh": "",
+    "shortDescription": "an class=\"before_label\">Short Description The BASc(GHD) help students develop the foundational multidisciplinary and international perspectives, the core blocks of knowledge and the people and systems oriented competencies needed to succeed in modern health and development related fields. The curriculum combines: Basic to intermediate level courses across multiple Faculties (Architecture, Business and Economics, Law, Medicine, Science, Social Sciences) Advanced seminars and case studies Placements in local/overseas health and development organisations Mentoring on career choices and leadership BASc courses on leadership and big data analytics A distinctive feature of the programme is a compulsory capstone, during which students will be placed in leading health and development organisations such as UN agencies, Non-governmental Organisations (NGOs), contract research organization (CRO), philanthropic foundations, etc., for a 6-month experience facilitated by HKU.",
+    "programmeWebsite": "https://www.ghd.sph.hku.hk/",
+    "tuition": "HK$47,000",
+    "intake": 18,
+    "duration": "4 years",
+    "interview": true,
+    "requirementsNote": "Programme Entrance Requirements General Entrance Requirements",
+    "stats2025": {
+      "bandA": 36,
+      "bandB": 20,
+      "bandC": 73,
+      "bandD": 159,
+      "bandE": 150,
+      "total": 438
+    },
+    "offers2025": {
+      "bandA": 11,
+      "bandB": 0,
+      "bandC": 0,
+      "bandD": 0,
+      "bandE": 0,
+      "total": 11
+    },
+    "facultyPhone": "+852 3917 9255"
+  },
+  "admissionsSnippet": "--> Home | BASc(GHD) - HKU School of Public Health | Hong Kong top of page About Us Faculty and Staff Contact Us Follow Us Admissions Curriculum Overview Major in Global Health and Development Minor Options Field Placement International Exchange Scholarships Summer Programme Graduates Career Prospects MENU MENU HKU Home MENU HKU Home Videos Admissions Talks HKUMed Admissions Talk 2024: BASc(GHD) | 港大醫學院 2024 入學講座：文理學士（環球衞生及發展） | JS6250 Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Channel Info Close About BASc(GHD) Are you ready to be a leader? Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Close Graduate Voices BASc(GHD) Alumni Sharing - Mr Dickson Tong (2023) Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Close Student Voices JS6250 HKU Global Health &amp; Development – inclusive thinking in an interconnected world Play Video JS6250 HKU Global Health and Development – how do social factors impact our health? Play Video JS6250 HKU Global Health and Development – the value of diversity Play Video JS6250 HKU Global Health and Development – the passion for social responsibility Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Close Global Health and Development Webinar Series HKU Global Health and Development Student Webinar Series: 2021 Myanmar coup d&#x27;état Play Video HKU Global Health and Development Student Webinar Series: Exploring Public and Global Health Careers Play Video HKU Global Health and Development Student Webinar Series: Exploring Public and Global Health Careers Play Video Understanding the COVID-19 Outbreak - An Open Dialogue with Prof Keiji Fukuda Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Close Battling COVID-19: Behind the Scenes Battling COVID-19: Behind the Scenes with Dr Hein Min Tun Play Video Battling COVID-19: Behind the Scenes with Professor Leo Poon and Dr Hui Ling Yen Play Video Battling COVID-19: Behind the Scenes with Professor Joseph Wu Play Video Battling COVID-19: Behind the Scenes with Dr Ryan Au Yeung Play Video Watch Now Share Whole Channel This Video Facebook Twitter Pinterest Tumblr Copy Link Link Copied Share Close Gallery News and Events &#8203; &#8203; Load More Contact Postgraduate Studies The Bachelor of Arts and Sciences in Global Health and Development [BASc(GHD)] programme provides students with the knowledge and competencies necessary to effectively engage with today&rsquo;s rapidly evolving, international and interdisciplinary environment and to respond to complex global health and development challenges.&nbsp; Follow Us Enquiries For further enquires on the admissions process and the curriculum for the Bachelor of Arts and Sciences in Global Health and Development: Email: Website: ghdsph@hku.hk https://sph.hku.hk/ghd/ Phone: (852) 3917-6727 &copy;2024 School of Public Health, HKUMed, The University of Hong Kong. All rights reserved. Site Map bottom of page"
+}

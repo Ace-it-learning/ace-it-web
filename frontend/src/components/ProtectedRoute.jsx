@@ -2,9 +2,34 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { LoadingPage } from './shared';
+import { fetchWithAuth } from '../utils/apiAuth';
+import { apiUrl } from '../utils/apiBase';
+
+const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
+
+const isLocalDevHost = () => {
+    const h = typeof window !== 'undefined' ? window.location.hostname : '';
+    return h === 'localhost' || h === '127.0.0.1' || h.endsWith('.localhost');
+};
+
+const isEmailVerificationSatisfied = (authUser) => {
+    if (!authUser) return false;
+    if (USE_ENTRA || authUser.authProvider === 'entra') return true;
+    if (authUser.emailVerified === true) return true;
+    return isLocalDevHost();
+};
+
+const profileIndicatesOnboarded = (profile) => {
+    if (!profile || typeof profile !== 'object') return false;
+    if (profile.is_new_student === false) return true;
+    if (profile.status === 'active') return true;
+    if (profile.onboarding_completed === true) return true;
+    if (profile.school || profile.nickname) return true;
+    return false;
+};
 
 const ProtectedRoute = ({ children }) => {
-    const { user, loading, initialized, isProfileLoading } = useAuth();
+    const { user, loading, initialized, isProfileLoading, profile } = useAuth();
     const [isOnboarded, setIsOnboarded] = useState(null);
     const onboardedRef = useRef(null); // Ref for timeout closure safety
     const [checkedUid, setCheckedUid] = useState(null);
@@ -15,8 +40,17 @@ const ProtectedRoute = ({ children }) => {
     useEffect(() => {
         setIsOnboarded(null);
         onboardedRef.current = null;
+        setCheckedUid(null);
         setShowFallback(false);
     }, [user?.uid]);
+
+    useEffect(() => {
+        if (user?.uid && profileIndicatesOnboarded(profile)) {
+            setIsOnboarded(true);
+            onboardedRef.current = true;
+            setCheckedUid(user.uid);
+        }
+    }, [user?.uid, profile]);
 
     useEffect(() => {
         console.log("ProtectedRoute useEffect: user =", user?.uid);
@@ -42,12 +76,13 @@ const ProtectedRoute = ({ children }) => {
             // We implement a retry mechanism here to handle Firestore eventual consistency
             const checkOnboarding = async (retries = 3) => {
                 try {
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
                     console.log(`ProtectedRoute: Fetching onboarding status for ${user.uid} (Retries left: ${retries})`);
 
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 10000);
-                    const res = await fetch(`${API_URL}/api/stats?uid=${user.uid}`, { signal: controller.signal });
+                    const res = await fetchWithAuth(user, apiUrl(`/api/stats?uid=${user.uid}`), {
+                        signal: controller.signal,
+                    });
                     clearTimeout(timeoutId);
                     if (res.ok) {
                         const data = await res.json();
@@ -55,6 +90,13 @@ const ProtectedRoute = ({ children }) => {
 
                         // If user is explicitly flagged as NEW, they are NOT onboarded.
                         if (data.is_new_student === true) {
+                            if (profileIndicatesOnboarded(profile)) {
+                                console.log("ProtectedRoute: stats says NEW but profile shows returning — allow dashboard.");
+                                setIsOnboarded(true);
+                                onboardedRef.current = true;
+                                setCheckedUid(user.uid);
+                                return;
+                            }
                             console.log("ProtectedRoute: User is flagged as NEW, setting isOnboarded to false");
                             localStorage.removeItem('justOnboarded'); // Clear stale flag
                             setIsOnboarded(false);
@@ -80,7 +122,12 @@ const ProtectedRoute = ({ children }) => {
                         onboardedRef.current = true;
                         setCheckedUid(user.uid);
                     } else if (res.status === 404) {
-                        if (retries > 0) {
+                        if (profileIndicatesOnboarded(profile)) {
+                            console.log("ProtectedRoute: stats 404 but profile shows returning user — allow dashboard.");
+                            setIsOnboarded(true);
+                            onboardedRef.current = true;
+                            setCheckedUid(user.uid);
+                        } else if (retries > 0) {
                             console.log("ProtectedRoute: User profile 404, retrying...");
                             setTimeout(() => checkOnboarding(retries - 1), 500);
                         } else {
@@ -108,11 +155,13 @@ const ProtectedRoute = ({ children }) => {
                 }
             };
 
-            // Force a re-check if UID changed
-            if (checkedUid !== user.uid) {
+            // Re-check whenever onboarding state is unknown or UID changed
+            if (checkedUid !== user.uid || isOnboarded === null) {
                 console.log(`ProtectedRoute: UID mismatch (${checkedUid} vs ${user.uid}), triggering check...`);
-                setIsOnboarded(null); // Reset to loading
-                onboardedRef.current = null;
+                if (isOnboarded !== true) {
+                    setIsOnboarded(null);
+                    onboardedRef.current = null;
+                }
                 checkOnboarding();
             }
         } else {
@@ -124,9 +173,12 @@ const ProtectedRoute = ({ children }) => {
         return () => clearTimeout(timeout);
     }, [user?.uid, location.pathname]); // Removed isOnboarded from deps to prevent loop, used user?.uid for stability
 
+    const stillAwaitingUidCheck = user && checkedUid !== user.uid && isOnboarded !== true;
+    const stillLoadingProfile = isProfileLoading && isOnboarded !== true;
+
     // 1. Wait for initialization before making any redirection decisions (include profile load
     // so Entra resolve-identity finishes before we treat missing user as "guest").
-    if (!initialized || loading || isProfileLoading || (user && checkedUid !== user.uid)) {
+    if (!initialized || loading || stillLoadingProfile || stillAwaitingUidCheck) {
         return (
             <LoadingPage 
                 title="Preparing your Ace-it experience..." 
@@ -139,7 +191,12 @@ const ProtectedRoute = ({ children }) => {
                         
                         <div className="flex flex-col gap-3">
                             <button
-                                onClick={() => setIsOnboarded(true)}
+                                type="button"
+                                onClick={() => {
+                                    setIsOnboarded(true);
+                                    onboardedRef.current = true;
+                                    if (user?.uid) setCheckedUid(user.uid);
+                                }}
                                 className="w-full py-4 bg-orange-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-lg shadow-orange-200 hover:scale-[1.02] transition-transform active:scale-[0.98]"
                             >
                                 Skip & Continue
@@ -177,9 +234,8 @@ const ProtectedRoute = ({ children }) => {
         );
     }
 
-    // 4. CHECK EMAIL VERIFICATION
-    // Localhost Bypass: Allow development without real email verification
-    if (!user.emailVerified && window.location.hostname !== 'localhost') {
+    // 4. EMAIL VERIFICATION (Firebase only; Entra / local dev exempt)
+    if (!isEmailVerificationSatisfied(user)) {
         console.log("ProtectedRoute: User NOT VERIFIED, redirecting to login with notice.");
         return <Navigate to="/login" state={{ message: "Please verify your email address to continue." }} />;
     }
@@ -193,6 +249,12 @@ const ProtectedRoute = ({ children }) => {
     // Redirect to onboarding if profile not found
     // IMPORTANT: Only check this if we have actually verified the CURRENT user
     if (user && checkedUid === user.uid && isOnboarded === false) {
+        if (isLocalDevHost() && import.meta.env.DEV) {
+            console.warn(
+                'ProtectedRoute: DEV localhost — allowing dashboard (complete onboarding from Account when ready).'
+            );
+            return children;
+        }
         console.log("ProtectedRoute: User not onboarded, REDIRECTING to /onboarding");
         return <Navigate to="/onboarding" />;
     }

@@ -577,7 +577,7 @@ class MockAssessmentService {
     /**
      * Evaluate a Paper 2 (Writing) submission
      */
-    async evaluateWritingPaper(mockData, userAnswers, analytics = {}, tier = 'free') {
+    async evaluateWritingPaper(mockData, userAnswers, analytics = {}, _tier = 'free') {
         const results = {};
         const sectionalScores = { 
             A: { score: 0, possible: 21, domains: {} }, 
@@ -594,7 +594,7 @@ class MockAssessmentService {
         const selectedPartB = analytics.selectedPartB;
 
         // 1. Pre-check for empty submission
-        if (!partA_Draft.trim() && !partB_Draft.trim()) {
+        if (!String(partA_Draft || '').trim() && !String(partB_Draft || '').trim()) {
             return {
                 totalScore: 0,
                 possibleScore: 42,
@@ -611,27 +611,26 @@ class MockAssessmentService {
         const prompt = this.createWritingBatchPrompt(mockData, partA_Draft, partB_Draft, selectedPartB);
         
         let data = {};
+        const writingJsonOpts = {
+            model: 'ace-it-flash',
+            temperature: 0.1,
+            strictModel: false,
+            // Reasoner / short defaults truncate long rubric JSON; chat model + 4k avoids parse failures → 500.
+            generationConfig: { maxOutputTokens: 4096 }
+        };
         try {
-            // TIER-BASED MODEL SELECTION
-            const model = (tier && tier.toLowerCase() === 'premium') ? 'ace-it-pro' : 'ace-it-flash';
-
-            const response = await GenerativeAIService.generateJson(prompt, { 
-                model: model,
-                temperature: 0.1, 
-                strictModel: model === 'ace-it-pro'
-            });
+            const response = await GenerativeAIService.generateJson(prompt, writingJsonOpts);
             data = response.data || {};
         } catch (e) {
-            console.warn("[MockAssessment] Writing evaluation with Pro failed, falling back to Flash:", e.message);
+            console.warn("[MockAssessment] Writing evaluation failed, retrying with higher temperature:", e.message);
             try {
-                const response = await GenerativeAIService.generateJson(prompt, { 
-                    model: 'ace-it-flash',
-                    temperature: 0.2,
-                    strictModel: false
+                const response = await GenerativeAIService.generateJson(prompt, {
+                    ...writingJsonOpts,
+                    temperature: 0.25
                 });
                 data = response.data || {};
             } catch (fallbackError) {
-                console.error("[MockAssessment] Both Pro and Flash failed for writing:", fallbackError);
+                console.error("[MockAssessment] Writing evaluation retries failed:", fallbackError);
                 throw fallbackError;
             }
         }
@@ -697,15 +696,16 @@ class MockAssessmentService {
     }
 
     createWritingBatchPrompt(mockData, partA, partB, selectedPartB) {
+        const pa = mockData.Part_A || {};
         return `
             You are a Senior HKEAA HKDSE English Language Paper 2 (Writing) Examiner.
             Evaluate the following submission based on the official 0-7 scale for Content, Language, and Organization.
 
             ### EXAM DATA:
             Part A (Compulsory):
-            - Genre: ${mockData.Part_A.genre}
-            - Situation: ${mockData.Part_A.situation}
-            - Mandatory Requirements: ${mockData.Part_A.requirements?.join(' | ')}
+            - Genre: ${pa.genre || 'N/A'}
+            - Situation: ${pa.situation || 'N/A'}
+            - Mandatory Requirements: ${pa.requirements?.join(' | ') || 'N/A'}
             - Student Draft: "${partA}"
 
             Part B (Elective):

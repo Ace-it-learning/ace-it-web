@@ -70,6 +70,20 @@ export const translations = {
                     vision: "Passing on literary aesthetics, helping you master sample texts and writing techniques to please examiners.",
                     highlights: ["Writing Flair", "Classical Prose", "Reading Comprehension"]
                 }
+            },
+            dream_subject: {
+                premium_badge: "Premium Plan",
+                title: "Dream Subject",
+                desc: "Plan your JUPAS journey with official programme details for the 2026–27 academic year. Build your Top 20 dream list in priority order—Ace Sir delivers strategic advice and a personalised learning path aligned to your university targets.",
+                highlights: [
+                    "Official JUPAS programme details (2026/27 academic year)",
+                    "Set and reorder your Top 20 dream programmes",
+                    "Gap analysis: reachable, stretch, and ambitious targets",
+                    "Admission criteria, weighting rules, and programme structure",
+                    "Ace Sir strategic advice and learning path recommendations"
+                ],
+                ace_sir_note: "Connect your DSE targets to real university programmes. Ace Sir interprets your gap analysis and helps you decide where to focus revision—so every Quest and mock moves you closer to your #1 choice.",
+                cta: "Subscribe to Premium Plan"
             }
         },
         nav: {
@@ -971,6 +985,20 @@ export const translations = {
                     vision: "傳承文學美學，助你精通範文及其寫作技巧，在中文科取悅閱卷員。",
                     highlights: ["寫作風采", "文言文", "閱讀理解"]
                 }
+            },
+            dream_subject: {
+                premium_badge: "Premium 方案",
+                title: "夢想學科",
+                desc: "以 2026–27 學年官方 JUPAS 課程資料規劃升學路線。設定並排序你的心儀 Top 20 課程，Ace Sir 會提供升學策略建議及個人化學習路徑，助你對準大學目標。",
+                highlights: [
+                    "2026/27 學年官方 JUPAS 課程詳情",
+                    "設定及排序 Top 20 心儀課程",
+                    "分數差距分析：可達、需努力、具挑戰",
+                    "入學要求、計分規則及課程結構",
+                    "Ace Sir 升學策略建議與學習路徑"
+                ],
+                ace_sir_note: "將 DSE 目標與真實大學課程連結。Ace Sir 會解讀你的分數差距，助你決定溫習重點——令每個 Quest 同模擬試都更接近你的首選志願。",
+                cta: "訂閱 Premium 方案"
             }
         },
         nav: {

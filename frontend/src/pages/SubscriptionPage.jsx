@@ -345,22 +345,6 @@ const SubscriptionPage = () => {
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-primary to-amber-500 rounded-3xl p-8 text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
-                        <div className="relative z-10 space-y-4">
-                            <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
-                                {t('subscription.limited_offer') || 'Limited Time'}
-                            </span>
-                            <h3 className="text-2xl font-bold leading-tight">
-                                {t('subscription.referral_title') || 'Refer a friend, get 1 month Pro for free!'}
-                            </h3>
-                            <button className="flex items-center gap-2 text-sm font-bold hover:gap-4 transition-all">
-                                {t('subscription.learn_more') || 'Learn More'} <ArrowRight className="w-4 h-4" />
-                            </button>
-                        </div>
-                        {/* Decorative Blur Circles */}
-                        <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-                        <div className="absolute -right-4 -top-4 w-20 h-20 bg-amber-400/20 rounded-full blur-2xl" />
-                    </div>
                 </div>
 
         </div>

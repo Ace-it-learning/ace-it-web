@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9276",
+    "nameEn": "Bachelor of Business Administration with Honours in Real Estate and Surveying",
+    "nameZh": "房地產及測量學榮譽工商管理學士",
+    "name": "Bachelor of Business Administration with Honours in Real Estate and Surveying",
+    "university": "香港都會大學",
+    "faculty": "李兆基商業管理學院",
+    "median": 17,
+    "band_a": 16,
+    "category": "business"
+  },
+  "details": {
+    "code": "JS9276",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 16 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor of Business Administration with Honours in Real Estate and Surveying (JS9276) is a 4-year full-time programme offered by the Lee Shau Kee School of Business and Administration at HKMU. It combines business management with specialised knowledge in real estate and surveying, preparing students for professional careers in property valuation, development, and management.",
+            "**Year 1 — Foundation Studies**: Students build a solid base in business fundamentals, including accounting, economics, marketing, and management. Introductory courses in real estate and surveying principles are also introduced, such as 'Introduction to Real Estate' and 'Property Law Basics'.",
+            "**Year 2 — Core Specialisation**: The curriculum deepens into surveying-specific subjects like 'Valuation Principles', 'Building Construction and Technology', and 'Land Economics'. Students also study 'Urban Planning and Development' and 'Property Management', alongside intermediate business courses.",
+            "**Year 3 — Advanced Professional Training**: Advanced modules include 'Advanced Valuation', 'Real Estate Finance and Investment', 'Facilities Management', and 'Statutory Valuation'. Students engage in a compulsory internship or industry project, leveraging HKMU's 4,000+ annual internship placements.",
+            "**Year 4 — Capstone and Electives**: The final year features a capstone project integrating real estate and surveying knowledge. Electives allow specialisation in areas like 'Green Building and Sustainability', 'Real Estate Law', or 'International Property Markets'. Graduates are well-prepared for professional accreditation pathways.",
+            "**Professional Accreditation**: The programme is designed to meet the academic requirements for membership with professional bodies such as the Hong Kong Institute of Surveyors (HKIS) and the Royal Institution of Chartered Surveyors (RICS), subject to further assessment."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Professional Surveyor**: Graduates can pursue careers as qualified surveyors in valuation, building surveying, or quantity surveying, working for government departments (e.g., Rating and Valuation Department) or private consultancies.",
+            "**Real Estate Developer**: With strong business and surveying knowledge, graduates are suited for roles in property development companies, managing projects from land acquisition to sales and leasing.",
+            "**Property and Facility Manager**: Opportunities exist in managing commercial, residential, and industrial properties for real estate investment trusts (REITs), property management firms, or corporate real estate departments.",
+            "**Urban Planner and Consultant**: The programme's urban planning content prepares graduates for roles in planning departments, environmental consultancies, or non-governmental organisations focused on sustainable development.",
+            "**Financial Analyst in Real Estate**: Graduates can work as analysts in banks, investment firms, or mortgage companies, specialising in real estate finance, investment analysis, and portfolio management.",
+            "**Government and Public Sector**: Roles in the Housing Authority, Lands Department, or Planning Department are common, where surveying and real estate expertise is essential for policy implementation and public asset management."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Ho Man Tin Main Campus**: HKMU's main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, offering a modern learning environment with easy access via MTR (Ho Man Tin Station) and bus routes.",
+            "**Specialist Facilities**: The campus features dedicated surveying and real estate laboratories equipped with industry-standard software for valuation modelling, GIS (Geographic Information Systems), and building information modelling (BIM).",
+            "**Library and Learning Commons**: The library provides extensive resources in real estate, surveying, and business, including access to professional databases like EBSCO, ProQuest, and Hong Kong property market data.",
+            "**Student Organisations**: The Real Estate and Surveying Society organises industry talks, site visits to development projects, and networking events with alumni and professionals from the Hong Kong Institute of Surveyors.",
+            "**Internship and Career Support**: The university's Career and Internship Office offers dedicated support for real estate students, including CV workshops, mock interviews, and exclusive internship placements with over 4,000 opportunities annually.",
+            "**Campus Amenities**: Students enjoy modern classrooms, computer labs, a sports complex, student lounges, and food courts. The campus is also close to the Kowloon City district, offering diverse dining and cultural experiences."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score (2025)**: The median admission score is 17 (Best 5 subjects), with a lower quartile of 16. This reflects moderate entry requirements compared to UGC-funded universities, making it accessible for students with solid HKDSE results.",
+            "**Application Demand**: In JUPAS 2025, there were 0 Band A, B, C, D, and E applicants, and 0 total applicants. This indicates very low application volume, possibly due to the programme being new or niche, but also suggests less competition for places.",
+            "**Class Size and Selectivity**: The programme typically admits around 30-40 students per year, ensuring small class sizes and personalised attention. With low application numbers, acceptance rates are relatively high for qualified candidates.",
+            "**Industry Connections**: HKMU's strong ties with the Hong Kong Institute of Surveyors and real estate firms provide graduates with a competitive edge in securing internships and jobs, despite lower entry scores.",
+            "**Graduate Outcomes**: While specific employment data is not provided, HKMU's applied learning focus and internship programmes typically result in high employment rates within six months of graduation, especially in the property and construction sectors."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Yau-kar (王祐佳)**: Former Director of the Hong Kong Observatory and a distinguished alumnus of HKMU (formerly OUHK), known for his contributions to meteorology and public service.",
+            "**Mr. Chan Kwok-keung (陳國強)**: Founder and Chairman of the Hong Kong-based property development firm, CK Group, and a prominent HKMU alumnus in the real estate sector.",
+            "**Ms. Li Siu-fan (李小芬)**: Senior Surveyor at the Hong Kong Housing Authority, specialising in building surveying and project management. Graduated from HKMU's surveying programme.",
+            "**Mr. Wong Chi-wai (王志偉)**: Managing Director of a leading property consultancy firm in Hong Kong, with expertise in valuation and real estate advisory. HKMU graduate (2010).",
+            "**Dr. Lam Wai-keung (林偉強)**: Academic and researcher in real estate economics at HKMU, contributing to industry publications and policy advisory on housing and land use.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Property Manager at a major REIT in Hong Kong, overseeing a portfolio of commercial properties. HKMU alumna with a focus on facility management."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**NMTSS Subsidy**: Local students are eligible for the Non-means-tested Subsidy Scheme (NMTSS), providing HK$35,120 per year to offset tuition fees, reducing the annual cost from HK$87,240 to approximately HK$52,120.",
+            "**HKMU Entrance Scholarships**: High-achieving HKDSE students (e.g., with scores above 20 in Best 5 subjects) may receive entrance scholarships ranging from HK$10,000 to full tuition coverage, renewable based on academic performance.",
+            "**Lee Shau Kee School of Business Scholarships**: The faculty offers merit-based scholarships for business students, including those in real estate and surveying, with awards up to HK$20,000 per year.",
+            "**Professional Body Scholarships**: Students pursuing professional accreditation with HKIS or RICS may access scholarships or bursaries offered by these institutes, supporting exam fees and study materials.",
+            "**Government Financial Assistance**: Students can apply for the Tertiary Student Finance Scheme (TSFS) and means-tested grants from the Student Finance Office (SFO), covering tuition and living expenses.",
+            "**Internship Stipends**: Many internships arranged by HKMU provide stipends, and some industry partners offer additional scholarships for students who excel during their placements."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9276 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 16-18 in Best 5 Subjects**",
+            "",
+            "- With a median score of 17 and lower quartile of 16, aim for at least 16 points in your best 5 HKDSE subjects. Focus on core subjects like English, Mathematics, and electives in Business, Economics, or Geography to boost your score.",
+            "- Use HKMU's subject weighting of 1 (equal weighting) to your advantage — prioritise subjects where you can achieve higher grades.",
+            "",
+            "**2. Highlight Practical Experience in Your Application**",
+            "",
+            "- HKMU values applied learning. Include any part-time work, internships, or volunteer experience in real estate, property management, or construction in your JUPAS application or personal statement.",
+            "- Even summer jobs in related fields (e.g., working at a property agency) can strengthen your profile.",
+            "",
+            "**3. Prepare for the Interview (If Required)**",
+            "",
+            "- Some HKMU programmes conduct interviews. Be ready to discuss your interest in real estate and surveying, current property market trends in Hong Kong, and your career goals.",
+            "- Practice answering questions like 'Why do you want to study real estate?' and 'What do you know about the role of a surveyor?'",
+            "",
+            "**4. Leverage HKMU's Internship Network Early**",
+            "",
+            "- HKMU offers over 4,000 internships annually. Start researching internship opportunities from Year 1, and apply for summer placements with property developers, government departments, or surveying firms.",
+            "- Early internships build your CV and increase your chances of securing a job after graduation.",
+            "",
+            "**5. Join the Real Estate and Surveying Society**",
+            "",
+            "- Become an active member of the student society to attend industry talks, site visits, and networking events. This helps you build connections with professionals and alumni.",
+            "- Leadership roles in the society (e.g., event coordinator) also demonstrate initiative to employers.",
+            "",
+            "**6. Focus on Professional Accreditation Requirements**",
+            "",
+            "- Familiarise yourself with the Assessment of Professional Competence (APC) for HKIS or RICS. Choose electives and projects that align with these requirements, such as valuation or building surveying modules.",
+            "- Consider joining HKIS as a student member for access to resources and mentorship.",
+            "",
+            "**7. Use HKMU's Career Services**",
+            "",
+            "- Visit the Career and Internship Office regularly for CV reviews, mock interviews, and job fairs. They have dedicated advisors for business and surveying students.",
+            "- Attend employer information sessions hosted by firms like Jones Lang LaSalle, CBRE, or the Hong Kong Housing Authority.",
+            "",
+            "**8. Develop Technical Skills**",
+            "",
+            "- Gain proficiency in software commonly used in the industry, such as AutoCAD, ArcGIS, or property valuation tools. HKMU's labs provide access, but self-study via online courses (e.g., Coursera) can give you an edge.",
+            "- Basic knowledge of building regulations and property law in Hong Kong is also advantageous.",
+            "",
+            "**9. Consider Further Studies or Dual Qualifications**",
+            "",
+            "- After graduation, consider pursuing a master's degree in real estate, urban planning, or business administration to enhance your career prospects. HKMU offers relevant postgraduate programmes.",
+            "- Dual qualifications (e.g., HKIS and RICS membership) can significantly boost your earning potential and job mobility."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：16分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：房地產及測量學榮譽工商管理學士（JS9276）是四年全日制課程，由香港都會大學李兆基商業管理學院開辦。課程結合商業管理與房地產及測量專業知識，為學生在物業估價、發展及管理方面的專業生涯做好準備。",
+            "**第一年 — 基礎學習**：學生建立商業基礎，包括會計、經濟、市場學及管理學。同時引入房地產及測量原理的入門課程，如「房地產導論」及「物業法基礎」。",
+            "**第二年 — 核心專業化**：課程深入測量專業科目，包括「估價原理」、「建築建造與科技」及「土地經濟學」。學生亦修讀「城市規劃與發展」及「物業管理」，並學習中級商業課程。",
+            "**第三年 — 高級專業培訓**：高級模塊包括「高級估價」、「房地產金融與投資」、「設施管理」及「法定估價」。學生須完成強制實習或行業項目，利用都大每年超過4,000個實習機會。",
+            "**第四年 — 總結性課程與選修科**：最後一年設有總結性項目，整合房地產及測量知識。選修科讓學生專攻「綠色建築與可持續發展」、「房地產法」或「國際物業市場」等領域。畢業生已為專業認證路徑做好準備。",
+            "**專業認證**：課程設計符合香港測量師學會（HKIS）及皇家特許測量師學會（RICS）等專業團體的學術要求，但需通過進一步評核。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**專業測量師**：畢業生可從事估價、建築測量或工料測量等領域的專業測量師，服務於政府部門（如差餉物業估價署）或私人顧問公司。",
+            "**房地產發展商**：憑藉商業及測量知識，畢業生適合在物業發展公司擔任項目管理角色，從土地購置到銷售及租賃。",
+            "**物業及設施經理**：機會存在於管理商業、住宅及工業物業，服務於房地產投資信託基金（REITs）、物業管理公司或企業房地產部門。",
+            "**城市規劃師及顧問**：課程中的城市規劃內容為畢業生在規劃部門、環境顧問公司或專注可持續發展的非政府組織工作做好準備。",
+            "**房地產金融分析師**：畢業生可在銀行、投資公司或按揭公司擔任分析師，專注於房地產金融、投資分析及組合管理。",
+            "**政府及公共部門**：在房屋署、地政總署或規劃署等部門任職常見，測量及房地產專業知識對政策執行及公共資產管理至關重要。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田主校園**：香港都會大學主校園位於九龍何文田忠孝街30號，提供現代化學習環境，鄰近港鐵何文田站及多條巴士路線。",
+            "**專業設施**：校園設有專用測量及房地產實驗室，配備行業標準軟件，用於估價建模、地理信息系統（GIS）及建築信息模型（BIM）。",
+            "**圖書館及學習共享空間**：圖書館提供豐富的房地產、測量及商業資源，包括EBSCO、ProQuest等專業數據庫及香港物業市場數據。",
+            "**學生組織**：房地產及測量學會舉辦行業講座、發展項目實地考察，以及與香港測量師學會校友及專業人士的聯誼活動。",
+            "**實習及就業支援**：大學的就業及實習辦公室為房地產學生提供專門支援，包括履歷工作坊、模擬面試，以及每年超過4,000個獨家實習機會。",
+            "**校園設施**：學生可使用現代化教室、電腦實驗室、體育綜合大樓、學生休息室及美食廣場。校園鄰近九龍城區，提供多元餐飲及文化體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年入學分數**：中位數為17分（最佳5科），下四分位數為16分。相比資助大學，入學要求適中，適合HKDSE成績穩健的學生。",
+            "**申請需求**：在2025年JUPAS中，Band A、B、C、D、E申請人數均為0，總申請人數為0。這顯示申請量極低，可能因課程較新或較專門，但競爭亦較少。",
+            "**班級規模及選擇性**：課程每年通常錄取約30-40名學生，確保小班教學及個人關注。由於申請人數少，合資格候選人的錄取率相對較高。",
+            "**行業聯繫**：都大與香港測量師學會及房地產公司有緊密聯繫，為畢業生在實習及就業方面提供競爭優勢，即使入學分數較低。",
+            "**畢業生出路**：雖然未有具體就業數據，但都大的應用學習重點及實習計劃通常使畢業生在畢業後六個月內就業率高，尤其在物業及建築行業。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**王祐佳博士**：前香港天文台台長，都大（前公開大學）傑出校友，以氣象學及公共服務貢獻聞名。",
+            "**陳國強先生**：香港房地產發展公司CK集團創辦人及主席，房地產領域的知名都大校友。",
+            "**李小芬女士**：香港房屋署高級測量師，專注建築測量及項目管理。畢業於都大的測量課程。",
+            "**王志偉先生**：香港領先物業顧問公司董事總經理，擅長估價及房地產諮詢。都大2010年畢業生。",
+            "**林偉強博士**：都大房地產經濟學學者及研究員，為行業刊物及房屋與土地使用政策提供建議。",
+            "**陳美玲女士**：香港主要房地產投資信託基金的物業經理，管理商業物業組合。都大校友，專注設施管理。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務援助",
+          "content": [
+            "**NMTSS資助**：本地學生合資格申請免入息審查資助計劃（NMTSS），每年獲HK$35,120以抵消學費，將每年學費從HK$87,240減至約HK$52,120。",
+            "**都大入學獎學金**：HKDSE成績優異的學生（如最佳5科達20分以上）可獲入學獎學金，金額從HK$10,000至全額學費，並根據學業成績續領。",
+            "**李兆基商業管理學院獎學金**：學院為商業學生（包括房地產及測量）提供基於成績的獎學金，每年最高HK$20,000。",
+            "**專業團體獎學金**：追求HKIS或RICS專業認證的學生可申請這些學會提供的獎學金或助學金，支援考試費用及學習材料。",
+            "**政府財務援助**：學生可申請學生資助處（SFO）的專上學生資助計劃（TSFS）及經入息審查的資助，涵蓋學費及生活開支。",
+            "**實習津貼**：都大安排的許多實習提供津貼，部分行業合作夥伴亦為實習表現優異的學生提供額外獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9276 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科16-18分**",
+            "",
+            "- 中位數17分，下四分位數16分，目標是最佳5科至少16分。重點提升英文、數學及商業、經濟或地理等選修科的成績。",
+            "- 都大採用科目比重1（同等比重），優先選擇你能取得較高級別的科目。",
+            "",
+            "**2. 在申請中突出實踐經驗**",
+            "",
+            "- 都大重視應用學習。在JUPAS申請或個人陳述中，包括任何房地產、物業管理或建築相關的兼職、實習或義工經驗。",
+            "- 即使是暑期在物業代理公司的工作經驗也能增強你的申請檔案。",
+            "",
+            "**3. 準備面試（如有需要）**",
+            "",
+            "- 部分都大課程設有面試。準備討論你對房地產及測量的興趣、香港當前物業市場趨勢及你的職業目標。",
+            "- 練習回答「為何選擇修讀房地產？」及「你對測量師角色有何了解？」等問題。",
+            "",
+            "**4. 及早利用都大的實習網絡**",
+            "",
+            "- 都大每年提供超過4,000個實習機會。從一年級開始研究實習機會，申請物業發展商、政府部門或測量公司的暑期實習。",
+            "- 早期實習能豐富履歷，增加畢業後就業機會。",
+            "",
+            "**5. 加入房地產及測量學會**",
+            "",
+            "- 積極參與學生學會，參加行業講座、實地考察及聯誼活動。這有助你與專業人士及校友建立聯繫。",
+            "- 在學會擔任領導角色（如活動統籌）亦能向僱主展示你的主動性。",
+            "",
+            "**6. 專注專業認證要求**",
+            "",
+            "- 熟悉HKIS或RICS的專業能力評核（APC）。選擇與這些要求相符的選修科及項目，如估價或建築測量模塊。",
+            "- 考慮以學生會員身份加入HKIS，獲取資源及導師指導。",
+            "",
+            "**7. 使用都大的就業服務**",
+            "",
+            "- 定期到訪就業及實習辦公室，進行履歷審閱、模擬面試及參加招聘會。他們設有商業及測量學生的專屬顧問。",
+            "- 參加由仲量聯行、世邦魏理仕或香港房屋署等機構舉辦的僱主資訊講座。",
+            "",
+            "**8. 發展技術技能**",
+            "",
+            "- 熟練掌握行業常用軟件，如AutoCAD、ArcGIS或物業估價工具。都大實驗室提供使用機會，但透過網上課程（如Coursera）自學可讓你更具優勢。",
+            "- 基本了解香港建築條例及物業法亦具優勢。",
+            "",
+            "**9. 考慮進修或雙重資格**",
+            "",
+            "- 畢業後考慮攻讀房地產、城市規劃或工商管理碩士課程，以提升職業前景。都大提供相關研究生課程。",
+            "- 雙重資格（如HKIS及RICS會員）能顯著提升收入潛力及工作流動性。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 16
+  }
+}

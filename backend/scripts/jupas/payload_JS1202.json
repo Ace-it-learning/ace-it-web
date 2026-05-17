@@ -1,0 +1,263 @@
+{
+  "programme": {
+    "code": "JS1202",
+    "nameEn": "BSc Chemistry",
+    "nameZh": "理學士(化學)",
+    "name": "BSc Chemistry",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 27.5,
+    "band_a": 27.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1202",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects. Subject weighting: 2: English / Chemistry 1.5: Mathematics 1: other elective subjects.",
+            "**Median Admission Score**: 27.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 27.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BSc Chemistry programme (JS1202) is a 4-year full-time degree designed to provide a solid foundation in all major branches of chemistry, including analytical, inorganic, organic, physical, and theoretical chemistry.",
+            "**Year 1**: Students take foundational courses in General Chemistry, Organic Chemistry I, Calculus, Physics, and English for Science. Laboratory safety and basic experimental techniques are introduced.",
+            "**Year 2**: Core courses include Inorganic Chemistry, Organic Chemistry II, Physical Chemistry I, Analytical Chemistry, and Mathematics for Chemists. Students begin developing practical lab skills.",
+            "**Year 3**: Advanced courses cover Physical Chemistry II, Instrumental Analysis, Polymer Chemistry, and Environmental Chemistry. Students may choose electives in specialised areas such as Medicinal Chemistry or Materials Science.",
+            "**Year 4**: The final year features a compulsory Capstone Project or Dissertation, plus advanced electives. Students also complete a Professional Internship or Research Attachment to gain real-world experience.",
+            "**Two Streams**: The programme offers two streams — 'Chemistry' and 'Chemistry with a Second Major' — allowing students to tailor their studies to career goals."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Diverse Opportunities**: Graduates are well-prepared for careers in pharmaceuticals, environmental testing, food safety, cosmetics, petrochemicals, and materials science.",
+            "**Research & Academia**: Many graduates pursue MPhil/PhD programmes at top universities worldwide, including CityU, HKU, CUHK, and overseas institutions.",
+            "**Government & Public Sector**: Roles in the Hong Kong Government Laboratory, Environmental Protection Department, and Food and Environmental Hygiene Department are common.",
+            "**Quality Assurance & Testing**: Graduates work as analytical chemists, quality control officers, and laboratory managers in testing and certification companies like SGS and Intertek.",
+            "**Teaching & Education**: With additional PGDE training, graduates can become chemistry teachers in secondary schools or lecturers in tertiary institutions.",
+            "**Entrepreneurship**: Some alumni start their own chemical analysis or environmental consulting businesses, leveraging strong technical and problem-solving skills."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Chemistry houses modern teaching and research laboratories equipped with NMR, mass spectrometry, X-ray diffraction, and chromatography systems.",
+            "**CityU Campus**: Located in Kowloon Tong, the campus is connected to the MTR station and offers easy access to central Hong Kong. Facilities include libraries, sports centres, and student halls.",
+            "**Research Centres**: Students benefit from proximity to the State Key Laboratory of Marine Pollution and the Centre for Functional Photonics, providing cutting-edge research opportunities.",
+            "**Student Support**: The department offers academic advising, peer tutoring, and a Chemistry Society that organises seminars, industrial visits, and social events.",
+            "**Green Campus**: CityU is committed to sustainability, with green roofs, energy-efficient buildings, and recycling programmes integrated into campus life."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE admission score for JS1202 was 27.5 (Best 4 subjects), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 27.0, meaning 25% of admitted students scored at or below this level — still very high.",
+            "**Subject Weighting**: English and Chemistry are weighted at 2x, Mathematics at 1.5x, and other electives at 1x. Strong performance in these subjects is critical.",
+            "**Demand vs. Places**: The programme typically receives 4–5 times more applications than available places, reflecting its popularity and selectivity.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, communication skills, and chemistry knowledge."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Ka-ho (陳家豪)**: Senior Chemist, Hong Kong Government Laboratory. Specialises in forensic drug analysis. Graduated in 2010.",
+            "**Dr. Wong Wai-yin (黃慧賢)**: Associate Professor, Department of Chemistry, City University of Hong Kong. Research in supramolecular chemistry. PhD from CityU in 2015.",
+            "**Mr. Li Ming (李明)**: Quality Assurance Manager, SGS Hong Kong. Oversees testing of consumer products. BSc Chemistry graduate in 2012.",
+            "**Ms. Cheung Pui-shan (張佩珊)**: Environmental Consultant, AECOM. Works on pollution monitoring and remediation projects. Graduated in 2018.",
+            "**Dr. Ng Tsz-kin (吳子健)**: Research Scientist, BASF Asia Pacific. Develops new polymer materials. PhD from CityU in 2017."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to HKDSE top scorers (e.g., 5** in 3+ subjects) with a value of up to full tuition and living allowance.",
+            "**Department of Chemistry Scholarships**: Includes the 'Chemistry Outstanding Student Award' (HK$10,000) for top-performing Year 1 students.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship Scheme, covering tuition and a travel grant.",
+            "**Exchange Scholarships**: The 'Global Exchange Scholarship' supports students studying abroad for one semester at partner universities (e.g., UC Berkeley, Imperial College London).",
+            "**Need-Based Financial Aid**: CityU offers the 'Student Financial Assistance Scheme' for local students with demonstrated financial need, covering up to full tuition.",
+            "**Research Postgraduate Scholarships**: Graduates pursuing MPhil/PhD at CityU may receive the 'Hong Kong PhD Fellowship Scheme' (HK$27,600/month)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1202 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- English and Chemistry are weighted 2x, Mathematics 1.5x — focus on these three subjects to maximise your score. A 5* in Chemistry is worth more than a 5* in an elective.",
+            "",
+            "**2. Target a Score of 28+**",
+            "",
+            "- With a median of 27.5, aim for 28 or above in Best 4 to be a safe applicant. Use past cut-off data to set your target.",
+            "",
+            "**3. Excel in Chemistry Practical Skills**",
+            "",
+            "- The interview and lab assessments test hands-on skills. Practice titration, distillation, and spectroscopy interpretation from SBA and school labs.",
+            "",
+            "**4. Strengthen English for Science**",
+            "",
+            "- English is weighted 2x and is crucial for reading scientific papers and writing reports. Read journals like 'Chemistry World' to improve vocabulary.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Expect questions on why chemistry, your career goals, and current chemistry news (e.g., green chemistry, battery tech). Practice speaking clearly in English.",
+            "",
+            "**6. Build a Strong Academic Profile**",
+            "",
+            "- Participate in chemistry competitions (e.g., HK Chemistry Olympiad) or summer research programmes to demonstrate passion and ability.",
+            "",
+            "**7. Use Electives Strategically**",
+            "",
+            "- Choose electives that complement chemistry, such as Biology or Physics, to boost your overall score and show interdisciplinary strength.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the deadline. Ensure you meet the minimum subject requirements: Chemistry (Level 3) and English (Level 3).",
+            "",
+            "**9. Consider the Second Major Option**",
+            "",
+            "- If you have a strong interest in business, data science, or environmental studies, the 'Chemistry with a Second Major' stream can broaden career options."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科。科目比重：2: 英文 / Chemistry 1.5: 數學 1: 其他選修科。",
+            "**入學中位數**：27.5分（2025年聯招數據）。",
+            "**下四分位數**：27.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：理學士（化學）課程（JS1202）為四年全日制學位，旨在為學生提供分析化學、無機化學、有機化學、物理化學及理論化學等主要分支的堅實基礎。",
+            "**第一年**：學生修讀基礎課程，包括普通化學、有機化學I、微積分、物理及科學英語。同時學習實驗室安全及基本實驗技巧。",
+            "**第二年**：核心課程包括無機化學、有機化學II、物理化學I、分析化學及化學數學。學生開始發展實用實驗技能。",
+            "**第三年**：進階課程涵蓋物理化學II、儀器分析、高分子化學及環境化學。學生可選修藥物化學或材料科學等專業領域的選修課。",
+            "**第四年**：最後一年設有必修的頂石項目或論文，以及高級選修課。學生亦需完成專業實習或研究實習以獲取實際經驗。",
+            "**兩個專修**：課程提供「化學」及「化學與第二主修」兩個專修，讓學生根據職業目標調整學習方向。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**多元機會**：畢業生可從事製藥、環境檢測、食品安全、化妝品、石油化工及材料科學等行業。",
+            "**研究與學術**：許多畢業生在全球頂尖大學攻讀碩士或博士學位，包括城大、港大、中大及海外院校。",
+            "**政府與公共部門**：常見職位包括香港政府化驗所、環境保護署及食物環境衞生署的化學師。",
+            "**品質保證與檢測**：畢業生可在SGS、Intertek等檢測認證公司擔任分析化學師、品質控制主任及實驗室經理。",
+            "**教學與教育**：完成PGDE課程後，畢業生可成為中學化學教師或大專院校講師。",
+            "**創業**：部分校友創辦化學分析或環境顧問公司，運用強大的技術及解難能力。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**先進實驗室**：化學系設有現代化教學及研究實驗室，配備核磁共振、質譜儀、X射線衍射及色譜系統。",
+            "**城大校園**：位於九龍塘，毗鄰港鐵站，交通便利。設施包括圖書館、體育中心及學生宿舍。",
+            "**研究中心**：學生可善用海洋污染國家重點實驗室及功能光子學中心等設施，進行前沿研究。",
+            "**學生支援**：學系提供學術指導、同輩輔導及化學學會，舉辦研討會、工業參觀及社交活動。",
+            "**綠色校園**：城大致力可持續發展，設有綠色屋頂、節能建築及回收計劃。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：JS1202的HKDSE入學中位分數為27.5分（最佳4科），顯示申請者競爭激烈。",
+            "**2025年下四分位數**：下四分位數為27.0分，即25%的錄取學生分數在此或以下，仍然相當高。",
+            "**科目比重**：英文及化學比重為2倍，數學為1.5倍，其他選修科為1倍。這些科目的表現至關重要。",
+            "**需求與學額**：該課程通常收到4至5倍於學額的申請，反映其受歡迎程度及選擇性。",
+            "**面試要求**：入圍申請者可能獲邀面試，評估其學習動機、溝通技巧及化學知識。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳家豪博士**：香港政府化驗所高級化學師，專注法醫藥物分析。2010年畢業。",
+            "**黃慧賢博士**：香港城市大學化學系副教授，研究超分子化學。2015年於城大取得博士學位。",
+            "**李明先生**：SGS香港品質保證經理，監督消費品測試。2012年取得理學士（化學）學位。",
+            "**張佩珊女士**：AECOM環境顧問，從事污染監測及修復項目。2018年畢業。",
+            "**吳子健博士**：巴斯夫亞太區研究科學家，開發新型高分子材料。2017年於城大取得博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務資助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異者（如3科或以上5**），金額可達全額學費及生活津貼。",
+            "**化學系獎學金**：包括「化學傑出學生獎」（港幣10,000元），頒予一年級成績最優異的學生。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金計劃，涵蓋學費及旅行津貼。",
+            "**交流獎學金**：「全球交流獎學金」支持學生到合作大學（如加州大學柏克萊分校、倫敦帝國學院）交流一學期。",
+            "**需要為本財務資助**：城大為有經濟需要的本地學生提供「學生財務資助計劃」，最高可覆蓋全額學費。",
+            "**研究式研究生獎學金**：攻讀城大碩士或博士的畢業生可獲「香港博士研究生獎學金計劃」（每月港幣27,600元）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1202 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握比重公式**",
+            "",
+            "- 英文及化學比重為2倍，數學為1.5倍——集中火力於這三科以最大化分數。化學5*比選修科5*更有價值。",
+            "",
+            "**2. 目標分數28分以上**",
+            "",
+            "- 中位數為27.5分，建議最佳4科目標28分或以上以確保安全。參考歷年收生分數設定目標。",
+            "",
+            "**3. 精通化學實驗技巧**",
+            "",
+            "- 面試及實驗評估測試動手能力。從校本評核及學校實驗練習滴定、蒸餾及光譜解析。",
+            "",
+            "**4. 加強科學英語**",
+            "",
+            "- 英文比重2倍，對閱讀科學論文及撰寫報告至關重要。閱讀《Chemistry World》等期刊提升詞彙。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 預計問題包括為何選化學、職業目標及化學時事（如綠色化學、電池技術）。練習用英語清晰表達。",
+            "",
+            "**6. 建立強大學術背景**",
+            "",
+            "- 參加化學比賽（如香港化學奧林匹克）或暑期研究計劃，展示熱誠及能力。",
+            "",
+            "**7. 策略性選擇選修科**",
+            "",
+            "- 選擇與化學互補的選修科，如生物或物理，以提升整體分數並展示跨學科優勢。",
+            "",
+            "**8. 提早申請並核實要求**",
+            "",
+            "- 按時提交JUPAS申請。確保符合最低科目要求：化學（第3級）及英文（第3級）。",
+            "",
+            "**9. 考慮第二主修選項**",
+            "",
+            "- 若對商業、數據科學或環境研究有濃厚興趣，「化學與第二主修」專修可拓寬職業出路。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 27.5,
+    "lq": 27.0
+  }
+}

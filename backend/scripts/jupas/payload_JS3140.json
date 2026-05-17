@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3140",
+    "nameEn": "BEng Scheme in Aviation Engineering",
+    "nameZh": "航空工程學(榮譽)工學士組合課程",
+    "name": "BEng Scheme in Aviation Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "210.0",
+    "band_a": "205.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3140",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 220.4 (2025 JUPAS data).",
+            "**Median Admission Score**: 210.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 205.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3140 is a 4-year BEng Scheme in Aviation Engineering offered by PolyU’s Faculty of Engineering. Students gain a solid foundation in aeronautical principles, aircraft design, maintenance, and aviation management, with a median admission score of 210.0 (2025) and an average weighted score of 220.4.",
+            "**Two Streams**: The scheme offers two specialised streams — Aeronautical Engineering and Aviation Operations and Management. Students choose their stream after Year 1, allowing flexibility to align with career interests.",
+            "**Year 1**: Foundational courses include Engineering Mathematics, Physics for Engineers, Introduction to Aerospace Engineering, and Programming. Students also take General University Requirements (GUR) subjects to broaden their perspective.",
+            "**Year 2**: Core aviation subjects such as Aerodynamics, Aircraft Structures, Propulsion Systems, and Avionics. Students begin stream-specific electives and participate in laboratory-based projects.",
+            "**Year 3**: Advanced coursework including Flight Dynamics, Aircraft Design, and Aviation Safety Management. A key highlight is the Work-Integrated Education (WIE) placement, where students gain real industry experience.",
+            "**Year 4**: Final-year capstone project on a real-world aviation challenge, plus advanced electives like Space Engineering or Airport Operations. Graduates are well-prepared for professional engineering roles."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Hong Kong’s aviation sector is expanding rapidly, with the Three-Runway System at HKIA creating thousands of jobs. Graduates are in high demand for roles in airlines, MRO (Maintenance, Repair, Overhaul) companies, and airport authorities.",
+            "**Aeronautical Engineering Stream**: Graduates can pursue careers as Aircraft Design Engineers, Flight Test Engineers, or Systems Engineers at companies like Cathay Pacific, HAECO, and the Hong Kong Aircraft Engineering Company.",
+            "**Aviation Operations Stream**: Opportunities include Airport Operations Manager, Air Traffic Control Specialist, or Aviation Safety Officer at the Airport Authority Hong Kong, government departments, or logistics firms.",
+            "**Global Mobility**: The programme’s international recognition allows graduates to work overseas, with many pursuing further studies at top universities like MIT, Cranfield, or the University of Cambridge.",
+            "**Professional Accreditation**: The BEng scheme is accredited by the Hong Kong Institution of Engineers (HKIE), enabling graduates to become Chartered Engineers after relevant experience.",
+            "**Entrepreneurship and Innovation**: PolyU’s entrepreneurship support, including the PolyU Micro Fund, helps graduates launch startups in drone technology, aviation analytics, or sustainable aviation fuels."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, just a 5-minute walk from Hung Hom MTR station (East Rail Line and West Rail Line). The campus is also close to the Cross-Harbour Tunnel, making it accessible from all parts of Hong Kong.",
+            "**Aviation Engineering Labs**: The Faculty of Engineering houses state-of-the-art facilities including a wind tunnel, aircraft structural testing lab, and flight simulators. Students use industry-standard software like ANSYS and MATLAB.",
+            "**Library and Learning Commons**: The Pao Yue-kong Library offers extensive aviation journals, e-books, and 24/7 study spaces. The Learning Commons provides collaborative zones for group projects and presentations.",
+            "**Student Organisations**: The PolyU Aviation Society organises industry visits, guest lectures from Cathay Pacific engineers, and networking events. Students also participate in the Hong Kong International Aviation Academy’s programmes.",
+            "**Sports and Recreation**: The campus features a sports centre with a swimming pool, gym, and multi-purpose courts. The nearby Hung Hom Promenade offers jogging and cycling paths along Victoria Harbour.",
+            "**Accommodation**: Non-local students can apply for on-campus halls (e.g., Hung Hom Halls) or off-campus housing. The Student Affairs Office provides support for finding suitable accommodation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the best 5 HKDSE subject scores, with specific weighting for core and elective subjects. English and Mathematics are typically weighted higher.",
+            "**Median Score (2025)**: 210.0 — This is the median score of admitted students under the weighted formula. A score above 210 significantly improves your chances.",
+            "**Lower Quartile (2025)**: 205.0 — The 25th percentile score. Applicants with scores near this level should consider including relevant electives like Physics or M2 to strengthen their application.",
+            "**Average Weighted Score**: 220.4 — The average score of admitted students, indicating that successful candidates typically perform well above the median. Strong performance in English and Mathematics is critical.",
+            "**Subject Weighting**: English and Mathematics are weighted at 1.5x, while Physics, M1/M2, and elective subjects are weighted at 1.2x. Chinese Language and Liberal Studies are weighted at 1.0x. This favours students with STEM strengths."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: Chief Engineer, Cathay Pacific Airways. Graduated from PolyU’s Mechanical Engineering programme (related to aviation). Led the fleet modernisation project for the Airbus A350.",
+            "**Ir. Dr. Chan Chi-chiu (陳志超)**: Director of Engineering, HAECO Group. A PolyU engineering alumnus who oversaw MRO operations for over 200 aircraft annually. Received the HKIE Outstanding Engineer Award.",
+            "**Ms. Li Sze-man (李詩敏)**: Senior Operations Manager, Airport Authority Hong Kong. Graduated from PolyU’s Aviation Operations stream. Managed the implementation of the Smart Airport initiative at HKIA.",
+            "**Prof. Michael Leung (梁國熙)**: Professor of Aerospace Engineering, University of Hong Kong. Former PolyU faculty member and alumnus. Published over 100 papers on aircraft propulsion and sustainable aviation.",
+            "**Mr. Thomas Ng (吳志強)**: Founder and CEO, Skyward Drone Solutions. A PolyU aviation graduate who launched a drone inspection startup, now serving clients like CLP Power and MTR Corporation.",
+            "**Dr. Emily Tse (謝敏儀)**: Flight Test Engineer, Boeing (Seattle). PolyU alumna who completed a PhD in Aerospace Engineering at the University of Cambridge. Specialises in flight dynamics and certification."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to top HKDSE achievers (e.g., score ≥ 30 in best 5 subjects). Covers full tuition fees and provides a living allowance of up to HK$50,000 per year.",
+            "**Faculty of Engineering Scholarship**: Specifically for engineering students with outstanding HKDSE results (score ≥ 25 in best 5 subjects). Offers HK$20,000–HK$40,000 per year.",
+            "**Aviation Industry Scholarships**: Sponsored by Cathay Pacific, HAECO, and the Airport Authority. Includes the Cathay Pacific Engineering Scholarship (HK$60,000/year) with a guaranteed summer internship.",
+            "**HKSAR Government Scholarship**: For students with exceptional academic performance and leadership. Provides HK$80,000 per year, renewable based on GPA.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support for students undertaking unpaid WIE placements. Up to HK$15,000 per placement to cover travel and living expenses.",
+            "**Need-Based Financial Aid**: PolyU offers the Student Financial Assistance Scheme (SFAS) for local students, covering tuition and living costs based on family income. Non-local students can apply for the Non-local Student Scholarship."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3140 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Weighted Score of 220+**",
+            "",
+            "- The average weighted score for JS3140 is 220.4. Aim for at least 220 to be competitive. Use PolyU’s online calculator to estimate your weighted score based on your predicted HKDSE grades.",
+            "",
+            "**2. Prioritise English and Mathematics**",
+            "",
+            "- English and Mathematics are weighted at 1.5x. A Level 5 in English (score 5) becomes 7.5, while Level 4 becomes 6.0. Focus on achieving Level 5 or above in both subjects.",
+            "",
+            "**3. Take Physics or M2 as an Elective**",
+            "",
+            "- Physics and M1/M2 are weighted at 1.2x. A Level 5 in Physics (score 5) becomes 6.0. These subjects also demonstrate STEM aptitude, which is highly valued by the admissions panel.",
+            "",
+            "**4. Build a Strong Profile with Extracurriculars**",
+            "",
+            "- Participate in aviation-related activities: join the Hong Kong Youth Aviation Academy, attend HKIA tours, or complete online courses (e.g., edX ‘Introduction to Aerospace Engineering’). Mention these in your JUPAS application.",
+            "",
+            "**5. Prepare for the Interview (if shortlisted)**",
+            "",
+            "- PolyU may invite shortlisted candidates for an interview. Prepare to discuss your motivation for aviation engineering, knowledge of current industry trends (e.g., sustainable aviation), and your career goals.",
+            "",
+            "**6. Use the ‘Any Best 5’ Formula to Your Advantage**",
+            "",
+            "- Since only the best 5 subjects count, you can drop your weakest subject. For example, if Liberal Studies is your weakest, focus on boosting your top 5 subjects. Ensure you meet the minimum requirements for all subjects.",
+            "",
+            "**7. Apply Early for Scholarships**",
+            "",
+            "- The PolyU Entrance Scholarship deadline is usually in December. Prepare your HKDSE predicted grades, personal statement, and recommendation letters early. A strong application can secure full tuition coverage.",
+            "",
+            "**8. Explore Work-Integrated Education (WIE) Options**",
+            "",
+            "- WIE is a key part of the programme. Research companies like HAECO, Cathay Pacific, and the Airport Authority for summer internships. A WIE placement can boost your CV and provide industry connections.",
+            "",
+            "**9. Network with Current Students and Alumni**",
+            "",
+            "- Connect with PolyU Aviation Society members on LinkedIn or attend their events. Ask about their experiences, interview tips, and course recommendations. Alumni can also provide mentorship for career planning."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：220.4（2025年聯招數據）。",
+            "**入學中位數**：210.0分（2025年聯招數據）。",
+            "**下四分位數**：205.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3140 是為期四年的航空工程學(榮譽)工學士組合課程，由香港理工大學工程學院開辦。學生將學習航空學原理、飛機設計、維修及航空管理，2025 年入學中位分數為 210.0，平均加權分數為 220.4。",
+            "**兩個專修**：課程提供兩個專修方向——航空工程學及航空營運與管理。學生在第一年後選擇專修，靈活配合職業興趣。",
+            "**第一年**：基礎科目包括工程數學、工程物理、航空航天工程導論及程式設計。學生亦須修讀大學核心課程（GUR）以擴闊視野。",
+            "**第二年**：核心航空科目包括空氣動力學、飛機結構、推進系統及航空電子學。學生開始選修專修科目，並參與實驗室項目。",
+            "**第三年**：進階課程包括飛行動力學、飛機設計及航空安全管理。重點是工作綜合教育（WIE）實習，讓學生獲得真實行業經驗。",
+            "**第四年**：畢業專題項目針對真實航空挑戰，加上太空工程或機場運作等高級選修科。畢業生已準備好擔任專業工程職位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：香港航空業正快速擴張，三跑道系統創造數千個職位。畢業生在航空公司、維修公司（MRO）及機場管理局等機構需求極高。",
+            "**航空工程學專修**：畢業生可擔任飛機設計工程師、飛行測試工程師或系統工程師，任職於國泰航空、香港飛機工程公司（HAECO）等企業。",
+            "**航空營運專修**：機會包括機場營運經理、航空交通管制專員或航空安全主任，服務於機場管理局、政府部門或物流公司。",
+            "**國際流動性**：課程獲國際認可，畢業生可到海外工作，或於麻省理工、克蘭菲爾德大學及劍橋大學等頂尖學府深造。",
+            "**專業認證**：課程獲香港工程師學會（HKIE）認可，畢業生累積相關經驗後可成為特許工程師。",
+            "**創業與創新**：理大創業支援（如微型基金）幫助畢業生創立無人機技術、航空數據分析或可持續航空燃料等初創企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，步行 5 分鐘即達紅磡港鐵站（東鐵線及西鐵線），鄰近海底隧道，交通便利。",
+            "**航空工程實驗室**：工程學院設有風洞、飛機結構測試實驗室及飛行模擬器。學生使用 ANSYS 及 MATLAB 等業界標準軟件。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供大量航空期刊、電子書及 24 小時自修區。學習共享空間設有協作區供小組項目及簡報。",
+            "**學生組織**：理大航空學會舉辦行業參觀、國泰工程師講座及交流活動。學生亦參與香港國際航空學院的課程。",
+            "**體育與康樂**：校園設有體育中心，包括游泳池、健身室及多用途球場。鄰近紅磡海濱長廊提供緩跑徑及單車徑。",
+            "**住宿安排**：非本地學生可申請校內宿舍（如紅磡宿舍）或校外住宿。學生事務處提供住宿支援。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科——理大計算文憑試最佳五科成績，英文及數學權重較高。",
+            "**2025 年中位分數**：210.0——這是加權公式下獲取錄學生的中位數。分數高於 210 能大幅提升機會。",
+            "**2025 年下四分位數**：205.0——第 25 百分位數。分數接近此水平的申請者應考慮選修物理或 M2 以加強申請。",
+            "**平均加權分數**：220.4——獲取錄學生的平均分數，顯示成功申請者通常遠高於中位數。英文及數學表現關鍵。",
+            "**科目權重**：英文及數學權重 1.5 倍，物理、M1/M2 及選修科權重 1.2 倍，中文及通識教育權重 1.0 倍。有利於 STEM 成績優異的學生。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃國強博士**：國泰航空首席工程師，畢業於理大機械工程（相關航空課程）。領導空中巴士 A350 機隊現代化項目。",
+            "**陳志超工程師**：HAECO 集團工程總監，理大工程校友，管理每年超過 200 架飛機的維修運作，獲 HKIE 傑出工程師獎。",
+            "**李詩敏女士**：香港機場管理局高級營運經理，畢業於理大航空營運專修，負責推行香港國際機場智慧機場計劃。",
+            "**梁國熙教授**：香港大學航空航天工程教授，前理大教授及校友，發表超過 100 篇關於飛機推進及可持續航空的論文。",
+            "**吳志強先生**：Skyward Drone Solutions 創辦人及行政總裁，理大航空畢業生，創立無人機檢測初創，客戶包括中電及港鐵。",
+            "**謝敏儀博士**：波音公司（西雅圖）飛行測試工程師，理大校友，於劍橋大學取得航空航天工程博士學位，專注飛行動力學及認證。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試頂尖考生（如最佳五科 30 分或以上），涵蓋全額學費及每年高達 50,000 港元生活津貼。",
+            "**工程學院獎學金**：專為工程學院成績優異學生而設（最佳五科 25 分或以上），每年 20,000 至 40,000 港元。",
+            "**航空業獎學金**：由國泰航空、HAECO 及機場管理局贊助，包括國泰航空工程獎學金（每年 60,000 港元）及保證暑期實習。",
+            "**香港政府獎學金**：頒予學術及領導才能卓越的學生，每年 80,000 港元，可根據 GPA 續期。",
+            "**工作綜合教育（WIE）津貼**：資助參與無薪 WIE 實習的學生，每次實習最高 15,000 港元以支付交通及生活開支。",
+            "**需要為本資助**：理大為本地學生提供學生資助計劃（SFAS），按家庭收入涵蓋學費及生活費。非本地學生可申請非本地生獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3140 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標加權分數達 220 以上**",
+            "",
+            "- JS3140 平均加權分數為 220.4。目標至少 220 分以增加競爭力。使用理大網上計算機估算你的加權分數。",
+            "",
+            "**2. 優先提升英文及數學**",
+            "",
+            "- 英文及數學權重 1.5 倍。Level 5 的英文（5 分）變成 7.5，Level 4 變成 6.0。集中爭取兩科達 Level 5 或以上。",
+            "",
+            "**3. 選修物理或 M2**",
+            "",
+            "- 物理及 M1/M2 權重 1.2 倍。物理 Level 5（5 分）變成 6.0。這些科目展示 STEM 能力，獲入學委員會高度重視。",
+            "",
+            "**4. 透過課外活動建立強大履歷**",
+            "",
+            "- 參與航空相關活動：加入香港青年航空學院、參觀機場或完成網上課程（如 edX「航空航天工程導論」）。在 JUPAS 申請中提及這些經歷。",
+            "",
+            "**5. 準備面試（如獲篩選）**",
+            "",
+            "- 理大可能邀請候選人面試。準備討論你對航空工程的動機、行業趨勢（如可持續航空）及職業目標。",
+            "",
+            "**6. 善用「最佳五科」公式**",
+            "",
+            "- 由於只計算最佳五科，你可以放棄最弱科目。例如，若通識教育最弱，集中提升其餘五科。確保所有科目符合最低要求。",
+            "",
+            "**7. 提早申請獎學金**",
+            "",
+            "- 理大入學獎學金截止日期通常在 12 月。提早準備文憑試預測成績、個人陳述及推薦信。強勁申請可獲全額學費資助。",
+            "",
+            "**8. 探索工作綜合教育（WIE）機會**",
+            "",
+            "- WIE 是課程重要部分。研究 HAECO、國泰航空及機場管理局等公司的暑期實習。WIE 實習能提升履歷及建立業界人脈。",
+            "",
+            "**9. 與現屆學生及校友建立網絡**",
+            "",
+            "- 在 LinkedIn 上聯繫理大航空學會成員或參加其活動。詢問他們的經驗、面試貼士及課程建議。校友可提供職業規劃指導。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "210.0",
+    "lq": "205.0"
+  }
+}

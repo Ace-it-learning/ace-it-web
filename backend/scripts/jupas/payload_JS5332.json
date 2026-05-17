@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5332",
+    "nameEn": "BSc in Quantitative Finance",
+    "nameZh": "理學士（量化金融學）",
+    "name": "BSc in Quantitative Finance",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "58.13",
+    "band_a": "56.06",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5332",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 66.94.",
+            "**Median Admission Score**: 58.13 (2025 JUPAS data).",
+            "**Lower Quartile**: 56.06 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 7.12.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS5332 BSc in Quantitative Finance is a 4-year interdisciplinary programme jointly offered by the School of Business and Management and the School of Science. It combines rigorous training in finance, mathematics, statistics, and computing to prepare students for quantitative roles in the financial industry.",
+            "**Year 1**: Foundational courses include Calculus, Linear Algebra, Probability, Introduction to Finance, and Programming (Python). Students also take core business courses such as Microeconomics and Financial Accounting.",
+            "**Year 2**: Advanced quantitative courses: Stochastic Calculus, Statistical Inference, Financial Derivatives, and Econometrics. Students begin specialization electives in areas like Risk Management or Financial Technology.",
+            "**Year 3**: Core modules include Fixed Income Securities, Portfolio Management, and Numerical Methods. Students undertake a capstone project or internship, and have the option to participate in exchange programmes at partner universities worldwide.",
+            "**Year 4**: Advanced electives such as Machine Learning in Finance, High-Frequency Trading, and Advanced Derivatives. Students complete a final-year research project or industry practicum, integrating all prior learning.",
+            "**Key Features**: The programme emphasizes hands-on learning through case competitions, trading simulations, and access to Bloomberg terminals. Graduates are equipped for roles in investment banking, asset management, and fintech."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Quantitative finance professionals are in high demand globally, with Hong Kong as a leading financial hub offering abundant opportunities in banks, hedge funds, and fintech firms.",
+            "**Typical Roles**: Graduates commonly enter roles such as Quantitative Analyst, Risk Manager, Financial Engineer, Algorithmic Trader, and Data Scientist in finance.",
+            "**Top Employers**: Major recruiters include Goldman Sachs, Morgan Stanley, J.P. Morgan, BlackRock, Citadel, and Hong Kong Monetary Authority (HKMA).",
+            "**Internship Opportunities**: The programme's proximity to Hong Kong Science Park and strong industry connections facilitate internships at leading financial institutions and tech companies.",
+            "**Further Studies**: Many graduates pursue master's or PhD programmes in quantitative finance, financial engineering, or data science at top universities like MIT, Oxford, and LSE.",
+            "**Salary Outlook**: Starting salaries for quantitative finance graduates in Hong Kong typically range from HKD 30,000 to 50,000 per month, with significant growth potential."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location**: HKUST is located in Clear Water Bay, Sai Kung, offering stunning sea views and a serene environment conducive to study and research.",
+            "**Academic Facilities**: The campus features state-of-the-art laboratories, including the Financial Markets Laboratory with Bloomberg terminals, and the Center for Quantitative Finance for research collaboration.",
+            "**Student Life**: Over 100 student clubs and societies, including the Quantitative Finance Society, organize networking events, trading competitions, and guest lectures by industry leaders.",
+            "**Sports & Recreation**: Facilities include a 50-meter swimming pool, gym, sports halls, tennis courts, and hiking trails in the surrounding country park.",
+            "**Global Exposure**: HKUST has over 300 partner universities worldwide, offering exchange programmes in Europe, North America, and Asia. Students can spend a semester abroad.",
+            "**Industry Connections**: Close proximity to Hong Kong Science Park enables internships and collaborative projects with over 1,000 technology and finance companies."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus, with a highest attainable score of 66.94.",
+            "**Median Score (2025)**: 58.13, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 56.06, meaning the bottom 25% of admitted students scored at or below this level.",
+            "**Preferred Subject Average**: The lower quartile per-subject average is 7.12, reflecting high academic standards across all subjects.",
+            "**Demand vs. Supply**: With limited places and high demand, applicants should aim for scores well above the median to secure admission."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) and former Vice-Chancellor of HKUST. His work on fibre optics revolutionized telecommunications.",
+            "**Dr. Tony F. Chan (陳繁昌)**: Former President of HKUST (2009-2018) and renowned mathematician. He led the university's global rise in rankings.",
+            "**Mr. Peter T. Lee (李澤楷)**: Chairman of PCCW and HKT Group. A prominent business leader in Hong Kong's telecommunications and media sectors.",
+            "**Dr. Nancy Y. Ip (葉玉如)**: Vice-President for Research and Development at HKUST, and a leading neuroscientist. She discovered key proteins in Alzheimer's disease.",
+            "**Mr. Francis Y. Lui (雷鼎鳴)**: Professor of Economics at HKUST and a well-known commentator on Hong Kong's economic policies.",
+            "**Dr. John C. C. Chan (陳志強)**: Co-founder of SenseTime, a leading AI company. He is a pioneer in computer vision and deep learning."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for all applicants with outstanding HKDSE results (e.g., score above 60). Covers full or partial tuition fees.",
+            "**Quantitative Finance Programme Scholarship**: Awarded to top-performing students in the programme, based on academic merit and contributions to the field.",
+            "**HKSAR Government Scholarship**: For local students with excellent academic records and leadership qualities. Provides up to HKD 80,000 per year.",
+            "**External Scholarships**: Students can apply for scholarships from organizations like the Hong Kong Monetary Authority (HKMA) and the Hong Kong Institute of Bankers.",
+            "**Financial Aid**: HKUST offers need-based financial assistance, including grants and low-interest loans, to ensure access for all qualified students.",
+            "**Research Grants**: Undergraduate students can apply for research grants (up to HKD 10,000) to support capstone projects or independent research in quantitative finance."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5332 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritize Mathematics and Economics in HKDSE**: Aim for Level 5** or above in M1/M2 and Economics, as these are heavily weighted in the admission formula.",
+            "",
+            "- Target at least 5** in M1/M2 to demonstrate strong quantitative ability.",
+            "- Economics at Level 5* or above shows understanding of financial principles.",
+            "",
+            "**2. Excel in English and Chinese Languages**: With a per-subject average of 7.12, strong language scores are critical. Aim for Level 5* or above in both.",
+            "",
+            "- Practice essay writing and reading comprehension daily.",
+            "- Use past papers to familiarize yourself with exam patterns.",
+            "",
+            "**3. Build a Strong Profile with Extracurriculars**: Participate in math competitions, finance clubs, or trading simulations to stand out.",
+            "",
+            "- Join the Hong Kong Mathematical Olympiad or the International Economics Olympiad.",
+            "- Attend HKUST's summer programmes or workshops in quantitative finance.",
+            "",
+            "**4. Aim for a Total Score Above 60**: With a median of 58.13, scoring 60+ significantly increases your chances. Use the 6th subject bonus to your advantage.",
+            "",
+            "- Take 6 HKDSE subjects and perform well in all to maximize the bonus.",
+            "- Focus on electives like Physics or Chemistry if they align with your strengths.",
+            "",
+            "**5. Prepare for the Admission Interview**: If shortlisted, demonstrate passion for quantitative finance and knowledge of current financial markets.",
+            "",
+            "- Read financial news (e.g., Bloomberg, Financial Times) daily.",
+            "- Practice explaining complex concepts like Black-Scholes or Monte Carlo simulations.",
+            "",
+            "**6. Leverage HKUST's Open Days and Info Sessions**: Attend events to learn about the programme and network with professors and current students.",
+            "",
+            "- Ask specific questions about curriculum, internships, and research opportunities.",
+            "- Collect contact information for follow-up queries.",
+            "",
+            "**7. Consider a Second Choice Programme**: Apply to related programmes like BSc in Mathematics and Economics (JS5313) as a backup, with similar entry requirements.",
+            "",
+            "- Ensure your HKDSE subject choices align with both programmes.",
+            "- Check the admission scores for backup options to plan strategically.",
+            "",
+            "**8. Apply Early for Scholarships**: Submit scholarship applications by the deadline (usually December) to maximize financial support.",
+            "",
+            "- Prepare a strong personal statement highlighting your achievements.",
+            "- Request recommendation letters from teachers early.",
+            "",
+            "**9. Stay Updated on Programme Changes**: Check the HKUST website regularly for updates on curriculum, admission requirements, and scholarship criteria.",
+            "",
+            "- Follow HKUST's social media channels for announcements.",
+            "- Contact the admissions office directly for clarification on any doubts."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：66.94。",
+            "**入學中位數**：58.13分（2025年聯招數據）。",
+            "**下四分位數**：56.06分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 7.12。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS5332 量化金融學理學士是一個為期四年的跨學科課程，由工商管理學院和理學院合辦。課程結合金融、數學、統計學及計算機科學的嚴格訓練，為學生在金融行業的量化崗位做好準備。",
+            "**第一年**：基礎課程包括微積分、線性代數、概率論、金融學導論及程式設計（Python）。學生亦修讀核心商業課程，如微觀經濟學及財務會計。",
+            "**第二年**：進階量化課程：隨機微積分、統計推斷、金融衍生工具及計量經濟學。學生開始選擇風險管理或金融科技等領域的專修選修課。",
+            "**第三年**：核心科目包括固定收益證券、投資組合管理及數值方法。學生需完成頂石項目或實習，並可選擇參加全球合作大學的交換計劃。",
+            "**第四年**：進階選修課如金融機器學習、高頻交易及高級衍生工具。學生完成最後一年的研究項目或行業實習，整合所有先前所學。",
+            "**主要特色**：課程強調實踐學習，通過案例比賽、交易模擬及使用彭博終端機。畢業生具備投資銀行、資產管理及金融科技領域的競爭力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：量化金融專業人士在全球需求極高，香港作為領先金融中心，在銀行、對沖基金及金融科技公司提供大量機會。",
+            "**典型職位**：畢業生通常擔任量化分析師、風險管理師、金融工程師、算法交易員及金融數據科學家等職位。",
+            "**主要僱主**：主要招聘機構包括高盛、摩根士丹利、摩根大通、貝萊德、Citadel 及香港金融管理局。",
+            "**實習機會**：課程毗鄰香港科學園，並與業界緊密聯繫，為學生提供在頂尖金融機構及科技公司的實習機會。",
+            "**深造途徑**：許多畢業生於麻省理工、牛津及倫敦政治經濟學院等頂尖大學攻讀量化金融、金融工程或數據科學的碩士或博士課程。",
+            "**薪酬展望**：香港量化金融畢業生的起薪通常為每月港幣 30,000 至 50,000 元，增長潛力巨大。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：香港科技大學位於西貢清水灣，享有壯麗海景，環境寧靜，有利於學習和研究。",
+            "**學術設施**：校園設有先進實驗室，包括配備彭博終端機的金融市場實驗室，以及量化金融中心促進研究合作。",
+            "**學生生活**：超過 100 個學生社團，包括量化金融學會，舉辦聯誼活動、交易比賽及行業領袖講座。",
+            "**體育與康樂**：設施包括 50 米游泳池、健身房、體育館、網球場及周邊郊野公園的遠足徑。",
+            "**全球視野**：科大與全球超過 300 所合作大學，提供歐洲、北美及亞洲的交換計劃，學生可到海外學習一學期。",
+            "**行業聯繫**：毗鄰香港科學園，學生可與超過 1,000 家科技及金融公司進行實習及合作項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科 + 第 6 科加分，最高可達 66.94 分。",
+            "**2025 年中位數**：58.13 分，顯示申請者之間競爭激烈。",
+            "**2025 年下四分位數**：56.06 分，表示最低 25% 的錄取學生分數等於或低於此水平。",
+            "**優先科目平均分**：下四分位數的每科平均分為 7.12，反映所有科目的高學術標準。",
+            "**供需情況**：學額有限而需求高，申請者應爭取遠高於中位數的分數以確保錄取。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**高錕博士**：2009 年諾貝爾物理學獎得主，前科大校長。其光纖研究革新了電信領域。",
+            "**陳繁昌博士**：前科大校長（2009-2018），著名數學家，帶領科大在全球排名中崛起。",
+            "**李澤楷先生**：電訊盈科及香港電訊集團主席，香港電信及媒體界的傑出商業領袖。",
+            "**葉玉如博士**：科大副校長（研究及發展），頂尖神經科學家，發現了阿茲海默症的關鍵蛋白質。",
+            "**雷鼎鳴先生**：科大經濟學教授，香港經濟政策的知名評論員。",
+            "**陳志強博士**：商湯科技聯合創始人，領先的人工智能公司，計算機視覺及深度學習先驅。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**科大入學獎學金**：所有 HKDSE 成績優異（如分數高於 60）的申請者自動獲考慮，涵蓋全額或部分學費。",
+            "**量化金融課程獎學金**：頒予課程中表現頂尖的學生，基於學術成績及對領域的貢獻。",
+            "**香港政府獎學金**：給予學術成績優異及具領導才能的本地學生，每年最高港幣 80,000 元。",
+            "**外部獎學金**：學生可申請香港金融管理局及香港銀行學會等機構的獎學金。",
+            "**財政援助**：科大提供基於需要的資助，包括助學金及低息貸款，確保所有合資格學生都能入學。",
+            "**研究資助**：本科生可申請最高港幣 10,000 元的研究資助，用於支持量化金融的頂石項目或獨立研究。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5332 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理 HKDSE 數學及經濟科**：目標在 M1/M2 及經濟科取得 5** 或以上，因這些科目在入學公式中權重較高。",
+            "",
+            "- 在 M1/M2 至少取得 5**，以展示強大的量化能力。",
+            "- 經濟科達 5* 或以上，顯示對金融原理的理解。",
+            "",
+            "**2. 在英文及中文科表現出色**：每科平均分為 7.12，語言成績至關重要。目標在兩科取得 5* 或以上。",
+            "",
+            "- 每日練習寫作及閱讀理解。",
+            "- 使用歷屆試題熟悉考試模式。",
+            "",
+            "**3. 透過課外活動建立強大履歷**：參加數學比賽、金融學會或交易模擬，以突顯自己。",
+            "",
+            "- 參加香港數學奧林匹克或國際經濟奧林匹克。",
+            "- 參加科大的量化金融暑期課程或工作坊。",
+            "",
+            "**4. 目標總分超過 60 分**：中位數為 58.13，取得 60 分以上能大幅增加機會。善用第 6 科加分。",
+            "",
+            "- 報考 6 科 HKDSE 並在所有科目表現良好，以最大化加分。",
+            "- 選擇物理或化學等選修科，若符合你的優勢。",
+            "",
+            "**5. 準備入學面試**：若獲篩選，展示對量化金融的熱情及對當前金融市場的認識。",
+            "",
+            "- 每日閱讀財經新聞（如彭博、金融時報）。",
+            "- 練習解釋複雜概念，如 Black-Scholes 或蒙特卡羅模擬。",
+            "",
+            "**6. 善用科大的開放日及資訊講座**：參加活動以了解課程，並與教授及現屆學生交流。",
+            "",
+            "- 提出關於課程、實習及研究機會的具體問題。",
+            "- 收集聯絡資訊以便後續查詢。",
+            "",
+            "**7. 考慮第二選擇課程**：申請相關課程如數學與經濟學理學士（JS5313）作為後備，入學要求相近。",
+            "",
+            "- 確保你的 HKDSE 科目選擇與兩個課程相符。",
+            "- 查閱後備選項的入學分數，以制定策略。",
+            "",
+            "**8. 及早申請獎學金**：在截止日期（通常為 12 月）前提交獎學金申請，以最大化財政支援。",
+            "",
+            "- 準備一份強而有力的個人陳述，突出你的成就。",
+            "- 及早向老師索取推薦信。",
+            "",
+            "**9. 緊貼課程最新資訊**：定期查看科大網站，了解課程、入學要求及獎學金標準的更新。",
+            "",
+            "- 關注科大的社交媒體頻道以獲取公告。",
+            "- 直接聯絡招生辦以澄清任何疑問。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "58.13",
+    "lq": "56.06"
+  }
+}

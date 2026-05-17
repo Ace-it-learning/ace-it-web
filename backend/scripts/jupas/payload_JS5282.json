@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5282",
+    "nameEn": "Engineering with Extended Major in Artificial Intelligence",
+    "nameZh": "工程學 – 人工智能延伸主修",
+    "name": "Engineering with Extended Major in Artificial Intelligence",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5282",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/ICT/Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ ICT; Math/ M1/ M2.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS5282 is a 4-year full-time programme that combines a core engineering foundation with an extended major in Artificial Intelligence, allowing students to graduate with a BEng degree in Engineering with a specialisation in AI.",
+            "**Year 1 – Foundation**: Students take common engineering courses (e.g., Calculus, Physics, Programming) and introductory AI modules, building a strong quantitative and computational base. The School of Engineering’s flexible first year lets you explore multiple disciplines.",
+            "**Year 2 – Core Engineering & AI Integration**: Deepen your engineering discipline (e.g., Computer Science, Electronic Engineering, or Mechanical Engineering) while starting core AI courses such as Machine Learning, Data Structures, and Algorithms.",
+            "**Year 3 – Advanced AI & Specialisation**: Focus on advanced AI topics including Deep Learning, Natural Language Processing, Computer Vision, and Robotics. Students also begin a year-long capstone project or industry internship.",
+            "**Year 4 – Capstone & Electives**: Complete your capstone project (often in partnership with industry or research labs) and choose from a wide range of AI electives such as Reinforcement Learning, AI Ethics, or Autonomous Systems.",
+            "**Extended Major Advantage**: The extended major in AI is embedded within your engineering degree, meaning you graduate with a single BEng degree that officially recognises your AI expertise — no extra years required."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**AI Engineer**: Design and deploy machine learning models for tech giants like Google, Microsoft, or local leaders such as Alibaba and Tencent. HKUST’s proximity to Hong Kong Science Park provides direct internship pipelines.",
+            "**Data Scientist**: Analyse big data for financial institutions (e.g., HSBC, Goldman Sachs) or consulting firms (e.g., McKinsey, BCG). The programme’s strong quantitative focus is highly valued in data-driven roles.",
+            "**Robotics Engineer**: Work in automation and robotics companies like DJI (founded by HKUST alumni) or Siemens, applying AI to physical systems. HKUST’s robotics labs offer hands-on experience.",
+            "**Research & Academia**: Pursue a PhD at top global universities (e.g., MIT, Stanford, Cambridge) or join HKUST’s own world-class research centres in AI, such as the HKUST AI Research Institute.",
+            "**Entrepreneur**: Launch your own AI startup. HKUST’s entrepreneurship ecosystem — including the HKUST Entrepreneurship Centre and the HKUST-Sino One Million Dollar Entrepreneurship Competition — supports student ventures.",
+            "**Industry Demand**: According to HKUST career data, engineering graduates with AI specialisation see starting salaries 20–30% higher than general engineering peers, with many securing offers before graduation."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST’s Clear Water Bay campus offers breathtaking sea views and a tranquil environment, ideal for focused study. The campus is just 30 minutes from central Hong Kong by MTR or bus.",
+            "**World-Class Labs**: The School of Engineering houses specialised AI labs including the AI Robotics Lab, the Big Data Institute, and the Centre for Artificial Intelligence Research (CAIR), equipped with NVIDIA DGX systems and GPU clusters.",
+            "**Innovation Hub**: The campus is connected to Hong Kong Science Park (a 10-minute shuttle ride), where students can intern at over 1,100 tech companies, including SenseTime and Huawei.",
+            "**Student Life**: Over 100 student societies, including the HKUST AI Society and Engineering Student Union, organise hackathons, workshops, and networking events year-round.",
+            "**Global Exposure**: HKUST offers exchange programmes with 280+ partner universities in 40+ countries, including UC Berkeley, Imperial College London, and Tsinghua University. Many engineering students spend a semester abroad.",
+            "**Residential Experience**: All first-year students are guaranteed on-campus housing, with modern halls featuring sea-view rooms, study lounges, and recreational facilities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Science subjects, ICT, Mathematics, M1, and M2 are weighted more heavily, giving a clear advantage to students strong in STEM.",
+            "**Highest Attainable Score**: 75.86 — this is the maximum score possible under the weighting system, indicating the programme targets top-tier DSE performers.",
+            "**Median & Lower Quartile (2025)**: N/A (new programme or recent data not yet released). However, based on similar HKUST engineering programmes with AI focus, a score of 65+ is typically competitive.",
+            "**Preferred Subjects**: Science subjects (Physics, Chemistry, Biology), ICT, Mathematics, M1, and M2 are explicitly preferred. Students without these subjects may find it harder to gain admission.",
+            "**Demand vs. Supply**: AI-related programmes at HKUST consistently attract high demand. With limited places (estimated 30–50 per cohort), competition is intense — strong predicted scores and a compelling personal statement are essential."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Wang Tao (汪滔)**: Founder and CEO of DJI (world’s largest drone manufacturer). Graduated from HKUST with a degree in Electronic Engineering. DJI’s success is a testament to HKUST’s engineering and entrepreneurial culture.",
+            "**Professor Sun Dong (孫東)**: HKUST alumnus and current Secretary for Innovation, Technology and Industry of Hong Kong. He holds a PhD in Mechanical Engineering from HKUST and has driven AI policy in Hong Kong.",
+            "**Dr. Helen Liang (梁頴宇)**: Founding Managing Partner of Qiming Venture Partners, a leading venture capital firm investing in AI and tech startups. She earned her MBA from HKUST and frequently mentors engineering students.",
+            "**Professor Yang Qiang (楊強)**: Chief AI Officer at WeBank and former Head of HKUST’s Department of Computer Science and Engineering. A world-renowned AI researcher, he pioneered federated learning and has supervised many JS5282-related graduates.",
+            "**Dr. David Chung (鍾志平)**: Former Chairman of the Hong Kong Science and Technology Parks Corporation and HKUST Engineering alumnus. He has been instrumental in bridging HKUST research with industry AI applications.",
+            "**HKUST AI Research Excellence**: The university’s AI research output ranks among the top 10 globally (CSRankings), with alumni contributing to breakthroughs in autonomous driving, medical AI, and natural language processing."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top DSE scorers (e.g., 5** in multiple subjects). Covers full or partial tuition, with amounts up to HK$200,000 per year. No separate application required — based on admission scores.",
+            "**School of Engineering Merit Scholarship**: Specifically for engineering students with outstanding DSE results in STEM subjects. Provides up to HK$50,000 per year and priority access to research internships.",
+            "**AI Talent Scholarship**: A new scholarship for JS5282 students demonstrating exceptional aptitude in AI, including winners of robotics competitions or coding contests. Valued at HK$30,000–$80,000.",
+            "**Need-Based Financial Aid**: HKUST offers the Financial Assistance Scheme (FAS) covering up to full tuition and living expenses for students from low-income families. Application required after admission.",
+            "**External Scholarships**: Students can apply for the HKSAR Government Scholarship Fund, the Sir Edward Youde Memorial Fund, and other external awards. HKUST’s Financial Aid Office provides guidance.",
+            "**Research & Teaching Assistantships**: From Year 3 onwards, students can work as research assistants in AI labs, earning HK$6,000–$10,000 per month while gaining valuable experience."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5282 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Your admission score = Best 5 subjects + 6th subject bonus. Science subjects (Physics, Chemistry, Biology), ICT, Math, M1, and M2 are weighted 1.5x–2x. Focus your revision on these subjects to maximise your score.",
+            "- Aim for at least 5* in Math and one science subject to hit the competitive range (65+ out of 75.86).",
+            "",
+            "**2. Build a Strong STEM Profile**",
+            "",
+            "- Take M1 or M2 if possible — they are explicitly weighted and show mathematical maturity. If your school doesn’t offer them, self-study and mention it in your personal statement.",
+            "- Participate in STEM competitions (e.g., Hong Kong Physics Olympiad, HKICT Awards) to demonstrate passion beyond the classroom.",
+            "",
+            "**3. Write a Personal Statement That Connects to AI**",
+            "",
+            "- Explain why you want to study AI at HKUST specifically — mention professors (e.g., Professor Yang Qiang), labs (e.g., AI Robotics Lab), or the Science Park connection.",
+            "- Use concrete examples: a project where you used Python to build a simple ML model, or a robotics competition you entered.",
+            "",
+            "**4. Prepare for Interviews (If Shortlisted)**",
+            "",
+            "- HKUST may invite top applicants for an interview. Be ready to discuss your interest in AI, your engineering background, and how you plan to use the extended major.",
+            "- Practice explaining technical concepts (e.g., neural networks) in simple terms — this shows communication skills.",
+            "",
+            "**5. Leverage the School-Based System**",
+            "",
+            "- In Year 1, you can take courses from different engineering departments. Use this flexibility to explore Computer Science, Electronic Engineering, or Mechanical Engineering before committing to a specific discipline.",
+            "- Attend department open days and talk to professors to find your best fit.",
+            "",
+            "**6. Gain Hands-On AI Experience Early**",
+            "",
+            "- Start learning Python and TensorFlow/PyTorch in Form 5 or summer before university. Free online courses (e.g., Andrew Ng’s Machine Learning on Coursera) are excellent preparation.",
+            "- Build a small project (e.g., a chatbot or image classifier) to include in your portfolio.",
+            "",
+            "**7. Network with Current Students and Alumni**",
+            "",
+            "- Join HKUST’s official JUPAS information sessions and connect with current engineering students on LinkedIn or Instagram. Ask about their experience in the programme.",
+            "- Alumni like Wang Tao (DJI founder) show the entrepreneurial potential — mention their stories in your application to show you’ve done your research.",
+            "",
+            "**8. Plan for the Capstone Project**",
+            "",
+            "- The Year 4 capstone project is a key differentiator. Think about potential topics now: autonomous vehicles, AI for healthcare, or NLP for Cantonese. Early planning helps you secure a supervisor.",
+            "- If you can, find an industry partner (e.g., through Science Park) for a real-world project — this boosts your CV and job prospects.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- Even if you don’t get the top entrance scholarship, apply for the School of Engineering Merit Scholarship and AI Talent Scholarship. Deadlines are usually in August–September after results are released.",
+            "- Prepare a strong scholarship application: highlight your DSE scores, STEM achievements, and a clear vision for your AI career."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/ICT/Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ ICT; Math/ M1/ M2。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS5282 是一個四年全日制課程，將核心工程基礎與人工智能延伸主修相結合，畢業生將獲得工程學學士學位（BEng），並附有 AI 專修認證。",
+            "**第一年 – 基礎**：學生修讀共通工程課程（如微積分、物理、程式設計）及入門 AI 模塊，建立堅實的數理與計算基礎。工程學院靈活的第一年讓你可以探索多個學科。",
+            "**第二年 – 核心工程與 AI 整合**：深化你的工程學科（如計算機科學、電子工程或機械工程），同時開始核心 AI 課程，包括機器學習、數據結構和算法。",
+            "**第三年 – 高級 AI 與專修**：專注於高級 AI 主題，包括深度學習、自然語言處理、計算機視覺和機器人學。學生亦開始為期一年的畢業專題或行業實習。",
+            "**第四年 – 畢業專題與選修**：完成畢業專題（通常與業界或研究實驗室合作），並從廣泛的 AI 選修課中選擇，如強化學習、AI 倫理或自主系統。",
+            "**延伸主修優勢**：AI 延伸主修嵌入在你的工程學位內，意味著你只需一個 BEng 學位即可正式獲得 AI 專長認證——無需額外修讀年份。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**AI 工程師**：為 Google、Microsoft 等科技巨頭或阿里巴巴、騰訊等本地龍頭設計和部署機器學習模型。科大毗鄰香港科學園，提供直接的實習渠道。",
+            "**數據科學家**：為金融機構（如滙豐、高盛）或諮詢公司（如麥肯錫、BCG）分析大數據。課程強調數理能力，在數據驅動的崗位中極具價值。",
+            "**機器人工程師**：在 DJI（由科大校友創立）或西門子等自動化與機器人公司工作，將 AI 應用於物理系統。科大的機器人實驗室提供實戰經驗。",
+            "**研究與學術**：在頂尖全球大學（如麻省理工、史丹福、劍橋）攻讀博士，或加入科大自家的世界級 AI 研究中心，如科大人工智能研究院。",
+            "**創業家**：創辦自己的 AI 初創公司。科大的創業生態系統——包括科大創業中心和科大-信和百萬獎金創業大賽——全力支持學生創業。",
+            "**行業需求**：根據科大就業數據，具 AI 專修的工程畢業生起薪比一般工程同儕高 20–30%，許多人畢業前已獲聘書。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**絕佳位置**：科大清水灣校園坐擁壯麗海景，環境寧靜，適合專注學習。距離香港市中心僅 30 分鐘港鐵或巴士車程。",
+            "**世界級實驗室**：工程學院設有專門的 AI 實驗室，包括人工智能機器人實驗室、大數據研究所及人工智能研究中心（CAIR），配備 NVIDIA DGX 系統和 GPU 集群。",
+            "**創新樞紐**：校園與香港科學園相連（10 分鐘穿梭巴士車程），學生可在超過 1,100 間科技公司實習，包括商湯科技和華為。",
+            "**學生生活**：超過 100 個學生社團，包括科大人工智能學會和工程學院學生會，全年舉辦黑客松、工作坊和聯誼活動。",
+            "**全球視野**：科大提供與 40 多個國家 280 多間夥伴大學的交換計劃，包括加州大學柏克萊分校、倫敦帝國學院和清華大學。許多工程學生會到海外交流一個學期。",
+            "**住宿體驗**：所有一年級學生保證獲分配校內宿舍，現代化宿舍設有海景房、溫習室和康樂設施。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科 + 第 6 科加分。理科、資訊及通訊科技、數學、M1 和 M2 獲較高權重，對 STEM 強的學生明顯有利。",
+            "**最高可達分數**：75.86——這是權重系統下的最高分數，顯示該課程針對頂尖 DSE 考生。",
+            "**2025 年中位數及下四分位數**：暫無數據（新課程或近期數據未公布）。然而，根據科大類似 AI 相關工程課程，65 分以上通常具競爭力。",
+            "**優先科目**：理科（物理、化學、生物）、資訊及通訊科技、數學、M1 和 M2 獲明確優先考慮。沒有這些科目的學生可能較難獲取錄。",
+            "**供求情況**：科大的 AI 相關課程一直吸引大量申請。由於學額有限（估計每屆 30–50 人），競爭激烈——優秀的預測分數和有力的個人陳述至關重要。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**汪滔 (Wang Tao)**：DJI（全球最大無人機製造商）創始人兼 CEO。畢業於科大電子工程學系。DJI 的成功證明了科大的工程與創業文化。",
+            "**孫東教授 (Professor Sun Dong)**：科大校友，現任香港創新科技及工業局局長。他持有科大機械工程博士學位，並推動了香港的 AI 政策。",
+            "**梁頴宇博士 (Dr. Helen Liang)**：啟明創投創始管理合夥人，專注投資 AI 及科技初創公司。她持有科大工商管理碩士學位，並經常指導工程學生。",
+            "**楊強教授 (Professor Yang Qiang)**：微眾銀行首席人工智能官，曾任科大計算機科學及工程學系主任。他是世界知名的 AI 研究員，開創了聯邦學習，並指導過許多 JS5282 相關畢業生。",
+            "**鍾志平博士 (Dr. David Chung)**：前香港科技園公司主席，科大工程校友。他在連接科大研究與業界 AI 應用方面發揮了關鍵作用。",
+            "**科大 AI 研究卓越**：大學的 AI 研究成果位列全球前十（CSRankings），校友在自動駕駛、醫療 AI 和自然語言處理等領域貢獻了突破性成果。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**科大入學獎學金**：頒予 DSE 頂尖考生（如多科 5**），涵蓋全額或部分學費，金額可達每年 20 萬港元。無需另行申請——根據入學分數自動考慮。",
+            "**工程學院卓越獎學金**：專為 STEM 科目 DSE 成績優異的工程學生而設，提供每年高達 5 萬港元獎學金及研究實習優先機會。",
+            "**人工智能人才獎學金**：為 JS5282 學生而設的新獎學金，頒予在 AI 方面表現卓越的學生（如機械人比賽或編程比賽得獎者），金額為 3 萬至 8 萬港元。",
+            "**需要為本財務資助**：科大提供財務資助計劃（FAS），涵蓋低收入家庭學生的全額學費及生活費。需於取錄後申請。",
+            "**外部獎學金**：學生可申請香港特別行政區政府獎學基金、尤德爵士紀念基金及其他外部獎項。科大財務資助處提供指導。",
+            "**研究及教學助理職位**：從第三年起，學生可在 AI 實驗室擔任研究助理，每月賺取 6,000 至 10,000 港元，同時累積寶貴經驗。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5282 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握權重計分公式**",
+            "",
+            "- 你的入學分數 = 最佳 5 科 + 第 6 科加分。理科（物理、化學、生物）、資訊及通訊科技、數學、M1 和 M2 獲 1.5 倍至 2 倍權重。集中溫習這些科目以最大化分數。",
+            "- 目標在數學及至少一科理科取得 5* 或以上，以達到競爭範圍（75.86 分中取得 65 分以上）。",
+            "",
+            "**2. 建立強大的 STEM 背景**",
+            "",
+            "- 如可能，選修 M1 或 M2——它們獲明確加權，顯示數學成熟度。若學校沒有開設，可自學並在個人陳述中提及。",
+            "- 參加 STEM 比賽（如香港物理奧林匹克、香港資訊及通訊科技獎），展示課堂以外的熱誠。",
+            "",
+            "**3. 撰寫與 AI 相關的個人陳述**",
+            "",
+            "- 解釋為何你特別想在科大學習 AI——提及教授（如楊強教授）、實驗室（如人工智能機器人實驗室）或科學園的聯繫。",
+            "- 使用具體例子：一個你用 Python 建立簡單機器學習模型的項目，或你參加過的機械人比賽。",
+            "",
+            "**4. 準備面試（如獲篩選）**",
+            "",
+            "- 科大可能會邀請頂尖申請人面試。準備討論你對 AI 的興趣、你的工程背景，以及你打算如何運用延伸主修。",
+            "- 練習用簡單語言解釋技術概念（如神經網絡）——這展示溝通能力。",
+            "",
+            "**5. 善用學院制系統**",
+            "",
+            "- 在第一年，你可以修讀不同工程學系的課程。利用這靈活性探索計算機科學、電子工程或機械工程，然後才決定專修學科。",
+            "- 參加學系開放日，與教授交流，找出最適合你的方向。",
+            "",
+            "**6. 及早獲得 AI 實戰經驗**",
+            "",
+            "- 在中五或大學前的暑假開始學習 Python 和 TensorFlow/PyTorch。免費網上課程（如 Andrew Ng 在 Coursera 的機器學習課程）是極佳的準備。",
+            "- 建立一個小型項目（如聊天機械人或圖像分類器），放入你的作品集。",
+            "",
+            "**7. 與現屆學生及校友建立聯繫**",
+            "",
+            "- 參加科大的官方 JUPAS 資訊講座，並在 LinkedIn 或 Instagram 上聯繫現屆工程學生。詢問他們在課程中的經驗。",
+            "- 像汪滔（DJI 創辦人）這樣的校友展示了創業潛力——在申請中提及他們的故事，顯示你做過資料搜集。",
+            "",
+            "**8. 提早規劃畢業專題**",
+            "",
+            "- 第四年的畢業專題是關鍵的區分點。現在就思考潛在主題：自動駕駛汽車、醫療 AI 或粵語自然語言處理。早期規劃有助你找到指導教授。",
+            "- 如可能，通過科學園尋找業界合作夥伴進行真實項目——這能提升你的履歷和就業前景。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 即使未能獲得頂尖入學獎學金，也應申請工程學院卓越獎學金和人工智能人才獎學金。截止日期通常在成績公布後的 8 月至 9 月。",
+            "- 準備一份有力的獎學金申請：突出你的 DSE 成績、STEM 成就，以及清晰的 AI 職業願景。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

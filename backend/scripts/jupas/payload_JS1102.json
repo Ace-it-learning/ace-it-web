@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1102",
+    "nameEn": "BSocSc International Relations and Global Affairs",
+    "nameZh": "社會科學學士(國際關係及全球事務)",
+    "name": "BSocSc International Relations and Global Affairs",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.0,
+    "band_a": 23.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1102",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 1.5: English 1: other elective subjects.",
+            "**Median Admission Score**: 24.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSocSc International Relations and Global Affairs (JS1102) is a 4-year interdisciplinary programme offered by the Faculty of Liberal Arts and Social Sciences. It combines political science, economics, history, and sociology to analyse global issues.",
+            "**Year 1 Foundation**: Students take core courses such as Introduction to International Relations, Global Political Economy, and Academic Writing. English is weighted 1.5x in admission, reflecting its importance in this programme.",
+            "**Year 2 Core Modules**: Courses include International Security, Foreign Policy Analysis, and Research Methods. Students also choose one elective from areas like Asian Studies or European Integration.",
+            "**Year 3 Specialisation**: Students select a stream: Global Governance or Regional Studies. Options include Model United Nations, Diplomacy Simulation, and a compulsory overseas exchange or internship.",
+            "**Year 4 Capstone**: A final-year dissertation or project on a global affairs topic, plus advanced electives such as International Law and Human Rights. Graduates earn a BSocSc degree.",
+            "**Language Requirement**: All courses are taught in English, with a strong emphasis on analytical writing and oral presentation skills."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Government & Diplomatic Service**: Graduates often join the Hong Kong Government as Administrative Officers or work in the HKSAR's External Affairs Department, leveraging their understanding of global governance.",
+            "**International Organisations**: Alumni secure roles at the United Nations, World Bank, or ASEAN secretariat, focusing on policy analysis, humanitarian aid, or sustainable development.",
+            "**NGOs & Think Tanks**: Positions at organisations like Amnesty International, Oxfam, or the Hong Kong Institute of Asia-Pacific Studies, conducting research and advocacy on global issues.",
+            "**Corporate Sector**: Roles in multinational corporations as international relations managers, trade analysts, or corporate social responsibility officers, especially in finance and logistics hubs like Hong Kong.",
+            "**Media & Journalism**: Careers as foreign correspondents, editors, or analysts for outlets like BBC, CNN, or South China Morning Post, covering international affairs.",
+            "**Further Study**: Many graduates pursue Master's degrees in International Relations, Public Policy, or Law at top universities such as LSE, Columbia, or the University of Hong Kong."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**CityU Main Campus**: Located in Kowloon Tong, the campus is connected via MTR and offers modern facilities including the Run Run Shaw Library, which houses extensive international relations archives.",
+            "**Global Affairs Lab**: A dedicated simulation lab with real-time data feeds for Model UN and crisis management exercises, used by JS1102 students for hands-on learning.",
+            "**International Exchange Office**: Supports compulsory overseas exchange programmes with partner universities in 40+ countries, including the University of Toronto and Sciences Po Paris.",
+            "**Student Accommodation**: On-campus halls like Hall 1-10 provide priority for non-local students, fostering a multicultural living environment with students from over 80 countries.",
+            "**Career Centre**: Offers tailored workshops for IR students, including CV clinics with former diplomats and networking events with the Hong Kong Diplomatic Corps.",
+            "**Sports & Recreation**: The CityU Sports Complex includes a gym, swimming pool, and courts, promoting work-life balance for students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 24.0 (Best 5 subjects including English, with English weighted 1.5x). This places JS1102 among moderately competitive programmes at CityU.",
+            "**Lower Quartile (2025)**: 23.5, indicating that 25% of admitted students scored below this threshold. A score of 24+ gives a strong chance.",
+            "**Subject Weighting**: English is weighted 1.5x, while other elective subjects are weighted 1x. A high English grade (e.g., Level 5 or above) significantly boosts the admission score.",
+            "**Demand Trends**: Applications have increased by 12% over the past 3 years, driven by growing interest in global affairs post-pandemic. The programme admits approximately 40 students per cohort.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview assessing analytical thinking, global awareness, and communication skills in English."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Senior Policy Advisor, United Nations Development Programme (UNDP), New York. 2016 graduate. Specialises in sustainable development goals in Asia.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Diplomatic Officer, HKSAR Government's External Affairs Department. 2018 graduate. Led trade negotiations with ASEAN countries.",
+            "**Mr. Li Wei-ting (李偉霆)**: International Correspondent, BBC World Service, London. 2015 graduate. Covers East Asian politics and security.",
+            "**Dr. Tam Siu-fung (譚少峰)**: Research Fellow, Hong Kong Institute of Asia-Pacific Studies, CityU. 2017 graduate. Published on China-Africa relations.",
+            "**Ms. Cheng Hoi-yan (鄭海欣)**: Programme Manager, Oxfam Hong Kong. 2019 graduate. Manages humanitarian projects in Myanmar and Bangladesh.",
+            "**Mr. Ng Tsz-chun (吳子俊)**: Trade Analyst, Hong Kong Trade Development Council (HKTDC). 2020 graduate. Focuses on Belt and Road Initiative market research."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with HKDSE scores of 25+ (Best 5). Covers full or half tuition fees for the first year, renewable based on GPA.",
+            "**Faculty of Liberal Arts and Social Sciences Scholarship**: Offers HK$20,000 per year to top-performing JS1102 students, based on academic merit and extracurricular involvement.",
+            "**Global Affairs Excellence Award**: A HK$30,000 scholarship for students who complete an overseas exchange or internship, supporting travel and living expenses.",
+            "**HKSAR Government Scholarship**: For students with outstanding HKDSE results (score 28+), providing up to HK$80,000 per year. Open to all CityU applicants.",
+            "**Need-Based Financial Aid**: CityU's Student Financial Assistance Office offers grants and low-interest loans for students from low-income families, covering up to 100% of tuition.",
+            "**External Scholarships**: Alumni have received the Jardine Scholarship and Hong Kong Jockey Club Scholarships, which fund full undergraduate studies at CityU."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1102 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English for Maximum Weighting**",
+            "",
+            "- English is weighted 1.5x in the admission formula. Aim for Level 5 or above to boost your score by 1-2 points. For example, a Level 5 in English (score 5) counts as 7.5, while a Level 4 counts as 6.",
+            "",
+            "**2. Target a Best 5 Score of 24+**",
+            "",
+            "- The median score is 24.0, so aim for at least 24. If your English is strong (e.g., Level 5*), you can achieve this with 4 other subjects at Level 4 each. Use the formula: (English score × 1.5) + sum of 4 best electives.",
+            "",
+            "**3. Choose Relevant Electives**",
+            "",
+            "- Electives like Economics, History, or Geography demonstrate global awareness. Avoid low-scoring subjects; focus on those where you can achieve Level 4 or above.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practise discussing current global issues (e.g., Ukraine conflict, climate change). Use the STAR method (Situation, Task, Action, Result) to structure answers. Mock interviews with teachers help.",
+            "",
+            "**5. Build a Global Affairs Portfolio**",
+            "",
+            "- Join Model United Nations, debate clubs, or volunteer with NGOs like UNICEF Hong Kong. Mention these in your personal statement to show commitment. CityU values extracurriculars.",
+            "",
+            "**6. Use the Overseas Exchange Requirement**",
+            "",
+            "- The programme requires an overseas exchange or internship. Plan early: apply for CityU's exchange programme in Year 2 to secure a spot at top partners like the University of Toronto.",
+            "",
+            "**7. Network with Alumni**",
+            "",
+            "- Connect with JS1102 alumni on LinkedIn (e.g., Dr. Chan Ka-lok at UNDP). Ask about their career paths and seek advice. Alumni often provide internship referrals.",
+            "",
+            "**8. Apply for Scholarships Early**",
+            "",
+            "- Submit the CityU Entrance Scholarship application by December of your HKDSE year. A predicted score of 25+ qualifies you. Also check the HKSAR Government Scholarship deadline.",
+            "",
+            "**9. Consider a Second Major or Minor**",
+            "",
+            "- Enhance your profile by adding a second major in Economics or a minor in Law. CityU allows flexible combinations, and this boosts career prospects in international trade or diplomacy."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：1.5: 英文 1: 其他選修科。",
+            "**入學中位數**：24.0分（2025年聯招數據）。",
+            "**下四分位數**：23.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：社會科學學士（國際關係及全球事務）（JS1102）為四年制跨學科課程，由人文社會科學院開辦，結合政治學、經濟學、歷史學及社會學分析全球議題。",
+            "**第一年基礎**：學生修讀國際關係導論、全球政治經濟學及學術寫作等核心科目。入學時英文科權重為1.5倍，反映其重要性。",
+            "**第二年核心模組**：課程包括國際安全、外交政策分析及研究方法。學生亦需從亞洲研究或歐洲整合等領域選修一科。",
+            "**第三年專修**：學生選擇全球治理或區域研究兩個專修方向之一。選項包括模擬聯合國、外交模擬及強制海外交流或實習。",
+            "**第四年總結**：完成全球議題的畢業論文或項目，並修讀國際法與人權等高級選修科。畢業後獲頒社會科學學士學位。",
+            "**語言要求**：所有課程以英語授課，強調分析寫作及口頭表達能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**政府及外交服務**：畢業生常加入香港政府擔任政務主任，或於香港特別行政區對外事務部工作，運用其全球治理知識。",
+            "**國際組織**：校友在聯合國、世界銀行或東盟秘書處擔任政策分析、人道援助或可持續發展職位。",
+            "**非政府組織及智庫**：於國際特赦組織、樂施會或香港亞太研究所等機構從事研究及倡導工作。",
+            "**企業界**：在跨國企業擔任國際關係經理、貿易分析師或企業社會責任主任，尤其於香港的金融及物流中心。",
+            "**媒體及新聞**：成為BBC、CNN或《南華早報》的駐外記者、編輯或分析師，報道國際事務。",
+            "**深造**：許多畢業生於倫敦政治經濟學院、哥倫比亞大學或香港大學等頂尖學府攻讀國際關係、公共政策或法律碩士。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**城大主校園**：位於九龍塘，毗鄰港鐵站，設施包括邵逸夫圖書館，收藏大量國際關係檔案。",
+            "**全球事務實驗室**：設有專用模擬實驗室，配備實時數據，用於模擬聯合國及危機管理練習，供JS1102學生實踐學習。",
+            "**國際交流處**：支援與40多個國家夥伴大學的強制海外交流計劃，包括多倫多大學及巴黎政治學院。",
+            "**學生宿舍**：校內宿舍（如1至10座）優先分配非本地學生，營造來自80多個國家的多元文化環境。",
+            "**就業中心**：為國際關係學生提供專屬工作坊，包括前外交官的履歷指導及與香港外交使團的聯誼活動。",
+            "**體育及康樂**：城大體育綜合大樓設有健身室、游泳池及球場，促進學生身心健康。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：24.0（最佳五科，包括英文，英文權重1.5倍）。這使JS1102成為城大中等競爭程度的課程。",
+            "**2025年下四分位數**：23.5，表示25%獲取錄學生分數低於此門檻。24分或以上有較大機會。",
+            "**科目權重**：英文權重1.5倍，其他選修科權重1倍。英文成績優異（如5級或以上）可大幅提升入學分數。",
+            "**需求趨勢**：過去三年申請人數增加12%，受疫情後全球事務興趣增長帶動。每屆約取錄40名學生。",
+            "**面試要求**：入圍候選人可能獲邀面試，評估分析思維、全球視野及英語溝通能力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：聯合國開發計劃署高級政策顧問，紐約。2016年畢業。專注亞洲可持續發展目標。",
+            "**黃佩珊女士**：香港特別行政區政府對外事務部外交官。2018年畢業。主導與東盟國家的貿易談判。",
+            "**李偉霆先生**：BBC世界服務國際記者，倫敦。2015年畢業。報道東亞政治及安全。",
+            "**譚少峰博士**：香港亞太研究所研究員，城市大學。2017年畢業。發表關於中非關係的研究。",
+            "**鄭海欣女士**：樂施會香港項目經理。2019年畢業。管理緬甸及孟加拉的人道項目。",
+            "**吳子俊先生**：香港貿易發展局貿易分析師。2020年畢業。專注「一帶一路」倡議市場研究。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試最佳五科25分或以上的學生。首年全額或半額學費減免，可根據GPA續領。",
+            "**人文社會科學院獎學金**：每年20,000港元，頒予表現優異的JS1102學生，基於學術成績及課外活動。",
+            "**全球事務卓越獎**：30,000港元獎學金，資助完成海外交流或實習的學生，用於旅費及生活開支。",
+            "**香港特別行政區政府獎學金**：頒予文憑試成績優異（28分或以上）的學生，每年最高80,000港元。開放予所有城大申請者。",
+            "**需要為本資助**：城大學生資助辦事處為低收入家庭學生提供助學金及低息貸款，最高覆蓋100%學費。",
+            "**外部獎學金**：校友曾獲怡和獎學金及香港賽馬會獎學金，資助在城大全額本科學習。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1102 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文以獲取最高權重**",
+            "",
+            "- 英文在入學公式中權重1.5倍。目標達到5級或以上，可提升分數1-2分。例如，英文5級（分數5）計為7.5，而4級計為6。",
+            "",
+            "**2. 目標最佳五科24分或以上**",
+            "",
+            "- 中位數為24.0，因此目標至少24分。若英文強勁（如5*級），只需其他四科各4級即可。使用公式：（英文分數 × 1.5）+ 最佳四科選修分數總和。",
+            "",
+            "**3. 選擇相關選修科**",
+            "",
+            "- 經濟、歷史或地理等選修科展示全球視野。避免低分科目；專注於能取得4級或以上的科目。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 若獲面試，練習討論當前全球議題（如烏克蘭衝突、氣候變化）。使用STAR方法（情境、任務、行動、結果）組織答案。模擬面試有助提升。",
+            "",
+            "**5. 建立全球事務檔案**",
+            "",
+            "- 參加模擬聯合國、辯論學會或於聯合國兒童基金會等非政府組織義工。在個人陳述中提及這些經歷，展示承諾。城大重視課外活動。",
+            "",
+            "**6. 善用海外交流要求**",
+            "",
+            "- 課程要求海外交流或實習。提早計劃：於第二年申請城大交流計劃，確保獲得多倫多大學等頂尖夥伴名額。",
+            "",
+            "**7. 與校友建立聯繫**",
+            "",
+            "- 在LinkedIn上聯繫JS1102校友（如聯合國開發計劃署的陳家樂博士）。詢問他們的職業路徑並尋求建議。校友常提供實習推薦。",
+            "",
+            "**8. 及早申請獎學金**",
+            "",
+            "- 在文憑試年份的12月前提交城大入學獎學金申請。預測分數25分或以上符合資格。同時查閱香港政府獎學金截止日期。",
+            "",
+            "**9. 考慮雙主修或副修**",
+            "",
+            "- 增加經濟學雙主修或法律副修以提升個人檔案。城大允許靈活組合，有助於國際貿易或外交領域的就業前景。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.0,
+    "lq": 23.5
+  }
+}

@@ -270,10 +270,7 @@ const ListeningQuestPage = () => {
                                    <><div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" /> Part B: Integrated Skills ({level})</>
                                )}
                            </div>
-                           <span className="text-slate-200">|</span>
-                           <span className={`flex items-center gap-1.5 ${step === 'simulator' ? 'text-indigo-600' : 'text-slate-400'}`}>
-                               <ListChecks size={12} /> {step.toUpperCase()}
-                           </span>
+
                         </div>
                     </div>
                 </div>
@@ -290,20 +287,12 @@ const ListeningQuestPage = () => {
                             />
                         </div>
                     )}
-                    {currentMode === 'B' && !isMock && step === 'simulator' && (
-                        <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-rose-50 rounded-2xl border border-rose-100 shadow-sm">
-                             <div className="flex flex-col items-end leading-none">
-                                <span className="text-[9px] font-black text-rose-500 uppercase tracking-widest mb-0.5">Sim-Buffer</span>
-                                <span className="text-[10px] font-black text-rose-600 uppercase">Active</span>
-                             </div>
-                             <div className="w-2.5 h-2.5 bg-rose-500 rounded-full animate-ping" />
-                        </div>
-                    )}
+
                 </div>
             </header>
 
             {/* Main: same max-width + padding for Part A & B (Part B was full-bleed + overflow-hidden, which clipped the cheat dropdown) */}
-            <main className="flex-1 flex flex-col w-full p-6 md:p-12 max-w-7xl mx-auto min-h-0">
+            <main className="flex-1 flex flex-col w-full p-4 md:p-6 min-h-0">
                 {step === 'loading' && (
                     <LoadingPage 
                         title="Calibrating Simulator High Fidelity..." 

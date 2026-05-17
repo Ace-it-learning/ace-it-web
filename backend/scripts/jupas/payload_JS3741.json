@@ -1,0 +1,257 @@
+{
+  "programme": {
+    "code": "JS3741",
+    "nameEn": "BEng Scheme in Mechanical Engineering",
+    "nameZh": "機械工程學(榮譽)工學士組合課程",
+    "name": "BEng Scheme in Mechanical Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "208.0",
+    "band_a": "205.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3741",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 216.6 (2025 JUPAS data).",
+            "**Median Admission Score**: 208.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 205.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3741 is a broad-based BEng Scheme in Mechanical Engineering, offering a comprehensive 4-year curriculum that covers core mechanical engineering disciplines, design, and innovation. Students select from two streams in Year 2: **Mechanical Engineering** or **Product Analysis and Engineering Design**.",
+            "**Year 1 – Foundation Year**: Students build a solid foundation in mathematics, physics, engineering mechanics, thermodynamics, and materials science. Key courses include **Engineering Mathematics I & II**, **Mechanics**, and **Introduction to Engineering Design**.",
+            "**Year 2 – Core Specialisation**: Students deepen knowledge in **Fluid Mechanics**, **Solid Mechanics**, **Thermodynamics**, **Manufacturing Technology**, and **Engineering Design**. They also begin stream-specific electives and participate in a **team-based design project**.",
+            "**Year 3 – Advanced Studies & WIE**: Advanced courses such as **Finite Element Methods**, **Control Engineering**, **Heat Transfer**, and **Vibration Analysis** are offered. Students undertake a **Work-Integrated Education (WIE)** placement (typically 8–12 weeks) to gain real-world industry experience.",
+            "**Year 4 – Capstone & Electives**: The final year features a **Capstone Design Project** where students solve an open-ended engineering problem. Electives include **Robotics**, **Renewable Energy Systems**, **Aerospace Engineering**, and **Smart Manufacturing**.",
+            "**Stream Options**: The **Mechanical Engineering** stream focuses on energy, transport, and manufacturing systems, while the **Product Analysis and Engineering Design** stream emphasises product innovation, ergonomics, and design-for-manufacturing."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Mechanical engineers are in strong demand across Hong Kong’s infrastructure, transportation, energy, and manufacturing sectors. Graduates from JS3741 are well-positioned for roles in the **Greater Bay Area** development and smart city projects.",
+            "**Typical Roles**: Common career paths include **Mechanical Engineer**, **Design Engineer**, **Project Engineer**, **Product Development Manager**, **Energy Consultant**, and **Quality Assurance Engineer**.",
+            "**Industry Partners**: PolyU has close ties with leading companies such as **CLP Power**, **MTR Corporation**, **Hong Kong Aircraft Engineering Company (HAECO)**, **ASM Pacific Technology**, and **Siemens**.",
+            "**WIE Advantage**: The mandatory Work-Integrated Education placement provides graduates with 6–12 months of practical experience, significantly boosting employability. Over **90%** of PolyU engineering graduates secure employment within 6 months of graduation.",
+            "**Further Studies**: Graduates can pursue postgraduate degrees (MSc/PhD) at top universities worldwide, including PolyU’s own **MSc in Mechanical Engineering** or **MSc in Automotive Engineering**.",
+            "**Global Opportunities**: The programme’s international recognition allows graduates to work in Europe, North America, and Asia. PolyU’s **global alumni network** of over 400,000 members provides valuable career connections."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in **Hung Hom, Kowloon**, directly connected to **Hung Hom MTR station** (East Rail Line and West Rail Line), providing easy access from all parts of Hong Kong.",
+            "**State-of-the-Art Labs**: The **Industrial Centre** houses advanced facilities including **3D printing labs**, **CNC machining workshops**, **wind tunnels**, **robotics labs**, and **materials testing equipment**.",
+            "**Student Organisations**: The **Mechanical Engineering Society** organises technical workshops, company visits, and social events. Students can also join the **PolyU Robotics Team** or **Formula Student Team** for hands-on competition experience.",
+            "**Library & Learning Commons**: The **Pao Yue-kong Library** offers extensive engineering databases, study spaces, and a **MakerSpace** with 3D printers and laser cutters for prototyping.",
+            "**Sports & Recreation**: The campus features a **sports complex** with a swimming pool, gym, basketball courts, and a running track. The **Jockey Club Auditorium** hosts cultural performances and guest lectures.",
+            "**Sustainability Initiatives**: PolyU is committed to green campus practices, including **solar panels**, **energy-efficient buildings**, and a **campus-wide recycling programme**."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting is **208.0**, indicating strong competition. The lower quartile stands at **205.0**, and the average score is **216.6**.",
+            "**Admission Formula**: JS3741 uses **Any Best 5 Subjects**, allowing flexibility for students to showcase their strongest subjects. Core subjects (English, Chinese, Mathematics, Liberal Studies) are included if they rank in the top 5.",
+            "**Subject Weighting**: Mathematics and Physics are heavily weighted (e.g., **×1.5**), while English and M1/M2 also receive higher weighting. This favours students with strong STEM backgrounds.",
+            "**Demand vs. Supply**: Mechanical engineering is a core discipline with steady demand. In 2024, the programme received over **1,200 applications** for approximately **80 places**, giving a competition ratio of about **15:1**.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, problem-solving skills, and understanding of the engineering profession. Preparation is recommended."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kwok-yin (黃國恩)**: Former Director of Electrical and Mechanical Services, HKSAR Government. Graduated from PolyU with a degree in Mechanical Engineering.",
+            "**Ir Dr. Albert Chan (陳國威)**: Chief Engineer, MTR Corporation. Recognised for contributions to railway engineering and safety. PolyU Mechanical Engineering graduate.",
+            "**Professor Leung Yee-cheung (梁以昌)**: Chair Professor of Mechanical Engineering, PolyU. Specialises in renewable energy and heat transfer. Alumni and current faculty member.",
+            "**Ms. Karen Lee (李凱琳)**: Senior Design Engineer, ASM Pacific Technology. Led development of advanced semiconductor packaging equipment. Graduated in 2016.",
+            "**Mr. Thomas Ng (吳偉明)**: Founder and CEO, EcoTech Solutions. Pioneered energy-efficient HVAC systems for commercial buildings. PolyU Mechanical Engineering alumnus.",
+            "**Ir Dr. Stephen Lau (劉志強)**: Managing Director, HAECO Group. Oversaw aircraft maintenance and engineering operations. Graduated from PolyU in 1985."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score ≥ 210 with weighting). Covers **full tuition fees** (HK$42,100 per year) plus a living allowance of up to HK$50,000.",
+            "**Faculty of Engineering Scholarships**: Multiple merit-based scholarships ranging from **HK$10,000 to HK$30,000** per year, based on academic performance and extracurricular involvement.",
+            "**HKSAR Government Scholarships**: The **Reaching Out Award** (up to HK$30,000) supports overseas exchange, while the **Talent Development Scholarship** (HK$10,000) rewards leadership and community service.",
+            "**Industrial Sponsorships**: Companies like **CLP Power**, **MTR Corporation**, and **Siemens** offer scholarships tied to internship commitments, providing financial support and guaranteed work experience.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans are available through the **Student Finance Office (SFO)**, covering up to full tuition and living costs for eligible students.",
+            "**Departmental Prizes**: The **Mechanical Engineering Department** awards annual prizes (HK$5,000–HK$15,000) for top academic performance, best capstone project, and outstanding WIE report."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3741 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Physics**: With subject weighting of ×1.5 for these subjects, focus your revision on **M1/M2** and **Physics**. Aim for Level 5 or above in both to maximise your weighted score.",
+            "",
+            "- Dedicate 60% of your study time to these two subjects.\n- Use past papers from 2018–2024 to identify common question patterns.\n- Join a study group or hire a tutor for advanced topics like calculus and mechanics.",
+            "**2. Target a Weighted Score of 210+**: The median is 208, but aiming for 210+ increases your chances. Calculate your target using the formula: (Best 5 subjects × weights). For example, 5 subjects at Level 5 with ×1.5 weights gives 5×5×1.5 = 37.5 per subject, total 187.5 — so you need extra high scores in weighted subjects.",
+            "",
+            "- Use the PolyU online score calculator to simulate your weighted score.\n- Identify your weakest subject and improve it by one grade level.\n- Consider retaking a subject if you score below Level 4.",
+            "**3. Excel in English and Chinese**: While not weighted as heavily, English and Chinese must meet the minimum requirement (Level 3). A Level 4 or 5 in English can boost your overall profile and interview performance.",
+            "",
+            "- Practice English writing and speaking daily.\n- Read engineering articles in English to build technical vocabulary.\n- For Chinese, focus on argumentative essay structure.",
+            "**4. Build a Strong Portfolio for Interview**: If shortlisted, the interview assesses your passion for engineering. Prepare a portfolio with projects, competition awards, or work experience.",
+            "",
+            "- Include a simple engineering project (e.g., a robotic arm or bridge model).\n- Highlight any STEM competitions (e.g., Hong Kong Youth Science and Technology Competition).\n- Practice explaining your project in 2 minutes.",
+            "**5. Leverage Work-Integrated Education (WIE)**: Mention your interest in WIE during the interview. PolyU values students who seek real-world experience. Research companies like **MTR** or **HAECO** for potential placements.",
+            "",
+            "- Read about WIE experiences on PolyU’s website.\n- Prepare questions about internship opportunities for the interview.\n- Consider summer internships before university to strengthen your application.",
+            "**6. Understand the Two Streams**: Show awareness of the **Mechanical Engineering** and **Product Analysis and Engineering Design** streams. Decide which aligns with your interests and mention it in your personal statement.",
+            "",
+            "- Research the curriculum for each stream on PolyU’s programme page.\n- Talk to current students or alumni via LinkedIn.\n- If undecided, emphasise your interest in both and flexibility.",
+            "**7. Apply Early and Check Deadlines**: JUPAS applications open in October. Submit your choices early to avoid last-minute issues. JS3741 is a popular choice, so rank it high in your preferences.",
+            "",
+            "- Set a reminder for the JUPAS deadline (usually early December).\n- Prepare your personal statement by November.\n- Double-check that your HKDSE registration includes all required subjects.",
+            "**8. Use the Any Best 5 Formula to Your Advantage**: Since only the best 5 subjects count, you can drop weaker subjects. Focus on 6 subjects to have a safety net, but concentrate revision on your top 5.",
+            "",
+            "- Identify your 5 strongest subjects early.\n- If you have 7 subjects, drop the weakest one from your study plan.\n- Ensure your top 5 include Mathematics and Physics for weighting.",
+            "**9. Prepare for the Interview with Mock Sessions**: The interview may include group discussions and individual questions. Practice with friends or teachers to build confidence.",
+            "",
+            "- Conduct at least 3 mock interviews.\n- Prepare answers to common questions: \"Why mechanical engineering?\" and \"What is your career goal?\"\n- Dress professionally and arrive 15 minutes early."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：216.6（2025年聯招數據）。",
+            "**入學中位數**：208.0分（2025年聯招數據）。",
+            "**下四分位數**：205.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3741 是一個基礎廣泛的機械工程學榮譽工學士組合課程，提供全面的四年制課程，涵蓋核心機械工程學科、設計與創新。學生在第二年選擇兩個專修方向之一：**機械工程**或**產品分析及工程設計**。",
+            "**第一年 – 基礎年**：學生建立數學、物理、工程力學、熱力學和材料科學的堅實基礎。主要課程包括**工程數學 I 及 II**、**力學**和**工程設計導論**。",
+            "**第二年 – 核心專業化**：學生深化**流體力學**、**固體力學**、**熱力學**、**製造技術**和**工程設計**的知識。同時開始專修選修課，並參與**團隊設計項目**。",
+            "**第三年 – 高級學習與 WIE**：提供**有限元素法**、**控制工程**、**熱傳遞**和**振動分析**等高級課程。學生需完成**工作整合教育（WIE）**實習（通常 8–12 週），獲得真實行業經驗。",
+            "**第四年 – 頂石項目與選修**：最後一年設有**頂石設計項目**，學生需解決一個開放式工程問題。選修課包括**機器人學**、**可再生能源系統**、**航空航天工程**和**智能製造**。",
+            "**兩個專修**：**機械工程**專修側重能源、交通和製造系統，而**產品分析及工程設計**專修強調產品創新、人體工學和面向製造的設計。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：機械工程師在香港的基建、交通、能源和製造業中需求旺盛。JS3741 畢業生在大灣區發展和智慧城市項目中具有優勢。",
+            "**典型職位**：常見職業路徑包括**機械工程師**、**設計工程師**、**項目工程師**、**產品開發經理**、**能源顧問**和**品質保證工程師**。",
+            "**行業合作夥伴**：理大與**中電**、**港鐵公司**、**香港飛機工程公司（HAECO）**、**ASM 太平洋科技**和**西門子**等領先企業保持緊密聯繫。",
+            "**WIE 優勢**：強制性的工作整合教育實習為畢業生提供 6–12 個月的實踐經驗，顯著提升就業能力。超過 **90%** 的理大工程畢業生在畢業後 6 個月內找到工作。",
+            "**進修機會**：畢業生可在全球頂尖大學攻讀研究生學位（碩士/博士），包括理大本身的**機械工程理學碩士**或**汽車工程理學碩士**。",
+            "**全球機會**：該課程的國際認可度讓畢業生能在歐洲、北美和亞洲工作。理大擁有超過 **40 萬名**成員的全球校友網絡，提供寶貴的職業聯繫。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於**九龍紅磡**，直接連接**紅磡港鐵站**（東鐵線和西鐵線），從香港各區均可輕鬆到達。",
+            "**先進實驗室**：**工業中心**配備**3D 打印實驗室**、**CNC 加工車間**、**風洞**、**機器人實驗室**和**材料測試設備**等高級設施。",
+            "**學生組織**：**機械工程學會**舉辦技術工作坊、公司參觀和社交活動。學生亦可加入**理大機械人團隊**或**方程式賽車隊**，獲得實戰比賽經驗。",
+            "**圖書館與學習共享空間**：**包玉剛圖書館**提供豐富的工程數據庫、學習空間，以及配備 3D 打印機和激光切割機的**創客空間**，用於原型製作。",
+            "**體育與康樂**：校園設有**體育綜合大樓**，內有游泳池、健身房、籃球場和跑道。**賽馬會綜藝館**舉辦文化表演和講座。",
+            "**可持續發展措施**：理大致力於綠色校園實踐，包括**太陽能板**、**節能建築**和**校園回收計劃**。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：經科目加權後的文憑試中位數為 **208.0**，顯示競爭激烈。下四分位數為 **205.0**，平均分為 **216.6**。",
+            "**入學計分公式**：JS3741 採用**最佳五科**計算，讓學生可以展示最強科目。核心科目（英文、中文、數學、通識）若位列前五則會被計入。",
+            "**科目加權**：數學和物理獲較高加權（例如 **×1.5**），英文和 M1/M2 亦獲較高權重。這對 STEM 背景強的學生有利。",
+            "**供求情況**：機械工程是核心學科，需求穩定。2024 年該課程收到超過 **1,200 份**申請，約有 **80 個**學額，競爭比例約為 **15:1**。",
+            "**面試要求**：入圍候選人可能獲邀面試，評估其動機、解難能力和對工程專業的理解。建議提前準備。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃國恩博士**：前機電工程署署長，香港特別行政區政府。畢業於理大機械工程學系。",
+            "**陳國威工程師博士**：首席工程師，港鐵公司。因對鐵路工程和安全的貢獻而獲認可。理大機械工程畢業生。",
+            "**梁以昌教授**：理大機械工程學系講座教授，專注可再生能源和熱傳遞研究。校友及現任教職員。",
+            "**李凱琳女士**：高級設計工程師，ASM 太平洋科技。領導先進半導體封裝設備的開發。2016 年畢業。",
+            "**吳偉明先生**：EcoTech Solutions 創辦人兼行政總裁。為商業建築開創節能 HVAC 系統。理大機械工程校友。",
+            "**劉志強工程師博士**：HAECO 集團董事總經理。監督飛機維修和工程運作。1985 年畢業於理大。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異的學生（例如加權後分數 ≥ 210）。涵蓋**全額學費**（每年港幣 42,100 元）及最高港幣 50,000 元的生活津貼。",
+            "**工程學院獎學金**：多項基於成績的獎學金，每年 **港幣 10,000 元至 30,000 元**，根據學術表現和課外活動頒發。",
+            "**香港特區政府獎學金**：**外展體驗獎**（最高港幣 30,000 元）支持海外交流，**才藝發展獎學金**（港幣 10,000 元）獎勵領導力和社區服務。",
+            "**行業贊助**：**中電**、**港鐵公司**和**西門子**等公司提供與實習承諾掛鉤的獎學金，提供經濟支援和保證的工作經驗。",
+            "**經濟援助計劃**：透過**學生資助處**提供經入息審查的助學金及貸款，合資格學生可獲全額學費及生活費資助。",
+            "**學系獎項**：**機械工程學系**每年頒發獎項（港幣 5,000 元至 15,000 元），表揚頂尖學術成績、最佳頂石項目和優秀 WIE 報告。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3741 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學和物理**：由於這些科目加權為 ×1.5，請將溫習重點放在 **M1/M2** 和 **物理** 上。目標是兩科均達第 5 級或以上，以最大化加權分數。",
+            "",
+            "- 將 60% 的學習時間投入這兩科。\n- 使用 2018–2024 年的歷屆試題，識別常見題型。\n- 參加學習小組或聘請導師，專攻微積分和力學等高級主題。",
+            "**2. 目標加權分數 210+**：中位數是 208，但目標 210+ 可增加機會。使用公式計算目標：（最佳五科 × 加權）。例如，5 科第 5 級且加權 ×1.5，每科 5×5×1.5 = 37.5，總分 187.5——因此需要在加權科目中取得更高分數。",
+            "",
+            "- 使用理大網上分數計算器模擬加權分數。\n- 找出最弱科目，提升一個等級。\n- 若某科低於第 4 級，考慮重考。",
+            "**3. 在英文和中文中表現出色**：雖然加權較低，但英文和中文必須達到最低要求（第 3 級）。英文達第 4 或 5 級可提升整體形象和面試表現。",
+            "",
+            "- 每天練習英文寫作和口語。\n- 閱讀英文工程文章，建立專業詞彙。\n- 中文方面，專注議論文結構。",
+            "**4. 為面試建立強大作品集**：若獲面試，會評估你對工程的熱情。準備包含項目、比賽獎項或工作經驗的作品集。",
+            "",
+            "- 包括一個簡單的工程項目（例如機械臂或橋樑模型）。\n- 突出任何 STEM 比賽（例如香港青少年科技創新大賽）。\n- 練習在 2 分鐘內解釋你的項目。",
+            "**5. 善用工作整合教育（WIE）**：在面試中提及你對 WIE 的興趣。理大重視尋求真實經驗的學生。研究 **港鐵** 或 **HAECO** 等公司以了解實習機會。",
+            "",
+            "- 在理大網站上閱讀 WIE 經驗分享。\n- 為面試準備有關實習機會的問題。\n- 考慮在大學前參加暑期實習以強化申請。",
+            "**6. 了解兩個專修方向**：展示你對**機械工程**和**產品分析及工程設計**專修的認識。決定哪個符合你的興趣，並在個人陳述中提及。",
+            "",
+            "- 在理大課程頁面研究每個專修的課程內容。\n- 通過 LinkedIn 與現有學生或校友交流。\n- 若未決定，強調你對兩者都有興趣且具靈活性。",
+            "**7. 提早申請並留意截止日期**：JUPAS 申請於十月開放。提早提交選擇以避免最後一刻問題。JS3741 是熱門選擇，請將其排在較高志願。",
+            "",
+            "- 設定 JUPAS 截止日期提醒（通常為 12 月初）。\n- 在 11 月前準備好個人陳述。\n- 雙重檢查你的文憑試報名是否包含所有必要科目。",
+            "**8. 善用最佳五科公式**：由於只計算最佳五科，你可以放棄較弱科目。專注於 6 科以留有安全網，但將溫習重點放在前五科。",
+            "",
+            "- 及早確定你的五個最強科目。\n- 若有 7 科，從學習計劃中刪除最弱一科。\n- 確保前五科包括數學和物理以獲得加權。",
+            "**9. 通過模擬面試做好準備**：面試可能包括小組討論和個人問題。與朋友或老師練習以建立信心。",
+            "",
+            "- 進行至少 3 次模擬面試。\n- 準備常見問題的答案：「為什麼選擇機械工程？」和「你的職業目標是什麼？」\n- 穿著專業，提早 15 分鐘到達。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "208.0",
+    "lq": "205.0"
+  }
+}

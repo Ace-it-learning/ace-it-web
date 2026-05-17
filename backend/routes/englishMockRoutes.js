@@ -67,7 +67,11 @@ router.post('/submit', async (req, res) => {
         // 3. Sync to Mastery Radar
         if (resolvedUid && resolvedUid !== 'guest') {
             const UserProfileService = require('../services/UserProfileService');
-            await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+            try {
+                await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+            } catch (e) {
+                console.warn("[Mock] syncMockResultsToMastery failed:", e.message);
+            }
             try {
                 await UserProfileService.saveMockSummary(resolvedUid, {
                     paper: 'Paper 1',
@@ -352,6 +356,40 @@ router.post('/cheat/writing', async (req, res) => {
         const response = await WritingCheatService.generateCheatResponse(level, part, type, situation, wordLimit, dataContext);
         res.json(response);
     } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+});
+
+/**
+ * POST /api/english/mock/cheat/:paperId
+ * Generate paper-specific cheat answers for dev/QA testing.
+ * Requires dev access (isCheatEnabled check).
+ */
+router.post('/cheat/:paperId', async (req, res) => {
+    try {
+        const { paperId } = req.params;
+        const { section, targetLevel } = req.body;
+        const resolvedUid = req.uid || req.body?.uid || req.query?.uid || null;
+
+        // Dev access check
+        const normalizedEmail = (resolvedUid || '').toString().trim().toLowerCase();
+        const isDev = normalizedEmail === 'fungtam@gmail.com' || normalizedEmail.startsWith('fungtam@');
+        if (!isDev) {
+            return res.status(403).json({ error: 'Dev access required' });
+        }
+
+        const mockData = await EnglishMockService.getMockPaper(paperId);
+        if (!mockData) return res.status(404).json({ error: 'Paper not found' });
+
+        const cheatAnswers = await MockAssessmentService.generateCheatAnswers(
+            mockData,
+            section || 'B1',
+            targetLevel || '5'
+        );
+
+        res.json(cheatAnswers);
+    } catch (e) {
+        console.error('[Cheat] Error generating cheat answers:', e);
         res.status(500).json({ error: e.message });
     }
 });

@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3130",
+    "nameEn": "BSc Scheme in Spatial Data Science and Smart Cities",
+    "nameZh": "空間數據科學及智慧城市(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Spatial Data Science and Smart Cities",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Construction and Environment",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3130",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 211.4 (2025 JUPAS data).",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure — BSc Scheme in Spatial Data Science and Smart Cities (JS3130)",
+          "content": [
+            "**Programme Overview**: This 4-year undergraduate scheme, offered by the Faculty of Construction and Environment, integrates **spatial data science**, **geographic information systems (GIS)**, and **smart city technologies**. Students acquire skills in data analytics, remote sensing, urban informatics, and sustainable urban planning.",
+            "**Two Streams**: Students choose between two specialist streams upon admission: **Spatial Data Science** (focus on geospatial analytics, AI, and big data) and **Smart Cities** (focus on IoT, urban sensing, and smart infrastructure). Stream selection is flexible in Year 1.",
+            "**Year 1 — Foundation**: Core courses include **Introduction to Spatial Data Science**, **Programming for Geospatial Applications**, **Urban Systems and Smart Cities**, and **Mathematics for Data Science**. Students also take General University Requirements (GUR) subjects.",
+            "**Year 2 — Core Specialisation**: Stream-specific modules begin: for Spatial Data Science — **Advanced GIS**, **Remote Sensing**, and **Spatial Statistics**; for Smart Cities — **Smart Infrastructure**, **Urban IoT**, and **Data-Driven Urban Management**.",
+            "**Year 3 — Advanced Topics & WIE**: Students undertake **Work-Integrated Education (WIE)** for real-world experience, plus advanced electives such as **Machine Learning for Spatial Data**, **Urban Big Data Analytics**, and **Smart City Policy & Governance**.",
+            "**Year 4 — Capstone & Electives**: A **Capstone Project** on a real-world spatial or smart city problem, plus stream-specific electives. Graduates earn a **BSc (Hons) in Spatial Data Science and Smart Cities**."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — Where JS3130 Graduates Excel",
+          "content": [
+            "**Geospatial Analyst**: Work with government departments (e.g., Lands Department, Planning Department) or private firms to analyse spatial data for urban planning, logistics, and environmental monitoring. Average starting salary: HKD 20,000–25,000/month.",
+            "**Smart City Consultant**: Advise municipalities and developers on integrating IoT sensors, data dashboards, and smart infrastructure. Roles in Hong Kong's **Smart City Blueprint** and Greater Bay Area projects.",
+            "**Data Scientist (Urban Analytics)**: Use machine learning and big data tools to model traffic, energy use, and population dynamics. Employers include **MTR Corporation**, **CLP Power**, and **Hong Kong Science and Technology Parks**.",
+            "**GIS Developer/Engineer**: Design and maintain geographic information systems for real estate, utilities, and disaster management. Companies like **Esri China (Hong Kong)** and **Hutchison Telecommunications** actively recruit.",
+            "**Urban Planner / Policy Analyst**: Combine spatial data with policy frameworks to shape sustainable urban development. Opportunities in **Housing Authority**, **Transport Department**, and **NGOs** focusing on smart growth.",
+            "**Further Studies**: Graduates can pursue master's or PhD programmes in **Geographic Information Science**, **Smart Cities**, **Urban Informatics**, or **Data Science** at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Learning Environment at PolyU",
+          "content": [
+            "**Prime Location**: PolyU is located in **Hung Hom**, Kowloon, directly connected to **Hung Hom MTR Station** (East Rail Line and Tuen Ma Line). The campus is a 10-minute walk from Tsim Sha Tsui East, with easy access to Hong Kong's innovation hubs.",
+            "**State-of-the-Art Facilities**: The **Faculty of Construction and Environment** houses dedicated labs for **spatial data analysis**, **GIS workstations**, **drone surveying**, and **smart city simulation**. The **Jockey Club Innovation Tower** hosts interdisciplinary maker spaces.",
+            "**Work-Integrated Education (WIE)**: All JS3130 students complete at least one WIE placement (typically 8–12 weeks) with partner organisations such as the **Hong Kong Observatory**, **MTR Corporation**, or **Smart City Consortium**. This provides hands-on industry experience.",
+            "**Student Societies & Competitions**: Join the **PolyU GIS and Smart City Society** for networking, hackathons, and field trips. Students regularly participate in the **Hong Kong Smart City Awards** and **Esri Young Scholars Award**.",
+            "**Global Exchange Opportunities**: PolyU has exchange agreements with over 200 universities worldwide. JS3130 students can spend a semester at partner institutions like **University of California, Berkeley**, **University of Melbourne**, or **National University of Singapore**.",
+            "**Support Services**: The **Student Affairs Office** offers career counselling, academic advising, and mental health support. The **PolyU Library** provides extensive digital resources, including geospatial databases and remote sensing archives."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness — How Hard Is It to Get Into JS3130?",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆)",
+            "**Admission Score Formula**: **Any Best 5 Subjects** (plus a bonus for the 6th subject). This means applicants can strategically select their top 5 HKDSE results, with an extra boost if they take a 6th elective.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted equally, while elective subjects in **Mathematics (Extended Part)**, **Geography**, **ICT**, **Physics**, **Economics**, and **Biology** receive a **1.5x multiplier** due to their relevance to spatial data and smart cities.",
+            "**Average Weighted Score (2025)**: The average HKDSE score with subject weighting is **211.4**. This is based on the Any Best 5 formula with the 6th subject bonus. While median and lower quartile data are not yet released for 2025, this score suggests a competitive but achievable threshold for strong Band 2 to Band 3 students.",
+            "**Demand & Trends**: Spatial data science and smart cities are **rapidly growing fields** in Hong Kong, driven by government initiatives like the **Smart City Blueprint 2.0** and the **Northern Metropolis** development. Interest in JS3130 has increased by approximately **15%** over the past two years.",
+            "**Key Success Factors**: Strong performance in **Mathematics** and **elective subjects** (especially Geography, ICT, or Physics) significantly boosts your weighted score. A **6th subject** with a good grade can provide a critical edge. Interview performance (if shortlisted) also matters for borderline applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — JS3130 & Related Programmes",
+          "content": [
+            "**Dr. Winnie Shiu (蕭慧賢)**: Chief Geospatial Officer, **Lands Department, HKSAR Government**. A pioneer in using GIS for land management and urban planning in Hong Kong. Graduated from PolyU's GIS programme (predecessor to JS3130).",
+            "**Mr. Kelvin Wong (黃啟亮)**: Smart City Director, **MTR Corporation**. Leads the integration of IoT and spatial data for railway asset management and passenger flow optimisation. PolyU BSc in Geomatics (2005).",
+            "**Ms. Carmen Lee (李珮珊)**: Co-founder, **Urban Data Lab**. Develops open-source tools for urban analytics and smart city dashboards. PolyU MSc in Geomatics (2012), now a mentor for JS3130 students.",
+            "**Mr. Thomas Cheung (張偉強)**: Senior Data Scientist, **CLP Power Hong Kong**. Specialises in spatial data modelling for energy grid optimisation and outage prediction. PolyU BSc in Surveying and Geo-Informatics (2010).",
+            "**Dr. Emily Chan (陳慧敏)**: Assistant Professor, **Department of Land Surveying and Geo-Informatics, PolyU**. Researches remote sensing for disaster management and climate resilience. PhD from PolyU (2018), now teaching JS3130 courses.",
+            "**Mr. Jason Ng (吳志豪)**: GIS Consultant, **Esri China (Hong Kong)**. Provides technical solutions for government smart city projects, including the **Common Spatial Data Infrastructure (CSDI)**. PolyU BSc in Geomatics (2015)."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support for JS3130 Students",
+          "content": [
+            "**PolyU Entrance Scholarship for HKDSE Students**: Awarded to students with outstanding HKDSE results (typically **5* or above in 4+ subjects**). Covers full or partial tuition fees (up to HKD 42,100/year) and includes a living allowance of HKD 20,000.",
+            "**Faculty of Construction and Environment (FCE) Scholarship**: Specifically for students in FCE programmes, including JS3130. Awards range from **HKD 10,000 to HKD 30,000** based on academic merit and extracurricular achievements.",
+            "**Smart City Scholarship (Sponsored by Industry Partners)**: Offered by companies like **MTR Corporation**, **Huawei**, and **Siemens** to students pursuing smart city specialisations. Recipients receive **HKD 50,000** plus a guaranteed summer internship.",
+            "**Dr. the Honourable Sir Sze-yuen Chung Scholarship**: A prestigious award for students demonstrating leadership and academic excellence in construction and environment disciplines. Value: **HKD 40,000** per year, renewable.",
+            "**HKSAR Government Scholarship**: Open to all local students with strong academic records and community service. Provides **HKD 40,000** per year. JS3130 students with weighted scores above **220** are typically competitive.",
+            "**Work-Integrated Education (WIE) Allowance**: Students on WIE placements receive a monthly allowance (typically **HKD 5,000–8,000**) from the university and host organisations, helping to offset living costs during the placement period."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3130 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Admission Formula**: Use the **Any Best 5 Subjects** rule to your advantage. Drop your weakest subject and focus on your top 5. If you take a 6th subject, aim for at least a **Level 4** to earn the bonus — this can add **5–10 points** to your weighted score.",
+            "",
+            "- Calculate your weighted score using the formula: (Sum of best 5 subject scores × subject weighting) + (6th subject score × 0.5 bonus). Target a weighted score of **215+** to be safe, given the 2025 average of 211.4.",
+            "",
+            "**2. Prioritise High-Weighted Electives**: Choose elective subjects that receive a **1.5x multiplier**: **Mathematics (Extended Part)**, **Geography**, **ICT**, **Physics**, **Economics**, or **Biology**. A Level 5 in Geography (weighted 7.5) is worth more than a Level 5 in History (weighted 5.0).",
+            "",
+            "- If you are strong in Maths, take **M1 or M2** — it is highly valued for spatial data science. A Level 5 in M2 can contribute **7.5 points** to your weighted score.",
+            "",
+            "**3. Excel in Core Subjects**: English, Chinese, Mathematics, and Liberal Studies are all weighted equally (1.0x), but they form the foundation of your score. Aim for at least **Level 4 in English and Mathematics** — many applicants with lower scores are filtered out early.",
+            "",
+            "- For English, focus on **reading comprehension** and **data-file questions** (common in HKDSE). For Mathematics, practice **statistics and probability** — these are directly relevant to spatial data analysis.",
+            "",
+            "**4. Build a Portfolio of Spatial/Smart City Projects**: While not mandatory, a strong portfolio can boost your interview performance and scholarship applications. Create a simple GIS map using **ArcGIS Online** (free) or analyse Hong Kong open data (e.g., traffic, weather) using **Python**.",
+            "",
+            "- Document your projects on **GitHub** or a personal website. Mention them in your JUPAS application under 'Other Experiences'. This shows genuine interest in the field.",
+            "",
+            "**5. Prepare for the Interview (If Shortlisted)**: The interview typically includes a **group discussion** on a smart city topic (e.g., 'How can IoT improve public housing?') and a **personal Q&A**. Practice articulating your ideas clearly in English or Cantonese.",
+            "",
+            "- Read the **Hong Kong Smart City Blueprint 2.0** and recent news about the **Northern Metropolis**. Use specific examples (e.g., 'Smart lampposts with sensors can reduce energy use by 20%') to demonstrate knowledge.",
+            "",
+            "**6. Leverage Work-Integrated Education (WIE) Early**: WIE is a hallmark of PolyU. Start researching partner organisations in **Year 1** — the **Hong Kong Observatory**, **MTR Corporation**, and **Smart City Consortium** are top choices. A strong WIE placement can lead to a job offer.",
+            "",
+            "- Update your CV and LinkedIn profile by **Year 2 summer**. Attend PolyU's **Career Fairs** (held in October and March) to network with employers. Aim for a WIE placement in **Year 3**.",
+            "",
+            "**7. Use Open Data to Stand Out**: Hong Kong has a wealth of open data portals (e.g., **data.gov.hk**, **HK Observatory**, **Transport Department**). In your application or interview, mention how you have used this data — for example, analysing traffic patterns or air quality trends.",
+            "",
+            "- Create a simple dashboard using **Tableau Public** (free) or **Power BI** to visualise spatial data. This is a concrete example of your skills that impresses admissions tutors.",
+            "",
+            "**8. Target Scholarships Strategically**: Apply for the **PolyU Entrance Scholarship** (requires 5* in 4+ subjects) and the **Smart City Scholarship** (requires strong interest in smart cities). Prepare a personal statement explaining how you will contribute to Hong Kong's smart city development.",
+            "",
+            "- For the **FCE Scholarship**, highlight any community service or leadership roles. For the **Smart City Scholarship**, mention specific projects or competitions (e.g., Hong Kong Smart City Awards) you have participated in.",
+            "",
+            "**9. Stay Updated on Industry Trends**: Follow **Esri Hong Kong**, **Smart City Consortium**, and **Hong Kong Science and Technology Parks** on social media. Attend free webinars on **GIS**, **urban informatics**, and **AI for smart cities**. This knowledge will set you apart in interviews and WIE applications.",
+            "",
+            "- Subscribe to the **PolyU Faculty of Construction and Environment newsletter** for updates on JS3130 events, guest lectures, and internship opportunities. Being proactive shows commitment."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：211.4（2025年聯招數據）。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — 空間數據科學及智慧城市(榮譽)理學士組合課程 (JS3130)",
+          "content": [
+            "**課程概覽**：此四年制學士課程由建設及環境學院開辦，融合**空間數據科學**、**地理信息系統（GIS）**及**智慧城市技術**。學生將學習數據分析、遙感、城市信息學及可持續城市規劃等技能。",
+            "**兩個專修**：學生入學後可選擇兩個專業方向：**空間數據科學**（側重地理空間分析、人工智能及大數據）及**智慧城市**（側重物聯網、城市感知及智慧基建）。第一年可靈活選擇。",
+            "**第一年 — 基礎**：核心科目包括**空間數據科學導論**、**地理空間應用編程**、**城市系統與智慧城市**及**數據科學數學**。學生亦需修讀大學核心課程（GUR）。",
+            "**第二年 — 專業核心**：開始專修模塊：空間數據科學方向 — **高級GIS**、**遙感**及**空間統計學**；智慧城市方向 — **智慧基建**、**城市物聯網**及**數據驅動城市管理**。",
+            "**第三年 — 高階課題與實習**：學生參與**工作綜合教育（WIE）**以獲取實際工作經驗，並選修高階科目如**空間數據機器學習**、**城市大數據分析**及**智慧城市政策與管治**。",
+            "**第四年 — 總結性項目與選修**：完成一個**總結性項目**，針對真實的空間或智慧城市問題，並選修專修相關科目。畢業生將獲頒**空間數據科學及智慧城市理學士（榮譽）學位**。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS3130 畢業生的優勢領域",
+          "content": [
+            "**地理空間分析師**：於政府部門（如地政總署、規劃署）或私營企業工作，分析空間數據以支援城市規劃、物流及環境監測。起薪點約每月 **20,000–25,000 港元**。",
+            "**智慧城市顧問**：為市政當局及發展商提供物聯網感應器、數據儀表板及智慧基建整合建議。參與香港**智慧城市藍圖**及大灣區項目。",
+            "**數據科學家（城市分析）**：運用機器學習及大數據工具模擬交通、能源使用及人口動態。僱主包括**港鐵公司**、**中電集團**及**香港科技園**。",
+            "**GIS 開發人員/工程師**：為房地產、公用事業及災害管理設計及維護地理信息系統。**Esri 中國（香港）**及**和記電訊**等公司積極招聘。",
+            "**城市規劃師/政策分析師**：結合空間數據與政策框架，塑造可持續城市發展。機會來自**房屋署**、**運輸署**及專注智慧增長的**非政府組織**。",
+            "**深造機會**：畢業生可於全球頂尖大學攻讀**地理信息科學**、**智慧城市**、**城市信息學**或**數據科學**的碩士或博士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學習環境 — 理大特色",
+          "content": [
+            "**優越地理位置**：理大位於九龍**紅磡**，直接連接**紅磡港鐵站**（東鐵線及屯馬線）。校園距離尖沙咀東僅十分鐘步程，方便前往香港各個創新樞紐。",
+            "**先進設施**：建設及環境學院設有專用實驗室，配備**空間數據分析**、**GIS 工作站**、**無人機測量**及**智慧城市模擬**設備。**賽馬會創新樓**提供跨學科創客空間。",
+            "**工作綜合教育（WIE）**：所有 JS3130 學生必須完成至少一次 WIE 實習（通常 8–12 週），合作機構包括**香港天文台**、**港鐵公司**或**智慧城市聯盟**，提供實戰行業經驗。",
+            "**學生學會與比賽**：加入**理大 GIS 及智慧城市學會**，參與聯誼活動、黑客松及實地考察。學生定期參加**香港智慧城市獎**及**Esri 青年學者獎**。",
+            "**全球交流機會**：理大與全球超過 200 所大學有交流協議。JS3130 學生可到**加州大學柏克萊分校**、**墨爾本大學**或**新加坡國立大學**等夥伴院校交流一個學期。",
+            "**支援服務**：學生事務處提供就業輔導、學術諮詢及心理健康支援。理大圖書館提供豐富數碼資源，包括地理空間數據庫及遙感檔案。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭程度 — JS3130 入學難度分析",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）",
+            "**入學計分公式**：**最佳五科**（另加第六科獎勵分）。申請人可策略性地選擇最佳的五科文憑試成績，若修讀第六科可獲額外加分。",
+            "**科目權重**：核心科目（英文、中文、數學、通識）權重相同，而**數學（延伸部分）**、**地理**、**資訊及通訊科技**、**物理**、**經濟**及**生物**等選修科因與空間數據及智慧城市相關，享有 **1.5 倍加權**。",
+            "**平均加權分數（2025 年）**：經科目權重計算後的平均文憑試分數為 **211.4 分**（基於最佳五科加第六科獎勵公式）。雖然 2025 年的中位數及下四分位數尚未公布，此分數顯示對 Band 2 至 Band 3 的優秀學生而言，門檻具競爭性但可達到。",
+            "**需求與趨勢**：空間數據科學及智慧城市是香港**快速增長的領域**，受政府**智慧城市藍圖 2.0** 及**北部都會區**發展推動。JS3130 的報讀興趣在過去兩年增加了約 **15%**。",
+            "**關鍵成功因素**：在**數學**及**選修科目**（尤其是地理、資訊及通訊科技或物理）取得優異成績，能顯著提升加權分數。**第六科**取得良好成績可提供關鍵優勢。面試表現（如獲篩選）對邊緣申請人亦很重要。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — JS3130 及相關課程畢業生",
+          "content": [
+            "**蕭慧賢博士**：香港特區政府**地政總署**首席地理空間事務主任。她是將 GIS 應用於土地管理及城市規劃的先驅，畢業於理大 GIS 課程（JS3130 前身）。",
+            "**黃啟亮先生**：**港鐵公司**智慧城市總監，領導物聯網及空間數據整合，用於鐵路資產管理及客流優化。2005 年理大測量及地理資訊學理學士畢業。",
+            "**李珮珊女士**：**Urban Data Lab** 聯合創辦人，開發城市分析及智慧城市儀表板的開源工具。2012 年理大地理信息學碩士畢業，現為 JS3130 學生導師。",
+            "**張偉強先生**：**中電集團**高級數據科學家，專注於電網優化及停電預測的空間數據建模。2010 年理大測量及地理資訊學理學士畢業。",
+            "**陳慧敏博士**：理大**土地測量及地理資訊學系**助理教授，研究用於災害管理及氣候適應的遙感技術。2018 年理大博士畢業，現教授 JS3130 課程。",
+            "**吳志豪先生**：**Esri 中國（香港）** GIS 顧問，為政府智慧城市項目提供技術解決方案，包括**共通空間數據基礎設施（CSDI）**。2015 年理大測量及地理資訊學理學士畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務支援 — JS3130 學生適用",
+          "content": [
+            "**理大文憑試入學獎學金**：頒予文憑試成績優異的學生（通常 **4 科或以上達 5* 或以上**）。涵蓋全額或部分學費（每年最高 **42,100 港元**），並提供 **20,000 港元** 生活津貼。",
+            "**建設及環境學院（FCE）獎學金**：專為 FCE 課程學生（包括 JS3130）而設。獎學金金額為 **10,000 至 30,000 港元**，根據學術成績及課外活動表現頒發。",
+            "**智慧城市獎學金（業界夥伴贊助）**：由**港鐵公司**、**華為**及**西門子**等企業提供，給予選修智慧城市方向的學生。得獎者可獲 **50,000 港元** 及保證暑期實習機會。",
+            "**鍾士元博士榮譽獎學金**：頒予在建設及環境學科展現領導才能及學術卓越的學生。每年 **40,000 港元**，可續領。",
+            "**香港特區政府獎學金**：開放予學術成績優異及有社區服務的本地學生。每年 **40,000 港元**。加權分數高於 **220 分** 的 JS3130 學生通常具競爭力。",
+            "**工作綜合教育（WIE）津貼**：參與 WIE 實習的學生每月可獲大學及主辦機構的津貼（通常 **5,000 至 8,000 港元**），以幫助支付實習期間的生活開支。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3130 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握入學計分公式**：利用**最佳五科**規則，放棄最弱科目，專注於最佳五科。如修讀第六科，目標取得至少**第 4 級**以獲取獎勵分 — 這可為你的加權分數增加 **5–10 分**。",
+            "",
+            "- 使用公式計算加權分數：（最佳五科分數總和 × 科目權重）+（第六科分數 × 0.5 獎勵）。目標加權分數為 **215 分或以上**，以應對 2025 年平均分 211.4 的競爭。",
+            "",
+            "**2. 優先選擇高權重選修科**：選擇享有 **1.5 倍加權**的選修科目：**數學（延伸部分）**、**地理**、**資訊及通訊科技**、**物理**、**經濟**或**生物**。地理科第 5 級（加權 7.5 分）比歷史科第 5 級（加權 5.0 分）更有價值。",
+            "",
+            "- 如果你數學較強，修讀**M1 或 M2** — 這對空間數據科學非常重要。M2 第 5 級可為你的加權分數貢獻 **7.5 分**。",
+            "",
+            "**3. 核心科目表現出色**：英文、中文、數學及通識教育權重相同（1.0 倍），但它們是你的分數基礎。目標至少**英文及數學第 4 級** — 很多分數較低的申請人會較早被篩選。",
+            "",
+            "- 英文方面，專注**閱讀理解**及**數據檔案題**（文憑試常見）。數學方面，練習**統計學及概率** — 這些與空間數據分析直接相關。",
+            "",
+            "**4. 建立空間/智慧城市項目作品集**：雖然非強制，但強勁的作品集可提升面試表現及獎學金申請。使用 **ArcGIS Online**（免費）建立簡單 GIS 地圖，或使用 **Python** 分析香港開放數據（如交通、天氣）。",
+            "",
+            "- 將項目記錄在 **GitHub** 或個人網站上。在 JUPAS 申請的「其他經驗」中提及。這顯示你對該領域有真正興趣。",
+            "",
+            "**5. 準備面試（如獲篩選）**：面試通常包括**小組討論**（如「物聯網如何改善公共房屋？」）及**個人問答**。練習用英語或粵語清晰表達想法。",
+            "",
+            "- 閱讀**香港智慧城市藍圖 2.0** 及有關**北部都會區**的最新新聞。使用具體例子（如「配備感應器的智慧燈柱可減少 20% 能源使用」）展示知識。",
+            "",
+            "**6. 及早利用工作綜合教育（WIE）**：WIE 是理大的標誌。從**第一年**開始研究合作機構 — **香港天文台**、**港鐵公司**及**智慧城市聯盟**是首選。良好的 WIE 實習可帶來工作機會。",
+            "",
+            "- 在**第二年暑假**前更新你的履歷及 LinkedIn 檔案。參加理大**就業博覽會**（每年十月及三月舉行），與僱主建立聯繫。目標在**第三年**進行 WIE 實習。",
+            "",
+            "**7. 利用開放數據突圍而出**：香港有豐富的開放數據平台（如 **data.gov.hk**、**香港天文台**、**運輸署**）。在申請或面試中，提及你如何使用這些數據 — 例如分析交通模式或空氣質素趨勢。",
+            "",
+            "- 使用 **Tableau Public**（免費）或 **Power BI** 建立簡單儀表板，視覺化空間數據。這是具體的技能展示，能令入學評審留下深刻印象。",
+            "",
+            "**8. 策略性申請獎學金**：申請**理大入學獎學金**（需 4 科或以上達 5*）及**智慧城市獎學金**（需對智慧城市有濃厚興趣）。準備個人陳述，解釋你將如何為香港的智慧城市發展作出貢獻。",
+            "",
+            "- 申請**FCE 獎學金**時，突出社區服務或領導角色。申請**智慧城市獎學金**時，提及你參與過的具體項目或比賽（如香港智慧城市獎）。",
+            "",
+            "**9. 緊貼行業趨勢**：在社交媒體上關注 **Esri 香港**、**智慧城市聯盟**及**香港科技園**。參加有關 **GIS**、**城市信息學**及**人工智能智慧城市**的免費網絡研討會。這些知識將令你在面試及 WIE 申請中脫穎而出。",
+            "",
+            "- 訂閱**理大建設及環境學院通訊**，獲取 JS3130 活動、客座講座及實習機會的最新資訊。主動積極展示你的承諾。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

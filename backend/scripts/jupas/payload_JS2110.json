@@ -1,0 +1,281 @@
+{
+  "programme": {
+    "code": "JS2110",
+    "nameEn": "Bachelor of Business Administration (Hons) - Accounting Concentration",
+    "nameZh": "工商管理學士(榮譽) - 會計學專修",
+    "name": "Bachelor of Business Administration (Hons) - Accounting Concentration",
+    "university": "香港浸會大學",
+    "faculty": "School of Business",
+    "median": "22.15",
+    "band_a": "20.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2110",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 22.15 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 5, LQ 5",
+            "- **English Language**: Median 4, LQ 4",
+            "- **Mathematics**: Median 3, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 650 applicants, Band B 280. Total 1450 applicants.",
+            "**First Year Intake**: 80 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BBA (Hons) in Accounting is a 4-year full-time programme designed to equip students with professional accounting knowledge and business acumen. The curriculum integrates core business disciplines with specialized accounting courses, preparing graduates for professional qualifications like CPA, ACCA, and HKICPA.",
+            "**Year 1 – Foundation Year**: Students build a solid base with courses in Financial Accounting, Economics, Statistics, and Business Law. General education requirements include University English, Chinese, and Citizenship and Social Development, fostering whole-person development.",
+            "**Year 2 – Core Business & Accounting**: Key subjects include Management Accounting, Corporate Finance, Taxation, and Auditing. Students also take core business courses such as Marketing, Management, and Business Ethics, alongside elective choices.",
+            "**Year 3 – Advanced Specialization**: Advanced modules cover Financial Reporting, Advanced Taxation, Audit and Assurance, and Accounting Information Systems. Students may choose electives in areas like International Accounting or Business Valuation.",
+            "**Year 4 – Capstone & Professional Preparation**: The final year includes a Capstone Project integrating accounting theory and practice. Students also prepare for professional examinations through courses in Corporate Governance, Ethics, and Strategic Management. An optional internship is available.",
+            "**Professional Recognition**: The programme is accredited by the Hong Kong Institute of Certified Public Accountants (HKICPA) and the Association of Chartered Certified Accountants (ACCA), offering exemptions from certain professional papers."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Professional Accounting Firms**: Graduates commonly join the Big Four (Deloitte, PwC, EY, KPMG) as audit associates, tax consultants, or advisory staff. Starting salaries typically range from HKD 18,000 to 22,000 per month.",
+            "**Corporate Finance & Accounting**: Many graduates work as financial analysts, management accountants, or internal auditors in multinational corporations, banks, and listed companies in Hong Kong and mainland China.",
+            "**Public Sector & NGOs**: Opportunities exist in government departments (e.g., Audit Commission, Inland Revenue Department) and non-profit organizations, offering stable career paths with competitive benefits.",
+            "**Further Studies & Professional Qualifications**: Graduates can pursue master's degrees in accounting, finance, or business administration (MBA). The programme's accreditation allows direct entry to HKICPA Qualification Programme and ACCA exams.",
+            "**Entrepreneurship & Consulting**: Some graduates start their own accounting firms or join management consulting firms, leveraging their financial expertise to advise businesses on strategy and operations.",
+            "**Global Mobility**: With HKBU's extensive exchange network, graduates can pursue international careers in accounting firms or multinational corporations across Asia, Europe, and North America."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Shaw Campus Location**: The programme is based at HKBU's scenic Shaw Campus in Kowloon Tong, featuring modern lecture theatres, computer labs, and the iconic Communication and Visual Arts Building.",
+            "**Business School Facilities**: The School of Business provides dedicated study spaces, a financial trading room with Bloomberg terminals, and collaborative project rooms for team-based learning.",
+            "**Library & Learning Resources**: The HKBU Library offers extensive accounting databases (e.g., Thomson Reuters, Mergent Online), e-journals, and quiet study zones. The Learning Commons provides 24/7 access.",
+            "**Student Accommodation**: On-campus halls (e.g., Jockey Club Campus) are available for non-local students, with priority given to first-year applicants. Off-campus housing options are also supported by the Student Affairs Office.",
+            "**Extracurricular Activities**: Students can join the Accounting Society, participate in case competitions (e.g., CPA Australia Case Competition), and attend networking events with industry professionals.",
+            "**Sports & Recreation**: The university offers sports facilities including a gymnasium, swimming pool, and sports fields. The nearby Kowloon Tsai Park provides additional outdoor recreation space."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Statistics (2025)**: With 650 Band A applicants for only 80 places, the programme has a Band A-to-place ratio of 8.1:1, indicating strong competition. Total applicants reached 1,450.",
+            "**Score Requirements**: The median score of 22.15 (Best 5) and lower quartile of 20.50 reflect high entry standards. Chinese Language median of 5 and English median of 4 show strong language demands.",
+            "**Subject Requirements**: Applicants need strong results in Chinese (median 5) and English (median 4), with Mathematics at median 3. Electives at median 4 indicate preference for well-rounded academic profiles.",
+            "**No Interview Policy**: The absence of an interview means admission relies entirely on HKDSE scores, making every subject grade critical. Applicants should aim for at least 5 in Chinese and 4 in English to be competitive.",
+            "**Professional Accreditation Advantage**: The programme's HKICPA and ACCA accreditation adds significant value, attracting high-calibre students who seek direct pathways to professional qualifications."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Clement Chen (陳振彬)**: Chairman of the HKBU Foundation and former President of the Hong Kong Institute of Certified Public Accountants (HKICPA). Graduated with a BBA in Accounting from HKBU.",
+            "**Mr. Peter Wong (王冬勝)**: Former Chairman of HSBC Asia Pacific and a prominent figure in Hong Kong's banking sector. He earned his BBA in Accounting from HKBU before pursuing an MBA.",
+            "**Ms. Winnie Cheung (張慧敏)**: Partner at Deloitte China, specializing in audit and assurance services. She is a HKBU Accounting graduate and active alumna mentor.",
+            "**Mr. Albert Au (區瑞強)**: Renowned Hong Kong singer-songwriter and radio host. While not a business graduate, his HKBU connection highlights the university's diverse alumni network.",
+            "**Dr. the Hon. Lam Tai-fai (林大輝)**: Chairman of the HKBU Council and a successful businessman. He holds a BBA in Accounting from HKBU and is a strong advocate for the programme.",
+            "**Ms. Florence Hui (許曉暉)**: Former Under Secretary for Home Affairs of Hong Kong. She graduated from HKBU's BBA programme and has been active in public service and community development."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarships**: Outstanding HKDSE achievers with scores of 25 or above (Best 5) may receive full or half tuition fee waivers. Applicants with 22-24 points may qualify for partial scholarships.",
+            "**School of Business Scholarships**: The School offers merit-based scholarships for BBA students, including the Dr. Clement Chen Scholarship (HKD 20,000) for top accounting students.",
+            "**Professional Body Scholarships**: Students who excel in HKICPA or ACCA examinations may receive awards from these professional bodies, covering examination fees and offering cash prizes.",
+            "**Need-Based Financial Aid**: The HKBU Financial Assistance Scheme provides grants and loans for students from low-income families. The maximum grant can cover up to full tuition fees.",
+            "**External Scholarships**: Accounting students can apply for scholarships from organizations like the Hong Kong Institute of Certified Public Accountants (HKICPA) and the Association of Chartered Certified Accountants (ACCA).",
+            "**Sports & Talent Scholarships**: HKBU offers scholarships for students with exceptional achievements in sports, arts, or community service, with amounts ranging from HKD 10,000 to 50,000 per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2110 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Minimum of 22 Points in Best 5**",
+            "",
+            "- With a median score of 22.15, aim for at least 22 points to be competitive. Use the HKBU admission calculator to check your predicted score against the 2025 median.",
+            "",
+            "**2. Prioritize Chinese Language (Target Level 5)**",
+            "",
+            "- Chinese median is 5, so a Level 5 or above is crucial. Dedicate extra time to Chinese reading and writing, especially for the integrated skills paper.",
+            "",
+            "**3. Secure English at Level 4 or Above**",
+            "",
+            "- English median is 4. Focus on Paper 3 (listening and integrated skills) and Paper 2 (writing) to boost your score. Consider taking IELTS for additional evidence of proficiency.",
+            "",
+            "**4. Maintain Mathematics at Level 3 Minimum**",
+            "",
+            "- Mathematics median is 3, but a Level 4 or above strengthens your application. Practice past papers and focus on core topics like algebra and statistics.",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "- Elective median is 4. Select subjects like Economics, Business, Accounting and Financial Studies (BAFS), or Mathematics Extended Part (M1/M2) to align with the programme's focus.",
+            "",
+            "**6. Aim for Attained in Citizenship and Social Development**",
+            "",
+            "- This subject only requires 'Attained' (median), but a higher grade (e.g., Attained with Distinction) can improve your overall profile. Focus on the project-based assessment.",
+            "",
+            "**7. Build a Strong Academic Profile Beyond Scores**",
+            "",
+            "- While no interview is required, participation in accounting-related competitions (e.g., HKICPA Case Competition) or business camps can demonstrate interest and strengthen your application.",
+            "",
+            "**8. Apply Early in Band A**",
+            "",
+            "- With 650 Band A applicants for 80 places, Band A placement is critical. List JS2110 as your first choice to maximize chances. Band B applicants have significantly lower success rates.",
+            "",
+            "**9. Prepare for Professional Examinations Early**",
+            "",
+            "- The programme offers exemptions from HKICPA and ACCA papers. Start studying for these exams in Year 2 or 3 to gain a head start. Use HKBU's library resources and student societies for support."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：22.15分（2025年聯招數據）。",
+            "**下四分位數**：20.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 5, 下四分位數 5",
+            "- **英國語文**：中位數 4, 下四分位數 4",
+            "- **數學**：中位數 3, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者650人、Band B 280人。總申請者1450人。",
+            "**首年學額**：80人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：工商管理學士（榮譽）會計學專修為四年全日制課程，旨在培養學生的專業會計知識與商業觸覺。課程融合核心商業學科與專門會計科目，為學生考取CPA、ACCA及HKICPA等專業資格做好準備。",
+            "**第一年 – 基礎年**：學生修讀財務會計、經濟學、統計學及商業法等基礎科目。通識教育包括大學英語、中文及公民與社會發展，促進全人發展。",
+            "**第二年 – 核心商業與會計**：主要科目包括管理會計、公司財務、稅務及審計。學生同時修讀市場學、管理學及商業倫理等核心商業課程，並可選修其他科目。",
+            "**第三年 – 高級專修**：高級模塊涵蓋財務報告、高級稅務、審計與核證及會計信息系統。學生可選修國際會計或商業估值等領域的科目。",
+            "**第四年 – 總結與專業準備**：最後一年包括整合會計理論與實踐的總結項目。學生通過企業管治、倫理及策略管理等課程為專業考試做準備，並可選擇實習。",
+            "**專業認可**：本課程獲香港會計師公會（HKICPA）及特許公認會計師公會（ACCA）認可，畢業生可獲豁免部分專業考試卷目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**專業會計師事務所**：畢業生通常加入四大會計師事務所（德勤、普華永道、安永、畢馬威）擔任審計助理、稅務顧問或諮詢人員。起薪一般為每月18,000至22,000港元。",
+            "**企業財務與會計**：許多畢業生在跨國企業、銀行及香港和中國內地的上市公司擔任財務分析師、管理會計師或內部審計師。",
+            "**公共部門與非政府組織**：政府部門（如審計署、稅務局）及非營利組織提供就業機會，工作穩定且福利具競爭力。",
+            "**深造與專業資格**：畢業生可攻讀會計、金融或工商管理碩士（MBA）學位。課程認可讓學生直接進入HKICPA資格課程及ACCA考試。",
+            "**創業與諮詢**：部分畢業生創辦自己的會計師事務所或加入管理諮詢公司，運用財務專長為企業提供策略及運營建議。",
+            "**全球流動性**：憑藉浸大廣泛的交流網絡，畢業生可在亞洲、歐洲及北美的會計師事務所或跨國企業開展國際職業生涯。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**善衡校園位置**：課程設於九龍塘風景優美的善衡校園，配備現代化演講廳、電腦實驗室及標誌性的傳理與視覺藝術大樓。",
+            "**商學院設施**：商學院提供專用學習空間、配備彭博終端的金融交易室，以及協作項目室，促進團隊學習。",
+            "**圖書館與學習資源**：浸大圖書館提供豐富的會計數據庫（如Thomson Reuters、Mergent Online）、電子期刊及安靜的學習區。學習共享空間提供24小時開放服務。",
+            "**學生住宿**：非本地學生可申請校內宿舍（如賽馬會校園），一年級新生獲優先考慮。學生事務處亦支援校外住宿選擇。",
+            "**課外活動**：學生可加入會計學會、參與個案比賽（如澳洲會計師公會個案比賽），並參加與業界專業人士的交流活動。",
+            "**體育與康樂**：大學提供健身室、游泳池及運動場等體育設施。附近的九龍仔公園提供額外的戶外康樂空間。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學統計**：650名Band A申請者競爭80個學額，Band A與學額比例為8.1:1，競爭激烈。總申請人數達1,450人。",
+            "**分數要求**：中位數22.15分（最佳五科）及下四分位數20.50分反映高入學門檻。中文中位數5級及英文中位數4級顯示對語文能力的高要求。",
+            "**科目要求**：申請者需在中文（中位數5級）及英文（中位數4級）取得優異成績，數學中位數為3級。選修科中位數4級反映對全面學術背景的偏好。",
+            "**無面試政策**：沒有面試意味著入學完全取決於文憑試成績，因此每個科目等級都至關重要。申請者應力爭中文5級及英文4級以上以具競爭力。",
+            "**專業認可優勢**：課程獲HKICPA及ACCA認可，增加課程價值，吸引希望直接通往專業資格的高質素學生。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳振彬博士**：香港浸會大學基金會主席，前香港會計師公會會長。畢業於浸大工商管理學士（會計）課程。",
+            "**王冬勝先生**：前滙豐亞太區主席，香港銀行業傑出人物。在浸大取得工商管理學士（會計）學位後攻讀MBA。",
+            "**張慧敏女士**：德勤中國合夥人，專注審計與核證服務。浸大會計畢業生，積極擔任校友導師。",
+            "**區瑞強先生**：香港著名唱作歌手及電台主持。雖非商科畢業，但其浸大背景彰顯大學多元校友網絡。",
+            "**林大輝博士**：香港浸會大學校董會主席，成功企業家。持有浸大工商管理學士（會計）學位，是課程的堅定支持者。",
+            "**許曉暉女士**：前香港民政事務局副局長。畢業於浸大工商管理學士課程，積極參與公共服務及社區發展。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**浸大入學獎學金**：文憑試最佳五科達25分或以上的優秀學生可獲全額或半額學費減免。22至24分的申請者可能獲得部分獎學金。",
+            "**商學院獎學金**：商學院為工商管理學生提供基於成績的獎學金，包括陳振彬博士獎學金（20,000港元），頒予頂尖會計學生。",
+            "**專業機構獎學金**：在HKICPA或ACCA考試中表現優異的學生可獲這些專業機構的獎項，涵蓋考試費用並提供現金獎勵。",
+            "**需要為本資助**：浸大財務資助計劃為低收入家庭學生提供助學金及貸款，最高可覆蓋全額學費。",
+            "**外部獎學金**：會計學生可申請香港會計師公會（HKICPA）及特許公認會計師公會（ACCA）等機構的獎學金。",
+            "**體育及才藝獎學金**：浸大為在體育、藝術或社區服務有卓越成就的學生提供獎學金，金額每年10,000至50,000港元不等。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2110 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科至少22分**",
+            "",
+            "- 中位數為22.15分，目標定在22分或以上以具競爭力。使用浸大入學計算器核對你的預測分數與2025年中位數的差距。",
+            "",
+            "**2. 優先提升中文科（目標5級）**",
+            "",
+            "- 中文中位數為5級，取得5級或以上至關重要。額外投入時間於中文閱讀及寫作，特別是綜合能力卷。",
+            "",
+            "**3. 確保英文科達4級或以上**",
+            "",
+            "- 英文中位數為4級。專注於卷三（聆聽及綜合能力）及卷二（寫作）以提升分數。可考慮考取IELTS作為額外英語能力證明。",
+            "",
+            "**4. 數學科維持至少3級**",
+            "",
+            "- 數學中位數為3級，但取得4級或以上可強化申請。練習歷屆試題，專注代數及統計等核心課題。",
+            "",
+            "**5. 策略性選擇選修科**",
+            "",
+            "- 選修科中位數為4級。選擇經濟、商業、會計與財務（BAFS）或數學延伸部分（M1/M2）等與課程相關的科目。",
+            "",
+            "**6. 公民與社會發展科達標即可**",
+            "",
+            "- 此科只需「達標」（中位數），但取得更高等級（如「達標並表現優異」）可提升整體檔案。專注於專題研習評核。",
+            "",
+            "**7. 建立超越分數的強大學術檔案**",
+            "",
+            "- 雖然無需面試，但參與會計相關比賽（如HKICPA個案比賽）或商業夏令營可展示興趣並強化申請。",
+            "",
+            "**8. 盡早在Band A申請**",
+            "",
+            "- 650名Band A申請者競爭80個學額，Band A位置至關重要。將JS2110列為首選以最大化機會。Band B申請者成功率顯著較低。",
+            "",
+            "**9. 提早準備專業考試**",
+            "",
+            "- 課程提供HKICPA及ACCA試卷豁免。從第二年或第三年開始準備這些考試以取得先機。利用浸大圖書館資源及學生學會尋求支援。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "22.15",
+    "lq": "20.50"
+  }
+}

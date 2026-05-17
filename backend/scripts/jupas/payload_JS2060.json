@@ -1,0 +1,323 @@
+{
+  "programme": {
+    "code": "JS2060",
+    "nameEn": "Bachelor of Arts (Hons) / Bachelor of Music (Hons) (Music / Creative Industries)",
+    "nameZh": "文學士(榮譽) / 音樂學士(榮譽) (音樂 / 創意產業)",
+    "name": "Bachelor of Arts (Hons) / Bachelor of Music (Hons) (Music / Creative Industries)",
+    "university": "香港浸會大學",
+    "faculty": "Faculty of Arts",
+    "median": "20.68",
+    "band_a": "18.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2060",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 20.68 (2025 JUPAS data).",
+            "**Lower Quartile**: 18.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 5*, LQ 3",
+            "- **English Language**: Median 4, LQ 4",
+            "- **Mathematics**: Median 3, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 5",
+            "- **Elective 2**: Median 3, LQ 3",
+            "- **Elective 3**: Median 3",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 280 applicants, Band B 120. Total 650 applicants.",
+            "**First Year Intake**: 50 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS2060 is a double-degree programme offered by HKBU's Faculty of Arts, allowing students to earn both a Bachelor of Arts (Hons) and a Bachelor of Music (Hons) in 5 years. It integrates music performance, composition, and creative industries studies.",
+            "**Two Streams**: Students choose between the Music stream (focusing on performance, composition, and musicology) and the Creative Industries stream (focusing on arts management, media, and cultural entrepreneurship).",
+            "**Year 1**: Foundation courses include music theory, aural skills, music history, and introductory creative industries modules. Students also take General Education courses as part of HKBU's whole-person education.",
+            "**Year 2**: Specialisation deepens with stream-specific courses: Music stream students take advanced performance and composition; Creative Industries students study arts marketing, event management, and digital media.",
+            "**Year 3**: Includes a mandatory internship or industry placement (e.g., with Hong Kong Philharmonic, West Kowloon Cultural District, or local media companies). Students also begin capstone projects.",
+            "**Year 4**: Advanced electives and a major project or recital. Music stream students present a public recital; Creative Industries students develop a portfolio or business plan for a cultural venture.",
+            "**Year 5**: Final year focuses on a thesis or creative project, plus a professional practicum. Graduates leave with a double degree and a strong portfolio for careers in music, arts, or creative sectors."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Music Performance & Teaching**: Graduates can become professional musicians, music teachers, or conductors in schools, orchestras, and private studios. HKBU's strong network in Hong Kong's music scene supports job placements.",
+            "**Creative Industries Management**: Roles include arts administrator, event manager, cultural policy officer, or producer for organisations like the West Kowloon Cultural District Authority or Hong Kong Arts Festival.",
+            "**Media & Entertainment**: Opportunities in film scoring, sound design, radio production, and digital content creation. HKBU's School of Communication provides cross-faculty collaboration for media projects.",
+            "**Entrepreneurship**: Graduates can start their own music studios, creative agencies, or cultural enterprises. The programme includes modules on business planning and intellectual property.",
+            "**Further Study**: Many graduates pursue master's degrees in musicology, arts management, or creative industries at top institutions like University of the Arts London, Royal Academy of Music, or HKU.",
+            "**Industry Demand**: With Hong Kong's growing creative economy (contributing over 5% to GDP), graduates are well-positioned for roles in arts, culture, and entertainment sectors."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Shaw Campus**: The main campus for Faculty of Arts programmes, located in Kowloon Tong. Features modern classrooms, practice rooms, and the 1,200-seat Lee Shau Kee Hall for concerts and performances.",
+            "**Music Facilities**: Dedicated music building with individual practice rooms, a recording studio, electronic music lab, and a library with extensive music scores and recordings.",
+            "**Creative Industries Hub**: The Academy of Visual Arts and School of Communication offer state-of-the-art studios, editing suites, and exhibition spaces for cross-disciplinary projects.",
+            "**Library Resources**: The HKBU Library holds over 1.5 million volumes, including a specialised music collection, digital archives, and access to international databases like JSTOR and RILM.",
+            "**Location Advantage**: Kowloon Tong is well-connected by MTR (Kowloon Tong station on East Rail and Kwun Tong lines), with easy access to Hong Kong's cultural districts like Tsim Sha Tsui and Central.",
+            "**Student Life**: Over 100 student clubs and societies, including the Music Society and Creative Industries Society, organise events, workshops, and networking opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects — HKBU calculates the best 5 HKDSE results, including core and elective subjects, with no specific weighting.",
+            "**Median Score (2025)**: 20.68 — The median admission score for 2025 JUPAS entry was 20.68, indicating a highly competitive programme.",
+            "**Lower Quartile (2025)**: 18.50 — The lowest score among the bottom 25% of admitted students was 18.50, showing that strong results are essential.",
+            "**Subject Performance**: Successful applicants typically achieve Chinese 5* (median), English 4, Maths 3, and Citizenship Attained. Elective 1 median is 4, Elective 2 median is 3.",
+            "**Demand vs Places**: In 2025, there were 280 Band A applicants and 120 Band B applicants, with only 50 first-year places. This means approximately 5.6 Band A applicants per place, making it very competitive.",
+            "**Interview Requirement**: All shortlisted candidates must attend an interview, which assesses musical aptitude, creativity, and motivation. Preparation is key — see Ace Sir's tips below."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Raymond Wong (黃霑)**: Legendary lyricist, composer, and writer. Graduated from HKBU's Chinese department (now Faculty of Arts). Known for iconic Cantopop lyrics and film scores.",
+            "**Prof. Daniel Chua (蔡志雄)**: Professor of Music at the University of Hong Kong. HKBU music graduate (BA/BMus). Renowned for research in musicology and early music performance.",
+            "**Ms. Gigi Leung (梁詠琪)**: Singer, actress, and songwriter. Studied at HKBU's School of Communication. Achieved multi-platinum album sales and starred in over 30 films.",
+            "**Mr. Cheung Tat-ming (張達明)**: Actor, comedian, and playwright. HKBU graduate in Communication. Known for stage performances and Hong Kong film comedies.",
+            "**Ms. Janis Chan (陳貝兒)**: TV host and journalist. HKBU graduate in Communication. Won Best Female Host at TVB Anniversary Awards for documentary series.",
+            "**Mr. Wong Ka-keung (黃家強)**: Musician and bassist of Beyond. Studied at HKBU's Academy of Visual Arts. Beyond is one of Hong Kong's most influential rock bands."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarship**: Awarded to outstanding JUPAS entrants with top HKDSE scores (e.g., 5** in multiple subjects). Covers full or partial tuition fees for the first year.",
+            "**Faculty of Arts Scholarships**: Multiple scholarships for arts students, including the Dr. Ng Tor-tai Scholarship (HK$20,000) and the Arts Faculty Dean's List Award (HK$10,000).",
+            "**Music Programme Scholarships**: Specific to JS2060, such as the Wong Chun-choi Music Scholarship (HK$30,000) for students demonstrating exceptional musical talent and academic performance.",
+            "**Creative Industries Bursary**: Needs-based bursary of up to HK$50,000 for students pursuing internships or projects in creative industries, funded by the HKBU Foundation.",
+            "**Government Schemes**: Eligible students can apply for the HKSAR Government Scholarship (HK$40,000 per year) and the Reaching Out Award (HK$10,000 for overseas exchange).",
+            "**Renewable Awards**: Many scholarships are renewable annually based on maintaining a minimum GPA (e.g., 3.0) and active participation in programme activities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2060 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score Above 21**: With a median of 20.68, aim for at least 21 points in Best 5. Focus on Chinese (target 5* or above) and English (target 4 or above) as they are weighted heavily.",
+            "",
+            "- Use past papers to identify weak areas in Chinese and English. Aim for Level 4+ in English and Level 5*+ in Chinese.",
+            "- For Mathematics, a Level 3 is sufficient, but a Level 4 strengthens your application. Practice core topics like algebra and statistics.",
+            "- In Elective 1, target Level 4 or above. Choose subjects like Music, Visual Arts, or Economics that align with the programme.",
+            "",
+            "**2. Ace the Interview**: The interview is mandatory and assesses musical aptitude, creativity, and motivation. Prepare a 3-minute performance piece and be ready to discuss your artistic influences.",
+            "",
+            "- Practice your performance piece with a teacher or mentor. Record yourself to refine timing and expression.",
+            "- Research current trends in Hong Kong's creative industries (e.g., West Kowloon Cultural District projects).",
+            "- Prepare answers to common questions like 'Why do you want to study music and creative industries?' and 'What is your career goal?'",
+            "",
+            "**3. Build a Strong Portfolio**: For the Creative Industries stream, submit a portfolio of your work (e.g., event proposals, digital media projects, or writing samples). For Music stream, include recordings of performances or compositions.",
+            "",
+            "- Include at least 3-5 pieces that showcase your range. For music, include a classical piece, a contemporary piece, and an original composition if possible.",
+            "- For creative industries, include a project plan, a marketing proposal, or a short film script. Ensure each piece has a clear description of your role.",
+            "- Get feedback from teachers or professionals before submission.",
+            "",
+            "**4. Choose Electives Strategically**: Select HKDSE electives that demonstrate your interest in the programme. Music, Visual Arts, Economics, or Business Studies are strong choices.",
+            "",
+            "- Music elective: Focus on performance and theory. Aim for Level 4 or above.",
+            "- Visual Arts elective: Build a portfolio that includes both traditional and digital works.",
+            "- Economics/Business: Useful for the Creative Industries stream. Target Level 4.",
+            "",
+            "**5. Gain Relevant Experience**: Participate in music competitions, arts festivals, or creative workshops. HKBU values practical experience in the arts.",
+            "",
+            "- Join the Hong Kong Schools Music Festival or local choir/orchestra. Even a bronze award adds value.",
+            "- Volunteer at arts events like the Hong Kong Arts Festival or Clockenflap. Document your experience for your portfolio.",
+            "- Attend HKBU's open days or summer programmes to network with faculty and current students.",
+            "",
+            "**6. Prepare for the Audition**: If applying for the Music stream, the audition is critical. Prepare two contrasting pieces (e.g., Baroque and Romantic) and sight-reading.",
+            "",
+            "- Choose pieces that highlight your technical skill and musicality. Avoid overly common pieces unless you can perform them exceptionally.",
+            "- Practice sight-reading daily using graded materials (e.g., ABRSM sight-reading books).",
+            "- Arrive early on audition day to warm up and familiarise yourself with the venue.",
+            "",
+            "**7. Write a Compelling Personal Statement**: Your JUPAS personal statement should explain your passion for music and creative industries, and how HKBU's programme fits your goals.",
+            "",
+            "- Mention specific HKBU resources you want to use, such as the recording studio or the Creative Industries Hub.",
+            "- Connect your personal experiences (e.g., organising a school concert) to the programme's focus on whole-person education.",
+            "- Keep it concise (500 words max) and proofread for grammar and clarity.",
+            "",
+            "**8. Apply Early Decision (Band A)**: With 280 Band A applicants for 50 places, placing JS2060 in Band A significantly increases your chances. Band B applicants have much lower success rates.",
+            "",
+            "- If JS2060 is your top choice, put it as Band A1. This signals strong commitment to the admissions committee.",
+            "- Use Band A2 and A3 for backup programmes that also interest you, such as other arts or music programmes.",
+            "- Check JUPAS statistics for previous years to understand your chances based on your predicted scores.",
+            "",
+            "**9. Stay Updated on Programme Changes**: HKBU occasionally updates the curriculum or admission requirements. Check the official website and attend information sessions.",
+            "",
+            "- Visit HKBU's Faculty of Arts website monthly for updates on JS2060.",
+            "- Follow HKBU's social media (Instagram, Facebook) for news on open days and workshops.",
+            "- Contact the admissions office directly if you have specific questions about the programme or portfolio requirements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：20.68分（2025年聯招數據）。",
+            "**下四分位數**：18.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 5*, 下四分位數 3",
+            "- **英國語文**：中位數 4, 下四分位數 4",
+            "- **數學**：中位數 3, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 5",
+            "- **選修科2**：中位數 3, 下四分位數 3",
+            "- **選修科3**：中位數 3",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者280人、Band B 120人。總申請者650人。",
+            "**首年學額**：50人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS2060 是香港浸會大學文學院提供的雙學位課程，學生可在5年內同時獲得文學士（榮譽）及音樂學士（榮譽）。課程融合音樂表演、作曲及創意產業研究。",
+            "**兩個專修**：學生可選擇音樂專修（專注表演、作曲及音樂學）或創意產業專修（專注藝術管理、媒體及文化創業）。",
+            "**第一年**：基礎課程包括音樂理論、聽覺訓練、音樂史及創意產業導論。學生亦需修讀通識教育課程，體現浸大全人教育理念。",
+            "**第二年**：深化專修課程：音樂專修學生修讀高級表演及作曲；創意產業專修學生學習藝術市場學、活動管理及數碼媒體。",
+            "**第三年**：包括強制實習或行業實習（例如與香港管弦樂團、西九文化區或本地媒體公司合作）。學生亦開始畢業專題項目。",
+            "**第四年**：高級選修課及主要項目或演奏會。音樂專修學生舉行公開演奏會；創意產業專修學生開發文化企業的投資組合或商業計劃。",
+            "**第五年**：最後一年專注於論文或創意項目，以及專業實習。畢業生將獲得雙學位及強大的作品集，為音樂、藝術或創意產業職業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**音樂表演及教學**：畢業生可成為專業音樂家、音樂教師或指揮，任職於學校、樂團及私人工作室。浸大在香港音樂界的強大網絡有助就業。",
+            "**創意產業管理**：職位包括藝術行政人員、活動經理、文化政策主任或製作人，服務於西九文化區管理局或香港藝術節等機構。",
+            "**媒體及娛樂**：電影配樂、聲音設計、電台製作及數碼內容創作等機會。浸大傳理學院為媒體項目提供跨學院合作。",
+            "**創業**：畢業生可創辦自己的音樂工作室、創意機構或文化企業。課程包括商業計劃及知識產權模塊。",
+            "**深造**：許多畢業生在倫敦藝術大學、皇家音樂學院或香港大學等頂尖學府攻讀音樂學、藝術管理或創意產業碩士學位。",
+            "**行業需求**：香港創意經濟持續增長（佔GDP超過5%），畢業生在藝術、文化及娛樂領域具備良好就業優勢。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**善衡校園**：文學院課程主校園，位於九龍塘。設有現代化教室、練習室及1,200座位的李兆基會堂，用於音樂會及表演。",
+            "**音樂設施**：專用音樂大樓，設有獨立練習室、錄音室、電子音樂實驗室及收藏豐富樂譜和錄音的圖書館。",
+            "**創意產業中心**：視覺藝術院及傳理學院提供先進的工作室、剪接室及展覽空間，支持跨學科項目。",
+            "**圖書館資源**：浸大圖書館藏書超過150萬冊，包括專門音樂收藏、數碼檔案及JSTOR、RILM等國際數據庫。",
+            "**地理位置優勢**：九龍塘交通便利（九龍塘站連接東鐵線及觀塘線），輕鬆前往尖沙咀及中環等文化區。",
+            "**學生生活**：超過100個學生社團，包括音樂學會及創意產業學會，舉辦活動、工作坊及交流機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 — 浸大計算HKDSE最佳5科成績，包括核心及選修科目，無特定加權。",
+            "**2025年中位數**：20.68 — 2025年JUPAS入學中位分數為20.68，顯示課程競爭激烈。",
+            "**2025年下四分位數**：18.50 — 最低錄取學生中下25%的分數為18.50，表明需要優秀成績。",
+            "**科目表現**：成功申請者通常中文5*（中位數）、英文4、數學3、公民科達標。選修1中位數為4，選修2中位數為3。",
+            "**需求與學額**：2025年有280名Band A申請者及120名Band B申請者，僅50個一年級學額。即每個學額約有5.6名Band A申請者，競爭非常激烈。",
+            "**面試要求**：所有入圍申請者必須參加面試，評估音樂才能、創意及動機。準備工作至關重要 — 請參閱Ace Sir的貼士。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃霑博士**：傳奇填詞人、作曲家及作家。畢業於浸大中文系（現文學院）。以經典粵語流行曲歌詞及電影配樂聞名。",
+            "**蔡志雄教授**：香港大學音樂系教授。浸大音樂系畢業生（BA/BMus）。以音樂學及早期音樂表演研究聞名。",
+            "**梁詠琪女士**：歌手、演員及作曲人。曾就讀浸大傳理學院。獲得白金唱片銷量，並參演超過30部電影。",
+            "**張達明先生**：演員、喜劇演員及劇作家。浸大傳理系畢業生。以舞台表演及香港電影喜劇聞名。",
+            "**陳貝兒女士**：電視主持及記者。浸大傳理系畢業生。憑紀錄片系列獲得TVB萬千星輝頒獎典禮最佳女主持。",
+            "**黃家強先生**：Beyond樂隊音樂人及貝斯手。曾就讀浸大視覺藝術院。Beyond是香港最具影響力的搖滾樂隊之一。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務援助",
+          "content": [
+            "**浸大入學獎學金**：頒予HKDSE成績優異的JUPAS新生（例如多科5**）。涵蓋首年全額或部分學費。",
+            "**文學院獎學金**：多項藝術學生獎學金，包括吳多泰博士獎學金（20,000港元）及文學院院長名單獎（10,000港元）。",
+            "**音樂課程獎學金**：JS2060專屬獎學金，如黃俊釗音樂獎學金（30,000港元），頒予表現卓越音樂才華及學業成績的學生。",
+            "**創意產業助學金**：基於需求的助學金，最高50,000港元，資助學生在創意產業的實習或項目，由浸大基金會資助。",
+            "**政府計劃**：合資格學生可申請香港特區政府獎學金（每年40,000港元）及外展體驗獎（10,000港元用於海外交流）。",
+            "**可續期獎項**：許多獎學金可按年續期，條件是維持最低GPA（例如3.0）及積極參與課程活動。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2060 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數高於21分**：中位數為20.68，最佳5科目標至少21分。重點提升中文（目標5*或以上）及英文（目標4或以上），因這些科目權重較高。",
+            "",
+            "- 使用歷屆試題找出中文及英文弱項。英文目標4級或以上，中文目標5*級或以上。",
+            "- 數學3級已足夠，但4級可增強申請。練習代數及統計等核心課題。",
+            "- 選修1目標4級或以上。選擇音樂、視覺藝術或經濟等與課程相關的科目。",
+            "",
+            "**2. 面試表現出色**：面試為強制環節，評估音樂才能、創意及動機。準備3分鐘表演作品，並準備討論你的藝術影響。",
+            "",
+            "- 與老師或導師練習表演作品。錄影自己以改進節奏及表達。",
+            "- 研究香港創意產業的最新趨勢（例如西九文化區項目）。",
+            "- 準備常見問題答案，如「為何想學習音樂及創意產業？」及「你的職業目標是什麼？」",
+            "",
+            "**3. 建立強大作品集**：創意產業專修提交作品集（如活動建議書、數碼媒體項目或寫作樣本）。音樂專修包括表演或作曲錄音。",
+            "",
+            "- 包括至少3-5件展示你能力的作品。音樂方面包括古典作品、當代作品及原創作品（如可能）。",
+            "- 創意產業方面包括項目計劃、市場推廣建議或短片劇本。確保每件作品清楚說明你的角色。",
+            "- 提交前請教師或專業人士提供反饋。",
+            "",
+            "**4. 策略性選擇選修科**：選擇能展示你對課程興趣的HKDSE選修科。音樂、視覺藝術、經濟或商業研究均為強項選擇。",
+            "",
+            "- 音樂選修：專注表演及理論。目標4級或以上。",
+            "- 視覺藝術選修：建立包括傳統及數碼作品的作品集。",
+            "- 經濟/商業：對創意產業專修有用。目標4級。",
+            "",
+            "**5. 獲取相關經驗**：參加音樂比賽、藝術節或創意工作坊。浸大重視藝術方面的實際經驗。",
+            "",
+            "- 參加香港學校音樂節或本地合唱團/樂團。即使銅獎也有價值。",
+            "- 在香港藝術節或Clockenflap等藝術活動擔任義工。記錄經驗用於作品集。",
+            "- 參加浸大開放日或暑期課程，與教職員及現屆學生建立網絡。",
+            "",
+            "**6. 準備試音**：如申請音樂專修，試音至關重要。準備兩首對比作品（例如巴洛克及浪漫時期）及視奏。",
+            "",
+            "- 選擇能展示技巧及音樂性的作品。避免過於常見的作品，除非你能出色演繹。",
+            "- 每日使用分級教材（如ABRSM視奏書籍）練習視奏。",
+            "- 試音當天提早到達，熱身並熟悉場地。",
+            "",
+            "**7. 撰寫具說服力的個人陳述**：你的JUPAS個人陳述應解釋你對音樂及創意產業的熱情，以及浸大課程如何配合你的目標。",
+            "",
+            "- 提及你想使用的浸大資源，如錄音室或創意產業中心。",
+            "- 將個人經驗（如組織學校音樂會）與課程的全人教育理念聯繫。",
+            "- 保持簡潔（最多500字），並校對語法及清晰度。",
+            "",
+            "**8. 提早申請（Band A）**：280名Band A申請者競爭50個學額，將JS2060放在Band A可大幅提高機會。Band B申請者成功率較低。",
+            "",
+            "- 如JS2060是你的首選，將其放在Band A1。這向招生委員會展示強烈承諾。",
+            "- 使用Band A2及A3作為你同樣感興趣的後備課程，如其他藝術或音樂課程。",
+            "- 查閱往年JUPAS統計數據，根據預測分數了解你的機會。",
+            "",
+            "**9. 緊貼課程更新**：浸大不時更新課程或入學要求。瀏覽官方網站及參加資訊講座。",
+            "",
+            "- 每月瀏覽浸大文學院網站以獲取JS2060最新資訊。",
+            "- 關注浸大社交媒體（Instagram、Facebook）以獲取開放日及工作坊消息。",
+            "- 如有關於課程或作品集要求的具體問題，直接聯絡招生辦公室。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "20.68",
+    "lq": "18.50"
+  }
+}

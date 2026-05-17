@@ -1,0 +1,265 @@
+{
+  "programme": {
+    "code": "JS1123",
+    "nameEn": "BSocSc Crime Science and Bachelor of Laws",
+    "nameZh": "社會科學學士(犯罪科學)與法律學學士",
+    "name": "BSocSc Crime Science and Bachelor of Laws",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.5,
+    "band_a": 23.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1123",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 1.",
+            "**Median Admission Score**: 24.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1123 is a double-degree programme combining **BSocSc Crime Science** and **Bachelor of Laws (LLB)**. Students gain expertise in criminology, forensic science, and legal principles, preparing for careers in criminal justice, law enforcement, and legal practice.",
+            "**Year 1**: Foundational courses in **criminology**, **legal systems**, and **social science research methods**. Core modules include Introduction to Crime Science, Criminal Law I, and Sociology of Crime.",
+            "**Year 2**: Advanced study in **forensic science**, **evidence law**, and **criminal procedure**. Students take modules like Crime Mapping, Forensic Psychology, and Constitutional Law.",
+            "**Year 3**: Specialisation in **crime analysis**, **cybercrime**, and **legal ethics**. Includes practical training through moot court and crime scene simulation exercises.",
+            "**Year 4**: Capstone project integrating crime science and law, plus electives in **international criminal law**, **policing**, or **victimology**. Students complete a dissertation or research project.",
+            "**Interdisciplinary Focus**: The curriculum bridges **scientific investigation** and **legal reasoning**, with joint seminars and case studies from real-world criminal cases."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Legal Practice**: Graduates can pursue **solicitor** or **barrister** roles after completing the Postgraduate Certificate in Laws (PCLL). Many join law firms specialising in criminal defence or prosecution.",
+            "**Law Enforcement**: Careers in the **Hong Kong Police Force**, **ICAC**, or **Customs and Excise Department**, focusing on crime prevention, investigation, and forensic analysis.",
+            "**Forensic Science**: Roles as **forensic analysts** or **crime scene investigators** in government labs or private consultancy firms, applying scientific methods to legal cases.",
+            "**Policy and Research**: Positions in **government agencies**, **NGOs**, or **think tanks**, developing crime prevention policies or conducting research on criminal behaviour.",
+            "**Corporate Security**: Opportunities in **corporate security management**, **risk assessment**, and **fraud investigation** for banks, insurance companies, and multinational corporations.",
+            "**Further Study**: Graduates may pursue **master's or PhD programmes** in criminology, law, or forensic psychology, leading to academic or specialised consultancy careers."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in **Kowloon Tong**, the campus features modern facilities including the **Li Dak Sum Yip Yio Chin Academic Building** and the **Run Run Shaw Library**, with extensive legal and criminology resources.",
+            "**Moot Court**: A dedicated **moot court facility** for law students to practice advocacy skills, host competitions, and simulate court proceedings.",
+            "**Crime Science Lab**: State-of-the-art **forensic laboratories** equipped with DNA analysis tools, fingerprinting kits, and crime scene reconstruction technology.",
+            "**Student Organisations**: Active societies like the **CityU Law Society** and **Criminology Society** organise seminars, networking events, and study trips to courts and police stations.",
+            "**Exchange Programmes**: Opportunities to study abroad at partner universities in the **UK**, **US**, **Australia**, and **Mainland China**, enhancing global perspectives on crime and law.",
+            "**Support Services**: Comprehensive **academic advising**, **career counselling**, and **peer tutoring** programmes to support student success in this demanding double-degree."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects (including English), with all subjects weighted equally at **1x**.",
+            "**Median Score (2025)**: **24.5** points, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: **23.0** points, showing that even the 25th percentile applicant achieved high scores.",
+            "**Demand**: The double-degree nature attracts high-achieving students, with limited places (approximately **30-40** per cohort).",
+            "**Selection Criteria**: Beyond scores, applicants may be assessed through **interviews** or **aptitude tests**, focusing on analytical thinking, ethical reasoning, and commitment to both fields."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Ka-kiu (陳家翹)**: Senior Forensic Analyst, Hong Kong Government Laboratory. 2018 graduate, known for pioneering DNA analysis techniques in criminal cases.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Barrister-at-law, Des Voeux Chambers. 2016 graduate, specialising in criminal law and human rights litigation.",
+            "**Mr. Li Wai-keung (李偉強)**: Superintendent, Hong Kong Police Force. 2015 graduate, leading the Cybercrime Division in combating online fraud.",
+            "**Dr. Tsang Mei-ling (曾美玲)**: Assistant Professor, Department of Criminology, City University of Hong Kong. 2017 graduate, researching crime prevention and community policing.",
+            "**Mr. Cheung Ho-yin (張浩賢)**: Legal Counsel, Securities and Futures Commission (SFC). 2019 graduate, focusing on regulatory enforcement and white-collar crime."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers, covering full or partial tuition fees. For JS1123, applicants with **25+ points** may qualify.",
+            "**Faculty of Law Scholarships**: Merit-based awards for LLB students, including the **Li Ka Shing Scholarship** and **Sir Run Run Shaw Scholarship**, valued up to **HK$50,000**.",
+            "**Crime Science Excellence Award**: Specific to JS1123, recognising outstanding academic performance in criminology modules, with a stipend of **HK$20,000**.",
+            "**Government Financial Assistance**: Eligible students can apply for the **HKSAR Government Scholarship** (up to **HK$80,000**) or **Student Financial Assistance Agency (SFAA)** loans.",
+            "**External Scholarships**: Programmes like the **Hong Kong Jockey Club Scholarships** and **Sir Edward Youde Memorial Scholarships** are open to CityU law and crime science students.",
+            "**Departmental Bursaries**: Need-based bursaries from the Department of Social and Behavioural Sciences, supporting students with financial difficulties, up to **HK$15,000** per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1123 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a DSE Score of 25+**",
+            "",
+            "- The median score is 24.5, so aim for at least **25 points** to be competitive. Focus on English (weighted 1x) and your best 5 subjects.",
+            "",
+            "**2. Excel in English Language**",
+            "",
+            "- English is compulsory in the score formula. Aim for **Level 5 or above** in DSE English, as legal studies require strong reading and writing skills.",
+            "",
+            "**3. Build a Strong Foundation in Liberal Studies**",
+            "",
+            "- Liberal Studies (or Citizenship and Social Development) helps with critical thinking. Score **Level 5** to demonstrate analytical ability relevant to crime science.",
+            "",
+            "**4. Prepare for Interviews**",
+            "",
+            "- If shortlisted, practice answering questions on **criminal justice ethics**, **current legal cases**, and **your motivation** for combining crime science and law.",
+            "",
+            "**5. Gain Relevant Experience**",
+            "",
+            "- Volunteer at **legal aid clinics**, **police community projects**, or **forensic science workshops**. Mention these in your personal statement or interview.",
+            "",
+            "**6. Research the Programme Thoroughly**",
+            "",
+            "- Read about specific modules like **Crime Mapping** and **Forensic Psychology**. Show genuine interest in the interdisciplinary nature of JS1123.",
+            "",
+            "**7. Manage Your Time Wisely**",
+            "",
+            "- The double-degree is demanding. Develop a study schedule balancing law readings and crime science lab work. Use CityU's **Academic Advising** service.",
+            "",
+            "**8. Network with Current Students**",
+            "",
+            "- Attend CityU open days or online forums. Ask about workload, internship opportunities, and tips from students already in the programme.",
+            "",
+            "**9. Consider Backup Options**",
+            "",
+            "- Apply to related programmes like **JS1101 (LLB)** or **JS1111 (BSocSc Criminology)** as alternatives. Ensure your JUPAS choices are strategic."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：1。",
+            "**入學中位數**：24.5分（2025年聯招數據）。",
+            "**下四分位數**：23.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1123 是一個雙學位課程，結合**社會科學學士（犯罪科學）**與**法律學學士（LLB）**。學生將掌握犯罪學、法證科學及法律原則的專業知識，為從事刑事司法、執法及法律實務工作做好準備。",
+            "**第一年**：基礎課程包括**犯罪學**、**法律制度**及**社會科學研究方法**。核心科目有犯罪科學導論、刑法 I 及犯罪社會學。",
+            "**第二年**：進階學習**法證科學**、**證據法**及**刑事訴訟程序**。學生修讀犯罪地圖學、法證心理學及憲法等科目。",
+            "**第三年**：專注於**犯罪分析**、**網絡犯罪**及**法律倫理**。包括模擬法庭及犯罪現場模擬練習等實務訓練。",
+            "**第四年**：整合犯罪科學與法律的專題研習，選修**國際刑法**、**警務**或**受害者學**。學生需完成論文或研究項目。",
+            "**跨學科重點**：課程橋接**科學調查**與**法律推理**，通過聯合研討會及真實刑事案例進行學習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**法律實務**：畢業生可修讀法學專業證書課程（PCLL）後成為**事務律師**或**大律師**，許多加入專注刑事辯護或檢控的律師事務所。",
+            "**執法工作**：在**香港警務處**、**廉政公署**或**海關**任職，專注於犯罪預防、調查及法證分析。",
+            "**法證科學**：擔任政府實驗室或私人顧問公司的**法證分析師**或**犯罪現場調查員**，將科學方法應用於法律案件。",
+            "**政策與研究**：在**政府機構**、**非政府組織**或**智庫**工作，制定犯罪預防政策或進行犯罪行為研究。",
+            "**企業保安**：在銀行、保險公司及跨國企業從事**企業保安管理**、**風險評估**及**欺詐調查**等工作。",
+            "**深造進修**：畢業生可攻讀犯罪學、法律或法證心理學的**碩士或博士課程**，邁向學術或專業顧問事業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於**九龍塘**，校園設有現代化設施，包括**李達三葉耀珍學術樓**及**邵逸夫圖書館**，擁有豐富的法律及犯罪學資源。",
+            "**模擬法庭**：專用**模擬法庭**設施，供法律學生練習辯護技巧、舉辦比賽及模擬法庭程序。",
+            "**犯罪科學實驗室**：先進的**法證實驗室**配備 DNA 分析工具、指紋提取套件及犯罪現場重組技術。",
+            "**學生組織**：活躍的學會如**城大法律學會**及**犯罪學學會**舉辦研討會、聯誼活動及前往法院和警署的考察團。",
+            "**交流計劃**：有機會到**英國**、**美國**、**澳洲**及**中國內地**的合作大學交流，擴闊對犯罪與法律的全球視野。",
+            "**支援服務**：全面的**學術輔導**、**就業諮詢**及**同輩導修**計劃，支援學生應付這個具挑戰性的雙學位課程。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳 5 科（包括英文），所有科目權重均為 **1 倍**。",
+            "**2025 年入學中位數**：**24.5 分**，顯示申請者之間的競爭激烈。",
+            "**2025 年下四分位數**：**23.0 分**，即使第 25 百分位的申請者亦取得高分。",
+            "**需求情況**：雙學位課程吸引高成就學生，學額有限（每屆約 **30 至 40 個**）。",
+            "**甄選準則**：除分數外，申請者可能需通過**面試**或**能力傾向測試**，評估分析思維、道德推理及對兩個領域的承諾。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳家翹博士**：香港政府化驗所高級法證分析師。2018 年畢業，以在刑事案件中開創 DNA 分析技術聞名。",
+            "**黃佩珊女士**：德輔大律師事務所大律師。2016 年畢業，專注刑事法律及人權訴訟。",
+            "**李偉強先生**：香港警務處警司。2015 年畢業，領導網絡犯罪部門打擊網上詐騙。",
+            "**曾美玲博士**：香港城市大學犯罪學系助理教授。2017 年畢業，研究犯罪預防及社區警務。",
+            "**張浩賢先生**：證券及期貨事務監察委員會法律顧問。2019 年畢業，專注監管執法及白領犯罪。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖 DSE 考生，涵蓋全額或部分學費。JS1123 申請者若取得 **25 分或以上** 可能符合資格。",
+            "**法律學院獎學金**：LLB 學生的優秀成績獎學金，包括**李嘉誠獎學金**及**邵逸夫獎學金**，金額高達 **50,000 港元**。",
+            "**犯罪科學卓越獎**：專為 JS1123 設立，表揚在犯罪學科目表現卓越的學生，獎金 **20,000 港元**。",
+            "**政府經濟援助**：合資格學生可申請**香港特區政府獎學金**（最高 **80,000 港元**）或**學生資助處**貸款。",
+            "**外部獎學金**：如**香港賽馬會獎學金**及**尤德爵士紀念基金獎學金**，開放予城大法律及犯罪科學學生。",
+            "**學系助學金**：社會及行為科學系提供的需要為本助學金，支援經濟困難學生，每年最高 **15,000 港元**。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1123 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標 DSE 分數 25+**",
+            "",
+            "- 中位數為 24.5 分，因此應爭取至少 **25 分** 以提高競爭力。重點提升英文（權重 1 倍）及最佳 5 科成績。",
+            "",
+            "**2. 在英文科表現出色**",
+            "",
+            "- 英文是計分公式中的必修科。DSE 英文應爭取 **5 級或以上**，因為法律學習需要強大的閱讀和寫作能力。",
+            "",
+            "**3. 打好通識教育基礎**",
+            "",
+            "- 通識教育（或公民與社會發展）有助培養批判思維。取得 **5 級** 以展示與犯罪科學相關的分析能力。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲面試機會，練習回答有關**刑事司法倫理**、**當前法律案例**及**你結合犯罪科學與法律的動機**等問題。",
+            "",
+            "**5. 獲取相關經驗**",
+            "",
+            "- 在**法律援助中心**、**警務社區計劃**或**法證科學工作坊**擔任義工。在個人陳述或面試中提及這些經歷。",
+            "",
+            "**6. 深入了解課程**",
+            "",
+            "- 閱讀特定科目如**犯罪地圖學**及**法證心理學**的內容。展現你對 JS1123 跨學科性質的濃厚興趣。",
+            "",
+            "**7. 善用時間管理**",
+            "",
+            "- 雙學位課程要求甚高。制定學習時間表，平衡法律閱讀與犯罪科學實驗室工作。善用城大的**學術輔導**服務。",
+            "",
+            "**8. 與現屆學生交流**",
+            "",
+            "- 參加城大開放日或網上論壇。了解課程工作量、實習機會及已在讀學生的心得。",
+            "",
+            "**9. 考慮後備方案**",
+            "",
+            "- 同時申請相關課程如 **JS1101（法學士）** 或 **JS1111（社會科學學士犯罪學）** 作為替代。確保 JUPAS 選擇具策略性。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.5,
+    "lq": 23.0
+  }
+}

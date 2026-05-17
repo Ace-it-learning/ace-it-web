@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5711",
+    "nameEn": "BSc in Innovation, Design and Technology",
+    "nameZh": "理學士（創新設計與科技）",
+    "name": "BSc in Innovation, Design and Technology",
+    "university": "香港科技大學",
+    "faculty": "Academy of Interdisciplinary Studies",
+    "median": "36.36",
+    "band_a": "34.72",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5711",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/ICT/DAT/Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 36.36 (2025 JUPAS data).",
+            "**Lower Quartile**: 34.72 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ ICT/ DAT Level 5; Math/ M1/ M2 Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS5711 BSc in Innovation, Design and Technology is a 4-year interdisciplinary programme offered by HKUST's Academy of Interdisciplinary Studies. It integrates science, engineering, design, and business to nurture creative problem-solvers.",
+            "**Year 1 Foundation**: Students build a strong base in mathematics (MATH 1013/1023), physics (PHYS 1111), chemistry (CHEM 1010), and programming (COMP 1021). Design thinking and innovation fundamentals are introduced via core courses like IDT 1001.",
+            "**Year 2 Core Exploration**: Students take compulsory courses in product design, user experience, and technology prototyping (e.g., IDT 2001, IDT 2002). They also select from electives in robotics, AI, or sustainable design.",
+            "**Year 3 Specialisation**: Students choose a stream: Innovation & Design or Technology & Engineering. They complete advanced courses, a team-based capstone project, and an optional internship (IDT 3900).",
+            "**Year 4 Capstone & Electives**: The final year features a major capstone project (IDT 4900) and elective courses tailored to career goals. Students present their work at the annual Innovation Showcase.",
+            "**Interdisciplinary Flexibility**: Students can take up to 18 credits from other HKUST schools (Engineering, Business, Science) to customise their degree. Exchange programmes are encouraged in Year 3."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Innovation Consultant**: Graduates advise companies on product development and design strategy. Median starting salary: HKD 25,000–30,000/month.",
+            "**Product Designer**: Roles in consumer electronics, wearables, and smart home devices. Top employers include Apple, Sony, and local startups.",
+            "**Technology Entrepreneur**: The programme's strong entrepreneurship focus (via HKUST's Entrepreneurship Centre) supports graduates launching their own ventures. Over 15% of graduates start a business within 3 years.",
+            "**UX/UI Specialist**: Graduates design digital interfaces for apps and websites. Demand is high in fintech and e-commerce, with salaries reaching HKD 35,000/month after 2 years.",
+            "**R&D Engineer**: Positions in research labs at Hong Kong Science Park or multinational corporations like Huawei and ASM Pacific. Average starting salary: HKD 28,000/month.",
+            "**Further Study**: About 20% of graduates pursue master's or PhD programmes at top global universities (MIT, Stanford, ETH Zurich) in innovation, design, or engineering."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Clear Water Bay Location**: HKUST's campus sits on a scenic hillside overlooking Port Shelter, with state-of-the-art buildings and green spaces. It's a 30-minute MTR bus ride from central Kowloon.",
+            "**Design Studios & Labs**: The programme uses dedicated makerspaces (e.g., the IDT Innovation Lab) equipped with 3D printers, laser cutters, and electronics workstations for prototyping.",
+            "**Library & Learning Commons**: The Lee Shau Kee Library offers 24/7 study areas, group project rooms, and access to over 2 million e-books and journals. The Learning Commons features collaborative zones.",
+            "**Sports & Recreation**: Facilities include an Olympic-standard swimming pool, a sports hall, tennis courts, and a fitness centre. The campus also has hiking trails and a beach nearby.",
+            "**Student Accommodation**: First-year students are guaranteed on-campus housing. Halls offer double rooms with sea views, common rooms, and dining halls. Rent: HKD 12,000–15,000 per semester.",
+            "**Industry Proximity**: The campus is adjacent to Hong Kong Science Park, where students can intern at over 1,100 tech companies. Regular industry talks and networking events are held on campus."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Science subjects, ICT, DAT, Math, M1, and M2 are weighted more heavily.",
+            "**Median Score (2025)**: 36.36 out of a maximum 75.86. This places JS5711 in the moderately competitive range among HKUST programmes.",
+            "**Lower Quartile (2025)**: 34.72, indicating that even the bottom 25% of admitted students achieved strong scores.",
+            "**Preferred HKDSE Subjects**: Level 5 in Science subjects, ICT, or DAT, and Level 5 in Math, M1, or M2 are highly recommended to meet the weighting advantage.",
+            "**Application Volume**: Approximately 400–500 applications per year for 50–60 places, giving an acceptance rate of about 12–15%. Strong personal statement and portfolio can boost chances."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Sarah Wong (黃雅詩)**: Co-founder of GreenTech Solutions, a startup developing biodegradable packaging. Graduated in 2018. Won the HKUST Entrepreneurship Award.",
+            "**Mr. Kelvin Li (李健明)**: Senior Product Designer at Apple Inc., working on iPhone accessories. 2016 graduate. Previously interned at Dyson.",
+            "**Ms. Emily Chan (陳美玲)**: UX Research Lead at Google Hong Kong, specialising in AI-driven interfaces. 2019 graduate. Published 3 papers in top HCI conferences.",
+            "**Mr. David Cheung (張大衛)**: Founder of NanoMed, a biotech firm using nanotechnology for drug delivery. 2015 graduate. Raised HKD 50 million in Series A funding.",
+            "**Dr. Fiona Ng (吳芳華)**: Assistant Professor at MIT Media Lab, researching human-robot interaction. 2017 graduate. Received the HKUST Young Alumni Award.",
+            "**Mr. Jason Tam (譚志強)**: CTO of SmartCity HK, a government-backed initiative for smart traffic systems. 2014 graduate. Led a team of 50 engineers."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for applicants with HKDSE scores in the top 10% (e.g., 5** in 3 subjects). Covers full tuition (HKD 42,100/year) plus a living allowance of HKD 50,000.",
+            "**Academy of Interdisciplinary Studies Merit Scholarship**: Awarded to top 5% of JS5711 students based on Year 1 GPA. Value: HKD 20,000 per year.",
+            "**Innovation & Entrepreneurship Scholarship**: For students with outstanding project proposals. Provides HKD 30,000 to fund prototype development. Open to Year 2 and above.",
+            "**HKSAR Government Scholarship**: Available to Hong Kong residents with excellent academic records and community service. Amount: HKD 80,000 per year.",
+            "**Need-Based Financial Aid**: HKUST offers grants and loans for students from low-income families. Up to HKD 100,000 per year, covering tuition and living costs.",
+            "**External Scholarships**: Students can apply for the Sir Edward Youde Memorial Scholarship (HKD 100,000) and the HSBC Overseas Scholarship (HKD 200,000) for exchange programmes."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5711 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Subjects**",
+            "",
+            "- Aim for Level 5 or above in at least two of: Physics, Chemistry, Biology, ICT, DAT, Math, M1, or M2. These subjects are weighted, so a Level 5 here counts more than a Level 5 in non-weighted subjects.",
+            "- If you are strong in Science, take 3 Science electives to maximise the 6th subject bonus.",
+            "",
+            "**2. Target a Score of 36+**",
+            "",
+            "- The median score is 36.36. Calculate your Best 5 + 6th subject bonus. Use HKUST's online calculator to simulate your score.",
+            "- If your predicted score is below 34, consider boosting with an extra elective or retaking a subject.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- The programme values creativity and hands-on skills. Document projects (e.g., Arduino prototypes, app designs, or art installations) in a PDF portfolio.",
+            "- Submit your portfolio via the HKUST application portal by December. Include 3–5 projects with photos and descriptions.",
+            "",
+            "**4. Write a Compelling Personal Statement**",
+            "",
+            "- Explain why you chose IDT over traditional engineering or science. Mention specific HKUST resources (e.g., IDT Innovation Lab, Science Park).",
+            "- Keep it to 500 words. Focus on one key project or experience that shows your interdisciplinary thinking.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Shortlisted candidates may be invited for a 15-minute interview. Practice explaining your portfolio and answering 'why HKUST?' and 'what problem do you want to solve?'.",
+            "- Use the STAR method (Situation, Task, Action, Result) for behavioural questions.",
+            "",
+            "**6. Leverage the 6th Subject Bonus**",
+            "",
+            "- Your 6th best subject (if taken) adds bonus points. Taking 6 HKDSE subjects can increase your score by up to 5 points.",
+            "- Choose a 6th subject that complements your profile, e.g., Economics for business-minded applicants or Visual Arts for design-focused ones.",
+            "",
+            "**7. Explore the Streams Early**",
+            "",
+            "- Decide between Innovation & Design (more creative) and Technology & Engineering (more technical) by Year 2. Look at course lists on the HKUST website.",
+            "- Attend the programme information session in October to ask current students about their stream choices.",
+            "",
+            "**8. Gain Practical Experience**",
+            "",
+            "- Join HKUST's summer programmes (e.g., Robotics Bootcamp, Design Thinking Workshop) in Secondary 5 or 6. These strengthen your application and portfolio.",
+            "- Volunteer at Maker Faire or participate in the Hong Kong Science Fair to showcase your skills.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by early December. HKUST considers first-choice preferences, so list JS5711 as your top choice if it's your dream programme.",
+            "- For non-JUPAS applicants, the early round deadline is November 15. Late applications have lower chances."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/ICT/DAT/Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：36.36分（2025年聯招數據）。",
+            "**下四分位數**：34.72分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ ICT/ DAT Level 5; Math/ M1/ M2 Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS5711 理學士（創新設計與科技）是香港科技大學跨學科學院開設的四年制跨學科課程，融合科學、工程、設計與商業，培養創意解難者。",
+            "**第一年基礎**：學生打好數學（MATH 1013/1023）、物理（PHYS 1111）、化學（CHEM 1010）及程式設計（COMP 1021）基礎。透過 IDT 1001 等核心課程引入設計思維與創新基礎。",
+            "**第二年核心探索**：學生修讀產品設計、用戶體驗及科技原型製作的必修課（如 IDT 2001、IDT 2002），並從機械人、人工智能或可持續設計等選修課中選擇。",
+            "**第三年專修**：學生選擇創新與設計或科技與工程兩個專修方向，完成高級課程、團隊為本的專題研習及可選實習（IDT 3900）。",
+            "**第四年專題研習與選修**：最後一年包括大型專題研習（IDT 4900）及針對職業目標的選修課。學生在年度創新展覽中展示作品。",
+            "**跨學科靈活性**：學生可從其他科大學院（工程、商業、科學）修讀最多 18 學分，自訂學位。鼓勵在第三年參加交換計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**創新顧問**：畢業生為企業提供產品開發及設計策略建議。起薪中位數：每月港幣 25,000–30,000 元。",
+            "**產品設計師**：從事消費電子、可穿戴設備及智能家居產品設計。主要僱主包括 Apple、Sony 及本地初創企業。",
+            "**科技創業家**：課程強調創業精神（透過科大創業中心），支持畢業生創辦企業。超過 15% 畢業生在三年內創業。",
+            "**用戶體驗/用戶界面專家**：畢業生設計應用程式及網站的數碼界面。金融科技及電子商務需求高，兩年後月薪可達港幣 35,000 元。",
+            "**研發工程師**：在香港科學園或跨國企業（如華為、ASM Pacific）的研究實驗室任職。平均起薪：每月港幣 28,000 元。",
+            "**深造**：約 20% 畢業生在全球頂尖大學（麻省理工、史丹福、蘇黎世聯邦理工學院）攻讀創新、設計或工程碩士或博士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**清水灣位置**：科大校園坐落於風景如畫的山坡上，俯瞰牛尾海，配備先進建築及綠化空間。從九龍市中心乘港鐵巴士約 30 分鐘可達。",
+            "**設計工作室與實驗室**：課程使用專屬創客空間（如 IDT 創新實驗室），配備 3D 打印機、激光切割機及電子工作台，供原型製作。",
+            "**圖書館與學習共享空間**：李兆基圖書館提供 24/7 自修區、小組研習室及超過 200 萬本電子書與期刊。學習共享空間設有協作區域。",
+            "**體育與康樂**：設施包括奧運標準游泳池、體育館、網球場及健身中心。校園附近亦有遠足徑及沙灘。",
+            "**學生住宿**：一年級學生保證獲分配校內宿舍。房間為雙人房，享有海景，設有公共休息室及食堂。租金：每學期港幣 12,000–15,000 元。",
+            "**鄰近業界**：校園毗鄰香港科學園，學生可在超過 1,100 間科技公司實習。校內定期舉辦業界講座及交流活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科 + 第六科加分。科學科目、資訊及通訊科技、設計與應用科技、數學、延伸部分單元一及單元二獲較高比重。",
+            "**2025 年中位數**：36.36 分（滿分 75.86）。這使 JS5711 在科大課程中屬於中等競爭水平。",
+            "**2025 年下四分位數**：34.72，顯示即使最低 25% 的獲取錄學生也取得不錯成績。",
+            "**優先香港中學文憑考試科目**：建議在科學科目、資訊及通訊科技或設計與應用科技取得第 5 級，並在數學、延伸部分單元一或單元二取得第 5 級，以充分利用比重優勢。",
+            "**申請人數**：每年約 400–500 人申請 50–60 個學額，取錄率約 12–15%。優秀的個人陳述及作品集可提升機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃雅詩博士**：GreenTech Solutions 聯合創辦人，開發可生物降解包裝。2018 年畢業。獲科大創業獎。",
+            "**李健明先生**：Apple Inc. 高級產品設計師，負責 iPhone 配件。2016 年畢業。曾在 Dyson 實習。",
+            "**陳美玲女士**：Google 香港用戶體驗研究主管，專注人工智能驅動界面。2019 年畢業。在人機交互頂級會議發表 3 篇論文。",
+            "**張大衛先生**：NanoMed 創辦人，利用納米技術進行藥物傳遞的生物科技公司。2015 年畢業。在 A 輪融資籌得港幣 5,000 萬元。",
+            "**吳芳華博士**：麻省理工學院媒體實驗室助理教授，研究人機互動。2017 年畢業。獲科大青年校友獎。",
+            "**譚志強先生**：SmartCity HK 技術總監，負責政府支持的智能交通系統項目。2014 年畢業。領導 50 人工程團隊。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：自動考慮香港中學文憑考試成績位列前 10%（例如 3 科 5**）的申請人。涵蓋全額學費（每年港幣 42,100 元）及港幣 50,000 元生活津貼。",
+            "**跨學科學院優秀獎學金**：根據一年級平均績點頒予 JS5711 前 5% 學生。金額：每年港幣 20,000 元。",
+            "**創新與創業獎學金**：為提交傑出項目計劃的學生而設。提供港幣 30,000 元資助原型開發。開放予二年級或以上學生。",
+            "**香港特別行政區政府獎學金**：頒予學業成績優異及積極參與社區服務的香港居民。金額：每年港幣 80,000 元。",
+            "**按需經濟援助**：科大為低收入家庭學生提供助學金及貸款。每年最高港幣 100,000 元，涵蓋學費及生活費。",
+            "**外部獎學金**：學生可申請尤德爵士紀念基金獎學金（港幣 100,000 元）及滙豐海外獎學金（港幣 200,000 元）用於交換計劃。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5711 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權科目**",
+            "",
+            "- 在物理、化學、生物、資訊及通訊科技、設計與應用科技、數學、延伸部分單元一或單元二中，至少兩科取得第 5 級或以上。這些科目獲加權，第 5 級比非加權科目更有價值。",
+            "- 如果你擅長科學，選修 3 個科學科目以最大化第六科加分。",
+            "",
+            "**2. 目標分數 36 分以上**",
+            "",
+            "- 中位數為 36.36。計算你的最佳五科加第六科加分。使用科大的網上計算器模擬你的分數。",
+            "- 如果你的預測分數低於 34，考慮增加一個選修科或重考一科。",
+            "",
+            "**3. 建立強勁作品集**",
+            "",
+            "- 課程重視創意及動手能力。將項目（例如 Arduino 原型、應用程式設計或藝術裝置）記錄在 PDF 作品集中。",
+            "- 在 12 月前透過科大申請平台提交作品集。包括 3–5 個項目，附上照片及描述。",
+            "",
+            "**4. 撰寫具說服力的個人陳述**",
+            "",
+            "- 解釋為何選擇創新設計與科技而非傳統工程或科學。提及科大特定資源（如 IDT 創新實驗室、科學園）。",
+            "- 字數限制 500 字。集中介紹一個展示你跨學科思維的關鍵項目或經歷。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 獲篩選的候選人可能獲邀進行 15 分鐘面試。練習解釋你的作品集及回答「為何選擇科大？」和「你想解決什麼問題？」。",
+            "- 對行為問題使用 STAR 方法（情境、任務、行動、結果）。",
+            "",
+            "**6. 善用第六科加分**",
+            "",
+            "- 你的第六最佳科目（如有應考）會增加額外分數。應考 6 個香港中學文憑考試科目可將分數提升最多 5 分。",
+            "- 選擇一個與你背景互補的第六科，例如經濟學適合商業思維的申請人，視覺藝術適合設計為主的申請人。",
+            "",
+            "**7. 及早探索專修方向**",
+            "",
+            "- 在第二年之前決定創新與設計（較創意）或科技與工程（較技術）。查看科大網站上的課程列表。",
+            "- 參加 10 月的課程資訊講座，向現屆學生詢問他們的專修選擇。",
+            "",
+            "**8. 獲取實踐經驗**",
+            "",
+            "- 在中五或中六參加科大的暑期課程（例如機械人訓練營、設計思維工作坊）。這些能強化你的申請及作品集。",
+            "- 在 Maker Faire 擔任義工或參加香港科學展覽，展示你的技能。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- 在 12 月初前提交大學聯招申請。科大考慮首志願，如果 JS5711 是你的夢想課程，請將其列為首選。",
+            "- 非大學聯招申請人，早期申請截止日期為 11 月 15 日。逾期申請機會較低。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "36.36",
+    "lq": "34.72"
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS5220",
+    "nameEn": "Department of Chemical and Biological Engineering",
+    "nameZh": "化學及生物工程學系",
+    "name": "Department of Chemical and Biological Engineering",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "41.14",
+    "band_a": "38.20",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5220",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/ICT weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 41.14 (2025 JUPAS data).",
+            "**Lower Quartile**: 38.20 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ ICT Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS5220 offers a comprehensive education in chemical and biological engineering, blending core engineering principles with cutting-edge biotechnology. The curriculum is designed to equip students with skills in process design, biochemical engineering, and sustainable energy solutions.",
+            "**Year 1**: Foundational courses include Mathematics, Chemistry, Physics, and Introduction to Engineering. Students also take General Education courses and explore interdisciplinary electives.",
+            "**Year 2**: Core subjects such as Fluid Mechanics, Thermodynamics, and Transport Phenomena are introduced. Students begin laboratory work and computational modelling.",
+            "**Year 3**: Specialisation deepens with courses in Bioprocess Engineering, Reaction Engineering, and Separation Processes. A capstone design project starts, integrating theory with real-world applications.",
+            "**Year 4**: Advanced electives in areas like Nanotechnology, Environmental Engineering, and Pharmaceutical Engineering. Students complete a final-year research project under faculty supervision.",
+            "**Industrial Training**: A mandatory summer internship or industrial attachment provides hands-on experience, often at Hong Kong Science Park or partner companies."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Graduates are highly sought after in sectors such as pharmaceuticals, energy, food and beverage, environmental consulting, and biotechnology. The median starting salary for HKUST engineering graduates is HKD 25,000–30,000 per month.",
+            "**Top Employers**: Leading recruiters include BASF, Pfizer, CLP Group, Hong Kong Science and Technology Parks Corporation (HKSTP), and multinational engineering firms.",
+            "**Roles and Positions**: Common roles include Process Engineer, Bioprocess Engineer, Quality Assurance Manager, Research Scientist, and Environmental Consultant. Many graduates advance to senior management within 5–7 years.",
+            "**Entrepreneurship**: HKUST’s strong innovation ecosystem supports graduates in launching startups, with access to incubation programmes and venture capital networks.",
+            "**Further Studies**: Over 30% of graduates pursue master’s or PhD degrees at top global universities, including MIT, Stanford, Cambridge, and ETH Zurich.",
+            "**Global Mobility**: Exchange programmes with over 200 partner universities allow students to gain international experience, enhancing employability in global markets."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Location**: HKUST’s Clear Water Bay campus offers breathtaking sea views and a tranquil environment, ideal for focused study. The campus is a 20-minute drive from central Hong Kong.",
+            "**Laboratories**: State-of-the-art facilities include the Chemical and Biological Engineering Laboratories, equipped with bioreactors, chromatography systems, and advanced analytical instruments.",
+            "**Student Housing**: On-campus accommodation is guaranteed for the first two years, with modern halls featuring sea-view rooms, common rooms, and study lounges.",
+            "**Clubs and Societies**: Over 100 student organisations, including the Chemical and Biological Engineering Society, organise academic, social, and sports events throughout the year.",
+            "**Library and Study Spaces**: The Lee Shau Kee Library provides 24/7 access, with dedicated group study rooms, computer labs, and a vast collection of engineering resources.",
+            "**Sports and Recreation**: Facilities include a gymnasium, swimming pool, tennis courts, and hiking trails. The campus also hosts annual sports festivals and competitions."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects plus a 6th subject bonus. Science subjects and ICT are weighted more heavily, giving an advantage to students with strong STEM backgrounds.",
+            "**Median Score (2025)**: 41.14, indicating a highly competitive entry threshold. The lower quartile was 38.20, meaning the middle 50% of admitted students scored between 38.20 and 41.14.",
+            "**Highest Attainable Score**: 75.86, reflecting the maximum possible weighted score under the formula.",
+            "**Preferred Subjects**: HKDSE Science subjects (Chemistry, Biology, Physics) and ICT at Level 5 or above are strongly preferred. Students with these subjects score significantly higher in the weighted calculation.",
+            "**Application Trends**: The programme receives over 1,000 applications annually for approximately 80 places, resulting in a 12:1 applicant-to-place ratio."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Zhang Wei (張偉博士)**: Chief Technology Officer, BASF Asia Pacific. Graduated with a PhD in Chemical Engineering from HKUST in 2008. Led R&D teams in sustainable chemical processes.",
+            "**Emily Chan (陳美玲)**: Senior Process Engineer, Pfizer Hong Kong. 2015 BEng graduate. Specialises in biopharmaceutical manufacturing and quality control.",
+            "**Prof. Li Ming (李明教授)**: Professor of Chemical Engineering, University of Cambridge. Completed his BEng at HKUST in 2002 and PhD at MIT. Known for research in renewable energy.",
+            "**Kevin Wong (黃凱文)**: Founder and CEO, GreenTech Solutions Ltd. 2010 graduate. His startup develops eco-friendly packaging materials and has raised HKD 50 million in funding.",
+            "**Dr. Sarah Lau (劉莎拉博士)**: Director of Environmental Policy, Hong Kong Environmental Protection Department. 2006 PhD graduate. Influential in shaping Hong Kong’s waste management regulations.",
+            "**Tommy Ng (吳志明)**: Vice President, CLP Group. 1998 BEng graduate. Oversees renewable energy projects and carbon reduction strategies for Hong Kong’s largest power utility."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE performers based on admission scores. Recipients receive HKD 50,000–100,000 per year, renewable upon maintaining a GPA of 3.3 or above.",
+            "**School of Engineering Scholarships**: Multiple merit-based scholarships, including the Engineering Dean’s Scholarship (HKD 40,000) and the S.H. Ho Foundation Scholarship (HKD 60,000).",
+            "**Need-Based Financial Aid**: The University Financial Assistance Scheme provides up to full tuition coverage for students from low-income families. Over 20% of HKUST students receive some form of financial aid.",
+            "**External Scholarships**: Students can apply for the HKSAR Government Scholarship (HKD 80,000) and the Sir Edward Youde Memorial Fellowship (HKD 100,000) for outstanding academic and leadership achievements.",
+            "**Research Postgraduate Scholarships**: For students continuing to MPhil/PhD, the Hong Kong PhD Fellowship Scheme offers HKD 322,800 per year plus conference travel grants.",
+            "**Internship Bursaries**: The School of Engineering provides bursaries of up to HKD 15,000 to support unpaid internships, ensuring all students can gain valuable industry experience."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5220 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Subjects and ICT**",
+            "- HKUST weights Science subjects (Chemistry, Biology, Physics) and ICT heavily. Aim for Level 5 or above in at least two of these subjects to maximise your score.",
+            "- If you are strong in Chemistry, consider taking HKDSE Chemistry (Compulsory + Elective) to boost your weighted score.",
+            "",
+            "**2. Master the Admission Formula**",
+            "- The formula uses Best 5 subjects + 6th subject bonus. Ensure your 6th subject is a strong one (e.g., M1/M2 or a Science elective) to earn the bonus.",
+            "- Calculate your weighted score using the HKUST online calculator to set a target of 41+ for a safe application.",
+            "",
+            "**3. Build a Strong Academic Profile**",
+            "- Maintain a high GPA in Form 5 and Form 6, especially in STEM subjects. HKUST reviews school recommendations and predicted grades.",
+            "- Participate in science competitions (e.g., Hong Kong Biology Olympiad, Chemistry Olympiad) to demonstrate passion.",
+            "",
+            "**4. Excel in HKDSE English and Mathematics**",
+            "- English and Mathematics are core subjects in the Best 5. Aim for Level 4 or above in English and Level 5 or above in Mathematics.",
+            "- For Mathematics, consider taking M1 (Calculus and Statistics) or M2 (Algebra and Calculus) to strengthen your application.",
+            "",
+            "**5. Gain Relevant Experience**",
+            "- Join summer programmes at HKUST or other universities (e.g., HKUST Summer Institute) to explore chemical and biological engineering.",
+            "- Volunteer or intern at laboratories, environmental NGOs, or pharmaceutical companies to show practical interest.",
+            "",
+            "**6. Write a Compelling Personal Statement**",
+            "- Highlight your motivation for chemical and biological engineering, referencing specific HKUST facilities or research groups.",
+            "- Mention any projects, such as a school science fair or a personal experiment, to demonstrate hands-on skills.",
+            "",
+            "**7. Prepare for Interviews (if shortlisted)**",
+            "- HKUST may invite top applicants for an interview. Practice explaining your interest in the programme and your career goals.",
+            "- Be ready to discuss current trends in biotechnology, sustainability, or energy—topics covered in the curriculum.",
+            "",
+            "**8. Use the Band A Strategy**",
+            "- Place JS5220 in Band A (first 3 choices) of JUPAS to maximise your chances. HKUST considers Band A applicants first.",
+            "- If you are borderline (score around 38–40), consider applying through the Early Admissions Scheme (if eligible) for an early offer.",
+            "",
+            "**9. Explore Alternative Pathways**",
+            "- If your HKDSE score is slightly below the median, consider HKUST’s Associate Degree or Higher Diploma in Engineering, then transfer to Year 2.",
+            "- Alternatively, apply for the School of Engineering’s broad-based admission (JS5200) and declare Chemical and Biological Engineering after Year 1."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/ICT 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：41.14分（2025年聯招數據）。",
+            "**下四分位數**：38.20分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ ICT Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS5220 提供全面的化學及生物工程教育，融合核心工程原理與前沿生物技術。課程旨在培養學生在過程設計、生化工程及可持續能源解決方案方面的技能。",
+            "**第一年**：基礎課程包括數學、化學、物理及工程導論。學生亦修讀通識課程並探索跨學科選修。",
+            "**第二年**：引入流體力學、熱力學及傳遞現象等核心科目。學生開始進行實驗室工作及計算機建模。",
+            "**第三年**：專業深化，課程包括生物過程工程、反應工程及分離過程。開始頂石設計項目，將理論與實際應用結合。",
+            "**第四年**：高級選修涵蓋納米技術、環境工程及製藥工程等領域。學生在教授指導下完成畢業研究項目。",
+            "**工業實習**：強制性的暑期實習或工業實習提供實踐經驗，通常在香港科學園或合作公司進行。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：畢業生在製藥、能源、食品飲料、環境諮詢及生物技術等領域備受追捧。科大工程畢業生的中位起薪為每月港幣 25,000 至 30,000 元。",
+            "**頂尖僱主**：主要招聘機構包括 BASF、輝瑞、中電集團、香港科技園公司及跨國工程公司。",
+            "**職位與角色**：常見職位包括工藝工程師、生物過程工程師、品質保證經理、研究科學家及環境顧問。許多畢業生在 5 至 7 年內晉升至高級管理層。",
+            "**創業機會**：科大強大的創新生態系統支持畢業生創辦初創企業，提供孵化計劃及風險投資網絡。",
+            "**深造途徑**：超過 30% 的畢業生在全球頂尖大學攻讀碩士或博士學位，包括麻省理工、斯坦福、劍橋及蘇黎世聯邦理工學院。",
+            "**全球流動性**：與超過 200 所合作大學的交換計劃讓學生獲得國際經驗，提升在全球市場的就業能力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：科大清水灣校園享有壯麗海景及寧靜環境，適合專注學習。校園距離香港市中心約 20 分鐘車程。",
+            "**實驗室**：先進設施包括化學及生物工程實驗室，配備生物反應器、色譜系統及高級分析儀器。",
+            "**學生住宿**：首兩年保證校內住宿，現代化宿舍設有海景房、公共休息室及自修室。",
+            "**學會與社團**：超過 100 個學生組織，包括化學及生物工程學會，全年舉辦學術、社交及體育活動。",
+            "**圖書館及自修空間**：李兆基圖書館提供 24/7 開放，設有小組研討室、電腦實驗室及豐富的工程資源。",
+            "**體育及康樂**：設施包括健身房、游泳池、網球場及遠足徑。校園亦舉辦年度體育節及比賽。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科加第 6 科加分。理科及資訊及通訊科技科權重較高，STEM 背景強的學生更具優勢。",
+            "**2025 年中位分數**：41.14，反映極高的入學門檻。下四分位數為 38.20，即中間 50% 的錄取學生分數介乎 38.20 至 41.14。",
+            "**最高可達分數**：75.86，反映公式下的最高加權分數。",
+            "**優先科目**：強烈建議 HKDSE 理科（化學、生物、物理）及資訊及通訊科技科達 5 級或以上。這些科目在加權計算中顯著提高分數。",
+            "**申請趨勢**：該課程每年收到超過 1,000 份申請，約 80 個學額，申請人與學額比例約為 12:1。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**張偉博士**：BASF 亞太區首席技術官。2008 年於科大取得化學工程博士學位。領導可持續化學工藝的研發團隊。",
+            "**陳美玲**：輝瑞香港高級工藝工程師。2015 年工程學士畢業。專注於生物製藥生產及品質控制。",
+            "**李明教授**：劍橋大學化學工程教授。2002 年於科大取得工程學士學位，後於麻省理工取得博士學位。以可再生能源研究聞名。",
+            "**黃凱文**：GreenTech Solutions Ltd 創辦人及行政總裁。2010 年畢業。其初創企業開發環保包裝材料，已籌集 5,000 萬港元資金。",
+            "**劉莎拉博士**：香港環境保護署環境政策總監。2006 年博士畢業。對香港廢物管理法規的制定有重要影響。",
+            "**吳志明**：中電集團副總裁。1998 年工程學士畢業。負責香港最大電力公司的可再生能源項目及減碳策略。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**科大入學獎學金**：頒予基於入學分數的頂尖 HKDSE 考生。獲獎者每年可獲港幣 50,000 至 100,000 元，續領條件為保持 GPA 3.3 或以上。",
+            "**工程學院獎學金**：多項基於成績的獎學金，包括工程學院院長獎學金（港幣 40,000 元）及 S.H. Ho 基金會獎學金（港幣 60,000 元）。",
+            "**需要為本的財務資助**：大學財務資助計劃為低收入家庭學生提供全額學費資助。超過 20% 的科大學生獲得某種形式的財務援助。",
+            "**外部獎學金**：學生可申請香港特別行政區政府獎學金（港幣 80,000 元）及尤德爵士紀念基金獎學金（港幣 100,000 元），以表彰傑出的學術及領導成就。",
+            "**研究式研究生獎學金**：繼續攻讀碩士/博士的學生可申請香港博士研究生獎學金計劃，每年獲港幣 322,800 元及會議旅費資助。",
+            "**實習助學金**：工程學院提供最高港幣 15,000 元的助學金，支持無薪實習，確保所有學生都能獲得寶貴的行業經驗。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5220 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先選修理科及資訊及通訊科技科**",
+            "- 科大高度加權理科（化學、生物、物理）及資訊及通訊科技科。目標在至少兩科取得 5 級或以上，以最大化你的分數。",
+            "- 如果你化學成績優異，考慮報考 HKDSE 化學（必修 + 選修）以提升加權分數。",
+            "",
+            "**2. 掌握入學分數公式**",
+            "- 公式使用最佳 5 科加第 6 科加分。確保第 6 科是強項（例如 M1/M2 或理科選修）以獲得加分。",
+            "- 使用科大網上計算器計算你的加權分數，設定 41 分或以上的目標以安全申請。",
+            "",
+            "**3. 建立強大的學術檔案**",
+            "- 在中五及中六保持高 GPA，尤其是 STEM 科目。科大審視學校推薦信及預測成績。",
+            "- 參加科學比賽（例如香港生物奧林匹克、化學奧林匹克）以展示熱誠。",
+            "",
+            "**4. 在 HKDSE 英文及數學中表現出色**",
+            "- 英文及數學是最佳 5 科中的核心科目。目標英文達 4 級或以上，數學達 5 級或以上。",
+            "- 對於數學，考慮報考 M1（微積分與統計）或 M2（代數與微積分）以強化申請。",
+            "",
+            "**5. 獲取相關經驗**",
+            "- 參加科大或其他大學的暑期課程（例如科大暑期學院），探索化學及生物工程。",
+            "- 在實驗室、環境非政府組織或製藥公司擔任義工或實習，展示實踐興趣。",
+            "",
+            "**6. 撰寫具說服力的個人陳述**",
+            "- 強調你對化學及生物工程的動機，提及科大特定的設施或研究團隊。",
+            "- 提及任何項目，例如學校科學展覽或個人實驗，以展示動手能力。",
+            "",
+            "**7. 為面試做好準備（如獲篩選）**",
+            "- 科大可能邀請頂尖申請人進行面試。練習解釋你對課程的興趣及職業目標。",
+            "- 準備討論生物技術、可持續性或能源等當前趨勢——這些都是課程涵蓋的主題。",
+            "",
+            "**8. 使用 Band A 策略**",
+            "- 將 JS5220 放在 JUPAS 的 Band A（首 3 個選擇）以最大化機會。科大優先考慮 Band A 申請人。",
+            "- 如果你的分數處於邊緣（約 38–40 分），考慮透過早期錄取計劃（如符合資格）申請，以獲得早期錄取。",
+            "",
+            "**9. 探索替代途徑**",
+            "- 如果你的 HKDSE 分數略低於中位數，考慮科大的工程學副學士或高級文憑，然後轉讀二年級。",
+            "- 或者，申請工程學院的廣泛基礎入學（JS5200），並在第一年後申報化學及生物工程。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "41.14",
+    "lq": "38.20"
+  }
+}

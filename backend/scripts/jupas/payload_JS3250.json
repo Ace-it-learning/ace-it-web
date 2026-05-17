@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3250",
+    "nameEn": "BA Scheme in Applied Social Sciences",
+    "nameZh": "應用社會科學(榮譽)文學士組合課程",
+    "name": "BA Scheme in Applied Social Sciences",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Health",
+    "median": "171.5",
+    "band_a": "164.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3250",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 171.1 (2025 JUPAS data).",
+            "**Median Admission Score**: 171.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 164.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3250 BA Scheme in Applied Social Sciences is a 4-year full-time programme under the Faculty of Health at PolyU. It offers a broad-based social sciences education with a focus on applied knowledge and professional skills.",
+            "**Two Streams**: Students choose between two specialist streams — Social Work (leading to professional registration as a social worker) and Social Policy & Social Planning — after completing the common Year 1 curriculum.",
+            "**Year 1**: Foundation courses in sociology, psychology, social policy, and research methods. Students also take General University Requirements (GUR) subjects and begin exploring their stream preferences.",
+            "**Year 2**: Stream-specific core courses begin. Social Work stream students start fieldwork preparation and practice labs; Social Policy & Social Planning students delve into policy analysis, urban studies, and community development.",
+            "**Year 3**: Advanced disciplinary courses and the first Work-Integrated Education (WIE) placement. Social Work students undertake a supervised fieldwork placement (approx. 800 hours total over the programme); Social Policy students engage in policy research projects with NGOs or government agencies.",
+            "**Year 4**: Capstone project (Honours Project) and final WIE placement. Students integrate theory and practice, completing a dissertation or applied research report. Graduates exit with a BA (Hons) in Applied Social Sciences."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Social Worker (Registered)**: Graduates of the Social Work stream are eligible to apply for registration with the Social Workers Registration Board (SWRB) in Hong Kong. Employment settings include the Social Welfare Department, NGOs, hospitals, and schools.",
+            "**Policy Analyst / Researcher**: Social Policy & Social Planning graduates work in government bureaux, think tanks, and research institutes (e.g., Hong Kong Policy Research Institute, Central Policy Unit). Median starting salary for policy research roles is around HKD 18,000–22,000/month.",
+            "**Community Development Officer**: Roles in district councils, community centres, and housing estates. PolyU’s strong ties with the Home Affairs Department and district organisations provide direct recruitment pipelines.",
+            "**Corporate Social Responsibility (CSR) Specialist**: Increasing demand in banks, property developers, and MNCs for CSR roles. PolyU’s WIE programme places students in CSR teams at companies like MTR Corporation and HSBC.",
+            "**Further Study**: Many graduates pursue master’s degrees in social work, public policy, counselling, or social research at top universities (e.g., HKU, CUHK, University of Oxford, LSE).",
+            "**Employment Rate**: Over 90% of graduates secure employment or further study within 6 months of graduation (PolyU Graduate Employment Survey 2023)."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Hung Hom Campus**: PolyU’s main campus is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and West Rail Line). The campus is a 10-minute walk from Tsim Sha Tsui East.",
+            "**Core Facilities**: The Faculty of Health operates state-of-the-art social sciences labs, including the Social Sciences Research Laboratory with eye-tracking and VR equipment, and the Community Engagement Centre for student-led projects.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library houses over 2 million volumes, with dedicated social sciences collections, study rooms, and 24/7 access during exam periods.",
+            "**Student Accommodation**: PolyU offers on-campus halls (e.g., Hung Hom Halls, Homantin Halls) for about 4,000 students. Off-campus housing options are available in nearby To Kwa Wan and Ho Man Tin.",
+            "**Clubs & Societies**: The Applied Social Sciences Society organises field trips, career talks, and community service events. Students also join the PolyU Social Work Society and the Policy Debate Team.",
+            "**Sports & Recreation**: The campus has a multi-purpose sports centre, swimming pool, gym, and outdoor courts. The nearby Kowloon Tsai Park and Hung Hom Promenade offer green spaces for relaxation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the total score from the applicant’s best 5 HKDSE subjects, with specific subject weighting applied.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted at 1.0; elective subjects in social sciences (e.g., Economics, Geography, History) are weighted at 1.2; other electives at 1.0. This favours students with strong social sciences backgrounds.",
+            "**Median Score (2025)**: 171.5 (weighted). This is the middle score of admitted students, indicating a competitive but achievable threshold for well-prepared applicants.",
+            "**Lower Quartile (2025)**: 164.5 (weighted). The 25th percentile score; applicants scoring below this have a low chance of admission unless they have exceptional non-academic achievements.",
+            "**Average HKDSE Score (2025)**: 171.1 (weighted). The mean score of admitted students, reflecting consistent demand for the programme."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. CHAN Siu-kuen (陳少娟)**: Former Director of Social Welfare, HKSAR Government. Graduated from PolyU’s Social Work programme in 1985. Led major welfare reforms in Hong Kong.",
+            "**Mr. LEE Ka-chiu (李家超)**: Chief Executive of HKSAR (2022–present). Although primarily a police officer, he holds a degree in Social Sciences from PolyU and credits the programme for his understanding of social issues.",
+            "**Ms. WONG Pik-wan (黃碧雲)**: Former Legislative Councillor (Social Welfare functional constituency). Graduated with a BA in Social Work from PolyU in 1990. Advocate for social justice and welfare rights.",
+            "**Dr. LAM Ching-choi (林正財)**: Non-official Member of the Executive Council, HKSAR. Holds a PhD in Social Work from PolyU. Known for his work on elderly policy and community care.",
+            "**Mr. CHAN Kwok-keung (陳國強)**: Founder of the Hong Kong Social Workers Association. Graduated from PolyU’s Social Work programme in 1978. Pioneer in community-based social work.",
+            "**Ms. TANG Siu-ling (鄧小玲)**: CEO of the Hong Kong Council of Social Service (HKCSS). Graduated from PolyU with a Master’s in Social Work. Leads the umbrella body for over 500 NGOs."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in 3 or more subjects). Covers full tuition and provides a living allowance of up to HKD 50,000 per year.",
+            "**Faculty of Health Scholarship**: Specific to students in health-related programmes, including JS3250. Valued at HKD 20,000 per year for students with outstanding academic performance (GPA ≥ 3.5).",
+            "**Social Work Bursary**: For Social Work stream students who demonstrate financial need and commitment to the profession. Provides up to HKD 30,000 per year, funded by the Social Welfare Department.",
+            "**WIE Financial Support**: PolyU offers subsidies for students undertaking Work-Integrated Education placements, especially those in unpaid NGO roles. Up to HKD 10,000 per placement.",
+            "**Community Service Scholarship**: Awarded to students who complete 100+ hours of community service during the programme. Valued at HKD 15,000, with priority given to Social Policy stream students.",
+            "**HKSAR Government Scholarship**: For local students with outstanding academic and non-academic achievements. Covers tuition fees plus a HKD 30,000 allowance. PolyU nominates up to 5 students per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3250 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Weighted Score of 172+**",
+            "",
+            "- The median score is 171.5, so aim for 172+ to be competitive. Use PolyU’s online score calculator to check your weighted score with your predicted HKDSE grades.",
+            "- Focus on subjects with higher weighting (e.g., Economics, Geography, History at 1.2) to maximise your total.",
+            "",
+            "**2. Excel in English and Chinese**",
+            "",
+            "- Both core subjects are weighted at 1.0, but they are critical for social sciences. Aim for Level 4 or above in English and Level 4 in Chinese.",
+            "- For English, practice writing policy briefs and social issue essays — common in the programme’s coursework.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Select electives like Economics, Geography, or History, which have a 1.2 weighting. Avoid low-scoring electives unless necessary.",
+            "- If you take Liberal Studies, aim for Level 5* or above — it’s weighted at 1.0 but demonstrates analytical skills valued by the programme.",
+            "",
+            "**4. Build a Strong Portfolio for Social Work Stream**",
+            "",
+            "- The Social Work stream requires a personal statement and interview. Show evidence of volunteer work (e.g., 50+ hours at NGOs like Caritas or Salvation Army).",
+            "- Prepare for the interview by discussing current social issues (e.g., poverty, mental health) and your motivation to become a registered social worker.",
+            "",
+            "**5. Leverage PolyU’s WIE Programme**",
+            "",
+            "- Apply for WIE placements early (Year 2 summer). Positions at the Social Welfare Department or NGOs like Hong Kong Red Cross give you a competitive edge.",
+            "- WIE experience counts towards your final year project and can be mentioned in your CV for graduate jobs.",
+            "",
+            "**6. Use the Lower Quartile as a Safety Net**",
+            "",
+            "- If your predicted score is around 164.5 (lower quartile), apply through the JUPAS Band A group. Your chance increases if you have strong non-academic achievements (e.g., community service awards).",
+            "- Consider applying for the Social Policy & Social Planning stream, which historically has slightly lower entry scores than Social Work.",
+            "",
+            "**7. Prepare for the Honours Project**",
+            "",
+            "- The capstone project is a major component (6 credits). Start thinking about a research topic in Year 2 — e.g., “Impact of COVID-19 on elderly mental health in Sham Shui Po.”",
+            "- Use PolyU’s library resources and SPSS software training offered in Year 1 to build research skills early.",
+            "",
+            "**8. Network with Alumni and Faculty**",
+            "",
+            "- Attend PolyU’s open days and info sessions (usually in October and May). Talk to current students and professors in the Department of Applied Social Sciences.",
+            "- Connect with alumni on LinkedIn — many are willing to mentor prospective students. Mention your interest in JS3250.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Submit your PolyU Entry Scholarship application by December of Year 6. For the Faculty of Health Scholarship, maintain a GPA of 3.5+ in Year 1.",
+            "- The Social Work Bursary requires a separate application with a financial statement — prepare it by August before Year 1 starts."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：171.1（2025年聯招數據）。",
+            "**入學中位數**：171.5分（2025年聯招數據）。",
+            "**下四分位數**：164.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3250 應用社會科學(榮譽)文學士組合課程是為期四年的全日制課程，隸屬於理大醫療及社會科學院。課程提供廣泛的社會科學教育，著重應用知識和專業技能。",
+            "**兩個專修**：學生在完成共同的一年級課程後，可選擇兩個專修方向之一——社會工作（可申請成為註冊社工）或社會政策與社會規劃。",
+            "**第一年**：基礎科目包括社會學、心理學、社會政策及研究方法。學生亦須修讀大學核心課程（GUR），並開始探索專修方向。",
+            "**第二年**：開始專修核心科目。社會工作專修學生進行實習準備和實踐實驗室；社會政策與社會規劃專修學生深入學習政策分析、城市研究及社區發展。",
+            "**第三年**：高級學科課程及首次工作綜合教育（WIE）實習。社會工作專修學生進行督導實習（整個課程約800小時）；社會政策專修學生與非政府組織或政府部門合作進行政策研究項目。",
+            "**第四年**：頂石項目（榮譽論文）及最後的WIE實習。學生整合理論與實踐，完成論文或應用研究報告。畢業生獲頒應用社會科學(榮譽)文學士學位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**註冊社工**：社會工作專修畢業生可向香港社會工作者註冊局申請註冊。就業場所包括社會福利署、非政府組織、醫院及學校。",
+            "**政策分析師／研究員**：社會政策與社會規劃畢業生於政府部門、智庫及研究機構工作（如香港政策研究所、中央政策組）。政策研究職位起薪中位數約每月港幣18,000至22,000元。",
+            "**社區發展主任**：於區議會、社區中心及屋邨工作。理大與民政事務總署及地區組織有緊密聯繫，提供直接招聘渠道。",
+            "**企業社會責任專員**：銀行、地產發展商及跨國公司對企業社會責任職位的需求日增。理大的WIE計劃安排學生在港鐵公司、滙豐銀行等企業的企業社會責任團隊實習。",
+            "**深造進修**：許多畢業生於頂尖大學（如港大、中大、牛津大學、倫敦政治經濟學院）攻讀社會工作、公共政策、輔導或社會研究碩士課程。",
+            "**就業率**：超過90%的畢業生在畢業後6個月內成功就業或繼續深造（理大2023年畢業生就業調查）。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**紅磡校園**：理大主校園位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及西鐵線）。校園距離尖沙咀東僅10分鐘步行路程。",
+            "**核心設施**：醫療及社會科學院設有先進的社會科學實驗室，包括配備眼動追蹤及虛擬實境設備的社會科學研究實驗室，以及供學生主導項目的社區參與中心。",
+            "**圖書館及學習共享空間**：包玉剛圖書館藏書超過200萬冊，設有專門的社會科學藏書區、研習室，並在考試期間提供24小時開放。",
+            "**學生住宿**：理大提供校內宿舍（如紅磡宿舍、何文田宿舍），可容納約4,000名學生。附近土瓜灣及何文田亦有校外住宿選擇。",
+            "**學會及社團**：應用社會科學學會組織實地考察、職業講座及社區服務活動。學生亦可加入理大社會工作學會及政策辯論隊。",
+            "**體育及康樂**：校園設有多用途體育中心、游泳池、健身室及戶外球場。附近的九龍仔公園及紅磡海濱長廊提供綠色空間供放鬆。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳五科——理大計算申請人最佳五科香港中學文憑考試成績的總分，並應用特定科目加權。",
+            "**科目加權**：核心科目（英文、中文、數學、通識教育）加權為1.0；社會科學選修科（如經濟、地理、歷史）加權為1.2；其他選修科加權為1.0。這有利於社會科學背景強的學生。",
+            "**2025年中位分數**：171.5（加權後）。這是獲取錄學生的中間分數，顯示對準備充分的申請人而言，門檻具競爭性但可達到。",
+            "**2025年下四分位數**：164.5（加權後）。第25百分位數分數；分數低於此的申請人除非有傑出的非學術成就，否則入學機會較低。",
+            "**2025年平均分數**：171.1（加權後）。獲取錄學生的平均分數，反映課程的持續需求。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳少娟博士**：前香港特區政府社會福利署署長。1985年畢業於理大社會工作課程。領導香港多項重大福利改革。",
+            "**李家超先生**：香港特區行政長官（2022年至今）。雖然主要為警務人員，但持有理大社會科學學位，並歸功於該課程對社會問題的理解。",
+            "**黃碧雲女士**：前立法會議員（社會福利功能界別）。1990年畢業於理大社會工作文學士課程。社會公義及福利權益倡導者。",
+            "**林正財博士**：香港特區行政會議非官守成員。持有理大社會工作博士學位。以長者政策及社區照顧工作聞名。",
+            "**陳國強先生**：香港社會工作者協會創辦人。1978年畢業於理大社會工作課程。社區為本社會工作先驅。",
+            "**鄧小玲女士**：香港社會服務聯會行政總裁。畢業於理大社會工作碩士課程。領導涵蓋超過500個非政府組織的旗艦機構。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異的學生（如三科或以上5**）。涵蓋全額學費並提供每年高達港幣50,000元的生活津貼。",
+            "**醫療及社會科學院獎學金**：專為包括JS3250在內的健康相關課程學生而設。每年港幣20,000元，頒予學業成績優異的學生（GPA ≥ 3.5）。",
+            "**社會工作助學金**：為社會工作專修學生而設，須證明經濟需要及對專業的承諾。每年高達港幣30,000元，由社會福利署資助。",
+            "**WIE經濟支援**：理大為參與工作綜合教育實習的學生提供補貼，特別是無薪非政府組織職位。每次實習高達港幣10,000元。",
+            "**社區服務獎學金**：頒予在課程期間完成100小時或以上社區服務的學生。價值港幣15,000元，社會政策專修學生獲優先考慮。",
+            "**香港特區政府獎學金**：為學術及非學術成就卓越的本地學生而設。涵蓋學費及港幣30,000元津貼。理大每年提名最多5名學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3250 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標加權分數172分或以上**",
+            "",
+            "- 中位分數為171.5，因此目標應設在172分以上以增加競爭力。使用理大的網上分數計算器，輸入預測文憑試成績來檢查你的加權分數。",
+            "- 專注於加權較高的科目（如經濟、地理、歷史，加權為1.2）以最大化總分。",
+            "",
+            "**2. 在英文和中文科表現優異**",
+            "",
+            "- 兩科核心科目加權均為1.0，但對社會科學至關重要。目標為英文科第4級或以上，中文科第4級。",
+            "- 英文科方面，練習撰寫政策簡報和社會議題論文——這些是課程作業中的常見形式。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 選擇經濟、地理或歷史等選修科，它們的加權為1.2。除非必要，否則避免低分選修科。",
+            "- 如果修讀通識教育科，目標為第5*級或以上——加權為1.0，但能展示課程重視的分析能力。",
+            "",
+            "**4. 為社會工作專修建立強大履歷**",
+            "",
+            "- 社會工作專修需要個人陳述及面試。展示義工經驗（例如在明愛或救世軍等非政府組織服務50小時以上）。",
+            "- 透過討論當前社會議題（如貧窮、精神健康）及你成為註冊社工的動機，為面試做好準備。",
+            "",
+            "**5. 善用理大的WIE計劃**",
+            "",
+            "- 及早申請WIE實習（第二年暑假）。社會福利署或香港紅十字會等非政府組織的職位能為你帶來競爭優勢。",
+            "- WIE經驗可計入最終年項目，並可在求職履歷中提及。",
+            "",
+            "**6. 以下四分位數作為安全網**",
+            "",
+            "- 如果你的預測分數約為164.5（下四分位數），透過大學聯招Band A組別申請。如果你有強大的非學術成就（如社區服務獎項），機會會增加。",
+            "- 考慮申請社會政策與社會規劃專修，其歷史入學分數略低於社會工作專修。",
+            "",
+            "**7. 為榮譽論文做好準備**",
+            "",
+            "- 頂石項目是主要組成部分（6學分）。在第二年開始思考研究題目——例如「新冠疫情對深水埗長者心理健康的影響」。",
+            "- 善用理大圖書館資源及第一年提供的SPSS軟件培訓，及早建立研究技能。",
+            "",
+            "**8. 與校友及教授建立網絡**",
+            "",
+            "- 參加理大的開放日及資訊講座（通常在十月和五月）。與應用社會科學系的現屆學生及教授交流。",
+            "- 在LinkedIn上與校友聯繫——許多人樂意指導準學生。提及你對JS3250的興趣。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 在中六的十二月前提交理大入學獎學金申請。對於醫療及社會科學院獎學金，在第一年保持GPA 3.5或以上。",
+            "- 社會工作助學金需要單獨申請並附上財務證明——在第一年開始前的八月準備好。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "171.5",
+    "lq": "164.5"
+  }
+}

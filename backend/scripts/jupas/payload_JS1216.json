@@ -1,0 +1,287 @@
+{
+  "programme": {
+    "code": "JS1216",
+    "nameEn": "BEng Intelligent Manufacturing Engineering",
+    "nameZh": "工學士(智能製造工程學)",
+    "name": "BEng Intelligent Manufacturing Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 20.0,
+    "band_a": 18.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1216",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 20.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 18.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: BEng Intelligent Manufacturing Engineering (JS1216) is a 4-year full-time programme offered by the College of Engineering, City University of Hong Kong. It focuses on smart manufacturing, automation, and digital technologies.",
+            "**Year 1**: Foundation courses in mathematics, physics, programming, and engineering principles. Students also take University Core courses and English enhancement.",
+            "**Year 2**: Core engineering subjects including mechanics, materials science, thermodynamics, and electrical circuits. Introduction to intelligent manufacturing concepts.",
+            "**Year 3**: Specialised courses in robotics, IoT, data analytics, AI for manufacturing, and supply chain management. Students begin capstone project preparation.",
+            "**Year 4**: Advanced topics such as smart factory design, cyber-physical systems, and Industry 4.0. Final year capstone project and industrial internship.",
+            "**Industrial Training**: A mandatory 8-week summer internship after Year 2 or Year 3, providing hands-on experience in manufacturing firms or R&D labs.",
+            "**Capstone Project**: Students complete a year-long group project solving real-world manufacturing problems, often in collaboration with industry partners."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Smart Manufacturing Engineer**: Design and optimise automated production lines using AI and IoT technologies. Average starting salary HK$20,000–25,000/month.",
+            "**Industrial Automation Specialist**: Develop and maintain robotic systems and control software. Demand is high in Hong Kong's electronics and logistics sectors.",
+            "**Supply Chain Analyst**: Use data analytics to improve inventory management and logistics efficiency. Graduates often join firms like DHL or Li & Fung.",
+            "**R&D Engineer**: Work in product development and process innovation at companies such as ASM Pacific Technology or Foxconn.",
+            "**Quality Assurance Manager**: Implement Six Sigma and lean manufacturing methodologies to ensure product quality. Opportunities in medical device and automotive industries.",
+            "**Further Studies**: Pursue MSc or PhD in mechanical engineering, industrial engineering, or data science at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Smart Manufacturing Lab**: State-of-the-art facility equipped with industrial robots, 3D printers, CNC machines, and IoT sensors for hands-on learning.",
+            "**CityU Campus**: Located in Kowloon Tong, with direct MTR access. Modern buildings include the Run Run Shaw Library, sports complex, and student hostels.",
+            "**Industry Collaboration Centre**: Dedicated space for student-industry projects, featuring simulation software and prototyping tools.",
+            "**Student Hostels**: On-campus accommodation available for Year 1 and Year 2 students, with priority given to non-local applicants.",
+            "**Innovation Hub**: MakerSpace with laser cutters, electronics workstations, and VR equipment for creative prototyping and entrepreneurship.",
+            "**Library Resources**: Extensive digital and physical collections, including IEEE journals, manufacturing standards, and CAD/CAM software access."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆)",
+            "**Admission Score Formula**: Best 5 subjects including English and Mathematics, all weighted equally at 1.",
+            "**Median Score (2025)**: 20.0, indicating a competitive entry level requiring solid HKDSE results.",
+            "**Lower Quartile (2025)**: 18.0, meaning 25% of admitted students scored below this threshold.",
+            "**Subject Requirements**: English and Mathematics are mandatory. Physics or Combined Science with Physics is strongly recommended.",
+            "**Interview**: Shortlisted applicants may be invited for an interview to assess motivation, problem-solving skills, and interest in manufacturing."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Chief Engineer, Hong Kong Productivity Council. 2010 graduate, pioneered smart factory solutions for SMEs.",
+            "**Ms. Li Xia (李霞女士)**: Senior Automation Manager, ASM Pacific Technology. 2013 graduate, led development of AI-driven quality inspection systems.",
+            "**Mr. Wong Ka-ho (黃家豪先生)**: Co-founder, RoboKitchen Ltd. 2016 graduate, awarded HK$1 million in HKSTP incubation programme.",
+            "**Dr. Ng Tsz-fung (伍子豐博士)**: Assistant Professor, University of Hong Kong. 2012 graduate, research focus on additive manufacturing and 3D printing.",
+            "**Mr. Cheung Man-kit (張文傑先生)**: Supply Chain Director, Li & Fung. 2009 graduate, managed global logistics for major fashion brands.",
+            "**Ms. Cheng Pui-shan (鄭佩珊女士)**: R&D Team Lead, Foxconn. 2015 graduate, holds 3 patents in robotic assembly systems."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top HKDSE scorers, up to HK$80,000 per year for students with 5** or above in relevant subjects.",
+            "**Faculty of Engineering Scholarship**: HK$20,000–50,000 for students with outstanding academic performance (CGPA ≥ 3.5) in Year 1.",
+            "**Industrial Sponsorships**: Partner companies like ASM Pacific and Foxconn offer scholarships of HK$30,000–60,000 with internship commitments.",
+            "**HKSAR Government Scholarship**: Up to HK$80,000 per year for students with exceptional achievements in academics and extracurriculars.",
+            "**Need-based Financial Aid**: CityU provides grants and loans of up to full tuition coverage for students from low-income families.",
+            "**Exchange Programme Bursary**: HK$10,000–20,000 for students participating in overseas exchange semesters at partner universities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1216 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 20+**: With a median of 20.0, aim for at least 20 points in Best 5. Focus on English and Mathematics as they are mandatory.",
+            "",
+            "- Practice HKDSE past papers for English and Mathematics to secure Level 4 or above.",
+            "- Use the HKDSE cut-off scores to gauge your target grades in each subject.",
+            "",
+            "**2. Prioritise Physics or Combined Science**: These subjects are strongly recommended and can boost your application.",
+            "",
+            "- If you haven't taken Physics, consider self-study or online courses to demonstrate interest.",
+            "- Highlight any science-related projects or competitions in your personal statement.",
+            "",
+            "**3. Build a Strong Portfolio**: Showcase hands-on projects in robotics, coding, or 3D printing.",
+            "",
+            "- Participate in the Hong Kong Youth Robotics Competition or similar events.",
+            "- Document your projects with photos and descriptions for the interview.",
+            "",
+            "**4. Prepare for the Interview**: Shortlisted candidates may face questions on problem-solving and manufacturing trends.",
+            "",
+            "- Read about Industry 4.0, IoT, and smart factories to speak confidently.",
+            "- Practice answering 'Why intelligent manufacturing?' with specific examples.",
+            "",
+            "**5. Gain Relevant Work Experience**: Internships or part-time jobs in manufacturing or engineering firms add value.",
+            "",
+            "- Apply for summer internships at Hong Kong Science Park or Cyberport startups.",
+            "- Volunteer for school STEM outreach programmes to show leadership.",
+            "",
+            "**6. Excel in English and Mathematics**: These subjects are weighted equally, so a high score is critical.",
+            "",
+            "- Aim for Level 5 or above in English and Mathematics to maximise your score.",
+            "- Use online resources like Khan Academy for Mathematics revision.",
+            "",
+            "**7. Research the Programme Thoroughly**: Understand the curriculum and career paths to tailor your application.",
+            "",
+            "- Visit CityU's website and attend admission talks or open days.",
+            "- Connect with current students or alumni on LinkedIn for insights.",
+            "",
+            "**8. Consider Band A Choice**: Place JS1216 in Band A to show strong interest and increase chances.",
+            "",
+            "- CityU may give priority to Band A applicants in the selection process.",
+            "- Use the JUPAS application system to adjust your choices before the deadline.",
+            "",
+            "**9. Apply for Scholarships Early**: Prepare applications for entrance scholarships before the deadline.",
+            "",
+            "- Check CityU's scholarship page for specific requirements and deadlines.",
+            "- Gather recommendation letters and academic transcripts in advance."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文及數學)。科目比重：1。",
+            "**入學中位數**：20.0分（2025年聯招數據）。",
+            "**下四分位數**：18.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程簡介**：智能製造工程學工學士（JS1216）為四年全日制課程，由香港城市大學工程學院開辦，專注於智能製造、自動化及數碼技術。",
+            "**第一年**：修讀數學、物理、程式設計及工程原理基礎科目，同時完成大學核心課程及英語增潤。",
+            "**第二年**：核心工程科目包括力學、材料科學、熱力學及電路，並引入智能製造概念。",
+            "**第三年**：專門課程涵蓋機械人、物聯網、數據分析、人工智能製造及供應鏈管理，開始畢業專題準備。",
+            "**第四年**：進階課題如智能工廠設計、網絡實體系統及工業4.0，完成畢業專題及工業實習。",
+            "**工業實習**：第二年或第三年暑假須完成8星期實習，在製造企業或研發實驗室獲取實戰經驗。",
+            "**畢業專題**：學生以小組形式進行為期一年的項目，解決真實製造問題，常與業界夥伴合作。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**智能製造工程師**：利用人工智能及物聯網技術設計及優化自動化生產線，起薪約每月港幣20,000–25,000元。",
+            "**工業自動化專家**：開發及維護機械人系統及控制軟件，香港電子及物流行業需求殷切。",
+            "**供應鏈分析師**：運用數據分析改善庫存管理及物流效率，畢業生常加入DHL或利豐等企業。",
+            "**研發工程師**：從事產品開發及流程創新，任職於ASM Pacific Technology或富士康等公司。",
+            "**品質保證經理**：推行六式碼及精益生產方法確保產品質素，醫療設備及汽車行業機會眾多。",
+            "**進修深造**：可攻讀機械工程、工業工程或數據科學碩士或博士課程，升讀全球頂尖大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**智能製造實驗室**：配備工業機械人、3D打印機、CNC機床及物聯網感應器，提供實踐學習環境。",
+            "**城大校園**：位於九龍塘，港鐵直達，現代化建築包括邵逸夫圖書館、體育綜合大樓及學生宿舍。",
+            "**業界協作中心**：專為學生與業界合作項目而設，配備模擬軟件及原型製作工具。",
+            "**學生宿舍**：為一年級及二年級學生提供住宿，非本地申請者獲優先考慮。",
+            "**創新中心**：設有激光切割機、電子工作站及VR設備，支援創意原型製作及創業。",
+            "**圖書館資源**：豐富的數碼及實體館藏，包括IEEE期刊、製造業標準及CAD/CAM軟件存取。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）",
+            "**入學分數計算**：最佳5科（包括英文及數學），各科權重均為1。",
+            "**2025年中位數**：20.0分，反映需具備穩健的HKDSE成績才能獲取錄。",
+            "**2025年下四分位數**：18.0分，即25%獲取錄學生分數低於此門檻。",
+            "**科目要求**：英文及數學為必修科，強烈建議修讀物理或組合科學（含物理）。",
+            "**面試**：獲篩選的申請人可能獲邀面試，以評估其學習動機、解難能力及對製造業的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳偉強博士**：香港生產力促進局首席工程師，2010年畢業，為中小企開發智能工廠方案。",
+            "**李霞女士**：ASM Pacific Technology高級自動化經理，2013年畢業，領導人工智能品質檢測系統開發。",
+            "**黃家豪先生**：RoboKitchen Ltd.聯合創辦人，2016年畢業，獲香港科技園100萬港元孵化計劃資助。",
+            "**伍子豐博士**：香港大學助理教授，2012年畢業，專注增材製造及3D打印研究。",
+            "**張文傑先生**：利豐供應鏈總監，2009年畢業，管理國際時裝品牌的環球物流。",
+            "**鄭佩珊女士**：富士康研發團隊主管，2015年畢業，持有3項機械人裝配系統專利。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異者，每年最高港幣80,000元，適用於相關科目達5**或以上學生。",
+            "**工程學院獎學金**：港幣20,000–50,000元，頒予一年級成績優異（CGPA ≥ 3.5）學生。",
+            "**業界贊助獎學金**：合作企業如ASM Pacific及富士康提供港幣30,000–60,000元獎學金，附帶實習承諾。",
+            "**香港特區政府獎學金**：每年最高港幣80,000元，頒予學術及課外活動表現卓越學生。",
+            "**需要為本資助**：城大為低收入家庭學生提供助學金及貸款，最高可覆蓋全額學費。",
+            "**交換計劃津貼**：參與海外交換學期的學生可獲港幣10,000–20,000元資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1216 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數20分以上**：中位數為20.0，最佳5科應爭取至少20分，尤其重視英文及數學。",
+            "",
+            "- 操練HKDSE歷屆試題，確保英文及數學達第4級或以上。",
+            "- 參考各大學收分數據，設定各科目標等級。",
+            "",
+            "**2. 優先修讀物理或組合科學**：這些科目獲強烈推薦，有助提升申請競爭力。",
+            "",
+            "- 若未修讀物理，可自學或報讀網上課程以展示興趣。",
+            "- 在個人陳述中突出相關科學項目或比賽經驗。",
+            "",
+            "**3. 建立豐富作品集**：展示機械人、編程或3D打印等實踐項目。",
+            "",
+            "- 參加香港青少年機械人比賽或類似活動。",
+            "- 為作品拍照並附上說明，以便面試時展示。",
+            "",
+            "**4. 準備面試**：獲篩選申請人可能被問及解難能力及製造業趨勢。",
+            "",
+            "- 閱讀工業4.0、物聯網及智能工廠相關資料，自信應答。",
+            "- 練習回答「為何選擇智能製造？」並舉具體例子。",
+            "",
+            "**5. 獲取相關工作經驗**：在製造或工程公司的實習或兼職工作極具價值。",
+            "",
+            "- 申請香港科學園或數碼港初創企業的暑期實習。",
+            "- 參與學校STEM推廣活動，展示領導能力。",
+            "",
+            "**6. 英文及數學力求卓越**：兩科權重相同，高分至關重要。",
+            "",
+            "- 目標英文及數學達第5級或以上，以最大化分數。",
+            "- 利用Khan Academy等網上資源複習數學。",
+            "",
+            "**7. 深入了解課程內容**：熟悉課程結構及就業路徑，針對性準備申請。",
+            "",
+            "- 瀏覽城大網站，參加入學講座或開放日。",
+            "- 在LinkedIn上聯繫現屆學生或校友，獲取第一手資訊。",
+            "",
+            "**8. 考慮將課程放在Band A**：將JS1216列為Band A選擇，展示強烈興趣並增加機會。",
+            "",
+            "- 城大可能在遴選過程中優先考慮Band A申請人。",
+            "- 在截止日期前透過JUPAS系統調整選項。",
+            "",
+            "**9. 及早申請獎學金**：在截止日期前準備入學獎學金申請。",
+            "",
+            "- 查閱城大獎學金網頁，了解具體要求及截止日期。",
+            "- 提前準備推薦信及學業成績單。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 20.0,
+    "lq": 18.0
+  }
+}

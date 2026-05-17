@@ -8,7 +8,7 @@
     "faculty": "醫學院",
     "median": 42,
     "band_a": 44,
-    "category": "medicine"
+    "category": "Medicine"
   },
   {
     "code": "JS4513",
@@ -19,7 +19,7 @@
     "faculty": "醫學院",
     "median": 28,
     "band_a": 30,
-    "category": "health_science"
+    "category": "Medicine"
   },
   {
     "code": "JS4601",
@@ -30,7 +30,7 @@
     "faculty": "理學院",
     "median": 25,
     "band_a": 27,
-    "category": "science"
+    "category": "Science"
   },
   {
     "code": "JS4801",
@@ -41,7 +41,7 @@
     "faculty": "社會科學院",
     "median": 24,
     "band_a": 26,
-    "category": "social_science"
+    "category": "Social Science"
   },
   {
     "code": "JS4903",
@@ -52,6 +52,6 @@
     "faculty": "法律學院",
     "median": 33,
     "band_a": 35,
-    "category": "law"
+    "category": "Law"
   }
 ]

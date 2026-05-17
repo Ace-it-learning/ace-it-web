@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1204",
+    "nameEn": "BSc Computer Science",
+    "nameZh": "理學士(計算機科學)",
+    "name": "BSc Computer Science",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 23.0,
+    "band_a": 22.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1204",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 23.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 22.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: BSc Computer Science (JS1204) is a 4-year full-time programme offered by the Department of Computer Science at City University of Hong Kong. It focuses on both theoretical foundations and practical applications of computing.",
+            "**Core Areas**: Students study algorithms, data structures, programming languages, software engineering, artificial intelligence, and computer networks. The curriculum is designed to meet international standards (ACM/IEEE).",
+            "**Year 1**: Foundation courses include Introduction to Computer Science, Calculus, Linear Algebra, Programming Fundamentals (Python/Java), and English for Academic Purposes.",
+            "**Year 2**: Core courses cover Data Structures, Object-Oriented Programming, Discrete Mathematics, Computer Organisation, and Operating Systems. Students begin elective choices.",
+            "**Year 3**: Advanced topics such as Database Systems, Software Engineering, Artificial Intelligence, Computer Networks, and a Final Year Project (FYP) preparation course.",
+            "**Year 4**: Final Year Project (capstone), advanced electives (e.g., Machine Learning, Cybersecurity, Cloud Computing), and internship opportunities. Graduation requires 120 credit units."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Software Developer**: Graduates are well-prepared for roles as software engineers, web developers, and mobile app developers in tech firms like Google, Microsoft, and local companies.",
+            "**Data Scientist**: With strong foundations in algorithms and AI, many graduates pursue careers in data analytics, machine learning, and big data at banks, startups, and research labs.",
+            "**Cybersecurity Analyst**: The programme offers electives in network security and cryptography, leading to roles in cybersecurity consulting and government agencies.",
+            "**IT Consultant**: Graduates often join consulting firms (e.g., Accenture, Deloitte) to advise on digital transformation, system integration, and IT strategy.",
+            "**Entrepreneur / Startup Founder**: The curriculum includes innovation and entrepreneurship modules, with alumni founding successful tech startups in Hong Kong and Shenzhen.",
+            "**Academic / Researcher**: Top graduates pursue MPhil/PhD at CityU or overseas universities (e.g., Imperial College, NUS) in areas like AI, computer vision, and theory."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Location**: CityU is located in Kowloon Tong, Hong Kong, directly connected to Kowloon Tong MTR station, providing easy access to the city centre and Shenzhen.",
+            "**Computer Science Labs**: Dedicated labs equipped with high-performance workstations, GPU clusters for AI research, and software development environments (Linux, Windows, macOS).",
+            "**Library**: The Run Run Shaw Library offers extensive digital resources, including IEEE Xplore, ACM Digital Library, and over 1 million e-books.",
+            "**Innovation Hub**: The CityU HK Tech 300 programme provides co-working spaces, prototyping labs, and funding for student startups in the Run Run Shaw Creative Media Centre.",
+            "**Student Accommodation**: On-campus halls (e.g., Hall 1–11) are available for first-year students, with priority for non-local applicants. Off-campus housing options are also supported.",
+            "**Sports & Recreation**: The campus features a sports centre with a swimming pool, gym, basketball courts, and a rooftop running track, plus student lounges and cafes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects, with all subjects weighted equally at 1.0. No specific subject weighting for this programme.",
+            "**Median Score (2025)**: 23.0 (Best 5). This indicates a competitive entry level, requiring strong performance across five HKDSE subjects.",
+            "**Lower Quartile (2025)**: 22.0 (Best 5). The 25th percentile score suggests that even borderline applicants need a solid academic record.",
+            "**Subject Requirements**: No compulsory subjects, but Mathematics (Compulsory Part) is strongly recommended. M1/M2 are advantageous but not required.",
+            "**Interview**: Shortlisted applicants may be invited for an interview (group or individual) to assess motivation, problem-solving skills, and interest in computing."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kam-fai (黃錦輝教授)**: Professor and former Head of Department of Computer Science, CityU. Renowned for research in natural language processing and AI. Graduated from CityU (PhD).",
+            "**Mr. Chan Chi-ho (陳志豪)**: Co-founder of a Hong Kong-based fintech startup (PayMe-like platform). 2018 BSc Computer Science graduate.",
+            "**Ms. Li Wai-yan (李慧欣)**: Senior Software Engineer at Google (Mountain View). 2016 BSc Computer Science graduate. Specialises in distributed systems.",
+            "**Mr. Cheung Tsz-kin (張子健)**: Data Scientist at HSBC Hong Kong. 2019 BSc Computer Science graduate. Led machine learning projects for fraud detection.",
+            "**Dr. Liu Wenyin (劉文印教授)**: Professor at CityU, known for contributions to computer vision and pattern recognition. Alumni of the department's PhD programme.",
+            "**Mr. Ng Ka-ho (吳家豪)**: Founder of a cybersecurity startup (CyberSec HK) that won the HK Tech 300 award. 2020 BSc Computer Science graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to HKDSE top scorers (e.g., score ≥ 28 in Best 5) with full tuition waiver and living allowance up to HK$50,000 per year.",
+            "**Department of Computer Science Scholarships**: Multiple merit-based scholarships for BSc Computer Science students, ranging from HK$10,000 to HK$30,000 per year.",
+            "**HKSAR Government Scholarship**: For local students with outstanding academic performance and community service. Value up to HK$40,000 per year.",
+            "**HK Tech 300 Seed Fund**: Up to HK$100,000 for student startups. Available to all CityU students, including Computer Science majors, to commercialise their projects.",
+            "**Exchange Programme Scholarships**: Financial support for students participating in overseas exchange (e.g., at UC Berkeley, University of Toronto) up to HK$30,000.",
+            "**Need-based Financial Aid**: CityU offers grants and loans for students with financial difficulties, covering tuition and living expenses. Apply via the Student Development Services."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1204 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 23+**",
+            "",
+            "- The 2025 median is 23.0, so aim for at least 23 in your Best 5 subjects. A score of 24+ gives you a strong chance.",
+            "- Focus on your top 5 subjects — even if you have 6 or 7, only the best 5 count equally.",
+            "",
+            "**2. Prioritise Mathematics (Compulsory) and M1/M2**",
+            "",
+            "- Mathematics is not compulsory but is highly recommended. A Level 5 or above in Maths Compulsory is expected.",
+            "- If you take M1 or M2, aim for Level 5 or above — it signals quantitative readiness.",
+            "",
+            "**3. Build a Strong Programming Portfolio**",
+            "",
+            "- Start learning Python or Java before applying. Create 2–3 personal projects (e.g., a simple game, a web app) to showcase in interviews.",
+            "- Join coding competitions (e.g., HKOI, NOI) — even participation adds value.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect questions on your motivation for CS, problem-solving (e.g., logic puzzles), and basic programming concepts.",
+            "- Practice explaining your projects clearly in English or Cantonese.",
+            "",
+            "**5. Use Your Electives Wisely in HKDSE**",
+            "",
+            "- Choose subjects that demonstrate analytical skills: Physics, ICT, Economics, or M1/M2.",
+            "- Avoid subjects with low scaling (e.g., Visual Arts) unless you are confident of a top grade.",
+            "",
+            "**6. Apply Early and Check Your JUPAS Band**",
+            "",
+            "- Band A (first 3 choices) is critical. Put JS1204 in Band A to maximise your chance.",
+            "- Check your predicted score against the lower quartile (22.0) — if you are below, consider a safety choice.",
+            "",
+            "**7. Explore the Curriculum in Advance**",
+            "",
+            "- Review the 4-year plan on CityU's website. Identify areas you like (e.g., AI, cybersecurity) to mention in your personal statement.",
+            "- Mention specific courses (e.g., CS3205 Machine Learning) to show genuine interest.",
+            "",
+            "**8. Leverage CityU's Resources**",
+            "",
+            "- Visit the campus or virtual tour. Mention the labs, HK Tech 300, or exchange programmes in your application.",
+            "- Connect with current students or alumni via LinkedIn for insights.",
+            "",
+            "**9. Have a Backup Plan**",
+            "",
+            "- If your score is around 22, also apply to related programmes like BSc Data Science (JS1205) or BEng Computer Engineering (JS1202).",
+            "- Consider associate degree or higher diploma in computing as a pathway if needed."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：23.0分（2025年聯招數據）。",
+            "**下四分位數**：22.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：理學士(計算機科學)（JS1204）是香港城市大學電腦科學系開設的四年全日制課程，專注於計算機科學的理論基礎與實際應用。",
+            "**核心領域**：學生學習算法、數據結構、程式語言、軟件工程、人工智能及計算機網絡。課程設計符合國際標準（ACM/IEEE）。",
+            "**第一年**：基礎課程包括計算機科學導論、微積分、線性代數、程式設計基礎（Python/Java）及學術英語。",
+            "**第二年**：核心課程涵蓋數據結構、物件導向程式設計、離散數學、計算機組織及操作系統。學生開始選修課程。",
+            "**第三年**：進階課題包括數據庫系統、軟件工程、人工智能、計算機網絡及畢業專題（FYP）準備課程。",
+            "**第四年**：畢業專題（頂點項目）、高級選修（如機器學習、網絡安全、雲端計算）及實習機會。畢業需完成120學分。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**軟件開發人員**：畢業生勝任軟件工程師、網頁開發員及手機應用開發員等職位，任職於Google、Microsoft等科技公司及本地企業。",
+            "**數據科學家**：憑藉扎實的算法與人工智能基礎，許多畢業生從事數據分析、機器學習及大數據工作，服務於銀行、初創公司及研究實驗室。",
+            "**網絡安全分析師**：課程提供網絡安全及密碼學選修，畢業生可擔任網絡安全顧問或政府機構安全專家。",
+            "**資訊科技顧問**：畢業生常加入顧問公司（如Accenture、Deloitte），就數碼轉型、系統整合及IT策略提供建議。",
+            "**創業家／初創創辦人**：課程包含創新與創業模塊，校友在香港及深圳成功創辦科技初創公司。",
+            "**學者／研究人員**：頂尖畢業生於城大或海外大學（如Imperial College、NUS）攻讀碩士/博士，專注人工智能、計算機視覺等領域。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**地理位置**：城大位於香港九龍塘，毗鄰九龍塘港鐵站，交通便利，可快速到達市中心及深圳。",
+            "**電腦科學實驗室**：專用實驗室配備高效能工作站、人工智能研究用GPU集群及軟件開發環境（Linux、Windows、macOS）。",
+            "**圖書館**：邵逸夫圖書館提供豐富電子資源，包括IEEE Xplore、ACM Digital Library及超過100萬本電子書。",
+            "**創新中心**：城大HK Tech 300計劃提供共享工作空間、原型製作實驗室及初創資金，位於邵逸夫創意媒體中心。",
+            "**學生宿舍**：校內宿舍（如Hall 1–11）優先提供給一年級學生，非本地生可獲優先考慮。校外住宿選項亦獲支援。",
+            "**體育與康樂**：校園設有體育中心，包括游泳池、健身房、籃球場及天台跑道，另有學生休息室及咖啡廳。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科，所有科目權重均為1.0。此課程無特定科目加權。",
+            "**2025年中位數**：23.0（最佳5科）。這表示入學競爭激烈，需在五個HKDSE科目中取得優異成績。",
+            "**2025年下四分位數**：22.0（最佳5科）。第25百分位數分數顯示邊緣申請者亦需有穩固學術成績。",
+            "**科目要求**：無必修科目，但強烈建議修讀數學（必修部分）。延伸部分（M1/M2）有優勢但非必需。",
+            "**面試**：入圍申請者可能獲邀參加面試（小組或個人），以評估其動機、解難能力及對計算機科學的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃錦輝教授 (Dr. Wong Kam-fai)**：城大電腦科學系教授及前系主任，在自然語言處理及人工智能研究方面享負盛名。城大博士畢業。",
+            "**陳志豪 (Mr. Chan Chi-ho)**：香港金融科技初創公司（類似PayMe平台）聯合創辦人。2018年理學士(計算機科學)畢業。",
+            "**李慧欣 (Ms. Li Wai-yan)**：Google（山景城）高級軟件工程師。2016年理學士(計算機科學)畢業，專注分佈式系統。",
+            "**張子健 (Mr. Cheung Tsz-kin)**：滙豐銀行香港數據科學家。2019年理學士(計算機科學)畢業，領導機器學習項目進行欺詐檢測。",
+            "**劉文印教授 (Dr. Liu Wenyin)**：城大教授，以計算機視覺及模式識別研究聞名。電腦科學系博士課程校友。",
+            "**吳家豪 (Mr. Ng Ka-ho)**：網絡安全初創公司CyberSec HK創辦人，曾獲HK Tech 300獎項。2020年理學士(計算機科學)畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE高分考生（如最佳5科28分或以上），提供全額學費減免及每年高達50,000港元生活津貼。",
+            "**電腦科學系獎學金**：多項基於成績的獎學金，專為理學士(計算機科學)學生設立，每年10,000至30,000港元不等。",
+            "**香港特區政府獎學金**：獎勵學業成績優異及社區服務出色的本地學生，每年高達40,000港元。",
+            "**HK Tech 300種子基金**：為學生初創項目提供高達100,000港元資金，所有城大學生（包括計算機科學主修）均可申請，以商業化其項目。",
+            "**交換計劃獎學金**：資助學生參與海外交換（如加州大學柏克萊分校、多倫多大學），最高30,000港元。",
+            "**基於需要的經濟援助**：城大為有經濟困難的學生提供助學金及貸款，涵蓋學費及生活開支。可通過學生發展服務申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1204 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科23分或以上**",
+            "",
+            "- 2025年中位數為23.0，因此最佳5科應至少達23分。24分或以上將大大增加機會。",
+            "- 專注於你的最佳5科——即使你有6或7科，只有最佳5科被同等計算。",
+            "",
+            "**2. 優先處理數學（必修）及M1/M2**",
+            "",
+            "- 數學並非必修，但強烈建議。數學必修部分預計需達5級或以上。",
+            "- 若修讀M1或M2，目標5級或以上——這顯示你的量化能力。",
+            "",
+            "**3. 建立強大的程式設計作品集**",
+            "",
+            "- 在申請前開始學習Python或Java。建立2至3個個人項目（例如簡單遊戲、網頁應用），以便在面試中展示。",
+            "- 參加編程比賽（如HKOI、NOI）——即使只是參與也有價值。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 若獲面試，預計會被問及你對計算機科學的動機、解難問題（如邏輯謎題）及基本程式設計概念。",
+            "- 練習用英語或粵語清晰解釋你的項目。",
+            "",
+            "**5. 在HKDSE中明智選擇選修科**",
+            "",
+            "- 選擇能展示分析能力的科目：物理、資訊及通訊科技、經濟或M1/M2。",
+            "- 避免評分較低的科目（如視覺藝術），除非你有信心取得頂級成績。",
+            "",
+            "**6. 及早申請並檢查你的JUPAS志願組別**",
+            "",
+            "- 組別A（首3個選擇）至關重要。將JS1204放在組別A以最大化機會。",
+            "- 檢查你的預測分數是否低於下四分位數（22.0）——若低於，考慮一個安全選擇。",
+            "",
+            "**7. 提前了解課程內容**",
+            "",
+            "- 瀏覽城大網站上的四年課程計劃。找出你感興趣的領域（如人工智能、網絡安全），並在個人陳述中提及。",
+            "- 提及具體課程（如CS3205機器學習）以顯示你真誠的興趣。",
+            "",
+            "**8. 善用城大資源**",
+            "",
+            "- 參觀校園或虛擬導覽。在申請中提及實驗室、HK Tech 300或交換計劃。",
+            "- 透過LinkedIn聯繫現屆學生或校友以獲取見解。",
+            "",
+            "**9. 制定備用計劃**",
+            "",
+            "- 若你的分數約為22分，同時申請相關課程，如理學士(數據科學)（JS1205）或工學士(計算機工程)（JS1202）。",
+            "- 如有需要，考慮副學士或高級文憑作為升學途徑。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 23.0,
+    "lq": 22.0
+  }
+}

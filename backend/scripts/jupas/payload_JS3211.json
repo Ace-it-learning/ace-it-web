@@ -1,0 +1,255 @@
+{
+  "programme": {
+    "code": "JS3211",
+    "nameEn": "BEng in Building Sciences and Engineering",
+    "nameZh": "建築科學及工程學(榮譽)工學士",
+    "name": "BEng in Building Sciences and Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Construction and Environment",
+    "median": "181.5",
+    "band_a": "179.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3211",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 184.7 (2025 JUPAS data).",
+            "**Median Admission Score**: 181.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 179.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS3211 BEng in Building Sciences and Engineering is a 4-year full-time programme under the Faculty of Construction and Environment, focusing on building performance, energy efficiency, and sustainable design.",
+            "**Two Streams**: Students choose between Building Services Engineering (BSE) and Building Sciences & Sustainability (BSS) from Year 2, allowing specialisation in mechanical/electrical systems or environmental performance.",
+            "**Year 1**: Foundation courses in mathematics, physics, engineering mechanics, and building technology, plus General University Requirements (GUR) subjects. Students build core knowledge for advanced study.",
+            "**Year 2**: Specialised modules including thermodynamics, fluid mechanics, building services systems, and indoor environmental quality. Students declare their stream (BSE or BSS) and begin focused study.",
+            "**Year 3**: Advanced technical courses such as HVAC design, fire engineering, lighting and acoustics, and building energy modelling. Work-Integrated Education (WIE) placement is typically completed in summer.",
+            "**Year 4**: Capstone design project, elective specialisations, and professional practice. Students integrate knowledge to solve real-world building performance challenges, preparing for graduate careers."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Building Services Engineer**: Design and manage mechanical, electrical, and plumbing systems for commercial and residential buildings. Median starting salary for PolyU graduates in this field is HKD 22,000–28,000/month.",
+            "**Energy Consultant**: Advise on energy efficiency, green building certification (e.g., BEAM Plus, LEED), and carbon reduction strategies. Demand in Hong Kong is growing with government net-zero targets by 2050.",
+            "**Fire Safety Engineer**: Specialise in fire detection, suppression systems, and evacuation design. Opportunities in consulting firms and the Hong Kong Fire Services Department.",
+            "**Sustainability Manager**: Oversee environmental performance of building portfolios for developers or property management firms. Roles in the Greater Bay Area are expanding rapidly.",
+            "**Project Manager**: Coordinate building services installation and commissioning for construction projects. PolyU’s WIE programme provides direct industry exposure, enhancing employability.",
+            "**Further Study**: Graduates can pursue MSc or PhD in building sciences, energy engineering, or smart buildings at top universities worldwide, including PolyU’s own research centres."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Hung Hom Location**: PolyU’s main campus is in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), with easy access to Hong Kong Island and the New Territories.",
+            "**State-of-the-Art Labs**: The Building Services Engineering Laboratory and Environmental Chamber provide hands-on experience with HVAC systems, lighting, acoustics, and fire testing equipment.",
+            "**Industry Partnerships**: The Faculty of Construction and Environment collaborates with over 200 companies, including Arup, Gammon, and Hysan Development, for internships and final-year projects.",
+            "**Student Societies**: The PolyU Building Services Engineering Society organises technical visits, workshops, and networking events, fostering peer learning and professional connections.",
+            "**Library & Study Spaces**: The Pao Yue-kong Library offers extensive engineering databases, 24/7 study areas, and group project rooms. The campus also features green roofs and sustainable design showcases.",
+            "**Sports & Recreation**: PolyU has a sports centre with a swimming pool, gym, and courts, plus the nearby Hung Hom Promenade for jogging and relaxation along Victoria Harbour."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 181.5 (Any Best 5 Subjects with weighting). This places JS3211 in a competitive range, requiring strong performance in core subjects.",
+            "**Lower Quartile (2025)**: 179.5, indicating that even the bottom 25% of admitted students achieved high scores, reflecting consistent demand.",
+            "**Average HKDSE Score**: 184.7 with subject weighting, showing that successful applicants typically excel in mathematics, physics, and English.",
+            "**Subject Weighting**: Mathematics and Physics are weighted more heavily (e.g., 1.5x), while English and other electives are also considered. Check PolyU’s official website for exact weightings.",
+            "**Application Ratio**: The programme typically receives 8–10 applications per place, with strong competition from Band A choices. Early application and a well-prepared portfolio can strengthen your profile."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Ir Dr. Albert T.P. So (蘇廷弼博士工程師)**: Founder of the Asian Institute of Intelligent Buildings (AIIB) and a pioneer in intelligent building research. Graduated from PolyU with a PhD in Building Services Engineering.",
+            "**Ir Dr. Sam C.M. Hui (許俊民博士工程師)**: Associate Professor at the University of Hong Kong, specialising in building energy efficiency and sustainable design. PolyU BEng graduate and former WIE student.",
+            "**Ir Dr. Joseph H.K. Lai (黎曉光博士工程師)**: Associate Head of Department of Building Services Engineering at PolyU, leading research on smart buildings and indoor air quality. Alumni and current faculty member.",
+            "**Ir Dr. K.W. Mui (梅國威博士工程師)**: Associate Professor at PolyU, recognised for contributions to fire safety engineering and building ventilation. Graduated from the BEng programme in the 1990s.",
+            "**Ir Dr. L.T. Wong (黃力田博士工程師)**: Professor at PolyU and expert in building water systems and plumbing engineering. Long-time contributor to the programme’s curriculum development.",
+            "**PolyU Faculty Excellence**: Many current professors in the Department of Building Services Engineering are alumni, ensuring a strong mentorship pipeline and industry-relevant teaching."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Admission Scholarship**: Top HKDSE scorers (e.g., 5** in 3 or more subjects) may receive up to HKD 50,000–100,000 in tuition waivers or cash awards. No separate application required.",
+            "**Faculty of Construction and Environment Scholarships**: Multiple awards for outstanding students, including the FCE Entrance Scholarship (HKD 20,000) and the FCE Academic Excellence Scholarship (HKD 15,000).",
+            "**Building Services Engineering Scholarships**: Industry-sponsored awards from companies like Arup, Gammon, and Hysan Development, offering HKD 10,000–30,000 plus internship opportunities.",
+            "**Government Scholarships**: The HKSAR Government Scholarship Fund provides up to HKD 80,000 per year for students with exceptional academic and extracurricular achievements.",
+            "**Work-Integrated Education (WIE) Stipend**: Students on WIE placements receive a monthly stipend (typically HKD 8,000–12,000) from host companies, reducing financial burden during the programme.",
+            "**Need-Based Financial Aid**: PolyU offers the PolyU Bursary and the HKSAR Student Financial Assistance Agency (SFAA) schemes, covering tuition and living costs for eligible students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3211 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Physics**",
+            "- These subjects carry higher weighting (often 1.5x) in the admission score formula. Aim for Level 5 or above in both to maximise your composite score.",
+            "",
+            "**2. Target a Minimum of 180 Points**",
+            "- With a median score of 181.5 and lower quartile of 179.5, ensure your weighted Any Best 5 total is at least 180 to be competitive. Use PolyU’s online calculator to estimate your score.",
+            "",
+            "**3. Strengthen Your English Score**",
+            "- English is a core subject in Any Best 5. A Level 5 or above can significantly boost your ranking, especially for technical report writing in the programme.",
+            "",
+            "**4. Choose Relevant Electives**",
+            "- Subjects like Chemistry, Information and Communication Technology (ICT), or Design and Applied Technology (DAT) are valued. Avoid unrelated electives like visual arts unless you excel.",
+            "",
+            "**5. Apply as Band A in JUPAS**",
+            "- Most successful applicants place JS3211 in Band A. This signals strong interest to the admissions committee and increases your chance of an interview offer.",
+            "",
+            "**6. Prepare for the Interview**",
+            "- If shortlisted, you may be invited for a group or individual interview. Research current building trends (e.g., net-zero buildings, smart HVAC) and prepare to discuss your motivation.",
+            "",
+            "**7. Gain Practical Experience**",
+            "- Participate in building-related competitions, summer internships, or volunteer work with NGOs like the Hong Kong Green Building Council. This strengthens your portfolio and interview responses.",
+            "",
+            "**8. Use the PolyU Admission Calculator**",
+            "- Visit PolyU’s official website to input your predicted HKDSE grades with subject weightings. Compare your score to the 2025 median (181.5) to gauge your chances.",
+            "",
+            "**9. Consider the Greater Bay Area Advantage**",
+            "- PolyU has strong ties with GBA companies. Highlight any Mandarin skills or interest in cross-border projects in your application — this is a growing differentiator for building sciences graduates."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：184.7（2025年聯招數據）。",
+            "**入學中位數**：181.5分（2025年聯招數據）。",
+            "**下四分位數**：179.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS3211 建築科學及工程學(榮譽)工學士為四年全日制課程，隸屬於建設及環境學院，專注於建築性能、能源效益及可持續設計。",
+            "**兩個專修**：學生在第二年可選擇「屋宇設備工程」或「建築科學與可持續發展」分流，分別專注於機電系統或環境性能。",
+            "**第一年**：基礎課程包括數學、物理、工程力學及建築技術，並修讀大學核心科目（GUR），為高年級學習奠定基礎。",
+            "**第二年**：專業科目包括熱力學、流體力學、屋宇設備系統及室內環境質量。學生需選擇分流（BSE 或 BSS），開始專注學習。",
+            "**第三年**：高級技術課程如 HVAC 設計、消防工程、照明與聲學、建築能源模擬。通常於暑期完成「工作綜合教育」（WIE）實習。",
+            "**第四年**：畢業設計項目、選修專題及專業實踐。學生整合知識解決真實建築性能挑戰，為畢業後就業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**屋宇設備工程師**：設計及管理商業及住宅建築的機電、管道系統。理工大學畢業生在此領域的起薪中位數為每月港幣 22,000–28,000 元。",
+            "**能源顧問**：提供能源效益、綠色建築認證（如 BEAM Plus、LEED）及減碳策略建議。香港政府 2050 年碳中和目標帶動需求增長。",
+            "**消防工程師**：專注於火災偵測、滅火系統及疏散設計。顧問公司及香港消防處均有就業機會。",
+            "**可持續發展經理**：為發展商或物業管理公司監督建築組合的環境表現。大灣區相關職位正快速增加。",
+            "**項目經理**：協調建築項目的設備安裝及調試。理工大學的 WIE 計劃提供直接行業經驗，提升就業競爭力。",
+            "**深造機會**：畢業生可於全球頂尖大學攻讀建築科學、能源工程或智慧建築的碩士或博士課程，包括理工大學自身的研究中心。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**紅磡位置**：理工大學主校園位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），方便前往香港島及新界。",
+            "**先進實驗室**：屋宇設備工程實驗室及環境艙提供 HVAC 系統、照明、聲學及消防測試設備的實踐操作經驗。",
+            "**行業合作**：建設及環境學院與超過 200 間公司合作，包括 Arup、金門建築及希慎興業，提供實習及畢業項目機會。",
+            "**學生學會**：理工大學屋宇設備工程學會舉辦技術參觀、工作坊及聯誼活動，促進同儕學習及專業聯繫。",
+            "**圖書館與自修空間**：包玉剛圖書館提供豐富的工程數據庫、24/7 自修區及小組項目室。校園亦設有綠色屋頂及可持續設計展示。",
+            "**體育與休閒**：理工大學設有體育中心，內有游泳池、健身室及球場；鄰近紅磡海濱長廊適合跑步及欣賞維港景色。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：181.5 分（最佳五科加權後）。這顯示 JS3211 競爭激烈，需要在核心科目取得優異成績。",
+            "**2025 年下四分位數**：179.5 分，即使最低 25% 的獲取錄學生也取得高分，反映持續的需求。",
+            "**平均 HKDSE 分數**：加權後為 184.7 分，顯示成功申請者通常在數學、物理及英文科表現出色。",
+            "**科目加權**：數學及物理的加權較高（例如 1.5 倍），英文及其他選修科亦會考慮。請查閱理工大學官方網站了解確切加權。",
+            "**申請比例**：該課程通常每個學額收到 8–10 份申請，來自 Band A 選擇的競爭尤為激烈。提早申請及準備完善的個人檔案可增加優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**蘇廷弼博士工程師**：亞洲智能建築學會創辦人，智能建築研究先驅。於理工大學取得屋宇設備工程博士學位。",
+            "**許俊民博士工程師**：香港大學副教授，專注建築能源效益及可持續設計。理工大學工學士畢業生及前 WIE 學生。",
+            "**黎曉光博士工程師**：理工大學屋宇設備工程學系副系主任，領導智慧建築及室內空氣質素研究。校友及現任教職員。",
+            "**梅國威博士工程師**：理工大學副教授，在消防工程及建築通風領域獲認可。1990 年代畢業於此工學士課程。",
+            "**黃力田博士工程師**：理工大學教授，建築供水系統及管道工程專家。長期參與課程發展。",
+            "**理工大學教研卓越**：屋宇設備工程學系多位現任教授均為校友，確保強大的師徒傳承及行業相關教學。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**理工大學入學獎學金**：HKDSE 成績優異者（例如 3 科或以上 5**）可獲最高港幣 50,000–100,000 元的學費減免或現金獎勵。無需另行申請。",
+            "**建設及環境學院獎學金**：多項獎項頒予傑出學生，包括 FCE 入學獎學金（港幣 20,000 元）及 FCE 學術卓越獎學金（港幣 15,000 元）。",
+            "**屋宇設備工程獎學金**：由 Arup、金門建築及希慎興業等公司贊助的行業獎學金，金額為港幣 10,000–30,000 元，並附帶實習機會。",
+            "**政府獎學金**：香港特別行政區政府獎學金基金每年提供最高港幣 80,000 元，頒予學術及課外活動表現卓越的學生。",
+            "**工作綜合教育（WIE）津貼**：參與 WIE 實習的學生可獲僱主公司每月津貼（通常為港幣 8,000–12,000 元），減輕課程期間的經濟負擔。",
+            "**需要為本的財務資助**：理工大學提供理工大學助學金及香港特別行政區政府學生資助處（SFAA）計劃，涵蓋合資格學生的學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3211 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升數學及物理成績**",
+            "- 這些科目在入學計分中加權較高（通常 1.5 倍）。目標是兩科均達 5 級或以上，以最大化你的綜合分數。",
+            "",
+            "**2. 目標分數至少 180 分**",
+            "- 鑑於中位數 181.5 分及下四分位數 179.5 分，確保你的加權最佳五科總分至少達 180 分才具競爭力。使用理工大學網上計分器估算分數。",
+            "",
+            "**3. 強化英文科成績**",
+            "- 英文是「最佳五科」中的核心科目。取得 5 級或以上可大幅提升排名，尤其對課程中的技術報告寫作有幫助。",
+            "",
+            "**4. 選擇相關選修科**",
+            "- 化學、資訊及通訊科技（ICT）或設計與應用科技（DAT）等科目受重視。除非表現極佳，否則避免選擇無關的選修科如視覺藝術。",
+            "",
+            "**5. 在 JUPAS 中將課程列為 Band A**",
+            "- 大部分成功申請者將 JS3211 放在 Band A。這向入學委員會表明強烈興趣，並增加面試機會。",
+            "",
+            "**6. 為面試做好準備**",
+            "- 如獲篩選，可能被邀請參加小組或個人面試。研究當前建築趨勢（如淨零建築、智能 HVAC），並準備討論你的申請動機。",
+            "",
+            "**7. 獲取實踐經驗**",
+            "- 參加建築相關比賽、暑期實習或與香港綠色建築議會等非政府組織的義工工作。這能強化你的個人檔案及面試表現。",
+            "",
+            "**8. 使用理工大學入學計分器**",
+            "- 瀏覽理工大學官方網站，輸入你預計的 HKDSE 成績及科目加權。與 2025 年中位數 181.5 分比較，評估你的機會。",
+            "",
+            "**9. 善用大灣區優勢**",
+            "- 理工大學與大灣區企業聯繫緊密。在申請中強調你的普通話能力或對跨境項目的興趣——這是建築科學畢業生日益重要的區分因素。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "181.5",
+    "lq": "179.5"
+  }
+}

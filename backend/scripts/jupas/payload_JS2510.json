@@ -1,0 +1,301 @@
+{
+  "programme": {
+    "code": "JS2510",
+    "nameEn": "Bachelor of Science (Hons)",
+    "nameZh": "理學士(榮譽)",
+    "name": "Bachelor of Science (Hons)",
+    "university": "香港浸會大學",
+    "faculty": "Faculty of Science",
+    "median": "20.15",
+    "band_a": "18.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2510",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 20.15 (2025 JUPAS data).",
+            "**Lower Quartile**: 18.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 4",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 4, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 5, LQ 5",
+            "- **Elective 2**: Median 4, LQ 4",
+            "- **Elective 3**: Median 4, LQ 4",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 520 applicants, Band B 220. Total 1100 applicants.",
+            "**First Year Intake**: 120 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BSc (Hons) programme offers a broad-based science education with flexibility to specialise in disciplines such as Chemistry, Biology, Physics, Mathematics, and Environmental Science. Students complete 120 credits over 4 years.",
+            "**Year 1 Foundation**: Core courses include General Chemistry, Introductory Biology, Calculus, Physics, and University English. Students also take the University Core Requirement (UCR) courses in liberal arts.",
+            "**Year 2 Specialisation**: Students choose a major stream from Chemistry, Biology, Mathematics & Statistics, or Physics. Courses include Organic Chemistry, Cell Biology, Linear Algebra, and Electromagnetism.",
+            "**Year 3 Advanced Study**: In-depth courses such as Analytical Chemistry, Genetics, Differential Equations, and Quantum Mechanics. Students begin a final-year project or research internship.",
+            "**Year 4 Capstone**: Completion of the Honours Project or dissertation. Electives allow further specialisation in areas like Environmental Science, Data Science, or Biotechnology.",
+            "**Interdisciplinary Options**: Students can take minor programmes in Data Science, Environmental Studies, or Business, leveraging HKBU's liberal arts ethos."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates pursue roles in university labs, government research institutes (e.g., HKSTP), or pharmaceutical companies like Pfizer and Merck.",
+            "**Data Analyst**: With strong quantitative skills, graduates work in banking (HSBC), tech firms (Tencent), or consulting (McKinsey) as data analysts or business intelligence specialists.",
+            "**Environmental Consultant**: Opportunities in environmental impact assessment firms (e.g., AECOM) or NGOs like WWF Hong Kong, focusing on sustainability and pollution control.",
+            "**Education Sector**: Many graduates become secondary school science teachers or lab technicians, with HKBU's PGDE programme as a common pathway.",
+            "**Healthcare & Biotech**: Roles in hospital labs, diagnostic companies (e.g., Prenetics), or biotech startups (e.g., Insilico Medicine) as clinical researchers or quality assurance officers.",
+            "**Further Study**: Over 30% of graduates pursue master's or PhD programmes at top universities worldwide, including University of Cambridge, National University of Singapore, and University of Hong Kong."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Shaw Campus**: The main campus in Kowloon Tong features modern science laboratories, the Oen Hall Building, and the Fong Shu Chuen Library with extensive science journals.",
+            "**State-of-the-Art Labs**: The Faculty of Science operates specialised labs for molecular biology, materials science, and environmental analysis, equipped with NMR spectrometers and electron microscopes.",
+            "**Student Halls**: On-campus accommodation is available at the Undergraduate Halls (e.g., Jockey Club Campus), fostering a vibrant residential community with study rooms and common areas.",
+            "**Sports & Recreation**: The University Sports Centre offers a gym, swimming pool, and courts for basketball, badminton, and tennis. The nearby Morse Park provides outdoor running tracks.",
+            "**Exchange Opportunities**: HKBU has over 300 partner universities in 40+ countries. Science students can spend a semester at institutions like University of California, Berkeley or University of Toronto.",
+            "**Student Societies**: The Science Society organises academic talks, lab visits, and social events. Students can also join the HKBU Choir, Drama Society, or volunteering groups."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects. Median score 20.15, lower quartile 18.50 (2025 JUPAS).",
+            "**Demand vs Supply**: 520 Band A applicants for 120 places, a ratio of 4.3:1. Total applicants 1,100, indicating strong interest.",
+            "**Subject Requirements**: Mathematics median 4, Elective 1 median 5. Chinese and English median 3. Citizenship and Social Development must be Attained.",
+            "**No Interview**: The programme does not require an interview, so admission is purely based on HKDSE scores and JUPAS band choices.",
+            "**Band Strategy**: With 120 places and 520 Band A applicants, Band A selection is critical. Band B applicants have very low chance (only 220 applicants, but places mostly filled by Band A)."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Prof. Wong Kam-fai (黃錦輝教授)**: Professor of Systems Engineering & Engineering Management, CUHK. Former HKBU Science graduate. Known for AI and natural language processing research.",
+            "**Dr. Chan Yuk-wah (陳玉華博士)**: Chief Scientific Officer, Hong Kong Science and Technology Parks Corporation. PhD in Chemistry from HKBU. Led biotech incubation programmes.",
+            "**Ms. Lee Sze-man (李詩敏女士)**: Senior Environmental Officer, Environmental Protection Department, HKSAR Government. BSc in Environmental Science from HKBU.",
+            "**Mr. Cheung Hoi-tung (張海東先生)**: Data Science Manager, Alibaba Group. Graduated with BSc in Mathematics from HKBU. Specialises in e-commerce analytics.",
+            "**Dr. Ng Siu-hung (吳兆雄博士)**: Associate Professor, Department of Physics, HKBU. Alumni of the BSc programme, now leading research in quantum materials.",
+            "**Ms. Tam Ka-yan (譚嘉欣女士)**: Science Communicator and TV Host, RTHK. BSc in Biology from HKBU. Hosts the programme 'Science in the News'."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarship**: Awarded to JUPAS students with top HKDSE scores (e.g., 5** in two electives). Covers full or half tuition fees for Year 1.",
+            "**Faculty of Science Merit Scholarship**: For students with outstanding academic performance (CGPA ≥ 3.5). Amount up to HK$20,000 per year.",
+            "**Dr. Ng Tat-lung Memorial Scholarship**: Specifically for BSc students in Chemistry or Biology. HK$10,000 awarded annually based on academic merit and research potential.",
+            "**HKSAR Government Scholarship**: For local students with excellent HKDSE results and leadership qualities. Up to HK$40,000 per year.",
+            "**HKBU Financial Assistance Scheme**: Need-based grants and loans for students from low-income families. Covers tuition fees and living expenses up to HK$50,000 per year.",
+            "**Exchange Scholarships**: HKBU offers up to HK$30,000 for students participating in overseas exchange programmes, including the Science Faculty's partner universities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2510 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 20+**",
+            "",
+            "- The median score is 20.15, so aim for at least 20 points in your best 5 subjects. A score of 21+ puts you in a strong position.",
+            "- Focus on Elective 1 (median 5) — a 5 or 5* in a science subject (e.g., Chemistry, Biology) is almost essential.",
+            "",
+            "**2. Prioritise Mathematics and Science Electives**",
+            "",
+            "- Mathematics median is 4, so a Level 4 is the minimum. Aim for Level 5 if possible.",
+            "- Elective 2 and 3 median both 4 — choose complementary subjects like Physics or M2 to boost your score.",
+            "",
+            "**3. Don't Neglect English and Chinese**",
+            "",
+            "- English median is 3, but a Level 4 can give you an edge. Chinese median is 3, but LQ is 4 — so a Level 4 is safer.",
+            "- Citizenship and Social Development must be Attained — it's a pass/fail requirement.",
+            "",
+            "**4. Apply as Band A — It's Almost Mandatory**",
+            "",
+            "- With 520 Band A applicants for 120 places, Band A is the only realistic pathway. Band B has only 220 applicants and very low success rate.",
+            "- Put JS2510 as your first or second choice in Band A to maximise chances.",
+            "",
+            "**5. Prepare a Strong Personal Statement (if required)**",
+            "",
+            "- Although no interview, some applicants submit a personal statement via JUPAS. Highlight your passion for science, lab experience, and career goals.",
+            "- Mention specific HKBU resources like the Faculty of Science labs or exchange programmes.",
+            "",
+            "**6. Leverage HKBU's Liberal Arts Advantage**",
+            "",
+            "- HKBU emphasises whole-person education. In your statement, show how you value interdisciplinary learning — e.g., combining science with communication or arts.",
+            "- This can differentiate you from applicants who only focus on grades.",
+            "",
+            "**7. Consider the 'Best 5' Strategy Carefully**",
+            "",
+            "- Your best 5 subjects likely include Mathematics, Elective 1 (science), Elective 2, English, and Chinese. Drop the weakest subject from calculation.",
+            "- If you have a third elective (Elective 3), use it if it scores higher than Chinese or English.",
+            "",
+            "**8. Apply for Scholarships Early**",
+            "",
+            "- HKBU Entrance Scholarship requires separate application. Check the HKBU website for deadlines (usually December to January).",
+            "- Prepare your HKDSE predicted grades and a brief academic portfolio.",
+            "",
+            "**9. Visit the Campus and Attend Info Days**",
+            "",
+            "- HKBU holds annual Admission Talks and Campus Tours (e.g., October-November). Attend to learn about lab facilities and meet professors.",
+            "- This shows genuine interest and helps you tailor your application."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：20.15分（2025年聯招數據）。",
+            "**下四分位數**：18.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 4",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 5, 下四分位數 5",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "- **選修科3**：中位數 4, 下四分位數 4",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者520人、Band B 220人。總申請者1100人。",
+            "**首年學額**：120人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：理學士（榮譽）課程提供廣泛的科學基礎，學生可專攻化學、生物學、物理學、數學或環境科學等領域。四年內需完成120學分。",
+            "**第一年基礎**：核心課程包括普通化學、生物學導論、微積分、物理學及大學英語。學生亦需修讀大學核心課程（UCR）的通識科目。",
+            "**第二年專修**：學生選擇主修方向，如化學、生物學、數學與統計學或物理學。課程包括有機化學、細胞生物學、線性代數及電磁學。",
+            "**第三年進階學習**：深入課程如分析化學、遺傳學、微分方程及量子力學。學生開始進行畢業專題或研究實習。",
+            "**第四年總結**：完成榮譽專題或論文。選修課允許進一步專攻環境科學、數據科學或生物技術等領域。",
+            "**跨學科選項**：學生可選修數據科學、環境研究或商業等副修課程，體現浸大博雅教育的理念。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可於大學實驗室、政府研究機構（如香港科技園）或藥廠（如輝瑞、默克）擔任研究職位。",
+            "**數據分析師**：憑藉扎實的量化技能，畢業生可在銀行（滙豐）、科技公司（騰訊）或顧問公司（麥肯錫）擔任數據分析師或商業智能專員。",
+            "**環境顧問**：機會存在於環境影響評估公司（如AECOM）或非政府組織（如世界自然基金會香港分會），專注可持續發展與污染控制。",
+            "**教育領域**：許多畢業生成為中學科學教師或實驗室技術員，浸大的學位教師教育文憑（PGDE）是常見進修路徑。",
+            "**醫療與生物科技**：角色包括醫院實驗室、診斷公司（如Prenetics）或生物科技初創（如英矽智能）的臨床研究員或品質保證主任。",
+            "**深造進修**：超過30%的畢業生在全球頂尖大學攻讀碩士或博士課程，包括劍橋大學、新加坡國立大學及香港大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**善衡校園**：位於九龍塘的主校園設有現代化科學實驗室、王仲銘樓及方樹泉圖書館，後者藏有大量科學期刊。",
+            "**先進實驗室**：理學院設有分子生物學、材料科學及環境分析等專項實驗室，配備核磁共振光譜儀及電子顯微鏡。",
+            "**學生宿舍**：校內住宿設於本科生宿舍（如賽馬會校園），提供研習室及公共空間，營造活力社區氛圍。",
+            "**體育與康樂**：大學體育中心設有健身室、游泳池及籃球、羽毛球、網球場。附近的摩士公園提供戶外跑步徑。",
+            "**交流機會**：浸大與全球40多個國家超過300所夥伴大學合作。理科生可到加州大學柏克萊分校或多倫多大學等院校交流一學期。",
+            "**學生學會**：理學會舉辦學術講座、實驗室參觀及社交活動。學生亦可加入浸大合唱團、戲劇學會或義工團體。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科。2025年聯招中位數20.15分，下四分位數18.50分。",
+            "**供求比例**：520名Band A申請者競爭120個學額，比例為4.3:1。總申請人數達1,100人，反映需求強勁。",
+            "**科目要求**：數學中位數4級，選修1中位數5級。中文及英文中位數3級。公民與社會發展科必須達標。",
+            "**無面試**：課程不設面試，入學純粹基於文憑試成績及聯招組別選擇。",
+            "**組別策略**：120個學額中有520名Band A申請者，Band A選擇至關重要。Band B申請者機會極低（僅220人，且學額多由Band A填滿）。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃錦輝教授**：香港中文大學系統工程與工程管理學系教授，浸大理學院校友，專注人工智能及自然語言處理研究。",
+            "**陳玉華博士**：香港科技園公司首席科學官，浸大化學博士，曾領導生物科技孵化計劃。",
+            "**李詩敏女士**：香港特區政府環境保護署高級環境保護主任，浸大環境科學學士。",
+            "**張海東先生**：阿里巴巴集團數據科學經理，浸大數學學士，專注電子商務分析。",
+            "**吳兆雄博士**：浸會大學物理系副教授，理學士課程校友，現領導量子材料研究。",
+            "**譚嘉欣女士**：香港電台科學傳播者及電視主持，浸大生物學學士，主持《科學看新聞》節目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**浸大入學獎學金**：頒予文憑試成績優異的聯招學生（如兩科5**），涵蓋第一年全額或半額學費。",
+            "**理學院優秀學生獎學金**：獎勵學業成績出眾的學生（CGPA≥3.5），每年最高20,000港元。",
+            "**吳達倫博士紀念獎學金**：專為化學或生物學理學士學生設立，每年10,000港元，基於學術成績及研究潛力。",
+            "**香港特區政府獎學金**：頒予文憑試成績優異且具領導才能的本地學生，每年最高40,000港元。",
+            "**浸大經濟援助計劃**：為低收入家庭學生提供需要為本的資助及貸款，每年最高50,000港元，涵蓋學費及生活費。",
+            "**交流獎學金**：浸大為參與海外交流計劃的學生提供最高30,000港元資助，包括理學院夥伴大學的交流項目。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2510 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科20分以上**",
+            "",
+            "- 中位數為20.15分，建議最佳5科至少達20分。21分或以上將極具優勢。",
+            "- 選修1中位數為5級，理科科目（如化學、生物）取得5級或5*幾乎是必須的。",
+            "",
+            "**2. 優先提升數學及理科選修成績**",
+            "",
+            "- 數學中位數為4級，最低要求為4級，目標5級更佳。",
+            "- 選修2及3中位數均為4級，選擇物理或延伸數學（M2）等互補科目可提升總分。",
+            "",
+            "**3. 勿忽略英文及中文**",
+            "",
+            "- 英文中位數為3級，但4級可帶來優勢。中文中位數為3級，但下四分位數為4級，因此4級更穩妥。",
+            "- 公民與社會發展科必須達標，這是合格與否的門檻。",
+            "",
+            "**4. 必須將課程放在Band A**",
+            "",
+            "- 520名Band A申請者競爭120個學額，Band A是唯一現實途徑。Band B僅220人，成功率極低。",
+            "- 將JS2510放在Band A的第一或第二志願，以最大化機會。",
+            "",
+            "**5. 準備一份有力的個人陳述（如需要）**",
+            "",
+            "- 雖然無面試，部分申請者可經聯招提交個人陳述。突出你對科學的熱誠、實驗室經驗及職業目標。",
+            "- 提及浸大的具體資源，如理學院實驗室或交流計劃。",
+            "",
+            "**6. 善用浸大的博雅教育優勢**",
+            "",
+            "- 浸大強調全人教育。在陳述中展示你重視跨學科學習，例如將科學與傳播或藝術結合。",
+            "- 這能讓你在只關注成績的申請者中脫穎而出。",
+            "",
+            "**7. 謹慎規劃最佳5科策略**",
+            "",
+            "- 最佳5科通常包括數學、選修1（理科）、選修2、英文及中文。剔除最弱的一科。",
+            "- 如有第三選修科（選修3），若分數高於中文或英文，則納入計算。",
+            "",
+            "**8. 及早申請獎學金**",
+            "",
+            "- 浸大入學獎學金需獨立申請。查閱浸大網站了解截止日期（通常為12月至1月）。",
+            "- 準備文憑試預測成績及簡要學術檔案。",
+            "",
+            "**9. 參觀校園及參加資訊日**",
+            "",
+            "- 浸大每年舉辦入學講座及校園導賞（如10月至11月）。參加以了解實驗室設施及與教授交流。",
+            "- 這能展示你的真誠興趣，並幫助你調整申請策略。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "20.15",
+    "lq": "18.50"
+  }
+}

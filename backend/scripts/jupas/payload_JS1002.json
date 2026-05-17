@@ -1,0 +1,304 @@
+{
+  "programme": {
+    "code": "JS1002",
+    "nameEn": "BBA Accountancy",
+    "nameZh": "工商管理學士(會計)",
+    "name": "BBA Accountancy",
+    "university": "香港城市大學",
+    "faculty": "商學院",
+    "median": 22.0,
+    "band_a": 21.5,
+    "category": "business"
+  },
+  "details": {
+    "code": "JS1002",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 22.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 1 applicants, Band B 771, Band C 927, Band D 920, Band E 653. Total 3272 applicants.",
+            "**2025 Offer Statistics**: Band A 108 offers, Band B 10, Band C 1, Band D 0, Band E 3. Total 122 offers.",
+            "**First Year Intake**: 148 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Programme Structure & Curriculum",
+          "content": [
+            "**Programme Overview**: Known as the 'language of business,' accounting is vital knowledge for business excellence. The programme prepares students to practice the profession of accounting and perform related business functions amid growing demand in Hong Kong and Greater China.",
+            "**Two Streams**: (1) Professional Accounting Stream — traditional accounting pathway with professional accreditation; (2) ESG and Tech Stream — focuses on environmental, social, governance reporting and technology applications in accounting (introduced 2023/24).",
+            "**Professional Accreditation**: Accredited by HKICPA, ACCA, and CPA Australia for maximum exam exemptions.",
+            "**Double Degree**: Double Degree in Accountancy and Law available.",
+            "**Joint Degree**: Joint degree programme with National Taiwan University available.",
+            "**Year 1 - Foundation**: Financial accounting, management accounting, economics, business law, and business communication.",
+            "**Year 2 - Core Accounting**: Intermediate financial accounting, cost accounting, taxation, auditing, and corporate governance.",
+            "**Year 3 - Advanced Topics**: Advanced financial reporting, tax planning, audit practice, and accounting information systems.",
+            "**Year 4 - Professional Preparation**: Capstone project, professional exam preparation (HKICPA, ACCA), and internship.",
+            "**Internships**: Approximately 70% of students secure internships in banking, accounting, IT, and consulting.",
+            "**Duration**: 4 years full-time."
+          ]
+        },
+        "career": {
+          "title": "Career Pathways & Prospects",
+          "content": [
+            "**Big Four Audit**: Audit associate at Deloitte, PwC, EY, and KPMG.",
+            "**Corporate Accounting**: Financial reporting and management accounting at listed companies.",
+            "**Tax Advisory**: Tax consultant at Big Four and specialized firms.",
+            "**ESG Reporting**: Sustainability and ESG analyst roles — growing field with increasing regulatory requirements.",
+            "**Forensic Accounting**: Fraud investigation and litigation support.",
+            "**Government & Regulatory**: Accountant positions at government departments including Inland Revenue Department.",
+            "**Notable Employers**: Alibaba, Bloomberg, Citi Group, Deloitte, EY, Goldman Sachs, Hang Seng Bank, HSBC, JPMorgan, KPMG, Moody's, Morgan Stanley, PwC, Swire Group, HK Jockey Club.",
+            "**Further Studies**: Graduates have pursued postgraduate studies at renowned universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Student Experience",
+          "content": [
+            "**Department Rankings**: Department of Accountancy ranked 28th globally, 5th in Asia-Pacific, 3rd in Hong Kong (BYU Rankings 2022-2024). College of Business consistently ranked world's top-50 for research.",
+            "**Accounting Labs**: Computer labs with accounting software and financial databases.",
+            "**Professional Partnerships**: Strong relationships with Big Four for internships and recruitment.",
+            "**Student Community**: Active Accountancy Society and professional exam study groups.",
+            "**Industry Connections**: Regular networking events with accounting professionals and alumni.",
+            "**Exchange Opportunities**: Over 200 partner universities worldwide."
+          ]
+        },
+        "competitiveness": {
+          "title": "Admission Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆). Very popular programme with large applicant pool.",
+            "**Academic Requirements**: Median 22, Lower Quartile 21.5. Accessible to a broad range of students.",
+            "**Band A Competition (2025)**: 1,030 Band A applicants for 148 places — approximately 7:1 ratio. 108 offers to Band A.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**What Differentiates Winners**: Consistent academic performance across all subjects.",
+            "**Trend**: Stable demand with growing ESG and tech focus in accounting profession."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty",
+          "content": [
+            "**Dilys Chau Suet-fung (周雪鳳)**: Partner, Ernst & Young (EY); First female CityU Distinguished Alumni Award winner; Former CityU Council Member; Justice of the Peace (JP) since 2023; Former President of ACCA Hong Kong (2006/07).",
+            "**William Mak Tze-leung (麥子良)**: Partner, Assurance Services, PricewaterhouseCoopers (PwC) Hong Kong; College Alumni Advisory Board Member. 1991 graduate (BA Accountancy).",
+            "**Mable Chan Mei-bo (陳美寶)**: Deputy Managing Partner, Grant Thornton Hong Kong Limited. 1993 graduate (BBA Accountancy).",
+            "**Dr Venus Tang Lai-wah (鄧麗華)**: CFO, Excel Technology International (Hong Kong) Limited. 1991 graduate (BBA Accountancy), EMBA 1999, DBA 2011.",
+            "**Kelly Chan**: President, Association of Women Accountants Hong Kong (elected 2020); Justice of the Peace. BA Accountancy graduate.",
+            "**Cheryl Fan**: Featured in 'A Journey of Global Ambition and Financial Leadership'. 2020 graduate (BBA Accountancy).",
+            "**Faculty Excellence**: CityUHK accounting faculty includes leading researchers in financial reporting, auditing, and ESG."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**Entrance Scholarships (by HKDSE score)**: Score 26 or above: HK$30,000 (one-off); Score 24-25: HK$20,000 (one-off); Score 23: HK$10,000 (one-off).**CityUHK Admission Scholarships**: For outstanding HKDSE performers. Up to HK$265,000 for elite students.",
+            "**Big Four Scholarships**: Sponsored by Deloitte, PwC, EY, and KPMG.",
+            "**Professional Body Scholarships**: HKICPA, ACCA, and CPA Australia scholarship opportunities.",
+            "**Government Aid**: TSFS and NLSPS available for eligible local students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1002 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: Aim for 22+**",
+            "",
+            "- The median score is 22 (Best 5 including Mathematics). To be a safe candidate, target a total of 22 or above. The lower quartile is 21.5, so anything below 21 is risky.",
+            "- With 1,030 Band A applicants competing for 148 places, consistent performance across all five subjects matters more than one standout grade.",
+            "",
+            "**2. Prioritize Mathematics in Your Best 5**",
+            "",
+            "- Mathematics (Compulsory Part) must be included in the Best 5 calculation. Aim for at least Level 4, as strong numeracy is foundational for accounting.",
+            "- M1/M2 can be used to meet the elective requirement but only counts as one subject if both are taken — plan your subject combination wisely.",
+            "",
+            "**3. Build a Balanced Subject Profile**",
+            "",
+            "- Since all subjects are weighted x1, there is no penalty for taking humanities or sciences. Choose electives where you can reliably score Level 4 or above.",
+            "- Business, Accounting and Financial Studies (BAFS) and Economics are natural complements, but any strong elective combination works.",
+            "",
+            "**4. Leverage the No-Interview Advantage**",
+            "",
+            "- Unlike many competitive business programmes, JS1002 does not require an interview. Your DSE score is the sole determinant — every mark counts.",
+            "- Focus your energy entirely on exam preparation rather than splitting time for interview coaching or personal statement polishing.",
+            "",
+            "**5. Understand the Two Streams Early**",
+            "",
+            "- The Professional Accounting Stream is the traditional HKICPA/ACCA pathway with maximum exam exemptions. The ESG and Tech Stream (introduced 2023/24) targets sustainability reporting and fintech.",
+            "- If you are interested in ESG, demonstrate awareness of CSRD, HKEX climate disclosures, and carbon accounting trends.",
+            "",
+            "**6. Maximize Scholarship Opportunities**",
+            "",
+            "- Score 26+: HK$30,000 entrance scholarship; 24-25: HK$20,000; 23: HK$10,000. Each additional DSE point can be worth thousands of dollars.",
+            "- Big Four-sponsored scholarships and professional body awards (HKICPA, ACCA, CPA Australia) are also available after admission.",
+            "",
+            "**7. Plan Your Professional Qualification Route**",
+            "",
+            "- CityU Accountancy is triple-accredited (HKICPA, ACCA, CPA Australia), giving you the most exam exemptions possible. Research which qualification aligns with your career destination.",
+            "- HKICPA is essential for practising in Hong Kong; ACCA offers stronger global mobility; CPA Australia is valuable for Asia-Pacific roles.",
+            "",
+            "**8. Secure Internships from Year 1**",
+            "",
+            "- Approximately 70% of students secure internships at employers including Deloitte, PwC, EY, KPMG, Goldman Sachs, JPMorgan, Morgan Stanley, HSBC, Citi, Bloomberg, and Alibaba.",
+            "- Early internships dramatically improve Big Four graduate programme placement rates. Attend CityU career fairs and firm networking events from your first year.",
+            "",
+            "**9. Consider the Double Degree and Joint Degree Options**",
+            "",
+            "- The Double Degree in Accountancy and Law is highly prestigious for students interested in forensic accounting, tax law, or corporate governance.",
+            "- The joint degree with National Taiwan University offers Mandarin immersion and cross-strait business exposure — valuable for Greater China career tracks."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：22.0分（2025年聯招數據）。",
+            "**下四分位數**：21.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者1人、Band B 771人、Band C 927人、Band D 920人、Band E 653人。總申請者3272人。",
+            "**2025年取錄統計**：Band A取錄108人、Band B 10人、Band C 1人、Band D 0人、Band E 3人。總取錄122人。",
+            "**首年學額**：148人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構與內容",
+          "content": [
+            "**課程概覽**：會計被稱為『商業語言』，是商業卓越的關鍵知識。課程培養學生從事會計專業及相關商業職能，應對香港及大中華地區日益增長的需求。",
+            "**兩個專修**：(1) 專業會計專修——傳統會計途徑，具專業認可；(2) 環境社會治理及科技專修——專注環境、社會、管治報告及會計科技應用（2023/24年推出）。",
+            "**專業認可**：獲香港會計師公會、ACCA及澳洲會計師公會認可，可獲最多考試豁免。",
+            "**雙學位**：會計與法律雙學位課程可供選擇。",
+            "**雙聯學位**：與國立台灣大學的雙聯學位課程可供選擇。",
+            "**第一年 - 基礎**：財務會計、管理會計、經濟、商業法及商業傳播。",
+            "**第二年 - 會計核心**：中級財務會計、成本會計、稅務、審計及企業管治。",
+            "**第三年 - 高級課題**：高級財務報告、稅務規劃、審計實務及會計資訊系統。",
+            "**第四年 - 專業準備**：專題項目、專業考試準備（香港會計師公會、ACCA）及實習。",
+            "**實習**：約70%學生於銀行、會計、資訊科技及顧問公司獲得實習機會。",
+            "**修讀年期**：4年全日制。"
+          ]
+        },
+        "career": {
+          "title": "職業前景與出路",
+          "content": [
+            "**四大審計**：於德勤、羅兵咸永道、安永及畢馬威擔任審計助理。",
+            "**企業會計**：於上市公司擔任財務報告及管理會計。",
+            "**稅務顧問**：於四大及專門公司擔任稅務顧問。",
+            "**ESG報告**：可持續發展及ESG分析師職位——隨著監管要求增加，此領域不斷增長。",
+            "**法證會計**：欺詐調查及訴訟支援。",
+            "**政府及監管**：於政府部門包括稅務局擔任會計師職位。",
+            "**知名僱主**：阿里巴巴、彭博、花旗集團、德勤、安永、高盛、恒生銀行、滙豐銀行、摩根大通、畢馬威、穆迪、摩根士丹利、羅兵咸永道、太古集團、香港賽馬會。",
+            "**升學**：畢業生於本地及海外知名大學修讀研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學生體驗",
+          "content": [
+            "**學系排名**：會計學系全球排名第28、亞太區第5、香港第3（BYU排名2022-2024）。商學院研究排名持續位列全球前50。",
+            "**會計實驗室**：配備會計軟件及財務數據庫的電腦實驗室。",
+            "**專業夥伴關係**：與四大建立強大聯繫，提供實習及招聘機會。",
+            "**學生社群**：活躍的會計學會及專業考試學習小組。",
+            "**產業聯繫**：定期與會計專業人士及校友舉辦交流活動。",
+            "**海外交流**：全球超過200所夥伴大學。"
+          ]
+        },
+        "competitiveness": {
+          "title": "入學競爭力分析",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）。非常受歡迎的課程，申請者眾多。",
+            "**學術要求**：中位數22分，下四分位數21.5分。適合廣泛範圍的學生。",
+            "**Band A競爭（2025）**：1,030名Band A申請者競爭148個學額——約7:1比率。Band A取錄108人。",
+            "**面試**：標準聯招不需要面試。",
+            "**成功申請者特質**：所有科目表現一致的學術成績。",
+            "**趨勢**：需求穩定，會計專業的ESG及科技專注持續增長。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及教職員",
+          "content": [
+            "**周雪鳳 Dilys Chau Suet-fung**：安永（EY）合夥人；首位獲城大傑出校友獎的女性；前城大校董會成員；2023年起太平紳士；前ACCA香港會長（2006/07）。",
+            "**麥子良 William Mak Tze-leung**：羅兵咸永道（PwC）香港保證服務合夥人；學院校友諮詢委員會成員。1991年畢業（文學士會計）。",
+            "**陳美寶 Mable Chan Mei-bo**：致同（香港）會計師事務所副管理合夥人。1993年畢業（工商管理學士會計）。",
+            "**鄧麗華 Dr Venus Tang Lai-wah**：卓科國際（香港）有限公司財務總監。1991年畢業（工商管理學士會計），1999年行政人員工商管理碩士，2011年工商管理博士。",
+            "**Kelly Chan**：香港女會計師協會會長（2020年當選）；太平紳士。文學士會計畢業生。",
+            "**Cheryl Fan**：獲專訪「環球抱負與金融領導之旅」。2020年畢業（工商管理學士會計）。",
+            "**教職員卓越**：城大會計教職員包括財務報告、審計及ESG領域的領先研究人員。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及經濟援助",
+          "content": [
+            "**入學獎學金（按文憑試成績）**：26分或以上：港幣30,000元（一次性）；24-25分：港幣20,000元（一次性）；23分：港幣10,000元（一次性）。",
+            "**城大入學獎學金**：適用於香港中學文憑考試成績卓越的學生。精英學生最高可獲港幣265,000元。",
+            "**四大獎學金**：德勤、羅兵咸永道、安永及畢馬威贊助。",
+            "**專業團體獎學金**：香港會計師公會、ACCA及澳洲會計師公會獎學金機會。",
+            "**政府援助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir 的 JS1002 策略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：力爭 22 分或以上**",
+            "",
+            "- 中位數為 22 分（最佳 5 科包括數學）。為求穩妥，應以總分 22 或以上為目標。下四分位數為 21.5，低於 21 分風險較高。",
+            "- Band A 有 1,030 人競爭 148 個學額，五科成績均衡穩定比單科突出更為重要。",
+            "",
+            "**2. 將數學納入最佳五科**",
+            "",
+            "- 數學（必修部分）必須計入最佳五科。目標至少第 4 級，因為良好的數學能力是會計的基礎。",
+            "- 數學延伸部分（M1/M2）可滿足選修要求，但如兩科皆修只計一科——務必明智規劃科目組合。",
+            "",
+            "**3. 建立均衡的科目組合**",
+            "",
+            "- 由於所有科目加權均為 x1，修讀文科或理科不會有懲罰。選擇你能穩定取得第 4 級或以上的選修科。",
+            "- 企業、會計與財務概論（BAFS）及經濟科是自然的搭配，但任何強勁的選修組合均可。",
+            "",
+            "**4. 善用無需面試的優勢**",
+            "",
+            "- 與許多競爭激烈的商科課程不同，JS1002 不需要面試。文憑試分數是唯一的決定因素——每一分都至關重要。",
+            "- 將全部精力集中於考試準備，無需分心於面試培訓或個人陳述潤飾。",
+            "",
+            "**5. 及早了解兩個專修方向**",
+            "",
+            "- 專業會計專修是傳統的香港會計師公會／ACCA 途徑，可獲最多考試豁免。環境社會治理及科技專修（2023/24年推出）針對可持續發展報告及金融科技。",
+            "- 如對 ESG 感興趣，應展現對 CSRD、港交所氣候披露及碳會計趨勢的認識。",
+            "",
+            "**6. 最大化獎學金機會**",
+            "",
+            "- 26 分或以上：入學獎學金港幣 30,000 元；24-25 分：港幣 20,000 元；23 分：港幣 10,000 元。每多一分文憑試成績都可能價值數千元。",
+            "- 入學後亦可申請四大贊助獎學金及專業團體獎項（香港會計師公會、ACCA、澳洲會計師公會）。",
+            "",
+            "**7. 規劃你的專業資格路線**",
+            "",
+            "- 城大會計課程獲三重認可（香港會計師公會、ACCA、澳洲會計師公會），可獲最多考試豁免。研究哪個資格最符合你的職業目標。",
+            "- 香港會計師公會資格對在香港執業至關重要；ACCA 提供更強的全球流動性；澳洲會計師公會資格對亞太區職位甚有價值。",
+            "",
+            "**8. 從第一年開始爭取實習**",
+            "",
+            "- 約 70% 學生於德勤、羅兵咸永道、安永、畢馬威、高盛、摩根大通、摩根士丹利、滙豐、花旗、彭博及阿里巴巴等機構獲得實習機會。",
+            "- 及早實習能顯著提升獲四大畢業生計劃取錄的機會。從第一年起參加城大職業博覽會及公司交流活動。",
+            "",
+            "**9. 考慮雙學位及雙聯學位選項**",
+            "",
+            "- 會計與法律雙學位極具聲譽，適合對法證會計、稅務法或企業管治感興趣的學生。",
+            "- 與國立台灣大學的雙聯學位提供普通話沉浸及兩岸商業 exposure——對大中華職業發展甚有價值。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 22.0,
+    "lq": 21.5
+  }
+}

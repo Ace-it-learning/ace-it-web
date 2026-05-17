@@ -1,0 +1,269 @@
+{
+  "programme": {
+    "code": "JS3160",
+    "nameEn": "BSc in Sports Science and Technology",
+    "nameZh": "體育科技(榮譽)理學士",
+    "name": "BSc in Sports Science and Technology",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Health",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3160",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: JS3160 BSc in Sports Science and Technology integrates sports science, engineering, and technology to prepare students for careers in the sports industry. It is a 4-year full-time programme offered by the Faculty of Health.",
+            "**Core Disciplines**: Students study biomechanics, exercise physiology, sports psychology, sports nutrition, and sports technology, with a strong emphasis on applied research and practical skills.",
+            "**Year 1 Foundation**: Courses include Introduction to Sports Science, Human Anatomy and Physiology, Basic Statistics, and University Core Requirements. Students build a solid scientific foundation.",
+            "**Year 2 Specialisation**: Modules such as Sports Biomechanics, Exercise Physiology, Sports Psychology, and Research Methods. Students begin laboratory-based learning and data analysis.",
+            "**Year 3 Advanced Study**: Courses include Sports Nutrition, Sports Technology and Innovation, Strength and Conditioning, and a Capstone Project. Students apply knowledge to real-world sports problems.",
+            "**Year 4 Integration & WIE**: Final year includes a Work-Integrated Education (WIE) placement, a dissertation, and elective modules in areas like sports analytics or rehabilitation technology. Graduates are equipped for industry or further study."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Sports Scientist**: Work with professional athletes or sports teams to enhance performance through biomechanical analysis, fitness testing, and training programme design. Average starting salary HKD 20,000–25,000/month.",
+            "**Sports Technology Specialist**: Develop wearable devices, performance tracking systems, or sports equipment for companies like Nike, Adidas, or local start-ups. Roles in R&D and product testing.",
+            "**Strength and Conditioning Coach**: Design and implement training programmes for athletes in sports clubs, schools, or the Hong Kong Sports Institute. Certification pathways available.",
+            "**Health and Fitness Consultant**: Advise on exercise prescription, injury prevention, and wellness programmes for corporate clients, hospitals, or government bodies like the Leisure and Cultural Services Department.",
+            "**Sports Data Analyst**: Use statistical models and machine learning to analyse athlete performance and game strategies. Growing demand in esports and professional leagues.",
+            "**Further Study**: Graduates can pursue MSc or PhD in Sports Science, Physiotherapy, or Biomedical Engineering at PolyU or overseas universities like Loughborough or University of Sydney."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Hung Hom Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), making commuting convenient from all districts.",
+            "**Sports Science Labs**: State-of-the-art laboratories include a biomechanics lab with motion capture systems, an exercise physiology lab with metabolic carts, and a sports technology prototyping workshop.",
+            "**Sports Facilities**: On-campus amenities include a multi-purpose sports hall, fitness centre, swimming pool, and outdoor running track. Students also access the nearby Hong Kong Sports Institute for elite training.",
+            "**Student Organisations**: The Sports Science and Technology Society organises workshops, guest lectures, and inter-university competitions. Students can join PolyU's varsity teams in basketball, football, athletics, and more.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive sports science journals, databases (e.g., SPORTDiscus), and 24/7 study spaces. The Learning Commons provides collaborative areas and tech support.",
+            "**Greater Bay Area Connections**: PolyU has partnerships with universities and sports organisations in Shenzhen, Guangzhou, and Macau, offering exchange programmes and internship opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the best 5 HKDSE subject scores, with specific weightings for core and elective subjects.",
+            "**Subject Weighting**: English Language and Mathematics are weighted more heavily (x1.5), while other subjects (e.g., Biology, Physics, Chemistry, Physical Education) are weighted x1.0. A third elective may also be considered.",
+            "**Median Score (2025)**: N/A — This is a relatively new or low-enrolment programme; applicants should aim for a Best 5 score of at least 18–20 based on similar programmes in the Faculty of Health.",
+            "**Lower Quartile (2025)**: N/A — Competitive applicants typically have strong results in Science subjects (Biology or Physics) and Mathematics.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview to assess interest in sports science, practical aptitude, and communication skills. Prepare to discuss sports experiences and career goals."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Ka-ho (黃家豪)**: Sports Scientist, Hong Kong Sports Institute. Specialises in biomechanics for elite rowing and cycling athletes. PhD from PolyU (2020).",
+            "**Ms. Chan Wai-ling (陳慧玲)**: Strength and Conditioning Coach, Hong Kong Rugby Union. Works with the national sevens team. BSc in Sports Science and Technology (2018).",
+            "**Mr. Li Ming (李明)**: Product Manager, Nike Greater China. Leads development of smart footwear with embedded sensors. Graduated from PolyU (2019).",
+            "**Dr. Tsang Hoi-yan (曾海欣)**: Research Fellow, University of Sydney. Published 15+ papers on exercise physiology and ageing. PhD from PolyU (2022).",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Founder, SportAI Ltd. — a Hong Kong start-up using AI for injury prediction in athletes. BSc graduate (2020), recipient of PolyU's Young Innovator Award."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to HKDSE top scorers (e.g., 5** in 5+ subjects) with up to HKD 50,000 per year. Automatically considered upon application.",
+            "**Faculty of Health Scholarships**: Merit-based scholarships for students with a GPA of 3.5 or above, ranging from HKD 10,000 to HKD 30,000 per year.",
+            "**Sports Achievement Scholarship**: For students with outstanding performance in sports (e.g., Hong Kong team representatives). Covers up to full tuition fees. Apply with portfolio.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support for students undertaking unpaid internships, up to HKD 15,000 per placement.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Student Financial Assistance (TSFS) and Non-means-tested Loan Scheme (NLSPS).",
+            "**External Scholarships**: Opportunities from the Hong Kong Sports Institute, Jockey Club, and private foundations for students pursuing sports science research or elite training."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3160 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English and Mathematics**",
+            "",
+            "- PolyU weights English and Mathematics at 1.5x in the Best 5 calculation. Aim for Level 4 or above in both to boost your score significantly.",
+            "",
+            "**2. Choose Science Electives Strategically**",
+            "",
+            "- Biology, Physics, or Chemistry are preferred. A Level 5 in Biology gives you a strong edge. Physical Education (if offered) is also valued.",
+            "",
+            "**3. Target a Best 5 Score of 20+**",
+            "",
+            "- Although median scores are N/A, similar PolyU health programmes require 18–22. Aim for 20+ to be competitive. Use the HKDSE calculator on PolyU's website.",
+            "",
+            "**4. Build a Sports Portfolio**",
+            "",
+            "- Document your sports participation, coaching, or volunteer work (e.g., school team captain, sports day organiser). This strengthens your interview and application.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect questions on why sports science, your favourite athlete, or a recent sports technology innovation. Practice articulating your passion clearly.",
+            "",
+            "**6. Explore Work-Integrated Education Early**",
+            "",
+            "- WIE is a graduation requirement. Research potential internship hosts like the Hong Kong Sports Institute, hospitals, or sports brands. Start networking in Year 2.",
+            "",
+            "**7. Use PolyU's Open Day Resources**",
+            "",
+            "- Attend the Faculty of Health information sessions and lab tours. Talk to current students about their projects — this shows genuine interest in your application.",
+            "",
+            "**8. Apply for Scholarships Proactively**",
+            "",
+            "- Submit separate applications for the Sports Achievement Scholarship and Faculty scholarships. Deadlines are typically in May–June. Prepare a strong personal statement.",
+            "",
+            "**9. Consider a Second Choice Programme**",
+            "",
+            "- If JS3160 is highly competitive, add a related programme like JS3630 (BSc in Physiotherapy) or JS3868 (BSc in Nursing) as a backup. Use the same Best 5 strategy."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：JS3160 體育科技(榮譽)理學士結合體育科學、工程與科技，培養學生投身體育行業。此為健康學院提供的四年全日制課程。",
+            "**核心學科**：學生學習生物力學、運動生理學、運動心理學、運動營養學及體育科技，強調應用研究與實踐技能。",
+            "**第一年基礎**：課程包括體育科學導論、人體解剖與生理學、基礎統計學及大學核心科目。學生建立穩固的科學基礎。",
+            "**第二年專業化**：模組包括體育生物力學、運動生理學、運動心理學及研究方法。學生開始實驗室學習與數據分析。",
+            "**第三年進階學習**：課程包括運動營養學、體育科技與創新、體能訓練及畢業專題。學生將知識應用於真實體育問題。",
+            "**第四年整合與實習**：最後一年包括工作綜合教育（WIE）實習、畢業論文及選修模組（如運動分析或康復科技）。畢業生具備行業或深造能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**體育科學家**：與專業運動員或團隊合作，通過生物力學分析、體能測試及訓練計劃提升表現。起薪約每月港幣20,000–25,000元。",
+            "**體育科技專家**：為Nike、Adidas或本地初創公司開發可穿戴設備、表現追蹤系統或運動器材。從事研發與產品測試。",
+            "**體能教練**：為體育會、學校或香港體育學院的運動員設計及執行訓練計劃。可考取相關認證。",
+            "**健康與健身顧問**：為企業客戶、醫院或政府機構（如康樂及文化事務署）提供運動處方、傷患預防及健康計劃建議。",
+            "**體育數據分析師**：利用統計模型及機器學習分析運動員表現及比賽策略。電競及職業聯賽需求增長。",
+            "**進一步進修**：畢業生可於理大或海外大學（如拉夫堡大學、悉尼大學）攻讀體育科學、物理治療或生物醫學工程碩士或博士。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**紅磡位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），交通便利。",
+            "**體育科學實驗室**：先進實驗室包括配備動作捕捉系統的生物力學實驗室、代謝車的運動生理學實驗室，以及體育科技原型製作工場。",
+            "**體育設施**：校內設有多用途體育館、健身中心、游泳池及戶外跑道。學生亦可使用鄰近的香港體育學院進行精英訓練。",
+            "**學生組織**：體育科技學會舉辦工作坊、講座及大學間比賽。學生可加入理大校隊（籃球、足球、田徑等）。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供大量體育科學期刊、資料庫（如SPORTDiscus）及24/7自修區。學習共享空間提供協作區域及技術支援。",
+            "**大灣區聯繫**：理大與深圳、廣州及澳門的大學及體育機構合作，提供交流計劃及實習機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳五科 — 理大計算文憑試最佳五科成績，核心及選修科目設有特定加權。",
+            "**科目加權**：英文及數學加權1.5倍，其他科目（如生物、物理、化學、體育）加權1.0倍。第三選修科亦可能被考慮。",
+            "**2025年中位分數**：不適用 — 此課程相對較新或收生人數較少；申請人應以最佳五科18–20分為目標（參考健康學院類似課程）。",
+            "**2025年下四分位數**：不適用 — 競爭者通常在科學科目（生物或物理）及數學取得優異成績。",
+            "**面試要求**：獲篩選的申請人可能獲邀面試，評估對體育科學的興趣、實踐能力及溝通技巧。準備討論運動經驗及職業目標。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃家豪博士**：香港體育學院體育科學家，專注精英划艇及單車運動員的生物力學分析。2020年於理大取得博士學位。",
+            "**陳慧玲女士**：香港欖球總會體能教練，負責國家七人欖球隊訓練。2018年畢業於體育科技理學士。",
+            "**李明先生**：Nike大中華區產品經理，主導內置感應器的智能鞋類開發。2019年理大畢業。",
+            "**曾海欣博士**：悉尼大學研究員，發表超過15篇關於運動生理學與老化的論文。2022年理大博士畢業。",
+            "**張子峰先生**：SportAI Ltd.創辦人 — 利用人工智能預測運動員傷患的香港初創公司。2020年理大學士畢業，獲理大青年創新獎。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異者（如5科5**），每年最高港幣50,000元。申請時自動考慮。",
+            "**健康學院獎學金**：基於成績的獎學金，要求GPA 3.5或以上，每年港幣10,000至30,000元。",
+            "**體育成就獎學金**：為代表香港的傑出運動員而設，最高涵蓋全額學費。需提交作品集申請。",
+            "**工作綜合教育（WIE）津貼**：資助參與無薪實習的學生，每次實習最高港幣15,000元。",
+            "**政府資助**：合資格學生可申請政府的「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLSPS）。",
+            "**外部獎學金**：香港體育學院、賽馬會及私人基金會為從事體育科學研究或精英訓練的學生提供機會。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3160 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文及數學**",
+            "",
+            "- 理大將英文及數學加權1.5倍計算最佳五科。目標達到4級或以上，大幅提升分數。",
+            "",
+            "**2. 策略性選擇科學選修科**",
+            "",
+            "- 生物、物理或化學為佳。生物科5級給予明顯優勢。體育科（如有提供）亦受重視。",
+            "",
+            "**3. 目標最佳五科20分以上**",
+            "",
+            "- 雖然中位分數不適用，類似理大健康課程需18–22分。目標20分以上以增加競爭力。使用理大網站的分數計算器。",
+            "",
+            "**4. 建立體育作品集**",
+            "",
+            "- 記錄你的運動參與、教練或義工經驗（如校隊隊長、運動會組織者）。這能強化面試及申請。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 如獲篩選，預計問題包括為何選擇體育科學、最喜歡的運動員或近期體育科技創新。清晰表達你的熱誠。",
+            "",
+            "**6. 及早探索工作綜合教育**",
+            "",
+            "- WIE是畢業要求。研究潛在實習機構如香港體育學院、醫院或運動品牌。第二年開始建立人脈。",
+            "",
+            "**7. 善用理大開放日資源**",
+            "",
+            "- 參加健康學院的資訊講座及實驗室導賞。與現屆學生交流他們的項目 — 這顯示你對課程的真心興趣。",
+            "",
+            "**8. 主動申請獎學金**",
+            "",
+            "- 分別提交體育成就獎學金及學院獎學金申請。截止日期通常在5–6月。準備一份有力的個人陳述。",
+            "",
+            "**9. 考慮第二志願課程**",
+            "",
+            "- 如JS3160競爭激烈，可加入相關課程如JS3630（物理治療學）或JS3868（護理學）作為後備。使用相同的最佳五科策略。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

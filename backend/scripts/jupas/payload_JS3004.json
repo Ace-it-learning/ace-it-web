@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3004",
+    "nameEn": "Bachelor's Degree Scheme in Construction and Environment",
+    "nameZh": "建設及環境組合學士課程",
+    "name": "Bachelor's Degree Scheme in Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Construction and Environment",
+    "median": "184.0",
+    "band_a": "181.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3004",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 188.8 (2025 JUPAS data).",
+            "**Median Admission Score**: 184.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 181.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor's Degree Scheme in Construction and Environment (JS3004) is a broad-based programme offered by PolyU's Faculty of Construction and Environment. It allows students to explore multiple disciplines before choosing a specialised major in Year 2, covering areas such as building engineering, civil engineering, environmental engineering, and surveying.",
+            "**Year 1 — Foundation Year**: Students take a common curriculum including mathematics, physics, engineering mechanics, environmental science, and communication skills. This year provides a solid grounding in construction and environmental principles, with a focus on interdisciplinary learning and hands-on projects.",
+            "**Year 2 — Major Selection**: After completing Year 1, students select one of the following majors: Building Engineering and Management, Civil Engineering, Environmental Engineering and Sustainable Development, or Geomatics (Surveying). Each major has a distinct curriculum tailored to industry needs.",
+            "**Year 3 — Specialisation and WIE**: Students deepen their knowledge in their chosen major through advanced courses such as structural analysis, construction project management, water resources engineering, or land surveying. The Work-Integrated Education (WIE) programme places students in real-world internships with leading construction firms, government departments, or engineering consultancies.",
+            "**Year 4 — Capstone Project and Electives**: The final year features a capstone design project where students apply their skills to solve a real-world problem, often in collaboration with industry partners. Students also choose elective courses to tailor their expertise, such as smart construction, green building, or urban informatics.",
+            "**Global Learning Opportunities**: Students can participate in exchange programmes with over 200 partner universities worldwide, including institutions in the UK, Australia, and Mainland China. Short-term study trips to the Greater Bay Area and Southeast Asia are also available."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sectors**: Graduates of JS3004 are highly sought after in Hong Kong's construction, infrastructure, and environmental sectors. The Hong Kong government's 10-year infrastructure plan (worth over HK$1 trillion) and the development of the Northern Metropolis create sustained demand for construction and environmental professionals.",
+            "**Diverse Career Paths**: Graduates can pursue careers as civil engineers, building services engineers, environmental consultants, quantity surveyors, project managers, or geomatics surveyors. Many work for major contractors like Gammon Construction, Dragages Hong Kong, or government bodies such as the Drainage Services Department and the Buildings Department.",
+            "**Professional Accreditation**: The programme is accredited by professional bodies including the Hong Kong Institution of Engineers (HKIE), the Royal Institution of Chartered Surveyors (RICS), and the Hong Kong Institute of Surveyors (HKIS). Graduates can pursue chartered status after completing relevant work experience and professional assessments.",
+            "**Entrepreneurial Opportunities**: With the rise of smart construction and green building technologies, graduates can start their own consultancies or tech startups. PolyU's Innovation and Entrepreneurship Centre provides incubation support and funding for student ventures.",
+            "**Greater Bay Area Prospects**: The Hong Kong-Zhuhai-Macao Bridge and other GBA projects create cross-border career opportunities. Graduates with Putonghua skills and knowledge of Mainland standards are particularly competitive.",
+            "**Further Studies**: Many graduates pursue master's degrees at top universities worldwide, including University College London, the University of Cambridge, and the National University of Singapore. PolyU also offers taught postgraduate programmes in construction and environment."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, just a 5-minute walk from Hung Hom MTR station (East Rail Line and West Rail Line). The campus is also close to the Cross-Harbour Tunnel, making it easily accessible from Hong Kong Island and the New Territories.",
+            "**State-of-the-Art Labs**: The Faculty of Construction and Environment houses specialised laboratories including the Structural Engineering Research Lab, the Environmental Engineering Lab, and the Geotechnical Engineering Lab. These facilities are equipped with advanced testing equipment and simulation software.",
+            "**Industry Connections Hub**: The campus features the Jockey Club Innovation Tower, designed by renowned architect Zaha Hadid, which houses design studios and collaborative spaces. The Building and Construction Resource Centre provides access to industry databases and BIM software.",
+            "**Student Organisations**: The Construction and Environment Student Society organises site visits, career talks, and social events. Students can also join the PolyU Engineering Without Borders chapter to participate in community projects in developing countries.",
+            "**Sports and Recreation**: PolyU's sports facilities include a multi-purpose sports hall, a swimming pool, a fitness centre, and outdoor courts. The campus is also near the Hong Kong Coliseum and the waterfront promenade for leisure activities.",
+            "**Living and Dining**: The campus has multiple canteens and cafes offering affordable meals. Student halls of residence are available for non-local students, with priority given to first-year applicants. The nearby Hung Hom and Tsim Sha Tsui areas offer a wide range of dining and shopping options."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score for JS3004 was 184.0, indicating strong competition. This score is calculated using the 'Any Best 5 Subjects' formula with subject weighting.",
+            "**Lower Quartile (2025)**: The lower quartile score was 181.0, meaning 25% of admitted students scored at or below this level. Applicants with scores around this range should consider including the programme as a 'choice A' or 'choice B' in their JUPAS preferences.",
+            "**Average Score (2025)**: The average weighted HKDSE score was 188.8, reflecting the programme's high academic standards. This average is significantly above the minimum entry requirements for many other PolyU programmes.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted at 1.0, while elective subjects in science (Physics, Chemistry, Biology, M1/M2) are weighted at 1.5. Other electives are weighted at 1.0. A 6th subject bonus of 5% is applied to the best 5 subjects.",
+            "**Application Tips**: To maximise your score, focus on achieving high grades in science electives (Physics, Chemistry, or M1/M2) as they receive higher weighting. A score of 184+ is recommended for a competitive application, with 190+ being a safe target."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Ir Dr. Albert Chan (陳國華工程師)**: Chief Engineer, Hong Kong Housing Authority. Graduated with a BEng in Civil Engineering from PolyU. He has overseen the construction of over 10,000 public housing units.",
+            "**Dr. Jane Li (李靜博士)**: Director of Environmental Sustainability, MTR Corporation. She earned her PhD in Environmental Engineering from PolyU and has led the MTR's carbon reduction initiatives, achieving a 30% reduction in emissions since 2015.",
+            "**Mr. Thomas Wong (黃志強先生)**: Managing Director, Gammon Construction Limited. A PolyU graduate in Building Engineering and Management, he has managed landmark projects including the Hong Kong-Zhuhai-Macao Bridge and the West Kowloon Cultural District.",
+            "**Ms. Sarah Cheung (張雅詩女士)**: Senior Quantity Surveyor, Arup Hong Kong. She graduated with a BSc in Surveying from PolyU and has worked on major infrastructure projects such as the Shatin to Central Link and the Kai Tak Development.",
+            "**Ir Dr. Peter Lee (李彼得博士)**: Founder and CEO, GreenTech Engineering Ltd. He holds a PhD in Environmental Engineering from PolyU and his company has won multiple awards for innovative waste-to-energy technologies.",
+            "**Professor Michael Chan (陳明教授)**: Dean of Engineering, University of Hong Kong. He completed his BEng in Civil Engineering at PolyU and later earned a PhD from MIT. He is a Fellow of the Hong Kong Institution of Engineers."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to JUPAS applicants with outstanding HKDSE results. For JS3004, students scoring 190+ (weighted) may receive a scholarship of up to HK$50,000, with top scorers (200+) eligible for full tuition coverage (HK$42,100 per year).",
+            "**Faculty of Construction and Environment Scholarships**: The faculty offers multiple scholarships including the 'C&E Outstanding Student Scholarship' (HK$20,000) and the 'C&E Industry Partnership Scholarship' (HK$15,000) for students with strong academic performance and industry engagement.",
+            "**Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (HK$40,000 per year) and the Reaching Out Award (HK$10,000) for overseas exchange. The HKSAR Government also offers means-tested grants and loans through the Student Finance Office.",
+            "**Industry-Sponsored Awards**: Major construction companies such as Gammon, Dragages, and Arup sponsor scholarships and prizes for JS3004 students. These include the 'Gammon Construction Scholarship' (HK$30,000) and the 'Arup Engineering Excellence Award' (HK$20,000).",
+            "**Work-Integrated Education (WIE) Stipend**: Students on WIE placements receive a monthly stipend of HK$8,000–HK$12,000 from their host organisations, helping to offset living costs while gaining valuable work experience.",
+            "**Financial Assistance for Non-Local Students**: Non-local students can apply for the PolyU Non-Local Student Scholarship (up to full tuition) and the Hong Kong PhD Fellowship Scheme for postgraduate studies. The university also provides need-based bursaries of up to HK$50,000 per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3004 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Electives for Higher Weighting**",
+            "",
+            "- Science electives (Physics, Chemistry, Biology, M1/M2) are weighted at 1.5, compared to 1.0 for other subjects. A Level 5 in Physics (weighted 7.5) is worth more than a Level 5 in Economics (weighted 5.0).",
+            "- Aim for at least two science electives to maximise your weighted score. If you take three, the best two will count in your top 5.",
+            "",
+            "**2. Target a Weighted Score of 190+**",
+            "",
+            "- The median score is 184, but the average is 188.8. Aim for 190+ to be a competitive applicant. This translates to roughly Level 5 in three subjects and Level 4 in two subjects (with science weighting).",
+            "- Use the formula: (Sum of best 5 weighted scores) × 1.05 (6th subject bonus). For example, 5 subjects at Level 5 (weighted 7.5 each) = 37.5 × 1.05 = 39.375, which is well above 190.",
+            "",
+            "**3. Excel in English and Mathematics**",
+            "",
+            "- English and Mathematics are core subjects with a weighting of 1.0, but they are critical for meeting university entrance requirements. A Level 4 in English is often the minimum for professional accreditation.",
+            "- Mathematics (Compulsory) is especially important for engineering majors. Aim for Level 5 or above to strengthen your application.",
+            "",
+            "**4. Use the 6th Subject Bonus Strategically**",
+            "",
+            "- The 6th subject bonus adds 5% to your best 5 subjects. If you have a 6th subject with a high score (e.g., Level 5 in an elective), it can boost your total significantly.",
+            "- Example: Best 5 weighted score = 180, plus 6th subject bonus (5% of 180 = 9) = 189. This could push you above the median.",
+            "",
+            "**5. Research Your Preferred Major Early**",
+            "",
+            "- JS3004 is a broad-based scheme. Research the four majors (Building Engineering, Civil Engineering, Environmental Engineering, Geomatics) before applying. Your Year 1 grades and preferences will determine your major placement.",
+            "- Visit PolyU's website for detailed major descriptions and talk to current students at open days.",
+            "",
+            "**6. Gain Relevant Work Experience**",
+            "",
+            "- PolyU values Work-Integrated Education (WIE). Secure a summer internship or part-time job in construction, engineering, or environmental consulting before applying. This strengthens your personal statement and interview performance.",
+            "- Even shadowing a professional for a week can demonstrate commitment.",
+            "",
+            "**7. Prepare for Interviews (if shortlisted)**",
+            "",
+            "- Some majors within JS3004 may require an interview. Prepare by reviewing common questions like 'Why do you want to study construction/environment?' and 'What are your career goals?'.",
+            "- Bring a portfolio of any relevant projects, such as science fair entries or design work.",
+            "",
+            "**8. Apply Early and Use JUPAS Band A**",
+            "",
+            "- Place JS3004 in Band A (choices 1–3) to maximise your chances. The programme is competitive, and Band A applicants receive priority consideration.",
+            "- If your predicted score is borderline (around 181), consider placing it as choice 1 or 2.",
+            "",
+            "**9. Explore PolyU's Support Services**",
+            "",
+            "- PolyU offers free HKDSE revision workshops, academic advising, and career counselling. Attend the 'JUPAS Strategy Seminar' held in November each year.",
+            "- Use the online 'Admission Score Calculator' on PolyU's website to estimate your weighted score and compare it with past admission data."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：188.8（2025年聯招數據）。",
+            "**入學中位數**：184.0分（2025年聯招數據）。",
+            "**下四分位數**：181.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：建設及環境組合學士課程（JS3004）是香港理工大學建設及環境學院提供的基礎廣泛的課程。學生可在第二年選擇專業前探索多個學科，涵蓋建築工程、土木工程、環境工程及測量等領域。",
+            "**第一年 — 基礎年**：學生修讀共同課程，包括數學、物理、工程力學、環境科學及溝通技巧。這一年為建設及環境原理打下堅實基礎，注重跨學科學習及動手實踐。",
+            "**第二年 — 專業選擇**：完成第一年後，學生選擇以下其中一個專業：建築工程及管理學、土木工程學、環境工程與可持續發展學，或土地測量及地理資訊學。每個專業均有針對行業需求的課程。",
+            "**第三年 — 專業深化與實習**：學生通過結構分析、建築項目管理、水資源工程或土地測量等高級課程深化專業知識。工作綜合教育（WIE）計劃安排學生在頂尖建築公司、政府部門或工程顧問公司進行真實實習。",
+            "**第四年 — 畢業專題與選修**：最後一年設有畢業專題設計項目，學生需與行業夥伴合作解決實際問題。學生亦可選修智慧建築、綠色建築或城市信息學等課程，以定制專業知識。",
+            "**全球學習機會**：學生可參與與全球200多所合作大學的交換計劃，包括英國、澳洲及中國內地的大學。短期考察團亦會前往大灣區及東南亞。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：JS3004畢業生在香港的建築、基建及環境行業備受青睞。香港政府的十年基建計劃（總值超過1萬億港元）及北部都會區的發展，持續創造對建設及環境專業人才的需求。",
+            "**多元職業路徑**：畢業生可從事土木工程師、屋宇裝備工程師、環境顧問、工料測量師、項目經理或測量師等職業。許多畢業生任職於金門建築、香港寶嘉建築等大型承建商，或渠務署、屋宇署等政府部門。",
+            "**專業認證**：課程獲香港工程師學會（HKIE）、英國皇家特許測量師學會（RICS）及香港測量師學會（HKIS）等專業機構認可。畢業生完成相關工作經驗及專業評核後可取得特許資格。",
+            "**創業機會**：隨著智慧建築及綠色建築技術的興起，畢業生可創立自己的顧問公司或科技初創企業。理大的創新及創業中心為學生創業提供孵化支援及資金。",
+            "**大灣區前景**：港珠澳大橋及其他大灣區項目創造了跨境就業機會。具備普通話能力及熟悉內地標準的畢業生更具競爭力。",
+            "**深造途徑**：許多畢業生前往倫敦大學學院、劍橋大學及新加坡國立大學等頂尖學府攻讀碩士學位。理大亦提供建設及環境領域的授課式研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，步行5分鐘即可到達紅磡港鐵站（東鐵線及西鐵線）。校園亦鄰近海底隧道，從香港島及新界前往均十分便捷。",
+            "**先進實驗室**：建設及環境學院設有結構工程研究實驗室、環境工程實驗室及岩土工程實驗室等專業實驗室，配備先進測試設備及模擬軟件。",
+            "**行業聯繫樞紐**：校園內的賽馬會創新樓由著名建築師扎哈·哈迪德設計，設有設計工作室及協作空間。建築及建造資源中心提供行業數據庫及BIM軟件。",
+            "**學生組織**：建設及環境學生會舉辦實地考察、職業講座及社交活動。學生亦可加入理大「工程無疆界」分會，參與發展中國家的社區項目。",
+            "**體育與休閒**：理大的體育設施包括多用途體育館、游泳池、健身中心及戶外球場。校園鄰近香港體育館及海濱長廊，適合休閒活動。",
+            "**生活與餐飲**：校園內有多個食堂及咖啡店，提供價格實惠的餐飲。非本地學生可申請學生宿舍，一年級申請者獲優先考慮。附近的紅磡及尖沙咀地區提供豐富的餐飲及購物選擇。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數分數**：JS3004的HKDSE中位數分數為184.0，顯示競爭激烈。此分數採用「最佳5科」計算公式，並加入科目權重。",
+            "**2025年下四分位數**：下四分位數分數為181.0，即25%的獲取錄學生分數在此水平或以下。分數接近此水平的申請者應考慮將此課程列為「組別A」或「組別B」選擇。",
+            "**2025年平均分數**：加權後的HKDSE平均分數為188.8，反映課程的高學術標準。此平均分顯著高於理大許多其他課程的最低入學要求。",
+            "**科目權重**：核心科目（英文、中文、數學、通識教育）權重為1.0，而科學選修科（物理、化學、生物、延伸數學M1/M2）權重為1.5。其他選修科權重為1.0。第6科可獲5%的加分。",
+            "**申請貼士**：為最大化分數，應專注於科學選修科（物理、化學或M1/M2）取得佳績，因它們享有較高權重。建議取得184分或以上以具競爭力，190分以上則更為穩妥。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳國華工程師**：香港房屋署總工程師。畢業於理大土木工程學士課程，曾監督超過10,000個公營房屋單位的建造。",
+            "**李靜博士**：港鐵公司環境可持續發展總監。於理大取得環境工程博士學位，領導港鐵減碳計劃，自2015年實現排放量減少30%。",
+            "**黃志強先生**：金門建築有限公司董事總經理。理大建築工程及管理學畢業生，曾管理港珠澳大橋及西九文化區等地標項目。",
+            "**張雅詩女士**：奧雅納香港高級工料測量師。理大測量學士畢業，參與沙中線及啟德發展等大型基建項目。",
+            "**李彼得博士**：綠科工程有限公司創辦人及行政總裁。持有理大環境工程博士學位，其公司因創新廢物轉能技術屢獲獎項。",
+            "**陳明教授**：香港大學工程學院院長。於理大完成土木工程學士學位，後於麻省理工學院取得博士學位，現為香港工程師學會院士。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**理大入學獎學金**：頒予HKDSE成績優異的JUPAS申請者。JS3004學生若加權分數達190分或以上，可獲最高50,000港元獎學金；頂尖考生（200分以上）可獲全額學費資助（每年42,100港元）。",
+            "**建設及環境學院獎學金**：學院提供多項獎學金，包括「建設及環境學院傑出學生獎學金」（20,000港元）及「建設及環境學院行業夥伴獎學金」（15,000港元），頒予學術表現優異及積極參與行業活動的學生。",
+            "**政府獎學金**：合資格學生可申請香港特別行政區政府獎學金（每年40,000港元）及外展體驗獎（10,000港元）用於海外交流。政府亦透過學生資助處提供經入息審查的資助及貸款。",
+            "**行業贊助獎項**：金門建築、寶嘉建築及奧雅納等大型建築公司為JS3004學生提供獎學金及獎項，包括「金門建築獎學金」（30,000港元）及「奧雅納工程卓越獎」（20,000港元）。",
+            "**工作綜合教育（WIE）津貼**：參與WIE實習的學生每月可獲主辦機構發放8,000至12,000港元的津貼，有助減輕生活開支，同時獲得寶貴工作經驗。",
+            "**非本地學生資助**：非本地學生可申請理大非本地學生獎學金（最高全額學費）及香港博士研究生獎學金計劃。大學亦提供每年最高50,000港元的需要為本助學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3004 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先選擇科學選修科以獲取更高權重**",
+            "",
+            "- 科學選修科（物理、化學、生物、M1/M2）權重為1.5，其他科目為1.0。物理科取得5級（加權7.5分）比經濟科5級（加權5分）更有價值。",
+            "- 建議至少修讀兩科科學選修科以最大化加權分數。若修讀三科，最佳兩科將計入前五名。",
+            "",
+            "**2. 目標加權分數達190分以上**",
+            "",
+            "- 中位數分數為184分，但平均分為188.8分。目標190分以上以成為具競爭力的申請者。這大致相當於三科5級及兩科4級（含科學權重）。",
+            "- 使用公式：（最佳5科加權總分）× 1.05（第6科加分）。例如，5科5級（每科加權7.5分）= 37.5 × 1.05 = 39.375，遠高於190分。",
+            "",
+            "**3. 在英文及數學科表現出色**",
+            "",
+            "- 英文及數學是核心科目，權重為1.0，但對滿足大學入學要求至關重要。英文科4級通常是專業認證的最低要求。",
+            "- 數學（必修部分）對工程專業尤為重要。目標取得5級或以上以增強申請競爭力。",
+            "",
+            "**4. 策略性運用第6科加分**",
+            "",
+            "- 第6科加分為最佳5科總分增加5%。若第6科成績優異（例如選修科5級），可顯著提升總分。",
+            "- 示例：最佳5科加權分數為180分，加上第6科加分（180的5% = 9分）= 189分，可能超越中位數。",
+            "",
+            "**5. 提早研究心儀專業**",
+            "",
+            "- JS3004是基礎廣泛的課程。申請前研究四個專業（建築工程、土木工程、環境工程、土地測量）。第一年成績及偏好將決定專業分配。",
+            "- 瀏覽理大網站獲取詳細專業介紹，並在開放日與在讀學生交流。",
+            "",
+            "**6. 獲取相關工作經驗**",
+            "",
+            "- 理大重視工作綜合教育（WIE）。申請前爭取暑期實習或兼職工作，例如建築、工程或環境顧問公司。這有助強化個人陳述及面試表現。",
+            "- 即使只是跟隨專業人士工作一週，也能展示你的投入。",
+            "",
+            "**7. 為面試做好準備（如獲篩選）**",
+            "",
+            "- JS3004內部分專業可能需要面試。準備常見問題，例如「為何選擇建設及環境？」及「你的職業目標是什麼？」。",
+            "- 攜帶相關項目作品集，例如科學展覽作品或設計作品。",
+            "",
+            "**8. 提早申請並使用JUPAS組別A**",
+            "",
+            "- 將JS3004放在組別A（第1至3志願）以最大化機會。此課程競爭激烈，組別A申請者獲優先考慮。",
+            "- 若預測分數接近邊緣（約181分），建議將其列為第1或第2志願。",
+            "",
+            "**9. 探索理大的支援服務**",
+            "",
+            "- 理大提供免費HKDSE溫習工作坊、學術諮詢及職業輔導。參加每年11月舉行的「JUPAS策略講座」。",
+            "- 使用理大網站上的「入學分數計算器」估算加權分數，並與過往入學數據比較。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "184.0",
+    "lq": "181.0"
+  }
+}

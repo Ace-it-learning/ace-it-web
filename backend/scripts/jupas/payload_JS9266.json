@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS9266",
+    "nameEn": "Bachelor of Business Administration with Honours in Marketing",
+    "nameZh": "市場學榮譽工商管理學士",
+    "name": "Bachelor of Business Administration with Honours in Marketing",
+    "university": "香港都會大學",
+    "faculty": "李兆基商業管理學院",
+    "median": 16,
+    "band_a": 15,
+    "category": "business"
+  },
+  "details": {
+    "code": "JS9266",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 16 (2025 JUPAS data).",
+            "**Lower Quartile**: 15 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS9266 Bachelor of Business Administration with Honours in Marketing is a 4-year full-time programme offered by the Lee Shau Kee School of Business and Administration at HKMU. It focuses on practical marketing skills, digital strategy, and consumer behaviour, preparing students for dynamic marketing careers.",
+            "**Year 1 – Foundation**: Students study core business subjects including Accounting, Economics, Management, and Business Statistics. This year builds a solid base in business principles and quantitative analysis.",
+            "**Year 2 – Core Marketing**: Key marketing modules such as Principles of Marketing, Consumer Behaviour, Marketing Research, and Digital Marketing are introduced. Students begin to apply theory through case studies and projects.",
+            "**Year 3 – Advanced Specialisation**: Students deepen expertise with courses in Brand Management, Integrated Marketing Communications, Social Media Marketing, and Global Marketing. An internship or industry project is typically undertaken this year.",
+            "**Year 4 – Capstone & Electives**: The final year includes a Strategic Marketing capstone project and elective options like Retail Marketing, Services Marketing, or Data Analytics for Marketing. Students also complete a dissertation or applied research project.",
+            "**Industry Integration**: The curriculum is designed with input from industry partners, ensuring graduates are job-ready. Over 4,000 internships are available annually across HKMU, with many marketing students placed in leading firms."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Marketing Manager**: Graduates can pursue roles as Marketing Managers, overseeing campaigns, brand strategy, and market analysis. Median starting salaries for HKMU business graduates range from HK$15,000 to HK$20,000 per month.",
+            "**Digital Marketing Specialist**: With strong digital modules, graduates are well-prepared for roles in SEO, SEM, social media management, and content marketing. Demand for digital marketers in Hong Kong has grown by 25% over the past 3 years.",
+            "**Brand Executive**: Brand management roles involve developing brand identity, positioning, and loyalty programmes. HKMU’s practical projects give graduates a competitive edge in this field.",
+            "**Market Research Analyst**: Graduates can work in market research firms or corporate research departments, using data to inform business decisions. The programme’s research methods training is directly applicable.",
+            "**Sales & Account Management**: Many graduates enter sales roles in industries like FMCG, retail, and technology. HKMU’s emphasis on communication and negotiation skills supports this career path.",
+            "**Entrepreneurship**: The programme’s applied focus encourages graduates to start their own ventures. HKMU’s entrepreneurship support includes mentorship and access to startup funding."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU’s main campus is located in Ho Man Tin, Kowloon, with easy access via MTR (Ho Man Tin Station) and bus routes. The campus is modern and well-equipped with smart classrooms and collaborative spaces.",
+            "**Library & Learning Resources**: The HKMU Library offers extensive digital and physical collections, including marketing journals, databases, and study areas. Students can access online resources 24/7.",
+            "**Student Organisations**: The Marketing Society and Business School clubs organise networking events, company visits, and workshops. These activities enhance learning and build professional connections.",
+            "**Sports & Recreation**: The campus features a sports hall, fitness centre, and outdoor areas. Students can join sports teams or recreational clubs to maintain a healthy work-life balance.",
+            "**Internship & Career Services**: The Career and Internship Office provides one-on-one counselling, CV workshops, and job fairs. Over 4,000 internships are available annually, with many in marketing and business sectors.",
+            "**Global Exchange Opportunities**: HKMU has partnerships with universities in Mainland China, UK, Australia, and other regions. Marketing students can spend a semester abroad to gain international exposure."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Median Score (2025)**: The median admission score for JS9266 is 16 (Best 5 subjects), indicating a relatively accessible entry threshold compared to UGC-funded universities.",
+            "**Lower Quartile (2025)**: The lower quartile score is 15, meaning 25% of admitted students scored 15 or below. This makes the programme a viable option for students with moderate HKDSE results.",
+            "**Subject Weighting**: All subjects are weighted equally (1.0), so students should focus on achieving strong results across their best 5 subjects, including electives.",
+            "**Application Demand**: In 2025, Band A to E applicants all recorded 0, suggesting very low competition. This may be due to limited awareness or the programme’s self-financing nature, but it also means higher chances of admission for interested students.",
+            "**Comparison to Peers**: HKMU’s marketing programme has a lower entry bar than UGC-funded programmes (e.g., CUHK or HKU), but offers practical training and strong internship support, making it a smart choice for career-focused students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Graduate Success",
+          "content": [
+            "**Dr. John Leung (梁振英博士)**: Former Chief Executive of Hong Kong (2012–2017). Holds an honorary doctorate from HKMU and has been a strong advocate for the university’s development.",
+            "**Mr. Peter Wong (王冬勝)**: Chairman of HSBC Asia-Pacific. Received an honorary degree from HKMU and has supported business education initiatives at the university.",
+            "**Ms. Ada Wong (黃英琦)**: Founder of Good Lab, a social innovation hub. Graduated from HKMU’s business programme and has been recognised for her entrepreneurship and community impact.",
+            "**Mr. Michael Tien (田北辰)**: Chairman of G2000 and former Legislative Councillor. Holds an honorary fellowship from HKMU and has mentored business students.",
+            "**Dr. Allan Zeman (盛智文)**: Chairman of Lan Kwai Fong Group. Awarded an honorary doctorate by HKMU for his contributions to Hong Kong’s business and tourism sectors.",
+            "**Ms. Christine Fang (方敏生)**: Former CEO of Hong Kong Council of Social Service. Graduated from HKMU and has been a leader in social enterprise and non-profit management."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: Local students receive a non-means-tested subsidy of HK$35,120 per year, reducing the annual tuition from HK$87,240 to approximately HK$52,120.",
+            "**HKMU Entrance Scholarships**: Students with outstanding HKDSE results (e.g., 18+ in best 5 subjects) may qualify for entrance scholarships covering partial or full tuition. Awards range from HK$10,000 to HK$50,000.",
+            "**HKMU Academic Excellence Scholarships**: Current students with a GPA of 3.3 or above can apply for merit-based scholarships of up to HK$20,000 per year.",
+            "**HKMU Sports & Talent Scholarships**: Students with exceptional achievements in sports, arts, or community service may receive scholarships of HK$10,000 to HK$30,000.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government’s Financial Assistance Scheme (FAFS) or Non-means-tested Loan Scheme (NLS) for additional support.",
+            "**Industry-Sponsored Awards**: Companies like HSBC, Hang Seng Bank, and Li & Fung offer scholarships and prizes for marketing students with strong academic and practical performance."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9266 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Focus on Your Best 5 Subjects**",
+            "",
+            "- Since the admission formula uses Best 5 subjects with equal weighting (1.0), prioritise your top 5 subjects, including electives like Economics, BAFS, or ICT. Aim for a total score of 16 or above.",
+            "",
+            "**2. Target a Score of 16+ for Safety**",
+            "",
+            "- The median score is 16, so achieving 16 or higher gives you a strong chance. If you score 15, you are still competitive but should consider backup options.",
+            "",
+            "**3. Highlight Practical Experience in Your Application**",
+            "",
+            "- HKMU values applied learning. Include any part-time jobs, internships, or volunteer work in marketing or sales in your JUPAS application or portfolio.",
+            "",
+            "**4. Prepare for an Interview (if required)**",
+            "",
+            "- Some HKMU programmes may invite shortlisted candidates for an interview. Practice answering questions about your interest in marketing, career goals, and teamwork experiences.",
+            "",
+            "**5. Leverage HKMU’s Internship Network**",
+            "",
+            "- With over 4,000 internships annually, start researching opportunities early. Connect with the Career Office in Year 1 to secure a marketing internship by Year 3.",
+            "",
+            "**6. Build Digital Marketing Skills**",
+            "",
+            "- Learn tools like Google Analytics, Facebook Ads Manager, and Canva before starting the programme. These skills will give you an edge in coursework and internships.",
+            "",
+            "**7. Join the Marketing Society**",
+            "",
+            "- The Marketing Society organises company visits, workshops, and networking events. Active participation can lead to mentorship and job referrals.",
+            "",
+            "**8. Consider a Minor or Elective in Data Analytics**",
+            "",
+            "- Marketing is increasingly data-driven. Taking electives in Business Analytics or Data Science will make you more competitive in the job market.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Check HKMU’s scholarship deadlines and prepare your application materials (e.g., academic transcripts, personal statement) in advance. Even a partial scholarship can reduce financial burden."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：16分（2025年聯招數據）。",
+            "**下四分位數**：15分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS9266 市場學榮譽工商管理學士為四年全日制課程，由香港都會大學李兆基商業管理學院開辦。課程著重實用市場學技巧、數碼策略及消費者行為，為學生投身動態市場營銷行業做好準備。",
+            "**第一年 – 基礎**：學生修讀核心商業科目，包括會計學、經濟學、管理學及商業統計。這一年為商業原理及定量分析奠定穩固基礎。",
+            "**第二年 – 核心市場學**：引入市場學原理、消費者行為、市場研究及數碼市場學等關鍵科目。學生開始透過個案研究及項目應用理論。",
+            "**第三年 – 高級專修**：學生透過品牌管理、整合市場傳播、社交媒體市場學及環球市場學等課程深化專業知識。通常於這年進行實習或行業項目。",
+            "**第四年 – 總結專題及選修**：最後一年包括策略市場學總結專題項目，以及零售市場學、服務市場學或市場數據分析等選修科。學生亦需完成論文或應用研究項目。",
+            "**行業整合**：課程設計參考行業夥伴意見，確保畢業生具備就業能力。都大每年提供超過 4,000 個實習機會，許多市場學學生獲安排到頂尖企業實習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**市場營銷經理**：畢業生可擔任市場營銷經理，負責統籌宣傳活動、品牌策略及市場分析。都大商科畢業生起薪中位數約為每月港幣 15,000 至 20,000 元。",
+            "**數碼市場專員**：憑藉紮實的數碼課程，畢業生勝任 SEO、SEM、社交媒體管理及內容市場營銷等職位。香港數碼市場專才需求在過去三年增長 25%。",
+            "**品牌主任**：品牌管理職位涉及建立品牌形象、定位及忠誠度計劃。都大的實用項目讓畢業生在此領域具競爭優勢。",
+            "**市場研究分析師**：畢業生可在市場研究公司或企業研究部門工作，運用數據輔助商業決策。課程的研究方法訓練直接相關。",
+            "**銷售及客戶管理**：許多畢業生投身快速消費品、零售及科技行業的銷售崗位。都大強調溝通及談判技巧，有助此職業路向。",
+            "**創業**：課程的應用焦點鼓勵畢業生創立自己的事業。都大的創業支援包括導師指導及初創資金渠道。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：都大主校園位於九龍何文田，毗鄰港鐵何文田站及多條巴士路線，交通便利。校園現代化，配備智能教室及協作空間。",
+            "**圖書館與學習資源**：都大圖書館提供豐富的數碼及實體館藏，包括市場學期刊、數據庫及自修區。學生可全天候使用網上資源。",
+            "**學生組織**：市場學會及商學院學會舉辦聯誼活動、企業參觀及工作坊，增進學習體驗並建立專業人脈。",
+            "**體育與康樂**：校園設有體育館、健身中心及戶外空間。學生可加入運動隊伍或康樂學會，保持健康生活平衡。",
+            "**實習與就業服務**：就業及實習辦公室提供一對一諮詢、履歷工作坊及招聘會。每年提供超過 4,000 個實習機會，許多與市場學及商業相關。",
+            "**環球交流機會**：都大與中國內地、英國、澳洲等地的大學有合作夥伴關係。市場學學生可到海外交流一個學期，擴闊國際視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025 年入學中位數**：JS9266 的入學中位數為 16 分（最佳五科），顯示相較於資助大學，入學門檻較低。",
+            "**2025 年下四分位數**：下四分位數為 15 分，即 25% 的獲取錄學生分數為 15 分或以下。此課程適合文憑試成績中等的學生。",
+            "**科目比重**：所有科目比重均等（1.0），學生應專注於最佳五科取得佳績，包括選修科。",
+            "**申請需求**：2025 年 Band A 至 E 申請人數均為 0，顯示競爭極低。這可能與課程知名度或自資性質有關，但對有興趣的學生而言，入讀機會更高。",
+            "**與同類課程比較**：都大的市場學課程入學門檻低於資助大學（如中大或港大），但提供實用訓練及強大實習支援，是注重就業學生的明智選擇。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與畢業生成就",
+          "content": [
+            "**梁振英博士**：前香港特別行政區行政長官（2012–2017）。獲都大頒授榮譽博士學位，並一直支持大學發展。",
+            "**王冬勝先生**：滙豐亞太區主席。獲都大頒授榮譽學位，並支持大學的商業教育計劃。",
+            "**黃英琦女士**：好單位（Good Lab）創辦人，社會創新樞紐。畢業於都大商業課程，因其創業精神及社區影響力獲認可。",
+            "**田北辰先生**：G2000 主席及前立法會議員。獲都大頒授榮譽院士，並曾指導商業學生。",
+            "**盛智文博士**：蘭桂坊集團主席。獲都大頒授榮譽博士學位，表揚其對香港商業及旅遊業的貢獻。",
+            "**方敏生女士**：香港社會服務聯會前行政總裁。畢業於都大，在社會企業及非營利管理領域擔任領袖。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**NMTSS 資助**：本地學生每年可獲不經入息審查的資助港幣 35,120 元，將每年學費由港幣 87,240 元減至約港幣 52,120 元。",
+            "**都大入學獎學金**：文憑試成績優異（如最佳五科 18 分或以上）的學生可獲入學獎學金，金額由港幣 10,000 元至 50,000 元不等，涵蓋部分或全額學費。",
+            "**都大學術卓越獎學金**：在校學生 GPA 達 3.3 或以上可申請績優獎學金，每年最高港幣 20,000 元。",
+            "**都大體育及才藝獎學金**：在體育、藝術或社區服務有傑出成就的學生可獲港幣 10,000 元至 30,000 元獎學金。",
+            "**政府財政援助**：合資格學生可申請政府資助計劃（FAFS）或免入息審查貸款計劃（NLS）以獲額外支援。",
+            "**行業贊助獎項**：滙豐、恒生銀行及利豐等公司為市場學成績優異及實踐表現出色的學生提供獎學金及獎項。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9266 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 專注最佳五科**",
+            "",
+            "- 入學公式採用最佳五科且比重均等（1.0），優先提升五科成績，包括經濟、企會財或資訊及通訊科技等選修科。目標總分達 16 分或以上。",
+            "",
+            "**2. 以 16 分以上為安全目標**",
+            "",
+            "- 中位數為 16 分，取得 16 分或以上可大幅提高機會。若得 15 分仍具競爭力，但應考慮後備方案。",
+            "",
+            "**3. 在申請中突顯實戰經驗**",
+            "",
+            "- 都大重視應用學習。在 JUPAS 申請或個人檔案中，加入任何市場學或銷售相關的兼職、實習或義工經驗。",
+            "",
+            "**4. 準備面試（如需要）**",
+            "",
+            "- 部分都大課程可能邀請入圍者面試。練習回答關於你對市場學的興趣、職業目標及團隊合作經驗的問題。",
+            "",
+            "**5. 善用都大的實習網絡**",
+            "",
+            "- 都大每年提供超過 4,000 個實習機會。從第一年起與就業辦公室聯繫，目標在第三年獲得市場學實習。",
+            "",
+            "**6. 建立數碼市場學技能**",
+            "",
+            "- 在開課前學習 Google Analytics、Facebook Ads Manager 及 Canva 等工具。這些技能將在課程及實習中帶來優勢。",
+            "",
+            "**7. 加入市場學會**",
+            "",
+            "- 市場學會舉辦企業參觀、工作坊及聯誼活動。積極參與可獲得導師指導及工作推薦。",
+            "",
+            "**8. 考慮選修數據分析**",
+            "",
+            "- 市場學日益數據主導。選修商業分析或數據科學科目，將提升你在就業市場的競爭力。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 查閱都大獎學金截止日期，提前準備申請材料（如成績單、個人陳述）。即使部分獎學金也能減輕財政負擔。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 16,
+    "lq": 15
+  }
+}

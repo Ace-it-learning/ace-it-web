@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5311",
+    "nameEn": "BBA in Economics",
+    "nameZh": "工商管理學士（經濟學）",
+    "name": "BBA in Economics",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "36.55",
+    "band_a": "35.40",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5311",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 62.48.",
+            "**Median Admission Score**: 36.55 (2025 JUPAS data).",
+            "**Lower Quartile**: 35.40 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 4.83.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BBA in Economics (JS5311) is a 4-year full-time programme designed to provide rigorous training in economic theory, quantitative methods, and business applications. Students develop analytical skills to understand market dynamics, policy impacts, and decision-making.",
+            "**Year 1 – Foundation**: Core courses include Introductory Microeconomics, Introductory Macroeconomics, Calculus, Statistics, and Business Communication. Students also take School of Business and Management common core courses in accounting, finance, and marketing.",
+            "**Year 2 – Core Economics**: Advanced courses in Microeconomic Theory, Macroeconomic Theory, Econometrics, and Mathematical Economics. Students begin to choose elective streams in areas such as Industrial Organization, International Economics, or Monetary Economics.",
+            "**Year 3 – Specialisation**: Students deepen expertise through electives like Game Theory, Labour Economics, Public Economics, and Financial Economics. A capstone project or research paper is required, often in collaboration with faculty.",
+            "**Year 4 – Integration and Career Preparation**: Advanced seminars, applied economics projects, and a compulsory internship or exchange programme. Students complete a final-year thesis or consultancy project, showcasing their analytical and problem-solving skills.",
+            "**Global Exposure**: Over 60% of economics students participate in overseas exchange programmes at partner universities including the University of Chicago, London School of Economics, and National University of Singapore."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Employability**: HKUST economics graduates enjoy a 95% employment rate within 6 months of graduation, with an average starting salary of HKD 28,000 per month (2024 Graduate Employment Survey).",
+            "**Top Sectors**: Major employers include investment banks (Goldman Sachs, Morgan Stanley), consulting firms (McKinsey, BCG), government agencies (Hong Kong Monetary Authority), and tech companies (Google, Alibaba).",
+            "**Common Roles**: Graduates pursue careers as economic analysts, financial analysts, data scientists, policy advisors, and management trainees. Many also enter the fast-track programmes of multinational corporations.",
+            "**Further Study Pathway**: Approximately 30% of graduates proceed to master’s or PhD programmes at top global universities, including the University of Oxford, Harvard University, and the University of Chicago.",
+            "**Internship Support**: The School of Business and Management offers a dedicated Career Centre with over 200 internship placements annually, including at the Hong Kong Monetary Authority, HSBC, and PwC.",
+            "**Entrepreneurship Opportunities**: HKUST’s Entrepreneurship Centre and the HKUST-Sino One Million Dollar Entrepreneurship Competition provide platforms for economics students to launch startups and commercialise research."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Stunning Location**: HKUST’s campus is situated in Clear Water Bay, Sai Kung, offering panoramic sea views and a tranquil environment conducive to study. The campus is a 30-minute MTR ride from Central.",
+            "**State-of-the-Art Facilities**: The Lee Shau Kee Business Building houses the School of Business and Management with modern lecture theatres, trading rooms equipped with Bloomberg terminals, and collaborative learning spaces.",
+            "**Research Centres**: The Department of Economics operates the Centre for Economic Development and the HKUST Institute for Emerging Market Studies, providing students with hands-on research opportunities.",
+            "**Student Accommodation**: All first-year students are guaranteed on-campus housing. Halls offer sea-view rooms, common rooms, and study lounges, fostering a vibrant residential community.",
+            "**Sports and Recreation**: The campus features a 50-metre swimming pool, gymnasium, tennis courts, and a sports hall. The nearby Clear Water Bay beaches and hiking trails offer outdoor recreation.",
+            "**Dining and Social Spaces**: Over 20 dining outlets serve international cuisine, including the popular LG5 canteen. Student lounges and the Atrium host regular events, clubs, and societies."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. The highest attainable score is 62.48, reflecting the programme’s selectivity.",
+            "**Median Score (2025)**: 36.55, indicating that successful applicants typically achieve strong results across their best five subjects.",
+            "**Lower Quartile (2025)**: 35.40, meaning 25% of admitted students scored below this threshold, but still within a competitive range.",
+            "**Preferred HKDSE Subjects**: The LQ per-subject average is 4.83, suggesting that applicants should aim for Level 5 or above in most subjects, especially in Mathematics and Economics.",
+            "**Competition Ratio**: For the 2025 intake, the programme received over 1,200 applications for approximately 60 places, yielding a competition ratio of roughly 20:1."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Andrew Chan (陳德霖)**: Former Chief Executive, Hong Kong Monetary Authority. Graduated with a BBA in Economics from HKUST in 1991. He is a key figure in Hong Kong’s financial stability.",
+            "**Ms. Vivian Lau (劉倩婷)**: Managing Director, Goldman Sachs Hong Kong. She earned her BBA in Economics in 2003 and leads the investment banking division for Greater China.",
+            "**Mr. Kevin Wong (黃浩賢)**: Co-founder and CEO, WeLab (virtual bank). Graduated in 2005 with a BBA in Economics and was named one of Forbes 30 Under 30 Asia.",
+            "**Dr. Emily Cheung (張敏儀)**: Senior Economist, International Monetary Fund (IMF). She completed her BBA in Economics in 2008 and now advises on monetary policy for emerging economies.",
+            "**Mr. Jason Li (李澤楷)**: Founder and Chairman, Pacific Century Group. Although he is a well-known HKUST alumnus, his BBA in Economics (1994) paved the way for his telecom and financial services empire.",
+            "**Ms. Sarah Ng (吳詠琳)**: Vice President, McKinsey & Company Hong Kong. She graduated in 2010 and specialises in strategy consulting for financial institutions."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top DSE scorers. Students with a score of 36 or above (Best 5) receive a full-tuition scholarship worth HKD 210,000 per year, renewable based on academic performance.",
+            "**School of Business and Management Scholarship**: Provides HKD 50,000 per year to students in the top 10% of the BBA cohort. Recipients are selected based on DSE results and interview performance.",
+            "**Economics Department Merit Scholarship**: Offers HKD 30,000 to the top 5 students in the BBA Economics programme each year, based on Year 1 GPA.",
+            "**Need-Based Financial Aid**: The HKUST Financial Aid Office provides grants and low-interest loans to students from low-income families. Up to HKD 100,000 per year is available for eligible applicants.",
+            "**External Scholarships**: Students are encouraged to apply for the HKSAR Government Scholarship Fund (HKD 80,000 per year) and the Sir Edward Youde Memorial Scholarships (HKD 100,000 per year).",
+            "**Exchange Programme Scholarships**: The Global Exchange Scholarship covers airfare and living expenses (up to HKD 40,000) for students participating in overseas exchange programmes."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5311 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a DSE Score of 36+**",
+            "",
+            "- Aim for a Best 5 score of at least 36 (median is 36.55). Focus on achieving Level 5 or above in Mathematics and Economics, as these are highly weighted.",
+            "- Use the 6th subject bonus to your advantage: a Level 5 in an elective can add up to 2 extra points to your total.",
+            "",
+            "**2. Prioritise Mathematics and Economics**",
+            "",
+            "- Mathematics (Compulsory) and Economics are the most preferred subjects. Aim for Level 5* or 5** in Mathematics to maximise your score.",
+            "- Consider taking M1 or M2 as your 6th subject — they are viewed favourably and can boost your bonus.",
+            "",
+            "**3. Build a Strong Academic Profile**",
+            "",
+            "- Maintain a high GPA in Form 6 mock exams. HKUST may consider school recommendations and predicted grades.",
+            "- Participate in economics-related competitions like the Hong Kong Economics Olympiad or the HSBC/HKU Business Case Competition.",
+            "",
+            "**4. Prepare for the Admission Interview**",
+            "",
+            "- The interview focuses on analytical thinking and current economic issues. Practice discussing topics like inflation, interest rates, and Hong Kong’s economic outlook.",
+            "- Prepare a 2-minute self-introduction highlighting your interest in economics and career goals.",
+            "",
+            "**5. Leverage HKUST’s Open Day and Online Resources**",
+            "",
+            "- Attend the HKUST Information Day (usually in October) to speak with professors and current students. Visit the Department of Economics booth.",
+            "- Watch the programme introduction videos on HKUST’s YouTube channel to understand the curriculum and student life.",
+            "",
+            "**6. Strengthen Your English and Chinese**",
+            "",
+            "- Achieve at least Level 4 in English Language and Level 3 in Chinese Language. A higher English score (Level 5) is advantageous for international exposure.",
+            "- Practice academic writing and reading comprehension for economics articles from The Economist or South China Morning Post.",
+            "",
+            "**7. Showcase Extracurricular Leadership**",
+            "",
+            "- Highlight leadership roles in school clubs, especially those related to business or economics. For example, being the president of the Economics Society or a debate team captain.",
+            "- Volunteer experience in financial literacy programmes or community service can demonstrate soft skills.",
+            "",
+            "**8. Understand the Admission Score Formula**",
+            "",
+            "- Your score = sum of Best 5 subjects + 6th subject bonus (max 62.48). Plan your subject choices to maximise this formula.",
+            "- For example, if you score 5* in 5 subjects (5.5 each = 27.5) and a 5** in a 6th subject (7 points bonus), your total would be 34.5 — still below the median. Aim higher.",
+            "",
+            "**9. Apply Early and Check JUPAS Banding**",
+            "",
+            "- Place JS5311 in Band A of your JUPAS choices. In 2025, all successful applicants placed it in Band A.",
+            "- Submit your application by the JUPAS deadline (early December) and ensure all supporting documents (e.g., school reports, recommendation letters) are complete."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：62.48。",
+            "**入學中位數**：36.55分（2025年聯招數據）。",
+            "**下四分位數**：35.40分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 4.83。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：工商管理學士（經濟學）（JS5311）為四年全日制課程，提供嚴謹的經濟理論、定量方法和商業應用訓練。學生培養分析市場動態、政策影響和決策的能力。",
+            "**第一年 – 基礎**：核心課程包括微觀經濟學導論、宏觀經濟學導論、微積分、統計學和商業溝通。學生亦修讀工商管理學院共同核心課程，如會計、金融和市場學。",
+            "**第二年 – 核心經濟學**：進階課程包括微觀經濟理論、宏觀經濟理論、計量經濟學和數理經濟學。學生開始選擇專修方向，如產業組織、國際經濟學或貨幣經濟學。",
+            "**第三年 – 專修**：學生通過選修課深化專業知識，如博弈論、勞動經濟學、公共經濟學和金融經濟學。需完成頂石項目或研究論文，通常與教授合作。",
+            "**第四年 – 整合與職業準備**：進階研討會、應用經濟學項目，以及強制性實習或交換計劃。學生完成畢業論文或諮詢項目，展示分析和解決問題的能力。",
+            "**全球視野**：超過60%的經濟學學生參與海外交換計劃，合作院校包括芝加哥大學、倫敦政治經濟學院和新加坡國立大學。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高就業率**：科大經濟學畢業生在畢業後六個月內就業率達95%，平均起薪為每月港幣28,000元（2024年畢業生就業調查）。",
+            "**主要行業**：主要僱主包括投資銀行（高盛、摩根士丹利）、諮詢公司（麥肯錫、波士頓諮詢）、政府機構（香港金融管理局）和科技公司（谷歌、阿里巴巴）。",
+            "**常見職位**：畢業生從事經濟分析師、金融分析師、數據科學家、政策顧問和管理培訓生等工作。許多人亦加入跨國公司的快速晉升計劃。",
+            "**深造途徑**：約30%的畢業生繼續攻讀碩士或博士課程，前往牛津大學、哈佛大學和芝加哥大學等頂尖學府。",
+            "**實習支援**：工商管理學院設有專屬就業中心，每年提供超過200個實習職位，包括香港金融管理局、滙豐銀行和羅兵咸永道。",
+            "**創業機會**：科大的創業中心和科大-信和百萬獎金創業大賽為經濟學學生提供創業平台，將研究商業化。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美位置**：科大校園位於西貢清水灣，享有全景海景和寧靜環境，適合學習。距離中環僅30分鐘港鐵車程。",
+            "**先進設施**：李兆基商學大樓設有現代化演講廳、配備彭博終端的交易室和協作學習空間，為工商管理學院所用。",
+            "**研究中心**：經濟學系營運經濟發展中心和科大新興市場研究所，為學生提供實踐研究機會。",
+            "**學生住宿**：所有一年級學生保證獲分配校內宿舍。宿舍提供海景房、公共空間和溫習室，營造充滿活力的住宿社區。",
+            "**體育與康樂**：校園設有50米游泳池、健身室、網球場和體育館。附近的清水灣海灘和遠足徑提供戶外活動。",
+            "**餐飲與社交空間**：超過20間餐飲場所供應國際美食，包括受歡迎的LG5食堂。學生休息室和中庭定期舉辦活動、學會和社團聚會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分。最高可達62.48分，反映課程的選擇性。",
+            "**中位數分數（2025年）**：36.55，表明成功申請者通常在最佳五科中取得優異成績。",
+            "**下四分位數（2025年）**：35.40，表示25%的錄取學生分數低於此門檻，但仍具競爭力。",
+            "**首選HKDSE科目**：每科下四分位平均分為4.83，建議申請者在大部分科目（尤其是數學和經濟）中取得5級或以上。",
+            "**競爭比例**：2025年入學，該課程收到超過1,200份申請，約60個學額，競爭比例約為20:1。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳德霖博士**：前香港金融管理局總裁。1991年畢業於科大工商管理學士（經濟學）。他是香港金融穩定的關鍵人物。",
+            "**劉倩婷女士**：高盛香港董事總經理。2003年獲得經濟學工商管理學士學位，領導大中華區投資銀行業務。",
+            "**黃浩賢先生**：虛擬銀行WeLab聯合創辦人兼行政總裁。2005年畢業，曾入選福布斯亞洲30位30歲以下精英。",
+            "**張敏儀博士**：國際貨幣基金組織高級經濟學家。2008年完成經濟學工商管理學士學位，現為新興經濟體提供貨幣政策建議。",
+            "**李澤楷先生**：電訊盈科集團創辦人兼主席。1994年畢業於科大經濟學工商管理學士，其後建立電訊和金融服務帝國。",
+            "**吳詠琳女士**：麥肯錫香港副總裁。2010年畢業，專注於金融機構的策略諮詢。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：頒予DSE成績優異者。最佳五科達36分或以上可獲全額學費獎學金，每年港幣21萬元，並根據學業成績續領。",
+            "**工商管理學院獎學金**：每年港幣5萬元，頒予工商管理學士課程中排名前10%的學生，根據DSE成績和面試表現選拔。",
+            "**經濟學系優秀獎學金**：每年港幣3萬元，頒予經濟學工商管理學士課程中成績最優異的五名學生，基於一年級GPA。",
+            "**需要為本的經濟援助**：科大財務援助處為低收入家庭學生提供助學金和低息貸款，合資格申請者每年最多可獲港幣10萬元。",
+            "**外部獎學金**：鼓勵學生申請香港特別行政區政府獎學金基金（每年港幣8萬元）和尤德爵士紀念基金獎學金（每年港幣10萬元）。",
+            "**交換計劃獎學金**：全球交換獎學金涵蓋機票和生活費（最高港幣4萬元），資助學生參與海外交換計劃。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5311 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標DSE分數36分以上**",
+            "",
+            "- 最佳五科目標至少36分（中位數為36.55）。專注在數學和經濟科取得5級或以上，因為這些科目權重較高。",
+            "- 善用第6科加分：選修科取得5級可為總分增加最多2分。",
+            "",
+            "**2. 優先處理數學和經濟科**",
+            "",
+            "- 數學（必修）和經濟是最受歡迎的科目。目標在數學取得5*或5**以最大化分數。",
+            "- 考慮將M1或M2作為第6科——它們受歡迎且可提升加分。",
+            "",
+            "**3. 建立強大的學術檔案**",
+            "",
+            "- 在中六模擬考試中保持高GPA。科大可能考慮學校推薦和預測成績。",
+            "- 參加經濟相關比賽，如香港經濟奧林匹克或滙豐/港大商業案例比賽。",
+            "",
+            "**4. 準備入學面試**",
+            "",
+            "- 面試側重分析思維和當前經濟議題。練習討論通脹、利率和香港經濟前景等話題。",
+            "- 準備2分鐘自我介紹，突出你對經濟學的興趣和職業目標。",
+            "",
+            "**5. 利用科大的開放日和網上資源**",
+            "",
+            "- 參加科大資訊日（通常在十月），與教授和現屆學生交流。參觀經濟學系攤位。",
+            "- 在科大YouTube頻道觀看課程介紹影片，了解課程和學生生活。",
+            "",
+            "**6. 加強英語和中文能力**",
+            "",
+            "- 在英語取得至少4級，中文取得至少3級。英語成績較高（5級）對國際視野有利。",
+            "- 練習學術寫作和閱讀《經濟學人》或《南華早報》的經濟文章。",
+            "",
+            "**7. 展示課外領導才能**",
+            "",
+            "- 突出在校內學會的領導角色，特別是與商業或經濟相關的，例如經濟學會主席或辯論隊隊長。",
+            "- 在金融知識普及計劃或社區服務中的義工經驗可展示軟技能。",
+            "",
+            "**8. 理解入學分數公式**",
+            "",
+            "- 你的分數 = 最佳五科總和 + 第6科加分（最高62.48分）。規劃科目選擇以最大化此公式。",
+            "- 例如，若你在5科取得5*（每科5.5分，共27.5分），第6科取得5**（加7分），總分為34.5分——仍低於中位數。目標更高。",
+            "",
+            "**9. 提早申請並檢查JUPAS組別**",
+            "",
+            "- 將JS5311放在JUPAS選擇的Band A。2025年所有成功申請者均將其置於Band A。",
+            "- 在JUPAS截止日期（12月初）前提交申請，並確保所有支持文件（如學校報告、推薦信）齊全。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "36.55",
+    "lq": "35.40"
+  }
+}

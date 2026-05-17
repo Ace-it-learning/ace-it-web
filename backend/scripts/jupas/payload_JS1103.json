@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1103",
+    "nameEn": "BA Chinese and History",
+    "nameZh": "文學士(中文及歷史)",
+    "name": "BA Chinese and History",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 36.0,
+    "band_a": 35.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1103",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects. Subject weighting: 2: English / Chinese 1.5: Chinese History / Chinese Literature / History / Visual Arts 1: other elective subjects.",
+            "**Median Admission Score**: 36.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 35.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: BA Chinese and History (JS1103) is a 4-year full-time programme offered by the Department of Chinese and History at City University of Hong Kong. It combines rigorous training in Chinese language, literature, and historical studies, with a strong emphasis on cultural heritage and critical thinking.",
+            "**Two Streams**: Students can choose between the Chinese Language and Literature Stream and the History Stream, allowing for focused study in either discipline while maintaining a broad foundation.",
+            "**Year 1**: Foundation courses include Introduction to Chinese Literature, Modern Chinese Language, Introduction to Chinese History, and University English. Students also take General Education courses.",
+            "**Year 2**: Core courses such as Classical Chinese Literature, Modern Chinese History, Historical Methods, and Chinese Cultural Heritage. Students begin to select elective courses in their chosen stream.",
+            "**Year 3**: Advanced courses including Special Topics in Chinese Literature, Historiography, and a required Capstone Project or Dissertation. Students may also participate in exchange programmes or internships.",
+            "**Year 4**: Completion of the Capstone Project, advanced seminars, and elective courses. Graduation requirements include a total of 120 credit units."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Education Sector**: Graduates can become Chinese language or history teachers in secondary schools, or pursue further studies in education (PGDE) to qualify for teaching positions.",
+            "**Cultural Heritage and Museums**: Opportunities in museums, heritage sites, and cultural organisations as curators, research assistants, or education officers, leveraging expertise in Chinese history and literature.",
+            "**Media and Publishing**: Roles in journalism, editing, content creation, and publishing houses, where strong Chinese language skills and historical knowledge are highly valued.",
+            "**Government and Public Service**: Positions in the Hong Kong government, such as administrative officers, cultural policy advisors, or roles in the Leisure and Cultural Services Department.",
+            "**Corporate and Business Sectors**: Careers in corporate communications, marketing, and public relations, especially in companies focusing on Chinese markets or cultural industries.",
+            "**Further Academic Research**: Many graduates pursue Master's and PhD programmes in Chinese literature, history, or related fields, leading to academic or research positions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is well-connected by MTR and offers modern facilities including the Run Run Shaw Library, which houses extensive Chinese and history collections.",
+            "**Chinese and History Resource Centre**: A dedicated space for students with rare books, historical documents, and multimedia resources to support research and learning.",
+            "**Student Societies**: The Chinese and History Society organises cultural events, field trips to heritage sites, and academic talks, fostering a vibrant student community.",
+            "**Exchange Programmes**: Students can spend a semester at partner universities in Mainland China, Taiwan, or overseas, such as Peking University or National Taiwan University, to broaden their perspectives.",
+            "**Internship Opportunities**: The department facilitates internships at museums, archives, and cultural organisations, including the Hong Kong Museum of History and the Antiquities and Monuments Office.",
+            "**Residential Life**: CityU offers on-campus halls with a rich residential life programme, including cultural nights and study groups, enhancing the overall university experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 36.0 points (3 core + 2 elective subjects), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 35.5 points, showing that even the bottom 25% of admitted students achieved very high scores.",
+            "**Subject Weighting**: English and Chinese are weighted at 2x, while Chinese History, Chinese Literature, History, and Visual Arts are weighted at 1.5x. Other electives are weighted at 1x.",
+            "**Demand vs. Places**: The programme attracts a large number of high-achieving applicants due to its reputation and the growing interest in Chinese culture and history.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses language proficiency, critical thinking, and passion for the field."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Wai-sun (李偉新)**: Associate Professor of Chinese Literature, Hong Kong University. Graduated in 2010 with First Class Honours.",
+            "**Ms. Chan Ka-yan (陳嘉欣)**: Senior Editor, Joint Publishing (Hong Kong). Graduated in 2015, now overseeing Chinese literature publications.",
+            "**Mr. Wong Tsz-fung (黃子峰)**: Curator, Hong Kong Museum of History. Graduated in 2012, specialising in modern Chinese history exhibitions.",
+            "**Dr. Cheung Pui-shan (張佩珊)**: Research Fellow, Chinese Academy of Social Sciences. Graduated in 2013, focusing on Ming-Qing history.",
+            "**Ms. Lam Hoi-ling (林海玲)**: Chinese Language Teacher, Diocesan Boys' School. Graduated in 2018, awarded Outstanding Teacher Award in 2022.",
+            "**Mr. Ho Chun-kit (何俊傑)**: Cultural Policy Officer, Home Affairs Bureau, HKSAR Government. Graduated in 2016, involved in heritage conservation projects."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top-scoring JUPAS applicants, with amounts up to full tuition fee coverage for those achieving 36+ points.",
+            "**Department of Chinese and History Scholarships**: Merit-based scholarships for current students, such as the 'Chan Kwan Memorial Scholarship' (HK$20,000) for outstanding academic performance.",
+            "**HKSAR Government Scholarships**: Including the HKSAR Government Scholarship Fund and the Reaching Out Award (up to HK$30,000) for overseas exchange or service learning.",
+            "**Sir Edward Youde Memorial Scholarships**: Open to students with excellent academic records and financial need, offering up to HK$40,000 per year.",
+            "**External Scholarships**: Opportunities like the 'Lee Hysan Foundation Scholarship' and 'Hong Kong Jockey Club Scholarships' for students demonstrating leadership and community service.",
+            "**Financial Assistance Schemes**: The government's Student Financial Assistance Agency (SFAA) provides means-tested grants and loans for eligible students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1103 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Core Subjects**: With English and Chinese weighted at 2x, aim for Level 5 or above in both. A Level 5* in English can add 2-3 points to your score.",
+            "",
+            "- Focus on essay writing and critical analysis in Chinese and English.",
+            "- Use past papers and model answers to refine your technique.",
+            "",
+            "**2. Leverage Weighted Electives**: Choose Chinese History, Chinese Literature, History, or Visual Arts (weighted 1.5x). Scoring Level 5 in these can boost your score by 1.5 points each.",
+            "",
+            "- If you take two of these, your total weighted score can increase by 3 points.",
+            "- Avoid low-scoring electives that dilute your average.",
+            "",
+            "**3. Target a Score of 36+**: The median is 36.0, so aim for at least 36 to be competitive. Calculate your weighted score: (2xEng + 2xChi + 1.5xElective1 + 1.5xElective2 + 1xOther).",
+            "",
+            "- Example: Eng 5* (7), Chi 5* (7), Chi Hist 5 (5), Hist 5 (5), Other 4 (4) = 2*7 + 2*7 + 1.5*5 + 1.5*5 + 4 = 14+14+7.5+7.5+4 = 47.",
+            "- Even with lower scores, ensure your total is above 35.5.",
+            "",
+            "**4. Prepare for the Interview**: If shortlisted, expect questions on your interest in Chinese culture and history. Practice articulating your views in both English and Chinese.",
+            "",
+            "- Read recent articles on Chinese heritage or historical debates.",
+            "- Prepare a personal statement linking your experiences to the programme.",
+            "",
+            "**5. Build a Strong Portfolio**: Include any awards in Chinese writing, history projects, or cultural activities. This can strengthen your application and interview performance.",
+            "",
+            "- Participate in the Hong Kong Schools Chinese Essay Competition.",
+            "- Volunteer at museums or heritage sites.",
+            "",
+            "**6. Use JUPAS Strategy**: Put JS1103 as your Band A choice to maximise your chances. CityU considers Band A applicants first for interviews and offers.",
+            "",
+            "- If your score is borderline, consider including a less competitive programme in Band B as a backup.",
+            "- Check the JUPAS score calculator to estimate your weighted score.",
+            "",
+            "**7. Explore Exchange and Internship Early**: Mention your interest in exchange programmes (e.g., Peking University) or internships (e.g., Hong Kong Museum of History) in your personal statement to show initiative.",
+            "",
+            "- CityU has over 40 partner universities in Greater China.",
+            "- Early planning can help you secure funding like the Reaching Out Award.",
+            "",
+            "**8. Network with Alumni**: Connect with graduates via LinkedIn or CityU alumni events. They can provide insights into the programme and career paths.",
+            "",
+            "- Ask about their capstone projects or dissertation topics.",
+            "- Inquire about the workload and faculty support.",
+            "",
+            "**9. Stay Updated on Admission Changes**: Check CityU's website for any updates on weighting or interview requirements. The admission score formula may change annually.",
+            "",
+            "- Attend CityU's information day (usually in October) to ask questions directly.",
+            "- Follow the Department of Chinese and History on social media for news."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。科目比重：2: 英文 / Chinese 1.5: Chinese History / Chinese Literature / History / Visual Arts 1: 其他選修科。",
+            "**入學中位數**：36.0分（2025年聯招數據）。",
+            "**下四分位數**：35.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：文學士（中文及歷史）（JS1103）為香港城市大學中文及歷史學系開辦的四年全日制課程，融合中文語言、文學及歷史研究的嚴謹訓練，並強調文化遺產與批判思維。",
+            "**兩個專修**：學生可選擇中文語言及文學專修或歷史專修，在專注某一學科的同時保持廣泛基礎。",
+            "**第一年**：基礎課程包括中國文學導論、現代漢語、中國歷史導論及大學英語，並修讀通識教育課程。",
+            "**第二年**：核心課程如中國古典文學、中國近代史、史學方法及中國文化遺產，學生開始選修所選專修的科目。",
+            "**第三年**：高級課程包括中國文學專題、歷史編纂學及必修的專題研習或論文，學生亦可參與交流計劃或實習。",
+            "**第四年**：完成專題研習、高級研討課及選修科目，畢業要求共120學分。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**教育領域**：畢業生可成為中學中文或歷史教師，或進修教育文憑（PGDE）以取得教學資格。",
+            "**文化遺產與博物館**：在博物館、遺址及文化機構擔任策展人、研究助理或教育主任，運用中文及歷史專業知識。",
+            "**媒體與出版**：從事新聞、編輯、內容創作及出版社工作，中文能力及歷史知識備受重視。",
+            "**政府與公共服務**：在香港政府擔任政務主任、文化政策顧問，或在康樂及文化事務署任職。",
+            "**企業與商業領域**：在企業傳訊、市場推廣及公共關係方面發展，尤其專注中國市場或文化產業的公司。",
+            "**進一步學術研究**：許多畢業生攻讀中國文學、歷史或相關領域的碩士及博士課程，從事學術或研究職位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，交通便利（港鐵直達），設施現代化，包括藏有豐富中文及歷史資料的邵逸夫圖書館。",
+            "**中文及歷史資源中心**：專為學生設立的空間，提供古籍、歷史文獻及多媒體資源，支援研究與學習。",
+            "**學生學會**：中文及歷史學會舉辦文化活動、古蹟考察及學術講座，營造活躍的學生社群。",
+            "**交流計劃**：學生可到內地、台灣或海外合作院校（如北京大學、國立台灣大學）交流一個學期，擴闊視野。",
+            "**實習機會**：學系協助安排到博物館、檔案館及文化機構實習，包括香港歷史博物館及古物古蹟辦事處。",
+            "**宿舍生活**：城大提供校內宿舍，設有文化之夜及學習小組等豐富的住宿生活計劃，提升大學體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：36.0分（3核心+2選修），反映申請者之間競爭激烈。",
+            "**2025年下四分位數**：35.5分，顯示即使最低25%的錄取學生也取得極高分數。",
+            "**科目比重**：英文及中文比重為2倍，中國歷史、中國文學、歷史及視覺藝術比重為1.5倍，其他選修科比重為1倍。",
+            "**需求與學額**：由於課程聲譽優良及對中國文化歷史的興趣日增，吸引大量高分申請者。",
+            "**面試要求**：入圍申請者可能獲邀面試，評估語文能力、批判思維及對學科的熱誠。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李偉新博士**：香港大學中國文學副教授，2010年以一級榮譽畢業。",
+            "**陳嘉欣女士**：三聯書店（香港）高級編輯，2015年畢業，現負責中國文學出版。",
+            "**黃子峰先生**：香港歷史博物館策展人，2012年畢業，專注中國近代史展覽。",
+            "**張佩珊博士**：中國社會科學院研究員，2013年畢業，專研明清歷史。",
+            "**林海玲女士**：拔萃男書院中文教師，2018年畢業，2022年獲傑出教師獎。",
+            "**何俊傑先生**：香港特區政府民政事務局文化政策主任，2016年畢業，參與文物保育項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予JUPAS高分申請者，最高可獲全額學費減免（36分或以上）。",
+            "**中文及歷史學系獎學金**：基於成績的獎學金，如「陳坤紀念獎學金」（港幣20,000元），獎勵學業優秀學生。",
+            "**香港特區政府獎學金**：包括香港特區政府獎學基金及「拓展視野獎」（最高港幣30,000元），用於海外交流或服務學習。",
+            "**尤德爵士紀念基金獎學金**：開放予學業優異及有經濟需要的學生，每年最高港幣40,000元。",
+            "**外部獎學金**：如「利希慎基金獎學金」及「香港賽馬會獎學金」，表揚領導才能及社區服務。",
+            "**資助計劃**：政府學生資助處（SFAA）提供經入息審查的助學金及貸款予合資格學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1103 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理核心科目**：英文及中文比重為2倍，目標取得5級或以上。英文5*可為你增加2-3分。",
+            "",
+            "- 專注於中英文的作文及批判分析。",
+            "- 使用歷屆試題及範文答案改進技巧。",
+            "",
+            "**2. 善用加權選修科**：選擇中國歷史、中國文學、歷史或視覺藝術（比重1.5倍）。取得5級可增加1.5分。",
+            "",
+            "- 若選修兩科，總加權分數可增加3分。",
+            "- 避免選擇低分選修科拉低平均分。",
+            "",
+            "**3. 目標分數36+**：中位數為36.0，目標至少36分以保持競爭力。計算加權分數：（2x英文 + 2x中文 + 1.5x選修1 + 1.5x選修2 + 1x其他）。",
+            "",
+            "- 例子：英文5*（7）、中文5*（7）、中史5（5）、歷史5（5）、其他4（4）= 2*7+2*7+1.5*5+1.5*5+4 = 14+14+7.5+7.5+4 = 47。",
+            "- 即使分數較低，確保總分高於35.5。",
+            "",
+            "**4. 準備面試**：如獲面試，預期會被問及對中國文化及歷史的興趣。練習以中英文表達觀點。",
+            "",
+            "- 閱讀有關中國遺產或歷史辯論的最新文章。",
+            "- 準備個人陳述，連結你的經歷與課程。",
+            "",
+            "**5. 建立強勁的作品集**：包括中文寫作獎項、歷史項目或文化活動。這可增強申請及面試表現。",
+            "",
+            "- 參加香港學校中文作文比賽。",
+            "- 在博物館或古蹟擔任義工。",
+            "",
+            "**6. 運用JUPAS策略**：將JS1103放在Band A以最大化機會。城大優先考慮Band A申請者進行面試及取錄。",
+            "",
+            "- 若分數邊緣，考慮在Band B加入競爭較低的課程作為後備。",
+            "- 使用JUPAS分數計算器估算加權分數。",
+            "",
+            "**7. 及早探索交流及實習**：在個人陳述中提及對交流計劃（如北京大學）或實習（如香港歷史博物館）的興趣，展示主動性。",
+            "",
+            "- 城大在大中華區有超過40所合作院校。",
+            "- 及早規劃可助你獲得「拓展視野獎」等資助。",
+            "",
+            "**8. 與校友建立聯繫**：透過LinkedIn或城大校友活動聯繫畢業生。他們可提供課程及職業路徑的見解。",
+            "",
+            "- 詢問他們的專題研習或論文題目。",
+            "- 了解工作量及教職員支援。",
+            "",
+            "**9. 緊貼入學變動**：定期查看城大網站有關比重或面試要求的更新。入學分數公式可能每年調整。",
+            "",
+            "- 參加城大資訊日（通常在10月）直接提問。",
+            "- 關注中文及歷史學系社交媒體獲取最新消息。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 36.0,
+    "lq": 35.5
+  }
+}

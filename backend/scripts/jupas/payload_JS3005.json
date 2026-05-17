@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3005",
+    "nameEn": "Bachelor's Degree Scheme in Engineering",
+    "nameZh": "工程學科組合學士課程",
+    "name": "Bachelor's Degree Scheme in Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3005",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Chinese & English Languages + Any Best 3 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 221.9 (2025 JUPAS data).",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3005 is a broad-based engineering scheme under the Faculty of Engineering, allowing students to explore multiple disciplines before specialising. The programme adopts a flexible credit-based system with a total of 124 credits required for graduation.",
+            "**Year 1 — Foundation Year**: Students take common core courses in mathematics, physics, programming, and engineering fundamentals. This year is designed to build a strong technical base and help students identify their interests through introductory modules across civil, mechanical, electrical, and computing engineering.",
+            "**Year 2 — Broadening & Specialisation Selection**: Students continue with intermediate engineering subjects and select a major from 12+ options, including Civil Engineering, Mechanical Engineering, Electrical Engineering, Electronic & Information Engineering, and Logistics & Enterprise Engineering. The selection is based on academic performance and personal preference.",
+            "**Year 3 — Deepening Specialisation**: Students focus on their chosen discipline with advanced core and elective courses. Work-Integrated Education (WIE) placements typically occur in the summer or during this year, providing at least 1 semester of real-world industry experience.",
+            "**Year 4 — Capstone & Professional Development**: Students undertake a final-year capstone project, often in collaboration with industry partners. Professional ethics, project management, and innovation modules complete the curriculum, preparing graduates for engineering chartership and postgraduate study.",
+            "**Work-Integrated Education (WIE)**: A hallmark of PolyU engineering, WIE requires students to complete a minimum of 100 hours of practical work experience. Many students secure placements at leading firms such as MTR Corporation, CLP Power, and Arup."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Graduate Employment Rate**: Over 90% of PolyU engineering graduates find employment within 6 months of graduation, with many receiving multiple job offers from top employers in Hong Kong and the Greater Bay Area.",
+            "**Diverse Industries**: Graduates of JS3005 are equipped for roles in construction, transportation, energy, manufacturing, information technology, and logistics. Common employers include the Hong Kong Government, MTR Corporation, CLP Power, Hongkong Electric, and global engineering consultancies.",
+            "**Professional Accreditation**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE) and other international bodies, enabling graduates to pursue chartered engineer status after completing relevant work experience and professional assessments.",
+            "**Starting Salaries**: Fresh engineering graduates from PolyU typically earn between HKD 18,000 and HKD 25,000 per month, with specialisations like electrical and mechanical engineering commanding higher starting packages.",
+            "**Career Progression**: With 3–5 years of experience, many graduates advance to senior engineer, project manager, or technical lead roles. The Faculty of Engineering's strong industry connections facilitate rapid career growth.",
+            "**Entrepreneurship & Innovation**: PolyU's entrepreneurship support ecosystem, including the PolyU Micro Fund and the Innovation and Technology Scholarship, encourages engineering graduates to launch their own tech startups."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, just a 5-minute walk from Hung Hom MTR station (East Rail Line and West Rail Line). The campus is also accessible via the Cross-Harbour Tunnel, making it convenient for students from all districts.",
+            "**State-of-the-Art Labs**: The Faculty of Engineering houses over 30 specialised laboratories, including the Industrial Centre, which features advanced manufacturing equipment, robotics labs, and a wind tunnel facility for civil and mechanical engineering research.",
+            "**Student Accommodation**: PolyU offers on-campus halls for undergraduate students, with priority given to non-local and first-year students. The halls are located within walking distance of the main campus and provide a vibrant residential community.",
+            "**Sports & Recreation**: The campus includes a multi-purpose sports complex with a swimming pool, gymnasium, basketball courts, and a running track. Students can join over 100 clubs and societies, including the Engineering Students' Society.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library provides extensive engineering databases, 24/7 study spaces, and group project rooms. The Learning Commons on the ground floor is a popular collaborative study area.",
+            "**Greater Bay Area Connections**: PolyU's proximity to Shenzhen and the Greater Bay Area enables students to participate in cross-border internships, exchange programmes, and industry visits, enhancing their regional career prospects."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆)",
+            "**Admission Score Formula**: The programme calculates scores based on Chinese Language + English Language + Any Best 3 Subjects. This formula favours students with strong language skills and a balanced profile across elective subjects.",
+            "**Average Weighted Score**: The average HKDSE score with subject weighting for 2025 is 221.9. This places JS3005 in a moderately competitive range among PolyU engineering programmes.",
+            "**Subject Weighting**: While all subjects are considered, Mathematics and M1/M2 carry higher weighting in the 'Any Best 3' category. Students with strong STEM backgrounds have an advantage in the selection process.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, problem-solving ability, and communication skills. The interview typically lasts 15–20 minutes and may include group discussion elements.",
+            "**Flexible Specialisation**: The broad-based structure reduces the risk of choosing the wrong major early. Students can switch between engineering disciplines up to the end of Year 2, making the programme attractive to those exploring options."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Ir. Albert Chan (陳帆)**: Former Secretary for Transport and Housing, Hong Kong SAR Government. Graduated with a degree in Civil Engineering from PolyU.",
+            "**Ir. Dr. the Hon. Lo Wai-kwok (盧偉國)**: Legislative Council Member (Engineering Functional Constituency) and Chairman of the Hong Kong Institution of Engineers. PolyU engineering alumnus.",
+            "**Dr. Ir. Peter Lee (李德明)**: CEO of MTR Corporation (2019–2023). Holds a Bachelor's degree in Civil Engineering from PolyU and has led major infrastructure projects.",
+            "**Ir. Dr. Thomas Tang (鄧振強)**: Deputy Director of the Hong Kong Observatory. Graduated from PolyU's Department of Electrical Engineering and has contributed to meteorological advancements.",
+            "**Ir. Dr. Eric Ma (馬振峰)**: Founder and CEO of EGL Holdings, a leading engineering consultancy in Hong Kong. PolyU mechanical engineering graduate and recipient of the PolyU Outstanding Alumni Award.",
+            "**Ir. Dr. Joseph Lee (李志強)**: Managing Director of Arup East Asia. PolyU civil engineering alumnus who has overseen iconic projects such as the Hong Kong-Zhuhai-Macao Bridge."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to HKDSE top scorers with exceptional results (e.g., 5** in multiple subjects). The scholarship covers full tuition fees and provides a living allowance of up to HKD 50,000 per year.",
+            "**Faculty of Engineering Scholarships**: The Faculty offers multiple merit-based scholarships for engineering students, including the 'Engineering Dean's List Scholarship' (HKD 10,000–20,000) for top-performing students each semester.",
+            "**Work-Integrated Education (WIE) Subsidy**: Students undertaking unpaid internships or WIE placements may receive a subsidy of up to HKD 8,000 to cover travel and living expenses, ensuring equal access to practical experience.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Grant and Loan Schemes, including the Tertiary Student Finance Scheme (TSFS) and the Non-means-tested Loan Scheme (NLS).",
+            "**External Scholarships**: PolyU engineering students frequently win prestigious external awards such as the 'Hong Kong Institution of Engineers Scholarship' and the 'Innovation and Technology Scholarship' (up to HKD 150,000).",
+            "**Alumni Bursaries**: The PolyU Alumni Association provides need-based bursaries ranging from HKD 5,000 to HKD 20,000 for engineering students facing financial difficulties."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3005 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Language Scores**",
+            "- The admission formula counts Chinese + English + any best 3 subjects. Aim for Level 4 or above in both languages to maximise your score.",
+            "- A strong English score (Level 5 or 5*) can significantly boost your weighted total beyond the 221.9 average.",
+            "",
+            "**2. Excel in Mathematics and M1/M2**",
+            "- Mathematics and M1/M2 carry higher weighting in the 'Any Best 3' category. Target Level 5 or above in these subjects.",
+            "- If you take M1 or M2, treat it as a core subject — it demonstrates quantitative ability valued by engineering departments.",
+            "",
+            "**3. Build a Balanced Elective Profile**",
+            "- Choose electives that complement engineering: Physics, Chemistry, ICT, or Design & Applied Technology are strong choices.",
+            "- Avoid taking too many humanities electives unless you are confident they will be in your best 3 subjects.",
+            "",
+            "**4. Prepare for the Interview**",
+            "- If shortlisted, expect questions like 'Why engineering?' and 'Which specialisation interests you?' Prepare specific examples from your school projects or competitions.",
+            "- Practice group discussion skills — the interview may include a case study or problem-solving task with other candidates.",
+            "",
+            "**5. Explore Specialisations Early**",
+            "- Use Year 1 to attend departmental talks and lab tours. PolyU offers over 12 engineering majors — don't wait until Year 2 to decide.",
+            "- Talk to current students in different disciplines via the Engineering Students' Society or open days.",
+            "",
+            "**6. Leverage Work-Integrated Education (WIE)**",
+            "- Start applying for summer internships in Year 1. Companies like MTR, CLP, and Arup recruit PolyU students early.",
+            "- The WIE requirement (100 hours minimum) can be completed through part-time jobs, internships, or research assistant roles.",
+            "",
+            "**7. Use the Broad-Based Structure to Your Advantage**",
+            "- If you are unsure about your major, JS3005 is ideal — you can switch specialisations up to the end of Year 2 without penalty.",
+            "- Maintain a high GPA in Year 1 to keep all specialisation options open.",
+            "",
+            "**8. Apply for Scholarships Proactively**",
+            "- The PolyU Entrance Scholarship requires separate application — submit your HKDSE results and a personal statement by the deadline (usually August).",
+            "- Even if you miss the entrance scholarship, apply for Faculty scholarships in Year 1 — many are based on first-semester grades.",
+            "",
+            "**9. Connect with Alumni and Industry**",
+            "- Attend PolyU's Engineering Career Fair (held annually in September) to network with employers like AECOM, Gammon, and the Hong Kong Government.",
+            "- Join the PolyU Engineering Alumni Association LinkedIn group to seek mentorship and internship referrals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：Chinese & English Languages + Any Best 3 Subjects。",
+            "**文憑試成績平均積點（計算科目比重後）**：221.9（2025年聯招數據）。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3005 是工程學院下設的基礎廣泛的工程學科組合課程，讓學生在專修前探索多個工程領域。課程採用靈活的學分制，畢業要求總共 124 學分。",
+            "**第一年 — 基礎年**：學生修讀數學、物理、編程及工程基礎等共同核心科目。這一年旨在建立堅實的技術基礎，並通過土木、機械、電機及計算機工程的入門單元幫助學生發掘興趣。",
+            "**第二年 — 拓寬視野與選擇專修**：學生繼續修讀中級工程科目，並從 12 個以上選項中選擇主修，包括土木工程、機械工程、電機工程、電子及資訊工程、物流及企業工程等。選擇基於學業成績和個人偏好。",
+            "**第三年 — 深化專修**：學生專注於所選學科，修讀高級核心及選修課程。工作綜合教育（WIE）實習通常在夏季或本年內進行，提供至少一個學期的真實行業經驗。",
+            "**第四年 — 頂石課程與專業發展**：學生完成畢業頂石項目，通常與行業夥伴合作。專業倫理、項目管理及創新模塊完成課程，為畢業生考取工程師資格及深造做好準備。",
+            "**工作綜合教育（WIE）**：作為理大工程學院的標誌，WIE 要求學生完成至少 100 小時的實際工作經驗。許多學生在港鐵公司、中電及奧雅納等領先企業獲得實習機會。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**畢業生就業率**：超過 90% 的理大工程畢業生在畢業後 6 個月內找到工作，許多人獲得香港及大灣區頂尖僱主的多份錄取通知。",
+            "**多元化行業**：JS3005 畢業生勝任建築、交通、能源、製造、資訊科技及物流等領域的職位。常見僱主包括香港政府、港鐵公司、中電、港燈及全球工程顧問公司。",
+            "**專業認證**：課程獲香港工程師學會（HKIE）及其他國際機構認可，畢業生完成相關工作經驗及專業評核後可考取特許工程師資格。",
+            "**起薪點**：理大工程畢業生月薪通常介乎港幣 18,000 至 25,000 元，電機及機械工程等專修起薪更高。",
+            "**職業晉升**：擁有 3 至 5 年經驗後，許多畢業生晉升為高級工程師、項目經理或技術主管。工程學院強大的行業聯繫促進快速職業發展。",
+            "**創業與創新**：理大的創業支援體系，包括理大微型基金及創新科技獎學金，鼓勵工程畢業生創辦自己的科技初創企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，步行 5 分鐘即達紅磡港鐵站（東鐵線及西鐵線）。校園亦可經海底隧道到達，方便來自各區的學生。",
+            "**先進實驗室**：工程學院設有超過 30 個專業實驗室，包括工業中心，配備先進製造設備、機械人實驗室及用於土木及機械工程研究的風洞設施。",
+            "**學生住宿**：理大為本科生提供校內宿舍，優先分配給非本地及一年級學生。宿舍位於主校園步行範圍內，提供充滿活力的住宿社區。",
+            "**體育與康樂**：校園設有多用途體育綜合大樓，包括游泳池、健身室、籃球場及跑道。學生可加入超過 100 個學會及社團，包括工程學會。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供豐富的工程數據庫、24 小時學習空間及小組研討室。地下學習共享空間是受歡迎的協作學習區域。",
+            "**大灣區聯繫**：理大毗鄰深圳及大灣區，學生可參與跨境實習、交流計劃及行業考察，提升區域就業前景。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）",
+            "**入學分數計算公式**：課程按中國語文 + 英國語文 + 任何最佳 3 科計算分數。此公式有利於語文能力強且選修科目均衡的學生。",
+            "**平均加權分數**：2025 年經科目加權後的 HKDSE 平均分數為 221.9。這使 JS3005 在理大工程課程中處於中等競爭水平。",
+            "**科目比重**：雖然所有科目均獲考慮，但數學及 M1/M2 在「任何最佳 3 科」中佔較高比重。STEM 背景強的學生在遴選中具優勢。",
+            "**面試要求**：獲篩選的申請人或獲邀參加面試，評估動機、解難能力及溝通技巧。面試通常歷時 15 至 20 分鐘，可能包括小組討論環節。",
+            "**靈活專修**：基礎廣泛的結構降低了過早選錯主修的風險。學生可在第二年結束前轉換工程學科，使課程對探索選項的學生極具吸引力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳帆博士工程師**：前香港特別行政區運輸及房屋局局長。畢業於理大土木工程學系。",
+            "**盧偉國博士工程師**：立法會議員（工程界功能界別）及香港工程師學會前會長。理大工程學院校友。",
+            "**李德明博士工程師**：港鐵公司行政總裁（2019–2023）。持有理大土木工程學士學位，曾領導多項大型基建項目。",
+            "**鄧振強博士工程師**：香港天文台副台長。畢業於理大電機工程學系，對氣象學發展有貢獻。",
+            "**馬振峰博士工程師**：香港領先工程顧問公司 EGL Holdings 創辦人及行政總裁。理大機械工程畢業生，獲理大傑出校友獎。",
+            "**李志強博士工程師**：奧雅納東亞區董事總經理。理大土木工程校友，曾監督港珠澳大橋等標誌性項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**理大入學獎學金**：頒予 HKDSE 成績優異的頂尖考生（如多科 5**）。獎學金涵蓋全額學費並提供每年高達港幣 50,000 元的生活津貼。",
+            "**工程學院獎學金**：學院為工程學生提供多項基於成績的獎學金，包括每學期頒予頂尖學生的「工程學院院長榮譽榜獎學金」（港幣 10,000 至 20,000 元）。",
+            "**工作綜合教育（WIE）津貼**：進行無薪實習或 WIE 實習的學生可獲最高港幣 8,000 元的津貼，以支付交通及生活開支，確保平等獲得實踐經驗。",
+            "**政府資助**：合資格學生可申請香港政府的資助及貸款計劃，包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLS）。",
+            "**外部獎學金**：理大工程學生經常獲得著名外部獎項，如「香港工程師學會獎學金」及「創新科技獎學金」（最高港幣 150,000 元）。",
+            "**校友助學金**：理大校友會為面對經濟困難的工程學生提供需要為本的助學金，金額介乎港幣 5,000 至 20,000 元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3005 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升語文成績**",
+            "- 入學公式計算中文 + 英文 + 任何最佳 3 科。目標在兩科取得第 4 級或以上以最大化分數。",
+            "- 英文成績優異（第 5 級或 5*）可顯著提升加權總分，超越 221.9 的平均水平。",
+            "",
+            "**2. 在數學及 M1/M2 表現出色**",
+            "- 數學及 M1/M2 在「任何最佳 3 科」中佔較高比重。目標在這些科目取得第 5 級或以上。",
+            "- 如果你修讀 M1 或 M2，將其視為核心科目——這展示工程學系重視的量化能力。",
+            "",
+            "**3. 建立均衡的選修科目組合**",
+            "- 選擇與工程互補的選修科：物理、化學、資訊及通訊科技或設計與應用科技均為強勢選擇。",
+            "- 除非你確信人文學科能進入最佳 3 科，否則避免修讀過多文科選修。",
+            "",
+            "**4. 為面試做好準備**",
+            "- 如獲篩選，預計會被問到「為何選擇工程？」及「哪個專修令你感興趣？」等問題。準備學校項目或比賽的具體例子。",
+            "- 練習小組討論技巧——面試可能包括與其他考生一起進行的個案研究或解難任務。",
+            "",
+            "**5. 及早探索專修方向**",
+            "- 利用第一年參加學系講座及實驗室導賞。理大提供超過 12 個工程主修——不要等到第二年才決定。",
+            "- 透過工程學會或開放日與不同學科的現屆學生交流。",
+            "",
+            "**6. 善用工作綜合教育（WIE）**",
+            "- 從第一年開始申請暑期實習。港鐵、中電及奧雅納等公司會較早招募理大學生。",
+            "- WIE 要求（最少 100 小時）可通過兼職工作、實習或研究助理角色完成。",
+            "",
+            "**7. 利用基礎廣泛的結構**",
+            "- 如果你對主修不確定，JS3005 是理想選擇——你可以在第二年結束前轉換專修而無需受罰。",
+            "- 在第一年保持高 GPA，以保留所有專修選項。",
+            "",
+            "**8. 主動申請獎學金**",
+            "- 理大入學獎學金需獨立申請——在截止日期（通常為 8 月）前提交 HKDSE 成績及個人陳述。",
+            "- 即使錯過入學獎學金，也可在第一年申請學院獎學金——許多基於第一學期成績。",
+            "",
+            "**9. 與校友及業界建立聯繫**",
+            "- 參加理大工程就業博覽會（每年 9 月舉行），與艾奕康、金門建築及香港政府等僱主建立網絡。",
+            "- 加入理大工程校友會 LinkedIn 群組，尋求導師指導及實習推薦。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

@@ -811,37 +811,57 @@ class WritingQuestService {
             
             Student Text Content: "${content}"
 
-            ### 🎯 HKEAA MARKING CRITERIA (1-7 SCALE):
-            Evaluate each pillar on a scale of 1 to 7. Use the following descriptors as your internal anchor:
+            ### OFFICIAL HKEAA WRITING DESCRIPTORS — 0-7 SCALE (Per Domain)
 
-            **1. Content (C) - 7 Marks Max**
-            - **7 (Elite)**: Content is sophisticated and highly relevant. Ideas are extensively developed with significant depth, creativity, or insight. Audience awareness is masterful.
-            - **5 (Strong)**: Content is relevant and well-developed. Ideas are clear and supported with relevant details. Good audience awareness.
-            - **3 (Basic)**: Content is partially relevant. Some development of ideas but lacks depth or becomes repetitive.
-            - **1 (Weak)**: Very limited content. Highly repetitive or irrelevant.
-            *STERN RULE: If length is < 160 words (Part A) or < 320 words (Part B), do NOT award a 7 for Content as development is not sustained.*
+            #### CONTENT (0–7 marks)
+            **7 (Level 5**)**: All bullet points addressed with insight, originality, and flair. Ideas are complex, well-developed, and insightful. Goes beyond the prompt with nuanced arguments.
+            **6 (Level 5*)**: All bullet points addressed clearly. Ideas are well-organized and clearly expressed with some depth. Strong relevance throughout.
+            **5 (Level 5)**: All bullet points addressed. Ideas are clear and effective. Good development with relevant examples. Minor gaps in depth.
+            **4 (Level 4)**: Most bullet points addressed. Ideas are clear but may lack sophistication. Some development present but surface-level.
+            **3 (Level 3)**: Some bullet points addressed. Main points communicated but with significant omissions. Basic development only.
+            **2 (Level 2)**: Few bullet points addressed. Ideas are fragmented or underdeveloped. Limited relevance to the task.
+            **1 (Level 1)**: One or two relevant points. Ideas are barely communicated. Largely off-task or incoherent.
+            **0**: No attempt or completely irrelevant.
 
-            **2. Language (L) - 7 Marks Max**
-            - **7 (Elite)**: Wide range of vocabulary and complex sentence structures used with flair and precision. Extremely high degree of accuracy; errors are rare/minor.
-            - **5 (Strong)**: Good range of vocabulary and structures. Generally accurate; errors do not impede communication.
-            - **3 (Basic)**: Simple vocabulary and structures. Frequent errors in grammar/spelling, though meaning is mostly clear.
-            - **1 (Weak)**: Very limited vocabulary. Frequent errors that significantly obscure meaning.
+            **PENALTIES:**
+            - Missing ANY mandatory bullet point: MAXIMUM 4 for Content.
+            - Off-topic response: MAXIMUM 2 for Content.
+            - Lifting entire phrases from the prompt without reworking: −1 Content.
+            - If length is < 160 words (Part A) or < 320 words (Part B), do NOT award a 7 for Content as development is not sustained.
 
-            **3. Organization (O) - 7 Marks Max**
-            - **7 (Elite)**: Perfectly cohesive and logically structured. Sophisticated use of transitions and connectives. Genre conventions are flawlessly followed.
-            - **5 (Strong)**: Logically organized and cohesive. Effective use of paragraphing and transition devices.
-            - **3 (Basic)**: Basic organization. Some cohesive devices used, but may be mechanical (e.g., Firstly, Secondly).
-            - **1 (Weak)**: Poorly organized. Lacks clear paragraphing or logical flow.
+            #### LANGUAGE (0–7 marks)
+            **7 (Level 5**)**: Sophisticated sentence structures (inversions, cleft sentences, participial phrases). Precise vocabulary with natural collocations. Virtually error-free. Native-like command.
+            **6 (Level 5*)**: Wide range of structures, mostly complex. Impressive vocabulary used naturally. Very few errors.
+            **5 (Level 5)**: Wide range of vocabulary and sentence structures. Communication is clear and effective. Occasional minor errors.
+            **4 (Level 4)**: Language is generally accurate. Uses simple and compound sentences; some complex. Errors do not affect clarity.
+            **3 (Level 3)**: Simple language used correctly. Some fairly complex sentences attempted. Basic vocabulary with repetition. Errors sometimes impede meaning.
+            **2 (Level 2)**: Short and simple sentence types. Frequent grammar and spelling errors. Limited vocabulary; repetitive phrasing.
+            **1 (Level 1)**: Simple basic structures accurate enough to be understood in parts. Very limited vocabulary.
+            **0**: No attempt or unintelligible.
+
+            **PENALTIES:**
+            - Frequent spelling mistakes impeding clarity: −1 to −2 Language.
+            - Inappropriate register (e.g., slang in formal letter): −1 Language.
+
+            #### ORGANIZATION (0–7 marks)
+            **7 (Level 5**)**: Wholly coherent. Seamless transitions. Perfect genre features (e.g., report headers, letter addresses). Logical grouping with sophisticated connectors.
+            **6 (Level 5*)**: Highly coherent. Smooth transitions. Correct genre features. Well-structured paragraphs.
+            **5 (Level 5)**: Coherent throughout. Logical paragraphing. Appropriate genre features. Clear progression of ideas.
+            **4 (Level 4)**: Coherent. Logical paragraphing. Genre features used correctly. Adequate transitions.
+            **3 (Level 3)**: Coherent in parts. Some genre features used correctly. Paragraphing present but uneven. Weak transitions.
+            **2 (Level 2)**: Some evidence of paragraphing. Some genre features used. Weak or absent transitions. Poor grouping of points.
+            **1 (Level 1)**: Basic genre features used. One or two links between sentences. Little coherent structure.
+            **0**: No structure.
 
             ### 📝 MARKER'S MANDATE:
-            1. **Predicted Level**: Predict an overall HKDSE Level (1 to 5**). A Level 5** MUST show "flair" and "sophisticated control." If the writing is merely "correct" but lacks impact, cap it at Level 4 or 5.
-            2. **Hotspots**: Identify 3-4 specific substrings that need improvement. 
+            1. **Predicted Level**: Predict an overall HKDSE Level (1 to 5**). Use the FULL 0-7 range. A Level 5** MUST show "flair" and "sophisticated control." Most average students should score 3-4. Strong students 5-6. Only exceptional students 7.
+            2. **Hotspots**: Identify 3-4 specific substrings that need improvement.
                - "original_phrase": EXACT substring from student work.
                - "improved_phrase": Refined version in DSE 5** style.
                - "explanation": { "en": "...", "zh": "..." } - Linguistic reason for change.
             3. **Model Answer**: Provide a FULL-LENGTH 5** model answer (450+ words).
             4. **High Score Tips**: Provide 3 tactical "Marker's Favorites" that would elevate this specific piece.
-            
+
             ### ABSOLUTE RULES:
             - BILINGUAL: ALL qualitative fields (feedback, summaries, tips) MUST contain both "en" and "zh" objects.
             - CHINESE: EXCLUSIVELY use Traditional Chinese (繁體中文).

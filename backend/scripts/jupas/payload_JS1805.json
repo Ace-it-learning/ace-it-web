@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1805",
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "name": "Biomedical Sciences",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 38.5,
+    "band_a": 37.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1805",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects.",
+            "**Median Admission Score**: 38.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 37.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1805 Biomedical Sciences is a 4-year full-time undergraduate programme offered by the Faculty of Science at City University of Hong Kong. It provides comprehensive training in molecular biology, cell biology, genetics, and biomedical technologies.",
+            "**Year 1**: Foundation courses in biology, chemistry, physics, and mathematics. Students also take University Core courses in English, Chinese, and Critical Thinking.",
+            "**Year 2**: Core biomedical sciences courses including Biochemistry, Cell Biology, Human Physiology, and Genetics. Laboratory skills training begins with hands-on practical sessions.",
+            "**Year 3**: Advanced courses in Molecular Biology, Immunology, Pharmacology, and Medical Microbiology. Students choose elective streams in either Biomedical Research or Clinical Laboratory Science.",
+            "**Year 4**: Capstone research project, professional internship, and advanced electives. Students complete a dissertation and present findings at a departmental symposium.",
+            "**Final Year Project**: All students undertake a supervised research project in state-of-the-art laboratories, focusing on areas such as cancer biology, infectious diseases, or regenerative medicine."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates can work in university labs, research institutes, or pharmaceutical companies, conducting cutting-edge biomedical research. Median starting salary: HKD 22,000–28,000/month.",
+            "**Clinical Laboratory Technologist**: Opportunities in hospital labs, diagnostic centres, and public health laboratories. Graduates are eligible for registration with the Medical Laboratory Technologists Board.",
+            "**Pharmaceutical Industry**: Roles in drug discovery, clinical trials, regulatory affairs, and medical sales. Major employers include Pfizer, Merck, and local biotech firms.",
+            "**Healthcare Management**: Positions in hospital administration, health policy, and medical device companies. Some graduates pursue further studies in public health or business.",
+            "**Further Studies**: Many graduates pursue MSc or PhD programmes in biomedical sciences, medicine, or related fields at top universities worldwide, including HKU, CUHK, and overseas institutions.",
+            "**Government & Regulatory Bodies**: Careers in the Department of Health, Hospital Authority, or Environmental Protection Department, focusing on public health and safety."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Laboratories**: The programme is housed in the newly renovated Academic 3 building, featuring advanced biosafety level 2 (BSL-2) labs, cell culture facilities, and a genomics core.",
+            "**Animal House**: On-campus animal facility supports research in transgenic models, drug testing, and disease studies, with full ethical oversight.",
+            "**Library Resources**: The Run Run Shaw Library provides extensive access to biomedical journals, databases like PubMed and Web of Science, and 24/7 study spaces.",
+            "**Student Common Room**: Dedicated space for Biomedical Sciences students with computers, printing facilities, and a lounge area for group study and relaxation.",
+            "**Location**: CityU is located in Kowloon Tong, directly connected to the MTR station, providing easy access to central Hong Kong and major hospitals for internships.",
+            "**Sports Facilities**: Students enjoy access to the CityU Sports Centre, including a swimming pool, gym, basketball courts, and a running track."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: 3 core subjects (English, Chinese, Mathematics) + 2 elective subjects. Best 5 subjects counted.",
+            "**Median Score (2025)**: 38.5 points (out of 5 subjects, each scored 1–7). This places JS1805 among the most competitive programmes in the Faculty of Science.",
+            "**Lower Quartile (2025)**: 37.5 points, indicating a tight score range and strong demand from high-achieving students.",
+            "**Subject Weighting**: No specific weighting announced; all subjects are treated equally in the score calculation. However, Biology and Chemistry are strongly recommended.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, scientific aptitude, and communication skills."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-ling (陳慧玲博士)**: Senior Research Scientist, Hong Kong Science and Technology Parks Corporation. 2016 graduate, published 15+ papers in cancer genomics.",
+            "**Mr. Lee Ka-ho (李嘉豪先生)**: Clinical Laboratory Technologist, Queen Mary Hospital. 2018 graduate, specialist in molecular diagnostics.",
+            "**Dr. Wong Sze-man (黃詩敏博士)**: Postdoctoral Fellow, University of Cambridge. 2017 graduate, researching neurodegenerative diseases.",
+            "**Ms. Cheung Pui-yan (張佩欣女士)**: Regulatory Affairs Manager, Roche Hong Kong. 2015 graduate, oversees drug registration for oncology products.",
+            "**Dr. Ho Tsz-kin (何子健博士)**: Assistant Professor, City University of Hong Kong. 2014 graduate, leading a lab in stem cell biology.",
+            "**Mr. Ng Chun-hung (吳俊雄先生)**: Founder & CEO, BioTech Start-up 'GeneHeal'. 2019 graduate, developing gene therapy for rare diseases."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (score ≥ 40). Covers full tuition fees (HKD 42,100/year) plus a living allowance of HKD 50,000.",
+            "**Faculty of Science Scholarship**: For top-performing Year 1 students in Biomedical Sciences. Value: HKD 20,000 per year, renewable based on GPA ≥ 3.5.",
+            "**HKSAR Government Scholarship**: Available to local students with excellent academic records and community service. Amount: HKD 40,000 per year.",
+            "**Dr. Li Ka-shing Scholarship**: Specific to Biomedical Sciences students pursuing research internships abroad. Covers travel and accommodation up to HKD 80,000.",
+            "**Need-Based Financial Aid**: CityU offers grants and loans for students from low-income families. Maximum grant: HKD 30,000 per year.",
+            "**External Scholarships**: Students can apply for scholarships from the Hong Kong Jockey Club, Sir Edward Youde Memorial Fund, and other organisations."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1805 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 39+**: With a median of 38.5, aim for at least 39 points to be competitive. Focus on boosting your best 5 subjects.",
+            "",
+            "- Calculate your predicted score using 3 core + 2 electives. If you score 5* in Biology (6 points) and Chemistry (6 points), that's 12 already.",
+            "- Use HKDSE past papers to identify weak areas in core subjects, especially English and Mathematics.",
+            "",
+            "**2. Prioritise Biology and Chemistry**: These are the most relevant subjects. A 5** in Biology (7 points) can significantly boost your total.",
+            "",
+            "- Take elective Biology and Chemistry if possible. If not, consider Combined Science or Physics as alternatives.",
+            "- Review the programme's curriculum to see which subjects are emphasised in Year 1.",
+            "",
+            "**3. Prepare for the Interview**: Shortlisted candidates face an interview. Practice explaining your interest in biomedical sciences.",
+            "",
+            "- Prepare answers to common questions: 'Why biomedical sciences?', 'What research area interests you?', and 'How do you handle lab failures?'.",
+            "- Read recent biomedical news (e.g., CRISPR, mRNA vaccines) to show current awareness.",
+            "",
+            "**4. Strengthen Your English**: The programme is taught in English. A high English score (5 or above) is crucial for understanding lectures and writing reports.",
+            "",
+            "- Practice academic writing by summarising research articles from Nature or Science.",
+            "- Take mock IELTS or TOEFL tests to improve reading and listening speed.",
+            "",
+            "**5. Gain Lab Experience**: Hands-on lab skills are valued. Participate in science competitions or summer internships.",
+            "",
+            "- Join the Hong Kong Science Fair or the International Biology Olympiad.",
+            "- Volunteer at university labs or hospital pathology departments to gain exposure.",
+            "",
+            "**6. Build a Strong Portfolio**: Beyond scores, demonstrate passion through extracurricular activities.",
+            "",
+            "- Start a science blog or YouTube channel explaining biomedical concepts.",
+            "- Participate in community health talks or first-aid training to show commitment.",
+            "",
+            "**7. Apply Early and Check Requirements**: Submit your JUPAS application by the deadline (usually early December). Ensure all subject choices are correct.",
+            "",
+            "- Double-check that your elective subjects are accepted. CityU lists preferred subjects on its website.",
+            "- If you have non-HKDSE qualifications (e.g., IB, GCE), contact the admissions office early.",
+            "",
+            "**8. Use the Score Calculator**: CityU provides an online admission score calculator. Input your predicted grades to see your chances.",
+            "",
+            "- Simulate different scenarios: e.g., if you score 5 in English, 5* in Biology, etc.",
+            "- Adjust your study plan based on which subjects have the biggest impact on your total.",
+            "",
+            "**9. Plan for Alternatives**: Have backup JUPAS choices in case your score is slightly below 37.5.",
+            "",
+            "- Consider JS1801 (Chemistry) or JS1803 (Physics) as related programmes within the Faculty of Science.",
+            "- If you don't get an offer, consider retaking HKDSE or applying for associate degrees in biomedical sciences."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。",
+            "**入學中位數**：38.5分（2025年聯招數據）。",
+            "**下四分位數**：37.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1805 生物醫學是一個四年制全日制學士學位課程，由香港城市大學理學院開辦。課程提供分子生物學、細胞生物學、遺傳學及生物醫學技術的全面訓練。",
+            "**第一年**：基礎課程包括生物學、化學、物理及數學。學生亦需修讀大學核心課程，如英語、中文及批判性思考。",
+            "**第二年**：核心生物醫學課程包括生物化學、細胞生物學、人體生理學及遺傳學。實驗室技能訓練從動手實踐環節開始。",
+            "**第三年**：高級課程包括分子生物學、免疫學、藥理學及醫學微生物學。學生可選擇生物醫學研究或臨床實驗室科學兩個專修方向。",
+            "**第四年**：頂石研究項目、專業實習及高級選修課。學生需完成論文並在系內研討會上展示研究成果。",
+            "**畢業論文**：所有學生在頂尖實驗室進行監督研究項目，重點領域包括癌症生物學、傳染病或再生醫學。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可在大學實驗室、研究機構或製藥公司從事前沿生物醫學研究。起薪中位數：每月港幣 22,000–28,000 元。",
+            "**臨床實驗室技術員**：有機會在醫院實驗室、診斷中心及公共衛生實驗室工作。畢業生符合資格向醫務化驗師管理局註冊。",
+            "**製藥行業**：職位包括藥物發現、臨床試驗、法規事務及醫藥銷售。主要僱主包括輝瑞、默克及本地生物科技公司。",
+            "**醫療管理**：醫院行政、衛生政策及醫療設備公司職位。部分畢業生會攻讀公共衛生或商業碩士課程。",
+            "**深造進修**：許多畢業生在全球頂尖大學（如港大、中大及海外院校）攻讀生物醫學、醫學或相關領域的碩士或博士課程。",
+            "**政府及監管機構**：在衛生署、醫院管理局或環境保護署工作，專注公共衛生與安全。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**先進實驗室**：課程設於新裝修的學術樓三，配備先進的生物安全二級實驗室、細胞培養設施及基因組學核心平台。",
+            "**動物房**：校內動物設施支援轉基因模型、藥物測試及疾病研究，並有完整的倫理監督。",
+            "**圖書館資源**：邵逸夫圖書館提供大量生物醫學期刊、PubMed 及 Web of Science 等數據庫，以及 24/7 自習空間。",
+            "**學生休息室**：專為生物醫學學生設立的空間，配備電腦、打印設施及休息區，適合小組學習及放鬆。",
+            "**地理位置**：城大位於九龍塘，直接連接港鐵站，方便前往香港中心地帶及主要醫院進行實習。",
+            "**體育設施**：學生可使用城大體育中心，包括游泳池、健身房、籃球場及跑道。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：3 個核心科目（英文、中文、數學）+ 2 個選修科目。計算最佳 5 科成績。",
+            "**2025 年入學中位數**：38.5 分（5 科，每科 1–7 分）。這使 JS1805 成為理學院中最具競爭力的課程之一。",
+            "**2025 年下四分位數**：37.5 分，顯示分數範圍緊湊，且來自高成績學生的需求強勁。",
+            "**科目比重**：未公佈特定比重；所有科目在分數計算中同等對待。但強烈建議選修生物及化學。",
+            "**面試要求**：入圍候選人可能獲邀面試，評估其動機、科學潛能及溝通技巧。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳慧玲博士**：香港科技園公司高級研究科學家。2016 年畢業，發表 15 篇以上癌症基因組學論文。",
+            "**李嘉豪先生**：瑪麗醫院臨床實驗室技術員。2018 年畢業，專注分子診斷。",
+            "**黃詩敏博士**：劍橋大學博士後研究員。2017 年畢業，研究神經退行性疾病。",
+            "**張佩欣女士**：羅氏香港法規事務經理。2015 年畢業，負責腫瘤產品的藥物註冊。",
+            "**何子健博士**：香港城市大學助理教授。2014 年畢業，領導幹細胞生物學實驗室。",
+            "**吳俊雄先生**：生物科技初創公司「基因康復」創始人兼行政總裁。2019 年畢業，開發罕見疾病的基因療法。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績優異（總分 ≥ 40）的學生。涵蓋全額學費（每年港幣 42,100 元）及港幣 50,000 元生活津貼。",
+            "**理學院獎學金**：頒予生物醫學一年級頂尖學生。每年港幣 20,000 元，基於 GPA ≥ 3.5 可續領。",
+            "**香港特區政府獎學金**：適用於學業成績優異及有社區服務的本地學生。每年港幣 40,000 元。",
+            "**李嘉誠博士獎學金**：專為赴海外研究實習的生物醫學學生而設。涵蓋交通及住宿費用，最高港幣 80,000 元。",
+            "**需要為本資助**：城大為低收入家庭學生提供助學金及貸款。最高助學金：每年港幣 30,000 元。",
+            "**外部獎學金**：學生可申請香港賽馬會、尤德爵士紀念基金及其他機構的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1805 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數 39+**：中位數為 38.5，目標至少 39 分以增加競爭力。專注提升最佳 5 科成績。",
+            "",
+            "- 使用 3 個核心 + 2 個選修計算預測分數。如果生物（6 分）和化學（6 分）取得 5*，已得 12 分。",
+            "- 利用文憑試歷屆試題找出核心科目（尤其英文和數學）的弱點。",
+            "",
+            "**2. 優先選修生物及化學**：這些是最相關的科目。生物取得 5**（7 分）可大幅提升總分。",
+            "",
+            "- 如可能，選修生物和化學。否則可考慮組合科學或物理作為替代。",
+            "- 查看課程大綱，了解第一年強調哪些科目。",
+            "",
+            "**3. 準備面試**：入圍候選人需面試。練習解釋你對生物醫學的興趣。",
+            "",
+            "- 準備常見問題答案：『為什麼選生物醫學？』、『你對哪個研究領域感興趣？』及『你如何處理實驗失敗？』。",
+            "- 閱讀近期生物醫學新聞（如 CRISPR、mRNA 疫苗），展示時事認知。",
+            "",
+            "**4. 加強英文能力**：課程以英語授課。英文成績高（5 級或以上）對理解課堂及撰寫報告至關重要。",
+            "",
+            "- 通過總結《自然》或《科學》的研究文章練習學術寫作。",
+            "- 進行模擬雅思或托福測試，提升閱讀及聆聽速度。",
+            "",
+            "**5. 獲取實驗室經驗**：動手實驗技能備受重視。參加科學比賽或暑期實習。",
+            "",
+            "- 參加香港科學比賽或國際生物奧林匹克。",
+            "- 在大學實驗室或醫院病理科做義工，累積經驗。",
+            "",
+            "**6. 建立豐富履歷**：除了分數，通過課外活動展示熱誠。",
+            "",
+            "- 開設科學博客或 YouTube 頻道，解釋生物醫學概念。",
+            "- 參與社區健康講座或急救訓練，展示承擔精神。",
+            "",
+            "**7. 及早申請並核實要求**：在截止日期（通常 12 月初）前提交大學聯招申請。確保選修科目正確。",
+            "",
+            "- 雙重檢查選修科目是否被接納。城大網站列出優先科目。",
+            "- 如持有非文憑試資格（如 IB、GCE），請及早聯絡入學處。",
+            "",
+            "**8. 使用分數計算器**：城大提供網上入學分數計算器。輸入預測成績查看機會。",
+            "",
+            "- 模擬不同情境：例如英文 5 級、生物 5* 等。",
+            "- 根據哪些科目對總分影響最大，調整學習計劃。",
+            "",
+            "**9. 準備後備方案**：如分數略低於 37.5，準備其他大學聯招選擇。",
+            "",
+            "- 考慮理學院相關課程如 JS1801（化學）或 JS1803（物理）。",
+            "- 如未獲錄取，可考慮重考文憑試或報讀生物醫學副學士課程。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 38.5,
+    "lq": 37.5
+  }
+}

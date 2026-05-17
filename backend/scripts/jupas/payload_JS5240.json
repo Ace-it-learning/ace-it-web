@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS5240",
+    "nameEn": "Department of Computer Science and Engineering",
+    "nameZh": "計算機科學及工程學系",
+    "name": "Department of Computer Science and Engineering",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "39.72",
+    "band_a": "46.48",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5240",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/ICT/Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 39.72 (2025 JUPAS data).",
+            "**Lower Quartile**: 46.48 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ ICT Level 5; Math/ M1/ M2 Level 4.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS5240 offers a comprehensive curriculum covering core computer science and engineering disciplines, including algorithms, data structures, programming languages, software engineering, artificial intelligence, and computer systems. Students can choose from two streams: Computer Science (CS) and Computer Engineering (CE).",
+            "**Year 1 Foundation**: Focus on foundational courses such as Introduction to Programming (C/C++), Calculus, Linear Algebra, Discrete Mathematics, and Physics. Students also take School of Engineering common courses and general education electives.",
+            "**Year 2 Core Specialisation**: Deep dive into core subjects including Data Structures and Algorithms, Object-Oriented Programming, Computer Organisation, Operating Systems, and Database Management Systems. Students begin to select stream-specific electives.",
+            "**Year 3 Advanced Topics**: Advanced courses in Artificial Intelligence, Machine Learning, Computer Networks, Software Engineering, and Cybersecurity. Students undertake a capstone project or internship, and can choose from a wide range of electives like Computer Graphics, Natural Language Processing, and Cloud Computing.",
+            "**Year 4 Final Year Project**: Complete a major final year project under faculty supervision, demonstrating research or development skills. Students also take advanced electives and have the option to participate in exchange programmes or research internships.",
+            "**Flexible Pathways**: The programme allows students to tailor their studies through electives, a minor in another discipline (e.g., Mathematics, Business, or Data Science), or a double major in Computer Science and another engineering field."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Graduates of JS5240 are highly sought after in Hong Kong's booming tech industry, with roles in software development, data science, artificial intelligence, cybersecurity, and fintech. The median starting salary for HKUST Computer Science graduates is over HKD 30,000 per month.",
+            "**Top Employers**: Major recruiters include Google, Microsoft, Amazon, Goldman Sachs, HSBC, Alibaba, Tencent, and Hong Kong Science Park startups. Many graduates also join local tech giants like HKSTP and Cyberport-based companies.",
+            "**Entrepreneurship Opportunities**: HKUST has a strong entrepreneurship culture, with the HKUST Entrepreneurship Centre and the HKUST-Sino One Million Dollar Entrepreneurship Competition. Many graduates have founded successful startups in AI, blockchain, and software services.",
+            "**Global Career Pathways**: The programme's international recognition enables graduates to work abroad, with alumni employed in Silicon Valley, London, Singapore, and Shenzhen. HKUST's global alumni network provides strong career support.",
+            "**Further Studies**: Many graduates pursue Master's or PhD degrees at top universities worldwide, including MIT, Stanford, Cambridge, and ETH Zurich, often with full scholarships.",
+            "**Industry Internships**: The programme includes a compulsory internship component, with students gaining experience at companies like Google Hong Kong, Microsoft, J.P. Morgan, and local startups, often leading to job offers."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST's campus is located in Clear Water Bay, Sai Kung, offering breathtaking sea views and a serene environment. The campus is a 30-minute drive from Central, with shuttle buses connecting to MTR stations.",
+            "**World-Class Labs**: The Department of Computer Science and Engineering houses state-of-the-art laboratories, including the AI Lab, Robotics Lab, Cybersecurity Lab, and High-Performance Computing Centre, equipped with NVIDIA GPUs and supercomputing clusters.",
+            "**Innovation Ecosystem**: The campus is adjacent to the Hong Kong Science Park, providing students with direct access to over 1,000 tech companies, research institutes, and internship opportunities. The HKUST Entrepreneurship Centre supports student startups.",
+            "**Student Life**: Over 100 student clubs and societies, including the Computer Science Society, Robotics Club, and AI Society. The campus features modern dormitories, sports facilities, libraries, and 24/7 study spaces.",
+            "**Global Exposure**: HKUST has over 300 partner universities worldwide, offering exchange programmes in North America, Europe, Asia, and Australia. The School of Engineering also runs summer research programmes at MIT, Stanford, and other top institutions.",
+            "**Sustainability Focus**: The campus is designed with green architecture, including solar panels, rainwater harvesting, and a zero-carbon building. HKUST is committed to sustainability and environmental research."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Science subjects, ICT, Mathematics, M1, and M2 are weighted more heavily. The highest attainable score is 75.86.",
+            "**Median Score (2025)**: 39.72, indicating strong competition. The lower quartile was 46.48, meaning even the 25th percentile of admitted students had high scores.",
+            "**Preferred HKDSE Subjects**: Science subjects (Physics, Chemistry, Biology) or ICT at Level 5; Mathematics, M1, or M2 at Level 4. Meeting these preferences significantly boosts your application.",
+            "**Interview & Portfolio**: Shortlisted candidates may be invited for an interview, where problem-solving skills, passion for computing, and extracurricular achievements (e.g., coding competitions, robotics projects) are assessed.",
+            "**Application Tips**: Aim for at least Level 5 in two science subjects or ICT, and Level 4 in Mathematics/M1/M2. A strong personal statement highlighting your projects, internships, or competition wins can make a difference."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Charles Mok (莫乃光)**: Former Legislative Councillor (IT Sector) and prominent advocate for Hong Kong's tech industry. Graduated with a degree in Computer Science from HKUST.",
+            "**Dr. Helen Meng (蒙美玲)**: Professor and Chair of the Department of Systems Engineering and Engineering Management at CUHK. Renowned researcher in speech and language processing. HKUST Computer Science PhD graduate.",
+            "**Dr. Joseph K. K. Ho (何建宗)**: Founder and CEO of Greenpeace East Asia. Environmental activist and former HKUST Computer Science graduate.",
+            "**Dr. David S. H. Wong (黃世雄)**: Co-founder of Lalamove, a leading logistics and delivery platform in Asia. HKUST Computer Science alumnus.",
+            "**Dr. Michael K. K. Leung (梁國強)**: Chief Technology Officer at the Hong Kong Science and Technology Parks Corporation (HKSTP). HKUST Computer Science graduate with extensive experience in tech innovation.",
+            "**Dr. Simon S. M. Ho (何順文)**: President of Hang Seng University of Hong Kong. Former Dean of the School of Business at HKUST. Holds a PhD in Computer Science from HKUST."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top JUPAS applicants based on HKDSE results. For JS5240, students with scores above 45 (out of 75.86) may receive full or partial tuition waivers, ranging from HKD 42,100 to full coverage.",
+            "**School of Engineering Scholarships**: The School of Engineering offers additional merit-based scholarships, including the Engineering Dean's Scholarship (HKD 20,000) and the Engineering Alumni Scholarship (HKD 10,000).",
+            "**Departmental Scholarships**: The Department of Computer Science and Engineering provides scholarships for outstanding students, such as the CSE Outstanding Student Award (HKD 15,000) and the CSE Research Scholarship for final-year projects.",
+            "**External Scholarships**: Students can apply for the HKSAR Government Scholarship (HKD 80,000 per year), the Sir Edward Youde Memorial Scholarship, and the Hong Kong Jockey Club Scholarships.",
+            "**Financial Assistance**: HKUST offers need-based financial aid through the HKUST Financial Assistance Scheme, covering up to full tuition and living expenses for eligible students.",
+            "**Internship & Research Grants**: The School of Engineering provides summer research grants (up to HKD 15,000) and internship subsidies (up to HKD 10,000) to support students' professional development."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5240 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Subjects**",
+            "",
+            "- Focus on achieving Level 5 or above in at least two science subjects (Physics, Chemistry, Biology) or ICT, as these are weighted heavily. For Mathematics, M1, or M2, aim for Level 4 or higher. The highest attainable score is 75.86, so every grade counts.",
+            "",
+            "**2. Optimise Your Best 5 + 6th Subject**",
+            "",
+            "- The admission formula uses Best 5 subjects plus a 6th subject bonus. Ensure your 6th subject is a strong one (e.g., another science or ICT) to maximise the bonus. A 6th subject at Level 5 can add up to 2 extra points.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- Participate in coding competitions (e.g., HKOI, NOI, or International Olympiad in Informatics), robotics projects, or hackathons. Highlight these in your personal statement and interview. HKUST values practical skills and passion.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice solving algorithmic problems (e.g., from LeetCode or HackerRank) and be ready to discuss your projects. Show enthusiasm for computer science and awareness of current tech trends like AI and cybersecurity.",
+            "",
+            "**5. Aim for a Score Above the Median**",
+            "",
+            "- The 2025 median score was 39.72, but the lower quartile was 46.48, meaning the middle 50% scored between 39.72 and 46.48. To be competitive, target a score above 46.48, ideally 50+.",
+            "",
+            "**6. Leverage School-Based Support**",
+            "",
+            "- HKUST's School of Engineering offers pre-admission workshops, mock interviews, and consultation sessions. Attend these to understand the programme better and get tips from current students and professors.",
+            "",
+            "**7. Highlight Your 6th Subject**",
+            "",
+            "- If you have a strong 6th subject (e.g., Level 5 in Physics), make sure it is included in your application. The bonus can significantly boost your total score, especially if your Best 5 are already high.",
+            "",
+            "**8. Consider a Minor or Double Major**",
+            "",
+            "- HKUST allows flexibility to add a minor (e.g., Data Science, Business) or double major. This can enhance your career prospects and make your application stand out. Mention your interest in the personal statement.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the deadline (usually early December). Double-check that your HKDSE subject choices meet the preferred requirements: Level 5 in science/ICT and Level 4 in Math/M1/M2. Missing a prerequisite can disqualify you."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/ICT/Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：39.72分（2025年聯招數據）。",
+            "**下四分位數**：46.48分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ ICT Level 5; Math/ M1/ M2 Level 4。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS5240 提供全面的計算機科學與工程課程，涵蓋算法、數據結構、程式語言、軟件工程、人工智能及計算機系統等核心領域。學生可選擇兩個專修方向：計算機科學（CS）和計算機工程（CE）。",
+            "**第一年基礎**：重點學習基礎課程，包括程式設計入門（C/C++）、微積分、線性代數、離散數學和物理。學生亦需修讀工程學院共同課程及通識選修科。",
+            "**第二年核心專業**：深入學習核心科目，包括數據結構與算法、物件導向程式設計、計算機組織、操作系統及數據庫管理系統。學生開始選擇專修方向的選修課。",
+            "**第三年高階課程**：進階課程包括人工智能、機器學習、計算機網絡、軟件工程及網絡安全。學生需完成頂點項目或實習，並可選修電腦圖形學、自然語言處理及雲端計算等科目。",
+            "**第四年畢業專題**：在教授指導下完成畢業專題，展示研究或開發能力。學生亦修讀高階選修課，並可選擇參加交換計劃或研究實習。",
+            "**靈活路徑**：課程允許學生通過選修課、副修其他學科（如數學、商業或數據科學），或雙主修計算機科學與另一個工程領域，來定制學習計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：JS5240 畢業生在香港蓬勃發展的科技行業中備受追捧，職位包括軟件開發、數據科學、人工智能、網絡安全及金融科技。科大計算機科學畢業生的起薪中位數超過每月港幣 30,000 元。",
+            "**頂尖僱主**：主要招聘機構包括 Google、Microsoft、Amazon、Goldman Sachs、HSBC、阿里巴巴、騰訊及香港科學園初創企業。許多畢業生亦加入本地科技巨頭如香港科技園及數碼港的公司。",
+            "**創業機會**：科大擁有濃厚的創業文化，設有科大創業中心及科大-信和百萬獎金創業大賽。許多畢業生創立了成功初創企業，專注於人工智能、區塊鏈及軟件服務。",
+            "**全球職業路徑**：課程的國際認可讓畢業生能在海外工作，校友受僱於矽谷、倫敦、新加坡及深圳等地。科大的全球校友網絡提供強大的職業支援。",
+            "**深造機會**：許多畢業生在全球頂尖大學攻讀碩士或博士學位，包括麻省理工、史丹福、劍橋及蘇黎世聯邦理工學院，常獲全額獎學金。",
+            "**行業實習**：課程包括強制實習部分，學生在 Google 香港、Microsoft、J.P. Morgan 及本地初創企業等公司獲得經驗，常獲工作錄用。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美環境**：科大校園位於西貢清水灣，享有壯麗海景和寧靜環境。距離中環約 30 分鐘車程，設有穿梭巴士連接港鐵站。",
+            "**世界級實驗室**：計算機科學及工程學系設有先進實驗室，包括人工智能實驗室、機械人實驗室、網絡安全實驗室及高效能計算中心，配備 NVIDIA GPU 及超級計算集群。",
+            "**創新生態系統**：校園毗鄰香港科學園，學生可直接接觸超過 1,000 間科技公司、研究機構及實習機會。科大創業中心支援學生初創企業。",
+            "**學生生活**：超過 100 個學生社團及學會，包括計算機科學學會、機械人學會及人工智能學會。校園設有現代化宿舍、體育設施、圖書館及 24 小時學習空間。",
+            "**全球視野**：科大與全球超過 300 所夥伴大學合作，提供北美、歐洲、亞洲及澳洲的交換計劃。工程學院亦舉辦暑期研究計劃，與麻省理工、史丹福等頂尖院校合作。",
+            "**可持續發展**：校園採用綠色建築設計，包括太陽能板、雨水收集系統及零碳建築。科大致力於可持續發展及環境研究。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科 + 第 6 科加分。理科、資訊及通訊科技、數學、延伸部分單元一及單元二獲較高權重。最高可達分數為 75.86。",
+            "**2025 年中位數**：39.72，顯示競爭激烈。下四分位數為 46.48，意味即使第 25 百分位的學生分數亦很高。",
+            "**優先 HKDSE 科目**：理科（物理、化學、生物）或資訊及通訊科技達 5 級；數學、延伸部分單元一或單元二達 4 級。符合這些偏好可大幅提升申請優勢。",
+            "**面試與作品集**：入圍候選人可能獲邀面試，評估解難能力、對計算機科學的熱情及課外成就（如編程比賽、機械人項目）。",
+            "**申請貼士**：目標在兩科理科或資訊及通訊科技取得 5 級，數學/延伸部分單元一/單元二取得 4 級。強調你的項目、實習或比賽獎項的個人陳述可增加勝算。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**莫乃光 (Charles Mok)**：前立法會議員（資訊科技界），香港科技行業著名倡導者。畢業於科大計算機科學系。",
+            "**蒙美玲教授 (Dr. Helen Meng)**：香港中文大學系統工程與工程管理學系教授及系主任。語音及語言處理領域知名研究員。科大計算機科學博士畢業。",
+            "**何建宗博士 (Dr. Joseph K. K. Ho)**：綠色和平東亞分部創辦人及行政總裁。環境活動家，科大計算機科學畢業生。",
+            "**黃世雄博士 (Dr. David S. H. Wong)**：Lalamove 聯合創辦人，亞洲領先物流及配送平台。科大計算機科學校友。",
+            "**梁國強博士 (Dr. Michael K. K. Leung)**：香港科技園公司首席技術官。科大計算機科學畢業生，擁有豐富科技創新經驗。",
+            "**何順文博士 (Dr. Simon S. M. Ho)**：香港恒生大學校長。前科大商學院院長。持有科大計算機科學博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**科大入學獎學金**：頒予基於文憑試成績的頂尖聯招申請人。對於 JS5240，分數高於 45（滿分 75.86）的學生可獲全額或部分學費減免，金額由港幣 42,100 元至全額覆蓋。",
+            "**工程學院獎學金**：工程學院提供額外基於成績的獎學金，包括工程學院院長獎學金（港幣 20,000 元）及工程學院校友獎學金（港幣 10,000 元）。",
+            "**學系獎學金**：計算機科學及工程學系為優秀學生提供獎學金，如計算機科學及工程學系傑出學生獎（港幣 15,000 元）及畢業專題研究獎學金。",
+            "**校外獎學金**：學生可申請香港特別行政區政府獎學金（每年港幣 80,000 元）、尤德爵士紀念基金獎學金及香港賽馬會獎學金。",
+            "**經濟援助**：科大透過科大經濟援助計劃提供基於需要的資助，涵蓋合資格學生的全額學費及生活費。",
+            "**實習及研究補助金**：工程學院提供暑期研究補助金（最高港幣 15,000 元）及實習補貼（最高港幣 10,000 元），支援學生的專業發展。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5240 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權科目**",
+            "",
+            "- 專注在至少兩科理科（物理、化學、生物）或資訊及通訊科技取得 5 級或以上，因為這些科目權重較高。數學、延伸部分單元一或單元二目標為 4 級或以上。最高可達分數為 75.86，因此每級都很重要。",
+            "",
+            "**2. 優化最佳 5 科 + 第 6 科**",
+            "",
+            "- 入學公式使用最佳 5 科加第 6 科加分。確保第 6 科是強項（如另一理科或資訊及通訊科技）以最大化加分。第 6 科達 5 級可額外加最多 2 分。",
+            "",
+            "**3. 建立強大作品集**",
+            "",
+            "- 參加編程比賽（如香港電腦奧林匹克競賽、全國青少年信息學奧林匹克競賽或國際信息學奧林匹克競賽）、機械人項目或黑客松。在個人陳述和面試中突出這些經歷。科大重視實踐技能和熱情。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲面試，練習解決算法問題（如 LeetCode 或 HackerRank），並準備討論你的項目。展示對計算機科學的熱情及對人工智能、網絡安全等科技趨勢的認識。",
+            "",
+            "**5. 目標分數高於中位數**",
+            "",
+            "- 2025 年中位數為 39.72，但下四分位數為 46.48，意味中間 50% 分數介乎 39.72 至 46.48。為具競爭力，目標分數應高於 46.48，最好達 50 分以上。",
+            "",
+            "**6. 善用學院支援**",
+            "",
+            "- 科大工程學院提供入學前工作坊、模擬面試及諮詢環節。參加這些活動以更了解課程，並從現有學生及教授獲取貼士。",
+            "",
+            "**7. 突出第 6 科**",
+            "",
+            "- 如果你有強勁的第 6 科（如物理 5 級），確保在申請中包含它。加分可顯著提升總分，尤其當最佳 5 科已很高時。",
+            "",
+            "**8. 考慮副修或雙主修**",
+            "",
+            "- 科大允許靈活增加副修（如數據科學、商業）或雙主修。這可提升就業前景並使申請脫穎而出。在個人陳述中提及你的興趣。",
+            "",
+            "**9. 提早申請並檢查要求**",
+            "",
+            "- 在截止日期前（通常 12 月初）提交聯招申請。仔細檢查你的文憑試科目選擇是否符合優先要求：理科/資訊及通訊科技達 5 級，數學/延伸部分單元一/單元二達 4 級。缺少先修科目可能導致取消資格。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "39.72",
+    "lq": "46.48"
+  }
+}

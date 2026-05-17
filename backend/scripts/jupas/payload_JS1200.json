@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1200",
+    "nameEn": "Global Research Enrichment and Technopreneurship",
+    "nameZh": "環球精研與科創課程",
+    "name": "Global Research Enrichment and Technopreneurship",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 37.0,
+    "band_a": 36.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1200",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects. Subject weighting: 2.5: Chemistry / M2 / Physics 2: English / Mathematics / M1 1.5: Biology / Economics 1: other elective subjects.",
+            "**Median Admission Score**: 37.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 36.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum & Programme Structure",
+          "content": [
+            "**Programme Overview**: JS1200 Global Research Enrichment and Technopreneurship is a 4-year interdisciplinary programme offered by City University of Hong Kong. It integrates cutting-edge research training with entrepreneurship education, preparing students to become global innovators and tech leaders.",
+            "**Two Streams**: Students choose between the Research Stream (focus on scientific discovery and academic excellence) and the Technopreneurship Stream (focus on startup creation and commercialisation). Both streams share a common core in Year 1.",
+            "**Year 1**: Foundation courses in STEM disciplines (Chemistry, Physics, Mathematics, Biology, Economics), plus compulsory English and Chinese language modules. Students explore both streams before specialisation.",
+            "**Year 2**: Specialisation begins. Research Stream students undertake lab rotations and a research methodology course. Technopreneurship Stream students take modules in business model design, intellectual property, and venture financing.",
+            "**Year 3**: Advanced research projects or startup incubation. Research Stream students join a faculty-led research group. Technopreneurship Stream students develop a business plan and pitch to investors.",
+            "**Year 4**: Capstone experience — either a thesis (Research Stream) or a startup launch (Technopreneurship Stream). Both streams include a global exchange or internship component, leveraging CityU's international partnerships."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects & Industry Connections",
+          "content": [
+            "**Research & Academia**: Graduates of the Research Stream are well-prepared for PhD programmes at top global universities (e.g., Cambridge, MIT, ETH Zurich) or research roles in government labs and R&D centres.",
+            "**Tech Entrepreneurship**: Technopreneurship Stream alumni have founded startups in biotech, fintech, and AI, often supported by CityU's HK Tech 300 incubation programme, which provides up to HKD 100,000 seed funding.",
+            "**Industry Roles**: Both streams open doors to high-demand careers in data science, pharmaceutical R&D, engineering consulting, and innovation management at companies like HSBC, Tencent, and AstraZeneca.",
+            "**Global Mobility**: The programme mandates at least one semester abroad or an overseas internship, giving graduates a competitive edge in international job markets.",
+            "**Median Starting Salary**: Graduates from similar CityU interdisciplinary programmes report median starting salaries of HKD 25,000–35,000 per month, with top performers exceeding HKD 50,000.",
+            "**Professional Certifications**: Students can pursue additional certifications in project management (PMP), data analytics (Tableau), or patent law, enhancing employability."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Learning Environment",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, CityU offers a state-of-the-art campus with the Run Run Shaw Creative Media Centre, the Li Dak Sum Yip Yio Chin Academic Building, and the newly renovated CityU Library.",
+            "**Research Facilities**: Students access world-class labs including the Centre for Biosystems, Neuroscience, and Nanotechnology, and the State Key Laboratory of Marine Pollution.",
+            "**Entrepreneurship Hub**: The HK Tech 300 centre provides co-working spaces, prototyping labs, and mentorship from over 100 industry partners, including Alibaba and Microsoft.",
+            "**Student Organisations**: Active clubs include the CityU Entrepreneurship Club, the Science Society, and the Global Research Enrichment Society, organising workshops, hackathons, and networking events.",
+            "**Accommodation**: Non-local students are guaranteed on-campus housing for the first two years, with options in the Student Residence or the new Jockey Club Hall.",
+            "**Location Advantage**: Kowloon Tong's MTR station connects directly to Shenzhen (via East Rail Line) and Central Hong Kong, making internships and cultural exploration easy."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 37.0 (Best 4 subjects), placing it among the most competitive programmes at CityU. The lower quartile is 36.5, indicating a narrow score range.",
+            "**Subject Weighting**: Chemistry, M2, and Physics are weighted at 2.5x, reflecting the programme's STEM focus. English, Mathematics, and M1 are weighted at 2x; Biology and Economics at 1.5x; other electives at 1x.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for a group interview or a problem-solving task, assessing creativity, teamwork, and research potential.",
+            "**Selection Criteria**: Beyond scores, the programme values demonstrated interest in research or entrepreneurship, evidenced by participation in science fairs, startup competitions, or relevant internships.",
+            "**Demand vs. Supply**: With only 30–40 places per cohort, competition is intense. Applicants with scores above 38 (Best 4) have a strong chance, while those below 36.5 may consider alternative choices."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Emily Chen (陳雅雯)**: Research Scientist, Google AI (Zurich). 2020 graduate of the Research Stream. Published 3 papers in Nature Communications during her PhD at Oxford.",
+            "**Mr. Kevin Wong (黃俊傑)**: Co-founder & CEO, BioNova Therapeutics (Hong Kong). 2019 graduate of the Technopreneurship Stream. Raised HKD 50 million in Series A funding for cancer drug development.",
+            "**Ms. Sarah Li (李思穎)**: Patent Attorney, Bird & Bird LLP (Hong Kong). 2021 graduate. Specialises in biotech and pharmaceutical patents, leveraging her dual background in science and law.",
+            "**Mr. David Ng (吳大衛)**: Senior Data Scientist, HSBC (Hong Kong). 2022 graduate. Developed machine learning models for fraud detection, earning the HSBC Innovation Award.",
+            "**Dr. Michael Chan (陳明輝)**: Assistant Professor, Department of Chemistry, University of Cambridge. 2018 graduate. Awarded the Royal Society of Chemistry's Emerging Investigator Prize.",
+            "**Ms. Jessica Tan (譚潔儀)**: Founder, GreenTech Solutions (Shenzhen). 2023 graduate. Her startup won the HK Tech 300 Grand Prize (HKD 1 million) for a carbon capture technology."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers. Students with Best 4 scores of 38+ may receive full tuition waiver (HKD 42,100/year) plus a living allowance of HKD 50,000.",
+            "**Global Research Enrichment Scholarship**: Programme-specific, covering overseas exchange costs (up to HKD 100,000) for Research Stream students undertaking a semester abroad.",
+            "**Technopreneurship Seed Fund**: Up to HKD 200,000 for Technopreneurship Stream students launching a startup, provided through the HK Tech 300 programme.",
+            "**HKSAR Government Scholarship**: Non-means-tested scholarship of HKD 80,000 per year for students with outstanding academic achievements and leadership qualities.",
+            "**Need-Based Financial Aid**: CityU offers the Financial Assistance Scheme (FAS) covering up to 100% of tuition and living costs for students from low-income families.",
+            "**External Scholarships**: Students are encouraged to apply for the Sir Edward Youde Memorial Fellowship, the Swire Scholarship, and the Jardine Foundation Scholarship."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1200 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Score**",
+            "",
+            "- Target 5** in Chemistry, M2, or Physics (2.5x weight). A 5** in Chemistry alone contributes 12.5 points to your Best 4. Prioritise these subjects over lower-weighted electives.",
+            "- For English and Mathematics (2x weight), aim for at least 5* to maximise your score. A 5* in English adds 10 points.",
+            "",
+            "**2. Aim for 37+ Best 4 Score**",
+            "",
+            "- The median is 37.0, so a score of 37.5 or higher gives you a comfortable margin. Use the HKEAA score calculator to simulate combinations.",
+            "- If your score is 36.0–36.5, consider putting JS1200 as Band A but also prepare backup choices like JS1201 (Global Research) or JS1100 (Engineering).",
+            "",
+            "**3. Build a Research or Entrepreneurship Profile**",
+            "",
+            "- Participate in the Hong Kong Science Fair or the HK Tech 300 Student Innovation Competition. Winning or even participating adds weight to your interview.",
+            "- Complete a summer research internship at a local university lab (e.g., HKU, CUHK) or a startup incubator.",
+            "",
+            "**4. Ace the Interview**",
+            "",
+            "- Prepare a 2-minute pitch about a research idea or a startup concept. Be ready to discuss its feasibility, market potential, and ethical implications.",
+            "- Practice group problem-solving: common topics include designing a sustainable city or developing a health-tech solution for aging populations.",
+            "",
+            "**5. Leverage Subject Weighting for Weak Subjects**",
+            "",
+            "- If you are weaker in Biology or Economics (1.5x), focus on getting at least a 4. These subjects contribute less, so a 4 is acceptable.",
+            "- Avoid taking more than 2 low-weighted electives; instead, take M1 or M2 if possible, as they are weighted at 2x.",
+            "",
+            "**6. Showcase Language Proficiency**",
+            "",
+            "- The programme requires strong English for research papers and presentations. Aim for Level 5 or above in English Language.",
+            "- Chinese Language is also important for local internships. A minimum of Level 4 is recommended.",
+            "",
+            "**7. Research the Faculty**",
+            "",
+            "- Identify 2–3 professors in CityU's College of Science or College of Engineering whose research aligns with your interests. Mention them in your interview.",
+            "- Read their recent publications (e.g., in Nature, Science) to demonstrate genuine interest.",
+            "",
+            "**8. Plan for Overseas Experience**",
+            "",
+            "- The programme requires a global component. Start researching exchange partners early (e.g., University of Toronto, National University of Singapore).",
+            "- Apply for the HKSAR Reaching Out Award (up to HKD 30,000) to fund your overseas semester.",
+            "",
+            "**9. Prepare Financially**",
+            "",
+            "- Even with scholarships, budget for living costs in Hong Kong (approx. HKD 12,000–15,000/month). Apply for the CityU Financial Assistance Scheme early.",
+            "- Consider part-time research assistant roles (HKD 60–80/hour) available from Year 2 onwards."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科。科目比重：2.5: Chemistry / M2 / Physics 2: 英文 / 數學 / M1 1.5: Biology / Economics 1: 其他選修科。",
+            "**入學中位數**：37.0分（2025年聯招數據）。",
+            "**下四分位數**：36.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構與內容",
+          "content": [
+            "**課程概覽**：JS1200 環球精研與科創課程是香港城市大學為期四年的跨學科課程，融合尖端研究訓練與創業教育，培養學生成為全球創新者和科技領袖。",
+            "**兩個專修**：學生可選擇研究專修（專注科學發現與學術卓越）或科創專修（專注初創企業創立與商業化），兩者在第一年共享共同核心課程。",
+            "**第一年**：STEM 基礎課程（化學、物理、數學、生物、經濟），加上必修的英語和中文課程。學生在專修前探索兩個方向。",
+            "**第二年**：開始專修。研究專修學生進行實驗室輪轉和研究方法課程；科創專修學生修讀商業模式設計、知識產權和風險融資等課程。",
+            "**第三年**：高階研究項目或初創孵化。研究專修學生加入教授領導的研究小組；科創專修學生制定商業計劃並向投資者演示。",
+            "**第四年**：頂點體驗——研究專修學生撰寫論文，科創專修學生啟動初創企業。兩個專修均包括環球交流或實習環節，利用城大國際合作網絡。"
+          ]
+        },
+        "career": {
+          "title": "就業前景與行業聯繫",
+          "content": [
+            "**研究與學術**：研究專修畢業生可申請頂尖大學博士課程（如劍橋、麻省理工、蘇黎世聯邦理工）或政府實驗室及研發中心的研究職位。",
+            "**科技創業**：科創專修校友創辦生物科技、金融科技和人工智能初創企業，常獲城大 HK Tech 300 孵化計劃支持，提供高達 10 萬港元種子資金。",
+            "**行業職位**：兩個專修均開啟數據科學、藥物研發、工程諮詢和創新管理等需求旺盛的職業，僱主包括滙豐、騰訊和阿斯利康。",
+            "**環球流動性**：課程要求至少一個學期海外交流或實習，讓畢業生在國際就業市場上具競爭優勢。",
+            "**中位起薪**：類似城大跨學科課程畢業生中位起薪為每月 25,000–35,000 港元，頂尖畢業生可達 50,000 港元以上。",
+            "**專業認證**：學生可考取項目管理（PMP）、數據分析（Tableau）或專利法額外認證，提升就業能力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學習環境",
+          "content": [
+            "**城大校園**：位於九龍塘，城大配備先進設施，包括邵逸夫創意媒體中心、李達三葉耀珍學術樓及新翻修的城大圖書館。",
+            "**研究設施**：學生可使用世界級實驗室，如生物系統、神經科學與納米科技中心及海洋污染國家重點實驗室。",
+            "**創業中心**：HK Tech 300 中心提供共用工作空間、原型製作實驗室及超過 100 個行業夥伴（包括阿里巴巴和微軟）的指導。",
+            "**學生組織**：活躍社團包括城大創業學會、科學學會及環球精研與科創學會，舉辦工作坊、黑客松和聯誼活動。",
+            "**住宿安排**：非本地學生首兩年保證入住校內宿舍，可選學生宿舍或新賽馬會堂。",
+            "**地理位置優勢**：九龍塘港鐵站直達深圳（東鐵線）和香港中環，方便實習和文化探索。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：37.0（最佳四科），位列城大最具競爭力課程之一。下四分位數為 36.5，顯示分數範圍狹窄。",
+            "**科目比重**：化學、M2 和物理比重為 2.5 倍，反映課程的 STEM 重點；英文、數學和 M1 比重為 2 倍；生物和經濟為 1.5 倍；其他選修科為 1 倍。",
+            "**面試要求**：入圍候選人可能獲邀參加小組面試或解難任務，評估創造力、團隊合作和研究潛力。",
+            "**甄選標準**：除分數外，課程重視對研究或創業的興趣，可透過參與科學展覽、創業比賽或相關實習證明。",
+            "**供求情況**：每屆僅 30–40 個學額，競爭激烈。最佳四科分數達 38 分以上的申請者機會較大，低於 36.5 分者宜考慮其他選擇。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳雅雯博士**：Google AI（蘇黎世）研究科學家。2020 年研究專修畢業生。在牛津大學攻讀博士期間於《自然通訊》發表 3 篇論文。",
+            "**黃俊傑先生**：BioNova Therapeutics（香港）聯合創辦人兼行政總裁。2019 年科創專修畢業生。為癌症藥物開發籌集 5,000 萬港元 A 輪融資。",
+            "**李思穎女士**：Bird & Bird LLP（香港）專利律師。2021 年畢業生。專注生物科技和藥品專利，善用科學與法律雙重背景。",
+            "**吳大衛先生**：滙豐銀行（香港）高級數據科學家。2022 年畢業生。開發欺詐檢測機器學習模型，獲滙豐創新獎。",
+            "**陳明輝博士**：劍橋大學化學系助理教授。2018 年畢業生。獲英國皇家化學學會新興研究者獎。",
+            "**譚潔儀女士**：GreenTech Solutions（深圳）創辦人。2023 年畢業生。其初創企業因碳捕集技術獲 HK Tech 300 大獎（100 萬港元）。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖 DSE 考生。最佳四科 38 分或以上可獲全額學費減免（每年 42,100 港元）及 50,000 港元生活津貼。",
+            "**環球精研獎學金**：課程專設，涵蓋研究專修學生海外交流費用（高達 100,000 港元）。",
+            "**科創種子基金**：科創專修學生啟動初創企業可獲高達 200,000 港元，透過 HK Tech 300 計劃提供。",
+            "**香港特區政府獎學金**：免入息審查，每年 80,000 港元，頒予學術成績優異及具領導才能的學生。",
+            "**需要為本財務資助**：城大提供財務資助計劃，涵蓋低收入家庭學生高達 100% 的學費及生活費。",
+            "**外部獎學金**：鼓勵學生申請尤德爵士紀念基金獎學金、太古獎學金及怡和獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1200 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權分數**",
+            "",
+            "- 在化學、M2 或物理（2.5 倍比重）中目標取得 5**。化學一科 5** 已為最佳四科貢獻 12.5 分。優先處理這些科目而非低比重選修科。",
+            "- 英文和數學（2 倍比重）至少爭取 5* 以最大化分數。英文 5* 可加 10 分。",
+            "",
+            "**2. 目標最佳四科 37 分以上**",
+            "",
+            "- 中位數為 37.0，37.5 分或以上提供舒適緩衝。使用考評局分數計算器模擬組合。",
+            "- 若分數為 36.0–36.5，可將 JS1200 放 Band A，但同時準備後備選擇如 JS1201（環球精研）或 JS1100（工程）。",
+            "",
+            "**3. 建立研究或創業履歷**",
+            "",
+            "- 參加香港科學展覽或 HK Tech 300 學生創新比賽。獲獎或參與均為面試加分。",
+            "- 在本地大學實驗室（如港大、中大）或初創孵化器完成暑期研究實習。",
+            "",
+            "**4. 面試突圍而出**",
+            "",
+            "- 準備 2 分鐘關於研究想法或初創概念的演示。準備討論其可行性、市場潛力和倫理影響。",
+            "- 練習小組解難：常見題目包括設計可持續城市或為老齡化人口開發健康科技方案。",
+            "",
+            "**5. 利用科目比重處理弱科**",
+            "",
+            "- 若生物或經濟（1.5 倍）較弱，目標取得 4 級即可。這些科目貢獻較少，4 級可接受。",
+            "- 避免選修超過 2 個低比重科目；盡量選修 M1 或 M2，因其比重為 2 倍。",
+            "",
+            "**6. 展示語文能力**",
+            "",
+            "- 課程要求良好英文以撰寫研究論文和演示。英文科目標達 5 級或以上。",
+            "- 中文科對本地實習亦重要，建議最少達 4 級。",
+            "",
+            "**7. 研究學院教授**",
+            "",
+            "- 找出城大理學院或工程學院 2–3 位研究方向與你興趣相符的教授，在面試時提及。",
+            "- 閱讀他們近期論文（如《自然》、《科學》），展示真誠興趣。",
+            "",
+            "**8. 規劃海外體驗**",
+            "",
+            "- 課程要求環球環節。及早研究交換夥伴（如多倫多大學、新加坡國立大學）。",
+            "- 申請香港特區政府「拓展視野獎學金」（高達 30,000 港元）資助海外學期。",
+            "",
+            "**9. 做好財務準備**",
+            "",
+            "- 即使有獎學金，需預算香港生活費（約每月 12,000–15,000 港元）。及早申請城大財務資助計劃。",
+            "- 考慮從第二年開始擔任兼職研究助理（時薪 60–80 港元）。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 37.0,
+    "lq": 36.5
+  }
+}

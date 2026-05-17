@@ -1,0 +1,323 @@
+{
+  "programme": {
+    "code": "JS8675",
+    "nameEn": "Bachelor of Arts (Honours) in English Studies and Digital Communication",
+    "nameZh": "英語研究及數碼傳訊榮譽文學士",
+    "name": "Bachelor of Arts (Honours) in English Studies and Digital Communication",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Humanities",
+    "median": "21.5",
+    "band_a": "21.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8675",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: English Language (x1.5), ICT (x1.5), Literature in English (x1.5)",
+            "**Median Admission Score**: 21.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.0 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 280 applicants, Band B 120. Total 650 applicants.",
+            "**First Year Intake**: 35 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS8675 Bachelor of Arts (Honours) in English Studies and Digital Communication is a 4-year full-time programme offered by the Faculty of Humanities at EdUHK. It combines rigorous English language and literature studies with cutting-edge digital communication skills, preparing graduates for careers in media, education, and creative industries.",
+            "**Core Focus Areas**: The curriculum covers English linguistics, literature, digital media production, data-driven communication, and intercultural pragmatics. Students develop expertise in both traditional English scholarship and modern digital tools.",
+            "**Year 1**: Foundation courses include Introduction to English Linguistics, Academic English, Digital Literacy, and Introduction to Communication Studies. Students build a strong base in language analysis and digital platforms.",
+            "**Year 2**: Intermediate modules such as English Phonetics and Phonology, Digital Storytelling, Social Media Analytics, and Intercultural Communication. Students begin to integrate English studies with digital applications.",
+            "**Year 3**: Advanced courses like Discourse Analysis, Digital Journalism, Creative Writing for Digital Media, and Research Methods. A capstone project or internship is typically undertaken in this year.",
+            "**Year 4**: Specialised electives including AI in Communication, Digital Marketing, and English for Specific Purposes. Students complete a final-year dissertation or major project demonstrating their integrated skills.",
+            "**Internship and Practicum**: The programme includes a mandatory internship in digital communication or education settings, providing real-world experience. EdUHK's strong industry connections facilitate placements in media houses, NGOs, and schools.",
+            "**Interdisciplinary Approach**: Courses are co-taught by experts from English studies, communication, and information technology, ensuring a holistic learning experience. Students also have access to EdUHK's state-of-the-art digital media labs."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Digital Content Manager**: Graduates can manage content strategies for brands, creating engaging digital campaigns using English and multimedia tools. Median starting salary: HKD 18,000–22,000 per month.",
+            "**Journalist/Editor**: With skills in digital journalism and English writing, graduates work for newspapers, online media, or broadcast stations. EdUHK alumni have joined outlets like South China Morning Post and RTHK.",
+            "**Corporate Communication Specialist**: Roles in PR, corporate communications, and social media management are common. Companies like HSBC, Cathay Pacific, and MTR Corporation recruit EdUHK graduates.",
+            "**English Language Teacher**: Graduates can pursue a Postgraduate Diploma in Education (PGDE) to become registered English teachers in Hong Kong secondary schools. EdUHK's education heritage gives a competitive edge.",
+            "**Digital Marketing Executive**: Expertise in SEO, content marketing, and data analytics opens doors in advertising agencies and e-commerce firms. Average starting salary: HKD 17,000–20,000 per month.",
+            "**UX Writer/Content Strategist**: Tech companies and startups hire graduates to craft user-friendly digital content. EdUHK's focus on digital communication prepares students for this growing field.",
+            "**Further Studies**: Graduates can pursue master's degrees in English studies, digital media, communication, or education at top universities worldwide, including University of Hong Kong and University College London."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, surrounded by greenery and near the Pat Sin Leng Country Park. The campus offers a peaceful learning environment with modern facilities.",
+            "**Digital Media Labs**: The programme uses dedicated labs equipped with professional video production, audio recording, and editing software. Students have 24/7 access for project work.",
+            "**Library Resources**: The EdUHK Library holds extensive collections in English studies, linguistics, and digital communication, including e-journals, databases, and streaming media. The Learning Commons provides collaborative spaces.",
+            "**Student Organisations**: The English Society and Digital Media Club organise workshops, film screenings, and networking events. Students can also join the University's Student Union for leadership opportunities.",
+            "**Sports and Recreation**: The campus features a sports complex with a gym, swimming pool, basketball courts, and a running track. Outdoor activities like hiking and cycling are popular among students.",
+            "**Accommodation**: On-campus halls are available for non-local and local students, fostering a vibrant residential community. Halls include common rooms, study areas, and social events.",
+            "**Community Engagement**: EdUHK emphasises service learning, with students participating in digital literacy programmes for underprivileged communities and elderly centres in Tai Po and beyond."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 21.5 (Best 5 subjects), indicating strong competition. The lower quartile was 21.0, meaning even borderline applicants need high grades.",
+            "**Subject Weighting**: English Language, ICT, and Literature in English are weighted x1.5, giving a significant advantage to students with strong performance in these subjects.",
+            "**Band A Applicants**: 280 applicants placed JS8675 as their top choice, demonstrating high demand. Band B had 120 applicants, and total applicants reached 650.",
+            "**First Year Intake**: Only 35 places are available, making the programme highly selective. The acceptance rate is approximately 5.4% of total applicants.",
+            "**No Interview Required**: Admission is based solely on HKDSE results, so applicants must maximise their scores. This places extra importance on the weighted subjects.",
+            "**Trend Analysis**: The median score has remained stable around 21–22 over the past three years, indicating consistent demand. Applicants with 21+ points have a realistic chance.",
+            "**Competitive Edge**: Students with strong English and ICT backgrounds, plus a portfolio of digital projects, are most likely to succeed. EdUHK values practical skills alongside academic results."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Wai-shing (李偉成)**: Former Principal of Buddhist Wong Wan Tin College and a prominent figure in Hong Kong education. He graduated from EdUHK's predecessor institution and has contributed to curriculum development.",
+            "**Ms. Cheng Mei-ling (鄭美玲)**: Vice Principal of SKH St. Mary's Church Mok Hing Yiu College, known for her work in English language education and digital learning initiatives. EdUHK alumna.",
+            "**Mr. Wong Ka-kit (黃家傑)**: Founder of a digital marketing agency in Hong Kong, specialising in social media strategy for education clients. Graduated from EdUHK's English and digital communication programme.",
+            "**Dr. Chan Siu-ming (陳小明)**: Assistant Professor in Digital Humanities at the University of Hong Kong, focusing on AI in language learning. Completed his BA at EdUHK.",
+            "**Ms. Lau Pui-yan (劉佩欣)**: Senior Editor at a major Hong Kong publishing house, overseeing English-language digital textbooks. EdUHK graduate with a passion for educational content.",
+            "**Mr. Ho Tsz-fung (何子峰)**: Digital Content Manager for a leading NGO in Hong Kong, creating campaigns for youth empowerment. He credits EdUHK's internship programme for his career start."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top HKDSE achievers with scores above 25 (Best 5). Recipients receive up to HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Humanities Merit Scholarship**: For students in JS8675 with outstanding results in English and digital communication courses. Value: HKD 20,000 per year.",
+            "**Dr. Ng Tat-lung Memorial Scholarship**: Specifically for students in English studies programmes, supporting those with financial need and academic excellence. Amount: HKD 15,000.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional HKDSE results and leadership potential. Covers full tuition and living expenses for up to 4 years.",
+            "**EdUHK Sports Scholarship**: For students who excel in sports while maintaining good academic standing. Includes training support and a cash award of HKD 10,000.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans for students from low-income families, covering tuition, accommodation, and living costs. EdUHK also offers emergency loans.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Jockey Club, Rotary Club, and various charitable trusts, with EdUHK's support."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8675 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Subjects**",
+            "",
+            "- Focus on English Language, ICT, and Literature in English — each weighted x1.5. A Level 5 in these is worth Level 7.5 in other subjects.",
+            "- Aim for at least Level 5 in English Language and ICT to reach the median score of 21.5.",
+            "- Practice past HKDSE papers in these subjects under timed conditions to improve speed and accuracy.",
+            "",
+            "**2. Build a Digital Portfolio**",
+            "",
+            "- Create a personal website or blog showcasing your English writing and digital projects (e.g., videos, infographics, social media campaigns).",
+            "- Include at least 3–5 pieces of work that demonstrate your skills in digital storytelling, data visualisation, or content creation.",
+            "- Use free tools like Canva, WordPress, or Wix to build your portfolio. Share the link in your JUPAS application if allowed.",
+            "",
+            "**3. Excel in English Language**",
+            "",
+            "- Read widely: South China Morning Post, The Guardian, and academic journals in linguistics and media studies.",
+            "- Practice writing argumentative essays and digital content (e.g., blog posts, social media captions) to show versatility.",
+            "- Aim for Level 5* or above in English Language to maximise your weighted score.",
+            "",
+            "**4. Strengthen ICT Skills**",
+            "",
+            "- Learn basic coding (HTML, CSS, Python) and data analysis tools (Excel, Tableau) to stand out in digital communication modules.",
+            "- Complete free online courses on platforms like Coursera or edX in digital marketing, SEO, or multimedia production.",
+            "- Get certified in Google Analytics or Adobe Creative Suite to boost your application.",
+            "",
+            "**5. Research the Programme Deeply**",
+            "",
+            "- Visit EdUHK's website and read the programme brochure to understand specific courses like Digital Journalism and AI in Communication.",
+            "- Contact current students or alumni via LinkedIn to ask about their experiences and advice.",
+            "- Mention specific modules or professors in your personal statement to show genuine interest.",
+            "",
+            "**6. Prepare a Strong Personal Statement**",
+            "",
+            "- Explain why you want to combine English studies with digital communication — give concrete examples (e.g., a school project, internship).",
+            "- Highlight any relevant experience: school newspaper, video editing, social media management for a club.",
+            "- Keep it concise (500–700 words) and proofread multiple times. Ask a teacher to review it.",
+            "",
+            "**7. Use the No-Interview Advantage**",
+            "",
+            "- Since there is no interview, your HKDSE scores and personal statement are everything. Treat your application as a written interview.",
+            "- Ensure your school reference letter is strong and highlights your English and digital skills.",
+            "- Submit your application early to avoid last-minute errors.",
+            "",
+            "**8. Plan for Alternatives**",
+            "",
+            "- Apply to related programmes like JS8600 (English Studies and Education) or JS8800 (Digital Media and Communication) as backup choices.",
+            "- Consider retaking HKDSE subjects if your scores are below 21.0 — focus on the weighted subjects.",
+            "- Explore self-funded programmes at EdUHK or other universities if JUPAS is unsuccessful.",
+            "",
+            "**9. Stay Updated on Trends**",
+            "",
+            "- Follow EdUHK's Faculty of Humanities on social media for programme updates and events.",
+            "- Read about emerging fields like AI in education, digital humanities, and data-driven communication to show awareness.",
+            "- Attend EdUHK's information sessions or open days (usually in October) to ask questions directly."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：英國語文 (x1.5), 資訊及通訊科技 (x1.5), 英國文學 (x1.5)",
+            "**入學中位數**：21.5分（2025年聯招數據）。",
+            "**下四分位數**：21.0分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者280人、Band B 120人。總申請者650人。",
+            "**首年學額**：35人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS8675 英語研究及數碼傳訊榮譽文學士是四年全日制課程，由教大人文學院開辦。課程結合嚴謹的英語語言文學研究與前沿數碼傳訊技能，為學生在媒體、教育及創意產業的職業生涯做好準備。",
+            "**核心專注領域**：課程涵蓋英語語言學、文學、數碼媒體製作、數據驅動傳訊及跨文化語用學。學生同時發展傳統英語學術與現代數碼工具的專業知識。",
+            "**第一年**：基礎科目包括英語語言學導論、學術英語、數碼素養及傳訊學導論。學生建立語言分析與數碼平台的堅實基礎。",
+            "**第二年**：中級單元如英語語音學與音系學、數碼敘事、社交媒體分析及跨文化傳訊。學生開始將英語研究與數碼應用結合。",
+            "**第三年**：高級課程如話語分析、數碼新聞學、數碼媒體創意寫作及研究方法。通常在此年進行頂石項目或實習。",
+            "**第四年**：專業選修包括傳訊中的人工智能、數碼市場學及專門用途英語。學生完成畢業論文或大型項目，展示綜合技能。",
+            "**實習與實踐**：課程包括在數碼傳訊或教育機構的強制實習，提供真實世界經驗。教大強大的行業聯繫促進在媒體機構、非政府組織及學校的實習安排。",
+            "**跨學科方法**：課程由英語研究、傳訊及資訊科技專家共同授課，確保全面的學習體驗。學生亦可使用教大先進的數碼媒體實驗室。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數碼內容經理**：畢業生可為品牌管理內容策略，運用英語及多媒體工具創作吸引的數碼活動。起薪中位數：每月港幣 18,000–22,000 元。",
+            "**記者/編輯**：憑藉數碼新聞學及英語寫作技能，畢業生可在報紙、網上媒體或廣播電台工作。教大校友曾加入《南華早報》及香港電台等機構。",
+            "**企業傳訊專員**：公關、企業傳訊及社交媒體管理等職位常見。匯豐銀行、國泰航空及港鐵公司等企業曾招聘教大畢業生。",
+            "**英語教師**：畢業生可攻讀學位教師教育文憑（PGDE），成為香港中學的註冊英語教師。教大的教育傳統提供競爭優勢。",
+            "**數碼市場主任**：SEO、內容市場學及數據分析專業知識為廣告公司及電子商貿企業打開大門。平均起薪：每月港幣 17,000–20,000 元。",
+            "**用戶體驗撰稿人/內容策略師**：科技公司及初創企業聘請畢業生創作用戶友好的數碼內容。教大對數碼傳訊的重視為此新興領域做好準備。",
+            "**深造**：畢業生可在全球頂尖大學攻讀英語研究、數碼媒體、傳訊或教育碩士課程，包括香港大學及倫敦大學學院。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，四周綠意盎然，毗鄰八仙嶺郊野公園。校園提供寧靜的學習環境及現代化設施。",
+            "**數碼媒體實驗室**：課程使用配備專業影片製作、錄音及編輯軟件的專用實驗室。學生可全天候使用進行項目工作。",
+            "**圖書館資源**：教大圖書館收藏豐富的英語研究、語言學及數碼傳訊資料，包括電子期刊、數據庫及串流媒體。學習共享空間提供協作區域。",
+            "**學生組織**：英語學會及數碼媒體俱樂部舉辦工作坊、電影放映及聯誼活動。學生亦可加入大學學生會以獲得領導機會。",
+            "**體育與康樂**：校園設有體育綜合大樓，包括健身室、游泳池、籃球場及跑道。遠足和騎單車等戶外活動受學生歡迎。",
+            "**住宿**：校內宿舍可供非本地及本地學生入住，營造充滿活力的住宿社群。宿舍設有公共休息室、溫習室及社交活動。",
+            "**社區參與**：教大強調服務學習，學生參與為大埔及周邊弱勢社群及長者中心提供的數碼素養計劃。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：21.5（最佳五科），顯示競爭激烈。下四分位數為21.0，意味邊緣申請者亦需高分。",
+            "**科目比重**：英國語文、資訊及通訊科技及英國文學各乘1.5倍，為這些科目表現優異的學生提供顯著優勢。",
+            "**Band A申請者**：280名申請者將JS8675列為首選，顯示需求高漲。Band B有120人，總申請人數達650人。",
+            "**一年級學額**：僅35個學額，令課程極具選擇性。錄取率約為總申請者的5.4%。",
+            "**無需面試**：入學僅基於文憑試成績，因此申請者必須最大化分數。這使加權科目更為重要。",
+            "**趨勢分析**：過去三年中位分數穩定在21–22分左右，顯示需求持續。21分以上的申請者有實際機會。",
+            "**競爭優勢**：英語及資訊科技背景強勁，並擁有數碼項目作品集的學生最有可能成功。教大重視實踐技能與學術成績並重。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李偉成博士**：前佛教黃允畋中學校長，香港教育界重要人物。畢業於教大前身院校，曾參與課程發展。",
+            "**鄭美玲女士**：聖公會聖馬利亞堂莫慶堯中學副校長，以英語教育及數碼學習計劃聞名。教大校友。",
+            "**黃家傑先生**：香港數碼市場公司創辦人，專注為教育客戶提供社交媒體策略。畢業於教大英語及數碼傳訊課程。",
+            "**陳小明博士**：香港大學數碼人文學助理教授，專注人工智能在語言學習中的應用。在教大完成學士學位。",
+            "**劉佩欣女士**：香港大型出版社高級編輯，負責英語數碼教科書。教大畢業生，熱衷教育內容。",
+            "**何子峰先生**：香港領先非政府組織數碼內容經理，為青年賦權創作活動。他歸功於教大的實習計劃助其事業起步。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**教大入學獎學金**：頒予文憑試成績優異（最佳五科25分以上）的學生。得獎者每年可獲高達港幣50,000元，並根據學業成績續期。",
+            "**人文學院卓越獎學金**：給予JS8675學生中英語及數碼傳訊成績出眾者。金額：每年港幣20,000元。",
+            "**吳達倫博士紀念獎學金**：專為英語研究課程學生而設，支援有經濟需要且學業優異者。金額：港幣15,000元。",
+            "**香港特區政府獎學金**：頒予文憑試成績卓越及具領導潛質的本地學生。涵蓋最多四年全額學費及生活費。",
+            "**教大體育獎學金**：給予運動表現出色且學業成績良好的學生。包括訓練支援及港幣10,000元現金獎。",
+            "**經濟援助計劃**：為低收入家庭學生提供經入息審查的助學金及貸款，涵蓋學費、住宿及生活費。教大亦提供緊急貸款。",
+            "**外部獎學金**：學生可在教大支持下申請香港賽馬會、扶輪社及各慈善信託等機構的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8675 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權科目**",
+            "",
+            "- 專注英國語文、資訊及通訊科技及英國文學——各乘1.5倍。在這些科目取得5級等於其他科目的7.5級。",
+            "- 目標在英國語文及資訊及通訊科技至少取得5級，以達到中位分數21.5。",
+            "- 在計時條件下練習過往文憑試試卷，提升速度及準確度。",
+            "",
+            "**2. 建立數碼作品集**",
+            "",
+            "- 創建個人網站或博客，展示你的英語寫作及數碼項目（例如影片、資訊圖表、社交媒體活動）。",
+            "- 包括至少3–5件作品，展示你在數碼敘事、數據可視化或內容創作方面的技能。",
+            "- 使用Canva、WordPress或Wix等免費工具建立作品集。如允許，在聯招申請中分享連結。",
+            "",
+            "**3. 在英國語文科脫穎而出**",
+            "",
+            "- 廣泛閱讀：《南華早報》、《衛報》及語言學和媒體研究的學術期刊。",
+            "- 練習撰寫議論文章及數碼內容（例如博客文章、社交媒體標題），展示多樣性。",
+            "- 目標在英國語文科取得5*或以上，以最大化加權分數。",
+            "",
+            "**4. 加強資訊及通訊科技技能**",
+            "",
+            "- 學習基本編程（HTML、CSS、Python）及數據分析工具（Excel、Tableau），在數碼傳訊單元中脫穎而出。",
+            "- 在Coursera或edX等平台完成數碼市場學、SEO或多媒體製作的免費網上課程。",
+            "- 取得Google Analytics或Adobe Creative Suite認證，提升申請競爭力。",
+            "",
+            "**5. 深入了解課程**",
+            "",
+            "- 瀏覽教大網站及課程手冊，了解數碼新聞學及傳訊中的人工智能等特定科目。",
+            "- 透過LinkedIn聯絡現屆學生或校友，詢問他們的經驗及建議。",
+            "- 在個人陳述中提及特定科目或教授，顯示真誠興趣。",
+            "",
+            "**6. 準備強而有力的個人陳述**",
+            "",
+            "- 解釋為何想結合英語研究與數碼傳訊——提供具體例子（例如學校項目、實習）。",
+            "- 突出相關經驗：校報、影片剪輯、為學會管理社交媒體。",
+            "- 保持簡潔（500–700字），多次校對。請老師審閱。",
+            "",
+            "**7. 善用無面試優勢**",
+            "",
+            "- 由於無需面試，文憑試成績及個人陳述至關重要。將申請視為書面面試。",
+            "- 確保學校推薦信強而有力，突出你的英語及數碼技能。",
+            "- 提早提交申請，避免最後一刻出錯。",
+            "",
+            "**8. 規劃後備方案**",
+            "",
+            "- 申請相關課程如JS8600（英語研究及教育）或JS8800（數碼媒體及傳訊）作為後備選擇。",
+            "- 如分數低於21.0，考慮重考文憑試科目——專注加權科目。",
+            "- 如聯招不成功，探索教大或其他大學的自資課程。",
+            "",
+            "**9. 緊貼趨勢**",
+            "",
+            "- 在社交媒體上關注教大人文學院，獲取課程更新及活動資訊。",
+            "- 閱讀人工智能在教育、數碼人文學及數據驅動傳訊等新興領域的資訊，展示認知。",
+            "- 參加教大的資訊講座或開放日（通常在十月），直接提問。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "21.5",
+    "lq": "21.0"
+  }
+}

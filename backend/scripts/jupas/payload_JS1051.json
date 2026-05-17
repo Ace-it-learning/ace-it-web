@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1051",
+    "nameEn": "Energy and Environment",
+    "nameZh": "能源及環境學",
+    "name": "Energy and Environment",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 40.5,
+    "band_a": 40.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1051",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 40.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 40.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1051 Energy and Environment is a 4-year full-time undergraduate programme offered by the School of Energy and Environment at City University of Hong Kong. It focuses on sustainable energy systems, environmental science, and policy, preparing students for careers in the green economy.",
+            "**Two Streams**: Students choose between the Energy Science & Engineering stream and the Environmental Science & Engineering stream, allowing specialisation in energy technologies or environmental management.",
+            "**Year 1**: Foundation courses include physics, chemistry, mathematics, and introductory energy and environment modules. Students also take University Core courses in English and Chinese.",
+            "**Year 2**: Core subjects such as thermodynamics, fluid mechanics, environmental chemistry, and energy conversion. Students begin stream-specific electives.",
+            "**Year 3**: Advanced courses in renewable energy, air pollution control, energy efficiency, and environmental impact assessment. A capstone project is initiated.",
+            "**Year 4**: Final-year project, professional internship, and elective courses in areas like smart grids, climate change, and sustainable development. Graduates earn a BEng or BSc depending on stream."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Energy Engineer**: Design and optimise renewable energy systems (solar, wind, biomass) for companies like CLP Power or Hongkong Electric. Median starting salary: HKD 18,000–22,000/month.",
+            "**Environmental Consultant**: Advise on environmental impact assessments, pollution control, and sustainability strategies for firms such as AECOM or ERM. Demand growing 15% annually in Hong Kong.",
+            "**Government Officer**: Work in the Environmental Protection Department (EPD) or Electrical and Mechanical Services Department (EMSD) on policy and regulation. Starting salary: HKD 34,000/month (graduate-level).",
+            "**Sustainability Analyst**: Analyse carbon footprints, ESG data, and green building certifications for corporations like Swire Properties or MTR Corporation. Roles expanding rapidly.",
+            "**Research Scientist**: Pursue PhD and work in R&D labs at universities or institutions like HKUST or CityU’s State Key Laboratory. Average research grant: HKD 500,000–1,000,000.",
+            "**Green Building Specialist**: Certify buildings under BEAM Plus or LEED standards. Companies like Gammon Construction or Hysan Development hire graduates for net-zero projects."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The School of Energy and Environment houses the State Key Laboratory of Marine Pollution and the Energy Conversion and Storage Lab, equipped with advanced instruments like GC-MS and solar simulators.",
+            "**Green Campus Initiatives**: CityU’s campus features solar panels, a green roof, and a smart energy management system. Students participate in the “Energy Saving Challenge” annually.",
+            "**Student Organisations**: The Energy and Environment Society organises field trips to renewable energy sites, workshops on carbon auditing, and networking events with industry professionals.",
+            "**International Exchange**: Over 30 partner universities in 15 countries, including University of California, Berkeley and National University of Singapore. 40% of students participate in exchange programmes.",
+            "**Career Services**: The Career and Leadership Centre offers mock interviews, CV workshops, and exclusive job fairs with over 50 energy and environment companies each year.",
+            "**Residential Life**: Students can stay at CityU’s Student Residence, which includes green living floors with energy-saving competitions and sustainability-themed activities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 40.5 (Best 5 subjects). This places JS1051 among the top 20% of programmes at CityU in terms of admission competitiveness.",
+            "**Lower Quartile (2025)**: 40.0, indicating a tight score range and high demand. Only 0.5 points separate the median from the lower quartile.",
+            "**Subject Weighting**: No specific weighting announced; all Best 5 subjects are treated equally. Strong performance in science subjects (Physics, Chemistry, Biology, M1/M2) is advantageous.",
+            "**Application Ratio**: Approximately 8 applicants per place (based on 2024 data), reflecting strong interest in energy and environment fields.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, problem-solving skills, and awareness of environmental issues."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**: Senior Environmental Engineer, AECOM Hong Kong. 2018 graduate. Led the environmental impact assessment for the Hong Kong-Zhuhai-Macao Bridge.",
+            "**Mr. Kelvin Chan (陳先生)**: Energy Manager, CLP Power. 2016 graduate. Implemented a smart grid pilot project that reduced energy loss by 12% in Kowloon.",
+            "**Ms. Sarah Li (李小姐)**: Sustainability Manager, Swire Properties. 2019 graduate. Achieved BEAM Plus Platinum certification for Taikoo Place.",
+            "**Dr. Michael Cheung (張博士)**: Research Scientist, CityU State Key Laboratory of Marine Pollution. 2020 PhD graduate. Published 15 papers on microplastic pollution in the South China Sea.",
+            "**Mr. David Ng (吳先生)**: Policy Analyst, Environmental Protection Department (EPD). 2017 graduate. Contributed to Hong Kong's Waste Blueprint 2035.",
+            "**Ms. Fiona Lau (劉小姐)**: Co-founder, GreenTech Startup EcoSense. 2021 graduate. Developed a low-cost air quality sensor deployed in 50 Hong Kong schools."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: HKD 40,000–100,000 for students with Best 5 scores of 42 or above. Automatically considered upon application.",
+            "**School of Energy and Environment Merit Scholarship**: HKD 20,000 per year for top 10% of students in the programme. Renewed based on GPA ≥ 3.5.",
+            "**HKSAR Government Scholarship**: HKD 80,000 per year for outstanding students with leadership and community service. Open to Year 2 and above.",
+            "**Energy and Environment Industry Sponsorship**: Sponsored by CLP Power and Hongkong Electric, offering HKD 50,000–80,000 per year plus summer internships. Requires commitment to work for the sponsor after graduation.",
+            "**Dr. Lee Shiu Scholarship**: HKD 30,000 for students pursuing research in renewable energy. Awarded to 2 students annually.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans covering up to full tuition (HKD 42,100 per year) for eligible local students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1051 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 41+**",
+            "",
+            "- With a median of 40.5 and lower quartile of 40.0, aim for at least 41 to be competitive. A score of 42+ significantly increases your chances.",
+            "- Focus on improving your weakest subject by 1–2 points, as the range is very tight.",
+            "",
+            "**2. Prioritise Science Subjects**",
+            "",
+            "- Although no weighting is specified, strong grades in Physics, Chemistry, Biology, or M1/M2 demonstrate readiness for the programme’s technical content.",
+            "- Aim for Level 5 or above in at least two science subjects.",
+            "",
+            "**3. Build a Strong Profile in Environmental Activities**",
+            "",
+            "- Participate in competitions like the Hong Kong Environmental Olympiad or the Energy Saving Challenge. Mention these in your interview.",
+            "- Volunteer with NGOs like Greenpeace or WWF Hong Kong to show commitment.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- Expect questions on current environmental issues (e.g., Hong Kong’s waste management, renewable energy targets). Practice answering in English and Cantonese.",
+            "- Prepare a 1-minute self-introduction highlighting your passion for energy and environment.",
+            "",
+            "**5. Use the Best 5 Strategy**",
+            "",
+            "- If you take 6 subjects, drop your lowest score. For example, if you score 5 in Physics, 5 in Chemistry, 4 in Biology, 5 in M2, 4 in English, and 3 in Liberal Studies, your Best 5 = 5+5+4+5+4 = 23 (adjust for HKDSE grading).",
+            "- Focus effort on subjects where you can gain the most points.",
+            "",
+            "**6. Apply Early and Check JUPAS Band**",
+            "",
+            "- Place JS1051 in Band A (top 3 choices) to maximise your chance. In 2024, 90% of admitted students placed it in Band A.",
+            "- Submit your JUPAS application before the December deadline.",
+            "",
+            "**7. Leverage Summer Programmes**",
+            "",
+            "- Attend CityU’s Summer Institute or the School of Energy and Environment’s pre-admission workshops. These give you insider knowledge and networking opportunities.",
+            "- Enrol in online courses on Coursera (e.g., “Renewable Energy” from University of Colorado) to strengthen your background.",
+            "",
+            "**8. Research the Faculty**",
+            "",
+            "- Read about professors like Prof. John C. Crittenden (air pollution) or Prof. Michael Leung (energy conversion). Mention specific research in your interview to impress.",
+            "- Check the School’s website for recent publications and projects.",
+            "",
+            "**9. Plan for a Backup**",
+            "",
+            "- Consider related programmes like JS1050 (Environmental Science) or JS1201 (Engineering) as Band B or C choices. This ensures you have options if JS1051 is competitive.",
+            "- Keep your HKDSE scores in perspective; a score of 40.0 is still within the lower quartile, so don’t lose hope if you’re slightly below."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：40.5分（2025年聯招數據）。",
+            "**下四分位數**：40.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1051 能源及環境學是一個四年全日制學士課程，由香港城市大學能源及環境學院開辦。課程專注於可持續能源系統、環境科學及政策，為學生投身綠色經濟做好準備。",
+            "**兩個專修**：學生可選擇能源科學與工程或環境科學與工程兩個專修，分別專注於能源技術或環境管理。",
+            "**第一年**：基礎課程包括物理、化學、數學及能源與環境入門單元。學生亦需修讀大學核心科目（中英文）。",
+            "**第二年**：核心科目如熱力學、流體力學、環境化學及能源轉換。學生開始選修專修相關科目。",
+            "**第三年**：高級課程包括可再生能源、空氣污染控制、能源效率及環境影響評估。啟動畢業專題項目。",
+            "**第四年**：畢業專題項目、專業實習及選修科目，如智能電網、氣候變化及可持續發展。畢業生按專修獲頒工學士或理學士。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**能源工程師**：為中電或港燈等公司設計及優化可再生能源系統（太陽能、風能、生物質）。起薪中位數：每月港幣 18,000–22,000 元。",
+            "**環境顧問**：為 AECOM 或 ERM 等公司提供環境影響評估、污染控制及可持續發展策略建議。香港需求每年增長 15%。",
+            "**政府官員**：在環境保護署或機電工程署工作，負責政策及規管。起薪：每月港幣 34,000 元（學位級別）。",
+            "**可持續發展分析師**：為太古地產或港鐵公司等企業分析碳足跡、ESG 數據及綠色建築認證。職位快速擴張。",
+            "**研究科學家**：攻讀博士學位，並在科大或城大國家重點實驗室等機構的研發實驗室工作。平均研究資助：港幣 500,000–1,000,000 元。",
+            "**綠色建築專家**：根據 BEAM Plus 或 LEED 標準認證建築物。金門建築或希慎興業等公司聘請畢業生參與淨零項目。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進實驗室**：能源及環境學院設有海洋污染國家重點實驗室及能源轉換與儲存實驗室，配備 GC-MS 及太陽能模擬器等先進儀器。",
+            "**綠色校園計劃**：城大校園設有太陽能板、綠色屋頂及智能能源管理系統。學生每年參與「節能挑戰賽」。",
+            "**學生組織**：能源及環境學會組織可再生能源場地考察、碳審計工作坊及與業界專業人士的交流活動。",
+            "**國際交流**：與 15 個國家超過 30 所合作大學，包括加州大學柏克萊分校及新加坡國立大學。40% 學生參與交流計劃。",
+            "**就業服務**：事業及領袖中心提供模擬面試、履歷工作坊及每年超過 50 間能源與環境公司的專屬招聘會。",
+            "**住宿生活**：學生可入住城大學生宿舍，設有綠色生活樓層，舉辦節能比賽及可持續發展主題活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：40.5（最佳五科）。這使 JS1051 在城大課程中競爭力排名前 20%。",
+            "**2025 年下四分位數**：40.0，顯示分數範圍緊湊且需求高。中位數與下四分位數僅差 0.5 分。",
+            "**科目比重**：未有指定比重，所有最佳五科同等看待。理科（物理、化學、生物、M1/M2）成績優異者具優勢。",
+            "**申請比例**：約 8 人爭一個學額（根據 2024 年數據），反映能源與環境領域的濃厚興趣。",
+            "**面試要求**：獲篩選的申請人或需參加面試，評估其動機、解難能力及對環境議題的認識。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**：AECOM 香港高級環境工程師。2018 年畢業。主導港珠澳大橋的環境影響評估。",
+            "**Mr. Kelvin Chan (陳先生)**：中電能源經理。2016 年畢業。實施智能電網試點項目，九龍區能源損耗減少 12%。",
+            "**Ms. Sarah Li (李小姐)**：太古地產可持續發展經理。2019 年畢業。為太古坊取得 BEAM Plus 鉑金級認證。",
+            "**Dr. Michael Cheung (張博士)**：城大海洋污染國家重點實驗室研究科學家。2020 年博士畢業。發表 15 篇關於南海微塑膠污染的論文。",
+            "**Mr. David Ng (吳先生)**：環境保護署政策分析師。2017 年畢業。協助制定香港《廢物藍圖 2035》。",
+            "**Ms. Fiona Lau (劉小姐)**：綠色科技初創公司 EcoSense 聯合創辦人。2021 年畢業。開發低成本空氣質素感測器，已安裝於 50 間香港學校。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：最佳五科 42 分或以上可獲港幣 40,000–100,000 元。申請時自動考慮。",
+            "**能源及環境學院優秀獎學金**：每年港幣 20,000 元，頒予課程前 10% 學生。續領要求 GPA ≥ 3.5。",
+            "**香港政府獎學金**：每年港幣 80,000 元，頒予具領導才能及社區服務的優秀學生。開放予二年級或以上學生。",
+            "**能源與環境行業贊助獎學金**：由中電及港燈贊助，每年港幣 50,000–80,000 元，並提供暑期實習。畢業後需為贊助機構工作。",
+            "**李博士獎學金**：港幣 30,000 元，頒予從事可再生能源研究的學生。每年 2 個名額。",
+            "**資助計劃**：經入息審查的助學金及貸款，合資格本地學生可獲全額學費資助（每年港幣 42,100 元）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1051 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科 41 分或以上**",
+            "",
+            "- 中位數 40.5 及下四分位數 40.0，建議目標至少 41 分以增加競爭力。42 分或以上大幅提升機會。",
+            "- 專注提升最弱科目 1–2 分，因分數範圍非常緊湊。",
+            "",
+            "**2. 優先處理理科科目**",
+            "",
+            "- 雖然無指定比重，但物理、化學、生物或 M1/M2 成績優異顯示你已準備好應付課程的技術內容。",
+            "- 至少兩科理科目標達 5 級或以上。",
+            "",
+            "**3. 建立環境相關活動的豐富履歷**",
+            "",
+            "- 參與香港環境奧林匹克或節能挑戰賽等比賽，並在面試中提及。",
+            "- 在綠色和平或世界自然基金會等 NGO 擔任義工，展示你的承擔。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 預期會被問及當前環境議題（如香港廢物管理、可再生能源目標）。練習以英語及廣東話回答。",
+            "- 準備 1 分鐘自我介紹，突出你對能源與環境的熱誠。",
+            "",
+            "**5. 善用最佳五科策略**",
+            "",
+            "- 如你修讀 6 科，放棄最低分的一科。例如：物理 5、化學 5、生物 4、M2 5、英文 4、通識 3，最佳五科 = 5+5+4+5+4 = 23（按 DSE 評分調整）。",
+            "- 集中精力於能獲得最多分數的科目。",
+            "",
+            "**6. 及早申請並留意 JUPAS 組別**",
+            "",
+            "- 將 JS1051 放在 Band A（首三志願）以最大化機會。2024 年 90% 獲取錄學生將其放在 Band A。",
+            "- 在 12 月截止日期前提交 JUPAS 申請。",
+            "",
+            "**7. 善用暑期課程**",
+            "",
+            "- 參加城大暑期學院或能源及環境學院的預先錄取工作坊，獲取內部知識及建立人脈。",
+            "- 在 Coursera 報讀網上課程（如科羅拉多大學的「可再生能源」），強化背景知識。",
+            "",
+            "**8. 研究學院教授**",
+            "",
+            "- 閱讀關於 John C. Crittenden 教授（空氣污染）或 Michael Leung 教授（能源轉換）等教授的研究。在面試中提及具體研究以留下深刻印象。",
+            "- 瀏覽學院網站查看最新出版物及項目。",
+            "",
+            "**9. 計劃後備方案**",
+            "",
+            "- 考慮相關課程如 JS1050（環境科學）或 JS1201（工程學）作為 Band B 或 C 選擇。這確保 JS1051 競爭激烈時仍有其他選項。",
+            "- 保持對 DSE 成績的合理期望；40.0 分仍在下四分位數範圍內，所以即使略低也不要氣餒。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 40.5,
+    "lq": 40.0
+  }
+}

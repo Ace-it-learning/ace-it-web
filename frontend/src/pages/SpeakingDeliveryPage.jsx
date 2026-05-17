@@ -5,6 +5,7 @@ import { Mic, Play, Pause, Square, RotateCcw, CheckCircle2, Volume2, Loader2, Ar
 import DeliveryScaffoldPassage from '../components/speaking/DeliveryScaffoldPassage';
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import PhonemeSpotlight from '../components/speaking/PhonemeSpotlight';
+import { useKaraokeSync } from '../hooks/useKaraokeSync';
 
 // Simplified Speaking Scaffold Toolbar
 const SpeakingScaffoldToolbar = ({ settings, onChange }) => {
@@ -65,8 +66,6 @@ const SpeakingDeliveryPage = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isPlayingStudent, setIsPlayingStudent] = useState(false);
     const [isRecording, setIsRecording] = useState(false);
-    const [isPlayingMaster, setIsPlayingMaster] = useState(false);
-    const [isMasterLoading, setIsMasterLoading] = useState(false);
     const [voiceLevel, setVoiceLevel] = useState(0);
     const [quest, setQuest] = useState({ segments: [], role: 'Candidate', scenario: 'Speaking Drill' });
 
@@ -79,7 +78,10 @@ const SpeakingDeliveryPage = () => {
     const silenceTimeout = useRef(null);
     const studentAudio = useRef(null);
     const wavesurferRecorder = useRef(null);
-    const audioRef = useRef(null);
+    const karaoke = useKaraokeSync({
+        audioUrl: currentSegment?.master_audio_url ?? null,
+        timingsUrl: currentSegment?.master_timings_url ?? null,
+    });
 
     // Audio Playback for Spotlight (Forced Browser TTS)
     const handlePlayWord = (word) => {
@@ -139,34 +141,10 @@ const SpeakingDeliveryPage = () => {
     }, [topicId, level, user?.uid, recordedBlobUrl]);
 
 
-    // Cleanup audio
     const stopMasterAudio = () => {
-        if (audioRef.current) {
-            audioRef.current.pause();
-            audioRef.current.onended = null;
-            audioRef.current.ontimeupdate = null;
-            audioRef.current.src = "";
-            audioRef.current.load();
-        }
+        karaoke.stop();
         if (window.speechSynthesis) {
             window.speechSynthesis.cancel();
-        }
-        // Clear global keep-alive reference
-        if (window._currentUtterance) {
-            window._currentUtterance.onend = null;
-            window._currentUtterance.onboundary = null;
-            window._currentUtterance.onerror = null;
-            window._currentUtterance = null;
-        }
-        setIsPlayingMaster(false);
-        // Clear all DOM-driven highlights
-        const root = document.getElementById('scaffold-passage-root');
-        if (root) {
-            root.querySelectorAll('[id^="word-"]').forEach(el => {
-                el.style.color = '';
-                el.style.opacity = '';
-                el.style.fontWeight = '';
-            });
         }
     };
 
@@ -182,221 +160,20 @@ const SpeakingDeliveryPage = () => {
     };
 
 
-    // --- Audio Control Functions ---
-
-    // 2. Play Master Audio with Word Highlighting
-    const [activeWordIndex, setActiveWordIndex] = useState(-1);
-
-    const playMasterAudio = () => {
-        stopAllAudio();
-        setIsPlayingMaster(true);
-
-        try {
-            const rawText = currentSegment.master_script || "";
-            const utter = new SpeechSynthesisUtterance(rawText);
-            
-            // Persistent reference to prevent GC (Garbage Collection) freeze
-            window._currentUtterance = utter;
-            
-            const voices = window.speechSynthesis.getVoices();
-            const preferredVoice = voices.find(v => v.lang.includes('en-GB') && v.name.includes('Google')) || 
-                                   voices.find(v => v.lang.includes('en-GB')) || 
-                                   voices.find(v => v.lang.includes('en-US'));
-            if (preferredVoice) utter.voice = preferredVoice;
-            
-            utter.lang = 'en-GB';
-            utter.rate = 0.9; 
-            utter.pitch = 1.0;
-
-            // ──────────────────────────────────────────────────────
-            // BUILD CHAR-OFFSET → WORD-INDEX MAP
-            // Must exactly match the tokenizer in DeliveryScaffoldPassage:
-            //   rawText.split(/(\s+)/).filter(t => t !== "")
-            // Word tokens get sequential indices; whitespace is skipped.
-            // ──────────────────────────────────────────────────────
-            const tokens = rawText.split(/(\s+)/).filter(t => t !== "");
-            const wordCharStarts = [];   // wordCharStarts[wordIdx] = char offset of that word
-            const wordCharEnds = [];     // wordCharEnds[wordIdx]   = char offset after last char
-            let charCursor = 0;
-            let wordCount = 0;
-            tokens.forEach(token => {
-                const isWhitespace = /^\s+$/.test(token);
-                if (!isWhitespace) {
-                    wordCharStarts.push(charCursor);
-                    wordCharEnds.push(charCursor + token.length);
-                    wordCount++;
-                }
-                charCursor += token.length;
-            });
-
-            /**
-             * Map a charIndex from onboundary → display word index.
-             * Uses binary search for precision.
-             */
-            const charIndexToWordIndex = (charIdx) => {
-                let lo = 0, hi = wordCharStarts.length - 1, best = -1;
-                while (lo <= hi) {
-                    const mid = (lo + hi) >>> 1;
-                    if (wordCharStarts[mid] <= charIdx) {
-                        best = mid;
-                        lo = mid + 1;
-                    } else {
-                        hi = mid - 1;
-                    }
-                }
-                return best;
-            };
-
-            // ──────────────────────────────────────────────────────
-            // SYNC STATE
-            // ──────────────────────────────────────────────────────
-            let boundaryFired = false;      // Has ANY onboundary event fired?
-            let lastBoundaryWordIdx = -1;   // Last word index from onboundary
-            let fallbackTimer = null;       // Fallback interval (only used when onboundary is absent)
-            let fallbackWordIdx = 0;        // Ticker position for fallback
-            let speechStartTime = 0;        // When speech actually started (for fallback calibration)
-            let prevHighlightIdx = -1;      // Track previous word for DOM cleanup
-
-            /**
-             * DIRECT DOM MANIPULATION — bypasses React's render cycle entirely.
-             * Sets color on the word span element the instant onboundary fires.
-             */
-            const updateHighlight = (idx) => {
-                if (idx < 0 || idx >= wordCount) return;
-
-                // Mark previous word as "past" (faded orange)
-                if (prevHighlightIdx >= 0 && prevHighlightIdx !== idx) {
-                    const prevEl = document.getElementById(`word-${prevHighlightIdx}`);
-                    if (prevEl) {
-                        prevEl.style.color = '#f97316';     // orange-500 (past)
-                        prevEl.style.opacity = '0.65';
-                    }
-                }
-
-                // Mark current word as "active" (bold orange)
-                const el = document.getElementById(`word-${idx}`);
-                if (el) {
-                    el.style.color = '#ea580c';             // orange-600 (active)
-                    el.style.opacity = '1';
-                    el.style.fontWeight = '900';             // font-black
-                }
-
-                prevHighlightIdx = idx;
-            };
-
-            /**
-             * Clear all DOM-applied styles in one sweep (on speech end/error).
-             */
-            const clearAllHighlights = () => {
-                for (let i = 0; i < wordCount; i++) {
-                    const el = document.getElementById(`word-${i}`);
-                    if (el) {
-                        el.style.color = '';
-                        el.style.opacity = '';
-                        el.style.fontWeight = '';
-                    }
-                }
-                prevHighlightIdx = -1;
-            };
-
-            // ──────────────────────────────────────────────────────
-            // PRIMARY SYNC: onboundary events
-            // ──────────────────────────────────────────────────────
-            utter.onboundary = (event) => {
-                if (event.name === 'word') {
-                    boundaryFired = true;
-                    const wordIdx = charIndexToWordIndex(event.charIndex);
-                    if (wordIdx !== -1) {
-                        lastBoundaryWordIdx = wordIdx;
-                        updateHighlight(wordIdx);
-                        // Kill fallback if it was running – boundary events are authoritative
-                        if (fallbackTimer) {
-                            clearInterval(fallbackTimer);
-                            fallbackTimer = null;
-                        }
-                    }
-                }
-            };
-
-            // ──────────────────────────────────────────────────────
-            // FALLBACK SYNC: timer-based (only if onboundary never fires)
-            // Some browser/voice combos (e.g. certain Edge voices) never
-            // fire boundary events. We detect this ~400ms after speech
-            // starts and activate a calibrated ticker.
-            // ──────────────────────────────────────────────────────
-            const startFallbackIfNeeded = () => {
-                if (boundaryFired || fallbackTimer) return; // Boundary is working, no need
-                
-                // Estimate speech duration from word count and rate
-                // Typical English: ~150-170 WPM at rate=1.0; at 0.9 rate ≈ 140 WPM
-                const effectiveWPM = 150 * utter.rate;
-                const msPerWord = 60000 / effectiveWPM;
-                fallbackWordIdx = 0;
-                
-                console.log(`[SpeakingQuest] onboundary not supported by this voice – using ${Math.round(effectiveWPM)} WPM fallback ticker`);
-                
-                fallbackTimer = setInterval(() => {
-                    if (!window.speechSynthesis.speaking) {
-                        clearInterval(fallbackTimer);
-                        fallbackTimer = null;
-                        return;
-                    }
-                    fallbackWordIdx++;
-                    if (fallbackWordIdx < wordCount) {
-                        updateHighlight(fallbackWordIdx);
-                    }
-                }, msPerWord);
-            };
-
-            utter.onstart = () => {
-                setIsPlayingMaster(true);
-                speechStartTime = performance.now();
-                updateHighlight(0);
-                // Check after 400ms whether onboundary is firing
-                setTimeout(startFallbackIfNeeded, 400);
-            };
-
-            utter.onend = () => {
-                if (fallbackTimer) { clearInterval(fallbackTimer); fallbackTimer = null; }
-                setIsPlayingMaster(false);
-                clearAllHighlights();
-                window._currentUtterance = null;
-            };
-
-            utter.onerror = () => {
-                if (fallbackTimer) { clearInterval(fallbackTimer); fallbackTimer = null; }
-                setIsPlayingMaster(false);
-                clearAllHighlights();
-                window._currentUtterance = null;
-            };
-
-            window.speechSynthesis.cancel();
-            window.speechSynthesis.speak(utter);
-
-            // Keep-Alive: Chrome stops long utterances after ~15s without this
-            const keepAlive = setInterval(() => {
-                if (window.speechSynthesis.speaking) {
-                    window.speechSynthesis.pause();
-                    window.speechSynthesis.resume();
-                } else {
-                    clearInterval(keepAlive);
-                }
-            }, 5000);
-        } catch (err) {
-            console.error('[SpeakingQuest] Browser TTS failed:', err);
-            setIsPlayingMaster(false);
+    const handleMasterDemo = async () => {
+        if (karaoke.isPlaying) {
+            stopMasterAudio();
+            return;
         }
+        stopAllAudio();
+        await karaoke.toggle();
     };
 
-    // Legacy Cloud-based TTS (Kept for reference if high-fidelity is needed later)
-    const playMasterAudioCloud = async () => {
-        // ... (removed for brevity but logically replaced by the above)
-    };
-
-    // Multi-Speaker Fallback (Simplified)
-    const fallbackPlayMasterAudio = () => {
-    };
-
+    useEffect(() => {
+        if (currentSegment?.master_audio_url && currentSegment?.master_timings_url) {
+            karaoke.ensureLoaded();
+        }
+    }, [currentSegment?.master_audio_url, currentSegment?.master_timings_url]);
 
     // 3. Recording with Silence Detection
     const startRecording = async () => {
@@ -729,7 +506,7 @@ const SpeakingDeliveryPage = () => {
                                 text={currentSegment.master_script}
                                 vocabulary={currentSegment.vocabulary}
                                 settings={scaffoldSettings}
-                                activeWordIndex={activeWordIndex}
+                                activeWordIndex={karaoke.activeWordIndex}
                                 resultsMode={!!segmentFeedback}
                                 wordAnalysis={segmentFeedback?.word_analysis || []}
                             />
@@ -748,19 +525,24 @@ const SpeakingDeliveryPage = () => {
                         </div>
 
                         <button
-                            onClick={isPlayingMaster ? stopMasterAudio : playMasterAudio}
-                            disabled={isMasterLoading}
-                            className={`w-full py-3.5 rounded-xl font-black flex flex-col items-center justify-center gap-1 transition-all ${isPlayingMaster ? 'bg-red-500 text-white shadow-lg' : 'bg-indigo-600 text-white hover:bg-indigo-700'
-                                } ${isMasterLoading ? 'opacity-70 cursor-wait' : ''}`}
+                            onClick={handleMasterDemo}
+                            disabled={karaoke.isLoading || !karaoke.hasKaraoke}
+                            title={!karaoke.hasKaraoke ? 'Karaoke demo is available for library pronunciation drills (a_1–a_20)' : undefined}
+                            className={`w-full py-3.5 rounded-xl font-black flex flex-col items-center justify-center gap-1 transition-all ${karaoke.isPlaying ? 'bg-red-500 text-white shadow-lg' : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                } ${(karaoke.isLoading || !karaoke.hasKaraoke) ? 'opacity-70 cursor-not-allowed' : ''}`}
                         >
                             <div className="flex items-center gap-3">
-                                {isMasterLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : (isPlayingMaster ? <Square className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5" />)}
+                                {karaoke.isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : (karaoke.isPlaying ? <Square className="w-5 h-5 fill-current" /> : <Play className="w-5 h-5" />)}
                                 <span className="text-[10px] uppercase tracking-widest">
-                                    {isMasterLoading ? 'Synthesizing Audio...' : (isPlayingMaster ? 'STOP DEMO' : 'MASTER DEMO')}
+                                    {karaoke.isLoading ? 'Loading Demo...' : (karaoke.isPlaying ? 'STOP DEMO' : 'MASTER DEMO')}
                                 </span>
                             </div>
-                            
-                            {isMasterLoading && (
+                            {!karaoke.hasKaraoke && !karaoke.isLoading && (
+                                <span className="text-[9px] font-semibold normal-case tracking-normal opacity-80 mt-0.5">
+                                    Library drills only
+                                </span>
+                            )}
+                            {karaoke.isLoading && (
                                 <div className="w-48 h-1 bg-white/20 rounded-full mt-2 overflow-hidden">
                                     <div className="h-full bg-white animate-[loading_2s_ease-in-out_infinite]" style={{ width: '40%' }}></div>
                                 </div>

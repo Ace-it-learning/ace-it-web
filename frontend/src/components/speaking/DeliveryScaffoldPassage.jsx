@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Volume2, Loader2 } from 'lucide-react';
+import { tokenizePassage } from '../../utils/speakingPassageTokenizer';
 
 /**
  * DeliveryScaffoldPassage - FIXED v11.0
@@ -17,31 +18,15 @@ const DeliveryScaffoldPassage = ({
     const [activeTooltip, setActiveTooltip] = useState(null);
     const [isPlayingWord, setIsPlayingWord] = useState(null);
 
-    // 1. DETERMINISTIC TOKENIZER (Clean & Flat)
     const tokens = useMemo(() => {
         if (!text) return [];
         const normalizedText = (typeof text === 'string') ? text : (text.master_script || text.stimulus || "");
-        
-        const rawTokens = normalizedText.split(/(\s+)/).filter(t => t !== "");
-        let wordCounter = 0;
 
-        return rawTokens.map((token, idx) => {
-            const isWhitespace = /^\s+$/.test(token);
-            const myIndex = isWhitespace ? -1 : wordCounter;
-            if (!isWhitespace) wordCounter++;
-
-            const cleanToken = token.replace(/[.,!?;:'"()]/g, '').toLowerCase();
+        return tokenizePassage(normalizedText).map((tk) => {
+            const cleanToken = tk.text.replace(/[.,!?;:'"()]/g, '').toLowerCase();
             const vocab = vocabulary?.find(v => v.word.toLowerCase() === cleanToken);
             const result = resultsMode ? (wordAnalysis || []).find(w => (w.word || w.token || "").toLowerCase() === cleanToken) : null;
-
-            return {
-                text: token,
-                index: myIndex,
-                isWhitespace,
-                vocab,
-                result,
-                id: `tk-${idx}`
-            };
+            return { ...tk, vocab, result };
         });
     }, [text, vocabulary, resultsMode, wordAnalysis]);
 
@@ -64,15 +49,17 @@ const DeliveryScaffoldPassage = ({
                 const isCorrect = tk.result && tk.result.status === 'correct';
                 const isIncorrect = tk.result && tk.result.status === 'incorrect';
 
-                // Base Styles — no transitions; live karaoke is DOM-driven for zero latency
-                let classes = "inline "; 
-                
+                let classes = "inline ";
+
                 if (resultsMode) {
                     if (isCorrect) classes += "text-emerald-700 font-extrabold ";
                     else if (isIncorrect) classes += "text-rose-600 font-extrabold underline decoration-rose-300 decoration-4 ";
                     else classes += "text-slate-200 opacity-40 ";
+                } else if (isActive) {
+                    classes += "text-orange-600 font-black ";
+                } else if (isPast) {
+                    classes += "text-orange-500 font-bold opacity-65 ";
                 } else {
-                    // Default state: black text. Active/past styling applied via direct DOM manipulation.
                     classes += "text-black font-bold ";
                 }
 

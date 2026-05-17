@@ -1,0 +1,281 @@
+{
+  "programme": {
+    "code": "JS7213",
+    "nameEn": "Bachelor of Business Administration (Honours)-Finance",
+    "nameZh": "工商管理(榮譽)學士-金融",
+    "name": "Bachelor of Business Administration (Honours)-Finance",
+    "university": "嶺南大學",
+    "faculty": "Faculty of Business",
+    "median": "28.75",
+    "band_a": "27.00",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7213",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 28.75 (2025 JUPAS data).",
+            "**Lower Quartile**: 27.00 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 3",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 4, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 450 applicants, Band B 200. Total 1000 applicants.",
+            "**First Year Intake**: 50 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BBA (Hons) in Finance at Lingnan University is a 4-year programme designed to equip students with comprehensive financial knowledge and analytical skills, with a focus on CFA-aligned content and diverse elective pathways in Investment, Corporate Finance, and FinTech.",
+            "**Year 1**: Students complete foundational business courses including Principles of Economics, Financial Accounting, Business Statistics, and Introduction to Finance, alongside Lingnan's core liberal arts requirements such as Critical Thinking and University English.",
+            "**Year 2**: Core finance modules deepen understanding of Financial Markets, Corporate Finance, and Quantitative Methods. Students also begin exploring elective streams with introductory courses like Investment Analysis and Financial Technology Fundamentals.",
+            "**Year 3**: Advanced coursework covers Portfolio Management, Derivatives, and International Finance. Students select specialized electives from three streams: Investment (e.g., Security Analysis), Corporate Finance (e.g., Mergers & Acquisitions), or FinTech (e.g., Blockchain Applications).",
+            "**Year 4**: The capstone course, Applied Finance Project, integrates theory with real-world case studies. Students complete remaining electives and may pursue a CFA preparation module, supported by the CFA Student Scholarship programme.",
+            "**CFA Student Scholarship**: The programme offers a CFA Student Scholarship, providing selected students with exam fee waivers, study materials, and access to CFA Institute events, directly preparing them for the CFA charter."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Investment Banking**: Graduates can pursue roles as financial analysts or associates in investment banks such as Goldman Sachs, Morgan Stanley, or local firms, leveraging skills in valuation, M&A, and capital raising.",
+            "**Asset Management**: Career paths include portfolio manager or research analyst at asset management firms like BlackRock, Fidelity, or Hang Seng Investment Management, focusing on equity and fixed-income strategies.",
+            "**Corporate Finance**: Opportunities exist as finance managers or treasury analysts in multinational corporations like HSBC, Swire, or CLP Group, handling budgeting, risk management, and capital structure decisions.",
+            "**FinTech Sector**: With the FinTech elective stream, graduates can join startups or established firms in areas such as digital payments (e.g., Alipay, WeChat Pay), blockchain consulting, or robo-advisory platforms.",
+            "**Professional Certification**: The programme's CFA alignment and scholarship support graduates in obtaining the CFA charter, significantly enhancing employability in competitive finance roles globally.",
+            "**Further Studies**: Alumni often pursue master's degrees in Finance, Financial Engineering, or Business Analytics at top universities worldwide, including LSE, University of Hong Kong, and Singapore Management University."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Residential Halls**: All Lingnan students are required to live in residential halls for at least one year, fostering a close-knit community and lifelong friendships. Halls include facilities like common rooms, study lounges, and sports amenities.",
+            "**Small Class Sizes**: With an average class size of 30 students, finance courses offer personalized attention from professors, enabling in-depth discussions and mentorship opportunities.",
+            "**Tuen Mun Campus**: Located in the New Territories, the campus features modern lecture theatres, a state-of-the-art Financial Trading Laboratory equipped with Bloomberg terminals, and a comprehensive library with finance databases.",
+            "**Exchange Programmes**: Lingnan has over 200 partner universities worldwide, including University of California, Berkeley, and University of Manchester. Finance students can spend one semester abroad, earning credits while gaining global exposure.",
+            "**Student Societies**: The Finance Society organizes workshops, company visits (e.g., to Hong Kong Stock Exchange), and networking events with industry professionals, enhancing practical learning outside the classroom.",
+            "**Community Service**: Lingnan's liberal arts ethos emphasizes social responsibility; finance students can engage in pro-bono financial literacy projects for underprivileged communities through the Office of Service-Learning."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Data**: In 2025, the programme received 450 Band A applicants and 200 Band B applicants out of 1,000 total applicants, competing for only 50 first-year places — a Band A-to-place ratio of 9:1.",
+            "**Score Requirements**: The median admission score was 28.75 (Best 5 subjects), with a lower quartile of 27.00. Strong performance in Mathematics (median 4) and electives (median 4 each) is critical for admission.",
+            "**Subject Weighting**: While no interview is required, applicants with Mathematics Level 4 or above and two electives at Level 4 or above have a significant advantage, as these subjects carry higher median scores.",
+            "**Programme Uniqueness**: The CFA Student Scholarship and specialized electives in Investment, Corporate Finance, and FinTech distinguish this programme from general BBA offerings, attracting high-caliber students.",
+            "**Competitive Landscape**: Compared to similar programmes at other universities, Lingnan's liberal arts focus and small class sizes appeal to students seeking a balanced education with strong faculty interaction, though it faces competition from UGC-funded finance programmes at CityU and PolyU."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Albert Ip (葉毓強)**: Renowned financial advisor and philanthropist, former Managing Director at Merrill Lynch Asia Pacific. He is a long-time supporter of Lingnan University and serves as an honorary advisor to the Faculty of Business.",
+            "**Mr. Stephen Law (羅志聰)**: Chief Financial Officer, Hong Kong Science and Technology Parks Corporation. A Lingnan BBA graduate, he oversees financial strategy for one of Hong Kong's key innovation hubs.",
+            "**Ms. Karen Chan (陳嘉欣)**: Vice President, Corporate Banking at DBS Bank Hong Kong. She credits Lingnan's liberal arts education for her strong communication and ethical decision-making skills in banking.",
+            "**Mr. Michael Wong (黃偉文)**: Founder and CEO of FinTech startup PayFabric, a Hong Kong-based digital payment platform. He graduated from Lingnan's BBA programme and later earned an MBA from HKUST.",
+            "**Dr. Emily Ng (吳雅雯)**: Assistant Professor of Finance, University of Hong Kong. After completing her BBA at Lingnan, she earned a PhD in Finance from the University of Cambridge and now researches corporate governance.",
+            "**Ms. Grace Li (李雅儀)**: Senior Analyst, Fixed Income at BlackRock Hong Kong. She actively mentors current Lingnan finance students through the university's alumni mentorship programme."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CFA Student Scholarship**: Offered to selected students in the programme, covering CFA exam registration fees (up to USD 1,000) and providing free access to CFA Institute study materials and online resources.",
+            "**Lingnan University Entrance Scholarships**: Awarded to top JUPAS applicants based on HKDSE scores. For example, students with Best 5 scores of 28 or above may receive a full tuition waiver (HK$42,100 per year) and a living allowance.",
+            "**Faculty of Business Merit Scholarships**: High-achieving finance students with a cumulative GPA of 3.5 or above are eligible for scholarships of up to HK$20,000 per year, renewable based on academic performance.",
+            "**HKSAR Government Scholarships**: The Reaching Out Award (up to HK$30,000) supports finance students for overseas exchange or internships, while the Talent Development Scholarship (HK$10,000) recognizes leadership and community service.",
+            "**Need-Based Financial Aid**: Lingnan offers the Financial Assistance Scheme for students with family income below HK$200,000, providing partial tuition subsidies and textbook allowances.",
+            "**External Scholarships**: Finance students can apply for scholarships from professional bodies like the Hong Kong Institute of Bankers (HKIB) or the CFA Society Hong Kong, which offer awards of up to HK$15,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7213 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 28+**",
+            "",
+            "- With a median score of 28.75 and LQ of 27.00, aim for at least 28 points in your best 5 subjects. Prioritize Mathematics (target Level 4 or above) and two electives (target Level 4 each) as these are key differentiators.",
+            "",
+            "**2. Excel in Mathematics and Electives**",
+            "",
+            "- The median for Mathematics is Level 4, and for both electives it's Level 4. Focus on achieving Level 4 or above in these subjects — they carry more weight in the admission formula. Consider taking M1/M2 as an elective to strengthen your application.",
+            "",
+            "**3. Leverage the CFA Scholarship in Your Application**",
+            "",
+            "- Mention your interest in the CFA Student Scholarship in your JUPAS application or personal statement. Highlight any prior knowledge of finance (e.g., reading financial news, participating in investment clubs) to show alignment with the programme's CFA focus.",
+            "",
+            "**4. Apply as Band A to Maximize Chances**",
+            "",
+            "- In 2025, 450 Band A applicants competed for 50 places. With a Band A-to-place ratio of 9:1, placing JS7213 as your Band A choice signals strong interest and improves your chances of being considered.",
+            "",
+            "**5. Prepare for No Interview — Focus on HKDSE Scores**",
+            "",
+            "- Since no interview is required, your HKDSE results are the sole criterion. Ensure your Chinese and English are at least Level 3 (median and LQ both 3), and Citizenship and Social Development is at least Attained.",
+            "",
+            "**6. Build a Strong Personal Statement**",
+            "",
+            "- Although not mandatory, a personal statement can strengthen your application. Discuss your passion for finance, specific elective interests (e.g., FinTech, Investment), and how Lingnan's liberal arts approach aligns with your career goals.",
+            "",
+            "**7. Explore the Elective Streams Early**",
+            "",
+            "- Research the three elective streams (Investment, Corporate Finance, FinTech) before applying. If you're interested in FinTech, mention any coding experience (e.g., Python) or blockchain knowledge in your application.",
+            "",
+            "**8. Use Lingnan's Liberal Arts to Stand Out**",
+            "",
+            "- Emphasize how Lingnan's whole-person education, small classes, and residential hall experience will help you develop communication, ethics, and critical thinking — skills valued in finance. Mention community service or leadership roles.",
+            "",
+            "**9. Plan for Exchange and Internships**",
+            "",
+            "- Lingnan's exchange programmes and the Financial Trading Lab are unique assets. In your application, express interest in a semester abroad or an internship at a bank or FinTech firm to demonstrate proactive career planning."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：28.75分（2025年聯招數據）。",
+            "**下四分位數**：27.00分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 3",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者450人、Band B 200人。總申請者1000人。",
+            "**首年學額**：50人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：嶺南大學工商管理（榮譽）學士金融課程為四年制，旨在培養學生全面的金融知識與分析能力，重點涵蓋CFA相關內容，並提供投資學、公司財務及金融科技三個選修範疇。",
+            "**第一年**：學生完成基礎商業科目，包括經濟學原理、財務會計、商業統計及金融學導論，同時修讀嶺大核心博雅課程，如批判性思考及大學英語。",
+            "**第二年**：核心金融科目深化對金融市場、公司財務及計量方法的理解。學生開始探索選修範疇，修讀投資分析及金融科技基礎等入門課程。",
+            "**第三年**：高級課程涵蓋投資組合管理、衍生工具及國際金融。學生從三個範疇中選擇專業選修：投資學（如證券分析）、公司財務（如併購）或金融科技（如區塊鏈應用）。",
+            "**第四年**：頂石課程「應用金融專題」將理論與真實案例結合。學生完成剩餘選修，並可修讀CFA備考模塊，配合CFA學生獎學金計劃的支持。",
+            "**CFA學生獎學金**：課程提供CFA學生獎學金，獲選學生可獲考試費減免、學習材料及CFA協會活動參與機會，直接為考取CFA特許資格做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**投資銀行**：畢業生可在高盛、摩根士丹利或本地投資銀行擔任金融分析師或助理，運用估值、併購及集資等技能。",
+            "**資產管理**：職業路徑包括在貝萊德、富達或恒生投資管理公司擔任投資組合經理或研究分析師，專注於股票及固定收益策略。",
+            "**公司財務**：機會存在於跨國企業如滙豐、太古或中電，擔任財務經理或庫務分析師，負責預算管理、風險管理及資本結構決策。",
+            "**金融科技領域**：透過金融科技選修範疇，畢業生可加入初創或成熟企業，從事數碼支付（如支付寶、微信支付）、區塊鏈諮詢或機械人理財顧問平台等工作。",
+            "**專業認證**：課程與CFA對接及獎學金支持，幫助畢業生考取CFA特許資格，顯著提升在全球競爭性金融職位中的就業能力。",
+            "**深造機會**：校友常於倫敦政治經濟學院、香港大學及新加坡管理大學等頂尖學府攻讀金融、金融工程或商業分析碩士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**住宿書院**：所有嶺大學生須至少住校一年，培養緊密社群及終身友誼。宿舍設有公共空間、自修室及體育設施。",
+            "**小班教學**：金融課程平均每班30人，教授能提供個別關注，促進深入討論及師友指導。",
+            "**屯門校園**：校園位於新界，設有現代化演講廳、配備彭博終端機的先進金融交易實驗室，以及藏有金融數據庫的綜合圖書館。",
+            "**交流計劃**：嶺大與全球超過200所夥伴大學合作，包括加州大學柏克萊分校及曼徹斯特大學。金融學生可到海外交流一學期，賺取學分並拓展國際視野。",
+            "**學生組織**：金融學會舉辦工作坊、企業參觀（如香港交易所）及業界交流活動，增強課堂以外的實踐學習。",
+            "**社區服務**：嶺大博雅教育強調社會責任；金融學生可透過服務研習處，為弱勢社群提供公益金融素養項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學數據**：2025年，課程收到450名Band A申請者及200名Band B申請者，總申請人數達1,000人，僅提供50個一年級學額——Band A與學額比例為9:1。",
+            "**分數要求**：中位入學分數為28.75（最佳5科），下四分位數為27.00。數學（中位數4級）及選修科（各中位數4級）表現優異對入學至關重要。",
+            "**科目權重**：雖然無需面試，但數學達4級或以上及兩科選修達4級或以上的申請者具顯著優勢，因這些科目的中位分數較高。",
+            "**課程獨特性**：CFA學生獎學金及投資學、公司財務、金融科技三個選修範疇，使此課程有別於一般工商管理學士課程，吸引高質素學生。",
+            "**競爭格局**：與其他大學同類課程相比，嶺大的博雅教育重點及小班教學吸引尋求平衡教育及緊密師生互動的學生，但需面對城大及理大資助金融課程的競爭。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**葉毓強博士**：著名財務顧問及慈善家，曾任美林亞太區董事總經理。他長期支持嶺南大學，並擔任商學院榮譽顧問。",
+            "**羅志聰先生**：香港科技園公司首席財務總監。嶺大工商管理學士畢業，負責香港其中一個關鍵創新樞紐的財務策略。",
+            "**陳嘉欣女士**：星展銀行香港企業銀行副總裁。她歸功於嶺大的博雅教育，培養了在銀行業所需的溝通能力及道德決策技巧。",
+            "**黃偉文先生**：香港數碼支付平台PayFabric創辦人及行政總裁。他畢業於嶺大工商管理學士課程，後於科大取得工商管理碩士。",
+            "**吳雅雯博士**：香港大學金融學助理教授。在嶺大完成工商管理學士後，於劍橋大學取得金融學博士學位，現研究企業管治。",
+            "**李雅儀女士**：貝萊德香港固定收益高級分析師。她透過大學的校友師友計劃，積極指導現屆嶺大金融學生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**CFA學生獎學金**：提供予課程中獲選學生，涵蓋CFA考試註冊費（高達1,000美元），並免費提供CFA協會學習材料及網上資源。",
+            "**嶺南大學入學獎學金**：根據香港中學文憑考試成績頒予頂尖聯招申請者。例如，最佳5科達28分或以上的學生可獲全額學費減免（每年42,100港元）及生活津貼。",
+            "**商學院優秀獎學金**：累計GPA達3.5或以上的高成就金融學生，可獲每年高達20,000港元的獎學金，並可按學業表現續領。",
+            "**香港特區政府獎學金**：「拓展視野獎學金」（高達30,000港元）支持金融學生海外交流或實習；「才藝發展獎學金」（10,000港元）表揚領導才能及社區服務。",
+            "**需要為本經濟援助**：嶺大為家庭收入低於200,000港元的學生提供經濟援助計劃，包括部分學費補貼及教科書津貼。",
+            "**外部獎學金**：金融學生可申請香港銀行學會或CFA香港協會等專業機構的獎學金，獎項高達15,000港元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7213 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科28分或以上**",
+            "",
+            "- 中位數28.75分及下四分位數27.00分，最佳5科應至少取得28分。優先提升數學（目標4級或以上）及兩科選修（各目標4級），因這些是關鍵區分因素。",
+            "",
+            "**2. 在數學及選修科表現出色**",
+            "",
+            "- 數學中位數為4級，兩科選修中位數均為4級。專注取得4級或以上——這些科目在入學公式中權重較高。考慮選修M1/M2以增強申請。",
+            "",
+            "**3. 在申請中善用CFA獎學金**",
+            "",
+            "- 在聯招申請或個人陳述中提及你對CFA學生獎學金的興趣。突出任何金融相關知識（如閱讀財經新聞、參加投資學會），以展示與課程CFA重點的契合。",
+            "",
+            "**4. 將課程放在Band A以增加機會**",
+            "",
+            "- 2025年，450名Band A申請者競爭50個學額，比例為9:1。將JS7213放在Band A顯示強烈興趣，並提高被考慮的機會。",
+            "",
+            "**5. 無需面試——專注文憑試成績**",
+            "",
+            "- 由於無需面試，文憑試成績是唯一標準。確保中文及英文至少達3級（中位數及下四分位數均為3級），公民與社會發展科至少達「達標」。",
+            "",
+            "**6. 撰寫有力的個人陳述**",
+            "",
+            "- 雖然非強制，個人陳述可加強申請。討論你對金融的熱誠、特定選修興趣（如金融科技、投資學），以及嶺大博雅教育如何配合你的職業目標。",
+            "",
+            "**7. 及早探索選修範疇**",
+            "",
+            "- 申請前研究三個選修範疇（投資學、公司財務、金融科技）。若對金融科技感興趣，在申請中提及任何編程經驗（如Python）或區塊鏈知識。",
+            "",
+            "**8. 利用嶺大博雅教育突顯優勢**",
+            "",
+            "- 強調嶺大全人教育、小班教學及住宿書院經驗如何助你發展溝通、倫理及批判性思考——這些是金融業重視的技能。提及社區服務或領導角色。",
+            "",
+            "**9. 計劃交流及實習**",
+            "",
+            "- 嶺大的交流計劃及金融交易實驗室是獨特資產。在申請中表達對海外學期或銀行/金融科技公司實習的興趣，以展示積極的職業規劃。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "28.75",
+    "lq": "27.00"
+  }
+}

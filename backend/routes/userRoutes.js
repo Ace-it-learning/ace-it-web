@@ -145,7 +145,15 @@ router.post('/dream-programs', requireResolvedUid, async (req, res) => {
     if (!uid) return res.status(400).json({ error: 'Missing uid' });
     if (!Array.isArray(programs)) return res.status(400).json({ error: 'Invalid programs format' });
     try {
-        await UserProfileService.createOrUpdateProfile(uid, { dreamPrograms: programs });
+        // Always sync dreamSubject from first dream program (JUPAS programmes are source of truth)
+        const updates = { dreamPrograms: programs };
+        if (programs.length > 0) {
+            const first = programs[0];
+            updates.dreamSubject = first.name || first.title || first.label || first.programmeName || '';
+        } else {
+            updates.dreamSubject = '';
+        }
+        await UserProfileService.createOrUpdateProfile(uid, updates);
         res.json({ success: true });
     } catch (error) {
         console.error('[DreamPrograms] Save error:', error);

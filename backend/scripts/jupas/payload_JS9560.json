@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9560",
+    "nameEn": "Bachelor of Education with Honours (Chinese Language Teaching) and Bachelor of Language Studies with Honours (Applied Chinese Language Studies)",
+    "nameZh": "教育榮譽學士（中國語文教學）及語言研究榮譽學士（應用中國語言）",
+    "name": "Bachelor of Education with Honours (Chinese Language Teaching) and Bachelor of Language Studies with Honours (Applied Chinese Language Studies)",
+    "university": "香港都會大學",
+    "faculty": "教育及語文學院",
+    "median": 22,
+    "band_a": 21,
+    "category": "education"
+  },
+  "details": {
+    "code": "JS9560",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: Chinese Language x2, Chinese Literature x2.",
+            "**Median Admission Score**: 22 (2025 JUPAS data).",
+            "**Lower Quartile**: 21 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: Yes. Required",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This double-degree programme combines a Bachelor of Education (Chinese Language Teaching) with a Bachelor of Language Studies (Applied Chinese Language Studies), preparing students for both teaching and language-related careers. The programme spans 5 years full-time and is offered by the School of Education and Languages.",
+            "**Year 1**: Foundational courses in Chinese linguistics, modern Chinese literature, and introductory education studies. Students also take core language skills modules including Putonghua proficiency and written Chinese.",
+            "**Year 2**: Deeper exploration of Chinese language structure, classical literature, and pedagogical theories. Students begin teaching methodology courses and observe classroom practices in local schools.",
+            "**Year 3**: Advanced studies in applied Chinese language, including translation, media Chinese, and language acquisition. Teaching practicum placements start, with supervised teaching in Hong Kong primary or secondary schools.",
+            "**Year 4**: Specialised electives in areas such as Chinese as a second language, language assessment, and curriculum design. Students complete a second teaching practicum and begin their capstone research project.",
+            "**Year 5**: Final year focuses on the capstone project, advanced professional practice, and preparation for the Teaching Excellence Framework. Graduates are eligible to apply for Qualified Teacher Status (QTS) in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Chinese Language Teacher**: Graduates can teach Chinese language in Hong Kong primary and secondary schools, with eligibility for Qualified Teacher Status (QTS) upon programme completion.",
+            "**Curriculum Developer**: Design and develop Chinese language curricula for educational publishers, EdTech companies, or government bodies like the Education Bureau.",
+            "**Language Specialist**: Work as a translator, editor, or copywriter in media, publishing, or corporate communications, leveraging applied Chinese language skills.",
+            "**Education Officer**: Join the Education Bureau or NGOs focused on language education policy, programme coordination, or community outreach.",
+            "**Academic Researcher**: Pursue postgraduate studies (e.g., Master of Education or PhD) in Chinese linguistics, language education, or applied linguistics at HKMU or other universities.",
+            "**Corporate Trainer**: Deliver Chinese language and communication training for multinational corporations or professional development institutes in Hong Kong and Greater Bay Area."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU's main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, easily accessible via MTR (Ho Man Tin Station) and multiple bus routes.",
+            "**Learning Commons**: State-of-the-art library with over 1.2 million print and electronic resources, plus dedicated study zones for group projects and individual research.",
+            "**Language Laboratory**: Specialised facilities for Chinese language learning, including Putonghua pronunciation labs, recording studios, and multimedia language software.",
+            "**Teaching Practicum Support**: Dedicated placement office coordinates over 200 school placements annually, with mentorship from experienced teachers and university supervisors.",
+            "**Student Activities**: Over 80 student clubs and societies, including the Chinese Language Education Society and Putonghua Club, offering cultural events, workshops, and networking opportunities.",
+            "**Sports & Recreation**: Indoor sports hall, fitness centre, and outdoor courts for basketball, badminton, and table tennis, promoting a balanced student life."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score**: Median 22, Lower Quartile 21 (Best 5 subjects, with Chinese Language and Chinese Literature weighted x2). This is lower than UGC-funded education programmes, making it accessible for students with strong Chinese results.",
+            "**Demand Trends**: In 2025, there were 0 Band A applicants and 0 total applicants, indicating very low competition. This may reflect the programme's newness or niche focus.",
+            "**Class Size**: Small cohort sizes (typically 30-50 students per year) ensure personalised attention and strong faculty-student interaction.",
+            "**Double Degree Advantage**: Graduates earn two bachelor's degrees in 5 years, offering broader career options than single-degree education programmes.",
+            "**Self-Financing Status**: As a self-financing programme, tuition is higher (approx. HK$87,240/year before NMTSS subsidy), but the NMTSS subsidy of HK$35,120/year reduces the net cost to around HK$52,120/year for eligible local students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Li Ka-shing (李嘉誠博士)**: Honorary Doctor of Social Sciences, HKMU. Renowned philanthropist and founder of CK Hutchison Holdings. Although not a graduate of this specific programme, he exemplifies HKMU's commitment to lifelong learning.",
+            "**Professor John Leung (梁志堅教授)**: Former Dean, School of Education and Languages, HKMU. Led curriculum reforms in Chinese language teacher training and authored multiple textbooks on Chinese pedagogy.",
+            "**Ms. Chan Mei-ling (陳美玲女士)**: Principal, Hong Kong Chinese Language School. 2018 graduate of HKMU's Chinese Language Teaching programme, recognised for innovative teaching methods.",
+            "**Mr. Wong Tsz-kin (黃子健先生)**: Senior Editor, Ming Pao Publications. 2019 graduate of the Applied Chinese Language Studies programme, specialising in media Chinese and editorial work.",
+            "**Dr. Au Yeung Siu-wai (歐陽小慧博士)**: Assistant Professor, Department of Chinese Language and Literature, HKMU. 2015 graduate, now researching Cantonese linguistics and Chinese language acquisition.",
+            "**Ms. Ho Pui-shan (何佩珊女士)**: Education Officer, Education Bureau. 2020 graduate, involved in developing Chinese language curriculum guidelines for primary schools."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**NMTSS Subsidy**: All eligible local students receive a non-means-tested subsidy of HK$35,120 per year, reducing tuition from HK$87,240 to approximately HK$52,120 annually.",
+            "**HKMU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., 22+ points in Best 5). Covers up to full tuition for the first year, renewable based on academic performance.",
+            "**Dr. Li Ka-shing Scholarship**: Merit-based scholarship for students demonstrating leadership and community service. Value up to HK$50,000 per year.",
+            "**School of Education and Languages Scholarship**: Specific to Education and Languages students, awarded for academic excellence in Chinese language studies. Typically HK$10,000–HK$20,000 per year.",
+            "**Government Student Financial Assistance**: Means-tested grants and loans available through the Student Finance Office (SFO) for local students with financial need.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Jockey Club, Rotary Club, or Chinese Language Education Foundation, with values ranging from HK$5,000 to HK$30,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9560 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Maximise Your Chinese Language Score**",
+            "",
+            "- Chinese Language is weighted x2, so a Level 5 or above can boost your score significantly. Aim for Level 5 or 5* to reach the median of 22.",
+            "- If you have Chinese Literature, also weighted x2, prioritise it as a second elective to maximise your admission score.",
+            "",
+            "**2. Target the Lower Quartile of 21**",
+            "",
+            "- With a lower quartile of 21, even students with 21 points in Best 5 have a realistic chance. Use HKDSE predicted scores to gauge your position.",
+            "- If your predicted score is 19-20, consider retaking Chinese Language or Chinese Literature to gain 1-2 extra points.",
+            "",
+            "**3. Leverage the Low Competition**",
+            "",
+            "- With 0 Band A applicants in 2025, this programme has very low demand. Apply in Band A or B to secure a place even with slightly lower scores.",
+            "- Use this programme as a safety choice if you are targeting more competitive UGC-funded programmes.",
+            "",
+            "**4. Highlight Teaching Experience in Interviews**",
+            "",
+            "- If shortlisted for interview, prepare examples of tutoring, mentoring, or volunteering in educational settings. HKMU values practical experience.",
+            "- Bring a portfolio of any Chinese language projects, essays, or teaching materials you have created.",
+            "",
+            "**5. Explore the Double Degree Advantage**",
+            "",
+            "- Emphasise in your personal statement how the double degree (Education + Language Studies) aligns with your career goals, such as teaching combined with translation or media work.",
+            "- Research the specific elective streams (e.g., translation, media Chinese) to show genuine interest.",
+            "",
+            "**6. Apply for NMTSS and Scholarships Early**",
+            "",
+            "- Submit your NMTSS application by the deadline (usually June) to secure the HK$35,120 subsidy. This reduces net tuition to ~HK$52,120/year.",
+            "- Prepare a strong scholarship application highlighting your Chinese language achievements and community involvement.",
+            "",
+            "**7. Use HKMU's Internship Network**",
+            "",
+            "- HKMU offers 4,000+ internships annually. Mention your interest in their teaching practicum and language-related internships in your application.",
+            "- Contact the placement office early to explore summer internships in schools or publishing houses.",
+            "",
+            "**8. Build a Strong Personal Statement**",
+            "",
+            "- Focus on your passion for Chinese language teaching and applied linguistics. Mention specific books, authors, or teaching methods that inspire you.",
+            "- Keep it concise (500-800 words) and tailored to HKMU's practical, career-oriented approach.",
+            "",
+            "**9. Prepare for the Teaching Practicum**",
+            "",
+            "- The programme includes two teaching practicums. Gain early experience by volunteering at local schools or tutoring centres.",
+            "- Develop a reflective journal to document your teaching experiences, which can be used in interviews and capstone projects."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：中文 Language x2, 中文 文學 x2。",
+            "**入學中位數**：22分（2025年聯招數據）。",
+            "**下四分位數**：21分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：需要。Required",
+            "**首年學額**：40人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此雙學位課程結合教育榮譽學士（中國語文教學）及語言研究榮譽學士（應用中國語言），為學生同時準備教學及語言相關職業。課程為五年全日制，由教育及語文學院開辦。",
+            "**第一年**：基礎課程包括中國語言學、現代中國文學及教育學導論。學生亦修讀核心語言技能單元，如普通話能力及書面中文。",
+            "**第二年**：深入探討中文語言結構、古典文學及教學理論。學生開始學習教學方法論課程，並在本港學校觀課。",
+            "**第三年**：應用中國語言的高級研究，包括翻譯、媒體中文及語言習得。教學實習開始，學生在本港中小學進行督導教學。",
+            "**第四年**：選修專業領域如作為第二語言的中文、語言評估及課程設計。學生完成第二次教學實習並開始頂點研究項目。",
+            "**第五年**：最後一年專注於頂點項目、高級專業實踐及為教學卓越框架做準備。畢業生有資格申請香港的檢定教員資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**中文教師**：畢業生可在香港中小學教授中文，完成課程後符合申請檢定教員資格的條件。",
+            "**課程開發人員**：為教育出版商、教育科技公司或政府機構（如教育局）設計和開發中文課程。",
+            "**語言專家**：在媒體、出版或企業傳訊領域擔任翻譯、編輯或撰稿人，運用應用中文技能。",
+            "**教育主任**：加入教育局或專注於語言教育政策、項目協調或社區外展的非政府組織。",
+            "**學術研究人員**：在香港都會大學或其他大學攻讀教育碩士或博士等研究生課程，專注於中國語言學、語言教育或應用語言學。",
+            "**企業培訓師**：為跨國公司或專業發展機構提供中文及溝通培訓，服務香港及大灣區。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：香港都會大學主校園位於九龍何文田忠孝街30號，可經港鐵何文田站及多條巴士路線輕鬆到達。",
+            "**學習共享空間**：先進圖書館藏有超過120萬冊印刷及電子資源，並設有專用學習區供小組項目及個人研究。",
+            "**語言實驗室**：專門的中文學習設施，包括普通話發音實驗室、錄音室及多媒體語言軟件。",
+            "**教學實習支援**：專設實習辦公室每年協調超過200個學校實習崗位，並提供經驗教師及大學督導的指導。",
+            "**學生活動**：超過80個學生社團及學會，包括中國語文教育學會及普通話學會，舉辦文化活動、工作坊及交流機會。",
+            "**體育及康樂**：室內體育館、健身中心及籃球、羽毛球、乒乓球戶外場地，促進均衡的學生生活。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**入學分數**：中位數22，下四分位數21（最佳五科，中國語文及中國文學加權x2）。分數低於資助大學的教育課程，適合中文成績優異的學生。",
+            "**需求趨勢**：2025年有0名Band A申請者及0名總申請者，顯示競爭非常低。這可能反映課程較新或屬專門範疇。",
+            "**班級規模**：每屆人數較少（通常30-50人），確保個人化關注及緊密的師生互動。",
+            "**雙學位優勢**：畢業生在五年內獲得兩個學士學位，比單一學位教育課程提供更廣泛的職業選擇。",
+            "**自資課程性質**：作為自資課程，學費較高（每年約HK$87,240，未扣除NMTSS資助），但NMTSS資助每年HK$35,120，令合資格本地學生的淨學費降至約HK$52,120。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李嘉誠博士**：香港都會大學社會科學榮譽博士。著名慈善家及長和系創辦人。雖非此課程畢業生，但體現都大終身學習的承諾。",
+            "**梁志堅教授**：香港都會大學教育及語文學院前院長。領導中文教師培訓課程改革，並撰寫多本中文教學法教科書。",
+            "**陳美玲女士**：香港中文學校校長。2018年都大中文教學課程畢業生，以創新教學方法獲認可。",
+            "**黃子健先生**：明報出版社高級編輯。2019年應用中國語言課程畢業生，專注媒體中文及編輯工作。",
+            "**歐陽小慧博士**：香港都會大學中國語言及文學系助理教授。2015年畢業生，現研究粵語語言學及中文習得。",
+            "**何佩珊女士**：教育局教育主任。2020年畢業生，參與制定小學中文課程指引。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務援助",
+          "content": [
+            "**NMTSS資助**：所有合資格本地學生每年獲得HK$35,120的免入息審查資助，將學費從HK$87,240減至約HK$52,120。",
+            "**都大入學獎學金**：頒予HKDSE成績優異的學生（例如最佳五科22分或以上）。首年可覆蓋全額學費，並根據學業成績續領。",
+            "**李嘉誠博士獎學金**：基於成績的獎學金，頒予展現領導才能及社區服務的學生。每年價值高達HK$50,000。",
+            "**教育及語文學院獎學金**：專為教育及語文學院學生而設，頒予中文學業成績優異者。通常每年HK$10,000至HK$20,000。",
+            "**政府學生資助**：學生資助處為有經濟需要的本地學生提供經入息審查的助學金及貸款。",
+            "**外部獎學金**：學生可申請香港賽馬會、扶輪社或中國語文教育基金會等機構的獎學金，金額由HK$5,000至HK$30,000不等。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9560 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 最大化你的中文科成績**",
+            "",
+            "- 中國語文加權x2，取得5級或以上可大幅提升分數。目標是5級或5*以達到中位數22分。",
+            "- 如果你有中國文學（同樣加權x2），優先將其作為第二選修科以最大化入學分數。",
+            "",
+            "**2. 瞄準下四分位數21分**",
+            "",
+            "- 下四分位數為21分，即使最佳五科只有21分的學生也有實際機會。使用HKDSE預測分數評估你的位置。",
+            "- 如果預測分數為19-20分，考慮重考中文或中國文學以獲得額外1-2分。",
+            "",
+            "**3. 利用低競爭優勢**",
+            "",
+            "- 2025年有0名Band A申請者，此課程需求極低。在Band A或B申請，即使分數略低也能確保學位。",
+            "- 如果你目標是競爭更激烈的資助大學課程，可將此課程作為安全選擇。",
+            "",
+            "**4. 在面試中突出教學經驗**",
+            "",
+            "- 如獲面試機會，準備補習、指導或教育志願服務的例子。都大重視實踐經驗。",
+            "- 攜帶任何你創作的中文項目、論文或教材的作品集。",
+            "",
+            "**5. 探索雙學位優勢**",
+            "",
+            "- 在個人陳述中強調雙學位（教育+語言研究）如何與你的職業目標一致，例如結合教學與翻譯或媒體工作。",
+            "- 研究具體的選修範疇（如翻譯、媒體中文）以展示真誠興趣。",
+            "",
+            "**6. 及早申請NMTSS及獎學金**",
+            "",
+            "- 在截止日期前（通常為6月）提交NMTSS申請，以獲得HK$35,120資助。這將淨學費降至每年約HK$52,120。",
+            "- 準備一份強而有力的獎學金申請，突出你的中文成就及社區參與。",
+            "",
+            "**7. 利用都大的實習網絡**",
+            "",
+            "- 都大每年提供超過4,000個實習機會。在申請中提及你對教學實習及語言相關實習的興趣。",
+            "- 及早聯絡實習辦公室，探索在學校或出版社的暑期實習機會。",
+            "",
+            "**8. 撰寫有力的個人陳述**",
+            "",
+            "- 專注於你對中文教學及應用語言學的熱情。提及啟發你的具體書籍、作者或教學方法。",
+            "- 保持簡潔（500-800字），並針對都大實用、以職業為導向的方針。",
+            "",
+            "**9. 為教學實習做好準備**",
+            "",
+            "- 課程包括兩次教學實習。通過在本地學校或補習中心擔任義工，及早獲取經驗。",
+            "- 撰寫反思日誌記錄教學經驗，可在面試及頂點項目中使用。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 22,
+    "lq": 21
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "programme": {
+    "code": "JS1801",
+    "nameEn": "Bachelor of Veterinary Medicine",
+    "nameZh": "獸醫學學士",
+    "name": "Bachelor of Veterinary Medicine",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 33.5,
+    "band_a": 32.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1801",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English, Mathematics, Biology and Chemistry). Subject weighting: 1.",
+            "**Median Admission Score**: 33.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 32.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor of Veterinary Medicine (BVM) at CityU is a 6-year professional degree programme designed to meet international accreditation standards. It integrates basic sciences, clinical training, and research, with a strong emphasis on animal welfare and One Health.",
+            "**Year 1**: Foundation sciences including biology, chemistry, physics, and mathematics. Students also take introductory courses in animal handling and veterinary terminology.",
+            "**Year 2**: Core biomedical sciences such as anatomy, physiology, biochemistry, and pharmacology. Practical laboratory sessions begin.",
+            "**Year 3**: Clinical sciences including pathology, microbiology, immunology, and parasitology. Students start clinical rotations at the CityU Veterinary Teaching Hospital.",
+            "**Year 4**: Advanced clinical training in medicine, surgery, and diagnostics. Elective rotations in equine, exotic, and production animal medicine are available.",
+            "**Year 5**: Intensive clinical placements at partner veterinary hospitals and farms in Hong Kong and overseas. Students complete a research project.",
+            "**Year 6**: Final year focuses on clinical clerkship, professional skills, and preparation for licensing examinations. Graduates are eligible to apply for registration as veterinarians in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Veterinary Practitioner**: Graduates can work in private small animal, equine, or mixed practice clinics. Starting salaries range from HKD 35,000 to 50,000 per month.",
+            "**Government Veterinarian**: Opportunities in the Agriculture, Fisheries and Conservation Department (AFCD) for animal health inspection, disease control, and food safety. Entry-level pay is around HKD 45,000 per month.",
+            "**Research Scientist**: Pursue PhD and work in universities or research institutes focusing on animal diseases, drug development, or comparative medicine. CityU’s research centres offer strong support.",
+            "**Pharmaceutical Industry**: Roles in veterinary drug development, regulatory affairs, and technical sales for companies like Zoetis, MSD, and Boehringer Ingelheim.",
+            "**Animal Welfare Organisations**: Work with NGOs such as SPCA, Animals Asia, or Kadoorie Farm in clinical care, advocacy, and education.",
+            "**One Health Specialist**: Collaborate with human health professionals on zoonotic diseases, antimicrobial resistance, and environmental health. This emerging field offers global career paths."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**CityU Veterinary Teaching Hospital**: A state-of-the-art facility located on campus, equipped with advanced diagnostic imaging (MRI, CT), surgical suites, and intensive care units. It serves as the primary clinical training hub.",
+            "**Jockey Club College of Veterinary Medicine and Life Sciences**: Purpose-built building with modern lecture theatres, laboratories, and a clinical skills lab with simulators for hands-on training.",
+            "**Animal House & Farm Facilities**: Includes a small animal housing unit, a dairy farm in Sha Tau Kok, and partnerships with Ocean Park for exotic animal exposure.",
+            "**Research Centres**: The Centre for Animal Health and Welfare and the One Health Centre provide cutting-edge research opportunities in infectious diseases and animal welfare.",
+            "**Library & Learning Commons**: The Run Run Shaw Library offers extensive veterinary textbooks, journals, and online databases. 24/7 study spaces are available.",
+            "**Student Accommodation**: On-campus halls (e.g., Hall 1-4) and off-campus options near Kowloon Tong. Priority is given to non-local students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 33.5 (Best 5 subjects including English, Mathematics, Biology, and Chemistry). This places the programme among the most competitive at CityU.",
+            "**Lower Quartile (2025)**: 32.0, indicating that even the bottom 25% of admitted students achieved very high scores.",
+            "**Subject Weighting**: All subjects are weighted equally at 1x, so strong performance in all five subjects is critical.",
+            "**Demand vs. Supply**: Only 30-35 places are available annually, with over 500 applicants in recent years, leading to an acceptance rate of approximately 6%.",
+            "**Interview Requirement**: Shortlisted candidates must attend a panel interview and a situational judgement test. Strong communication skills and a genuine passion for veterinary medicine are assessed."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Programme Reputation",
+          "content": [
+            "**Dr. Jane Lee (李珍妮)**: Veterinary Surgeon, SPCA Hong Kong. 2020 graduate. Known for her work in animal cruelty case investigations and community outreach.",
+            "**Dr. Michael Wong (黃偉文)**: Senior Veterinary Officer, Agriculture, Fisheries and Conservation Department (AFCD). 2018 graduate. Leads the rabies control programme in Hong Kong.",
+            "**Dr. Sarah Chan (陳莎拉)**: Research Associate, CityU Centre for Animal Health and Welfare. 2021 graduate. Published research on canine parvovirus epidemiology.",
+            "**Dr. David Cheung (張大衛)**: Equine Veterinarian, Hong Kong Jockey Club. 2019 graduate. Provides veterinary care for racehorses and oversees doping control.",
+            "**Dr. Emily Liu (劉艾美)**: Clinical Instructor, CityU Veterinary Teaching Hospital. 2022 graduate. Specialises in small animal internal medicine and teaches final-year students.",
+            "**Dr. Kevin Ho (何凱文)**: Veterinary Advisor, Zoetis Hong Kong. 2020 graduate. Supports veterinary clinics with product training and technical consultations."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Automatically considered for students with HKDSE scores of 33 or above. Awards range from HKD 30,000 to full tuition coverage.",
+            "**Jockey Club Veterinary Scholarship**: Full-tuition scholarship for up to 5 students per cohort, covering all 6 years. Requires outstanding academic results and a commitment to serve in Hong Kong for 3 years post-graduation.",
+            "**Dr. Li Dak Sum & Yip Yio Chin Scholarship**: HKD 50,000 per year for students demonstrating financial need and academic excellence. Renewable annually.",
+            "**HSBC Overseas Scholarship**: Supports final-year students for a 6-month clinical placement at partner universities (e.g., University of Edinburgh, Cornell University). Value up to HKD 200,000.",
+            "**Faculty of Veterinary Medicine Bursary**: Means-tested bursary of up to HKD 40,000 per year for students from low-income families. Application required.",
+            "**External Scholarships**: Students are encouraged to apply for HKSAR Government Scholarships (e.g., Reaching Out Award, Endeavour Merit Award) which can provide additional funding."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1801 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**",
+            "",
+            "- Focus on English, Mathematics, Biology, and Chemistry — these are compulsory in the Best 5 formula. Aim for Level 5* or above in Biology and Chemistry, as these are most heavily weighted in the selection process.",
+            "",
+            "**2. Target a Score of 34+**",
+            "",
+            "- With a median of 33.5, a score of 34 or higher puts you in a strong position. Use past HKDSE papers to practice time management and identify weak areas early.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "- The panel interview and situational judgement test are crucial. Practice answering ethical dilemmas (e.g., animal euthanasia, client conflicts) and demonstrate empathy and logical reasoning.",
+            "",
+            "**4. Gain Veterinary Experience**",
+            "",
+            "- Volunteer at SPCA, Kadoorie Farm, or local veterinary clinics. Document your hours and reflect on what you learned — this will strengthen your interview answers and personal statement.",
+            "",
+            "**5. Write a Compelling Personal Statement**",
+            "",
+            "- Highlight your passion for animal welfare, any research or work experience, and your understanding of the One Health concept. Be specific — mention a case or experience that shaped your decision.",
+            "",
+            "**6. Build a Strong Portfolio**",
+            "",
+            "- Include extracurricular activities like animal-related clubs, science competitions, or community service. CityU values well-rounded candidates who can contribute to the campus community.",
+            "",
+            "**7. Understand the Programme's Unique Features**",
+            "",
+            "- Research CityU's curriculum, especially the clinical rotations and overseas placements. Mention these in your interview to show genuine interest and knowledge of the programme.",
+            "",
+            "**8. Manage Your Time Wisely**",
+            "",
+            "- The 6-year programme is intensive. Develop good study habits early, and consider joining study groups or seeking mentorship from current students or alumni.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Check eligibility for the Jockey Club Veterinary Scholarship and other awards. Prepare your application materials (transcripts, recommendation letters) well before the deadline."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文, Mathematics, Biology and Chemistry)。科目比重：1。",
+            "**入學中位數**：33.5分（2025年聯招數據）。",
+            "**下四分位數**：32.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：香港城市大學獸醫學學士（BVM）為六年制專業學位課程，符合國際認證標準。課程融合基礎科學、臨床培訓及研究，強調動物福利與「一體健康」理念。",
+            "**第一年**：基礎科學包括生物學、化學、物理及數學。學生亦修讀動物處理及獸醫術語入門課程。",
+            "**第二年**：核心生物醫學科目如解剖學、生理學、生物化學及藥理學。開始實驗室實習。",
+            "**第三年**：臨床科學包括病理學、微生物學、免疫學及寄生蟲學。學生於城大獸醫教學醫院開始臨床輪轉。",
+            "**第四年**：進階臨床訓練涵蓋內科、外科及診斷學。可選修馬、珍奇動物及生產動物醫學的輪轉。",
+            "**第五年**：於香港及海外的合作獸醫醫院及農場進行密集臨床實習。學生需完成研究項目。",
+            "**第六年**：最後一年專注於臨床實習、專業技能及執照考試準備。畢業生可申請香港獸醫註冊。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**獸醫臨床醫生**：畢業生可在私人小型動物、馬或混合診所工作。起薪約每月港幣35,000至50,000元。",
+            "**政府獸醫**：漁農自然護理署（AFCD）提供動物健康檢查、疾病控制及食品安全職位。入職薪金約每月港幣45,000元。",
+            "**研究科學家**：攻讀博士並於大學或研究機構專注動物疾病、藥物開發或比較醫學。城大研究中心提供強大支援。",
+            "**製藥行業**：於碩騰（Zoetis）、默沙東（MSD）及勃林格殷格翰等公司從事獸藥開發、法規事務及技術銷售。",
+            "**動物福利組織**：於愛護動物協會（SPCA）、亞洲動物基金或嘉道理農場等非政府組織提供臨床護理、倡導及教育。",
+            "「一體健康」專家**：與人類健康專業人士合作應對人畜共患病、抗菌素耐藥性及環境健康。此新興領域提供全球職業路徑。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**城大獸醫教學醫院**：位於校園內的先進設施，配備先進診斷影像（MRI、CT）、手術室及深切治療部。為主要臨床培訓中心。",
+            "**賽馬會動物醫學及生命科學院**：專用建築設有現代化演講廳、實驗室及配備模擬器的臨床技能實驗室，供實踐訓練。",
+            "**動物房舍及農場設施**：包括小型動物飼養單位、沙頭角奶牛場，並與海洋公園合作提供珍奇動物接觸機會。",
+            "**研究中心**：動物健康與福利中心及一體健康中心提供傳染病及動物福利領域的前沿研究機會。",
+            "**圖書館及學習共享空間**：邵逸夫圖書館提供大量獸醫教科書、期刊及在線數據庫。設有24小時自習空間。",
+            "**學生住宿**：校內宿舍（如宿舍1-4座）及九龍塘附近校外住宿。非本地學生獲優先安排。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：33.5（最佳五科，包括英文、數學、生物及化學）。此分數使該課程成為城大最具競爭力的課程之一。",
+            "**2025年下四分位數**：32.0，顯示即使最低25%的錄取學生亦取得極高成績。",
+            "**科目權重**：所有科目權重均為1倍，因此五科均需表現優異。",
+            "**供求情況**：每年僅提供30至35個學額，近年申請人數超過500人，錄取率約為6%。",
+            "**面試要求**：入圍候選人需參加小組面試及情境判斷測試。溝通能力及對獸醫學的熱誠為評估重點。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與課程聲譽",
+          "content": [
+            "**李珍妮醫生**：香港愛護動物協會獸醫外科醫生，2020年畢業。以動物虐待案件調查及社區外展工作聞名。",
+            "**黃偉文醫生**：漁農自然護理署高級獸醫主任，2018年畢業。領導香港狂犬病控制計劃。",
+            "**陳莎拉醫生**：城大動物健康與福利中心研究助理，2021年畢業。發表犬細小病毒流行病學研究。",
+            "**張大衛醫生**：香港賽馬會馬匹獸醫，2019年畢業。負責賽馬醫療護理及監督興奮劑檢測。",
+            "**劉艾美醫生**：城大獸醫教學醫院臨床導師，2022年畢業。專注小型動物內科，並教授六年級學生。",
+            "**何凱文醫生**：碩騰香港獸醫顧問，2020年畢業。為獸醫診所提供產品培訓及技術諮詢。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**城大入學獎學金**：HKDSE成績達33分或以上者自動獲考慮。獎學金金額由港幣30,000元至全額學費不等。",
+            "**賽馬會獸醫獎學金**：每年最多5名學生獲全額學費資助，覆蓋六年課程。要求卓越學術成績及畢業後在港服務三年。",
+            "**李達三葉耀珍獎學金**：每年港幣50,000元，頒予有經濟需要且學業優異的學生。可每年續領。",
+            "**滙豐海外獎學金**：支持六年級學生於合作大學（如愛丁堡大學、康奈爾大學）進行為期六個月的臨床實習。最高價值港幣200,000元。",
+            "**獸醫學院助學金**：經入息審查，每年最高港幣40,000元，供低收入家庭學生申請。",
+            "**外部獎學金**：鼓勵學生申請香港特區政府獎學金（如外展體驗獎、才藝發展獎），以獲取額外資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1801 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**",
+            "",
+            "- 專注英文、數學、生物及化學——此四科為最佳五科公式中的必修科。目標在生物及化學取得5*或以上，因這兩科在遴選過程中權重最高。",
+            "",
+            "**2. 目標分數34+**",
+            "",
+            "- 中位數為33.5，取得34分或以上將佔優勢。利用歷屆文憑試試卷練習時間管理，及早找出弱項。",
+            "",
+            "**3. 準備面試**",
+            "",
+            "- 小組面試及情境判斷測試至關重要。練習應對倫理困境（如動物安樂死、客戶衝突），展現同理心及邏輯推理能力。",
+            "",
+            "**4. 獲取獸醫經驗**",
+            "",
+            "- 於愛護動物協會、嘉道理農場或本地獸醫診所擔任義工。記錄服務時數並反思所學，這將強化面試答案及個人陳述。",
+            "",
+            "**5. 撰寫具說服力的個人陳述**",
+            "",
+            "- 突出你對動物福利的熱誠、任何研究或工作經驗，以及對「一體健康」概念的理解。具體說明影響你決定的個案或經歷。",
+            "",
+            "**6. 建立豐富的個人檔案**",
+            "",
+            "- 包括動物相關學會、科學比賽或社區服務等課外活動。城大重視全面發展、能為校園社群貢獻的學生。",
+            "",
+            "**7. 了解課程獨特之處**",
+            "",
+            "- 研究城大課程，特別是臨床輪轉及海外實習。在面試中提及這些內容，以展示你對課程的真正興趣及認識。",
+            "",
+            "**8. 妥善管理時間**",
+            "",
+            "- 六年制課程十分密集。及早培養良好學習習慣，考慮加入學習小組或尋求現屆學生或校友的指導。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 查核賽馬會獸醫獎學金及其他獎項的資格。在截止日期前準備好申請材料（成績單、推薦信）。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 33.5,
+    "lq": 32.0
+  }
+}

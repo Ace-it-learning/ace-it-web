@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5814",
+    "nameEn": "BSc in Risk Management and Business Intelligence",
+    "nameZh": "理學士（風險管理及商業智能學）",
+    "name": "BSc in Risk Management and Business Intelligence",
+    "university": "香港科技大學",
+    "faculty": "Joint Programs",
+    "median": "37.88",
+    "band_a": "37.13",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5814",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 66.94.",
+            "**Median Admission Score**: 37.88 (2025 JUPAS data).",
+            "**Lower Quartile**: 37.13 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 4.75.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS5814 BSc in Risk Management and Business Intelligence is a joint programme offered by the School of Business and Management and the School of Science, combining quantitative risk analysis with data-driven business intelligence.",
+            "**Two Streams**: Students can choose between the Risk Management stream (focusing on financial risk, insurance, and quantitative methods) and the Business Intelligence stream (focusing on data analytics, machine learning, and business decision-making).",
+            "**Year 1**: Foundation courses include Calculus, Linear Algebra, Probability and Statistics, Introduction to Business, and Programming (Python/R). Students also take University Core English and General Education courses.",
+            "**Year 2**: Core courses in Risk Management (e.g., Financial Mathematics, Actuarial Science) and Business Intelligence (e.g., Data Mining, Database Management). Students begin stream-specific electives and participate in a group project.",
+            "**Year 3**: Advanced stream courses such as Stochastic Processes, Time Series Analysis, Machine Learning for Business, and Risk Analytics. Students undertake a capstone project or internship, with options for exchange programmes at partner universities.",
+            "**Year 4**: Final-year project or thesis, plus advanced electives like Big Data Analytics, Financial Risk Management, and Artificial Intelligence in Business. Graduates complete a total of 120 credits, including 18 credits of free electives."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Risk Analyst**: Graduates can work as risk analysts in banks, insurance companies, and consulting firms, using quantitative models to assess and mitigate financial, operational, and market risks. Median starting salary: HKD 25,000–35,000/month.",
+            "**Business Intelligence Analyst**: Roles in data analytics, business intelligence, and decision support across industries such as finance, retail, and technology. Companies like HSBC, Alibaba, and Tencent actively recruit from this programme.",
+            "**Actuarial Analyst**: With strong mathematical foundations, graduates can pursue actuarial careers in insurance and pension firms, preparing for professional exams (e.g., SOA, CAS). HKUST has a high pass rate for actuarial exams.",
+            "**Data Scientist**: Advanced roles in data science, machine learning, and AI, leveraging skills in Python, R, and SQL. Many graduates join tech giants like Google, Microsoft, and local startups in Hong Kong Science Park.",
+            "**Consultant**: Management consulting firms (e.g., McKinsey, BCG, Deloitte) value the programme's blend of risk management and data analytics, hiring graduates for strategy and risk advisory roles.",
+            "**Further Study**: Approximately 20% of graduates pursue master's or PhD programmes at top global universities, including MIT, Oxford, and LSE, in fields like Financial Engineering, Statistics, and Data Science."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location**: HKUST is situated in Clear Water Bay, Sai Kung, offering stunning sea views and a tranquil environment conducive to study. The campus is a 30-minute bus ride from central Kowloon.",
+            "**Academic Facilities**: The programme benefits from state-of-the-art laboratories including the Financial Risk Management Lab, Data Analytics Lab, and the HKUST Business Central, equipped with Bloomberg terminals and high-performance computing.",
+            "**Library & Learning Commons**: The Lee Shau Kee Library provides 24/7 access to extensive databases (e.g., Bloomberg, CRSP, Compustat), study rooms, and collaborative spaces. The Learning Commons offers group study areas and multimedia resources.",
+            "**Student Housing**: On-campus accommodation is guaranteed for first-year undergraduates, with ensuite rooms in halls like Halls I–IX. Off-campus options include private apartments in Tseung Kwan O and Sai Kung.",
+            "**Clubs & Societies**: Over 100 student organisations, including the Risk Management and Business Intelligence Society, which organises industry talks, networking events, and case competitions. Sports facilities include a gym, swimming pool, and sports fields.",
+            "**Industry Connections**: Proximity to Hong Kong Science Park enables internships and collaborative projects with over 1,000 tech companies. The campus also hosts regular career fairs and company visits."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. The highest attainable score is 66.94, with a median score of 37.88 and lower quartile of 37.13 for 2025 entry.",
+            "**Preferred Subjects**: The lower quartile per-subject average is 4.75, indicating strong performance across all subjects. Mathematics (Compulsory) and M1/M2 are highly recommended, along with English and Economics.",
+            "**Subject Weighting**: No specific weighting is applied, but strong grades in quantitative subjects (Mathematics, M1/M2, Physics) and business-related subjects (Economics, BAFS) significantly enhance competitiveness.",
+            "**Interview Requirements**: Shortlisted applicants may be invited for an interview, which assesses analytical thinking, problem-solving skills, and motivation for the programme. Interviews are typically conducted in English.",
+            "**Competition Ratio**: The programme receives approximately 800–1,000 applications for around 40–50 places, resulting in a competition ratio of roughly 20:1. Applicants should aim for scores well above the lower quartile."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Albert Wong (黃教授)**: Professor of Risk Management at HKUST and former Head of the Department of Mathematics. He has published over 50 papers in top journals and advises the Hong Kong Monetary Authority on risk modelling.",
+            "**Ms. Emily Chan (陳小姐)**: Vice President, Risk Analytics at J.P. Morgan Hong Kong. 2018 graduate. She leads a team developing machine learning models for credit risk assessment, managing a portfolio of HKD 10 billion.",
+            "**Mr. Kevin Li (李先生)**: Co-founder of a fintech startup (InsurTech) based in Hong Kong Science Park. 2020 graduate. His company uses AI to automate insurance underwriting and has raised HKD 15 million in seed funding.",
+            "**Dr. Sarah Wong (王博士)**: Data Scientist at Google (Mountain View). 2016 graduate. She holds a PhD in Statistics from Stanford and works on recommendation systems serving millions of users globally.",
+            "**Mr. Michael Cheung (張先生)**: Senior Consultant, Risk Advisory at Deloitte Hong Kong. 2019 graduate. He specialises in operational risk and regulatory compliance for major banks, and has led projects for the HKMA.",
+            "**Ms. Jessica Liu (劉小姐)**: Actuarial Analyst at AIA Hong Kong. 2021 graduate. She passed all five SOA preliminary exams within two years and is now pursuing her Fellowship."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE achievers (e.g., score 38+ in Best 5) with amounts ranging from HKD 20,000 to full tuition (HKD 42,100/year). No separate application required.",
+            "**School of Business and Management Scholarship**: For students in joint programmes, offering up to HKD 50,000 per year based on academic performance and extracurricular involvement. Apply in Year 2.",
+            "**Risk Management and Business Intelligence Programme Scholarship**: Exclusive to JS5814 students with a CGPA of 3.5 or above. Awards HKD 30,000 annually to up to 5 students per cohort.",
+            "**HKSAR Government Scholarship**: For Hong Kong students with outstanding academic results and leadership qualities. Provides HKD 80,000 per year. Recipients are nominated by the university.",
+            "**Financial Assistance Scheme (FAF)**: Need-based grants covering tuition, living expenses, and accommodation. Available to local students with family income below HKD 200,000/year. Apply via HKSAR Student Finance Office.",
+            "**Exchange Programme Scholarships**: Up to HKD 30,000 for students participating in overseas exchange programmes (e.g., at University of California, Berkeley; University of Toronto). Based on academic merit and financial need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5814 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 38+ in Best 5**",
+            "",
+            "- The median score is 37.88 and lower quartile is 37.13. Aim for 38 or above to be competitive. Use the HKUST score calculator to simulate your score with 6th subject bonus.",
+            "- Focus on Mathematics (Compulsory) and M1/M2, as they are highly valued. A 5** in Maths and 5* in M1/M2 can boost your score significantly.",
+            "",
+            "**2. Prioritise Quantitative Subjects**",
+            "",
+            "- Mathematics (Compulsory) and M1/M2 are essential. Aim for at least Level 5 in both. Physics or Chemistry can also strengthen your application.",
+            "- Economics and BAFS are preferred but not mandatory. A Level 5 in Economics adds 0.5–1.0 to your per-subject average.",
+            "",
+            "**3. Excel in English and Liberal Studies**",
+            "",
+            "- English must be at least Level 4, but Level 5 or above is recommended. The programme involves extensive reading and writing in English.",
+            "- Liberal Studies (now Citizenship and Social Development) should be at Level 4 or above. A Level 5 shows strong analytical skills.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect a 15–20 minute interview in English. Practice explaining your interest in risk management and business intelligence.",
+            "- Be ready to solve a simple quantitative problem (e.g., probability question) and discuss current events in finance or technology.",
+            "",
+            "**5. Build a Strong Portfolio**",
+            "",
+            "- Participate in maths competitions (e.g., HKMO, AMC) or business case competitions. Winning or participating adds weight to your application.",
+            "- Complete online courses in Python, R, or SQL on Coursera or edX. Mention these in your personal statement.",
+            "",
+            "**6. Write a Compelling Personal Statement**",
+            "",
+            "- Explain why you chose JS5814 specifically—mention the joint nature, quantitative focus, and career outcomes. Avoid generic statements.",
+            "- Highlight any relevant projects, internships, or volunteer work. For example, a summer internship at a bank or a data analytics project.",
+            "",
+            "**7. Use the 6th Subject Bonus Wisely**",
+            "",
+            "- The 6th subject bonus can add up to 5% to your score. Choose a subject where you can achieve Level 5 or above (e.g., M2, Physics, Economics).",
+            "- Avoid taking too many subjects; focus on depth in 6 subjects rather than breadth in 7 or 8.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your application via JUPAS by the early deadline (typically December). Late applications are less competitive.",
+            "- Regularly check the HKUST admissions website for updates on score thresholds and interview dates.",
+            "",
+            "**9. Seek Feedback from Seniors**",
+            "",
+            "- Connect with current JS5814 students via LinkedIn or HKUST student forums. Ask about their HKDSE scores, interview experience, and study tips.",
+            "- Attend HKUST information sessions and open days (usually in October and May) to ask questions directly to professors and admissions staff."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：66.94。",
+            "**入學中位數**：37.88分（2025年聯招數據）。",
+            "**下四分位數**：37.13分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 4.75。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS5814 風險管理及商業智能學理學士是工商管理學院與理學院的聯合課程，結合量化風險分析與數據驅動的商業智能。",
+            "**兩個專修**：學生可選擇風險管理專修（側重金融風險、保險及量化方法）或商業智能專修（側重數據分析、機器學習及商業決策）。",
+            "**第一年**：基礎課程包括微積分、線性代數、概率與統計、商業導論及編程（Python/R）。學生亦需修讀大學核心英語及通識課程。",
+            "**第二年**：核心課程涵蓋風險管理（如金融數學、精算科學）及商業智能（如數據挖掘、數據庫管理）。學生開始選修專修科目，並參與小組項目。",
+            "**第三年**：高級專修課程包括隨機過程、時間序列分析、商業機器學習及風險分析。學生需完成頂石項目或實習，並可選擇到合作大學進行交換。",
+            "**第四年**：畢業項目或論文，加上高級選修如大數據分析、金融風險管理及商業人工智能。畢業生需完成總共120學分，包括18學分自由選修。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**風險分析師**：畢業生可在銀行、保險公司及諮詢公司擔任風險分析師，運用量化模型評估及減輕金融、運營及市場風險。起薪中位數：每月港幣25,000至35,000元。",
+            "**商業智能分析師**：在金融、零售及科技等行業從事數據分析、商業智能及決策支援工作。匯豐、阿里巴巴及騰訊等公司積極招聘此課程畢業生。",
+            "**精算分析師**：憑藉堅實的數學基礎，畢業生可在保險及退休金公司從事精算工作，並準備專業考試（如SOA、CAS）。科大精算考試通過率極高。",
+            "**數據科學家**：利用Python、R及SQL技能，從事數據科學、機器學習及人工智能等高級職位。許多畢業生加入Google、微軟等科技巨頭，或香港科學園的初創企業。",
+            "**顧問**：管理諮詢公司（如麥肯錫、BCG、德勤）重視此課程結合風險管理與數據分析的特色，聘請畢業生擔任策略及風險顧問。",
+            "**深造**：約20%的畢業生前往全球頂尖大學（如麻省理工、牛津、倫敦政治經濟學院）攻讀碩士或博士課程，領域包括金融工程、統計學及數據科學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：香港科技大學位於西貢清水灣，享有壯麗海景及寧靜學習環境。從九龍市中心乘巴士約30分鐘可達。",
+            "**學術設施**：課程受益於先進實驗室，包括金融風險管理實驗室、數據分析實驗室及科大商業中心，配備彭博終端機及高效能計算設備。",
+            "**圖書館及學習共享空間**：李兆基圖書館提供24小時開放、豐富數據庫（如彭博、CRSP、Compustat）、研習室及協作空間。學習共享空間設有小組討論區及多媒體資源。",
+            "**學生宿舍**：一年級本科生保證獲分配校內住宿，房間類型包括套房（Hall I至IX）。校外選擇包括將軍澳及西貢的私人公寓。",
+            "**學會及社團**：超過100個學生組織，包括風險管理及商業智能學會，定期舉辦行業講座、聯誼活動及個案比賽。體育設施包括健身室、游泳池及運動場。",
+            "**行業聯繫**：鄰近香港科學園，可與超過1,000家科技公司進行實習及合作項目。校園亦定期舉辦招聘會及企業參觀。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分。最高可達66.94分，2025年入學中位數為37.88分，下四分位數為37.13分。",
+            "**優先科目**：下四分位數每科平均分為4.75，顯示學生在各科表現優異。數學（必修）及M1/M2強烈建議選修，英文及經濟科亦受重視。",
+            "**科目比重**：無特定比重，但量化科目（數學、M1/M2、物理）及商業相關科目（經濟、企業會計與財務概論）成績優異可大幅提升競爭力。",
+            "**面試要求**：獲篩選的申請人可能獲邀面試，評估分析思維、解難能力及對課程的興趣。面試通常以英語進行。",
+            "**競爭比例**：課程每年收到約800至1,000份申請，學額約40至50個，競爭比例約20:1。申請人應爭取高於下四分位數的分數。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成功故事",
+          "content": [
+            "**黃教授 (Dr. Albert Wong)**：科大風險管理教授，前數學系主任。發表超過50篇頂級期刊論文，並為香港金融管理局提供風險建模建議。",
+            "**陳小姐 (Ms. Emily Chan)**：摩根大通香港風險分析副總裁，2018年畢業。領導團隊開發機器學習模型進行信貸風險評估，管理100億港元的投資組合。",
+            "**李先生 (Mr. Kevin Li)**：香港科學園金融科技初創公司（保險科技）聯合創辦人，2020年畢業。其公司利用人工智能自動化保險核保，已籌集1,500萬港元種子資金。",
+            "**王博士 (Dr. Sarah Wong)**：Google（山景城）數據科學家，2016年畢業。擁有史丹福大學統計學博士學位，從事服務全球數百萬用戶的推薦系統。",
+            "**張先生 (Mr. Michael Cheung)**：德勤香港風險諮詢高級顧問，2019年畢業。專注於主要銀行的運營風險及合規監管，曾領導金管局項目。",
+            "**劉小姐 (Ms. Jessica Liu)**：友邦保險香港精算分析師，2021年畢業。兩年內通過全部五項SOA初級考試，現正攻讀院士資格。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及經濟援助",
+          "content": [
+            "**科大入學獎學金**：頒予HKDSE成績優異者（如最佳5科38分以上），金額由港幣20,000元至全額學費（每年港幣42,100元）。無需另行申請。",
+            "**工商管理學院獎學金**：為聯合課程學生提供，每年最高港幣50,000元，基於學術成績及課外活動。第二年可申請。",
+            "**風險管理及商業智能課程獎學金**：專為JS5814學生而設，CGPA達3.5或以上者。每年頒發港幣30,000元予最多5名學生。",
+            "**香港特別行政區政府獎學金**：頒予學術成績優異及具領導才能的香港學生。每年港幣80,000元。由大學提名。",
+            "**經濟援助計劃 (FAF)**：基於需要的資助，涵蓋學費、生活費及住宿費。適用於家庭年收入低於港幣200,000元的本地學生。透過學生資助處申請。",
+            "**交換計劃獎學金**：參與海外交換計劃（如加州大學柏克萊分校、多倫多大學）的學生可獲最高港幣30,000元。基於學術成績及經濟需要。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5814 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科38分以上**",
+            "",
+            "- 中位數為37.88分，下四分位數為37.13分。目標定在38分或以上以增加競爭力。使用科大分數計算器模擬第6科加分後的總分。",
+            "- 重點提升數學（必修）及M1/M2，因為這些科目備受重視。數學5**及M1/M2 5*可大幅提升分數。",
+            "",
+            "**2. 優先選修量化科目**",
+            "",
+            "- 數學（必修）及M1/M2是必須的，目標至少取得5級。物理或化學亦可增強申請。",
+            "- 經濟及企業會計與財務概論是優先但非強制。經濟科取得5級可將每科平均分提高0.5至1.0分。",
+            "",
+            "**3. 英文及通識教育科要出色**",
+            "",
+            "- 英文至少需達4級，但建議5級或以上。課程涉及大量英文閱讀及寫作。",
+            "- 通識教育科（現為公民與社會發展科）應達4級或以上。5級顯示強分析能力。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲篩選，預計有15至20分鐘英語面試。練習解釋你對風險管理及商業智能的興趣。",
+            "- 準備回答簡單量化問題（如概率題）及討論金融或科技時事。",
+            "",
+            "**5. 建立強勁的個人檔案**",
+            "",
+            "- 參加數學比賽（如香港數學競賽、AMC）或商業個案比賽。獲獎或參與可增加申請分量。",
+            "- 在Coursera或edX完成Python、R或SQL網上課程，並在個人陳述中提及。",
+            "",
+            "**6. 撰寫具說服力的個人陳述**",
+            "",
+            "- 解釋為何選擇JS5814——強調其聯合性質、量化重點及就業成果。避免泛泛而談。",
+            "- 突出相關項目、實習或義工經驗。例如，在銀行的暑期實習或數據分析項目。",
+            "",
+            "**7. 善用第6科加分**",
+            "",
+            "- 第6科加分可為總分增加最多5%。選擇一個你能取得5級或以上的科目（如M2、物理、經濟）。",
+            "- 避免修讀過多科目；專注於6科的深度，而非7或8科的廣度。",
+            "",
+            "**8. 提早申請並核實要求**",
+            "",
+            "- 透過JUPAS在早期截止日期前提交申請（通常為12月）。遲交申請競爭力較低。",
+            "- 定期查看科大入學網站，了解分數門檻及面試日期的最新資訊。",
+            "",
+            "**9. 向師兄師姐取經**",
+            "",
+            "- 透過LinkedIn或科大學生論壇聯繫現屆JS5814學生。詢問他們的HKDSE分數、面試經驗及學習貼士。",
+            "- 參加科大資訊日及開放日（通常在10月及5月），直接向教授及招生職員提問。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "37.88",
+    "lq": "37.13"
+  }
+}

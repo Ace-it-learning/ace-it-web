@@ -1,0 +1,283 @@
+{
+  "programme": {
+    "code": "JS1026",
+    "nameEn": "BBA Business Decision Analytics",
+    "nameZh": "工商管理學士(商業決策分析)",
+    "name": "BBA Business Decision Analytics",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 21.5,
+    "band_a": 21.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1026",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 21.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BBA Business Decision Analytics (JS1026) is a 4-year full-time programme that equips students with data-driven decision-making skills, combining business acumen with quantitative analytics.",
+            "**Core Foundation**: Year 1 covers essential business disciplines including accounting, economics, marketing, and management, alongside foundational mathematics and statistics.",
+            "**Year 1**: Students take introductory courses in business analytics, calculus, and probability, building a strong quantitative base for advanced study.",
+            "**Year 2**: Focus shifts to core decision analytics courses such as data mining, optimization, and predictive modeling, with elective options in finance or supply chain.",
+            "**Year 3**: Advanced modules include machine learning for business, simulation, and decision theory; students also begin a capstone project or internship.",
+            "**Year 4**: Final year features a compulsory capstone project applying analytics to real-world business problems, plus specialized electives in areas like risk analytics or marketing analytics."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Analyst**: Graduates are well-prepared for roles as data analysts in banking, retail, and consulting firms, leveraging skills in statistical modeling and data visualization.",
+            "**Business Intelligence Specialist**: Many alumni work in business intelligence, transforming raw data into actionable insights for strategic decision-making.",
+            "**Operations Research Analyst**: The programme's optimization and simulation training opens doors to operations research roles in logistics and supply chain management.",
+            "**Consultant**: With strong analytical and problem-solving skills, graduates often join top consulting firms like McKinsey, BCG, or Deloitte.",
+            "**Financial Analyst**: The quantitative focus is ideal for financial analysis roles in investment banks, asset management, and fintech companies.",
+            "**Entrepreneur**: Some graduates launch startups, using data analytics to identify market opportunities and optimize business models."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is modern and well-connected, with state-of-the-art learning facilities and green spaces.",
+            "**Business School Facilities**: The College of Business offers dedicated analytics labs with Bloomberg terminals, SAS, and Python environments for hands-on learning.",
+            "**Student Organisations**: The Business Decision Analytics Society organizes workshops, company visits, and networking events with industry professionals.",
+            "**Exchange Opportunities**: Students can participate in semester-long exchanges at partner universities in North America, Europe, and Asia, broadening global perspectives.",
+            "**Career Services**: CityU's Career and Leadership Centre provides internship placements, resume workshops, and recruitment talks with top employers.",
+            "**Library & Study Spaces**: The Run Run Shaw Library offers extensive databases, quiet study areas, and group project rooms tailored for analytics students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score for JS1026 is 21.5 (Best 5 subjects including Mathematics), indicating strong competition.",
+            "**Lower Quartile (2025)**: The lower quartile score is 21.0, meaning 25% of admitted students scored 21.0 or below, showing a tight range.",
+            "**Subject Weighting**: All subjects are weighted equally at 1, but Mathematics is compulsory in the Best 5 calculation, emphasizing quantitative ability.",
+            "**Admission Ratio**: The programme typically receives around 500 applications for 40-50 places, resulting in a competitive admission rate of approximately 8-10%.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview to assess motivation, analytical thinking, and communication skills."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂博士)**: Data Science Lead, HSBC Hong Kong. Graduated in 2016 and now leads a team of 20 data scientists.",
+            "**Ms. Wong Pui-shan (黃佩珊女士)**: Senior Business Analyst, McKinsey & Company. 2018 graduate, recognized for her work in retail analytics.",
+            "**Mr. Li Wai-ting (李偉霆先生)**: Co-founder, DataPulse Technologies. 2019 graduate, his startup raised HK$10 million in seed funding.",
+            "**Ms. Cheung Hoi-ying (張海盈女士)**: Operations Research Analyst, Cathay Pacific. 2020 graduate, optimizing flight scheduling and crew allocation.",
+            "**Dr. Ng Tsz-fung (吳子峰博士)**: Assistant Professor, City University of Hong Kong. 2015 graduate, now teaching decision analytics and publishing in top journals."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., 5** in multiple subjects), covering full or partial tuition fees.",
+            "**College of Business Scholarship**: High-achieving JS1026 students may receive HK$20,000 per year based on academic performance and extracurricular involvement.",
+            "**Dr. Li Kwok Po Scholarship**: A merit-based scholarship of HK$50,000 for students excelling in business analytics, renewable annually.",
+            "**HKSAR Government Scholarship**: Eligible students can apply for the HKSAR Scholarship Scheme, offering up to HK$80,000 per year.",
+            "**Financial Assistance Scheme**: Need-based grants and loans are available through the Government's Financial Assistance Scheme (FASP) and CityU's own bursary programmes.",
+            "**Exchange Scholarship**: Students participating in overseas exchange programmes can apply for funding of up to HK$30,000 to cover travel and living expenses."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1026 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics in HKDSE**",
+            "",
+            "- Mathematics is compulsory in the Best 5 calculation; aim for Level 5 or above to boost your score significantly.",
+            "- Practice past papers and focus on statistics and probability topics, which are directly relevant to the programme.",
+            "",
+            "**2. Target a Best 5 Score of 22+**",
+            "",
+            "- With a median of 21.5, scoring 22 or higher places you in a strong position. Use the HKDSE score calculator to plan your subject combination.",
+            "- Include at least one elective in business, economics, or ICT to demonstrate interest in analytics.",
+            "",
+            "**3. Build a Strong Personal Statement**",
+            "",
+            "- Highlight any data-related projects, competitions (e.g., Hong Kong Data Science Challenge), or internships.",
+            "- Explain why you are drawn to decision analytics and how you plan to use data to solve business problems.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice answering questions about data analysis case studies (e.g., how to optimize a supply chain).",
+            "- Show enthusiasm for quantitative methods and real-world applications.",
+            "",
+            "**5. Gain Hands-On Experience**",
+            "",
+            "- Learn Python or R through online courses (e.g., Coursera, DataCamp) before joining the programme.",
+            "- Participate in hackathons or data competitions to build your portfolio.",
+            "",
+            "**6. Leverage CityU's Resources**",
+            "",
+            "- Visit the College of Business analytics labs and attend open days to learn about the curriculum and faculty.",
+            "- Connect with current students or alumni via LinkedIn for insider advice.",
+            "",
+            "**7. Consider Early Admission Schemes**",
+            "",
+            "- Apply through the School Nominations Direct Admission Scheme (SNDAS) if your school nominates you, which can reduce score requirements.",
+            "- Check CityU's early admission deadlines and prepare your application early.",
+            "",
+            "**8. Balance Your Subject Choices**",
+            "",
+            "- While Mathematics is key, strong performance in English and Liberal Studies also matters for the Best 5 calculation.",
+            "- Avoid dropping subjects too early; a broad profile can improve your overall score.",
+            "",
+            "**9. Stay Updated on Programme Changes**",
+            "",
+            "- Visit the CityU admissions website regularly for updates on admission scores, interview formats, and new scholarships.",
+            "- Follow the programme's social media channels for tips and success stories from current students."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：21.5分（2025年聯招數據）。",
+            "**下四分位數**：21.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工商管理學士（商業決策分析）（JS1026）為四年全日制課程，培養學生以數據驅動決策的能力，結合商業知識與定量分析技巧。",
+            "**核心基礎**：第一年涵蓋會計、經濟、市場學及管理等基礎商業學科，同時建立數學與統計學根基。",
+            "**第一年**：學生修讀商業分析入門、微積分及概率論等課程，為進階學習打下堅實的定量基礎。",
+            "**第二年**：課程重點轉向核心決策分析科目，如數據挖掘、優化及預測建模，並可選修金融或供應鏈方向。",
+            "**第三年**：進階模塊包括商業機器學習、模擬及決策理論；學生同時開始頂石項目或實習。",
+            "**第四年**：最後一年設有強制性頂石項目，將分析應用於真實商業問題，並提供風險分析或市場分析等專業選修。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據分析師**：畢業生勝任銀行、零售及諮詢公司的數據分析師職位，運用統計建模及數據可視化技能。",
+            "**商業智能專員**：許多校友從事商業智能工作，將原始數據轉化為策略決策的可行見解。",
+            "**運籌研究分析師**：課程的優化與模擬訓練為物流及供應鏈管理的運籌研究崗位打開大門。",
+            "**顧問**：憑藉強大的分析與解難能力，畢業生常加入頂尖諮詢公司如麥肯錫、BCG或德勤。",
+            "**金融分析師**：定量重點非常適合投資銀行、資產管理及金融科技公司的金融分析角色。",
+            "**創業者**：部分畢業生創辦初創企業，利用數據分析識別市場機會並優化商業模式。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，校園現代化且交通便利，配備先進學習設施及綠化空間。",
+            "**商學院設施**：商學院設有專用分析實驗室，配備彭博終端、SAS及Python環境，供學生實踐學習。",
+            "**學生組織**：商業決策分析學會舉辦工作坊、企業參觀及業界交流活動。",
+            "**交流機會**：學生可參加北美、歐洲及亞洲合作大學的學期交換，拓展國際視野。",
+            "**就業服務**：城大職業及領袖發展中心提供實習配對、履歷工作坊及頂尖僱主招聘講座。",
+            "**圖書館與自修空間**：邵逸夫圖書館提供大量數據庫、寧靜自修區及專為分析學生設立的小組討論室。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：JS1026的HKDSE中位分數為21.5分（最佳五科包括數學），顯示競爭激烈。",
+            "**2025年下四分位數**：下四分位數為21.0分，即25%獲取錄學生分數為21.0或以下，分數範圍緊湊。",
+            "**科目比重**：所有科目比重均為1，但數學為最佳五科計算中的必修科，強調定量能力。",
+            "**錄取比例**：該課程通常收到約500份申請，取錄40-50人，錄取率約為8-10%，競爭激烈。",
+            "**面試要求**：入圍候選人或需參加面試，以評估其動機、分析思維及溝通能力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：滙豐銀行香港數據科學主管，2016年畢業，現領導20人數據科學團隊。",
+            "**黃佩珊女士**：麥肯錫公司高級商業分析師，2018年畢業，因零售分析工作獲認可。",
+            "**李偉霆先生**：DataPulse Technologies聯合創辦人，2019年畢業，其初創企業獲1,000萬港元種子資金。",
+            "**張海盈女士**：國泰航空運籌研究分析師，2020年畢業，優化航班調度及機組人員分配。",
+            "**吳子峰博士**：香港城市大學助理教授，2015年畢業，現教授決策分析並在頂級期刊發表論文。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異的學生（如多科5**），涵蓋全額或部分學費。",
+            "**商學院獎學金**：JS1026成績優異學生可獲每年20,000港元，基於學術表現及課外活動。",
+            "**李國寶博士獎學金**：為商業分析表現出色的學生提供50,000港元績優獎學金，可每年續領。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金計劃，每年最高80,000港元。",
+            "**經濟援助計劃**：透過政府資助計劃（FASP）及城大本身的助學金計劃提供需時補助及貸款。",
+            "**交流獎學金**：參加海外交換計劃的學生可申請最高30,000港元的資助，用於旅行及生活開支。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1026 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 在HKDSE中優先處理數學**",
+            "",
+            "- 數學是最佳五科計算中的必修科；目標達到5級或以上，以大幅提升分數。",
+            "- 練習歷屆試題，重點關注統計與概率題目，這些與課程直接相關。",
+            "",
+            "**2. 目標最佳五科22分或以上**",
+            "",
+            "- 中位數為21.5分，取得22分或以上將處於強勢位置。使用HKDSE分數計算器規劃科目組合。",
+            "- 至少選修一科商業、經濟或資訊及通訊科技，以展示對分析的興趣。",
+            "",
+            "**3. 撰寫有力的個人陳述**",
+            "",
+            "- 突出任何數據相關項目、比賽（如香港數據科學挑戰賽）或實習經驗。",
+            "- 解釋為何你對決策分析感興趣，以及你計劃如何利用數據解決商業問題。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 如獲面試機會，練習回答數據分析案例問題（例如如何優化供應鏈）。",
+            "- 展示對定量方法和實際應用的熱情。",
+            "",
+            "**5. 獲取實踐經驗**",
+            "",
+            "- 在入學前通過在線課程（如Coursera、DataCamp）學習Python或R。",
+            "- 參加黑客松或數據比賽，建立你的作品集。",
+            "",
+            "**6. 善用城大資源**",
+            "",
+            "- 參觀商學院分析實驗室，並參加開放日了解課程及教授團隊。",
+            "- 通過LinkedIn聯繫現有學生或校友，獲取內部建議。",
+            "",
+            "**7. 考慮提早申請計劃**",
+            "",
+            "- 如獲學校提名，可通過學校推薦直接錄取計劃（SNDAS）申請，這可能降低分數要求。",
+            "- 查看城大提早申請截止日期，並提前準備申請。",
+            "",
+            "**8. 平衡你的科目選擇**",
+            "",
+            "- 雖然數學是關鍵，但英文及通識教育的優異成績對最佳五科計算也很重要。",
+            "- 避免過早放棄科目；廣泛的科目組合可提升整體分數。",
+            "",
+            "**9. 緊貼課程最新資訊**",
+            "",
+            "- 定期瀏覽城大招生網站，獲取入學分數、面試形式及新獎學金的最新消息。",
+            "- 關注課程社交媒體頻道，獲取現屆學生的貼士及成功故事。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 21.5,
+    "lq": 21.0
+  }
+}

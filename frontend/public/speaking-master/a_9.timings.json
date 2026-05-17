@@ -1,0 +1,682 @@
+{
+  "version": 1,
+  "drillId": "a_9",
+  "durationMs": 61707,
+  "words": [
+    {
+      "index": 0,
+      "startMs": 100,
+      "endMs": 823
+    },
+    {
+      "index": 1,
+      "startMs": 837,
+      "endMs": 1323
+    },
+    {
+      "index": 2,
+      "startMs": 1337,
+      "endMs": 1534
+    },
+    {
+      "index": 3,
+      "startMs": 1548,
+      "endMs": 2048
+    },
+    {
+      "index": 4,
+      "startMs": 2061,
+      "endMs": 2363
+    },
+    {
+      "index": 5,
+      "startMs": 2376,
+      "endMs": 2428
+    },
+    {
+      "index": 6,
+      "startMs": 2442,
+      "endMs": 3205
+    },
+    {
+      "index": 7,
+      "startMs": 3219,
+      "endMs": 3521
+    },
+    {
+      "index": 8,
+      "startMs": 3534,
+      "endMs": 4139
+    },
+    {
+      "index": 9,
+      "startMs": 4153,
+      "endMs": 4337
+    },
+    {
+      "index": 10,
+      "startMs": 4350,
+      "endMs": 4876
+    },
+    {
+      "index": 11,
+      "startMs": 4890,
+      "endMs": 5376
+    },
+    {
+      "index": 12,
+      "startMs": 5390,
+      "endMs": 5495
+    },
+    {
+      "index": 13,
+      "startMs": 5508,
+      "endMs": 5902
+    },
+    {
+      "index": 14,
+      "startMs": 5916,
+      "endMs": 6731
+    },
+    {
+      "index": 15,
+      "startMs": 7157,
+      "endMs": 7551
+    },
+    {
+      "index": 16,
+      "startMs": 7565,
+      "endMs": 8222
+    },
+    {
+      "index": 17,
+      "startMs": 8236,
+      "endMs": 8472
+    },
+    {
+      "index": 18,
+      "startMs": 8486,
+      "endMs": 8788
+    },
+    {
+      "index": 19,
+      "startMs": 8802,
+      "endMs": 9223
+    },
+    {
+      "index": 20,
+      "startMs": 9236,
+      "endMs": 9920
+    },
+    {
+      "index": 21,
+      "startMs": 10210,
+      "endMs": 10367
+    },
+    {
+      "index": 22,
+      "startMs": 10381,
+      "endMs": 10986
+    },
+    {
+      "index": 23,
+      "startMs": 11000,
+      "endMs": 11513
+    },
+    {
+      "index": 24,
+      "startMs": 11526,
+      "endMs": 11828
+    },
+    {
+      "index": 25,
+      "startMs": 11842,
+      "endMs": 12499
+    },
+    {
+      "index": 26,
+      "startMs": 12513,
+      "endMs": 13157
+    },
+    {
+      "index": 27,
+      "startMs": 13171,
+      "endMs": 13355
+    },
+    {
+      "index": 28,
+      "startMs": 13368,
+      "endMs": 13907
+    },
+    {
+      "index": 29,
+      "startMs": 13921,
+      "endMs": 14578
+    },
+    {
+      "index": 30,
+      "startMs": 14592,
+      "endMs": 15118
+    },
+    {
+      "index": 31,
+      "startMs": 15539,
+      "endMs": 15815
+    },
+    {
+      "index": 32,
+      "startMs": 15828,
+      "endMs": 16209
+    },
+    {
+      "index": 33,
+      "startMs": 16223,
+      "endMs": 16644
+    },
+    {
+      "index": 34,
+      "startMs": 16657,
+      "endMs": 16854
+    },
+    {
+      "index": 35,
+      "startMs": 16868,
+      "endMs": 17104
+    },
+    {
+      "index": 36,
+      "startMs": 17118,
+      "endMs": 17407
+    },
+    {
+      "index": 37,
+      "startMs": 17421,
+      "endMs": 17552
+    },
+    {
+      "index": 38,
+      "startMs": 17565,
+      "endMs": 18262
+    },
+    {
+      "index": 39,
+      "startMs": 18276,
+      "endMs": 18394
+    },
+    {
+      "index": 40,
+      "startMs": 18407,
+      "endMs": 19038
+    },
+    {
+      "index": 41,
+      "startMs": 19052,
+      "endMs": 19157
+    },
+    {
+      "index": 42,
+      "startMs": 19171,
+      "endMs": 19736
+    },
+    {
+      "index": 43,
+      "startMs": 19750,
+      "endMs": 20328
+    },
+    {
+      "index": 44,
+      "startMs": 20342,
+      "endMs": 20499
+    },
+    {
+      "index": 45,
+      "startMs": 20513,
+      "endMs": 20618
+    },
+    {
+      "index": 46,
+      "startMs": 20631,
+      "endMs": 21117
+    },
+    {
+      "index": 47,
+      "startMs": 21131,
+      "endMs": 21657
+    },
+    {
+      "index": 48,
+      "startMs": 21671,
+      "endMs": 21749
+    },
+    {
+      "index": 49,
+      "startMs": 21763,
+      "endMs": 22315
+    },
+    {
+      "index": 50,
+      "startMs": 22328,
+      "endMs": 22420
+    },
+    {
+      "index": 51,
+      "startMs": 22434,
+      "endMs": 22512
+    },
+    {
+      "index": 52,
+      "startMs": 22526,
+      "endMs": 22986
+    },
+    {
+      "index": 53,
+      "startMs": 23000,
+      "endMs": 23460
+    },
+    {
+      "index": 54,
+      "startMs": 23881,
+      "endMs": 24473
+    },
+    {
+      "index": 55,
+      "startMs": 24486,
+      "endMs": 24946
+    },
+    {
+      "index": 56,
+      "startMs": 24960,
+      "endMs": 25420
+    },
+    {
+      "index": 57,
+      "startMs": 25434,
+      "endMs": 26052
+    },
+    {
+      "index": 58,
+      "startMs": 26355,
+      "endMs": 27183
+    },
+    {
+      "index": 59,
+      "startMs": 27197,
+      "endMs": 27960
+    },
+    {
+      "index": 60,
+      "startMs": 28210,
+      "endMs": 28367
+    },
+    {
+      "index": 61,
+      "startMs": 28381,
+      "endMs": 28894
+    },
+    {
+      "index": 62,
+      "startMs": 28907,
+      "endMs": 29485
+    },
+    {
+      "index": 63,
+      "startMs": 29500,
+      "endMs": 30052
+    },
+    {
+      "index": 64,
+      "startMs": 30460,
+      "endMs": 31012
+    },
+    {
+      "index": 65,
+      "startMs": 31026,
+      "endMs": 31144
+    },
+    {
+      "index": 66,
+      "startMs": 31157,
+      "endMs": 32091
+    },
+    {
+      "index": 67,
+      "startMs": 32105,
+      "endMs": 32223
+    },
+    {
+      "index": 68,
+      "startMs": 32236,
+      "endMs": 32551
+    },
+    {
+      "index": 69,
+      "startMs": 32565,
+      "endMs": 32972
+    },
+    {
+      "index": 70,
+      "startMs": 32986,
+      "endMs": 33722
+    },
+    {
+      "index": 71,
+      "startMs": 33736,
+      "endMs": 33854
+    },
+    {
+      "index": 72,
+      "startMs": 33868,
+      "endMs": 34394
+    },
+    {
+      "index": 73,
+      "startMs": 34407,
+      "endMs": 34933
+    },
+    {
+      "index": 74,
+      "startMs": 35276,
+      "endMs": 35973
+    },
+    {
+      "index": 75,
+      "startMs": 35986,
+      "endMs": 36078
+    },
+    {
+      "index": 76,
+      "startMs": 36092,
+      "endMs": 36789
+    },
+    {
+      "index": 77,
+      "startMs": 36802,
+      "endMs": 37328
+    },
+    {
+      "index": 78,
+      "startMs": 37342,
+      "endMs": 37447
+    },
+    {
+      "index": 79,
+      "startMs": 37460,
+      "endMs": 37986
+    },
+    {
+      "index": 80,
+      "startMs": 38000,
+      "endMs": 38118
+    },
+    {
+      "index": 81,
+      "startMs": 38131,
+      "endMs": 38328
+    },
+    {
+      "index": 82,
+      "startMs": 38342,
+      "endMs": 38789
+    },
+    {
+      "index": 83,
+      "startMs": 38802,
+      "endMs": 39328
+    },
+    {
+      "index": 84,
+      "startMs": 39736,
+      "endMs": 40301
+    },
+    {
+      "index": 85,
+      "startMs": 40565,
+      "endMs": 40670
+    },
+    {
+      "index": 86,
+      "startMs": 40684,
+      "endMs": 41210
+    },
+    {
+      "index": 87,
+      "startMs": 41223,
+      "endMs": 41617
+    },
+    {
+      "index": 88,
+      "startMs": 41631,
+      "endMs": 42091
+    },
+    {
+      "index": 89,
+      "startMs": 42105,
+      "endMs": 42749
+    },
+    {
+      "index": 90,
+      "startMs": 42763,
+      "endMs": 43013
+    },
+    {
+      "index": 91,
+      "startMs": 43026,
+      "endMs": 43131
+    },
+    {
+      "index": 92,
+      "startMs": 43144,
+      "endMs": 43657
+    },
+    {
+      "index": 93,
+      "startMs": 43671,
+      "endMs": 43986
+    },
+    {
+      "index": 94,
+      "startMs": 44000,
+      "endMs": 44500
+    },
+    {
+      "index": 95,
+      "startMs": 44513,
+      "endMs": 44684
+    },
+    {
+      "index": 96,
+      "startMs": 44697,
+      "endMs": 45183
+    },
+    {
+      "index": 97,
+      "startMs": 45197,
+      "endMs": 45302
+    },
+    {
+      "index": 98,
+      "startMs": 45315,
+      "endMs": 45775
+    },
+    {
+      "index": 99,
+      "startMs": 45789,
+      "endMs": 45960
+    },
+    {
+      "index": 100,
+      "startMs": 45973,
+      "endMs": 46486
+    },
+    {
+      "index": 101,
+      "startMs": 46500,
+      "endMs": 47263
+    },
+    {
+      "index": 102,
+      "startMs": 47684,
+      "endMs": 47855
+    },
+    {
+      "index": 103,
+      "startMs": 47868,
+      "endMs": 48552
+    },
+    {
+      "index": 104,
+      "startMs": 48565,
+      "endMs": 49143
+    },
+    {
+      "index": 105,
+      "startMs": 49157,
+      "endMs": 49301
+    },
+    {
+      "index": 106,
+      "startMs": 49315,
+      "endMs": 49920
+    },
+    {
+      "index": 107,
+      "startMs": 50236,
+      "endMs": 50354
+    },
+    {
+      "index": 108,
+      "startMs": 50368,
+      "endMs": 50868
+    },
+    {
+      "index": 109,
+      "startMs": 50881,
+      "endMs": 51302
+    },
+    {
+      "index": 110,
+      "startMs": 51315,
+      "endMs": 51920
+    },
+    {
+      "index": 111,
+      "startMs": 51934,
+      "endMs": 52078
+    },
+    {
+      "index": 112,
+      "startMs": 52092,
+      "endMs": 52539
+    },
+    {
+      "index": 113,
+      "startMs": 52552,
+      "endMs": 53328
+    },
+    {
+      "index": 114,
+      "startMs": 53342,
+      "endMs": 53539
+    },
+    {
+      "index": 115,
+      "startMs": 53552,
+      "endMs": 53946
+    },
+    {
+      "index": 116,
+      "startMs": 53960,
+      "endMs": 54446
+    },
+    {
+      "index": 117,
+      "startMs": 54460,
+      "endMs": 54591
+    },
+    {
+      "index": 118,
+      "startMs": 54605,
+      "endMs": 55065
+    },
+    {
+      "index": 119,
+      "startMs": 55486,
+      "endMs": 55591
+    },
+    {
+      "index": 120,
+      "startMs": 55605,
+      "endMs": 55933
+    },
+    {
+      "index": 121,
+      "startMs": 55947,
+      "endMs": 56065
+    },
+    {
+      "index": 122,
+      "startMs": 56078,
+      "endMs": 56762
+    },
+    {
+      "index": 123,
+      "startMs": 56776,
+      "endMs": 56920
+    },
+    {
+      "index": 124,
+      "startMs": 56934,
+      "endMs": 57012
+    },
+    {
+      "index": 125,
+      "startMs": 57026,
+      "endMs": 57762
+    },
+    {
+      "index": 126,
+      "startMs": 57776,
+      "endMs": 57868
+    },
+    {
+      "index": 127,
+      "startMs": 57881,
+      "endMs": 57986
+    },
+    {
+      "index": 128,
+      "startMs": 58000,
+      "endMs": 58473
+    },
+    {
+      "index": 129,
+      "startMs": 58486,
+      "endMs": 59117
+    },
+    {
+      "index": 130,
+      "startMs": 59131,
+      "endMs": 59275
+    },
+    {
+      "index": 131,
+      "startMs": 59289,
+      "endMs": 59696
+    },
+    {
+      "index": 132,
+      "startMs": 59710,
+      "endMs": 60499
+    },
+    {
+      "index": 133,
+      "startMs": 60513,
+      "endMs": 60618
+    },
+    {
+      "index": 134,
+      "startMs": 60631,
+      "endMs": 61407
+    }
+  ]
+}

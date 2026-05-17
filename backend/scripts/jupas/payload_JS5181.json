@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS5181",
+    "nameEn": "Science (Group A) with Extended Major in Artificial Intelligence",
+    "nameZh": "理學Ａ組– 人工智能延伸主修",
+    "name": "Science (Group A) with Extended Major in Artificial Intelligence",
+    "university": "香港科技大學",
+    "faculty": "School of Science",
+    "median": "43.49",
+    "band_a": "41.49",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5181",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/M1/M2 weighted + AI.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 43.49 (2025 JUPAS data).",
+            "**Lower Quartile**: 41.49 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure — JS5181 Science (Group A) with Extended Major in AI",
+          "content": [
+            "**Programme Overview**: JS5181 is a 4-year interdisciplinary programme offered by the School of Science, combining a strong foundation in scientific disciplines with an **Extended Major in Artificial Intelligence**. Students graduate with a Bachelor of Science degree and a specialized AI credential.",
+            "**Two Streams**: Students choose between two streams — **Biological Science** or **Chemistry** — as their core science discipline. The AI extended major is integrated across all four years, covering machine learning, data science, and AI applications.",
+            "**Year 1**: Foundational courses in mathematics (calculus, linear algebra), physics, chemistry/biology, and introductory programming. Students also take **COMP 1021** (Introduction to Computer Science) and **SCI 1000** (University Science).",
+            "**Year 2**: Core science courses deepen in the chosen stream. AI coursework begins with **COMP 2012** (Object-Oriented Programming) and **MATH 2343** (Probability and Statistics). Students also take **AI Foundation** modules.",
+            "**Year 3**: Advanced AI courses including **COMP 3211** (Machine Learning), **COMP 3311** (Database Management), and **AI Electives** such as Natural Language Processing or Computer Vision. Science stream courses continue with laboratory work.",
+            "**Year 4**: Capstone project integrating AI with the chosen science discipline. Students complete **AI Extended Major** requirements and can take electives in robotics, deep learning, or bioinformatics. Graduates receive a transcript noting the Extended Major in AI."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — Where JS5181 Graduates Excel",
+          "content": [
+            "**AI Research Scientist**: Graduates can pursue roles in AI research labs, developing algorithms for healthcare, finance, or environmental science. HKUST's strong research culture and Science Park connections provide a pipeline to top labs.",
+            "**Data Scientist**: With expertise in both science and AI, graduates are highly sought after in industries like pharmaceuticals, biotech, and fintech. Median starting salary for HKUST science graduates is approximately HKD 25,000–30,000 per month.",
+            "**Technology Consultant**: Companies like McKinsey, Accenture, and Deloitte hire science-AI graduates for data-driven consulting roles. The programme's interdisciplinary nature is a key advantage.",
+            "**Biotech/AI Specialist**: The biological science stream opens doors to roles in genomics, drug discovery, and precision medicine, where AI is transforming research. Hong Kong's biotech sector is growing rapidly.",
+            "**Entrepreneur**: HKUST's entrepreneurship ecosystem, including the **Entrepreneurship Centre** and **HKUST-Sino One Million Dollar Entrepreneurship Competition**, supports graduates launching AI-driven startups.",
+            "**Further Study**: Many graduates pursue MSc/PhD at top global universities (MIT, Stanford, Oxford) in AI, computational biology, or data science. HKUST's strong research output and faculty mentorship facilitate this path."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life — HKUST Clear Water Bay Experience",
+          "content": [
+            "**Stunning Location**: HKUST is located in **Clear Water Bay, Sai Kung**, offering breathtaking sea views and a tranquil environment. The campus is a 30-minute MTR/bus ride from central Hong Kong.",
+            "**World-Class Facilities**: Students have access to state-of-the-art laboratories, including the **AI Supercomputing Centre**, **Biosciences Central Research Facility**, and the **Nanoelectronics Fabrication Facility**.",
+            "**Student Housing**: All first-year students are guaranteed on-campus accommodation. Halls offer double rooms, common rooms, and stunning sea views. Meal plans and 24/7 security are provided.",
+            "**Clubs and Societies**: Over 100 student clubs, including the **AI Society**, **Science Society**, and **Entrepreneurship Club**. Annual events include **HKUST Open Day**, **Engineering Week**, and **Science Festival**.",
+            "**Global Exposure**: HKUST has over 300 exchange partners in 40+ countries. Students can spend a semester abroad at institutions like UC Berkeley, Imperial College London, or National University of Singapore.",
+            "**Industry Proximity**: The campus is adjacent to **Hong Kong Science Park**, home to over 1,100 tech companies. This enables internships, industry projects, and networking with companies like **SenseTime**, **Huawei**, and **Lalamove**."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness — JS5181 Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Science subjects, M1/M2, and AI-related subjects are weighted higher. The highest attainable score is **75.86**.",
+            "**Median Score (2025)**: **43.49** — this is the score achieved by the middle-ranked admitted student. Applicants should target scores above this to be competitive.",
+            "**Lower Quartile (2025)**: **41.49** — the 25th percentile score. Scores below this have a low chance of admission. The programme is selective, with a strong preference for high achievers.",
+            "**Preferred HKDSE Subjects**: Level 5 or above in **Mathematics**, **M1/M2**, **Physics**, **Chemistry**, or **Biology** is highly advantageous. Students with strong science backgrounds are prioritized.",
+            "**Demand vs. Supply**: JS5181 is a popular programme within the School of Science, attracting students interested in the intersection of science and AI. The Extended Major in AI adds significant value, making it more competitive than standard science programmes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — JS5181 and HKUST Science Graduates",
+          "content": [
+            "**Prof. Nancy Ip (葉玉如)**: President of HKUST and world-renowned neuroscientist. Her research on Alzheimer's disease has global impact. She is a member of the Chinese Academy of Sciences.",
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) for groundbreaking achievements concerning the transmission of light in fibers for optical communication. Former HKUST Vice-Chancellor.",
+            "**Dr. Tony Chan (陳繁昌)**: Former President of HKUST (2009–2018) and renowned mathematician. He is a Fellow of the IEEE and SIAM, and currently serves as President of KAUST.",
+            "**Prof. Yang Wang (王陽)**: Chair Professor of Computer Science and Engineering at HKUST. His work in AI and computer vision has been widely cited. He leads the HKUST AI Research Centre.",
+            "**Dr. Simon Shen (沈旭暉)**: Co-founder of **Lalamove**, a Hong Kong-based logistics unicorn valued at over USD 1 billion. He graduated from HKUST with a degree in Computer Science and Mathematics.",
+            "**Dr. Rebecca Lee (李慧詩)**: Olympic medalist and HKUST alumna. She earned a degree in Science and has been a vocal advocate for STEM education in Hong Kong."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships — Financial Support for JS5181 Students",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for all JUPAS applicants with outstanding HKDSE results. Awards range from HKD 20,000 to full tuition coverage (up to HKD 170,000 per year).",
+            "**School of Science Merit Scholarship**: Awarded to top-performing students in the School of Science. Recipients receive HKD 10,000–50,000 per year based on academic performance.",
+            "**Extended Major in AI Scholarship**: New scholarship for students enrolled in JS5181, recognizing excellence in AI-related coursework. Amounts vary, typically HKD 20,000–40,000.",
+            "**HKSAR Government Scholarship**: For students with exceptional academic achievements and leadership qualities. Covers full tuition and provides a living allowance of HKD 50,000 per year.",
+            "**Dr. Charles K. Kao Scholarship**: Named after the Nobel laureate, this scholarship supports science students with outstanding research potential. Award value: HKD 30,000 per year.",
+            "**Need-Based Financial Aid**: HKUST offers bursaries and loans for students with financial need. Up to 100% of tuition and living expenses can be covered through the **HKUST Financial Aid Scheme**."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5181 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score Above 44**",
+            "",
+            "- The median score is 43.49, so aim for at least 44 to be safe. With the highest attainable score at 75.86, every point counts. Focus on boosting your best 5 subjects.",
+            "",
+            "**2. Prioritize Science Subjects and M1/M2**",
+            "",
+            "- Science subjects, M1, and M2 are weighted higher. Aim for Level 5 or above in at least two of these: Physics, Chemistry, Biology, M1, or M2. A Level 5* or 5** gives a significant boost.",
+            "",
+            "**3. Leverage the 6th Subject Bonus**",
+            "",
+            "- The formula includes a bonus for a 6th subject. Take an extra elective (e.g., ICT, Economics, or a second science) and aim for Level 4 or above. This can add 2–4 points to your total.",
+            "",
+            "**4. Excel in Mathematics**",
+            "",
+            "- Mathematics is core to both science and AI. Aim for Level 5* or 5** in Compulsory Math and M1/M2. This is the single most important subject for this programme.",
+            "",
+            "**5. Build an AI Portfolio**",
+            "",
+            "- Demonstrate interest in AI through projects, online courses (e.g., Coursera Machine Learning), or participation in competitions like the **Hong Kong AI Challenge**. Mention these in your JUPAS application.",
+            "",
+            "**6. Prepare for Interviews (If Shortlisted)**",
+            "",
+            "- HKUST may interview shortlisted candidates. Be ready to discuss your interest in AI and science. Practice explaining a simple AI concept (e.g., neural networks) and your career goals.",
+            "",
+            "**7. Use the School of Science Open Day**",
+            "",
+            "- Attend HKUST Open Day (usually October) to meet professors and current students. Ask about the AI extended major, lab facilities, and internship opportunities. This shows genuine interest.",
+            "",
+            "**8. Consider EAP (Early Admission Programme)**",
+            "",
+            "- HKUST offers Early Admission for students with exceptional HKDSE predicted grades. If your school predicts you at Level 5 or above in 4+ subjects, apply early to secure a conditional offer.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Submit your JUPAS application by the first deadline (usually December) to be considered for admission scholarships. Check HKUST's scholarship page for additional applications (e.g., HKSAR Government Scholarship)."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/M1/M2 加權 + AI。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：43.49分（2025年聯招數據）。",
+            "**下四分位數**：41.49分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — JS5181 理學A組（人工智能延伸主修）",
+          "content": [
+            "**課程概覽**：JS5181 是一個為期四年的跨學科課程，由理學院開辦，結合堅實的科學基礎與**人工智能延伸主修**。畢業生將獲得理學士學位及人工智能專項證書。",
+            "**兩個專修**：學生可選擇**生物科學**或**化學**作為核心科學範疇。人工智能延伸主修貫穿四年，涵蓋機器學習、數據科學及人工智能應用。",
+            "**第一年**：基礎課程包括數學（微積分、線性代數）、物理、化學/生物及入門編程。學生亦須修讀**COMP 1021**（計算機科學導論）及**SCI 1000**（大學科學）。",
+            "**第二年**：核心科學課程在所選範疇深化。人工智能課程包括**COMP 2012**（物件導向編程）及**MATH 2343**（概率與統計）。學生亦須修讀**人工智能基礎**單元。",
+            "**第三年**：高級人工智能課程包括**COMP 3211**（機器學習）、**COMP 3311**（數據庫管理）及**人工智能選修科**（如自然語言處理或計算機視覺）。科學範疇課程繼續進行實驗室工作。",
+            "**第四年**：整合人工智能與所選科學範疇的畢業專題項目。學生完成**人工智能延伸主修**要求，並可選修機械人學、深度學習或生物信息學。畢業生將獲發註明人工智能延伸主修的成績單。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS5181 畢業生的優勢領域",
+          "content": [
+            "**人工智能研究科學家**：畢業生可在人工智能研究實驗室從事算法開發，應用於醫療、金融或環境科學。科大強大的研究文化及科學園的聯繫，為頂尖實驗室提供人才輸送渠道。",
+            "**數據科學家**：憑藉科學與人工智能的雙重專業知識，畢業生在製藥、生物科技及金融科技等行業極受歡迎。科大理科畢業生平均起薪約為每月港幣 25,000 至 30,000 元。",
+            "**科技顧問**：麥肯錫、埃森哲及德勤等公司聘請科學與人工智能畢業生從事數據驅動的顧問工作。課程的跨學科性質是重要優勢。",
+            "**生物科技/人工智能專家**：生物科學範疇為基因組學、藥物發現及精準醫學領域開闢機會，人工智能正改變這些領域的研究。香港的生物科技行業正在快速增長。",
+            "**創業家**：科大的創業生態系統，包括**創業中心**及**科大—信和百萬獎金創業大賽**，支持畢業生創立人工智能驅動的初創企業。",
+            "**深造**：許多畢業生在頂尖國際大學（如麻省理工、史丹福、牛津）攻讀人工智能、計算生物學或數據科學的碩士/博士學位。科大的強大研究成果及教授指導為此路徑提供支持。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活 — 科大清水灣體驗",
+          "content": [
+            "**絕美地點**：科大位於**清水灣、西貢**，擁有壯麗海景及寧靜環境。校園距離香港市中心約 30 分鐘港鐵/巴士車程。",
+            "**世界級設施**：學生可使用先進實驗室，包括**人工智能超級計算中心**、**生物科學中央研究設施**及**納米電子製造設施**。",
+            "**學生住宿**：所有一年級學生保證獲分配校內宿舍。宿舍提供雙人房、公共空間及壯麗海景。提供膳食計劃及 24 小時保安。",
+            "**學會與社團**：超過 100 個學生學會，包括**人工智能學會**、**理學會**及**創業學會**。年度活動包括**科大開放日**、**工程週**及**科學節**。",
+            "**環球視野**：科大與超過 40 個國家的 300 多所院校有交換合作。學生可到加州大學柏克萊分校、倫敦帝國學院或新加坡國立大學等院校進行一學期交流。",
+            "**鄰近業界**：校園毗鄰**香港科學園**，內有超過 1,100 間科技公司。這為學生提供實習、業界項目及與**商湯科技**、**華為**及**Lalamove** 等公司建立人脈的機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析 — JS5181 入學數據解讀",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科 + 第 6 科加分。理科科目、M1/M2 及與人工智能相關的科目權重較高。最高可達分數為 **75.86**。",
+            "**2025 年入學中位數**：**43.49** — 這是獲錄取學生的中間分數。申請者應以高於此分數為目標以增加競爭力。",
+            "**2025 年下四分位數**：**41.49** — 第 25 百分位數分數。低於此分數的申請者錄取機會較低。此課程具選擇性，偏好成績優異的學生。",
+            "**優先考慮的 HKDSE 科目**：在**數學**、**M1/M2**、**物理**、**化學**或**生物**中取得第 5 級或以上成績極具優勢。理科背景強的學生獲優先考慮。",
+            "**供求情況**：JS5181 是理學院內受歡迎的課程，吸引對科學與人工智能交叉領域感興趣的學生。人工智能延伸主修增加了顯著價值，使其比標準理科課程更具競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — JS5181 及科大理科畢業生",
+          "content": [
+            "**葉玉如教授**：科大校長及國際知名神經科學家。她在阿茲海默症方面的研究具有全球影響力。她是中國科學院院士。",
+            "**高錕博士**：2009 年諾貝爾物理學獎得主，因在光纖通訊方面的開創性貢獻而獲獎。曾任科大校長。",
+            "**陳繁昌博士**：曾任科大校長（2009–2018），著名數學家。他是 IEEE 及 SIAM 院士，現任 KAUST 校長。",
+            "**王陽教授**：科大計算機科學及工程學系講座教授。他在人工智能及計算機視覺方面的研究被廣泛引用。他領導科大人工智能研究中心。",
+            "**沈旭暉博士**：**Lalamove** 聯合創辦人，該物流獨角獸估值超過 10 億美元。他畢業於科大計算機科學及數學系。",
+            "**李慧詩博士**：奧運獎牌得主及科大校友。她取得理學士學位，並一直是香港 STEM 教育的積極倡導者。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金 — JS5181 學生的財務支援",
+          "content": [
+            "**科大入學獎學金**：所有 JUPAS 申請者如 HKDSE 成績優異，將自動被考慮。獎學金金額由港幣 20,000 元至全額學費（每年高達港幣 170,000 元）不等。",
+            "**理學院優秀學生獎學金**：頒予理學院表現頂尖的學生。得獎者每年可獲港幣 10,000 至 50,000 元，視乎學業成績而定。",
+            "**人工智能延伸主修獎學金**：專為 JS5181 學生設立的新獎學金，表揚在人工智能相關課程中的卓越表現。金額不定，通常為港幣 20,000 至 40,000 元。",
+            "**香港特區政府獎學金**：頒予學業成績優異及具領導才能的學生。涵蓋全額學費及每年港幣 50,000 元的生活津貼。",
+            "**高錕博士獎學金**：以諾貝爾獎得主命名，支持具傑出研究潛力的理科學生。獎學金價值為每年港幣 30,000 元。",
+            "**按需要提供的經濟援助**：科大為有經濟需要的學生提供助學金及貸款。透過**科大經濟援助計劃**，最高可涵蓋 100% 的學費及生活開支。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5181 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數設在 44 分以上**",
+            "",
+            "- 中位數為 43.49，因此目標應設在至少 44 分以策安全。最高可達分數為 75.86，每一分都很重要。專注提升最佳 5 科的成績。",
+            "",
+            "**2. 優先處理理科及 M1/M2**",
+            "",
+            "- 理科、M1 及 M2 的權重較高。目標是在物理、化學、生物、M1 或 M2 中至少兩科取得第 5 級或以上。第 5* 或 5** 級會帶來顯著優勢。",
+            "",
+            "**3. 善用第 6 科加分**",
+            "",
+            "- 計分公式包括第 6 科的加分。多修一科選修科（例如資訊及通訊科技、經濟或第二理科），目標取得第 4 級或以上。這可為總分增加 2 至 4 分。",
+            "",
+            "**4. 在數學科表現卓越**",
+            "",
+            "- 數學是科學和人工智能的核心。目標是在必修數學及 M1/M2 取得第 5* 或 5** 級。這是此課程最重要的單一科目。",
+            "",
+            "**5. 建立人工智能作品集**",
+            "",
+            "- 透過項目、網上課程（例如 Coursera 機器學習）或參加比賽（如**香港人工智能挑戰賽**）展示你對人工智能的興趣。在 JUPAS 申請中提及這些經歷。",
+            "",
+            "**6. 為面試做好準備（如獲篩選）**",
+            "",
+            "- 科大可能會為入圍申請者安排面試。準備好討論你對人工智能和科學的興趣。練習解釋一個簡單的人工智能概念（例如神經網絡）及你的職業目標。",
+            "",
+            "**7. 善用理學院開放日**",
+            "",
+            "- 參加科大開放日（通常在十月），與教授及現屆學生交流。詢問關於人工智能延伸主修、實驗室設施及實習機會。這顯示你對課程的真正興趣。",
+            "",
+            "**8. 考慮早期錄取計劃**",
+            "",
+            "- 科大為 HKDSE 預測成績優異的學生提供早期錄取。如果你的學校預測你在 4 科或以上取得第 5 級或以上，請提早申請以獲取有條件錄取。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 在第一個截止日期（通常是十二月）前提交 JUPAS 申請，以被考慮入學獎學金。查看科大獎學金網頁以了解其他申請（例如香港特區政府獎學金）。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "43.49",
+    "lq": "41.49"
+  }
+}

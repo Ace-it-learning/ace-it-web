@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear, Zap, Crown } from 'lucide-react';
+import { BookOpen, Sparkles, Mic, Activity, Lightbulb, Ear, Zap, Crown, Trophy, Clock } from 'lucide-react';
 import ExamTipsModal from './ace/ExamTipsModal';
 import CardPreviewModal from './CardPreviewModal';
 import { cn } from '../utils/cn';
@@ -48,7 +48,7 @@ function resolveLearnerSidebarName(user, profile, statsPayload) {
     return 'Student';
 }
 
-const Sidebar = () => {
+const Sidebar = ({ stats: statsProp }) => {
     const navigate = useNavigate();
     const { activeAgentId, setActiveAgentId, activeAgent, avatarState, studentState, equipment, getAgentIdentity } = useAvatar();
     const { user, profile, loginWithGoogle, loading: authBusy } = useAuth();
@@ -56,7 +56,7 @@ const Sidebar = () => {
     const isPaid = tier === 'pro' || tier === 'premium';
     const { t } = useLanguage();
     const [gender, setGender] = useState(null);
-    const [stats, setStats] = useState(null);
+    const [stats, setStats] = useState(statsProp || null);
     const [isExamTipsOpen, setIsExamTipsOpen] = useState(false);
 
     // Card preview state
@@ -307,6 +307,53 @@ const Sidebar = () => {
                     })}
             </div>
 
+
+            {/* XP Progress, Redeem & Timeline */}
+            {user && (
+                <div className="mt-2 p-4 rounded-3xl flex flex-col gap-3">
+                    {/* XP Bar */}
+                    <div className="flex items-center gap-3">
+                        <div className="flex flex-col items-start gap-0.5">
+                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{t('stats.xp_progress')}</span>
+                            <span className="text-sm font-bold text-gray-800">{stats?.currentStepXP || 0} <span className="text-[10px] text-gray-400 font-medium">/ {stats?.nextLevelXP || 100}</span></span>
+                        </div>
+                        <div className="h-3 bg-gray-300/50 rounded-full flex-1 overflow-hidden border border-white shadow-inner relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent w-full -translate-x-full animate-[shimmer_2s_infinite]"></div>
+                            <div
+                                className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-sm transition-all duration-1000"
+                                style={{ width: `${stats?.progressPercent || 0}%` }}
+                            ></div>
+                        </div>
+                    </div>
+
+                    {/* Level + Actions */}
+                    <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                            <div className="size-8 rounded-lg bg-white shadow-sm flex items-center justify-center border border-gray-100">
+                                <Trophy className="w-4 h-4 text-yellow-500" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[9px] text-gray-400 uppercase tracking-widest font-bold">{t('stats.current_tier')}</span>
+                                <span className="text-sm font-extrabold text-gray-800">LVL {stats?.level || 1}</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={() => navigate('/redemption')}
+                                className="px-3 py-2 rounded-xl bg-electric-orange text-white text-[10px] font-bold hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(255,102,0,0.4)] hover:scale-105 transition-all flex items-center gap-1.5 shadow-md"
+                            >
+                                <span>🎁</span> {t('stats.redeem')}
+                            </button>
+                            <button
+                                onClick={() => navigate('/achievements')}
+                                className="px-3 py-2 rounded-xl bg-white border border-gray-200 text-gray-600 text-[10px] font-bold hover:bg-gray-50 hover:text-gray-900 transition-all shadow-sm"
+                            >
+                                {t('stats.timeline')}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {!user && (
                 <div className="mt-2 p-5 bg-gradient-to-br from-primary/90 to-primary rounded-3xl text-white shadow-xl">

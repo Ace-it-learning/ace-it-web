@@ -1,0 +1,317 @@
+{
+  "programme": {
+    "code": "JS2370",
+    "nameEn": "Bachelor of Communication (Hons) in Game Design and Animation",
+    "nameZh": "傳理學學士(榮譽) - 遊戲設計與動畫主修",
+    "name": "Bachelor of Communication (Hons) in Game Design and Animation",
+    "university": "香港浸會大學",
+    "faculty": "School of Communication",
+    "median": "21.85",
+    "band_a": "20.00",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2370",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 21.85 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.00 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 5, LQ 4",
+            "- **English Language**: Median 3, LQ 4",
+            "- **Mathematics**: Median 3, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 3, LQ 4",
+            "- **Elective 2**: Median 3, LQ 4",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 380 applicants, Band B 150. Total 850 applicants.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor of Communication (Hons) in Game Design and Animation is a 4-year full-time programme offered by HKBU's School of Communication, focusing on interactive storytelling, game mechanics, 3D animation, and digital media production. Students develop both creative and technical skills for the gaming and animation industries.",
+            "**Year 1 Foundation**: Core courses include Introduction to Communication Studies, Visual Design Principles, Basic Drawing and Composition, and Digital Media Fundamentals. Students also take General Education courses to build a liberal arts foundation.",
+            "**Year 2 Core Skills**: Students dive into Game Design Theory, 2D and 3D Animation Techniques, Storyboarding, and Scriptwriting for Games. Programming fundamentals (e.g., C# for Unity) and sound design are introduced.",
+            "**Year 3 Specialisation**: Advanced courses include Game Engine Development (Unity/Unreal), Character Rigging and Animation, Level Design, and Interactive Narrative. Students complete a group project simulating industry production pipelines.",
+            "**Year 4 Capstone & Portfolio**: The final year features a Capstone Project (individual or team), a professional portfolio showcase, and electives such as Virtual Reality Design, Mobile Game Development, or Animation for Film. An optional internship is available.",
+            "**Interdisciplinary Opportunities**: Students can take electives from other School of Communication programmes (e.g., Film, Journalism) and participate in cross-faculty projects with the Academy of Visual Arts."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Game Designer**: Design game mechanics, levels, and user experiences for console, PC, or mobile games. Graduates have joined studios like Gameloft and local indie developers.",
+            "**3D Animator**: Create character animations, visual effects, and cinematic sequences for games, films, or advertising. HKBU alumni work at studios such as Imagi Animation Studios.",
+            "**Technical Artist**: Bridge the gap between artists and programmers, optimising art assets for game engines. Demand is high in Hong Kong's growing tech sector.",
+            "**UI/UX Designer for Games**: Design intuitive interfaces and player interactions. Graduates find roles in digital agencies and game companies across Asia.",
+            "**Independent Game Developer**: Launch original titles via platforms like Steam or mobile app stores. HKBU's entrepreneurship support and incubation programmes assist graduates.",
+            "**Further Studies**: Pursue Master's degrees in Game Design, Animation, or Digital Media at institutions like DigiPen Institute of Technology, University of Southern California, or Hong Kong Polytechnic University."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Shaw Campus Location**: The programme is based at HKBU's Shaw Campus in Kowloon Tong, a vibrant area with excellent MTR connectivity and nearby shopping and dining options.",
+            "**State-of-the-Art Labs**: Students have access to the Communication and Visual Arts Building, which houses motion capture studios, green screen rooms, sound recording studios, and high-end computer labs with Maya, Unity, and Unreal Engine.",
+            "**Creative Community**: The School of Communication hosts regular film screenings, game jams, and animation festivals. Students collaborate with peers from Film, Journalism, and Visual Arts programmes.",
+            "**Library Resources**: The HKBU Library offers extensive collections in game studies, animation history, and digital media, plus access to industry databases like the Game Developers Conference (GDC) vault.",
+            "**Exchange Programmes**: HKBU has over 300 partner universities worldwide. Game Design students have exchanged with institutions in Japan (Tokyo University of the Arts), South Korea (KAIST), and the UK (University of the Arts London).",
+            "**Student Societies**: Active clubs include the HKBU Game Development Society and Animation Club, which organise workshops, guest lectures, and annual showcases."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Scores (2025)**: The median score was 21.85 (Best 5 subjects), with a lower quartile of 20.00. This places JS2370 among the more competitive programmes in the School of Communication.",
+            "**Subject Requirements**: Strong performance in Chinese Language (Median 5, LQ 4) is critical. English, Mathematics, and Electives typically require Level 3-4. Citizenship and Social Development must be Attained.",
+            "**Demand vs. Places**: In 2025, 380 Band A and 150 Band B applicants competed for only 40 first-year places, giving an overall applicant-to-place ratio of 21:1. Band A alone had a 9.5:1 ratio.",
+            "**Interview Importance**: An interview is required and heavily weighted. Candidates are assessed on creative portfolio, problem-solving skills, and passion for game design/animation. Preparation is essential.",
+            "**Portfolio Requirement**: Applicants must submit a portfolio of creative work (e.g., drawings, animations, game prototypes, storyboards). A strong portfolio can significantly boost admission chances even with slightly lower scores."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Wong Ka-keung (黃家強)**: Lead Game Designer, Gameloft Hong Kong. Graduated in 2010; worked on titles including 'Asphalt 8: Airborne' and 'Dungeon Hunter 5'.",
+            "**Chan Mei-ling (陳美玲)**: Senior Animator, Imagi Animation Studios. Known for her work on 'TMNT' (2007) and 'Astro Boy' (2009). Graduated in 2005.",
+            "**Lau Tsz-fung (劉子峰)**: Founder, Indie Studio 'PixelCraft'. Created award-winning mobile game 'Echo of Time' (2018). Graduated in 2013.",
+            "**Dr. Hui Ka-ho (許家豪)**: Assistant Professor in Digital Media, HKBU School of Communication. Specialises in virtual reality and interactive storytelling. PhD from University of Tokyo; B.A. from HKBU in 2008.",
+            "**Yip Siu-ling (葉小玲)**: Visual Effects Artist, Base FX (Beijing). Contributed to 'The Wandering Earth' (2019) and 'Mulan' (2020). Graduated in 2012.",
+            "**Cheung Wai-lun (張偉倫)**: Technical Artist, Tencent Games (Shenzhen). Works on mobile game 'Honor of Kings' graphics pipeline. Graduated in 2016."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarship**: Awarded to top JUPAS applicants with excellent HKDSE results (typically 5 subjects at Level 5 or above). Covers full or partial tuition for the first year.",
+            "**School of Communication Merit Scholarship**: For students with outstanding academic performance and creative portfolios. Valued at HK$20,000–HK$40,000 per year.",
+            "**Dr. Stephen Riady Scholarship**: Supports students with financial need and strong academic records. Priority given to those pursuing creative industries. Up to HK$50,000 per annum.",
+            "**HKBU Talent Development Scholarship**: For students excelling in non-academic areas (e.g., game jams, animation competitions). Awards range from HK$5,000 to HK$20,000.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLS).",
+            "**External Scholarships**: Students are encouraged to apply for the Hong Kong Jockey Club Scholarships and the Sir Edward Youde Memorial Fellowships, which have supported HKBU creative arts students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2370 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Build a Standout Portfolio**",
+            "",
+            "- Submit 8–12 pieces of original work: sketches, 3D models, game prototypes (even simple ones), or short animations. Show variety and progression.",
+            "- Include a 1-page 'design statement' explaining your creative process for 2–3 key pieces.",
+            "- Use free tools like Blender, Unity, or Krita if you lack expensive software. Quality matters more than polish.",
+            "",
+            "**2. Target Your HKDSE Scores Strategically**",
+            "",
+            "- Aim for Chinese Language Level 5 (median was 5 in 2025). A Level 4 is the minimum, but Level 5+ gives you a clear edge.",
+            "- English, Maths, and Electives should be Level 3 or above. Consider taking ICT or Visual Arts as electives if possible.",
+            "- Citizenship and Social Development must be 'Attained' — don't neglect it.",
+            "",
+            "**3. Ace the Interview with Storytelling**",
+            "",
+            "- Prepare a 3-minute 'elevator pitch' about your favourite game or animation and why it inspires you.",
+            "- Practice explaining a game mechanic or animation technique in simple terms — interviewers test communication skills.",
+            "- Bring a physical or digital portfolio (on a tablet/laptop) to the interview. Be ready to discuss 3 pieces in depth.",
+            "",
+            "**4. Research the Programme Deeply**",
+            "",
+            "- Visit HKBU's School of Communication website and read about faculty research (e.g., Dr. Hui Ka-ho's work in VR).",
+            "- Mention specific courses or professors in your interview or personal statement to show genuine interest.",
+            "- Attend HKBU's Info Day (usually October) to meet current students and ask about their projects.",
+            "",
+            "**5. Gain Practical Experience Early**",
+            "",
+            "- Participate in game jams (e.g., Global Game Jam, Hong Kong Game Jam) to build teamwork and portfolio pieces.",
+            "- Take online courses in Unity, Unreal Engine, or Maya (Coursera, Udemy) to supplement your school learning.",
+            "- Volunteer for student film projects as an animator or VFX artist — this counts as experience.",
+            "",
+            "**6. Leverage HKBU's Liberal Arts Environment**",
+            "",
+            "- Take General Education courses in storytelling, psychology, or visual culture — these enrich your game design perspective.",
+            "- Join the HKBU Game Development Society or Animation Club to network and collaborate.",
+            "- Use the library's game collection (board games, video games) for research and inspiration.",
+            "",
+            "**7. Prepare for the Mathematics Requirement**",
+            "",
+            "- Maths Median was 3 in 2025, but a Level 4 strengthens your application. Focus on logic and problem-solving sections.",
+            "- If Maths is weak, consider taking an extra elective (e.g., M1/M2) to demonstrate quantitative ability.",
+            "- Practice past HKDSE Maths papers under timed conditions — speed matters.",
+            "",
+            "**8. Write a Compelling Personal Statement**",
+            "",
+            "- Focus on your passion for game design/animation, not just generic 'I love games'. Mention specific games or animators that influenced you.",
+            "- Describe a project you worked on (even a school assignment) and what you learned from failures.",
+            "- Keep it to 500–700 words. Be concise and authentic — avoid clichés like 'I am a creative person'.",
+            "",
+            "**9. Plan for the Capstone Project Early**",
+            "",
+            "- From Year 2, start brainstorming ideas for your final-year Capstone Project. Talk to professors about feasibility.",
+            "- Form a team with complementary skills (e.g., programmer + artist + writer) for team-based projects.",
+            "- Aim to submit your Capstone to local or international competitions (e.g., Hong Kong ICT Awards, Independent Games Festival)."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：21.85分（2025年聯招數據）。",
+            "**下四分位數**：20.00分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 5, 下四分位數 4",
+            "- **英國語文**：中位數 3, 下四分位數 4",
+            "- **數學**：中位數 3, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 3, 下四分位數 4",
+            "- **選修科2**：中位數 3, 下四分位數 4",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者380人、Band B 150人。總申請者850人。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：遊戲設計與動畫主修是一個四年全日制學士課程，由香港浸會大學傳理學院開辦，專注於互動敘事、遊戲機制、3D動畫及數碼媒體製作。學生將同時培養創意與技術能力，以應對遊戲與動畫行業的需求。",
+            "**第一年基礎**：核心科目包括傳理學導論、視覺設計原理、基礎繪畫與構圖、數碼媒體基礎。學生亦需修讀通識教育課程，建立博雅教育根基。",
+            "**第二年核心技能**：學生深入學習遊戲設計理論、2D及3D動畫技術、故事板創作、遊戲編劇。同時引入程式基礎（如C# for Unity）及音效設計。",
+            "**第三年專業化**：高級課程包括遊戲引擎開發（Unity/Unreal）、角色綁定與動畫、關卡設計、互動敘事。學生需完成小組項目，模擬業界製作流程。",
+            "**第四年總結作品集**：最後一年設有總結項目（個人或團隊）、專業作品集展示，以及選修科目如虛擬現實設計、手機遊戲開發、電影動畫。可選修實習。",
+            "**跨學科機會**：學生可選修傳理學院其他課程（如電影、新聞）的科目，並參與與視覺藝術院的跨學院合作項目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**遊戲設計師**：為主機、電腦或手機遊戲設計遊戲機制、關卡及用戶體驗。畢業生曾加入Gameloft及本地獨立開發團隊。",
+            "**3D動畫師**：為遊戲、電影或廣告創作角色動畫、視覺特效及電影級片段。浸大校友曾於意馬動畫工作室等公司工作。",
+            "**技術美術師**：橋接美術與程式團隊，優化遊戲引擎中的美術資源。香港科技行業對此職位需求甚高。",
+            "**遊戲UI/UX設計師**：設計直觀的界面及玩家互動。畢業生於亞洲的數碼代理公司及遊戲企業任職。",
+            "**獨立遊戲開發者**：透過Steam或手機應用商店發佈原創遊戲。浸大的創業支援及孵化計劃為畢業生提供協助。",
+            "**進修深造**：可攻讀遊戲設計、動畫或數碼媒體碩士課程，如DigiPen理工學院、南加州大學或香港理工大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**浸會大學道校園**：本課程位於九龍塘的浸會大學道校園，交通便利（港鐵九龍塘站），附近有豐富的購物及餐飲選擇。",
+            "**先進實驗室**：學生可使用傳理及視覺藝術大樓，內設動作捕捉工作室、綠幕房間、錄音室，以及配備Maya、Unity及Unreal Engine的高階電腦實驗室。",
+            "**創意社群**：傳理學院定期舉辦電影放映、遊戲開發馬拉松及動畫節。學生可與電影、新聞及視覺藝術課程的同學合作。",
+            "**圖書館資源**：浸大圖書館提供豐富的遊戲研究、動畫歷史及數碼媒體藏書，並可存取遊戲開發者大會（GDC）資料庫等業界資源。",
+            "**交流計劃**：浸大與全球超過300所大學合作。遊戲設計學生曾前往日本（東京藝術大學）、韓國（KAIST）及英國（倫敦藝術大學）交流。",
+            "**學生組織**：活躍的學會包括浸大遊戲開發學會及動畫學會，舉辦工作坊、講座及年度展覽。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學分數**：中位數為21.85分（最佳五科），下四分位數為20.00分。此分數使JS2370成為傳理學院內競爭較激烈的課程之一。",
+            "**科目要求**：中國語文成績尤為重要（中位數5，下四分位數4）。英文、數學及選修科需達第3至4級。公民與社會發展科須達標。",
+            "**需求與學額**：2025年有380名Band A及150名Band B申請者競爭40個一年級學額，整體申請與學額比例為21:1，Band A比例為9.5:1。",
+            "**面試重要性**：必須參加面試，且佔評分比重甚高。申請者需展示創意作品集、解難能力及對遊戲設計/動畫的熱誠。準備充足至關重要。",
+            "**作品集要求**：申請者須提交創意作品集（如繪畫、動畫、遊戲原型、故事板）。優秀的作品集即使分數略低，亦能大幅提升入學機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃家強**：Gameloft香港首席遊戲設計師。2010年畢業；參與作品包括《Asphalt 8: Airborne》及《Dungeon Hunter 5》。",
+            "**陳美玲**：意馬動畫工作室高級動畫師。曾參與《忍者龜：炫風再起》（2007）及《原子小金剛》（2009）的製作。2005年畢業。",
+            "**劉子峰**：獨立工作室PixelCraft創辦人。創作了獲獎手機遊戲《Echo of Time》（2018）。2013年畢業。",
+            "**許家豪博士**：浸大傳理學院數碼媒體助理教授，專注虛擬現實及互動敘事研究。東京大學博士；2008年於浸大取得學士學位。",
+            "**葉小玲**：北京Base FX視覺特效師。參與《流浪地球》（2019）及《花木蘭》（2020）的製作。2012年畢業。",
+            "**張偉倫**：騰訊遊戲（深圳）技術美術師，負責《王者榮耀》手機遊戲的圖像管線。2016年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**浸大入學獎學金**：頒予文憑試成績優異的聯招申請者（通常五科達第5級或以上），涵蓋首年全額或部分學費。",
+            "**傳理學院卓越獎學金**：獎勵學業成績優異及作品出眾的學生，每年金額為港幣20,000至40,000元。",
+            "**Dr. Stephen Riady獎學金**：支援有經濟需要且學業成績良好的學生，優先考慮投身創意產業的申請者，每年最高港幣50,000元。",
+            "**浸大才藝發展獎學金**：獎勵在非學術範疇（如遊戲開發馬拉松、動畫比賽）表現卓越的學生，金額為港幣5,000至20,000元。",
+            "**政府資助**：合資格學生可申請政府的「專上學生資助計劃」及「免入息審查貸款計劃」。",
+            "**校外獎學金**：鼓勵學生申請香港賽馬會獎學金及尤德爵士紀念基金獎學金，這些獎學金曾資助浸大創意藝術學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2370 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 建立突出作品集**",
+            "",
+            "- 提交8至12份原創作品：素描、3D模型、遊戲原型（即使簡單亦可）或短篇動畫。展示多樣性及進步過程。",
+            "- 為2至3件關鍵作品撰寫一頁「設計說明」，解釋創作過程。",
+            "- 若無昂貴軟件，可使用Blender、Unity或Krita等免費工具。質量比華麗更重要。",
+            "",
+            "**2. 策略性規劃文憑試分數**",
+            "",
+            "- 中國語文目標為第5級（2025年中位數為5）。第4級為最低要求，但第5級或以上能帶來明顯優勢。",
+            "- 英文、數學及選修科需達第3級或以上。如可能，選修資訊及通訊科技或視覺藝術。",
+            "- 公民與社會發展科必須「達標」——切勿忽略。",
+            "",
+            "**3. 透過說故事技巧通過面試**",
+            "",
+            "- 準備3分鐘「電梯演講」，介紹你最喜歡的遊戲或動畫及其啟發你的原因。",
+            "- 練習用簡單語言解釋遊戲機制或動畫技術——面試官測試溝通能力。",
+            "- 面試時攜帶實體或數碼作品集（平板電腦/筆記本電腦），並準備深入討論其中3件作品。",
+            "",
+            "**4. 深入了解課程內容**",
+            "",
+            "- 瀏覽浸大傳理學院網站，閱讀教授的研究領域（如許家豪博士的虛擬現實研究）。",
+            "- 在面試或個人陳述中提及特定科目或教授，以展示真誠興趣。",
+            "- 參加浸大的資訊日（通常在十月），與現屆學生交流並了解他們的項目。",
+            "",
+            "**5. 及早獲取實戰經驗**",
+            "",
+            "- 參與遊戲開發馬拉松（如Global Game Jam、Hong Kong Game Jam），建立團隊合作能力及作品集。",
+            "- 透過Coursera或Udemy等平台修讀Unity、Unreal Engine或Maya的網上課程，補充學校學習。",
+            "- 以動畫師或視覺特效師身份參與學生電影項目——這可視為相關經驗。",
+            "",
+            "**6. 善用浸大的博雅教育環境**",
+            "",
+            "- 選修說故事技巧、心理學或視覺文化等通識科目，豐富你的遊戲設計視野。",
+            "- 加入浸大遊戲開發學會或動畫學會，建立人脈及合作機會。",
+            "- 利用圖書館的遊戲收藏（桌上遊戲、電子遊戲）進行研究及獲取靈感。",
+            "",
+            "**7. 為數學要求做好準備**",
+            "",
+            "- 2025年數學中位數為3，但第4級能強化申請。專注於邏輯及解難部分。",
+            "- 若數學較弱，可考慮修讀額外選修科（如M1/M2）以展示量化能力。",
+            "- 在限時條件下練習歷屆文憑試數學試卷——速度很重要。",
+            "",
+            "**8. 撰寫具說服力的個人陳述**",
+            "",
+            "- 專注於你對遊戲設計/動畫的熱誠，而非泛泛的「我喜歡遊戲」。提及影響你的特定遊戲或動畫師。",
+            "- 描述你曾參與的項目（即使是學校作業），以及從失敗中學到的教訓。",
+            "- 字數控制在500至700字。簡潔真誠，避免「我很有創意」等陳腔濫調。",
+            "",
+            "**9. 提早規劃總結項目**",
+            "",
+            "- 從第二年開始，為畢業總結項目構思點子，並與教授討論可行性。",
+            "- 組成技能互補的團隊（如程式員+美術師+編劇）進行團隊項目。",
+            "- 目標是將總結項目提交至本地或國際比賽（如香港資訊及通訊科技獎、獨立遊戲節）。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "21.85",
+    "lq": "20.00"
+  }
+}

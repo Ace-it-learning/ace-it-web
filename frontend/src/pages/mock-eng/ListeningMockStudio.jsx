@@ -33,7 +33,8 @@ import {
     AlertCircle,
     X,
     Layers,
-    GraduationCap
+    GraduationCap,
+    Loader2
 } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
@@ -44,7 +45,16 @@ import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import DataFileViewer from '../../components/listening/DataFileViewer';
 import Paper3AudioEngine from '../../components/listening/Paper3AudioEngine';
 import { isCheatEnabled } from '../../utils/devAccess';
+import { apiUrl } from '../../utils/apiBase';
 
+const CHEAT_LEVELS = [
+    { label: '5**', value: '5', color: 'bg-rose-100 text-rose-600', desc: 'Perfect' },
+    { label: '4', value: '4', color: 'bg-emerald-100 text-emerald-600', desc: 'Competent' },
+    { label: '3', value: '3', color: 'bg-amber-100 text-amber-600', desc: 'Basic' },
+    { label: '2', value: '2', color: 'bg-slate-100 text-slate-600', desc: 'Weak' }
+];
+
+// Deprecated: replaced by paper-specific AI-generated cheats
 const SMART_CITY_GOLDEN_ANSWERS = {
     Task_5: `Subject: Response to Your Concerns Regarding Smart Lampposts in Kowloon East\n\nDear Mr. Wong,\n\nThank you for contacting the IT Bureau. We value your feedback regarding the smart lampposts in your neighborhood.\n\nI would like to reassure you that your privacy is our top priority. All data collected by the 5G Sensor Array is fully anonymized and, as mandated by our strict policy, is never sold to third parties or advertisers. To further ensure your digital safety, we have partnered with CyberGuard HK to provide free antivirus and anti-phishing software to all participating households.\n\nThe Smart Mobility initiative aims to reduce urban stress for all residents. Our data shows that this system has already saved commuters in Kowloon East approximately 20 minutes per day by optimizing traffic flow.\n\nWe hope this clarifies our position. Please feel free to reach out if you have further questions.\n\nYours sincerely,\n\nProject Assistant, IT Bureau`,
     Task_6: `[NOTICE] New AI Field Trainers Program\n\nBridging the digital divide is a core mission of the Smart City 2026 initiative. We are excited to announce the launch of our 'AI Field Trainers' program, creating 200 new roles dedicated to supporting our senior community.\n\nThese trainers will be deployed directly to elderly centers across the district. Their primary goal is to provide hands-on digital literacy training, helping you navigate new technologies with confidence. We encourage all seniors to participate and enjoy the benefits of a connected city.\n\nDon't let the technology gap hold you back—join us in building a smarter, more inclusive Hong Kong.`,
@@ -92,6 +102,8 @@ const ListeningMockStudio = () => {
     const [showSubmitModal, setShowSubmitModal] = useState(false);
     const [showSwitchModal, setShowSwitchModal] = useState(false);
     const [pendingSection, setPendingSection] = useState(null);
+    const [cheatLoading, setCheatLoading] = useState(false);
+    const [cheatLevel, setCheatLevel] = useState('5');
     
     const rightPanelRef = useRef(null);
     const audioEngineRef = useRef(null);
@@ -597,77 +609,132 @@ const ListeningMockStudio = () => {
                                     <button className="w-10 h-10 flex items-center justify-center bg-amber-50 hover:bg-amber-100 text-amber-600 rounded-xl border border-amber-200 transition-all shadow-sm">
                                         <Zap size={16} fill="currentColor" />
                                     </button>
-                                    <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
+                                    <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60]">
                                         <div className="px-3 py-2 border-b border-slate-50 mb-1">
                                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Cheat Console</p>
                                         </div>
+
+                                        {/* Level Selector */}
+                                        <div className="px-3 py-2">
+                                            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Target Level</p>
+                                            <div className="flex gap-1">
+                                                {CHEAT_LEVELS.map(lvl => (
+                                                    <button
+                                                        key={lvl.value}
+                                                        onClick={() => setCheatLevel(lvl.value)}
+                                                        className={`flex-1 py-1.5 rounded-lg text-[10px] font-black transition-all ${
+                                                            cheatLevel === lvl.value 
+                                                                ? `${lvl.color} ring-1 ring-offset-1 ring-slate-200` 
+                                                                : 'bg-slate-50 text-slate-400 hover:bg-slate-100'
+                                                        }`}
+                                                        title={lvl.desc}
+                                                    >
+                                                        {lvl.label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
                                         
+                                        <div className="h-[1px] bg-slate-50 my-1" />
+
                                         {/* Option A + B1 */}
                                         <button 
-                                            onClick={() => {
-                                                const answers = {};
-                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
-                                                setUserAnswers(answers);
-                                                
-                                                const bDrafts = {};
-                                                if (mockData?.Part_B) {
-                                                    const b1Tasks = ['Task_5', 'Task_6', 'Task_7'];
-                                                    b1Tasks.forEach(tid => {
-                                                        bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                            onClick={async () => {
+                                                setCheatLoading(true);
+                                                try {
+                                                    const res = await fetch(apiUrl(`/api/english/mock/cheat/${paperId}`), {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({ section: 'B1', targetLevel: cheatLevel, uid: user?.uid })
                                                     });
+                                                    if (!res.ok) throw new Error('Cheat fetch failed');
+                                                    const data = await res.json();
+                                                    setUserAnswers(data.partA || {});
+                                                    setDrafts(data.partB || {});
                                                     setSelectedSection('B1');
+                                                } catch (e) {
+                                                    console.error('Cheat error:', e);
+                                                    // Fallback to old hardcoded answers
+                                                    const answers = {};
+                                                    mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
+                                                    setUserAnswers(answers);
+                                                    const bDrafts = {};
+                                                    const b1Tasks = ['Task_5', 'Task_6', 'Task_7'];
+                                                    b1Tasks.forEach(tid => { bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || ''; });
+                                                    setDrafts(bDrafts);
+                                                    setSelectedSection('B1');
+                                                } finally {
+                                                    setCheatLoading(false);
                                                 }
-                                                setDrafts(bDrafts);
                                             }}
-                                            className="w-full text-left p-3 hover:bg-indigo-50 rounded-xl flex items-center gap-3 group transition-all"
+                                            disabled={cheatLoading}
+                                            className="w-full text-left p-3 hover:bg-indigo-50 rounded-xl flex items-center gap-3 group transition-all disabled:opacity-50"
                                         >
-                                            <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black text-xs">B1</div>
+                                            <div className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-black text-xs">
+                                                {cheatLoading ? <Loader2 size={14} className="animate-spin" /> : 'B1'}
+                                            </div>
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-900">Fill A + B1 (5**)</p>
-                                                <p className="text-[8px] text-slate-400">Tasks 1-7 complete</p>
+                                                <p className="text-[10px] font-black text-slate-900">Fill A + B1 ({CHEAT_LEVELS.find(l => l.value === cheatLevel)?.label})</p>
+                                                <p className="text-[8px] text-slate-400">Paper-specific AI answers</p>
                                             </div>
                                         </button>
 
                                         {/* Option A + B2 */}
                                         <button 
-                                            onClick={() => {
-                                                const answers = {};
-                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
-                                                setUserAnswers(answers);
-                                                
-                                                const bDrafts = {};
-                                                if (mockData?.Part_B) {
-                                                    const b2Tasks = ['Task_8', 'Task_9', 'Task_10'];
-                                                    b2Tasks.forEach(tid => {
-                                                        bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || "Level 5** Perfect response using all Data File points...";
+                                            onClick={async () => {
+                                                setCheatLoading(true);
+                                                try {
+                                                    const res = await fetch(apiUrl(`/api/english/mock/cheat/${paperId}`), {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({ section: 'B2', targetLevel: cheatLevel, uid: user?.uid })
                                                     });
+                                                    if (!res.ok) throw new Error('Cheat fetch failed');
+                                                    const data = await res.json();
+                                                    setUserAnswers(data.partA || {});
+                                                    setDrafts(data.partB || {});
                                                     setSelectedSection('B2');
+                                                } catch (e) {
+                                                    console.error('Cheat error:', e);
+                                                    const answers = {};
+                                                    mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
+                                                    setUserAnswers(answers);
+                                                    const bDrafts = {};
+                                                    const b2Tasks = ['Task_8', 'Task_9', 'Task_10'];
+                                                    b2Tasks.forEach(tid => { bDrafts[tid] = SMART_CITY_GOLDEN_ANSWERS[tid] || ''; });
+                                                    setDrafts(bDrafts);
+                                                    setSelectedSection('B2');
+                                                } finally {
+                                                    setCheatLoading(false);
                                                 }
-                                                setDrafts(bDrafts);
                                             }}
-                                            className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all"
+                                            disabled={cheatLoading}
+                                            className="w-full text-left p-3 hover:bg-rose-50 rounded-xl flex items-center gap-3 group transition-all disabled:opacity-50"
                                         >
-                                            <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black text-xs">B2</div>
+                                            <div className="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-black text-xs">
+                                                {cheatLoading ? <Loader2 size={14} className="animate-spin" /> : 'B2'}
+                                            </div>
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-900">Fill A + B2 (5**)</p>
-                                                <p className="text-[8px] text-slate-400">Tasks 1-4 & 8-10 complete</p>
+                                                <p className="text-[10px] font-black text-slate-900">Fill A + B2 ({CHEAT_LEVELS.find(l => l.value === cheatLevel)?.label})</p>
+                                                <p className="text-[8px] text-slate-400">Paper-specific AI answers</p>
                                             </div>
                                         </button>
 
                                         <div className="h-[1px] bg-slate-50 my-1" />
 
+                                        {/* Quick Part A Only */}
                                         <button 
                                             onClick={() => {
                                                 const answers = {};
-                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach((q, idx) => answers[q.id] = idx % 2 === 0 ? q.answer : 'Wrong answer'));
+                                                mockData?.Part_A?.tasks.forEach(t => t.questions.forEach(q => answers[q.id] = q.answer));
                                                 setUserAnswers(answers);
                                             }}
-                                            className="w-full text-left p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 group transition-all opacity-50"
+                                            className="w-full text-left p-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 group transition-all"
                                         >
-                                            <div className="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center font-black">L2</div>
+                                            <div className="w-8 h-8 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center font-black text-xs">A</div>
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-900">Level 2 (Part A Only)</p>
-                                                <p className="text-[8px] text-slate-400">50% error rate</p>
+                                                <p className="text-[10px] font-black text-slate-900">Part A Only (Perfect)</p>
+                                                <p className="text-[8px] text-slate-400">Fill all listening answers</p>
                                             </div>
                                         </button>
                                     </div>

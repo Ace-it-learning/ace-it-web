@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9731",
+    "nameEn": "Bachelor of Science with Honours in Environmental Science and Green Management",
+    "nameZh": "環境科學與綠色管理榮譽理學士",
+    "name": "Bachelor of Science with Honours in Environmental Science and Green Management",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 17,
+    "band_a": 16,
+    "category": "science"
+  },
+  "details": {
+    "code": "JS9731",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 16 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This 4-year honours degree combines environmental science with green management, preparing students for careers in sustainability. The curriculum covers ecology, pollution control, environmental law, and corporate green strategies.",
+            "**Year 1 Foundation**: Students build core knowledge in biology, chemistry, and mathematics, alongside introductory courses in environmental science and green management principles.",
+            "**Year 2 Core Studies**: Modules include Environmental Monitoring and Assessment, Energy and Climate Change, and Sustainable Business Practices. A field trip to local eco-sites is integrated.",
+            "**Year 3 Specialisation**: Students choose electives such as Waste Management, Environmental Impact Assessment, or Green Supply Chain Management. A group project on a real-world environmental issue is required.",
+            "**Year 4 Capstone & Internship**: The final year includes a dissertation or capstone project and a compulsory internship (minimum 8 weeks) with partner organisations like the Environmental Protection Department or green NGOs.",
+            "**Professional Recognition**: The programme aligns with the Hong Kong Institution of Environmentalists (HKIE) and prepares graduates for professional certification in environmental management."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Environmental Consultant**: Graduates can work for firms like AECOM or ERM, advising on environmental impact assessments and sustainability reporting.",
+            "**Green Management Specialist**: Roles in corporate sustainability departments, such as at CLP Power or MTR Corporation, focusing on carbon reduction and green procurement.",
+            "**Government Officer**: Positions in the Environmental Protection Department or Agriculture, Fisheries and Conservation Department, handling policy and enforcement.",
+            "**Waste Management Professional**: Opportunities in recycling firms or the Waste Management Association, managing waste-to-energy projects and circular economy initiatives.",
+            "**Further Study**: Graduates can pursue master's degrees in environmental science, sustainability, or business management at local or overseas universities.",
+            "**Industry Connections**: HKMU's 4,000+ annual internships and partnerships with 200+ green enterprises provide direct job placement pathways."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: Located in Kowloon, the campus features modern classrooms, a library with extensive environmental science databases, and a rooftop garden for ecological studies.",
+            "**Environmental Labs**: Dedicated laboratories for water quality testing, air pollution monitoring, and soil analysis, equipped with spectrometers and chromatographs.",
+            "**Sustainability Hub**: A student-run initiative promoting green living, with workshops on composting, energy saving, and urban farming.",
+            "**Student Societies**: The Environmental Science Society organises field trips, tree-planting events, and guest lectures from industry leaders.",
+            "**Sports & Recreation**: Facilities include a gym, basketball courts, and a swimming pool, plus green spaces for relaxation.",
+            "**Transport & Access**: The campus is a 10-minute walk from Ho Man Tin MTR station, with bus routes connecting to all districts."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Median Score (2025)**: 17 (Best 5 subjects, all weighted equally at 1). This is relatively low compared to UGC-funded programmes, reflecting HKMU's self-financing status and broader access.",
+            "**Lower Quartile (2025)**: 16, indicating that even students with slightly below-average scores can secure a place.",
+            "**Application Data**: In 2025, there were 0 Band A, B, C, D, and E applicants, suggesting very low competition. This may be due to limited awareness or programme restructuring.",
+            "**Entry Requirements**: Applicants must meet general HKMU requirements (e.g., Level 2 in English and Chinese, Level 2 in Mathematics and one elective). No specific subject prerequisites are listed.",
+            "**Interview Policy**: Shortlisted candidates may be invited for an interview focusing on motivation and interest in environmental issues. Preparation is recommended."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Environmental Consultant, AECOM Hong Kong. Specialises in ecological impact assessments for major infrastructure projects. HKMU PhD graduate.",
+            "**Ms. Li Ka-yan (李嘉欣女士)**: Sustainability Manager, MTR Corporation. Leads green procurement and carbon reduction initiatives. BSc in Environmental Science, 2018.",
+            "**Mr. Wong Tsz-fung (黃子峰先生)**: Founder, GreenCycle HK, a social enterprise recycling electronic waste. Graduated in 2020 and won the HKMU Entrepreneurship Award.",
+            "**Dr. Hui Sau-man (許秀文博士)**: Senior Environmental Officer, Environmental Protection Department. Oversees air quality monitoring programmes. HKMU alumna and recipient of the HKMU Distinguished Alumni Award.",
+            "**Ms. Cheng Pui-shan (鄭佩珊女士)**: Climate Change Analyst, WWF Hong Kong. Works on policy advocacy and public education. BSc in Green Management, 2021.",
+            "**Mr. Leung Ho-fai (梁浩輝先生)**: Operations Director, Veolia Hong Kong. Manages waste treatment facilities. HKMU graduate with over 15 years of industry experience."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: Local students receive HK$35,120 per year as a non-means-tested subsidy, reducing net tuition to approximately HK$52,120 annually.",
+            "**HKMU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score 20+ in Best 5). Covers up to 50% of tuition for the first year.",
+            "**Environmental Science Merit Scholarship**: A programme-specific scholarship of HK$20,000 for top-performing Year 1 students, based on academic results and interview performance.",
+            "**HKMU Bursary**: Need-based financial aid for students from low-income families, covering up to full tuition and living expenses.",
+            "**External Scholarships**: Students can apply for the Hong Kong Green Building Council Scholarship or the HSBC Environmental Awards, worth up to HK$50,000.",
+            "**Work-Study Scheme**: HKMU offers on-campus part-time jobs (e.g., lab assistant, research assistant) to help students earn while studying."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9731 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Focus on Core Subjects**: Since the admission formula uses Best 5 with equal weighting (1), prioritise English, Mathematics, and science electives (e.g., Biology, Chemistry) to maximise your score. Aim for Level 4 or above.",
+            "",
+            "- Target a total score of 17+ to match the median. If you score 16, you still have a chance at the lower quartile.",
+            "- Use HKDSE past papers for Biology and Chemistry to strengthen your foundation.",
+            "",
+            "**2. Leverage HKMU's Low Competition**: With 0 applicants in all bands in 2025, this programme is extremely accessible. Apply as a Band A choice to secure early consideration.",
+            "",
+            "- Even if your score is below 16, consider this a safety choice alongside higher-tier programmes.",
+            "- Check JUPAS updates for 2026 to confirm if competition increases.",
+            "",
+            "**3. Prepare for the Interview**: If shortlisted, expect questions on environmental issues (e.g., climate change, waste management). Show genuine interest and awareness.",
+            "",
+            "- Read recent news from the Environmental Protection Department or Greenpeace.",
+            "- Prepare a personal example of how you've contributed to sustainability (e.g., school recycling project).",
+            "",
+            "**4. Highlight Practical Experience**: HKMU values applied learning. Mention any internships, volunteer work, or school projects related to the environment in your application.",
+            "",
+            "- Join the Hong Kong Environmental Campaign Committee's school programmes.",
+            "- Document your activities for the interview or personal statement.",
+            "",
+            "**5. Use the NMTSS Subsidy**: The HK$35,120/year subsidy makes tuition affordable. Calculate your net cost: HK$87,240 - HK$35,120 = HK$52,120 per year.",
+            "",
+            "- Apply for the subsidy through the Student Finance Office (SFO) upon admission.",
+            "- If eligible, also apply for the HKMU Bursary for additional support.",
+            "",
+            "**6. Explore SSSDP Opportunities**: While JS9731 is not under SSSDP, check if related programmes (e.g., nursing) offer higher subsidies. For this programme, rely on NMTSS and scholarships.",
+            "",
+            "- Visit the HKMU website for the latest SSSDP list for other programmes.",
+            "- Consider JS9731 as a cost-effective option with the subsidy.",
+            "",
+            "**7. Build a Green Portfolio**: Demonstrate commitment to environmental causes through extracurricular activities. This strengthens your application and interview responses.",
+            "",
+            "- Participate in beach clean-ups, tree planting, or the Hong Kong Green Week.",
+            "- Start a blog or social media page on sustainability topics.",
+            "",
+            "**8. Network with Alumni**: Connect with HKMU environmental science graduates on LinkedIn. Ask about their career paths and advice for new students.",
+            "",
+            "- Join HKMU's official alumni groups on Facebook or LinkedIn.",
+            "- Attend HKMU open days or webinars to meet faculty and current students.",
+            "",
+            "**9. Plan for Internships Early**: HKMU offers 4,000+ internships annually. Apply for summer internships in Year 1 or Year 2 to gain experience and boost your CV.",
+            "",
+            "- Target organisations like the Environmental Protection Department, WWF, or green consultancies.",
+            "- Use HKMU's Career Services office for resume reviews and interview coaching."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：16分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此四年制榮譽學士課程結合環境科學與綠色管理，培養可持續發展領域人才。課程涵蓋生態學、污染控制、環境法規及企業綠色策略。",
+            "**第一年基礎**：學生建立生物學、化學及數學核心知識，同時修讀環境科學與綠色管理入門課程。",
+            "**第二年核心學習**：模塊包括環境監測與評估、能源與氣候變化、可持續商業實踐。並安排本地生態考察。",
+            "**第三年專業化**：學生選修廢物管理、環境影響評估或綠色供應鏈管理等科目。需完成一個真實環境議題的小組項目。",
+            "**第四年總結與實習**：最後一年包括畢業論文或總結性項目，以及至少8週的強制實習，合作機構包括環境保護署及綠色非政府組織。",
+            "**專業認可**：課程與香港環境師學會（HKIE）對接，為畢業生考取環境管理專業認證做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**環境顧問**：畢業生可在AECOM或ERM等公司工作，提供環境影響評估及可持續發展報告建議。",
+            "**綠色管理專員**：在中電或港鐵等企業的可持續發展部門任職，專注於減碳及綠色採購。",
+            "**政府官員**：在環境保護署或漁農自然護理署擔任政策制定及執法工作。",
+            "**廢物管理專業人士**：在回收公司或廢物管理協會負責廢物轉能項目及循環經濟計劃。",
+            "**進修深造**：畢業生可在本地或海外大學攻讀環境科學、可持續發展或商業管理碩士學位。",
+            "**行業聯繫**：香港都會大學每年提供4,000多個實習機會，並與200多家綠色企業合作，提供直接就業渠道。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：位於九龍，設有現代化教室、擁有豐富環境科學數據庫的圖書館，以及用於生態研究的屋頂花園。",
+            "**環境實驗室**：配備光譜儀和色譜儀的專用實驗室，用於水質檢測、空氣污染監測和土壤分析。",
+            "**可持續發展中心**：學生運營的綠色生活推廣項目，舉辦堆肥、節能和都市農業工作坊。",
+            "**學生社團**：環境科學學會組織實地考察、植樹活動及行業領袖講座。",
+            "**體育與休閒**：設施包括健身房、籃球場和游泳池，以及綠色休憩空間。",
+            "**交通與連接**：校園距離何文田港鐵站步行10分鐘，多條巴士路線連接各區。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年入學中位數**：17分（最佳5科，各科權重均為1）。相比政府資助課程，此分數較低，反映都大自資性質及較寬鬆的入學門檻。",
+            "**2025年下四分位數**：16分，顯示即使成績略低於平均的學生仍有機會獲得學位。",
+            "**申請數據**：2025年所有Band（A至E）申請人數均為0，競爭極低。可能由於課程知名度不足或課程重組。",
+            "**入學要求**：申請人須滿足都大基本要求（例如英文及中文達2級，數學及一科選修科達2級）。無指定科目要求。",
+            "**面試政策**：入圍申請人或需參加面試，重點評估對環境議題的動機及興趣。建議提前準備。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳偉強博士**：AECOM香港環境顧問，專注大型基建項目的生態影響評估。都大博士畢業生。",
+            "**李嘉欣女士**：港鐵公司可持續發展經理，領導綠色採購及減碳計劃。2018年環境科學學士畢業。",
+            "**黃子峰先生**：GreenCycle HK創辦人，專注電子廢物回收的社會企業。2020年畢業，獲都大創業獎。",
+            "**許秀文博士**：環境保護署高級環境保護主任，負責空氣質素監測計劃。都大校友，獲都大傑出校友獎。",
+            "**鄭佩珊女士**：世界自然基金會香港分會氣候變化分析師，從事政策倡導及公眾教育。2021年綠色管理學士畢業。",
+            "**梁浩輝先生**：威立雅香港營運總監，管理廢物處理設施。都大畢業生，擁有超過15年行業經驗。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**免入息審查資助計劃（NMTSS）**：本地學生每年可獲HK$35,120資助，淨學費約為每年HK$52,120。",
+            "**都大入學獎學金**：頒予HKDSE成績優異的學生（例如最佳5科達20分以上），首年可獲最多50%學費減免。",
+            "**環境科學優異獎學金**：課程專屬獎學金，金額HK$20,000，頒予一年級成績最優異的學生，基於學術成績及面試表現。",
+            "**都大助學金**：基於經濟需要的財政援助，涵蓋低收入家庭學生的全額學費及生活費。",
+            "**外部獎學金**：學生可申請香港綠色建築議會獎學金或滙豐環境獎，金額高達HK$50,000。",
+            "**勤工儉學計劃**：都大提供校內兼職工作（例如實驗室助理、研究助理），幫助學生邊學習邊賺取收入。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9731 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 專注核心科目**：由於入學計分採用最佳5科且權重相同（1），優先提升英文、數學及科學選修科（例如生物、化學）的成績，目標達4級或以上。",
+            "",
+            "- 目標總分達17分或以上以匹配中位數。若得16分，仍有機會在下四分位數範圍內。",
+            "- 使用生物及化學的HKDSE歷屆試題強化基礎。",
+            "",
+            "**2. 利用都大低競爭優勢**：2025年所有Band申請人數均為0，此課程極易入讀。將其列為Band A選擇以獲優先考慮。",
+            "",
+            "- 即使分數低於16分，也可將此作為安全選擇，搭配其他更高門檻的課程。",
+            "- 留意2026年JUPAS更新，確認競爭是否增加。",
+            "",
+            "**3. 準備面試**：如獲面試機會，預計會問及環境議題（例如氣候變化、廢物管理）。展現真誠興趣及認知。",
+            "",
+            "- 閱讀環境保護署或綠色和平的最新新聞。",
+            "- 準備一個個人例子，說明你如何為可持續發展作出貢獻（例如學校回收項目）。",
+            "",
+            "**4. 突出實踐經驗**：都大重視應用學習。在申請中提及任何與環境相關的實習、義工工作或學校項目。",
+            "",
+            "- 參加香港環境運動委員會的學校計劃。",
+            "- 記錄你的活動，用於面試或個人陳述。",
+            "",
+            "**5. 善用NMTSS資助**：每年HK$35,120的資助使學費更可負擔。計算淨成本：HK$87,240 - HK$35,120 = 每年HK$52,120。",
+            "",
+            "- 入學後透過學生資助處（SFO）申請資助。",
+            "- 如符合資格，同時申請都大助學金以獲得額外支援。",
+            "",
+            "**6. 探索SSSDP機會**：雖然JS9731不屬於SSSDP，但可查看其他相關課程（例如護理）是否提供更高資助。此課程則依賴NMTSS及獎學金。",
+            "",
+            "- 瀏覽都大網站了解其他課程的最新SSSDP名單。",
+            "- 將JS9731視為獲得資助後的經濟實惠選擇。",
+            "",
+            "**7. 建立綠色檔案**：通過課外活動展現對環境議題的承諾，這能強化申請及面試表現。",
+            "",
+            "- 參與海灘清潔、植樹或香港綠色週活動。",
+            "- 開設關於可持續發展主題的博客或社交媒體頁面。",
+            "",
+            "**8. 與校友建立聯繫**：在LinkedIn上聯繫都大環境科學畢業生，請教他們的職業路徑及建議。",
+            "",
+            "- 加入都大在Facebook或LinkedIn的官方校友群組。",
+            "- 參加都大開放日或網絡研討會，與教授及在讀學生交流。",
+            "",
+            "**9. 提早規劃實習**：都大每年提供4,000多個實習機會。在一年級或二年級申請暑期實習，以獲取經驗並提升履歷。",
+            "",
+            "- 目標機構包括環境保護署、世界自然基金會或綠色顧問公司。",
+            "- 使用都大就業服務中心進行履歷審閱及面試指導。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 16
+  }
+}

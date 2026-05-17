@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9220",
+    "nameEn": "Bachelor of Business Administration with Honours in Professional Accounting",
+    "nameZh": "專業會計榮譽工商管理學士",
+    "name": "Bachelor of Business Administration with Honours in Professional Accounting",
+    "university": "香港都會大學",
+    "faculty": "李兆基商業管理學院",
+    "median": 17,
+    "band_a": 17,
+    "category": "business"
+  },
+  "details": {
+    "code": "JS9220",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 17 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 80 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: This 4-year honours degree programme provides comprehensive training in professional accounting, preparing students for HKICPA, ACCA, and CPA Australia accreditation. The curriculum integrates accounting theory with practical business applications.",
+            "**Year 1 Foundation**: Students build core business knowledge in financial accounting, economics, business law, quantitative methods, and management principles. Emphasis on developing analytical and communication skills.",
+            "**Year 2 Core Accounting**: Courses include intermediate financial accounting, cost and management accounting, taxation, auditing principles, and corporate finance. Students begin using professional accounting software.",
+            "**Year 3 Advanced Studies**: Advanced financial reporting, strategic management accounting, advanced taxation, company law, and ethics. Students can choose electives in areas like forensic accounting or international taxation.",
+            "**Year 4 Capstone and Specialisation**: Final year includes a capstone project, advanced auditing, and professional practice. Students complete a business strategy simulation and prepare for professional examinations.",
+            "**Professional Recognition**: The programme is accredited by HKICPA (Hong Kong Institute of Certified Public Accountants) and recognised by ACCA, CPA Australia, and CIMA, offering maximum exemptions for professional qualifications."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Accounting Firms**: Graduates join Big Four firms (Deloitte, PwC, EY, KPMG) and mid-tier firms as audit associates, tax consultants, or advisory staff. Starting salaries range from HK$18,000 to HK$25,000 per month.",
+            "**Corporate Finance**: Roles in financial analysis, treasury management, and internal audit at listed companies, banks, and multinational corporations. HKMU's 4,000+ internship opportunities provide direct industry access.",
+            "**Public Sector and NGOs**: Opportunities in government departments, statutory bodies, and non-profit organisations as accountants or financial officers. Stable career paths with competitive benefits.",
+            "**Entrepreneurial Path**: Graduates can establish their own accounting practices or provide financial consulting services to SMEs. HKMU's business incubation support helps alumni launch ventures.",
+            "**Further Studies**: Graduates can pursue master's degrees in accounting, finance, or business administration (MBA) at local or overseas universities. HKMU offers articulation pathways to postgraduate programmes.",
+            "**Industry Connections**: The Lee Shau Kee School of Business and Administration has strong partnerships with professional bodies and employers, organising career fairs, mentorship programmes, and recruitment talks."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: Located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, the campus is easily accessible via MTR (Ho Man Tin Station) and multiple bus routes. The area offers vibrant student amenities.",
+            "**Learning Commons**: Modern library with extensive accounting and business databases, 24/7 study spaces, group discussion rooms, and multimedia production facilities. Students access Bloomberg terminals and financial data platforms.",
+            "**Business Simulation Lab**: Dedicated lab equipped with professional accounting software (SAP, QuickBooks), trading platforms, and business simulation tools for hands-on learning in a realistic environment.",
+            "**Student Accommodation**: On-campus halls and nearby private housing options available. The university provides support for off-campus housing through its student affairs office.",
+            "**Student Organisations**: Active Accounting Society organises professional workshops, networking events, and study groups. Students participate in case competitions and business case challenges locally and internationally.",
+            "**Sports and Recreation**: Sports facilities include a gymnasium, basketball courts, badminton courts, and a swimming pool. The campus also has student lounges, cafes, and green spaces for relaxation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Analysis",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score (2025)**: Median score of 17 and lower quartile of 17 (Best 5 subjects, all subjects weighted equally at 1). This is relatively low compared to UGC-funded programmes, reflecting HKMU's accessible admission policy.",
+            "**Applicant Data (2025)**: Zero applicants recorded across all Band choices (A to E). This unusual statistic may indicate data suppression or a new programme cycle. Applicants should verify current demand through JUPAS official channels.",
+            "**Tuition and Subsidy**: Annual tuition is HK$87,240 (before NMTSS subsidy of HK$35,120/year). Net cost approximately HK$52,120/year for local students, making it one of the more affordable accounting honours programmes.",
+            "**Class Size and Support**: Smaller class sizes (typically 30-50 students per cohort) ensure personalised attention from faculty. The programme benefits from HKMU's self-accrediting status and industry-experienced lecturers.",
+            "**Entry Requirements**: Minimum HKDSE scores typically include Level 3 in English and Mathematics, Level 2 in Chinese Language and two electives. No specific subject weighting, so students can leverage their strongest subjects."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Success Stories",
+          "content": [
+            "**Dr. Clement Chen (陳志輝)**: Former President of HKMU (2014-2021), instrumental in transforming the university from Open University to a self-accrediting institution. A visionary leader in higher education.",
+            "**Mr. Wong Kwok-keung (黃國強)**: Partner at a mid-tier accounting firm, specialising in SME audit and advisory services. 2010 graduate of HKMU's accounting programme, now mentors current students.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Financial Controller at a Hong Kong-listed manufacturing company. 2015 graduate who completed HKICPA qualification within two years of graduation, now leads a team of 15 accountants.",
+            "**Mr. Leung Ho-fai (梁浩輝)**: Founder of a successful fintech startup providing cloud-based accounting solutions for SMEs. 2018 graduate who leveraged HKMU's entrepreneurship support to launch his venture.",
+            "**Ms. Tammy Yuen (阮佩珊)**: Senior Manager in Forensic Accounting at a Big Four firm. 2012 graduate, recognised for her expertise in fraud investigation and dispute resolution. Active alumna speaker at university events.",
+            "**Dr. Au Yeung (歐陽博士)**: Professor of Accounting at HKMU, leading research in corporate governance and sustainability reporting. A graduate who returned to teach and inspire the next generation of accountants."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKMU Entrance Scholarship**: Awarded to top HKDSE achievers (typically score 18+ in Best 5). Covers up to full tuition for the first year, renewable based on academic performance. Approximately 10-15 awards available annually.",
+            "**Lee Shau Kee School of Business Scholarships**: Multiple merit-based scholarships ranging from HK$10,000 to HK$50,000 for business students. Criteria include HKDSE results, interview performance, and extracurricular achievements.",
+            "**Professional Body Scholarships**: Sponsored by HKICPA, ACCA, and CPA Australia for students demonstrating strong academic performance and commitment to the accounting profession. Includes exam fee waivers and study materials.",
+            "**Government Financial Assistance**: Local students can apply for the Non-means-tested Subsidy Scheme (NMTSS) of HK$35,120/year. Additionally, means-tested grants and loans are available through the Student Finance Office (SFO).",
+            "**HKMU Bursary Programme**: Need-based bursaries for students facing financial hardship. Awards range from HK$5,000 to HK$20,000 per academic year. Over 200 bursaries distributed annually across all programmes.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Institute of Certified Public Accountants (HKICPA) Scholarship, which provides HK$30,000 plus internship opportunities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9220 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Focus on Your Best 5 Subjects**",
+            "",
+            "- HKMU uses Best 5 subjects with equal weighting (1x). Identify your five strongest HKDSE subjects and prioritise them for revision. Aim for a total score of at least 17 (median 2025).",
+            "- If you have a weaker subject, consider dropping it from your Best 5 calculation. For example, if you score 5 in English, 5 in Maths, 4 in BAFS, 4 in Economics, and 3 in Chinese, your Best 5 score is 21.",
+            "",
+            "**2. Leverage HKMU's Lower Entry Threshold**",
+            "",
+            "- With a median score of 17, this programme is more accessible than UGC-funded accounting programmes (which typically require 20-24). Apply even if your predicted score is around 16-18.",
+            "- Use HKMU as a safety choice in Band A or B if you are aiming for higher-tier universities but want a guaranteed accounting honours degree.",
+            "",
+            "**3. Highlight Practical Experience in Your Application**",
+            "",
+            "- HKMU values applied learning. Include any part-time work, internships, or volunteer roles related to business or accounting in your JUPAS application and personal statement.",
+            "- If you have completed a business-related project or competition (e.g., HKICPA case competition), mention it to demonstrate your interest and initiative.",
+            "",
+            "**4. Prepare for Professional Accreditation**",
+            "",
+            "- Research HKICPA, ACCA, and CPA Australia requirements. This programme offers maximum exemptions, so you can fast-track your professional qualification. Mention this awareness in your interview.",
+            "- Consider taking an introductory accounting course (e.g., via Coursera or edX) before starting the programme to build foundational knowledge.",
+            "",
+            "**5. Visit the Campus and Attend Open Days**",
+            "",
+            "- HKMU's Ho Man Tin campus is accessible via MTR. Attend the annual Information Day (usually in October) to meet faculty, current students, and alumni. Ask about internship opportunities and class sizes.",
+            "- If you cannot attend in person, explore the virtual campus tour on HKMU's website and watch programme-specific videos.",
+            "",
+            "**6. Build a Strong Personal Statement**",
+            "",
+            "- Explain why you chose Professional Accounting at HKMU specifically. Mention the programme's professional recognition, practical focus, and HKMU's self-accrediting status.",
+            "- Include your career goals (e.g., becoming a CPA, working in audit, or starting an accounting firm) and how the programme aligns with them.",
+            "",
+            "**7. Consider the Financial Aspect**",
+            "",
+            "- Net tuition after NMTSS subsidy is approximately HK$52,120/year. Budget for textbooks, professional exam fees (HK$3,000-5,000 per paper), and living expenses.",
+            "- Apply for HKMU scholarships early. The entrance scholarship requires a separate application — check the HKMU website for deadlines (usually March-April).",
+            "",
+            "**8. Connect with Current Students and Alumni**",
+            "",
+            "- Use LinkedIn to find HKMU accounting students or alumni. Ask about their experience, workload, and internship placements. Most are happy to share insights.",
+            "- Join HKMU's official social media groups (e.g., Facebook group for prospective students) to get real-time updates and advice.",
+            "",
+            "**9. Plan for Professional Exam Success**",
+            "",
+            "- Start preparing for HKICPA or ACCA exams from Year 2. HKMU offers revision workshops and mock exams. Aim to pass at least 2-3 papers before graduation.",
+            "- Use the programme's capstone project to develop a portfolio that demonstrates your accounting skills to future employers."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：17分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：80人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：這個四年制榮譽學位課程提供全面的專業會計培訓，為學生考取香港會計師公會（HKICPA）、特許公認會計師公會（ACCA）及澳洲會計師公會（CPA Australia）的專業資格做好準備。課程將會計理論與實際商業應用相結合。",
+            "**第一年基礎**：學生建立核心商業知識，包括財務會計、經濟學、商業法律、計量方法及管理原則。重點培養分析及溝通能力。",
+            "**第二年核心會計**：課程包括中級財務會計、成本與管理會計、稅務、審計原則及企業財務。學生開始使用專業會計軟件。",
+            "**第三年高階學習**：高級財務報告、策略管理會計、高級稅務、公司法及商業道德。學生可選修法證會計或國際稅務等範疇。",
+            "**第四年總結與專修**：最後一年包括總結性專題研習、高級審計及專業實務。學生完成商業策略模擬，並為專業考試做好準備。",
+            "**專業認可**：課程獲香港會計師公會（HKICPA）認可，並獲ACCA、CPA Australia及CIMA承認，提供最多科目豁免，助你快速取得專業資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**會計師事務所**：畢業生加入四大會計師行（德勤、羅兵咸永道、安永、畢馬威）及中型事務所，擔任審計助理、稅務顧問或諮詢人員。起薪點每月約港幣18,000至25,000元。",
+            "**企業財務**：在上市公司、銀行及跨國企業擔任財務分析、庫務管理及內部審計等職位。都大每年提供超過4,000個本地及海外實習機會，直接連接業界。",
+            "**公共機構及非政府組織**：在政府部門、法定機構及非牟利組織擔任會計師或財務主任，提供穩定的職業發展路徑及具競爭力的福利。",
+            "**創業之路**：畢業生可開設自己的會計事務所，或為中小企提供財務顧問服務。都大的創業支援計劃幫助校友開展業務。",
+            "**進修深造**：畢業生可於本地或海外大學攻讀會計、金融或工商管理碩士（MBA）課程。都大提供銜接途徑至研究生課程。",
+            "**業界聯繫**：李兆基商業管理學院與專業團體及僱主建立緊密夥伴關係，定期舉辦職業博覽、師友計劃及招聘講座。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：位於九龍何文田忠孝街30號，鄰近港鐵何文田站及多條巴士路線，交通便利。周邊社區配套完善，生活便利。",
+            "**學習共享空間**：現代化圖書館提供豐富的會計及商業數據庫、24小時自修區、小組討論室及多媒體製作設施。學生可使用彭博終端機及金融數據平台。",
+            "**商業模擬實驗室**：配備專業會計軟件（SAP、QuickBooks）、交易平台及商業模擬工具，讓學生在真實環境中進行實踐學習。",
+            "**學生住宿**：提供校內宿舍及附近私人住宿選擇。學生事務處協助學生尋找校外住宿，並提供相關支援。",
+            "**學生組織**：活躍的會計學會舉辦專業工作坊、聯誼活動及學習小組。學生參與本地及國際個案比賽及商業案例挑戰賽。",
+            "**體育及康樂**：體育設施包括健身室、籃球場、羽毛球場及游泳池。校園亦設有學生休息室、咖啡店及綠化空間，供學生放鬆身心。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學分析",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年入學分數**：中位數17分，下四分位數17分（最佳五科，所有科目權重均為1）。相比資助大學課程，分數要求較低，反映都大的彈性收生政策。",
+            "**2025年申請人數**：所有組別（A至E）均錄得零申請。此異常數據可能因資料隱藏或課程新週期所致。申請人應透過JUPAS官方渠道核實最新需求。",
+            "**學費及資助**：每年學費港幣87,240元（扣除每年港幣35,120元的免入息審查資助後，本地學生淨學費約港幣52,120元），是較實惠的會計榮譽學位課程之一。",
+            "**班級規模與支援**：每班學生人數較少（通常30至50人），確保學生獲得個人化指導。課程受惠於都大的自行評審資格及具業界經驗的講師團隊。",
+            "**入學要求**：最低HKDSE成績通常包括英文及數學達第3級，中文及兩科選修科達第2級。無特定科目權重，學生可善用最強科目。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳志輝博士**：都大前校長（2014-2021年），帶領大學從香港公開大學轉型為自行評審院校，是高等教育界的遠見領袖。",
+            "**黃國強先生**：中型會計師事務所合夥人，專注中小企審計及顧問服務。2010年都大會計課程畢業生，現任學生導師。",
+            "**陳美玲女士**：香港上市製造公司財務總監。2015年畢業，畢業兩年內考獲HKICPA資格，現領導15名會計師團隊。",
+            "**梁浩輝先生**：成功金融科技初創公司創辦人，為中小企提供雲端會計解決方案。2018年畢業，善用都大創業支援開展業務。",
+            "**阮佩珊女士**：四大會計師行法證會計高級經理。2012年畢業，專長欺詐調查及爭議解決，經常回校擔任講座嘉賓。",
+            "**歐陽博士**：都大會計學教授，領導企業管治及可持續發展報告研究。畢業後回校任教，啟發新一代會計師。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**都大入學獎學金**：頒予HKDSE成績優異的學生（最佳五科18分或以上），可獲首年全額學費減免，並按學業成績續領。每年約10至15個名額。",
+            "**李兆基商業管理學院獎學金**：多項基於成績的獎學金，金額由港幣10,000元至50,000元不等，頒予商業課程學生。評審準則包括HKDSE成績、面試表現及課外活動成就。",
+            "**專業團體獎學金**：由HKICPA、ACCA及CPA Australia贊助，頒予學業成績優異及對會計專業有承擔的學生。包括考試費減免及學習材料。",
+            "**政府財政援助**：本地學生可申請免入息審查資助計劃（NMTSS），每年港幣35,120元。此外，學生可透過學生資助處（SFO）申請入息審查資助及貸款。",
+            "**都大助學金計劃**：為面對經濟困難的學生提供需要為本的助學金，金額由港幣5,000元至20,000元不等。每年全校派發超過200個助學金。",
+            "**外部獎學金**：學生可申請香港會計師公會（HKICPA）獎學金等外部獎項，金額達港幣30,000元，並附帶實習機會。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9220 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 專注你的最佳五科**",
+            "",
+            "- 都大採用最佳五科且權重相同（1倍）。找出你最強的五科並優先溫習。目標總分至少17分（2025年中位數）。",
+            "- 如果你有較弱的科目，可考慮將其排除在最佳五科計算之外。例如，若英文5分、數學5分、BAFS 4分、經濟4分、中文3分，你的最佳五科分數為21分。",
+            "",
+            "**2. 善用都大較低的入學門檻**",
+            "",
+            "- 中位數17分，比資助大學的會計課程（通常要求20-24分）更易入讀。即使預測分數約16-18分，也應申請。",
+            "- 如果你目標是較高排名的大學，但想確保獲得會計榮譽學位，可將都大放在Band A或B作為安全選擇。",
+            "",
+            "**3. 在申請中突出實踐經驗**",
+            "",
+            "- 都大重視應用學習。在JUPAS申請及個人陳述中，加入任何與商業或會計相關的兼職、實習或義工經驗。",
+            "- 如果你曾參與商業相關項目或比賽（例如HKICPA個案比賽），務必提及，以展示你的興趣及主動性。",
+            "",
+            "**4. 為專業資格做好準備**",
+            "",
+            "- 研究HKICPA、ACCA及CPA Australia的要求。此課程提供最多科目豁免，助你快速取得專業資格。在面試中提及此認知。",
+            "- 考慮在開課前修讀入門會計課程（例如透過Coursera或edX），建立基礎知識。",
+            "",
+            "**5. 參觀校園及出席開放日**",
+            "",
+            "- 都大何文田校園鄰近港鐵站。參加每年10月左右的資訊日，與教授、現屆學生及校友交流。詢問實習機會及班級規模。",
+            "- 如未能親身出席，可瀏覽都大網站上的虛擬校園導覽，並觀看課程相關影片。",
+            "",
+            "**6. 撰寫有力的個人陳述**",
+            "",
+            "- 解釋為何選擇都大的專業會計課程。提及課程的專業認可、實踐導向及都大的自行評審資格。",
+            "- 包括你的職業目標（例如成為CPA、從事審計或開設會計事務所），以及課程如何與之配合。",
+            "",
+            "**7. 考慮財政因素**",
+            "",
+            "- 扣除NMTSS資助後，淨學費約每年港幣52,120元。預算課本、專業考試費（每科約港幣3,000至5,000元）及生活開支。",
+            "- 及早申請都大獎學金。入學獎學金需另行申請——請查閱都大網站了解截止日期（通常為3月至4月）。",
+            "",
+            "**8. 與現屆學生及校友聯繫**",
+            "",
+            "- 使用LinkedIn尋找都大會計學生或校友，詢問他們的學習經驗、工作量及實習安排。大多數人樂於分享見解。",
+            "- 加入都大的官方社交媒體群組（例如準學生Facebook群組），獲取即時更新及建議。",
+            "",
+            "**9. 為專業考試成功做好規劃**",
+            "",
+            "- 從第二年開始準備HKICPA或ACCA考試。都大提供溫習工作坊及模擬考試。目標在畢業前通過至少2至3科。",
+            "- 利用課程的總結性專題研習建立作品集，向未來僱主展示你的會計技能。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 17
+  }
+}

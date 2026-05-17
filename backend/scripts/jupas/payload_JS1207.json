@@ -1,0 +1,283 @@
+{
+  "programme": {
+    "code": "JS1207",
+    "nameEn": "Mechanical Engineering",
+    "nameZh": "機械工程學",
+    "name": "Mechanical Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 34.5,
+    "band_a": 34.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1207",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 2: English / Mathematics / Physics 1.5: Chemistry / Design and Applied Technology / M1/M2 1: other elective subjects.",
+            "**Median Admission Score**: 34.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 34.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BEng in Mechanical Engineering (JS1207) is a 4-year full-time programme designed to equip students with a solid foundation in mechanical engineering principles, including mechanics, thermodynamics, materials science, and design.",
+            "**Year 1**: Students take core foundational courses such as Engineering Mathematics, Physics for Engineers, Introduction to Mechanical Engineering, and General University Requirements (GUR).",
+            "**Year 2**: Focus shifts to core mechanical engineering subjects including Fluid Mechanics, Solid Mechanics, Thermodynamics, and Engineering Materials, along with laboratory work.",
+            "**Year 3**: Advanced courses include Mechanical Design, Control Engineering, Heat Transfer, and Manufacturing Technology. Students also begin their Final Year Project (FYP) preparation.",
+            "**Year 4**: Students complete their Final Year Project, choose elective specialisations (e.g., Energy Engineering, Robotics, or Aerospace), and take professional engineering ethics courses.",
+            "**Industrial Training**: A mandatory 6-week summer industrial placement is integrated, providing hands-on experience in Hong Kong or overseas engineering firms."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Diverse Sectors**: Graduates can pursue careers in energy, automotive, aerospace, manufacturing, robotics, and building services engineering across both public and private sectors.",
+            "**Professional Recognition**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), enabling graduates to become Chartered Engineers after relevant experience.",
+            "**Graduate Roles**: Common positions include Mechanical Engineer, Design Engineer, Project Engineer, Maintenance Engineer, and Technical Manager, with starting salaries typically ranging from HKD 18,000 to 25,000 per month.",
+            "**Further Studies**: Many graduates pursue master's or PhD degrees at top universities worldwide, including Imperial College London, University of Cambridge, and National University of Singapore.",
+            "**Entrepreneurship**: CityU's entrepreneurship support programmes and the CityU HK Tech 300 initiative help graduates launch their own engineering startups.",
+            "**Global Opportunities**: Exchange programmes with over 40 partner universities allow students to gain international exposure, enhancing employability in global markets."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Mechanical Engineering houses specialised laboratories for fluid mechanics, thermodynamics, materials testing, and robotics, equipped with industry-standard tools.",
+            "**Innovation Hub**: CityU's new Jockey Club Innovation Tower provides collaborative spaces, 3D printing facilities, and a makerspace for prototyping and design projects.",
+            "**Library Resources**: The Run Run Shaw Library offers extensive engineering databases, e-journals, and quiet study areas, with 24/7 access during exam periods.",
+            "**Student Support**: The College of Engineering provides academic advising, peer tutoring, and career counselling services tailored to mechanical engineering students.",
+            "**Location**: CityU is located in Kowloon Tong, with direct MTR access and proximity to industrial areas for internships and site visits.",
+            "**Green Campus**: The university is committed to sustainability, with solar panels, energy-efficient buildings, and a campus-wide recycling programme."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects including Mathematics, with weighted scores: English, Mathematics, Physics (×2); Chemistry, Design and Applied Technology, M1/M2 (×1.5); other electives (×1).",
+            "**Median Score (2025)**: 34.5 (weighted), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 34.0 (weighted), meaning even the bottom 25% of admitted students achieved high scores.",
+            "**Demand**: Mechanical Engineering is a popular choice due to its broad applications, with approximately 1,200 applicants for 80 places in recent years (15:1 ratio).",
+            "**Interview**: Shortlisted candidates may be invited for an interview, which assesses motivation, problem-solving skills, and interest in engineering."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: Chief Engineer, Hong Kong MTR Corporation. 1998 graduate. Led the design of the Tuen Ma Line extension.",
+            "**Ir Dr. Chan Wai-keung (陳偉強)**: Managing Director, Hong Kong Productivity Council. 2001 graduate. Pioneered smart manufacturing initiatives in Hong Kong.",
+            "**Dr. Leung Siu-ming (梁兆明)**: Senior Research Scientist, NASA Jet Propulsion Laboratory. 2005 graduate. Contributed to Mars rover thermal control systems.",
+            "**Ir Prof. Lam Kin-che (林建財)**: Professor of Mechanical Engineering, City University of Hong Kong. 1995 graduate. Awarded the HKIE Gold Medal for outstanding research.",
+            "**Ms. Cheng Mei-ling (鄭美玲)**: Founder & CEO, GreenTech Engineering Ltd. 2010 graduate. Developed award-winning energy-efficient HVAC systems for commercial buildings."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE achievers; students with scores above 36 (weighted) may receive full tuition coverage (HKD 42,100 per year) plus a living allowance.",
+            "**Faculty of Engineering Scholarship**: Up to HKD 20,000 per year for students in the top 10% of their cohort based on academic performance.",
+            "**HKIE Scholarships**: The Hong Kong Institution of Engineering offers scholarships of HKD 10,000–30,000 for engineering students with outstanding academic records and leadership potential.",
+            "**HKSAR Government Scholarship**: Up to HKD 80,000 per year for students demonstrating exceptional academic merit and community service.",
+            "**Industrial Sponsorships**: Companies like CLP Power and Hong Kong Aircraft Engineering Company (HAECO) sponsor students with tuition and internship opportunities.",
+            "**Financial Assistance**: The university's Financial Assistance Scheme provides means-tested grants and loans for students from low-income families."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1207 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Focus intensely on English, Mathematics, and Physics (each weighted ×2). A Level 5 in these subjects contributes 10 points to your weighted score, while a Level 4 gives only 8.",
+            "- Aim for at least Level 5 in Mathematics and Physics, and Level 4 in English, to reach the median score of 34.5.",
+            "",
+            "**2. Prioritise M1/M2 and Chemistry**",
+            "",
+            "- M1/M2 and Chemistry are weighted ×1.5, so a Level 5 in these adds 7.5 points. If you take M1/M2, it can significantly boost your score.",
+            "- Consider taking both M1/M2 and Chemistry if your schedule allows, as they complement mechanical engineering content.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- Participate in engineering competitions like the Hong Kong Youth Science and Technology Innovation Competition or robotics contests. Winning awards can strengthen your interview performance.",
+            "- Document any hands-on projects, such as building a drone or a simple engine model, to demonstrate practical interest.",
+            "",
+            "**4. Ace the Interview**",
+            "",
+            "- Prepare for common questions: 'Why mechanical engineering?', 'What is your favourite physics concept?', and 'How do you solve a technical problem?'",
+            "- Bring a portfolio of your projects or a short presentation to showcase your passion. Practice explaining technical concepts in simple terms.",
+            "",
+            "**5. Use the 34.5 Benchmark**",
+            "",
+            "- With a median score of 34.5, aim for a weighted score of at least 35 to be competitive. Calculate your expected score using the formula: (Eng+Math+Phys)×2 + (Chem/DAT/M1/M2)×1.5 + other electives.",
+            "- If your predicted score is below 34, consider retaking subjects or improving through summer study.",
+            "",
+            "**6. Leverage Summer Programmes**",
+            "",
+            "- Attend CityU's Summer Engineering Camp or similar programmes to gain exposure and network with professors. This can also strengthen your application.",
+            "- Complete online courses in CAD (e.g., SolidWorks) or programming (Python) to show initiative.",
+            "",
+            "**7. Choose Electives Strategically**",
+            "",
+            "- Select DSE electives that align with mechanical engineering, such as Physics (if not already taken), Chemistry, or Design and Applied Technology. These are weighted higher.",
+            "- Avoid low-scoring electives; every point counts in the weighted formula.",
+            "",
+            "**8. Prepare for the Final Year Project Early**",
+            "",
+            "- In Year 1, start exploring FYP topics by reading journals or talking to professors. Early preparation can lead to a stronger project and better grades.",
+            "- Consider topics in renewable energy or robotics, which are highly valued by employers.",
+            "",
+            "**9. Network with Alumni**",
+            "",
+            "- Connect with CityU mechanical engineering alumni on LinkedIn or at university events. They can provide mentorship, internship referrals, and insights into the programme.",
+            "- Attend the annual Engineering Alumni Day to build relationships and learn about career paths."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：2: 英文 / 數學 / Physics 1.5: Chemistry / Design and Applied Technology / M1/M2 1: 其他選修科。",
+            "**入學中位數**：34.5分（2025年聯招數據）。",
+            "**下四分位數**：34.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：機械工程學學士（JS1207）為四年全日制課程，旨在為學生建立機械工程原理的堅實基礎，包括力學、熱力學、材料科學及設計。",
+            "**第一年**：學生修讀核心基礎科目，如工程數學、工程物理、機械工程導論及大學核心課程（GUR）。",
+            "**第二年**：重點轉向核心機械工程科目，包括流體力學、固體力學、熱力學及工程材料，並配合實驗室實習。",
+            "**第三年**：進階課程包括機械設計、控制工程、傳熱學及製造技術。學生亦開始準備畢業專題項目（FYP）。",
+            "**第四年**：學生完成畢業專題項目，選修專業方向（如能源工程、機器人或航空航天），並修讀工程倫理課程。",
+            "**工業實習**：課程設有為期六星期的暑期工業實習，學生可在香港或海外工程公司獲得實戰經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**多元行業**：畢業生可在能源、汽車、航空航天、製造、機器人及屋宇裝備工程等公私營領域發展事業。",
+            "**專業認可**：課程獲香港工程師學會（HKIE）認可，畢業生累積相關經驗後可成為特許工程師。",
+            "**畢業生職位**：常見職位包括機械工程師、設計工程師、項目工程師、維修工程師及技術經理，起薪點一般為每月港幣18,000至25,000元。",
+            "**深造機會**：不少畢業生前往頂尖大學攻讀碩士或博士，包括倫敦帝國學院、劍橋大學及新加坡國立大學。",
+            "**創業支援**：城大的創業支援計劃及HK Tech 300項目協助畢業生創辦工程初創企業。",
+            "**環球機會**：與超過40所夥伴大學的交換計劃讓學生獲得國際視野，提升在全球市場的就業競爭力。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**先進實驗室**：機械工程學系設有流體力學、熱力學、材料測試及機器人專用實驗室，配備業界標準儀器。",
+            "**創新中心**：城大新翼賽馬會創新大樓提供協作空間、3D打印設施及創客空間，供設計及原型製作之用。",
+            "**圖書館資源**：邵逸夫圖書館提供豐富的工程數據庫、電子期刊及寧靜自修區，考試期間更提供24小時開放。",
+            "**學生支援**：工程學院為機械工程學生提供學術指導、同輩輔導及就業諮詢服務。",
+            "**地理位置**：城大位於九龍塘，毗鄰港鐵站，鄰近工業區，方便實習及實地考察。",
+            "**綠色校園**：大學致力可持續發展，設有太陽能板、節能建築及校園回收計劃。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科（包括數學），加權計算：英文、數學、物理（×2）；化學、設計與應用科技、M1/M2（×1.5）；其他選修科（×1）。",
+            "**2025年中位數**：34.5（加權後），反映申請者競爭激烈。",
+            "**2025年下四分位數**：34.0（加權後），即使最低25%的錄取學生也取得高分。",
+            "**需求情況**：機械工程因應用廣泛而受歡迎，近年約有1,200人申請80個學額（比例約15:1）。",
+            "**面試環節**：獲篩選的申請人或需參加面試，評估其學習動機、解難能力及對工程的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**黃國強博士**：香港鐵路有限公司總工程師，1998年畢業。領導屯馬線延線設計。",
+            "**陳偉強工程師**：香港生產力促進局總裁，2001年畢業。推動香港智能製造發展。",
+            "**梁兆明博士**：美國太空總署噴射推進實驗室高級研究科學家，2005年畢業。參與火星探測器熱控系統研發。",
+            "**林建財教授**：香港城市大學機械工程學系教授，1995年畢業。獲香港工程師學會金獎表揚傑出研究。",
+            "**鄭美玲女士**：GreenTech Engineering Ltd創辦人兼行政總裁，2010年畢業。研發獲獎節能空調系統應用於商業建築。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予成績優異的文憑試考生；加權分數達36分或以上可獲全額學費資助（每年港幣42,100元）及生活津貼。",
+            "**工程學院獎學金**：每年高達港幣20,000元，頒予成績位列學院前10%的學生。",
+            "**香港工程師學會獎學金**：HKIE提供港幣10,000至30,000元獎學金，表揚學業成績優異及具領導潛質的工程學生。",
+            "**香港政府獎學金**：每年高達港幣80,000元，頒予學術表現卓越及積極參與社區服務的學生。",
+            "**企業贊助**：中電集團及香港飛機工程有限公司（HAECO）等企業提供學費贊助及實習機會。",
+            "**經濟援助**：大學的經濟援助計劃為低收入家庭學生提供經入息審查的助學金及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1207 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權公式**",
+            "",
+            "- 重點投入英文、數學及物理（各加權×2）。這三科考獲5級可貢獻10分，而4級僅得8分。",
+            "- 目標在數學及物理取得至少5級，英文取得4級，以達到中位數34.5分。",
+            "",
+            "**2. 優先修讀M1/M2及化學**",
+            "",
+            "- M1/M2及化學加權×1.5，考獲5級可加7.5分。如選修M1/M2，可大幅提升總分。",
+            "- 如時間許可，建議同時修讀M1/M2及化學，因內容與機械工程相關。",
+            "",
+            "**3. 建立豐富的個人檔案**",
+            "",
+            "- 參加工程比賽，如香港青少年科技創新大賽或機械人競賽。獲獎可增強面試表現。",
+            "- 記錄動手項目，例如自製無人機或簡單引擎模型，以展示實踐興趣。",
+            "",
+            "**4. 面試表現出色**",
+            "",
+            "- 準備常見問題：「為何選擇機械工程？」、「你最喜歡的物理概念是甚麼？」及「你如何解決技術問題？」",
+            "- 攜帶項目作品集或簡短簡報，展示你的熱誠。練習用簡單語言解釋技術概念。",
+            "",
+            "**5. 以34.5分為基準**",
+            "",
+            "- 中位數為34.5分，目標加權分數至少達35分以保持競爭力。用公式計算預測分數：(英+數+物)×2 + (化/設/M1/M2)×1.5 + 其他選修科。",
+            "- 如預測分數低於34分，考慮重考或暑期進修提升成績。",
+            "",
+            "**6. 善用暑期課程**",
+            "",
+            "- 參加城大暑期工程營或類似課程，增進認識並與教授建立聯繫，有助強化申請。",
+            "- 完成線上CAD（如SolidWorks）或程式設計（如Python）課程，展示主動性。",
+            "",
+            "**7. 策略性選擇選修科**",
+            "",
+            "- 選擇與機械工程相關的DSE選修科，如物理（如未選修）、化學或設計與應用科技，這些科目加權較高。",
+            "- 避免低分選修科；加權公式下每分都重要。",
+            "",
+            "**8. 提早準備畢業專題**",
+            "",
+            "- 一年級開始探索畢業專題題目，閱讀期刊或諮詢教授。提早準備可提升項目質素及成績。",
+            "- 考慮可再生能源或機器人技術等題目，這些領域僱主高度重視。",
+            "",
+            "**9. 與校友建立聯繫**",
+            "",
+            "- 在LinkedIn或大學活動中聯繫城大機械工程校友。他們可提供指導、實習推薦及課程見解。",
+            "- 參加年度工程校友日，建立人脈並了解職業路徑。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 34.5,
+    "lq": 34.0
+  }
+}

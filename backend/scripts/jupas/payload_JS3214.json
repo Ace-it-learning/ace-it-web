@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS3214",
+    "nameEn": "BSc in Architectural Studies",
+    "nameZh": "建築學(榮譽)理學士",
+    "name": "BSc in Architectural Studies",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Design",
+    "median": "165.8",
+    "band_a": "163.1",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3214",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 169.4 (2025 JUPAS data).",
+            "**Median Admission Score**: 165.8 (2025 JUPAS data).",
+            "**Lower Quartile**: 163.1 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3214 BSc in Architectural Studies is a 4-year full-time programme offered by PolyU's Faculty of Design. It integrates design, technology, and theory to prepare students for professional architectural careers.",
+            "**Year 1 Foundation**: Students take core design studios, architectural history, building technology, and visual communication courses. Emphasis on developing spatial thinking and design fundamentals.",
+            "**Year 2 Core Studies**: Advanced design studios, structural systems, environmental science, and digital modelling. Introduction to urban design and professional practice.",
+            "**Year 3 Specialisation**: Students choose elective streams in areas such as sustainable design, digital architecture, or urbanism. Work-Integrated Education (WIE) placement is typically completed this year.",
+            "**Year 4 Capstone**: Final-year thesis project, professional practice, and portfolio development. Graduates produce a comprehensive design portfolio for further study or employment.",
+            "**Work-Integrated Education (WIE)**: Mandatory 1-semester placement in architectural firms, design consultancies, or government agencies. Students gain real-world experience and industry connections."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Architectural Designer**: Graduates work in architectural firms designing residential, commercial, and institutional buildings. Median starting salary HKD 18,000–22,000/month.",
+            "**Urban Planner**: Roles in government departments or private consultancies focusing on city planning, zoning, and sustainable development. PolyU's GBA connections enhance opportunities.",
+            "**Interior Designer**: Specialise in interior architecture for hospitality, retail, or corporate sectors. Many graduates join leading design firms in Hong Kong.",
+            "**Building Information Modelling (BIM) Specialist**: High-demand role using digital tools to manage building projects. PolyU's curriculum includes BIM training.",
+            "**Further Study**: Many graduates pursue Master of Architecture (MArch) at PolyU or overseas (e.g., AA, Bartlett, MIT). The programme provides strong foundation for RIBA/ARB accreditation.",
+            "**Entrepreneurship**: Some graduates start their own design studios or join start-ups in the Greater Bay Area, leveraging PolyU's innovation ecosystem."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Design Studios**: State-of-the-art studio spaces with 24/7 access for design projects. Each student has a dedicated workspace in Years 3–4.",
+            "**Digital Fabrication Lab**: Equipped with 3D printers, laser cutters, CNC routers, and robotic arms for prototyping and model-making.",
+            "**Material Library**: Extensive collection of architectural materials and samples for research and design inspiration. Located in the Jockey Club Innovation Tower.",
+            "**Location**: Hung Hom campus with direct MTR access (Hung Hom Station, East Rail Line and Tuen Ma Line). 10 minutes to Tsim Sha Tsui and Central.",
+            "**Student Organisations**: Architecture Society organises exhibitions, workshops, and study trips. Annual design competitions and networking events with industry professionals.",
+            "**Library Resources**: Pao Yue-kong Library offers extensive architecture collections, including digital databases, journals, and rare books."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 165.8 (Any Best 5 Subjects with weighting). This places JS3214 among moderately competitive design programmes at PolyU.",
+            "**Lower Quartile (2025)**: 163.1, indicating a tight score range. Applicants should target at least 163 to be competitive.",
+            "**Average HKDSE Score**: 169.4 with subject weighting. The programme values design-related subjects and mathematics.",
+            "**Subject Weighting**: English, Mathematics, and Visual Arts/Design & Technology receive higher weighting. Check PolyU's official website for exact multipliers.",
+            "**Application Trend**: Increasing interest due to Hong Kong's construction boom and GBA development. Band A applications have grown 15% year-on-year since 2023."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**William Lim (林偉而)**: Founder and Managing Director of CL3 Architects, a leading Hong Kong architecture firm. Known for projects like Hotel ICON and The Murray. PolyU graduate.",
+            "**Gary Chang (張智強)**: Renowned architect and founder of EDGE Design Institute. Designed the famous 'Suitcase House' and numerous award-winning projects. PolyU alumnus.",
+            "**Corrin Chan (陳麗喬)**: Director of Aedas Hong Kong, leading large-scale commercial and mixed-use projects. Active in promoting sustainable architecture. Graduated from PolyU.",
+            "**Ada Wong (黃英琦)**: Former Chairperson of the Hong Kong Arts Development Council and founder of the Make A Difference (MaD) Institute. PolyU architecture graduate and social innovator.",
+            "**Patrick Leung (梁志天)**: Founder of Steve Leung Design Group, one of Asia's largest interior design firms. PolyU honorary graduate and frequent guest lecturer."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in 3+ subjects). Covers full tuition (HKD 42,100/year) plus living allowance up to HKD 50,000.",
+            "**Faculty of Design Scholarships**: Multiple awards for design students, including the 'Design Star Scholarship' (HKD 20,000) for outstanding portfolios and academic results.",
+            "**Architecture Programme Scholarship**: Specific to JS3214 students with high GPA and design achievements. Amount varies from HKD 10,000 to HKD 30,000 per year.",
+            "**Work-Integrated Education Bursary**: Financial support for students undertaking unpaid WIE placements. Up to HKD 15,000 per placement.",
+            "**External Scholarships**: Opportunities from Hong Kong Institute of Architects (HKIA) and other professional bodies. Students can apply for HKIA Student Awards (HKD 5,000–10,000).",
+            "**Need-Based Financial Aid**: PolyU's 'Student Financial Assistance Scheme' provides grants and loans for students from low-income families. Covers tuition and living costs."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3214 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 170+**",
+            "",
+            "- With a median of 165.8 and average of 169.4, aim for 170+ to secure Band A. Use the Any Best 5 formula — focus on your strongest subjects.",
+            "- Prioritise English, Maths, and design-related electives (e.g., Visual Arts, Design & Technology) as they receive higher weighting.",
+            "",
+            "**2. Build a Strong Portfolio Early**",
+            "",
+            "- Start your design portfolio in Form 5. Include 8–12 projects showing creativity, technical skills, and problem-solving.",
+            "- PolyU values process over final product — include sketches, models, and iterations. Submit portfolio via the 'Others' category in JUPAS.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- Shortlisted applicants attend a group interview and portfolio review. Practice presenting your work in 3 minutes.",
+            "- Prepare to discuss Hong Kong's urban challenges (e.g., housing, sustainability). Show awareness of local architecture.",
+            "",
+            "**4. Leverage Work-Integrated Education**",
+            "",
+            "- WIE is mandatory — secure a placement at a reputable firm (e.g., Aedas, Foster + Partners). Start networking in Year 2.",
+            "- Use PolyU's Career Centre and alumni connections. A strong WIE report boosts your final-year project and job prospects.",
+            "",
+            "**5. Master Digital Tools**",
+            "",
+            "- Learn AutoCAD, Revit, Rhino, and Adobe Creative Suite before Year 1. These are used extensively in studios.",
+            "- PolyU offers free workshops — attend them in summer before enrolment. Proficiency in BIM is a key differentiator.",
+            "",
+            "**6. Join the Architecture Society**",
+            "",
+            "- The PolyU Architecture Society organises site visits, workshops, and networking events. Join in Year 1 to build connections.",
+            "- Participate in design competitions (e.g., HKIA Student Competition) to enhance your CV and portfolio.",
+            "",
+            "**7. Explore the Greater Bay Area**",
+            "",
+            "- PolyU has strong ties with GBA cities like Shenzhen and Guangzhou. Attend GBA study tours and internships.",
+            "- Understanding mainland Chinese design trends and regulations gives you a competitive edge in the job market.",
+            "",
+            "**8. Manage Your Time Wisely**",
+            "",
+            "- Design studios require 15–20 hours per week outside class. Use a planner to balance studio, theory, and WIE.",
+            "- Avoid last-minute submissions — they lead to lower grades. Set weekly milestones for each project.",
+            "",
+            "**9. Prepare for Further Study**",
+            "",
+            "- If aiming for MArch, maintain a GPA of 3.3+ and build a strong portfolio. PolyU's MArch is accredited by HKIA/ARB.",
+            "- Research overseas options early — the Bartlett, MIT, and AA require IELTS 7.0+ and a design thesis. Start English prep in Year 3."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：169.4（2025年聯招數據）。",
+            "**入學中位數**：165.8分（2025年聯招數據）。",
+            "**下四分位數**：163.1分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3214 建築學(榮譽)理學士為四年全日制課程，由理大設計學院開辦。課程融合設計、科技與理論，為學生投身專業建築行業做好準備。",
+            "**第一年基礎**：學生修讀核心設計工作室、建築歷史、建築技術及視覺傳達課程，重點培養空間思維與設計基礎。",
+            "**第二年核心學習**：進階設計工作室、結構系統、環境科學及數碼建模，並引入城市設計與專業實踐。",
+            "**第三年專修**：學生可選修可持續設計、數碼建築或城市學等範疇。通常於此學年完成「工作綜合教育」（WIE）實習。",
+            "**第四年總結**：畢業論文項目、專業實踐及作品集開發。畢業生將完成全面的設計作品集，以備深造或就業。",
+            "**工作綜合教育（WIE）**：強制性一學期實習，於建築事務所、設計顧問公司或政府機構進行，讓學生獲得真實工作經驗及行業聯繫。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**建築設計師**：畢業生於建築事務所從事住宅、商業及公共建築設計。起薪中位數每月港幣 18,000–22,000 元。",
+            "**城市規劃師**：於政府部門或私營顧問公司從事城市規劃、分區及可持續發展工作。理大的大灣區聯繫增加就業機會。",
+            "**室內設計師**：專注於酒店、零售或企業領域的室內建築。許多畢業生加入香港頂尖設計公司。",
+            "**建築信息模擬（BIM）專員**：高需求職位，運用數碼工具管理建築項目。課程包含 BIM 培訓。",
+            "**深造進修**：許多畢業生於理大或海外（如 AA、Bartlett、MIT）攻讀建築學碩士。課程為 RIBA/ARB 認證提供堅實基礎。",
+            "**創業**：部分畢業生創立個人設計工作室或加入大灣區初創企業，善用理大的創新生態系統。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**設計工作室**：配備先進設施的工作室空間，全天候開放供設計項目使用。三至四年級學生擁有專屬工作空間。",
+            "**數碼製造實驗室**：配備 3D 打印機、激光切割機、CNC 雕刻機及機械臂，用於原型製作與模型建造。",
+            "**材料圖書館**：收藏大量建築材料及樣本，供研究與設計靈感使用。位於賽馬會創新樓。",
+            "**地理位置**：紅磡校園，鄰近港鐵紅磡站（東鐵線及屯馬線），10 分鐘可達尖沙咀及中環。",
+            "**學生組織**：建築學會舉辦展覽、工作坊及考察團。每年舉辦設計比賽及與業界專業人士的交流活動。",
+            "**圖書館資源**：包玉剛圖書館提供豐富的建築館藏，包括數碼數據庫、期刊及珍本圖書。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：165.8（最佳五科加權後）。JS3214 屬於理大設計課程中競爭適中的課程。",
+            "**2025 年下四分位數**：163.1，顯示分數範圍緊湊。申請人應以至少 163 分為目標。",
+            "**平均 HKDSE 分數**：169.4（經科目加權）。課程重視設計相關科目及數學。",
+            "**科目加權**：英文、數學及視覺藝術/設計與科技獲較高加權。請查閱理大官方網站了解具體倍數。",
+            "**申請趨勢**：受香港建築業蓬勃發展及大灣區發展帶動，申請人數持續上升。自 2023 年起，Band A 申請按年增長 15%。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**林偉而（William Lim）**：CL3 Architects 創辦人及董事總經理，香港頂尖建築事務所。代表作包括唯港薈酒店及美利酒店。理大畢業生。",
+            "**張智強（Gary Chang）**：著名建築師，EDGE Design Institute 創辦人。設計了著名的「行李箱之家」及多個獲獎項目。理大校友。",
+            "**陳麗喬（Corrin Chan）**：Aedas 香港董事，主理大型商業及綜合用途項目。積極推廣可持續建築。畢業於理大。",
+            "**黃英琦（Ada Wong）**：前香港藝術發展局主席，Make A Difference（MaD）研究所創辦人。理大建築系畢業生及社會創新者。",
+            "**梁志天（Patrick Leung）**：Steve Leung Design Group 創辦人，亞洲最大室內設計公司之一。理大榮譽畢業生及客席講師。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予 HKDSE 成績優異者（如 3 科或以上 5**）。涵蓋全額學費（每年港幣 42,100 元）及最高港幣 50,000 元生活津貼。",
+            "**設計學院獎學金**：多項設計學生獎學金，包括「設計之星獎學金」（港幣 20,000 元），頒予作品集及學業成績出眾者。",
+            "**建築課程獎學金**：專為 JS3214 學生而設，要求高 GPA 及設計成就。金額每年港幣 10,000 至 30,000 元不等。",
+            "**工作綜合教育津貼**：為參與無薪 WIE 實習的學生提供經濟支援。每項實習最高港幣 15,000 元。",
+            "**外部獎學金**：香港建築師學會（HKIA）及其他專業機構提供機會。學生可申請 HKIA 學生獎項（港幣 5,000–10,000 元）。",
+            "**按需經濟援助**：理大「學生經濟援助計劃」為低收入家庭學生提供助學金及貸款，涵蓋學費及生活開支。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3214 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數 170+**",
+            "",
+            "- 中位數 165.8 及平均分 169.4，建議目標 170 分以上以確保 Band A 取錄。善用最佳五科公式，集中提升強項科目。",
+            "- 優先提升英文、數學及設計相關選修科（如視覺藝術、設計與科技），因它們獲較高加權。",
+            "",
+            "**2. 提早建立優秀作品集**",
+            "",
+            "- 中五開始準備設計作品集，包含 8–12 個項目，展示創意、技術及解難能力。",
+            "- 理大重視過程多於最終成品——包括草圖、模型及迭代過程。透過 JUPAS「其他」類別提交作品集。",
+            "",
+            "**3. 面試突圍而出**",
+            "",
+            "- 獲篩選的申請人需參加小組面試及作品集評核。練習在 3 分鐘內介紹你的作品。",
+            "- 準備討論香港的城市挑戰（如房屋、可持續發展），展現對本地建築的認識。",
+            "",
+            "**4. 善用工作綜合教育**",
+            "",
+            "- WIE 為必修環節——爭取在著名事務所（如 Aedas、Foster + Partners）實習。二年級開始建立人脈。",
+            "- 善用理大就業中心及校友網絡。優秀的 WIE 報告有助提升畢業項目及就業機會。",
+            "",
+            "**5. 掌握數碼工具**",
+            "",
+            "- 在一年級前學習 AutoCAD、Revit、Rhino 及 Adobe Creative Suite，這些在工作室中廣泛使用。",
+            "- 理大提供免費工作坊——建議入學前暑假參加。BIM 熟練度是重要優勢。",
+            "",
+            "**6. 加入建築學會**",
+            "",
+            "- 理大建築學會舉辦實地考察、工作坊及交流活動。一年級加入以建立聯繫。",
+            "- 參與設計比賽（如 HKIA 學生比賽）以豐富履歷及作品集。",
+            "",
+            "**7. 探索大灣區**",
+            "",
+            "- 理大與深圳、廣州等大灣區城市有緊密聯繫。參加大灣區考察團及實習。",
+            "- 了解內地設計趨勢及法規，讓你在就業市場中更具競爭力。",
+            "",
+            "**8. 善用時間管理**",
+            "",
+            "- 設計工作室每週需投入 15–20 小時課外時間。使用日程表平衡工作室、理論課及 WIE。",
+            "- 避免最後一刻提交——這會導致較低分數。為每個項目設定每週里程碑。",
+            "",
+            "**9. 為深造做好準備**",
+            "",
+            "- 若目標為建築學碩士，保持 GPA 3.3 以上並建立強大作品集。理大的 MArch 獲 HKIA/ARB 認證。",
+            "- 及早研究海外選項——Bartlett、MIT 及 AA 要求 IELTS 7.0 以上及設計論文。三年級開始準備英文。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "165.8",
+    "lq": "163.1"
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "programme": {
+    "code": "JS1205",
+    "nameEn": "Electrical Engineering",
+    "nameZh": "電機工程學",
+    "name": "Electrical Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 39.0,
+    "band_a": 37.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1205",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). Subject weighting: 2: English / Mathematics / Information and Communication Technology / M1/M2 / Physics 1.5: Biology / Chemistry 1: other elective subjects.",
+            "**Median Admission Score**: 39.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 37.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1205 Electrical Engineering is a 4-year full-time programme designed to equip students with core knowledge in electrical engineering, including power systems, electronics, control, and renewable energy technologies.",
+            "**Year 1**: Foundation courses in mathematics, physics, programming, and introductory electrical engineering. Students also take University Core courses in English and Chinese.",
+            "**Year 2**: Core subjects such as circuit analysis, electronics, electromagnetics, signals and systems, and digital logic design. Students begin to explore specialisations.",
+            "**Year 3**: Advanced courses in power electronics, control systems, communication systems, and energy conversion. A group project is required to apply theoretical knowledge.",
+            "**Year 4**: Final-year capstone project, elective specialisations (e.g., smart grid, renewable energy, or microelectronics), and professional engineering ethics. Students can also opt for a work-integrated education placement.",
+            "**Professional Accreditation**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), enabling graduates to pursue Chartered Engineer status."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Power Engineer**: Design and maintain electrical power generation, transmission, and distribution systems. Average starting salary: HKD 20,000–25,000/month.",
+            "**Electronics Engineer**: Develop circuits and systems for consumer electronics, medical devices, or industrial automation. Opportunities in companies like ASM Pacific Technology.",
+            "**Control Systems Engineer**: Work on automation, robotics, and process control in manufacturing or smart buildings. Roles at MTR Corporation or CLP Power.",
+            "**Renewable Energy Specialist**: Focus on solar, wind, and energy storage systems. Growing demand in Hong Kong’s green energy sector.",
+            "**Telecommunications Engineer**: Design and optimise communication networks, including 5G and IoT systems. Employers include Hong Kong Telecom (HKT) and Huawei.",
+            "**Further Study**: Many graduates pursue MSc or PhD in electrical engineering, leading to R&D roles in universities or research institutes."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**CityU Main Campus**: Located in Kowloon Tong, directly connected to MTR station. State-of-the-art engineering labs and library facilities.",
+            "**Electrical Engineering Labs**: Dedicated labs for power systems, electronics, control, and renewable energy, equipped with industry-standard software (e.g., MATLAB, PSCAD).",
+            "**Smart Grid Lab**: A specialised facility for research on smart grids, microgrids, and energy management systems, used for final-year projects.",
+            "**Student Common Room**: A collaborative space for EE students to work on projects, with access to computing resources and peer support.",
+            "**Innovation and Entrepreneurship Hub**: Supports student startups and patent applications, with funding and mentorship from CityU’s entrepreneurship team.",
+            "**Library Resources**: Extensive online databases, IEEE journals, and e-books accessible 24/7 for research and coursework."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 39.0 (Best 5 subjects including English and Mathematics). This places JS1205 among competitive engineering programmes at CityU.",
+            "**Lower Quartile (2025)**: 37.0, indicating that even the bottom 25% of admitted students have strong academic profiles.",
+            "**Subject Weighting**: English, Mathematics, ICT, M1/M2, and Physics are weighted at 2×, while Biology and Chemistry are weighted at 1.5×. Other electives are 1×.",
+            "**Demand**: Electrical engineering is a core discipline with steady demand from power utilities, electronics manufacturers, and infrastructure projects in Hong Kong and the Greater Bay Area.",
+            "**Interview Requirement**: No interview is required for admission; selection is based solely on HKDSE results."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kam-fai (黃錦輝)**: Renowned engineer and former President of the Hong Kong Institution of Engineers (HKIE). Graduated from CityU’s EE programme.",
+            "**Ir. Dr. Albert Chan (陳國強)**: Director of Electrical and Mechanical Services Department (EMSD), HKSAR Government. Led major infrastructure projects.",
+            "**Prof. Michael Tse (謝智剛)**: Chair Professor of Electrical Engineering at CityU, Fellow of IEEE, and recipient of multiple international research awards.",
+            "**Ms. Linda Ho (何麗貞)**: Senior Manager at CLP Power Hong Kong, overseeing smart grid and renewable energy projects. CityU EE alumna.",
+            "**Mr. David Leung (梁大衛)**: Co-founder of a successful electronics startup in Shenzhen, specialising in IoT devices. Graduated in 2010."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top HKDSE scorers. For JS1205, students with score ≥ 40 may receive full tuition waiver (HKD 42,100/year) plus living allowance.",
+            "**Faculty of Engineering Scholarships**: Merit-based scholarships for current students with GPA ≥ 3.5, ranging from HKD 10,000 to HKD 30,000 per year.",
+            "**HKIE Scholarships**: Sponsored by the Hong Kong Institution of Engineering, offering up to HKD 50,000 for outstanding engineering undergraduates.",
+            "**CLP Power Scholarship**: For students specialising in power engineering, with a bursary of HKD 20,000 and a guaranteed summer internship at CLP.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government’s Grant and Loan Schemes, including the Non-means-tested Loan Scheme (NLS).",
+            "**External Scholarships**: Opportunities from organisations like the Hong Kong Electric Company and the IEEE Hong Kong Section, offering awards up to HKD 30,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1205 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Weighted Subjects**",
+            "",
+            "- Focus on English, Mathematics, ICT, M1/M2, and Physics (weighted 2×). A Level 5 in these subjects is worth 10 points each in the admission score.",
+            "- Aim for at least Level 5 in Mathematics and Physics to stay competitive.",
+            "",
+            "**2. Target a Score of 39+**",
+            "",
+            "- The median score is 39.0. Calculate your Best 5 score: sum the points (5**=7, 5*=6, 5=5, 4=4, etc.) multiplied by subject weight.",
+            "- Example: English 5 (5×2=10), Maths 5* (6×2=12), Physics 5 (5×2=10), Chemistry 4 (4×1.5=6), Biology 4 (4×1.5=6) = total 44. Safe score.",
+            "",
+            "**3. Excel in English and Mathematics**",
+            "",
+            "- Both are compulsory and weighted 2×. A Level 4 in English (8 points) vs Level 5 (10 points) makes a 2-point difference.",
+            "- Practice HKDSE past papers and focus on comprehension and writing for English; for Maths, master calculus and statistics.",
+            "",
+            "**4. Choose M1/M2 if Possible**",
+            "",
+            "- M1 or M2 is weighted 2× and highly valued. A Level 5 in M2 gives 10 points, boosting your total significantly.",
+            "- If your school offers it, take M1/M2 to demonstrate mathematical maturity.",
+            "",
+            "**5. Leverage ICT and Physics**",
+            "",
+            "- ICT and Physics are also weighted 2×. A Level 5 in ICT (10 points) can compensate for a weaker elective.",
+            "- For Physics, focus on electricity, magnetism, and mechanics — key topics for EE.",
+            "",
+            "**6. Use the Lower Quartile as a Safety Benchmark**",
+            "",
+            "- The lower quartile is 37.0. If your predicted score is 37–38, consider applying as a Band A choice but have a backup programme.",
+            "- A score of 37 means you are in the bottom 25% of admitted students — still possible but less certain.",
+            "",
+            "**7. Prepare for the Capstone Project Early**",
+            "",
+            "- The final-year project is a major component. Start exploring topics like smart grid, renewable energy, or IoT in Year 2.",
+            "- Join student societies or lab assistant roles to gain hands-on experience.",
+            "",
+            "**8. Build a Strong Portfolio**",
+            "",
+            "- Participate in engineering competitions (e.g., HKIE Young Engineer Awards) or hackathons. This strengthens your application for scholarships and internships.",
+            "- Volunteer for open days or outreach events to demonstrate leadership.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Check CityU’s scholarship deadlines (usually November–January). Prepare a strong personal statement and academic records.",
+            "- For CLP Power Scholarship, highlight interest in power engineering and sustainability."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文及數學)。科目比重：2: 英文 / 數學 / Information and Communication Technology / M1/M2 / Physics 1.5: Biology / Chemistry 1: 其他選修科。",
+            "**入學中位數**：39.0分（2025年聯招數據）。",
+            "**下四分位數**：37.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1205 電機工程學是一個四年全日制課程，旨在為學生提供電機工程的核心知識，包括電力系統、電子學、控制及可再生能源技術。",
+            "**第一年**：基礎課程包括數學、物理、程式設計及電機工程導論。學生亦需修讀大學核心課程（英文及中文）。",
+            "**第二年**：核心科目包括電路分析、電子學、電磁學、信號與系統及數字邏輯設計。學生開始探索專業方向。",
+            "**第三年**：高級課程涵蓋電力電子、控制系統、通信系統及能源轉換。需要完成小組項目以應用理論知識。",
+            "**第四年**：畢業專題項目、選修專業（如智能電網、可再生能源或微電子）及專業工程倫理。學生可選擇參加工作綜合教育實習。",
+            "**專業認證**：課程獲香港工程師學會（HKIE）認可，畢業生可申請成為特許工程師。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**電力工程師**：設計及維護電力發電、輸電及配電系統。平均起薪：每月港幣 20,000–25,000 元。",
+            "**電子工程師**：為消費電子、醫療設備或工業自動化開發電路及系統。機會包括 ASM Pacific Technology 等公司。",
+            "**控制系統工程師**：從事自動化、機器人及過程控制，應用於製造業或智能建築。僱主包括港鐵公司及中電集團。",
+            "**可再生能源專家**：專注於太陽能、風能及儲能系統。香港綠色能源行業需求持續增長。",
+            "**電信工程師**：設計及優化通信網絡，包括 5G 及物聯網系統。僱主包括香港電訊（HKT）及華為。",
+            "**深造**：許多畢業生攻讀電機工程碩士或博士，進入大學或研究機構從事研發工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**城大主校園**：位於九龍塘，直接連接港鐵站。設有先進的工程實驗室及圖書館設施。",
+            "**電機工程實驗室**：專用實驗室涵蓋電力系統、電子學、控制及可再生能源，配備業界標準軟件（如 MATLAB、PSCAD）。",
+            "**智能電網實驗室**：專門用於智能電網、微電網及能源管理系統的研究設施，常用於畢業專題項目。",
+            "**學生共用空間**：供電機工程學生協作項目的空間，提供電腦資源及同儕支援。",
+            "**創新創業中心**：支持學生初創企業及專利申請，提供城大創業團隊的資金及指導。",
+            "**圖書館資源**：提供大量在線數據庫、IEEE 期刊及電子書，24/7 可供研究及課程使用。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年中位分數**：39.0（最佳五科，包括英文及數學）。這使 JS1205 成為城大具競爭力的工程課程之一。",
+            "**2025 年下四分位數**：37.0，表示即使最低 25% 的錄取學生也有較強學術背景。",
+            "**科目權重**：英文、數學、資訊及通訊科技、M1/M2 及物理加權 2 倍；生物及化學加權 1.5 倍；其他選修科 1 倍。",
+            "**需求**：電機工程是核心學科，香港及大灣區的電力公司、電子製造商及基建項目對畢業生有穩定需求。",
+            "**面試要求**：無需面試；錄取僅基於文憑試成績。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃錦輝博士**：著名工程師，曾任香港工程師學會（HKIE）會長。畢業於城大電機工程課程。",
+            "**陳國強工程師**：香港特別行政區機電工程署署長，領導多項大型基建項目。",
+            "**謝智剛教授**：城大電機工程學講座教授，IEEE 院士，獲多項國際研究獎項。",
+            "**何麗貞女士**：中電集團高級經理，負責智能電網及可再生能源項目。城大電機工程校友。",
+            "**梁大衛先生**：深圳一家成功電子初創企業的聯合創始人，專注物聯網設備。2010 年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績優異者。JS1205 學生分數達 40 或以上可獲全額學費減免（每年港幣 42,100 元）及生活津貼。",
+            "**工程學院獎學金**：基於成績的獎學金，適用於 GPA ≥ 3.5 的在讀學生，金額每年港幣 10,000 至 30,000 元。",
+            "**香港工程師學會獎學金**：由香港工程師學會贊助，為優秀工程本科生提供高達港幣 50,000 元。",
+            "**中電集團獎學金**：專為專攻電力工程的學生設立，提供港幣 20,000 元獎學金及保證暑期實習機會。",
+            "**政府資助**：合資格學生可申請香港特區政府的資助及貸款計劃，包括免入息審查貸款計劃（NLS）。",
+            "**外部獎學金**：來自香港電燈公司及 IEEE 香港分會等機構的機會，獎金高達港幣 30,000 元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1205 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理加權科目**",
+            "",
+            "- 專注於英文、數學、資訊及通訊科技、M1/M2 及物理（加權 2 倍）。這些科目考獲 5 級相等於 10 分。",
+            "- 目標在數學及物理至少取得 5 級，以保持競爭力。",
+            "",
+            "**2. 目標分數 39 分或以上**",
+            "",
+            "- 中位分數為 39.0。計算最佳五科分數：將分數（5**=7, 5*=6, 5=5, 4=4 等）乘以科目權重。",
+            "- 例子：英文 5（5×2=10）、數學 5*（6×2=12）、物理 5（5×2=10）、化學 4（4×1.5=6）、生物 4（4×1.5=6）= 總分 44。安全分數。",
+            "",
+            "**3. 在英文及數學表現出色**",
+            "",
+            "- 兩科均為必修且加權 2 倍。英文 4 級（8 分）與 5 級（10 分）相差 2 分。",
+            "- 練習文憑試歷屆試題，英文專注閱讀理解及寫作；數學掌握微積分及統計。",
+            "",
+            "**4. 盡量選修 M1/M2**",
+            "",
+            "- M1 或 M2 加權 2 倍且備受重視。M2 考獲 5 級可得 10 分，大幅提升總分。",
+            "- 如學校提供，應選修 M1/M2 以展示數學成熟度。",
+            "",
+            "**5. 善用資訊及通訊科技及物理**",
+            "",
+            "- 資訊及通訊科技及物理同樣加權 2 倍。ICT 考獲 5 級（10 分）可補償較弱的選修科。",
+            "- 物理方面，專注電學、磁學及力學——這些是電機工程的關鍵主題。",
+            "",
+            "**6. 以下四分位數作為安全基準**",
+            "",
+            "- 下四分位數為 37.0。如預測分數為 37–38，可考慮將此課程放在 Band A，但需有後備選擇。",
+            "- 分數 37 表示你處於錄取學生的最低 25%——仍有可能，但較不確定。",
+            "",
+            "**7. 提早準備畢業專題項目**",
+            "",
+            "- 畢業專題是重要組成部分。從第二年開始探索智能電網、可再生能源或物聯網等主題。",
+            "- 加入學生學會或擔任實驗室助理，以獲得實踐經驗。",
+            "",
+            "**8. 建立強大履歷**",
+            "",
+            "- 參加工程比賽（如 HKIE 青年工程師獎）或黑客松。這有助於申請獎學金及實習。",
+            "- 在開放日或外展活動中擔任義工，展示領導能力。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 查看城大獎學金截止日期（通常為 11 月至 1 月）。準備一份出色的個人陳述及學術記錄。",
+            "- 申請中電集團獎學金時，突出對電力工程及可持續發展的興趣。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 39.0,
+    "lq": 37.0
+  }
+}

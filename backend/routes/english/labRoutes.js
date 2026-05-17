@@ -233,26 +233,33 @@ router.post('/evaluate_batch', async (req, res) => {
             target_sentence: t.target_sentence
         }));
 
-        const prompt = `You are a strict but fair HKDSE Senior English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab. 
+        const prompt = `You are a strict but fair HKDSE Senior English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab.
 Tasks to Grade: ${JSON.stringify(gradingRequests)}
 
-For each task:
-1. MANDATORY SEMANTIC GRADING: For open-ended questions (Short Answer, TFNG justifications), grade based on SEMANTIC MEANING, not literal keyword matching. If the student uses different words to express the identical logical concept found in the 'logic' or 'keywords', they must be awarded the mark.
-2. If the student's answer captures the core semantic meaning completely, mark "status": "correct", and "correct": true.
-3. If the answer is partially correct (captures some but not all of the required meaning), mark "status": "partial", and "correct": false.
-4. If the answer is wrong, irrelevant, or misses the core meaning, mark "status": "incorrect", and "correct": false.
-5. For MCQ tasks, "status" is "correct" ONLY if the student's letter matches the correct option exactly.
-6. Provide a "feedback" string:
-   - If correct: Confirm why it's right.
-   - If partial: Explain what was correct and what crucial detail was missing.
-   - If incorrect: Explain the error clearly AND provide the correct solution.
-   
-Return a SINGLE JSON OBJECT where keys are the task IDs. 
-Format: { "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean, "feedback": "..." } }`;
+### 📊 HKEAA READING LEVEL DESCRIPTORS (Official):
+**Level 5**: Complex texts, inferences, figurative language, explicit+implied info.
+**Level 4**: Fairly complex texts, obvious inferences, simple figurative language.
+**Level 3**: Straightforward texts, literal language, explicit views.
+**Level 2**: Simple texts, clearly signalled main ideas, literal only.
+**Level 1**: Predictable factual info, linear sequence only.
+
+### 🎯 MARKING RULES:
+1. **SEMANTIC GRADING**: For open-ended questions, grade on SEMANTIC MEANING, not literal keyword matching. Different words expressing the same logical concept = correct.
+2. **Full Marks**: Captures ALL required criteria. Award "status": "correct", "correct": true, "hkeaa_level": 5.
+3. **Partial Marks**: Captures main idea but misses nuance. Award "status": "partial", "correct": false, "hkeaa_level": 3.
+4. **Zero Marks**: Fundamentally misunderstands. Award "status": "incorrect", "correct": false, "hkeaa_level": 1.
+5. **MCQ**: "status" is "correct" ONLY if student's letter matches exactly.
+6. **Feedback**: Keep feedback concise (1 sentence). State if correct/partial/incorrect and why.
+
+Return a SINGLE JSON OBJECT where keys are task IDs:
+{ "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean, "feedback": "...", "hkeaa_level": 1-5 } }`;
 
         const result = await GenerativeAIService.generateContent(prompt, {
             model: "ace-it-flash",
-            generationConfig: { responseMimeType: "application/json" }
+            generationConfig: {
+                responseMimeType: "application/json",
+                maxOutputTokens: 4096
+            }
         });
 
         if (result.response && result.response.usageMetadata) {
@@ -280,6 +287,87 @@ Format: { "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean,
                 if (key) flat[key] = item[key];
             });
             json = flat;
+        }
+
+        // --- PERSIST MICRO-SKILL MASTERY & QUEST RESULT ---
+        const resolvedUid = uid || req.body?.uid || req.query?.uid || null;
+        if (resolvedUid && resolvedUid !== 'guest' && resolvedUid !== 'placeholder') {
+            try {
+                const UserProfileService = require('../../services/UserProfileService');
+                const GamificationService = require('../../services/GamificationService');
+
+                const resultsMap = json;
+                // Calculate overall percentage from results
+                const resultEntries = Object.values(resultsMap).filter(v => v && typeof v === 'object');
+                const correctCount = resultEntries.filter(r => r.correct === true || r.status === 'correct').length;
+                const overallPercentage = resultEntries.length > 0 ? Math.round((correctCount / resultEntries.length) * 100) : 0;
+                const overallHkeaaLevel = resultEntries.length > 0
+                    ? Math.round(resultEntries.reduce((sum, r) => sum + (r.hkeaa_level || 3), 0) / resultEntries.length)
+                    : 3;
+
+                // Calculate per-skill accuracy from task skills tags
+                const skillAccuracy = {};
+                const skillCounts = {};
+                tasks.forEach(t => {
+                    const taskResult = resultsMap[t.id];
+                    const skillId = t.skills?.[0] || t.micro_skill || t.skill || category || 'reading_literalComprehension';
+                    if (!skillAccuracy[skillId]) {
+                        skillAccuracy[skillId] = 0;
+                        skillCounts[skillId] = 0;
+                    }
+                    skillCounts[skillId]++;
+                    if (taskResult && (taskResult.correct === true || taskResult.status === 'correct')) {
+                        skillAccuracy[skillId]++;
+                    }
+                });
+
+                // Update each micro-skill with its accuracy
+                const skillUpdatePromises = Object.entries(skillAccuracy).map(([skillId, correctCount]) => {
+                    const total = skillCounts[skillId] || 1;
+                    const masteryScore = Math.round((correctCount / total) * 100);
+                    return UserProfileService.updateMicroSkillLevel(resolvedUid, 'english', skillId, masteryScore, {
+                        type: 'Quest',
+                        difficulty: req.body.level || 4,
+                        totalQuestions: total
+                    });
+                });
+                await Promise.all(skillUpdatePromises);
+                console.log(`[Lab evaluate_batch] Updated ${skillUpdatePromises.length} micro-skills for ${resolvedUid}`);
+
+                // Save quest result for historical review
+                const resultId = await UserProfileService.saveQuestResult(resolvedUid, {
+                    module: 'Reading',
+                    questName: req.body.questName || `Reading Lab: ${category || 'General'}`,
+                    score: overallPercentage,
+                    hkeaaLevel: overallHkeaaLevel,
+                    xpAwarded: 0,
+                    content: resultsMap,
+                    feedback: {
+                        summary: `HKDSE Level ${overallHkeaaLevel} performance (${correctCount}/${resultEntries.length} correct)`,
+                        strength_areas: [],
+                        weakness_areas: []
+                    },
+                    subject: 'english',
+                    paper: 'Reading',
+                    timestamp: new Date()
+                });
+
+                // Award scaled XP for batch evaluation
+                const baseXP = GamificationService.getTieredXP(req.body.level || '4');
+                const xpAmount = Math.round((overallPercentage / 100) * baseXP);
+                if (xpAmount > 0) {
+                    await GamificationService.awardXP(resolvedUid, xpAmount, 'reading', {
+                        title: `Reading Lab: ${category || 'Practice'}`,
+                        score: `${overallPercentage}%`,
+                        subject: 'english',
+                        paper: 'Reading',
+                        questName: req.body.questName || `Reading Lab: ${category || 'General'}`,
+                        resultId: resultId
+                    });
+                }
+            } catch (persistErr) {
+                console.warn(`[Lab evaluate_batch] Persistence failed for ${resolvedUid}:`, persistErr.message);
+            }
         }
 
         res.json(json);

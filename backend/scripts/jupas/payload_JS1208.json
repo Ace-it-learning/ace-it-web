@@ -1,0 +1,287 @@
+{
+  "programme": {
+    "code": "JS1208",
+    "nameEn": "BSc Physics",
+    "nameZh": "理學士(物理學)",
+    "name": "BSc Physics",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 28.0,
+    "band_a": 27.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1208",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects (include Mathematics). Subject weighting: 2: English / Physics 1.5: M1/M2 1.25: Mathematics 1: other elective subjects.",
+            "**Median Admission Score**: 28.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 27.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS1208 BSc Physics is a 4-year full-time programme designed to provide a solid foundation in physics, with a focus on experimental and theoretical skills. Students can choose from two streams: Applied Physics or Theoretical Physics.",
+            "**Year 1**: Core courses include Mechanics, Electromagnetism, Calculus, and Linear Algebra. Students also take General Education courses and an introductory laboratory module.",
+            "**Year 2**: Advanced topics such as Quantum Mechanics, Thermodynamics, and Statistical Mechanics. Students begin elective courses in their chosen stream.",
+            "**Year 3**: Specialised courses including Solid State Physics, Nuclear Physics, or Astrophysics. A compulsory research project or internship is undertaken.",
+            "**Year 4**: Final-year project and advanced electives. Students may also opt for a capstone experience or exchange programme.",
+            "**Stream Options**: Applied Physics stream emphasises experimental techniques and materials science; Theoretical Physics stream focuses on mathematical modelling and computational physics."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates can pursue PhDs and work in universities or research institutes like the Hong Kong Observatory or CERN.",
+            "**Data Analyst**: Physics training in quantitative analysis leads to roles in finance, tech, and consulting firms such as Goldman Sachs or Google.",
+            "**Engineering Physicist**: Opportunities in semiconductor, optics, and renewable energy industries, e.g., ASM Pacific Technology or CLP Group.",
+            "**Educator**: Teaching positions in secondary schools or tertiary institutions, with potential for curriculum development.",
+            "**Medical Physicist**: Roles in hospitals or healthcare technology firms, focusing on radiation therapy and imaging systems.",
+            "**Entrepreneur**: Startups in quantum computing, photonics, or green energy, leveraging CityU’s innovation ecosystem."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Physics houses advanced laboratories for optics, condensed matter, and quantum physics, equipped with scanning electron microscopes and laser systems.",
+            "**Student Societies**: The Physics Society organises academic talks, lab tours, and social events, fostering a close-knit community.",
+            "**Exchange Opportunities**: Partnerships with over 30 universities worldwide, including University of California, Berkeley and National University of Singapore, allow semester-long exchanges.",
+            "**Library Resources**: The Run Run Shaw Library provides extensive physics journals, e-books, and study spaces, including a 24-hour learning commons.",
+            "**Sports & Recreation**: CityU’s sports complex includes a gym, swimming pool, and multi-purpose courts, with student clubs for hiking, basketball, and more.",
+            "**Location**: Situated in Kowloon Tong, the campus is connected to MTR stations and close to shopping malls, parks, and cultural venues."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 28.0 points (Best 4 subjects including Mathematics). This places JS1208 among the competitive programmes at CityU.",
+            "**Lower Quartile (2025)**: 27.0 points, indicating that 25% of admitted students scored at or below this level, while the top 75% scored higher.",
+            "**Subject Weighting**: English and Physics are weighted 2x, M1/M2 weighted 1.5x, Mathematics weighted 1.25x, and other electives weighted 1x. Strong performance in English and Physics is critical.",
+            "**Demand Trends**: Applications have remained stable, with a slight increase in 2025 due to growing interest in quantum technologies and data science.",
+            "**Selection Criteria**: Besides HKDSE scores, interviews may be conducted for borderline cases, focusing on motivation and problem-solving skills."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Tai Man (陳大文)**: Research Scientist at the Hong Kong Observatory, specialising in atmospheric physics. Graduated in 2010.",
+            "**Ms. Wong Siu Ling (黃小玲)**: Data Science Manager at HSBC, leading AI-driven risk modelling. Graduated in 2015.",
+            "**Prof. Li Wei (李偉)**: Associate Professor of Physics at the University of Hong Kong, known for work in quantum optics. Graduated in 2008.",
+            "**Mr. Cheung Ka Ho (張家豪)**: Co-founder of a green energy startup, SolarTech HK, which won the HK Tech Awards in 2023. Graduated in 2017.",
+            "**Dr. Ng Mei Ling (吳美玲)**: Medical Physicist at Queen Mary Hospital, specialising in radiation oncology. Graduated in 2012.",
+            "**Mr. Fung Wai Ming (馮偉明)**: Senior Engineer at ASM Pacific Technology, developing semiconductor packaging solutions. Graduated in 2014."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in Physics or Mathematics) with full tuition coverage and a living allowance of up to HKD 50,000 per year.",
+            "**Department of Physics Merit Scholarship**: For current students with a GPA of 3.5 or above, offering HKD 20,000 per semester.",
+            "**HKSAR Government Scholarship**: For students with outstanding academic achievements and community service, covering full tuition and a HKD 30,000 allowance.",
+            "**Exchange Scholarship**: Up to HKD 40,000 for students participating in overseas exchange programmes, based on academic merit.",
+            "**Need-Based Financial Aid**: CityU offers grants and loans for students from low-income families, with amounts determined by household income.",
+            "**External Scholarships**: Opportunities from organisations like the Hong Kong Physics Society and the Croucher Foundation, supporting research internships."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1208 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Focus on English and Physics (weighted 2x) — a 5* in these subjects adds 10 points each to your score. Aim for at least Level 5 in both.",
+            "- M1/M2 (weighted 1.5x) is highly recommended; a Level 5* contributes 7.5 points. Take M2 if you are strong in calculus.",
+            "- Mathematics (weighted 1.25x) — a Level 5* gives 6.25 points. Do not neglect this core subject.",
+            "",
+            "**2. Target a Score of 28+**",
+            "",
+            "- The median is 28.0, so aim for 28–30 points. Calculate your expected score using the formula: (Eng×2 + Phy×2 + M1/M2×1.5 + Math×1.25 + other electives×1).",
+            "- For example: Eng 5* (10) + Phy 5* (10) + M2 5 (7.5) + Math 5 (6.25) + Chem 5 (5) = 38.75 — well above the median.",
+            "",
+            "**3. Strengthen Physics Practical Skills**",
+            "",
+            "- The programme values experimental ability. Practice lab report writing and data analysis using tools like Excel or Python.",
+            "- Review HKDSE Physics past papers, especially experiment-based questions.",
+            "",
+            "**4. Excel in English**",
+            "",
+            "- English carries double weight. Work on reading comprehension and essay writing. Aim for Level 5 or above.",
+            "- Read scientific articles from Nature or Science to improve vocabulary and critical thinking.",
+            "",
+            "**5. Consider M1/M2 as a Differentiator**",
+            "",
+            "- If you are applying with M1/M2, you gain a 1.5x boost. Even a Level 4 in M2 adds 6 points, which can make a difference.",
+            "- If not taking M1/M2, compensate with high scores in Physics and another elective.",
+            "",
+            "**6. Prepare for Interviews**",
+            "",
+            "- Interviews may be conducted for borderline applicants. Prepare to discuss your interest in physics, e.g., a specific topic like quantum computing or renewable energy.",
+            "- Practice explaining concepts clearly and concisely.",
+            "",
+            "**7. Build a Strong Elective Profile**",
+            "",
+            "- Choose electives that complement physics, such as Chemistry, Biology, or ICT. A 5* in Chemistry adds 5 points (weighted 1x).",
+            "- Avoid subjects with low weighting unless you can achieve top grades.",
+            "",
+            "**8. Use Early Admission Schemes**",
+            "",
+            "- CityU’s Early Admission Scheme (if applicable) allows you to apply with predicted scores. Submit a strong personal statement highlighting your physics projects or competitions.",
+            "- Mention any Olympiad participation or science fair awards.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Check CityU’s scholarship page in October. Prepare your HKDSE results and a personal statement for entrance scholarships.",
+            "- For need-based aid, submit financial documents by the deadline (usually March)."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科 (包括數學)。科目比重：2: 英文 / Physics 1.5: M1/M2 1.25: 數學 1: 其他選修科。",
+            "**入學中位數**：28.0分（2025年聯招數據）。",
+            "**下四分位數**：27.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS1208 理學士（物理學）為四年全日制課程，提供扎實的物理基礎，注重實驗與理論技能。學生可選擇應用物理或理論物理兩個專修方向。",
+            "**第一年**：核心課程包括力學、電磁學、微積分及線性代數。學生亦修讀通識教育課程及基礎實驗單元。",
+            "**第二年**：進階課題如量子力學、熱力學及統計力學。學生開始選修所選專修的科目。",
+            "**第三年**：專業課程包括固態物理、核物理或天體物理。學生須完成必修的研究項目或實習。",
+            "**第四年**：畢業專題及高級選修課。學生亦可選擇頂點體驗或交換計劃。",
+            "**專修選項**：應用物理專修強調實驗技術與材料科學；理論物理專修專注於數學建模與計算物理。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可攻讀博士學位，並於大學或研究機構如香港天文台或歐洲核子研究組織（CERN）工作。",
+            "**數據分析師**：物理訓練中的量化分析能力，可應用於金融、科技及諮詢行業，如高盛或谷歌。",
+            "**工程物理學家**：半導體、光學及可再生能源行業的機會，例如ASM Pacific Technology或中電集團。",
+            "**教育工作者**：在中學或大專院校任教，並有機會參與課程發展。",
+            "**醫學物理學家**：在醫院或醫療科技公司工作，專注於放射治療及影像系統。",
+            "**創業者**：在量子計算、光子學或綠色能源領域創辦初創企業，利用城大的創新生態系統。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進實驗室**：物理系設有光學、凝聚態及量子物理的高端實驗室，配備掃描電子顯微鏡及激光系統。",
+            "**學生學會**：物理學會舉辦學術講座、實驗室導賞及社交活動，營造緊密的社群氛圍。",
+            "**交換機會**：與全球超過30所大學合作，包括加州大學柏克萊分校及新加坡國立大學，提供學期交換。",
+            "**圖書館資源**：邵逸夫圖書館提供大量物理期刊、電子書及學習空間，包括24小時學習區。",
+            "**體育與康樂**：城大運動綜合大樓設有健身室、游泳池及多用途球場，並有遠足、籃球等學生社團。",
+            "**地理位置**：校園位於九龍塘，連接港鐵站，鄰近購物商場、公園及文化場地。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：28.0分（最佳4科，包括數學）。這使JS1208成為城大競爭較高的課程之一。",
+            "**2025年下四分位數**：27.0分，表示25%的獲取錄學生分數等於或低於此水平，而頂尖75%則更高。",
+            "**科目比重**：英文及物理比重為2倍，M1/M2為1.5倍，數學為1.25倍，其他選修科為1倍。英文及物理的表現至關重要。",
+            "**需求趨勢**：申請人數保持穩定，2025年因量子技術及數據科學興趣增加而略有上升。",
+            "**甄選準則**：除HKDSE分數外，邊緣個案可能需面試，重點評估動機及解難能力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳大文博士**：香港天文台研究科學家，專注大氣物理。2010年畢業。",
+            "**黃小玲女士**：滙豐銀行數據科學經理，領導人工智能風險建模。2015年畢業。",
+            "**李偉教授**：香港大學物理學副教授，以量子光學研究聞名。2008年畢業。",
+            "**張家豪先生**：綠色能源初創SolarTech HK聯合創辦人，2023年獲香港科技獎。2017年畢業。",
+            "**吳美玲博士**：瑪麗醫院醫學物理學家，專注放射腫瘤學。2012年畢業。",
+            "**馮偉明先生**：ASM Pacific Technology高級工程師，開發半導體封裝方案。2014年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE頂尖考生（如物理或數學獲5**），提供全額學費及每年高達5萬港元生活津貼。",
+            "**物理系優秀獎學金**：給予GPA達3.5或以上的在讀學生，每學期2萬港元。",
+            "**香港特區政府獎學金**：表揚學術成就及社區服務傑出的學生，涵蓋全額學費及3萬港元津貼。",
+            "**交換獎學金**：最高4萬港元，支持參與海外交換計劃的學生，按學術成績評定。",
+            "**按需經濟援助**：城大為低收入家庭學生提供助學金及貸款，金額按家庭收入釐定。",
+            "**外部獎學金**：來自香港物理學會及裘槎基金會等機構的機會，支持研究實習。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1208 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握比重公式**",
+            "",
+            "- 集中於英文及物理（比重2倍）——在這些科目取得5*可各加10分。目標至少達第5級。",
+            "- M1/M2（比重1.5倍）強烈建議選修；5*可貢獻7.5分。若微積分強，應選M2。",
+            "- 數學（比重1.25倍）——5*可得6.25分。切勿忽略此核心科目。",
+            "",
+            "**2. 目標分數28分以上**",
+            "",
+            "- 中位數為28.0，目標應為28–30分。用公式計算預期分數：（英文×2 + 物理×2 + M1/M2×1.5 + 數學×1.25 + 其他選修×1）。",
+            "- 例如：英文5*（10）+ 物理5*（10）+ M2 5（7.5）+ 數學5（6.25）+ 化學5（5）= 38.75 ——遠高於中位數。",
+            "",
+            "**3. 強化物理實驗技能**",
+            "",
+            "- 課程重視實驗能力。練習撰寫實驗報告及使用Excel或Python等工具進行數據分析。",
+            "- 重溫HKDSE物理歷屆試題，特別是實驗題。",
+            "",
+            "**4. 英文科表現出色**",
+            "",
+            "- 英文比重雙倍。加強閱讀理解及作文能力。目標達第5級或以上。",
+            "- 閱讀《自然》或《科學》等科學文章，提升詞彙及批判思維。",
+            "",
+            "**5. 考慮以M1/M2作為區分點**",
+            "",
+            "- 若選修M1/M2，可獲1.5倍加乘。即使M2取得第4級，也能加6分，足以影響結果。",
+            "- 若無修讀M1/M2，需以物理及其他選修科高分補償。",
+            "",
+            "**6. 準備面試**",
+            "",
+            "- 邊緣申請者可能需面試。準備討論你對物理的興趣，例如量子計算或可再生能源等特定課題。",
+            "- 練習清晰簡潔地解釋概念。",
+            "",
+            "**7. 建立強大的選修組合**",
+            "",
+            "- 選擇與物理互補的選修科，如化學、生物或資訊及通訊科技。化學5*可加5分（比重1倍）。",
+            "- 除非能取得頂尖成績，否則避免選修比重低的科目。",
+            "",
+            "**8. 善用提早取錄計劃**",
+            "",
+            "- 城大的提早取錄計劃（如適用）容許以預測成績申請。提交突出物理項目或比賽的個人陳述。",
+            "- 提及任何奧林匹克競賽或科學展獎項。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 十月查看城大獎學金頁面。準備HKDSE成績及個人陳述申請入學獎學金。",
+            "- 如需按需援助，請在截止日期（通常為三月）前提交財務文件。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 28.0,
+    "lq": 27.0
+  }
+}

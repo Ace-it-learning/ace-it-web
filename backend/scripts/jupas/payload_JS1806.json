@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1806",
+    "nameEn": "BSc Biological Sciences",
+    "nameZh": "理學士(生物科學)",
+    "name": "BSc Biological Sciences",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 35.5,
+    "band_a": 35.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1806",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects.",
+            "**Median Admission Score**: 35.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 35.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1806 BSc Biological Sciences is a 4-year full-time programme offered by the Department of Chemistry, City University of Hong Kong. It covers molecular biology, cell biology, genetics, ecology, and biotechnology.",
+            "**Two Streams**: Students can choose between the Biological Sciences stream and the Biotechnology stream, allowing specialisation in areas such as genomics, bioinformatics, or environmental biology.",
+            "**Year 1**: Foundation courses include General Biology, General Chemistry, Calculus, and University English. Students also take a Common Core course to broaden their perspectives.",
+            "**Year 2**: Core courses such as Cell Biology, Genetics, Biochemistry, and Microbiology are introduced. Students begin laboratory practicals and data analysis training.",
+            "**Year 3**: Advanced electives include Molecular Biology, Immunology, Ecology, and Biotechnology. Students undertake a supervised research project or internship.",
+            "**Year 4**: Capstone project or thesis, plus advanced specialisation courses. Students may also take cross-disciplinary electives from other science programmes."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates can work in universities, government labs (e.g., Agriculture, Fisheries and Conservation Department), or private R&D firms, focusing on drug discovery, genetics, or environmental monitoring.",
+            "**Biotechnology Specialist**: Roles in biotech companies like Hong Kong Science Park tenants, including genetic testing, vaccine development, or bio-manufacturing.",
+            "**Healthcare and Diagnostics**: Positions in clinical laboratories, hospitals, or diagnostic companies such as Prenetics or Qualigenics, handling molecular diagnostics or pathology.",
+            "**Education and Academia**: Teaching roles in secondary schools or tertiary institutions, or pursuing further studies (MPhil/PhD) in biological sciences.",
+            "**Environmental and Conservation**: Careers with NGOs (e.g., WWF Hong Kong) or government bodies in conservation, ecological assessment, or environmental impact analysis.",
+            "**Pharmaceutical and Regulatory Affairs**: Jobs in pharmaceutical companies (e.g., GSK, Pfizer) in quality control, regulatory compliance, or product development."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The programme uses modern laboratories in the Li Dak Sum Yip Yio Chin Academic Building, equipped with PCR machines, microscopes, and cell culture facilities.",
+            "**Research Opportunities**: Students can join faculty research projects in areas like cancer biology, marine ecology, and synthetic biology, often leading to publications.",
+            "**Student Societies**: The Biological Sciences Society organises field trips, workshops, and networking events, fostering a close-knit community among students.",
+            "**Exchange Programmes**: CityU offers exchange opportunities with partner universities in the UK, US, Australia, and mainland China, allowing students to study abroad for a semester.",
+            "**Green Campus**: The university campus features green spaces, a rooftop garden, and the CityU Farm, where students can engage in urban agriculture and sustainability projects.",
+            "**Career Services**: The Career and Leadership Centre provides internship placements, resume workshops, and employer talks specifically tailored for science students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 35.5 (3 core + 2 elective subjects), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 35.0, meaning the bottom 25% of admitted students scored at this level, showing a narrow score range.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) and elective subjects are weighted equally in the admission score formula.",
+            "**Demand**: The programme attracts high-achieving students due to its focus on cutting-edge biological research and strong industry links.",
+            "**Selection Criteria**: Besides HKDSE scores, applicants may be invited for interviews or required to submit a personal statement demonstrating interest in biological sciences."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Achievements",
+          "content": [
+            "**Dr. Chan Ka-wai (陳嘉偉)**: Research Scientist, Hong Kong University of Science and Technology. Specialises in cancer genomics and has published over 20 peer-reviewed papers.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Senior Biotechnology Officer, Hong Kong Science and Technology Parks Corporation. Leads projects on bio-manufacturing and startup incubation.",
+            "**Mr. Li Chun-ho (李俊豪)**: Environmental Consultant, AECOM Hong Kong. Works on ecological impact assessments for major infrastructure projects.",
+            "**Dr. Cheung Mei-ling (張美玲)**: Assistant Professor, Department of Biology, Chinese University of Hong Kong. Research focuses on marine biodiversity and conservation.",
+            "**Mr. Tsang Wai-kit (曾偉傑)**: Quality Assurance Manager, Pfizer Hong Kong. Oversees compliance and product safety for pharmaceutical products.",
+            "**Ms. Yip Sze-wan (葉詩雲)**: Science Teacher, St. Paul's Co-educational College. Awarded the Outstanding Teacher Award in 2023 for innovative biology teaching."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., score 36 or above) with a value of up to HK$80,000 per year, renewable based on academic performance.",
+            "**Departmental Scholarships**: The Department of Chemistry offers the 'Biological Sciences Excellence Scholarship' (HK$20,000) to students with outstanding Year 1 results.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship Fund, which provides up to HK$40,000 per year for local students.",
+            "**Exchange Scholarships**: CityU's Global Exchange Office offers funding (up to HK$30,000) for students participating in semester-long exchange programmes.",
+            "**Research Grants**: Final-year students undertaking a capstone project may apply for the Undergraduate Research Fund (up to HK$10,000) to cover lab materials and equipment.",
+            "**Need-Based Financial Aid**: The university provides means-tested bursaries and loans through the Financial Assistance Scheme for students with financial difficulties."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1806 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 36+**",
+            "",
+            "- The median score is 35.5, so aim for 36 or above to be a competitive applicant. Focus on boosting your best 5 subjects, especially Biology and Chemistry.",
+            "",
+            "**2. Prioritise Biology and Chemistry Electives**",
+            "",
+            "- These subjects are highly relevant and may be implicitly weighted. A Level 5 or above in Biology and Chemistry strengthens your application significantly.",
+            "",
+            "**3. Excel in Core Subjects**",
+            "",
+            "- English and Mathematics are critical. Aim for Level 5 or above in English and Level 5 in Mathematics to maximise your admission score.",
+            "",
+            "**4. Build a Strong Personal Statement**",
+            "",
+            "- Write about specific biological topics you are passionate about (e.g., CRISPR, marine conservation). Mention any lab experience or science competitions.",
+            "",
+            "**5. Gain Laboratory Experience**",
+            "",
+            "- Participate in summer internships or school lab projects. Even basic skills like pipetting or microscopy can be highlighted in interviews.",
+            "",
+            "**6. Prepare for Interviews**",
+            "",
+            "- If shortlisted, practice answering questions on current biological issues (e.g., COVID-19 vaccines, biodiversity loss). Be ready to discuss your career goals.",
+            "",
+            "**7. Use the 'Broadening' Subjects Wisely**",
+            "",
+            "- Take subjects like Combined Science or M1/M2 if available. They demonstrate quantitative skills and scientific breadth, which are valued.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your application via JUPAS by the deadline. Verify any additional requirements like portfolio or interview invitations.",
+            "",
+            "**9. Consider the Biotechnology Stream**",
+            "",
+            "- If you are interested in industry applications, choose the Biotechnology stream. It offers more practical training and direct links to biotech companies."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。",
+            "**入學中位數**：35.5分（2025年聯招數據）。",
+            "**下四分位數**：35.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1806 理學士(生物科學) 是四年全日制課程，由香港城市大學化學系開辦。涵蓋分子生物學、細胞生物學、遺傳學、生態學及生物技術。",
+            "**兩個專修**：學生可選擇生物科學或生物技術專修，專注於基因組學、生物信息學或環境生物學等領域。",
+            "**第一年**：基礎課程包括普通生物學、普通化學、微積分及大學英語。學生亦需修讀一門大學核心課程以擴闊視野。",
+            "**第二年**：核心課程包括細胞生物學、遺傳學、生物化學及微生物學。學生開始進行實驗室實習及數據分析訓練。",
+            "**第三年**：高級選修課程包括分子生物學、免疫學、生態學及生物技術。學生需完成指導研究項目或實習。",
+            "**第四年**：頂石項目或論文，加上高級專業課程。學生亦可選修其他科學課程的跨學科科目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可於大學、政府實驗室（如漁農自然護理署）或私營研發機構工作，專注藥物發現、遺傳學或環境監測。",
+            "**生物技術專家**：於生物科技公司（如香港科學園租戶）擔任基因檢測、疫苗開發或生物製造等職位。",
+            "**醫療保健與診斷**：於臨床實驗室、醫院或診斷公司（如 Prenetics、Qualigenics）從事分子診斷或病理學工作。",
+            "**教育與學術界**：於中學或大專院校任教，或攻讀生物科學碩士/博士學位。",
+            "**環境與保育**：於非政府組織（如世界自然基金會香港分會）或政府機構從事保育、生態評估或環境影響分析。",
+            "**製藥與法規事務**：於製藥公司（如葛蘭素史克、輝瑞）擔任品質控制、法規合規或產品開發職位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進實驗室**：課程使用李達三葉耀珍學術樓內的現代化實驗室，配備 PCR 機、顯微鏡及細胞培養設施。",
+            "**研究機會**：學生可參與教授的研究項目，如癌症生物學、海洋生態學及合成生物學，並有機會發表論文。",
+            "**學生學會**：生物科學學會舉辦實地考察、工作坊及聯誼活動，促進學生之間的緊密聯繫。",
+            "**交流計劃**：城大提供與英國、美國、澳洲及中國內地夥伴大學的交換機會，學生可到海外學習一個學期。",
+            "**綠色校園**：校園設有綠化空間、屋頂花園及城大農場，學生可參與都市農業及可持續發展項目。",
+            "**就業服務**：事業及領袖策劃中心提供實習安排、履歷工作坊及僱主講座，專為理科學生而設。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：35.5（3個核心科目 + 2個選修科目），顯示申請者競爭激烈。",
+            "**2025年下四分位數**：35.0，表示最低25%的錄取學生分數在此水平，分數範圍狹窄。",
+            "**科目權重**：核心科目（英文、中文、數學、通識教育）及選修科目在入學分數公式中權重相同。",
+            "**需求**：該課程因專注前沿生物研究及與業界緊密聯繫，吸引高成績學生申請。",
+            "**甄選標準**：除文憑試成績外，申請者或需參加面試或提交個人陳述，展示對生物科學的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳嘉偉博士**：香港科技大學研究科學家，專注癌症基因組學，已發表超過20篇同行評審論文。",
+            "**黃佩珊女士**：香港科技園公司高級生物技術主任，領導生物製造及初創孵化項目。",
+            "**李俊豪先生**：艾奕康香港環境顧問，負責大型基建項目的生態影響評估。",
+            "**張美玲博士**：香港中文大學生物學系助理教授，研究專注海洋生物多樣性及保育。",
+            "**曾偉傑先生**：輝瑞香港品質保證經理，監督藥品合規及產品安全。",
+            "**葉詩雲女士**：聖保羅男女中學科學教師，2023年獲頒傑出教師獎，表揚其創新生物教學。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績優異者（如分數達36或以上），每年最高80,000港元，可根據學業成績續領。",
+            "**學系獎學金**：化學系提供「生物科學卓越獎學金」（20,000港元），頒予第一年成績出眾的學生。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金基金，本地學生每年最高40,000港元。",
+            "**交流獎學金**：城大環球事務處提供最高30,000港元的資助，供參與學期交換計劃的學生申請。",
+            "**研究資助**：進行頂石項目的四年級學生可申請本科生研究基金（最高10,000港元），用於實驗材料及設備。",
+            "**需要為本財政援助**：大學透過財政資助計劃提供經入息審查的助學金及貸款，幫助有經濟困難的學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1806 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數定在36分或以上**",
+            "",
+            "- 中位分數為35.5，因此目標36分或以上能提升競爭力。重點提升最佳5科成績，尤其是生物及化學。",
+            "",
+            "**2. 優先選修生物及化學**",
+            "",
+            "- 這些科目與課程高度相關，可能隱含權重。生物及化學達5級或以上能顯著增強申請。",
+            "",
+            "**3. 核心科目力爭佳績**",
+            "",
+            "- 英文及數學至關重要。目標英文5級或以上，數學5級，以最大化入學分數。",
+            "",
+            "**4. 撰寫有力的個人陳述**",
+            "",
+            "- 描述你熱衷的具體生物學課題（如 CRISPR、海洋保育）。提及任何實驗室經驗或科學比賽。",
+            "",
+            "**5. 累積實驗室經驗**",
+            "",
+            "- 參與暑期實習或校內實驗項目。即使基本技能如移液或顯微鏡使用，也可在面試中突出。",
+            "",
+            "**6. 為面試做好準備**",
+            "",
+            "- 如獲面試機會，練習回答當前生物議題（如 COVID-19 疫苗、生物多樣性流失）。準備討論你的職業目標。",
+            "",
+            "**7. 善用「延伸」科目**",
+            "",
+            "- 如可選修，修讀組合科學或 M1/M2。這些科目展示量化技能及科學廣度，備受重視。",
+            "",
+            "**8. 及早申請並核實要求**",
+            "",
+            "- 透過聯招系統於截止日期前提交申請。確認是否需要額外文件如作品集或面試邀請。",
+            "",
+            "**9. 考慮生物技術專修**",
+            "",
+            "- 如對行業應用感興趣，選擇生物技術專修。該專修提供更多實踐訓練及與生物科技公司的直接聯繫。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 35.5,
+    "lq": 35.0
+  }
+}

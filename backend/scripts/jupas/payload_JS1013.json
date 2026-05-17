@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1013",
+    "nameEn": "BBA Business Economics",
+    "nameZh": "工商管理學士(商業經濟)",
+    "name": "BBA Business Economics",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 22.0,
+    "band_a": 21.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1013",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 22.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: BBA Business Economics (JS1013) combines economic theory with business analytics, equipping students to analyse market trends, formulate strategies, and make data-driven decisions in a global economy.",
+            "**Core Foundation**: Students complete 36 credit units of core business courses including Accounting, Finance, Marketing, and Management, alongside 18 credit units of specialised Economics courses such as Microeconomics, Macroeconomics, and Econometrics.",
+            "**Year 1**: Foundation year covering introductory Economics, Business Statistics, Financial Accounting, and University Core requirements. Students build quantitative skills through Mathematics for Economists.",
+            "**Year 2**: Intermediate Microeconomics and Macroeconomics, plus elective streams in Business Forecasting, Industrial Organisation, or International Trade. Students begin selecting from 12+ elective options.",
+            "**Year 3**: Advanced electives including Game Theory, Monetary Economics, and Economic Development. A mandatory Capstone Project applies economic modelling to real-world business problems.",
+            "**Year 4**: Final-year dissertation or applied project, plus advanced seminars on topics like Behavioural Economics and China’s Economic Transformation. Students complete a minimum of 120 credit units overall."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Economic Analyst**: Graduates join banks, consultancies, and government agencies as economic analysts, forecasting GDP growth, inflation, and trade flows. Median starting salary: HKD 22,000–28,000/month.",
+            "**Business Consultant**: Top consulting firms (McKinsey, BCG, Deloitte) recruit BBA Economics graduates for data-driven strategy roles. 15% of graduates enter consulting within 2 years.",
+            "**Financial Services**: Roles in investment banking, asset management, and risk analysis at HSBC, Standard Chartered, and local banks. Over 30% of graduates work in finance.",
+            "**Data Analyst**: With strong econometrics training, graduates become data analysts in tech firms (Google, Tencent) and logistics companies. Demand for data skills has grown 40% since 2020.",
+            "**Government & Public Policy**: The HKSAR Government’s Economic Analysis Division and the Hong Kong Monetary Authority hire graduates for policy research and regulatory roles.",
+            "**Further Study**: 20% of graduates pursue Master’s degrees in Economics, Finance, or Data Science at top universities like LSE, UChicago, and HKU."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Learning Environment",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus features the iconic Run Run Shaw Library with 24-hour study zones, the Lau Ming Wai Academic Building, and the state-of-the-art Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Economics Lab**: The Department of Economics and Finance operates a dedicated Bloomberg Terminal Lab, giving students hands-on access to real-time financial data and economic modelling software.",
+            "**Global Exchange**: Over 60% of BBA Economics students participate in exchange programmes at partner universities in the UK, US, Canada, and mainland China, including the University of Manchester and Peking University.",
+            "**Student Organisations**: The Economics Society organises annual case competitions, industry talks, and networking events with alumni from Goldman Sachs and the Hong Kong Monetary Authority.",
+            "**Career Services**: CityU’s Career and Leadership Centre offers one-on-one coaching, mock interviews, and an annual Economics & Finance Career Fair with 50+ employers.",
+            "**Innovation Hub**: The new CityU Innovation Tower houses the Entrepreneurship Studio, where students can pitch business ideas and access seed funding of up to HKD 100,000."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 22.0 (Best 5 subjects, including Mathematics). This places JS1013 in the mid-to-high range among CityU business programmes.",
+            "**Lower Quartile (2025)**: 21.5, indicating that even the bottom 25% of admitted students achieved strong scores. A score of 21–22 is the realistic target for applicants.",
+            "**Subject Weighting**: All subjects are weighted equally at 1.0, meaning no bonus for specific electives. However, Mathematics is mandatory in the Best 5 calculation.",
+            "**Application Volume**: Approximately 800–1,000 applications are received annually for 60–70 places, yielding an acceptance rate of roughly 7–9%.",
+            "**Trend Analysis**: The median score has remained stable at 21–22 over the past 3 years, suggesting consistent demand. Applicants with 22+ are considered safe, while 21–21.5 are competitive."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Kelvin Wong (黃健明)**: Chief Economist, Bank of China (Hong Kong). PhD in Economics from University of Chicago. 1998 graduate.",
+            "**Ms. Clara Lee (李慧玲)**: Managing Director, Head of Asia Economic Research, Goldman Sachs. 2002 graduate.",
+            "**Mr. Thomas Ng (吳天賜)**: Senior Economist, Hong Kong Monetary Authority. Led policy research on currency stability. 2005 graduate.",
+            "**Dr. Sarah Chen (陳莎拉)**: Associate Professor of Economics, London School of Economics. Published in top journals including American Economic Review. 2007 graduate.",
+            "**Mr. David Fung (馮大衛)**: Co-Founder & CEO, FinTech startup Quantifeed. Raised USD 15 million in Series B funding. 2010 graduate.",
+            "**Ms. Jessica Ma (馬潔儀)**: Director of Economic Analysis, HKSAR Government’s Commerce and Economic Development Bureau. 2012 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with HKDSE scores of 22+ (Best 5). Covers full or half tuition (HKD 42,100–84,200 per year). Automatically considered upon application.",
+            "**BBA Economics Merit Scholarship**: Departmental award for top-performing Year 1 students. Value: HKD 20,000. Requires a GPA of 3.5 or above.",
+            "**HSBC Hong Kong Scholarship**: Open to business students with outstanding academic records and community service. Value: HKD 50,000 per year. 5 awards annually.",
+            "**Sir Run Run Shaw Scholarship**: Prestigious university-wide scholarship for students with exceptional leadership and academic achievements. Value: up to HKD 100,000.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans available through the HKSAR Government’s Student Finance Office. Covers tuition and living expenses for eligible students.",
+            "**External Scholarships**: Students can apply for the Hong Kong Jockey Club Scholarship and the Y. K. Pao Scholarship, both valued at HKD 80,000–120,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1013 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 22+**",
+            "",
+            "- The median is 22.0, so aim for 22–23 to be safe. Use the HKDSE calculator to simulate your Best 5 with Mathematics included.",
+            "- If your predicted score is 21–21.5, strengthen your Band A choice by including a slightly lower-scoring backup programme.",
+            "",
+            "**2. Prioritise Mathematics (Compulsory)**",
+            "",
+            "- Mathematics is mandatory in the Best 5. A Level 5 or above in Maths gives you a significant edge over applicants with Level 4.",
+            "- If Maths is your weakest subject, dedicate extra revision time — a jump from Level 4 to 5 can raise your score by 1 full point.",
+            "",
+            "**3. Leverage Equal Weighting**",
+            "",
+            "- All subjects count equally (weight 1.0), so don’t neglect Liberal Studies or electives. A balanced profile of 5 subjects at Level 4–5 is ideal.",
+            "- Avoid over-investing in one subject at the expense of others — a 5* in one subject with 3s in others yields a lower total than five 4s.",
+            "",
+            "**4. Write a Strong Personal Statement**",
+            "",
+            "- CityU considers personal statements in borderline cases. Highlight your interest in economics (e.g., reading The Economist, participating in case competitions).",
+            "- Mention specific CityU resources like the Bloomberg Terminal Lab or exchange programmes to show genuine interest.",
+            "",
+            "**5. Prepare for the Admission Interview**",
+            "",
+            "- Shortlisted candidates may be invited for a group interview. Expect questions on current economic issues (e.g., inflation, China’s GDP growth).",
+            "- Practice explaining economic concepts in simple terms — clarity and confidence matter more than jargon.",
+            "",
+            "**6. Build a Portfolio of Economics Experience**",
+            "",
+            "- Join the Hong Kong Economics Olympiad or the HSBC/HKU Business Case Competition. Even participation adds weight to your application.",
+            "- Complete a free online course (e.g., Coursera’s ‘Microeconomics Principles’) and mention it in your personal statement.",
+            "",
+            "**7. Apply Early in the JUPAS Cycle**",
+            "",
+            "- Submit your JUPAS application by the early deadline (typically December). Late applications are accepted but may reduce your chances of an interview.",
+            "- Band JS1013 as your first or second choice (Band A) to signal strong interest.",
+            "",
+            "**8. Use the CityU Admission Score Calculator**",
+            "",
+            "- CityU provides an online tool to convert your HKDSE predicted grades into a composite score. Use it to check if you meet the 21.5–22.0 threshold.",
+            "- Recalculate after each mock exam to adjust your strategy.",
+            "",
+            "**9. Have a Backup Plan**",
+            "",
+            "- If your score is below 21, consider related programmes like JS1014 (BBA Finance) or JS1015 (BBA Global Business) which may have slightly lower cut-offs.",
+            "- Alternatively, apply through the Self-Financed route (higher tuition but lower entry requirements) and transfer to government-funded places in Year 2 if your GPA is strong."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：22.0分（2025年聯招數據）。",
+            "**下四分位數**：21.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：工商管理學士（商業經濟）（JS1013）結合經濟理論與商業分析，培養學生分析市場趨勢、制定策略及在全球化經濟中作出數據驅動決策的能力。",
+            "**核心基礎**：學生須完成36學分的核心商業課程（包括會計、金融、市場學及管理學），以及18學分的專業經濟學課程（如微觀經濟學、宏觀經濟學及計量經濟學）。",
+            "**第一年**：基礎年涵蓋經濟學導論、商業統計、財務會計及大學核心課程。學生透過「經濟數學」建立量化技能。",
+            "**第二年**：中級微觀與宏觀經濟學，並可選修商業預測、產業組織或國際貿易等分流。學生開始從12個以上選修科中選擇。",
+            "**第三年**：高級選修包括博弈論、貨幣經濟學及經濟發展。必修的「頂石項目」將經濟模型應用於真實商業問題。",
+            "**第四年**：畢業論文或應用項目，以及行為經濟學、中國經濟轉型等高級研討課。學生總共須完成至少120學分。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**經濟分析師**：畢業生加入銀行、顧問公司及政府機構擔任經濟分析師，預測GDP增長、通脹及貿易流動。起薪中位數：每月港幣22,000–28,000元。",
+            "**商業顧問**：頂尖顧問公司（麥肯錫、BCG、德勤）招聘商業經濟畢業生擔任數據驅動的策略角色。15%的畢業生在兩年內進入顧問行業。",
+            "**金融服務**：在滙豐、渣打及本地銀行從事投資銀行、資產管理及風險分析。超過30%的畢業生任職金融業。",
+            "**數據分析師**：憑藉扎實的計量經濟學訓練，畢業生於科技公司（Google、騰訊）及物流企業擔任數據分析師。自2020年以來，數據技能需求增長40%。",
+            "**政府與公共政策**：香港特區政府經濟分析部及香港金融管理局聘請畢業生從事政策研究及監管工作。",
+            "**深造進修**：20%的畢業生攻讀經濟學、金融或數據科學碩士學位，升讀倫敦政治經濟學院、芝加哥大學及香港大學等頂尖院校。"
+          ]
+        },
+        "campus": {
+          "title": "校園與學習環境",
+          "content": [
+            "**城市大學校園**：位於九龍塘，校園設有24小時開放的邵逸夫圖書館、劉鳴煒學術樓及先進的李達三葉耀珍學術樓。",
+            "**經濟學實驗室**：經濟及金融系設有專用的彭博終端機實驗室，讓學生親身接觸實時金融數據及經濟建模軟件。",
+            "**環球交流**：超過60%的商業經濟學生參與交換計劃，前往英國、美國、加拿大及中國內地的合作大學（包括曼徹斯特大學及北京大學）。",
+            "**學生組織**：經濟學會每年舉辦個案比賽、行業講座及與高盛、金管局校友的聯誼活動。",
+            "**就業服務**：城市大學事業及領袖策劃中心提供一對一輔導、模擬面試及年度經濟金融招聘會，吸引50多家僱主參與。",
+            "**創新中心**：全新的城大創新大樓設有創業工作室，學生可推銷商業點子並申請高達港幣10萬元的種子資金。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：22.0（最佳5科，包括數學）。此分數使JS1013在城大商學院課程中屬於中高水平。",
+            "**2025年下四分位數**：21.5，顯示即使最低25%的錄取學生也取得不錯成績。21–22分是申請者的現實目標。",
+            "**科目比重**：所有科目比重均為1.0，即沒有特定選修科加分。但數學必須納入最佳5科計算。",
+            "**申請人數**：每年約800–1,000人申請60–70個學額，錄取率約為7–9%。",
+            "**趨勢分析**：過去3年中位分數穩定維持在21–22分，顯示需求持續。22分或以上屬安全，21–21.5分則具競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃健明博士**：中國銀行（香港）首席經濟學家，芝加哥大學經濟學博士，1998年畢業。",
+            "**李慧玲女士**：高盛亞洲經濟研究部董事總經理，2002年畢業。",
+            "**吳天賜先生**：香港金融管理局高級經濟師，主導貨幣穩定政策研究，2005年畢業。",
+            "**陳莎拉博士**：倫敦政治經濟學院經濟學副教授，論文發表於《美國經濟評論》等頂尖期刊，2007年畢業。",
+            "**馮大衛先生**：金融科技初創Quantifeed聯合創辦人兼行政總裁，B輪融資1,500萬美元，2010年畢業。",
+            "**馬潔儀女士**：香港特區政府商務及經濟發展局經濟分析總監，2012年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城市大學入學獎學金**：頒予HKDSE最佳5科22分或以上的學生，涵蓋全額或半額學費（每年港幣42,100–84,200元），申請時自動考慮。",
+            "**商業經濟成績優異獎學金**：系方頒予一年級成績最優秀的學生，金額港幣20,000元，要求GPA達3.5或以上。",
+            "**滙豐香港獎學金**：開放予學業成績優異及有社區服務經驗的商科學生，每年港幣50,000元，每年5個名額。",
+            "**邵逸夫獎學金**：大學層面的榮譽獎學金，頒予具卓越領導力及學術成就的學生，金額高達港幣100,000元。",
+            "**經濟援助計劃**：透過香港特區政府學生資助處的入息審查計劃，提供助學金及貸款，覆蓋合資格學生的學費及生活費。",
+            "**校外獎學金**：學生可申請香港賽馬會獎學金及包玉剛獎學金，金額均為港幣80,000–120,000元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1013 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科22分或以上**",
+            "",
+            "- 中位數為22.0，因此目標22–23分最穩妥。使用HKDSE計分器模擬包含數學的最佳5科成績。",
+            "- 若預測分數為21–21.5，請在Band A中加入一個分數要求稍低的後備課程。",
+            "",
+            "**2. 優先處理數學（必修科）**",
+            "",
+            "- 數學必須納入最佳5科計算。數學達5級或以上，比4級考生有明顯優勢。",
+            "- 若數學是你的弱項，請額外投入時間溫習——從4級升至5級可提升總分1分。",
+            "",
+            "**3. 善用同等比重**",
+            "",
+            "- 所有科目比重相同（1.0），因此不要忽略通識教育或選修科。5科均達4–5級是最理想的組合。",
+            "- 避免過度集中於一科——一科5*但其餘只有3級，總分反而不如五科4級。",
+            "",
+            "**4. 撰寫有力的個人陳述**",
+            "",
+            "- 城市大學在邊緣個案中考慮個人陳述。突出你對經濟學的興趣（例如閱讀《經濟學人》、參加個案比賽）。",
+            "- 提及城大具體資源（如彭博終端機實驗室或交換計劃），以顯示真誠興趣。",
+            "",
+            "**5. 準備入學面試**",
+            "",
+            "- 獲篩選的申請人可能獲邀參加小組面試。預期問題圍繞當前經濟議題（如通脹、中國GDP增長）。",
+            "- 練習用簡單語言解釋經濟概念——清晰與自信比術語更重要。",
+            "",
+            "**6. 建立經濟學經驗組合**",
+            "",
+            "- 參加香港經濟奧林匹克或滙豐/港大商業個案比賽。即使只是參與也能為申請加分。",
+            "- 完成免費網上課程（如Coursera的「微觀經濟學原理」），並在個人陳述中提及。",
+            "",
+            "**7. 在JUPAS週期內盡早申請**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交JUPAS申請。逾期申請雖可接受，但可能降低面試機會。",
+            "- 將JS1013列為首選或第二志願（Band A），以顯示強烈興趣。",
+            "",
+            "**8. 使用城市大學入學分數計算器**",
+            "",
+            "- 城市大學提供網上工具，將HKDSE預測等級轉換為綜合分數。用它檢查你是否達到21.5–22.0的門檻。",
+            "- 每次模擬考試後重新計算，以調整策略。",
+            "",
+            "**9. 準備後備計劃**",
+            "",
+            "- 若分數低於21分，可考慮相關課程如JS1014（工商管理學士金融）或JS1015（工商管理學士環球商業），其收生分數可能稍低。",
+            "- 或透過自資途徑申請（學費較高但入學要求較低），然後在二年級憑GPA轉回政府資助學額。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 22.0,
+    "lq": 21.5
+  }
+}

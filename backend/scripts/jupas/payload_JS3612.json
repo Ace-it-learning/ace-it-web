@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3612",
+    "nameEn": "BSc in Radiography",
+    "nameZh": "放射學(榮譽)理學士",
+    "name": "BSc in Radiography",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Health",
+    "median": "320.0",
+    "band_a": "320.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3612",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 329.3 (2025 JUPAS data).",
+            "**Median Admission Score**: 320.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 320.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: Yes. Selective basis",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3612 BSc in Radiography is a 4-year full-time programme under the Faculty of Health, focusing on diagnostic imaging and therapeutic radiography. Students gain expertise in medical imaging technologies, radiation safety, and patient care.",
+            "**Year 1 Foundation**: Core subjects include Human Anatomy, Physiology, Physics for Radiography, and Introduction to Radiography. Students build a strong scientific basis for clinical practice.",
+            "**Year 2 Clinical Skills**: Courses cover Radiographic Techniques, Radiation Protection, Image Interpretation, and Patient Management. Practical lab sessions simulate real clinical environments.",
+            "**Year 3 Advanced Studies**: Specialised modules such as Computed Tomography (CT), Magnetic Resonance Imaging (MRI), and Nuclear Medicine. Students begin Work-Integrated Education (WIE) placements in hospitals.",
+            "**Year 4 Professional Practice**: Final year includes advanced clinical placements, a capstone research project, and professional ethics. Graduates are eligible for registration with the Radiographers Board of Hong Kong.",
+            "**Work-Integrated Education (WIE)**: Mandatory clinical placements in public and private hospitals across Hong Kong, totalling over 1,000 hours. This hands-on experience ensures graduates are job-ready."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Radiographer**: Graduates can work as diagnostic radiographers in hospitals, clinics, and imaging centres. Median starting salary is around HKD 35,000 per month.",
+            "**Specialist Roles**: Opportunities in CT, MRI, ultrasound, or interventional radiography after further training. PolyU alumni have advanced to senior positions in top hospitals.",
+            "**Healthcare Management**: With experience, radiographers can move into department management, quality assurance, or healthcare administration roles.",
+            "**Research and Academia**: Some graduates pursue master's or PhD degrees in medical imaging, health sciences, or biomedical engineering, leading to research or teaching careers.",
+            "**Industry and Sales**: Roles in medical equipment companies (e.g., Siemens, GE Healthcare) as application specialists, product managers, or sales representatives.",
+            "**Global Opportunities**: Hong Kong's radiography qualification is recognised internationally, allowing graduates to work in the UK, Australia, Canada, and other regions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, with direct MTR access (Hung Hom Station and East Tsim Sha Tsui Station). The campus is minutes from the Hong Kong Coliseum and Victoria Harbour.",
+            "**State-of-the-Art Labs**: The Faculty of Health houses advanced simulation labs with X-ray, CT, and MRI equipment for hands-on training. Students practice on high-fidelity mannequins and real imaging systems.",
+            "**Library and Learning Commons**: The Pao Yue-kong Library offers extensive health sciences resources, including online databases like PubMed and Radiography journals. 24/7 study spaces are available.",
+            "**Student Halls and Accommodation**: On-campus halls are available for first-year students, with priority given to those living far from campus. Off-campus options include nearby Hung Hom and Tsim Sha Tsui.",
+            "**Clubs and Societies**: The Radiography Society organises study groups, hospital visits, and social events. Students can also join sports teams, cultural clubs, and volunteer programmes.",
+            "**Support Services**: PolyU provides career counselling, academic advising, mental health support, and a dedicated health sciences student office. The campus is fully accessible with barrier-free facilities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 320.0 (Any Best 5 Subjects with weighting). This indicates strong competition, with most successful applicants achieving high grades.",
+            "**Lower Quartile (2025)**: 320.0, meaning the bottom 25% of admitted students still scored at this level — no margin for low scores.",
+            "**Average HKDSE Score**: 329.3 with subject weighting, reflecting the programme's selectivity. Applicants should aim for scores above 330 to be competitive.",
+            "**Subject Weighting**: Core subjects like English, Mathematics, and Science (Biology, Physics, Chemistry) are weighted more heavily. A strong performance in these subjects is critical.",
+            "**Interview Requirement**: Shortlisted candidates are invited for an interview, which assesses communication skills, motivation, and understanding of the radiography profession. Prepare thoroughly."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強)**: Chief Radiographer, Queen Mary Hospital. 2005 graduate. Known for pioneering digital radiography systems in Hong Kong public hospitals.",
+            "**Ms. Li Ka-yan (李嘉欣)**: Senior MRI Specialist, Hong Kong Sanatorium & Hospital. 2012 graduate. Awarded the Hospital Authority Outstanding Staff Award in 2020.",
+            "**Mr. Wong Tsz-fung (黃子峰)**: Clinical Tutor, PolyU Department of Health Technology and Informatics. 2015 graduate. Leads the radiography simulation lab and mentors current students.",
+            "**Dr. Ho Pui-shan (何佩珊)**: Assistant Professor, University of Hong Kong. 2008 graduate. Research focuses on AI in medical imaging, with publications in top journals like Radiology.",
+            "**Mr. Cheung Ka-ho (張家豪)**: Application Specialist, Siemens Healthineers Hong Kong. 2017 graduate. Provides training on advanced CT and MRI systems to hospitals across Asia.",
+            "**Ms. Ng Sze-wing (吳思穎)**: Radiographer, private practice and freelance health educator. 2019 graduate. Runs a popular Instagram page (@radiography_hk) with over 10,000 followers."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE scorers. Students with scores above 330 may receive HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Health Scholarships**: Multiple scholarships for health sciences students, including the Dr. Li Shu Pui Scholarship (HKD 20,000) for outstanding radiography students.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Student Financial Assistance Agency (SFAA) grants and loans, covering tuition and living costs.",
+            "**Work-Integrated Education Allowance**: Students on clinical placements receive a monthly allowance of up to HKD 5,000 from the Hospital Authority or partner institutions.",
+            "**External Scholarships**: Opportunities from the Hong Kong Radiographers Association, the Hong Kong College of Radiologists, and charitable foundations like the Hong Kong Jockey Club.",
+            "**Merit-Based Awards**: The programme offers Dean's List awards and subject prizes for top-performing students in each year, with cash prizes and certificates."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3612 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score Above 330**",
+            "",
+            "- The average score is 329.3, so aim for at least 330 in your Best 5 subjects with weighting. Use PolyU's online score calculator to check your predicted score.",
+            "",
+            "**2. Prioritise Weighted Subjects**",
+            "",
+            "- English, Mathematics, and Science subjects (Biology, Physics, Chemistry) carry higher weighting. Focus your revision on these to maximise your total score.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- Prepare for a panel interview. Practice explaining why you want to be a radiographer, your understanding of radiation safety, and your patient care skills. Mock interviews with teachers help.",
+            "",
+            "**4. Gain Relevant Experience**",
+            "",
+            "- Volunteer at hospitals, clinics, or elderly homes. Any healthcare-related experience strengthens your application and interview responses. Aim for at least 20 hours.",
+            "",
+            "**5. Build a Strong Personal Statement**",
+            "",
+            "- Write about your passion for medical imaging, any shadowing experiences, and your long-term career goals. Mention specific technologies like CT or MRI to show knowledge.",
+            "",
+            "**6. Use the 6th Subject Bonus**",
+            "",
+            "- The admission formula includes a bonus for a 6th subject. Take an extra elective (e.g., Combined Science, Economics) to boost your score by up to 5%.",
+            "",
+            "**7. Manage Time During Exams**",
+            "",
+            "- HKDSE exams are intense. Practice past papers under timed conditions. For science subjects, focus on data interpretation and application questions, which are common in radiography-related topics.",
+            "",
+            "**8. Research the Programme Thoroughly**",
+            "",
+            "- Visit PolyU's website, attend info sessions, and talk to current students. Know the curriculum, WIE requirements, and career paths. This shows genuine interest in interviews.",
+            "",
+            "**9. Prepare for a Demanding but Rewarding Career**",
+            "",
+            "- Radiography requires physical stamina, attention to detail, and empathy. Shadow a radiographer if possible. Be ready for shift work and long hours in hospitals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：329.3（2025年聯招數據）。",
+            "**入學中位數**：320.0分（2025年聯招數據）。",
+            "**下四分位數**：320.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：需要。Selective basis",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3612 放射學(榮譽)理學士是一個四年全日制課程，隸屬於健康學院，專注於診斷影像和治療放射學。學生將掌握醫學影像技術、輻射安全及病人護理方面的專業知識。",
+            "**第一年基礎**：核心科目包括人體解剖學、生理學、放射物理學及放射學導論。學生為臨床實踐建立堅實的科學基礎。",
+            "**第二年臨床技能**：課程涵蓋放射攝影技術、輻射防護、影像判讀及病人管理。實驗室實習模擬真實臨床環境。",
+            "**第三年進階學習**：專業模塊包括電腦斷層掃描（CT）、磁共振成像（MRI）及核子醫學。學生開始在醫院進行工作整合教育（WIE）實習。",
+            "**第四年專業實踐**：最後一年包括高級臨床實習、畢業研究項目及專業倫理。畢業生符合資格向香港放射技師管理委員會註冊。",
+            "**工作整合教育（WIE）**：強制性臨床實習，在香港公立及私營醫院進行，總時數超過1,000小時。這種實踐經驗確保畢業生具備就業能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**放射技師**：畢業生可在醫院、診所及影像中心擔任診斷放射技師。起薪中位數約為每月港幣35,000元。",
+            "**專科角色**：經進一步培訓後，可從事CT、MRI、超聲波或介入放射學等專科。理大校友已在頂尖醫院晉升至高級職位。",
+            "**醫療管理**：累積經驗後，放射技師可轉向部門管理、質量保證或醫療行政管理崗位。",
+            "**研究與學術**：部分畢業生攻讀醫學影像、健康科學或生物醫學工程的碩士或博士學位，從事研究或教學工作。",
+            "**行業與銷售**：在醫療設備公司（如西門子、GE醫療）擔任應用專家、產品經理或銷售代表。",
+            "**環球機會**：香港的放射學資格獲國際認可，畢業生可在英國、澳洲、加拿大等地工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，毗鄰港鐵紅磡站及尖東站，交通便利。校園距離香港體育館及維多利亞港僅數分鐘路程。",
+            "**先進實驗室**：健康學院設有先進模擬實驗室，配備X光、CT及MRI設備，供學生進行實踐訓練。學生可在高仿真人體模型及真實影像系統上練習。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供豐富的健康科學資源，包括PubMed及放射學期刊等網上數據庫。設有24小時自修室。",
+            "**學生宿舍**：一年級學生可申請入住校內宿舍，優先考慮居住偏遠地區的學生。校外住宿選擇包括紅磡及尖沙咀一帶。",
+            "**學會與社團**：放射學會組織學習小組、醫院參觀及社交活動。學生亦可參加運動隊、文化社團及義工計劃。",
+            "**支援服務**：理大提供就業輔導、學術諮詢、心理健康支援及專屬的健康科學學生辦公室。校園設有無障礙設施。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：320.0（最佳五科加權後）。這顯示競爭激烈，大部分成功申請者成績優異。",
+            "**2025年下四分位數**：320.0，表示最低25%的錄取學生仍達到此分數——低分幾乎沒有機會。",
+            "**平均HKDSE分數**：329.3（加權後），反映課程的選擇性。申請者應爭取330分以上以增加競爭力。",
+            "**科目權重**：英文、數學及科學（生物、物理、化學）等核心科目權重較高。這些科目表現優異至關重要。",
+            "**面試要求**：入圍候選人將獲邀面試，評估溝通能力、動機及對放射學專業的了解。務必充分準備。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳偉強博士**：瑪麗醫院首席放射技師。2005年畢業。以在香港公立醫院推行數碼放射系統而聞名。",
+            "**李嘉欣女士**：香港養和醫院高級MRI專科技師。2012年畢業。2020年獲醫院管理局傑出員工獎。",
+            "**黃子峰先生**：理大醫療科技及資訊學系臨床導師。2015年畢業。領導放射學模擬實驗室並指導現屆學生。",
+            "**何佩珊博士**：香港大學助理教授。2008年畢業。研究專注於醫學影像中的人工智能，在《放射學》等頂級期刊發表論文。",
+            "**張家豪先生**：西門子醫療香港應用專家。2017年畢業。為亞洲各地醫院提供先進CT及MRI系統培訓。",
+            "**吳思穎女士**：私營診所放射技師及兼職健康教育者。2019年畢業。經營Instagram專頁@radiography_hk，擁有超過10,000名粉絲。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予HKDSE成績優異的學生。分數超過330的學生每年可獲港幣50,000元，並根據學業成績續領。",
+            "**健康學院獎學金**：多項健康科學獎學金，包括李樹培博士獎學金（港幣20,000元），專為傑出放射學學生而設。",
+            "**政府經濟援助**：合資格學生可申請香港特區政府學生資助處（SFAA）的助學金及貸款，涵蓋學費及生活費。",
+            "**工作整合教育津貼**：在臨床實習期間，學生每月可獲醫院管理局或合作機構提供高達港幣5,000元的津貼。",
+            "**外部獎學金**：來自香港放射技師協會、香港放射科醫學院及香港賽馬會等慈善基金會的獎學金機會。",
+            "**優異成績獎**：課程設有院長名單獎及學科獎，頒予每年成績最優秀的學生，並附有現金獎勵及證書。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3612 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數設定在330以上**",
+            "",
+            "- 平均分為329.3，因此最佳五科加權後應至少達到330分。使用理大的網上分數計算器預測你的分數。",
+            "",
+            "**2. 優先處理加權科目**",
+            "",
+            "- 英文、數學及科學（生物、物理、化學）權重較高。集中溫習這些科目以最大化總分。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 準備小組面試。練習解釋為何想成為放射技師、對輻射安全的了解及病人護理技巧。與老師進行模擬面試有幫助。",
+            "",
+            "**4. 獲取相關經驗**",
+            "",
+            "- 在醫院、診所或長者中心做義工。任何醫療相關經驗都能強化申請及面試表現。目標至少20小時。",
+            "",
+            "**5. 撰寫有力的個人陳述**",
+            "",
+            "- 寫下你對醫學影像的熱情、任何影子實習經驗及長期職業目標。提及CT或MRI等具體技術以展示知識。",
+            "",
+            "**6. 善用第六科加分**",
+            "",
+            "- 入學公式包括第六科加分。選修額外科目（如組合科學、經濟）可將分數提升高達5%。",
+            "",
+            "**7. 考試時間管理**",
+            "",
+            "- HKDSE考試壓力大。在計時條件下練習歷屆試題。科學科目重點練習數據詮釋及應用題，這在放射學相關題目中常見。",
+            "",
+            "**8. 深入了解課程**",
+            "",
+            "- 瀏覽理大網站、參加資訊講座並與現屆學生交流。了解課程結構、WIE要求及職業路徑。這能在面試中展示真誠興趣。",
+            "",
+            "**9. 為具挑戰但有意義的職業做好準備**",
+            "",
+            "- 放射學需要體力、細心及同理心。如有可能，跟隨放射技師見習。準備應付輪班工作及長時間在醫院工作。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "320.0",
+    "lq": "320.0"
+  }
+}

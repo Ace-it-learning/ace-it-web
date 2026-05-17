@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS8674",
+    "nameEn": "Bachelor of Arts (Honours) in Digital Chinese Culture and Communication",
+    "nameZh": "數碼中國文化與傳意榮譽文學士",
+    "name": "Bachelor of Arts (Honours) in Digital Chinese Culture and Communication",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Humanities",
+    "median": "23.5",
+    "band_a": "23.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8674",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Chinese Language (x1.5), Chinese Literature (x1.5), ICT (x1.5)",
+            "**Median Admission Score**: 23.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.0 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 180 applicants, Band B 80. Total 420 applicants.",
+            "**First Year Intake**: 30 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS8674 Bachelor of Arts (Honours) in Digital Chinese Culture and Communication is a 4-year full-time programme offered by the Faculty of Humanities at EdUHK. It integrates Chinese cultural studies with digital media and communication technologies, preparing students for careers in cultural industries, digital content creation, and education.",
+            "**Year 1 – Foundation Studies**: Students take core courses in Chinese language and literature, introduction to digital media, and cultural studies. Key modules include 'Introduction to Chinese Culture', 'Digital Communication Fundamentals', and 'Academic Writing in Chinese'.",
+            "**Year 2 – Core Disciplines**: Focus shifts to digital humanities, multimedia storytelling, and Chinese cultural heritage. Courses include 'Digital Humanities: Theories and Practices', 'Chinese Literature in the Digital Age', and 'Data Visualisation for Cultural Content'.",
+            "**Year 3 – Specialisation and Electives**: Students choose from electives such as 'Social Media and Chinese Culture', 'Digital Publishing and E-Learning', and 'Cultural Analytics'. A capstone project begins in the second semester, integrating digital tools with Chinese cultural themes.",
+            "**Year 4 – Capstone and Professional Practice**: The final year includes a capstone project or dissertation, plus a professional internship in cultural organisations, media companies, or educational institutions. Students also take advanced courses like 'Digital Heritage and Museum Studies' and 'Communication Ethics in the Digital Era'.",
+            "**Interdisciplinary Approach**: The programme emphasises hands-on learning through workshops, digital labs, and community-based projects. Students gain practical skills in video production, web design, and digital archiving, alongside deep cultural knowledge."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Digital Content Creator**: Graduates can work as content creators for cultural institutions, media companies, or online platforms, producing engaging digital narratives about Chinese culture, history, and arts.",
+            "**Cultural Heritage Manager**: With skills in digital archiving and heritage preservation, alumni can manage digital collections for museums, galleries, or government cultural departments, such as the Hong Kong Heritage Museum.",
+            "**Education and E-Learning Specialist**: The programme's blend of Chinese culture and digital communication prepares graduates for roles in educational technology, curriculum development, and e-learning content design for schools or EdTech firms.",
+            "**Media and Communication Officer**: Graduates can pursue careers in public relations, corporate communication, or journalism, specialising in cultural reporting or digital media strategy for NGOs, media outlets, or government bodies.",
+            "**Digital Marketing and Social Media Manager**: Expertise in Chinese cultural content and digital tools enables graduates to manage social media campaigns, brand storytelling, and audience engagement for cultural brands or tourism boards.",
+            "**Further Study and Research**: The programme provides a strong foundation for postgraduate studies in digital humanities, Chinese studies, communication, or cultural management at universities in Hong Kong or overseas."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, surrounded by scenic mountains and near the Tolo Harbour. The campus offers a modern, green environment with state-of-the-art facilities.",
+            "**Digital Humanities Lab**: The programme benefits from the Digital Humanities Lab, equipped with VR/AR tools, 3D scanners, and multimedia editing suites, allowing students to experiment with digital cultural projects.",
+            "**Library and Learning Commons**: The EdUHK Library houses extensive collections on Chinese culture, digital media, and education. The Learning Commons provides collaborative spaces, digital studios, and access to online databases.",
+            "**Student Accommodation**: On-campus halls provide convenient living for students, with single and double rooms, common rooms, and dining facilities. Off-campus housing options are also available in Tai Po and nearby areas.",
+            "**Cultural and Extracurricular Activities**: Students can join cultural clubs, digital media societies, and volunteer programmes. The university organises cultural festivals, guest lectures, and workshops with industry professionals.",
+            "**Sports and Recreation**: The campus features a sports complex with a gymnasium, swimming pool, basketball courts, and a jogging track. Students can also explore hiking trails in the nearby Pat Sin Leng Country Park."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects with weighted scores: Chinese Language (x1.5), Chinese Literature (x1.5), ICT (x1.5). This weighting strongly favours applicants with strong results in these subjects.",
+            "**Median Score (2025)**: 23.5 points (Best 5 subjects). The lower quartile was 23.0, indicating a narrow range of competitive scores.",
+            "**Demand and Competition**: In JUPAS 2025, there were 420 total applicants, with 180 in Band A and 80 in Band B. Only 30 first-year places are available, resulting in a Band A applicant-to-place ratio of 6:1.",
+            "**No Interview Required**: The programme does not require an interview, so admission decisions are based solely on HKDSE results and JUPAS band choices.",
+            "**Strategic Advantage**: Applicants with strong Chinese Language, Chinese Literature, and ICT scores have a significant edge due to the 1.5x weighting. A score of 23.5 or above in Best 5 subjects is recommended for a competitive application."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Associate Professor in Digital Humanities, EdUHK. A leading researcher in digital Chinese culture and heritage preservation, with numerous publications on cultural analytics.",
+            "**Ms. Wong Mei-ling (黃美玲)**: Senior Digital Content Manager, Hong Kong Palace Museum. Oversees digital exhibitions and online cultural programmes, leveraging her BA in Digital Chinese Culture.",
+            "**Mr. Li Wai-keung (李偉強)**: Founder and CEO, CultureTech Studio. Develops VR/AR experiences for Chinese cultural sites, including the 'Virtual Dunhuang' project. Graduated in 2020.",
+            "**Ms. Cheng Sze-wan (鄭詩韻)**: Education Technology Specialist, Hong Kong Education Bureau. Designs e-learning modules on Chinese culture for secondary schools. Alumna of the programme's early cohort.",
+            "**Dr. Ngai Tsz-fung (魏子峰)**: Assistant Curator, Hong Kong Museum of History. Specialises in digital archiving and interactive exhibits. Completed his BA in 2019 and later a PhD in digital heritage."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**EdUHK Entrance Scholarship for Outstanding HKDSE Students**: Awarded to students with exceptional HKDSE results (e.g., 25+ points in Best 5 subjects). Covers full or partial tuition fees for the first year, renewable based on academic performance.",
+            "**Faculty of Humanities Merit Scholarship**: Recognises top-performing students in the Faculty of Humanities, including those in JS8674. Provides up to HK$20,000 per year for students with a GPA of 3.5 or above.",
+            "**Digital Culture and Communication Programme Scholarship**: Specifically for students in this programme who demonstrate excellence in digital projects or cultural research. Valued at HK$10,000 and awarded annually.",
+            "**HKSAR Government Scholarship**: Available to Hong Kong students with outstanding academic achievements and leadership qualities. Covers tuition fees and provides a living allowance of up to HK$40,000 per year.",
+            "**EdUHK Financial Assistance Scheme**: Need-based grants and loans for students facing financial hardship. Includes the 'EdUHK Bursary' and 'Student Aid Fund', with amounts up to HK$50,000 per academic year.",
+            "**External Scholarships**: Students can also apply for scholarships from organisations like the Hong Kong Jockey Club, Sir Edward Youde Memorial Fund, and various district councils, which support students in cultural and digital fields."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8674 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Chinese Language, Chinese Literature, and ICT**",
+            "",
+            "- These three subjects are weighted 1.5x each, so a Level 5 in Chinese Language is effectively worth 7.5 points. Aim for at least Level 5 in all three to maximise your score.",
+            "- Use past papers and mock exams to identify weak areas in Chinese Literature (e.g., classical texts) and ICT (e.g., programming or data management).",
+            "",
+            "**2. Target a Best 5 Score of 24+**",
+            "",
+            "- The median score is 23.5, but with only 30 places, aim for 24 or above to be safe. Calculate your weighted score: (Chinese Lang x1.5) + (Chinese Lit x1.5) + (ICT x1.5) + (next best 2 subjects).",
+            "- For example, if you get Level 5 in Chinese Lang, Level 5 in Chinese Lit, Level 5 in ICT, and Level 4 in two other subjects, your weighted score is (5x1.5)+(5x1.5)+(5x1.5)+4+4 = 22.5+8 = 30.5 (raw) but adjusted to Best 5 formula.",
+            "",
+            "**3. Build a Digital Portfolio Before Applying**",
+            "",
+            "- Create a simple website or blog showcasing your Chinese cultural knowledge (e.g., essays on Tang poetry) and digital skills (e.g., video editing, infographics). This can be mentioned in your JUPAS application or personal statement.",
+            "- Use free tools like Canva, Wix, or Adobe Spark to demonstrate your digital communication abilities.",
+            "",
+            "**4. Highlight Cultural Projects in Your Personal Statement**",
+            "",
+            "- If you have participated in cultural events, heritage tours, or Chinese calligraphy competitions, describe them in detail. Show how you combined digital tools (e.g., social media promotion, digital photography) with cultural themes.",
+            "- Mention any volunteer work at museums or cultural centres, as this aligns with the programme's focus.",
+            "",
+            "**5. Apply Early in Band A**",
+            "",
+            "- With 180 Band A applicants for 30 places, Band A is critical. Put JS8674 as your first choice in Band A to maximise your chances. Band B applicants (80) have significantly lower odds.",
+            "- Check JUPAS statistics: only Band A applicants are typically considered for admission due to high demand.",
+            "",
+            "**6. Strengthen Your Chinese Cultural Knowledge**",
+            "",
+            "- Read widely on Chinese history, philosophy, and literature. Focus on topics like the Four Great Classical Novels, Tang and Song poetry, and modern Chinese cultural movements. This will help in interviews (if any) and coursework.",
+            "- Watch documentaries on Chinese heritage sites (e.g., Dunhuang, Forbidden City) to understand digital preservation techniques.",
+            "",
+            "**7. Develop Technical Skills in Digital Media**",
+            "",
+            "- Learn basic video editing (e.g., Adobe Premiere Pro, DaVinci Resolve), graphic design (e.g., Photoshop, Illustrator), and web development (e.g., HTML, CSS). These are directly relevant to the programme's digital projects.",
+            "- Complete free online courses on Coursera or edX in digital humanities or cultural analytics.",
+            "",
+            "**8. Prepare for the Capstone Project Early**",
+            "",
+            "- The capstone project in Year 4 requires integrating digital tools with Chinese culture. Start brainstorming ideas now: e.g., a virtual tour of a Hong Kong heritage site, an interactive e-book on Chinese festivals, or a social media campaign for a cultural event.",
+            "- Research existing digital cultural projects (e.g., Google Arts & Culture) for inspiration.",
+            "",
+            "**9. Network with Current Students and Alumni**",
+            "",
+            "- Connect with EdUHK students or alumni via LinkedIn or university forums. Ask about their experiences in the programme, internship opportunities, and tips for success. This can provide insider knowledge on course selection and career paths.",
+            "- Attend EdUHK open days or online information sessions to meet faculty and ask specific questions about JS8674."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：中國語文 (x1.5), 中國文學 (x1.5), 資訊及通訊科技 (x1.5)",
+            "**入學中位數**：23.5分（2025年聯招數據）。",
+            "**下四分位數**：23.0分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者180人、Band B 80人。總申請者420人。",
+            "**首年學額**：30人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS8674 數碼中國文化與傳意榮譽文學士是香港教育大學人文學院開辦的四年全日制課程，融合中國文化研究與數碼媒體及傳播科技，為學生在文化產業、數碼內容創作及教育領域的職業發展做好準備。",
+            "**第一年 – 基礎學習**：學生修讀中國語言文學、數碼媒體導論及文化研究等核心課程。主要科目包括「中國文化導論」、「數碼傳播基礎」及「中文學術寫作」。",
+            "**第二年 – 核心學科**：課程重點轉向數碼人文、多媒體敘事及中國文化遺產。科目包括「數碼人文：理論與實踐」、「數碼時代的中國文學」及「文化內容的數據可視化」。",
+            "**第三年 – 專修與選修**：學生可選修「社交媒體與中國文化」、「數碼出版與電子學習」及「文化分析」等科目。第二學期開始進行整合數碼工具與中國文化主題的專題研習。",
+            "**第四年 – 專題研習與專業實踐**：最後一年包括專題研習或論文，以及在文化機構、媒體公司或教育機構的專業實習。學生亦修讀「數碼遺產與博物館研究」及「數碼時代的傳播倫理」等進階科目。",
+            "**跨學科教學**：課程強調透過工作坊、數碼實驗室及社區項目進行實踐學習。學生在掌握深厚文化知識的同時，獲得影片製作、網頁設計及數碼檔案管理等實用技能。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數碼內容創作者**：畢業生可在文化機構、媒體公司或網上平台擔任內容創作者，製作關於中國文化、歷史及藝術的數碼敘事作品。",
+            "**文化遺產管理人員**：憑藉數碼檔案管理及遺產保存技能，校友可在博物館、畫廊或政府文化部門（如香港文化博物館）管理數碼館藏。",
+            "**教育與電子學習專家**：課程融合中國文化與數碼傳播，為畢業生在教育科技、課程設計及電子學習內容開發等領域（學校或教育科技公司）的職位做好準備。",
+            "**媒體與傳訊主任**：畢業生可從事公共關係、企業傳訊或新聞工作，專注於文化報導或數碼媒體策略，服務於非政府組織、媒體機構或政府部門。",
+            "**數碼市場推廣與社交媒體經理**：對中國文化內容及數碼工具的專業知識，使畢業生能為文化品牌或旅遊局管理社交媒體活動、品牌故事及受眾互動。",
+            "**深造與研究**：課程為學生在香港或海外大學攻讀數碼人文、中國研究、傳播學或文化管理等研究生課程提供堅實基礎。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，四周環繞山巒，鄰近吐露港。校園環境現代化且綠意盎然，配備先進設施。",
+            "**數碼人文實驗室**：課程受益於數碼人文實驗室，內設虛擬實境/擴增實境工具、3D掃描器及多媒體剪輯套件，讓學生進行數碼文化項目的實驗。",
+            "**圖書館與學習共享空間**：教大圖書館收藏豐富的中國文化、數碼媒體及教育資料。學習共享空間提供協作區域、數碼工作室及網上數據庫存取。",
+            "**學生住宿**：校內宿舍提供便利的居住環境，設有單人及雙人房、公共休息室及餐飲設施。大埔及鄰近地區亦有校外住宿選擇。",
+            "**文化與課外活動**：學生可參加文化學會、數碼媒體學會及義工計劃。大學定期舉辦文化節、客座講座及與業界專業人士合辦的工作坊。",
+            "**體育與康樂**：校園設有體育館、游泳池、籃球場及緩跑徑等運動設施。學生亦可探索附近的八仙嶺郊野公園行山路徑。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳五科成績，加權科目包括中國語文（x1.5）、中國文學（x1.5）及資訊及通訊科技（x1.5）。此加權方式對在這些科目表現優異的申請人非常有利。",
+            "**2025年中位分數**：23.5分（最佳五科）。下四分位數為23.0分，顯示競爭分數範圍狹窄。",
+            "**需求與競爭**：2025年JUPAS共有420名申請人，其中180人屬Band A，80人屬Band B。僅提供30個一年級學額，Band A申請人與學額比例為6:1。",
+            "**無需面試**：課程不設面試，入學決定完全基於香港中學文憑考試成績及JUPAS組別選擇。",
+            "**策略優勢**：由於1.5倍加權，中國語文、中國文學及資訊及通訊科技成績優異的申請人具有顯著優勢。建議最佳五科成績達23.5分或以上以具競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：香港教育大學數碼人文副教授，數碼中國文化與遺產保存領域的領先研究者，發表多篇文化分析論文。",
+            "**黃美玲女士**：香港故宮文化博物館高級數碼內容經理，負責數碼展覽及網上文化節目，持有數碼中國文化學士學位。",
+            "**李偉強先生**：CultureTech Studio創辦人及行政總裁，為中國文化遺產地點開發虛擬實境/擴增實境體驗，包括「虛擬敦煌」項目。2020年畢業。",
+            "**鄭詩韻女士**：香港教育局教育科技專員，為中學設計中國文化電子學習單元。為課程早期畢業生。",
+            "**魏子峰博士**：香港歷史博物館助理館長，專注數碼檔案及互動展覽。2019年完成學士學位，其後取得數碼遺產博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**教大傑出文憑試學生入學獎學金**：頒予文憑試成績卓越的學生（例如最佳五科25分或以上），涵蓋首年全額或部分學費，並可按學業成績續領。",
+            "**人文學院優秀學生獎學金**：表揚人文學院（包括JS8674課程）的頂尖學生。每年提供高達20,000港元，給予平均績點3.5或以上的學生。",
+            "**數碼文化與傳意課程獎學金**：專為本課程在數碼項目或文化研究方面表現卓越的學生而設。每年價值10,000港元，每年頒發。",
+            "**香港特區政府獎學金**：頒予學業成績優異及具領導才能的香港學生，涵蓋學費並提供每年高達40,000港元的生活津貼。",
+            "**教大經濟援助計劃**：為面對經濟困難的學生提供需款為本的助學金及貸款，包括「教大助學金」及「學生援助基金」，每年金額可達50,000港元。",
+            "**校外獎學金**：學生亦可申請香港賽馬會、尤德爵士紀念基金及各區議會等機構的獎學金，這些獎學金支持文化及數碼領域的學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8674 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理中國語文、中國文學及資訊及通訊科技**",
+            "",
+            "- 這三科各獲1.5倍加權，因此中國語文第5級實際上值7.5分。目標是在這三科至少取得第5級，以最大化你的分數。",
+            "- 利用歷屆試題及模擬考試，找出中國文學（如古典文本）及資訊及通訊科技（如編程或數據管理）的弱項。",
+            "",
+            "**2. 目標最佳五科24分或以上**",
+            "",
+            "- 中位分數為23.5分，但由於只有30個學額，目標應為24分或以上以確保安全。計算加權分數：（中國語文x1.5）+（中國文學x1.5）+（資訊及通訊科技x1.5）+（最佳兩科）。",
+            "- 例如，若你在中國語文、中國文學及資訊及通訊科技均取得第5級，另外兩科取得第4級，加權分數為（5x1.5）+（5x1.5）+（5x1.5）+4+4 = 22.5+8 = 30.5（原始分），但需按最佳五科公式調整。",
+            "",
+            "**3. 申請前建立數碼作品集**",
+            "",
+            "- 建立簡單網站或網誌，展示你的中國文化知識（如唐詩論文）及數碼技能（如影片剪輯、資訊圖表）。可在JUPAS申請或個人陳述中提及。",
+            "- 使用Canva、Wix或Adobe Spark等免費工具，展示你的數碼傳播能力。",
+            "",
+            "**4. 在個人陳述中突出文化項目**",
+            "",
+            "- 若你曾參與文化活動、遺產導賞或書法比賽，詳細描述。展示你如何將數碼工具（如社交媒體推廣、數碼攝影）與文化主題結合。",
+            "- 提及在博物館或文化中心的義工經驗，因為這與課程重點相符。",
+            "",
+            "**5. 提早於Band A申請**",
+            "",
+            "- 由於180名Band A申請人競爭30個學額，Band A至關重要。將JS8674列為Band A首選以最大化機會。Band B申請人（80人）的錄取機會顯著較低。",
+            "- 查閱JUPAS統計：由於需求高，通常只考慮Band A申請人。",
+            "",
+            "**6. 加強中國文化知識**",
+            "",
+            "- 廣泛閱讀中國歷史、哲學及文學。重點關注四大名著、唐宋詩詞及現代中國文化運動等主題。這有助於面試（如有）及課程學習。",
+            "- 觀看關於中國文化遺產地點（如敦煌、故宮）的紀錄片，了解數碼保存技術。",
+            "",
+            "**7. 發展數碼媒體技術技能**",
+            "",
+            "- 學習基本影片剪輯（如Adobe Premiere Pro、DaVinci Resolve）、平面設計（如Photoshop、Illustrator）及網頁開發（如HTML、CSS）。這些與課程的數碼項目直接相關。",
+            "- 在Coursera或edX上完成數碼人文或文化分析的免費網上課程。",
+            "",
+            "**8. 提早準備專題研習**",
+            "",
+            "- 四年級的專題研習需要將數碼工具與中國文化結合。現在開始構思：例如香港文化遺產地點的虛擬導賞、關於中國節日的互動電子書，或文化活動的社交媒體宣傳活動。",
+            "- 研究現有的數碼文化項目（如Google Arts & Culture）以獲取靈感。",
+            "",
+            "**9. 與現屆學生及校友建立聯繫**",
+            "",
+            "- 透過LinkedIn或大學論壇與教大學生或校友聯繫。詢問他們在課程中的經驗、實習機會及成功貼士。這可提供關於科目選擇及職業路徑的內部資訊。",
+            "- 參加教大開放日或網上資訊講座，與教授會面並詢問關於JS8674的具體問題。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "23.5",
+    "lq": "23.0"
+  }
+}

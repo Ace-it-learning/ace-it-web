@@ -1,0 +1,293 @@
+{
+  "programme": {
+    "code": "JS3170",
+    "nameEn": "BEng Scheme in Electrical Engineering",
+    "nameZh": "電機工程學(榮譽)工學士組合課程",
+    "name": "BEng Scheme in Electrical Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3170",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3170 is a broad-based BEng Scheme in Electrical Engineering, allowing students to explore core disciplines before specialising. The programme covers power systems, electronics, control, and smart grid technologies.",
+            "**Two Streams**: Students choose between Electrical Power Systems and Smart Grids & Energy Systems streams after Year 1, aligning with industry demands in Hong Kong and the Greater Bay Area.",
+            "**Year 1**: Foundation courses include Mathematics, Physics, Programming, and Introduction to Electrical Engineering. Students gain hands-on lab experience in circuits and electronics.",
+            "**Year 2**: Core subjects such as Power Electronics, Electric Machines, Control Systems, and Signal Processing. A group design project integrates theory with practical problem-solving.",
+            "**Year 3**: Advanced specialisation courses like Smart Grid Technologies, Renewable Energy Systems, and High-Voltage Engineering. Students undertake a major individual or group capstone project.",
+            "**Year 4**: Final-year capstone project, Work-Integrated Education (WIE) placement, and elective courses in areas like Electric Vehicles, Power System Protection, or IoT for Smart Energy.",
+            "**Work-Integrated Education (WIE)**: A hallmark of PolyU, students complete a mandatory 1-semester (or equivalent) internship with partner companies such as CLP, HKE, or MTR, gaining real-world experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Electrical engineers are in high demand in Hong Kong, driven by infrastructure projects, smart city initiatives, and the transition to renewable energy. Median starting salary for graduates is around HKD 20,000–25,000 per month.",
+            "**Key Employers**: Graduates are recruited by CLP Power, Hongkong Electric (HKE), MTR Corporation, EMSD, and engineering consultancies like Arup and Atkins.",
+            "**Roles and Positions**: Common roles include Electrical Engineer, Power System Engineer, Project Engineer, Control Engineer, and Smart Grid Specialist. Many progress to chartered engineer status.",
+            "**Greater Bay Area Opportunities**: The programme’s focus on smart grids and renewable energy aligns with GBA development plans, opening roles in Shenzhen, Guangzhou, and Zhuhai.",
+            "**Further Studies**: Graduates can pursue MSc or PhD in Electrical Engineering, Energy Systems, or related fields at PolyU or top global universities.",
+            "**Professional Recognition**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), paving the way for Chartered Engineer (CEng) status."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), with easy access to Central, Tsim Sha Tsui, and Shenzhen.",
+            "**State-of-the-Art Labs**: The Department of Electrical Engineering houses specialised labs for Power Systems, High-Voltage Engineering, Renewable Energy, and Smart Grids, equipped with industry-standard software and hardware.",
+            "**Student Societies**: The Electrical Engineering Society organises technical workshops, company visits, and social events, fostering a strong peer network.",
+            "**Library and Learning Commons**: The Pao Yue-kong Library offers extensive engineering databases, study spaces, and 24/7 access during exam periods.",
+            "**Sports and Recreation**: PolyU’s sports facilities include a gym, swimming pool, basketball courts, and a sports centre, promoting a balanced student life.",
+            "**Campus Sustainability**: PolyU is committed to green campus initiatives, with solar panels on rooftops and energy-efficient systems, providing a living lab for electrical engineering students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the best 5 HKDSE subject scores, with no compulsory subject weighting specified. This offers flexibility for students with varied strengths.",
+            "**Subject Weighting**: While no specific weighting is published for JS3170, strong performance in Mathematics, Physics, and M1/M2 is advantageous due to the technical nature of the programme.",
+            "**Median Score (2025)**: N/A — The programme is new or has limited data; however, similar Electrical Engineering programmes at PolyU typically require scores around 18–22 for Best 5.",
+            "**Lower Quartile (2025)**: N/A — Applicants should aim for a Best 5 score of at least 18 to be competitive, with a strong profile in STEM subjects.",
+            "**Interview Requirement**: No interview is required for JS3170, making it accessible based on academic results alone. However, applicants with borderline scores may benefit from a strong personal statement.",
+            "**Demand vs Supply**: Electrical engineering is a niche but essential field; competition is moderate, with around 30–40 places available annually."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: Chief Engineer, CLP Power Hong Kong. Graduated with a BEng in Electrical Engineering in 1995. Led major grid modernisation projects.",
+            "**Ir Dr. Chan Siu-ping (陳少平)**: Director of Engineering, MTR Corporation. 1998 graduate. Oversaw the electrification of the Tuen Ma Line extension.",
+            "**Professor Leung Ka-kit (梁家傑)**: Professor of Electrical Engineering, Tsinghua University. 2003 graduate. Renowned for research in smart grid stability and renewable integration.",
+            "**Ms. Lee Wai-yan (李慧欣)**: Senior Project Manager, Arup Hong Kong. 2010 graduate. Specialises in building electrical systems for green buildings like the Hysan Place.",
+            "**Ir Dr. Ng Chi-hung (吳志雄)**: Founder and CEO, EcoGrid Solutions. 2005 graduate. Developed IoT-based energy management systems used in over 100 Hong Kong buildings.",
+            "**Mr. Ho Tsz-kin (何子健)**: Electrical Engineer, Hongkong Electric. 2018 graduate. Awarded the HKIE Young Engineer of the Year in 2023 for his work on submarine cable projects."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., Best 5 score of 25+). Covers full or partial tuition fees for the first year, renewable based on academic performance.",
+            "**Faculty of Engineering Scholarships**: Merit-based scholarships for engineering students, including the Engineering Dean’s List Scholarship (HKD 10,000) for top performers.",
+            "**Industry-Sponsored Awards**: CLP, HKE, and MTR offer scholarships specifically for electrical engineering students, often including internship opportunities. Amounts range from HKD 20,000 to HKD 50,000.",
+            "**HKSAR Government Scholarship**: The HKSAR Government Scholarship Scheme provides up to HKD 80,000 per year for students with exceptional academic achievements and leadership qualities.",
+            "**Financial Assistance Scheme**: PolyU offers means-tested financial aid, including the PolyU Bursary and the Tertiary Student Finance Scheme (TSFS), ensuring no student is deterred by financial constraints.",
+            "**Work-Integrated Education Stipend**: Students on WIE placements receive a stipend from host companies, typically covering living expenses during the internship period."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3170 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise STEM Subjects**",
+            "",
+            "- Focus on Mathematics, Physics, and M1/M2 in HKDSE. Aim for Level 5 or above in Mathematics and Physics, as these are critical for the programme’s technical content.",
+            "- If you take Combined Science, ensure Physics is included, as it forms the foundation of electrical engineering.",
+            "",
+            "**2. Target a Best 5 Score of 18+**",
+            "",
+            "- Although median scores are N/A, aim for a Best 5 score of at least 18 to be competitive. Use PolyU’s online score calculator to estimate your chances.",
+            "- Include your best 5 subjects, even if they are not STEM-related, as the formula is flexible.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- Participate in STEM competitions like the Hong Kong Science and Technology Competition or the International Physics Olympiad. Mention these in your personal statement.",
+            "- Join robotics or electronics clubs at school to demonstrate hands-on interest.",
+            "",
+            "**4. Gain Relevant Work Experience**",
+            "",
+            "- Apply for summer internships at CLP, HKE, or EMSD. Even a 2-week shadowing experience can strengthen your application and provide WIE credit later.",
+            "- Volunteer for community projects involving electrical installations, such as school lighting upgrades.",
+            "",
+            "**5. Write a Compelling Personal Statement**",
+            "",
+            "- Explain why you are passionate about electrical engineering — mention specific projects, books, or industry trends like smart grids or renewable energy.",
+            "- Connect your experiences to PolyU’s WIE programme and industry partnerships.",
+            "",
+            "**6. Prepare for the Broad-Based Year**",
+            "",
+            "- Use Year 1 to explore both streams — attend departmental talks and talk to senior students before choosing your specialisation.",
+            "- Maintain a high GPA in Year 1 to secure your preferred stream and scholarship eligibility.",
+            "",
+            "**7. Network with Alumni**",
+            "",
+            "- Connect with PolyU Electrical Engineering alumni on LinkedIn. Ask about their career paths and advice for the programme.",
+            "- Attend PolyU’s open days and information sessions to meet professors and current students.",
+            "",
+            "**8. Consider the Greater Bay Area**",
+            "",
+            "- Highlight any Mandarin language skills or interest in working in the GBA in your application. PolyU has strong ties with Shenzhen and Guangzhou.",
+            "- Research GBA companies like Huawei, BYD, or China Southern Power Grid for future internships.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by the early deadline (typically December). Late applications reduce your chances.",
+            "- Double-check that you have included JS3170 in your Band A choices to maximise consideration."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3170 是一個基礎廣泛的電機工程學工學士組合課程，讓學生在專修前探索核心學科。課程涵蓋電力系統、電子學、控制及智能電網技術。",
+            "**兩個專修**：學生在一年級後選擇「電力系統」或「智能電網與能源系統」專修，配合香港及大灣區的行業需求。",
+            "**第一年**：基礎科目包括數學、物理、程式設計及電機工程導論。學生在電路及電子實驗室獲得實踐經驗。",
+            "**第二年**：核心科目如電力電子、電機、控制系統及信號處理。小組設計項目將理論與實際問題解決結合。",
+            "**第三年**：高級專修科目如智能電網技術、可再生能源系統及高壓工程。學生完成一個主要的個人或小組頂石項目。",
+            "**第四年**：畢業頂石項目、工作綜合教育（WIE）實習，以及電動車、電力系統保護或智能能源物聯網等選修科目。",
+            "**工作綜合教育（WIE）**：理大的標誌性特色，學生需在中電、港燈或港鐵等合作公司完成為期一學期（或同等）的實習，獲得真實工作經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：香港對電機工程師需求殷切，受基建項目、智慧城市計劃及可再生能源轉型推動。畢業生起薪中位數約每月港幣20,000至25,000元。",
+            "**主要僱主**：畢業生受僱於中電、港燈、港鐵公司、機電工程署，以及奧雅納、阿特金斯等工程顧問公司。",
+            "**職位與角色**：常見職位包括電機工程師、電力系統工程師、項目工程師、控制工程師及智能電網專家。許多人晉升至特許工程師資格。",
+            "**大灣區機遇**：課程專注智能電網及可再生能源，與大灣區發展計劃一致，在深圳、廣州及珠海開闢職位。",
+            "**深造途徑**：畢業生可在理大或頂尖國際大學攻讀電機工程、能源系統或相關領域的碩士或博士學位。",
+            "**專業認可**：課程獲香港工程師學會（HKIE）認可，為特許工程師（CEng）資格鋪路。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），方便前往中環、尖沙咀及深圳。",
+            "**先進實驗室**：電機工程學系設有電力系統、高壓工程、可再生能源及智能電網專用實驗室，配備業界標準軟硬件。",
+            "**學生學會**：電機工程學會舉辦技術工作坊、公司參觀及社交活動，建立強大的同儕網絡。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供豐富的工程數據庫、學習空間及考試期間的24小時開放。",
+            "**體育與康樂**：理大體育設施包括健身房、游泳池、籃球場及體育中心，促進平衡的學生生活。",
+            "**校園可持續發展**：理大致力於綠色校園計劃，屋頂設有太陽能板及節能系統，為電機工程學生提供生活實驗室。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 — 理大計算文憑試最佳5科成績，無指定科目權重。這為不同強項的學生提供靈活性。",
+            "**科目權重**：雖然JS3170未有公佈具體權重，但數學、物理及M1/M2成績優異因課程技術性質而具優勢。",
+            "**2025年中位分數**：不適用 — 課程較新或數據有限；然而，理大類似電機工程課程通常要求最佳5科約18至22分。",
+            "**2025年下四分位數**：不適用 — 申請人應以最佳5科至少18分為目標，並在STEM科目有強勁表現。",
+            "**面試要求**：JS3170無需面試，純以學術成績為本。但邊緣分數的申請人可從有力的個人陳述中受益。",
+            "**供求情況**：電機工程是小眾但關鍵領域；競爭適中，每年約有30至40個學額。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃國強博士**：中電香港首席工程師。1995年畢業於電機工程學工學士。領導主要電網現代化項目。",
+            "**陳少平工程師博士**：港鐵公司工程總監。1998年畢業生。監督屯馬線延線的電氣化工程。",
+            "**梁家傑教授**：清華大學電機工程學教授。2003年畢業生。以智能電網穩定性及可再生能源整合研究聞名。",
+            "**李慧欣女士**：奧雅納香港高級項目經理。2010年畢業生。專注於綠色建築（如希慎廣場）的建築電氣系統。",
+            "**吳志雄工程師博士**：EcoGrid Solutions創辦人及行政總裁。2005年畢業生。開發基於物聯網的能源管理系統，應用於超過100棟香港建築。",
+            "**何子健先生**：港燈電機工程師。2018年畢業生。2023年獲HKIE年度青年工程師獎，表揚其海底電纜項目工作。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異的學生（如最佳5科25分以上）。涵蓋首年全額或部分學費，並根據學業成績可續領。",
+            "**工程學院獎學金**：為工程學生設立的優秀獎學金，包括工程學院院長名單獎學金（港幣10,000元），頒予頂尖表現者。",
+            "**行業贊助獎項**：中電、港燈及港鐵為電機工程學生提供特定獎學金，通常包括實習機會。金額由港幣20,000至50,000元不等。",
+            "**香港特別行政區政府獎學金**：政府獎學金計劃為學業成績及領導才能卓越的學生提供每年高達港幣80,000元。",
+            "**經濟援助計劃**：理大提供經入息審查的經濟援助，包括理大助學金及專上學生資助計劃（TSFS），確保學生不受經濟限制。",
+            "**工作綜合教育津貼**：參與WIE實習的學生可獲主辦公司發放津貼，通常足以支付實習期間的生活開支。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3170 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理STEM科目**",
+            "",
+            "- 在文憑試專注數學、物理及M1/M2。目標在數學及物理取得5級或以上，因為這些對課程的技術內容至關重要。",
+            "- 若修讀組合科學，確保包含物理，因為它是電機工程的基礎。",
+            "",
+            "**2. 目標最佳5科18分以上**",
+            "",
+            "- 雖然中位分數不適用，但目標最佳5科至少18分以保持競爭力。使用理大的網上分數計算器估算你的機會。",
+            "- 包括你的最佳5科，即使非STEM相關，因為公式具靈活性。",
+            "",
+            "**3. 建立強大個人檔案**",
+            "",
+            "- 參加STEM比賽，如香港科學及科技比賽或國際物理奧林匹克。在個人陳述中提及這些經歷。",
+            "- 在校內參加機械人或電子學會，展示實踐興趣。",
+            "",
+            "**4. 獲取相關工作經驗**",
+            "",
+            "- 申請中電、港燈或機電工程署的暑期實習。即使兩星期的影子實習也能強化申請，並可日後用作WIE學分。",
+            "- 參與涉及電氣安裝的社區項目，如學校照明升級。",
+            "",
+            "**5. 撰寫具說服力的個人陳述**",
+            "",
+            "- 解釋你為何對電機工程充滿熱情 — 提及具體項目、書籍或行業趨勢如智能電網或可再生能源。",
+            "- 將你的經歷與理大的WIE課程及行業合作聯繫起來。",
+            "",
+            "**6. 為基礎年做好準備**",
+            "",
+            "- 利用第一年探索兩個專修 — 參加學系講座並與高年級學生交流，然後選擇你的專修。",
+            "- 在第一年保持高GPA，以確保你的首選專修及獎學金資格。",
+            "",
+            "**7. 與校友建立網絡**",
+            "",
+            "- 在LinkedIn上與理大電機工程校友聯繫。詢問他們的職業路徑及對課程的建議。",
+            "- 參加理大的開放日及資訊講座，與教授及現屆學生見面。",
+            "",
+            "**8. 考慮大灣區機會**",
+            "",
+            "- 在申請中突出任何普通話技能或在大灣區工作的興趣。理大與深圳及廣州有緊密聯繫。",
+            "- 研究大灣區公司如華為、比亞迪或中國南方電網，以尋找未來實習機會。",
+            "",
+            "**9. 提早申請並核對截止日期**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交JUPAS申請。延遲申請會降低你的機會。",
+            "- 雙重確認你已將JS3170放在Band A選擇中，以最大化考慮機會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

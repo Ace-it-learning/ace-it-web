@@ -1,0 +1,309 @@
+{
+  "programme": {
+    "code": "JS8011",
+    "nameEn": "Bachelor of Science (Honours) in Integrated Environmental Management and Bachelor of Education (Honours) (Science)",
+    "nameZh": "綜合環境管理榮譽理學士及科學教育榮譽學士",
+    "name": "Bachelor of Science (Honours) in Integrated Environmental Management and Bachelor of Education (Honours) (Science)",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "24.6",
+    "band_a": "24.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8011",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Chemistry (x1.5), Biology (x1.3), Physics (x1.2), Math, M1/M2 (x1.1), Geography (x1.1)",
+            "**Median Admission Score**: 24.6 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.0 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 150 applicants, Band B 70. Total 350 applicants.",
+            "**First Year Intake**: 20 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This 5-year double-degree programme combines a Bachelor of Science in Integrated Environmental Management with a Bachelor of Education (Science), preparing students to become qualified science teachers with deep environmental expertise.",
+            "**Year 1**: Foundation courses in environmental science, biology, chemistry, and physics, alongside introductory education studies and a first teaching practicum observation.",
+            "**Year 2**: Core modules in integrated environmental management, including ecology, pollution control, and environmental policy, plus educational psychology and curriculum design.",
+            "**Year 3**: Advanced environmental topics such as climate change science, environmental impact assessment, and sustainable development, with a second teaching practicum in local schools.",
+            "**Year 4**: Specialised electives in areas like environmental law, green technology, or conservation biology, combined with a research project and a third teaching practicum.",
+            "**Year 5**: Capstone research dissertation in environmental management, final teaching practicum, and professional development seminars to prepare for teacher registration."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Science Teacher**: Graduates are eligible for Hong Kong teacher registration and can teach science and environmental studies in secondary schools, with strong demand for STEM educators.",
+            "**Environmental Consultant**: Work with government agencies or private firms on environmental impact assessments, sustainability reporting, and pollution management projects.",
+            "**Education Officer**: Join NGOs or government departments (e.g., Environmental Protection Department) to develop and deliver environmental education programmes.",
+            "**Corporate Sustainability Manager**: Lead sustainability initiatives in corporations, focusing on carbon reduction, waste management, and green supply chains.",
+            "**Researcher**: Pursue postgraduate studies in environmental science or education, leading to roles in universities or research institutes.",
+            "**Policy Analyst**: Contribute to environmental policy development in government or think tanks, leveraging both scientific and educational expertise."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in the New Territories, surrounded by greenery and close to the Pat Sin Leng Country Park, offering a natural environment for environmental studies.",
+            "**Science Laboratories**: State-of-the-art labs for chemistry, biology, and physics, equipped with modern instruments for environmental analysis and teaching practice.",
+            "**Environmental Field Station**: A dedicated outdoor facility for ecological fieldwork, water quality testing, and biodiversity surveys, used extensively in the programme.",
+            "**Library & Learning Commons**: The Mong Man Wai Library holds extensive collections in education and environmental science, with 24/7 study spaces and digital resources.",
+            "**Student Halls**: On-campus accommodation is available for students, fostering a close-knit community with shared facilities and green spaces.",
+            "**Sports & Recreation**: The campus features a sports complex, gym, and outdoor courts, supporting a healthy work-life balance for students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: The median score for 2025 entry was 24.6 (Best 5 subjects), with a lower quartile of 24.0, indicating strong academic competition.",
+            "**Subject Weighting**: Chemistry is weighted at x1.5, Biology at x1.3, Physics at x1.2, and Mathematics/M1/M2 at x1.1, giving a clear advantage to science-oriented applicants.",
+            "**Application Demand**: In 2025, there were 350 total applicants (150 Band A, 70 Band B) for only 20 first-year places, yielding a Band A-to-place ratio of 7.5:1.",
+            "**Interview Requirement**: All shortlisted candidates must attend an interview, which assesses motivation, communication skills, and passion for teaching and environmental issues.",
+            "**Double-Degree Advantage**: The integrated BSc and BEd structure is unique in Hong Kong, combining professional teacher training with a science degree, enhancing graduate employability."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Ka-kiu (李嘉翹)**: Principal, SKH St. James' Primary School. A graduate of EdUHK's science education programme, known for promoting STEM education in primary schools.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Head of Science, Queen's College. 2018 graduate of the BEd (Science) programme, recognised for innovative teaching methods in biology.",
+            "**Mr. Chan Ho-yin (陳浩賢)**: Environmental Education Officer, WWF-Hong Kong. 2020 graduate, leading school outreach programmes on marine conservation.",
+            "**Dr. Tsang Wai-yin (曾慧賢)**: Assistant Professor, Department of Science and Environmental Studies, EdUHK. 2015 graduate, researching climate change education.",
+            "**Mr. Leung Tsz-fung (梁子峰)**: Sustainability Manager, MTR Corporation. 2017 graduate, overseeing environmental compliance and green initiatives.",
+            "**Ms. Cheng Sze-wan (鄭詩韻)**: Secondary School Teacher, St. Paul's Convent School. 2019 graduate, awarded Outstanding New Teacher Award by the Hong Kong Education Bureau."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS applicants with excellent HKDSE results, covering full or half tuition fees for the first year.",
+            "**Faculty of Liberal Arts and Social Sciences Scholarship**: Merit-based scholarships for students in the faculty, with awards up to HK$20,000 per year.",
+            "**Dr. the Hon. Sir David K.P. Li Scholarship**: For students demonstrating outstanding academic performance and leadership in environmental or educational activities.",
+            "**HKSAR Government Scholarship**: Open to all Hong Kong students with exceptional academic achievements, providing up to HK$40,000 annually.",
+            "**Teaching Practicum Bursary**: Financial support for students during their teaching practicum placements, covering travel and accommodation expenses.",
+            "**Environmental Education Fund**: Sponsored by the Environmental Campaign Committee, offering grants for student-led environmental projects and community initiatives."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8011 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Subjects**",
+            "",
+            "- Focus heavily on Chemistry (x1.5) and Biology (x1.3) — a 5 in Chemistry is worth 7.5 points, while a 5 in Biology is worth 6.5 points.",
+            "- Aim for at least Level 5 in Chemistry and Level 5 in Biology to reach the median score of 24.6.",
+            "- Physics (x1.2) and Mathematics (x1.1) also boost your score — don't neglect them.",
+            "",
+            "**2. Target a Best 5 Score of 25+**",
+            "",
+            "- The median is 24.6, but with only 20 places, aim for 25 or above to be competitive.",
+            "- Use the weighted formula: (Chem score x1.5) + (Bio x1.3) + (Phy x1.2) + (Math x1.1) + (Geo x1.1) = total.",
+            "- For example, 5 in Chem, 5 in Bio, 4 in Phy, 5 in Math, 4 in Geo gives 7.5 + 6.5 + 4.8 + 5.5 + 4.4 = 28.7 — well above median.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "- The interview is mandatory and assesses your passion for teaching and environmental issues.",
+            "- Prepare a 2-minute self-introduction explaining why you want to be a science teacher.",
+            "- Read up on current environmental topics in Hong Kong, such as waste management or air quality.",
+            "",
+            "**4. Showcase Teaching Experience**",
+            "",
+            "- Any tutoring, mentoring, or volunteering with children is a strong plus — mention it in your application.",
+            "- Consider joining EdUHK's summer programmes or open days to demonstrate interest.",
+            "- If you have led environmental projects (e.g., beach clean-ups), highlight them.",
+            "",
+            "**5. Build a Strong E-APP Portfolio**",
+            "",
+            "- Submit your E-APP with detailed descriptions of your science projects and teaching-related activities.",
+            "- Include certificates from science competitions or environmental clubs.",
+            "- Ask teachers to write recommendation letters that emphasise your teaching potential.",
+            "",
+            "**6. Understand the Double-Degree Structure**",
+            "",
+            "- This is a 5-year programme — be prepared for a longer commitment than typical degrees.",
+            "- The BSc component covers environmental management, while the BEd provides teacher training.",
+            "- You will complete 3 teaching practicums — start thinking about which school levels interest you.",
+            "",
+            "**7. Use the Subject Weighting to Your Advantage**",
+            "",
+            "- If you are strong in Chemistry and Biology, this programme is ideal — your scores are multiplied.",
+            "- If you are weaker in Physics, compensate with higher scores in Chemistry and Biology.",
+            "- Consider retaking HKDSE subjects if your weighted score is below 24.",
+            "",
+            "**8. Apply Early in Band A**",
+            "",
+            "- In 2025, 150 Band A applicants competed for 20 places — Band B had only 70 applicants.",
+            "- Placing JS8011 in Band A significantly increases your chance of an interview offer.",
+            "- Do not waste a Band B choice on this programme — it is highly competitive.",
+            "",
+            "**9. Explore EdUHK's Environmental Resources**",
+            "",
+            "- Visit the Tai Po campus and the environmental field station to familiarise yourself with facilities.",
+            "- Attend EdUHK's information seminars or webinars for science education programmes.",
+            "- Connect with current students or alumni via LinkedIn to gain insider tips."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：化學 (x1.5), 生物 (x1.3), 物理 (x1.2), 數學, M1/M2 (x1.1), 地理 (x1.1)",
+            "**入學中位數**：24.6分（2025年聯招數據）。",
+            "**下四分位數**：24.0分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者150人、Band B 70人。總申請者350人。",
+            "**首年學額**：20人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此為五年制雙學位課程，結合綜合環境管理榮譽理學士及科學教育榮譽學士，培養具備深厚環境知識的合資格科學教師。",
+            "**第一年**：環境科學、生物學、化學及物理的基礎課程，配合教育學導論及首次教學實習觀摩。",
+            "**第二年**：綜合環境管理核心科目，包括生態學、污染控制及環境政策，加上教育心理學及課程設計。",
+            "**第三年**：進階環境專題，如氣候變化科學、環境影響評估及可持續發展，並在本地學校進行第二次教學實習。",
+            "**第四年**：選修環境法律、綠色科技或保育生物學等專業範疇，結合研究項目及第三次教學實習。",
+            "**第五年**：環境管理頂點研究論文、最後教學實習及專業發展研討會，為教師註冊做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**科學教師**：畢業生符合香港教師註冊資格，可在中學任教科學及環境研究，STEM教育師資需求殷切。",
+            "**環境顧問**：於政府機構或私營企業從事環境影響評估、可持續發展報告及污染管理項目。",
+            "**教育主任**：加入非政府組織或政府部門（如環保署），開發及推行環境教育計劃。",
+            "**企業可持續發展經理**：領導企業的減碳、廢物管理及綠色供應鏈等可持續發展項目。",
+            "**研究人員**：攻讀環境科學或教育學深造課程，於大學或研究機構擔任研究職位。",
+            "**政策分析師**：結合科學與教育專業知識，於政府或智庫參與環境政策制定。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：教大主校園位於新界，四周綠意盎然，毗鄰八仙嶺郊野公園，為環境研究提供自然環境。",
+            "**科學實驗室**：配備先進儀器的化學、生物及物理實驗室，用於環境分析及教學實踐。",
+            "**環境實地考察站**：專用戶外設施，進行生態實地考察、水質測試及生物多樣性調查，課程中廣泛使用。",
+            "**圖書館及學習共享空間**：蒙民偉圖書館收藏豐富的教育及環境科學資料，提供24小時自修空間及數碼資源。",
+            "**學生宿舍**：校園內設有住宿設施，促進緊密社群，共享設施及綠化空間。",
+            "**體育及康樂**：校園設有體育館、健身室及戶外球場，支持學生健康生活平衡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年入學中位分數為24.6分（最佳五科），下四分位數為24.0分，顯示學術競爭激烈。",
+            "**科目比重**：化學比重為1.5倍，生物為1.3倍，物理為1.2倍，數學/M1/M2為1.1倍，對理科申請人明顯有利。",
+            "**申請需求**：2025年共有350名申請人（150名Band A，70名Band B），僅20個一年級學額，Band A與學額比例為7.5:1。",
+            "**面試要求**：所有入圍候選人必須參加面試，評估其動機、溝通技巧及對教學和環境議題的熱誠。",
+            "**雙學位優勢**：此綜合理學士及教育學士課程在香港獨一無二，結合專業教師培訓與科學學位，提升畢業生就業競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李嘉翹博士**：聖公會聖雅各小學校長。畢業於教大科學教育課程，以推動小學STEM教育聞名。",
+            "**黃佩珊女士**：皇仁書院科學科主任。2018年科學教育學士畢業，以生物科創新教學法獲認可。",
+            "**陳浩賢先生**：世界自然基金會香港分會環境教育主任。2020年畢業，領導學校海洋保育外展計劃。",
+            "**曾慧賢博士**：教大科學與環境研究學系助理教授。2015年畢業，研究氣候變化教育。",
+            "**梁子峰先生**：港鐵公司可持續發展經理。2017年畢業，負責環境合規及綠色倡議。",
+            "**鄭詩韻女士**：聖保祿學校中學教師。2019年畢業，獲香港教育局頒發傑出新晉教師獎。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**教大入學獎學金**：頒予文憑試成績優異的聯招申請人，涵蓋首年全額或半額學費。",
+            "**文學及社會科學院獎學金**：基於學業成績的獎學金，每年最高達20,000港元。",
+            "**戴麟趾爵士獎學金**：頒予在環境或教育活動中表現卓越及具領導才能的學生。",
+            "**香港特區政府獎學金**：開放予所有學業成績出眾的香港學生，每年最高40,000港元。",
+            "**教學實習津貼**：為學生在教學實習期間提供交通及住宿費用的經濟支援。",
+            "**環境教育基金**：由環境運動委員會贊助，為學生主導的環境項目及社區計劃提供資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8011 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權科目**",
+            "",
+            "- 重點攻讀化學（1.5倍）及生物（1.3倍）— 化學考獲5級等於7.5分，生物5級等於6.5分。",
+            "- 目標至少化學及生物達5級，以達到中位分數24.6分。",
+            "- 物理（1.2倍）及數學（1.1倍）同樣有助提升分數，切勿忽略。",
+            "",
+            "**2. 目標最佳五科25分以上**",
+            "",
+            "- 中位數為24.6分，但只有20個學額，建議目標25分或以上以增加競爭力。",
+            "- 使用加權公式：（化學分數x1.5）+（生物x1.3）+（物理x1.2）+（數學x1.1）+（地理x1.1）= 總分。",
+            "- 例如：化學5、生物5、物理4、數學5、地理4，總分為7.5+6.5+4.8+5.5+4.4=28.7，遠高於中位數。",
+            "",
+            "**3. 準備面試**",
+            "",
+            "- 面試為強制環節，評估你對教學及環境議題的熱誠。",
+            "- 準備2分鐘自我介紹，解釋為何想成為科學教師。",
+            "- 了解香港當前環境議題，如廢物管理或空氣質素。",
+            "",
+            "**4. 展示教學經驗**",
+            "",
+            "- 任何補習、導師或兒童義工經驗均為優勢，請在申請中提及。",
+            "- 參加教大暑期課程或開放日，展示你的興趣。",
+            "- 若曾領導環境項目（如沙灘清潔），務必強調。",
+            "",
+            "**5. 建立豐富的E-APP檔案**",
+            "",
+            "- 在E-APP中詳細描述你的科學項目及教學相關活動。",
+            "- 附上科學比賽或環保學會的證書。",
+            "- 請教師撰寫推薦信，強調你的教學潛能。",
+            "",
+            "**6. 了解雙學位結構**",
+            "",
+            "- 此為五年制課程，需比一般學位投入更長時間。",
+            "- 理學士部分涵蓋環境管理，教育學士部分提供教師培訓。",
+            "- 你將完成三次教學實習，開始思考你感興趣的學校級別。",
+            "",
+            "**7. 善用科目比重**",
+            "",
+            "- 若你擅長化學及生物，此課程非常適合你——分數會被倍乘。",
+            "- 若物理較弱，以更高的化學及生物分數補償。",
+            "- 若加權分數低於24分，考慮重考文憑試科目。",
+            "",
+            "**8. 及早將課程放在Band A**",
+            "",
+            "- 2025年有150名Band A申請人競爭20個學額，Band B僅70人。",
+            "- 將JS8011放在Band A能大幅增加面試機會。",
+            "- 不要浪費Band B選擇在此課程上——競爭極高。",
+            "",
+            "**9. 探索教大的環境資源**",
+            "",
+            "- 參觀大埔校園及環境實地考察站，熟悉設施。",
+            "- 參加教大科學教育課程的資訊講座或網上研討會。",
+            "- 透過LinkedIn聯繫現屆學生或校友，獲取內部貼士。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "24.6",
+    "lq": "24.0"
+  }
+}

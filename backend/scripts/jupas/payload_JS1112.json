@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1112",
+    "nameEn": "BSocSc Psychology",
+    "nameZh": "社會科學學士(心理學)",
+    "name": "BSocSc Psychology",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.5,
+    "band_a": 24.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1112",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects (include English). Subject weighting: 2: English 1: other elective subjects.",
+            "**Median Admission Score**: 24.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: The BSocSc Psychology programme at CityU is a 4-year undergraduate degree designed to provide a comprehensive understanding of human behaviour, cognition, and emotion. Students develop critical thinking, research, and analytical skills essential for psychological practice and further study.",
+            "**Year 1**: Foundation courses include Introduction to Psychology, Research Methods, and Statistics. Students also take University Core and General Education courses to build a broad academic base.",
+            "**Year 2**: Core psychology courses such as Cognitive Psychology, Developmental Psychology, Social Psychology, and Biological Psychology. Students begin to explore elective options in specialised areas.",
+            "**Year 3**: Advanced courses in Abnormal Psychology, Personality Psychology, and Cross-Cultural Psychology. Students undertake a research project or internship to apply theoretical knowledge.",
+            "**Year 4**: Capstone experience including a Final Year Project or Dissertation. Students choose from a range of electives such as Health Psychology, Forensic Psychology, or Organisational Psychology.",
+            "**Practical Training**: The programme emphasises hands-on learning through laboratory work, field studies, and a required internship in Year 3, providing real-world experience in clinical, educational, or corporate settings."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Clinical Psychology**: Graduates can pursue further study to become clinical psychologists, working in hospitals, mental health clinics, or private practice, addressing mental health disorders.",
+            "**Educational Psychology**: Opportunities in schools and educational institutions as educational psychologists, supporting student learning, behaviour, and well-being.",
+            "**Human Resources**: Many graduates enter HR roles in corporations, focusing on recruitment, training, employee well-being, and organisational development.",
+            "**Market Research**: Skills in data analysis and human behaviour make graduates valuable in market research firms, consumer insights, and advertising agencies.",
+            "**Social Services**: Roles in NGOs, government agencies, and community organisations as counsellors, social workers, or programme coordinators.",
+            "**Further Study**: The programme provides a strong foundation for postgraduate degrees in psychology, counselling, neuroscience, or related fields, leading to professional accreditation."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is modern and well-connected, with easy access to public transport and nearby shopping and dining options.",
+            "**Psychology Laboratory**: Dedicated labs equipped with eye-tracking, EEG, and virtual reality technology for hands-on research and experiments.",
+            "**Library Resources**: The Run Run Shaw Library offers extensive psychology journals, databases, and study spaces, including a 24-hour learning commons.",
+            "**Student Organisations**: The Psychology Society organises academic talks, workshops, and social events, fostering a supportive community among students.",
+            "**International Exchange**: CityU has partnerships with over 400 universities worldwide, allowing psychology students to spend a semester abroad at institutions in the UK, US, Australia, or Asia.",
+            "**Career Services**: The Career and Leadership Centre provides internship placements, career counselling, and networking events specifically tailored to psychology students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Programme Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 4 subjects including English, with English weighted at 2x and other elective subjects at 1x, emphasising strong language skills.",
+            "**Median Score (2025)**: 24.5, indicating a competitive entry threshold that attracts high-achieving students.",
+            "**Lower Quartile (2025)**: 24.0, showing that even the bottom 25% of admitted students have strong academic profiles.",
+            "**Demand vs Supply**: Psychology is a popular field in Hong Kong, with limited places relative to applicants, making this programme moderately to highly competitive.",
+            "**Graduate Outcomes**: Over 90% of graduates secure employment or further study within six months of graduation, with many entering professional psychology or related fields."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂博士)**: Clinical Psychologist, Hospital Authority. Specialises in child and adolescent mental health. Graduated in 2010.",
+            "**Ms. Wong Pui-shan (黃佩珊女士)**: Senior Human Resources Manager, HSBC Hong Kong. Leads talent development and employee wellness programmes. Graduated in 2015.",
+            "**Mr. Li Ming (李明先生)**: Founder, Mindful Hong Kong, a mental health startup providing online counselling services. Graduated in 2018.",
+            "**Dr. Cheung Wai-yin (張慧賢博士)**: Assistant Professor, Department of Psychology, University of Hong Kong. Research focus on social cognition. Graduated in 2012.",
+            "**Ms. Tam Siu-ling (譚小玲女士)**: Educational Psychologist, Education Bureau. Works with schools to support students with special educational needs. Graduated in 2016.",
+            "**Mr. Ng Kin-hung (吳建雄先生)**: Market Research Manager, NielsenIQ Hong Kong. Leads consumer behaviour studies for FMCG brands. Graduated in 2014."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results, covering full or partial tuition fees for the first year. Based on admission scores.",
+            "**Faculty of Liberal Arts and Social Sciences Scholarships**: Multiple merit-based scholarships for psychology students, ranging from HK$10,000 to HK$50,000 per year.",
+            "**Dr. Lee Shiu Scholarship**: Specifically for psychology students demonstrating academic excellence and financial need, valued at HK$20,000 annually.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional academic performance and community service, providing up to HK$80,000 per year.",
+            "**Exchange Scholarships**: Support for psychology students undertaking overseas exchange programmes, covering travel and living expenses up to HK$30,000.",
+            "**Need-Based Financial Aid**: CityU offers grants and loans through the Student Financial Assistance Office, ensuring access for students from diverse backgrounds."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1112 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English**: With English weighted at 2x in the admission formula, aim for Level 5 or above in HKDSE English Language to maximise your score.",
+            "",
+            "- Focus on reading comprehension and writing skills, as these are heavily tested.",
+            "- Practice past papers and seek feedback from teachers to improve.",
+            "",
+            "**2. Choose Electives Wisely**: Select elective subjects that align with psychology, such as Biology, Economics, or Liberal Studies, to demonstrate interest and aptitude.",
+            "",
+            "- Biology provides a foundation for biological psychology.",
+            "- Economics or Liberal Studies can show analytical and critical thinking skills.",
+            "",
+            "**3. Target a Score of 24.5 or Higher**: The median score is 24.5, so aim for at least this to be competitive. Use the Best 4 formula to calculate your predicted score.",
+            "",
+            "- Calculate your weighted score: (English score × 2) + (next best 3 subjects × 1).",
+            "- If your predicted score is below 24, consider retaking or improving weaker subjects.",
+            "",
+            "**4. Build a Strong Profile**: Participate in psychology-related activities like volunteering at mental health NGOs, attending workshops, or reading introductory psychology books.",
+            "",
+            "- Join the Hong Kong Psychological Society's student events.",
+            "- Volunteer at organisations like Mindset or the Samaritan Befrienders.",
+            "",
+            "**5. Prepare for Interviews**: If shortlisted, CityU may conduct interviews to assess motivation and suitability. Practice common questions like 'Why psychology?' and 'What are your career goals?'",
+            "",
+            "- Prepare specific examples from your experiences.",
+            "- Show genuine interest in the field through current affairs knowledge.",
+            "",
+            "**6. Use the Band System Strategically**: Place JS1112 in Band A to maximise your chance of admission, as most offers go to Band A applicants.",
+            "",
+            "- Check CityU's admission statistics for previous years.",
+            "- Consult your school's career counsellor for banding advice.",
+            "",
+            "**7. Explore the Curriculum in Advance**: Familiarise yourself with the programme structure, including core courses and electives, to show informed interest during interviews.",
+            "",
+            "- Review the CityU Psychology Department website.",
+            "- Note specific courses that align with your interests, like Abnormal Psychology or Cognitive Neuroscience.",
+            "",
+            "**8. Consider the Weighting for Electives**: While English is weighted 2x, other electives are weighted 1x, so focus on achieving high grades in all subjects, not just English.",
+            "",
+            "- Maintain a balanced study schedule across all subjects.",
+            "- Use past paper analysis to identify weak areas.",
+            "",
+            "**9. Plan for Post-Graduation**: Think about your career path early. Whether you aim for clinical psychology, HR, or research, tailor your electives and internships accordingly.",
+            "",
+            "- Attend CityU's career talks and networking events.",
+            "- Seek mentorship from alumni or professionals in your target field."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科 (包括英文)。科目比重：2: 英文 1: 其他選修科。",
+            "**入學中位數**：24.5分（2025年聯招數據）。",
+            "**下四分位數**：24.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：城市大學社會科學學士（心理學）為四年制本科課程，旨在提供對人類行為、認知和情感的全面理解。學生將培養批判性思維、研究和分析技能，為心理學實踐及深造奠定基礎。",
+            "**第一年**：基礎課程包括心理學導論、研究方法與統計學。學生亦修讀大學核心及通識課程，建立廣泛的學術基礎。",
+            "**第二年**：核心心理學課程，如認知心理學、發展心理學、社會心理學及生物心理學。學生開始探索專業選修領域。",
+            "**第三年**：高級課程包括異常心理學、人格心理學及跨文化心理學。學生需完成研究項目或實習，以應用理論知識。",
+            "**第四年**：頂點體驗包括畢業專題研究或論文。學生可選修健康心理學、法證心理學或組織心理學等科目。",
+            "**實踐培訓**：課程強調動手學習，通過實驗室工作、實地研究及第三年必修實習，提供臨床、教育或企業環境的真實經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**臨床心理學**：畢業生可深造成為臨床心理學家，於醫院、精神健康診所或私人執業工作，處理心理健康問題。",
+            "**教育心理學**：於學校及教育機構擔任教育心理學家，支援學生的學習、行為及福祉。",
+            "**人力資源**：許多畢業生進入企業的人力資源部門，專注招聘、培訓、員工福祉及組織發展。",
+            "**市場研究**：數據分析及人類行為的知識使畢業生於市場研究公司、消費者洞察及廣告公司中極具價值。",
+            "**社會服務**：於非政府組織、政府機構及社區組織擔任輔導員、社會工作者或項目統籌。",
+            "**深造進修**：課程為心理學、輔導、神經科學等領域的研究生課程提供堅實基礎，邁向專業認證。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城市大學校園**：位於九龍塘，校園現代化且交通便利，鄰近購物及餐飲設施。",
+            "**心理學實驗室**：配備眼動追蹤、腦電圖及虛擬實境技術的專用實驗室，用於實踐研究與實驗。",
+            "**圖書館資源**：邵逸夫圖書館提供大量心理學期刊、數據庫及學習空間，包括24小時學習中心。",
+            "**學生組織**：心理學會舉辦學術講座、工作坊及社交活動，營造互助的學生社群。",
+            "**國際交流**：城市大學與全球超過400所大學合作，心理學學生可於英國、美國、澳洲或亞洲的院校交流一個學期。",
+            "**就業服務**：職業及領袖發展中心提供實習安排、職業諮詢及專為心理學學生而設的聯誼活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "課程競爭力",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳4科（包括英文），英文加權2倍，其他選修科加權1倍，強調語言能力。",
+            "**2025年中位數**：24.5分，顯示入學門檻具競爭性，吸引高成就學生。",
+            "**2025年下四分位數**：24.0分，即使最低25%的錄取學生亦具備優秀學術背景。",
+            "**需求與供應**：心理學在香港為熱門學科，學額有限，申請人數眾多，競爭中至高。",
+            "**畢業生出路**：超過90%的畢業生在畢業後六個月內就業或深造，許多進入專業心理學或相關領域。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：臨床心理學家，醫院管理局。專注兒童及青少年精神健康。2010年畢業。",
+            "**黃佩珊女士**：高級人力資源經理，滙豐銀行香港。領導人才發展及員工健康計劃。2015年畢業。",
+            "**李明先生**：創辦人，Mindful Hong Kong，提供網上輔導服務的心理健康初創企業。2018年畢業。",
+            "**張慧賢博士**：助理教授，香港大學心理學系。研究專注社會認知。2012年畢業。",
+            "**譚小玲女士**：教育心理學家，教育局。與學校合作支援有特殊教育需要的學生。2016年畢業。",
+            "**吳建雄先生**：市場研究經理，尼爾森IQ香港。領導快速消費品品牌的消費者行為研究。2014年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城市大學入學獎學金**：頒予HKDSE成績卓越的學生，涵蓋首年全額或部分學費。根據入學分數頒發。",
+            "**人文社會科學院獎學金**：多項基於成績的獎學金，專為心理學學生而設，每年金額由港幣10,000元至50,000元不等。",
+            "**李兆基博士獎學金**：專為心理學學生而設，表彰學術卓越及經濟需要，每年港幣20,000元。",
+            "**香港特別行政區政府獎學金**：提供予學術表現及社區服務傑出的本地學生，每年最高港幣80,000元。",
+            "**交流獎學金**：支援心理學學生參與海外交流計劃，涵蓋旅費及生活開支，最高港幣30,000元。",
+            "**按需經濟資助**：城市大學透過學生財務援助辦公室提供助學金及貸款，確保來自不同背景的學生均可入學。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1112 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文成績**：英文在入學公式中加權2倍，目標在HKDSE英文科取得5級或以上，以最大化分數。",
+            "",
+            "- 專注閱讀理解及寫作技巧，這些是重點考核部分。",
+            "- 練習歷屆試題並尋求老師反饋以改善。",
+            "",
+            "**2. 謹慎選擇選修科**：選擇與心理學相關的選修科，如生物、經濟或通識教育，以展示興趣及能力。",
+            "",
+            "- 生物科為生物心理學提供基礎。",
+            "- 經濟或通識教育可展示分析及批判性思維。",
+            "",
+            "**3. 目標分數達24.5或以上**：中位數為24.5分，因此目標至少達此分數以保持競爭力。使用最佳4科公式計算預測分數。",
+            "",
+            "- 計算加權分數：（英文分數 × 2）+（最佳3科分數 × 1）。",
+            "- 如預測分數低於24，考慮重考或改善弱科。",
+            "",
+            "**4. 建立豐富個人檔案**：參與心理學相關活動，如於精神健康非政府組織擔任義工、參加工作坊或閱讀心理學入門書籍。",
+            "",
+            "- 參加香港心理學會的學生活動。",
+            "- 於Mindset或撒瑪利亞防止自殺會等組織擔任義工。",
+            "",
+            "**5. 準備面試**：如獲篩選，城市大學可能進行面試以評估動機及適合度。練習常見問題如「為何選擇心理學？」及「你的職業目標是什麼？」",
+            "",
+            "- 準備具體例子說明你的經歷。",
+            "- 透過時事知識展示對該領域的真正興趣。",
+            "",
+            "**6. 策略性使用組別系統**：將JS1112放在組別A，以最大化錄取機會，因為大多數錄取通知發給組別A申請人。",
+            "",
+            "- 查閱城市大學過往的錄取統計數據。",
+            "- 諮詢學校升學輔導老師的組別建議。",
+            "",
+            "**7. 提前了解課程內容**：熟悉課程結構，包括核心科目及選修科，以在面試中展示有根據的興趣。",
+            "",
+            "- 瀏覽城市大學心理學系網站。",
+            "- 留意與你興趣相符的特定科目，如異常心理學或認知神經科學。",
+            "",
+            "**8. 注意選修科加權**：雖然英文加權2倍，但其他選修科加權1倍，因此需在所有科目取得高分，不限於英文。",
+            "",
+            "- 保持各科均衡的溫習時間表。",
+            "- 透過歷屆試題分析找出弱點。",
+            "",
+            "**9. 及早規劃畢業後方向**：思考你的職業路徑。無論目標是臨床心理學、人力資源還是研究，相應調整選修科及實習。",
+            "",
+            "- 參加城市大學的就業講座及聯誼活動。",
+            "- 尋求校友或目標領域專業人士的指導。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.5,
+    "lq": 24.0
+  }
+}

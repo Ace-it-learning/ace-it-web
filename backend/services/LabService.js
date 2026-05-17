@@ -1627,12 +1627,12 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
 
     const prompt = `You are a Senior HKEAA Examiner for Paper 3 (Listening and Integrated Skills).
     Task: Grade the student's submission for the mission: "${quest.title}".
-    
+
     ### MISSION CONTEXT:
     - WRITING TASK: "${quest.integrated_data?.writing_task?.instruction || 'General integrated task'}"
     - ROLE PROFILE: "${quest.integrated_data?.writing_task?.role_profile || 'Professional school/community coordinator writing to an official audience.'}"
     - TARGET DSE LEVEL: ${targetLevel}
-    
+
     ### SOURCE DATA:
     - DATA FILE (Reference): ${JSON.stringify(quest.integrated_data?.data_file || [])}
     - AUDIO TRANSCRIPT: ${quest.integrated_data?.audio_transcript || 'Audio transcript missing.'}
@@ -1642,9 +1642,16 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     ### MARKING KEY (MANDATORY CONTENT POINTS):
     ${JSON.stringify(quest.integrated_data?.marking_key || [])}
 
+    ### 📊 HKEAA OFFICIAL LEVEL DESCRIPTORS — INTEGRATED SKILLS:
+    **Level 5 (16–18 marks)**: All Data File instructions followed. Content complete, relevant, synthesised (not listed). Wide range of sentence structures. Highly accurate spelling/punctuation. Register/tone appropriate throughout. Organization wholly coherent.
+    **Level 4 (12–15 marks)**: Most instructions followed. Most content included. Range of structures, some complex. Errors don't affect clarity. Register/tone appropriate in familiar tasks. Organization coherent.
+    **Level 3 (8–11 marks)**: Some instructions followed. 1–2 key content points missing. Some fairly complex sentences. Basic vocabulary. Register/tone appropriate in straightforward tasks. Organization coherent in parts.
+    **Level 2 (4–7 marks)**: Some instructions followed in part. Significant omissions. Short/simple sentences only. Frequent errors. Some genre features used. Some paragraphing.
+    **Level 1 (0–3 marks)**: Minimal relevance. Largely missing content. Simple basic structures. Basic features, largely inappropriate.
+
     ### GRADING PROTOCOL:
     1. **Content (0-5)**:
-       - Scale linearly based on the provided Marking Key. 
+       - Scale linearly based on the provided Marking Key.
        - 100% points met = 5/5, 80%+ met = 4/5, 60%+ met = 3/5, etc.
        - Use "Positive Marking": Award points for semantic matches.
        - Precision Rule for bounded KPIs: if a key point includes qualifiers like "under", "below", "maximum", or "at most", the student must preserve that boundary language. Writing only the bare number (e.g. just "five minutes") is NOT full-credit at Level 5 standard.
@@ -1660,7 +1667,13 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
     3. **Organization (0-5)**: Logical flow and structure.
     4. **Appropriacy (0-3)**: Tone and register consistency.
        - Penalize sign-offs or tone that conflict with the required professional role profile.
-    
+
+    ### ⚖️ SCORING PENALTIES:
+    - **Relevance Penalty**: −0.5 marks (max −2.0) per irrelevant piece of info
+    - **Copied Chunks**: −1 to −2 marks for excessive copying without synthesis
+    - **Off-Topic**: Maximum 2 marks for Content if answer doesn't address task
+    - **Miscopying**: −1 Language for words clearly in Data File
+
     ### JSON OUTPUT SCHEMA (STRICT):
     - **CRITICAL**: Escape all double quotes (\\") and newlines (\\n) within strings.
     - **CRITICAL**: Return ONLY the JSON object. No preamble.
@@ -1683,7 +1696,7 @@ STRICT RULE: Do NOT use the same hooks, starting sentences, or specific scenario
       ],
       "exemplar5": string // Level 5 model answer only: ~150–220 words. No second exemplar (saves output tokens).
     }
-    
+
     Return ONLY the JSON response.`;
 
     const result = await GenerativeAIService.generateContent(prompt, {

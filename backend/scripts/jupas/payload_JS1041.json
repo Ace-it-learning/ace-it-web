@@ -1,0 +1,283 @@
+{
+  "programme": {
+    "code": "JS1041",
+    "nameEn": "Creative Media",
+    "nameZh": "創意媒體",
+    "name": "Creative Media",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 25.5,
+    "band_a": 25.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1041",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2: English 1: other elective subjects.",
+            "**Median Admission Score**: 25.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 25.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1041 Creative Media is a 4-year full-time programme offered by the School of Creative Media at City University of Hong Kong. It integrates theory and practice across digital media, film, animation, photography, and interactive arts.",
+            "**Two Streams**: Students choose between the 'Cinematic Arts' stream (focusing on film, video, and animation) and the 'Interactive Media' stream (focusing on game design, web media, and interactive installations).",
+            "**Year 1**: Foundation courses in media history, visual culture, digital production, and creative writing. Students also take core university requirements in English and general education.",
+            "**Year 2**: Specialised courses in chosen stream, including 'Digital Imaging', 'Sound Design', '3D Modelling', and 'Interactive Narrative'. Students begin portfolio development.",
+            "**Year 3**: Advanced studio practice, elective modules (e.g., 'Experimental Animation', 'Virtual Reality', 'Media Art and Social Practice'), and a collaborative project with industry partners.",
+            "**Year 4**: Capstone project (a major creative work or thesis), professional internship, and final portfolio exhibition. Graduates present their work in the annual 'Creative Media Showcase'."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Film and Television Industry**: Graduates work as directors, cinematographers, editors, and producers in Hong Kong's vibrant film sector, including at TVB, ViuTV, and independent studios.",
+            "**Digital Media and Advertising**: Roles such as creative director, motion graphics designer, and content strategist at agencies like Ogilvy, DDB, and local digital marketing firms.",
+            "**Game and Interactive Design**: Positions as game designer, UI/UX designer, and VR/AR developer at companies like Animoca Brands, King, and Tencent's Hong Kong studios.",
+            "**Arts and Cultural Institutions**: Careers in curatorial, exhibition design, and media art programming at venues like M+, Hong Kong Arts Centre, and Para Site.",
+            "**Freelance and Entrepreneurship**: Many alumni launch their own studios, production houses, or art collectives, leveraging the programme's strong network and incubation support.",
+            "**Further Study**: Graduates pursue MFA or MA degrees in film, digital media, or fine arts at top institutions such as RCA, Parsons, and NYU Tisch."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Run Run Shaw Creative Media Centre**: State-of-the-art building housing the School of Creative Media, featuring a 4K digital cinema, sound stages, animation labs, and a media library.",
+            "**Production Studios**: Fully equipped film and photography studios with professional lighting, green screens, and high-end cameras (RED, ARRI) available for student projects.",
+            "**Digital Labs**: Computer labs with industry-standard software (Adobe Creative Suite, Maya, Unity, Unreal Engine) and VR/AR development kits for hands-on learning.",
+            "**Exhibition Spaces**: The 'Creative Media Gallery' and 'MFA Gallery' host student and faculty exhibitions, screenings, and public events throughout the year.",
+            "**Student Organisations**: Active clubs like 'CityU Film Club', 'Animation Society', and 'Game Development Club' organise workshops, film festivals, and hackathons.",
+            "**Location**: The campus is located in Kowloon Tong, with easy access to Kowloon's cultural districts, art galleries, and the MTR network."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Admission Formula**: Best 5 subjects (including English) with subject weighting: English ×2, other elective subjects ×1.",
+            "**Median Score (2025)**: 25.5 (weighted), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 25.0 (weighted), meaning 25% of admitted students scored at or below this level.",
+            "**Overall Level**: High (★★★★☆). The programme attracts top creative talent from Hong Kong and internationally.",
+            "**Portfolio Requirement**: Shortlisted applicants must submit a creative portfolio and attend an interview, which heavily influences final admission decisions.",
+            "**Demand vs. Places**: The School of Creative Media receives over 1,000 applications annually for approximately 80-100 places in JS1041, making it one of the most competitive creative programmes in Hong Kong."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Wong Chun (黃進)**: Film director and screenwriter, known for 'Mad World' (2016) which won the Best New Director at the Hong Kong Film Awards. Graduate of the School of Creative Media.",
+            "**Jessey Tsang (曾翠珊)**: Award-winning film director and producer, known for 'The Last Hotel' and 'High Noon'. Her works have been screened at international film festivals. CityU Creative Media alumna.",
+            "**Cheng Ka-shing (鄭嘉欣)**: Visual artist and animator, whose works have been exhibited at M+ and the Hong Kong Arts Centre. She is known for experimental animation and digital installations.",
+            "**Lam Chiu-wing (林超榮)**: Media artist and curator, co-founder of the art collective 'The Cube'. His interactive installations have been shown at the Hong Kong Science Museum and overseas.",
+            "**Yan Ting (甄婷)**: Creative director at a major advertising agency in Hong Kong, leading campaigns for global brands. She credits the programme's interdisciplinary training for her career success."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., 5** in multiple subjects) with a value of up to HK$80,000 per year, renewable based on academic performance.",
+            "**School of Creative Media Scholarships**: Merit-based scholarships for outstanding creative portfolios, including the 'Creative Media Talent Scholarship' (HK$20,000–HK$50,000).",
+            "**HKSAR Government Scholarships**: Including the 'Reaching Out Award' (up to HK$100,000) for overseas exchange and the 'Talent Development Scholarship' for students with exceptional achievements.",
+            "**Need-Based Financial Aid**: CityU offers the 'CityU Bursary' and 'Student Financial Assistance' for students from low-income families, covering tuition and living expenses.",
+            "**Industry-Sponsored Awards**: Partnerships with companies like Adobe and Autodesk provide prizes and internship opportunities for top-performing students in specific competitions.",
+            "**Exchange and Internship Grants**: The 'Global Learning Fund' supports students undertaking semester-long exchanges or summer internships abroad, with grants of up to HK$30,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1041 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- English is weighted ×2, so aim for at least Level 5 or above in English Language. A Level 5* in English adds 2 points to your weighted score, significantly boosting your chances.",
+            "- For elective subjects, choose creative-related electives like Visual Arts, Design and Applied Technology, or Information and Communication Technology to align with the programme's focus.",
+            "",
+            "**2. Build a Strong Portfolio Early**",
+            "",
+            "- Start compiling your creative portfolio from Form 4. Include 8-12 diverse works: short films, animations, photography series, digital art, or game prototypes.",
+            "- Showcase your technical skills and creative thinking. Use platforms like Behance or a personal website to present your work professionally.",
+            "",
+            "**3. Target a Weighted Score of 26+**",
+            "",
+            "- With a median of 25.5, aim for a weighted score of 26 or higher to be competitive. Calculate your score: (English score ×2) + (best 4 other subjects ×1).",
+            "- For example, if you get English 5* (6 points), Maths 5 (5), Visual Arts 5* (6), Econ 4 (4), and Liberal Studies 4 (4), your weighted score = (6×2)+5+6+4+4 = 31.",
+            "",
+            "**4. Ace the Interview**",
+            "",
+            "- The interview is crucial. Prepare a 2-minute 'artist statement' explaining your creative influences and why you chose Creative Media.",
+            "- Bring a physical or digital portfolio to the interview. Be ready to discuss your creative process, challenges, and inspirations for each piece.",
+            "",
+            "**5. Excel in the Portfolio Submission**",
+            "",
+            "- The portfolio submission is a separate evaluation. Follow the guidelines strictly: submit up to 10 works, with descriptions and context.",
+            "- Include a 'process book' showing sketches, storyboards, or development stages to demonstrate your creative journey.",
+            "",
+            "**6. Leverage Summer Programmes**",
+            "",
+            "- Attend CityU's 'Creative Media Summer Institute' or similar workshops to gain hands-on experience and network with faculty and current students.",
+            "- These programmes also strengthen your portfolio and demonstrate genuine interest in the field.",
+            "",
+            "**7. Balance Academic and Creative Subjects**",
+            "",
+            "- While creative electives are valued, don't neglect core subjects like Maths and Liberal Studies. A strong overall DSE profile (e.g., 5 subjects at Level 4+) is essential.",
+            "- Use the 'Other Learning Experiences' (OLE) to document your creative activities, such as film club, art competitions, or community media projects.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the December deadline. Ensure you meet the minimum entrance requirements: Level 3 in English and Chinese, and Level 2 in Maths and Liberal Studies.",
+            "- Check the School of Creative Media's website for any updates on portfolio deadlines or interview formats.",
+            "",
+            "**9. Prepare a Backup Plan**",
+            "",
+            "- Consider related programmes like JS1042 (Creative Media - Animation) or JS1043 (Digital Media) as lower-band choices. These share similar curricula but may have slightly lower cut-offs.",
+            "- Also explore associate degree or higher diploma programmes in creative media at HKCC or other institutions as alternative pathways."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2: 英文 1: 其他選修科。",
+            "**入學中位數**：25.5分（2025年聯招數據）。",
+            "**下四分位數**：25.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1041 創意媒體是一個為期四年的全日制學士課程，由香港城市大學創意媒體學院開辦。課程融合數碼媒體、電影、動畫、攝影及互動藝術的理論與實踐。",
+            "**兩個專修**：學生可選擇「電影藝術」專修（專注電影、錄像及動畫）或「互動媒體」專修（專注遊戲設計、網絡媒體及互動裝置）。",
+            "**第一年**：基礎課程包括媒體歷史、視覺文化、數碼製作及創意寫作。學生亦需修讀大學核心英語及通識課程。",
+            "**第二年**：按所選專修修讀專業課程，包括「數碼影像」、「聲音設計」、「3D建模」及「互動敘事」。學生開始建立作品集。",
+            "**第三年**：進階工作室實踐、選修單元（例如「實驗動畫」、「虛擬現實」、「媒體藝術與社會實踐」），以及與業界夥伴合作的協作項目。",
+            "**第四年**：畢業專題（主要創意作品或論文）、專業實習及最終作品集展覽。畢業生在年度「創意媒體展」中展示作品。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**電影與電視行業**：畢業生擔任導演、攝影指導、剪接師及監製，活躍於香港電影業，包括TVB、ViuTV及獨立製作公司。",
+            "**數碼媒體與廣告**：在奧美、DDB等廣告公司及本地數碼營銷公司擔任創意總監、動態圖像設計師及內容策略師。",
+            "**遊戲與互動設計**：在Animoca Brands、King及騰訊香港工作室等公司擔任遊戲設計師、UI/UX設計師及VR/AR開發者。",
+            "**藝術與文化機構**：在M+、香港藝術中心及Para Site等場地從事策展、展覽設計及媒體藝術策劃工作。",
+            "**自由職業與創業**：許多校友創立自己的工作室、製作公司或藝術團體，受益於課程的強大網絡及孵化支援。",
+            "**深造進修**：畢業生前往皇家藝術學院、帕森斯設計學院及紐約大學Tisch藝術學院等頂尖院校攻讀電影、數碼媒體或純藝術碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**邵逸夫創意媒體中心**：創意媒體學院的先進大樓，設有4K數碼影院、錄音室、動畫實驗室及媒體圖書館。",
+            "**製作工作室**：設備齊全的電影及攝影工作室，配備專業燈光、綠幕及高端攝影機（RED、ARRI），供學生項目使用。",
+            "**數碼實驗室**：電腦實驗室配備業界標準軟件（Adobe Creative Suite、Maya、Unity、Unreal Engine）及VR/AR開發套件，進行實踐學習。",
+            "**展覽空間**：「創意媒體畫廊」及「碩士畫廊」全年舉辦學生及教職員展覽、放映會及公眾活動。",
+            "**學生組織**：活躍的學會如「城大電影學會」、「動畫學會」及「遊戲開發學會」舉辦工作坊、電影節及黑客松。",
+            "**地理位置**：校園位於九龍塘，交通便利，可輕鬆前往九龍的文化區、藝術畫廊及港鐵網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**入學計分**：最佳5科（包括英文），科目比重：英文×2，其他選修科×1。",
+            "**2025年中位數**：25.5分（加權後），顯示申請者競爭激烈。",
+            "**2025年下四分位數**：25.0分（加權後），表示25%的獲取錄學生分數在此或以下。",
+            "**整體程度**：高（★★★★☆）。該課程吸引香港及國際頂尖創意人才。",
+            "**作品集要求**：獲篩選的申請者需提交創意作品集並參加面試，這對最終取錄決定影響重大。",
+            "**需求與學額**：創意媒體學院每年收到超過1,000份申請，JS1041僅提供約80-100個學額，是香港競爭最激烈的創意課程之一。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃進 (Wong Chun)**：電影導演及編劇，憑《一念無明》（2016）獲得香港電影金像獎新晉導演獎。畢業於創意媒體學院。",
+            "**曾翠珊 (Jessey Tsang)**：獲獎電影導演及監製，作品包括《大藍湖》及《河上變村》，曾在國際電影節放映。城大創意媒體校友。",
+            "**鄭嘉欣 (Cheng Ka-shing)**：視覺藝術家及動畫師，作品曾在M+及香港藝術中心展出，以實驗動畫及數碼裝置聞名。",
+            "**林超榮 (Lam Chiu-wing)**：媒體藝術家及策展人，藝術團體「The Cube」聯合創辦人，其互動裝置曾在香港科學館及海外展出。",
+            "**甄婷 (Yan Ting)**：香港大型廣告公司創意總監，領導全球品牌廣告活動，歸功於課程的跨學科訓練。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**城大入學獎學金**：頒予DSE成績優異者（如多科5**），每年最高可達80,000港元，並根據學業成績續期。",
+            "**創意媒體學院獎學金**：基於創意作品集的優秀表現，包括「創意媒體才藝獎學金」（20,000–50,000港元）。",
+            "**香港特區政府獎學金**：包括「外展體驗獎」（高達100,000港元）供海外交流，以及「才藝發展獎學金」予有卓越成就的學生。",
+            "**需要為本財務資助**：城大提供「城大助學金」及「學生財務援助」予低收入家庭學生，涵蓋學費及生活費。",
+            "**業界贊助獎項**：與Adobe及Autodesk等公司的合作，為特定比賽中表現出色的學生提供獎品及實習機會。",
+            "**交流及實習資助**：「環球學習基金」支援學生參與學期交流或暑期海外實習，資助金額高達30,000港元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1041 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握計分比重**",
+            "",
+            "- 英文科比重×2，目標至少考獲第5級或以上。英文5*可為加權分數增加2分，大幅提升機會。",
+            "- 選修科方面，選擇與創意相關的科目如視覺藝術、設計與應用科技或資訊及通訊科技，配合課程重點。",
+            "",
+            "**2. 及早建立優秀作品集**",
+            "",
+            "- 從中四開始建立創意作品集，包含8-12件多元作品：短片、動畫、攝影系列、數碼藝術或遊戲原型。",
+            "- 展示技術能力及創意思維。使用Behance或個人網站專業地呈現作品。",
+            "",
+            "**3. 目標加權分數26分或以上**",
+            "",
+            "- 中位數為25.5分，目標加權分數達26分或以上以具競爭力。計算方法：（英文分數×2）+（最佳4科×1）。",
+            "- 例如：英文5*（6分）、數學5（5分）、視覺藝術5*（6分）、經濟4（4分）、通識4（4分），加權分數=(6×2)+5+6+4+4=31。",
+            "",
+            "**4. 面試表現出色**",
+            "",
+            "- 面試至關重要。準備2分鐘的「藝術家宣言」，解釋你的創意影響及選擇創意媒體的原因。",
+            "- 攜帶實體或數碼作品集參加面試，準備討論每件作品的創作過程、挑戰及靈感。",
+            "",
+            "**5. 作品集提交要出色**",
+            "",
+            "- 作品集提交是獨立評估。嚴格遵守指引：提交最多10件作品，附上描述及背景。",
+            "- 包括「過程手冊」，展示草圖、故事板或開發階段，以呈現創意歷程。",
+            "",
+            "**6. 善用暑期課程**",
+            "",
+            "- 參加城大「創意媒體暑期學院」或類似工作坊，獲取實踐經驗並與教授及現屆學生建立網絡。",
+            "- 這些課程亦能強化作品集，並展示對該領域的濃厚興趣。",
+            "",
+            "**7. 平衡學術與創意科目**",
+            "",
+            "- 創意選修科雖重要，但勿忽略數學及通識等核心科目。整體DSE成績優秀（如5科第4級或以上）至關重要。",
+            "- 利用「其他學習經歷」（OLE）記錄創意活動，如電影學會、藝術比賽或社區媒體項目。",
+            "",
+            "**8. 及早申請並核實要求**",
+            "",
+            "- 在12月截止日期前提交JUPAS申請。確保符合最低入學要求：英文及中文第3級，數學及通識第2級。",
+            "- 查閱創意媒體學院網站，了解作品集截止日期或面試形式的最新資訊。",
+            "",
+            "**9. 準備後備計劃**",
+            "",
+            "- 考慮相關課程如JS1042（創意媒體—動畫）或JS1043（數碼媒體）作為較低志願。這些課程課程結構相似，但收生分數可能稍低。",
+            "- 亦可探索香港專上學院或其他院校的創意媒體副學士或高級文憑課程，作為替代路徑。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 25.5,
+    "lq": 25.0
+  }
+}

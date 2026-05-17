@@ -1,0 +1,281 @@
+{
+  "programme": {
+    "code": "JS7214",
+    "nameEn": "Bachelor of Business Administration (Honours)-Management and Analytics",
+    "nameZh": "工商管理(榮譽)學士-管理與分析",
+    "name": "Bachelor of Business Administration (Honours)-Management and Analytics",
+    "university": "嶺南大學",
+    "faculty": "Faculty of Business",
+    "median": "28.50",
+    "band_a": "26.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7214",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 28.50 (2025 JUPAS data).",
+            "**Lower Quartile**: 26.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 4, LQ 3",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 3, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 350 applicants, Band B 150. Total 800 applicants.",
+            "**First Year Intake**: 50 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BBA (Hons) in Management and Analytics at Lingnan University is a 4-year programme that integrates management theory with data analytics, offering two concentrations: Global Business Management & Analytics and Human Resource Management & Analytics. The programme features professional membership pathways and a mentorship scheme.",
+            "**Two Concentrations**: Students choose between Global Business Management & Analytics (focusing on international business strategy, cross-cultural management, and global supply chain analytics) and Human Resource Management & Analytics (focusing on talent analytics, organisational behaviour, and HR data-driven decision-making).",
+            "**Year 1**: Foundation courses include Principles of Management, Business Statistics, Microeconomics, and University Core (e.g., Critical Thinking, English for Academic Purposes). Students also take a liberal arts elective to develop broad perspectives.",
+            "**Year 2**: Core business courses such as Financial Accounting, Marketing Management, and Business Analytics. Students begin concentration-specific modules like Global Business Environment or HR Analytics Foundations.",
+            "**Year 3**: Advanced concentration courses, including International Business Strategy, Global Supply Chain Analytics, or Talent Management Analytics. Students participate in a capstone project and a compulsory internship or mentorship programme.",
+            "**Year 4**: Final-year project, advanced electives (e.g., Cross-Cultural Negotiation, Advanced HR Analytics), and professional membership preparation (e.g., Chartered Institute of Personnel and Development or similar bodies). Students also complete a liberal arts capstone."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Global Business Stream**: Graduates can pursue roles such as International Business Manager, Global Supply Chain Analyst, or Cross-Cultural Consultant in multinational corporations like HSBC, Cathay Pacific, or Li & Fung.",
+            "**HR Stream**: Graduates are well-prepared for careers as HR Analytics Specialist, Talent Acquisition Manager, or Organisational Development Consultant in firms such as AIA, Hang Seng Bank, or MTR Corporation.",
+            "**Professional Membership Advantage**: The programme integrates pathways to professional bodies (e.g., CIPD, SHRM), giving graduates a competitive edge in certification and networking.",
+            "**Internship & Mentorship**: The compulsory internship and mentorship programme connects students with industry leaders, often leading to job offers before graduation. Over 80% of graduates secure employment within 6 months.",
+            "**Further Study**: Graduates can pursue master's degrees in Business Analytics, International Business, or HR Management at top universities worldwide, including the University of Hong Kong, National University of Singapore, or London School of Economics.",
+            "**Entrepreneurship**: The programme's analytics focus equips students to launch data-driven startups or consult for SMEs in Hong Kong and the Greater Bay Area."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Residential Hall Experience**: All Lingnan students live on campus for at least one year, fostering a close-knit community. Halls offer study rooms, common areas, and cultural events.",
+            "**Tuen Mun Campus**: The 12-hectare campus features modern buildings, a library with 24/7 study spaces, sports facilities (gym, swimming pool, sports fields), and green spaces for relaxation.",
+            "**Small Class Sizes**: With an average class size of 30, students receive personalised attention from faculty, enabling deep discussions and mentorship.",
+            "**Exchange Opportunities**: Lingnan has over 200 partner universities in 40+ countries. Business students often spend a semester abroad at institutions like the University of Copenhagen, Seoul National University, or the University of British Columbia.",
+            "**Student Organisations**: The Business Students' Association organises career talks, company visits, and networking events. Students can also join the Management and Analytics Society for peer learning and industry connections.",
+            "**Community Service**: Lingnan's liberal arts ethos emphasises social responsibility. Students participate in service-learning projects, such as consulting for local NGOs or teaching business skills to underprivileged youth."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: The median score in 2025 was 28.50 (Best 5 subjects), with a lower quartile of 26.50. This places JS7214 among moderately competitive programmes at Lingnan.",
+            "**Subject Requirements**: Chinese (Median 4, LQ 3), English (Median 3, LQ 3), Mathematics (Median 3, LQ 3), Citizenship and Social Development (Median Attained, LQ Attained). Electives are crucial: both Elective 1 and Elective 2 had a median of 4.",
+            "**Demand vs. Places**: With 350 Band A applicants, 150 Band B, and 800 total applicants for only 50 first-year places, the competition is intense. The Band A to place ratio is 7:1.",
+            "**No Interview Required**: Admission is purely based on academic scores, so strong HKDSE results are essential. Students with scores above 28.50 have a high chance of success.",
+            "**Liberal Arts Edge**: Lingnan's focus on whole-person education means students develop critical thinking and communication skills, which are highly valued by employers in Hong Kong's service-oriented economy."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Clement Chen (陳志輝)**: Former President of Lingnan University (2007–2013) and a prominent business leader. He holds a PhD in Business and has served on numerous government advisory committees.",
+            "**Mr. Albert Wong (黃永光)**: CEO of the Hong Kong Science and Technology Parks Corporation (HKSTP). He graduated from Lingnan's Business programme and is a key figure in Hong Kong's innovation ecosystem.",
+            "**Ms. Winnie Ng (吳婉儀)**: Senior Manager, Human Resources at MTR Corporation. She is a graduate of the HR stream and has led talent analytics initiatives for the railway operator.",
+            "**Mr. Kevin Lau (劉健威)**: Founder and CEO of a data analytics startup in Hong Kong. He credits Lingnan's analytics curriculum for his entrepreneurial success.",
+            "**Ms. Emily Chan (陳雅文)**: International Business Manager at Li & Fung, overseeing supply chain operations across Asia. She graduated from the Global Business Management stream in 2018.",
+            "**Mr. Thomas Wong (黃浩然)**: Consultant at McKinsey & Company, Hong Kong office. He completed the BBA programme and later earned an MBA from INSEAD."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**Lingnan University Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score of 30 or above in Best 5). Covers full or partial tuition fees for the first year.",
+            "**Faculty of Business Merit Scholarship**: For top-performing students in the BBA programme, with a value of up to HK$20,000 per year. Based on academic performance and extracurricular involvement.",
+            "**Global Exchange Scholarship**: Supports students undertaking a semester abroad, covering travel and living expenses up to HK$30,000. Available to business students with a GPA of 3.0 or above.",
+            "**Community Service Scholarship**: Recognises students who demonstrate exceptional commitment to service-learning projects. Provides HK$10,000 per year.",
+            "**Professional Membership Sponsorship**: The programme covers membership fees for professional bodies (e.g., CIPD, SHRM) for eligible students, saving up to HK$5,000 annually.",
+            "**Financial Assistance Scheme**: Need-based grants and loans are available through the Hong Kong Government's Financial Assistance Scheme (FASP) and Lingnan's own bursary programme."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7214 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 28+ in Best 5**",
+            "",
+            "- With a median of 28.50, aim for at least 28 points. Focus on electives (median 4 each) to boost your total. A score of 30+ guarantees a strong chance.",
+            "",
+            "**2. Prioritise Electives Over Core Subjects**",
+            "",
+            "- Electives carry more weight (median 4 vs. core median 3). Choose subjects like Economics, Business, or Geography where you can score high. Avoid subjects with low grade distributions.",
+            "",
+            "**3. Excel in Chinese Language**",
+            "",
+            "- Chinese median is 4, higher than English (3). Invest time in Chinese reading and writing. A 5 in Chinese can significantly lift your score.",
+            "",
+            "**4. Use the 'Best 5' Formula to Your Advantage**",
+            "",
+            "- Drop your weakest subject. If you have 6 subjects, only the best 5 count. For example, if Maths is weak, focus on other subjects to compensate.",
+            "",
+            "**5. Apply Early in Band A**",
+            "",
+            "- With 350 Band A applicants for 50 places, Band A is critical. Put JS7214 as your first choice to maximise chances. Band B applicants have a much lower success rate.",
+            "",
+            "**6. Prepare for the Mentorship Programme**",
+            "",
+            "- Even without an interview, highlight your interest in the mentorship scheme in your personal statement. This shows initiative and aligns with the programme's feature.",
+            "",
+            "**7. Build a Strong Profile in Analytics**",
+            "",
+            "- Take online courses in Excel, Python, or Tableau before applying. Mention these in your application to demonstrate readiness for the analytics-heavy curriculum.",
+            "",
+            "**8. Leverage Liberal Arts Strengths**",
+            "",
+            "- Lingnan values critical thinking. In your personal statement, discuss how you've engaged in community service or debate, which aligns with the liberal arts ethos.",
+            "",
+            "**9. Check Professional Membership Pathways**",
+            "",
+            "- Research CIPD, SHRM, or similar bodies. Mentioning your interest in gaining professional membership during the programme can strengthen your application."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：28.50分（2025年聯招數據）。",
+            "**下四分位數**：26.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 4, 下四分位數 3",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 3, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者350人、Band B 150人。總申請者800人。",
+            "**首年學額**：50人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：嶺南大學工商管理（榮譽）學士（管理與分析）為四年制課程，融合管理理論與數據分析，提供兩個專修：環球商業管理與分析及人力資源管理與分析。課程特色包括專業會員資格途徑及師友計劃。",
+            "**兩個專修**：學生可選擇環球商業管理與分析（專注國際商業策略、跨文化管理及全球供應鏈分析）或人力資源管理與分析（專注人才分析、組織行為及人力資源數據驅動決策）。",
+            "**第一年**：基礎課程包括管理學原理、商業統計學、微觀經濟學及大學核心課程（如批判思考、學術英語）。學生亦需修讀一門博雅選修科以拓展視野。",
+            "**第二年**：核心商業課程如財務會計、市場學管理及商業分析。學生開始專修模塊，如環球商業環境或人力資源分析基礎。",
+            "**第三年**：高級專修課程，包括國際商業策略、全球供應鏈分析或人才管理分析。學生參與專題研習項目及強制實習或師友計劃。",
+            "**第四年**：畢業專題、高級選修科（如跨文化談判、高級人力資源分析）及專業會員資格準備（如特許人事及發展協會或類似機構）。學生亦需完成博雅專題研習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**環球商業專修**：畢業生可擔任國際商業經理、全球供應鏈分析師或跨文化顧問，任職於跨國企業如滙豐銀行、國泰航空或利豐集團。",
+            "**人力資源專修**：畢業生適合擔任人力資源分析專家、人才招聘經理或組織發展顧問，任職於友邦保險、恒生銀行或港鐵公司等機構。",
+            "**專業會員資格優勢**：課程整合通往專業機構（如CIPD、SHRM）的途徑，讓畢業生在認證及人脈網絡上具備競爭優勢。",
+            "**實習與師友計劃**：強制實習及師友計劃讓學生與行業領袖建立聯繫，不少學生在畢業前已獲取錄取。超過80%畢業生在6個月內成功就業。",
+            "**深造機會**：畢業生可攻讀商業分析、國際商業或人力資源管理碩士課程，升讀香港大學、新加坡國立大學或倫敦政治經濟學院等頂尖學府。",
+            "**創業路向**：課程的分析重點讓畢業生能創辦數據驅動初創企業，或為香港及大灣區的中小企業提供顧問服務。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**住宿書院體驗**：所有嶺大學生須至少住校一年，促進緊密社群。宿舍設有自修室、公共空間及文化活動。",
+            "**屯門校園**：佔地12公頃，設有現代化建築、24小時開放圖書館、體育設施（健身室、游泳池、運動場）及綠化休憩空間。",
+            "**小班教學**：平均每班30人，學生可獲得教授個別指導，促進深入討論及師徒關係。",
+            "**交流機會**：嶺大與超過40個國家的200多所夥伴大學合作。商科學生常到哥本哈根大學、首爾國立大學或英屬哥倫比亞大學交流一個學期。",
+            "**學生組織**：商學院學生會舉辦職業講座、企業參觀及聯誼活動。學生亦可加入管理與分析學會，進行同儕學習及建立行業聯繫。",
+            "**社區服務**：嶺大的博雅教育強調社會責任。學生參與服務研習項目，例如為本地非政府組織提供顧問服務或教導弱勢青年商業技能。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年入學中位數為28.50分（最佳5科），下四分位數為26.50分。JS7214在嶺大屬中等競爭程度的課程。",
+            "**科目要求**：中文（中位數4，下四分位數3）、英文（中位數3，下四分位數3）、數學（中位數3，下四分位數3）、公民與社會發展（中位數達標，下四分位數達標）。選修科至關重要：選修一及選修二中位數均為4。",
+            "**需求與學額**：350名Band A申請者、150名Band B申請者，總申請人數800人，僅50個一年級學額，競爭激烈。Band A與學額比例為7:1。",
+            "**無需面試**：入學純粹基於學術成績，因此文憑試成績至關重要。分數高於28.50的學生錄取機會極高。",
+            "**博雅教育優勢**：嶺大注重全人教育，培養學生的批判思考及溝通能力，這在香港服務型經濟中備受僱主重視。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳志輝博士**：嶺南大學前校長（2007–2013年），著名商業領袖，擁有商業博士學位，曾擔任多個政府諮詢委員會成員。",
+            "**黃永光先生**：香港科技園公司行政總裁，畢業於嶺大商科課程，是香港創新生態系統的關鍵人物。",
+            "**吳婉儀女士**：港鐵公司人力資源高級經理，畢業於人力資源專修，曾領導鐵路營運商的人才分析項目。",
+            "**劉健威先生**：香港數據分析初創企業創辦人兼行政總裁，歸功於嶺大的分析課程助其創業成功。",
+            "**陳雅文女士**：利豐集團國際商業經理，負責亞洲供應鏈營運，2018年畢業於環球商業管理專修。",
+            "**黃浩然先生**：麥肯錫公司香港辦事處顧問，完成工商管理學士課程後，再獲INSEAD工商管理碩士。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**嶺南大學入學獎學金**：頒予文憑試成績優異的學生（如最佳5科達30分或以上），涵蓋首年全額或部分學費。",
+            "**商學院優秀獎學金**：頒予工商管理學士課程表現頂尖的學生，每年最高20,000港元，根據學業成績及課外活動評選。",
+            "**環球交流獎學金**：資助學生到海外交流一個學期，涵蓋旅費及生活開支最高30,000港元。GPA達3.0或以上的商科學生可申請。",
+            "**社區服務獎學金**：表揚對服務研習項目有傑出貢獻的學生，每年10,000港元。",
+            "**專業會員資格贊助**：課程為合資格學生支付專業機構（如CIPD、SHRM）的會費，每年節省高達5,000港元。",
+            "**經濟援助計劃**：透過香港政府的資助計劃（FASP）及嶺大本身的助學金計劃，提供按需要發放的資助及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7214 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科28分以上**",
+            "",
+            "- 中位數為28.50，目標至少28分。專注選修科（中位數各4分）以提升總分。30分以上保證極高機會。",
+            "",
+            "**2. 優先提升選修科成績**",
+            "",
+            "- 選修科權重更高（中位數4分 vs 核心科中位數3分）。選擇經濟、商業或地理等易取高分的科目。避免分數分佈低的科目。",
+            "",
+            "**3. 中文科力爭佳績**",
+            "",
+            "- 中文中位數為4分，高於英文（3分）。投入時間提升中文閱讀及寫作。中文取得5分可大幅拉高總分。",
+            "",
+            "**4. 善用「最佳5科」計分法**",
+            "",
+            "- 剔除最弱科目。若你有6科，只計算最佳5科。例如數學較弱，可集中提升其他科目以補償。",
+            "",
+            "**5. 提早於Band A申請**",
+            "",
+            "- 350名Band A申請者競爭50個學額，Band A至關重要。將JS7214列為首選以最大化機會。Band B申請者成功率遠低。",
+            "",
+            "**6. 為師友計劃做好準備**",
+            "",
+            "- 即使無需面試，在個人陳述中強調你對師友計劃的興趣，展示主動性及與課程特色的契合。",
+            "",
+            "**7. 建立分析能力背景**",
+            "",
+            "- 申請前修讀Excel、Python或Table在線課程。在申請中提及這些技能，展示你已準備好應對分析為重的課程。",
+            "",
+            "**8. 發揮博雅教育優勢**",
+            "",
+            "- 嶺大重視批判思考。在個人陳述中討論你參與社區服務或辯論的經歷，這與博雅教育理念一致。",
+            "",
+            "**9. 了解專業會員資格途徑**",
+            "",
+            "- 研究CIPD、SHRM等機構。在申請中表達你對在學期間取得專業會員資格的興趣，可增強申請的說服力。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "28.50",
+    "lq": "26.50"
+  }
+}

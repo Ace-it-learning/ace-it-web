@@ -410,7 +410,7 @@ const ChatInterface = ({ onOpenQuest }) => {
         isFocusMode, setIsFocusMode,
         equipment, syncEquipment
     } = useAvatar();
-    const { user, loginWithGoogle, logout, verifyEmail, reloadUser } = useAuth(); // Destructure all needed methods
+    const { user, profile, loginWithGoogle, logout, verifyEmail, reloadUser } = useAuth(); // Destructure all needed methods
     const { t, toggleLanguage, language } = useLanguage();
 
     console.log("[ChatInterface] Render triggered. User:", user?.email, "Verified:", user?.emailVerified);
@@ -497,10 +497,19 @@ const ChatInterface = ({ onOpenQuest }) => {
     }, [user, activeAgentId]);
 
 
+    // Always derive dreamSubject from first dream program (JUPAS programmes are source of truth)
+    const resolvedDreamSubject = (() => {
+        if (profile?.dreamPrograms && Array.isArray(profile.dreamPrograms) && profile.dreamPrograms.length > 0) {
+            const first = profile.dreamPrograms[0];
+            return first.name || first.title || first.label || first.programmeName || '';
+        }
+        return '';
+    })();
+
     // Dynamic Chips Logic based on User State
     const suggestionChips = (() => {
         if (activeAgentId === 'ace') {
-            const subject = user?.dreamSubject || "夢想學科";
+            const subject = resolvedDreamSubject || "夢想學科";
             return [
                 { label: "精算我的 Best 5 目標", value: "我想要精算我嘅 Best 5 成績估計同目標差距", emoji: "📊" },
                 { label: `解構 ${subject} 加權比重`, value: `我想知 ${subject} 嘅收生加權比重 (Weighting) 同 Career Path`, emoji: "🎓" },
@@ -531,6 +540,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [isAtLeft, setIsAtLeft] = useState(true);
     const [isAtRight, setIsAtRight] = useState(false);
     const chatContainerRef = useRef(null);
+    const sectionRef = useRef(null);
     const lastUserMessageRef = useRef(null);
     const isHistoryScrolledRef = useRef(false);
 
@@ -559,7 +569,6 @@ const ChatInterface = ({ onOpenQuest }) => {
             return () => el.removeEventListener('scroll', updateScrollState);
         }
     }, [dynamicChips, messages.length]);
-    const sectionRef = useRef(null);
     const [showChips, setShowChips] = useState(false);
     const [isUploaderOpen, setIsUploaderOpen] = useState(false);
     const [mockExams, setMockExams] = useState([]);
@@ -832,7 +841,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                         const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
 
                         if (activeAgentId === 'ace') {
-                            const subject = user?.dreamSubject;
+                            const subject = resolvedDreamSubject;
                             initialContent = subject
                                 ? `你好 ${userName}！我係 ${agentName}。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
                                 : `你好 ${userName}！我係 ${agentName}。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
@@ -1504,11 +1513,22 @@ const ChatInterface = ({ onOpenQuest }) => {
                 clearChipsCacheOnBackend();
                 setShowChips(true);
                 // Trigger Smart Greeting (Local Translation)
+                const agentName = activeAgent?.name || "Ace Sir";
+                const userName = user?.displayName || user?.email?.split('@')[0] || "小戰士";
+                let greetingContent;
+                if (activeAgentId === 'ace') {
+                    const subject = resolvedDreamSubject;
+                    greetingContent = subject
+                        ? `你好 ${userName}！我係 ${agentName}。聽講你目標係入 **${subject}**？同我講你嘅計劃，我幫你制定 DSE 奪星策略，確保你穩入大學！`
+                        : `你好 ${userName}！我係 ${agentName}。想入邊間大學？同我講你嘅目標，我幫你制定全方位奪星藍圖，助你進軍大學、稱霸 DSE！`;
+                } else if (['english', 'math'].includes(activeAgentId) && !hasDiagnostic) {
+                    greetingContent = t('chat.greeting_new', { agentName, userName });
+                } else {
+                    greetingContent = t('chat.greeting_return', { agentName, userName });
+                }
                 setMessages([{
                     role: 'assistant',
-                    content: (activeAgentId === 'english' && !hasDiagnostic)
-                        ? t('chat.greeting_new')
-                        : t('chat.greeting_return').replace('{{agentName}}', activeAgent.name),
+                    content: greetingContent,
                     agentId: activeAgentId
                 }]);
             } else {
@@ -1557,11 +1577,10 @@ const ChatInterface = ({ onOpenQuest }) => {
         <section
             ref={sectionRef}
             className={cn(
-                "flex flex-col rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-500",
-                !isFocusMode && "glass-container",
+                "flex flex-col relative transition-all duration-500",
                 isFocusMode
                     ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden bg-white dark:bg-background-dark border-0"
-                    : "lg:col-span-9 h-[80vh] min-h-[600px] w-full"
+                    : "w-full h-full"
             )}>
             {/* Verification Overlay Removed */}
             {/* Verify-Then-Grade Modal */}

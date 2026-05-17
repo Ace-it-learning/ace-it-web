@@ -1,0 +1,319 @@
+{
+  "programme": {
+    "code": "JS2910",
+    "nameEn": "Bachelor of Science (Hons) in Business Computing and Data Analytics",
+    "nameZh": "商業計算及數據分析理學士(榮譽)",
+    "name": "Bachelor of Science (Hons) in Business Computing and Data Analytics",
+    "university": "香港浸會大學",
+    "faculty": "Faculty of Science",
+    "median": "20.46",
+    "band_a": "19.00",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2910",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 20.46 (2025 JUPAS data).",
+            "**Lower Quartile**: 19.00 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 4",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 4, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 5, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "- **Elective 3**: Median 4, LQ 4",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 280 applicants, Band B 120. Total 650 applicants.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview — JS2910 Business Computing and Data Analytics",
+          "content": [
+            "**Programme Structure**: JS2910 is a 4-year full-time programme combining business computing, data analytics, and information systems. Students develop skills in programming, database management, statistical analysis, and business intelligence to solve real-world business problems.",
+            "**Year 1 Foundation**: Core courses include Introduction to Programming, Calculus, Linear Algebra, Business Statistics, and General Education. Students build a strong quantitative and computational foundation.",
+            "**Year 2 Core Development**: Courses such as Data Structures and Algorithms, Database Systems, Object-Oriented Programming, Financial Accounting, and Marketing Principles. Students begin integrating computing with business contexts.",
+            "**Year 3 Specialisation**: Advanced modules like Data Mining and Machine Learning, Big Data Analytics, Business Intelligence, Web and Mobile Application Development, and Operations Research. Students choose electives to deepen expertise in data analytics or business computing.",
+            "**Year 4 Capstone and Electives**: A final-year project (capstone) applying data analytics to a real business problem, plus advanced electives such as Cloud Computing, Artificial Intelligence for Business, and Digital Transformation. Students also complete a compulsory internship or industry attachment.",
+            "**Interdisciplinary Approach**: The curriculum emphasises hands-on learning through labs, case studies, and group projects. Students gain exposure to both technical skills (Python, R, SQL, Tableau) and business acumen (finance, marketing, supply chain)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — JS2910 Business Computing and Data Analytics",
+          "content": [
+            "**Data Analyst**: Graduates work as data analysts in banks, retail firms, and tech companies, using statistical tools and visualisation software to interpret data and support decision-making. Median starting salary around HKD 20,000–25,000 per month.",
+            "**Business Intelligence Specialist**: Roles in business intelligence involve designing dashboards, reporting systems, and data warehouses. Companies like HSBC, PCCW, and AIA regularly recruit HKBU graduates.",
+            "**IT Consultant**: Graduates join consulting firms (e.g., Accenture, Deloitte) to advise clients on digital transformation, system integration, and data strategy. Strong demand in Hong Kong's financial and logistics sectors.",
+            "**Software Developer**: With programming skills in Java, Python, and web technologies, graduates pursue careers as software developers or full-stack engineers in startups and multinational corporations.",
+            "**Data Engineer**: Roles focus on building and maintaining data pipelines, ETL processes, and cloud infrastructure. HKBU's curriculum includes hands-on training in AWS and Google Cloud platforms.",
+            "**Further Study**: Many graduates pursue master's degrees in data science, business analytics, or information systems at top universities worldwide, including HKU, CUHK, and overseas institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities — HKBU Kowloon Tong",
+          "content": [
+            "**Shaw Campus**: The main campus is located in Kowloon Tong, featuring modern buildings, green spaces, and a vibrant student atmosphere. The campus is well-connected by MTR (Kowloon Tong station) and bus routes.",
+            "**Computing Labs and Data Analytics Hub**: Dedicated labs equipped with high-performance computers, software like SAS, SPSS, and Tableau, and access to cloud computing resources for student projects and research.",
+            "**Library and Learning Commons**: The HKBU Library offers extensive digital resources, study rooms, and collaborative spaces. The Learning Commons provides 24/7 access for group work and self-study.",
+            "**Sports and Recreation**: Facilities include a sports centre, swimming pool, gym, basketball courts, and a running track. Students can join over 100 clubs and societies, including the Business Computing Society.",
+            "**Exchange and Global Opportunities**: HKBU has over 300 partner universities worldwide. JS2910 students can apply for semester-long exchanges in the UK, US, Canada, Australia, or Mainland China.",
+            "**Student Support Services**: The university provides career counselling, academic advising, mental health support, and a dedicated Data Analytics Student Association for peer networking and mentorship."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis — JS2910 Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: Median 20.46 (Best 5 subjects) and Lower Quartile 19.00. This places JS2910 in the moderately competitive range among HKBU science programmes.",
+            "**Subject Requirements**: Strong performance in Mathematics (Median 4) and Elective 1 (Median 5) is critical. Chinese and English at Level 3 are typical. Citizenship and Social Development must be Attained.",
+            "**Demand vs Places**: In 2025, 280 Band A applicants and 120 Band B applicants competed for 40 first-year places. This gives a Band A-to-place ratio of 7:1, indicating strong interest.",
+            "**Interview Policy**: No interview is required. Admission is solely based on HKDSE results, making the score formula the key determinant.",
+            "**Trends**: The programme has seen stable demand over recent years. Applicants with strong quantitative electives (e.g., M1/M2, Physics, Economics) have a distinct advantage."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — HKBU Business Computing and Data Analytics",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Data Science Lead, Hong Kong Monetary Authority (HKMA). Graduated with a BSc in Computing and Data Analytics, later earned a PhD in data mining. Known for developing fraud detection models for the banking sector.",
+            "**Ms. Li Ka-yan (李嘉欣)**: Senior Data Analyst, HSBC Hong Kong. 2018 graduate. Specialises in customer analytics and risk modelling, leading a team of 5 analysts.",
+            "**Mr. Wong Tsz-fung (黃子峰)**: Co-founder and CTO, DataSpark Hong Kong (a data analytics startup). 2020 graduate. Raised HKD 5 million in seed funding for AI-driven retail analytics.",
+            "**Ms. Cheng Pui-shan (鄭佩珊)**: Business Intelligence Manager, PCCW Solutions. 2016 graduate. Manages a team of 10 engineers delivering BI solutions to telecom and government clients.",
+            "**Dr. Ho Man-kit (何文傑)**: Assistant Professor, Department of Computer Science, City University of Hong Kong. 2012 graduate. Research focuses on big data systems and cloud computing, with over 30 publications.",
+            "**Mr. Lau Chun-ho (劉俊豪)**: Data Engineer, Google Hong Kong (Cloud division). 2021 graduate. Works on data pipeline optimisation and machine learning infrastructure."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid — HKBU JS2910",
+          "content": [
+            "**HKBU Entrance Scholarship**: Awarded to top HKDSE achievers. Students with Best 5 scores of 25 or above may receive full or half tuition fee waivers (up to HKD 42,100 per year).",
+            "**Faculty of Science Merit Scholarship**: For JS2910 students with outstanding academic performance (GPA 3.5 or above). Provides HKD 10,000–20,000 per year.",
+            "**Dr. Li Ka-shing Scholarship**: Open to students with financial need and strong academic records. Covers full tuition and living expenses for up to 4 years.",
+            "**HKBU Sports and Talent Scholarship**: For students with exceptional achievements in sports, arts, or community service. Amount varies from HKD 5,000 to HKD 30,000.",
+            "**Exchange Scholarship**: Supports JS2910 students participating in overseas exchange programmes. Up to HKD 20,000 per semester for travel and accommodation.",
+            "**Industry-Sponsored Awards**: Companies like HSBC, AIA, and Microsoft offer project-based scholarships and prizes for data analytics competitions. Winners receive cash awards and internship opportunities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2910 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Elective 1**",
+            "",
+            "- Mathematics has a median of 4 — aim for Level 5 or above to boost your Best 5 score significantly.",
+            "- Elective 1 (Median 5) is the most heavily weighted subject. Choose a quantitative elective like M1, M2, Physics, or Economics.",
+            "- Use past HKDSE papers and timed practice to achieve Level 5* in your strongest elective.",
+            "",
+            "**2. Target a Best 5 Score of 21+**",
+            "",
+            "- The median is 20.46, but a score of 21 or higher gives you a strong safety margin.",
+            "- Calculate your predicted score: (Chinese + English + Maths + CSD + Elective 1 + Elective 2 + Elective 3) but only Best 5 count.",
+            "- For example: Chinese 4, English 4, Maths 5, CSD Attained (counts as 2), Elective 1 5*, Elective 2 4 = 4+4+5+2+7+4 = 26 (Best 5 = 26).",
+            "",
+            "**3. Excel in Citizenship and Social Development**",
+            "",
+            "- CSD must be Attained — a Fail will disqualify you. Treat it seriously.",
+            "- Focus on key concepts: 'One Country, Two Systems', Basic Law, and national development.",
+            "- Use HKBU's sample CSD papers and attend school revision classes.",
+            "",
+            "**4. Build a Strong Portfolio Before Applying**",
+            "",
+            "- Although no interview is required, a portfolio of data projects (e.g., Python, Excel, Tableau) can strengthen your application.",
+            "- Participate in competitions like the Hong Kong Data Science Challenge or HKBU's own analytics hackathon.",
+            "- Include any coding bootcamps, online courses (Coursera, edX), or part-time work in data entry or IT support.",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "- Elective 2 and Elective 3 both have median 4 — aim for Level 5 in at least one.",
+            "- Recommended electives: Information and Communication Technology (ICT), Business, Accounting and Financial Studies (BAFS), or Economics.",
+            "- Avoid electives with low scaling (e.g., Visual Arts, Music) unless you are confident of Level 5*.",
+            "",
+            "**6. Use Band A Placement Wisely**",
+            "",
+            "- With 280 Band A applicants for 40 places, Band A is essential. Put JS2910 as your first or second Band A choice.",
+            "- Band B has only 120 applicants but very few offers — do not rely on Band B.",
+            "- Check HKBU's admission score calculator on their website to simulate your chances.",
+            "",
+            "**7. Prepare for the Capstone Project Early**",
+            "",
+            "- The final-year capstone is a major component. Start thinking about a business problem you want to solve (e.g., retail churn prediction, financial risk analysis).",
+            "- Learn tools like Python (pandas, scikit-learn), R, SQL, and Tableau in Year 1–2.",
+            "- Form a study group with classmates to share resources and practice coding.",
+            "",
+            "**8. Leverage HKBU's Exchange and Internship Programmes**",
+            "",
+            "- Apply for a semester exchange in Year 3 to gain international exposure — partner universities include University of Toronto, University of Manchester, and National University of Singapore.",
+            "- Secure a summer internship after Year 2 at companies like HSBC, AIA, or PCCW. HKBU's Career Centre helps with placements.",
+            "- Internships count towards your degree and boost your CV significantly.",
+            "",
+            "**9. Stay Updated on Industry Trends**",
+            "",
+            "- Follow data analytics blogs (e.g., Towards Data Science, KDnuggets) and attend HKBU's industry talks.",
+            "- Join the HKBU Data Analytics Student Association for networking and workshops.",
+            "- Consider earning certifications like Google Data Analytics Professional Certificate or AWS Cloud Practitioner before graduation."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：20.46分（2025年聯招數據）。",
+            "**下四分位數**：19.00分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 4",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 5, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "- **選修科3**：中位數 4, 下四分位數 4",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者280人、Band B 120人。總申請者650人。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽 — JS2910 商業計算及數據分析理學士",
+          "content": [
+            "**課程結構**：JS2910 為四年全日制課程，結合商業計算、數據分析及資訊系統。學生將學習程式設計、數據庫管理、統計分析及商業智能，以解決實際商業問題。",
+            "**第一年基礎**：核心科目包括程式設計入門、微積分、線性代數、商業統計及通識教育。學生建立堅實的量化及計算基礎。",
+            "**第二年核心發展**：課程包括數據結構與算法、數據庫系統、物件導向程式設計、財務會計及市場學原理。學生開始將計算與商業情境結合。",
+            "**第三年專業化**：高階模組如數據挖掘與機器學習、大數據分析、商業智能、網頁及流動應用開發、運籌學。學生選修以深化數據分析或商業計算專長。",
+            "**第四年頂點項目與選修**：頂點項目（capstone）應用數據分析於真實商業問題，加上高階選修如雲端運算、商業人工智能及數碼轉型。學生亦須完成強制實習或行業體驗。",
+            "**跨學科方法**：課程強調動手學習，透過實驗室、個案研究及小組項目。學生獲得技術技能（Python、R、SQL、Tableau）及商業知識（金融、市場學、供應鏈）的雙重訓練。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS2910 商業計算及數據分析理學士",
+          "content": [
+            "**數據分析師**：畢業生於銀行、零售公司及科技企業擔任數據分析師，運用統計工具及可視化軟件解讀數據並支援決策。起薪中位數約每月港幣 20,000 至 25,000 元。",
+            "**商業智能專員**：商業智能角色涉及設計儀表板、報告系統及數據倉庫。滙豐、電訊盈科及友邦保險等公司經常招聘浸大畢業生。",
+            "**IT 顧問**：畢業生加入顧問公司（如埃森哲、德勤），就數碼轉型、系統整合及數據策略提供建議。香港金融及物流行業需求強勁。",
+            "**軟件開發人員**：憑藉 Java、Python 及網頁技術的程式設計技能，畢業生於初創企業及跨國公司擔任軟件開發人員或全端工程師。",
+            "**數據工程師**：專注於建立及維護數據管道、ETL 流程及雲端基礎設施。浸大課程包括 AWS 及 Google Cloud 平台的實戰訓練。",
+            "**深造進修**：許多畢業生於全球頂尖大學（包括港大、中大及海外院校）攻讀數據科學、商業分析或資訊系統碩士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施 — 香港浸會大學九龍塘校園",
+          "content": [
+            "**善衡校園**：主校園位於九龍塘，擁有現代化建築、綠化空間及充滿活力的學生氛圍。校園交通便利，鄰近港鐵九龍塘站及巴士路線。",
+            "**電腦實驗室及數據分析中心**：配備高性能電腦、SAS、SPSS 及 Tableau 等軟件，並提供雲端運算資源供學生項目及研究使用。",
+            "**圖書館及學習共享空間**：浸大圖書館提供豐富的電子資源、研習室及協作空間。學習共享空間 24 小時開放，適合小組討論及自修。",
+            "**體育及康樂設施**：設施包括體育中心、游泳池、健身室、籃球場及跑道。學生可加入超過 100 個學會及社團，包括商業計算學會。",
+            "**交流及環球機會**：浸大與全球超過 300 所夥伴大學合作。JS2910 學生可申請前往英國、美國、加拿大、澳洲或中國內地進行一學期交流。",
+            "**學生支援服務**：大學提供就業輔導、學術諮詢、心理健康支援，以及專屬的數據分析學生協會，促進同儕網絡及指導。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析 — JS2910 入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：中位數 20.46（最佳五科）及下四分位數 19.00。這使 JS2910 在浸大理學課程中屬於中等競爭水平。",
+            "**科目要求**：數學（中位數 4）及選修科一（中位數 5）的表現至關重要。中文及英文需達第 3 級。公民與社會發展科必須達標。",
+            "**需求與學額**：2025 年，280 名 Band A 申請者及 120 名 Band B 申請者競爭 40 個一年級學額。Band A 與學額比例為 7:1，反映需求強勁。",
+            "**面試政策**：無需面試。錄取完全基於文憑試成績，因此分數公式是關鍵決定因素。",
+            "**趨勢**：該課程近年需求穩定。具備量化選修科（如 M1/M2、物理、經濟）的申請者具有明顯優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — 浸大商業計算及數據分析",
+          "content": [
+            "**陳偉強博士**：香港金融管理局數據科學主管。畢業於計算及數據分析學士，後獲數據挖掘博士學位。以開發銀行業欺詐檢測模型聞名。",
+            "**李嘉欣女士**：滙豐銀行高級數據分析師。2018 年畢業。專注於客戶分析及風險建模，領導 5 人分析團隊。",
+            "**黃子峰先生**：數據火花香港（數據分析初創企業）聯合創辦人及技術總監。2020 年畢業。為人工智能驅動的零售分析籌集 500 萬港元種子資金。",
+            "**鄭佩珊女士**：電訊盈科方案商業智能經理。2016 年畢業。管理 10 人工程團隊，為電訊及政府客戶提供商業智能解決方案。",
+            "**何文傑博士**：香港城市大學電腦科學系助理教授。2012 年畢業。研究專注於大數據系統及雲端運算，發表逾 30 篇論文。",
+            "**劉俊豪先生**：Google 香港（雲端部門）數據工程師。2021 年畢業。負責數據管道優化及機器學習基礎設施。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助 — 浸大 JS2910",
+          "content": [
+            "**浸大入學獎學金**：頒予文憑試成績優異者。最佳五科達 25 分或以上可獲全額或半額學費減免（每年最高港幣 42,100 元）。",
+            "**理學院優秀學生獎學金**：頒予學業成績優異（GPA 3.5 或以上）的 JS2910 學生。每年港幣 10,000 至 20,000 元。",
+            "**李嘉誠博士獎學金**：開放予有經濟需要及學業成績優異的學生。涵蓋全額學費及生活費，最多四年。",
+            "**浸大體育及才藝獎學金**：頒予在體育、藝術或社區服務有傑出成就的學生。金額由港幣 5,000 至 30,000 元不等。",
+            "**交流獎學金**：支援 JS2910 學生參與海外交流計劃。每學期最高港幣 20,000 元，用於交通及住宿。",
+            "**行業贊助獎項**：滙豐、友邦保險及微軟等公司提供項目式獎學金及數據分析比賽獎項。得獎者獲得現金獎勵及實習機會。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2910 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學及選修科一**",
+            "",
+            "- 數學中位數為 4 — 目標達第 5 級或以上，以顯著提升最佳五科分數。",
+            "- 選修科一（中位數 5）是權重最高的科目。選擇量化選修科如 M1、M2、物理或經濟。",
+            "- 使用歷屆文憑試試題及限時練習，在您最強的選修科取得第 5* 級。",
+            "",
+            "**2. 目標最佳五科 21 分或以上**",
+            "",
+            "- 中位數為 20.46，但 21 分或以上提供較強的安全邊際。",
+            "- 計算預測分數：（中文 + 英文 + 數學 + 公民與社會發展 + 選修一 + 選修二 + 選修三），但只計最佳五科。",
+            "- 例如：中文 4、英文 4、數學 5、公民與社會發展達標（計 2 分）、選修一 5*、選修二 4 = 4+4+5+2+7+4 = 26（最佳五科 = 26）。",
+            "",
+            "**3. 在公民與社會發展科表現出色**",
+            "",
+            "- 公民與社會發展科必須達標 — 不及格將被取消資格。認真對待。",
+            "- 聚焦關鍵概念：「一國兩制」、「基本法」及國家發展。",
+            "- 使用浸大的樣本試卷及參加學校溫習班。",
+            "",
+            "**4. 申請前建立強勁的作品集**",
+            "",
+            "- 雖然無需面試，但數據項目作品集（如 Python、Excel、Tableau）可增強申請。",
+            "- 參加比賽如香港數據科學挑戰賽或浸大自己的分析黑客松。",
+            "- 包括任何編程訓練營、網上課程（Coursera、edX）或數據輸入/IT 支援的兼職工作。",
+            "",
+            "**5. 策略性地選擇選修科**",
+            "",
+            "- 選修科二及選修科三中位數均為 4 — 目標至少一科達第 5 級。",
+            "- 推薦選修科：資訊及通訊科技、企業會計與財務概論或經濟。",
+            "- 避免低分數轉換的選修科（如視覺藝術、音樂），除非有信心取得第 5* 級。",
+            "",
+            "**6. 善用 Band A 選擇**",
+            "",
+            "- 280 名 Band A 申請者競爭 40 個學額，Band A 至關重要。將 JS2910 列為 Band A 第一或第二選擇。",
+            "- Band B 僅有 120 名申請者，但錄取機會極低 — 不要依賴 Band B。",
+            "- 查閱浸大網站上的入學分數計算器，模擬您的機會。",
+            "",
+            "**7. 提早準備頂點項目**",
+            "",
+            "- 最後一年的頂點項目是重要組成部分。開始思考您想解決的商業問題（例如零售客戶流失預測、金融風險分析）。",
+            "- 在第一至二年學習 Python（pandas、scikit-learn）、R、SQL 及 Tableau 等工具。",
+            "- 與同學組成學習小組，分享資源及練習編程。",
+            "",
+            "**8. 善用浸大的交流及實習計劃**",
+            "",
+            "- 在第三年申請一學期交流以獲得國際視野 — 夥伴大學包括多倫多大學、曼徹斯特大學及新加坡國立大學。",
+            "- 在第二年暑假於滙豐、友邦保險或電訊盈科等公司獲得暑期實習。浸大就業中心協助配對。",
+            "- 實習計入學分並顯著提升履歷。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "- 關注數據分析博客（如 Towards Data Science、KDnuggets）及參加浸大的行業講座。",
+            "- 加入浸大數據分析學生協會，拓展人脈及參加工作坊。",
+            "- 考慮在畢業前取得 Google 數據分析專業證書或 AWS 雲端從業人員認證。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "20.46",
+    "lq": "19.00"
+  }
+}

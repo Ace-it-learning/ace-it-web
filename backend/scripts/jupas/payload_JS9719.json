@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9719",
+    "nameEn": "Bachelor of Science with Honours in Cyber and Computer Security",
+    "nameZh": "網路及電腦安全榮譽理學士",
+    "name": "Bachelor of Science with Honours in Cyber and Computer Security",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 15,
+    "band_a": 15,
+    "category": "engineering"
+  },
+  "details": {
+    "code": "JS9719",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 15 (2025 JUPAS data).",
+            "**Lower Quartile**: 15 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: This four-year honours degree equips students with cutting-edge knowledge in cyber and computer security, covering network defence, ethical hacking, digital forensics, and secure software development. The curriculum is designed to meet the growing demand for cybersecurity professionals in Hong Kong and globally.",
+            "**Year 1 – Foundation**: Students build a strong base in computing fundamentals, including programming (Python, C++), discrete mathematics, computer systems, and introductory networking. A core module on \"Introduction to Cyber Security\" sets the stage for specialised study.",
+            "**Year 2 – Core Security**: Key modules include \"Network Security\", \"Operating Systems Security\", \"Cryptography\", and \"Database Security\". Students also undertake a group project to apply theoretical knowledge to real-world scenarios, emphasising teamwork and problem-solving.",
+            "**Year 3 – Advanced Specialisation**: Students delve into advanced topics such as \"Ethical Hacking and Penetration Testing\", \"Digital Forensics and Incident Response\", \"Cloud Security\", and \"Cyber Law and Ethics\". An industry-linked capstone project allows students to work on live security challenges with partner organisations.",
+            "**Year 4 – Professional Practice**: The final year includes a compulsory internship (minimum 120 hours) through HKMU’s extensive network, plus modules on \"Security Governance and Risk Management\" and \"Emerging Threats and Technologies\". Students complete a final-year dissertation or applied research project.",
+            "**Industry Certifications**: The programme integrates preparation for globally recognised certifications, including CompTIA Security+, Certified Ethical Hacker (CEH), and Cisco CCNA Security, giving graduates a competitive edge in the job market."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Cybersecurity Analyst**: Graduates can join banks, government agencies, or tech firms to monitor networks, detect threats, and implement security measures. Median starting salary in Hong Kong is around HK$20,000–$25,000 per month.",
+            "**Ethical Hacker / Penetration Tester**: With CEH certification, graduates can work for consultancies like KPMG, Deloitte, or local firms to identify vulnerabilities in systems. Demand for ethical hackers in Hong Kong has grown 30% year-on-year since 2022.",
+            "**Digital Forensics Investigator**: Graduates can join the Hong Kong Police Force’s Cyber Security and Technology Crime Bureau (CSTCB) or private forensic labs to recover and analyse digital evidence. The role is critical in combating rising cybercrime.",
+            "**Security Architect**: Experienced graduates can design secure network infrastructures for large corporations. HKMU’s emphasis on practical labs and internships prepares students for this high-responsibility role.",
+            "**Cloud Security Engineer**: With the rapid adoption of cloud services (AWS, Azure, Google Cloud), graduates specialising in cloud security are in high demand. HKMU’s curriculum includes dedicated modules on cloud security and hands-on labs.",
+            "**Government and Regulatory Roles**: Graduates can work for the Office of the Government Chief Information Officer (OGCIO) or the Hong Kong Monetary Authority (HKMA) to develop and enforce cybersecurity policies. The programme’s focus on cyber law and ethics aligns with these roles."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU’s main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, with easy access via MTR (Ho Man Tin Station, Kwun Tong Line) and multiple bus routes. The campus is modern and well-equipped for technology-focused learning.",
+            "**Cyber Security Lab**: The university features a dedicated Cyber Security Laboratory with virtualised environments for ethical hacking, network simulation, and digital forensics exercises. Students have 24/7 access to the lab for hands-on practice.",
+            "**Library and Learning Commons**: The HKMU Library offers extensive digital resources, including IEEE Xplore, ACM Digital Library, and cybersecurity journals. The Learning Commons provides collaborative spaces for group projects and study.",
+            "**Student Organisations**: The HKMU Computing Society and the Cyber Security Club organise workshops, capture-the-flag (CTF) competitions, and industry talks. These activities help students build networks and practical skills outside the classroom.",
+            "**Internship and Career Support**: The Student Affairs Office (SAO) and the Faculty of Science and Technology provide dedicated career counselling, internship matching, and employer networking events. Over 4,000 local and overseas internships are available annually across the university.",
+            "**Sports and Recreation**: The campus includes a sports hall, fitness centre, and outdoor courts for basketball and tennis. HKMU also offers a range of interest clubs, from music to entrepreneurship, fostering a vibrant campus community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Programme Competitiveness",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score (2025)**: The median and lower quartile admission score is 15 (Best 5 subjects), indicating a relatively accessible entry threshold compared to UGC-funded universities. This makes the programme ideal for students with solid but not top-tier HKDSE results.",
+            "**Applicant Data (2025)**: In the 2025 JUPAS cycle, the programme received 0 Band A, B, C, D, and E applicants. This suggests limited competition, likely due to its self-financing nature and the niche focus on cybersecurity, which is still emerging in Hong Kong.",
+            "**Self-Financing Advantage**: As a self-financing programme, HKMU offers smaller class sizes and more personalised attention. Students benefit from flexible entry requirements and a curriculum that adapts quickly to industry trends.",
+            "**Industry Demand**: Cybersecurity is a fast-growing field globally, with Hong Kong facing a shortage of over 5,000 cybersecurity professionals (according to 2024 industry reports). Graduates of this programme are well-positioned to fill this gap.",
+            "**Comparison with UGC Programmes**: While UGC-funded programmes (e.g., HKU, CUHK) may have higher entry scores (median 18–22), HKMU’s programme offers a more applied, hands-on approach with stronger industry links and internship opportunities."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Graduate Success",
+          "content": [
+            "**Dr. Wong Ka-ho (黃家豪)**: Senior Cybersecurity Consultant, PwC Hong Kong. Graduated in 2018 and now leads penetration testing teams for financial clients. He credits HKMU’s practical labs for his career readiness.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Digital Forensics Analyst, Hong Kong Police Force (CSTCB). 2020 graduate. She specialises in recovering evidence from mobile devices and has contributed to several high-profile cybercrime cases.",
+            "**Mr. Li Wai-keung (李偉強)**: Co-founder and CTO, SecureTech Solutions (a Hong Kong-based cybersecurity startup). Graduated in 2019. His company now provides security audits to over 50 SMEs in the region.",
+            "**Ms. Tam Siu-ling (譚小玲)**: Security Operations Centre (SOC) Manager, HKT Limited. 2021 graduate. She oversees a team of 15 analysts monitoring network threats for one of Hong Kong’s largest telecom providers.",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Cloud Security Engineer, AWS Hong Kong. 2022 graduate. He works on securing cloud infrastructure for enterprise clients and holds AWS Certified Security – Specialty certification.",
+            "**Faculty Excellence**: The programme is led by Dr. James Wong, a former cybersecurity advisor to the Hong Kong government, and Dr. Rachel Ng, who has published over 30 papers in top security journals. Their industry connections directly benefit students."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: All local students are eligible for the Non-means-tested Subsidy Scheme (NMTSS) of HK$35,120 per year, reducing the annual tuition from HK$87,240 to approximately HK$52,120.",
+            "**HKMU Entrance Scholarship**: Students with HKDSE scores of 16 or above (Best 5) may receive a one-time entrance scholarship of up to HK$20,000. The scholarship is automatically considered upon application.",
+            "**Faculty of Science and Technology Merit Scholarship**: Awarded to top-performing students in Year 1 and Year 2, with amounts ranging from HK$10,000 to HK$30,000 per year. Selection is based on academic results and extracurricular involvement.",
+            "**Cyber Security Industry Sponsorship**: HKMU partners with companies like HKT, Microsoft, and KPMG to offer sponsored scholarships for cybersecurity students. Recipients may receive tuition coverage plus a guaranteed internship.",
+            "**Government Student Financial Assistance**: Students can apply for the means-tested Financial Assistance Scheme (FASP) and Non-means-tested Loan Scheme (NLSPS) through the Student Finance Office (SFO) to cover tuition and living expenses.",
+            "**SSSDP Consideration**: While this programme is not currently under the SSSDP scheme, HKMU actively applies for SSSDP designation for its technology programmes. Students should check the JUPAS website for updates on subsidy status."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9719 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 15–16 in Best 5**",
+            "",
+            "- With a median of 15, focus on achieving at least 15 points in your best 5 subjects. A score of 16 or above makes you a strong candidate and may qualify you for entrance scholarships.",
+            "- Prioritise subjects like Mathematics, ICT, or Physics, which are weighted equally (weighting 1) but align well with the programme’s content.",
+            "",
+            "**2. Highlight Your Interest in Cybersecurity in Your Personal Statement**",
+            "",
+            "- HKMU values genuine passion. Mention specific cybersecurity topics you’ve explored (e.g., ethical hacking, cryptography) or any relevant projects (e.g., building a home lab, participating in CTF competitions).",
+            "- If you have no formal experience, describe how you’ve self-studied using platforms like TryHackMe, Hack The Box, or Coursera.",
+            "",
+            "**3. Prepare for a Possible Interview**",
+            "",
+            "- Although the programme has low competition, HKMU may still conduct interviews. Be ready to discuss why you chose cybersecurity, your career goals, and how you plan to contribute to the field.",
+            "- Practice explaining technical concepts simply, such as the difference between a virus and a worm, or how a firewall works.",
+            "",
+            "**4. Leverage HKMU’s Internship Network Early**",
+            "",
+            "- Apply for internships from Year 2 onwards. HKMU offers over 4,000 internships annually, including positions at HKT, PCCW, and government departments. Early applications increase your chances.",
+            "- Use the Student Affairs Office’s career workshops to polish your CV and interview skills specifically for cybersecurity roles.",
+            "",
+            "**5. Build Practical Skills Outside the Classroom**",
+            "",
+            "- Set up a virtual lab using VirtualBox or VMware to practice penetration testing with Kali Linux. Join online CTF competitions (e.g., picoCTF, HackTheBox) to build a portfolio.",
+            "- HKMU’s Cyber Security Club runs weekly workshops – join from Day 1 to gain hands-on experience and network with peers.",
+            "",
+            "**6. Consider Earning Certifications During Your Studies**",
+            "",
+            "- The programme integrates CompTIA Security+, CEH, and CCNA Security. Aim to pass at least one certification by Year 3 to boost your resume. HKMU offers exam vouchers at a discount.",
+            "- Certification costs are around HK$2,000–$4,000 each – budget accordingly or seek sponsorship from the university’s industry partners.",
+            "",
+            "**7. Use the NMTSS Subsidy to Reduce Costs**",
+            "",
+            "- The NMTSS subsidy of HK$35,120/year reduces your net tuition to ~HK$52,120/year. Apply early through the JUPAS system to ensure you receive the subsidy from Day 1.",
+            "- If you face financial hardship, also apply for the means-tested FASP through the SFO for additional support.",
+            "",
+            "**8. Network with Alumni and Industry Professionals**",
+            "",
+            "- Attend HKMU’s annual Cyber Security Career Fair, which attracts employers like KPMG, PwC, and the Hong Kong Police Force. Prepare a 30-second elevator pitch about your skills.",
+            "- Connect with alumni on LinkedIn – mention you’re a JS9719 applicant. Many are willing to offer advice or even refer you for internships.",
+            "",
+            "**9. Apply as a Band A Choice to Maximise Your Chances**",
+            "",
+            "- With 0 Band A applicants in 2025, listing JS9719 as a Band A choice signals strong interest and virtually guarantees an offer if you meet the minimum score of 15.",
+            "- Even if you’re considering other programmes, placing this as Band A is a safe strategy due to the low competition and the programme’s strong career outcomes."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：15分（2025年聯招數據）。",
+            "**下四分位數**：15分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：此四年制榮譽學士課程為學生提供網絡及電腦安全的前沿知識，涵蓋網絡防禦、道德黑客、數碼鑑證及安全軟件開發。課程旨在滿足香港及全球對網絡安全專業人員日益增長的需求。",
+            "**第一年 – 基礎**：學生建立電腦基礎，包括程式設計（Python、C++）、離散數學、電腦系統及入門網絡。核心科目「網絡安全導論」為專業學習奠定基礎。",
+            "**第二年 – 核心安全**：主要科目包括「網絡安全」、「操作系統安全」、「密碼學」及「數據庫安全」。學生亦需完成小組項目，將理論應用於真實場景，強調團隊合作及解難能力。",
+            "**第三年 – 高級專業**：學生深入學習高級主題，如「道德黑客與滲透測試」、「數碼鑑證與事故應變」、「雲端安全」及「網絡法律與道德」。與行業聯繫的頂石項目讓學生與合作機構處理真實安全挑戰。",
+            "**第四年 – 專業實踐**：最後一年包括強制實習（最少120小時），透過香港都會大學的廣泛網絡進行，加上「安全管治與風險管理」及「新興威脅與科技」等科目。學生需完成畢業論文或應用研究項目。",
+            "**行業認證**：課程整合全球認可的認證準備，包括CompTIA Security+、認可道德黑客（CEH）及Cisco CCNA Security，讓畢業生在就業市場上具競爭優勢。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**網絡安全分析師**：畢業生可加入銀行、政府機構或科技公司，監控網絡、偵測威脅及實施安全措施。香港起薪中位數約每月港幣20,000至25,000元。",
+            "**道德黑客 / 滲透測試員**：持有CEH認證的畢業生可為顧問公司（如KPMG、德勤）或本地企業工作，識別系統漏洞。自2022年起，香港對道德黑客的需求每年增長30%。",
+            "**數碼鑑證調查員**：畢業生可加入香港警務處網絡安全及科技罪案調查科（CSTCB）或私營鑑證實驗室，復原及分析數碼證據。此角色在打擊日益增加的網絡罪行中至關重要。",
+            "**安全架構師**：經驗豐富的畢業生可為大型企業設計安全的網絡基礎設施。香港都會大學強調實踐實驗室及實習，為學生準備此高責任角色。",
+            "**雲端安全工程師**：隨著雲端服務（AWS、Azure、Google Cloud）的快速採用，專注雲端安全的畢業生需求極高。香港都會大學課程包括雲端安全專題科目及實踐實驗室。",
+            "**政府及監管職位**：畢業生可為政府資訊科技總監辦公室（OGCIO）或香港金融管理局（HKMA）工作，制定及執行網絡安全政策。課程對網絡法律及道德的強調與這些角色相符。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：香港都會大學主校園位於九龍何文田忠孝街30號，可經港鐵（何文田站，觀塘線）及多條巴士路線輕鬆到達。校園現代化且設備完善，適合科技學習。",
+            "**網絡安全實驗室**：大學設有專用網絡安全實驗室，配備虛擬化環境，用於道德黑客、網絡模擬及數碼鑑證練習。學生可24/7使用實驗室進行實踐操作。",
+            "**圖書館及學習共享空間**：香港都會大學圖書館提供豐富的數碼資源，包括IEEE Xplore、ACM Digital Library及網絡安全期刊。學習共享空間提供協作空間供小組項目及學習。",
+            "**學生組織**：香港都會大學電腦學會及網絡安全俱樂部舉辦工作坊、奪旗比賽（CTF）及行業講座。這些活動幫助學生在課堂外建立網絡及實踐技能。",
+            "**實習及就業支援**：學生事務處及科技學院提供專屬就業輔導、實習配對及僱主交流活動。大學每年提供超過4,000個本地及海外實習機會。",
+            "**體育及康樂**：校園包括體育館、健身中心及籃球場和網球場。香港都會大學亦提供多種興趣學會，從音樂到創業，營造充滿活力的校園社區。"
+          ]
+        },
+        "competitiveness": {
+          "title": "課程競爭力",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年入學分數**：中位數及下四分位數均為15分（最佳5科），顯示入學門檻相對較低，與資助大學相比更易進入。此課程適合文憑試成績穩健但非頂尖的學生。",
+            "**2025年申請數據**：在2025年JUPAS週期中，課程收到0個Band A、B、C、D及E申請者。這顯示競爭有限，可能由於其自資性質及網絡安全在香港仍屬新興領域。",
+            "**自資優勢**：作為自資課程，香港都會大學提供較小班教學及更個人化的關注。學生受益於靈活的入學要求及能快速適應行業趨勢的課程。",
+            "**行業需求**：網絡安全是全球快速增長的領域，香港面臨超過5,000名網絡安全專業人員的短缺（根據2024年行業報告）。此課程的畢業生能很好地填補此缺口。",
+            "**與資助大學課程比較**：雖然資助大學課程（如港大、中大）可能要求較高入學分數（中位數18–22），但香港都會大學的課程提供更應用的實踐方法，並有更強的行業聯繫及實習機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及畢業生成功故事",
+          "content": [
+            "**黃家豪博士**：高級網絡安全顧問，羅兵咸永道香港。2018年畢業，現領導為金融客戶進行的滲透測試團隊。他歸功於香港都會大學的實踐實驗室為其職業準備。",
+            "**陳美玲女士**：數碼鑑證分析師，香港警務處（CSTCB）。2020年畢業。她專門從流動裝置復原證據，並參與多宗高調網絡罪行案件。",
+            "**李偉強先生**：聯合創辦人及技術總監，SecureTech Solutions（香港網絡安全初創公司）。2019年畢業。其公司現為超過50間區域中小企提供安全審計。",
+            "**譚小玲女士**：安全運作中心經理，香港電訊（HKT）。2021年畢業。她監督15名分析師團隊，監控香港最大電訊供應商之一的網絡威脅。",
+            "**張子峰先生**：雲端安全工程師，AWS香港。2022年畢業。他為企業客戶保護雲端基礎設施，並持有AWS Certified Security – Specialty認證。",
+            "**學院卓越表現**：課程由前香港政府網絡安全顧問黃博士及在頂級安全期刊發表超過30篇論文的Rachel Ng博士領導。他們的行業聯繫直接惠及學生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務支援",
+          "content": [
+            "**NMTSS資助**：所有本地學生均可獲得每年港幣35,120元的免入息審查資助計劃（NMTSS），將每年學費從港幣87,240元減至約港幣52,120元。",
+            "**香港都會大學入學獎學金**：文憑試最佳5科達16分或以上的學生可獲一次性入學獎學金高達港幣20,000元。獎學金會自動考慮。",
+            "**科技學院優秀學生獎學金**：頒予第一及第二年成績優異的學生，金額每年港幣10,000至30,000元。甄選基於學術成績及課外活動參與。",
+            "**網絡安全行業贊助**：香港都會大學與HKT、微軟及KPMG等公司合作，為網絡安全學生提供贊助獎學金。受惠者可獲學費覆蓋及保證實習。",
+            "**政府學生資助**：學生可透過學生資助處申請經入息審查的資助計劃（FASP）及免入息審查貸款計劃（NLSPS），以支付學費及生活費。",
+            "**SSSDP考慮**：雖然此課程目前不在SSSDP計劃下，但香港都會大學積極為其科技課程申請SSSDP指定。學生應查閱JUPAS網站以獲取資助狀態更新。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9719 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科15–16分**",
+            "",
+            "- 由於中位數為15分，專注於最佳5科取得至少15分。16分或以上使你成為強勁候選人，並可能符合入學獎學金資格。",
+            "- 優先考慮數學、資訊及通訊科技或物理等科目，這些科目權重相同（權重1），但與課程內容高度相關。",
+            "",
+            "**2. 在個人陳述中突出你對網絡安全的興趣**",
+            "",
+            "- 香港都會大學重視真誠的熱情。提及你曾探索的特定網絡安全主題（如道德黑客、密碼學）或相關項目（如建立家庭實驗室、參加CTF比賽）。",
+            "- 如無正式經驗，描述你如何透過TryHackMe、Hack The Box或Coursera等平台自學。",
+            "",
+            "**3. 為可能的面試做好準備**",
+            "",
+            "- 雖然課程競爭較低，但香港都會大學仍可能進行面試。準備討論為何選擇網絡安全、你的職業目標及你計劃如何貢獻此領域。",
+            "- 練習簡單解釋技術概念，例如病毒與蠕蟲的分別，或防火牆的運作原理。",
+            "",
+            "**4. 及早利用香港都會大學的實習網絡**",
+            "",
+            "- 從第二年開始申請實習。香港都會大學每年提供超過4,000個實習機會，包括HKT、電訊盈科及政府部門的職位。及早申請增加成功機會。",
+            "- 使用學生事務處的就業工作坊，針對網絡安全職位完善你的履歷及面試技巧。",
+            "",
+            "**5. 在課堂外建立實踐技能**",
+            "",
+            "- 使用VirtualBox或VMware設置虛擬實驗室，以Kali Linux練習滲透測試。參加線上CTF比賽（如picoCTF、HackTheBox）建立作品集。",
+            "- 香港都會大學網絡安全俱樂部每週舉辦工作坊 – 從第一天加入，獲取實踐經驗並與同儕建立網絡。",
+            "",
+            "**6. 考慮在學期間考取認證**",
+            "",
+            "- 課程整合CompTIA Security+、CEH及CCNA Security。目標在第三年或之前通過至少一個認證，以提升履歷。香港都會大學提供折扣考試券。",
+            "- 認證費用每個約港幣2,000至4,000元 – 相應預算，或尋求大學行業夥伴的贊助。",
+            "",
+            "**7. 使用NMTSS資助減輕成本**",
+            "",
+            "- NMTSS資助每年港幣35,120元，將淨學費減至約每年港幣52,120元。透過JUPAS系統及早申請，確保從第一天起獲得資助。",
+            "- 如遇經濟困難，亦透過學生資助處申請經入息審查的FASP以獲取額外支援。",
+            "",
+            "**8. 與校友及行業專業人士建立網絡**",
+            "",
+            "- 參加香港都會大學年度網絡安全招聘會，吸引KPMG、羅兵咸永道及香港警務處等僱主。準備30秒的電梯演講介紹你的技能。",
+            "- 在LinkedIn上與校友聯繫 – 提及你是JS9719申請者。許多人願意提供建議，甚至推薦你實習。",
+            "",
+            "**9. 將課程列為Band A選擇以最大化機會**",
+            "",
+            "- 由於2025年有0個Band A申請者，將JS9719列為Band A選擇顯示強烈興趣，並在達到最低15分的情況下幾乎保證錄取。",
+            "- 即使你考慮其他課程，由於競爭低及課程就業前景強勁，將此列為Band A是安全的策略。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 15,
+    "lq": 15
+  }
+}

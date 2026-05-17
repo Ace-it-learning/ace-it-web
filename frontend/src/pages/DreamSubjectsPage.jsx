@@ -6,6 +6,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { getJupasProgrammes, getJupasProgrammeDetails } from '../services/jupasService';
+import { getProgrammeCategory } from '../constants/jupasPrograms';
 import ProgrammeSearchPanel from '../components/dream-subjects/ProgrammeSearchPanel';
 import DreamListPanel from '../components/dream-subjects/DreamListPanel';
 
@@ -62,7 +63,7 @@ const DreamSubjectsPage = () => {
             dragHint: 'Drag to reorder',
             targetScore: 'Target',
             gapStatus: (gap) => gap <= 0 ? 'Reachable' : `${gap} pts gap`,
-            sourceHint: 'Source: Official JUPAS pages (2024/25 Academic Year)',
+            sourceHint: 'Source: Official JUPAS data (2026/27 Academic Year)',
             cancel: 'Cancel',
             description: 'Set your Top 20 dream programs, Ace Sir will track the gap to your target',
             standardHint: "Using standard scoring (1-7)",
@@ -104,7 +105,7 @@ const DreamSubjectsPage = () => {
             dragHint: '拖動調整優先次序',
             targetScore: '目標',
             gapStatus: (gap) => gap <= 0 ? '穩陣' : `差 ${gap} 分`,
-            sourceHint: '數據來源：各大學官方 JUPAS 頁面（2024/25 學年）',
+            sourceHint: '數據來源：各大學官方 JUPAS 資料（2026/27 學年）',
             cancel: '取消',
             description: '設定你嘅 Top 20 心儀課程，Ace Sir 會幫你追蹤同目標嘅距離',
             standardHint: "正在使用標準計分機制 (1-7)",
@@ -121,7 +122,12 @@ const DreamSubjectsPage = () => {
             setProgramsLoading(true);
             try {
                 const programmes = await getJupasProgrammes();
-                setJupasPrograms(programmes);
+                // Enrich each programme with category from our mapping
+                const enrichedProgrammes = programmes.map(p => ({
+                    ...p,
+                    category: getProgrammeCategory(p.code, p.faculty, p.nameEn || p.name)
+                }));
+                setJupasPrograms(enrichedProgrammes);
             } catch (err) {
                 console.warn('[DreamSubjects] Failed to fetch programmes:', err);
             }

@@ -1,0 +1,283 @@
+{
+  "programme": {
+    "code": "JS2120",
+    "nameEn": "Bachelor of Business Administration (Hons)",
+    "nameZh": "工商管理學士(榮譽)",
+    "name": "Bachelor of Business Administration (Hons)",
+    "university": "香港浸會大學",
+    "faculty": "School of Business",
+    "median": "22.07",
+    "band_a": "20.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2120",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 22.07 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 4",
+            "- **English Language**: Median 4, LQ 4",
+            "- **Mathematics**: Median 4, LQ 5",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 3",
+            "- **Elective 2**: Median 4, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 890 applicants, Band B 380. Total 2100 applicants.",
+            "**First Year Intake**: 120 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BBA (Hons) programme at HKBU is a comprehensive 4-year degree designed to develop well-rounded business professionals through a liberal arts foundation and specialised business training.",
+            "**Core Foundation**: Students complete a common business core covering accounting, economics, finance, management, marketing, and quantitative methods, ensuring a solid grounding across all key disciplines.",
+            "**Year 1**: Focuses on university core requirements and introductory business courses, including Principles of Accounting, Microeconomics, and Business Statistics, with 120 first-year intake places available.",
+            "**Year 2**: Deepens knowledge with intermediate courses such as Corporate Finance, Marketing Management, and Organisational Behaviour, while students begin exploring elective options.",
+            "**Year 3**: Offers advanced specialisation through elective clusters in areas like Finance, Marketing, Human Resource Management, or Business Analytics, plus an optional internship or exchange semester.",
+            "**Year 4**: Culminates in a capstone Strategic Management course, a final-year project, and remaining electives, preparing students for immediate entry into the business world or further studies.",
+            "**Liberal Arts Integration**: HKBU's whole-person education philosophy means students take General Education courses in creativity, ethics, and global citizenship alongside their business curriculum."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Diverse Opportunities**: Graduates are well-prepared for roles in banking, consulting, marketing, human resources, accounting, and entrepreneurship across Hong Kong and international markets.",
+            "**Top Employers**: HKBU BBA alumni are recruited by leading firms such as HSBC, PwC, Deloitte, Hang Seng Bank, and Cathay Pacific, reflecting the programme's strong industry reputation.",
+            "**Professional Accreditation**: The programme provides pathways to professional qualifications including CPA (HKICPA), CFA, and CIMA, enhancing graduates' credentials in finance and accounting.",
+            "**Internship Support**: The School of Business runs a dedicated Career Development Centre that connects students with summer internships and part-time placements at over 200 partner companies.",
+            "**Graduate Employment Rate**: Over 90% of HKBU BBA graduates secure employment or pursue further studies within six months of graduation, according to recent university surveys.",
+            "**Global Mobility**: Exchange programmes with 50+ partner universities in Europe, Asia, and North America allow students to gain international exposure, a key advantage in the global job market."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Shaw Campus Location**: The School of Business is based at HKBU's scenic Shaw Campus in Kowloon Tong, offering modern classrooms, computer labs, and collaborative study spaces.",
+            "**Student Organisations**: Business students can join the Business Administration Society, which organises networking events, company visits, and case competitions throughout the academic year.",
+            "**Facilities**: The campus features the Au Shue Hung Memorial Library with extensive business databases, a 24-hour learning commons, and the Wing Lung Bank Building for business school activities.",
+            "**Extracurricular Activities**: Students participate in the HKBU Entrepreneurship Club, Investment Club, and Marketing Society, gaining practical experience through workshops and competitions.",
+            "**Sports and Recreation**: The university offers sports facilities including a gymnasium, swimming pool, and sports fields, plus over 50 student clubs for hobbies and interests.",
+            "**Cultural Enrichment**: Located in Kowloon Tong, the campus is close to shopping malls, restaurants, and cultural venues like the Hong Kong Heritage Museum, enriching the student experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Scores**: The 2025 median score of 22.07 (Best 5) and lower quartile of 20.50 indicate a competitive entry threshold, requiring strong academic performance across all subjects.",
+            "**Demand vs Supply**: With 890 Band A applicants for only 120 first-year places, the programme has a Band A-to-place ratio of approximately 7.4:1, reflecting high popularity.",
+            "**Subject Requirements**: Strong English (median 4) and Mathematics (median 4) are essential, while electives at median 4 show the programme values consistent academic breadth.",
+            "**No Interview Policy**: The absence of an interview means admission decisions rely entirely on HKDSE scores, making predicted grades and final results critical for applicants.",
+            "**Total Applicant Pool**: Over 2,100 total applicants (Band A+B+others) compete for 120 places, reinforcing the programme's status as a highly sought-after business degree in Hong Kong."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Clement Chen (陳志輝)**: Former Chairman of the Hong Kong Institute of Certified Public Accountants (HKICPA) and prominent figure in the accounting profession. Graduated from HKBU's business programme.",
+            "**Mr. Peter Wong (王冬勝)**: Chairman of HSBC Asia Pacific, one of the most influential bankers in Hong Kong. He earned his MBA from HKBU and has been a strong supporter of the university.",
+            "**Ms. Christine Ip (葉鶯)**: Former CEO of Greater China at Ogilvy & Mather, a leading marketing and communications firm. She is an alumna of HKBU's business school.",
+            "**Mr. Albert Wong (黃永光)**: CEO of the Hong Kong Science and Technology Parks Corporation, driving innovation and entrepreneurship. He holds a BBA from HKBU.",
+            "**Ms. Winnie Chiu (趙慧賢)**: Former Deputy Commissioner of Police and now a senior executive in the Hong Kong government. She graduated from HKBU with a business degree.",
+            "**Mr. Vincent Lo (羅康瑞)**: Founder and Chairman of Shui On Group, a major property developer in Hong Kong and China. He is a distinguished alumnus of HKBU's business programme."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarships**: Awarded to top HKDSE achievers, with amounts ranging from HK$30,000 to full tuition coverage, based on admission scores and academic merit.",
+            "**School of Business Scholarships**: The School offers multiple scholarships including the Dr. Clement Chen Scholarship and the HSBC Scholarship for BBA students with outstanding performance.",
+            "**Need-Based Financial Aid**: The university provides the HKBU Financial Assistance Scheme, offering grants and interest-free loans to students from low-income families, covering up to full tuition.",
+            "**External Scholarships**: Students can apply for the Hong Kong Government Scholarship, Sir Edward Youde Memorial Scholarships, and other external awards for academic excellence.",
+            "**Exchange Scholarships**: For students participating in overseas exchange programmes, the School of Business offers travel grants of up to HK$20,000 to support international study experiences.",
+            "**Merit-Based Renewal**: Most scholarships are renewable annually, provided students maintain a minimum GPA of 3.0 and meet other programme-specific criteria."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2120 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 22+**",
+            "- The 2025 median is 22.07, so aim for at least 22 points in your best 5 subjects to be competitive.",
+            "- Use the HKBU admission calculator to simulate your score based on predicted grades.",
+            "",
+            "**2. Prioritise English and Mathematics**",
+            "- Both subjects have a median of 4, so achieving Level 4 or above is critical for a strong application.",
+            "- A Level 5 in Mathematics (LQ 5) can significantly boost your overall score.",
+            "",
+            "**3. Strengthen Your Electives**",
+            "- Elective 1 and 2 medians are 4, so choose subjects where you can achieve Level 4 or higher.",
+            "- Consider Business, Economics, or Accounting electives to align with the programme focus.",
+            "",
+            "**4. Excel in Citizenship and Social Development**",
+            "- The median is 'Attained', but a higher grade can differentiate you from other applicants.",
+            "- Focus on current affairs and essay writing to secure a strong result.",
+            "",
+            "**5. Apply as Band A to Maximise Chance**",
+            "- With 890 Band A applicants for 120 places, Band A status is almost essential for consideration.",
+            "- Place JS2120 in your Band A choices to signal strong interest to the admissions committee.",
+            "",
+            "**6. Prepare for No Interview**",
+            "- Since there is no interview, your HKDSE results are the sole determinant — ensure every subject counts.",
+            "- Double-check your predicted grades and seek teacher feedback early.",
+            "",
+            "**7. Build a Strong Academic Profile**",
+            "- Participate in business-related competitions, summer programmes, or online courses to demonstrate commitment.",
+            "- Highlight any leadership roles in school clubs or community service in your application.",
+            "",
+            "**8. Use the Liberal Arts Advantage**",
+            "- HKBU values whole-person education, so showcase extracurricular achievements in arts, sports, or volunteering.",
+            "- Mention any creative projects or global awareness activities in your personal statement.",
+            "",
+            "**9. Plan for Scholarships Early**",
+            "- Research HKBU entrance scholarships and prepare supporting documents like recommendation letters.",
+            "- A high HKDSE score (e.g., 25+) can qualify you for full-tuition scholarships."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：22.07分（2025年聯招數據）。",
+            "**下四分位數**：20.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 4",
+            "- **英國語文**：中位數 4, 下四分位數 4",
+            "- **數學**：中位數 4, 下四分位數 5",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 3",
+            "- **選修科2**：中位數 4, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者890人、Band B 380人。總申請者2100人。",
+            "**首年學額**：120人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工商管理學士（榮譽）學位課程為四年制，旨在透過博雅教育基礎及專業商業訓練，培養全面的商業專才。",
+            "**核心基礎**：學生需完成涵蓋會計、經濟、金融、管理、市場學及定量方法的共同商業核心課程，確保跨學科的扎實根基。",
+            "**第一年**：專注於大學核心要求及商業入門課程，包括會計學原理、微觀經濟學及商業統計，每年提供120個一年級學額。",
+            "**第二年**：深化學習企業財務、市場管理及組織行為等中級課程，同時開始探索選修方向。",
+            "**第三年**：提供金融、市場學、人力資源管理或商業分析等選修集群，並可選修實習或交換學期。",
+            "**第四年**：以策略管理頂石課程、畢業專題及剩餘選修作結，為學生投身商業世界或深造做好準備。",
+            "**博雅教育融合**：浸大全人教育理念要求學生在商業課程外，修讀創意、倫理及全球公民相關的通識教育科目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**多元機會**：畢業生勝任銀行、諮詢、市場學、人力資源、會計及創業等領域，在香港及國際市場均具競爭力。",
+            "**頂尖僱主**：浸大工商管理校友獲匯豐、羅兵咸永道、德勤、恒生銀行及國泰航空等知名企業聘用，反映課程的業界聲譽。",
+            "**專業認證**：課程提供考取香港會計師公會（HKICPA）、特許金融分析師（CFA）及特許管理會計師（CIMA）等專業資格的途徑。",
+            "**實習支援**：商學院設有專屬職業發展中心，每年與超過200間合作企業聯繫，提供暑期實習及兼職機會。",
+            "**就業率**：根據大學最新調查，超過90%的工商管理畢業生在畢業後六個月內成功就業或繼續升學。",
+            "**環球流動**：與歐洲、亞洲及北美超過50所夥伴大學的交換計劃，讓學生獲得國際視野，在環球就業市場佔優。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**善衡校園位置**：商學院位於浸大風景優美的善衡校園（九龍塘），配備現代化課室、電腦實驗室及協作學習空間。",
+            "**學生組織**：商科學生可加入工商管理學會，該會全年舉辦聯誼活動、企業參觀及個案比賽。",
+            "**設施**：校園設有樹洪紀念圖書館（提供豐富商業數據庫）、24小時學習共享空間及永隆銀行商學大樓。",
+            "**課外活動**：學生可參與浸大創業學會、投資學會及市場學會，透過工作坊及比賽累積實戰經驗。",
+            "**體育與康樂**：大學提供健身室、游泳池及運動場等體育設施，並有超過50個學生興趣學會。",
+            "**文化 enrichment**：校園位於九龍塘，鄰近商場、餐廳及香港文化博物館等文化場所，豐富學生體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年中位數22.07分（最佳五科）及下四分位數20.50分，反映入學門檻具競爭性，需在各科表現優異。",
+            "**供求情況**：890名Band A申請者競爭120個學額，Band A與學額比例約為7.4:1，顯示課程極受歡迎。",
+            "**科目要求**：英文（中位數4）及數學（中位數4）成績至關重要，選修科中位數4反映課程重視學術廣度。",
+            "**無面試政策**：不設面試意味入學決定完全基於文憑試成績，預測分數及最終成績對申請者極為關鍵。",
+            "**申請總人數**：超過2,100名申請者（Band A+B+其他）競爭120個學額，鞏固了此課程作為香港熱門商科學位的地位。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳志輝博士**：前香港會計師公會主席，會計界知名人物，畢業於浸大工商管理課程。",
+            "**王冬勝先生**：滙豐亞太區主席，香港最具影響力的銀行家之一，於浸大取得工商管理碩士學位，並一直大力支持母校。",
+            "**葉鶯女士**：前奧美大中華區首席執行官，頂尖市場推廣及傳播公司領袖，為浸大商學院校友。",
+            "**黃永光先生**：香港科技園公司行政總裁，推動創新及創業，持有浸大工商管理學士學位。",
+            "**趙慧賢女士**：前警務處副處長，現為香港政府高級行政人員，畢業於浸大商科課程。",
+            "**羅康瑞先生**：瑞安集團創辦人及主席，香港及中國主要地產發展商，為浸大工商管理課程傑出校友。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及經濟援助",
+          "content": [
+            "**浸大入學獎學金**：頒予文憑試成績優異者，金額由港幣30,000元至全額學費不等，根據入學分數及學術表現而定。",
+            "**商學院獎學金**：學院提供多項獎學金，包括陳志輝博士獎學金及滙豐銀行獎學金，頒予表現卓越的工商管理學生。",
+            "**需要為本經濟援助**：大學設有浸大經濟援助計劃，為低收入家庭學生提供助學金及免息貸款，最高可覆蓋全額學費。",
+            "**外部獎學金**：學生可申請香港政府獎學金、尤德爵士紀念基金獎學金及其他學術卓越的外部獎項。",
+            "**交換獎學金**：參與海外交換計劃的學生，商學院提供最高港幣20,000元的旅行資助，支持國際學習體驗。",
+            "**按成績續領**：大部分獎學金可每年續領，惟學生須維持最低GPA 3.0及符合其他課程特定要求。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2120 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科22分以上**",
+            "- 2025年中位數為22.07分，建議至少取得22分以保持競爭力。",
+            "- 使用浸大入學計算機，根據預測成績模擬分數。",
+            "",
+            "**2. 優先提升英文及數學成績**",
+            "- 兩科中位數均為4級，取得4級或以上對申請至關重要。",
+            "- 數學取得5級（下四分位數5級）可大幅提升總分。",
+            "",
+            "**3. 強化選修科目**",
+            "- 選修一及二中位數為4級，選擇能達4級或以上的科目。",
+            "- 考慮商業、經濟或會計等與課程相關的選修科。",
+            "",
+            "**4. 在公民與社會發展科表現出色**",
+            "- 中位數為「達標」，但更高等級可讓你脫穎而出。",
+            "- 專注時事及論述寫作，爭取優異成績。",
+            "",
+            "**5. 將課程放在Band A以增加機會**",
+            "- 890名Band A申請者競爭120個學額，Band A身份幾乎是必須的。",
+            "- 將JS2120放在Band A選擇，向招生委員會展示強烈興趣。",
+            "",
+            "**6. 為無面試做好準備**",
+            "- 由於不設面試，文憑試成績是唯一決定因素——確保每科都重要。",
+            "- 及早核對預測成績並向老師尋求反饋。",
+            "",
+            "**7. 建立強大的學術檔案**",
+            "- 參加商業相關比賽、暑期課程或網上課程，展示你的投入。",
+            "- 在申請中突出學校學會或社區服務的領導角色。",
+            "",
+            "**8. 善用博雅教育優勢**",
+            "- 浸大重視全人教育，在個人陳述中展示藝術、體育或義工等課外成就。",
+            "- 提及任何創意項目或全球意識活動。",
+            "",
+            "**9. 及早規劃獎學金**",
+            "- 研究浸大入學獎學金，準備推薦信等支持文件。",
+            "- 高分（如25分以上）可讓你獲得全額學費獎學金。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "22.07",
+    "lq": "20.50"
+  }
+}

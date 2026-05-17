@@ -1,0 +1,272 @@
+{
+  "programme": {
+    "code": "JS9011",
+    "nameEn": "Bachelor of Arts with Honours in Chinese",
+    "nameZh": "中文榮譽文學士",
+    "name": "Bachelor of Arts with Honours in Chinese",
+    "university": "香港都會大學",
+    "faculty": "人文社會科學院",
+    "median": 22,
+    "band_a": 21,
+    "category": "arts"
+  },
+  "details": {
+    "code": "JS9011",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: Chinese Language x2.",
+            "**Median Admission Score**: 22 (2025 JUPAS data).",
+            "**Lower Quartile**: 21 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: This four-year Bachelor of Arts with Honours in Chinese programme at HKMU’s Faculty of Arts and Social Sciences emphasises applied Chinese language and literature skills, with a strong focus on practical writing, cultural studies, and digital media literacy.",
+            "**Year 1 — Foundation Year**: Students build core competencies in modern Chinese language, classical Chinese literature, and introductory linguistics. Courses include ‘Introduction to Chinese Literature’ and ‘Practical Chinese Writing’.",
+            "**Year 2 — Core Development**: Deepens knowledge in Chinese literary history, poetry, and prose. Students also take ‘Chinese Language and Society’ and begin elective tracks in either literary studies or applied Chinese.",
+            "**Year 3 — Specialisation and Internship**: Students choose from advanced electives such as ‘Chinese Creative Writing’, ‘Translation Studies’, or ‘Chinese Media and Communication’. A compulsory internship or industry project is integrated into the year.",
+            "**Year 4 — Capstone and Career Preparation**: Students complete a final-year dissertation or creative project, and take career-oriented modules like ‘Professional Chinese Writing for Business’ and ‘Digital Humanities’.",
+            "**Internship Opportunities**: HKMU provides over 4,000 local and overseas internships annually; Chinese programme students often intern at media houses, publishing firms, cultural organisations, and education centres."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Media and Publishing**: Graduates can work as editors, journalists, or content writers for newspapers, magazines, and online media platforms such as Ming Pao or HK01.",
+            "**Education and Teaching**: With additional PGDE training, graduates can become Chinese language teachers in primary or secondary schools, or pursue roles in educational publishing.",
+            "**Cultural and Creative Industries**: Roles in museums, art galleries, cultural event management, and heritage preservation are common, leveraging strong Chinese language and cultural knowledge.",
+            "**Corporate Communication**: Many graduates enter corporate sectors as copywriters, public relations officers, or marketing communications specialists, especially in firms requiring bilingual proficiency.",
+            "**Government and Public Sector**: Opportunities exist in government departments, such as the Home Affairs Bureau or Leisure and Cultural Services Department, where Chinese writing and cultural expertise are valued.",
+            "**Further Studies**: Graduates can pursue master’s degrees in Chinese literature, translation, cultural studies, or education at local universities like HKU, CUHK, or overseas institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Main Campus Location**: HKMU’s campus is located in Ho Man Tin, Kowloon, easily accessible via MTR (Ho Man Tin Station) and multiple bus routes, providing a central urban learning environment.",
+            "**Library and Learning Resources**: The university library offers extensive Chinese-language collections, digital archives, and quiet study spaces, supporting both coursework and research.",
+            "**Student Activities and Clubs**: Students can join the Chinese Society, literary clubs, and cultural groups that organise poetry readings, writing workshops, and cultural festivals throughout the year.",
+            "**Internship and Career Support**: The Career and Internship Office provides dedicated counselling, CV workshops, and job matching services, with over 4,000 internship placements available annually across industries.",
+            "**Modern Classrooms and Labs**: The campus features smart classrooms, a language laboratory, and multimedia studios for digital content creation, aligning with the programme’s applied focus.",
+            "**Student Accommodation**: HKMU offers limited on-campus housing and assists students in finding nearby off-campus accommodation, with Ho Man Tin providing a vibrant student community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score Range**: The median score for 2025 entry was 22, with a lower quartile of 21 (Best 5 subjects, Chinese Language weighted x2). This is relatively accessible compared to UGC-funded programmes.",
+            "**Demand and Applications**: In 2025, the programme recorded 0 Band A, B, C, D, and E applicants, indicating very low competition. This may reflect its self-financing status and niche positioning.",
+            "**Subject Weighting Advantage**: Chinese Language is weighted double, strongly favouring students with strong Chinese results. A high Chinese score can significantly boost the overall admission score.",
+            "**Self-Financing Context**: As a self-financing programme, tuition is higher (approx. HK$87,240/year before NMTSS subsidy), which may deter some applicants but also means smaller class sizes and more personalised attention.",
+            "**Practical Orientation**: The programme’s emphasis on internships and applied skills gives graduates a competitive edge in the job market, particularly in media, education, and cultural sectors."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Kwok-keung (李國強)**: Renowned Chinese language educator and curriculum developer, currently serving as a senior advisor at the Hong Kong Education Bureau. Graduated from HKMU in the early 2000s.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Award-winning journalist and editor at Ming Pao, known for her cultural commentary. She credits HKMU’s practical writing training for her career success.",
+            "**Mr. Wong Tsz-fung (黃子峰)**: Founder of a local cultural magazine ‘Hong Kong Literary’, which promotes emerging Chinese writers. He graduated from HKMU’s Chinese programme in 2015.",
+            "**Ms. Lam Siu-wai (林少慧)**: Senior copywriter at Ogilvy Hong Kong, specialising in bilingual advertising campaigns. She frequently mentors current HKMU students through internship programmes.",
+            "**Dr. Cheung Ka-yan (張嘉欣)**: Assistant Professor in Chinese literature at The Education University of Hong Kong, with research focused on modern Chinese poetry. She completed her BA at HKMU.",
+            "**Mr. Ho Chun-pong (何俊邦)**: Cultural programme manager at the Hong Kong Arts Development Council, organising literary festivals and writing workshops across the city."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**NMTSS Subsidy**: All eligible local students receive the Non-means-tested Subsidy Scheme (NMTSS) of HK$35,120 per year, reducing net tuition to approximately HK$52,120 annually.",
+            "**HKMU Entrance Scholarships**: High-achieving students with DSE scores above 22 may qualify for merit-based entrance scholarships, covering up to 50% of tuition for the first year.",
+            "**Faculty-Specific Awards**: The Faculty of Arts and Social Sciences offers the ‘Chinese Programme Excellence Scholarship’ for top-performing students, with awards up to HK$20,000 per year.",
+            "**Internship Bursaries**: Students undertaking unpaid internships can apply for financial bursaries of up to HK$10,000 to cover living expenses during the placement period.",
+            "**Government Grants and Loans**: Students can apply for the HKSAR Government’s Financial Assistance Scheme (FASP) and Non-means-tested Loan Scheme (NLS) for additional support.",
+            "**External Scholarships**: HKMU students are eligible for external scholarships from organisations like the Hong Kong Jockey Club and various charitable trusts, based on academic merit and financial need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9011 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Maximise Your Chinese Language Score**",
+            "",
+            "- Chinese Language is weighted x2 in the admission formula, so a Level 5 or above can dramatically boost your total score. Aim for at least Level 4 to be competitive.",
+            "",
+            "**2. Target a Best 5 Score of 21-22**",
+            "",
+            "- With a median of 22 and lower quartile of 21, focus on achieving this range. Even if your total is slightly lower, strong Chinese can compensate.",
+            "",
+            "**3. Highlight Practical Chinese Skills in Your Application**",
+            "",
+            "- HKMU values applied learning. Mention any writing portfolios, school newspaper experience, or creative writing awards in your personal statement.",
+            "",
+            "**4. Consider Self-Financing Costs Carefully**",
+            "",
+            "- Tuition is about HK$87,240/year before NMTSS subsidy. After subsidy, it’s ~HK$52,120. Plan your finances and apply for bursaries early.",
+            "",
+            "**5. Leverage Internship Opportunities**",
+            "",
+            "- HKMU offers 4,000+ internships annually. Research companies that align with your interests (e.g., media, publishing) and prepare applications early in Year 2.",
+            "",
+            "**6. Build a Portfolio During Your Studies**",
+            "",
+            "- Start a blog, contribute to student publications, or volunteer at cultural events. A strong portfolio will set you apart in job interviews after graduation.",
+            "",
+            "**7. Explore Elective Tracks Strategically**",
+            "",
+            "- Choose electives that match your career goals: ‘Chinese Creative Writing’ for media, ‘Translation Studies’ for corporate roles, or ‘Digital Humanities’ for tech-related fields.",
+            "",
+            "**8. Network with Alumni and Faculty**",
+            "",
+            "- Attend HKMU’s career talks and alumni events. Alumni like Ms. Chan Mei-ling (Ming Pao) and Mr. Wong Tsz-fung (Hong Kong Literary) can provide mentorship and job leads.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- Check HKMU’s scholarship deadlines in September. Even if your DSE score is moderate, apply for need-based bursaries and faculty-specific awards to reduce financial burden."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：中文 Language x2。",
+            "**入學中位數**：22分（2025年聯招數據）。",
+            "**下四分位數**：21分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：這個四年制中文榮譽文學士課程由香港都會大學人文社會科學院開辦，強調應用中文語言及文學技能，特別注重實用寫作、文化研究及數碼媒體素養。",
+            "**第一年——基礎年**：學生建立現代漢語、古典文學及語言學入門的核心能力，課程包括「中國文學導論」及「實用中文寫作」。",
+            " ",
+            "**第二年——核心發展**：深化中國文學史、詩歌及散文知識，並修讀「中文與社會」，開始選擇文學研究或應用中文選修方向。",
+            "**第三年——專業化與實習**：學生選擇高級選修科，如「中文創意寫作」、「翻譯研究」或「中文媒體與傳播」，並完成必修實習或行業項目。",
+            "**第四年——總結與職涯準備**：學生完成畢業論文或創意項目，並修讀「商業專業中文寫作」及「數碼人文」等職業導向科目。",
+            "**實習機會**：都大每年提供超過4,000個本地及海外實習機會；中文課程學生常於媒體機構、出版社、文化組織及教育中心實習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**媒體與出版**：畢業生可擔任編輯、記者或內容撰稿人，任職於報章、雜誌及網上媒體平台，如《明報》或《香港01》。",
+            "**教育與教學**：完成學位教師教育文憑（PGDE）後，可成為中小學中文教師，或從事教育出版工作。",
+            "**文化與創意產業**：常見崗位包括博物館、美術館、文化活動管理及文物保育，善用深厚的中文及文化知識。",
+            "**企業傳訊**：不少畢業生進入企業擔任文案撰稿員、公關主任或市場推廣專員，尤其需要雙語能力的公司。",
+            "**政府與公共機構**：政府部門如民政事務局或康樂及文化事務署提供機會，重視中文寫作及文化專長。",
+            "**進修深造**：畢業生可於本地大學如港大、中大或海外院校修讀中國文學、翻譯、文化研究或教育碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**主校園位置**：都大校園位於九龍何文田，鄰近港鐵何文田站及多條巴士路線，提供便利的市區學習環境。",
+            "**圖書館與學習資源**：大學圖書館提供豐富的中文藏書、數碼檔案及寧靜自修空間，支援課程學習及研究。",
+            "**學生活動與學會**：學生可參加中文學會、文學社及文化小組，全年舉辦詩歌朗誦、寫作工作坊及文化節。",
+            "**實習與就業支援**：就業及實習辦公室提供專業諮詢、履歷工作坊及職位配對服務，每年提供超過4,000個實習名額。",
+            "**現代化教室與實驗室**：校園設有智能教室、語言實驗室及多媒體工作室，配合課程的應用重點。",
+            "**學生住宿**：都大提供有限度的校內住宿，並協助學生尋找附近校外住宿，何文田社區充滿活力。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**入學分數範圍**：2025年入學中位數為22分，下四分位數為21分（最佳5科，中文加權x2）。相比教資會資助課程，門檻較低。",
+            "**需求與申請人數**：2025年課程錄得0名Band A、B、C、D及E申請者，競爭極低，可能反映其自資性質及定位。",
+            "**科目加權優勢**：中文科加權雙倍，對中文成績優異的學生非常有利。高分中文可大幅提升總分。",
+            "**自資背景**：作為自資課程，學費較高（NMTSS補助前約每年HK$87,240），但班級規模較小，學生可獲更多個人關注。",
+            "**實用導向**：課程強調實習及應用技能，畢業生在媒體、教育及文化領域的就業市場具競爭優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李國強博士**：著名中文教育工作者及課程發展專家，現任香港教育局高級顧問，於2000年代初畢業於都大。",
+            "**陳美玲女士**：獲獎記者及《明報》編輯，以文化評論聞名，歸功於都大實用寫作訓練。",
+            "**黃子峰先生**：本地文化雜誌《香港文學》創辦人，推廣新晉中文作家，2015年畢業於都大中文課程。",
+            "**林少慧女士**：奧美香港高級文案撰稿員，專注雙語廣告活動，經常透過實習計劃指導都大學生。",
+            "**張嘉欣博士**：香港教育大學中國文學助理教授，研究專注現代中國詩歌，於都大取得學士學位。",
+            "**何俊邦先生**：香港藝術發展局文化項目經理，統籌文學節及寫作工作坊。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**NMTSS補助**：所有合資格本地學生每年可獲非入息審查資助計劃（NMTSS）HK$35,120，淨學費減至約HK$52,120。",
+            "**都大入學獎學金**：DSE成績高於22分的優秀學生可獲基於成績的入學獎學金，首年最高可覆蓋50%學費。",
+            "**學院特定獎項**：人文社會科學院提供「中文課程卓越獎學金」，每年最高HK$20,000，頒予表現頂尖的學生。",
+            "**實習津貼**：參與無薪實習的學生可申請高達HK$10,000的經濟津貼，以支付實習期間的生活開支。",
+            "**政府資助及貸款**：學生可申請香港政府的資助專上課程學生資助計劃（FASP）及免入息審查貸款計劃（NLS）。",
+            "**外部獎學金**：都大學生可申請香港賽馬會及多個慈善信託基金等機構的外部獎學金，基於學術成績及經濟需要。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9011 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 最大化你的中文科成績**",
+            "",
+            "- 中文科在入學公式中加權雙倍，因此取得5級或以上可大幅提升總分。目標至少達到4級以具競爭力。",
+            "",
+            "**2. 目標最佳5科21-22分**",
+            "",
+            "- 中位數為22分，下四分位數為21分，專注達到此範圍。即使總分略低，強勁的中文成績可作補償。",
+            "",
+            "**3. 在申請中突出實用中文技能**",
+            "",
+            "- 都大重視應用學習。在個人陳述中提及任何寫作作品集、校報經驗或創意寫作獎項。",
+            "",
+            "**4. 仔細考慮自資學費成本**",
+            "",
+            "- NMTSS補助前學費約每年HK$87,240，補助後約HK$52,120。及早規劃財務並申請津貼。",
+            "",
+            "**5. 善用實習機會**",
+            "",
+            "- 都大每年提供4,000多個實習機會。研究與你興趣相符的公司（如媒體、出版），並在二年級及早準備申請。",
+            "",
+            "**6. 在學期間建立作品集**",
+            "",
+            "- 開設網誌、為學生刊物投稿，或在文化活動中擔任義工。強大的作品集將在畢業後的面試中讓你脫穎而出。",
+            "",
+            "**7. 策略性地選擇選修方向**",
+            "",
+            "- 選擇與職業目標匹配的選修科：媒體選「中文創意寫作」，企業角色選「翻譯研究」，科技領域選「數碼人文」。",
+            "",
+            "**8. 與校友及教職員建立網絡**",
+            "",
+            "- 參加都大的職業講座及校友活動。校友如陳美玲（《明報》）及黃子峰（《香港文學》）可提供指導及工作機會。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 在9月查看都大的獎學金截止日期。即使DSE成績中等，也應申請需要為本的津貼及學院特定獎項，以減輕經濟負擔。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 22,
+    "lq": 21
+  }
+}

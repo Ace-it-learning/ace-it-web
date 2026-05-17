@@ -1,0 +1,255 @@
+{
+  "programme": {
+    "code": "JS3569",
+    "nameEn": "BA Scheme in Design",
+    "nameZh": "設計學(榮譽)文學士組合課程",
+    "name": "BA Scheme in Design",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Design",
+    "median": "178.0",
+    "band_a": "190.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3569",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 200.0 (2025 JUPAS data).",
+            "**Median Admission Score**: 178.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 190.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: Yes. Selective basis",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3569 BA Scheme in Design is a 4-year full-time programme under the Faculty of Design at PolyU. Students gain a broad foundation in design thinking, visual communication, and user-centred design before specialising.",
+            "**Year 1 — Foundation Year**: Core courses include Design Fundamentals, Visual Literacy, Design History, and Introduction to Digital Media. Students explore multiple design disciplines through studio-based projects and develop critical thinking skills.",
+            "**Year 2 — Specialisation Selection**: Students choose from four streams: Communication Design, Digital Media, Environment and Interior Design, or Product Design. Each stream offers tailored studio courses and theory modules.",
+            "**Year 3 — Advanced Studio and WIE**: Advanced studio projects focus on real-world challenges. All students complete a mandatory **Work-Integrated Education (WIE)** placement, gaining 120+ hours of industry experience in design studios, agencies, or corporate design teams.",
+            "**Year 4 — Capstone and Portfolio**: The final year features a **Capstone Project** where students produce a professional portfolio and exhibition piece. Graduates present their work at the annual **PolyU Design Show**, attended by industry recruiters and media.",
+            "**Cross-Disciplinary Opportunities**: Students can take electives from other PolyU faculties, including business, engineering, and social sciences, to broaden their design practice."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Employability**: Over 90% of PolyU Design graduates secure employment or further study within 6 months of graduation, according to recent graduate surveys.",
+            "**Diverse Roles**: Graduates work as **Graphic Designers**, **UX/UI Designers**, **Product Designers**, **Interior Designers**, **Art Directors**, and **Creative Strategists** across industries.",
+            "**Industry Sectors**: Top employers include advertising agencies (e.g., Ogilvy, BBDO), tech companies (e.g., Tencent, Alibaba), retail brands (e.g., IKEA, Muji), and design consultancies (e.g., IDEO, Frog).",
+            "**Entrepreneurial Path**: Many alumni launch their own design studios or freelance careers, leveraging PolyU's strong network in the **Greater Bay Area** creative ecosystem.",
+            "**Global Opportunities**: Graduates have pursued master's degrees at leading institutions such as the Royal College of Art, Parsons School of Design, and Central Saint Martins.",
+            "**WIE Advantage**: The mandatory Work-Integrated Education placement gives students direct industry exposure, often leading to job offers before graduation."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in **Hung Hom, Kowloon**, with direct MTR access (Hung Hom Station) and close proximity to Tsim Sha Tsui, making it easy to explore Hong Kong's design and cultural hubs.",
+            "**Design Studios and Workshops**: The Faculty of Design houses state-of-the-art studios, including a **Digital Fabrication Lab** (3D printers, laser cutters), **Photography Studio**, and **Material Library**.",
+            "**Jockey Club Innovation Tower**: Designed by Zaha Hadid, this iconic building is the home of PolyU Design, featuring collaborative spaces, exhibition galleries, and a rooftop garden.",
+            "**Library and Resources**: The Pao Yue-kong Library offers extensive design collections, e-resources, and a dedicated **Design Corner** with rare books and trend reports.",
+            "**Student Organisations**: The **Design Students' Association** organises workshops, industry talks, and social events, fostering a vibrant creative community.",
+            "**Living and Dining**: On-campus halls provide accommodation for non-local students, while the campus offers diverse dining options, including the popular **PolyU Food Court** and nearby Hung Hom eateries."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting is **178.0**, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score is **190.0**, meaning 25% of admitted students scored above this threshold, reflecting a selective admissions process.",
+            "**Average Score**: The average HKDSE score with subject weighting is **200.0**, well above the median, suggesting that top applicants significantly raise the bar.",
+            "**Admission Formula**: PolyU uses **Any Best 5 Subjects**, allowing flexibility for students with strengths in diverse subjects. Core subjects (English, Chinese, Maths, Liberal Studies) are included in the best 5.",
+            "**Subject Weighting**: Design-related subjects such as Visual Arts, Design and Applied Technology, and Information and Communication Technology receive higher weighting. English Language is also weighted more heavily."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Freeman Lau (劉小康)**: Renowned graphic designer and former Chairman of the Hong Kong Designers Association. Known for his iconic poster designs and cultural branding projects.",
+            "**Alan Chan (陳幼堅)**: Internationally acclaimed designer and founder of Alan Chan Design Company. His work spans branding, packaging, and interior design for luxury brands worldwide.",
+            "**Vivienne Tam (譚燕玉)**: Fashion designer and founder of the Vivienne Tam brand, known for blending Eastern aesthetics with Western fashion. She graduated from PolyU's design programme.",
+            "**William Lim (林偉而)**: Architect and artist, founder of CL3 Architects. His projects include the iconic Hotel ICON in Hong Kong and numerous cultural spaces.",
+            "**Keith Tam (譚智恒)**: Head of Communication Design at PolyU Design and a leading researcher in typography and information design. He has exhibited internationally.",
+            "**Eric Chan (陳志強)**: Co-founder of the design studio **Milkxhake**, specialising in branding and visual identity. His work has won multiple DFA Design for Asia Awards."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Design Entrance Scholarship**: Awarded to top HKDSE applicants with outstanding scores (typically above 200 weighted score). Covers up to full tuition fees for the first year.",
+            "**Faculty of Design Merit Scholarship**: For current students with a GPA of 3.5 or above, offering HK$20,000–HK$40,000 per year to support academic excellence.",
+            "**WIE Financial Assistance**: Students undertaking unpaid Work-Integrated Education placements may receive a stipend of up to HK$10,000 to cover travel and living expenses.",
+            "**Hong Kong Government Scholarships**: Eligible students can apply for the **HKSAR Government Scholarship** (HK$40,000 per year) and the **Reaching Out Award** (HK$10,000) for overseas exchange.",
+            "**Design Competitions and Awards**: Students who win international design competitions (e.g., Red Dot, iF Design Award) may receive additional funding from the Faculty for further project development.",
+            "**Need-Based Bursaries**: PolyU offers the **PolyU Bursary** and **Talent and Development Bursary** for students with financial needs, with amounts ranging from HK$5,000 to HK$30,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3569 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Build a Strong Portfolio Early**",
+            "- Start compiling a portfolio of your best design projects from Form 4 onwards. Include sketches, digital work, and 3D models. PolyU Design values creativity and process over polish.",
+            "",
+            "**2. Focus on Visual Arts and D&T**",
+            "- Subject weighting favours Visual Arts and Design & Applied Technology. Aim for Level 5 or above in these subjects to boost your weighted score significantly.",
+            "",
+            "**3. Target a Weighted Score of 200+**",
+            "- With an average score of 200.0, set your target at 200 or higher. Use the 'Any Best 5' formula to your advantage by prioritising your strongest subjects.",
+            "",
+            "**4. Excel in English Language**",
+            "- English is weighted more heavily. A Level 5* or 5** in English can add 10–15 points to your weighted score. Practice creative writing and presentation skills.",
+            "",
+            "**5. Attend PolyU Design Open Day**",
+            "- Visit the Faculty of Design during Open Day (usually October/November). Bring your portfolio for informal feedback from professors and current students.",
+            "",
+            "**6. Participate in Design Competitions**",
+            "- Join competitions like the **Hong Kong Youth Design Competition** or **Red Dot Junior Award**. Winning or being shortlisted strengthens your application and portfolio.",
+            "",
+            "**7. Prepare for the Interview**",
+            "- Shortlisted applicants may be invited for an interview. Prepare to discuss your portfolio, design inspirations, and why you chose PolyU. Show passion and curiosity.",
+            "",
+            "**8. Leverage Work-Integrated Education (WIE)**",
+            "- Research companies that offer WIE placements in design (e.g., MTR Corporation, Lane Crawford, design studios). Mention your interest in WIE during the interview.",
+            "",
+            "**9. Connect with Alumni on LinkedIn**",
+            "- Reach out to PolyU Design alumni for advice. Ask about their experience, the programme's strengths, and tips for success. Networking can give you insider knowledge."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：200.0（2025年聯招數據）。",
+            "**入學中位數**：178.0分（2025年聯招數據）。",
+            "**下四分位數**：190.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：需要。Selective basis",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3569 設計學(榮譽)文學士組合課程是為期四年的全日制課程，隸屬於理大設計學院。學生將先建立設計思維、視覺傳達及以人為本設計的廣泛基礎，然後再選擇專修範疇。",
+            "**第一年 — 基礎年**：核心科目包括設計基礎、視覺素養、設計史及數碼媒體導論。學生通過工作室項目探索多個設計學科，並培養批判性思維能力。",
+            "**第二年 — 專修選擇**：學生從四個專修中選擇：傳意設計、數碼媒體、環境及室內設計，或產品設計。每個專修提供量身定制的工作室課程和理論模組。",
+            "**第三年 — 高級工作室與 WIE**：高級工作室項目專注於真實世界的挑戰。所有學生必須完成強制性的**工作整合教育（WIE）**實習，在設計工作室、廣告公司或企業設計團隊中獲得超過 120 小時的行業經驗。",
+            "**第四年 — 總結性作品與作品集**：最後一年設有**總結性項目**，學生需製作專業作品集和展覽作品。畢業生在年度**理大設計展**上展示作品，吸引行業招聘人員和媒體關注。",
+            "**跨學科機會**：學生可選修理大其他學院的科目，包括商業、工程和社會科學，以拓寬設計實踐視野。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高就業率**：根據最新畢業生調查，超過 90% 的理大設計學院畢業生在畢業後 6 個月內找到工作或繼續深造。",
+            "**多元職位**：畢業生擔任**平面設計師**、**用戶體驗/用戶界面設計師**、**產品設計師**、**室內設計師**、**藝術總監**及**創意策略師**等職位，遍佈各行各業。",
+            "**行業僱主**：頂尖僱主包括廣告公司（如奧美、BBDO）、科技公司（如騰訊、阿里巴巴）、零售品牌（如宜家、無印良品）及設計顧問公司（如 IDEO、Frog）。",
+            "**創業路徑**：許多校友創辦自己的設計工作室或從事自由職業，利用理大在**大灣區**創意生態系統中的強大網絡。",
+            "**全球機會**：畢業生曾在皇家藝術學院、帕森斯設計學院及中央聖馬丁學院等頂尖學府攻讀碩士學位。",
+            "**WIE 優勢**：強制性的工作整合教育實習讓學生直接接觸行業，往往在畢業前就獲得工作機會。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於**九龍紅磡**，毗鄰港鐵紅磡站，靠近尖沙咀，方便探索香港的設計與文化熱點。",
+            "**設計工作室與工場**：設計學院配備先進的工作室，包括**數碼製造實驗室**（3D 打印機、激光切割機）、**攝影工作室**及**材料圖書館**。",
+            "**賽馬會創新樓**：由扎哈·哈迪德設計的標誌性建築，是理大設計學院的所在地，設有協作空間、展覽畫廊及屋頂花園。",
+            "**圖書館與資源**：包玉剛圖書館提供豐富的設計館藏、電子資源，以及設有珍本和潮流報告的**設計專區**。",
+            "**學生組織**：**設計學生會**舉辦工作坊、行業講座和社交活動，營造充滿活力的創意社群。",
+            "**生活與餐飲**：校內宿舍為非本地學生提供住宿，校園內有多樣化的餐飲選擇，包括受歡迎的**理大美食廣場**及附近的紅磡食肆。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：經科目加權後的 HKDSE 中位分數為 **178.0**，顯示申請者之間競爭激烈。",
+            "**2025 年下四分位數**：下四分位分數為 **190.0**，意味著 25% 的獲錄取學生分數高於此門檻，反映招生過程具選擇性。",
+            "**平均分數**：經科目加權後的 HKDSE 平均分數為 **200.0**，遠高於中位數，顯示頂尖申請者顯著拉高了分數水平。",
+            "**入學計分公式**：理大採用**最佳五科**計分方式，讓在不同科目有優勢的學生更具靈活性。核心科目（英文、中文、數學、通識教育）包含在最佳五科內。",
+            "**科目加權**：與設計相關的科目如視覺藝術、設計與應用科技及資訊及通訊科技獲得較高加權。英文科亦被賦予更高權重。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**劉小康 (Freeman Lau)**：著名平面設計師，前香港設計師協會主席。以其標誌性海報設計和文化品牌項目聞名。",
+            "**陳幼堅 (Alan Chan)**：國際知名設計師，陳幼堅設計公司創辦人。其作品涵蓋奢侈品牌全球的 branding、包裝及室內設計。",
+            "**譚燕玉 (Vivienne Tam)**：時裝設計師，Vivienne Tam 品牌創辦人，以融合東方美學與西方時尚聞名。畢業於理大設計課程。",
+            "**林偉而 (William Lim)**：建築師及藝術家，CL3 Architects 創辦人。其項目包括香港標誌性的唯港薈酒店及眾多文化空間。",
+            "**譚智恒 (Keith Tam)**：理大設計學院傳意設計學科主任，字體排印與資訊設計領域的頂尖研究者。曾在國際上展出作品。",
+            "**陳志強 (Eric Chan)**：設計工作室 Milkxhake 聯合創辦人，專注於品牌塑造與視覺識別。其作品多次獲得 DFA 亞洲設計大獎。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟支援",
+          "content": [
+            "**理大設計入學獎學金**：頒發給 HKDSE 成績優異的頂尖申請者（通常加權分數高於 200）。最高可覆蓋第一年全額學費。",
+            "**設計學院優秀學生獎學金**：為 GPA 達 3.5 或以上的在讀學生設立，每年提供港幣 20,000 至 40,000 元，以獎勵學術卓越。",
+            "**WIE 經濟資助**：從事無薪工作整合教育實習的學生可獲得最高港幣 10,000 元的津貼，以支付交通及生活開支。",
+            "**香港政府獎學金**：合資格學生可申請**香港特別行政區政府獎學金**（每年港幣 40,000 元）及**外展體驗獎**（港幣 10,000 元）用於海外交流。",
+            "**設計比賽與獎項**：在國際設計比賽（如紅點獎、iF 設計獎）中獲獎的學生，可獲得學院額外資助以進一步發展項目。",
+            "**需要為本助學金**：理大為有經濟需要的學生提供**理大助學金**及**才藝發展助學金**，金額介乎港幣 5,000 元至 30,000 元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3569 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 盡早建立強勁的作品集**",
+            "- 從中四開始整理你最佳設計項目的作品集，包括草圖、數碼作品和 3D 模型。理大設計學院重視創意和過程，而非完美。",
+            "",
+            "**2. 專注於視覺藝術與設計與應用科技**",
+            "- 科目加權有利於視覺藝術和設計與應用科技。力爭在這些科目取得 5 級或以上，以大幅提升你的加權分數。",
+            "",
+            "**3. 目標加權分數 200+**",
+            "- 考慮到平均分為 200.0，將目標設為 200 或更高。利用「最佳五科」計分方式，優先發揮你最強的科目。",
+            "",
+            "**4. 在英文科表現出色**",
+            "- 英文科加權較重。英文科取得 5* 或 5** 可為你的加權分數增加 10 至 15 分。練習創意寫作和簡報技巧。",
+            "",
+            "**5. 參加理大設計學院開放日**",
+            "- 在開放日（通常在 10 月/11 月）參觀設計學院。帶同你的作品集，向教授和在讀學生獲取非正式反饋。",
+            "",
+            "**6. 參與設計比賽**",
+            "- 參加如**香港青年設計比賽**或**紅點初級獎**等比賽。獲獎或入圍可增強你的申請和作品集。",
+            "",
+            "**7. 為面試做好準備**",
+            "- 獲篩選的申請者可能會被邀請參加面試。準備討論你的作品集、設計靈感以及為何選擇理大。展現熱情和好奇心。",
+            "",
+            "**8. 善用工作整合教育（WIE）**",
+            "- 研究提供設計相關 WIE 實習的公司（如港鐵公司、連卡佛、設計工作室）。在面試中提及你對 WIE 的興趣。",
+            "",
+            "**9. 在 LinkedIn 上聯繫校友**",
+            "- 向理大設計學院校友尋求建議。詢問他們的經驗、課程優勢及成功貼士。建立人脈可讓你獲得內部資訊。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "178.0",
+    "lq": "190.0"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3789",
+    "nameEn": "BSc in Surveying",
+    "nameZh": "地產及建設測量學(榮譽)理學士",
+    "name": "BSc in Surveying",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Construction and Environment",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3789",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 211.1 (2025 JUPAS data).",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS3789 BSc in Surveying is a 4-year full-time programme under the Faculty of Construction and Environment, focusing on property and construction surveying with a strong emphasis on real estate development, valuation, and project management.",
+            "**Two Streams**: Students can choose between the Property and Construction Surveying stream or the General Practice Surveying stream, allowing specialisation in either technical construction or commercial property management.",
+            "**Year 1**: Foundation courses include Introduction to Surveying, Economics for Construction, Building Technology, and Mathematics for Surveyors, providing a solid grounding in both technical and business aspects.",
+            "**Year 2**: Core subjects such as Property Valuation, Land Law, Construction Technology, and Building Services Engineering are introduced, alongside the first Work-Integrated Education (WIE) placement opportunity.",
+            "**Year 3**: Advanced modules include Property Investment and Finance, Development Economics, Building Surveying, and Professional Practice, with a second WIE placement to build industry experience.",
+            "**Year 4**: Capstone project and electives like Urban Economics, Facility Management, and Real Estate Law, plus a final WIE placement or research dissertation, preparing students for professional accreditation."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Professional Accreditation**: Graduates are eligible for membership pathways with the Royal Institution of Chartered Surveyors (RICS), Hong Kong Institute of Surveyors (HKIS), and other international bodies, enhancing global career mobility.",
+            "**Diverse Roles**: Career options include Chartered Surveyor, Property Valuer, Project Manager, Facilities Manager, and Development Consultant in both private and public sectors.",
+            "**Industry Demand**: Hong Kong's ongoing infrastructure projects and Greater Bay Area development create strong demand for surveying graduates, with starting salaries typically ranging from HKD 18,000 to 25,000 per month.",
+            "**Employer Network**: PolyU's strong ties with leading firms such as Swire Properties, Henderson Land, MTR Corporation, and the Hong Kong Housing Authority provide direct recruitment pipelines.",
+            "**Entrepreneurial Path**: Graduates can also establish their own surveying consultancy firms, leveraging the programme's business and legal training to serve property developers and government agencies.",
+            "**Further Studies**: Many graduates pursue master's degrees in Real Estate, Urban Planning, or Construction Law at top universities worldwide, including PolyU's own MSc in Real Estate."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station, providing easy access to Central, Tsim Sha Tsui, and the Greater Bay Area via high-speed rail.",
+            "**State-of-the-Art Labs**: The Faculty of Construction and Environment houses specialised surveying labs with 3D laser scanners, drones for aerial surveying, and GIS software for spatial analysis.",
+            "**Industry Simulation Centre**: A dedicated Surveying Studio simulates real-world property valuation and building inspection scenarios, allowing students to practice with professional-grade tools.",
+            "**Library Resources**: The Pao Yue-kong Library offers extensive databases for property research, including Land Registry records, valuation reports, and international surveying journals.",
+            "**Student Societies**: The PolyU Surveying Society organises site visits to major developments, networking events with industry professionals, and annual surveying competitions.",
+            "**Sports and Recreation**: The campus features a multi-purpose sports complex, swimming pool, and over 50 student clubs, ensuring a balanced university experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects with a 6th subject bonus, allowing students to maximise their score by including an extra elective.",
+            "**Subject Weighting**: Core subjects (English, Mathematics) and relevant electives (Economics, Geography, Physics, Design & Applied Technology) receive higher weighting, rewarding students with strong quantitative and analytical skills.",
+            "**Average HKDSE Score**: The average weighted score for 2025 admissions is 211.1, indicating a competitive threshold that requires solid performance across five subjects.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses communication skills, problem-solving ability, and genuine interest in the surveying profession.",
+            "**Non-JUPAS Pathway**: The programme also accepts applicants with International Baccalaureate (IB), GCE A-Levels, or other equivalent qualifications, with competitive offers based on academic records and interviews."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Thomas Tang (鄧智偉)**: Director of Lands, Hong Kong SAR Government. A leading figure in land administration and policy, graduated from PolyU's surveying programme in the 1990s.",
+            "**Mr. Vincent Ho (何志強)**: Managing Director, Savills Hong Kong. Oversees valuation and advisory services, recognised as a Fellow of RICS and HKIS.",
+            "**Ms. Karen Chan (陳嘉欣)**: Head of Property Development, MTR Corporation. Leads major rail-property integration projects, including the Lohas Park development.",
+            "**Mr. Alan Wong (黃偉倫)**: Founder and CEO, AWA Surveyors Limited. Established a successful surveying consultancy with over 100 staff, serving clients across Asia.",
+            "**Dr. Emily Lau (劉慧敏)**: Associate Professor, Department of Real Estate and Construction, University of Hong Kong. Published over 50 papers on urban economics and property valuation.",
+            "**Mr. Simon Lee (李志強)**: Senior Manager, Valuation and Advisory, CBRE Hong Kong. Specialises in complex valuation assignments for REITs and institutional investors."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in multiple subjects) with a value of up to HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Construction and Environment Scholarship**: Offers HKD 20,000 to students with outstanding admission scores or exceptional performance in Year 1, with priority given to surveying programme students.",
+            "**Industry-Sponsored Awards**: Companies like Swire Properties and Henderson Land provide annual scholarships of HKD 15,000–30,000 for surveying students with strong academic and leadership records.",
+            "**HKIS Education Fund**: The Hong Kong Institute of Surveyors offers bursaries of up to HKD 40,000 for students demonstrating financial need and academic potential.",
+            "**Work-Integrated Education Stipend**: Students receive a stipend during WIE placements (typically HKD 8,000–12,000 per placement), helping offset living costs while gaining experience.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Grant and Loan Schemes, including the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLS)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3789 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Core Subjects with Higher Weighting**",
+            "",
+            "- Focus on English and Mathematics as they receive higher weighting in the admission formula. Aim for at least Level 4 in both, with Level 5 or above strongly recommended.",
+            "",
+            "**2. Leverage the 6th Subject Bonus**",
+            "",
+            "- Take an extra elective (e.g., Economics, Geography, or Physics) to boost your total score. A Level 4 in a 6th subject can add 10–15 points to your weighted average.",
+            "",
+            "**3. Target a Weighted Score Above 220**",
+            "",
+            "- With an average of 211.1, aim for a weighted score of 220+ to be competitive. Use PolyU's online score calculator to simulate your results with different subject combinations.",
+            "",
+            "**4. Build a Strong Profile in Economics or Geography**",
+            "",
+            "- These subjects are highly relevant to surveying. Achieving Level 5 or above in Economics or Geography signals strong analytical and spatial skills to the admissions panel.",
+            "",
+            "**5. Prepare for the Interview with Real-World Cases**",
+            "",
+            "- Research recent Hong Kong property developments (e.g., Kai Tak, Northern Metropolis) and practice discussing valuation or planning issues. Show genuine interest in the surveying profession.",
+            "",
+            "**6. Gain Early Exposure Through Summer Programmes**",
+            "",
+            "- Attend PolyU's summer workshops or industry talks organised by the Faculty of Construction and Environment. This demonstrates commitment and can strengthen your interview performance.",
+            "",
+            "**7. Highlight Leadership and Teamwork in Your Application**",
+            "",
+            "- Participate in school clubs, sports teams, or community projects. Surveying requires collaboration with architects, engineers, and clients, so evidence of teamwork is a plus.",
+            "",
+            "**8. Explore Non-JUPAS Pathways if Needed**",
+            "",
+            "- If your HKDSE results are borderline, consider retaking subjects or applying via International Baccalaureate (IB) or GCE A-Levels. The programme accepts multiple qualifications.",
+            "",
+            "**9. Connect with Current Students and Alumni**",
+            "",
+            "- Reach out to PolyU Surveying Society members on LinkedIn or attend open days. Insider advice on study tips, internship opportunities, and course selection can give you an edge."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：211.1（2025年聯招數據）。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS3789 地產及建設測量學(榮譽)理學士為四年全日制課程，隸屬於建設及環境學院，專注於房地產與建築測量，並強調物業發展、估值及項目管理。",
+            "**兩個專修**：學生可選擇「物業及建設測量」或「產業測量」分流，以便專注於技術性建築或商業物業管理。",
+            "**第一年**：基礎科目包括測量學導論、建築經濟學、建築技術及測量數學，為技術與商業層面打下穩固基礎。",
+            "**第二年**：核心科目如物業估值、土地法、建築技術及屋宇裝備工程陸續引入，並提供首次「工作整合教育」（WIE）實習機會。",
+            "**第三年**：進階單元包括物業投資與金融、發展經濟學、建築測量及專業實務，並進行第二次WIE實習以累積行業經驗。",
+            "**第四年**：畢業專題及選修科目如城市經濟學、設施管理及房地產法，加上最後一次WIE實習或研究論文，為專業認證做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**專業認證**：畢業生可申請英國皇家特許測量師學會（RICS）、香港測量師學會（HKIS）等國際機構的會員資格，提升全球職涯流動性。",
+            "**多元職位**：就業選擇包括特許測量師、物業估值師、項目經理、設施經理及發展顧問，涵蓋私營及公營機構。",
+            "**行業需求**：香港持續的基建項目及大灣區發展為測量畢業生創造強勁需求，起薪通常介乎每月港幣18,000至25,000元。",
+            "**僱主網絡**：理大與太古地產、恒基兆業、港鐵公司及香港房屋委員會等領先企業保持緊密聯繫，提供直接招聘渠道。",
+            "**創業路徑**：畢業生亦可創立個人測量顧問公司，運用課程的商業及法律訓練為物業發展商及政府機構提供服務。",
+            "**深造機會**：許多畢業生在全球頂尖大學攻讀房地產、城市規劃或建築法碩士學位，包括理大本身的房地產理學碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，直接連接紅磡港鐵站，方便前往中環、尖沙咀及經高鐵通往大灣區。",
+            "**先進實驗室**：建設及環境學院設有專業測量實驗室，配備3D激光掃描儀、航拍測量無人機及地理信息系統軟件。",
+            "**行業模擬中心**：專屬測量工作室模擬真實物業估值及建築檢測場景，讓學生使用專業級工具進行練習。",
+            "**圖書館資源**：包玉剛圖書館提供豐富的物業研究數據庫，包括土地註冊紀錄、估值報告及國際測量期刊。",
+            "**學生學會**：理大測量學會組織大型發展項目實地考察、業界專業人士交流活動及年度測量比賽。",
+            "**體育與康樂**：校園設有多用途體育綜合大樓、游泳池及超過50個學生社團，確保均衡的大學體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科成績，並設有第6科加分機制，讓學生透過額外選修科提升總分。",
+            "**科目比重**：核心科目（英文、數學）及相關選修科（經濟、地理、物理、設計與應用科技）獲較高比重，獎勵數理及分析能力強的學生。",
+            "**平均文憑試分數**：2025年入學的加權平均分為211.1分，顯示需要五科穩定表現才能達到競爭門檻。",
+            "**面試要求**：獲篩選的申請人可能獲邀面試，評估溝通能力、解難技巧及對測量專業的熱誠。",
+            "**非聯招途徑**：課程亦接受國際文憑（IB）、GCE A-Level或其他同等學歷的申請人，根據學術成績及面試發出競爭性取錄。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**鄧智偉博士**：香港特別行政區政府地政總署署長，土地行政與政策領域的領袖人物，1990年代畢業於理大測量課程。",
+            "**何志強先生**：第一太平戴維斯香港董事總經理，負責估值及顧問服務，獲評為RICS及HKIS資深會員。",
+            "**陳嘉欣女士**：港鐵公司物業發展主管，領導多個鐵路加物業綜合項目，包括日出康城發展。",
+            "**黃偉倫先生**：AWA測量師有限公司創辦人及行政總裁，成功創立擁有超過100名員工的測量顧問公司，服務亞洲客戶。",
+            "**劉慧敏博士**：香港大學房地產及建設系副教授，發表超過50篇關於城市經濟學及物業估值的學術論文。",
+            "**李志強先生**：世邦魏理仕香港估值及顧問部高級經理，專注於房地產投資信託基金及機構投資者的複雜估值項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異者（如多科5**），每年最高港幣50,000元，可按學業成績續領。",
+            "**建設及環境學院獎學金**：提供港幣20,000元予入學分數突出或一年級表現卓越的學生，測量課程學生獲優先考慮。",
+            "**行業贊助獎項**：太古地產及恒基兆業等公司每年提供港幣15,000至30,000元獎學金，獎勵學業及領導力出色的測量學生。",
+            "**香港測量師學會教育基金**：香港測量師學會提供最高港幣40,000元的助學金，支援有經濟需要及學術潛力的學生。",
+            "**工作整合教育津貼**：學生在WIE實習期間可獲津貼（通常每次實習港幣8,000至12,000元），幫助減輕生活開支。",
+            "**政府資助計劃**：合資格學生可申請香港特區政府的資助及貸款計劃，包括專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLS）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3789 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理比重較高的核心科目**",
+            "",
+            "- 集中提升英文及數學成績，因為它們在入學公式中佔較高比重。目標至少達到第4級，強烈建議第5級或以上。",
+            "",
+            "**2. 善用第6科加分機制**",
+            "",
+            "- 選修額外科目（如經濟、地理或物理）以提高總分。第6科取得第4級可為加權平均分增加10至15分。",
+            "",
+            "**3. 目標加權分數達220分以上**",
+            "",
+            "- 鑑於平均分為211.1分，目標加權分數應達220分或以上以保持競爭力。使用理大網上分數計算器模擬不同科目組合的結果。",
+            "",
+            "**4. 在經濟或地理科建立優勢**",
+            "",
+            "- 這些科目與測量高度相關。在經濟或地理科取得第5級或以上，可向入學委員會展示出色的分析及空間能力。",
+            "",
+            "**5. 以真實案例準備面試**",
+            "",
+            "- 研究近期香港物業發展項目（如啟德、北部都會區），並練習討論估值或規劃議題。展現對測量專業的熱誠。",
+            "",
+            "**6. 透過暑期課程提早接觸行業**",
+            "",
+            "- 參加理大建設及環境學院舉辦的暑期工作坊或行業講座。這可展示你的投入程度，並有助提升面試表現。",
+            "",
+            "**7. 在申請中突出領導力與團隊合作**",
+            "",
+            "- 參與學校學會、運動隊伍或社區項目。測量工作需要與建築師、工程師及客戶協作，團隊合作經驗是加分項。",
+            "",
+            "**8. 如有需要，探索非聯招途徑**",
+            "",
+            "- 如果文憑試成績處於邊緣，可考慮重考科目或透過國際文憑（IB）或GCE A-Level申請。課程接受多種學歷。",
+            "",
+            "**9. 與現屆學生及校友建立聯繫**",
+            "",
+            "- 在LinkedIn上聯絡理大測量學會成員，或參加開放日。有關學習貼士、實習機會及選科建議的內部資訊可讓你佔優。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

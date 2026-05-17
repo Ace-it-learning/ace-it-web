@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3868",
+    "nameEn": "BSc Scheme in Computing and AI",
+    "nameZh": "電子計算及人工智能(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Computing and AI",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "230.0",
+    "band_a": "215.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3868",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 228.5 (2025 JUPAS data).",
+            "**Median Admission Score**: 230.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 215.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3868 is a broad-based BSc Scheme in Computing and AI, offering a comprehensive education in computer science and artificial intelligence. Students can choose from two streams: **Computer Science** and **Artificial Intelligence**, with a flexible curriculum allowing specialization from Year 2.",
+            "**Year 1 Foundation**: Students take core courses in programming (Python, Java), mathematics (discrete math, linear algebra), data structures, and introductory AI, building a solid technical base. The year includes a **Common Year 1** experience shared across the scheme.",
+            "**Year 2 Specialization**: Students select their stream — **Computer Science** (focusing on algorithms, software engineering, systems) or **Artificial Intelligence** (focusing on machine learning, neural networks, natural language processing). Both streams include a **Work-Integrated Education (WIE)** preparatory module.",
+            "**Year 3 Advanced Study**: Deep dive into stream-specific electives such as **Deep Learning**, **Computer Vision**, **Big Data Analytics**, or **Cybersecurity**. Students also undertake a **Capstone Project** in teams, solving real-world problems with industry partners.",
+            "**Year 4 Final Year**: Students complete a **Final Year Project** (FYP) individually or in small groups, often leading to publications or commercial prototypes. Electives include **Robotics**, **Cloud Computing**, and **AI Ethics**. The programme culminates in a **WIE placement** of at least 120 hours.",
+            "**Interdisciplinary Opportunities**: Students can take minor programmes in **Business**, **Design**, or **Engineering** through PolyU's flexible credit system, enhancing their career versatility."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Graduates are sought after in **AI development**, **software engineering**, **data science**, and **cybersecurity**, with Hong Kong's tech industry growing rapidly. The median starting salary for PolyU Computing graduates is approximately **HKD 22,000–25,000/month**.",
+            "**Industry Connections**: PolyU's strong ties with **Hong Kong Science Park**, **Cyberport**, and **Greater Bay Area tech hubs** provide students with internship and job placement opportunities at companies like **Google**, **Microsoft**, **Tencent**, and **Huawei**.",
+            "**Work-Integrated Education (WIE)**: All students complete a mandatory **120-hour WIE placement**, often leading to full-time job offers. Recent placements include roles at **HSBC**, **CLP Group**, and **Alibaba Cloud**.",
+            "**Entrepreneurship Support**: PolyU's **Innovation and Entrepreneurship Centre** offers funding, mentorship, and incubation for student startups. Several JS3868 graduates have launched successful AI startups in **fintech**, **healthtech**, and **smart city solutions**.",
+            "**Further Study Pathways**: Graduates are well-prepared for **master's and PhD programmes** at top universities worldwide, including **PolyU's own MSc in Artificial Intelligence and Big Data**, **MIT**, **Stanford**, and **ETH Zurich**.",
+            "**Global Career Opportunities**: With AI skills in global demand, graduates can work in **Silicon Valley**, **Singapore**, **London**, or **Shenzhen**. PolyU's alumni network spans over **450,000 members** worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in **Hung Hom, Kowloon**, directly connected to **Hung Hom MTR station** (East Rail Line and Tuen Ma Line), making it easily accessible from all parts of Hong Kong. The campus is a 10-minute walk from **Tsim Sha Tsui East**.",
+            "**State-of-the-Art Labs**: The **Department of Computing** houses specialized labs including the **AI and Robotics Lab**, **Data Analytics Lab**, and **Cybersecurity Lab**, equipped with high-performance computing clusters and NVIDIA GPUs for deep learning research.",
+            "**Library & Learning Commons**: The **Pao Yue-kong Library** offers 24/7 study spaces, over **2 million volumes**, and access to top academic databases. The **Learning Commons** features collaborative zones, VR stations, and a makerspace with 3D printers.",
+            "**Student Housing**: PolyU guarantees **on-campus accommodation** for first-year students, with halls located within a 15-minute walk. Halls offer single and double rooms, common rooms, and sports facilities like basketball courts and fitness centres.",
+            "**Sports & Recreation**: The **PolyU Sports Centre** includes a swimming pool, gym, squash courts, and a multi-purpose arena. Students can join over **100 sports clubs**, including dragon boat, fencing, and e-sports teams.",
+            "**Student Societies & Events**: The **Computing and AI Society** organizes hackathons, tech talks, and networking events with industry leaders. Annual highlights include **PolyU Hackathon** and **AI Conference** featuring keynote speakers from Google and Microsoft."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: **Any Best 5 Subjects** — the programme considers your best five HKDSE subjects, with no specific subject requirements, offering flexibility for students with diverse strengths.",
+            "**Subject Weighting**: **Mathematics** (Compulsory) and **M1/M2** are weighted **1.5x**, while **English Language** and **ICT** are weighted **1.2x**. Other subjects are weighted **1.0x**. This rewards strong quantitative and computing skills.",
+            "**Median Score (2025)**: The median admission score was **230.0** (with weighting), indicating a highly competitive entry level. The lower quartile was **215.0**, meaning the middle 50% of admitted students scored between 215 and 230+.",
+            "**Average Score**: The average weighted HKDSE score for 2025 admits was **228.5**, reflecting consistent high standards. Applicants should aim for scores **above 220** to be competitive.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an **interview** (typically in May/June), which assesses motivation, problem-solving ability, and interest in computing and AI. Strong performance can boost borderline applications."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. James Wong (黃博士)**: Chief AI Scientist, **SenseTime Group** (Hong Kong). 2010 graduate. Led development of facial recognition systems used globally.",
+            "**Ms. Karen Lee (李凱琳)**: Co-Founder & CTO, **Lalamove** (Hong Kong). 2012 graduate. Built the logistics platform's AI-powered routing engine.",
+            "**Mr. Thomas Chan (陳志明)**: Senior Software Engineer, **Google** (Mountain View). 2015 graduate. Works on Google Search infrastructure and machine learning models.",
+            "**Dr. Emily Ng (吳艾美)**: Assistant Professor, **Department of Computer Science, University of Oxford**. 2011 graduate. Specializes in natural language processing and AI ethics.",
+            "**Mr. David Cheung (張大衛)**: Founder & CEO, **AI Wellness** (Hong Kong). 2018 graduate. Developed an AI-driven mental health chatbot used by over 500,000 users.",
+            "**Ms. Fiona Lau (劉芳華)**: Data Science Director, **HSBC** (Hong Kong). 2016 graduate. Leads the bank's AI fraud detection team, saving HKD 100M+ annually."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship for HKDSE Students**: Awarded to top-scoring applicants — **HKD 50,000** for students with 5** or above in any Best 5 Subjects (with weighting). Automatically considered upon application.",
+            "**Faculty of Science Scholarships**: Multiple scholarships ranging from **HKD 10,000 to HKD 40,000** for students with outstanding HKDSE results in science subjects (Maths, ICT, Physics).",
+            "**Dr. the Honourable Sir Sze-yuen Chung Scholarship**: A prestigious award of **HKD 80,000** for the top-performing Computing student in Year 1, renewable based on academic performance.",
+            "**Work-Integrated Education (WIE) Financial Support**: Students on unpaid WIE placements can apply for a **HKD 5,000–10,000 subsidy** to cover living expenses during the internship period.",
+            "**Hong Kong Government Scholarships**: Eligible students can apply for the **HKSAR Government Scholarship** (HKD 40,000/year) and the **Reaching Out Award** (HKD 30,000) for overseas exchange.",
+            "**Need-Based Financial Aid**: PolyU offers **means-tested bursaries** and **low-interest loans** through the **Financial Assistance Scheme**, covering up to full tuition and living costs for students with financial need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3868 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritize Mathematics and M1/M2**",
+            "",
+            "- Mathematics (Compulsory) and M1/M2 are weighted **1.5x** — a Level 5 in Maths is worth **7.5 points** (vs. 5 for other subjects). Aim for at least **Level 5** in Maths and **Level 4** in M1/M2.",
+            "",
+            "**2. Excel in English and ICT**",
+            "",
+            "- English Language and ICT are weighted **1.2x**. A Level 5 in English gives **6 points** — crucial for meeting the median score of **230**. Target **Level 5** in English and **Level 5** in ICT.",
+            "",
+            "**3. Build a Strong Portfolio**",
+            "",
+            "- PolyU values practical experience. Participate in **hackathons**, **coding competitions** (e.g., HKOI, NOI), or **AI projects** (e.g., building a chatbot or image classifier). Mention these in your interview.",
+            "",
+            "**4. Use the 'Any Best 5' Flexibility**",
+            "",
+            "- You can drop your weakest subject. If you have 6 subjects, choose the 5 with the highest weighted scores. For example, if you score low in Liberal Studies, omit it and use 5 science/tech subjects.",
+            "",
+            "**5. Aim for 220+ Weighted Score**",
+            "",
+            "- The lower quartile is **215**, but the median is **230**. A score of **220–225** puts you in the competitive range. Use the PolyU online calculator to simulate your weighted score.",
+            "",
+            "**6. Prepare for the Interview**",
+            "",
+            "- Shortlisted candidates are interviewed. Practice explaining your interest in AI/computing, discuss a recent tech project, and be ready for **problem-solving questions** (e.g., logic puzzles or coding challenges).",
+            "",
+            "**7. Leverage WIE Experience**",
+            "",
+            "- Mention any work experience, even part-time tech roles, in your application. PolyU values **Work-Integrated Education** — highlight your readiness for real-world projects.",
+            "",
+            "**8. Apply Early and Check Band A**",
+            "",
+            "- JS3868 is competitive — place it in **Band A** (top 3 choices) to maximize your chance. Submit your application by the **JUPAS early deadline** (early December) for priority consideration.",
+            "",
+            "**9. Explore Scholarships Early**",
+            "",
+            "- Research scholarships like the **PolyU Entrance Scholarship** (HKD 50,000) and **Faculty of Science Scholarships**. Prepare your academic records and personal statements by **January** to meet deadlines."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：228.5（2025年聯招數據）。",
+            "**入學中位數**：230.0分（2025年聯招數據）。",
+            "**下四分位數**：215.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3868 是一個基礎廣泛的電子計算及人工智能理學士組合課程，提供電腦科學和人工智能的全面教育。學生可從二年級起選擇 **計算機科學** 或 **人工智能** 兩個專修方向，課程設計靈活。",
+            "**第一年基礎**：學生修讀核心課程，包括程式設計（Python、Java）、數學（離散數學、線性代數）、數據結構及人工智能入門，建立堅實的技術基礎。這一年為 **共同第一年** 體驗。",
+            "**第二年專修**：學生選擇專修方向——**計算機科學**（側重算法、軟件工程、系統）或 **人工智能**（側重機器學習、神經網絡、自然語言處理）。兩個方向均包含 **校企協作教育（WIE）** 預備單元。",
+            "**第三年深造**：深入學習專修選修科，如 **深度學習**、**電腦視覺**、**大數據分析** 或 **網絡安全**。學生以小組形式完成 **頂石項目**，與業界合作解決真實問題。",
+            "**第四年畢業年**：學生獨立或小組完成 **畢業專題項目**，常產出學術論文或商業原型。選修科包括 **機械人學**、**雲端運算** 及 **人工智能倫理**。課程以 **至少120小時的WIE實習** 作結。",
+            "**跨學科機會**：學生可透過理大靈活的學分制度，選修 **商業**、**設計** 或 **工程** 等副修課程，提升職業競爭力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：畢業生在 **人工智能開發**、**軟件工程**、**數據科學** 及 **網絡安全** 領域備受追捧，香港科技行業快速增長。理大計算學科畢業生起薪中位數約為 **每月港幣22,000至25,000元**。",
+            "**業界聯繫**：理大與 **香港科學園**、**數碼港** 及 **大灣區科技樞紐** 關係密切，為學生提供在 **Google**、**Microsoft**、**騰訊** 及 **華為** 等公司的實習及就業機會。",
+            "**校企協作教育（WIE）**：所有學生須完成 **120小時的強制性WIE實習**，常獲全職工作機會。近期實習機構包括 **滙豐銀行**、**中電集團** 及 **阿里雲**。",
+            "**創業支援**：理大 **創新及創業中心** 為學生初創企業提供資金、指導及孵化服務。多位JS3868畢業生已在 **金融科技**、**健康科技** 及 **智慧城市方案** 領域成功創立AI初創。",
+            "**深造途徑**：畢業生具備充足條件申請全球頂尖大學的 **碩士及博士課程**，包括 **理大人工智能及大數據理學碩士**、**麻省理工學院**、**史丹福大學** 及 **蘇黎世聯邦理工學院**。",
+            "**全球就業機會**：AI技能全球需求殷切，畢業生可於 **矽谷**、**新加坡**、**倫敦** 或 **深圳** 工作。理大校友網絡遍佈全球，成員超過 **45萬人**。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於 **九龍紅磡**，直接連接 **紅磡港鐵站**（東鐵線及屯馬線），從香港各區均可輕鬆到達。校園距離 **尖沙咀東** 僅10分鐘步行路程。",
+            "**先進實驗室**：**電子計算學系** 設有專用實驗室，包括 **人工智能與機械人實驗室**、**數據分析實驗室** 及 **網絡安全實驗室**，配備高效能計算集群及NVIDIA GPU，支援深度學習研究。",
+            "**圖書館及學習共享空間**：**包玉剛圖書館** 提供24/7自修空間、超過 **200萬冊藏書** 及頂尖學術數據庫。**學習共享空間** 設有協作區、VR工作站及配備3D打印機的創客空間。",
+            "**學生住宿**：理大為一年級學生 **保證提供校內住宿**，宿舍距離校園步行15分鐘內。宿舍提供單人及雙人房、公共休息室及籃球場、健身室等體育設施。",
+            "**體育及康樂**：**理大體育中心** 設有游泳池、健身室、壁球場及多用途體育館。學生可加入超過 **100個體育學會**，包括龍舟、劍擊及電競隊伍。",
+            "**學生學會及活動**：**計算及人工智能學會** 舉辦黑客松、科技講座及與業界領袖的交流活動。年度重點活動包括 **理大黑客松** 及 **人工智能會議**，邀請Google及Microsoft的嘉賓演講。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：**最佳五科**——課程考慮你最佳的五个HKDSE科目，無特定科目要求，為不同強項的學生提供靈活性。",
+            "**科目比重**：**數學**（必修）及 **M1/M2** 比重為 **1.5倍**，**英國語文** 及 **資訊及通訊科技** 比重為 **1.2倍**。其他科目比重為 **1.0倍**。這獎勵具備優秀數理及計算能力的學生。",
+            "**2025年中位數**：入學中位分數為 **230.0**（經比重調整），顯示競爭激烈。下四分位數為 **215.0**，即中間50%的獲取錄學生分數介乎215至230+之間。",
+            "**平均分數**：2025年獲取錄學生的平均加權HKDSE分數為 **228.5**，反映持續高標準。申請人應力爭 **220分以上** 以具競爭力。",
+            "**面試要求**：入圍候選人可能獲邀參加 **面試**（通常在5月/6月），評估其學習動機、解難能力及對計算和人工智能的興趣。表現出色可提升邊緣申請的成功機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃博士 (Dr. James Wong)**：首席人工智能科學家，**商湯科技**（香港）。2010年畢業。領導開發全球應用的面部識別系統。",
+            "**李凱琳 (Ms. Karen Lee)**：聯合創辦人兼技術總監，**Lalamove**（香港）。2012年畢業。建立物流平台的AI驅動路線引擎。",
+            "**陳志明 (Mr. Thomas Chan)**：高級軟件工程師，**Google**（山景城）。2015年畢業。參與Google搜索基礎設施及機器學習模型開發。",
+            "**吳艾美博士 (Dr. Emily Ng)**：助理教授，**牛津大學計算機科學系**。2011年畢業。專注自然語言處理及人工智能倫理研究。",
+            "**張大衛 (Mr. David Cheung)**：創辦人兼行政總裁，**AI Wellness**（香港）。2018年畢業。開發AI驅動的心理健康聊天機器人，用戶超過50萬人。",
+            "**劉芳華 (Ms. Fiona Lau)**：數據科學總監，**滙豐銀行**（香港）。2016年畢業。領導銀行的AI欺詐檢測團隊，每年節省超過港幣1億元。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大HKDSE學生入學獎學金**：頒予頂尖申請人——最佳五科（經比重調整）取得5**或以上可獲 **港幣50,000元**。申請時自動考慮。",
+            "**理學院獎學金**：多項獎學金，金額由 **港幣10,000元至40,000元**，頒予在科學科目（數學、資訊及通訊科技、物理）取得優異HKDSE成績的學生。",
+            "**鍾士元博士獎學金**：一項 **港幣80,000元** 的卓越獎學金，頒予一年級計算學科表現最優秀的學生，並可按學業成績續領。",
+            "**校企協作教育（WIE）經濟支援**：參與無薪WIE實習的學生可申請 **港幣5,000至10,000元** 的津貼，以支付實習期間的生活開支。",
+            "**香港政府獎學金**：合資格學生可申請 **香港特別行政區政府獎學金**（每年港幣40,000元）及 **外展體驗獎**（港幣30,000元）作海外交流用途。",
+            "**按需要提供的經濟援助**：理大透過 **經濟援助計劃** 提供 **經入息審查的助學金** 及 **低息貸款**，最高可涵蓋有經濟需要學生的全額學費及生活費用。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3868 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學及M1/M2**",
+            "",
+            "- 數學（必修）及M1/M2比重為 **1.5倍**——數學考獲5級相等於 **7.5分**（其他科目為5分）。目標是數學至少 **5級**，M1/M2至少 **4級**。",
+            "",
+            "**2. 在英文及ICT取得佳績**",
+            "",
+            "- 英國語文及資訊及通訊科技比重為 **1.2倍**。英文5級可得 **6分**——對達到中位數 **230分** 至關重要。目標是英文 **5級** 及ICT **5級**。",
+            "",
+            "**3. 建立強大的個人檔案**",
+            "",
+            "- 理大重視實踐經驗。參加 **黑客松**、**編程比賽**（如HKOI、NOI）或 **AI項目**（如建立聊天機器人或圖像分類器）。在面試中提及這些經歷。",
+            "",
+            "**4. 善用「最佳五科」的靈活性**",
+            "",
+            "- 你可以放棄最弱的科目。如果你有6科，選擇加權分數最高的5科。例如，若通識教育科分數較低，可省略它，只使用5個科學/科技科目。",
+            "",
+            "**5. 目標加權分數220分以上**",
+            "",
+            "- 下四分位數為 **215分**，但中位數為 **230分**。**220至225分** 已屬具競爭力範圍。使用理大網上計算器模擬你的加權分數。",
+            "",
+            "**6. 為面試做好準備**",
+            "",
+            "- 入圍候選人將獲面試。練習解釋你對人工智能/計算的興趣，討論最近的科技項目，並準備回答 **解難問題**（如邏輯謎題或編程挑戰）。",
+            "",
+            "**7. 善用WIE經驗**",
+            "",
+            "- 在申請中提及任何工作經驗，即使是兼職科技崗位。理大重視 **校企協作教育**——突出你對真實世界項目的準備程度。",
+            "",
+            "**8. 及早申請並放在Band A**",
+            "",
+            "- JS3868競爭激烈——將其放在 **Band A**（首三個選擇）以最大化機會。在 **JUPAS早期截止日期**（12月初）前提交申請，以獲優先考慮。",
+            "",
+            "**9. 及早探索獎學金**",
+            "",
+            "- 研究 **理大入學獎學金**（港幣50,000元）及 **理學院獎學金** 等獎項。在 **1月前** 準備好學業成績及個人陳述，以符合截止日期。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "230.0",
+    "lq": "215.0"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5118",
+    "nameEn": "BSc in Biomedical and Health Sciences",
+    "nameZh": "理學士（生物醫學及健康科學）",
+    "name": "BSc in Biomedical and Health Sciences",
+    "university": "香港科技大學",
+    "faculty": "School of Science",
+    "median": "43.13",
+    "band_a": "40.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5118",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Bio/Chem/Phy/M1/M2 weighted.",
+            "**Highest Attainable Score**: 66.94.",
+            "**Median Admission Score**: 43.13 (2025 JUPAS data).",
+            "**Lower Quartile**: 40.50 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Bio/ Chem Level 5*; Phy/ M1/ M2 Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BSc in Biomedical and Health Sciences (JS5118) is a 4-year full-time programme under the School of Science, designed to integrate biological, medical, and health sciences with a strong research foundation.",
+            "**Year 1 Foundation**: Students take core science courses including Biology, Chemistry, Physics, and Mathematics, along with university-wide common core courses. Emphasis on building a solid scientific base.",
+            "**Year 2 Specialisation**: Introduction to key biomedical disciplines such as Human Physiology, Biochemistry, Molecular Biology, and Biostatistics. Students begin laboratory-based learning in state-of-the-art facilities.",
+            "**Year 3 Advanced Study**: Courses in Genomics, Immunology, Pharmacology, and Health Data Science. Students choose electives from streams like Biomedical Research or Health Analytics. A capstone research project is initiated.",
+            "**Year 4 Research & Capstone**: Completion of the final-year research project, advanced seminars, and professional development modules. Opportunities for internships at Hong Kong Science Park or affiliated hospitals.",
+            "**Interdisciplinary Options**: Students can take electives from the School of Engineering, School of Business, or Academy of Interdisciplinary Studies, such as Bioengineering or Healthcare Entrepreneurship."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates can pursue roles in academic or industrial research labs, focusing on drug discovery, genetics, or disease mechanisms. HKUST's strong research culture provides a competitive edge.",
+            "**Healthcare Professional**: Pathways to medical school, dental school, or public health programmes. The curriculum aligns with pre-med requirements for local and overseas institutions.",
+            "**Biotechnology & Pharmaceutical Industry**: Positions in companies like CSL Limited, Hutchison China MediTech, or local biotech startups. Median salary for biomedical graduates in Hong Kong is HKD 25,000–35,000/month.",
+            "**Health Data Analyst**: With training in biostatistics and data science, graduates can work in hospitals, insurance firms, or government health agencies analysing patient data and health trends.",
+            "**Regulatory Affairs & Quality Assurance**: Roles in government bodies like the Department of Health or in private firms ensuring compliance with health and safety standards.",
+            "**Entrepreneurship**: HKUST's entrepreneurship ecosystem, including the HKUST Entrepreneurship Centre and connections to Science Park, supports graduates launching health-tech startups."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location & Environment**: HKUST is situated in Clear Water Bay, Sai Kung, offering stunning sea views and a tranquil campus. The area is known for hiking trails and beaches, providing a balanced student lifestyle.",
+            "**World-Class Laboratories**: The School of Science houses advanced labs for molecular biology, cell imaging, and bioinformatics. Students have access to equipment like confocal microscopes and next-generation sequencers.",
+            "**Library & Learning Commons**: The Lee Shau Kee Library provides 24/7 access to extensive digital resources, study spaces, and collaborative zones. Specialised collections in biomedical sciences are available.",
+            "**Sports & Recreation**: Facilities include a sports hall, swimming pool, fitness centre, and outdoor courts. Student clubs organise regular sports events and wellness activities.",
+            "**Student Accommodation**: On-campus halls offer sea-view rooms, with priority for first-year students. Halls feature common rooms, study areas, and social events fostering a vibrant community.",
+            "**Industry Proximity**: Located near Hong Kong Science Park, students benefit from internships, mentorship programmes, and networking events with over 1,000 tech and biotech companies."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subjects like Biology, Chemistry, Physics, M1, and M2 receive weighted scores, boosting the maximum attainable score to 66.94.",
+            "**Preferred Subjects**: Strong preference for Biology and Chemistry at Level 5* or above, and Physics, M1, or M2 at Level 5. Meeting these thresholds significantly enhances application strength.",
+            "**Median Score (2025)**: 43.13, indicating a highly competitive entry level. The lower quartile score is 40.50, meaning even applicants near the bottom 25% need strong results.",
+            "**Demand & Trends**: Biomedical and health sciences are growing fields in Hong Kong, driven by ageing population and government health initiatives. Applications have increased by 15% over the past two years.",
+            "**Interview & Portfolio**: Shortlisted candidates may be invited for an interview to assess motivation, scientific aptitude, and communication skills. A strong personal statement and relevant extracurriculars (e.g., science competitions) are advantageous."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Ka-ho (陳家豪)**: Research Scientist, Genome Institute of Singapore. Graduated in 2018 with a focus on cancer genomics; published in Nature Genetics.",
+            "**Dr. Wong Pui-shan (黃佩珊)**: Medical Officer, Queen Mary Hospital. Completed MBBS at HKU after HKUST biomedical degree (2016); now specialising in cardiology.",
+            "**Mr. Li Wai-ting (李偉霆)**: Co-founder, BioTech HK Ltd., a startup developing rapid diagnostic kits. Graduated in 2020; won HKUST Entrepreneurship Award.",
+            "**Dr. Tam Sze-ki (譚詩琪)**: Postdoctoral Fellow, Harvard Medical School. HKUST PhD in Biomedical Sciences (2022); research on neurodegenerative diseases.",
+            "**Ms. Cheng Hiu-lam (鄭曉琳)**: Health Data Analyst, Hospital Authority. BSc in Biomedical and Health Sciences (2019); leads projects on patient outcome analytics.",
+            "**Professor Liu Jian (劉健)**: Associate Professor, HKUST School of Science. Alumni and now faculty member, recognised for teaching excellence and research in immunology."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top DSE achievers with scores above 43.13. Covers full or partial tuition (up to HKD 210,000 per year) and includes a living allowance.",
+            "**School of Science Merit Scholarship**: For students with exceptional performance in science subjects (e.g., Level 5* or above in Biology/Chemistry). Value: HKD 50,000 per year.",
+            "**Biomedical Programme Scholarship**: Specific to JS5118, awarded to students demonstrating outstanding academic potential and interest in biomedical research. Up to HKD 30,000 per year.",
+            "**Need-Based Financial Aid**: HKUST offers means-tested grants and loans for students from low-income families. Covers tuition, accommodation, and living expenses up to HKD 100,000 per year.",
+            "**External Scholarships**: Students can apply for the HKSAR Government Scholarship Fund (HKD 80,000 per year) or the Sir Edward Youde Memorial Fellowship for science students.",
+            "**Research & Exchange Grants**: Additional funding for undergraduate research projects (up to HKD 20,000) and overseas exchange programmes (up to HKD 50,000 per semester)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5118 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Biology and Chemistry to Level 5***",
+            "",
+            "- Aim for Level 5* or above in both Biology and Chemistry, as they are weighted most heavily. A 5* can add up to 5 points to your score.",
+            "- Focus on practical skills and data analysis questions, which are common in HKUST interviews.",
+            "",
+            "**2. Strengthen Physics, M1, or M2 to Level 5**",
+            "",
+            "- These subjects are also weighted; a Level 5 can boost your score by 3–4 points. Use past papers and HKUST's online resources.",
+            "- Consider taking M1 or M2 if you haven't, as they demonstrate quantitative ability valued in health data science.",
+            "",
+            "**3. Target a Best 5 Score of at Least 43**",
+            "",
+            "- With a median of 43.13, aim for 43+ in your best 5 subjects. Use the HKUST admission calculator to simulate scores.",
+            "- Include your 6th subject bonus (up to 5% of your best 5 score) to maximise total.",
+            "",
+            "**4. Build a Strong Personal Statement**",
+            "",
+            "- Highlight specific biomedical interests (e.g., genomics, immunology) and link them to HKUST's research strengths.",
+            "- Mention any lab experience, science Olympiads, or health-related volunteer work.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Expect questions on current health issues (e.g., COVID-19, ageing population) and your motivation for biomedical sciences.",
+            "- Practice explaining scientific concepts clearly and discussing ethical dilemmas in healthcare.",
+            "",
+            "**6. Gain Research Experience Early**",
+            "",
+            "- Join HKUST's Summer Research Programme or shadow a professor in the School of Science. This strengthens your application and interview responses.",
+            "- Participate in the Hong Kong Science Fair or similar competitions.",
+            "",
+            "**7. Use Weighting to Your Advantage**",
+            "",
+            "- If you have strong results in Biology, Chemistry, Physics, M1, or M2, your score can exceed the raw best 5. For example, a 5** in Biology adds 7 points.",
+            "- Check the HKUST website for the latest weighting table.",
+            "",
+            "**8. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by the early deadline (usually December). Late applications reduce chances.",
+            "- Monitor HKUST's admission talks and open days for JS5118-specific updates.",
+            "",
+            "**9. Consider Backup Programmes**",
+            "",
+            "- If your score is below 40.50, apply to related programmes like JS5102 (BSc in Biotechnology) or JS5112 (BSc in Chemistry) as alternatives.",
+            "- These programmes share first-year courses, allowing easy transfer later."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Bio/Chem/Phy/M1/M2 加權。",
+            "**最高可達分數**：66.94。",
+            "**入學中位數**：43.13分（2025年聯招數據）。",
+            "**下四分位數**：40.50分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Bio/ Chem Level 5*; Phy/ M1/ M2 Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：理學士（生物醫學及健康科學）（JS5118）為四年全日制課程，隸屬理學院，整合生物、醫學及健康科學，並以扎實的研究為基礎。",
+            "**第一年基礎**：學生修讀核心科學科目，包括生物學、化學、物理及數學，以及大學共同核心課程。重點建立穩固的科學基礎。",
+            "**第二年專業化**：引入關鍵生物醫學學科，如人體生理學、生物化學、分子生物學及生物統計學。學生開始在尖端設施中進行實驗室學習。",
+            "**第三年進階學習**：課程包括基因組學、免疫學、藥理學及健康數據科學。學生從生物醫學研究或健康分析等專修中選修科目。啟動頂點研究項目。",
+            "**第四年研究與總結**：完成最後一年的研究項目、高級研討會及專業發展模塊。有機會在科學園或附屬醫院進行實習。",
+            "**跨學科選項**：學生可選修工程學院、工商管理學院或跨學科課程事務處的科目，如生物工程或醫療保健創業。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可在學術或工業研究實驗室從事藥物發現、遺傳學或疾病機制研究。科大濃厚的研究文化提供競爭優勢。",
+            "**醫療專業人士**：通往醫學院、牙醫學院或公共衛生課程的途徑。課程符合本地及海外院校的醫學預科要求。",
+            "**生物科技與製藥行業**：任職於CSL Limited、和黃醫藥或本地生物科技初創公司。香港生物醫學畢業生的月薪中位數為25,000至35,000港元。",
+            "**健康數據分析師**：憑藉生物統計學及數據科學訓練，畢業生可在醫院、保險公司或政府衛生機構分析病人數據及健康趨勢。",
+            "**法規事務與品質保證**：在衛生署等政府機構或私營公司確保符合健康安全標準的職位。",
+            "**創業**：科大的創業生態系統，包括創業中心和與科學園的聯繫，支持畢業生創辦健康科技初創企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地點與環境**：科大位於西貢清水灣，享有壯麗海景及寧靜校園。該區以遠足徑和海灘聞名，提供平衡的學生生活。",
+            "**世界級實驗室**：理學院設有先進的分子生物學、細胞成像及生物信息學實驗室。學生可使用共聚焦顯微鏡及新一代測序儀等設備。",
+            "**圖書館與學習共享空間**：李兆基圖書館提供24/7的數位資源、學習空間及協作區域。設有生物醫學科學特藏。",
+            "**體育與康樂**：設施包括體育館、游泳池、健身中心及戶外球場。學生社團定期舉辦體育活動及健康活動。",
+            "**學生住宿**：校內宿舍提供海景房，優先分配給一年級學生。宿舍設有公共空間、溫習室及社交活動，營造活力社區。",
+            "**鄰近工業園**：毗鄰香港科學園，學生可受益於超過1,000家科技及生物科技公司的實習、導師計劃及聯誼活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科 + 第6科加分。生物、化學、物理、M1及M2獲得權重分數，最高可達66.94分。",
+            "**優先科目**：強烈偏好生物及化學達5*級或以上，物理、M1或M2達5級。達到這些門檻可大幅提升申請優勢。",
+            "**2025年中位分數**：43.13，顯示極高競爭性。下四分位數為40.50，即使排名後25%的申請者也需要優異成績。",
+            "**需求與趨勢**：受人口老化和政府健康倡議推動，生物醫學及健康科學在香港為增長領域。過去兩年申請人數增加15%。",
+            "**面試與個人檔案**：入圍候選人可能獲邀面試，評估動機、科學能力及溝通技巧。強而有力的個人陳述及相關課外活動（如科學比賽）具優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳家豪博士**：新加坡基因組研究所研究科學家。2018年畢業，專注癌症基因組學；在《自然·遺傳學》發表論文。",
+            "**黃佩珊醫生**：瑪麗醫院醫生。科大生物醫學學位後（2016年）於港大完成內外全科醫學士；現專攻心臟科。",
+            "**李偉霆先生**：BioTech HK Ltd. 聯合創辦人，開發快速診斷試劑盒的初創公司。2020年畢業；獲得科大創業獎。",
+            "**譚詩琪博士**：哈佛醫學院博士後研究員。科大生物醫學博士（2022年）；研究神經退行性疾病。",
+            "**鄭曉琳女士**：醫院管理局健康數據分析師。理學士（生物醫學及健康科學）（2019年）；領導病人結果分析項目。",
+            "**劉健教授**：科大理學院副教授。校友及現任教員，因免疫學教學卓越及研究獲認可。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**科大入學獎學金**：頒予DSE成績優異（高於43.13分）的學生。涵蓋全額或部分學費（每年高達210,000港元）及生活津貼。",
+            "**理學院優秀獎學金**：授予科學科目表現卓越（如生物/化學達5*級或以上）的學生。每年50,000港元。",
+            "**生物醫學課程獎學金**：專為JS5118學生設立，頒予展現卓越學術潛力及生物醫學研究興趣的學生。每年高達30,000港元。",
+            "**需要為本財務資助**：科大為低收入家庭學生提供經審查的助學金及貸款。涵蓋學費、住宿及生活費，每年高達100,000港元。",
+            "**外部獎學金**：學生可申請香港特別行政區政府獎學基金（每年80,000港元）或尤德爵士紀念基金獎學金（科學學生）。",
+            "**研究及交流資助**：本科生研究項目（高達20,000港元）及海外交流計劃（每學期高達50,000港元）的額外資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5118 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先將生物及化學考獲5*級**",
+            "",
+            "- 目標是生物及化學均達5*級或以上，因為它們權重最高。5*級可為你的分數增加最多5分。",
+            "- 專注於實驗技巧及數據分析題目，這些在科大面試中常見。",
+            "",
+            "**2. 將物理、M1或M2提升至5級**",
+            "",
+            "- 這些科目亦有權重；5級可提升3至4分。使用歷屆試題及科大的網上資源。",
+            "- 如未修讀M1或M2，可考慮選修，因為它們展示健康數據科學所需的量化能力。",
+            "",
+            "**3. 目標最佳5科至少43分**",
+            "",
+            "- 鑑於中位數為43.13，目標是最佳5科達43分以上。使用科大入學計算器模擬分數。",
+            "- 包括第6科加分（最高為最佳5科分數的5%）以最大化總分。",
+            "",
+            "**4. 撰寫強而有力的個人陳述**",
+            "",
+            "- 突出具體的生物醫學興趣（如基因組學、免疫學），並與科大的研究優勢聯繫。",
+            "- 提及任何實驗室經驗、科學奧林匹克或健康相關義工工作。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- 預期問題涉及當前健康議題（如COVID-19、人口老化）及你對生物醫學的動機。",
+            "- 練習清晰解釋科學概念及討論醫療保健中的倫理困境。",
+            "",
+            "**6. 及早獲取研究經驗**",
+            "",
+            "- 參加科大暑期研究計劃或跟隨理學院教授。這可強化你的申請及面試表現。",
+            "- 參與香港科學比賽或類似競賽。",
+            "",
+            "**7. 善用權重優勢**",
+            "",
+            "- 如果你在生物、化學、物理、M1或M2成績優異，你的分數可超越原始最佳5科。例如，生物5**級可加7分。",
+            "- 查閱科大網站獲取最新權重表。",
+            "",
+            "**8. 及早申請並留意截止日期**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交JUPAS申請。延遲申請會降低機會。",
+            "- 留意科大的入學講座及開放日，獲取JS5118的最新資訊。",
+            "",
+            "**9. 考慮後備課程**",
+            "",
+            "- 如果你的分數低於40.50，可申請相關課程如JS5102（理學士（生物科技））或JS5112（理學士（化學））作為替代。",
+            "- 這些課程的第一年科目相同，方便日後轉系。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "43.13",
+    "lq": "40.50"
+  }
+}

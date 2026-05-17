@@ -1,0 +1,245 @@
+{
+  "programme": {
+    "code": "JS5230",
+    "nameEn": "Department of Civil and Environmental Engineering",
+    "nameZh": "土木及環境工程學系",
+    "name": "Department of Civil and Environmental Engineering",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "40.78",
+    "band_a": "35.10",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5230",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 40.78 (2025 JUPAS data).",
+            "**Lower Quartile**: 35.10 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Math/ M1/ M2 Level 5*.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS5230 offers a comprehensive 4-year curriculum covering civil and environmental engineering fundamentals, with a focus on sustainable infrastructure, smart cities, and climate resilience.",
+            "**Year 1**: Students take foundational courses in mathematics (including M1/M2), physics, chemistry, and introductory engineering, alongside university core requirements. A key course is 'Engineering Mechanics'.",
+            "**Year 2**: Core civil engineering subjects begin: structural analysis, fluid mechanics, geotechnical engineering, and environmental engineering principles. Students also start lab-based learning in state-of-the-art facilities.",
+            "**Year 3**: Specialisation deepens with electives in structural design, transportation engineering, water resources, and environmental systems. A major group design project is undertaken, simulating real-world consultancy work.",
+            "**Year 4**: Final year includes a capstone design project and research thesis, plus advanced electives like 'Smart Infrastructure' and 'Climate Change Adaptation'. Students can also pursue a minor in business or data science.",
+            "**Two Streams**: Students choose between Civil Engineering (focusing on structures, geotechnics, and transport) and Environmental Engineering (focusing on water, air quality, and waste management), with cross-over electives available."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Hong Kong's massive infrastructure projects (e.g., Northern Metropolis, Lantau Tomorrow) and green building initiatives create strong demand for civil and environmental engineers. Graduates are hired by top consultancies, contractors, and government departments.",
+            "**Diverse Roles**: Common career paths include structural engineer, geotechnical engineer, transportation planner, environmental consultant, water resources engineer, and project manager. Many graduates also enter the construction and property development sectors.",
+            "**Industry Connections**: HKUST's location near Hong Kong Science Park and strong ties with the Construction Industry Council (CIC) and MTR Corporation provide internship and job placement opportunities. Over 90% of graduates secure employment within 6 months.",
+            "**Global Opportunities**: The programme's international recognition allows graduates to work overseas, with many pursuing chartership with institutions like ICE (UK) or ASCE (USA). Exchange programmes also enhance global employability.",
+            "**Entrepreneurship Path**: HKUST's entrepreneurship ecosystem supports graduates who wish to start their own engineering or green-tech ventures, with access to the HKUST Entrepreneurship Centre and seed funding."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST's Clear Water Bay campus offers panoramic sea views and a tranquil environment, ideal for focused study. The campus is a short bus ride from Sai Kung town and central Kowloon.",
+            "**World-Class Labs**: The Department houses specialised labs for structural testing, geotechnical centrifuge modelling, environmental chemistry, and hydraulics. The 'Smart City Lab' features IoT sensors and digital twin technology.",
+            "**Student Halls**: On-campus accommodation is guaranteed for the first two years, with modern halls featuring sea-view rooms, common rooms, and study areas. Hall life includes sports teams, cultural events, and floor competitions.",
+            "**Sports & Recreation**: Facilities include a 50-metre swimming pool, sports hall, fitness centre, tennis courts, and a climbing wall. The 'Sai Kung Outdoor Activities Centre' offers kayaking, hiking, and sailing.",
+            "**Dining & Social**: Over 20 dining outlets on campus, from canteens to themed restaurants, serving international cuisine. The 'LG5' area is a popular student hub with cafes and convenience stores."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus, with Mathematics/M1/M2 weighted. The highest attainable score is 75.86, reflecting the programme's emphasis on quantitative skills.",
+            "**Median Score (2025)**: 40.78, indicating that successful applicants typically achieve strong results across their best five subjects, with a particular strength in mathematics.",
+            "**Lower Quartile (2025)**: 35.10, showing that even the lowest admitted students have solid academic profiles, with room for applicants who excel in mathematics to compensate for slightly weaker results elsewhere.",
+            "**Preferred Subjects**: Mathematics/M1/M2 at Level 5* or above are highly recommended. Applicants with these scores have a significant advantage in the weighted admission process.",
+            "**Competition Level**: With HKUST's global reputation and the programme's strong industry links, JS5230 attracts top local and international students. The 2025 median score of 40.78 places it among the more competitive engineering programmes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Ir. Thomas Tang (鄧兆棠)**: Former Director of Civil Engineering and Development, HKSAR Government. A pioneer in Hong Kong's infrastructure development, including the Hong Kong-Zhuhai-Macao Bridge.",
+            "**Ir. Albert Wong (黃志強)**: Managing Director, AECOM Asia. Led major projects such as the Kai Tak Development and West Kowloon Cultural District. 1995 graduate.",
+            "**Dr. Sarah Liao (廖秀冬)**: Former Secretary for the Environment, Transport and Works, HKSAR Government. Renowned for her work on environmental policy and sustainable development.",
+            "**Ir. Dr. Raymond Chan (陳志強)**: Executive Director, MTR Corporation. Oversaw the construction of the Shatin to Central Link and Tuen Ma Line. 1998 graduate.",
+            "**Prof. Irene Lo (盧慧卿)**: Chair Professor of Environmental Engineering, HKUST. Internationally recognised for research on water treatment and contaminated land remediation. Also a former Head of Department."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE achievers (e.g., 5** in multiple subjects). Covers full or partial tuition fees, with a living allowance of up to HK$50,000 per year.",
+            "**School of Engineering Scholarships**: Multiple merit-based scholarships for engineering students, including the 'Engineering Dean's Scholarship' (HK$20,000–HK$40,000) for those with outstanding admission scores.",
+            "**Departmental Awards**: The Department of Civil and Environmental Engineering offers the 'CivE Excellence Scholarship' (HK$10,000) to students with strong academic performance in Year 1 and Year 2.",
+            "**External Scholarships**: Students can apply for the 'HKSAR Government Scholarship' (up to HK$80,000) and 'Sir Edward Youde Memorial Fellowship' (HK$100,000) for outstanding academic and leadership achievements.",
+            "**Financial Assistance**: The university provides need-based grants and loans through the 'HKUST Financial Aid Scheme', ensuring no student is denied education due to financial constraints."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5230 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master Mathematics and M1/M2**",
+            "- Aim for Level 5* or above in Mathematics (Compulsory) and M1/M2, as these are weighted heavily in the admission formula. A 5* in M2 can boost your score by up to 10%.",
+            "",
+            "**2. Build a Strong Best 5 Profile**",
+            "- Focus on your top 5 subjects, as the formula uses Best 5 + 6th subject bonus. Prioritise subjects like Physics, Chemistry, and Economics, which align with engineering.",
+            "",
+            "**3. Excel in Physics and Chemistry**",
+            "- These subjects are highly relevant to civil and environmental engineering. Aim for Level 5 or above in both to demonstrate your scientific foundation.",
+            "",
+            "**4. Use the 6th Subject Bonus Wisely**",
+            "- Your 6th best subject can add bonus points. Choose a subject where you can achieve Level 5 or above, such as Geography or Biology, to maximise your total score.",
+            "",
+            "**5. Prepare for Interviews (if shortlisted)**",
+            "- HKUST may invite top applicants for interviews. Practice explaining your interest in civil engineering, discuss current infrastructure projects in Hong Kong, and show problem-solving skills.",
+            "",
+            "**6. Highlight Extracurricular Activities**",
+            "- Participation in engineering competitions (e.g., HK Youth Engineering Challenge), internships, or volunteering in construction-related projects can strengthen your application.",
+            "",
+            "**7. Research the Programme Thoroughly**",
+            "- Understand the two streams (Civil vs Environmental) and the capstone project. Mention specific labs or courses (e.g., Smart City Lab) in your personal statement to show genuine interest.",
+            "",
+            "**8. Plan for the Median Score**",
+            "- With a median score of 40.78, aim for at least 41–42 to be competitive. Calculate your expected score using the formula: sum of best 5 + 6th subject bonus, with M1/M2 weighted.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "- Submit your JUPAS application by the early deadline (typically December). Late applications reduce your chances, as HKUST fills places in the main round."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：40.78分（2025年聯招數據）。",
+            "**下四分位數**：35.10分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Math/ M1/ M2 Level 5*。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS5230 提供為期四年的全面課程，涵蓋土木及環境工程基礎，重點關注可持續基礎設施、智慧城市和氣候適應能力。",
+            "**第一年**：學生修讀數學（包括 M1/M2）、物理、化學和工程導論等基礎課程，以及大學核心科目。關鍵課程包括「工程力學」。",
+            "**第二年**：開始核心土木工程科目：結構分析、流體力學、岩土工程和環境工程原理。學生亦在最先進的實驗室進行實驗學習。",
+            "**第三年**：專業化加深，選修結構設計、交通工程、水資源和環境系統等課程。學生需完成一個大型小組設計項目，模擬真實顧問工作。",
+            "**第四年**：最後一年包括頂點設計項目和研究論文，以及「智慧基礎設施」和「氣候變化適應」等高級選修課。學生亦可選修商業或數據科學副修。",
+            "**兩個專修**：學生可選擇土木工程（專注結構、岩土和交通）或環境工程（專注水、空氣質素和廢物管理），並可選修跨專修科目。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：香港的大型基建項目（如北部都會區、明日大嶼）和綠色建築倡議創造了對土木及環境工程師的強勁需求。畢業生受僱於頂尖顧問公司、承建商和政府部門。",
+            "**多元化職位**：常見職業路徑包括結構工程師、岩土工程師、交通規劃師、環境顧問、水資源工程師和項目經理。許多畢業生亦進入建築和物業發展行業。",
+            "**行業聯繫**：科大鄰近香港科學園，並與建造業議會和港鐵公司有緊密聯繫，提供實習和就業機會。超過 90% 的畢業生在 6 個月內找到工作。",
+            "**環球機會**：課程的國際認可讓畢業生可在海外工作，許多人考取英國土木工程師學會或美國土木工程師學會的專業資格。交流計劃亦提升全球就業能力。",
+            "**創業路徑**：科大的創業生態系統支持希望創辦工程或綠色科技初創公司的畢業生，可獲取科大創業中心和種子資金的支援。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美地點**：科大清水灣校園享有全景海景和寧靜環境，是專注學習的理想地點。校園距離西貢市區和九龍市中心僅需短途巴士車程。",
+            "**世界級實驗室**：學系設有專門實驗室，用於結構測試、岩土離心機建模、環境化學和水力學。「智慧城市實驗室」配備物聯網傳感器和數碼孿生技術。",
+            "**學生宿舍**：首兩年保證提供校內住宿，現代化宿舍設有海景房、公共休息室和學習區。宿舍生活包括體育隊伍、文化活動和樓層比賽。",
+            "**體育與康樂**：設施包括 50 米游泳池、體育館、健身中心、網球場和攀石牆。「西貢戶外活動中心」提供獨木舟、遠足和帆船活動。",
+            "**餐飲與社交**：校園內有超過 20 個餐飲場所，從食堂到主題餐廳，提供國際美食。「LG5」區域是受歡迎的學生聚腳點，設有咖啡店和便利店。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳 5 科 + 第 6 科獎勵分，數學/M1/M2 獲加權。最高可達分數為 75.86，反映課程對量化技能的重視。",
+            "**2025 年中位數**：40.78，顯示成功申請者通常在其最佳五科中取得優異成績，尤其在數學方面表現突出。",
+            "**2025 年下四分位數**：35.10，顯示即使最低錄取學生也有穩固的學術背景，數學優異的申請者可彌補其他科目的較弱表現。",
+            "**優先科目**：強烈建議數學/M1/M2 達到 5* 或以上。擁有這些成績的申請者在加權入學過程中具有顯著優勢。",
+            "**競爭程度**：憑藉科大的全球聲譽和課程的強大行業聯繫，JS5230 吸引頂尖本地和國際學生。2025 年中位數 40.78 使其成為競爭較激烈的工程課程之一。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**鄧兆棠博士工程師**：前香港特別行政區政府土木工程拓展署署長。香港基建發展的先驅，包括港珠澳大橋。",
+            "**黃志強工程師**：AECOM 亞洲董事總經理。領導多個大型項目，如啟德發展計劃和西九文化區。1995 年畢業。",
+            "**廖秀冬博士**：前香港特別行政區政府環境運輸及工務局局長。以環境政策和可持續發展工作聞名。",
+            "**陳志強博士工程師**：港鐵公司執行董事。監督沙田至中環線和屯馬線的建設。1998 年畢業。",
+            "**盧慧卿教授**：香港科技大學環境工程講座教授。在水處理和污染土地修復研究方面享譽國際。曾任學系主任。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：頒予頂尖 HKDSE 考生（如多科 5**）。涵蓋全額或部分學費，並提供每年高達 50,000 港元的生活津貼。",
+            "**工程學院獎學金**：多項基於成績的工程獎學金，包括「工程學院院長獎學金」（20,000–40,000 港元），頒予入學成績優異的學生。",
+            "**學系獎項**：土木及環境工程學系提供「土木卓越獎學金」（10,000 港元），頒予第一年和第二年學業成績優異的學生。",
+            "**外部獎學金**：學生可申請「香港特別行政區政府獎學金」（高達 80,000 港元）和「尤德爵士紀念基金獎學金」（100,000 港元），以表彰學術和領導成就。",
+            "**經濟援助**：大學透過「科大經濟援助計劃」提供基於需要的資助和貸款，確保沒有學生因經濟困難而無法接受教育。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5230 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 精通數學和 M1/M2**",
+            "- 目標在數學（必修部分）和 M1/M2 取得 5* 或以上，因為這些科目在入學公式中獲加權。M2 的 5* 可提升分數高達 10%。",
+            "",
+            "**2. 建立強大的最佳五科檔案**",
+            "- 專注於你的最佳五科，因為公式使用最佳五科 + 第六科獎勵分。優先選擇與工程相關的科目，如物理、化學和經濟。",
+            "",
+            "**3. 在物理和化學中表現出色**",
+            "- 這些科目與土木及環境工程高度相關。目標在兩科取得 5 級或以上，以展示你的科學基礎。",
+            "",
+            "**4. 善用第六科獎勵分**",
+            "- 你的第六最佳科目可增加獎勵分。選擇一個你能取得 5 級或以上的科目，如地理或生物，以最大化總分。",
+            "",
+            "**5. 為面試做好準備（如獲篩選）**",
+            "- 科大可能邀請頂尖申請者面試。練習解釋你對土木工程的興趣，討論香港當前的基建項目，並展示解決問題的能力。",
+            "",
+            "**6. 突出課外活動**",
+            "- 參與工程比賽（如香港青年工程挑戰賽）、實習或建築相關項目的義工服務，可增強你的申請。",
+            "",
+            "**7. 徹底研究課程**",
+            "- 了解兩個專修（土木 vs 環境）和頂點項目。在個人陳述中提及具體實驗室或課程（如智慧城市實驗室），以展示真正興趣。",
+            "",
+            "**8. 以中位數為目標**",
+            "- 中位數為 40.78，目標至少 41–42 以具競爭力。使用公式計算預期分數：最佳五科總和 + 第六科獎勵分，M1/M2 獲加權。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "- 在早期截止日期（通常為 12 月）前提交 JUPAS 申請。延遲申請會降低機會，因為科大在主要輪次已填滿學額。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "40.78",
+    "lq": "35.10"
+  }
+}

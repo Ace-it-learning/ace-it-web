@@ -8,7 +8,7 @@
     "faculty": "商學院",
     "median": 31,
     "band_a": 33,
-    "category": "business"
+    "category": "Business"
   },
   {
     "code": "JS4240",
@@ -19,7 +19,7 @@
     "faculty": "商學院",
     "median": 29,
     "band_a": 31,
-    "category": "business"
+    "category": "Business"
   },
   {
     "code": "JS4542",
@@ -30,7 +30,7 @@
     "faculty": "醫學院",
     "median": 30,
     "band_a": 32,
-    "category": "health_science"
+    "category": "Medicine"
   },
   {
     "code": "JS4812",
@@ -41,7 +41,7 @@
     "faculty": "社會科學院",
     "median": 26,
     "band_a": 28,
-    "category": "design"
+    "category": "Architecture & Built Environment"
   },
   {
     "code": "JS4850",
@@ -52,6 +52,6 @@
     "faculty": "社會科學院",
     "median": 25,
     "band_a": 27,
-    "category": "social_science"
+    "category": "Communication & Media"
   }
 ]

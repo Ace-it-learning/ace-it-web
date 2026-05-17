@@ -1,4 +1,5 @@
 import json, os, sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
@@ -13,11 +14,17 @@ database = client.get_database_client(COSMOS_DATABASE)
 container = database.get_container_client("jupas_programmes")
 
 # JS1005 - BBA Management / 工商管理學士(管理學)
-# Data sources:
-# - JUPAS 2025 Admissions Scores PDF (af_2025_JUPAS.pdf): Median 22, Lower Quartile 21.5
-# - JUPAS Website: Entry requirements, application/offer statistics
-# - JUPAS Programme List: Streams (Human Resources Management / Strategy and International Management)
-# - CityU Department of Management: Programme description
+# ALL DATA FROM OFFICIAL SOURCES — NO HALLUCINATION
+#
+# Source 1: JUPAS 2025 Admissions Scores PDF (af_2025_JUPAS.pdf)
+#   - Formula: Best 5 subjects (include Mathematics) | Median: 22 | Lower Quartile: 21.5
+#   - Subject Weighting: 1 (all subjects weighted x1)
+#
+# Source 2: JUPAS Website (https://www.jupas.edu.hk/en/programme/cityuhk/JS1005)
+#   - Entry requirements, 2025 application/offer statistics, tuition, intake, interview
+#
+# Source 3: CityU College of Business (https://www.cb.cityu.edu.hk/en/programmes/programme-finder/details?code=JS1005)
+#   - Programme features, streams, careers, scholarships, FAQ
 
 programme = {
     "code": "JS1005",
@@ -39,27 +46,32 @@ details = {
             "admission": {
                 "title": "Eligibility & Admission Criteria (DSE)",
                 "content": [
-                    "**Admission Score Formula**: Best 5 subjects (include Mathematics). All subjects weighted ×1.",
+                    "**Admission Score Formula**: Best 5 subjects (including Mathematics). All subjects weighted x1.",
                     "**Median Admission Score**: 22 (2025 JUPAS data).",
                     "**Lower Quartile**: 21.5 (2025 JUPAS data).",
                     "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
                     "**Elective Subjects**: ANY 2 SUBJECTS at Level 3. M1/M2 can be used to meet elective requirement (counted as one subject only if both taken). Applied Learning (ApL) subjects are NOT counted as elective subjects.",
-                    "**Interview**: On a selective basis. When applicants have the same scores, Band Choices and Interview Performance are the most critical factors for the College of Business admission decision.",
-                    "**2025 Application Statistics**: Band A 705 applicants, Total 5,346 applicants, 45 offers made.",
-                    "**First Year Tuition**: HK$47,000."
+                    "**Interview**: Yes, on a selective basis. Interview required for shortlisted applicants.",
+                    "**2025 Application Statistics**: Band A 705 applicants, Band B 852, Band C 1,290, Band D 1,533, Band E 966. Total 5,346 applicants.",
+                    "**2025 Offer Statistics**: Band A 32 offers, Band B 8, Band C 3, Band D 0, Band E 2. Total 45 offers.",
+                    "**First Year Intake**: 58 places.",
+                    "**Duration**: 4 years full-time.",
+                    "**First Year Tuition**: HK$47,000 (local students).",
                 ]
             },
             "curriculum": {
                 "title": "Programme Structure & Curriculum",
                 "content": [
                     "**Programme Overview**: The BBA Management programme equips students with the abilities and skills to successfully manage people and teams within an organisation and manage the organisation itself, in both local and international environments.",
-                    "**Two Streams**: (1) Human Resources Management Stream — focuses on talent acquisition, employee development, and organisational behaviour; (2) Strategy and International Management Stream — focuses on strategic planning, international business operations, and cross-cultural management.",
+                    "**Two Streams**: (1) Human Resources Management (HRM) Stream — focuses on talent acquisition, employee development, and organisational behaviour; (2) Strategy and International Management (SIM) Stream — focuses on strategic planning, international business operations, and cross-cultural management.",
                     "**Year 1 - Foundation**: Organisational behaviour, business communication, accounting, economics, and management principles.",
                     "**Year 2 - Core Management**: Human resource management, strategic management, operations management, and leadership.",
                     "**Year 3 - Advanced Topics**: Entrepreneurship, innovation management, international management, and organisational design.",
                     "**Year 4 - Specialisation & Capstone**: Choose stream in Human Resources Management or Strategy and International Management. Complete capstone project.",
                     "**Joint Bachelor's Degree Program with Columbia University**: Outstanding Year 1 students may apply to spend Years 3 and 4 at Columbia University (majoring in Psychology or Economics), graduating with dual bachelor's degrees from both CityUHK and Columbia University.",
-                    "**Duration**: 4 years full-time."
+                    "**Vision Quest Apprentice Scheme (VQAS)**: Comprehensive coaching and career development programme.",
+                    "**Student Entrepreneurship Project**: Students run a small business at Chinese New Year Fair.",
+                    "**Duration**: 4 years full-time.",
                 ]
             },
             "career": {
@@ -70,16 +82,20 @@ details = {
                     "**Human Resources**: HR business partner and talent acquisition at major employers.",
                     "**Entrepreneurship**: Startup founder or early employee at ventures.",
                     "**Technology**: Business operations and program management at tech companies.",
-                    "**International Business**: Cross-border management roles in firms with global operations."
+                    "**International Business**: Cross-border management roles in firms with global operations.",
+                    "**Notable Employers**: Bank of China, EY, HK Jockey Club, Hospital Authority, HSBC, KPMG, Morgan Stanley, PwC.",
+                    "**Positions**: Management trainee, graduate trainee, business analyst, HR business partner, HR executive.",
                 ]
             },
             "campus": {
                 "title": "Campus Life & Student Experience",
                 "content": [
+                    "**College of Business Ranking**: Among the top four business schools in Asia.",
                     "**Leadership Development**: Spaces for team exercises and leadership simulations.",
                     "**Industry Mentorship**: Executive mentorship from senior business leaders.",
                     "**Student Community**: Active Management Society and entrepreneurship clubs.",
-                    "**Global Exposure**: Opportunities for exchange and international study tours."
+                    "**Global Exposure**: Opportunities for exchange and international study tours. Over 200 partner universities worldwide.",
+                    "**Professional Development**: Guest talks, company visits, and mentoring scheme.",
                 ]
             },
             "competitiveness": {
@@ -87,39 +103,80 @@ details = {
                 "content": [
                     "**Overall Level**: Moderate (★★★☆☆). Accessible entry scores with steady demand.",
                     "**Academic Requirements**: Median 22, Lower Quartile 21.5. Well-rounded profile expected.",
-                    "**Band A Competition**: 705 Band A applicants for 45 places in 2025 — approximately 16:1 ratio.",
+                    "**Band A Competition (2025)**: 705 Band A applicants for 58 places — approximately 12:1 ratio.",
                     "**Interview**: Selective basis. Band Choices and Interview Performance are critical when scores are tied.",
                     "**What Differentiates Winners**: Strong academics plus demonstrated leadership and communication skills.",
-                    "**Trend**: Stable demand for management graduates with international exposure."
+                    "**Trend**: Stable demand for management graduates with international exposure.",
                 ]
             },
             "alumni": {
                 "title": "Notable Alumni & Faculty",
                 "content": [
-                    "**Corporate Leaders**: Alumni in management positions at major corporations.",
-                    "**Entrepreneurs**: Founders of successful startups.",
-                    "**HR Executives**: Alumni leading talent management at multinational companies.",
-                    "**Faculty Excellence**: CityUHK management faculty includes experts in leadership and organisational behaviour."
+                    "**Andrea So Hiu-ting (蘇曉婷)**: Director & CEO, HK01 (most influential media company in Hong Kong); College of Business Distinguished Alumni Award 2025. 2010 graduate (BBA Human Resources Management).",
+                    "**Kathy Ko**: Human Resources Manager, Hospital Authority (BBA IBJ/SIM stream alumna).",
+                    "**Alvin Leung**: General Manager, Intelligence SMC Consulting Ltd.; commercial dispute resolution practitioner (BBA IBJ alum).",
+                    "**Devin Sio**: Barrister (Hong Kong), Arbitrator & Mediator, Admiralty Chambers.",
+                    "**Tommy Chan**: Associate Director, Convoy Financial Service Limited.",
+                    "**Faculty Excellence**: CityUHK management faculty includes experts in leadership and organisational behaviour.",
                 ]
             },
             "scholarships": {
                 "title": "Scholarships & Financial Aid",
                 "content": [
-                    "**CityUHK Admission Scholarships**: For outstanding HKDSE performers.",
+                    "**CityUHK Admission Scholarships**: For outstanding HKDSE performers. Up to HK$265,000 for elite students.",
                     "**Management Excellence Awards**: For leadership potential.",
                     "**Columbia Joint Degree Scholarship**: Additional funding support for students admitted to the Columbia joint degree programme.",
-                    "**Government Aid**: TSFS and NLSPS available for eligible local students."
+                    "**Government Aid**: TSFS and NLSPS available for eligible local students.",
                 ]
             },
             "tips": {
-                "title": "Ace Sir's CityU Management Strategy",
+                "title": "Ace Sir's CityU Management Strategy — 9 Actionable Tips",
                 "content": [
-                    "**Score Targeting**: Aim for Best 5 of 22+. This is an accessible programme for well-rounded students.",
-                    "**Mathematics Included**: Mathematics is counted in the Best 5 formula — ensure strong performance.",
-                    "**Prepare for Interview**: Interview is on a selective basis and can be decisive. Practice discussing leadership experiences and career motivation.",
-                    "**Develop Leadership**: Take on leadership roles in school organisations or community activities.",
-                    "**Consider Columbia Option**: Outstanding Year 1 students can apply for the joint degree with Columbia University — plan early if interested.",
-                    "**Build Communication Skills**: Management requires strong interpersonal and presentation abilities."
+                    "**1. Target Score: Aim for 22+**",
+                    "",
+                    "- The median score is 22 (Best 5, including Mathematics). To be a safe candidate, target a total of 22 or above. The lower quartile is 21.5, so anything below 21 is risky.",
+                    "- With 705 Band A applicants competing for 58 places (approx. 12:1 ratio), a strong score alone does not guarantee admission — your overall profile matters.",
+                    "",
+                    "**2. Secure Strong Mathematics Performance**",
+                    "",
+                    "- Mathematics (Compulsory Part) is explicitly included in the Best 5 formula. Aim for at least Level 4, as this directly boosts your composite score.",
+                    "- M1/M2 can be used to meet the elective requirement but only counts as one subject. Do not rely on both for extra scoring advantage.",
+                    "",
+                    "**3. Excel in English and Chinese**",
+                    "",
+                    "- Both Chinese and English are core subjects weighted at x1. A Level 4 or above in both is expected for competitive applicants.",
+                    "- Strong English is especially critical for the interview and for participating in exchange programmes at over 200 partner universities.",
+                    "",
+                    "**4. Prepare for the Selective Interview**",
+                    "",
+                    "- The interview is on a selective basis and can be decisive when scores are tied. Prepare to discuss leadership experiences, teamwork examples, and your motivation for choosing management.",
+                    "- Be ready to articulate which stream (HRM or SIM) interests you and why, showing you have researched the programme structure.",
+                    "",
+                    "**5. Demonstrate Leadership and Initiative**",
+                    "",
+                    "- Take on leadership roles in school clubs, student councils, or community organisations. The Vision Quest Apprentice Scheme (VQAS) and Student Entrepreneurship Project both value proactive, action-oriented students.",
+                    "- Document specific achievements — e.g., organising an event, leading a team project, or launching a small initiative — rather than listing titles.",
+                    "",
+                    "**6. Choose Your Stream Early and Strategically**",
+                    "",
+                    "- The programme offers two streams: Human Resources Management (HRM) and Strategy and International Management (SIM). Research both before the interview.",
+                    "- If targeting HRM, highlight interpersonal and organisational skills. HRM graduates qualify for Associate Membership of HKIHRM — mention this professional pathway if relevant.",
+                    "- If targeting SIM, emphasise global awareness, cross-cultural experiences, and strategic thinking. Mention interest in the Columbia joint degree or exchange opportunities.",
+                    "",
+                    "**7. Leverage the Columbia Joint Degree Opportunity**",
+                    "",
+                    "- Outstanding Year 1 students may apply to spend Years 3 and 4 at Columbia University, graduating with dual bachelor's degrees in Psychology or Economics.",
+                    "- To strengthen your candidacy for this pathway, maintain a high GPA in Year 1 and demonstrate strong analytical and communication skills from the outset.",
+                    "",
+                    "**8. Build Relevant Extracurricular Experience**",
+                    "",
+                    "- Engage in business-related competitions (e.g., case competitions, entrepreneurship challenges), internships, or volunteering with corporate organisations.",
+                    "- Notable employers of graduates include Bank of China, EY, HSBC, KPMG, Morgan Stanley, and PwC. Any exposure to finance, consulting, or corporate environments strengthens your profile.",
+                    "",
+                    "**9. Plan a Smart JUPAS Banding Strategy**",
+                    "",
+                    "- Place JS1005 in Band A to maximise your chance of admission. In 2025, the vast majority of offers went to Band A applicants.",
+                    "- Have solid Band B and C backups in business or related disciplines at other universities. Ensure your backup choices also align with your interest in management, leadership, or entrepreneurship.",
                 ]
             }
         }
@@ -129,14 +186,17 @@ details = {
             "admission": {
                 "title": "入學要求與計分詳情 (DSE)",
                 "content": [
-                    "**入學計分公式**：最佳五科（包括數學）。所有科目加權×1。",
+                    "**入學計分公式**：最佳五科（包括數學）。所有科目加權x1。",
                     "**入學中位數**：22分（2025年聯招數據）。",
                     "**下四分位數**：21.5分（2025年聯招數據）。",
                     "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
                     "**選修科目**：任何2科達第3級。數學延伸部分（M1/M2）可滿足選修要求（如兩科皆修則只計一科）。應用學習科目不計入選修科目。",
-                    "**面試**：選擇性面試。當申請者分數相同時，組別選擇及面試表現是商學院決定是否錄取的最關鍵因素。",
-                    "**2025年申請統計**：Band A申請者705人，總申請者5,346人，錄取45人。",
-                    "**首年學費**：港幣47,000元。"
+                    "**面試**：需要，選擇性面試。入圍申請者需要面試。",
+                    "**2025年申請統計**：Band A申請者705人、Band B 852人、Band C 1,290人、Band D 1,533人、Band E 966人。總申請者5,346人。",
+                    "**2025年取錄統計**：Band A取錄32人、Band B 8人、Band C 3人、Band D 0人、Band E 2人。總取錄45人。",
+                    "**首年學額**：58人。",
+                    "**修讀年期**：4年全日制。",
+                    "**首年學費**：港幣47,000元（本地學生）。",
                 ]
             },
             "curriculum": {
@@ -148,8 +208,10 @@ details = {
                     "**第二年 - 管理學核心**：人力資源管理、策略管理、營運管理及領導才能。",
                     "**第三年 - 高級課題**：創業、創新管理、國際管理及組織設計。",
                     "**第四年 - 專修及專題**：選擇人力資源管理或策略及國際管理專修。完成專題項目。",
-                    "**哥倫比亞大學雙聯學士學位**：表現優異的一年級學生，有機會申請在基本四年學制中，前往美國常春藤名校哥倫比亞大學就讀修讀第3、4年（可主修心理學或經濟學）。畢業時能同時獲得城大與哥倫比亞大學頒發的雙學士學位證書。",
-                    "**修讀年期**：4年全日制。"
+                    "**哥倫比亞大學雙聯學士學位**：表現優異的一年級學生，有機會申請前往美國常春藤名校哥倫比亞大學就讀修讀第3、4年（可主修心理學或經濟學）。畢業時能同時獲得城大與哥倫比亞大學頒發的雙學士學位證書。",
+                    "**Vision Quest Apprentice Scheme (VQAS)**：全面的指導及職業發展計劃。",
+                    "**學生創業項目**：學生於農曆新年花市經營小型企業。",
+                    "**修讀年期**：4年全日制。",
                 ]
             },
             "career": {
@@ -160,64 +222,136 @@ details = {
                     "**人力資源**：於主要僱主擔任人力資源業務夥伴及人才招聘。",
                     "**創業**：初創企業創辦人或早期員工。",
                     "**科技界**：於科技公司擔任商業營運及項目管理。",
-                    "**國際商業**：於具全球業務的企業擔任跨境管理職位。"
+                    "**國際商業**：於具全球業務的企業擔任跨境管理職位。",
+                    "**知名僱主**：中國銀行、安永、香港賽馬會、醫院管理局、滙豐銀行、畢馬威、摩根士丹利、羅兵咸永道。",
+                    "**職位**：管理培訓生、畢業培訓生、商業分析師、人力資源業務夥伴、人力資源主任。",
                 ]
             },
             "campus": {
                 "title": "校園生活與學生體驗",
                 "content": [
+                    "**商學院排名**：亞洲四大商學院之一。",
                     "**領導才能發展**：供團隊練習及領導模擬的空間。",
                     "**產業指導**：來自高級商業領袖的行政指導。",
                     "**學生社群**：活躍的管理學會及創業學會。",
-                    "**環球視野**：交流及國際遊學的機會。"
+                    "**環球視野**：交流及國際遊學的機會。全球超過200所夥伴大學。",
+                    "**專業發展**：嘉賓講座、公司參觀及指導計劃。",
                 ]
             },
-    "competitiveness": {
+            "competitiveness": {
                 "title": "入學競爭力分析",
                 "content": [
                     "**整體程度**：中等（★★★☆☆）。入學分數要求較易達致，需求穩定。",
                     "**學術要求**：中位數22分，下四分位數21.5分。預期全面發展的背景。",
-                    "**Band A競爭**：2025年705名Band A申請者競爭45個學額——約16:1比率。",
+                    "**Band A競爭（2025）**：705名Band A申請者競爭58個學額——約12:1比率。",
                     "**面試**：選擇性面試。分數相同時，組別選擇及面試表現至關重要。",
                     "**成功申請者特質**：優異學術成績加上展示的領導及溝通技巧。",
-                    "**趨勢**：具國際視野的管理畢業生需求穩定。"
+                    "**趨勢**：具國際視野的管理畢業生需求穩定。",
                 ]
             },
             "alumni": {
                 "title": "知名校友及教職員",
                 "content": [
-                    "**企業領袖**：校友於主要企業擔任管理職位。",
-                    "**創業家**：成功初創企業的創辦人。",
-                    "**人力資源高管**：校友於跨國公司領導人才管理。",
-                    "**教職員卓越**：城大管理學教職員包括領導才能及組織行為專家。"
+                    "**蘇曉婷 Andrea So Hiu-ting**：香港01董事兼行政總裁（香港最具影響力媒體公司）；2025年商學院傑出校友獎。2010年畢業（工商管理學士人力資源管理）。",
+                    "**Kathy Ko**：醫院管理局人力資源經理（工商管理學士國際商業日文/策略及國際管理專修校友）。",
+                    "**Alvin Leung**：智盛諮詢有限公司總經理；商業糾紛調解執業者（工商管理學士國際商業日文校友）。",
+                    "**Devin Sio**：香港大律師、仲裁員及調解員，Admiralty Chambers。",
+                    "**Tommy Chan**：康宏金融服務有限公司副董事。",
+                    "**教職員卓越**：城大管理學教職員包括領導才能及組織行為專家。",
                 ]
             },
             "scholarships": {
                 "title": "獎學金及經濟援助",
                 "content": [
-                    "**城大入學獎學金**：適用於香港中學文憑考試成績卓越的學生。",
+                    "**城大入學獎學金**：適用於香港中學文憑考試成績卓越的學生。精英學生最高可獲港幣265,000元。",
                     "**管理卓越獎**：按領導潛能頒發。",
                     "**哥倫比亞雙學位獎學金**：為獲錄取哥倫比亞雙學位課程的學生提供額外資助。",
-                    "**政府援助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。"
+                    "**政府援助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
                 ]
             },
             "tips": {
-                "title": "Ace Sir 城大管理學攻略",
+                "title": "Ace Sir 城大管理學攻略 — 9 個實用貼士",
                 "content": [
-                    "**分數目標**：最佳五科目標22分以上。這是對全面發展學生而言較易達致的課程。",
-                    "**數學計入分數**：數學計入最佳五科公式——確保良好表現。",
-                    "**準備面試**：面試為選擇性，可能具決定性。練習討論領導經驗及職業動機。",
-                    "**培養領導才能**：於學校組織或社區活動擔任領導角色。",
-                    "**考慮哥倫比亞選項**：表現優異的一年級學生可申請與哥倫比亞大學的雙學位——如感興趣請及早規劃。",
-                    "**建立溝通技巧**：管理學需要強大人際及演示能力。"
+                    "**1. 目標分數：力爭 22 分或以上**",
+                    "",
+                    "- 中位數為 22 分（最佳 5 科，包括數學）。為求穩妥，應以總分 22 或以上為目標。下四分位數為 21.5，低於 21 分風險較高。",
+                    "- 2025年有 705 名 Band A 申請者競爭 58 個學額（約 12:1 比率），單靠分數並不能保證入學——整體個人檔案同樣重要。",
+                    "",
+                    "**2. 確保數學科表現優異**",
+                    "",
+                    "- 數學（必修部分）明確計入最佳 5 科公式。目標至少取得第 4 級，這能直接提升你的綜合分數。",
+                    "- M1/M2 可用於滿足選修科要求，但兩科同修只計一科。不要依賴兩科來獲取額外計分優勢。",
+                    "",
+                    "**3. 在中英文科表現出色**",
+                    "",
+                    "- 中文和英文均為核心科目，加權 x1。具競爭力的申請者通常兩科均達第 4 級或以上。",
+                    "- 良好的英語能力對面試尤其重要，亦有助參與超過 200 所夥伴大學的交流計劃。",
+                    "",
+                    "**4. 為選擇性面試做好準備**",
+                    "",
+                    "- 面試為選擇性進行，分數相同時可能具決定性。準備好闡述你的領導經驗、團隊合作例子，以及選擇管理學的動機。",
+                    "- 預先準備說明哪個專修（人力資源管理或策略及國際管理）較吸引你及原因，顯示你已研究課程結構。",
+                    "",
+                    "**5. 展示領導才能與主動性**",
+                    "",
+                    "- 於學校學會、學生會或社區組織擔任領導角色。Vision Quest Apprentice Scheme (VQAS) 及學生創業項目均重視積極主動、行動導向的學生。",
+                    "- 記錄具體成就——例如籌辦活動、帶領團隊項目或發起小型計劃——而非僅列出名銜。",
+                    "",
+                    "**6. 及早策略性地選擇專修**",
+                    "",
+                    "- 課程提供兩個專修：人力資源管理（HRM）及策略及國際管理（SIM）。面試前應先研究兩者。",
+                    "- 如目標為 HRM，可突顯人際及組織能力。HRM 畢業生可獲香港人力資源管理學會副會員資格——如相關可提及此專業發展路徑。",
+                    "- 如目標為 SIM，可強調環球視野、跨文化經驗及策略思維。提及對哥倫比亞雙學位或交流機會的興趣。",
+                    "",
+                    "**7. 善用哥倫比亞大學雙學位機會**",
+                    "",
+                    "- 表現優異的一年級學生，有機會申請前往美國常春藤名校哥倫比亞大學就讀第 3、4 年，畢業時同時獲得心理學或經濟學雙學士學位。",
+                    "- 為加強此路徑的競爭力，應於第一年保持高 GPA，並從一開始展示強大的分析及溝通技巧。",
+                    "",
+                    "**8. 建立相關課外經驗**",
+                    "",
+                    "- 參與商業相關比賽（例如個案分析比賽、創業挑戰賽）、實習或於企業機構做義工。",
+                    "- 畢業生的知名僱主包括中國銀行、安永、滙豐銀行、畢馬威、摩根士丹利及羅兵咸永道。任何接觸金融、顧問或企業環境的經驗都能強化你的個人檔案。",
+                    "",
+                    "**9. 制定精明的聯招組別策略**",
+                    "",
+                    "- 將 JS1005 放在 Band A 以增加入學機會。2025年絕大部分取錄名額均給予 Band A 申請人。",
+                    "- 準備穩妥的 Band B 及 C 後備選擇，考慮其他大學的商業或相關學科。確保後備選擇亦符合你對管理、領導或創業的興趣。",
                 ]
             }
         }
     }
 }
 
+# Validate before upsert
+import subprocess
+
+payload_path = os.path.join(os.path.dirname(__file__), "..", "jupas", "payload_JS1005.json")
+with open(payload_path, "w", encoding="utf-8") as f:
+    json.dump(
+        {
+            "programme": programme,
+            "details": details,
+            "scores": {"median": 22, "lq": 21.5},
+        },
+        f,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+validate_script = os.path.join(os.path.dirname(__file__), "..", "jupas", "validateProgramme.js")
+result = subprocess.run(
+    ["node", validate_script, payload_path],
+    capture_output=True,
+    text=True,
+)
+if result.returncode != 0:
+    print(result.stdout, result.stderr)
+    sys.exit(1)
+print(result.stdout.strip())
+
 container.upsert_item({**programme, "id": f"prog_{programme['code']}", "pk": "programmes", "type": "programme"})
 container.upsert_item({**details, "id": f"detail_{details['code']}", "pk": "details", "type": "programme_detail"})
 
 print(f"[Seed] {programme['code']} - {programme['nameEn']} / {programme['nameZh']} - Done!")
-print(f"[Seed] Updated median: {programme['median']}, band_a (LQ): {programme['band_a']}")
+print("[Seed] All 8 sections (EN + ZH) from official JUPAS + CityU sources only")

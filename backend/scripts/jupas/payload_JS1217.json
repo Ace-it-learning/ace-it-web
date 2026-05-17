@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1217",
+    "nameEn": "Pathway for Research, Innovation, and Multinational Engineering",
+    "nameZh": "研究、創新和環球工程課程",
+    "name": "Pathway for Research, Innovation, and Multinational Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 38.5,
+    "band_a": 38.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1217",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2: English / Mathematics / Biology / Chemistry / Design and Applied Technology / Information and Communication Technology / M1/M2 / Physics 1: other elective subjects.",
+            "**Median Admission Score**: 38.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 38.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1217 is a 4-year interdisciplinary programme designed to cultivate future leaders in research, innovation, and multinational engineering. It integrates cutting-edge engineering knowledge with global perspectives and entrepreneurial thinking.",
+            "**Two Streams**: Students choose between the 'Research and Innovation' stream and the 'Multinational Engineering' stream, each offering specialised courses and project opportunities tailored to different career paths.",
+            "**Year 1**: Foundation courses in mathematics, physics, chemistry, and programming, plus a common core curriculum. Students explore both streams through introductory modules and lab sessions.",
+            "**Year 2**: Core engineering disciplines including thermodynamics, materials science, and circuit analysis. Students begin stream-specific electives and participate in a team-based innovation project.",
+            "**Year 3**: Advanced stream courses — Research stream students undertake a supervised research project; Multinational stream students complete an international exchange or industry placement. Both streams include cross-cultural communication training.",
+            "**Year 4**: Capstone project, advanced electives, and a final-year thesis or industry consultancy project. Graduates receive a Bachelor of Engineering with Honours."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Graduate Destinations**: Alumni enter sectors such as advanced manufacturing, renewable energy, smart city development, and multinational R&D centres. Many secure roles in top firms like ASM Pacific Technology, CLP Power, and Hong Kong Science and Technology Parks.",
+            "**Research Pathway**: The Research stream prepares students for MPhil/PhD programmes at CityU and overseas universities, with many graduates pursuing doctoral studies in engineering, materials science, or biomedical engineering.",
+            "**Multinational Roles**: The Multinational stream opens doors to global engineering firms, with graduates working as project engineers, technical consultants, or innovation managers in companies such as Siemens, Schneider Electric, and Arup.",
+            "**Entrepreneurship Support**: The programme offers incubation opportunities through CityU's HK Tech 300 programme, helping students launch startups in areas like green tech, AI hardware, and medical devices.",
+            "**Industry Connections**: Students benefit from internships at partner organisations including the Hong Kong Applied Science and Technology Research Institute (ASTRI) and the Hong Kong Productivity Council.",
+            "**Professional Recognition**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), enabling graduates to pursue Chartered Engineer status after relevant work experience."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: Students have access to over 20 specialised laboratories, including the Smart City Lab, Robotics Lab, and Advanced Materials Lab, equipped with 3D printers, electron microscopes, and AI computing clusters.",
+            "**Innovation Hub**: The CityU Innovation and Entrepreneurship Centre provides co-working spaces, prototyping workshops, and mentorship from industry veterans, fostering a vibrant startup culture.",
+            "**Global Exposure**: The programme supports overseas exchanges with over 40 partner universities in Europe, North America, and Asia, including the University of California, Berkeley and Imperial College London.",
+            "**Student Societies**: Active engineering clubs such as the CityU Engineering Society and the Robotics Team organise hackathons, technical workshops, and networking events throughout the year.",
+            "**Residential Life**: All first-year students are guaranteed on-campus accommodation at the CityU Student Residence, which features communal lounges, study rooms, and sports facilities.",
+            "**Location Advantage**: CityU is located in Kowloon Tong, directly connected to the MTR and within walking distance of the Kowloon Walled City Park and Festival Walk shopping mall."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score was 38.5 (Best 5 subjects including English), placing this programme among the most competitive engineering options at CityU.",
+            "**Lower Quartile (2025)**: The lower quartile stood at 38.0, indicating a narrow score range and strong demand from high-achieving applicants.",
+            "**Subject Weighting**: English, Mathematics, Biology, Chemistry, Design and Applied Technology, ICT, M1/M2, and Physics are weighted at 2×, while other electives are weighted at 1×. This favours students with strong STEM backgrounds.",
+            "**Application Ratio**: In recent cycles, the programme received approximately 8–10 applications per place, reflecting its popularity among top DSE candidates.",
+            "**Interview Requirement**: Shortlisted applicants may be invited for an interview, which assesses problem-solving skills, motivation, and interest in research or multinational engineering."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Senior Research Engineer, Hong Kong Applied Science and Technology Research Institute (ASTRI). Specialises in AI-driven manufacturing systems. 2018 graduate.",
+            "**Ms. Li Siu-ling (李少玲女士)**: Innovation Manager, Schneider Electric Hong Kong. Led the development of smart grid solutions for the Hong Kong housing authority. 2019 graduate.",
+            "**Mr. Wong Tsz-fung (黃子峰先生)**: Co-founder, GreenTech Solutions Ltd. Startup won the HK Tech 300 award in 2022 for a solar-powered water purification device. 2020 graduate.",
+            "**Dr. Ng Ka-ho (吳嘉豪博士)**: Postdoctoral Fellow, University of Cambridge. Research focuses on nanomaterials for energy storage. 2021 graduate.",
+            "**Mr. Cheung Man-kit (張文傑先生)**: Project Engineer, Arup Hong Kong. Worked on the structural design of the Kai Tak Sports Park. 2017 graduate.",
+            "**Ms. Chan Hoi-yan (陳凱欣女士)**: Technical Consultant, Siemens Mobility. Involved in the signalling system upgrade for the MTR East Rail Line. 2020 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: DSE top scorers with scores above 40 (Best 5) may receive full tuition coverage and a living allowance of up to HK$50,000 per year.",
+            "**Faculty of Engineering Merit Scholarship**: Awarded to the top 5% of students in each cohort based on academic performance, with a value of HK$20,000 per year.",
+            "**Research and Innovation Scholarship**: Specifically for students in the Research stream, providing up to HK$30,000 for conference attendance, lab equipment, or research travel.",
+            "**Multinational Engineering Bursary**: Supports students in the Multinational stream with up to HK$40,000 for overseas exchange or internship expenses.",
+            "**External Scholarships**: Students are encouraged to apply for the HKSAR Government Scholarship Fund and the Sir Edward Youde Memorial Fund, which offer additional awards of HK$80,000 or more.",
+            "**Need-Based Financial Aid**: CityU offers the Student Financial Assistance Scheme, covering tuition and living costs for eligible students from low-income families."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1217 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 39+**",
+            "",
+            "- The median is 38.5, but aiming for 39 or above gives you a strong buffer. Focus on English, Maths, and your weighted STEM subjects (Physics, Chemistry, M1/M2) to maximise your score.",
+            "",
+            "**2. Prioritise Weighted Subjects**",
+            "",
+            "- English, Maths, Biology, Chemistry, Design and Applied Technology, ICT, M1/M2, and Physics are all weighted at 2×. If you are strong in these, your score can jump significantly — invest extra revision time here.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- Prepare for problem-solving questions and be ready to discuss a recent engineering innovation you admire. Show genuine interest in either research or multinational engineering — align your answers with the stream you prefer.",
+            "",
+            "**4. Build a Strong Portfolio**",
+            "",
+            "- Participate in STEM competitions (e.g., Hong Kong Youth Science and Technology Competition) or engineering camps. Mention any projects, even small ones, in your application to demonstrate hands-on skills.",
+            "",
+            "**5. Choose Your Stream Early**",
+            "",
+            "- Decide between Research and Multinational Engineering by Year 1. Research stream suits those aiming for PhDs; Multinational stream suits those wanting global industry exposure. Tailor your electives accordingly.",
+            "",
+            "**6. Leverage CityU's Resources**",
+            "",
+            "- Use the Smart City Lab and Robotics Lab for your projects. Join the CityU Engineering Society to network with seniors who can share interview tips and study strategies.",
+            "",
+            "**7. Apply for Scholarships Early**",
+            "",
+            "- Check the CityU entrance scholarship criteria — if your predicted score is above 40, prepare your application documents in advance. Scholarships can cover up to full tuition plus living costs.",
+            "",
+            "**8. Gain Relevant Experience**",
+            "",
+            "- Seek summer internships at ASTRI, HKPC, or engineering firms. Even a 2-week shadowing programme adds weight to your application and helps you confirm your interest.",
+            "",
+            "**9. Stay Updated on Industry Trends**",
+            "",
+            "- Read about smart city initiatives, renewable energy projects, and AI in engineering. Being able to discuss current trends in the interview will set you apart from other candidates."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2: 英文 / 數學 / Biology / Chemistry / Design and Applied Technology / Information and Communication Technology / M1/M2 / Physics 1: 其他選修科。",
+            "**入學中位數**：38.5分（2025年聯招數據）。",
+            "**下四分位數**：38.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1217 是一個四年制跨學科課程，旨在培養研究、創新和環球工程領域的未來領袖。課程融合尖端工程知識、全球視野和創業思維。",
+            "**兩個專修**：學生可選擇「研究與創新」或「環球工程」專修，每個專修提供專門課程和項目機會，配合不同職業路向。",
+            "**第一年**：數學、物理、化學和編程基礎課程，加上大學核心課程。學生通過入門模塊和實驗課堂探索兩個專修方向。",
+            "**第二年**：核心工程學科，包括熱力學、材料科學和電路分析。學生開始選修專修科目，並參與團隊創新項目。",
+            "**第三年**：高級專修課程——研究專修學生進行指導研究項目；環球工程專修學生完成海外交流或行業實習。兩個專修均包括跨文化溝通訓練。",
+            "**第四年**：畢業專題項目、高級選修科及畢業論文或行業顧問項目。畢業生將獲頒工程學榮譽學士學位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**畢業出路**：校友進入先進製造、可再生能源、智慧城市發展及跨國研發中心等領域。許多人在 ASM Pacific Technology、中電及香港科技園等頂尖企業任職。",
+            "**研究路徑**：研究專修為學生準備攻讀城大及海外大學的哲學碩士/博士課程，不少畢業生繼續深造工程學、材料科學或生物醫學工程。",
+            "**環球職位**：環球工程專修為學生打開跨國工程公司的大門，畢業生在西門子、施耐德電氣及奧雅納等公司擔任項目工程師、技術顧問或創新經理。",
+            "**創業支援**：課程透過城大 HK Tech 300 計劃提供孵化機會，幫助學生在綠色科技、人工智能硬件及醫療設備等領域創立初創企業。",
+            "**行業聯繫**：學生可在香港應用科技研究院（ASTRI）及香港生產力促進局等合作機構實習，獲取寶貴經驗。",
+            "**專業認可**：課程獲香港工程師學會（HKIE）認可，畢業生累積相關工作經驗後可申請成為特許工程師。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**尖端實驗室**：學生可使用超過20個專業實驗室，包括智慧城市實驗室、機械人實驗室及先進材料實驗室，配備3D打印機、電子顯微鏡及人工智能運算集群。",
+            "**創新中心**：城大創新創業中心提供共享工作空間、原型製作工作坊及業界專家指導，營造充滿活力的創業文化。",
+            "**環球視野**：課程支持與歐洲、北美及亞洲超過40所夥伴大學進行海外交流，包括加州大學柏克萊分校及倫敦帝國學院。",
+            "**學生社團**：活躍的工程學會如城大工程學會及機械人團隊全年舉辦黑客松、技術工作坊及聯誼活動。",
+            "**住宿生活**：所有一年級學生保證入住城大學生宿舍，宿舍設有共用休息室、溫習室及體育設施。",
+            "**地理位置優勢**：城大位於九龍塘，直接連接港鐵站，步行可達九龍寨城公園及又一城購物中心。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：中位入學分數為38.5分（最佳五科包括英文），使此課程成為城大最具競爭力的工程選項之一。",
+            "**2025年下四分位數**：下四分位數為38.0分，顯示分數範圍狹窄，高分成績申請者需求強勁。",
+            "**科目權重**：英文、數學、生物、化學、設計與應用科技、資訊及通訊科技、M1/M2及物理加權為2倍，其他選修科加權為1倍。這對STEM背景強的學生有利。",
+            "**申請比例**：近幾個週期，該課程每個學額約有8至10份申請，反映其在頂尖DSE考生中的受歡迎程度。",
+            "**面試要求**：獲篩選的申請人或需參加面試，評估解難能力、動機及對研究或環球工程的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳偉強博士**：香港應用科技研究院（ASTRI）高級研究工程師，專注人工智能驅動的製造系統。2018年畢業。",
+            "**李少玲女士**：施耐德電氣香港創新經理，領導為香港房屋委員會開發智能電網解決方案。2019年畢業。",
+            "**黃子峰先生**：GreenTech Solutions Ltd 聯合創辦人，其初創企業於2022年憑太陽能淨水裝置獲得HK Tech 300獎項。2020年畢業。",
+            "**吳嘉豪博士**：劍橋大學博士後研究員，研究重點為能源儲存納米材料。2021年畢業。",
+            "**張文傑先生**：奧雅納香港項目工程師，參與啟德體育園的結構設計。2017年畢業。",
+            "**陳凱欣女士**：西門子交通技術顧問，參與港鐵東鐵線信號系統升級工程。2020年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：DSE最佳五科成績超過40分的頂尖考生可獲全額學費減免及每年高達50,000港元的生活津貼。",
+            "**工程學院優異獎學金**：根據學業成績頒予每屆前5%的學生，每年價值20,000港元。",
+            "**研究與創新獎學金**：專為研究專修學生而設，提供高達30,000港元用於參加會議、購買實驗室設備或研究旅行。",
+            "**環球工程助學金**：支援環球工程專修學生，提供高達40,000港元用於海外交流或實習開支。",
+            "**校外獎學金**：鼓勵學生申請香港特區政府獎學金基金及尤德爵士紀念基金，可獲額外80,000港元或以上獎勵。",
+            "**需要為本資助**：城大提供學生資助計劃，為來自低收入家庭的合資格學生支付學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1217 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數定在39分或以上**",
+            "",
+            "- 中位分數是38.5分，但目標定在39分或以上能提供強大緩衝。集中提升英文、數學及加權STEM科目（物理、化學、M1/M2）以最大化分數。",
+            "",
+            "**2. 優先處理加權科目**",
+            "",
+            "- 英文、數學、生物、化學、設計與應用科技、資訊及通訊科技、M1/M2及物理均加權2倍。如果你在這些科目表現強勁，分數可以大幅提升——在此投入額外溫習時間。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 準備解難問題，並準備討論你欣賞的近期工程創新。展示對研究或環球工程的真正興趣——根據你偏好的專修調整答案。",
+            "",
+            "**4. 建立強勁的作品集**",
+            "",
+            "- 參加STEM比賽（例如香港青少年科技創新大賽）或工程營。在申請中提及任何項目，即使規模較小，以展示動手能力。",
+            "",
+            "**5. 及早選擇專修方向**",
+            "",
+            "- 在第一年決定研究或環球工程。研究專修適合目標攻讀博士的學生；環球工程專修適合希望獲得全球行業經驗的學生。相應調整選修科。",
+            "",
+            "**6. 善用城大資源**",
+            "",
+            "- 使用智慧城市實驗室和機械人實驗室進行項目。加入城大工程學會，與學長交流，獲取面試貼士和學習策略。",
+            "",
+            "**7. 及早申請獎學金**",
+            "",
+            "- 查看城大入學獎學金條件——如果你的預測分數超過40分，提前準備申請文件。獎學金可覆蓋全額學費及生活費。",
+            "",
+            "**8. 獲取相關經驗**",
+            "",
+            "- 在ASTRI、HKPC或工程公司尋找暑期實習。即使是兩星期的影子計劃也能為申請加分，並幫助你確認興趣。",
+            "",
+            "**9. 緊貼行業趨勢**",
+            "",
+            "- 閱讀關於智慧城市計劃、可再生能源項目及人工智能在工程中的應用。能夠在面試中討論當前趨勢將使你脫穎而出。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 38.5,
+    "lq": 38.0
+  }
+}

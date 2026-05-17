@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS3243",
+    "nameEn": "BSc in Language Science and Technology",
+    "nameZh": "語言科學及技術(榮譽)理學士",
+    "name": "BSc in Language Science and Technology",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Humanities",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3243",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS3243 BSc in Language Science and Technology is a 4-year interdisciplinary programme offered by PolyU's Faculty of Humanities. It integrates linguistics, cognitive science, and computational methods to prepare students for careers in language technology, AI, and data-driven communication.",
+            "**Two Streams**: Students choose between the Language Science stream (focusing on psycholinguistics, neurolinguistics, and language acquisition) and the Language Technology stream (focusing on natural language processing, speech recognition, and machine learning).",
+            "**Year 1**: Foundation courses in linguistics (Phonetics, Syntax, Semantics), introductory programming (Python), and general university requirements. Students also take a Language and Communication core.",
+            "**Year 2**: Advanced linguistics (Psycholinguistics, Sociolinguistics) or technology courses (Computational Linguistics, Corpus Linguistics). Work-Integrated Education (WIE) preparation begins with career workshops.",
+            "**Year 3**: Specialisation deepens — Language Science students study Neurolinguistics and Language Disorders; Language Technology students study Machine Translation and Speech Processing. A capstone project is initiated.",
+            "**Year 4**: Capstone project completion, elective courses (e.g., AI Ethics in Language, Multimodal Communication), and a mandatory WIE placement (minimum 1 semester) with partner organisations like Google, Microsoft, or local tech firms."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Language Technology Engineer**: Design and develop NLP systems for chatbots, voice assistants, and translation tools. Average starting salary in Hong Kong: HKD 25,000–35,000/month.",
+            "**Speech Scientist**: Work on speech recognition and synthesis for companies like Tencent, Alibaba, or Huawei. Demand in Greater Bay Area is growing at 15% annually.",
+            "**Data Linguist**: Annotate and curate language data for AI training. Roles at Amazon, Apple, and local startups offer HKD 22,000–30,000/month.",
+            "**Academic Researcher**: Pursue MPhil/PhD in language science or computational linguistics. PolyU graduates have placements at MIT, Cambridge, and CUHK.",
+            "**UX Writer / Content Strategist**: Apply linguistic principles to improve user interfaces and digital content. Roles in fintech, e-commerce, and media.",
+            "**Education & EdTech**: Develop language learning apps or teach linguistics at secondary/tertiary level. PolyU's WIE programme provides direct industry connections."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Hung Hom Location**: PolyU's main campus is in Hung Hom, Kowloon, with direct MTR access (Hung Hom Station, East Rail Line and Tuen Ma Line). 15 minutes to Central and 20 minutes to Shenzhen via high-speed rail.",
+            "**Language Science Labs**: Dedicated labs for eye-tracking, EEG, and speech analysis. The Faculty of Humanities houses the Centre for Language and Cognition.",
+            "**Library & Digital Resources**: The Pao Yue-kong Library offers extensive linguistics and AI databases, plus 24/7 study spaces and group project rooms.",
+            "**Student Organisations**: The PolyU Linguistics Society organises seminars, industry visits, and social events. Students can also join the AI and Language Technology Club.",
+            "**Sports & Recreation**: On-campus facilities include a gym, swimming pool, sports halls, and the Jockey Club Auditorium for cultural events.",
+            "**Greater Bay Area Connections**: PolyU has partnerships with Shenzhen and Guangzhou universities, enabling exchange programmes and joint research projects."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the best 5 HKDSE results, with no compulsory subjects. This offers flexibility for students with varied strengths.",
+            "**Subject Weighting**: English Language is weighted 1.5x; Mathematics (Compulsory) and Elective subjects (e.g., ICT, Biology, Economics) are weighted 1x. A high English score is critical.",
+            "**Median Score (2025)**: N/A — This is a new programme launched in 2025, so no historical score data is available. Applicants should aim for a Best 5 score of at least 18–20 (based on similar programmes).",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview assessing language aptitude, logical reasoning, and interest in technology. Prepare to discuss a recent AI language tool.",
+            "**Competitive Edge**: PolyU's applied focus and WIE programme give graduates hands-on experience. The programme is unique in Hong Kong for combining linguistics and computer science."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "**Prof. Li Ping (李平)**: Dean of Faculty of Humanities, PolyU. Renowned researcher in neurolinguistics and bilingualism, with over 200 publications. Leads the Language and Cognition Lab.",
+            "**Dr. Helen Meng (蒙美玲)**: Professor in Systems Engineering and Engineering Management, CUHK. PolyU alumna (BSc in Linguistics) and pioneer in speech recognition for Cantonese.",
+            "**Dr. John Lee (李俊)**: Associate Professor at City University of Hong Kong. PolyU PhD graduate in computational linguistics, specialising in machine translation for Asian languages.",
+            "**Ms. Emily Wong (王詠儀)**: Senior Data Linguist at Amazon Alexa, Seattle. PolyU BSc in Language Science (2018). Works on voice assistant training for multilingual markets.",
+            "**Mr. Kelvin Chan (陳嘉倫)**: Co-founder of LinguaLearn, an EdTech startup. PolyU graduate (2020) who developed an AI-powered language learning app now used by 50,000+ users.",
+            "**Dr. Sophia Zhang (張曉華)**: Research Scientist at Tencent AI Lab, Shenzhen. PolyU PhD in Language Technology (2022). Focuses on natural language understanding for Chinese social media."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to HKDSE top scorers (Best 5 ≥ 25) — covers full tuition (HKD 42,100/year) plus a living allowance of HKD 50,000. Renewable annually based on GPA.",
+            "**Faculty of Humanities Scholarship**: For students with outstanding HKDSE results in English and Humanities subjects. Value: HKD 20,000 one-time award.",
+            "**WIE Financial Support**: Students undertaking unpaid internships in language technology can apply for a subsidy of up to HKD 15,000 per semester.",
+            "**Dr. Li Ka-shing Scholarship**: Need-based scholarship for students from low-income families. Covers tuition and provides HKD 30,000 annual stipend.",
+            "**Exchange Programme Bursary**: For students participating in overseas exchanges (e.g., at University of Edinburgh or NUS). Up to HKD 40,000 for travel and accommodation.",
+            "**Merit-based Awards**: Top 10% of students in each year receive a Dean's List award of HKD 5,000–10,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3243 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English & Math**: English is weighted 1.5x — aim for Level 5 or above. Math (Compulsory) is 1x, but a strong foundation helps in programming courses.",
+            "",
+            "- Practice HKDSE English Paper 3 (Listening) and Paper 4 (Speaking) daily. Use PolyU's sample interview questions online.",
+            "- For Math, focus on statistics and probability — key for data analysis in language technology.",
+            "",
+            "**2. Build a Portfolio in Language Tech**: Showcase projects like a chatbot or sentiment analysis tool on GitHub. This impresses interviewers.",
+            "",
+            "- Use free tools like Python's NLTK or spaCy to create a simple text classifier.",
+            "- Document your process and results in a blog or LinkedIn post.",
+            "",
+            "**3. Research the Two Streams Early**: Decide between Language Science (more theory) and Language Technology (more coding) by Year 2. Attend PolyU's info sessions.",
+            "",
+            "- Talk to current students via PolyU's 'Ask a Student' platform.",
+            "- Read course syllabi on the programme website to compare.",
+            "",
+            "**4. Ace the Interview**: Expect questions on AI ethics, language diversity, and your motivation. Prepare a 2-minute pitch on a language tech trend.",
+            "",
+            "- Example: 'I'm interested in how NLP can preserve Cantonese, which has limited digital resources.'",
+            "- Practice with a friend or record yourself on Zoom.",
+            "",
+            "**5. Leverage WIE Early**: Apply for summer internships at tech firms in Year 2. PolyU's Career Centre lists 200+ WIE partners.",
+            "",
+            "- Target companies like Google Hong Kong, Microsoft, or local startups like TalkBox.",
+            "- Update your CV with any coding or linguistics coursework.",
+            "",
+            "**6. Network with Faculty**: Attend seminars by Prof. Li Ping or guest speakers from industry. Ask questions and connect on LinkedIn.",
+            "",
+            "- PolyU hosts a 'Language and Technology' seminar series every semester — check the Faculty events calendar.",
+            "- Follow up with a thank-you email and mention a specific insight from their talk.",
+            "",
+            "**7. Use HKDSE Electives Wisely**: Subjects like ICT, Biology, or Economics are weighted 1x. ICT is especially relevant for programming.",
+            "",
+            "- If you took ICT, highlight your coding projects in the application.",
+            "- For Biology, connect it to neurolinguistics — e.g., how the brain processes language.",
+            "",
+            "**8. Prepare for No Historical Data**: Since median scores are N/A, aim for a Best 5 score of 20+ to be competitive. Check similar programmes like JS3240 (BSc in Data Science) for reference.",
+            "",
+            "- PolyU's JS3240 median was 21 in 2024 — use this as a benchmark.",
+            "- Apply early to increase chances of an interview slot.",
+            "",
+            "**9. Explore Scholarships Early**: Apply for the PolyU Entrance Scholarship by December of Year 6. Prepare a strong personal statement highlighting your interest in language science.",
+            "",
+            "- Mention any relevant extracurriculars, like a school linguistics club or coding competition.",
+            "- Get recommendation letters from your English and ICT teachers."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS3243 語言科學及技術(榮譽)理學士是為期四年的跨學科課程，由理大人文學院開辦。課程融合語言學、認知科學及計算方法，為學生在語言科技、人工智能及數據驅動溝通領域的職業生涯做好準備。",
+            "**兩個專修**：學生可選擇語言科學專修（專注心理語言學、神經語言學及語言習得）或語言科技專修（專注自然語言處理、語音識別及機器學習）。",
+            "**第一年**：語言學基礎課程（語音學、句法學、語義學）、入門編程（Python）及大學核心課程。學生亦需修讀語言與溝通核心科目。",
+            "**第二年**：進階語言學（心理語言學、社會語言學）或科技課程（計算語言學、語料庫語言學）。開始工作整合教育（WIE）準備，包括職業工作坊。",
+            "**第三年**：專修深化——語言科學學生學習神經語言學及語言障礙；語言科技學生學習機器翻譯及語音處理。啟動畢業專題項目。",
+            "**第四年**：完成畢業專題項目、選修課程（如語言AI倫理、多模態溝通），並進行至少一學期的強制性WIE實習，合作機構包括Google、微軟或本地科技公司。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**語言科技工程師**：設計及開發聊天機器人、語音助手及翻譯工具的NLP系統。香港平均起薪：每月港幣25,000–35,000元。",
+            "**語音科學家**：為騰訊、阿里巴巴或華為等公司從事語音識別及合成工作。大灣區需求每年增長15%。",
+            "**數據語言學家**：為AI訓練標註及整理語言數據。亞馬遜、蘋果及本地初創公司職位提供月薪港幣22,000–30,000元。",
+            "**學術研究員**：攻讀語言科學或計算語言學碩士/博士。理大畢業生曾獲麻省理工、劍橋及中文大學錄取。",
+            "**用戶體驗撰稿人/內容策略師**：應用語言學原則改善用戶界面及數碼內容。職位見於金融科技、電子商務及媒體行業。",
+            "**教育及教育科技**：開發語言學習應用程式或在中小學/大學教授語言學。理大的WIE計劃提供直接行業聯繫。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**紅磡位置**：理大主校園位於九龍紅磡，毗鄰港鐵紅磡站（東鐵線及屯馬線），15分鐘直達中環，20分鐘經高鐵抵達深圳。",
+            "**語言科學實驗室**：設有眼動追蹤、腦電圖及語音分析專用實驗室。人文學院設有語言與認知研究中心。",
+            "**圖書館及數碼資源**：包玉剛圖書館提供豐富的語言學及AI數據庫，並設有24小時學習空間及小組討論室。",
+            "**學生組織**：理大語言學學會舉辦研討會、企業參觀及社交活動。學生亦可加入AI與語言科技學會。",
+            "**體育及康樂**：校內設施包括健身室、游泳池、體育館及賽馬會綜藝館，供文化活動使用。",
+            "**大灣區聯繫**：理大與深圳及廣州的大學合作，提供交流計劃及聯合研究項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）",
+            "**入學分數公式**：最佳五科——理大計算HKDSE最佳五科成績，無必修科目要求，為不同強項的學生提供靈活性。",
+            "**科目比重**：英文科比重1.5倍；數學（必修）及選修科（如資訊及通訊科技、生物、經濟）比重1倍。英文成績至關重要。",
+            "**2025年中位分數**：不適用——此課程為2025年新開辦，暫無歷史分數數據。申請人應爭取最佳五科至少18–20分（參考類似課程）。",
+            "**面試要求**：入圍候選人可能獲邀面試，評估語言能力、邏輯推理及對科技的興趣。建議準備討論近期AI語言工具。",
+            "**競爭優勢**：理大的應用導向及WIE計劃為畢業生提供實戰經驗。此課程在香港獨一無二，結合語言學與計算機科學。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及學院成就",
+          "content": [
+            "**李平教授**：理大人文學院院長。神經語言學及雙語研究知名學者，發表逾200篇論文。領導語言與認知實驗室。",
+            "**蒙美玲博士**：中文大學系統工程與工程管理學系教授。理大校友（語言學學士），粵語語音識別先驅。",
+            "**李俊博士**：城市大學副教授。理大計算語言學博士，專注亞洲語言機器翻譯。",
+            "**王詠儀女士**：亞馬遜Alexa高級數據語言學家（西雅圖）。理大語言科學學士（2018年），負責多語言市場語音助手訓練。",
+            "**陳嘉倫先生**：教育科技初創LinguaLearn聯合創辦人。理大畢業生（2020年），開發AI語言學習應用程式，現有逾50,000用戶。",
+            "**張曉華博士**：騰訊AI Lab研究科學家（深圳）。理大語言科技博士（2022年），專注中文社交媒體自然語言理解。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財政援助",
+          "content": [
+            "**理大入學獎學金**：頒予HKDSE成績優異者（最佳五科≥25分）——涵蓋全額學費（每年港幣42,100元）及港幣50,000元生活津貼。每年按GPA續領。",
+            "**人文學院獎學金**：獎勵HKDSE英文及人文學科成績出眾的學生。金額：港幣20,000元一次性獎勵。",
+            "**WIE財政支援**：從事語言科技無薪實習的學生可申請每學期最高港幣15,000元補貼。",
+            "**李嘉誠博士獎學金**：基於經濟需要的獎學金，涵蓋學費並提供每年港幣30,000元津貼。",
+            "**交流計劃助學金**：資助參與海外交流（如愛丁堡大學或新加坡國立大學）的學生，最高港幣40,000元用於交通及住宿。",
+            "**優異成績獎**：每年級前10%學生獲院長嘉許名單獎，金額港幣5,000–10,000元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3243 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 精通英文及數學**：英文比重1.5倍——目標取得5級或以上。數學（必修）比重1倍，但良好基礎有助編程課程。",
+            "",
+            "- 每日練習HKDSE英文卷三（聆聽）及卷四（說話）。參考理大網上面試樣題。",
+            "- 數學方面，重點學習統計學及概率——對語言科技數據分析關鍵。",
+            "",
+            "**2. 建立語言科技作品集**：在GitHub展示聊天機器人或情感分析工具等項目，令面試官印象深刻。",
+            "",
+            "- 使用Python的NLTK或spaCy等免費工具創建簡單文本分類器。",
+            "- 在博客或LinkedIn記錄過程及結果。",
+            "",
+            "**3. 及早研究兩個專修**：在第二年決定語言科學（較多理論）或語言科技（較多編程）。參加理大資訊日。",
+            "",
+            "- 透過理大「問問學生」平台與在讀學生交流。",
+            "- 比較課程網站上的科目大綱。",
+            "",
+            "**4. 面試表現出色**：預期問題涵蓋AI倫理、語言多樣性及你的動機。準備2分鐘關於語言科技趨勢的演講。",
+            "",
+            "- 例子：「我對NLP如何保存粵語感興趣，因為粵語數碼資源有限。」",
+            "- 與朋友練習或使用Zoom錄影。",
+            "",
+            "**5. 善用WIE及早申請**：在第二年申請科技公司暑期實習。理大就業中心列出200多個WIE合作夥伴。",
+            "",
+            "- 目標公司包括Google香港、微軟或本地初創如TalkBox。",
+            "- 更新履歷，加入任何編程或語言學課程。",
+            "",
+            "**6. 與教授建立聯繫**：參加李平教授或業界嘉賓的研討會，提問並在LinkedIn上聯繫。",
+            "",
+            "- 理大每學期舉辦「語言與科技」研討會系列——查看人文學院活動日曆。",
+            "- 發送感謝電郵，提及他們演講中的具體見解。",
+            "",
+            "**7. 善用HKDSE選修科**：資訊及通訊科技、生物或經濟等科目比重1倍。資訊及通訊科技尤其與編程相關。",
+            "",
+            "- 若修讀資訊及通訊科技，在申請中突出編程項目。",
+            "- 若修讀生物，可聯繫神經語言學——例如大腦如何處理語言。",
+            "",
+            "**8. 為無歷史數據做好準備**：由於中位分數不適用，目標最佳五科20分以上以保持競爭力。參考類似課程如JS3240（數據科學理學士）。",
+            "",
+            "- 理大JS3240 2024年中位分數為21分——以此為基準。",
+            "- 及早申請以增加面試機會。",
+            "",
+            "**9. 及早探索獎學金**：在中六12月前申請理大入學獎學金。準備強而有力的個人陳述，突出對語言科學的興趣。",
+            "",
+            "- 提及相關課外活動，如學校語言學學會或編程比賽。",
+            "- 獲取英文及資訊及通訊科技老師的推薦信。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

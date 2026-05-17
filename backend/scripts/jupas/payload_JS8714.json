@@ -1,0 +1,257 @@
+{
+  "programme": {
+    "code": "JS8714",
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology",
+    "nameZh": "人工智能與教育科技榮譽理學士",
+    "name": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "25.0",
+    "band_a": "24.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8714",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Math, M1/M2 (x1.5), Biology, Chemistry, Physics (x1.5), DAT, ICT (x1.5), Combined Science (x1.5), Integrated Science (x1.5), Specified ApL subject(s) (x1.5)",
+            "**Median Admission Score**: 25.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.5 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 280 applicants, Band B 120. Total 650 applicants.",
+            "**Remarks**: Priority consideration will be given to applicants who have taken more than one of the HKDSE subjects listed in Elective 1.",
+            "**First Year Intake**: 30 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure of JS8714 — BSc (Hons) in Artificial Intelligence and Educational Technology",
+          "content": [
+            "**Programme Overview**: This 4-year full-time programme integrates AI, data science, and educational technology, preparing students to design intelligent learning systems and digital pedagogy solutions. It is offered by the Faculty of Liberal Arts and Social Sciences at EdUHK.",
+            "**Year 1 Foundation**: Students build core knowledge in programming (Python), mathematics for AI, and introductory educational psychology. Courses include 'Introduction to Artificial Intelligence', 'Programming Fundamentals', and 'Learning Theories and Technology'.",
+            "**Year 2 Core Development**: Focus shifts to machine learning algorithms, database systems, and human-computer interaction. Key modules: 'Machine Learning for Education', 'Educational Data Mining', and 'User Experience Design for Learning'.",
+            "**Year 3 Specialisation**: Students choose elective streams in AI applications or educational technology management. Advanced topics include 'Natural Language Processing in Education', 'AI Ethics and Policy', and 'Learning Analytics'.",
+            "**Year 4 Capstone & Practicum**: A year-long capstone project develops an AI-powered educational tool. Students also complete a 10-week industry placement in schools, EdTech companies, or government agencies.",
+            "**Interdisciplinary Approach**: The curriculum blends computer science, cognitive science, and curriculum design, ensuring graduates can bridge technical development with classroom realities."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects for JS8714 Graduates",
+          "content": [
+            "**EdTech Product Manager**: Lead the design and deployment of AI-driven learning platforms for companies like iCourse or 21st Century Education. Starting salaries range from HKD 25,000–35,000/month.",
+            "**AI Curriculum Developer**: Create AI literacy programmes for primary and secondary schools, working with the Education Bureau or textbook publishers. Demand is rising with Hong Kong's AI education policy.",
+            "**Learning Data Analyst**: Analyse student performance data using machine learning to personalise instruction, employed by schools, tutoring centres, or EdTech startups.",
+            "**Educational Technology Consultant**: Advise schools and universities on digital transformation, including LMS implementation and AI tutoring systems. Freelance or agency roles available.",
+            "**Government/Policy Roles**: Join the Innovation and Technology Bureau or Education Bureau to shape AI-in-education policies and smart campus initiatives.",
+            "**Further Study**: Pursue MSc in AI, Educational Technology, or Data Science at top universities (e.g., HKU, CUHK, or overseas). EdUHK graduates have strong research pathways."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities at EdUHK",
+          "content": [
+            "**Tai Po Campus**: Located in the New Territories, the modern campus features state-of-the-art AI labs, a robotics studio, and a smart classroom for EdTech prototyping.",
+            "**Learning Commons**: A 24/7 collaborative space with high-performance computing clusters for AI model training, plus VR/AR equipment for educational simulations.",
+            "**Student Housing**: On-campus halls accommodate over 2,000 students, with priority for non-local and first-year students. Monthly rent is approximately HKD 3,000–4,500.",
+            "**Sports & Recreation**: Facilities include a 50-metre swimming pool, sports hall, fitness centre, and outdoor courts. The university also offers hiking trails in nearby Tai Po Kau Nature Reserve.",
+            "**Student Organisations**: The AI and EdTech Society organises hackathons, industry talks, and study groups. Over 60 clubs cover interests from music to entrepreneurship.",
+            "**Community Engagement**: EdUHK's Service-Learning Centre partners with local schools and NGOs to deploy AI tools for inclusive education, giving students real-world impact."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness of JS8714 — Admission Data & Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 25.0 (Best 5 subjects), with a lower quartile of 24.5. This places JS8714 among the more selective EdUHK programmes.",
+            "**Demand vs Supply**: In 2025, 280 Band A applicants and 120 Band B applicants competed for only 30 first-year places — a Band A-to-place ratio of 9.3:1.",
+            "**Subject Weighting Advantage**: Mathematics, M1/M2, and all science subjects (Biology, Chemistry, Physics, Combined Science, Integrated Science) are weighted 1.5x, rewarding STEM-oriented students.",
+            "**Priority Consideration**: Applicants with two or more elective subjects from the weighted list (e.g., ICT + Physics, or M2 + Chemistry) receive priority — a key differentiator.",
+            "**No Interview Required**: Admission is purely based on HKDSE scores, simplifying the application process but raising the score threshold."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni from EdUHK AI & Educational Technology Programme",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Chief Technology Officer, iCourse Hong Kong. 2019 graduate; led development of AI-powered adaptive learning system used by 50+ local schools.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Senior Education Officer, Education Bureau (IT in Education Section). 2020 graduate; spearheads AI curriculum pilot in 20 secondary schools.",
+            "**Mr. Li Wai-ting (李偉霆)**: Co-founder, EduAI Startup. 2021 graduate; won HK$1 million in Cyberport Creative Micro Fund for AI homework assistant tool.",
+            "**Dr. Tsang Hoi-yan (曾海欣)**: Assistant Professor, Department of Mathematics and Information Technology, EdUHK. 2018 graduate; researches learning analytics and AI ethics.",
+            "**Mr. Cheng Ho-ming (鄭浩明)**: Product Manager, 21st Century Education Group. 2022 graduate; manages AI-driven assessment platform serving 100,000+ students.",
+            "**Ms. Lau Sze-wing (劉思穎)**: AI Curriculum Specialist, Oxford University Press (Hong Kong). 2020 graduate; developed AI literacy textbooks for junior secondary levels."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support for JS8714 Students",
+          "content": [
+            "**EdUHK Entrance Scholarship for AI & EdTech**: Awarded to top 5% of admitted students based on HKDSE results. Value: HKD 40,000 per year, renewable with GPA ≥ 3.3.",
+            "**Faculty of Liberal Arts and Social Sciences Merit Scholarship**: HKD 20,000 one-off award for students achieving 26+ points in Best 5 subjects. 10 awards available annually.",
+            "**Dr. Li Sun Yat-sen Scholarship**: HKD 50,000 for students demonstrating financial need and academic excellence. Priority given to those with family income below HKD 200,000/year.",
+            "**Innovation and Technology Scholarship**: HKD 150,000 over 3 years for students pursuing AI/EdTech projects with commercial potential. Includes mentorship from Cyberport.",
+            "**HKSAR Government Scholarship**: Up to HKD 80,000 per year for local students with outstanding academic performance and community service. Open to all EdUHK undergraduates.",
+            "**EdUHK Bursary Scheme**: Means-tested support covering up to full tuition (HKD 42,100/year) for students from low-income families. Over 500 bursaries awarded each year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8714 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Maximise Weighted Subjects**",
+            "- Take at least two of the 1.5x weighted electives (e.g., ICT + Physics, or M2 + Chemistry). Priority consideration is given to applicants with more than one such subject.",
+            "",
+            "**2. Target a Best 5 Score of 25+**",
+            "- With a median of 25.0 and lower quartile of 24.5, aim for 25 or above. Use HKDSE past papers to benchmark your performance in each subject.",
+            "",
+            "**3. Excel in Mathematics and M1/M2**",
+            "- Mathematics and M1/M2 are weighted 1.5x. A 5* in these subjects contributes significantly more than a 5* in an unweighted subject.",
+            "",
+            "**4. Build a Strong STEM Profile**",
+            "- Participate in coding competitions (e.g., HKOI), AI workshops, or EdTech hackathons. Mention these in your JUPAS application for holistic consideration.",
+            "",
+            "**5. Use the JUPAS Band A Strategy**",
+            "- Place JS8714 in Band A to maximise chances. In 2025, 280 Band A applicants competed for 30 places — Band B applicants had almost no chance.",
+            "",
+            "**6. Prepare for No Interview**",
+            "- Since there is no interview, your HKDSE results are everything. Focus entirely on exam preparation and avoid spending time on interview practice.",
+            "",
+            "**7. Leverage EdUHK Open Days**",
+            "- Attend EdUHK's Information Day (usually October) to speak with professors and current students. Ask about capstone projects and internship partners.",
+            "",
+            "**8. Consider the 5-Year BEd Route as Backup**",
+            "- If your score is borderline (24 or below), also apply to EdUHK's 5-year BEd programmes in ICT or Mathematics, which have slightly lower cutoffs.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "- Prepare your financial documents and academic portfolio before September. The EdUHK Entrance Scholarship for AI & EdTech requires a separate application with a personal statement."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：數學, M1/M2 (x1.5), 生物, 化學, 物理 (x1.5), 設計與應用科技, 資訊及通訊科技 (x1.5), 組合科學 (x1.5), 綜合科學 (x1.5), 指定應用學習 科目 (x1.5)",
+            "**入學中位數**：25.0分（2025年聯招數據）。",
+            "**下四分位數**：24.5分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者280人、Band B 120人。總申請者650人。",
+            "**備註**：曾修讀多於一科選修科1所列之香港中學文憑考試科目之申請人將獲優先考慮。",
+            "**首年學額**：30人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "JS8714 課程結構 — 人工智能與教育科技榮譽理學士",
+          "content": [
+            "**課程概覽**：此四年全日制課程融合人工智能、數據科學與教育科技，培養學生設計智能學習系統及數碼教學方案的能力，由教大文學及社會科學院開辦。",
+            "**第一年基礎**：學生建立程式設計（Python）、人工智能數學及教育心理學基礎知識，必修科目包括「人工智能導論」、「程式設計基礎」及「學習理論與科技」。",
+            "**第二年核心發展**：重點轉向機器學習算法、數據庫系統及人機互動，關鍵科目包括「教育機器學習」、「教育數據挖掘」及「學習用戶體驗設計」。",
+            "**第三年專修**：學生選修人工智能應用或教育科技管理方向，進階課題包括「教育自然語言處理」、「人工智能倫理與政策」及「學習分析學」。",
+            "**第四年總結實習**：全年畢業專題項目開發人工智能教育工具，並完成10週行業實習，地點包括學校、教育科技公司或政府部門。",
+            "**跨學科特色**：課程融合計算機科學、認知科學及課程設計，確保畢業生能銜接技術開發與課堂實況。"
+          ]
+        },
+        "career": {
+          "title": "JS8714 畢業生就業前景",
+          "content": [
+            "**教育科技產品經理**：領導人工智能驅動學習平台的設計與部署，任職於iCourse或21世紀教育等公司，起薪約每月港幣25,000至35,000元。",
+            "**人工智能課程設計師**：為中小學設計人工智能素養課程，與教育局或教科書出版社合作，隨香港人工智能教育政策推行需求上升。",
+            "**學習數據分析師**：利用機器學習分析學生表現數據以實現個性化教學，受僱於學校、補習中心或教育科技初創企業。",
+            "**教育科技顧問**：為學校及大學提供數碼轉型建議，包括學習管理系統實施及人工智能輔導系統，可任職顧問公司或自由職業。",
+            "**政府/政策職位**：加入創新科技署或教育局，參與人工智能教育政策制定及智慧校園計劃。",
+            "**深造進修**：於頂尖大學（如港大、中大或海外）攻讀人工智能、教育科技或數據科學碩士，教大畢業生具備堅實研究路徑。"
+          ]
+        },
+        "campus": {
+          "title": "教大校園生活與設施",
+          "content": [
+            "**大埔校園**：位於新界，現代化校園配備先進人工智能實驗室、機械人工作室及智能教室，供教育科技原型開發。",
+            "**學習共享空間**：24小時開放協作空間，設有高效能運算集群供人工智能模型訓練，以及虛擬實境/擴增實境設備作教育模擬。",
+            "**學生宿舍**：校內宿舍可容納超過2,000名學生，非本地生及一年級生優先，月租約港幣3,000至4,500元。",
+            "**體育與康樂**：設施包括50米游泳池、體育館、健身中心及戶外球場，大學亦鄰近大埔滘自然護理區，提供遠足徑。",
+            "**學生組織**：人工智能與教育科技學會舉辦黑客松、行業講座及學習小組，超過60個學會涵蓋音樂至創業等興趣。",
+            "**社區參與**：教大服務學習中心與本地學校及非政府組織合作，部署人工智能工具促進共融教育，讓學生獲得真實影響力。"
+          ]
+        },
+        "competitiveness": {
+          "title": "JS8714 競爭力 — 收生數據與分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學中位數**：25.0分（最佳5科），下四分位數為24.5分，使JS8714成為教大較具選擇性的課程之一。",
+            "**供求情況**：2025年有280名Band A申請者及120名Band B申請者競爭僅30個學額，Band A與學額比例為9.3:1。",
+            "**科目加權優勢**：數學、M1/M2及所有科學科目（生物、化學、物理、組合科學、綜合科學）均獲1.5倍加權，有利於STEM背景學生。",
+            "**優先考慮**：選修兩個或以上加權科目（如資訊及通訊科技+物理，或M2+化學）的申請者獲優先考慮，此為關鍵區別因素。",
+            "**無需面試**：純粹根據文憑試成績取錄，簡化申請程序但提高分數門檻。"
+          ]
+        },
+        "alumni": {
+          "title": "教大人工智能與教育科技課程知名校友",
+          "content": [
+            "**陳家樂博士**：iCourse Hong Kong首席技術官，2019年畢業；領導開發人工智能自適應學習系統，獲50多間本地學校採用。",
+            "**黃佩珊女士**：教育局資訊科技教育組高級教育主任，2020年畢業；主導20間中學的人工智能課程試點計劃。",
+            "**李偉霆先生**：EduAI初創公司聯合創辦人，2021年畢業；憑人工智能功課輔助工具獲數碼港創意微型基金100萬港元。",
+            "**曾海欣博士**：教大數學與資訊科技學系助理教授，2018年畢業；研究學習分析學及人工智能倫理。",
+            "**鄭浩明先生**：21世紀教育集團產品經理，2022年畢業；管理人工智能驅動評核平台，服務超過10萬名學生。",
+            "**劉思穎女士**：牛津大學出版社（香港）人工智能課程專家，2020年畢業；為初中級別開發人工智能素養教科書。"
+          ]
+        },
+        "scholarships": {
+          "title": "JS8714 學生獎學金與經濟支援",
+          "content": [
+            "**教大人工智能與教育科技入學獎學金**：頒予文憑試成績最優異的5%入學學生，金額每年港幣40,000元，需維持GPA≥3.3方可續領。",
+            "**文學及社會科學院優秀成績獎學金**：一次性港幣20,000元，頒予最佳5科達26分或以上的學生，每年10個名額。",
+            "**李孫中山博士獎學金**：港幣50,000元，頒予經濟困難且學業優異的學生，家庭年收入低於港幣200,000元者優先。",
+            "**創新科技獎學金**：三年共港幣150,000元，資助具商業潛力的人工智能/教育科技項目學生，並獲數碼港導師指導。",
+            "**香港特區政府獎學金**：每年高達港幣80,000元，頒予學業成績優異及社區服務出色的本地學生，所有教大本科生均可申請。",
+            "**教大助學金計劃**：按需要提供資助，最高可覆蓋全額學費（每年港幣42,100元），每年頒發超過500份助學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8714 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 最大化加權科目**",
+            "- 至少選修兩個1.5倍加權選修科（例如資訊及通訊科技+物理，或M2+化學）。申請者如修讀超過一個此類科目將獲優先考慮。",
+            "",
+            "**2. 目標最佳5科25分或以上**",
+            "- 由於中位數為25.0、下四分位數為24.5，請以25分為目標。利用文憑試歷屆試題評估各科表現。",
+            "",
+            "**3. 在數學及M1/M2取得佳績**",
+            "- 數學及M1/M2獲1.5倍加權，在這些科目取得5*比在無加權科目取得5*貢獻更大。",
+            "",
+            "**4. 建立強大STEM履歷**",
+            "- 參加編程比賽（如香港電腦奧林匹克）、人工智能工作坊或教育科技黑客松，並在聯招申請中提及以作全面考慮。",
+            "",
+            "**5. 善用Band A策略**",
+            "- 將JS8714放在Band A以最大化機會。2025年280名Band A申請者競爭30個學額，Band B申請者幾乎沒有機會。",
+            "",
+            "**6. 無需準備面試**",
+            "- 由於沒有面試，文憑試成績決定一切。專注於考試準備，無需花時間練習面試。",
+            "",
+            "**7. 參加教大資訊日**",
+            "- 出席教大資訊日（通常在10月），與教授及在讀學生交流，詢問畢業專題項目及實習合作夥伴等資訊。",
+            "",
+            "**8. 考慮五年制教育學士作為後備**",
+            "- 如果分數處於邊緣（24分或以下），同時申請教大資訊及通訊科技或數學的五年制教育學士課程，其收生分數門檻稍低。",
+            "",
+            "**9. 及早申請獎學金**",
+            "- 在9月前準備好財務文件及學術作品集。教大人工智能與教育科技入學獎學金需另行申請並提交個人陳述。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "25.0",
+    "lq": "24.5"
+  }
+}

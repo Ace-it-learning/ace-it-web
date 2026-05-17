@@ -1,9 +1,38 @@
 import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
-import { Play, Loader2, Headphones, Volume2, Timer, Clock } from 'lucide-react';
+import { Play, Loader2, Headphones, Volume2, Timer, Clock, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../context/AuthContext';
 import { speak, stopAll } from '../../utils/ttsService';
 import { isCheatEnabled } from '../../utils/devAccess';
+
+// Animated audio waveform visualizer (聲紋)
+const AudioWaveform = ({ isActive }) => {
+    const bars = 5;
+    return (
+        <div className="flex items-end gap-[3px] h-8">
+            {Array.from({ length: bars }).map((_, i) => (
+                <motion.div
+                    key={i}
+                    className="w-1 bg-indigo-400 rounded-full"
+                    animate={isActive ? {
+                        height: [8, 28, 12, 32, 10, 24, 8],
+                    } : {
+                        height: 6,
+                    }}
+                    transition={isActive ? {
+                        duration: 0.8,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        delay: i * 0.08,
+                        ease: 'easeInOut',
+                    } : {
+                        duration: 0.3,
+                    }}
+                />
+            ))}
+        </div>
+    );
+};
 
 const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChange, onSectionChange, onTidyingStart, onTidyingEnd, onStudyStart, onComplete, onRequireSelection, onCountdownTick, onStatusChange, initialIndex = 0, initialPause = null, onIndexChange }, ref) => {
     const { user, profile } = useAuth();
@@ -73,6 +102,7 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
         }
     }));
     const [isEngineBuffering, setIsEngineBuffering] = useState(false);
+    const [audioCheckStatus, setAudioCheckStatus] = useState('checking'); // 'checking' | 'ok' | 'warning'
     const [pauseCountdown, setPauseCountdown] = useState(['PART_A', 'PART_B_AUDIO', 'INDEPENDENT'].includes(phase) ? initialPause : null);
     const [prepCountdown, setPrepCountdown] = useState(phase === 'PREPARATION' ? initialPause : null);
     const audioRef = useRef(null);
@@ -83,19 +113,53 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
     const lastTaskNumber = useRef(1);
     const isInitialResume = useRef(initialPause > 0);
 
-    // Cleanup on unmount
+    // Audio output detection
     useEffect(() => {
-        return () => {
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.onended = null;
-                audioRef.current.onerror = null;
-                audioRef.current.src = "";
-                audioRef.current.load();
-                audioRef.current = null;
+        const checkAudioOutput = async () => {
+            try {
+                // Try to create a short silent audio context to detect if audio is working
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) {
+                    setAudioCheckStatus('warning');
+                    return;
+                }
+                const ctx = new AudioContext();
+                
+                // Create a silent oscillator to test audio pipeline
+                const oscillator = ctx.createOscillator();
+                const gainNode = ctx.createGain();
+                gainNode.gain.value = 0.001; // Nearly silent
+                oscillator.connect(gainNode);
+                gainNode.connect(ctx.destination);
+                oscillator.start();
+                
+                // Check if context is suspended (browser policy) or running
+                if (ctx.state === 'suspended') {
+                    // Audio context is suspended — user may need to interact first, but speakers might still work
+                    await ctx.resume().catch(() => {});
+                }
+                
+                // Also check for device enumeration if available
+                if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+                    const devices = await navigator.mediaDevices.enumerateDevices();
+                    const hasAudioOutput = devices.some(d => d.kind === 'audiooutput');
+                    if (!hasAudioOutput) {
+                        setAudioCheckStatus('warning');
+                        return;
+                    }
+                }
+                
+                oscillator.stop(ctx.currentTime + 0.05);
+                setTimeout(() => {
+                    ctx.close().catch(() => {});
+                    setAudioCheckStatus('ok');
+                }, 100);
+            } catch (e) {
+                setAudioCheckStatus('warning');
             }
-            stopAll();
         };
+        
+        checkAudioOutput();
     }, []);
 
 
@@ -375,15 +439,28 @@ const Paper3AudioEngine = forwardRef(({ script, phase, onPhaseChange, onTaskChan
                     </button>
                 ) : (
                     <div className="flex flex-col gap-6">
+                        {/* Audio Visualizer + Status */}
                         <div className="flex items-center gap-6 py-8 px-10 bg-white/5 rounded-[2rem] border border-white/5">
-                            <Volume2 size={32} className="text-indigo-400 shrink-0" />
-                            <div className="flex-1">
+                            <div className="shrink-0">
+                                <AudioWaveform isActive={isPlaying && !pauseCountdown} />
+                            </div>
+                            <div className="flex-1 min-w-0">
                                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-2">Now Playing</p>
-                                <p className="text-sm font-medium text-slate-300 italic leading-relaxed line-clamp-2">
-                                    "{script[currentIndex]?.text}"
+                                <p className="text-sm font-medium text-slate-400 leading-relaxed">
+                                    Listening to broadcast...
                                 </p>
                             </div>
                         </div>
+                        
+                        {/* Speaker Warning */}
+                        {audioCheckStatus === 'warning' && (
+                            <div className="flex items-center gap-3 px-5 py-3 bg-amber-500/10 border border-amber-500/20 rounded-2xl">
+                                <VolumeX size={18} className="text-amber-400 shrink-0" />
+                                <p className="text-[11px] font-bold text-amber-300 leading-relaxed">
+                                    Please ensure your speakers are turned on and not muted.
+                                </p>
+                            </div>
+                        )}
                         
                         <div className="flex items-center justify-between px-4">
                             <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Progress</span>

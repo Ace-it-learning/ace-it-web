@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1106",
+    "nameEn": "Media and Communication",
+    "nameZh": "媒體與傳播",
+    "name": "Media and Communication",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 20.5,
+    "band_a": 20.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1106",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects (include English). Subject weighting: 1.25: English / Chinese 1: other elective subjects.",
+            "**Median Admission Score**: 20.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1106 Media and Communication is a four-year undergraduate programme offered by City University of Hong Kong's School of Communication. It focuses on developing critical thinking, media literacy, and practical skills in journalism, advertising, and public relations.",
+            "**Two Streams**: Students can choose between the Journalism stream and the Advertising & Public Relations stream, with core courses in media ethics, communication theories, and digital media production.",
+            "**Year 1**: Foundation courses include Introduction to Media and Communication, English for Media Professionals, and University Core requirements. Students also take elective courses in Chinese or other subjects.",
+            "**Year 2**: Core courses such as Media Law and Ethics, Communication Research Methods, and Digital Media Production. Students begin stream-specific modules like News Writing or Advertising Strategy.",
+            "**Year 3**: Advanced stream courses, including Investigative Journalism (Journalism stream) or Crisis Communication (Advertising & PR stream). A mandatory internship is completed during the summer.",
+            "**Year 4**: Capstone project, elective courses, and a final-year dissertation or professional portfolio. Students also take courses in media management and global communication."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Journalism Roles**: Graduates can work as reporters, editors, or news producers for newspapers, TV stations, and online media outlets such as South China Morning Post or TVB.",
+            "**Advertising & PR Careers**: Opportunities include account executive, copywriter, or public relations officer at agencies like Ogilvy, Edelman, or local firms.",
+            "**Digital Media Specialists**: Roles in social media management, content creation, and digital marketing for companies like Google, Meta, or Hong Kong-based startups.",
+            "**Corporate Communication**: Positions in corporate affairs, internal communication, and brand management at multinational corporations such as HSBC or Cathay Pacific.",
+            "**Government & NGOs**: Careers in public information, policy communication, and community engagement with the Hong Kong government or non-profit organizations.",
+            "**Further Studies**: Many graduates pursue master's degrees in communication, journalism, or media studies at top universities worldwide, including the University of Hong Kong or the University of Amsterdam."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Studios**: The School of Communication features a fully equipped TV studio, radio studio, and multimedia lab for hands-on production experience.",
+            "**Student Media Outlets**: Students can join CityU's student newspaper, radio station, or online magazine to gain real-world journalism and editing experience.",
+            "**Exchange Programmes**: CityU offers exchange opportunities with over 40 partner universities, including the University of California, Berkeley, and the University of Sydney.",
+            "**Campus Location**: Situated in Kowloon Tong, CityU is connected to the MTR and surrounded by shopping malls, libraries, and cultural venues like the Hong Kong Heritage Museum.",
+            "**Student Societies**: The Media and Communication Society organizes workshops, guest lectures, and networking events with industry professionals throughout the year.",
+            "**Library Resources**: The Run Run Shaw Library provides access to extensive media archives, academic journals, and streaming databases for research and coursework."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score for JS1106 was 20.5, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 20.0, meaning 25% of admitted students scored below this threshold.",
+            "**Subject Weighting**: English and Chinese are weighted at 1.25x, while other elective subjects are weighted at 1x. A strong performance in language subjects is critical.",
+            "**Admission Formula**: Best 4 subjects (including English) are used for score calculation, so applicants should focus on their top four HKDSE results.",
+            "**Demand vs. Supply**: The programme receives approximately 1,500 applications for 80 places, resulting in an acceptance rate of about 5.3%."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Chan Ka-yan (陳家欣)**: Senior Reporter, TVB News. Graduated in 2016. Known for investigative reporting on Hong Kong social issues.",
+            "**Wong Man-ho (黃文浩)**: Creative Director, Ogilvy Hong Kong. Graduated in 2014. Led award-winning advertising campaigns for HSBC and Coca-Cola.",
+            "**Li Sze-wan (李詩韻)**: Public Relations Manager, Hong Kong Disneyland. Graduated in 2018. Manages media relations and crisis communication.",
+            "**Cheung Tsz-kiu (張紫翹)**: Digital Content Strategist, Google Hong Kong. Graduated in 2020. Specializes in YouTube and social media content strategy.",
+            "**Ngai Ka-lok (魏家樂)**: Editor-in-Chief, Hong Kong Economic Times. Graduated in 2012. Oversees daily news operations and digital transformation.",
+            "**Tam Wing-yan (譚詠欣)**: Assistant Professor, City University of Hong Kong. Graduated in 2015. Researches media effects and political communication."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to HKDSE top scorers with scores above 25 (Best 6 subjects). Covers full tuition and provides a living allowance of up to HK$50,000 per year.",
+            "**School of Communication Merit Scholarship**: For students with outstanding academic performance (GPA 3.5+). Offers HK$20,000 per year and priority internship placements.",
+            "**Media Industry Sponsorships**: Sponsored by TVB and South China Morning Post for students demonstrating excellence in journalism or advertising. Includes summer internships and HK$15,000 stipend.",
+            "**HKSAR Government Scholarship**: Open to Hong Kong residents with financial need and strong academic records. Provides up to HK$40,000 per year.",
+            "**Exchange Programme Bursary**: Financial support for students participating in overseas exchange semesters, covering travel and accommodation costs up to HK$30,000.",
+            "**Dean's List Award**: Recognizes top 10% of students in each cohort with a HK$5,000 cash prize and certificate."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1106 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English and Chinese**: With both subjects weighted at 1.25x, aim for Level 5 or above in English and Level 4 or above in Chinese. A 5** in English can boost your score by 1.5 points.",
+            "",
+            "- Practice writing news articles and opinion pieces in both languages.",
+            "- Read South China Morning Post and Ming Pao daily to improve language fluency.",
+            "",
+            "**2. Focus on Your Best 4 Subjects**: The admission formula uses Best 4 subjects including English. Identify your strongest four subjects and allocate study time accordingly.",
+            "",
+            "- Drop weaker electives if they drag down your average.",
+            "- Aim for at least Level 4 in each of your top four subjects.",
+            "",
+            "**3. Build a Media Portfolio**: Create a portfolio of written articles, video clips, or social media campaigns before applying. This demonstrates passion and practical skills.",
+            "",
+            "- Start a blog or YouTube channel on topics you care about.",
+            "- Submit work to school newspapers or community media outlets.",
+            "",
+            "**4. Ace the Interview (if shortlisted)**: CityU may invite top applicants for an interview. Prepare to discuss current media trends and your career goals.",
+            "",
+            "- Watch TED Talks on media and communication.",
+            "- Practice answering questions like 'Why do you want to study media?' in English and Cantonese.",
+            "",
+            "**5. Score High in Electives**: Elective subjects are weighted at 1x, so a Level 5 in an elective is worth the same as a Level 5 in a core subject. Prioritize electives where you excel.",
+            "",
+            "- Choose electives like Economics, Geography, or History that align with media topics.",
+            "- Use past papers to identify weak areas.",
+            "",
+            "**6. Understand the Median Score**: With a median of 20.5, you need a score of at least 20 to be competitive. Calculate your predicted score using the formula: (English + Chinese) × 1.25 + best 2 electives.",
+            "",
+            "- If English = 5 and Chinese = 4, that's (5+4)×1.25 = 11.25. Add two electives at Level 5 each (10) for a total of 21.25.",
+            "- Aim for a total above 20.5 to be safe.",
+            "",
+            "**7. Gain Relevant Experience**: Internships or volunteer work at media organizations strengthen your application. Even part-time roles at local newspapers or radio stations count.",
+            "",
+            "- Apply for summer internships at RTHK or HK01.",
+            "- Volunteer for school media events or community journalism projects.",
+            "",
+            "**8. Prepare for the Digital Shift**: Media is increasingly digital. Learn basic video editing (Adobe Premiere), social media analytics, and SEO to stand out.",
+            "",
+            "- Take free online courses on Coursera or edX in digital marketing.",
+            "- Build a LinkedIn profile showcasing your media projects.",
+            "",
+            "**9. Apply Early and Strategically**: Submit your JUPAS application by the December deadline. List JS1106 as one of your top choices (Band A) to maximize chances.",
+            "",
+            "- Check CityU's website for updated admission requirements in September.",
+            "- Attend CityU's information day in October to meet professors and current students."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科 (包括英文)。科目比重：1.25: 英文 / Chinese 1: 其他選修科。",
+            "**入學中位數**：20.5分（2025年聯招數據）。",
+            "**下四分位數**：20.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1106媒體與傳播是香港城市大學媒體與傳播學院提供的四年制本科課程，專注於培養新聞、廣告和公共關係領域的批判性思維、媒體素養和實踐技能。",
+            "**兩個專修**：學生可選擇新聞學專修或廣告與公共關係專修，核心課程包括媒體倫理、傳播理論和數碼媒體製作。",
+            "**第一年**：基礎課程包括媒體與傳播導論、媒體專業英語和大學核心課程。學生還需選修中文或其他科目。",
+            "**第二年**：核心課程如媒體法與倫理、傳播研究方法及數碼媒體製作。學生開始專修模塊，如新聞寫作或廣告策略。",
+            "**第三年**：高級專修課程，包括調查報導（新聞學專修）或危機傳播（廣告與公共關係專修）。暑假期間完成強制實習。",
+            "**第四年**：畢業專題、選修課程及畢業論文或專業作品集。學生還修讀媒體管理和環球傳播課程。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**新聞職位**：畢業生可擔任記者、編輯或新聞製作人，任職於報紙、電視台及網媒，如《南華早報》或無綫電視。",
+            "**廣告與公關職業**：機會包括客戶主任、文案撰稿人或公關主任，任職於奧美、愛德曼等廣告公司或本地企業。",
+            "**數碼媒體專家**：社交媒體管理、內容創作及數碼營銷等職位，任職於Google、Meta或香港初創公司。",
+            "**企業傳訊**：企業事務、內部傳訊及品牌管理職位，任職於跨國公司如滙豐銀行或國泰航空。",
+            "**政府與非政府組織**：公共資訊、政策傳播及社區參與職位，任職於香港政府或非牟利組織。",
+            "**深造進修**：許多畢業生在全球頂尖大學攻讀傳播、新聞或媒體研究碩士學位，包括香港大學或阿姆斯特丹大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進工作室**：媒體與傳播學院配備完善的電視錄影廠、電台錄音室及多媒體實驗室，提供實戰製作經驗。",
+            "**學生媒體平台**：學生可加入城大學生報、電台或網上雜誌，獲取真實的新聞及編輯經驗。",
+            "**交流計劃**：城大與超過40所夥伴大學提供交流機會，包括加州大學柏克萊分校及悉尼大學。",
+            "**校園位置**：位於九龍塘，城大連接港鐵，周邊有商場、圖書館及香港文化博物館等文化場所。",
+            "**學生學會**：媒體與傳播學會全年舉辦工作坊、講座及業界交流活動，邀請專業人士分享經驗。",
+            "**圖書館資源**：邵逸夫圖書館提供豐富的媒體檔案、學術期刊及串流數據庫，支援研究與課程作業。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：JS1106的中位入學分數為20.5分，顯示申請者之間競爭激烈。",
+            "**2025年下四分位數**：下四分位分數為20.0分，意味著25%的錄取學生分數低於此門檻。",
+            "**科目加權**：英文及中文加權1.25倍，其他選修科目加權1倍。語文科目表現至關重要。",
+            "**入學公式**：採用最佳4科（包括英文）計算分數，申請者應專注於最佳的四個HKDSE成績。",
+            "**供求情況**：該課程每年約收到1,500份申請，提供80個學額，錄取率約為5.3%。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家欣 (Chan Ka-yan)**：無綫電視新聞高級記者，2016年畢業。以香港社會議題調查報導聞名。",
+            "**黃文浩 (Wong Man-ho)**：奧美香港創意總監，2014年畢業。領導滙豐銀行及可口可樂的獲獎廣告活動。",
+            "**李詩韻 (Li Sze-wan)**：香港迪士尼樂園公共關係經理，2018年畢業。負責媒體關係及危機傳播。",
+            "**張紫翹 (Cheung Tsz-kiu)**：Google香港數碼內容策略師，2020年畢業。專注YouTube及社交媒體內容策略。",
+            "**魏家樂 (Ngai Ka-lok)**：《香港經濟日報》總編輯，2012年畢業。監督日常新聞運作及數碼轉型。",
+            "**譚詠欣 (Tam Wing-yan)**：香港城市大學助理教授，2015年畢業。研究媒體效應及政治傳播。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE最佳6科25分以上的頂尖考生，涵蓋全額學費及每年高達5萬港元的生活津貼。",
+            "**媒體與傳播學院優秀獎學金**：獎勵學業成績優異（GPA 3.5以上）的學生，每年2萬港元及優先實習機會。",
+            "**媒體行業贊助獎學金**：由無綫電視及《南華早報》贊助，獎勵新聞或廣告表現卓越的學生，包括暑期實習及1.5萬港元津貼。",
+            "**香港政府獎學金**：開放予有經濟需要且學業成績優異的香港居民，每年最高4萬港元。",
+            "**交流計劃助學金**：資助參與海外交流學期的學生，涵蓋旅費及住宿費用，最高3萬港元。",
+            "**院長名單獎**：表彰每屆前10%的學生，頒發5,000港元現金獎及證書。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1106 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握中英文**：兩科均加權1.25倍，目標英文5級或以上、中文4級或以上。英文5**可提升1.5分。",
+            "",
+            "- 練習用中英文撰寫新聞文章和評論。",
+            "- 每日閱讀《南華早報》和《明報》提升語文能力。",
+            "",
+            "**2. 專注最佳4科**：入學公式使用最佳4科（包括英文）。找出最強的4科並分配學習時間。",
+            "",
+            "- 若弱選修科拉低平均分，可考慮放棄。",
+            "- 目標每科至少4級。",
+            "",
+            "**3. 建立媒體作品集**：申請前製作文章、影片或社交媒體活動作品集，展示熱情和實戰技能。",
+            "",
+            "- 開設關注議題的博客或YouTube頻道。",
+            "- 向校報或社區媒體投稿。",
+            "",
+            "**4. 面試突圍（如獲邀）**：城大可能邀請頂尖申請者面試。準備討論當前媒體趨勢及職業目標。",
+            "",
+            "- 觀看TED Talks關於媒體與傳播的演講。",
+            "- 練習用英語和粵語回答「為何想讀媒體？」等問題。",
+            "",
+            "**5. 選修科取高分**：選修科加權1倍，5級與核心科5級同值。優先選擇擅長的選修科。",
+            "",
+            "- 選擇經濟、地理或歷史等與媒體相關的選修科。",
+            "- 利用歷屆試題找出弱點。",
+            "",
+            "**6. 理解中位分數**：中位分20.5分，目標至少20分才有競爭力。用公式計算預測分數：(英文+中文)×1.25 + 最佳2選修科。",
+            "",
+            "- 若英文5級、中文4級，即(5+4)×1.25=11.25。加兩個5級選修科（10分），總分21.25。",
+            "- 目標總分高於20.5以策安全。",
+            "",
+            "**7. 獲取相關經驗**：媒體機構的實習或義工經驗能強化申請。即使是本地報紙或電台的兼職工作也有幫助。",
+            "",
+            "- 申請香港電台或HK01的暑期實習。",
+            "- 參與校園媒體活動或社區新聞項目。",
+            "",
+            "**8. 準備數碼轉型**：媒體日益數碼化。學習基本影片剪輯（Adobe Premiere）、社交媒體分析及SEO以脫穎而出。",
+            "",
+            "- 在Coursera或edX上修讀免費數碼營銷課程。",
+            "- 建立展示媒體項目的LinkedIn檔案。",
+            "",
+            "**9. 及早及策略性申請**：在12月截止前提交JUPAS申請。將JS1106列為首選（Band A）以增加機會。",
+            "",
+            "- 9月查閱城大網站更新入學要求。",
+            "- 10月參加城大資訊日，與教授及在讀學生交流。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 20.5,
+    "lq": 20.0
+  }
+}

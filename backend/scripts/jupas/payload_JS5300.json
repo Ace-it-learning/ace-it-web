@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5300",
+    "nameEn": "Business and Management",
+    "nameZh": "工商管理",
+    "name": "Business and Management",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "35.00",
+    "band_a": "33.90",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5300",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 62.48.",
+            "**Median Admission Score**: 35.00 (2025 JUPAS data).",
+            "**Lower Quartile**: 33.90 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 4.64.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS5300 Business and Management is a broad-based programme offered by HKUST’s School of Business and Management, ranked #1 in Hong Kong and top 50 globally (QS 2025). It covers core business disciplines with flexibility to specialise.",
+            "**Year 1 – Foundation**: Students take compulsory courses in accounting, economics, finance, marketing, management, and statistics, building a solid business foundation. Also includes university core requirements and language courses.",
+            "**Year 2 – Core & Exploration**: Deepens knowledge in functional areas such as organisational behaviour, operations management, business law, and business strategy. Students begin exploring elective options across 10+ majors.",
+            "**Year 3 – Specialisation & Exchange**: Students declare a major (e.g., Finance, Marketing, Information Systems) and can participate in a semester-long exchange at one of 200+ partner universities worldwide.",
+            "**Year 4 – Capstone & Career Preparation**: Completes major requirements and a capstone project. Includes career workshops, internships, and networking events with corporate partners like HSBC, PwC, and McKinsey.",
+            "**Double Major & Minor Options**: Students can pursue a second major or minor within the School or across other HKUST schools (e.g., Engineering, Science), enhancing interdisciplinary expertise."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Top Employers**: Graduates are recruited by leading global firms including Goldman Sachs, J.P. Morgan, McKinsey & Company, Procter & Gamble, and HSBC.",
+            "**Industry Sectors**: Common career paths span investment banking, consulting, marketing, accounting, technology management, and entrepreneurship.",
+            "**Internship Support**: HKUST’s Career Center and School of Business provide dedicated internship placements, with over 90% of business undergraduates completing at least one internship before graduation.",
+            "**Graduate Starting Salary**: The average starting salary for HKUST business graduates is approximately HKD 28,000–35,000 per month, with top performers earning significantly higher in banking and consulting.",
+            "**Global Opportunities**: Many graduates pursue roles in Hong Kong, Mainland China, Singapore, London, and New York, leveraging HKUST’s strong alumni network and international reputation.",
+            "**Entrepreneurship Pathway**: The School supports student startups through the HKUST Entrepreneurship Center, with access to funding, mentorship, and the nearby Hong Kong Science Park ecosystem."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST is situated in Clear Water Bay, Sai Kung, offering breathtaking sea views and a tranquil environment conducive to study and reflection.",
+            "**World-Class Facilities**: The campus features state-of-the-art lecture theatres, the Lee Shau Kee Library, and dedicated business school facilities including trading rooms and collaborative spaces.",
+            "**Student Accommodation**: On-campus housing is available for most undergraduate students, with halls providing a vibrant community life and easy access to academic buildings.",
+            "**Clubs & Societies**: Over 100 student organisations, including the Business Students’ Association, investment clubs, and case competition teams, offer rich extracurricular engagement.",
+            "**Sports & Recreation**: The campus boasts a sports complex with a gym, swimming pool, tennis courts, and hiking trails, promoting a healthy work-life balance.",
+            "**Proximity to Science Park**: Located next to Hong Kong Science Park, students benefit from industry collaboration, internships, and innovation-driven events."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus, with a highest attainable score of 62.48.",
+            "**Median Score (2025)**: The median HKDSE score for admitted students was 35.00, indicating strong academic competition.",
+            "**Lower Quartile (2025)**: The lower quartile score was 33.90, meaning 25% of admitted students scored below this threshold.",
+            "**Preferred Subject Average**: The lower quartile per-subject average is 4.64, suggesting students typically achieve Level 5 or above in most subjects.",
+            "**Subject Weighting**: No specific subject weighting is applied, but strong performance across all subjects is expected given the Best 5 formula."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Charles Mok (莫乃光)**: Former Legislative Councillor (IT) and prominent advocate for technology policy in Hong Kong. Graduated with a degree in Business Administration.",
+            "**Rebecca Ko (高靜芝)**: Former Executive Director of the Hong Kong Jockey Club and a leading figure in Hong Kong’s charitable sector. HKUST Business School alumna.",
+            "**Dr. Sunny Chai (鄭小康)**: Chairman of the Hong Kong Science and Technology Parks Corporation and successful entrepreneur in the electronics industry. Holds a business degree from HKUST.",
+            "**Christina Gaw (吳燕安)**: Managing Principal and Head of Capital Markets at Gaw Capital Partners, a leading private equity firm. Graduated from HKUST Business School.",
+            "**Dr. Vincent Lo (羅康瑞)**: Chairman of Shui On Group and a prominent real estate developer. While not a direct graduate, he has been a long-time supporter and honorary doctorate recipient from HKUST.",
+            "**Alumni Network Impact**: Over 60,000 business alumni globally, with active chapters in major cities, providing mentorship and career connections for current students."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for all applicants based on HKDSE results; top scorers may receive full tuition coverage plus living allowance (up to HKD 200,000+ per year).",
+            "**School of Business Scholarships**: Multiple merit-based scholarships for business students, including the Dean’s Scholarship and the Business School Entrance Scholarship, ranging from HKD 10,000 to full tuition.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship Scheme, which provides up to HKD 80,000 per year for outstanding academic performance.",
+            "**Need-Based Financial Aid**: HKUST offers the Financial Assistance Scheme (FAS) and the HKUST Student Aid Fund, providing grants and low-interest loans to students with demonstrated financial need.",
+            "**External Scholarships**: Students can also apply for scholarships from corporations and foundations such as the Hong Kong Jockey Club, HSBC, and the Sir Edward Youde Memorial Fund.",
+            "**Renewable Criteria**: Most scholarships require maintaining a minimum GPA (typically 3.0 or above) and active participation in extracurricular activities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5300 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score Above 35.00**: With a median of 35.00, aim for at least 35–37 points in your Best 5 subjects to be competitive. Use the 6th subject bonus to boost your total.",
+            "",
+            "- Focus on achieving Level 5 or above in core subjects like English, Mathematics, and Liberal Studies.",
+            "- If your 6th subject is strong (e.g., Level 5*), it can add up to 2 extra points to your score.",
+            "",
+            "**2. Excel in English and Mathematics**: These subjects are critical for business programmes. Aim for Level 5* or 5** in English and Mathematics (Compulsory) to stand out.",
+            "",
+            "- Practice past papers and seek additional tutoring if needed.",
+            "- For Mathematics, focus on statistics and data interpretation, which are relevant to business.",
+            "",
+            "**3. Build a Strong Profile Beyond Academics**: HKUST values holistic development. Participate in business-related competitions, internships, or leadership roles.",
+            "",
+            "- Join the Hong Kong Federation of Youth Groups’ business programmes or case competitions.",
+            "- Volunteer or take on a leadership role in school clubs to demonstrate initiative.",
+            "",
+            "**4. Prepare for Interviews (If Shortlisted)**: While JS5300 primarily relies on HKDSE scores, some candidates may be invited for an interview. Be ready to discuss your motivation for business.",
+            "",
+            "- Research current business trends in Hong Kong and globally.",
+            "- Practice answering questions like “Why HKUST Business?” and “What is your career goal?”",
+            "",
+            "**5. Leverage the 6th Subject Bonus**: Take an additional elective subject (e.g., Economics, Business, Accounting, or ICT) to maximise your bonus points. A Level 5 in a 6th subject can add ~1.5 points.",
+            "",
+            "- Choose subjects that align with business, such as Economics or Business, Accounting and Financial Studies (BAFS).",
+            "- Ensure you perform well in your Best 5 first; the bonus is secondary.",
+            "",
+            "**6. Understand the Scoring System**: The highest attainable score is 62.48, but most successful applicants score in the 33–40 range. Calculate your expected score using the Best 5 + 6th subject formula.",
+            "",
+            "- Use online calculators or consult your school’s career teacher to estimate your score.",
+            "- Aim for a per-subject average of at least 4.64 (Level 5) across your Best 5.",
+            "",
+            "**7. Explore Early Exposure to Business**: Attend HKUST’s summer programmes, open days, or business workshops to demonstrate interest and gain insights.",
+            "",
+            "- Register for the HKUST Business School’s “Young Business Leaders” programme if available.",
+            "- Visit the campus and talk to current students about their experiences.",
+            "",
+            "**8. Consider Your Major Preferences Early**: While JS5300 is broad-based, having a clear idea of your intended major (e.g., Finance, Marketing) can help tailor your subject choices and personal statement.",
+            "",
+            "- Research the 10+ majors offered by the School of Business and Management.",
+            "- Align your elective subjects with your preferred major (e.g., Economics for Finance).",
+            "",
+            "**9. Apply for Scholarships Proactively**: Submit all required documents for admission scholarships early. Even if you don’t meet the top tier, partial scholarships are available.",
+            "",
+            "- Check the HKUST scholarship webpage for deadlines and criteria.",
+            "- Prepare a strong personal statement highlighting your achievements and goals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：62.48。",
+            "**入學中位數**：35.00分（2025年聯招數據）。",
+            "**下四分位數**：33.90分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 4.64。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS5300 工商管理是一個基礎廣泛的課程，由香港科技大學工商管理學院開辦，該學院在 QS 2025 排名中位列香港第一、全球前 50。課程涵蓋核心商業學科，並提供靈活的專修選擇。",
+            "**第一年 – 基礎**：學生修讀會計、經濟、金融、市場學、管理學及統計學等必修科目，建立穩固的商業基礎。同時包括大學核心課程及語文課程。",
+            "**第二年 – 核心與探索**：深化組織行為學、營運管理、商業法及商業策略等職能領域的知識。學生開始探索超過 10 個主修選項。",
+            "**第三年 – 專修與交流**：學生選擇主修（如金融、市場學、資訊系統），並可參加為期一學期的海外交流，合作院校遍佈全球 200 多所。",
+            "**第四年 – 總結與職涯準備**：完成主修要求及總結性項目。包括職業工作坊、實習機會，以及與滙豐、羅兵咸永道、麥肯錫等企業夥伴的交流活動。",
+            "**雙主修及副修選項**：學生可在學院內或跨學院（如工程學院、理學院）攻讀第二主修或副修，增強跨學科專業能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**頂尖僱主**：畢業生受聘於高盛、摩根大通、麥肯錫、寶潔及滙豐等全球領先企業。",
+            "**行業領域**：常見職業路徑包括投資銀行、諮詢、市場營銷、會計、科技管理及創業。",
+            "**實習支援**：科大就業中心及商學院提供專門的實習配對，超過 90% 的商科本科生在畢業前完成至少一次實習。",
+            "**畢業生起薪**：科大商學院畢業生的平均起薪約為每月港幣 28,000 至 35,000 元，頂尖學生在銀行及諮詢行業的薪酬更高。",
+            "**環球機會**：許多畢業生在香港、中國內地、新加坡、倫敦及紐約等地發展，受惠於科大強大的校友網絡及國際聲譽。",
+            "**創業路徑**：學院透過科大創業中心支援學生初創企業，提供資金、指導及鄰近香港科學園的生態系統。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美環境**：科大位於西貢清水灣，擁有壯麗海景，環境寧靜，有利於學習與反思。",
+            "**世界級設施**：校園配備先進演講廳、李兆基圖書館，以及商學院專用的交易室和協作空間。",
+            "**學生住宿**：大部分本科生可入住校內宿舍，宿舍提供充滿活力的社群生活，並方便前往教學大樓。",
+            "**學會與社團**：超過 100 個學生組織，包括商學院學生會、投資學會及個案比賽團隊，提供豐富的課外活動。",
+            "**體育與康樂**：校園設有體育中心，包括健身室、游泳池、網球場及遠足徑，促進健康的生活平衡。",
+            "**鄰近科學園**：毗鄰香港科學園，學生可受益於行業合作、實習機會及創新活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳 5 科 + 第 6 科加分，最高可達 62.48 分。",
+            "**2025 年中位數**：獲取錄學生的文憑試中位數為 35.00 分，反映學術競爭激烈。",
+            "**2025 年下四分位數**：下四分位數為 33.90 分，即 25% 的獲取錄學生分數低於此門檻。",
+            "**偏好科目平均分**：下四分位數的每科平均分為 4.64，顯示學生通常在多個科目取得第 5 級或以上。",
+            "**科目權重**：沒有特定科目權重，但鑑於最佳 5 科計算方式，所有科目均需表現優異。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**莫乃光 (Charles Mok)**：前立法會議員（資訊科技界），香港科技政策的重要倡導者。畢業於工商管理學士課程。",
+            "**高靜芝 (Rebecca Ko)**：前香港賽馬會執行總監，香港慈善界的領袖人物。科大商學院校友。",
+            "**鄭小康博士 (Dr. Sunny Chai)**：香港科技園公司主席，電子行業成功企業家。持有科大商學院學位。",
+            "**吳燕安 (Christina Gaw)**：基匯資本管理合夥人及資本市場主管，領先的私募股權公司。畢業於科大商學院。",
+            "**羅康瑞博士 (Dr. Vincent Lo)**：瑞安集團主席，著名房地產開發商。雖非直接畢業生，但長期支持科大並獲頒榮譽博士學位。",
+            "**校友網絡影響**：全球超過 60,000 名商學院校友，在主要城市設有活躍分會，為在校學生提供指導及職業聯繫。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：所有申請人根據文憑試成績自動被考慮；頂尖學生可獲全額學費減免及生活津貼（每年高達港幣 200,000 元以上）。",
+            "**商學院獎學金**：多項基於成績的獎學金，包括院長獎學金及商學院入學獎學金，金額從港幣 10,000 元至全額學費不等。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金計劃，每年最高港幣 80,000 元，獎勵優秀學術表現。",
+            "**需要為本經濟援助**：科大提供經濟援助計劃及科大學生援助基金，為有經濟需要的學生提供資助及低息貸款。",
+            "**外部獎學金**：學生亦可申請來自香港賽馬會、滙豐及尤德爵士紀念基金等機構的獎學金。",
+            "**可續期條件**：大多數獎學金要求維持最低 GPA（通常為 3.0 或以上）及積極參與課外活動。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5300 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數高於 35.00**：鑑於中位數為 35.00，最佳 5 科應爭取至少 35–37 分。利用第 6 科加分提升總分。",
+            "",
+            "- 專注於英文、數學及通識教育等核心科目，爭取第 5 級或以上。",
+            "- 若第 6 科表現優異（例如第 5* 級），可為總分增加最多 2 分。",
+            "",
+            "**2. 在英文及數學中脫穎而出**：這些科目對商科課程至關重要。目標是英文及數學（必修部分）取得第 5* 或 5** 級。",
+            "",
+            "- 多做歷屆試題，必要時尋求補習。",
+            "- 數學方面，專注於統計學及數據分析，這些與商業相關。",
+            "",
+            "**3. 建立超越學術的全面檔案**：科大重視全人發展。參與商業比賽、實習或領導角色。",
+            "",
+            "- 參加香港青年協會的商業課程或個案比賽。",
+            "- 在校內學會擔任義工或領導職位，展現主動性。",
+            "",
+            "**4. 為面試做好準備（如獲邀）**：JS5300 主要依賴文憑試成績，但部分申請人可能獲邀面試。準備討論你對商業的動機。",
+            "",
+            "- 研究香港及全球的商業趨勢。",
+            "- 練習回答「為何選擇科大商學院？」及「你的職業目標是什麼？」等問題。",
+            "",
+            "**5. 善用第 6 科加分**：多修一個選修科目（如經濟、商業、會計或資訊及通訊科技）以最大化加分。第 6 科取得第 5 級可加約 1.5 分。",
+            "",
+            "- 選擇與商業相關的科目，如經濟或企業、會計與財務概論。",
+            "- 確保最佳 5 科表現良好；加分是次要的。",
+            "",
+            "**6. 了解計分系統**：最高可達 62.48 分，但大多數成功申請人分數在 33–40 分之間。使用最佳 5 科 + 第 6 科公式估算你的分數。",
+            "",
+            "- 使用網上計算器或諮詢學校升學輔導老師。",
+            "- 最佳 5 科的每科平均分目標至少為 4.64（第 5 級）。",
+            "",
+            "**7. 提早接觸商業領域**：參加科大的暑期課程、開放日或商業工作坊，展現興趣並獲取見解。",
+            "",
+            "- 如有機會，報名參加科大商學院的「青年商業領袖」計劃。",
+            "- 參觀校園，與在校學生交流經驗。",
+            "",
+            "**8. 及早考慮主修偏好**：雖然 JS5300 是基礎廣泛的課程，但清楚你的意向主修（如金融、市場學）有助於調整科目選擇及個人陳述。",
+            "",
+            "- 研究工商管理學院提供的 10 多個主修。",
+            "- 將選修科目與你偏好的主修對齊（例如經濟學配合金融）。",
+            "",
+            "**9. 主動申請獎學金**：及早提交入學獎學金所需文件。即使不符合頂尖標準，仍有部分獎學金可供申請。",
+            "",
+            "- 查閱科大獎學金網頁了解截止日期及條件。",
+            "- 準備一份強而有力的個人陳述，突出你的成就及目標。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "35.00",
+    "lq": "33.90"
+  }
+}

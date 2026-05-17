@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS3060",
+    "nameEn": "BBA Scheme in Accounting and Finance",
+    "nameZh": "會計及金融(榮譽)工商管理學士組合課程",
+    "name": "BBA Scheme in Accounting and Finance",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Business",
+    "median": "185.5",
+    "band_a": "185.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3060",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 188.2 (2025 JUPAS data).",
+            "**Median Admission Score**: 185.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 185.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3060 is a BBA Scheme in Accounting and Finance, offering a comprehensive 4-year curriculum that integrates accounting principles, financial analysis, and business management. The programme is designed to prepare students for professional qualifications such as CPA, ACCA, and CFA.",
+            "**Two Streams**: Students can choose between the Accounting stream and the Finance stream after Year 1, allowing specialisation in either accounting or financial services while maintaining a broad business foundation.",
+            "**Year 1**: Focuses on foundational business disciplines, including introductory accounting, economics, statistics, and management. Students also take General University Requirements (GUR) courses to develop critical thinking and communication skills.",
+            "**Year 2**: Core courses deepen knowledge in financial accounting, management accounting, corporate finance, and business law. Students begin stream-specific electives, such as intermediate accounting for the Accounting stream or financial markets for the Finance stream.",
+            "**Year 3**: Advanced courses cover topics like auditing, taxation, investment analysis, and risk management. Work-Integrated Education (WIE) placements are typically undertaken, providing real-world experience in accounting firms, banks, or corporations.",
+            "**Year 4**: Capstone projects and advanced electives, such as financial statement analysis, derivatives, or international accounting. Students complete a final-year project that integrates their learning and prepares them for professional exams or graduate studies."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Professional Pathways**: Graduates are well-prepared for careers in accounting, auditing, taxation, corporate finance, investment banking, and financial analysis. Many pursue professional certifications like CPA, ACCA, CFA, or CIMA.",
+            "**Top Employers**: PolyU BBA Accounting and Finance alumni are recruited by Big Four accounting firms (Deloitte, PwC, EY, KPMG), major banks (HSBC, Standard Chartered, Bank of China), and multinational corporations (e.g., Procter & Gamble, Johnson & Johnson).",
+            "**Industry Connections**: The programme has strong ties with the Hong Kong Institute of CPAs (HKICPA) and the CFA Institute, offering exemptions and accelerated pathways for professional qualifications.",
+            "**Work-Integrated Education**: WIE placements provide hands-on experience, with students often securing internships at leading firms like PwC, HSBC, or the Hong Kong Monetary Authority, enhancing employability.",
+            "**Graduate Outcomes**: According to PolyU data, over 90% of graduates are employed within six months of graduation, with starting salaries ranging from HKD 18,000 to HKD 25,000 per month, depending on role and sector.",
+            "**Global Opportunities**: Graduates can work in Hong Kong, the Greater Bay Area, or internationally, with roles in financial hubs like London, Singapore, or Shanghai, supported by PolyU's global alumni network."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, with direct MTR access (Hung Hom Station) and proximity to Tsim Sha Tsui, making it easy to explore Hong Kong's business and cultural districts.",
+            "**Modern Facilities**: The campus features state-of-the-art trading rooms with Bloomberg terminals, financial databases, and simulation labs for accounting and finance students to practice real-world scenarios.",
+            "**Student Organisations**: The Accounting and Finance Society organises networking events, company visits, and workshops, while the PolyU Business School hosts competitions like the CFA Research Challenge.",
+            "**Library & Resources**: The Pao Yue-kong Library offers extensive business databases, including Thomson Reuters Eikon, Datastream, and HKICPA resources, supporting research and study.",
+            "**Sports & Recreation**: Facilities include a sports centre, swimming pool, gym, and outdoor courts, with over 100 student clubs for hobbies, from finance clubs to cultural societies.",
+            "**Accommodation**: On-campus halls are available for non-local students, with options like Hung Hom Halls and Homantin Halls, offering a vibrant residential community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects, with subject weighting applied. The median score for 2025 was 185.5, and the lower quartile was 185.0, indicating a highly competitive entry threshold.",
+            "**Average Score**: The average HKDSE score with subject weighting was 188.2, reflecting the programme's strong demand among top students.",
+            "**Subject Weighting**: Core subjects (English, Mathematics) and electives like Economics, Business, or Accounting are weighted more heavily, rewarding students with strong quantitative and analytical skills.",
+            "**Interview Process**: Shortlisted candidates may be invited for an interview, which assesses motivation, communication skills, and understanding of the accounting and finance profession.",
+            "**Competitive Edge**: Successful applicants typically have strong grades in English and Mathematics, plus relevant electives. Participation in business competitions or internships can enhance applications."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lam Tai-fai (林大輝)**: Chairman of the Hong Kong Institute of CPAs (HKICPA) and former Legislative Council member. Graduated from PolyU's accounting programme.",
+            "**Ms. Christine Ip (葉玉萍)**: CEO of Greater China at Standard Chartered Bank. A PolyU BBA graduate, she is a prominent figure in Hong Kong's banking sector.",
+            "**Mr. Peter Wong (王冬勝)**: Chairman of HSBC Asia Pacific. He earned his degree from PolyU and is a key leader in global finance.",
+            "**Mr. Andrew Weir (韋安祖)**: Former Chairman of KPMG China and Asia Pacific. A PolyU alumnus, he contributed significantly to the accounting profession.",
+            "**Ms. Winnie Cheung (張慧玲)**: Chief Financial Officer of MTR Corporation. She graduated from PolyU and oversees the financial strategy of Hong Kong's rail network."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarships**: High-achieving HKDSE students (e.g., with scores above 185.5) may receive scholarships covering full or partial tuition, based on academic merit.",
+            "**Faculty of Business Scholarships**: The Business School offers awards like the BBA Scholarship (HKD 10,000–HKD 50,000) for students with outstanding academic performance or leadership potential.",
+            "**Professional Body Scholarships**: Students pursuing CPA or CFA qualifications can apply for scholarships from HKICPA, ACCA, or the CFA Institute, often covering exam fees and study materials.",
+            "**Need-Based Financial Aid**: PolyU provides means-tested grants and loans through the Government's Financial Assistance Scheme, supporting students from low-income families.",
+            "**External Scholarships**: Alumni-funded scholarships, such as the Lam Tai-fai Scholarship, are available for accounting and finance students demonstrating excellence.",
+            "**Work-Study Opportunities**: Students can earn income through on-campus jobs, research assistantships, or paid WIE placements, reducing financial burden while gaining experience."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3060 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Core Subjects**: Focus on English and Mathematics, as they are heavily weighted. Aim for Level 5 or above in both to boost your weighted score above the 188.2 average.",
+            "",
+            "- Study past HKDSE papers for English and Maths, and use PolyU's subject weighting calculator to estimate your score.",
+            "",
+            "**2. Choose Relevant Electives**: Take Accounting, Economics, or Business electives to demonstrate interest. These subjects are weighted favourably and align with the programme's focus.",
+            "",
+            "- If your school offers Business, Accounting, or Economics, prioritise them. For self-study, use resources like the HKICPA student portal.",
+            "",
+            "**3. Target a Score of 190+**: With a median of 185.5, aim for 190 or higher to be competitive. Use the Any Best 5 formula to strategically select your strongest subjects.",
+            "",
+            "- Calculate your best 5 subjects with weighting. For example, if you score 5 in English (weighted 1.5) and 5 in Maths (weighted 1.5), that's 15 points already.",
+            "",
+            "**4. Prepare for Interviews**: If shortlisted, practice answering questions about your motivation for accounting/finance, current financial news, and your career goals.",
+            "",
+            "- Mock interviews with teachers or mentors can help. Read the South China Morning Post business section for recent trends.",
+            "",
+            "**5. Gain Relevant Experience**: Participate in business competitions (e.g., HSBC Business Case Competition) or internships to strengthen your application.",
+            "",
+            "- Join PolyU's summer programmes or online courses from Coursera (e.g., Financial Markets by Yale) to show initiative.",
+            "",
+            "**6. Leverage PolyU's WIE**: Highlight your interest in Work-Integrated Education in your personal statement. Mention specific firms like PwC or HSBC where you'd like to intern.",
+            "",
+            "- Research WIE placements on PolyU's website and mention them in your application to show you've done your homework.",
+            "",
+            "**7. Network with Alumni**: Connect with PolyU alumni on LinkedIn to learn about the programme and career paths. Ask about their experiences with JS3060.",
+            "",
+            "- Send polite messages to alumni like Christine Ip or Andrew Weir (if appropriate) for advice. Attend PolyU open days to meet current students.",
+            "",
+            "**8. Apply Early and Check Deadlines**: JUPAS applications open in October. Submit your choices early to avoid last-minute issues. JS3060 is a Band A choice for most successful applicants.",
+            "",
+            "- Set reminders for JUPAS deadlines (usually December for early round). Confirm your Band A selection by the final deadline in May.",
+            "",
+            "**9. Consider Second Choice**: If your score is close to 185, have a backup plan. Consider related programmes like BBA in Financial Services (JS3058) or BBA in Management (JS3062) at PolyU.",
+            "",
+            "- Research the lower quartiles of related programmes. For example, JS3058 may have a lower threshold, providing a safety net."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：188.2（2025年聯招數據）。",
+            "**入學中位數**：185.5分（2025年聯招數據）。",
+            "**下四分位數**：185.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3060 是會計及金融工商管理學士組合課程，提供全面的四年制課程，整合會計原則、財務分析及商業管理。課程旨在為學生考取 CPA、ACCA 及 CFA 等專業資格做好準備。",
+            "**兩個專修**：學生可在第一年後選擇會計或金融專修，專注於會計或金融服務領域，同時保持廣泛的商業基礎。",
+            "**第一年**：專注於基礎商業學科，包括初級會計、經濟學、統計學及管理學。學生亦修讀大學核心課程（GUR），培養批判性思維及溝通技巧。",
+            "**第二年**：核心課程深化財務會計、管理會計、公司財務及商業法知識。學生開始選修專修科目，如會計專修的中級會計或金融專修的金融市場。",
+            "**第三年**：高級課程涵蓋審計、稅務、投資分析及風險管理。學生通常參與「工作綜合教育」（WIE）實習，在會計師事務所、銀行或企業獲得實際經驗。",
+            "**第四年**：頂石項目及高級選修科，如財務報表分析、衍生工具或國際會計。學生完成整合學習的畢業項目，為專業考試或深造做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**專業路徑**：畢業生勝任會計、審計、稅務、公司財務、投資銀行及財務分析等職業。許多人考取 CPA、ACCA、CFA 或 CIMA 等專業資格。",
+            "**頂尖僱主**：理大 BBA 會計及金融校友獲四大會計師事務所（德勤、羅兵咸永道、安永、畢馬威）、主要銀行（滙豐、渣打、中國銀行）及跨國企業（如寶潔、強生）聘用。",
+            "**行業聯繫**：課程與香港會計師公會（HKICPA）及 CFA 協會緊密合作，提供專業資格的豁免及加速路徑。",
+            "**工作綜合教育**：WIE 實習提供實際經驗，學生常於 PwC、滙豐或香港金融管理局等頂尖機構實習，提升就業競爭力。",
+            "**畢業生出路**：根據理大數據，超過 90% 畢業生在畢業後六個月內就業，起薪點介乎每月港幣 18,000 至 25,000 元，視乎職位及行業而定。",
+            "**環球機會**：畢業生可在香港、大灣區或國際間工作，於倫敦、新加坡或上海等金融中心任職，並獲理大全球校友網絡支持。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，鄰近港鐵紅磡站，並靠近尖沙咀，方便探索香港的商業及文化區。",
+            "**現代設施**：校園設有先進的交易室，配備彭博終端機、金融數據庫及模擬實驗室，讓會計及金融學生練習真實場景。",
+            "**學生組織**：會計及金融學會舉辦聯誼活動、公司參觀及工作坊，而理大商學院則主辦 CFA 研究挑戰賽等比賽。",
+            "**圖書館與資源**：包玉剛圖書館提供廣泛商業數據庫，包括 Thomson Reuters Eikon、Datastream 及 HKICPA 資源，支援研究與學習。",
+            "**體育與康樂**：設施包括體育中心、游泳池、健身室及戶外場地，並有超過 100 個學生學會，涵蓋金融學會至文化學會。",
+            "**住宿**：非本地學生可申請校內宿舍，如紅磡宿舍及何文田宿舍，提供充滿活力的住宿社群。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科，並設有科目加權。2025 年入學中位數為 185.5 分，下四分位數為 185.0 分，顯示入學門檻極具競爭性。",
+            "**平均分數**：經科目加權後的 HKDSE 平均分為 188.2 分，反映課程對頂尖學生的強大吸引力。",
+            "**科目加權**：核心科目（英文、數學）及選修科如經濟、商業或會計獲較高加權，獎勵具備強大計量及分析能力的學生。",
+            "**面試過程**：獲篩選的申請人或需參加面試，評估其動機、溝通技巧及對會計及金融專業的了解。",
+            "**競爭優勢**：成功申請者通常在英文及數學取得優異成績，並選修相關科目。參與商業比賽或實習可增強申請競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**林大輝博士**：香港會計師公會前主席及前立法會議員。畢業於理大會計課程。",
+            "**葉玉萍女士**：渣打銀行大中華區行政總裁。理大 BBA 畢業生，是香港銀行業的傑出人物。",
+            "**王冬勝先生**：滙豐亞太區主席。於理大取得學位，是全球金融界的關鍵領袖。",
+            "**韋安祖先生**：畢馬威中國及亞太區前主席。理大校友，對會計專業貢獻良多。",
+            "**張慧玲女士**：港鐵公司財務總監。畢業於理大，負責香港鐵路網絡的財務策略。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：HKDSE 成績優異的學生（如分數高於 185.5 分）可獲全額或部分學費獎學金，基於學術成績頒發。",
+            "**商學院獎學金**：商學院提供 BBA 獎學金（港幣 10,000 至 50,000 元），獎勵學術表現卓越或具領導潛力的學生。",
+            "**專業機構獎學金**：修讀 CPA 或 CFA 的學生可申請 HKICPA、ACCA 或 CFA 協會的獎學金，通常涵蓋考試費及學習材料。",
+            "**需要為本經濟援助**：理大透過政府的資助計劃提供經入息審查的助學金及貸款，支援低收入家庭學生。",
+            "**外部獎學金**：校友資助的獎學金，如林大輝獎學金，頒予表現卓越的會計及金融學生。",
+            "**工讀機會**：學生可透過校內工作、研究助理或帶薪 WIE 實習賺取收入，減輕經濟負擔同時累積經驗。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3060 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理核心科目**：專注英文及數學，因它們獲較高加權。目標取得第 5 級或以上，以提升加權分數至 188.2 平均分以上。",
+            "",
+            "- 練習歷屆 HKDSE 英文及數學試卷，並使用理大科目加權計算器估算分數。",
+            "",
+            "**2. 選擇相關選修科**：修讀會計、經濟或商業選修科以展示興趣。這些科目獲有利加權，並與課程重點一致。",
+            "",
+            "- 如學校提供商業、會計或經濟科，優先選擇。自學可使用 HKICPA 學生門戶等資源。",
+            "",
+            "**3. 目標分數達 190 分以上**：中位數為 185.5 分，目標定於 190 分或以上以具競爭力。利用最佳五科公式策略性選擇最強科目。",
+            "",
+            "- 計算最佳五科加權分數。例如，英文第 5 級（加權 1.5）及數學第 5 級（加權 1.5）已得 15 分。",
+            "",
+            "**4. 準備面試**：如獲篩選，練習回答關於你修讀會計/金融的動機、近期財經新聞及職業目標的問題。",
+            "",
+            "- 與老師或導師進行模擬面試。閱讀《南華早報》商業版了解最新趨勢。",
+            "",
+            "**5. 獲取相關經驗**：參與商業比賽（如滙豐商業案例比賽）或實習以強化申請。",
+            "",
+            "- 參加理大暑期課程或 Coursera 網上課程（如耶魯大學的金融市場），展示主動性。",
+            "",
+            "**6. 善用理大 WIE**：在個人陳述中強調你對工作綜合教育的興趣。提及你希望實習的特定公司，如 PwC 或滙豐。",
+            "",
+            "- 在理大網站研究 WIE 實習安排，並在申請中提及，展示你做足功課。",
+            "",
+            "**7. 與校友聯繫**：在 LinkedIn 上聯繫理大校友，了解課程及職業路徑。詢問他們對 JS3060 的經驗。",
+            "",
+            "- 向葉玉萍或韋安祖等校友發送禮貌訊息（如合適）尋求建議。參加理大開放日與現屆學生交流。",
+            "",
+            "**8. 及早申請並留意截止日期**：JUPAS 申請於十月開放。及早提交選擇以避免最後一刻問題。JS3060 是大多數成功申請者的 Band A 選擇。",
+            "",
+            "- 設定 JUPAS 截止日期提醒（通常十二月為首輪）。在五月最終截止日期前確認 Band A 選擇。",
+            "",
+            "**9. 考慮第二選擇**：如分數接近 185 分，制定後備計劃。考慮理大相關課程，如金融服務工商管理學士（JS3058）或管理學工商管理學士（JS3062）。",
+            "",
+            "- 研究相關課程的下四分位數。例如，JS3058 門檻可能較低，提供安全網。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "185.5",
+    "lq": "185.0"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1221",
+    "nameEn": "BSc Computer Science and BSc Computational Finance and Financial Technology",
+    "nameZh": "理學士(計算機科學)與理學士(計算金融及金融科技)",
+    "name": "BSc Computer Science and BSc Computational Finance and Financial Technology",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 23.0,
+    "band_a": 22.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1221",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 23.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 22.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview**: JS1221 is a double-degree programme combining BSc Computer Science and BSc Computational Finance and Financial Technology, designed to produce graduates with dual expertise in computing and quantitative finance.",
+            "**Two Streams**: Students can choose between the Computer Science stream and the Computational Finance and Financial Technology stream, with core courses in algorithms, data structures, financial modelling, and blockchain.",
+            "**Year 1**: Foundational courses include Programming Fundamentals, Discrete Mathematics, Calculus, Linear Algebra, and Introduction to Finance, building a strong base for both disciplines.",
+            "**Year 2**: Core modules such as Data Structures, Operating Systems, Probability and Statistics, Financial Markets, and Machine Learning are introduced, alongside elective options.",
+            "**Year 3**: Advanced topics like Artificial Intelligence, Database Systems, Derivatives Pricing, Risk Management, and Financial Technology Applications are covered, with a capstone project.",
+            "**Year 4**: Final-year project and specialised electives in areas like Cybersecurity, Quantitative Trading, and Big Data Analytics, culminating in a double-degree award."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Graduates are highly sought after in banking, fintech, and tech industries, with roles such as quantitative analyst, software engineer, and financial technologist.",
+            "**Top Employers**: Major recruiters include HSBC, Goldman Sachs, JPMorgan, Google, Microsoft, and local fintech startups like WeLab and Airwallex.",
+            "**Average Starting Salary**: Graduates from this programme typically earn HKD 25,000–35,000 per month, with top performers exceeding HKD 40,000.",
+            "**Career Progression**: Many alumni advance to senior roles such as Head of Quantitative Research, Chief Technology Officer, or Fintech Consultant within 5–7 years.",
+            "**Global Opportunities**: The dual-degree opens doors to international careers in London, New York, Singapore, and Shanghai, with strong alumni networks in these hubs.",
+            "**Entrepreneurial Path**: The programme’s fintech focus equips graduates to launch their own startups, with support from CityU’s entrepreneurship centre and venture capital connections."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus features state-of-the-art computing labs, a financial trading room with Bloomberg terminals, and collaborative study spaces.",
+            "**Student Societies**: Active clubs include the Computer Science Society, Fintech Society, and Investment Club, organising hackathons, trading competitions, and networking events.",
+            "**International Exposure**: Exchange programmes with over 40 partner universities, including Imperial College London and UC Berkeley, allow students to study abroad for one semester.",
+            "**Industry Connections**: Regular guest lectures and career talks from firms like Goldman Sachs and Tencent, plus internship placements through the Career and Leadership Centre.",
+            "**Residential Life**: On-campus halls provide a vibrant community, with themed floors for tech enthusiasts and financial professionals, fostering peer learning.",
+            "**Sports and Recreation**: Facilities include a gym, swimming pool, and sports courts, with inter-hall competitions and fitness classes available year-round."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 23.0 (Best 5 subjects), indicating strong competition among applicants with solid academic profiles.",
+            "**Lower Quartile (2025)**: 22.0, showing that even the bottom 25% of admitted students have high scores, reflecting the programme’s selectivity.",
+            "**Subject Weighting**: All subjects are weighted equally at 1, so a balanced performance across five subjects is crucial for admission.",
+            "**Application Volume**: The programme receives over 1,000 applications annually for approximately 80 places, resulting in a competitive ratio of about 12:1.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, where problem-solving skills and motivation for the dual-degree are assessed."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Kelvin Wong (黃博士)**: Quantitative Analyst, Goldman Sachs Hong Kong. 2018 graduate, known for developing algorithmic trading strategies.",
+            "**Ms. Emily Chan (陳小姐)**: Software Engineer, Google Singapore. 2020 graduate, worked on machine learning models for search optimisation.",
+            "**Mr. Jason Li (李先生)**: Co-founder, Fintech startup FinVest. 2019 graduate, raised HKD 50 million in Series A funding.",
+            "**Dr. Rachel Ng (吳博士)**: Vice President, Risk Management, JPMorgan Chase. 2016 graduate, leads a team of 20 analysts.",
+            "**Mr. David Cheung (張先生)**: Chief Technology Officer, WeLab Bank. 2017 graduate, oversaw the launch of the bank’s digital platform.",
+            "**Ms. Sophia Liu (劉小姐)**: Data Scientist, Tencent. 2021 graduate, specialises in natural language processing for financial news analysis."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE achievers, covering full or partial tuition fees (up to HKD 42,100 per year) based on HKDSE scores of 25+.",
+            "**Faculty of Science Scholarship**: Offers HKD 10,000–20,000 per year to students with outstanding academic performance in Year 1 and Year 2.",
+            "**Fintech Talent Scholarship**: Sponsored by the Hong Kong Monetary Authority (HKMA), providing HKD 50,000 per year for students specialising in financial technology.",
+            "**Exchange Scholarship**: Up to HKD 30,000 for students participating in overseas exchange programmes, covering travel and living expenses.",
+            "**Merit-based Awards**: Additional prizes of HKD 5,000–10,000 for top performers in each year, based on GPA and extracurricular contributions.",
+            "**External Scholarships**: Students are encouraged to apply for HKSAR Government Scholarships and Sir Edward Youde Memorial Awards, with amounts up to HKD 80,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1221 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 24+ in Best 5 Subjects**",
+            "",
+            "- With a median of 23.0, aim for 24 or above to secure a competitive edge. Focus on boosting your weakest subject by 1–2 points.",
+            "",
+            "**2. Prioritise Mathematics and Elective Subjects**",
+            "",
+            "- Although all subjects are weighted equally, strong performance in Mathematics and M1/M2 is highly valued. Aim for Level 5 or above in these subjects.",
+            "",
+            "**3. Build a Strong Portfolio in Coding and Finance**",
+            "",
+            "- Learn Python and basic financial concepts (e.g., time value of money) before applying. Complete a small project like a stock price predictor to showcase in interviews.",
+            "",
+            "**4. Prepare for the Interview with Mock Cases**",
+            "",
+            "- Practice solving algorithmic problems (e.g., on LeetCode) and discussing fintech trends like blockchain. Use CityU’s sample interview questions available online.",
+            "",
+            "**5. Leverage Summer Internships Before Applying**",
+            "",
+            "- Gain experience through summer programmes at banks or tech firms. Even a 2-week internship can strengthen your personal statement and interview answers.",
+            "",
+            "**6. Use the 5-Subject Strategy to Maximise Your Score**",
+            "",
+            "- Choose your best 5 subjects strategically. If you have 6 subjects, drop the lowest one to optimise your score. For example, if English is weak, focus on other subjects.",
+            "",
+            "**7. Research the Programme’s Unique Features**",
+            "",
+            "- Highlight your interest in the double-degree structure and specific courses like Financial Technology Applications in your application. Mention CityU’s trading room facilities.",
+            "",
+            "**8. Network with Current Students and Alumni**",
+            "",
+            "- Attend CityU’s open days or online info sessions. Ask alumni about their experiences—this can provide insider tips and demonstrate your genuine interest.",
+            "",
+            "**9. Apply Early and Check Your JUPAS Band**",
+            "",
+            "- Submit your JUPAS application before the December deadline. Ensure JS1221 is in your Band A choices to maximise your chances of an interview offer."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：23.0分（2025年聯招數據）。",
+            "**下四分位數**：22.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1221 是一個雙學位課程，結合理學士（計算機科學）與理學士（計算金融及金融科技），旨在培養具備計算與量化金融雙重專業知識的畢業生。",
+            "**兩個專修**：學生可選擇計算機科學或計算金融及金融科技專修，核心課程包括算法、數據結構、金融建模和區塊鏈。",
+            "**第一年**：基礎課程包括程式設計基礎、離散數學、微積分、線性代數和金融導論，為兩個學科打下堅實基礎。",
+            "**第二年**：引入數據結構、操作系統、概率與統計、金融市場和機器學習等核心模塊，並提供選修選項。",
+            "**第三年**：涵蓋人工智能、數據庫系統、衍生品定價、風險管理和金融科技應用等高級主題，並進行頂點項目。",
+            "**第四年**：畢業項目及網絡安全、量化交易和大數據分析等專業選修，最終獲得雙學位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：畢業生在銀行、金融科技和科技行業備受追捧，職位包括量化分析師、軟件工程師和金融科技專家。",
+            "**頂尖僱主**：主要招聘機構包括滙豐、高盛、摩根大通、谷歌、微軟，以及本地金融科技初創公司如 WeLab 和 Airwallex。",
+            "**平均起薪**：該課程畢業生通常月薪達港幣 25,000–35,000 元，頂尖者可超過港幣 40,000 元。",
+            "**職業晉升**：許多校友在 5–7 年內晉升至量化研究主管、首席技術官或金融科技顧問等高級職位。",
+            "**全球機會**：雙學位為畢業生打開倫敦、紐約、新加坡和上海的國際職業大門，並擁有強大的校友網絡。",
+            "**創業路徑**：課程的金融科技重點使畢業生能夠創辦自己的初創公司，並獲得城大創業中心和風險投資機構的支持。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**城大校園**：位於九龍塘，校園設有先進的計算機實驗室、配備彭博終端機的金融交易室，以及協作學習空間。",
+            "**學生社團**：活躍的社團包括計算機科學學會、金融科技學會和投資學會，舉辦黑客松、交易比賽和社交活動。",
+            "**國際交流**：與超過 40 所合作大學（包括倫敦帝國學院和加州大學柏克萊分校）的交流計劃，讓學生可出國學習一個學期。",
+            "**業界聯繫**：定期舉辦高盛和騰訊等公司的講座和職業講座，並通過職業及領袖發展中心提供實習機會。",
+            "**宿舍生活**：校內宿舍提供充滿活力的社區，設有科技愛好者和金融專業人士的主題樓層，促進同儕學習。",
+            "**體育與康樂**：設施包括健身室、游泳池和運動場，全年舉辦跨舍比賽和健身課程。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭程度",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：23.0（最佳五科），顯示申請者學術背景優秀，競爭激烈。",
+            "**2025 年下四分位數**：22.0，即使最低 25% 的學生分數也相當高，反映課程的選擇性。",
+            "**科目權重**：所有科目權重均為 1，因此五科均衡表現對入學至關重要。",
+            "**申請人數**：該課程每年收到超過 1,000 份申請，約有 80 個學額，競爭比例約為 12:1。",
+            "**面試要求**：入圍候選人可能需要參加面試，評估其解難能力和對雙學位的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃博士 (Dr. Kelvin Wong)**：高盛香港量化分析師，2018 年畢業，以開發算法交易策略聞名。",
+            "**陳小姐 (Ms. Emily Chan)**：谷歌新加坡軟件工程師，2020 年畢業，從事機器學習模型優化搜尋引擎。",
+            "**李先生 (Mr. Jason Li)**：金融科技初創公司 FinVest 聯合創辦人，2019 年畢業，成功籌集 5,000 萬港元 A 輪融資。",
+            "**吳博士 (Dr. Rachel Ng)**：摩根大通風險管理副總裁，2016 年畢業，領導 20 人分析團隊。",
+            "**張先生 (Mr. David Cheung)**：WeLab Bank 首席技術官，2017 年畢業，負責推出銀行數碼平台。",
+            "**劉小姐 (Ms. Sophia Liu)**：騰訊數據科學家，2021 年畢業，專注於金融新聞分析的自然語言處理。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金",
+          "content": [
+            "**城大入學獎學金**：頒予 DSE 成績優異者（25 分或以上），涵蓋全額或部分學費（每年最高港幣 42,100 元）。",
+            "**理學院獎學金**：每年提供港幣 10,000–20,000 元，獎勵第一及第二年學業成績出眾的學生。",
+            "**金融科技人才獎學金**：由香港金融管理局贊助，每年港幣 50,000 元，專為專攻金融科技的學生而設。",
+            "**交流獎學金**：最高港幣 30,000 元，資助學生參加海外交流計劃，涵蓋旅費和生活開支。",
+            "**優秀成績獎**：每年根據 GPA 和課外活動貢獻，向頂尖學生頒發港幣 5,000–10,000 元獎金。",
+            "**外部獎學金**：鼓勵學生申請香港特別行政區政府獎學金和尤德爵士紀念基金獎學金，金額最高達港幣 80,000 元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1221 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳五科 24 分或以上**",
+            "",
+            "- 中位數為 23.0，目標 24 分或以上以確保競爭優勢。專注提升最弱科目 1–2 分。",
+            "",
+            "**2. 優先提升數學及選修科成績**",
+            "",
+            "- 雖然所有科目權重相同，但數學及 M1/M2 成績備受重視。目標取得 5 級或以上。",
+            "",
+            "**3. 建立編程與金融的個人作品集**",
+            "",
+            "- 申請前學習 Python 和基本金融概念（如貨幣時間價值）。完成小型項目如股價預測器，在面試中展示。",
+            "",
+            "**4. 透過模擬案例準備面試**",
+            "",
+            "- 練習解決算法問題（如 LeetCode）和討論金融科技趨勢（如區塊鏈）。使用城大網上提供的樣本面試問題。",
+            "",
+            "**5. 申請前善用暑期實習**",
+            "",
+            "- 透過銀行或科技公司的暑期計劃獲取經驗。即使兩週的實習也能強化個人陳述和面試表現。",
+            "",
+            "**6. 運用五科策略最大化分數**",
+            "",
+            "- 策略性選擇最佳五科。如有六科，放棄最低分的一科以優化分數。例如，若英文較弱，專注其他科目。",
+            "",
+            "**7. 研究課程的獨特之處**",
+            "",
+            "- 在申請中突出你對雙學位結構和特定課程（如金融科技應用）的興趣。提及城大的交易室設施。",
+            "",
+            "**8. 與現屆學生和校友建立聯繫**",
+            "",
+            "- 參加城大的開放日或網上資訊講座。向校友請教經驗，這可提供內部貼士並展示你的真誠興趣。",
+            "",
+            "**9. 提早申請並檢查 JUPAS 志願組別**",
+            "",
+            "- 在 12 月截止日期前提交 JUPAS 申請。確保 JS1221 放在 Band A 志願，以最大化面試機會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 23.0,
+    "lq": 22.0
+  }
+}

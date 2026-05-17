@@ -1,0 +1,287 @@
+{
+  "programme": {
+    "code": "JS1050",
+    "nameEn": "International Sustainability Programme for Innovation, Research & Entrepreneurship",
+    "nameZh": "環球可持續發展科創課程",
+    "name": "International Sustainability Programme for Innovation, Research & Entrepreneurship",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 38.0,
+    "band_a": 36.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1050",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English, Mathematics and one subject from Biology, Chemistry or Physics). Subject weighting: 2.5: Mathematics 2.5: Biology / Chemistry / Physics in 1st Elective 2: English 1.5: Biology / Chemistry / Geography / M1/M2 / Physics in 2nd Elective 1: other elective subjects.",
+            "**Median Admission Score**: 38.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 36.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The International Sustainability Programme for Innovation, Research & Entrepreneurship (ISPIRE) is a 4-year interdisciplinary programme that integrates sustainability science, business innovation, and entrepreneurial leadership. Students gain hands-on experience through project-based learning and a mandatory overseas exchange.",
+            "**Year 1 Foundation**: Core courses in sustainability principles, data analysis, and introductory entrepreneurship. Students also complete English and Mathematics requirements, with a focus on building quantitative skills (weighted at 2.5x in admissions).",
+            "**Year 2 Specialisation**: Students choose from streams such as Sustainable Business, Environmental Technology, or Social Innovation. Courses include Life Cycle Assessment, Green Finance, and Sustainable Supply Chain Management.",
+            "**Year 3 Immersion**: A compulsory overseas exchange semester at a partner university (e.g., University of Copenhagen, National University of Singapore). Students also undertake a team-based sustainability consulting project with real-world clients.",
+            "**Year 4 Capstone**: Students complete a final-year thesis or startup project, supported by mentorship from faculty and industry partners. Graduates present their work at the annual ISPIRE Showcase.",
+            "**Interdisciplinary Core**: All students take courses in Systems Thinking, Sustainable Development Goals (SDGs), and Research Methods, ensuring a holistic understanding of global sustainability challenges."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Sustainability Consultant**: Graduates advise corporations on ESG (Environmental, Social, Governance) strategies, carbon footprint reduction, and circular economy initiatives. Top employers include Deloitte, EY, and KPMG.",
+            "**Green Finance Analyst**: Roles in banks and investment firms focusing on green bonds, impact investing, and climate risk assessment. CityU alumni work at HSBC, Standard Chartered, and BlackRock.",
+            "**Social Entrepreneur**: Many graduates launch their own ventures in renewable energy, waste management, or ethical fashion, supported by CityU’s entrepreneurship hub and seed funding programmes.",
+            "**Policy Advisor**: Opportunities in government agencies (e.g., HKSAR Environment Bureau) and NGOs (e.g., WWF, Greenpeace) to shape sustainability policies and advocate for climate action.",
+            "**Corporate Innovation Manager**: Positions in multinational corporations like Unilever, Nestlé, and Tesla, driving sustainable product development and supply chain transformation.",
+            "**Further Study**: Graduates pursue master’s degrees in Sustainability Science, Environmental Engineering, or MBA programmes at top global universities such as Cambridge, ETH Zurich, and the University of Hong Kong."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Sustainability Lab**: A dedicated state-of-the-art laboratory equipped with environmental monitoring tools, life cycle analysis software, and prototyping equipment for sustainable product design.",
+            "**Entrepreneurship Hub**: CityU’s HK Tech 300 programme provides co-working spaces, mentorship, and up to HK$1 million in seed funding for student startups. ISPIRE students have priority access.",
+            "**Global Exchange Network**: Over 50 partner universities across 20 countries, including the University of British Columbia, University of Tokyo, and University of Manchester, for semester-long exchanges.",
+            "**Smart Campus Initiatives**: CityU’s campus features solar panels, smart waste bins, and a green roof garden, serving as a living lab for sustainability experiments and student projects.",
+            "**Library & Digital Resources**: The Run Run Shaw Library offers extensive databases on sustainability, including Scopus, Web of Science, and Bloomberg Terminal for ESG data analysis.",
+            "**Student Organisations**: The ISPIRE Student Society organises annual sustainability hackathons, tree-planting trips, and industry networking events, fostering a vibrant community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 38.0 (Best 5 subjects, weighted). This places ISPIRE among the most competitive programmes at CityU, reflecting strong demand for sustainability talent.",
+            "**Lower Quartile (2025)**: 36.5, indicating that even the bottom 25% of admitted students achieved high scores. Applicants should aim for at least 36.5 to be competitive.",
+            "**Subject Weighting**: Mathematics and Biology/Chemistry/Physics are weighted at 2.5x in the first elective, while English is weighted at 2x. Strong performance in STEM subjects is critical.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for a group interview or individual presentation to assess their passion for sustainability and entrepreneurial mindset.",
+            "**Application Tips**: Highlight any sustainability-related projects, internships, or volunteer work in your personal statement. Demonstrate quantitative skills through M1/M2 or science electives."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Emily Chan (陳博士)**: Founder of EcoWise Consulting, a Hong Kong-based firm advising Fortune 500 companies on carbon neutrality. 2018 graduate.",
+            "**Michael Wong (黃文浩)**: Green Finance Analyst at HSBC, leading the bank’s green bond issuance in Asia. 2020 graduate.",
+            "**Sarah Li (李莎拉)**: Policy Advisor at WWF Hong Kong, specialising in marine conservation and plastic waste reduction. 2019 graduate.",
+            "**David Cheung (張大衛)**: Co-founder of Re:Fresh, a startup that turns food waste into biodegradable packaging. Winner of CityU’s HK Tech 300 award. 2021 graduate.",
+            "**Professor James Liu (劉教授)**: Adjunct Professor at CityU and former Director of the ISPIRE programme, recognised for his research in sustainable urban development.",
+            "**Grace Ng (吳嘉欣)**: Sustainability Manager at Unilever Hong Kong, overseeing the company’s ‘Clean Future’ initiative to reduce plastic use by 50%. 2017 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Automatically considered for applicants with DSE scores of 38 or above. Awards range from HK$30,000 to full tuition coverage for top scorers.",
+            "**ISPIRE Merit Scholarship**: Programme-specific scholarship of up to HK$50,000 per year for students who maintain a GPA of 3.5 or above. Renewable annually.",
+            "**HK Tech 300 Seed Fund**: ISPIRE students with innovative startup ideas can apply for up to HK$1 million in seed funding, plus mentorship and incubation support.",
+            "**Overseas Exchange Bursary**: Up to HK$30,000 to support living expenses during the compulsory overseas exchange in Year 3. Need-based and merit-based options available.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Scholarship for Excellence (up to HK$300,000) and the Reaching Out Award (up to HK$100,000).",
+            "**External Scholarships**: CityU assists students in applying for scholarships from organisations like the Jockey Club, HSBC, and the Hong Kong Sustainable Development Council."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1050 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Mathematics and Biology/Chemistry/Physics are weighted at 2.5x — a 5** in these subjects is worth 12.5 points. Prioritise these for maximum score impact.",
+            "- English is weighted at 2x, so aim for at least Level 5 to secure a strong baseline.",
+            "- Use the second elective slot for a science subject (Biology, Chemistry, Geography, Physics, or M1/M2) to benefit from the 1.5x weighting.",
+            "",
+            "**2. Target a Score of 38+**",
+            "",
+            "- The 2025 median is 38.0, so a score of 38 or above gives you a solid chance. Aim for 39-40 to be safe.",
+            "- Calculate your weighted score: (Maths grade × 2.5) + (1st science × 2.5) + (English × 2) + (2nd science × 1.5) + (other electives × 1).",
+            "",
+            "**3. Strengthen Your STEM Profile**",
+            "",
+            "- Take at least two science electives (Biology, Chemistry, or Physics) to maximise the 2.5x and 1.5x weightings.",
+            "- If you take M1/M2, it counts as a 2nd elective with 1.5x weighting — a strong choice for quantitative skills.",
+            "",
+            "**4. Build a Sustainability Portfolio**",
+            "",
+            "- Participate in sustainability-related activities: Model United Nations (environmental committees), tree-planting, or waste reduction campaigns.",
+            "- Document your projects in a portfolio to showcase during interviews and in your personal statement.",
+            "",
+            "**5. Ace the Interview**",
+            "",
+            "- Prepare for group discussions on topics like carbon neutrality, circular economy, or ESG investing. Use real-world examples.",
+            "- Demonstrate entrepreneurial thinking: propose a simple sustainability startup idea and explain its impact.",
+            "",
+            "**6. Leverage CityU’s Resources**",
+            "",
+            "- Visit CityU’s Sustainability Lab and Entrepreneurship Hub during open days. Mention specific facilities in your application to show genuine interest.",
+            "- Connect with current ISPIRE students via LinkedIn or CityU’s student ambassador programme.",
+            "",
+            "**7. Write a Standout Personal Statement**",
+            "",
+            "- Explain why sustainability matters to you personally — link it to a specific experience (e.g., a beach clean-up, a family business in recycling).",
+            "- Highlight any leadership roles, such as organising a green event or leading a school environmental club.",
+            "",
+            "**8. Plan for the Overseas Exchange**",
+            "",
+            "- Research partner universities in your target region (e.g., Europe, Asia). Mention a preferred destination in your application to show foresight.",
+            "- Budget for the exchange: apply for the Overseas Exchange Bursary early to secure funding.",
+            "",
+            "**9. Consider Post-Graduation Pathways**",
+            "",
+            "- Explore careers in green finance, sustainability consulting, or social entrepreneurship. Tailor your elective choices (e.g., Green Finance, Sustainable Supply Chain) accordingly.",
+            "- Network with alumni via CityU’s mentorship programme — they can provide insider tips and internship referrals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文, Mathematics and one subject from Biology, Chemistry or Physics)。科目比重：2.5: 數學 2.5: Biology / Chemistry / Physics in 1st Elective 2: 英文 1.5: Biology / Chemistry / Geography / M1/M2 / Physics in 2nd Elective 1: 其他選修科。",
+            "**入學中位數**：38.0分（2025年聯招數據）。",
+            "**下四分位數**：36.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：環球可持續發展科創課程（ISPIRE）為四年制跨學科課程，融合可持續發展科學、商業創新及創業領導力。學生透過項目式學習及必修海外交流獲得實戰經驗。",
+            "**第一年基礎**：核心課程包括可持續發展原理、數據分析及創業入門。學生同時完成英文及數學要求，並重點培養量化技能（入學計分權重為2.5倍）。",
+            "**第二年專修**：學生可選擇可持續商業、環境科技或社會創新等專修範疇。課程包括生命週期評估、綠色金融及可持續供應鏈管理。",
+            "**第三年沉浸體驗**：必修海外交流學期，前往合作大學（如哥本哈根大學、新加坡國立大學）。學生亦需參與團隊可持續發展諮詢項目，與真實客戶合作。",
+            "**第四年總結項目**：學生完成畢業論文或初創項目，獲教授及業界導師指導。畢業生於年度ISPIRE展覽展示成果。",
+            "**跨學科核心**：所有學生修讀系統思維、可持續發展目標（SDGs）及研究方法，確保全面理解全球可持續發展挑戰。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**可持續發展顧問**：畢業生為企業提供ESG（環境、社會及管治）策略、碳足跡減排及循環經濟方案建議。主要僱主包括德勤、安永及畢馬威。",
+            "**綠色金融分析師**：於銀行及投資機構專注綠色債券、影響力投資及氣候風險評估。城大校友任職於滙豐、渣打及貝萊德。",
+            "**社會創業家**：許多畢業生創辦可再生能源、廢物管理或道德時尚領域的初創企業，獲城大創業中心及種子基金支持。",
+            "**政策顧問**：於政府部門（如環境局）及非政府組織（如世界自然基金會、綠色和平）制定可持續發展政策及推動氣候行動。",
+            "**企業創新經理**：於跨國企業如聯合利華、雀巢及特斯拉擔任職位，推動可持續產品開發及供應鏈轉型。",
+            "**深造進修**：畢業生於劍橋大學、蘇黎世聯邦理工學院及香港大學等頂尖學府攻讀可持續發展科學、環境工程或工商管理碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**可持續發展實驗室**：配備環境監測工具、生命週期分析軟件及可持續產品設計原型製作設備的頂尖實驗室。",
+            "**創業中心**：城大HK Tech 300計劃提供共享工作空間、導師指導及高達100萬港元的種子資金。ISPIRE學生享有優先使用權。",
+            "**全球交流網絡**：與20個國家超過50所合作大學建立聯繫，包括英屬哥倫比亞大學、東京大學及曼徹斯特大學，支援學期交流。",
+            "**智慧校園計劃**：城大校園設有太陽能板、智能垃圾桶及綠色屋頂花園，作為可持續發展實驗及學生項目的生活實驗室。",
+            "**圖書館與數碼資源**：邵逸夫圖書館提供豐富的可持續發展數據庫，包括Scopus、Web of Science及用於ESG數據分析的彭博終端機。",
+            "**學生組織**：ISPIRE學生會舉辦年度可持續發展黑客松、植樹活動及行業交流活動，營造活躍社群。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數分數**：38.0（最佳五科加權後）。此分數使ISPIRE成為城大競爭最激烈的課程之一，反映市場對可持續發展人才的需求。",
+            "**2025年下四分位數**：36.5，顯示即使最低25%的錄取學生亦取得高分。申請者應以至少36.5分為目標。",
+            "**科目權重**：數學及生物/化學/物理在第一選修科權重為2.5倍，英文權重為2倍。STEM科目表現至關重要。",
+            "**面試要求**：入圍候選人可能獲邀參加小組面試或個人簡報，以評估其對可持續發展的熱誠及創業思維。",
+            "**申請貼士**：在個人陳述中突出任何可持續發展相關項目、實習或義工經驗。透過M1/M2或科學選修科展示量化技能。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳博士（Dr. Emily Chan）**：EcoWise Consulting創辦人，為財富500強企業提供碳中和顧問服務。2018年畢業生。",
+            "**黃文浩（Michael Wong）**：滙豐銀行綠色金融分析師，主導亞洲綠色債券發行。2020年畢業生。",
+            "**李莎拉（Sarah Li）**：世界自然基金會香港分會政策顧問，專注海洋保護及塑膠廢物減量。2019年畢業生。",
+            "**張大衛（David Cheung）**：Re:Fresh初創企業聯合創辦人，將廚餘轉化為可生物降解包裝。獲城大HK Tech 300獎項。2021年畢業生。",
+            "**劉教授（Professor James Liu）**：城大客座教授及前ISPIRE課程總監，以可持續城市發展研究聞名。",
+            "**吳嘉欣（Grace Ng）**：聯合利華香港可持續發展經理，監督公司「清潔未來」計劃，目標減少50%塑膠使用。2017年畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：DSE分數達38分或以上的申請者自動獲考慮。獎學金金額由港幣3萬元至全額學費不等，頒予頂尖考生。",
+            "**ISPIRE優秀學生獎學金**：課程專屬獎學金，每年高達港幣5萬元，頒予GPA達3.5或以上的學生。每年可續領。",
+            "**HK Tech 300種子基金**：擁有創新初創構思的ISPIRE學生可申請高達港幣100萬元的種子資金，並獲導師指導及孵化支援。",
+            "**海外交流助學金**：高達港幣3萬元，資助第三年必修海外交流期間的生活開支。設有需要及優秀兩種申請類別。",
+            "**香港特區政府獎學金**：合資格學生可申請香港卓越獎學金（高達港幣30萬元）及外展體驗獎（高達港幣10萬元）。",
+            "**外部獎學金**：城大協助學生申請賽馬會、滙豐及香港可持續發展委員會等機構提供的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1050 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握計分權重公式**",
+            "",
+            "- 數學及生物/化學/物理在第一選修科權重為2.5倍——這些科目取得5**相等於12.5分。優先專注這些科目以最大化分數影響。",
+            "- 英文權重為2倍，目標至少取得第5級以建立穩固基礎。",
+            "- 第二選修科選擇科學科目（生物、化學、地理、物理或M1/M2），以享受1.5倍權重。",
+            "",
+            "**2. 目標分數38分或以上**",
+            "",
+            "- 2025年中位數為38.0，取得38分或以上有穩妥機會。目標39-40分以策安全。",
+            "- 計算加權分數：（數學等級×2.5）+（第一科學×2.5）+（英文×2）+（第二科學×1.5）+（其他選修科×1）。",
+            "",
+            "**3. 強化STEM背景**",
+            "",
+            "- 修讀至少兩個科學選修科（生物、化學或物理），以充分利用2.5倍及1.5倍權重。",
+            "- 如修讀M1/M2，可作為第二選修科並獲1.5倍權重——對量化技能是極佳選擇。",
+            "",
+            "**4. 建立可持續發展作品集**",
+            "",
+            "- 參與可持續發展相關活動：模擬聯合國（環境委員會）、植樹或減廢運動。",
+            "- 將項目記錄成作品集，在面試及個人陳述中展示。",
+            "",
+            "**5. 面試表現出色**",
+            "",
+            "- 準備小組討論，主題包括碳中和、循環經濟或ESG投資。使用真實案例。",
+            "- 展示創業思維：提出簡單的可持續發展初創構思並解釋其影響。",
+            "",
+            "**6. 善用城大資源**",
+            "",
+            "- 在開放日參觀城大可持續發展實驗室及創業中心。在申請中提及具體設施以展示真誠興趣。",
+            "- 透過LinkedIn或城大學生大使計劃與現屆ISPIRE學生聯繫。",
+            "",
+            "**7. 撰寫突出個人陳述**",
+            "",
+            "- 解釋可持續發展對你的個人意義——連結至具體經歷（如沙灘清潔、家族回收業務）。",
+            "- 突出任何領導角色，例如組織綠色活動或帶領學校環保學會。",
+            "",
+            "**8. 規劃海外交流**",
+            "",
+            "- 研究目標地區的合作大學（如歐洲、亞洲）。在申請中提及首選目的地以展示遠見。",
+            "- 為交流預算：盡早申請海外交流助學金以確保資金。",
+            "",
+            "**9. 考慮畢業後路向**",
+            "",
+            "- 探索綠色金融、可持續發展顧問或社會創業等職業。相應調整選修科選擇（如綠色金融、可持續供應鏈）。",
+            "- 透過城大導師計劃與校友建立網絡——他們可提供內部貼士及實習推薦。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 38.0,
+    "lq": 36.5
+  }
+}

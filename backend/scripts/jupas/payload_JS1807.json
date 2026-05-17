@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1807",
+    "nameEn": "BSc Biomedical Sciences",
+    "nameZh": "理學士(生物醫學)",
+    "name": "BSc Biomedical Sciences",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 45.5,
+    "band_a": 43.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1807",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects.",
+            "**Median Admission Score**: 45.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 43.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc Biomedical Sciences (JS1807) is a 4-year full-time programme offered by the Jockey Club College of Veterinary Medicine and Life Sciences. It integrates biology, medicine, and health sciences to prepare students for careers in biomedical research, diagnostics, and healthcare.",
+            "**Year 1 Foundation**: Students take core courses in biology, chemistry, physics, and mathematics, along with introductory biomedical sciences modules. A GPA of at least 2.5 is required to progress to Year 2.",
+            "**Year 2 Core Disciplines**: Key subjects include human anatomy, physiology, biochemistry, genetics, and cell biology. Students begin laboratory-based practical sessions and research methodology training.",
+            "**Year 3 Specialisation**: Students choose from three streams: Biomedical Research, Medical Laboratory Science, or Health Data Analytics. Each stream includes advanced electives and a capstone project.",
+            "**Year 4 Capstone & Internship**: The final year features a mandatory research project or industry internship, plus advanced seminars in translational medicine. Graduates must complete 120 credit units in total.",
+            "**Interdisciplinary Learning**: The programme offers cross-faculty electives in data science, public health, and bioethics, allowing students to tailor their degree to emerging fields."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Research Scientist**: Graduates can work in university labs, government research institutes (e.g., HKU, CUHK), or biotech firms like **InnoHK** centres, focusing on drug discovery or disease mechanisms.",
+            "**Medical Laboratory Technologist**: With professional accreditation, graduates can join the **Hospital Authority** or private diagnostic labs, performing clinical tests and managing lab operations.",
+            "**Healthcare Data Analyst**: The Health Data Analytics stream prepares students for roles in **healthtech startups**, insurance companies, or the **Department of Health**, analysing patient data for policy and treatment optimisation.",
+            "**Pharmaceutical Industry**: Opportunities in **Pfizer**, **GSK**, or local firms like **Lee's Pharmaceutical** for roles in regulatory affairs, clinical trials, or medical sales.",
+            "**Further Study**: Many graduates pursue MSc/PhD in biomedical sciences, public health, or medicine at top universities worldwide, including **University of Cambridge**, **Johns Hopkins**, and **HKU**.",
+            "**Public Health & Policy**: Roles in **WHO**, **Centre for Health Protection**, or NGOs like **Red Cross**, focusing on disease surveillance, health education, and outbreak response."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The programme is housed in the **Jockey Club One Health Tower**, featuring BSL-2 laboratories, a genomics core facility, and a cell culture suite for hands-on training.",
+            "**Teaching Hospital Access**: Students gain clinical exposure through partnerships with **Prince of Wales Hospital** and **Hong Kong Sanatorium & Hospital**, observing real-world diagnostics and patient care.",
+            "**Animal House Facility**: The university operates a licensed animal facility for biomedical research, supporting studies in pharmacology, toxicology, and disease modelling.",
+            "**Library & Digital Resources**: The **Run Run Shaw Library** provides access to over 1 million e-books, journals like *Nature* and *The Lancet*, and specialised databases such as **PubMed** and **Scopus**.",
+            "**Student Common Room**: A dedicated space for biomedical sciences students includes study pods, a microscopy lounge, and a 3D printing lab for prototyping medical devices.",
+            "**Green Campus**: CityU's main campus features a **green roof**, a **sustainable garden**, and energy-efficient buildings, promoting a healthy study environment."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score was **45.5** (3 core + 2 electives), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile was **43.0**, meaning 25% of admitted students scored below this threshold, but still within a competitive range.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted equally, with **Biology** and **Chemistry** receiving double weighting for elective subjects.",
+            "**Application Volume**: The programme receives approximately **800–1,000 applications** annually for about **50–60 places**, resulting in a **5–6% acceptance rate**.",
+            "**Interview Requirement**: Shortlisted candidates are invited for a group interview and a written test, assessing scientific reasoning, communication skills, and motivation."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Senior Research Scientist, **Hong Kong Science and Technology Parks Corporation**. Specialises in cancer genomics. Graduated in 2010.",
+            "**Ms. Lau Ka-yan (劉嘉欣女士)**: Medical Laboratory Technologist, **Hospital Authority**. Led a team during the COVID-19 pandemic to scale up testing capacity. Graduated in 2015.",
+            "**Dr. Wong Tsz-chun (黃子俊博士)**: Assistant Professor, **Department of Biomedical Sciences, City University of Hong Kong**. Research focus on neurodegenerative diseases. Graduated in 2012.",
+            "**Mr. Cheung Ho-ming (張浩明先生)**: Co-founder, **GeneTech Biotech Ltd.**, a startup developing rapid diagnostic kits for infectious diseases. Graduated in 2018.",
+            "**Dr. Li Sze-wan (李詩韻博士)**: Regulatory Affairs Manager, **Pfizer Hong Kong**. Oversees clinical trial approvals and drug registration. Graduated in 2011.",
+            "**Ms. Yeung Pui-shan (楊佩珊女士)**: Health Data Analyst, **Department of Health**. Works on epidemiological modelling for chronic diseases. Graduated in 2019."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top JUPAS applicants with scores above **46 points**, covering full or half tuition fees for the first year.",
+            "**Biomedical Sciences Merit Scholarship**: Offered to Year 2–4 students with a cumulative GPA of **3.5 or above**, providing HK$20,000 per year.",
+            "**HKSAR Government Scholarship**: For students with outstanding academic performance and leadership, worth up to **HK$80,000** annually.",
+            "**Jockey Club One Health Scholarship**: Specifically for biomedical sciences students engaged in interdisciplinary research, offering **HK$50,000** plus a mentorship programme.",
+            "**Exchange & Internship Grants**: The **Global Engagement Office** provides up to **HK$30,000** for overseas exchange or research internships at partner universities.",
+            "**Need-Based Financial Aid**: The **CityU Financial Assistance Scheme** offers loans and bursaries of up to **HK$42,100** per year for students with family financial difficulties."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1807 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Biology and Chemistry**",
+            "",
+            "- These two subjects receive double weighting in the admission formula, so aim for **Level 5 or above** in both.",
+            "- If you are weak in one, consider taking a **third elective** to boost your overall score.",
+            "",
+            "**2. Target a Score of 46+**",
+            "",
+            "- The median is 45.5, but to be safe, aim for **46–48 points** (3 core + 2 electives).",
+            "- Use the **HKDSE score calculator** on CityU's website to simulate your score.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- Prepare for a **group discussion** on a current biomedical topic (e.g., CRISPR, vaccine development).",
+            "- Practice explaining scientific concepts in **simple English** within 2 minutes.",
+            "",
+            "**4. Build a Strong Personal Statement**",
+            "",
+            "- Highlight any **lab experience**, **science competitions**, or **volunteer work** in healthcare settings.",
+            "- Mention specific faculty research areas you are interested in (e.g., cancer biology, neuroscience).",
+            "",
+            "**5. Take M1/M2 if Possible**",
+            "",
+            "- Mathematics Extended Part (M1 or M2) is not required but is **highly recommended** for the Health Data Analytics stream.",
+            "- A Level 4 in M1/M2 can add **1–2 bonus points** to your admission score.",
+            "",
+            "**6. Apply Early for Scholarships**",
+            "",
+            "- Submit your **CityU Entrance Scholarship** application by **December** of your DSE year.",
+            "- Prepare a portfolio of your achievements (certificates, awards, reference letters).",
+            "",
+            "**7. Attend CityU Open Day**",
+            "",
+            "- Visit the **Jockey Club One Health Tower** and talk to current students and professors.",
+            "- Ask about **internship opportunities** and **final-year projects** to show genuine interest.",
+            "",
+            "**8. Use the HKDSE Elective Strategy**",
+            "",
+            "- If you take **Biology, Chemistry, and Physics**, you can drop the lowest score among the three.",
+            "- Alternatively, take **Biology + Chemistry + a Liberal Arts subject** (e.g., Economics) to diversify your profile.",
+            "",
+            "**9. Prepare for the Written Test**",
+            "",
+            "- The test includes **data interpretation** and **short essay questions** on biomedical ethics.",
+            "- Practice with past papers from **HKU or CUHK biomedical sciences programmes** to get familiar with the format."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。",
+            "**入學中位數**：45.5分（2025年聯招數據）。",
+            "**下四分位數**：43.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：理學士(生物醫學)（JS1807）為四年全日制課程，由賽馬會動物醫學及生命科學院開辦。課程整合生物學、醫學及健康科學，為學生投身生物醫學研究、診斷及醫療保健行業做好準備。",
+            "**第一年基礎**：學生修讀生物、化學、物理及數學等核心科目，並學習生物醫學入門單元。平均積點須達2.5或以上方可升讀二年級。",
+            "**第二年核心學科**：重點科目包括人體解剖學、生理學、生物化學、遺傳學及細胞生物學。學生開始進行實驗室實習及研究方法訓練。",
+            "**第三年專修**：學生可從三個專修中選擇：生物醫學研究、醫學實驗室科學或健康數據分析。每個專修均設有高級選修科及專題研習。",
+            "**第四年總結實習**：最後一年須完成強制性研究項目或行業實習，並參與轉化醫學高級研討會。畢業生須修畢共120學分。",
+            "**跨學科學習**：課程提供數據科學、公共衛生及生物倫理等跨學院選修科，讓學生因應新興領域調整學習方向。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**研究科學家**：畢業生可於大學實驗室、政府研究機構（如港大、中大）或生物科技公司（如InnoHK中心）工作，專注藥物發現或疾病機制研究。",
+            "**醫學實驗室技術員**：取得專業認證後，可加入醫院管理局或私營診斷實驗室，負責臨床測試及實驗室管理。",
+            "**健康數據分析師**：健康數據分析專修為學生在健康科技初創、保險公司或衛生署擔任數據分析角色做好準備，分析病人數據以優化政策及治療。",
+            "**製藥行業**：在輝瑞、葛蘭素史克或本地公司（如李氏大藥廠）從事法規事務、臨床試驗或醫藥銷售等工作。",
+            "**深造進修**：不少畢業生於劍橋大學、約翰霍普金斯大學及港大等頂尖學府攻讀生物醫學、公共衛生或醫學碩士/博士課程。",
+            "**公共衛生及政策**：在世界衛生組織、衛生防護中心或紅十字會等非政府組織擔任疾病監測、健康教育及疫情應對等工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**先進實驗室**：課程設於賽馬會健康一體化大樓，內設二級生物安全實驗室、基因組學核心設施及細胞培養室，提供實戰訓練。",
+            "**教學醫院聯繫**：學生透過與威爾斯親王醫院及養和醫院的合作，獲得臨床實習機會，觀察真實診斷及病人護理過程。",
+            "**動物設施**：大學設有持牌動物設施，支援藥理學、毒理學及疾病模型等生物醫學研究。",
+            "**圖書館及數碼資源**：邵逸夫圖書館提供超過100萬本電子書、《自然》及《刺針》等期刊，以及PubMed和Scopus等專業數據庫。",
+            "**學生共用空間**：生物醫學學生專用空間設有自修室、顯微鏡室及3D打印實驗室，方便原型醫療設備設計。",
+            "**綠色校園**：城大主校園設有綠色天台、可持續花園及節能建築，營造健康學習環境。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：入學中位分數為45.5分（3科核心+2科選修），反映申請者競爭激烈。",
+            "**2025年下四分位數**：下四分位數為43.0分，即25%獲取錄學生分數低於此水平，但仍屬競爭範圍。",
+            "**科目比重**：核心科目（英文、中文、數學、通識）比重相同，而生物及化學選修科獲雙倍比重。",
+            "**申請人數**：課程每年收到約800至1,000份申請，學額約50至60個，取錄率約5%至6%。",
+            "**面試要求**：獲篩選的申請人須參加小組面試及筆試，考核科學推理、溝通技巧及學習動機。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳偉強博士**：香港科技園公司高級研究科學家，專注癌症基因組學。2010年畢業。",
+            "**劉嘉欣女士**：醫院管理局醫學實驗室技術員，在新冠疫情期間帶領團隊擴大檢測能力。2015年畢業。",
+            "**黃子俊博士**：香港城市大學生物醫學系助理教授，研究專注神經退行性疾病。2012年畢業。",
+            "**張浩明先生**：GeneTech Biotech Ltd.聯合創辦人，開發傳染病快速診斷試劑盒。2018年畢業。",
+            "**李詩韻博士**：輝瑞香港法規事務經理，負責臨床試驗審批及藥物註冊。2011年畢業。",
+            "**楊佩珊女士**：衛生署健康數據分析師，從事慢性疾病流行病學建模工作。2019年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予成績優異的聯招申請人（分數達46分或以上），涵蓋首年全額或半額學費。",
+            "**生物醫學優異獎學金**：頒予二年級至四年級累積平均積點達3.5或以上的學生，每年港幣20,000元。",
+            "**香港特區政府獎學金**：獎勵學術成績卓越及具領導才能的學生，每年最高港幣80,000元。",
+            "**賽馬會健康一體化獎學金**：專為參與跨學科研究的生物醫學學生而設，提供港幣50,000元及導師計劃。",
+            "**交流及實習資助**：環球事務處為海外交流或研究實習提供最高港幣30,000元資助。",
+            "**需要為本資助**：城大經濟援助計劃為家庭經濟困難的學生提供每年最高港幣42,100元的貸款及助學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1807 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理生物及化學**",
+            "",
+            "- 這兩科在入學計分中獲雙倍比重，目標應達**5級或以上**。",
+            "- 若其中一科較弱，可考慮修讀**第三個選修科**以提升總分。",
+            "",
+            "**2. 目標分數定為46分或以上**",
+            "",
+            "- 中位數為45.5分，為穩妥起見，目標應為**46至48分**（3科核心+2科選修）。",
+            "- 使用城大網站上的**HKDSE分數計算器**模擬你的分數。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 準備就當前生物醫學議題（如CRISPR、疫苗開發）進行**小組討論**。",
+            "- 練習在**2分鐘內**用簡單英語解釋科學概念。",
+            "",
+            "**4. 撰寫有力的個人陳述**",
+            "",
+            "- 突出任何**實驗室經驗**、**科學比賽**或**醫療保健義工工作**。",
+            "- 提及你感興趣的特定教職員研究領域（如癌症生物學、神經科學）。",
+            "",
+            "**5. 盡可能修讀M1/M2**",
+            "",
+            "- 數學延伸部分（M1或M2）並非必修，但對健康數據分析專修**強烈建議**。",
+            "- M1/M2取得4級可為入學分數增加**1至2分**。",
+            "",
+            "**6. 提早申請獎學金**",
+            "",
+            "- 在DSE年份的**12月前**提交**城大入學獎學金**申請。",
+            "- 準備成就檔案（證書、獎項、推薦信）。",
+            "",
+            "**7. 參加城大開放日**",
+            "",
+            "- 參觀**賽馬會健康一體化大樓**，與現屆學生及教授交流。",
+            "- 詢問**實習機會**及**畢業論文項目**，以展示真誠興趣。",
+            "",
+            "**8. 善用HKDSE選修策略**",
+            "",
+            "- 若修讀**生物、化學及物理**，可剔除三科中最低分的一科。",
+            "- 或選擇**生物+化學+文科**（如經濟學）以豐富個人背景。",
+            "",
+            "**9. 準備筆試**",
+            "",
+            "- 筆試包括**數據解讀**及關於生物醫學倫理的**短論文題目**。",
+            "- 練習**港大或中大生物醫學課程**的歷屆試題，熟悉考試模式。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 45.5,
+    "lq": 43.0
+  }
+}

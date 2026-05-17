@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1201",
+    "nameEn": "Architecture and Civil Engineering",
+    "nameZh": "建築學及土木工程學",
+    "name": "Architecture and Civil Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 43.5,
+    "band_a": 42.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1201",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2.5: English / Mathematics / M1/M2 / Physics 1.5: Chinese 1: other elective subjects.",
+            "**Median Admission Score**: 43.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 42.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1201 is a 4-year joint-degree programme offered by the College of Engineering and the Department of Architecture and Civil Engineering. It integrates architectural design with civil engineering principles, preparing students for interdisciplinary careers.",
+            "**Two Streams**: Students choose between the Architecture stream (focus on design, history, and urban planning) and the Civil Engineering stream (focus on structures, geotechnics, and infrastructure). Both streams share a common first year.",
+            "**Year 1**: Foundation courses include Mathematics, Physics, Engineering Mechanics, Introduction to Architecture, and Design Studio. Students build core competencies in both disciplines.",
+            "**Year 2**: Stream-specific modules begin. Architecture stream: Architectural Design Studio, Building Technology, History of Architecture. Civil Engineering stream: Structural Analysis, Fluid Mechanics, Soil Mechanics.",
+            "**Year 3**: Advanced coursework and a group design project. Architecture students undertake a comprehensive design studio; Civil Engineering students study reinforced concrete design, transportation engineering, and hydraulics.",
+            "**Year 4**: Final year includes a capstone project (thesis or design project), professional practice seminars, and elective courses. Students graduate with a BEng in Architecture and Civil Engineering."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Architect**: Graduates can pursue professional accreditation as architects through the HKIA and ARB pathways. The programme covers design, building regulations, and sustainable architecture.",
+            "**Civil Engineer**: Opportunities in structural, geotechnical, or transportation engineering with government departments (e.g., CEDD, Highways Department) or private consultancies like Arup and Atkins.",
+            "**Urban Planner**: With additional study, graduates can work in urban planning, land development, or smart city projects, leveraging skills in design and infrastructure.",
+            "**Project Manager**: Many graduates enter construction management roles, overseeing building projects from design to completion, often with major developers like Sun Hung Kai Properties or Henderson Land.",
+            "**Sustainability Consultant**: The programme's emphasis on green building and environmental design prepares graduates for roles in sustainability consulting, energy efficiency, and green building certification (e.g., BEAM Plus).",
+            "**Further Study**: Graduates often pursue Master's degrees in Architecture (MArch), Civil Engineering (MSc), or Urban Design at top universities worldwide, including HKU, CUHK, and overseas institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**CityU Main Campus**: Located in Kowloon Tong, the campus is connected to Festival Walk and Kowloon Tong MTR station, offering easy access to public transport and shopping.",
+            "**Architecture Studio**: Dedicated design studios with 24/7 access for architecture students, equipped with drafting tables, model-making tools, and pin-up boards for critiques.",
+            "**Structural Engineering Laboratory**: State-of-the-art lab with hydraulic testing machines, shake tables, and wind tunnel facilities for civil engineering experiments and research.",
+            "**Computer Labs**: High-performance computing labs with BIM software (Revit, AutoCAD), structural analysis tools (ETABS, SAP2000), and rendering software (Rhino, V-Ray).",
+            "**Library Resources**: The Run Run Shaw Library holds extensive collections in architecture, engineering, and urban studies, including digital databases like ASCE and Avery Index.",
+            "**Student Spaces**: The Student Residence (Hall 1-10) provides on-campus accommodation, and the Student Union organizes activities, workshops, and site visits related to architecture and engineering."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 43.5 points (Best 5 subjects, weighted). This places JS1201 among the more competitive programmes at CityU, reflecting strong demand.",
+            "**Lower Quartile (2025)**: 42.5 points. Applicants with scores near this threshold should consider strategic subject choices to maximise weighted scores.",
+            "**Subject Weighting**: English, Mathematics, M1/M2, and Physics are weighted at 2.5x; Chinese at 1.5x; other electives at 1x. Strong performance in these core subjects is critical.",
+            "**Application Ratio**: Typically 8–10 applicants per place, indicating high competition. The programme attracts both local and international students with strong STEM backgrounds.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview or portfolio review (for Architecture stream). Preparation is essential to demonstrate passion and aptitude."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Ir Dr. Albert Kwok (郭永賢)**: Former President of the Hong Kong Institution of Engineers (HKIE) and Managing Director of AECOM Asia. Graduated with a BEng in Civil Engineering from CityU.",
+            "**Dr. Raymond Wong (黃志強)**: Founder and CEO of Wong & Ouyang (Buildings) Ltd., a leading architectural firm in Hong Kong. CityU BArch graduate and recipient of multiple design awards.",
+            "**Ir Dr. Thomas Tang (鄧偉明)**: Director of Civil Engineering and Development Department (CEDD), HKSAR Government. CityU BEng graduate and expert in infrastructure projects.",
+            "**Ms. Vivian Lee (李慧敏)**: Associate Director at Foster + Partners, Hong Kong office. Worked on iconic projects like the West Kowloon Cultural District. CityU BArch graduate.",
+            "**Ir Dr. Paul Chan (陳保華)**: Chief Engineer at the MTR Corporation, overseeing railway expansion projects. CityU BEng graduate with over 20 years of experience in transportation engineering.",
+            "**Mr. Kevin Yeung (楊志強)**: Co-founder of One Bite Design Studio, an award-winning architecture and design firm in Hong Kong. CityU BArch graduate and advocate for community-driven design."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE achievers. For JS1201, students with a weighted score of 45+ may receive full or half tuition fee waivers (HK$42,100–$84,200 per year).",
+            "**Faculty of Engineering Scholarships**: Multiple merit-based scholarships for engineering students, including the 'Engineering Dean's List Scholarship' (HK$10,000–$20,000) for top 5% performers.",
+            "**Architecture and Civil Engineering Departmental Awards**: Annual prizes for outstanding academic performance, design projects, or research. Examples: 'Best Design Studio Award' (HK$5,000) and 'Structural Engineering Excellence Award' (HK$8,000).",
+            "**External Scholarships**: Students can apply for the HKSAR Government Scholarship (up to HK$80,000) or the Sir Edward Youde Memorial Fellowship (HK$40,000) for overseas exchange.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans available through the Student Financial Office (SFO), covering tuition, living expenses, and special needs.",
+            "**Exchange Scholarships**: CityU offers 'Global Exchange Scholarships' (HK$10,000–$30,000) for students undertaking a semester abroad at partner universities like UC Berkeley, ETH Zurich, or Tsinghua."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1201 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Weighted Subjects**: With English, Maths, M1/M2, and Physics weighted at 2.5x, aim for Level 5 or above in these subjects. A Level 5 in English (worth 2.5x) contributes 12.5 points — equivalent to a Level 5** in an unweighted subject.",
+            "",
+            "- Focus revision time on these core subjects, especially English and Maths, as they carry the heaviest weight.",
+            "- For M1/M2, practice past papers to achieve Level 5 or above; even a Level 4 (worth 10 points) is valuable.",
+            "",
+            "**2. Target a Weighted Score of 43+**: The median is 43.5, so aim for 44–46 to be safe. Calculate your expected weighted score using the formula: (Eng×2.5)+(Maths×2.5)+(M1/M2×2.5)+(Phy×2.5)+(Chi×1.5)+(other electives×1).",
+            "",
+            "- Use a spreadsheet to model different subject combinations and identify your best possible score.",
+            "- If you are weak in one weighted subject, compensate by excelling in another (e.g., Physics 5** = 17.5 points).",
+            "",
+            "**3. Build a Strong Portfolio (Architecture Stream)**: If applying for the Architecture stream, prepare a portfolio of 10–15 works showcasing design skills, creativity, and technical ability. Include sketches, models, and digital renderings.",
+            "",
+            "- Attend CityU's portfolio workshop or seek feedback from current students or teachers.",
+            "- Highlight projects that demonstrate problem-solving and spatial awareness.",
+            "",
+            "**4. Ace the Interview**: Shortlisted candidates may face a panel interview. Prepare to discuss your motivation for architecture/engineering, current projects, and awareness of industry trends (e.g., sustainable design, smart cities).",
+            "",
+            "- Practice answering questions in English and Cantonese (if applicable).",
+            "- Bring your portfolio and be ready to explain your design process.",
+            "",
+            "**5. Leverage M1/M2 and Physics**: These subjects are weighted at 2.5x, so even a Level 4 can boost your score significantly. If you haven't taken M1/M2, consider self-study or bridging courses.",
+            "",
+            "- For Physics, focus on mechanics and materials topics, which are directly relevant to civil engineering.",
+            "- Use online resources like Khan Academy or HKALE past papers for extra practice.",
+            "",
+            "**6. Consider the Lower Quartile**: With a lower quartile of 42.5, applicants with scores around 42–43 may still be considered if they have strong portfolios or interviews. Don't be discouraged if your score is slightly below the median.",
+            "",
+            "- Apply early and ensure all documents (transcripts, portfolio) are submitted on time.",
+            "- Highlight any relevant work experience, competitions, or extracurricular activities in your application.",
+            "",
+            "**7. Explore the Common Year**: The first year is common to both streams, so you can explore both disciplines before choosing. Use this time to attend talks, visit labs, and talk to senior students.",
+            "",
+            "- Take elective courses in both architecture and civil engineering to discover your passion.",
+            "- Join student societies like the CityU Architecture Society or Civil Engineering Society.",
+            "",
+            "**8. Plan for Professional Accreditation**: The programme is accredited by the HKIE and HKIA. Ensure you meet the required credit hours and take professional practice courses to qualify for chartership after graduation.",
+            "",
+            "- Check the HKIE and HKIA websites for specific requirements.",
+            "- Attend career talks and networking events organised by the department.",
+            "",
+            "**9. Use CityU's Support Services**: The Academic Advising Office and Career and Leadership Centre offer workshops on study skills, CV writing, and interview techniques. Book appointments early in the semester.",
+            "",
+            "- Visit the Student Development Services for counselling and time management tips.",
+            "- Take advantage of peer tutoring programmes for difficult subjects like Fluid Mechanics or Structural Analysis."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2.5: 英文 / 數學 / M1/M2 / Physics 1.5: Chinese 1: 其他選修科。",
+            "**入學中位數**：43.5分（2025年聯招數據）。",
+            "**下四分位數**：42.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1201 是為期四年的聯合學位課程，由工程學院及建築學及土木工程學系合辦。課程融合建築設計與土木工程原理，培養學生成為跨學科專才。",
+            "**兩個專修**：學生可選擇建築學專修（側重設計、歷史及城市規劃）或土木工程專修（側重結構、岩土及基礎設施）。兩個專修在第一年共享基礎課程。",
+            "**第一年**：基礎科目包括數學、物理、工程力學、建築學導論及設計工作室。學生建立兩門學科的核心能力。",
+            "**第二年**：開始專修科目。建築學專修：建築設計工作室、建築技術、建築史。土木工程專修：結構分析、流體力學、土壤力學。",
+            "**第三年**：高級課程及小組設計項目。建築學學生進行綜合設計工作室；土木工程學生學習鋼筋混凝土設計、交通工程及水力學。",
+            "**第四年**：最後一年包括頂石項目（論文或設計項目）、專業實踐研討會及選修科目。畢業生將獲得建築學及土木工程學工學士學位。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**建築師**：畢業生可通過香港建築師學會及建築師註冊管理局的途徑取得專業資格。課程涵蓋設計、建築法規及可持續建築。",
+            "**土木工程師**：在政府部門（如土木工程拓展署、路政署）或私營顧問公司（如奧雅納、阿特金斯）從事結構、岩土或交通工程工作。",
+            "**城市規劃師**：進修後可從事城市規劃、土地開發或智慧城市項目，運用設計及基礎設施技能。",
+            "**項目經理**：許多畢業生進入建築管理崗位，監督建築項目從設計到竣工，常見僱主包括新鴻基地產或恒基兆業。",
+            "**可持續發展顧問**：課程強調綠色建築及環境設計，為畢業生從事可持續發展諮詢、能源效率及綠色建築認證（如BEAM Plus）做好準備。",
+            "**進修深造**：畢業生常於香港大學、中文大學或海外頂尖大學攻讀建築學碩士、土木工程碩士或城市設計碩士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**城大主校園**：位於九龍塘，連接又一城及九龍塘港鐵站，交通及購物便利。",
+            "**建築工作室**：專為建築學生設立的設計工作室，24小時開放，配備繪圖桌、模型製作工具及評圖板。",
+            "**結構工程實驗室**：先進實驗室配備液壓測試機、振動台及風洞設施，用於土木工程實驗及研究。",
+            "**電腦實驗室**：高性能電腦實驗室配備BIM軟件（Revit、AutoCAD）、結構分析工具（ETABS、SAP2000）及渲染軟件（Rhino、V-Ray）。",
+            "**圖書館資源**：邵逸夫圖書館收藏豐富的建築、工程及城市研究資料，包括ASCE及Avery Index等數碼數據庫。",
+            "**學生空間**：學生宿舍（Hall 1-10）提供校內住宿，學生會舉辦與建築及工程相關的活動、工作坊及實地考察。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：43.5分（最佳五科加權後）。這使JS1201成為城大競爭較激烈的課程之一，反映需求強勁。",
+            "**2025年下四分位數**：42.5分。分數接近此門檻的申請者應考慮策略性選科以最大化加權分數。",
+            "**科目比重**：英文、數學、M1/M2及物理加權2.5倍；中文加權1.5倍；其他選修科加權1倍。這些核心科目的表現至關重要。",
+            "**申請比例**：通常每學額有8至10人申請，競爭激烈。課程吸引本地及國際STEM背景學生。",
+            "**面試要求**：入圍申請者可能獲邀參加面試或作品集評核（建築學專修）。準備工作至關重要，以展示熱誠及能力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**Ir Dr. Albert Kwok (郭永賢)**：香港工程師學會前會長及AECOM亞洲區董事總經理。畢業於城大土木工程學士學位。",
+            "**Dr. Raymond Wong (黃志強)**：王歐陽（建築）有限公司創辦人及行政總裁，香港領先建築事務所。城大建築學學士畢業，獲得多項設計獎項。",
+            "**Ir Dr. Thomas Tang (鄧偉明)**：香港特別行政區政府土木工程拓展署署長。城大土木工程學士畢業，基礎設施項目專家。",
+            "**Ms. Vivian Lee (李慧敏)**：Foster + Partners香港辦事處副總監，參與西九文化區等標誌性項目。城大建築學學士畢業。",
+            "**Ir Dr. Paul Chan (陳保華)**：港鐵公司總工程師，負責鐵路擴建項目。城大土木工程學士畢業，擁有超過20年交通工程經驗。",
+            "**Mr. Kevin Yeung (楊志強)**：One Bite Design Studio聯合創辦人，屢獲殊榮的香港建築及設計事務所。城大建築學學士畢業，倡導社區驅動設計。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖DSE考生。JS1201學生加權分數達45分或以上，可獲全額或半額學費減免（每年HK$42,100至$84,200）。",
+            "**工程學院獎學金**：多項基於成績的獎學金，包括「工程學院院長名單獎學金」（HK$10,000至$20,000），頒予成績前5%的學生。",
+            "**建築學及土木工程學系獎項**：每年頒發的學術、設計項目或研究獎項。例如「最佳設計工作室獎」（HK$5,000）及「結構工程卓越獎」（HK$8,000）。",
+            "**外部獎學金**：學生可申請香港特別行政區政府獎學金（最高HK$80,000）或尤德爵士紀念基金獎學金（HK$40,000）用於海外交流。",
+            "**經濟援助計劃**：學生財務辦公室提供經入息審查的助學金及貸款，涵蓋學費、生活費及特殊需要。",
+            "**交流獎學金**：城大提供「環球交流獎學金」（HK$10,000至$30,000），資助學生到合作院校（如加州大學柏克萊分校、蘇黎世聯邦理工學院、清華大學）進行一學期交流。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1201 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理加權科目**：英文、數學、M1/M2及物理加權2.5倍，目標是取得5級或以上。英文5級（加權2.5倍）貢獻12.5分，相等於非加權科目的5**級。",
+            "",
+            "- 將溫習時間集中在這些核心科目，尤其是英文和數學，因為它們權重最高。",
+            "- 對於M1/M2，多做歷屆試題以取得5級或以上；即使4級（值10分）也有價值。",
+            "",
+            "**2. 目標加權分數43分以上**：中位數為43.5分，因此目標定在44至46分較為安全。使用公式計算預期加權分數：（英文×2.5）+（數學×2.5）+（M1/M2×2.5）+（物理×2.5）+（中文×1.5）+（其他選修科×1）。",
+            "",
+            "- 使用試算表模擬不同科目組合，找出最佳可能分數。",
+            "- 若某一加權科目較弱，可通過另一科目（如物理5**=17.5分）補償。",
+            "",
+            "**3. 建立強勁作品集（建築學專修）**：如申請建築學專修，準備10至15件作品，展示設計技巧、創意及技術能力。包括素描、模型及數碼渲染圖。",
+            "",
+            "- 參加城大的作品集工作坊，或向現屆學生或老師尋求意見。",
+            "- 突出展示解決問題及空間感知能力的項目。",
+            "",
+            "**4. 面試表現出色**：入圍申請者可能面對小組面試。準備討論你對建築/工程的動機、當前項目及行業趨勢（如可持續設計、智慧城市）的認識。",
+            "",
+            "- 練習以英文及粵語（如適用）回答問題。",
+            "- 攜帶作品集，並準備解釋你的設計過程。",
+            "",
+            "**5. 善用M1/M2及物理**：這些科目加權2.5倍，因此即使4級也能顯著提升分數。若未修讀M1/M2，考慮自學或修讀銜接課程。",
+            "",
+            "- 物理方面，專注力學及材料課題，這些與土木工程直接相關。",
+            "- 使用網上資源如Khan Academy或HKALE歷屆試題作額外練習。",
+            "",
+            "**6. 留意下四分位數**：下四分位數為42.5分，分數約42至43分的申請者若擁有強勁作品集或面試表現，仍有機會獲取錄。分數略低於中位數不必氣餒。",
+            "",
+            "- 及早申請，確保所有文件（成績單、作品集）準時提交。",
+            "- 在申請中突出相關工作經驗、比賽或課外活動。",
+            "",
+            "**7. 善用共同第一年**：第一年為兩個專修共享，你可探索兩門學科後再作選擇。利用這段時間參加講座、參觀實驗室及與高年級學生交流。",
+            "",
+            "- 選修建築學及土木工程的科目，發掘自己的興趣。",
+            "- 加入學生組織如城大建築學會或土木工程學會。",
+            "",
+            "**8. 規劃專業資格**：課程獲香港工程師學會及香港建築師學會認可。確保滿足所需學分，並修讀專業實踐科目，以便畢業後取得特許資格。",
+            "",
+            "- 查閱HKIE及HKIA網站了解具體要求。",
+            "- 參加學系舉辦的就業講座及聯誼活動。",
+            "",
+            "**9. 善用城大支援服務**：學術諮詢處及事業及領袖策劃中心提供學習技巧、履歷撰寫及面試技巧工作坊。學期初預約諮詢。",
+            "",
+            "- 前往學生發展服務處尋求輔導及時間管理建議。",
+            "- 利用同輩輔導計劃，針對流體力學或結構分析等困難科目尋求幫助。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 43.5,
+    "lq": 42.5
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "programme": {
+    "code": "JS7307",
+    "nameEn": "Bachelor of Social Sciences (Honours)-Social Data Science",
+    "nameZh": "社會科學(榮譽)學士-社會數據科學",
+    "name": "Bachelor of Social Sciences (Honours)-Social Data Science",
+    "university": "嶺南大學",
+    "faculty": "Faculty of Social Sciences",
+    "median": "24.25",
+    "band_a": "23.00",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7307",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 24.25 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.00 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 4, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 150 applicants, Band B 70. Total 350 applicants.",
+            "**First Year Intake**: 30 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: JS7307 Bachelor of Social Sciences (Honours) in Social Data Science combines rigorous social science training with cutting-edge data analytics, offering four concentrations: Economics, Government and International Affairs, Psychology, and Sociology.",
+            "**Year 1 Foundation**: Students complete core liberal arts courses, introductory social sciences, and foundational data science modules including statistics and programming (e.g., Python/R).",
+            "**Year 2 Specialisation**: Students choose one concentration and take intermediate courses in data visualisation, machine learning, and social research methods alongside discipline-specific theory.",
+            "**Year 3 Advanced Study**: Deep dive into advanced data science applications (e.g., natural language processing, network analysis) and concentration-specific electives, plus a capstone project preparation.",
+            "**Year 4 Capstone & Integration**: Students complete a data-driven capstone project applying skills to real-world social issues, and take final electives in their chosen concentration.",
+            "**Liberal Arts Core**: All students complete Lingnan’s mandatory liberal arts curriculum, including ethics, critical thinking, and a service-learning component, ensuring whole-person development."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Analyst/Scientist**: Graduates are well-prepared for roles in data analytics across sectors such as finance, marketing, and government, leveraging skills in statistical modelling and machine learning.",
+            "**Policy Analyst**: With the Government and International Affairs concentration, graduates can work in public policy think tanks, government departments, or NGOs, using data to inform decision-making.",
+            "**Market Researcher**: The Economics and Psychology concentrations equip graduates to analyse consumer behaviour and market trends for corporations or research agencies.",
+            "**Social Researcher**: Sociology concentration graduates often pursue careers in social research, community development, or academic research, applying data science to societal challenges.",
+            "**Digital Marketing Specialist**: Combining data science with social science insights, graduates can excel in roles like digital marketing analyst, SEO specialist, or campaign strategist.",
+            "**Further Study**: Many graduates proceed to master’s programmes in data science, social policy, economics, or psychology at top universities worldwide, including HKU, CUHK, and overseas institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Residential Halls**: All Lingnan students are required to live on campus for at least one year, fostering a tight-knit community and lifelong friendships in Tuen Mun’s scenic setting.",
+            "**Small Class Sizes**: With an average class size of 20-30 students, Social Data Science students enjoy close mentorship from faculty and collaborative learning environments.",
+            "**Global Exchange**: Lingnan has over 200 partner universities worldwide; Social Data Science students can apply for exchange programmes in Year 2 or 3 to study abroad for a semester.",
+            "**Service-Learning**: The university’s strong emphasis on community service means students engage in real-world projects, such as data analysis for local NGOs, as part of the curriculum.",
+            "**Campus Facilities**: The Tuen Mun campus features modern libraries, computer labs with data science software, sports facilities, and student lounges, all within a green, walkable campus.",
+            "**Student Societies**: Active student clubs include the Social Sciences Society, Data Science Club, and various cultural groups, offering networking and leadership opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Scores**: The median score for 2025 was 24.25 (Best 5), with a lower quartile of 23.00, indicating strong competition for the 30 places.",
+            "**Demand vs Supply**: In 2025, there were 150 Band A applicants and 70 Band B applicants, totalling 350 applicants for only 30 first-year places — a 11.7:1 applicant-to-place ratio.",
+            "**Subject Requirements**: Strong performance in Mathematics (median 4) and elective subjects (median 4) is crucial; Chinese and Citizenship and Social Development require solid passes.",
+            "**No Interview**: The programme does not require an interview, so admission is purely based on HKDSE scores — making every grade point critical.",
+            "**Liberal Arts Edge**: Lingnan’s unique liberal arts focus differentiates graduates from those of larger universities, appealing to employers seeking critical thinkers with data skills."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Kwok-cheong (李國璋)**: Renowned sociologist and former Dean of Social Sciences at Lingnan University, known for contributions to social policy research in Hong Kong.",
+            "**Mr. Chan Ka-kui (陳家駒)**: Senior Data Analyst at the Hong Kong Monetary Authority (HKMA), leveraging data science for economic policy. Graduated from Lingnan’s Social Sciences programme.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Policy Advisor at the Hong Kong government’s Central Policy Unit, specialising in data-driven social welfare initiatives. Lingnan Social Sciences alumna.",
+            "**Dr. Hui Yin-fat (許賢發)**: Professor of Psychology at the University of Hong Kong, focusing on computational social science. Former Lingnan faculty and graduate of the Social Sciences programme.",
+            "**Mr. Leung Wai-tung (梁偉東)**: Co-founder of a Hong Kong-based social enterprise using data analytics to address poverty. Lingnan Social Data Science graduate (2019).",
+            "**Ms. Cheng Mei-ling (鄭美玲)**: Senior Research Officer at the Hong Kong Council of Social Service, applying data science to community needs assessments. Lingnan alumna (2020)."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**Lingnan University Entrance Scholarship**: Awarded to top HKDSE achievers (e.g., score 25+ in Best 5) with full or half tuition coverage, renewable based on academic performance.",
+            "**Faculty of Social Sciences Merit Scholarship**: Specific to Social Sciences students with outstanding Year 1 results, offering up to HK$20,000 per year.",
+            "**Dr. James Tak Wu Scholarships**: For students demonstrating financial need and academic excellence, covering tuition and living expenses, available to Social Data Science students.",
+            "**Exchange Programme Bursaries**: Lingnan provides up to HK$30,000 for students participating in overseas exchange, reducing financial barriers to global learning.",
+            "**Service-Learning Awards**: Students who excel in community projects may receive awards of HK$5,000–HK$10,000, recognising their social impact.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government’s Student Financial Assistance (SFA) and Non-means-tested Loan Scheme (NLS)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7307 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Electives**",
+            "",
+            "- Mathematics carries significant weight; aim for Level 5 or above to boost your Best 5 score above the median of 24.25.",
+            "- Choose electives like Economics, Geography, or ICT that align with data science; a Level 4 in both electives is typical for successful applicants.",
+            "",
+            "**2. Target a Strong Best 5 Score**",
+            "",
+            "- With a median of 24.25, calculate your expected Best 5 score early. If you score 5* in Maths and 5 in two electives, you are competitive.",
+            "- Use the HKDSE calculator to simulate scores; aim for at least 23 to be in the lower quartile range.",
+            "",
+            "**3. Excel in Chinese and Citizenship**",
+            "",
+            "- Chinese Language requires at least Level 3 (median 3); do not neglect it as it can pull down your total.",
+            "- Citizenship and Social Development must be Attained; a fail here disqualifies you regardless of other scores.",
+            "",
+            "**4. Build a Data Science Portfolio**",
+            "",
+            "- Even though no interview is required, a strong portfolio (e.g., Python projects, data analysis on Kaggle) can strengthen your application for scholarships.",
+            "- Participate in data science competitions or online courses (e.g., Coursera) to demonstrate passion.",
+            "",
+            "**5. Apply Early in Band A**",
+            "",
+            "- With 150 Band A applicants for 30 places, placing JS7307 in Band A is essential. Band B applicants have very low chances (only 70 applied in 2025).",
+            "- List the programme as your first choice if it aligns with your career goals.",
+            "",
+            "**6. Leverage Lingnan’s Liberal Arts Advantage**",
+            "",
+            "- In your personal statement (if required for non-JUPAS), highlight how liberal arts training complements data science — e.g., ethical reasoning in AI.",
+            "- Mention Lingnan’s small class sizes and residential hall experience as unique benefits.",
+            "",
+            "**7. Prepare for Capstone Projects Early**",
+            "",
+            "- The Year 4 capstone is a key differentiator; start thinking about a social issue you want to analyse with data (e.g., housing inequality, mental health trends).",
+            "- Learn tools like R, Python, and Tableau during Year 1-2 to be ready.",
+            "",
+            "**8. Explore Exchange and Internship Opportunities**",
+            "",
+            "- Apply for exchange programmes in Year 2 to gain global perspective; Lingnan offers over 200 partners.",
+            "- Seek internships at NGOs or government agencies during summers to apply data skills in real-world settings.",
+            "",
+            "**9. Monitor Admission Trends**",
+            "",
+            "- The 2025 median of 24.25 is a benchmark; check JUPAS release in August for 2026 trends. Scores may rise with increased data science popularity.",
+            "- Attend Lingnan’s admission talks (usually in October) to get direct updates from faculty."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：24.25分（2025年聯招數據）。",
+            "**下四分位數**：23.00分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者150人、Band B 70人。總申請者350人。",
+            "**首年學額**：30人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：JS7307 社會數據科學（榮譽）社會科學學士結合嚴謹的社會科學訓練與尖端數據分析，提供四個專修：經濟學、政府與國際事務學、心理學及社會學。",
+            "**第一年基礎**：學生完成核心博雅課程、社會科學導論及基礎數據科學模組，包括統計學和程式設計（如 Python/R）。",
+            "**第二年專修**：學生選擇一個專修，並修讀中級數據視覺化、機器學習及社會研究方法，同時學習學科特定理論。",
+            "**第三年深造**：深入學習高級數據科學應用（如自然語言處理、網絡分析）及專修選修課，並開始準備畢業專題。",
+            "**第四年整合**：學生完成數據驅動的畢業專題，將技能應用於現實社會問題，並修讀專修領域的最終選修課。",
+            "**博雅核心**：所有學生須完成嶺南大學必修的博雅課程，包括倫理學、批判性思維及服務學習，確保全人發展。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據分析師/科學家**：畢業生勝任金融、市場推廣及政府等領域的數據分析職位，運用統計建模和機器學習技能。",
+            "**政策分析師**：透過政府與國際事務學專修，畢業生可在公共政策智庫、政府部門或非政府組織工作，利用數據輔助決策。",
+            "**市場研究員**：經濟學和心理學專修培養畢業生分析消費者行為和市場趨勢的能力，適用於企業或研究機構。",
+            "**社會研究員**：社會學專修畢業生常從事社會研究、社區發展或學術研究，將數據科學應用於社會挑戰。",
+            "**數碼營銷專家**：結合數據科學與社會科學見解，畢業生可在數碼營銷分析、SEO 策略或活動策劃等崗位脫穎而出。",
+            "**深造機會**：許多畢業生升讀數據科學、社會政策、經濟學或心理學碩士課程，前往港大、中大及海外頂尖學府。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**住宿書院**：所有嶺大學生須至少住校一年，在屯門優美環境中培養緊密社群和終身友誼。",
+            "**小班教學**：社會數據科學課程平均每班 20-30 人，學生可享受緊密的師徒關係和協作學習環境。",
+            "**環球交流**：嶺大與全球逾 200 所夥伴大學合作；學生可在第二年或第三年申請交換計劃，到海外學習一學期。",
+            "**服務學習**：大學強調社區服務，學生需參與真實項目，例如為本地非政府組織進行數據分析，作為課程一部分。",
+            "**校園設施**：屯門校園設有現代化圖書館、配備數據科學軟件的電腦實驗室、體育設施及學生休息室，環境綠化且步行可達。",
+            "**學生組織**：活躍的學生社團包括社會科學學會、數據科學學會及各類文化團體，提供人脈拓展和領導力機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025 年最佳五科中位數為 24.25 分，下四分位數為 23.00 分，顯示 30 個學額競爭激烈。",
+            "**供求情況**：2025 年有 150 名 Band A 申請者及 70 名 Band B 申請者，總申請人數達 350 人，僅提供 30 個一年級學額，申請與學額比例約 11.7:1。",
+            "**科目要求**：數學（中位數 4）及選修科（中位數 4）成績至關重要；中文及公民與社會發展科須達標。",
+            "**無面試**：課程不設面試，入學純粹基於文憑試分數，因此每一分都至關重要。",
+            "**博雅優勢**：嶺大獨特的博雅教育方針使畢業生有別於大型大學，吸引僱主尋求具備批判性思維及數據技能的專才。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李國璋博士**：著名社會學家，曾任嶺南大學社會科學院院長，以香港社會政策研究貢獻聞名。",
+            "**陳家駒先生**：香港金融管理局高級數據分析師，運用數據科學支持經濟政策。嶺南大學社會科學課程畢業生。",
+            "**黃佩珊女士**：香港政府中央政策組政策顧問，專注數據驅動的社會福利計劃。嶺南大學社會科學校友。",
+            "**許賢發博士**：香港大學心理學教授，專注計算社會科學。曾任嶺南大學教職員及社會科學課程畢業生。",
+            "**梁偉東先生**：香港社會企業聯合創辦人，利用數據分析解決貧窮問題。嶺南大學社會數據科學畢業生（2019 年）。",
+            "**鄭美玲女士**：香港社會服務聯會高級研究主任，應用數據科學於社區需求評估。嶺南大學校友（2020 年）。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**嶺南大學入學獎學金**：頒予文憑試成績優異者（如最佳五科 25 分或以上），提供全額或半額學費減免，並按學業成績續領。",
+            "**社會科學院卓越獎學金**：專為社會科學學院一年級成績出眾的學生而設，每年最高可達港幣 20,000 元。",
+            "**譚兆博士獎學金**：為有經濟需要且學業優異的學生提供學費及生活費資助，社會數據科學學生可申請。",
+            "**交換計劃助學金**：嶺大為參與海外交換的學生提供最高港幣 30,000 元資助，減輕環球學習的經濟負擔。",
+            "**服務學習獎**：在社區項目中表現卓越的學生可獲港幣 5,000 至 10,000 元獎勵，肯定其社會影響。",
+            "**政府資助**：合資格學生可申請香港特區政府的學生資助計劃（SFA）及免入息審查貸款計劃（NLS）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7307 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學及選修科**",
+            "",
+            "- 數學佔分極重；目標達到 5 級或以上，以提升最佳五科分數至中位數 24.25 以上。",
+            "- 選擇與數據科學相關的選修科，如經濟、地理或資訊及通訊科技；成功申請者通常兩科均達 4 級。",
+            "",
+            "**2. 鎖定最佳五科高分**",
+            "",
+            "- 中位數為 24.25，及早估算你的最佳五科分數。若數學達 5*、兩選修科達 5 級，將極具競爭力。",
+            "- 使用文憑試計分器模擬分數；目標至少 23 分以達下四分位數範圍。",
+            "",
+            "**3. 中文及公民科不可忽視**",
+            "",
+            "- 中文須達 3 級（中位數 3）；忽略此科會拉低總分。",
+            "- 公民與社會發展科必須「達標」；不合格將直接喪失資格，不論其他科目成績。",
+            "",
+            "**4. 建立數據科學作品集**",
+            "",
+            "- 雖然無需面試，但豐富的作品集（如 Python 項目、Kaggle 數據分析）可增強獎學金申請優勢。",
+            "- 參加數據科學比賽或網上課程（如 Coursera），展現熱誠。",
+            "",
+            "**5. 提早於 Band A 申請**",
+            "",
+            "- 2025 年有 150 名 Band A 申請者爭奪 30 個學額，將 JS7307 置於 Band A 至關重要。Band B 申請者機會極低（僅 70 人申請）。",
+            "- 若課程符合你的職業目標，應將其列為首選。",
+            "",
+            "**6. 善用嶺大博雅優勢**",
+            "",
+            "- 在個人陳述中（如適用於非聯招申請），強調博雅訓練如何補充數據科學——例如人工智能中的倫理推理。",
+            "- 提及嶺大小班教學及住宿書院體驗的獨特價值。",
+            "",
+            "**7. 提早準備畢業專題**",
+            "",
+            "- 四年級的畢業專題是關鍵區分點；及早思考你想用數據分析的社會議題（如房屋不平等、心理健康趨勢）。",
+            "- 在第一至二年學習 R、Python 及 Tableau 等工具，做好準備。",
+            "",
+            "**8. 探索交換及實習機會**",
+            "",
+            "- 在第二年申請交換計劃，獲取環球視野；嶺大提供逾 200 所夥伴大學。",
+            "- 暑假期間在非政府組織或政府部門實習，將數據技能應用於真實環境。",
+            "",
+            "**9. 留意收生趨勢**",
+            "",
+            "- 2025 年中位數 24.25 是重要基準；留意 2026 年 8 月聯招公布的最新趨勢。數據科學受歡迎程度上升，分數可能提高。",
+            "- 參加嶺大入學講座（通常在十月），直接從教職員獲取最新資訊。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "24.25",
+    "lq": "23.00"
+  }
+}

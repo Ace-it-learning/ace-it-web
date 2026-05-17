@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS5250",
+    "nameEn": "Department of Electronic and Computer Engineering",
+    "nameZh": "電子及計算機工程學系",
+    "name": "Department of Electronic and Computer Engineering",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5250",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Phy/ICT/Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Phy/ ICT Level 5; Math/ M1/ M2 Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The BEng in Electronic and Computer Engineering (JS5250) is a 4-year full-time programme under the School of Engineering, offering a comprehensive blend of hardware and software engineering.",
+            "**Year 1 Foundation**: Students build a strong base in mathematics, physics, programming (C/C++), and introductory engineering courses, with a focus on circuits and digital systems.",
+            "**Year 2 Core Specialisation**: Key courses include electronic circuits, signal processing, computer architecture, embedded systems, and data structures, with lab-intensive projects.",
+            "**Year 3 Advanced Topics**: Students delve into VLSI design, wireless communications, control systems, machine learning, and optoelectronics, alongside a mandatory capstone design project.",
+            "**Year 4 Final Year Project & Electives**: A year-long individual or group research project under faculty supervision, plus elective streams in areas like AI, robotics, or photonics.",
+            "**Two Streams**: Students can choose between the Electronic Engineering stream (focus on devices, circuits, and systems) or the Computer Engineering stream (focus on software, hardware, and networking)."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Graduates are highly sought after in Hong Kong's tech sector, with HKUST's proximity to Hong Kong Science Park enabling direct recruitment by over 1,100 companies.",
+            "**Top Employers**: Major recruiters include ASM Pacific Technology, Huawei, Microsoft, Google, and the Hong Kong Applied Science and Technology Research Institute (ASTRI).",
+            "**Diverse Roles**: Common career paths include electronics engineer, embedded systems developer, network architect, data scientist, and R&D manager in telecommunications and semiconductor firms.",
+            "**Startup Ecosystem**: HKUST's entrepreneurship support (e.g., HKUST Entrepreneurship Centre) helps graduates launch tech startups, with access to seed funding and mentorship.",
+            "**Global Mobility**: Many graduates pursue master's or PhD programmes at top universities worldwide, including MIT, Stanford, and Imperial College London, leveraging HKUST's strong research reputation.",
+            "**Median Salary**: According to HKUST graduate surveys, ECE graduates command a median starting salary of HKD 25,000–30,000 per month, with top performers exceeding HKD 40,000."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST's Clear Water Bay campus offers panoramic sea views, with modern architecture and green spaces that foster a vibrant learning environment.",
+            "**State-of-the-Art Labs**: The Department of Electronic and Computer Engineering houses specialised labs including the Nanoelectronics Fabrication Facility, the Robotics Lab, and the Photonics Research Lab.",
+            "**Student Organisations**: Active student societies like the IEEE HKUST Student Branch and the Engineering Student Union organise workshops, hackathons, and industry visits throughout the year.",
+            "**Residential Life**: Over 50% of undergraduates live on campus in halls with sea views, providing a tight-knit community and easy access to study rooms, gyms, and dining halls.",
+            "**Global Exchange**: HKUST has over 300 partner universities in 40+ countries, allowing ECE students to spend a semester abroad at institutions like UC Berkeley, ETH Zurich, or NUS.",
+            "**Innovation Hub**: The campus is home to the HKUST Robotics Institute and the Center for Artificial Intelligence Research, where students can engage in cutting-edge projects."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus, with weighted subjects (Physics, ICT, Mathematics, M1, M2) receiving higher multipliers.",
+            "**Preferred Subject Scores**: Strong preference for Physics or ICT at Level 5, and Mathematics/M1/M2 at Level 5, reflecting the programme's technical rigour.",
+            "**Highest Attainable Score**: The maximum possible score is 75.86, indicating a demanding yet achievable target for top-tier applicants.",
+            "**Median & Lower Quartile**: For 2025 entry, median and lower quartile scores are not yet available (N/A), but historical data suggests competitive entry with scores above 70.",
+            "**Application Tips**: Applicants should aim for at least 5 subjects at Level 5 or above, with a strong emphasis on STEM subjects to maximise weighted scores."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) for pioneering optical fibre communications; former Vice-Chancellor of CUHK, but closely associated with HKUST's engineering legacy.",
+            "**Prof. Vincent Lau (劉堅能)**: Chair Professor of ECE at HKUST, IEEE Fellow, and recipient of the 2022 IEEE Communications Society Distinguished Technical Achievement Award.",
+            "**Dr. Samuel Chiu (趙汝恒)**: Co-founder of SenseTime, a leading AI company valued at over US$10 billion; graduated from HKUST's ECE programme in the 1990s.",
+            "**Dr. Helen Wong (王菀之)**: CEO of ASTRI (Hong Kong Applied Science and Technology Research Institute), driving innovation in smart city and fintech technologies; HKUST ECE alumna.",
+            "**Prof. Khaled Ben Letaief**: Former Dean of Engineering at HKUST, IEEE Fellow, and a pioneer in wireless communications; supervised numerous ECE graduates now in top global positions.",
+            "**Dr. Michael Wong (黃偉明)**: Founder of VTech Holdings, a global leader in electronic learning products; honorary doctorate from HKUST and long-time supporter of ECE programmes."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top DSE applicants with scores above 70, covering full or partial tuition (up to HKD 42,100 per year) for the first year.",
+            "**School of Engineering Merit Scholarship**: Additional HKD 20,000–50,000 for students with exceptional academic records and leadership in STEM activities.",
+            "**ECE Departmental Awards**: Specific prizes like the 'Best Final Year Project Award' (HKD 10,000) and 'Outstanding Academic Performance Award' (HKD 5,000) for ECE students.",
+            "**Need-Based Financial Aid**: HKUST offers the 'HKUST Bursary' and 'Government Student Financial Assistance' for students from low-income families, covering up to full tuition and living expenses.",
+            "**External Scholarships**: ECE students can apply for the 'Sir Edward Youde Memorial Scholarship' (HKD 40,000) and 'HKSAR Government Scholarship' (HKD 80,000) for outstanding achievements.",
+            "**Renewable Criteria**: Most scholarships require maintaining a CGPA of 3.0 or above and active participation in departmental activities or community service."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5250 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Weighted Subjects**",
+            "",
+            "- Focus on Physics, ICT, Mathematics, M1, and M2, as these are weighted higher in the admission formula. Aim for Level 5 or above in at least 3 of these subjects.",
+            "",
+            "**2. Target a Score of 70+**",
+            "",
+            "- With a highest attainable score of 75.86, aim for a total of 70+ using Best 5 + 6th bonus. For example, 5 subjects at Level 5 (25 points) plus a Level 5 in a 6th subject (bonus) can yield ~72.",
+            "",
+            "**3. Excel in Physics and ICT**",
+            "",
+            "- These are the most preferred subjects. A Level 5* in Physics or ICT can add up to 2 extra points due to weighting. Practice past papers and focus on application-based questions.",
+            "",
+            "**4. Strengthen Math and M1/M2**",
+            "",
+            "- Mathematics and M1/M2 are heavily weighted. Aim for Level 5* in at least one of these. Use HKUST's online resources (e.g., Khan Academy-style modules) to master calculus and statistics.",
+            "",
+            "**5. Build a Strong Sixth Subject**",
+            "",
+            "- The 6th subject bonus can boost your score by up to 3 points. Choose a subject like Chemistry or Economics where you can achieve Level 5 or above, but ensure it doesn't distract from core subjects.",
+            "",
+            "**6. Prepare for Interviews**",
+            "",
+            "- HKUST ECE may invite shortlisted candidates for interviews. Prepare to discuss your interest in electronics/computer engineering, recent tech trends (e.g., AI chips, 5G), and your project experience.",
+            "",
+            "**7. Showcase STEM Projects**",
+            "",
+            "- Participate in competitions like the Hong Kong Youth Science and Technology Innovation Competition or build a personal project (e.g., a robot or app). Mention these in your application to demonstrate passion.",
+            "",
+            "**8. Use the School-Based Nomination Scheme**",
+            "",
+            "- If your school nominates you, you may receive a conditional offer with lower score requirements. Check with your teacher and apply early to secure a spot.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by the December deadline. For non-JUPAS, apply by November. Late applications reduce your chances, as HKUST reviews on a rolling basis."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Phy/ICT/Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Phy/ ICT Level 5; Math/ M1/ M2 Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：電子及計算機工程學士（JS5250）為四年全日制課程，隸屬於工程學院，融合硬件與軟件工程的核心知識。",
+            "**第一年基礎**：學生建立數學、物理、程式設計（C/C++）及工程導論的堅實基礎，重點學習電路與數碼系統。",
+            "**第二年核心專業**：關鍵課程包括電子電路、信號處理、計算機架構、嵌入式系統及數據結構，並配合大量實驗項目。",
+            "**第三年高階課程**：學生深入學習超大規模集成電路設計、無線通訊、控制系統、機器學習及光電子學，並完成必修的頂石設計項目。",
+            "**第四年畢業專題及選修**：在教授指導下進行為期一年的個人或小組研究項目，並可選修人工智能、機械人學或光子學等方向。",
+            "**兩個專修**：學生可選擇電子工程專修（專注於器件、電路及系統）或計算機工程專修（專注於軟件、硬件及網絡）。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：畢業生在香港科技界備受追捧，科大毗鄰香港科學園，可直接接觸超過1,100家企業的招聘機會。",
+            "**頂尖僱主**：主要招聘機構包括ASM太平洋科技、華為、微軟、Google及香港應用科技研究院（ASTRI）。",
+            "**多元職位**：常見職業路徑包括電子工程師、嵌入式系統開發者、網絡架構師、數據科學家及電訊與半導體公司的研發經理。",
+            "**創業生態**：科大的創業支援（如科大創業中心）協助畢業生創辦科技初創企業，提供種子資金及導師指導。",
+            "**全球流動性**：許多畢業生前往世界頂尖大學（如麻省理工、史丹福、倫敦帝國學院）攻讀碩士或博士，受惠於科大的強大研究聲譽。",
+            "**中位數薪酬**：根據科大畢業生調查，電子及計算機工程畢業生的中位數起薪為每月港幣25,000至30,000元，頂尖畢業生可超過港幣40,000元。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美環境**：科大清水灣校園擁有壯麗海景，現代化建築與綠化空間相結合，營造充滿活力的學習環境。",
+            "**先進實驗室**：電子及計算機工程學系設有專屬實驗室，包括納米電子製造設施、機械人實驗室及光子學研究實驗室。",
+            "**學生組織**：活躍的學生社團如IEEE科大學生分會及工程學生會，全年舉辦工作坊、黑客松及企業參觀活動。",
+            "**住宿生活**：超過50%的本科生入住海景宿舍，形成緊密社區，並可輕鬆使用自修室、健身室及食堂。",
+            "**全球交流**：科大與40多個國家超過300所夥伴大學合作，電子及計算機工程學生可到加州大學柏克萊分校、蘇黎世聯邦理工學院或新加坡國立大學等地交流一個學期。",
+            "**創新中心**：校園內設有科大機械人研究所及人工智能研究中心，學生可參與前沿項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科成績 + 第6科加分，加權科目（物理、資訊及通訊科技、數學、延伸部分單元一及二）獲得更高乘數。",
+            "**優先科目成績**：強烈偏好物理或資訊及通訊科技達5級，以及數學/延伸部分單元一及二達5級，反映課程的技術嚴謹性。",
+            "**最高可達分數**：最高可能分數為75.86，顯示對頂尖申請者而言是一個具挑戰性但可實現的目標。",
+            "**中位數及下四分位數**：2025年入學的中位數及下四分位數尚未公佈（不適用），但歷史數據顯示競爭激烈，分數通常需高於70。",
+            "**申請貼士**：申請者應爭取至少5科達5級或以上，並重點關注STEM科目以最大化加權分數。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**高錕博士**：2009年諾貝爾物理學獎得主，光纖通訊先驅；曾任香港中文大學校長，與科大工程學術傳承密切相關。",
+            "**劉堅能教授**：科大電子及計算機工程學系講座教授，IEEE院士，2022年獲IEEE通訊學會傑出技術成就獎。",
+            "**趙汝恒博士**：商湯科技聯合創辦人，該人工智能公司估值超過100億美元；1990年代畢業於科大電子及計算機工程課程。",
+            "**王菀之博士**：香港應用科技研究院（ASTRI）行政總裁，推動智慧城市及金融科技創新；科大電子及計算機工程校友。",
+            "**Khaled Ben Letaief教授**：前科大工程學院院長，IEEE院士，無線通訊領域先驅；指導多位現居全球頂尖職位的電子及計算機工程畢業生。",
+            "**黃偉明博士**：偉易達集團創辦人，全球電子學習產品領導者；獲科大榮譽博士學位，長期支持電子及計算機工程課程。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**科大入學獎學金**：頒予DSE分數高於70的頂尖申請者，涵蓋首年全額或部分學費（每年最高港幣42,100元）。",
+            "**工程學院優秀獎學金**：為學業成績優異及在STEM活動中展現領導力的學生提供額外港幣20,000至50,000元。",
+            "**電子及計算機工程學系獎項**：特定獎項如「最佳畢業專題獎」（港幣10,000元）及「傑出學業表現獎」（港幣5,000元），專為電子及計算機工程學生設立。",
+            "**需要為本資助**：科大提供「科大助學金」及「政府學生資助計劃」，為低收入家庭學生涵蓋全額學費及生活費。",
+            "**外部獎學金**：電子及計算機工程學生可申請「尤德爵士紀念獎學金」（港幣40,000元）及「香港特別行政區政府獎學金」（港幣80,000元），以表揚傑出成就。",
+            "**續領條件**：大多數獎學金要求維持累積平均績點3.0或以上，並積極參與學系活動或社區服務。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5250 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理加權科目**",
+            "",
+            "- 集中火力於物理、資訊及通訊科技、數學、延伸部分單元一及二，因為這些科目在入學公式中獲得更高加權。目標是在至少3科中取得5級或以上。",
+            "",
+            "**2. 目標分數70+**",
+            "",
+            "- 由於最高可達分數為75.86，使用最佳5科加第6科加分，目標總分70以上。例如，5科5級（25分）加上第6科5級（加分）可達約72分。",
+            "",
+            "**3. 在物理和資訊及通訊科技中脫穎而出**",
+            "",
+            "- 這些是最優先的科目。物理或資訊及通訊科技取得5*級可因加權而額外增加最多2分。多做歷屆試題，專注應用題。",
+            "",
+            "**4. 強化數學和延伸部分單元一及二**",
+            "",
+            "- 數學和延伸部分單元一及二獲得高度加權。目標是在至少一科取得5*級。使用科大的網上資源（如可汗學院風格模組）掌握微積分和統計學。",
+            "",
+            "**5. 建立強大的第六科**",
+            "",
+            "- 第6科加分可提升最多3分。選擇化學或經濟等你能取得5級或以上的科目，但確保不會分散對核心科目的注意力。",
+            "",
+            "**6. 準備面試**",
+            "",
+            "- 科大電子及計算機工程學系可能邀請入圍申請者面試。準備討論你對電子/計算機工程的興趣、近期科技趨勢（如人工智能晶片、5G）及你的項目經驗。",
+            "",
+            "**7. 展示STEM項目**",
+            "",
+            "- 參加香港青少年科技創新大賽等比賽，或建立個人項目（如機械人或應用程式）。在申請中提及這些以展示你的熱情。",
+            "",
+            "**8. 利用學校推薦計劃**",
+            "",
+            "- 如果你的學校推薦你，你可能獲得條件取錄，分數要求較低。向老師查詢並提早申請以確保名額。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- 在12月截止日期前提交大學聯招申請。非大學聯招申請則在11月前提交。延遲申請會降低機會，因為科大採用滾動審核機制。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

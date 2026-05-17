@@ -243,7 +243,6 @@ const AccountPage = () => {
         targetGradeEng: '',
         targetGradeChi: '',
         targetGradeMath: '',
-        dreamSubject: '',
         electives: []
     });
 
@@ -272,7 +271,6 @@ const AccountPage = () => {
                 targetGradeEng: profile.targetGradeEng || '',
                 targetGradeChi: profile.targetGradeChi || '',
                 targetGradeMath: profile.targetGradeMath || '',
-                dreamSubject: profile.dreamSubject || '',
                 electives: profile.electives || []
             });
             setParentalSettings({
@@ -880,17 +878,14 @@ const AccountPage = () => {
                                                 />
                                             </div>
 
+                                            {/* Dream Subject is now managed via Dream Subjects page (JUPAS programmes) */}
                                             <div className="space-y-2">
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <Target size={14} className="text-primary" /> Dream Subject
+                                                    <Target size={14} className="text-primary" /> Dream Subjects
                                                 </label>
-                                                <input 
-                                                    type="text" 
-                                                    value={profileData.dreamSubject}
-                                                    onChange={e => setProfileData({...profileData, dreamSubject: e.target.value})}
-                                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                                                    placeholder="e.g. Medicine, Law, Computer Science"
-                                                />
+                                                <div className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm text-slate-500">
+                                                    Managed via <a href="/dream-subjects" className="text-primary font-semibold underline">Dream Subjects</a> page
+                                                </div>
                                             </div>
                                         </div>
 

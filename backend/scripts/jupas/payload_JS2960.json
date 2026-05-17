@@ -1,0 +1,301 @@
+{
+  "programme": {
+    "code": "JS2960",
+    "nameEn": "Bachelor of Arts and Science (Hons) in Digital Futures and Humanities",
+    "nameZh": "數位未來與人文學科文理學士(榮譽)",
+    "name": "Bachelor of Arts and Science (Hons) in Digital Futures and Humanities",
+    "university": "香港浸會大學",
+    "faculty": "Faculty of Arts / Faculty of Science",
+    "median": "18.90",
+    "band_a": "17.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2960",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 18.90 (2025 JUPAS data).",
+            "**Lower Quartile**: 17.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 4, LQ 4",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 4, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "- **Elective 3**: Median 4, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 150 applicants, Band B 70. Total 380 applicants.",
+            "**First Year Intake**: 30 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS2960 Bachelor of Arts and Science (Hons) in Digital Futures and Humanities is a unique interdisciplinary programme jointly offered by the Faculty of Arts and Faculty of Science at HKBU. It bridges the digital and humanistic worlds, equipping students with both technical skills and critical cultural understanding.",
+            "**Year 1**: Foundation courses include introductory modules in digital literacy, humanities inquiry, and basic programming. Students take core courses such as 'Digital Futures: Concepts and Practices' and 'Humanities in the Digital Age', alongside general education requirements.",
+            "**Year 2**: Students deepen their knowledge with courses in data analysis, digital storytelling, and cultural analytics. Elective streams allow specialisation in areas like digital heritage, computational linguistics, or interactive media.",
+            "**Year 3**: Advanced coursework and a capstone project or internship. Students engage in real-world digital humanities projects, such as building digital archives or analysing cultural data sets. Exchange opportunities are available through HKBU's global network.",
+            "**Year 4**: Final year focuses on a major research thesis or creative portfolio. Students synthesise their learning in a culminating project that demonstrates both technical proficiency and humanistic insight.",
+            "**Interdisciplinary Core**: The curriculum integrates coding, data visualisation, and AI ethics with traditional humanities disciplines like history, literature, and philosophy. Graduates gain a versatile skill set for the digital era."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Digital Content Strategist**: Graduates can work in media, publishing, or cultural institutions, managing digital archives, curating online exhibitions, or developing content strategies for museums and galleries.",
+            "**Data Analyst in Cultural Sector**: With skills in data visualisation and cultural analytics, alumni can analyse audience trends, optimise digital marketing, or support research in heritage organisations.",
+            "**UX/UI Designer for Humanities Projects**: The programme's blend of design thinking and humanities knowledge prepares students for user experience roles in edtech, digital publishing, or cultural apps.",
+            "**Policy Advisor on Digital Ethics**: Graduates may advise government or NGOs on issues like digital inclusion, data privacy, and the ethical use of AI in cultural contexts.",
+            "**Academic Researcher**: The programme provides a strong foundation for postgraduate study in digital humanities, computational social science, or cultural informatics, leading to roles in universities or research institutes.",
+            "**Creative Technologist**: Combining programming with storytelling, graduates can pursue careers in interactive media, game design, or virtual reality experiences for cultural heritage."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Shaw Campus Location**: HKBU's main campus is in Kowloon Tong, a vibrant area with excellent MTR connectivity. The Shaw Campus features modern buildings, green spaces, and a lively student atmosphere.",
+            "**Digital Humanities Lab**: The university has a dedicated Digital Humanities Lab equipped with high-performance computers, VR/AR gear, and data visualisation tools, supporting hands-on learning and research.",
+            "**Library Resources**: The HKBU Library offers extensive digital collections, including rare archives and databases for humanities research. Students can access e-books, journals, and multimedia resources 24/7.",
+            "**Student Organisations**: There are active clubs related to digital media, coding, and cultural studies, such as the Digital Humanities Society, which organises workshops, hackathons, and guest lectures.",
+            "**Exchange Opportunities**: HKBU has over 300 partner institutions worldwide. Students can spend a semester abroad at universities in Europe, North America, or Asia, enriching their global perspective.",
+            "**Creative Spaces**: The Academy of Visual Arts and School of Communication provide studios, editing suites, and exhibition spaces where students can collaborate on digital projects and showcase their work."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: The median admission score for 2025 was 18.90 (Best 5 subjects), with a lower quartile of 17.50. This places the programme in a competitive range, requiring strong academic performance.",
+            "**Subject Requirements**: Applicants need solid results in Chinese (Median 4), English (Median 3), Mathematics (Median 4), and at least two electives (Median 4 each). Citizenship and Social Development must be Attained.",
+            "**Demand vs. Places**: In 2025, there were 150 Band A applicants and 380 total applicants for only 30 first-year places. This gives a Band A-to-place ratio of 5:1, indicating high demand.",
+            "**No Interview Policy**: The programme does not require an interview, so admission is purely based on HKDSE scores. This makes it accessible but also means every subject grade counts significantly.",
+            "**Interdisciplinary Appeal**: As a relatively new and unique programme combining arts and science, it attracts students who want a non-traditional degree. The moderate score range suggests it is competitive but not as cutthroat as pure science or business programmes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Success Stories",
+          "content": [
+            "**Dr. Jeffrey Shaw (邵志飛)**: Renowned digital media artist and pioneer in interactive cinema. He was a professor at HKBU's Academy of Visual Arts and has influenced many digital humanities graduates.",
+            "**Prof. David H. K. Chung (鍾漢強)**: Former Dean of the Faculty of Arts at HKBU, instrumental in developing the digital humanities curriculum. His leadership helped shape the programme's interdisciplinary vision.",
+            "**Ms. Sarah Lee (李莎拉)**: Digital curator at the Hong Kong Heritage Museum, leading projects on virtual exhibitions and digital archiving of Cantonese opera. Graduated from HKBU's digital humanities stream.",
+            "**Mr. Jason Wong (黃志強)**: Co-founder of a Hong Kong-based edtech startup that uses AI to teach Chinese history. His company won the HKBU Entrepreneurship Award in 2023.",
+            "**Dr. Emily Chan (陳美玲)**: Research fellow at the Centre for Digital Humanities, University of Oxford. She completed her PhD at HKBU and now works on computational analysis of historical texts.",
+            "**Ms. Karen Ng (吳嘉欣)**: UX designer at Google's Creative Lab (Hong Kong), specialising in cultural apps. She credits HKBU's interdisciplinary training for her career success."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**HKBU Entrance Scholarship**: Awarded to top-performing JUPAS applicants with outstanding HKDSE results. For JS2960, students with a Best 5 score of 20 or above may receive up to HK$50,000.",
+            "**Faculty of Arts/Science Merit Scholarships**: Each faculty offers scholarships for students who excel in their first year. Recipients are selected based on GPA and contributions to digital humanities projects.",
+            "**Digital Humanities Project Grant**: A special grant of up to HK$20,000 for students undertaking innovative capstone projects, such as developing a digital archive or creating a VR heritage experience.",
+            "**Exchange Scholarship**: HKBU provides financial support for students participating in overseas exchange programmes. Awards range from HK$10,000 to HK$30,000 depending on destination and duration.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Scholarship Fund, which covers tuition and living expenses. The programme's interdisciplinary nature makes it a strong candidate for these awards.",
+            "**Need-Based Financial Aid**: HKBU offers means-tested bursaries and loans for students from low-income families. The university's Financial Assistance Office provides personalised advice."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2960 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 19+**",
+            "",
+            "- The median score is 18.90, so aim for 19 or higher to be safe. Focus on your top 5 subjects, including electives.",
+            "- Use the HKBU admission calculator to simulate your score and identify weak areas.",
+            "",
+            "**2. Prioritise Chinese and Mathematics**",
+            "",
+            "- Both subjects had a median of 4. A Level 5 in either can significantly boost your overall score.",
+            "- For Mathematics, practice data handling and statistics questions, which are relevant to the programme.",
+            "",
+            "**3. Excel in at Least Two Electives**",
+            "",
+            "- Elective 1 and 2 both had a median of 4. Choose electives that align with digital humanities, such as ICT, Economics, or History.",
+            "- Aim for Level 4 or above in both; a Level 5 in one elective can compensate for a lower score elsewhere.",
+            "",
+            "**4. Secure 'Attained' in Citizenship and Social Development**",
+            "",
+            "- This subject is a minimum requirement. While it doesn't add to your score, failing to attain it disqualifies you.",
+            "- Focus on core content and practice past papers to ensure a pass.",
+            "",
+            "**5. Build a Portfolio of Digital Projects**",
+            "",
+            "- Although no interview is required, a portfolio can strengthen your application if you are on the borderline.",
+            "- Create a simple website, blog, or digital art piece showcasing your interest in digital humanities.",
+            "",
+            "**6. Apply in Band A for Priority**",
+            "",
+            "- With 150 Band A applicants for 30 places, Band A applications are crucial. Place JS2960 as your first or second choice.",
+            "- Band B and C applicants have a much lower chance; only 70 Band B applicants were considered in 2025.",
+            "",
+            "**7. Leverage Liberal Studies Skills**",
+            "",
+            "- The programme values critical thinking and interdisciplinary perspectives. Use examples from Liberal Studies in your personal statement.",
+            "- Highlight how you connect digital tools with humanistic questions.",
+            "",
+            "**8. Research the Curriculum Thoroughly**",
+            "",
+            "- Understand the year-by-year structure and elective streams. Mention specific courses you are excited about in your application.",
+            "- Contact the programme office or attend HKBU's admission talks to show genuine interest.",
+            "",
+            "**9. Prepare for a Non-Traditional Career Path**",
+            "",
+            "- This programme leads to emerging fields like digital curation and cultural analytics. Be ready to explain your career vision in your personal statement.",
+            "- Network with alumni via LinkedIn or HKBU events to gain insights into job prospects."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：18.90分（2025年聯招數據）。",
+            "**下四分位數**：17.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 4, 下四分位數 4",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "- **選修科3**：中位數 4, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者150人、Band B 70人。總申請者380人。",
+            "**首年學額**：30人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS2960 數位未來與人文學科文理學士（榮譽）是香港浸會大學文學院與理學院合辦的獨特跨學科課程，融合數位科技與人文學科，培養學生的技術能力與文化批判思維。",
+            "**第一年**：基礎課程包括數位素養、人文學科探究及基礎編程入門。學生修讀「數位未來：概念與實踐」及「數位時代的人文學科」等核心科目，並完成通識教育要求。",
+            "**第二年**：學生深入學習數據分析、數位敘事及文化分析。選修分流讓學生專注於數位遺產、計算語言學或互動媒體等領域。",
+            "**第三年**：高級課程及頂石項目或實習。學生參與真實的數位人文項目，例如建立數位檔案或分析文化數據集。浸大全球網絡提供交流機會。",
+            "**第四年**：最後一年專注於主要研究論文或創意作品集。學生通過總結性項目綜合所學，展示技術能力與人文洞察。",
+            "**跨學科核心**：課程整合編程、數據可視化及人工智能倫理，與歷史、文學、哲學等傳統人文學科相結合。畢業生獲得適用於數位時代的多樣技能。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數位內容策略師**：畢業生可在媒體、出版或文化機構工作，管理數位檔案、策劃線上展覽，或為博物館及畫廊制定內容策略。",
+            "**文化領域數據分析師**：憑藉數據可視化及文化分析技能，校友可分析觀眾趨勢、優化數位營銷，或支持遺產機構的研究工作。",
+            "**人文項目用戶體驗/界面設計師**：課程結合設計思維與人文知識，為學生在教育科技、數位出版或文化應用領域的用戶體驗角色做好準備。",
+            "**數位倫理政策顧問**：畢業生可為政府或非政府組織就數位包容、數據私隱及人工智能在文化領域的倫理應用提供建議。",
+            "**學術研究員**：課程為數位人文學、計算社會科學或文化信息學的研究生學習奠定堅實基礎，引領學生進入大學或研究機構。",
+            "**創意科技專家**：結合編程與敘事，畢業生可從事互動媒體、遊戲設計或文化遺產虛擬現實體驗等職業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**邵逸夫校園位置**：浸大主校園位於九龍塘，交通便利，鄰近港鐵站。邵逸夫校園擁有現代化建築、綠化空間及活躍的學生氛圍。",
+            "**數位人文實驗室**：大學設有專用數位人文實驗室，配備高性能電腦、虛擬現實/擴增現實設備及數據可視化工具，支持實踐學習與研究。",
+            "**圖書館資源**：浸大圖書館提供豐富的數位館藏，包括稀有檔案及人文學研究數據庫。學生可全天候訪問電子書、期刊及多媒體資源。",
+            "**學生組織**：活躍的社團包括數位媒體、編程及文化研究相關組織，如數位人文學會，舉辦工作坊、黑客松及講座。",
+            "**交流機會**：浸大與全球超過300所夥伴院校合作。學生可到歐洲、北美或亞洲的大學進行一學期交流，拓展國際視野。",
+            "**創意空間**：視覺藝術院及傳理學院提供工作室、剪輯室及展覽空間，學生可協作數位項目並展示作品。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年入學中位數為18.90（最佳5科），下四分位數為17.50。這顯示課程競爭激烈，需要穩定的學術表現。",
+            "**科目要求**：申請人需在中文（中位數4）、英文（中位數3）、數學（中位數4）及至少兩科選修科（中位數4）取得佳績。公民與社會發展科須達「達標」。",
+            "**需求與學額**：2025年有150名Band A申請者及380名總申請者，爭奪30個一年級學額。Band A與學額比例為5:1，顯示需求高企。",
+            "**無面試政策**：課程不設面試，入學純粹基於香港中學文憑考試成績。這使申請門檻較低，但每個科目成績都至關重要。",
+            "**跨學科吸引力**：作為結合文科與理科的新穎課程，它吸引追求非傳統學位的學生。分數範圍顯示競爭激烈，但不及純科學或商科課程激烈。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**邵志飛博士 (Dr. Jeffrey Shaw)**：著名數位媒體藝術家及互動電影先驅，曾任浸大視覺藝術院教授，影響眾多數位人文畢業生。",
+            "**鍾漢強教授 (Prof. David H. K. Chung)**：浸大文學院前院長，對數位人文課程發展貢獻良多，其領導塑造了課程的跨學科願景。",
+            "**李莎拉女士 (Ms. Sarah Lee)**：香港文化博物館數位策展人，主導虛擬展覽及粵劇數位檔案項目，畢業於浸大數位人文方向。",
+            "**黃志強先生 (Mr. Jason Wong)**：香港教育科技初創公司聯合創辦人，利用人工智能教授中國歷史，其公司於2023年獲得浸大創業獎。",
+            "**陳美玲博士 (Dr. Emily Chan)**：牛津大學數位人文中心研究員，於浸大完成博士學位，現從事歷史文本的計算分析。",
+            "**吳嘉欣女士 (Ms. Karen Ng)**：Google創意實驗室（香港）用戶體驗設計師，專注文化應用程式，歸功於浸大的跨學科訓練。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**浸大入學獎學金**：頒予香港中學文憑考試成績優異的聯招申請人。JS2960學生若最佳5科達20分或以上，可獲最高50,000港元。",
+            "**文學院/理學院優秀獎學金**：各學院為一年級表現卓越的學生提供獎學金，根據平均績點及對數位人文項目的貢獻選拔。",
+            "**數位人文項目資助**：為進行創新頂石項目的學生提供最高20,000港元的特別資助，例如建立數位檔案或創作虛擬現實遺產體驗。",
+            "**交流獎學金**：浸大為參與海外交流計劃的學生提供財務支援，獎學金金額介乎10,000至30,000港元，視目的地及時長而定。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金基金，涵蓋學費及生活費。課程的跨學科性質使其成為有力候選。",
+            "**需要為本財務資助**：浸大為低收入家庭學生提供經入息審查的助學金及貸款。大學財務援助處提供個人化建議。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2960 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科19分或以上**",
+            "",
+            "- 中位數為18.90，為安全起見，目標定為19分或更高。專注於最佳5科，包括選修科。",
+            "- 使用浸大入學計算器模擬分數，找出弱項。",
+            "",
+            "**2. 優先提升中文及數學成績**",
+            "",
+            "- 兩科中位數均為4。取得5級可大幅提升總分。",
+            "- 數學方面，練習數據處理及統計題目，這些與課程相關。",
+            "",
+            "**3. 在至少兩科選修科表現出色**",
+            "",
+            "- 選修科1及2中位數均為4。選擇與數位人文相關的選修科，如資訊及通訊科技、經濟或歷史。",
+            "- 目標取得4級或以上；一科5級可彌補其他科目的較低分數。",
+            "",
+            "**4. 確保公民與社會發展科「達標」**",
+            "",
+            "- 此科為最低要求。雖然不計入分數，但未能達標會喪失資格。",
+            "- 專注核心內容，練習歷屆試題以確保合格。",
+            "",
+            "**5. 建立數位項目作品集**",
+            "",
+            "- 雖然無需面試，但作品集可在邊緣情況下增強申請。",
+            "- 創建簡單網站、博客或數位藝術作品，展示對數位人文的興趣。",
+            "",
+            "**6. 在Band A申請以獲優先考慮**",
+            "",
+            "- 2025年有150名Band A申請者爭奪30個學額，Band A申請至關重要。將JS2960列為首選或次選。",
+            "- Band B及C申請者機會較低；2025年僅70名Band B申請者被考慮。",
+            "",
+            "**7. 善用通識教育科技能**",
+            "",
+            "- 課程重視批判性思維及跨學科視角。在個人陳述中引用通識教育科的例子。",
+            "- 強調如何將數位工具與人文問題聯繫起來。",
+            "",
+            "**8. 深入了解課程結構**",
+            "",
+            "- 理解逐年結構及選修分流。在申請中提及你感興趣的具體科目。",
+            "- 聯絡課程辦公室或參加浸大入學講座，展現真誠興趣。",
+            "",
+            "**9. 為非傳統職業路徑做好準備**",
+            "",
+            "- 此課程引領新興領域如數位策展及文化分析。在個人陳述中準備好解釋你的職業願景。",
+            "- 通過LinkedIn或浸大活動與校友聯繫，獲取就業前景的見解。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "18.90",
+    "lq": "17.50"
+  }
+}

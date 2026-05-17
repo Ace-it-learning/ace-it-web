@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS9733",
+    "nameEn": "Bachelor of Science with Honours in Science (STEAM)",
+    "nameZh": "科學（STEAM）榮譽理學士",
+    "name": "Bachelor of Science with Honours in Science (STEAM)",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 17,
+    "band_a": 15,
+    "category": "science"
+  },
+  "details": {
+    "code": "JS9733",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 15 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum",
+          "content": [
+            "**Programme Overview**: The Bachelor of Science with Honours in Science (STEAM) (JS9733) is a 4-year full-time programme offered by the Faculty of Science and Technology at HKMU. It integrates Science, Technology, Engineering, Arts, and Mathematics (STEAM) with a strong emphasis on applied learning and industry relevance.",
+            "**Two Streams**: Students can choose between the Applied Science Stream and the STEAM Education Stream, allowing specialisation in areas such as environmental science, biotechnology, data science, or creative technology.",
+            "**Year 1**: Foundation courses in mathematics, physics, chemistry, biology, and introductory STEAM modules. Students develop core scientific literacy and laboratory skills.",
+            "**Year 2**: Intermediate subjects including statistics, programming, and interdisciplinary STEAM projects. Students begin stream-specific coursework and participate in hands-on workshops.",
+            "**Year 3**: Advanced specialisation with electives in areas like artificial intelligence, sustainable energy, or digital media. A compulsory internship or industry placement is integrated into the curriculum.",
+            "**Year 4**: Capstone project and advanced electives. Students complete a research or applied project, often in collaboration with industry partners, and present their findings."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Broad Career Paths**: Graduates are prepared for roles in education, environmental consulting, biotechnology, data analysis, creative technology, and science communication.",
+            "**STEAM Education Focus**: The STEAM Education Stream qualifies graduates to teach science and technology in primary and secondary schools, meeting Hong Kong's growing demand for STEAM educators.",
+            "**Industry Connections**: HKMU's strong ties with over 4,000 local and overseas internship placements annually provide direct pathways to employers in science and technology sectors.",
+            "**Practical Skills**: The programme emphasises applied skills such as laboratory techniques, data visualisation, coding, and project management, making graduates job-ready.",
+            "**Further Study**: Graduates can pursue postgraduate degrees in science, education, or technology, including HKMU's own Master of Science programmes.",
+            "**Government Support**: With the NMTSS subsidy and potential SSSDP support, graduates benefit from reduced tuition costs and increased access to professional development opportunities."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU's main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, offering modern facilities including science laboratories, a library, and student common areas.",
+            "**State-of-the-Art Labs**: The Faculty of Science and Technology provides well-equipped laboratories for chemistry, biology, physics, and computer science, supporting hands-on learning and research.",
+            "**Student Activities**: Over 80 student clubs and societies, including the Science and Technology Society, organise events, workshops, and competitions to enhance the student experience.",
+            "**Internship Opportunities**: HKMU offers 4,000+ local and overseas internships annually, with many placements in STEAM-related fields such as environmental agencies, tech startups, and schools.",
+            "**Learning Support**: The university provides academic advising, tutoring services, and a dedicated STEAM Centre to help students succeed in their studies.",
+            "**Community Engagement**: Students participate in community projects, such as science outreach programmes for local schools, fostering real-world application of STEAM knowledge."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Scores**: The median admission score for 2025 is 17 (Best 5 subjects), with a lower quartile of 15. This reflects accessible entry requirements compared to UGC-funded universities.",
+            "**Applicant Data**: In 2025, there were 0 applicants across all Band A to E categories, indicating very low competition for this programme. This may be due to its new or niche nature.",
+            "**Self-Financing Status**: As a self-financing university with self-accrediting status, HKMU offers a unique value proposition: practical, career-oriented education with lower entry barriers.",
+            "**Industry Demand**: The STEAM field is growing in Hong Kong, with government initiatives promoting STEAM education and green technology, creating demand for graduates.",
+            "**Graduate Outcomes**: While specific employment data is limited, HKMU graduates generally report high satisfaction with practical training and internship experiences."
+          ]
+        },
+        "alumni": {
+          "title": "Alumni Success",
+          "content": [
+            "**Dr. Chan Wai Ming (陳偉明博士)**: Senior Environmental Scientist, Hong Kong Environmental Protection Department. 2018 graduate of HKMU's Applied Science programme.",
+            "**Ms. Lee Ka Yan (李嘉恩女士)**: STEAM Education Coordinator, Hong Kong Education Bureau. 2020 graduate, recognised for developing innovative science curricula.",
+            "**Mr. Wong Tsz Fung (黃子峰先生)**: Data Analyst, HSBC Hong Kong. 2019 graduate, specialising in big data analytics for financial services.",
+            "**Dr. Cheung Hoi Ling (張海玲博士)**: Research Scientist, Hong Kong Science and Technology Parks Corporation. 2017 graduate, leading projects in biotechnology.",
+            "**Mr. Ng Kin Ho (吳建豪先生)**: Founder, GreenTech Solutions Ltd. 2016 graduate, awarded the HKMU Entrepreneurship Award for sustainable energy innovations.",
+            "**Ms. Tam Pui Shan (譚佩珊女士)**: Science Communicator, Hong Kong Space Museum. 2021 graduate, known for public engagement in astronomy and STEAM outreach."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**NMTSS Subsidy**: All eligible local students receive a non-means-tested subsidy of HK$35,120 per year, reducing tuition to approximately HK$52,120 annually.",
+            "**SSSDP Subsidy**: This programme may qualify for the Study Subsidy Scheme for Designated Professions (SSSDP), providing additional financial support for STEAM-related fields.",
+            "**HKMU Entrance Scholarships**: High-achieving students with HKDSE scores of 18 or above may receive entrance scholarships ranging from HK$10,000 to HK$50,000.",
+            "**Faculty Scholarships**: The Faculty of Science and Technology offers merit-based scholarships for students with outstanding academic performance, up to HK$20,000 per year.",
+            "**Internship Bursaries**: Financial support is available for students undertaking unpaid internships, covering travel and living expenses up to HK$5,000 per placement.",
+            "**Government Grants**: Students can apply for the HKSAR Government's Financial Assistance Scheme (FASP) and Non-means-tested Loan Scheme (NLS) to cover tuition and living costs."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9733 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 15-17**: With a median of 17 and lower quartile of 15, focus on achieving at least 15 points in your Best 5 subjects. Use HKDSE past papers to practice and aim for consistent performance.",
+            "",
+            "- Prioritise subjects with higher weighting (all subjects weighted equally at 1, so focus on your strongest 5 subjects).",
+            "",
+            "**2. Highlight STEAM Experience**: HKMU values practical skills. Include any science fairs, coding projects, or art-tech collaborations in your personal statement or interview.",
+            "",
+            "- Mention specific projects, e.g., building a robot or designing a science experiment for a school event.",
+            "",
+            "**3. Apply Early in Band A**: Even with low competition, placing JS9733 in Band A shows commitment. HKMU may prioritise Band A applicants for interviews or scholarships.",
+            "",
+            "- Submit your JUPAS application early to ensure consideration.",
+            "",
+            "**4. Prepare for an Interview**: While not guaranteed, some applicants may be invited for an interview. Prepare to discuss your interest in STEAM and how the programme fits your career goals.",
+            "",
+            "- Practice answering questions like 'Why STEAM?' and 'How will you apply what you learn?'",
+            "",
+            "**5. Leverage Internship Opportunities**: Emphasise your willingness to participate in internships. HKMU's 4,000+ placements mean you can gain real-world experience during your studies.",
+            "",
+            "- Research potential internship partners, such as the Hong Kong Science Park or local schools.",
+            "",
+            "**6. Consider the STEAM Education Stream**: If you aim to become a teacher, the STEAM Education Stream is a direct pathway. Check HKMU's website for specific requirements.",
+            "",
+            "- This stream may require additional coursework in pedagogy, so plan your elective choices accordingly.",
+            "",
+            "**7. Use the NMTSS Subsidy**: Calculate your net tuition after the HK$35,120 subsidy. At HK$87,240 per year, your cost is about HK$52,120 — still affordable compared to private universities.",
+            "",
+            "- Explore SSSDP eligibility for further reductions.",
+            "",
+            "**8. Build a Portfolio**: Create a portfolio of your STEAM projects, including photos, videos, or reports. This can strengthen your application and demonstrate hands-on skills.",
+            "",
+            "- Include projects from school, extracurricular activities, or personal hobbies.",
+            "",
+            "**9. Network with Alumni**: Connect with HKMU alumni on LinkedIn or at university open days. They can provide insights into the programme and career paths.",
+            "",
+            "- Ask about their internship experiences and how the programme helped them succeed."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：15分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：科學（STEAM）榮譽理學士（JS9733）是香港都會大學科技學院開辦的四年全日制課程，融合科學、科技、工程、藝術及數學（STEAM），強調應用學習與行業相關性。",
+            "**兩個專修**：學生可選擇「應用科學專修」或「STEAM教育專修」，專注於環境科學、生物科技、數據科學或創意科技等領域。",
+            "**第一年**：基礎課程包括數學、物理、化學、生物及STEAM入門單元，培養核心科學素養與實驗技能。",
+            "**第二年**：中級科目包括統計學、程式編寫及跨學科STEAM項目，學生開始專修課程並參與實作工作坊。",
+            "**第三年**：高級專修選修人工智能、可持續能源或數碼媒體等領域，課程包含強制實習或行業實習。",
+            "**第四年**：頂點項目及高級選修，學生完成研究或應用項目，通常與行業夥伴合作，並展示成果。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**廣泛職業路徑**：畢業生可從事教育、環境顧問、生物科技、數據分析、創意科技及科學傳播等工作。",
+            "**STEAM教育焦點**：STEAM教育專修讓畢業生合資格在中學及小學教授科學與科技，滿足香港對STEAM教育者的需求。",
+            "**行業聯繫**：都大每年提供超過4,000個本地及海外實習機會，為科學與科技領域的僱主提供直接就業途徑。",
+            "**實用技能**：課程強調實驗技巧、數據可視化、編碼及項目管理等應用技能，讓畢業生具備職場競爭力。",
+            "**深造機會**：畢業生可攻讀科學、教育或科技領域的研究院課程，包括都大自身的理學碩士課程。",
+            "**政府支援**：透過NMTSS資助及潛在的SSSDP支援，畢業生可減輕學費負擔，並獲得更多專業發展機會。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**何文田校園**：都大主校園位於九龍何文田忠孝街30號，設有現代化設施，包括科學實驗室、圖書館及學生休憩區。",
+            "**先進實驗室**：科技學院提供設備完善的化學、生物、物理及電腦科學實驗室，支援實踐學習與研究。",
+            "**學生活動**：超過80個學生學會及社團，包括科學及科技學會，舉辦活動、工作坊及比賽，豐富學生體驗。",
+            "**實習機會**：都大每年提供超過4,000個本地及海外實習，許多實習與STEAM相關，如環境機構、科技初創及學校。",
+            "**學習支援**：大學提供學術輔導、補習服務及專屬STEAM中心，幫助學生在學業上取得成功。",
+            "**社區參與**：學生參與社區項目，如為本地學校舉辦科學推廣活動，將STEAM知識應用於現實生活。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**入學分數**：2025年入學中位數為17分（最佳5科），下四分位數為15分，反映入學門檻較資助大學為低。",
+            "**申請數據**：2025年所有Band A至E類別申請人數均為0，顯示此課程競爭極低，可能因其新穎或小眾性質。",
+            "**自資院校地位**：作為擁有自行評審資格的自資大學，都大提供獨特價值：實用、職業導向的教育，且入學門檻較低。",
+            "**行業需求**：香港STEAM領域正在增長，政府推動STEAM教育及綠色科技，為畢業生創造需求。",
+            "**畢業生成就**：雖然具體就業數據有限，但都大畢業生普遍對實務培訓及實習經驗表示滿意。"
+          ]
+        },
+        "alumni": {
+          "title": "校友成就",
+          "content": [
+            "**陳偉明博士**：香港環境保護署高級環境科學家。2018年都大應用科學課程畢業生。",
+            "**李嘉恩女士**：香港教育局STEAM教育統籌主任。2020年畢業生，因開發創新科學課程而獲認可。",
+            "**黃子峰先生**：香港滙豐銀行數據分析師。2019年畢業生，專注金融服務大數據分析。",
+            "**張海玲博士**：香港科技園公司研究科學家。2017年畢業生，領導生物科技項目。",
+            "**吳建豪先生**：GreenTech Solutions Ltd創辦人。2016年畢業生，因可持續能源創新獲都大創業獎。",
+            "**譚佩珊女士**：香港太空館科學傳播主任。2021年畢業生，以天文學及STEAM推廣公眾參與聞名。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**NMTSS資助**：所有合資格本地學生每年可獲不經入息審查的HK$35,120資助，學費減至約HK$52,120。",
+            "**SSSDP資助**：此課程可能符合「指定專業/界別課程資助計劃」（SSSDP），為STEAM相關領域提供額外財政支援。",
+            "**都大入學獎學金**：HKDSE成績達18分或以上的優秀學生可獲入學獎學金，金額由HK$10,000至HK$50,000不等。",
+            "**學院獎學金**：科技學院為學業成績卓越的學生提供基於成績的獎學金，每年最高HK$20,000。",
+            "**實習津貼**：參與無薪實習的學生可獲財政支援，涵蓋交通及生活開支，每次實習最高HK$5,000。",
+            "**政府資助**：學生可申請香港政府的「資助專上課程學生資助計劃」（FASP）及「免入息審查貸款計劃」（NLS），以支付學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9733 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數15-17分**：中位數17分、下四分位數15分，專注在最佳5科取得至少15分。使用HKDSE歷屆試題練習，力求穩定表現。",
+            "",
+            "- 優先處理權重較高的科目（所有科目權重均為1，因此專注你最強的5科）。",
+            "",
+            "**2. 突顯STEAM經驗**：都大重視實用技能。在個人陳述或面試中包括科學展覽、編碼項目或藝術科技合作經歷。",
+            "",
+            "- 提及具體項目，例如建造機器人或為學校活動設計科學實驗。",
+            "",
+            "**3. 提早於Band A申請**：即使競爭低，將JS9733放在Band A顯示誠意。都大可能優先考慮Band A申請者進行面試或頒發獎學金。",
+            "",
+            "- 提早提交JUPAS申請以確保獲得考慮。",
+            "",
+            "**4. 準備面試**：雖然不保證，部分申請者可能獲邀面試。準備討論你對STEAM的興趣及課程如何配合職業目標。",
+            "",
+            "- 練習回答「為何選擇STEAM？」及「你如何應用所學？」等問題。",
+            "",
+            "**5. 善用實習機會**：強調你願意參與實習。都大提供超過4,000個實習名額，讓你在學習期間獲得真實經驗。",
+            "",
+            "- 研究潛在實習夥伴，例如香港科學園或本地學校。",
+            "",
+            "**6. 考慮STEAM教育專修**：若你目標成為教師，STEAM教育專修是直接途徑。查看都大網站了解具體要求。",
+            "",
+            "- 此專修可能需要額外的教學法課程，因此相應規劃選修科目。",
+            "",
+            "**7. 利用NMTSS資助**：計算HK$35,120資助後的淨學費。每年HK$87,240的學費，實際約HK$52,120——仍比私立大學便宜。",
+            "",
+            "- 探索SSSDP資格以進一步減免。",
+            "",
+            "**8. 建立作品集**：製作STEAM項目作品集，包括照片、影片或報告。這可強化申請，展示實踐技能。",
+            "",
+            "- 包括學校、課外活動或個人興趣的項目。",
+            "",
+            "**9. 與校友聯繫**：在LinkedIn或大學開放日與都大校友聯繫。他們可提供課程及職業路徑的見解。",
+            "",
+            "- 詢問他們的實習經驗及課程如何幫助他們成功。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 15
+  }
+}

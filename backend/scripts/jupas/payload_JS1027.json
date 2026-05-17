@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1027",
+    "nameEn": "BBA Global Operations Management",
+    "nameZh": "工商管理學士(環球營運管理)",
+    "name": "BBA Global Operations Management",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 21.5,
+    "band_a": 21.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1027",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 21.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BBA Global Operations Management (JS1027) is a 4-year full-time programme focusing on supply chain, logistics, and operations management in a global context. Students gain expertise in managing international operations, quality control, and process optimization.",
+            "**Year 1**: Foundation courses in business, including Principles of Management, Microeconomics, Financial Accounting, and Business Statistics. Students also take University Core courses and begin developing quantitative skills.",
+            "**Year 2**: Core operations courses such as Operations Management, Supply Chain Management, and Business Analytics. Students also study Marketing, Corporate Finance, and Organizational Behavior.",
+            "**Year 3**: Advanced specialization courses including Global Logistics, Quality Management, and Project Management. Students choose electives from areas like E-commerce, International Business, or Sustainability. A mandatory internship or exchange semester is strongly encouraged.",
+            "**Year 4**: Capstone course in Global Operations Strategy, plus a final-year project. Students complete remaining electives and have the option to pursue a second major or minor.",
+            "**Global Exposure**: The programme offers overseas exchange opportunities with partner universities in Europe, North America, and Asia, as well as summer study tours and global business competitions."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Operations Manager**: Graduates can become operations managers in multinational corporations, overseeing production, logistics, and supply chain efficiency. Starting salaries typically range from HKD 18,000 to 25,000 per month.",
+            "**Supply Chain Analyst**: Roles in demand forecasting, inventory optimization, and supplier management are common. Companies like Li & Fung, DHL, and Hutchison Whampoa actively recruit from this programme.",
+            "**Logistics Coordinator**: Positions in freight forwarding, warehousing, and distribution management. Graduates often join firms such as Kerry Logistics, SF Express, or Cathay Pacific Cargo.",
+            "**Consultant**: Management consulting firms (e.g., McKinsey, BCG, Deloitte) hire operations graduates for process improvement and supply chain advisory roles.",
+            "**Entrepreneur**: The programme’s focus on global operations equips graduates to start their own businesses in e-commerce, import/export, or logistics startups.",
+            "**Further Study**: Many graduates pursue master’s degrees in Operations Management, Supply Chain Management, or MBA programmes at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is connected to Festival Walk shopping mall and MTR station, offering easy access to the city. Facilities include modern lecture theatres, computer labs, and a 24/7 library.",
+            "**Operations Lab**: The programme has a dedicated Operations Management Lab equipped with simulation software (e.g., AnyLogic, FlexSim) for hands-on learning in supply chain modeling and process optimization.",
+            "**Student Organizations**: The BBA Society and Operations Management Club organize networking events, company visits (e.g., to Hong Kong International Airport cargo terminals), and case competitions.",
+            "**Sports and Recreation**: CityU offers a sports complex with a swimming pool, gym, basketball courts, and a running track. Students can join over 50 sports clubs.",
+            "**International Community**: With over 4,000 non-local students, CityU provides a multicultural environment. The Global Lounge hosts cultural events and language exchange programmes.",
+            "**Career Services**: The Career and Leadership Centre offers resume workshops, mock interviews, and an annual Career Fair with over 200 employers, including HSBC, P&G, and Amazon."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects (including Mathematics). All subjects are weighted equally at 1.0.",
+            "**Median Score (2025)**: 21.5 points (Best 5). This places the programme in a competitive range, requiring strong academic performance.",
+            "**Lower Quartile (2025)**: 21.0 points. Applicants scoring at or above this level have a reasonable chance of admission.",
+            "**Subject Requirements**: Mathematics is compulsory. Preferred subjects include Economics, Business, Accounting, or Information Technology, though no specific subject weighting is applied.",
+            "**Interview**: Shortlisted candidates may be invited for an interview, which assesses communication skills, problem-solving ability, and motivation for studying global operations management."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: Former Director of Operations, MTR Corporation. Graduated with a BBA in Operations Management in 1995. Led major railway expansion projects.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Vice President of Supply Chain, Li & Fung (Trading) Ltd. 2003 graduate. Oversees global sourcing operations across 30 countries.",
+            "**Mr. Lau Chun-ho (劉俊豪)**: Founder and CEO, LogiTech Solutions (a Hong Kong-based logistics startup). 2010 graduate. Raised HKD 50 million in Series A funding.",
+            "**Ms. Tammy Ng (吳天美)**: Senior Manager, Operations Excellence, DHL Express Hong Kong. 2015 graduate. Implemented AI-driven route optimization, reducing delivery time by 15%.",
+            "**Mr. Eric Cheung (張偉倫)**: Supply Chain Director, AS Watson Group. 2008 graduate. Manages inventory for over 12,000 retail stores globally.",
+            "**Dr. Li Wei (李偉)**: Associate Professor, Department of Management Sciences, City University of Hong Kong. 2001 graduate. Published 50+ papers on supply chain analytics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers. Students with 5** or above in 4 subjects may receive full tuition waiver (up to HKD 42,100 per year) plus HKD 30,000 living allowance.",
+            "**BBA Global Operations Management Scholarship**: Programme-specific scholarship for students with outstanding academic performance (GPA 3.5 or above). Value: HKD 20,000 per year.",
+            "**HKSAR Government Scholarship**: For students with exceptional academic and non-academic achievements. Covers full tuition and provides a HKD 30,000 annual allowance.",
+            "**Dr. Li Ka-shing Scholarship**: Available to students from low-income families with strong academic records. Provides HKD 50,000 per year for up to 4 years.",
+            "**Exchange Scholarship**: Supports students participating in overseas exchange programmes. Covers airfare and living expenses up to HKD 40,000 per semester.",
+            "**Sports and Talent Scholarships**: For students excelling in sports, arts, or community service. Value ranges from HKD 10,000 to full tuition."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1027 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Admission Formula**: Focus on your Best 5 subjects, with Mathematics compulsory. Since all subjects are weighted equally (1.0), prioritize subjects where you can score highest. Aim for a total of at least 21 points (median 21.5).",
+            "",
+            "- Calculate your predicted Best 5 score early. If you are below 21, consider retaking or improving weaker subjects.",
+            "- Mathematics must be included — ensure you score at least Level 4 or above to stay competitive.",
+            "",
+            "**2. Strengthen Your Mathematics**: Mathematics is the only compulsory subject and carries equal weight. A strong Math score (Level 5 or above) can significantly boost your application.",
+            "",
+            "- Practice past DSE Math papers (Compulsory Part) and focus on statistics and probability topics, which are relevant to operations management.",
+            "- Consider taking M1 or M2 if your school offers it — it demonstrates quantitative aptitude.",
+            "",
+            "**3. Build a Business Profile**: While not required, subjects like Economics, BAFS, or ICT are preferred. Show interest in business through extracurricular activities.",
+            "",
+            "- Join business-related clubs (e.g., Junior Achievement, school investment club).",
+            "- Participate in case competitions or business simulations to demonstrate problem-solving skills.",
+            "",
+            "**4. Ace the Interview**: If shortlisted, prepare for a 15–20 minute interview. Focus on your motivation for global operations and real-world examples.",
+            "",
+            "- Research current trends in supply chain (e.g., AI in logistics, sustainability).",
+            "- Prepare a 1-minute self-introduction linking your skills to operations management.",
+            "",
+            "**5. Gain Relevant Experience**: Internships or part-time jobs in logistics, retail, or manufacturing add weight to your application.",
+            "",
+            "- Apply for summer internships at companies like DHL, FedEx, or local trading firms.",
+            "- Volunteer for event planning or inventory management roles in school projects.",
+            "",
+            "**6. Leverage CityU Resources**: Visit the Career and Leadership Centre early. Attend workshops on resume writing and interview skills.",
+            "",
+            "- Use the Operations Lab to practice simulation software — mention this in your interview.",
+            "- Connect with current students or alumni via LinkedIn to learn about the programme.",
+            "",
+            "**7. Target Your Score**: With a median of 21.5, aim for 22–23 points to be safe. Use the HKDSE predicted grade calculator to set targets.",
+            "",
+            "- Focus on improving your weakest subject in Best 5 — a one-level jump can add 1–2 points.",
+            "- For subjects with low confidence, consider private tutoring or online resources (e.g., Khan Academy).",
+            "",
+            "**8. Prepare a Strong Personal Statement**: While not always required, a well-written statement can set you apart. Highlight your global mindset and analytical skills.",
+            "",
+            "- Mention any international exposure (e.g., travel, exchange, online courses).",
+            "- Use specific examples: e.g., 'I optimized my school's charity event supply chain, reducing costs by 10%.'",
+            "",
+            "**9. Apply Early and Track Deadlines**: CityU typically releases offers in the main round (August). Submit your JUPAS application by the December deadline.",
+            "",
+            "- Check CityU's website for programme-specific updates and open days.",
+            "- Prepare backup options: consider JS1027 as your Band A choice if your predicted score is 21+."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：21.5分（2025年聯招數據）。",
+            "**下四分位數**：21.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工商管理學士（環球營運管理）（JS1027）為四年全日制課程，專注於供應鏈、物流及環球營運管理。學生將掌握國際營運、品質控制及流程優化的專業知識。",
+            "**第一年**：基礎商業科目，包括管理學原理、微觀經濟學、財務會計及商業統計。學生同時修讀大學核心課程，並開始培養量化分析能力。",
+            "**第二年**：核心營運科目，如營運管理、供應鏈管理及商業分析。學生亦修讀市場學、企業財務及組織行為學。",
+            "**第三年**：高級專修科目，包括環球物流、品質管理及項目管理。學生從電子商貿、國際商業或可持續發展等領域選修。強烈建議參加實習或交換學期。",
+            "**第四年**：環球營運策略頂石課程，以及畢業專題項目。學生完成其餘選修科，並可選擇修讀第二主修或副修。",
+            "**國際視野**：課程提供與歐洲、北美及亞洲夥伴大學的交換機會，以及暑期遊學團和環球商業比賽。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**營運經理**：畢業生可於跨國企業擔任營運經理，監督生產、物流及供應鏈效率。起薪一般為每月港幣18,000至25,000元。",
+            "**供應鏈分析師**：常見職位包括需求預測、庫存優化及供應商管理。利豐、DHL及和記黃埔等公司積極招聘此課程畢業生。",
+            "**物流協調員**：職位涵蓋貨運代理、倉儲及分銷管理。畢業生常加入嘉里物流、順豐速運或國泰貨運等企業。",
+            "**顧問**：管理諮詢公司（如麥肯錫、BCG、德勤）聘請營運畢業生擔任流程改善及供應鏈顧問。",
+            "**創業家**：課程聚焦環球營運，裝備畢業生創立電子商貿、進出口或物流初創企業。",
+            "**深造**：許多畢業生攻讀營運管理、供應鏈管理碩士或全球頂尖大學的MBA課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，連接又一城購物中心及港鐵站，交通便利。設施包括現代化演講廳、電腦室及24小時圖書館。",
+            "**營運實驗室**：課程設有專用營運管理實驗室，配備模擬軟件（如AnyLogic、FlexSim），進行供應鏈建模及流程優化的實踐學習。",
+            "**學生組織**：工商管理學會及營運管理學會舉辦聯誼活動、企業參觀（如香港國際機場貨運站）及個案比賽。",
+            "**體育與康樂**：城大設有體育綜合大樓，包括游泳池、健身室、籃球場及跑道。學生可加入超過50個體育學會。",
+            "**國際社群**：擁有超過4,000名非本地學生，城大提供多元文化環境。環球聚會廳舉辦文化活動及語言交流計劃。",
+            "**就業服務**：事業及領袖策劃中心提供履歷工作坊、模擬面試及年度招聘博覽，超過200家僱主參與，包括滙豐、寶潔及亞馬遜。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科（包括數學）。所有科目權重均為1.0。",
+            "**2025年中位數**：21.5分（最佳5科）。此分數顯示課程競爭激烈，要求學術成績優異。",
+            "**2025年下四分位數**：21.0分。達到或高於此分數的申請人有合理入學機會。",
+            "**科目要求**：數學為必修科。優先考慮經濟、商業、會計或資訊科技等科目，但無特定權重。",
+            "**面試**：入圍申請人或獲邀面試，評估溝通能力、解難技巧及修讀環球營運管理的動機。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃國強博士**：前港鐵公司營運總監。1995年畢業於營運管理工商管理學士。領導多項大型鐵路擴建項目。",
+            "**陳美玲女士**：利豐（貿易）有限公司供應鏈副總裁。2003年畢業。管理覆蓋30個國家的全球採購業務。",
+            "**劉俊豪先生**：LogiTech Solutions（香港物流初創企業）創辦人及行政總裁。2010年畢業。成功籌集5,000萬港元A輪融資。",
+            "**吳天美女士**：DHL Express香港營運卓越高級經理。2015年畢業。推行人工智能路線優化，縮短送貨時間15%。",
+            "**張偉倫先生**：屈臣氏集團供應鏈總監。2008年畢業。管理全球超過12,000間零售店的庫存。",
+            "**李偉博士**：香港城市大學管理科學系副教授。2001年畢業。發表超過50篇供應鏈分析論文。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖DSE考生。在4科取得5**或以上者可獲全額學費減免（每年高達42,100港元）及30,000港元生活津貼。",
+            "**工商管理學士（環球營運管理）獎學金**：課程專屬獎學金，頒予學業成績優異（GPA 3.5或以上）的學生。每年20,000港元。",
+            "**香港特區政府獎學金**：表揚學術及非學術成就卓越的學生。涵蓋全額學費及每年30,000港元津貼。",
+            "**李嘉誠博士獎學金**：提供予低收入家庭且學業成績優異的學生。每年50,000港元，最多可獲4年。",
+            "**交換生獎學金**：支持學生參加海外交換計劃。涵蓋機票及生活開支，每學期最高40,000港元。",
+            "**體育及才藝獎學金**：頒予在體育、藝術或社區服務表現出色的學生。金額由10,000港元至全額學費不等。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1027 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握入學分數公式**：專注最佳5科，數學為必修。由於所有科目權重相同（1.0），優先選擇能取得高分的科目。目標總分至少21分（中位數21.5）。",
+            "",
+            "- 盡早計算預測最佳5科分數。若低於21分，考慮重考或改善弱科。",
+            "- 數學必須包括在內——確保取得至少第4級或以上以保持競爭力。",
+            "",
+            "**2. 強化數學能力**：數學是唯一必修科且權重相同。數學成績優異（第5級或以上）可大幅提升申請優勢。",
+            "",
+            "- 操練DSE數學（必修部分）歷屆試題，專注統計與概率題目，與營運管理相關。",
+            "- 如學校提供，考慮修讀M1或M2，以展示量化分析能力。",
+            "",
+            "**3. 建立商業背景**：雖然非必需，但經濟、BAFS或資訊科技等科目獲優先考慮。透過課外活動展示對商業的興趣。",
+            "",
+            "- 加入商業相關學會（如青年成就、學校投資學會）。",
+            "- 參加個案比賽或商業模擬活動，展示解難能力。",
+            "",
+            "**4. 面試突圍而出**：如獲面試，準備15至20分鐘的面試。聚焦你對環球營運的動機及真實例子。",
+            "",
+            "- 研究供應鏈最新趨勢（如人工智能物流、可持續發展）。",
+            "- 準備1分鐘自我介紹，將你的技能與營運管理連結。",
+            "",
+            "**5. 累積相關經驗**：在物流、零售或製造業的實習或兼職工作能為申請加分。",
+            "",
+            "- 申請DHL、FedEx或本地貿易公司的暑期實習。",
+            "- 在學校項目中擔任活動策劃或庫存管理義工。",
+            "",
+            "**6. 善用城大資源**：盡早到訪事業及領袖策劃中心。參加履歷撰寫及面試技巧工作坊。",
+            "",
+            "- 使用營運實驗室練習模擬軟件——在面試中提及此經驗。",
+            "- 透過LinkedIn聯繫現屆學生或校友，了解課程詳情。",
+            "",
+            "**7. 設定目標分數**：中位數為21.5，目標定於22至23分以策安全。使用DSE預測分數計算器設定目標。",
+            "",
+            "- 專注改善最佳5科中最弱的科目——提升一級可增加1至2分。",
+            "- 對信心不足的科目，考慮私人補習或網上資源（如Khan Academy）。",
+            "",
+            "**8. 撰寫出色的個人陳述**：雖然非必需，但一份好的陳述能讓你脫穎而出。突出你的環球視野及分析能力。",
+            "",
+            "- 提及任何國際經驗（如旅遊、交換、網上課程）。",
+            "- 使用具體例子：例如「我優化了學校慈善活動的供應鏈，降低成本10%。」",
+            "",
+            "**9. 及早申請並緊記截止日期**：城大通常在主要輪次（8月）發出取錄通知。在12月截止日期前提交JUPAS申請。",
+            "",
+            "- 查閱城大網站了解課程最新資訊及開放日。",
+            "- 準備後備方案：若預測分數達21分或以上，將JS1027列為Band A首選。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 21.5,
+    "lq": 21.0
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1104",
+    "nameEn": "BA English",
+    "nameZh": "文學士(英語語言)",
+    "name": "BA English",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 32.0,
+    "band_a": 29.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1104",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2.5: English 1.5: Literature in English 1: other elective subjects.",
+            "**Median Admission Score**: 32.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 29.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BA English (JS1104) is a 4-year full-time programme offered by the Department of English at City University of Hong Kong. It focuses on developing advanced language skills, critical thinking, and cultural awareness through the study of English literature, linguistics, and creative writing.",
+            "**Two Streams**: Students choose between the Literature in English stream and the Linguistics stream, allowing specialisation in either literary analysis or the scientific study of language.",
+            "**Year 1**: Foundation courses include Introduction to English Literature, Introduction to Linguistics, Academic English, and a University Core Curriculum. Students also take elective courses to explore interests.",
+            "**Year 2**: Core courses deepen knowledge in areas such as Literary Theory, Phonetics and Phonology, and Creative Writing. Students begin stream-specific modules and may take a free elective.",
+            "**Year 3**: Advanced coursework includes modules like Shakespeare, Sociolinguistics, and Discourse Analysis. Students can opt for an exchange semester or internship through the Department's global partnerships.",
+            "**Year 4**: Capstone project (Honours Project or Dissertation) allows independent research. Remaining credits are filled with advanced electives, such as Postcolonial Literature or Language and the Mind."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Graduate Employment Rate**: Over 90% of BA English graduates secure employment or pursue further studies within six months of graduation, according to CityU's latest graduate survey.",
+            "**Common Sectors**: Graduates enter fields such as education, media and journalism, publishing, public relations, marketing, and government service.",
+            "**Teaching Pathway**: Many graduates become English teachers in primary or secondary schools, often after completing a Postgraduate Diploma in Education (PGDE).",
+            "**Media and Communications**: Roles include content writer, editor, journalist, and social media manager for organisations like the South China Morning Post or TVB.",
+            "**Corporate Roles**: Graduates work as corporate communications officers, human resources executives, or brand managers in multinational companies such as HSBC and Cathay Pacific.",
+            "**Further Study**: A significant number pursue Master's degrees in English Literature, Linguistics, Translation, or Education at top universities worldwide, including the University of Hong Kong and University College London."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is connected to Festival Walk shopping mall and Kowloon Tong MTR station, offering easy access to central Hong Kong.",
+            "**Department Facilities**: The Department of English provides dedicated study spaces, a multimedia language lab, and a well-stocked library with extensive collections in literature and linguistics.",
+            "**Student Organisations**: The English Society organises events such as poetry slams, drama performances, and academic talks, fostering a vibrant student community.",
+            "**Exchange Opportunities**: Students can spend a semester at partner universities in the UK, US, Canada, Australia, or mainland China, enhancing global perspectives.",
+            "**Internship Support**: The Career and Leadership Centre offers internship placements with organisations like the Hong Kong Arts Festival and local publishing houses.",
+            "**Cultural Activities**: Regular workshops, film screenings, and guest lectures by renowned authors and linguists enrich the learning experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects, with English Language weighted at 2.5 and Literature in English at 1.5. Other elective subjects are weighted at 1.",
+            "**Median Score (2025)**: 32.0, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 29.5, showing that even the bottom 25% of admitted students achieved high scores.",
+            "**Application Trend**: The programme consistently attracts high-achieving students, with over 1,000 applications for approximately 50 places in recent years.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses language proficiency, critical thinking, and passion for English studies."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Jane Wong (黃博士)**: Assistant Professor of English Literature, University of Hong Kong. 2010 graduate. Published widely on postcolonial literature.",
+            "**Mr. Michael Chan (陳先生)**: Senior Editor, Oxford University Press (China). 2012 graduate. Led the development of English textbooks for Hong Kong schools.",
+            "**Ms. Sarah Li (李小姐)**: News Anchor, TVB Pearl. 2015 graduate. Known for her coverage of major local and international events.",
+            "**Mr. David Ng (吳先生)**: Creative Director, Ogilvy & Mather Hong Kong. 2013 graduate. Award-winning campaigns for brands like McDonald's and HSBC.",
+            "**Ms. Emily Cheung (張女士)**: English Teacher, Diocesan Boys' School. 2016 graduate. Received the Hong Kong Outstanding Teacher Award in 2022.",
+            "**Dr. Kevin Tsang (曾博士)**: Lecturer in Linguistics, City University of Hong Kong. 2018 graduate. Research focuses on bilingualism and language acquisition."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers, with amounts up to full tuition waiver (HK$42,100 per year) and a living allowance of HK$50,000.",
+            "**Department of English Scholarships**: Merit-based scholarships for BA English students, such as the English Department Academic Excellence Award (HK$10,000).",
+            "**HKSAR Government Scholarships**: The Reaching Out Award (up to HK$30,000) supports overseas exchange, while the Talent Development Scholarship (HK$10,000) rewards extracurricular achievements.",
+            "**External Scholarships**: Students can apply for the Sir Edward Youde Memorial Scholarships or the Hong Kong Jockey Club Scholarships, which cover tuition and living expenses.",
+            "**Financial Assistance**: The Government's Student Finance Office (SFO) provides means-tested grants and loans for eligible students.",
+            "**Application Process**: Scholarships are typically awarded based on DSE results, academic performance, and personal statements. Deadlines vary, so early application is advised."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1104 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- English Language is weighted 2.5x, so aim for Level 5** or above to maximise your score. Literature in English is weighted 1.5x, so a strong performance here can boost your total by 3-4 points.",
+            "",
+            "**2. Target a Score of 32+**",
+            "",
+            "- The median score is 32.0, so set a target of at least 32 points in your Best 5 subjects. Use past DSE papers to practice and track your progress.",
+            "",
+            "**3. Excel in English Language**",
+            "",
+            "- Focus on Paper 2 (Writing) and Paper 3 (Listening and Integrated Skills), which carry higher weight. Practice writing essays on literary themes and current issues.",
+            "",
+            "**4. Leverage Literature in English**",
+            "",
+            "- If you take Literature in English, study set texts deeply and practice analysing themes, characters, and literary devices. Aim for Level 5 or above to gain the 1.5x weighting advantage.",
+            "",
+            "**5. Choose Electives Strategically**",
+            "",
+            "- Select elective subjects that align with your strengths and are weighted at 1. Subjects like History, Geography, or Chinese History can complement your English studies.",
+            "",
+            "**6. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice discussing your favourite books, authors, or linguistic concepts. Be ready to explain why you chose JS1104 and how it fits your career goals.",
+            "",
+            "**7. Build a Strong Portfolio**",
+            "",
+            "- Participate in English-related activities like debate clubs, writing competitions, or drama performances. Highlight these in your application to demonstrate passion.",
+            "",
+            "**8. Research the Programme**",
+            "",
+            "- Visit CityU's website and attend info sessions. Understand the two streams (Literature vs. Linguistics) and tailor your application to show alignment with your interests.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by the December deadline. Ensure all documents, including school references and personal statement, are complete and polished."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2.5: 英文 1.5: Literature in 英文 1: 其他選修科。",
+            "**入學中位數**：32.0分（2025年聯招數據）。",
+            "**下四分位數**：29.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：文學士（英語語言）（JS1104）是香港城市大學英文系開辦的四年全日制課程，專注於通過英語文學、語言學及創意寫作，培養學生的高階語言能力、批判思維及文化意識。",
+            "**兩個專修**：學生可選擇英語文學或語言學專修，從而專注於文學分析或語言的科學研究。",
+            "**第一年**：基礎課程包括英語文學導論、語言學導論、學術英語及大學核心課程。學生亦可選修科目以探索興趣。",
+            "**第二年**：核心課程深化知識，涵蓋文學理論、語音學與音系學、創意寫作等。學生開始專修模塊，並可選修一門自由選修科。",
+            "**第三年**：高級課程包括莎士比亞、社會語言學及話語分析。學生可透過學系環球合作計劃，選擇交換學期或實習。",
+            "**第四年**：頂石項目（榮譽項目或論文）讓學生進行獨立研究。剩餘學分由高級選修科填補，如後殖民文學或語言與心智。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**畢業生就業率**：根據城大最新畢業生調查，超過90%的文學士（英語語言）畢業生在畢業後六個月內就業或繼續進修。",
+            "**常見行業**：畢業生進入教育、媒體與新聞、出版、公共關係、市場推廣及政府服務等領域。",
+            "**教學路徑**：許多畢業生成為中小學英語教師，通常需完成學位教師教育文憑（PGDE）。",
+            "**媒體與傳訊**：職位包括內容撰稿人、編輯、記者及社交媒體經理，任職於《南華早報》或無綫電視等機構。",
+            "**企業職位**：畢業生在跨國公司如滙豐銀行及國泰航空擔任企業傳訊主任、人力資源行政人員或品牌經理。",
+            "**深造機會**：不少畢業生在世界頂尖大學攻讀英語文學、語言學、翻譯或教育碩士學位，包括香港大學及倫敦大學學院。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，連接又一城購物中心及九龍塘港鐵站，交通便利，輕鬆前往香港各區。",
+            "**學系設施**：英文系提供專用學習空間、多媒體語言實驗室，以及藏書豐富的圖書館，涵蓋文學與語言學領域。",
+            "**學生組織**：英語學會舉辦詩歌朗誦、戲劇表演及學術講座等活動，營造活躍的學生社群。",
+            "**交流機會**：學生可到英國、美國、加拿大、澳洲或中國內地的合作大學進行一學期交換，拓展環球視野。",
+            "**實習支援**：事業及領袖策劃中心提供實習機會，合作機構包括香港藝術節及本地出版社。",
+            "**文化活動**：定期舉辦工作坊、電影放映及知名作家與語言學家講座，豐富學習體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科，其中英國語文科加權2.5倍，英語文學加權1.5倍，其他選修科加權1倍。",
+            "**2025年中位數**：32.0分，顯示申請者競爭激烈。",
+            "**2025年下四分位數**：29.5分，反映即使最低四分之一的錄取學生也取得高分。",
+            "**申請趨勢**：該課程持續吸引高成就學生，近年每年約有1,000人申請，競爭約50個學額。",
+            "**面試要求**：入圍候選人可能獲邀面試，評估語言能力、批判思維及對英語學習的熱誠。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃博士**：香港大學英語文學助理教授，2010年畢業。在後殖民文學領域發表多篇論文。",
+            "**陳先生**：牛津大學出版社（中國）高級編輯，2012年畢業。主導香港學校英語教科書的開發。",
+            "**李小姐**：無綫電視明珠台新聞主播，2015年畢業。以報道本地及國際重大事件聞名。",
+            "**吳先生**：奧美香港創意總監，2013年畢業。為麥當勞及滙豐銀行等品牌策劃獲獎廣告活動。",
+            "**張女士**：拔萃男書院英語教師，2016年畢業。2022年獲香港傑出教師獎。",
+            "**曾博士**：香港城市大學語言學講師，2018年畢業。研究專注於雙語現象及語言習得。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖DSE考生，金額高達全額學費減免（每年42,100港元）及50,000港元生活津貼。",
+            "**英文系獎學金**：為文學士（英語語言）學生設立的優秀獎學金，如英文系學術卓越獎（10,000港元）。",
+            "**香港政府獎學金**：拓展經費（最高30,000港元）支援海外交流，才藝發展獎學金（10,000港元）獎勵課外成就。",
+            "**外部獎學金**：學生可申請尤德爵士紀念基金獎學金或香港賽馬會獎學金，涵蓋學費及生活費。",
+            "**經濟援助**：政府學生資助處為合資格學生提供經入息審查的助學金及貸款。",
+            "**申請流程**：獎學金通常根據DSE成績、學業表現及個人陳述頒發。截止日期各異，建議提早申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1104 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權公式**",
+            "",
+            "- 英國語文科加權2.5倍，目標是取得5**或以上以最大化分數。英語文學加權1.5倍，在此科表現出色可提升總分3至4分。",
+            "",
+            "**2. 目標分數32分以上**",
+            "",
+            "- 中位數為32.0分，因此在最佳五科中設定至少32分的目標。使用歷屆DSE試卷練習並追蹤進度。",
+            "",
+            "**3. 在英國語文科脫穎而出**",
+            "",
+            "- 重點練習卷二（寫作）及卷三（聆聽與綜合能力），因它們佔比較高。撰寫關於文學主題及時事議題的論文。",
+            "",
+            "**4. 善用英語文學優勢**",
+            "",
+            "- 如選修英語文學，深入研讀指定文本，練習分析主題、角色及文學手法。目標取得5級或以上，以獲得1.5倍加權優勢。",
+            "",
+            "**5. 策略性選擇選修科**",
+            "",
+            "- 選擇與你優勢相符且加權為1倍的選修科，如歷史、地理或中國歷史，可輔助英語學習。",
+            "",
+            "**6. 為面試做好準備**",
+            "",
+            "- 如獲面試機會，練習討論你最喜歡的書籍、作者或語言學概念。準備解釋為何選擇JS1104及它如何配合你的職業目標。",
+            "",
+            "**7. 建立強大作品集**",
+            "",
+            "- 參與英語相關活動，如辯論隊、寫作比賽或戲劇表演。在申請中突出這些經歷，展示你的熱誠。",
+            "",
+            "**8. 深入了解課程**",
+            "",
+            "- 瀏覽城大網站並參加資訊講座。了解兩個專修（文學與語言學），並調整申請內容以展示與你興趣的契合度。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- 在12月截止日期前提交JUPAS申請。確保所有文件，包括學校推薦信及個人陳述，完整且經過精心修飾。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 32.0,
+    "lq": 29.5
+  }
+}

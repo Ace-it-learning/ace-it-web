@@ -21,6 +21,8 @@ const TTSService = require('../services/TTSService');
 const CacheService = require('../services/CacheService');
 const OcrService = require('../services/OcrService');
 const TutorResponseService = require('../services/TutorResponseService');
+const JupasProgrammeService = require('../services/JupasProgrammeService');
+const QuestionBankStore = require('../services/QuestionBankStore');
 const { requireResolvedUid } = require('../middleware/requireResolvedUid');
 
 // Prompts & Config
@@ -309,15 +311,25 @@ Important:
                     promptOverride = `SYSTEM INSTRUCTION: Returning student. (Context: Level ${pContext?.level || 1}).`;
                 }
 
+                // Always derive dreamSubject from first dream program (JUPAS programmes are source of truth)
+                let dreamSubject = "University";
+                if (user?.dreamPrograms && Array.isArray(user.dreamPrograms) && user.dreamPrograms.length > 0) {
+                    const first = user.dreamPrograms[0];
+                    dreamSubject = first.name || first.title || first.label || first.programmeName || 'University';
+                }
+
                 let systemPrompt = `${GLOBAL_BASE_RULES}\n\n${persona.prompt}\n\n${AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace}`;
                 systemPrompt = systemPrompt
                     .replace(/{{userName}}/g, (user?.displayName || "Student"))
                     .replace(/{{agentName}}/g, persona.name)
-                    .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"))
+                    .replace(/{{DREAM_SUBJECT}}/g, dreamSubject)
                     .replace(/{{INSIGHT_PACKAGE}}/g, UserProfileService.formatInsightsForPrompt(pContext));
                 if (promptOverride) systemPrompt += `\n\n${promptOverride}`;
                 if (uid !== 'guest' && user) {
-                    systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${UserProfileService.formatProfileAdmissionsBlock(user)}`;
+                    const profileBlock = UserProfileService.formatProfileAdmissionsBlock(user);
+                    if (profileBlock) {
+                        systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${profileBlock}`;
+                    }
                 }
 
                 const result = await GenerativeAIService.generateContent("Hello!", {
@@ -407,13 +419,84 @@ Important:
         // Tiered system prompt assembly. We track which optional sections
         // were attached so telemetry can later attribute cost shifts.
         const tierFlags = ['core'];
+        // Always derive dreamSubject from first dream program (JUPAS programmes are source of truth)
+        let dreamSubject = "University";
+        if (user?.dreamPrograms && Array.isArray(user.dreamPrograms) && user.dreamPrograms.length > 0) {
+            const first = user.dreamPrograms[0];
+            dreamSubject = first.name || first.title || first.label || first.programmeName || 'University';
+        }
+
         let systemPrompt = `${GLOBAL_BASE_RULES}\n\n${persona.prompt}\n\n${AGENT_PROMPTS[agentId] || AGENT_PROMPTS.ace}`;
         systemPrompt = systemPrompt
             .replace(/{{userName}}/g, (user?.displayName || "Student"))
             .replace(/{{agentName}}/g, persona.name)
-            .replace(/{{DREAM_SUBJECT}}/g, (user?.dreamSubject || "University"))
+            .replace(/{{DREAM_SUBJECT}}/g, dreamSubject)
             .replace(/{{INSIGHT_PACKAGE}}/g, UserProfileService.formatInsightsForPrompt(pContext));
         systemPrompt += `\n${TutorResponseService.buildTutorContractInstruction(agentId)}`;
+
+        // Inject authoritative student profile EARLY so it doesn't get "lost in the middle"
+        if (uid !== 'guest' && user) {
+            const profileBlock = UserProfileService.formatProfileAdmissionsBlock(user);
+            if (profileBlock) {
+                systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${profileBlock}`;
+                tierFlags.push('profile_admissions');
+            }
+        }
+
+        // --- DYNAMIC DB LOOKUPS (injected after profile, before RAG) ---
+        // Ace Sir: fetch full JUPAS programme details for the student's dream programmes
+        if (agentId === 'ace' && user?.dreamPrograms && user.dreamPrograms.length > 0) {
+            try {
+                const topPrograms = user.dreamPrograms.slice(0, 5);
+                const programmeDetails = [];
+                for (const prog of topPrograms) {
+                    const code = prog.code || prog.programmeCode || prog.jupasCode;
+                    if (!code) continue;
+                    const [summary, details] = await Promise.all([
+                        JupasProgrammeService.getProgrammeByCodeFresh(code).catch(() => null),
+                        JupasProgrammeService.getProgrammeDetails(code).catch(() => null)
+                    ]);
+                    if (summary) {
+                        const detailText = details
+                            ? `Overview: ${details.overviewEn || details.overviewZh || ''}\nAdmission: ${details.admissionEn || details.admissionZh || ''}\nCareer: ${details.careerEn || details.careerZh || ''}`
+                            : '';
+                        programmeDetails.push(
+                            `--- ${summary.nameEn || summary.name || code} (${code}) ---\n` +
+                            `University: ${summary.university || ''}\n` +
+                            `Faculty: ${summary.faculty || ''}\n` +
+                            `Median: ${summary.median || ''}\n` +
+                            (detailText ? detailText + '\n' : '')
+                        );
+                    }
+                }
+                if (programmeDetails.length) {
+                    systemPrompt += `\n### JUPAS PROGRAMME DETAILS (FROM DATABASE)\n${programmeDetails.join('\n')}\nUse the above programme details when answering questions about specific programmes. If a student asks about a programme not listed here, you may search online.`;
+                    tierFlags.push('jupas_details');
+                }
+            } catch (e) {
+                console.warn('[chatRoutes] JUPAS detail lookup failed:', e.message);
+            }
+        }
+
+        // English tutor: fetch relevant quest questions from question bank when student asks about specific quests
+        if (agentId === 'english' && effectiveMessage) {
+            try {
+                const questMatch = effectiveMessage.match(/(?:quest|question|mission|mock)\s*[#]?\s*(\d+)/i);
+                if (questMatch) {
+                    const questId = questMatch[1];
+                    const quest = await QuestionBankStore.getById(questId).catch(() => null);
+                    if (quest) {
+                        const qText = quest.question_text_en || quest.question_text_zh || quest.question || quest.title || '';
+                        const qAnswer = quest.answer || quest.model_answer || quest.correct_answer || '';
+                        const qExplanation = quest.explanation || quest.solution_steps?.join('\n') || '';
+                        systemPrompt += `\n### REFERENCE QUESTION (FROM DATABASE — ID: ${questId})\nQuestion: ${qText}\n${qAnswer ? `Answer: ${qAnswer}\n` : ''}${qExplanation ? `Explanation: ${qExplanation}\n` : ''}Use the above official question data when helping the student. Do not make up different questions or answers.`;
+                        tierFlags.push('quest_ref');
+                    }
+                }
+            } catch (e) {
+                console.warn('[chatRoutes] Quest lookup failed:', e.message);
+            }
+        }
 
         if (effectiveMessage.includes('[SYSTEM: PENDING_COMPLETION_SUMMARY')) {
             systemPrompt += `\n### PROACTIVE DASHBOARD SUMMARY MODE
@@ -522,9 +605,11 @@ ${clipped}`;
             tierFlags.push('windowed');
         }
 
+        // STUDENT PROFILE is now injected earlier in the prompt (right after core persona)
+        // to avoid "lost in the middle" effect. The block below is kept as a lightweight
+        // reminder so the model sees it again near the end of a very long prompt.
         if (uid !== 'guest' && user) {
-            systemPrompt += `\n### STUDENT PROFILE (FROM ACCOUNT — DO NOT ASK TO RE-ENTER DATA BELOW)\n${UserProfileService.formatProfileAdmissionsBlock(user)}`;
-            tierFlags.push('profile_admissions');
+            systemPrompt += `\n[REMINDER] The student's current dream subjects, grades, and intended study are defined in the STUDENT PROFILE block near the top of this prompt. If earlier conversation turns mention different subjects or grades, ignore them.`;
         }
 
         // Build the content array, attaching the image (if any) to the last

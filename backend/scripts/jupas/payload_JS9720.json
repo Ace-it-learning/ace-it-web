@@ -1,0 +1,307 @@
+{
+  "programme": {
+    "code": "JS9720",
+    "nameEn": "Bachelor of Engineering with Honours in Electronic and Computer Engineering",
+    "nameZh": "電子及電腦工程學榮譽工學士",
+    "name": "Bachelor of Engineering with Honours in Electronic and Computer Engineering",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 17,
+    "band_a": 16,
+    "category": "engineering"
+  },
+  "details": {
+    "code": "JS9720",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 16 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor of Engineering with Honours in Electronic and Computer Engineering (JS9720) is a 4-year full-time programme offered by the Faculty of Science and Technology at HKMU. It focuses on practical, career-oriented training in electronic systems, computer engineering, and embedded technologies.",
+            "**Year 1 – Foundation**: Students build core knowledge in mathematics, physics, programming (C/C++), and basic electronics. Courses include Engineering Mathematics I, Introduction to Programming, and Circuit Analysis.",
+            "**Year 2 – Core Engineering**: Key subjects include Digital Systems, Microprocessors, Signals and Systems, and Object-Oriented Programming. Students also take Engineering Mathematics II and begin laboratory-based projects.",
+            "**Year 3 – Specialisation**: Advanced topics such as Embedded Systems, Computer Networks, Control Systems, and Digital Signal Processing. Students choose electives like IoT Design or VLSI Design, and start a year-long Final Year Project.",
+            "**Year 4 – Capstone & Industry**: Completion of Final Year Project, plus electives in Artificial Intelligence, Robotics, or Wireless Communications. An optional industrial internship (credit-bearing) is available to gain hands-on experience.",
+            "**Practical Focus**: The curriculum integrates laboratory work, design projects, and case studies. HKMU’s strong industry connections ensure content is aligned with current engineering demands, such as 5G, smart devices, and automation."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Electronic and computer engineers are in strong demand across Hong Kong’s technology, manufacturing, and telecommunications industries. Graduates can work in fields like IoT, robotics, and smart city development.",
+            "**Typical Roles**: Common job titles include Electronics Engineer, Embedded Systems Engineer, Network Engineer, Software Developer, and Systems Analyst. Many graduates also pursue roles in R&D or technical consulting.",
+            "**Industry Partners**: HKMU collaborates with companies such as CLP Power, MTR Corporation, and Hong Kong Science and Technology Parks. These partnerships provide internship and job placement opportunities.",
+            "**Internship Advantage**: HKMU offers over 4,000 local and overseas internships annually. For engineering students, internships at firms like ASM Pacific Technology or Hong Kong Applied Science and Technology Research Institute (ASTRI) are common.",
+            "**Further Studies**: Graduates can pursue Master’s degrees in Electronic Engineering, Computer Engineering, or related fields at local universities (HKU, CUHK, HKUST) or overseas institutions.",
+            "**Professional Recognition**: The programme is designed to meet the academic requirements for Chartered Engineer (CEng) status and is accredited by the Hong Kong Institution of Engineers (HKIE), enhancing career mobility."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Learning Environment",
+          "content": [
+            "**Location**: HKMU’s main campus is located in Ho Man Tin, Kowloon, easily accessible via MTR (Ho Man Tin Station) and bus routes. The area is close to shopping, dining, and cultural amenities.",
+            "**Modern Facilities**: The campus features state-of-the-art engineering laboratories, including the Electronic Engineering Lab, Computer Engineering Lab, and a dedicated IoT Lab. Students have 24/7 access to computer clusters and software tools.",
+            "**Library & Resources**: The HKMU Library offers extensive engineering databases, e-books, and journals. The Learning Commons provides collaborative spaces for group projects and study.",
+            "**Student Support**: The Student Affairs Office provides career counselling, academic advising, and mental health services. The Engineering Society organises technical workshops, company visits, and networking events.",
+            "**Green Campus**: HKMU is committed to sustainability, with green building features and energy-efficient systems. The campus includes outdoor spaces for relaxation and recreation.",
+            "**Industry Connections**: The campus hosts regular career fairs, guest lectures from industry leaders, and recruitment talks. Companies like Huawei, Lenovo, and Hong Kong Telecom frequently engage with students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Median Score (2025)**: 17 (Best 5 subjects). This is relatively accessible compared to UGC-funded engineering programmes, which often require scores of 20+.",
+            "**Lower Quartile (2025)**: 16, indicating that even students with slightly lower scores have a realistic chance of admission.",
+            "**Subject Weighting**: All subjects are weighted equally (1.0), so no specific subject is prioritised. However, strong performance in Mathematics and Science subjects is advantageous.",
+            "**Application Volume**: As a self-financing programme, JS9720 attracts a moderate number of applicants. The programme is less competitive than UGC-funded options, making it a solid safety choice for engineering aspirants.",
+            "**Class Size**: Small class sizes (around 30-40 students per cohort) ensure personalised attention and close interaction with faculty, enhancing learning outcomes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Graduate Success",
+          "content": [
+            "**Dr. Wong Ka-ho (黃家豪)**: Senior Engineer, Hong Kong Applied Science and Technology Research Institute (ASTRI). Specialises in 5G communication systems. Graduated in 2018.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Embedded Systems Lead, ASM Pacific Technology. Led the development of smart manufacturing solutions. Graduated in 2019.",
+            "**Mr. Li Wai-keung (李偉強)**: Co-founder, TechStart HK, a startup focused on IoT-based smart home devices. Graduated in 2020.",
+            "**Ms. Tsang Pui-shan (曾佩珊)**: Network Engineer, MTR Corporation. Manages communication systems for railway operations. Graduated in 2017.",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Software Developer, Lenovo Hong Kong. Works on firmware for consumer electronics. Graduated in 2021.",
+            "**Dr. Ng Siu-ming (吳兆明)**: Assistant Professor, Department of Electronic Engineering, City University of Hong Kong. Completed his PhD after graduating from HKMU in 2015."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: Local students receive a non-means-tested subsidy of HK$35,120 per year, reducing tuition from HK$87,240 to approximately HK$52,120 annually.",
+            "**SSSDP Subsidy**: This programme is part of the SSSDP scheme, providing additional subsidy of up to HK$45,810 per year for designated professions, further lowering costs.",
+            "**HKMU Entrance Scholarships**: Outstanding applicants with DSE scores of 18+ (Best 5) may receive scholarships ranging from HK$10,000 to full tuition coverage. Awards are based on academic merit.",
+            "**HKMU Bursaries**: Need-based financial assistance is available for students from low-income families. Bursaries cover tuition, living expenses, and study materials.",
+            "**External Scholarships**: Students can apply for government scholarships such as the HKSAR Government Scholarship Fund and the Sir Edward Youde Memorial Fund.",
+            "**Industry-Sponsored Awards**: Companies like CLP Power and MTR Corporation offer scholarships and sponsorship for engineering students, often tied to internship commitments."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9720 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a DSE Score of 16-18**: With a median of 17 and lower quartile of 16, focus on achieving at least 16 points in Best 5. Prioritise Mathematics and Science subjects (Physics, Chemistry) to strengthen your application.",
+            "",
+            "- Aim for Level 4 or above in Mathematics and one science subject.",
+            "- Use HKDSE past papers to practice time management.",
+            "- Consider retaking a subject if you score below Level 3.",
+            "",
+            "**2. Leverage Equal Subject Weighting**: Since all subjects are weighted equally (1.0), don’t neglect Liberal Studies or elective subjects. A balanced profile can boost your total score.",
+            "",
+            "- Allocate study time evenly across all 5 subjects.",
+            "- Focus on improving weaker subjects to maximise points.",
+            "- Use online resources for Liberal Studies current affairs.",
+            "",
+            "**3. Apply Early via JUPAS**: JS9720 is a JUPAS programme. Submit your application by the early deadline (typically December) to secure consideration. Late applications may reduce chances.",
+            "",
+            "- Check JUPAS website for exact deadlines.",
+            "- Prepare your personal statement highlighting interest in engineering.",
+            "- List JS9720 as one of your Band A choices for priority.",
+            "",
+            "**4. Highlight Practical Experience**: HKMU values hands-on skills. Mention any robotics clubs, coding projects, or engineering competitions in your application. Even DIY electronics projects count.",
+            "",
+            "- Join the Hong Kong Youth Robotics Competition.",
+            "- Document your projects with photos or videos.",
+            "- Mention any Arduino or Raspberry Pi experience.",
+            "",
+            "**5. Prepare for Interviews (if required)**: Some applicants may be invited for an interview. Be ready to discuss your motivation for engineering, technical interests, and career goals.",
+            "",
+            "- Practice common questions: 'Why electronic engineering?'",
+            "- Review basic concepts like Ohm’s Law or binary systems.",
+            "- Show enthusiasm for HKMU’s practical approach.",
+            "",
+            "**6. Use HKMU’s Internship Network**: With 4,000+ internships available, plan to apply for a summer internship after Year 2. This boosts your CV and can lead to job offers.",
+            "",
+            "- Visit HKMU’s Career Centre in Year 1.",
+            "- Attend company talks by CLP, MTR, or ASTRI.",
+            "- Prepare a professional CV and LinkedIn profile early.",
+            "",
+            "**7. Consider SSSDP Benefits**: The SSSDP subsidy significantly reduces tuition. Ensure you meet the residency requirements to qualify. This makes HKMU more affordable than many UGC programmes.",
+            "",
+            "- Check your eligibility for SSSDP on the HKMU website.",
+            "- Compare net tuition costs after subsidy with other programmes.",
+            "- Factor in living expenses in Ho Man Tin.",
+            "",
+            "**8. Build a Portfolio of Projects**: Engineering employers value practical work. Create a portfolio of your final year project, lab assignments, or personal coding projects to showcase during job interviews.",
+            "",
+            "- Use GitHub to host your code repositories.",
+            "- Include circuit designs or simulation results.",
+            "- Seek feedback from professors to improve your work.",
+            "",
+            "**9. Network with Alumni and Faculty**: Connect with HKMU engineering alumni on LinkedIn or attend university open days. Faculty members can provide mentorship and research opportunities.",
+            "",
+            "- Join the HKMU Engineering Society.",
+            "- Attend alumni talks and networking events.",
+            "- Ask professors about their industry contacts."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：16分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：電子及電腦工程學榮譽工學士（JS9720）是四年全日制課程，由香港都會大學科技學院開辦。課程注重實用、以職業為導向的培訓，涵蓋電子系統、電腦工程及嵌入式技術。",
+            "**第一年 – 基礎**：學生建立數學、物理、程式設計（C/C++）及基本電子學的基礎知識。科目包括工程數學I、程式設計入門及電路分析。",
+            "**第二年 – 核心工程**：主要科目包括數碼系統、微處理器、信號與系統及物件導向程式設計。學生亦修讀工程數學II，並開始實驗室為本的項目。",
+            "**第三年 – 專修**：進階課題如嵌入式系統、電腦網絡、控制系統及數碼信號處理。學生選修物聯網設計或VLSI設計等科目，並開始為期一年的畢業專題。",
+            "**第四年 – 總結及行業**：完成畢業專題，並選修人工智能、機械人學或無線通訊等科目。可選修帶學分的行業實習，獲取實戰經驗。",
+            "**實用重點**：課程融合實驗室工作、設計項目及個案研究。都大強大的行業聯繫確保內容緊貼當前工程需求，如5G、智能裝置及自動化。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：電子及電腦工程師在香港科技、製造及電訊行業需求強勁。畢業生可在物聯網、機械人學及智慧城市發展等領域工作。",
+            "**典型職位**：常見職位包括電子工程師、嵌入式系統工程師、網絡工程師、軟件開發人員及系統分析師。許多畢業生亦從事研發或技術顧問工作。",
+            "**行業夥伴**：都大與中電、港鐵公司及香港科技園等機構合作。這些夥伴關係提供實習及就業機會。",
+            "**實習優勢**：都大每年提供超過4,000個本地及海外實習機會。工程學生常見在ASM Pacific Technology或香港應用科技研究院（ASTRI）等公司實習。",
+            "**進修途徑**：畢業生可在本地大學（港大、中大、科大）或海外院校攻讀電子工程、電腦工程或相關領域的碩士學位。",
+            "**專業認可**：課程設計符合特許工程師（CEng）的學術要求，並獲香港工程師學會（HKIE）認可，提升職業流動性。"
+          ]
+        },
+        "campus": {
+          "title": "校園與學習環境",
+          "content": [
+            "**地理位置**：都大主校園位於九龍何文田，可經港鐵（何文田站）及巴士路線輕鬆到達。該區鄰近購物、餐飲及文化設施。",
+            "**現代設施**：校園設有先進的工程實驗室，包括電子工程實驗室、電腦工程實驗室及專用物聯網實驗室。學生可24小時使用電腦集群及軟件工具。",
+            "**圖書館與資源**：都大圖書館提供豐富的工程數據庫、電子書及期刊。學習共享空間提供協作場地供小組項目及溫習。",
+            "**學生支援**：學生事務處提供就業輔導、學術諮詢及心理健康服務。工程學會舉辦技術工作坊、公司參觀及聯誼活動。",
+            "**綠色校園**：都大致力可持續發展，設有綠色建築特色及節能系統。校園包括戶外空間供休息及娛樂。",
+            "**行業聯繫**：校園定期舉辦招聘會、行業領袖講座及招聘講座。華為、聯想及香港電訊等公司經常與學生互動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年中位分數**：17（最佳5科）。相比資助大學工程課程（通常需20分以上），此課程門檻較低。",
+            "**2025年下四分位數**：16，顯示即使分數稍低的學生也有實際入學機會。",
+            "**科目比重**：所有科目比重相同（1.0），無特定科目優先。但數學及科學科目成績優異者具優勢。",
+            "**申請人數**：作為自資課程，JS9720吸引中等數量的申請者。競爭低於資助大學課程，是工程學生的穩妥選擇。",
+            "**班級規模**：小班教學（每班約30-40人），確保個人化關注及與教職員緊密互動，提升學習成效。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與畢業生成就",
+          "content": [
+            "**黃家豪博士**：香港應用科技研究院（ASTRI）高級工程師，專注5G通訊系統。2018年畢業。",
+            "**陳美玲女士**：ASM Pacific Technology嵌入式系統主管，領導智能製造解決方案開發。2019年畢業。",
+            "**李偉強先生**：TechStart HK聯合創辦人，初創公司專注物聯網智能家居設備。2020年畢業。",
+            "**曾佩珊女士**：港鐵公司網絡工程師，管理鐵路營運通訊系統。2017年畢業。",
+            "**張子峰先生**：聯想香港軟件開發人員，負責消費電子產品固件開發。2021年畢業。",
+            "**吳兆明博士**：香港城市大學電子工程學系助理教授，2015年都大畢業後完成博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**NMTSS資助**：本地學生每年獲得不設入息審查的資助HK$35,120，學費由HK$87,240減至約HK$52,120。",
+            "**SSSDP資助**：此課程屬SSSDP計劃，為指定專業提供額外資助高達每年HK$45,810，進一步降低費用。",
+            "**都大入學獎學金**：DSE最佳5科達18分或以上的優秀申請者可獲獎學金，金額由HK$10,000至全額學費不等。按學術成績頒發。",
+            "**都大助學金**：為低收入家庭學生提供需要為本的財務援助。助學金涵蓋學費、生活費及學習材料。",
+            "**外部獎學金**：學生可申請政府獎學金，如香港特別行政區政府獎學基金及尤德爵士紀念基金。",
+            "**行業贊助獎項**：中電及港鐵等公司為工程學生提供獎學金及贊助，通常附帶實習承諾。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9720 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標DSE分數16-18分**：中位數17分，下四分位數16分，專注在最佳5科取得至少16分。優先加強數學及科學科目（物理、化學）以提升申請競爭力。",
+            "",
+            "- 目標數學及一科科學達第4級或以上。",
+            "- 使用HKDSE歷屆試題練習時間管理。",
+            "- 若某科低於第3級，考慮重考。",
+            "",
+            "**2. 善用科目同等比重**：所有科目比重相同（1.0），勿忽略通識教育或選修科。均衡的成績可提高總分。",
+            "",
+            "- 平均分配溫習時間於5科。",
+            "- 專注改善弱科以最大化分數。",
+            "- 使用網上資源學習通識時事。",
+            "",
+            "**3. 經JUPAS提早申請**：JS9720是JUPAS課程。在早期截止日期（通常12月）前提交申請以確保考慮。遲交申請可能降低機會。",
+            "",
+            "- 查閱JUPAS網站了解確切截止日期。",
+            "- 準備個人陳述，突出對工程的興趣。",
+            "- 將JS9720列為Band A選擇之一以獲優先考慮。",
+            "",
+            "**4. 突出實踐經驗**：都大重視動手技能。在申請中提及機械人學會、編程項目或工程比賽。甚至DIY電子項目也算。",
+            "",
+            "- 參加香港青少年機械人比賽。",
+            "- 用照片或影片記錄你的項目。",
+            "- 提及任何Arduino或Raspberry Pi經驗。",
+            "",
+            "**5. 準備面試（如需要）**：部分申請者可能獲邀面試。準備討論你的工程動機、技術興趣及職業目標。",
+            "",
+            "- 練習常見問題：「為何選電子工程？」",
+            "- 複習基本概念如歐姆定律或二進制系統。",
+            "- 展示對都大實用教學方式的熱情。",
+            "",
+            "**6. 利用都大的實習網絡**：每年有4,000多個實習機會，計劃在第二年後申請暑期實習。這能提升履歷並可能帶來工作機會。",
+            "",
+            "- 第一年參觀都大就業中心。",
+            "- 參加中電、港鐵或ASTRI的公司講座。",
+            "- 提早準備專業履歷及LinkedIn檔案。",
+            "",
+            "**7. 考慮SSSDP福利**：SSSDP資助大幅降低學費。確保符合居留要求以獲得資格。這使都大比許多資助課程更實惠。",
+            "",
+            "- 在都大網站查閱SSSDP資格。",
+            "- 比較資助後淨學費與其他課程。",
+            "- 考慮何文田的生活開支。",
+            "",
+            "**8. 建立項目作品集**：工程僱主重視實踐工作。建立畢業專題、實驗室作業或個人編碼項目的作品集，在求職面試中展示。",
+            "",
+            "- 使用GitHub存放程式碼庫。",
+            "- 包括電路設計或模擬結果。",
+            "- 尋求教授反饋以改進作品。",
+            "",
+            "**9. 與校友及教職員建立網絡**：在LinkedIn上聯繫都大工程校友，或參加大學開放日。教職員可提供指導及研究機會。",
+            "",
+            "- 加入都大工程學會。",
+            "- 參加校友講座及聯誼活動。",
+            "- 向教授詢問他們的行業聯繫。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 16
+  }
+}

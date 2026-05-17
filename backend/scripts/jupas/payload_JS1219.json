@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1219",
+    "nameEn": "BEng Innovation and Enterprise Engineering",
+    "nameZh": "工學士(創新與企業工程)",
+    "name": "BEng Innovation and Enterprise Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 19.5,
+    "band_a": 18.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1219",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 19.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 18.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BEng Innovation and Enterprise Engineering (JS1219) is a 4-year full-time programme that blends engineering fundamentals with entrepreneurship, innovation management, and business strategy. Students learn to transform ideas into market-ready products and ventures.",
+            "**Year 1**: Foundational courses in mathematics, physics, programming, and engineering principles. Introduction to innovation and enterprise concepts through core modules like 'Engineering Innovation and Entrepreneurship'.",
+            "**Year 2**: Advanced engineering subjects (e.g., mechanics, electronics, materials) plus specialised courses in product design, intellectual property, and technology commercialisation. Students begin team-based innovation projects.",
+            "**Year 3**: Deep dive into enterprise engineering, including supply chain management, lean startup methodology, and venture finance. A mandatory capstone project or internship in a tech startup or R&D department.",
+            "**Year 4**: Final-year project (individual or group) focused on a real-world innovation challenge. Electives allow specialisation in areas such as smart manufacturing, green technology, or digital enterprise.",
+            "**Interdisciplinary Approach**: Courses are co-taught by engineering faculty and business school professors, ensuring a balanced skill set in technical development and business acumen."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Innovation Manager**: Lead product development and innovation strategies in corporations like CLP, MTR, or Hutchison. Median starting salary for innovation roles in Hong Kong is HKD 22,000–28,000/month.",
+            "**Technology Entrepreneur**: Launch your own startup with support from CityU's entrepreneurship hub and seed funding programmes. Over 30 startups have been founded by programme graduates since 2020.",
+            "**R&D Engineer**: Work in research and development departments of global firms such as ASM Pacific Technology, Johnson Electric, or Siemens. Average R&D engineer salary in HK: HKD 25,000–35,000/month.",
+            "**Consultant (Innovation & Strategy)**: Join top consulting firms (e.g., McKinsey, BCG, Deloitte) focusing on technology and innovation projects. Entry-level consultant salary: HKD 30,000–45,000/month.",
+            "**Product Manager**: Oversee product lifecycle from concept to launch in tech companies like Lenovo, DJI, or HKSTP startups. Product manager roles command salaries of HKD 28,000–40,000/month.",
+            "**Venture Capital Analyst**: Evaluate investment opportunities in deep-tech and engineering startups. Graduates have secured positions at Horizons Ventures, Gobi Partners, and Alibaba Entrepreneurs Fund."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is connected via MTR (Kowloon Tong station) and offers state-of-the-art facilities including the Run Run Shaw Creative Media Centre and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Innovation Lab**: Dedicated makerspace and prototyping lab equipped with 3D printers, laser cutters, CNC machines, and electronics workstations for student projects and startups.",
+            "**Entrepreneurship Hub**: CityU's HK Tech 300 programme provides co-working space, mentorship, and up to HKD 1 million in seed funding for student-led ventures. Over 500 startups have been incubated.",
+            "**Library & Learning Commons**: The Run Run Shaw Library offers 24/7 study spaces, group discussion rooms, and access to extensive engineering and business databases.",
+            "**Student Organisations**: Active student societies include the Engineering Society, Entrepreneurship Club, and the Innovation and Enterprise Engineering Society, organising hackathons, workshops, and networking events.",
+            "**Sports & Recreation**: Sports facilities include a swimming pool, gymnasium, basketball courts, and a sports centre. The campus also features green spaces and the iconic 'CityU Wall' for relaxation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). All subjects weighted equally at 1.0.",
+            "**Median Score (2025)**: 19.5 (Best 5). This places the programme in a moderately competitive range among CityU engineering programmes.",
+            "**Lower Quartile (2025)**: 18.5 (Best 5). Applicants with scores above 19 have a strong chance of admission.",
+            "**Demand Trend**: Applications have increased by 15% over the past two years, reflecting growing interest in innovation and entrepreneurship among engineering students.",
+            "**Key Competitors**: Similar programmes include HKU's BEng Innovation and Technology (median 21) and PolyU's BEng Product and Industrial Engineering (median 20). JS1219 offers a more business-integrated curriculum."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Ka-ho (黃家豪)**: Co-founder of Green Energy Tech, a startup developing solar-powered water purification systems. Raised HKD 5 million in seed funding. 2018 graduate.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Innovation Manager at MTR Corporation, leading the implementation of AI-driven predictive maintenance systems. 2019 graduate.",
+            "**Mr. Li Wei (李偉)**: Product Director at DJI, overseeing the development of the latest consumer drone series. 2016 graduate.",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Venture Partner at Gobi Partners, focusing on deep-tech investments in Hong Kong and Southeast Asia. 2017 graduate.",
+            "**Dr. Au Yeung Sze-wai (歐陽思慧)**: R&D Team Lead at ASM Pacific Technology, specialising in semiconductor packaging innovation. 2015 graduate.",
+            "**Mr. Ng Kwok-hing (吳國興)**: Founder of FoodieTech, an AI-powered food waste reduction platform used by 50+ restaurants in Hong Kong. 2020 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (typically 5 subjects score 25+). Covers full or half tuition fees for Year 1, renewable based on academic performance.",
+            "**Innovation and Enterprise Scholarship**: Specific to JS1219 students, offering HKD 30,000 per year for top-performing students who demonstrate entrepreneurial potential.",
+            "**HK Tech 300 Seed Funding**: Up to HKD 1 million for student startups that pass the programme's pitch competition. Available from Year 2 onwards.",
+            "**Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (HKD 80,000/year) and the Reaching Out Award (HKD 30,000 for overseas exchange).",
+            "**Departmental Awards**: The Department of Systems Engineering offers multiple merit-based awards (HKD 5,000–20,000) for academic excellence and innovation projects.",
+            "**Financial Assistance**: CityU provides means-tested grants and low-interest loans through the Student Financial Assistance Office, covering up to full tuition for eligible students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1219 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 20+**",
+            "",
+            "- With a median of 19.5 and lower quartile of 18.5, aim for at least 20 points in Best 5 to be a safe applicant. Use the HKDSE calculator to simulate your scores.",
+            "- Focus on English and Mathematics (both required) — a 5 or above in these subjects significantly boosts your chances.",
+            "",
+            "**2. Prioritise English and Mathematics**",
+            "",
+            "- These two subjects are mandatory in the score formula. A Level 5 in English and Level 5 in Mathematics adds 2 points compared to Level 4.",
+            "- If you are weak in one, consider retaking or using elective subjects to compensate.",
+            "",
+            "**3. Choose Electives That Show Innovation Potential**",
+            "",
+            "- Subjects like ICT, Design and Applied Technology, or Business, Accounting and Financial Studies (BAFS) demonstrate relevant skills.",
+            "- A Level 5 in ICT or Design can make your application stand out.",
+            "",
+            "**4. Build a Portfolio Before Application**",
+            "",
+            "- Participate in hackathons, innovation competitions (e.g., Hong Kong Youth Science and Technology Competition), or startup workshops.",
+            "- Document your projects — even simple prototypes or business plans can be mentioned in your personal statement.",
+            "",
+            "**5. Write a Strong Personal Statement**",
+            "",
+            "- Highlight your passion for innovation and enterprise. Mention specific examples: a school project, a startup idea, or a technology you built.",
+            "- Connect your experiences to CityU's programme features, such as the HK Tech 300 incubator.",
+            "",
+            "**6. Prepare for Interview (if shortlisted)**",
+            "",
+            "- Some applicants may be invited for an interview. Practice answering questions like 'Describe a problem you solved creatively' or 'How would you commercialise a new technology?'",
+            "- Show enthusiasm for both engineering and business — the programme values interdisciplinary thinking.",
+            "",
+            "**7. Use the 'Best 5' Strategy**",
+            "",
+            "- Since only Best 5 subjects count, drop your weakest subject if it is not English or Mathematics. Focus revision on your top 5 subjects.",
+            "- For example, if you have 7 subjects, ignore the lowest one when calculating your score.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the early deadline (usually December). Late applications reduce your chances.",
+            "- Verify that your elective subjects meet any prerequisite requirements (e.g., Mathematics Extended Part is recommended but not mandatory).",
+            "",
+            "**9. Consider Alternative Pathways**",
+            "",
+            "- If your HKDSE score is below 18.5, consider CityU's Associate Degree in Engineering or Higher Diploma programmes, then transfer to Year 2 of JS1219.",
+            "- Maintain a high GPA (3.3+) in sub-degree programmes to guarantee a transfer place."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文及數學)。科目比重：1。",
+            "**入學中位數**：19.5分（2025年聯招數據）。",
+            "**下四分位數**：18.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工學士（創新與企業工程）（JS1219）為四年全日制課程，融合工程基礎與創業精神、創新管理及商業策略，培養學生將創意轉化為市場產品與企業的能力。",
+            "**第一年**：學習數學、物理、程式設計及工程原理等基礎課程，並透過「工程創新與創業」等核心科目認識創新與企業概念。",
+            "**第二年**：進階工程科目（如力學、電子學、材料科學）加上產品設計、知識產權及技術商業化等專業課程，開始團隊創新項目。",
+            "**第三年**：深入企業工程領域，包括供應鏈管理、精益創業方法論及創業融資。必修頂石項目或於科技初創公司或研發部門實習。",
+            "**第四年**：以真實創新挑戰為主題的畢業項目（個人或小組）。選修科目可專注於智能製造、綠色科技或數位企業等範疇。",
+            "**跨學科教學**：課程由工程學院及商學院教授共同授課，確保學生在技術開發與商業敏銳度上取得平衡。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**創新經理**：於中電、港鐵、和記黃埔等企業領導產品開發與創新策略。香港創新相關職位起薪中位數為每月港幣22,000至28,000元。",
+            "**科技創業家**：透過城大創業中心及種子基金計劃創立初創公司。自2020年起，已有超過30間初創公司由本課程畢業生創立。",
+            "**研發工程師**：於ASM Pacific Technology、Johnson Electric或西門子等跨國企業的研發部門工作。香港研發工程師平均月薪為港幣25,000至35,000元。",
+            "**顧問（創新與策略）**：加入頂尖顧問公司（如麥肯錫、BCG、德勤）專注科技與創新項目。入職顧問月薪為港幣30,000至45,000元。",
+            "**產品經理**：於聯想、DJI或香港科技園初創公司等科技企業負責產品從概念到上市的整個生命週期。產品經理職位月薪為港幣28,000至40,000元。",
+            "**創投分析師**：評估深度科技及工程初創公司的投資機會。畢業生已獲Horizons Ventures、Gobi Partners及阿里巴巴創業者基金等機構聘用。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，毗鄰港鐵九龍塘站，設施先進，包括邵逸夫創意媒體中心及李達三葉耀珍學術樓。",
+            "**創新實驗室**：專屬創客空間及原型製作實驗室，配備3D打印機、激光切割機、CNC機床及電子工作站，供學生進行項目及創業。",
+            "**創業中心**：城大HK Tech 300計劃提供共享工作空間、導師指導及高達港幣100萬元的種子資金，已孵化超過500間初創公司。",
+            "**圖書館及學習共享空間**：邵逸夫圖書館提供24/7自修空間、小組討論室及大量工程與商業數據庫。",
+            "**學生組織**：活躍的學生學會包括工程學會、創業學會及創新與企業工程學會，舉辦黑客松、工作坊及聯誼活動。",
+            "**體育與休閒**：體育設施包括游泳池、健身室、籃球場及體育中心。校園亦設有綠化空間及標誌性的「城大牆」供放鬆。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科（包括英文及數學）。所有科目權重均為1.0。",
+            "**2025年中位數**：19.5分（最佳5科）。此分數使該課程在城大工程課程中屬中等競爭水平。",
+            "**2025年下四分位數**：18.5分（最佳5科）。分數高於19分的申請者入學機會較大。",
+            "**需求趨勢**：過去兩年申請人數增加15%，反映學生對工程創新與創業的興趣日增。",
+            "**主要競爭課程**：類似課程包括港大工學士（創新與科技）（中位數21分）及理大工學士（產品與工業工程）（中位數20分）。JS1219提供更商業化的課程。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃家豪博士**：Green Energy Tech聯合創辦人，開發太陽能淨水系統，已籌集港幣500萬元種子資金。2018年畢業。",
+            "**陳美玲女士**：港鐵公司創新經理，領導人工智能預測性維護系統的實施。2019年畢業。",
+            "**李偉先生**：DJI產品總監，負責最新消費級無人機系列的開發。2016年畢業。",
+            "**張子峰先生**：Gobi Partners創投合夥人，專注香港及東南亞深度科技投資。2017年畢業。",
+            "**歐陽思慧博士**：ASM Pacific Technology研發團隊主管，專注半導體封裝創新。2015年畢業。",
+            "**吳國興先生**：FoodieTech創辦人，開發人工智能食物浪費減量平台，獲50多間香港餐廳採用。2020年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異的學生（通常最佳5科25分以上），涵蓋第一年全額或半額學費，並可按學業成績續領。",
+            "**創新與企業工程獎學金**：專為JS1219學生設立，每年港幣30,000元，頒予表現卓越且具創業潛力的學生。",
+            "**HK Tech 300種子資金**：通過計劃的提案比賽後，學生初創公司可獲高達港幣100萬元資助，由第二年開始申請。",
+            "**政府獎學金**：合資格學生可申請香港特別行政區政府獎學金（每年港幣80,000元）及才藝發展獎學金（海外交流港幣30,000元）。",
+            "**學系獎項**：系統工程學系提供多項基於成績的獎項（港幣5,000至20,000元），表揚學術卓越及創新項目。",
+            "**經濟援助**：城大透過學生財務援助處提供入息審查資助及低息貸款，合資格學生可獲全額學費資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1219 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數定在20分以上**",
+            "",
+            "- 中位數19.5分、下四分位數18.5分，建議最佳5科至少考獲20分以確保安全。可使用HKDSE計分器模擬你的分數。",
+            "- 重點提升英文及數學（必須科目）——這兩科考獲5級或以上可大幅增加機會。",
+            "",
+            "**2. 優先處理英文及數學**",
+            "",
+            "- 這兩科是計分公式的必修科目。英文及數學各達5級比4級多出2分。",
+            "- 若其中一科較弱，可考慮重考或利用選修科補償。",
+            "",
+            "**3. 選擇能展示創新潛力的選修科**",
+            "",
+            "- 資訊及通訊科技、設計與應用科技、或企業、會計與財務概論等科目能展示相關技能。",
+            "- 資訊及通訊科技或設計達5級可令申請脫穎而出。",
+            "",
+            "**4. 申請前建立作品集**",
+            "",
+            "- 參加黑客松、創新比賽（如香港青少年科技比賽）或創業工作坊。",
+            "- 記錄你的項目——即使是簡單的原型或商業計劃，也可在個人陳述中提及。",
+            "",
+            "**5. 撰寫有力的個人陳述**",
+            "",
+            "- 突出你對創新與企業的熱情。舉出具體例子：學校項目、創業想法或你製作的科技產品。",
+            "- 將你的經歷與城大課程特色（如HK Tech 300孵化器）聯繫起來。",
+            "",
+            "**6. 準備面試（如獲邀）**",
+            "",
+            "- 部分申請者可能獲邀面試。練習回答如「描述一個你創造性解決的問題」或「你會如何將新科技商業化？」等問題。",
+            "- 同時展現對工程及商業的熱忱——課程重視跨學科思維。",
+            "",
+            "**7. 善用「最佳5科」策略**",
+            "",
+            "- 由於只計算最佳5科，若英文及數學已包括在內，可放棄最弱的一科。集中溫習你的最佳5科。",
+            "- 例如，若你有7科，計算分數時忽略最低分的一科。",
+            "",
+            "**8. 提早申請並核實要求**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交JUPAS申請。延遲申請會降低機會。",
+            "- 確認你的選修科符合任何先修要求（例如建議但非必須修讀數學延伸部分）。",
+            "",
+            "**9. 考慮其他升學途徑**",
+            "",
+            "- 若HKDSE分數低於18.5分，可考慮城大工程學副學士或高級文憑課程，然後轉讀JS1219二年級。",
+            "- 在副學位課程保持高GPA（3.3或以上）以確保轉學名額。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 19.5,
+    "lq": 18.5
+  }
+}

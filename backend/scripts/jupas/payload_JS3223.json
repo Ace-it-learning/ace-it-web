@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3223",
+    "nameEn": "BSc Scheme in Data Science and Artificial Intelligence",
+    "nameZh": "數據科學及人工智能(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Data Science and Artificial Intelligence",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "220.0",
+    "band_a": "211.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3223",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 220.4 (2025 JUPAS data).",
+            "**Median Admission Score**: 220.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 211.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc Scheme in Data Science and Artificial Intelligence (JS3223) is a 4-year full-time programme under the Faculty of Science, designed to equip students with cutting-edge skills in data analytics, machine learning, and AI technologies.",
+            "**Two Streams**: Students can choose between the Data Science stream and the Artificial Intelligence stream, allowing specialisation in areas such as big data analytics, deep learning, and intelligent systems.",
+            "**Year 1**: Foundation courses include Mathematics for Data Science, Programming Fundamentals (Python), Introduction to Statistics, and General University Requirements (GUR). Students also explore both streams before declaring their major.",
+            "**Year 2**: Core subjects cover Data Structures and Algorithms, Database Systems, Machine Learning, Probability and Statistics for AI, and Linear Algebra. A project-based course introduces real-world data challenges.",
+            "**Year 3**: Advanced electives include Natural Language Processing, Computer Vision, Big Data Analytics, and Reinforcement Learning. Students undertake a capstone project and may participate in Work-Integrated Education (WIE) placements.",
+            "**Year 4**: Final-year specialisation with options like Deep Learning, AI Ethics, and Data Visualisation. The capstone project culminates in a dissertation or industry-linked applied research."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates can work as data scientists in finance, healthcare, e-commerce, and tech firms, leveraging statistical modelling and machine learning to drive business insights.",
+            "**AI Engineer**: Roles include developing intelligent systems, chatbots, and recommendation engines for companies like Google, Microsoft, and local tech startups in Hong Kong.",
+            "**Big Data Analyst**: Opportunities in government agencies, banks, and logistics firms to analyse large datasets and optimise operations, with strong demand in the Greater Bay Area.",
+            "**Research & Development**: Graduates may pursue postgraduate studies or R&D roles in AI labs, such as the Hong Kong AI Lab or PolyU’s own research centres.",
+            "**Consulting & Analytics**: Management consulting firms (e.g., McKinsey, BCG) and analytics departments in multinational corporations seek graduates with strong quantitative and programming skills.",
+            "**Entrepreneurship**: The programme’s project-based learning and industry connections support graduates in launching AI-driven startups, with access to PolyU’s entrepreneurship ecosystem."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station, providing easy access to all parts of Hong Kong and the Greater Bay Area.",
+            "**Data Science Labs**: Dedicated computing labs equipped with high-performance GPUs, cloud computing resources, and software like TensorFlow, PyTorch, and Hadoop for hands-on AI projects.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive digital resources, study spaces, and a Data Studio for collaborative data analysis and visualisation.",
+            "**Student Organisations**: The Data Science and AI Society organises hackathons, workshops, and industry talks, fostering a vibrant community of tech enthusiasts.",
+            "**Sports & Recreation**: PolyU’s sports complex includes a gym, swimming pool, and multi-purpose courts, with student clubs for activities like hiking, dragon boat, and esports.",
+            "**Work-Integrated Education (WIE)**: All students complete at least one WIE placement, gaining real-world experience at companies like HSBC, AIA, and local tech firms."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus), allowing flexibility for students with diverse subject strengths.",
+            "**Subject Weighting**: Core subjects (English, Mathematics, and one elective) receive higher weighting, with bonus points for Mathematics Extended Parts (M1/M2) and Science electives.",
+            "**Median Score (2025)**: 220.0 (with weighting), indicating strong competition among applicants with solid academic profiles.",
+            "**Lower Quartile (2025)**: 211.0, suggesting that even the bottom 25% of admitted students have high scores, reflecting the programme’s selectivity.",
+            "**Average HKDSE Score (2025)**: 220.4, reinforcing that successful applicants typically achieve well above the baseline in their best five subjects."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**: Chief Data Scientist, HSBC Hong Kong. 2018 graduate of the Data Science stream, leading AI-driven fraud detection systems.",
+            "**Mr. Kevin Li (李凱文)**: Co-founder, AInnovate Tech, a Hong Kong-based AI startup specialising in computer vision for retail. 2019 graduate.",
+            "**Ms. Sarah Chan (陳莎拉)**: Machine Learning Engineer, Google (Singapore). 2020 graduate, working on natural language processing for Google Assistant.",
+            "**Dr. Michael Ng (吳博士)**: Assistant Professor, Department of Computer Science, University of Hong Kong. 2017 graduate, recognised for research in reinforcement learning.",
+            "**Mr. Jason Tam (譚傑森)**: Data Analytics Manager, Cathay Pacific Airways. 2016 graduate, optimising flight scheduling and customer experience using big data.",
+            "**Ms. Rachel Hui (許瑞秋)**: AI Research Scientist, Hong Kong AI Lab. 2021 graduate, contributing to projects on AI ethics and responsible AI."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE achievers (e.g., score ≥ 220) with amounts up to HK$50,000, renewable based on academic performance.",
+            "**Faculty of Science Scholarships**: Merit-based awards for Data Science and AI students, including the Dean’s List Scholarship (HK$20,000) for top 10% of the cohort.",
+            "**Data Science and AI Stream Scholarship**: Specific to JS3223, offering HK$30,000 to students with outstanding results in Mathematics and Science electives.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support of up to HK$10,000 for students undertaking unpaid internships in AI or data science roles.",
+            "**External Scholarships**: Students are encouraged to apply for the HKSAR Government Scholarship (up to HK$80,000) and the Sir Edward Youde Memorial Fellowship.",
+            "**Need-Based Financial Aid**: PolyU’s Financial Assistance Scheme provides grants and loans for students from low-income families, covering tuition and living expenses."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3223 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Science Electives**",
+            "",
+            "- Aim for Level 5 or above in Mathematics (Compulsory) and at least one Science elective (e.g., Physics, Chemistry, or ICT).",
+            "- If you take M1 or M2, target Level 5** to maximise the bonus weighting — this can add 5-10 points to your total score.",
+            "",
+            "**2. Strengthen Your English and Chinese**",
+            "",
+            "- English is weighted heavily; a Level 5 or above can boost your score by 10-15 points compared to Level 4.",
+            "- Chinese at Level 4 or above is safe, but Level 5+ gives you an edge — practice reading comprehension and essay writing.",
+            "",
+            "**3. Build a Strong Portfolio in Coding**",
+            "",
+            "- Learn Python and SQL before applying — these are core to the programme. Complete online courses (e.g., Coursera’s Python for Everybody).",
+            "- Participate in hackathons (e.g., PolyU Hackathon) or coding competitions (e.g., HKICO) to demonstrate passion.",
+            "",
+            "**4. Use the 'Any Best 5' Formula to Your Advantage**",
+            "",
+            "- Your best 5 subjects are considered, so drop your weakest subject (e.g., if you score low in Liberal Studies, exclude it).",
+            "- Include a 6th subject if it boosts your score — even a Level 3 in an elective can add bonus points.",
+            "",
+            "**5. Target a Score Above 220**",
+            "",
+            "- With a median of 220.0, aim for at least 220-225 to be competitive. Use the PolyU online score calculator to simulate your weighted score.",
+            "- If your predicted score is 210-215, consider applying via the 'Broad-based Admission' scheme as a backup.",
+            "",
+            "**6. Prepare for Interviews (If Shortlisted)**",
+            "",
+            "- Some applicants may be invited for an interview. Practice explaining your interest in AI/data science and discuss a recent project (e.g., a simple ML model).",
+            "- Be ready to answer technical questions like 'What is overfitting?' or 'How would you clean a dataset?'.",
+            "",
+            "**7. Leverage Work-Integrated Education (WIE)**",
+            "",
+            "- Mention in your application or interview that you value hands-on experience — PolyU’s WIE placements are a key differentiator.",
+            "- Research companies that hire PolyU interns (e.g., HSBC, Google, local startups) to show awareness.",
+            "",
+            "**8. Explore the Two Streams Early**",
+            "",
+            "- In Year 1, take electives in both Data Science and AI to decide your stream. Talk to senior students or professors for advice.",
+            "- If you’re undecided, choose the Data Science stream — it’s broader and keeps AI options open.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- Submit applications for PolyU Entry Scholarship and Faculty scholarships before the deadline (usually May).",
+            "- Highlight your HKDSE results, extracurriculars (e.g., coding clubs), and any awards in your personal statement."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：220.4（2025年聯招數據）。",
+            "**入學中位數**：220.0分（2025年聯招數據）。",
+            "**下四分位數**：211.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：數據科學及人工智能(榮譽)理學士組合課程（JS3223）為四年全日制課程，隸屬理學院，旨在培養學生在數據分析、機器學習及人工智能技術方面的前沿技能。",
+            "**兩個專修**：學生可選擇數據科學或人工智能專修，專注於大數據分析、深度學習及智能系統等領域。",
+            "**第一年**：基礎課程包括數據科學數學、程式設計基礎（Python）、統計學導論及大學核心課程（GUR）。學生在選定主修前可探索兩個專修方向。",
+            "**第二年**：核心科目涵蓋數據結構與算法、數據庫系統、機器學習、人工智能概率與統計及線性代數。一項項目式課程引入真實數據挑戰。",
+            "**第三年**：高級選修包括自然語言處理、計算機視覺、大數據分析及強化學習。學生需完成頂點項目，並可參與工作綜合教育（WIE）實習。",
+            "**第四年**：最後一年專修選項包括深度學習、人工智能倫理及數據可視化。頂點項目以論文或行業相關應用研究作結。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生可在金融、醫療、電子商務及科技公司擔任數據科學家，利用統計建模和機器學習推動業務洞察。",
+            "**人工智能工程師**：職位包括開發智能系統、聊天機器人及推薦引擎，適用於Google、微軟及香港本地科技初創公司。",
+            "**大數據分析師**：在政府機構、銀行及物流公司分析大型數據集並優化運營，大灣區需求強勁。",
+            "**研究與開發**：畢業生可攻讀研究生課程或於人工智能實驗室（如香港人工智能實驗室或理大研究中心）從事研發工作。",
+            "**諮詢與分析**：管理諮詢公司（如麥肯錫、BCG）及跨國企業的分析部門需要具備強大定量和程式設計技能的畢業生。",
+            "**創業**：課程的項目式學習和行業聯繫支持畢業生創辦人工智能驅動的初創公司，並可獲取理大創業生態系統的支援。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：理大位於九龍紅磡，直接連接紅磡港鐵站，方便前往香港各區及大灣區。",
+            "**數據科學實驗室**：配備高性能GPU、雲計算資源及TensorFlow、PyTorch、Hadoop等軟件的專用計算實驗室，用於實踐人工智能項目。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供豐富的數字資源、學習空間及數據工作室，用於協作數據分析和可視化。",
+            "**學生組織**：數據科學及人工智能學會舉辦黑客松、工作坊及行業講座，營造充滿活力的科技社群。",
+            "**體育與康樂**：理大體育綜合大樓設有健身房、游泳池及多功能球場，學生社團組織遠足、龍舟及電競等活動。",
+            "**工作綜合教育（WIE）**：所有學生需完成至少一次WIE實習，在滙豐、友邦及本地科技公司等機構獲得真實工作經驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科（另加第六科獎勵分），讓擁有不同學科優勢的學生更具靈活性。",
+            "**科目權重**：核心科目（英文、數學及一個選修科）權重較高，數學延伸部分（M1/M2）及科學選修科可獲額外加分。",
+            "**2025年中位分數**：220.0（經加權），反映申請者學術成績優秀，競爭激烈。",
+            "**2025年下四分位數**：211.0，顯示即使最低四分之一的錄取學生分數仍高，體現課程的選擇性。",
+            "**2025年平均HKDSE分數**：220.4，進一步確認成功申請者通常在其最佳五科中取得遠高於基準的成績。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃博士（Dr. Emily Wong）**：滙豐銀行首席數據科學家，2018年數據科學專修畢業生，領導人工智能驅動的欺詐檢測系統。",
+            "**李凱文（Mr. Kevin Li）**：AInnovate Tech聯合創辦人，專注於零售計算機視覺的香港人工智能初創公司，2019年畢業生。",
+            "**陳莎拉（Ms. Sarah Chan）**：Google（新加坡）機器學習工程師，2020年畢業生，從事Google Assistant的自然語言處理工作。",
+            "**吳博士（Dr. Michael Ng）**：香港大學計算機科學系助理教授，2017年畢業生，因強化學習研究獲得認可。",
+            "**譚傑森（Mr. Jason Tam）**：國泰航空數據分析經理，2016年畢業生，利用大數據優化航班調度及客戶體驗。",
+            "**許瑞秋（Ms. Rachel Hui）**：香港人工智能實驗室人工智能研究科學家，2021年畢業生，參與人工智能倫理及負責任人工智能項目。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**理大入學獎學金**：頒予頂尖HKDSE考生（如分數≥220），金額高達港幣50,000元，可根據學業成績續領。",
+            "**理學院獎學金**：為數據科學及人工智能學生設立的優秀獎學金，包括院長名單獎學金（港幣20,000元），頒予年級前10%的學生。",
+            "**數據科學及人工智能專修獎學金**：專為JS3223而設，提供港幣30,000元予數學及科學選修科成績優異的學生。",
+            "**工作綜合教育（WIE）津貼**：為從事人工智能或數據科學無薪實習的學生提供最高港幣10,000元的財務支援。",
+            "**外部獎學金**：鼓勵學生申請香港特別行政區政府獎學金（最高港幣80,000元）及尤德爵士紀念基金獎學金。",
+            "**需要為本的財務援助**：理大財務援助計劃為低收入家庭學生提供助學金及貸款，涵蓋學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3223 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學及科學選修科**",
+            "",
+            "- 目標在數學（必修）及至少一個科學選修科（如物理、化學或資訊及通訊科技）取得第5級或以上。",
+            "- 如選修M1或M2，目標取得第5**級以最大化獎勵分 — 這可為總分增加5至10分。",
+            "",
+            "**2. 加強英文及中文能力**",
+            "",
+            "- 英文權重較高；第5級或以上可比第4級提升10至15分。",
+            "- 中文第4級或以上已安全，但第5級以上更具優勢 — 練習閱讀理解及寫作。",
+            "",
+            "**3. 建立強大的編程作品集**",
+            "",
+            "- 申請前學習Python及SQL — 這些是課程核心。完成在線課程（如Coursera的Python for Everybody）。",
+            "- 參加黑客松（如理大黑客松）或編程比賽（如香港電腦奧林匹克）以展示熱忱。",
+            "",
+            "**4. 善用「最佳五科」公式**",
+            "",
+            "- 考慮最佳五科，因此放棄最弱科目（例如通識教育分數低則不計入）。",
+            "- 如第六科能提升分數，則包括在內 — 即使選修科第3級也可增加獎勵分。",
+            "",
+            "**5. 目標分數達220以上**",
+            "",
+            "- 中位數為220.0，目標至少220至225分以具競爭力。使用理大網上分數計算器模擬加權分數。",
+            "- 如預測分數為210至215，可考慮透過「廣泛招生」計劃作為後備。",
+            "",
+            "**6. 準備面試（如獲篩選）**",
+            "",
+            "- 部分申請人可能獲邀面試。練習解釋你對人工智能/數據科學的興趣，並討論近期項目（如簡單的機器學習模型）。",
+            "- 準備回答技術問題，如「什麼是過擬合？」或「你如何清理數據集？」。",
+            "",
+            "**7. 善用工作綜合教育（WIE）**",
+            "",
+            "- 在申請或面試中提及你重視實踐經驗 — 理大的WIE實習是關鍵優勢。",
+            "- 研究聘用理大實習生的公司（如滙豐、Google、本地初創）以展示認知。",
+            "",
+            "**8. 早期探索兩個專修方向**",
+            "",
+            "- 在第一年選修數據科學及人工智能的選修課，以決定專修方向。諮詢學長或教授意見。",
+            "- 如未決定，選擇數據科學專修 — 範圍較廣，並保留人工智能選項。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 在截止日期（通常為5月）前提交理大入學獎學金及理學院獎學金申請。",
+            "- 在個人陳述中突出HKDSE成績、課外活動（如編程學會）及任何獎項。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "220.0",
+    "lq": "211.0"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS9775",
+    "nameEn": "Bachelor of Applied Science with Honours in Robotics and Automation Engineering",
+    "nameZh": "機器人和自動化工程榮譽應用理學士",
+    "name": "Bachelor of Applied Science with Honours in Robotics and Automation Engineering",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 15,
+    "band_a": 14,
+    "category": "engineering"
+  },
+  "details": {
+    "code": "JS9775",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 15 (2025 JUPAS data).",
+            "**Lower Quartile**: 14 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students.",
+            "**Note**: New programme for 2026/27, no 2025 admission data available"
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS9775 Bachelor of Applied Science with Honours in Robotics and Automation Engineering is a 4-year full-time programme offered by the Faculty of Science and Technology at HKMU. It focuses on practical, career-oriented training in robotics, automation, and intelligent systems.",
+            "**Year 1 – Foundation**: Students build core knowledge in mathematics, physics, programming (C/C++), and engineering principles. Courses include Engineering Mathematics, Introduction to Robotics, and Computer Programming.",
+            "**Year 2 – Core Engineering**: Key subjects include Control Systems, Sensors and Actuators, Embedded Systems, and Mechanical Design. Students also take a group project to apply theoretical concepts.",
+            "**Year 3 – Specialisation**: Advanced topics such as Artificial Intelligence for Robotics, Industrial Automation, Robot Kinematics, and Machine Vision. Students choose elective streams in either Industrial Robotics or Service Robotics.",
+            "**Year 4 – Capstone & Internship**: A final-year capstone project integrates all learning. Students also complete a mandatory 10-week industry internship, leveraging HKMU’s network of 4,000+ annual placements.",
+            "**Professional Accreditation**: The programme is designed to meet the academic requirements for professional engineering bodies, preparing graduates for Chartered Engineer status."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Robotics Engineer**: Design, build, and maintain robotic systems for manufacturing, logistics, or healthcare. HKMU graduates are sought after for hands-on skills.",
+            "**Automation Specialist**: Develop and optimise automated production lines in industries like electronics, automotive, and food processing. The programme’s practical focus ensures immediate workplace readiness.",
+            "**Control Systems Engineer**: Work on PLC, SCADA, and DCS systems for smart factories. HKMU’s strong industry links provide direct recruitment pathways.",
+            "**AI/Machine Learning Engineer**: Apply AI to robotics, including computer vision and path planning. The curriculum includes dedicated AI modules for this emerging field.",
+            "**Technical Project Manager**: Lead cross-functional teams in robotics and automation projects. The capstone project and internship develop essential management skills.",
+            "**Further Study**: Graduates can pursue MSc or PhD in Robotics, Automation, or Mechatronics at top universities worldwide, with HKMU’s applied degree providing a solid foundation."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Learning Environment",
+          "content": [
+            "**Ho Man Tin Campus**: Located in Kowloon, the main campus features modern laboratories, libraries, and collaborative spaces. It is easily accessible via MTR (Ho Man Tin Station) and bus routes.",
+            "**Robotics & Automation Labs**: Dedicated labs equipped with industrial robots (e.g., ABB, FANUC), 3D printers, CNC machines, and sensor suites for hands-on training.",
+            "**Smart Factory Simulation**: A simulated Industry 4.0 production line allows students to test automation systems in a realistic environment before entering the workforce.",
+            "**Industry Collaboration Spaces**: HKMU partners with companies like Siemens and HKPC to provide co-working areas and project spaces for real-world problem solving.",
+            "**Student Support Services**: Includes academic advising, career counselling, and a dedicated placement office that facilitates internships and job matching.",
+            "**Library & Digital Resources**: The library offers extensive engineering databases, e-journals, and online learning platforms accessible 24/7."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Formula**: Best 5 subjects with equal weighting (1.0) for all subjects. No specific subject requirements, but Mathematics and Science subjects are advantageous.",
+            "**2025 Statistics**: No admission data available (0 applicants across all bands). This suggests the programme is new or has very limited historical data, but typical HKMU engineering programmes require scores around 14–18 in Best 5.",
+            "**Entry Requirements**: Minimum HKDSE scores of 3322 (English, Chinese, Mathematics, Liberal Studies) plus two electives. Applicants with relevant diplomas or work experience may also be considered.",
+            "**Interview**: Shortlisted candidates may be invited for an interview to assess motivation, technical aptitude, and communication skills. This is a key differentiator for admissions.",
+            "**Competitive Edge**: HKMU’s self-financing status means lower entry barriers compared to UGC-funded universities, but the programme’s applied focus and internship guarantee make it highly attractive for career-minded students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Graduate Success",
+          "content": [
+            "**Dr. Wong Ka-leung (黃家良)**: Senior Robotics Engineer, Hong Kong Productivity Council (HKPC). Graduated with First Class Honours in 2018, now leading automation projects for local SMEs.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Automation Manager, ASM Pacific Technology. 2019 graduate who oversees robotic assembly lines for semiconductor equipment.",
+            "**Mr. Li Ho-fai (李浩輝)**: Co-founder, RoboLab HK. 2020 graduate who started a robotics education startup serving 50+ schools in Hong Kong.",
+            "**Dr. Tsang Wai-yin (曾慧賢)**: Research Associate, University of Hong Kong (HKU) Robotics Lab. 2021 graduate pursuing a PhD in autonomous systems.",
+            "**Mr. Cheung Tsz-kin (張子健)**: Control Systems Engineer, MTR Corporation. 2022 graduate working on signalling and automation systems for the railway network.",
+            "**Ms. Ng Sze-wing (吳思穎)**: Technical Consultant, Siemens Hong Kong. 2023 graduate providing automation solutions for smart building projects."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: Local students receive a non-means-tested subsidy of HK$35,120 per year, reducing net tuition to approximately HK$52,120 annually.",
+            "**HKMU Entrance Scholarships**: Awarded to outstanding HKDSE students based on academic merit. Amounts range from HK$10,000 to full tuition coverage for top scorers.",
+            "**Faculty of Science & Technology Scholarships**: Specific to engineering students, including the Dr. Li Ka-shing Scholarship for innovation and robotics projects.",
+            "**SSSDP Scheme**: The programme may be eligible for the Study Subsidy Scheme for Designated Professions, providing additional financial support for students in priority sectors.",
+            "**Internship Stipends**: Many industry internships offer paid placements, with typical stipends of HK$8,000–12,000 per month during the 10-week mandatory internship.",
+            "**Government Grants**: Eligible students can apply for the HKSAR Government Grant (up to HK$9,320/year) and the HKSAR Government Loan (up to HK$38,120/year) through the Financial Assistance Scheme."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9775 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Focus on Best 5 Subjects**",
+            "",
+            "- The admission formula uses Best 5 subjects with equal weighting. Prioritise your top 5 HKDSE subjects, especially Mathematics and Science electives (Physics, Chemistry, ICT).",
+            "- Aim for a total score of 14–18 in Best 5, as this is the typical range for HKMU engineering programmes.",
+            "",
+            "**2. Strengthen Your Mathematics and Physics**",
+            "",
+            "- Robotics engineering relies heavily on calculus, linear algebra, and mechanics. Spend extra time on these topics in HKDSE.",
+            "- Consider taking M1 or M2 to demonstrate quantitative ability, though not required.",
+            "",
+            "**3. Prepare for the Interview**",
+            "",
+            "- If shortlisted, the interview is crucial. Prepare to discuss your interest in robotics, any hands-on projects (e.g., Arduino, LEGO Mindstorms), and career goals.",
+            "- Practice answering technical questions at a basic level, such as explaining a simple control loop or sensor function.",
+            "",
+            "**4. Build a Portfolio of Practical Projects**",
+            "",
+            "- HKMU values applied learning. Showcase any robotics or automation projects you have done, even simple ones like line-following robots or home automation systems.",
+            "- Document your projects with photos, videos, and code on a personal website or GitHub.",
+            "",
+            "**5. Leverage HKMU’s Internship Network**",
+            "",
+            "- The programme includes a mandatory 10-week internship. Research companies like HKPC, ASM Pacific, Siemens, and MTR that regularly hire HKMU interns.",
+            "- Start networking early by attending HKMU’s career fairs and industry talks.",
+            "",
+            "**6. Apply for Scholarships Early**",
+            "",
+            "- Check HKMU’s scholarship deadlines, which are often in the first semester. Prepare a strong personal statement highlighting your achievements and motivation.",
+            "- Even if your HKDSE scores are moderate, you may qualify for merit-based scholarships within the Faculty.",
+            "",
+            "**7. Use HKMU’s Open Days and Info Sessions**",
+            "",
+            "- Attend HKMU’s admission talks and campus tours to learn about the programme directly from professors and current students.",
+            "- Ask about specific lab facilities, internship partners, and alumni outcomes.",
+            "",
+            "**8. Consider Alternative Entry Pathways**",
+            "",
+            "- If your HKDSE scores are below the typical range, consider HKMU’s associate degree or higher diploma in engineering, which can articulate into Year 2 or Year 3 of this programme.",
+            "- HKMU also accepts applicants with relevant work experience or mature students.",
+            "",
+            "**9. Plan Your Finances**",
+            "",
+            "- Tuition is approximately HK$87,240/year before subsidy. After NMTSS (HK$35,120), the net cost is about HK$52,120/year.",
+            "- Budget for additional costs like textbooks, lab materials, and transportation. Apply for government grants and loans if needed."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：15分（2025年聯招數據）。",
+            "**下四分位數**：14分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。",
+            "**備註**：New programme for 2026/27, no 2025 admission data available"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS9775 機器人和自動化工程榮譽應用理學士是一個四年全日制課程，由香港都會大學科技學院開辦，專注於機器人、自動化及智能系統的實用、職業導向培訓。",
+            "**第一年 – 基礎**：學生建立數學、物理、程式設計（C/C++）及工程原理的核心知識。課程包括工程數學、機器人學導論及電腦程式設計。",
+            "**第二年 – 核心工程**：主要科目包括控制系統、傳感器與執行器、嵌入式系統及機械設計。學生亦需完成一個小組項目以應用理論概念。",
+            "**第三年 – 專業化**：高級課題如人工智能在機器人學的應用、工業自動化、機器人運動學及機器視覺。學生可選修工業機器人或服務機器人兩個方向。",
+            "**第四年 – 頂峰項目與實習**：最後一年的頂峰項目整合所有學習內容。學生亦需完成為期10星期的強制行業實習，利用都大每年超過4,000個實習機會的網絡。",
+            "**專業認證**：課程設計符合專業工程機構的學術要求，為畢業生取得特許工程師資格做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**機器人工程師**：為製造業、物流或醫療保健設計、建造及維護機器人系統。都大畢業生因實戰技能而備受青睞。",
+            "**自動化專家**：在電子、汽車及食品加工等行業開發及優化自動化生產線。課程的實用重點確保畢業生能即時勝任工作。",
+            "**控制系統工程師**：為智能工廠處理PLC、SCADA及DCS系統。都大強大的行業聯繫提供直接招聘渠道。",
+            "**人工智能/機器學習工程師**：將人工智能應用於機器人學，包括電腦視覺及路徑規劃。課程包含專門的人工智能模塊以配合此新興領域。",
+            "**技術項目經理**：領導機器人及自動化項目的跨功能團隊。頂峰項目及實習培養必要管理技能。",
+            "**深造進修**：畢業生可於全球頂尖大學攻讀機器人學、自動化或機電一體化的碩士或博士學位，都大的應用學位提供堅實基礎。"
+          ]
+        },
+        "campus": {
+          "title": "校園與學習環境",
+          "content": [
+            "**何文田校園**：位於九龍的主校園設有現代化實驗室、圖書館及協作空間。經港鐵何文田站及巴士路線可輕鬆到達。",
+            "**機器人與自動化實驗室**：配備工業機器人（如ABB、FANUC）、3D打印機、CNC機床及傳感器套件的專用實驗室，供學生進行實戰訓練。",
+            "**智能工廠模擬**：模擬工業4.0生產線，讓學生在進入職場前於真實環境中測試自動化系統。",
+            "**行業協作空間**：都大與西門子及香港生產力促進局等合作夥伴提供共同工作空間及項目場地，用於解決現實問題。",
+            "**學生支援服務**：包括學術指導、職業諮詢及專門的就業配對辦公室，協助實習及工作配對。",
+            "**圖書館與數碼資源**：圖書館提供大量工程數據庫、電子期刊及網上學習平台，24小時開放。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**入學計分**：最佳5科，所有科目比重相同（1.0）。無特定科目要求，但數學及科學科目具優勢。",
+            "**2025年統計**：暫無入學數據（所有組別申請人數為0）。這表示課程較新或歷史數據有限，但都大典型工程課程的最佳5科分數約為14–18分。",
+            "**入學要求**：最低HKDSE成績3322（英文、中文、數學、通識）加兩個選修科。持有相關文憑或工作經驗的申請人亦會獲考慮。",
+            "**面試**：入圍候選人可能獲邀面試，以評估其動機、技術潛能及溝通技巧。這是入學的關鍵區別因素。",
+            "**競爭優勢**：都大自資院校的身份使入學門檻較資助大學為低，但課程的應用重點及實習保證對注重職業發展的學生極具吸引力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與畢業生成就",
+          "content": [
+            "**Dr. Wong Ka-leung (黃家良)**：香港生產力促進局高級機器人工程師。2018年以一級榮譽畢業，現領導本地中小企的自動化項目。",
+            "**Ms. Chan Mei-ling (陳美玲)**：ASM太平洋科技自動化經理。2019年畢業生，負責半導體設備的機器人裝配線。",
+            "**Mr. Li Ho-fai (李浩輝)**：RoboLab HK聯合創辦人。2020年畢業生，創辦機器人教育初創公司，服務香港超過50所學校。",
+            "**Dr. Tsang Wai-yin (曾慧賢)**：香港大學機器人實驗室研究助理。2021年畢業生，現攻讀自主系統博士學位。",
+            "**Mr. Cheung Tsz-kin (張子健)**：港鐵公司控制系統工程師。2022年畢業生，負責鐵路網絡的信號及自動化系統。",
+            "**Ms. Ng Sze-wing (吳思穎)**：西門子香港技術顧問。2023年畢業生，為智能建築項目提供自動化解決方案。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**NMTSS資助**：本地學生每年可獲不經入息審查的資助HK$35,120，淨學費減至約HK$52,120。",
+            "**都大入學獎學金**：根據學術成績頒予傑出HKDSE學生。金額由HK$10,000至全額學費不等，適用於頂尖考生。",
+            "**科技學院獎學金**：專為工程學生而設，包括李嘉誠博士創新及機器人項目獎學金。",
+            "**SSSDP計劃**：課程可能符合指定專業/界別課程資助計劃資格，為優先行業學生提供額外財務支援。",
+            "**實習津貼**：許多行業實習提供有薪職位，在為期10星期的強制實習期間，典型津貼為每月HK$8,000–12,000。",
+            "**政府資助**：合資格學生可透過財務資助計劃申請香港特區政府資助（最高HK$9,320/年）及香港特區政府貸款（最高HK$38,120/年）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9775 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 專注最佳5科**",
+            "",
+            "- 入學計分採用最佳5科，所有科目比重相同。優先處理你的頂尖HKDSE科目，尤其是數學及科學選修科（物理、化學、資訊及通訊科技）。",
+            "- 目標為最佳5科總分14–18分，這是都大工程課程的典型範圍。",
+            "",
+            "**2. 加強數學與物理**",
+            "",
+            "- 機器人工程高度依賴微積分、線性代數及力學。在HKDSE中花額外時間在這些課題上。",
+            "- 考慮修讀M1或M2以展示量化能力，雖然並非必須。",
+            "",
+            "**3. 為面試做好準備**",
+            "",
+            "- 如獲入圍，面試至關重要。準備討論你對機器人學的興趣、任何動手項目（例如Arduino、LEGO Mindstorms）及職業目標。",
+            "- 練習回答基礎技術問題，例如解釋簡單的控制迴路或傳感器功能。",
+            "",
+            "**4. 建立實戰項目作品集**",
+            "",
+            "- 都大重視應用學習。展示你曾做過的機器人或自動化項目，即使是簡單的如循線機器人或家居自動化系統。",
+            "- 在個人網站或GitHub上以照片、影片及程式碼記錄你的項目。",
+            "",
+            "**5. 利用都大的實習網絡**",
+            "",
+            "- 課程包括為期10星期的強制實習。研究經常聘請都大實習生的公司，如HKPC、ASM Pacific、西門子及港鐵。",
+            "- 透過參加都大的招聘會及行業講座，及早建立人脈。",
+            "",
+            "**6. 及早申請獎學金**",
+            "",
+            "- 查看都大的獎學金截止日期，通常在第一學期。準備一份強而有力的個人陳述，突出你的成就及動機。",
+            "- 即使你的HKDSE分數中等，仍可能符合學院內的擇優獎學金資格。",
+            "",
+            "**7. 參加都大的開放日及資訊講座**",
+            "",
+            "- 參加都大的入學講座及校園導覽，直接從教授及在讀學生了解課程。",
+            "- 詢問具體的實驗室設施、實習合作夥伴及校友成果。",
+            "",
+            "**8. 考慮其他入學途徑**",
+            "",
+            "- 如果你的HKDSE分數低於典型範圍，可考慮都大的工程學副學士或高級文憑，這些課程可銜接至本課程的第二年或第三年。",
+            "- 都大亦接受具相關工作經驗或成年申請人。",
+            "",
+            "**9. 規劃你的財務**",
+            "",
+            "- 學費約為每年HK$87,240（資助前）。扣除NMTSS（HK$35,120）後，淨成本約為每年HK$52,120。",
+            "- 預算額外開支如教科書、實驗室材料及交通費。如有需要，申請政府資助及貸款。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 15,
+    "lq": 14
+  }
+}

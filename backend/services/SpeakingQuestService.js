@@ -58,8 +58,7 @@ class SpeakingQuestService {
                     response.mind_map = preWritten.mind_map;
                     response.guidance = preWritten.guidance;
                 } else {
-                    // Fallback to legacy segment-based structure for Delivery/Interaction
-                    response.segments = [{
+                    const segment = {
                         segment_id: "P1",
                         title: preWritten.title,
                         master_script: preWritten.master_script || preWritten.stimulus,
@@ -70,7 +69,21 @@ class SpeakingQuestService {
                         stimulus: preWritten.stimulus,
                         strategy_goal: preWritten.strategy_goal,
                         power_phrases: preWritten.power_phrases || []
-                    }];
+                    };
+
+                    if (preWritten.id && preWritten.id.startsWith('a_')) {
+                        const masterDir = path.join(__dirname, '../data/speaking-master');
+                        const publicAudio = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.mp3`);
+                        const publicTimings = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.timings.json`);
+                        const hasAudio = fs.existsSync(publicAudio) || fs.existsSync(path.join(masterDir, `${preWritten.id}.mp3`));
+                        const hasTimings = fs.existsSync(publicTimings) || fs.existsSync(path.join(masterDir, `${preWritten.id}.timings.json`));
+                        if (hasAudio && hasTimings) {
+                            segment.master_audio_url = `/speaking-master/${preWritten.id}.mp3`;
+                            segment.master_timings_url = `/speaking-master/${preWritten.id}.timings.json`;
+                        }
+                    }
+
+                    response.segments = [segment];
                 }
 
                 return response;

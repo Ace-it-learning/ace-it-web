@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/landing/Hero';
 import TutorSection from '../components/landing/TutorSection';
 import FeaturesSection from '../components/landing/FeaturesSection';
+import DreamSubjectSection from '../components/landing/DreamSubjectSection';
 import MockExamSection from '../components/landing/MockExamSection';
 import Testimonials from '../components/landing/Testimonials';
 import PricingTable from '../components/landing/PricingTable';
@@ -42,6 +43,7 @@ const LandingPage = () => {
                 <TutorSection />
                 <MockExamSection id="features" />
                 <FeaturesSection />
+                <DreamSubjectSection />
                 <Testimonials />
                 <PricingTable />
             </main>

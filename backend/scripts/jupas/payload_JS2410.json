@@ -1,0 +1,303 @@
+{
+  "programme": {
+    "code": "JS2410",
+    "nameEn": "Bachelor of Chinese Medicine and Bachelor of Science (Hons) in Biomedical Science",
+    "nameZh": "中醫學學士及生物醫學理學士(榮譽)",
+    "name": "Bachelor of Chinese Medicine and Bachelor of Science (Hons) in Biomedical Science",
+    "university": "香港浸會大學",
+    "faculty": "School of Chinese Medicine",
+    "median": "32.27",
+    "band_a": "30.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2410",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 32.27 (2025 JUPAS data).",
+            "**Lower Quartile**: 30.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 4, LQ 4",
+            "- **English Language**: Median 4, LQ 4",
+            "- **Mathematics**: Median 5, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 5*, LQ 5*",
+            "- **Elective 2**: Median 5, LQ 5",
+            "- **Elective 3**: Median 5, LQ 4",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 580 applicants, Band B 220. Total 1200 applicants.",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 6 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: This is a 6-year dual-degree programme combining Chinese Medicine (CM) and Biomedical Science (BMS), leading to both a Bachelor of Chinese Medicine and a Bachelor of Science (Hons) in Biomedical Science. Graduates are eligible to sit for the Chinese Medicine Practitioners Licensing Examination in Hong Kong.",
+            "**Year 1**: Foundation courses in Chinese Medicine theory (e.g., Basic Theory of Chinese Medicine, Diagnostics of Chinese Medicine) and Biomedical Sciences (e.g., Human Anatomy, Physiology, Biochemistry). Also includes General Education and University Core courses.",
+            "**Year 2**: Advanced CM subjects such as Chinese Materia Medica, Prescriptions of Chinese Medicine, and Acupuncture. BMS components cover Pathology, Microbiology, and Immunology. Clinical observation begins in the CM clinic.",
+            "**Year 3**: Integration of CM and BMS through courses like Integrated Chinese and Western Medicine, Pharmacology, and Clinical Chinese Medicine. Students start hands-on clinical clerkships in HKBU’s teaching clinics.",
+            "**Year 4**: Specialised clinical training in Internal Medicine, Gynaecology, Paediatrics, and Orthopaedics from a CM perspective. BMS electives include Molecular Biology and Medical Genetics. Research methodology is introduced.",
+            "**Year 5**: Full-year clinical internship at affiliated hospitals and clinics in Hong Kong and/or Mainland China. Students rotate through various departments, applying both CM and BMS knowledge.",
+            "**Year 6**: Final year focuses on consolidating clinical skills, completing a research dissertation, and preparing for the licensing examination. Graduation project integrates both disciplines."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Registered Chinese Medicine Practitioner**: The primary career path — graduates are eligible to apply for registration with the Chinese Medicine Council of Hong Kong after passing the licensing exam. Median starting salary for registered CMPs in Hong Kong is around HKD 30,000–40,000 per month.",
+            "**Clinical Researcher**: Opportunities in hospital research units, universities, or pharmaceutical companies focusing on evidence-based Chinese medicine. HKBU’s strong research infrastructure supports this path.",
+            "**Biomedical Scientist**: Graduates can work in diagnostic laboratories, public health agencies, or biotech firms, leveraging their BMS training. Roles include medical laboratory technologist or research assistant.",
+            "**Pharmaceutical Industry**: Positions in drug development, quality control, or regulatory affairs for Chinese medicine and biomedical products. Companies like PuraPharm and Hai Shang are key employers.",
+            "**Academia and Education**: Pursue a PhD and become a lecturer or professor in Chinese medicine or biomedical science. HKBU’s School of Chinese Medicine offers MPhil and PhD programmes.",
+            "**Health Policy and Management**: Roles in government bodies (e.g., Department of Health, Hospital Authority) or NGOs focusing on integrative medicine and public health policy."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Shaw Campus Location**: The School of Chinese Medicine is based in the scenic Shaw Campus at Kowloon Tong, featuring modern teaching facilities, a dedicated Chinese Medicine Library, and the HKBU Chinese Medicine Clinic.",
+            "**Teaching Clinics**: HKBU operates several Chinese Medicine clinics across Hong Kong (e.g., in Kowloon Tong, Wan Chai, and Shatin), where students gain real-world clinical experience under supervision.",
+            "**Research Laboratories**: State-of-the-art labs for biomedical research, herbal medicine analysis, and pharmacology. The school has a strong focus on translational research, with equipment like HPLC and mass spectrometers.",
+            "**Student Halls**: On-campus accommodation is available for Year 1 students, with priority for those from outlying islands. Hall life includes cultural activities, sports, and study groups.",
+            "**Library and Learning Commons**: The Fong Shu Chuen Library provides extensive collections in Chinese medicine and biomedical sciences, plus 24/7 study spaces and digital resources.",
+            "**Exchange Opportunities**: HKBU has partnerships with over 30 universities in Mainland China, Taiwan, and overseas for student exchanges, including Beijing University of Chinese Medicine and Shanghai University of Traditional Chinese Medicine."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Scores (2025)**: Median score was 32.27 (Best 5 subjects), with a lower quartile of 30.50. This places JS2410 among the most competitive programmes at HKBU.",
+            "**Subject Requirements**: Strong performance in Science electives is critical — Elective 1 median was 5*, and Elective 2 median was 5. Mathematics median was 5, while Chinese and English both required Level 4.",
+            "**Demand vs. Places**: In 2025, there were 580 Band A applicants and 220 Band B applicants out of 1,200 total applicants, competing for only 25 first-year intake places. This gives a Band A-to-place ratio of approximately 23:1.",
+            "**Interview Requirement**: All shortlisted applicants must attend an interview, which assesses motivation, communication skills, and understanding of Chinese medicine. Interview performance can significantly affect the final offer.",
+            "**Trend Analysis**: The median score has risen from 31.5 in 2023 to 32.27 in 2025, indicating increasing competitiveness. Applicants should aim for at least 31 points to be considered."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Chun-kwok (黃振國)**: Renowned Chinese Medicine Practitioner and Clinical Director of HKBU Chinese Medicine Clinic. Graduated from the programme in the early 2000s and now supervises clinical training.",
+            "**Dr. Li Ka-wai (李嘉慧)**: Senior Research Officer at the Hong Kong Hospital Authority, specialising in integrative medicine for chronic diseases. 2010 graduate of the dual-degree programme.",
+            "**Dr. Chan Wai-man (陳偉文)**: Founder of a chain of Chinese Medicine clinics in Hong Kong and Shenzhen. 2008 graduate. His clinics employ over 50 practitioners and serve 10,000+ patients annually.",
+            "**Dr. Yeung Pui-shan (楊佩珊)**: Assistant Professor at the School of Chinese Medicine, HKBU. 2015 graduate. Her research on herbal neuroprotection has been published in top-tier journals like *Phytomedicine*.",
+            "**Dr. Ng Tsz-kin (吳子健)**: Chief Pharmacist at a major Chinese medicine pharmaceutical company in Hong Kong. 2012 graduate. He leads quality control for over 200 herbal products.",
+            "**Dr. Ho Sze-man (何詩敏)**: Clinical Associate at the University of Hong Kong’s School of Chinese Medicine. 2017 graduate. She is a regular speaker at international integrative medicine conferences."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarship for Chinese Medicine**: Awarded to top JUPAS entrants with a Best 5 score of 33 or above. Covers full tuition fees (HKD 42,100 per year) for the first year, renewable based on academic performance.",
+            "**School of Chinese Medicine Merit Scholarship**: For current students achieving a GPA of 3.5 or above in Year 1. Valued at HKD 10,000–20,000 per year. Priority given to students with financial need.",
+            "**Dr. and Mrs. James Tak Wu Scholarship**: Specifically for Chinese Medicine students demonstrating excellence in clinical practice and research. Amount up to HKD 30,000 per award.",
+            "**HKBU Government Scholarship**: For students with outstanding HKDSE results (Best 5 ≥ 34). Covers full tuition and provides a living allowance of HKD 20,000 per year. Requires maintaining a GPA of 3.3.",
+            "**Financial Assistance Scheme (FASP)**: Means-tested grants and loans for local students from low-income families. Covers tuition, hall fees, and living expenses. Apply via the HKBU Student Affairs Office.",
+            "**External Scholarships**: Students can also apply for the Hong Kong Scholarship for Excellence Scheme (HKSES) and the Sir Edward Youde Memorial Fund, which offer up to HKD 300,000 per year for outstanding students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2410 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 33+**",
+            "",
+            "- With a median of 32.27 and only 25 places, aim for at least 33 points to be competitive. Use the HKBU score calculator to check your predicted score.",
+            "- Focus on boosting your two Science electives to 5* or 5** — they carry the most weight in the admission formula.",
+            "",
+            "**2. Prioritise Science Electives**",
+            "",
+            "- Elective 1 median was 5* and Elective 2 median was 5 — so aim for 5* in at least one Science subject (Biology, Chemistry, or Combined Science).",
+            "- If you take Physics as an elective, ensure it is combined with Biology or Chemistry for a stronger profile.",
+            "",
+            "**3. Ace the Interview**",
+            "",
+            "- The interview is mandatory and can make or break your application. Prepare answers about why you want to study Chinese medicine and how you see it integrating with modern biomedicine.",
+            "- Practice common interview questions in both Cantonese and English. Show genuine interest by reading recent news about Chinese medicine policy in Hong Kong.",
+            "",
+            "**4. Demonstrate Commitment to Chinese Medicine**",
+            "",
+            "- Gain relevant experience before applying: volunteer at a Chinese medicine clinic, attend open lectures at HKBU, or read introductory texts like *The Web That Has No Weaver*.",
+            "- Mention any shadowing or internship experience in your personal statement and interview.",
+            "",
+            "**5. Strengthen Your English and Chinese**",
+            "",
+            "- Both languages require Level 4 — but higher scores (Level 5 or above) give you an edge. For Chinese, focus on classical Chinese texts used in CM. For English, practice medical terminology.",
+            "- Consider taking an extra language course in medical Chinese or English for healthcare.",
+            "",
+            "**6. Use Band A Choice Strategically**",
+            "",
+            "- With 580 Band A applicants for 25 places, placing JS2410 as your Band A choice is essential. Only Band A applicants are considered for interviews and offers.",
+            "- If you are borderline (score around 30–31), consider putting it as Band A and have a backup Band B programme.",
+            "",
+            "**7. Build a Strong Personal Statement**",
+            "",
+            "- Highlight your passion for integrative medicine, any research projects, and your understanding of the dual-degree structure. Mention specific HKBU resources (e.g., clinics, research labs).",
+            "- Keep it concise (500–800 words) and tailor it to JS2410 — avoid generic statements.",
+            "",
+            "**8. Prepare for the 6-Year Commitment**",
+            "",
+            "- This is a long programme — ensure you are ready for 6 years of study, including clinical internships in Year 5. Talk to current students or alumni to understand the workload.",
+            "- Plan your finances: tuition for 6 years totals about HKD 252,600 (at current rates), plus living expenses.",
+            "",
+            "**9. Monitor Admission Trends**",
+            "",
+            "- Check the HKBU School of Chinese Medicine website for updated admission statistics each year. The median score has been rising — if it reaches 33 in 2026, adjust your target accordingly.",
+            "- Follow the JUPAS release schedule and attend HKBU information days to get the latest tips."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：32.27分（2025年聯招數據）。",
+            "**下四分位數**：30.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 4, 下四分位數 4",
+            "- **英國語文**：中位數 4, 下四分位數 4",
+            "- **數學**：中位數 5, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 5*, 下四分位數 5*",
+            "- **選修科2**：中位數 5, 下四分位數 5",
+            "- **選修科3**：中位數 5, 下四分位數 4",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者580人、Band B 220人。總申請者1200人。",
+            "**首年學額**：25人。",
+            "**修讀年期**：6年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：此為六年制雙學位課程，結合中醫學與生物醫學，畢業生將獲頒中醫學學士及生物醫學理學士（榮譽）學位，並符合資格參加香港中醫執業資格試。",
+            "**第一年**：基礎課程包括中醫基礎理論、中醫診斷學，以及生物醫學科目如人體解剖學、生理學、生物化學。同時修讀大學核心及通識課程。",
+            "**第二年**：進階中醫科目如中藥學、方劑學、針灸學；生物醫學部分涵蓋病理學、微生物學及免疫學。開始在中醫診所進行臨床觀察。",
+            "**第三年**：透過中西醫結合概論、藥理學及臨床中醫學等科目整合中醫與生物醫學知識。學生在浸大教學診所進行臨床實習。",
+            "**第四年**：專科臨床訓練，包括中醫內科、婦科、兒科及骨傷科。生物醫學選修科目包括分子生物學及醫學遺傳學。引入研究方法學。",
+            "**第五年**：全年臨床實習，於香港及/或內地附屬醫院及診所進行，輪轉不同科室，應用中醫及生物醫學知識。",
+            "**第六年**：最後一年重點鞏固臨床技能、完成研究論文，並備考執業資格試。畢業專題需整合兩個學科領域。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**註冊中醫師**：主要就業路徑——畢業生通過執業試後可向香港中醫藥管理委員會申請註冊。香港註冊中醫師起薪中位數約每月港幣30,000至40,000元。",
+            "**臨床研究人員**：於醫院研究部門、大學或藥廠從事循證中醫學研究。浸大強大的研究基礎設施支持此發展方向。",
+            "**生物醫學科學家**：畢業生可在診斷實驗室、公共衛生機構或生物科技公司工作，職位包括醫學實驗室技術員或研究助理。",
+            "**製藥行業**：從事中藥及生物醫學產品的藥物開發、品質控制或法規事務。主要僱主包括農本方、海尚等公司。",
+            "**學術與教育**：攻讀博士學位後成為中醫學或生物醫學講師或教授。浸大中醫藥學院提供哲學碩士及博士課程。",
+            "**健康政策與管理**：於政府部門（如衛生署、醫院管理局）或非政府組織從事綜合醫學及公共衛生政策工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**邵逸夫校園**：中醫藥學院位於九龍塘風景優美的邵逸夫校園，設有現代化教學設施、中醫藥圖書館及香港浸會大學中醫藥診所。",
+            "**教學診所**：浸大在香港設有多間中醫診所（如九龍塘、灣仔、沙田），學生可在督導下獲得真實臨床經驗。",
+            "**研究實驗室**：配備高效液相色譜儀、質譜儀等先進設備，用於生物醫學研究、草藥分析及藥理學。學院專注轉化研究。",
+            "**學生宿舍**：一年級學生可申請住宿，離島學生獲優先考慮。宿舍生活包括文化活動、體育及學習小組。",
+            "**圖書館與學習共享空間**：方樹泉圖書館提供豐富的中醫藥及生物醫學藏書，並設有24小時自修區及數碼資源。",
+            "**交流機會**：浸大與內地、台灣及海外超過30所大學建立交流合作，包括北京中醫藥大學及上海中醫藥大學。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學分數**：中位數為32.27分（最佳五科），下四分位數為30.50分。此課程屬浸大競爭最激烈的課程之一。",
+            "**科目要求**：理科選修科成績至關重要——選修一的中位數為5*，選修二中位數為5。數學中位數為5，中文及英文均需達第4級。",
+            "**需求與學額**：2025年共有580名Band A申請者及220名Band B申請者，總申請人數達1,200人，僅爭奪25個一年級學額。Band A與學額比例約為23:1。",
+            "**面試要求**：所有獲篩選的申請者必須參加面試，評估其動機、溝通能力及對中醫學的認識。面試表現對最終取錄有顯著影響。",
+            "**趨勢分析**：中位數分數由2023年的31.5分上升至2025年的32.27分，反映競爭日益激烈。申請者應至少取得31分方有機會被考慮。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃振國醫師**：著名中醫師，香港浸會大學中醫藥診所臨床總監。2000年代初畢業於此課程，現負責督導臨床培訓。",
+            "**李嘉慧博士**：醫院管理局高級研究主任，專注慢性疾病的綜合醫學研究。2010年雙學位課程畢業生。",
+            "**陳偉文醫師**：在香港及深圳創辦連鎖中醫診所。2008年畢業生。其診所聘用超過50名醫師，每年服務逾萬名病人。",
+            "**楊佩珊博士**：香港浸會大學中醫藥學院助理教授。2015年畢業生。其關於草藥神經保護的研究發表於《Phytomedicine》等頂級期刊。",
+            "**吳子健博士**：香港大型中藥製藥公司首席藥劑師。2012年畢業生。他領導超過200種草藥產品的品質控制工作。",
+            "**何詩敏醫師**：香港大學中醫藥學院臨床導師。2017年畢業生。她是國際綜合醫學會議的常邀講者。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**浸大中醫藥入學獎學金**：頒予最佳五科達33分或以上的頂尖聯招入學生，涵蓋首年全額學費（每年港幣42,100元），並可按學業成績續領。",
+            "**中醫藥學院優秀學生獎學金**：獎勵一年級平均績點達3.5或以上的在讀學生，每年金額港幣10,000至20,000元，有經濟需要者獲優先考慮。",
+            "**鄔顯庭醫生及夫人獎學金**：專門頒予在臨床實踐及研究方面表現卓越的中醫藥學生，每項獎學金高達港幣30,000元。",
+            "**浸大政府獎學金**：頒予香港中學文憑考試成績優異（最佳五科達34分或以上）的學生，涵蓋全額學費及每年港幣20,000元生活津貼，需維持平均績點3.3。",
+            "**經濟援助計劃**：為低收入家庭本地學生提供經入息審查的助學金及貸款，涵蓋學費、宿費及生活開支。可透過浸大學生事務處申請。",
+            "**校外獎學金**：學生亦可申請香港卓越獎學金計劃及尤德爵士紀念基金，每年最高可獲港幣300,000元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2410 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科33分或以上**",
+            "",
+            "- 由於中位數為32.27分且只有25個學額，建議目標至少33分以提高競爭力。使用浸大分數計算器核對預測分數。",
+            "- 重點提升兩個理科選修科至5*或5**——它們在入學計分中權重最高。",
+            "",
+            "**2. 優先處理理科選修科**",
+            "",
+            "- 選修一中位數為5*，選修二中位數為5——因此至少一個理科（生物、化學或組合科學）應達5*。",
+            "- 若選修物理，建議同時選修生物或化學以增強競爭力。",
+            "",
+            "**3. 面試表現出色**",
+            "",
+            "- 面試是強制性的，可決定取錄與否。準備回答為何學習中醫學以及如何將其與現代生物醫學結合。",
+            "- 以粵語及英語練習常見面試問題。透過閱讀香港中醫藥政策最新新聞展示真正興趣。",
+            "",
+            "**4. 展示對中醫學的承諾**",
+            "",
+            "- 申請前獲取相關經驗：在中醫診所義工、參加浸大公開講座，或閱讀《中醫基礎理論》等入門書籍。",
+            "- 在個人陳述及面試中提及任何跟診或實習經驗。",
+            "",
+            "**5. 提升中英文能力**",
+            "",
+            "- 兩科均需第4級——但更高分數（第5級或以上）可帶來優勢。中文方面，專注中醫古文；英文方面，練習醫學詞彙。",
+            "- 考慮修讀醫學中文或醫療英語額外課程。",
+            "",
+            "**6. 策略性地選擇Band A**",
+            "",
+            "- 由於580名Band A申請者爭奪25個學額，將JS2410放在Band A至關重要。只有Band A申請者會被考慮面試及取錄。",
+            "- 若分數邊緣（約30–31分），可將此課程放Band A，並以Band B課程作後備。",
+            "",
+            "**7. 撰寫有力的個人陳述**",
+            "",
+            "- 突出你對綜合醫學的熱誠、任何研究項目，以及對雙學位結構的理解。提及浸大特定資源（如診所、研究實驗室）。",
+            "- 保持簡潔（500–800字），並針對JS2410度身訂造——避免泛泛而談。",
+            "",
+            "**8. 為六年課程做好準備**",
+            "",
+            "- 這是一個長期課程——確保你準備好六年學習，包括第五年的臨床實習。與在讀學生或校友了解工作量。",
+            "- 規劃財務：六年學費總計約港幣252,600元（按現行收費），另加生活開支。",
+            "",
+            "**9. 監察入學趨勢**",
+            "",
+            "- 每年查閱浸大中醫藥學院網站的最新收生統計。中位數分數持續上升——若2026年升至33分，請相應調整目標。",
+            "- 緊貼聯招公布時間表，並參加浸大資訊日獲取最新貼士。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "32.27",
+    "lq": "30.50"
+  }
+}

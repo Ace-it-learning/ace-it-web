@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Reorder } from 'framer-motion';
 import { GraduationCap, GripVertical, Trash2, Info, Sparkles, Target, TrendingUp, ChevronUp, ChevronDown } from 'lucide-react';
-import { UNIVERSITY_SHORT_NAMES } from '../../constants/jupasPrograms';
+import { getUniversityLabel } from '../../constants/jupasPrograms';
 import GapAnalysisBar from './GapAnalysisBar';
 import ProgrammeDetailView from './ProgrammeDetailView';
 
@@ -92,7 +92,7 @@ const DreamListPanel = ({
                                                     {(language === 'zh' ? program.nameZh : program.nameEn) || program.name || program.nameEn || program.code}
                                                 </p>
                                                 <p className="text-sm text-slate-400 font-medium truncate">
-                                                    {UNIVERSITY_SHORT_NAMES[program.university] || program.university}
+                                                    {getUniversityLabel(program.university, language)}
                                                 </p>
                                             </div>
                                             <div className="flex items-center gap-1.5 flex-shrink-0 ml-2">

@@ -57,6 +57,8 @@
     "pg": "^8.20.0"
   },
   "devDependencies": {
+    "edge-tts": "^1.0.1",
+    "mp3-duration": "^1.1.0",
     "nodemon": "^3.1.11"
   }
 }

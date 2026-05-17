@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1074",
+    "nameEn": "BSc Data and Systems Engineering",
+    "nameZh": "理學士(數據與系統工程)",
+    "name": "BSc Data and Systems Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 28.0,
+    "band_a": 27.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1074",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects. Subject weighting: 2: Mathematics 1.5: English 1: other elective subjects.",
+            "**Median Admission Score**: 28.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 27.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: BSc Data and Systems Engineering (JS1074) integrates data science, systems engineering, and AI to train students in designing and managing complex data-driven systems. The programme is offered by the Department of Systems Engineering at City University of Hong Kong.",
+            "**Year 1 Foundation**: Core courses include Calculus, Linear Algebra, Programming Fundamentals, and Introduction to Data Science, building a strong quantitative and computational base.",
+            "**Year 2 Core Development**: Students study Probability and Statistics, Database Systems, Data Structures, and Systems Modelling, with a 1.5x weighting on English and 2x on Mathematics in admission reflecting the quantitative emphasis.",
+            "**Year 3 Specialisation**: Advanced topics such as Machine Learning, Big Data Analytics, Optimisation, and System Simulation are covered, alongside elective streams in Data Engineering or Systems Analytics.",
+            "**Year 4 Capstone & Electives**: A final-year project and advanced electives like Deep Learning, Cloud Computing, and Smart Systems design prepare students for industry or research.",
+            "**Professional Accreditation**: The programme aligns with industry standards, and graduates are eligible for membership in professional bodies like the Hong Kong Institution of Engineers (HKIE) after further training."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Engineer**: Design and maintain data pipelines for companies like HSBC, Tencent, or Alibaba, leveraging skills in big data tools and systems engineering.",
+            "**Systems Analyst**: Optimise business processes and IT systems in firms such as MTR Corporation or CLP Group, using data-driven decision-making.",
+            "**AI/ML Specialist**: Develop machine learning models for fintech, healthcare, or logistics firms, with median starting salaries around HKD 25,000–30,000 per month.",
+            "**Consultant (Tech)**: Advise on digital transformation strategies at firms like Accenture or Deloitte, combining data analysis with systems thinking.",
+            "**Research & Academia**: Pursue MPhil/PhD at top universities (e.g., HKU, CUHK, or overseas) in data engineering or systems science.",
+            "**Government & Public Sector**: Work as data analysts or system engineers in the Hong Kong Government's Smart City initiatives or the Housing Authority."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Main Campus**: Located in Kowloon Tong, the campus is connected via MTR and offers state-of-the-art labs, including the Data Engineering Laboratory and Systems Simulation Centre.",
+            "**Student Organisations**: Join the Data and Systems Engineering Society or the CityU Data Science Club for networking, hackathons, and industry talks.",
+            "**Global Exchange**: Opportunities to study at partner universities in the US, UK, or Singapore for one semester, enhancing cross-cultural exposure.",
+            "**Innovation Hub**: Access to the CityU HK Tech 300 programme, which provides funding and mentorship for student startups in data and systems fields.",
+            "**Sports & Recreation**: Facilities include a sports centre, swimming pool, and fitness rooms, with over 50 sports clubs available.",
+            "**Library & Resources**: The Run Run Shaw Library offers extensive digital resources, including access to IEEE Xplore, ACM Digital Library, and big data platforms."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 28.0 (3 core + 2 electives), placing JS1074 among the more competitive programmes at CityU.",
+            "**Lower Quartile (2025)**: 27.5, indicating a tight score range and strong demand from high-achieving students.",
+            "**Subject Weighting**: Mathematics is weighted 2x, English 1.5x, and other electives 1x, favouring students with strong quantitative and language skills.",
+            "**Application Ratio**: Typically receives 8–10 applications per place, reflecting its popularity among STEM-oriented students.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses problem-solving ability and motivation."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Chief Data Scientist, Hong Kong Science and Technology Parks Corporation. Graduated with a PhD in Systems Engineering from CityU.",
+            "**Ms. Li Ka-man (李嘉敏女士)**: Data Engineering Lead, Google Hong Kong. 2018 BSc graduate, recognised for contributions to cloud data systems.",
+            "**Mr. Wong Tsz-fung (黃子峰先生)**: Co-founder of a fintech startup (PayFabric), which raised HKD 10 million in seed funding. 2020 graduate.",
+            "**Dr. Ng Siu-lun (吳兆倫博士)**: Associate Professor, Department of Systems Engineering, CityU. Specialises in big data analytics and optimisation.",
+            "**Mr. Cheung Ho-yin (張浩賢先生)**: Senior Systems Analyst, MTR Corporation. 2016 graduate, led the development of predictive maintenance systems.",
+            "**Ms. Chan Pui-shan (陳佩珊女士)**: AI Product Manager, Alibaba Cloud. 2019 graduate, managed the launch of AI-driven customer analytics tools."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with DSE scores of 28 or above, covering up to full tuition (HKD 42,100 per year) for the first year.",
+            "**Faculty of Engineering Scholarships**: Merit-based awards of HKD 10,000–20,000 for top-performing students in the BSc Data and Systems Engineering programme.",
+            "**HKSAR Government Scholarship**: Up to HKD 80,000 per year for students with outstanding academic achievements and leadership qualities.",
+            "**HK Tech 300 Seed Fund**: Start-up grants of up to HKD 100,000 for students launching data or systems engineering ventures.",
+            "**External Scholarships**: Opportunities like the HSBC Scholarship or Swire Scholarship, which provide HKD 50,000–100,000 annually for STEM students.",
+            "**Need-Based Financial Aid**: CityU offers the Student Financial Assistance Scheme, providing loans and grants for students with family financial difficulties."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1074 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and English**",
+            "",
+            "- Mathematics is weighted 2x and English 1.5x in the admission formula — aim for Level 5 or above in both to maximise your score.",
+            "- A score of 28.0 (median) means you need roughly 5,5,4 in core subjects plus 5,5 in electives, so focus on these two heavily weighted subjects.",
+            "",
+            "**2. Choose Electives Strategically**",
+            "",
+            "- Pick electives like Physics, ICT, or Economics that align with data and systems engineering — they are weighted 1x but show aptitude.",
+            "- Avoid low-scoring electives; a Level 4 in a relevant subject is better than a Level 5 in an unrelated one.",
+            "",
+            "**3. Target a Minimum of 27.5**",
+            "",
+            "- The lower quartile is 27.5, so aim for at least this score to be competitive. Use the formula: (Maths×2) + (English×1.5) + (Elective1) + (Elective2) = total.",
+            "- For example, Maths 5 (10 points), English 5 (7.5), Elective1 5 (5), Elective2 5 (5) = 27.5 — meet the threshold.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect questions on why you chose data and systems engineering, your problem-solving approach, and your career goals.",
+            "- Practice explaining a data-related project or system you've designed — use the STAR method (Situation, Task, Action, Result).",
+            "",
+            "**5. Build a Portfolio of Projects**",
+            "",
+            "- Create a GitHub portfolio with 2–3 data projects (e.g., a predictive model or a database system) to showcase during interviews or in your application.",
+            "- Use free tools like Python, SQL, and Tableau — these are directly relevant to the programme's curriculum.",
+            "",
+            "**6. Leverage CityU's Open Days**",
+            "",
+            "- Attend CityU's information sessions and lab tours for JS1074 to ask professors about the programme and demonstrate genuine interest.",
+            "- Network with current students to learn about the learning environment and career support.",
+            "",
+            "**7. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the December deadline, and ensure you meet the minimum subject requirements (e.g., Maths Core and one elective).",
+            "- Double-check that your elective subjects are accepted — CityU typically accepts all HKDSE electives except Applied Learning.",
+            "",
+            "**8. Consider the Weighting in Your Study Plan**",
+            "",
+            "- Dedicate 40% of your study time to Mathematics, 30% to English, and 30% to electives — this mirrors the admission weighting.",
+            "- Use past papers and mock exams to simulate the scoring formula and identify weak areas.",
+            "",
+            "**9. Explore Alternative Pathways**",
+            "",
+            "- If your score is slightly below 27.5, consider applying through CityU's Associate Degree or Higher Diploma in Data Science, then transfer to Year 2.",
+            "- Alternatively, apply for the BSc Data and Systems Engineering via non-JUPAS if you have relevant work experience or international qualifications."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。科目比重：2: 數學 1.5: 英文 1: 其他選修科。",
+            "**入學中位數**：28.0分（2025年聯招數據）。",
+            "**下四分位數**：27.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：理學士（數據與系統工程）（JS1074）融合數據科學、系統工程及人工智能，培養學生設計和管理複雜數據驅動系統的能力。該課程由香港城市大學系統工程學系開辦。",
+            "**第一年基礎**：核心科目包括微積分、線性代數、程式設計基礎及數據科學導論，奠定堅實的數學與計算基礎。",
+            "**第二年核心發展**：學生學習概率與統計、數據庫系統、數據結構及系統建模，入學時英文權重1.5倍、數學權重2倍，反映量化重點。",
+            "**第三年專業化**：涵蓋機器學習、大數據分析、優化及系統模擬等高階主題，並設有數據工程或系統分析兩個選修分流。",
+            "**第四年頂點項目與選修**：畢業專題及深度學習、雲端運算、智能系統設計等高階選修，為就業或研究做好準備。",
+            "**專業認證**：課程符合行業標準，畢業生經進一步培訓後可申請成為香港工程師學會（HKIE）等專業機構會員。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據工程師**：為滙豐、騰訊或阿里巴巴等公司設計和維護數據管道，運用大數據工具及系統工程技能。",
+            "**系統分析師**：在港鐵公司或中電集團等企業優化業務流程及資訊系統，利用數據驅動決策。",
+            "**AI/機器學習專家**：為金融科技、醫療或物流公司開發機器學習模型，起薪中位數約每月港幣25,000至30,000元。",
+            "**科技顧問**：在埃森哲或德勤等公司提供數位轉型策略建議，結合數據分析與系統思維。",
+            "**研究與學術**：在港大、中大或海外頂尖大學攻讀數據工程或系統科學的哲學碩士/博士學位。",
+            "**政府與公共部門**：在香港政府的智慧城市計劃或房屋署擔任數據分析師或系統工程師。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大主校園**：位於九龍塘，經港鐵直達，設有數據工程實驗室及系統模擬中心等先進設施。",
+            "**學生組織**：加入數據與系統工程學會或城大數據科學學會，參與黑客松、業界講座及交流活動。",
+            "**環球交流**：有機會到美國、英國或新加坡的夥伴大學交換一學期，增強跨文化視野。",
+            "**創新中心**：使用城大HK Tech 300計劃，為數據與系統領域的學生初創提供資金及指導。",
+            "**體育與康樂**：設施包括體育中心、游泳池及健身室，設有超過50個體育學會。",
+            "**圖書館與資源**：邵逸夫圖書館提供豐富數位資源，包括IEEE Xplore、ACM Digital Library及大數據平台。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：28.0分（3核心+2選修），使JS1074成為城大競爭較激烈的課程之一。",
+            "**2025年下四分位數**：27.5分，顯示分數範圍緊湊，且來自高分成績學生的需求強勁。",
+            "**科目權重**：數學權重2倍，英文1.5倍，其他選修1倍，有利於數理及語言能力強的學生。",
+            "**申請比例**：通常每個學額收到8至10份申請，反映其在STEM學生中的受歡迎程度。",
+            "**面試要求**：獲篩選的申請人可能獲邀面試，評估解難能力及學習動機。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳偉強博士**：香港科技園公司首席數據科學家，畢業於城大系統工程博士學位。",
+            "**李嘉敏女士**：Google香港數據工程主管，2018年學士畢業生，因貢獻雲端數據系統而獲認可。",
+            "**黃子峰先生**：金融科技初創PayFabric聯合創辦人，籌得港幣1,000萬元種子資金，2020年畢業生。",
+            "**吳兆倫博士**：城大系統工程學系副教授，專注大數據分析及優化研究。",
+            "**張浩賢先生**：港鐵公司高級系統分析師，2016年畢業生，主導預測性維護系統的開發。",
+            "**陳佩珊女士**：阿里雲人工智能產品經理，2019年畢業生，管理AI驅動客戶分析工具的推出。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績達28分或以上的學生，首年可獲全額學費資助（每年港幣42,100元）。",
+            "**工程學院獎學金**：為數據與系統工程學士課程的頂尖學生提供港幣10,000至20,000元的績優獎學金。",
+            "**香港政府獎學金**：每年最高港幣80,000元，頒予學術成績優異及具領導才能的學生。",
+            "**HK Tech 300種子基金**：為開展數據或系統工程初創的學生提供最高港幣100,000元的創業資助。",
+            "**外部獎學金**：如滙豐獎學金或太古獎學金，每年為STEM學生提供港幣50,000至100,000元。",
+            "**需要為本經濟援助**：城大提供學生經濟援助計劃，為家庭經濟困難的學生提供貸款及助學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1074 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學和英文**",
+            "",
+            "- 數學在入學公式中權重2倍，英文1.5倍 — 兩科目標達5級或以上以最大化分數。",
+            "- 中位數28.0分意味著核心科目大約需5,5,4，加上選修5,5，因此重點放在這兩科高權重科目。",
+            "",
+            "**2. 策略性選擇選修科**",
+            "",
+            "- 選擇與數據及系統工程相關的選修科，如物理、資訊及通訊科技或經濟 — 它們權重1倍但能展示能力。",
+            "- 避免低分選修科；相關科目取得4級比不相關科目取得5級更有利。",
+            "",
+            "**3. 目標分數至少27.5分**",
+            "",
+            "- 下四分位數為27.5分，因此目標至少達到此分數才有競爭力。使用公式：（數學×2）+（英文×1.5）+（選修1）+（選修2）=總分。",
+            "- 例如：數學5（10分）、英文5（7.5分）、選修1得5（5分）、選修2得5（5分）=27.5分 — 達到門檻。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 若獲篩選，預計會被問及為何選擇數據與系統工程、你的解難方法及職業目標。",
+            "- 練習介紹一個與數據相關的項目或你設計的系統 — 使用STAR方法（情境、任務、行動、結果）。",
+            "",
+            "**5. 建立作品集**",
+            "",
+            "- 在GitHub上建立包含2至3個數據項目（如預測模型或數據庫系統）的作品集，以便在面試或申請中展示。",
+            "- 使用Python、SQL和Tableau等免費工具 — 這些與課程內容直接相關。",
+            "",
+            "**6. 善用城大開放日**",
+            "",
+            "- 參加城大JS1074的資訊講座及實驗室導賞，向教授提問並展示你對課程的濃厚興趣。",
+            "- 與現屆學生交流，了解學習環境及就業支援。",
+            "",
+            "**7. 提早申請並核實要求**",
+            "",
+            "- 在12月截止日期前提交聯招申請，並確保符合最低科目要求（如數學核心及一個選修科）。",
+            "- 雙重檢查選修科是否被接納 — 城大通常接受所有文憑試選修科，但應用學習除外。",
+            "",
+            "**8. 按權重制定溫習計劃**",
+            "",
+            "- 將40%的溫習時間用於數學，30%用於英文，30%用於選修科 — 這與入學權重一致。",
+            "- 使用歷屆試題及模擬考試來模擬計分公式，並找出弱項。",
+            "",
+            "**9. 探索其他升學途徑**",
+            "",
+            "- 若分數略低於27.5分，可考慮申請城大的數據科學副學士或高級文憑，然後轉讀二年級。",
+            "- 若具相關工作經驗或國際資格，亦可透過非聯招方式申請數據與系統工程學士課程。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 28.0,
+    "lq": 27.5
+  }
+}

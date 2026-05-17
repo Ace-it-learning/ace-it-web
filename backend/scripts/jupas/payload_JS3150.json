@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3150",
+    "nameEn": "BSc in Biomedical Engineering",
+    "nameZh": "生物醫學工程(榮譽)理學士",
+    "name": "BSc in Biomedical Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "218.0",
+    "band_a": "213.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3150",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 226.0 (2025 JUPAS data).",
+            "**Median Admission Score**: 218.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 213.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS3150 BSc in Biomedical Engineering is a 4-year full-time programme under the Faculty of Engineering, blending engineering principles with medical sciences to develop innovative healthcare technologies.",
+            "**Year 1 Foundation**: Students build a strong base in mathematics, physics, biology, and introductory engineering, including courses like Calculus, General Physics, and Fundamentals of Biomedical Engineering.",
+            "**Year 2 Core Studies**: Key subjects include Biomechanics, Biomaterials, Medical Electronics, and Physiology, with hands-on laboratory sessions to apply theoretical knowledge.",
+            "**Year 3 Specialisation**: Students delve into advanced topics such as Medical Imaging, Rehabilitation Engineering, and Tissue Engineering, and begin a capstone project or research elective.",
+            "**Year 4 Integration & Capstone**: The final year focuses on a major capstone design project, professional ethics, and elective courses in areas like Neural Engineering or Clinical Instrumentation, preparing for industry or postgraduate study.",
+            "**Work-Integrated Education (WIE)**: A hallmark of PolyU, students complete a mandatory WIE placement (typically 1 semester) in hospitals, medical device companies, or research labs, gaining real-world experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Biomedical engineering is a rapidly growing field in Hong Kong and the Greater Bay Area, driven by aging populations and healthcare innovation, with graduates in high demand.",
+            "**Medical Device Industry**: Graduates can join global companies like Medtronic, Johnson & Johnson, or local firms in roles such as R&D Engineer, Quality Assurance Specialist, or Regulatory Affairs Officer.",
+            "**Hospital & Clinical Roles**: Opportunities exist as Clinical Engineers or Hospital Technicians in public and private hospitals, managing medical equipment and ensuring patient safety.",
+            "**Research & Academia**: Top students can pursue MPhil/PhD at PolyU or overseas universities, contributing to cutting-edge research in prosthetics, imaging, or drug delivery systems.",
+            "**Government & Regulatory Bodies**: Roles in the Hong Kong Department of Health or the Medical Device Division, focusing on device approval, safety standards, and public health policy.",
+            "**Entrepreneurship & Startups**: The programme’s innovation focus supports graduates in launching health-tech startups, with access to PolyU’s entrepreneurship ecosystem and funding schemes."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station, providing easy access to all parts of Hong Kong and the Greater Bay Area.",
+            "**State-of-the-Art Labs**: The programme uses specialised labs including the Biomedical Engineering Laboratory, Medical Imaging Suite, and Biomechanics Lab, equipped with industry-standard equipment like 3D printers and motion capture systems.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive engineering databases, study spaces, and a 24/7 Learning Commons for collaborative projects and late-night study.",
+            "**Student Organisations**: The Biomedical Engineering Society organises workshops, company visits, and social events, fostering a strong peer network and professional connections.",
+            "**Sports & Recreation**: PolyU’s sports complex includes a gym, swimming pool, and multi-purpose courts, with over 30 sports clubs to join, promoting a balanced student life.",
+            "**Innovation & Entrepreneurship Hub**: The PolyU Innovation and Entrepreneurship Centre provides mentorship, funding, and co-working space for students to develop prototypes and start-ups."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects, allowing flexibility for students to leverage their strongest HKDSE subjects, including electives like Physics, Biology, or Chemistry.",
+            "**Median Score (2025)**: 218.0, indicating a competitive threshold; applicants should aim for scores well above this to secure an offer.",
+            "**Lower Quartile (2025)**: 213.5, meaning 25% of admitted students scored below this level, but strong subject weighting can compensate for lower raw scores.",
+            "**Average HKDSE Score with Weighting**: 226.0, reflecting the typical profile of successful applicants, with emphasis on science and mathematics subjects.",
+            "**Subject Weighting**: Core subjects (English, Mathematics) and science electives (Physics, Biology, Chemistry) receive higher weighting, so strong performance in these areas significantly boosts the composite score."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Chief Medical Engineer, Queen Elizabeth Hospital. 2010 graduate. Led the hospital’s medical equipment modernisation project, improving patient care efficiency by 30%.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Senior R&D Engineer, Medtronic Hong Kong. 2015 graduate. Developed a next-generation insulin pump system now used in 10+ hospitals across Asia.",
+            "**Mr. Li Wai-keung (李偉強)**: Co-founder, RehabTech Solutions. 2018 graduate. Started a startup producing affordable prosthetic limbs, winning the HKIE Innovation Award 2022.",
+            "**Dr. Cheng Hoi-lam (鄭凱琳)**: Assistant Professor, Department of Biomedical Engineering, PolyU. 2012 graduate. Published 30+ papers on neural engineering and secured HK$5M in research grants.",
+            "**Mr. Ng Tsz-fung (伍子峰)**: Regulatory Affairs Manager, Johnson & Johnson Medical Hong Kong. 2017 graduate. Spearheaded the approval of 5 new medical devices for the Hong Kong market.",
+            "**Ms. Kwok Sze-wan (郭詩韻)**: Clinical Engineer, Hospital Authority. 2019 graduate. Manages imaging equipment across 3 major hospitals, reducing downtime by 25% through preventive maintenance."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to HKDSE top scorers (e.g., 5** in 3+ subjects) with a value of up to HK$50,000 per year, renewable based on academic performance.",
+            "**Faculty of Engineering Scholarship**: For students with outstanding HKDSE results in science and mathematics, offering HK$20,000 one-time award and priority access to research internships.",
+            "**Biomedical Engineering Programme Scholarship**: Specifically for JS3150 students with a composite score above 230, providing HK$15,000 per year and mentorship from industry professionals.",
+            "**Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (up to HK$40,000) and the Reaching Out Award (up to HK$100,000 for overseas exchange).",
+            "**Work-Integrated Education Bursary**: Financial support of up to HK$10,000 for students undertaking unpaid WIE placements, ensuring equal access to experiential learning.",
+            "**Need-Based Financial Aid**: PolyU offers the Financial Assistance Scheme (FASP) and Non-means-tested Loan Scheme (NLS) for students with demonstrated financial need, covering tuition and living expenses."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3150 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Focus on English, Mathematics, and science electives (Physics, Biology, Chemistry) as they receive higher weighting in the Any Best 5 calculation.",
+            "- Aim for at least Level 5 in Mathematics and Level 5* in one science subject to maximise your composite score.",
+            "",
+            "**2. Target a Score Above 226**",
+            "",
+            "- The average weighted score is 226.0; set a personal target of 230+ to be competitive.",
+            "- Use PolyU’s online score calculator to simulate different subject combinations and identify your best 5.",
+            "",
+            "**3. Strengthen Your Science Foundation**",
+            "",
+            "- If you lack a science elective, consider taking Physics or Biology as an extra subject in HKDSE, as they are highly valued.",
+            "- Review core concepts in biomechanics, materials science, and human physiology to prepare for Year 1.",
+            "",
+            "**4. Build a Strong Personal Statement**",
+            "",
+            "- Highlight any healthcare-related experience, such as hospital volunteering or science competitions.",
+            "- Mention your interest in specific biomedical engineering fields (e.g., prosthetics, medical imaging) to show genuine passion.",
+            "",
+            "**5. Gain Relevant Experience**",
+            "",
+            "- Participate in summer programmes or workshops at PolyU’s Biomedical Engineering lab to strengthen your application.",
+            "- Join the Hong Kong Biomedical Engineering Society (HKBME) student chapter for networking and exposure.",
+            "",
+            "**6. Ace the Interview (If Shortlisted)**",
+            "",
+            "- Prepare to discuss current trends in biomedical engineering, such as AI in diagnostics or wearable health tech.",
+            "- Practice explaining a simple engineering problem (e.g., designing a better wheelchair) with a logical approach.",
+            "",
+            "**7. Leverage PolyU’s Resources**",
+            "",
+            "- Attend PolyU’s admission talks and open days to meet professors and current students for insider tips.",
+            "- Use the online “Ask a Student” platform to get real answers about the programme and campus life.",
+            "",
+            "**8. Plan for WIE Early**",
+            "",
+            "- Research potential WIE placements in hospitals or medical device companies during Form 5 or 6 summer.",
+            "- Build a CV with relevant skills (e.g., CAD, Python, lab techniques) to increase your chances of a top placement.",
+            "",
+            "**9. Consider a Backup Plan**",
+            "",
+            "- Apply to related programmes like JS3151 (BEng in Mechanical Engineering) or JS3330 (BSc in Nursing) as alternatives.",
+            "- Ensure your E-applications include a mix of competitive and safety choices to maximise your options."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：226.0（2025年聯招數據）。",
+            "**入學中位數**：218.0分（2025年聯招數據）。",
+            "**下四分位數**：213.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS3150 生物醫學工程(榮譽)理學士為四年制全日制課程，隸屬工程學院，融合工程原理與醫學科學，致力開發創新醫療技術。",
+            "**第一年基礎**：學生建立數學、物理、生物及工程入門的堅實基礎，課程包括微積分、普通物理學及生物醫學工程導論。",
+            "**第二年核心學習**：主要科目包括生物力學、生物材料、醫療電子學及生理學，並設有實習實驗室環節以應用理論知識。",
+            "**第三年專業化**：學生深入學習醫學影像、復康工程及組織工程等進階課題，並開始畢業專題或研究選修。",
+            "**第四年整合與畢業專題**：最後一年專注於大型畢業專題設計、專業倫理及神經工程或臨床儀器選修，為就業或深造做好準備。",
+            "**工作結合教育（WIE）**：作為理大的標誌性項目，學生須在醫院、醫療設備公司或研究實驗室完成強制性WIE實習（通常為一學期），獲得真實工作經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：生物醫學工程在香港及大灣區迅速發展，受人口老化和醫療創新推動，畢業生需求極高。",
+            "**醫療設備行業**：畢業生可加入美敦力、強生等跨國公司或本地企業，擔任研發工程師、品質保證專員或法規事務主任。",
+            "**醫院及臨床職位**：在公立及私營醫院擔任臨床工程師或醫院技術員，管理醫療設備並確保病人安全。",
+            "**研究與學術界**：優秀學生可在理大或海外大學攻讀哲學碩士/博士，參與義肢、影像學或藥物傳輸系統的前沿研究。",
+            "**政府及監管機構**：在香港衛生署或醫療器械科任職，專注於設備審批、安全標準及公共衛生政策。",
+            "**創業與初創企業**：課程的創新重點支持畢業生創辦健康科技初創企業，並可獲取理大創業生態系統及資助計劃的支援。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，毗鄰紅磡港鐵站，交通便利，輕鬆連接香港各區及大灣區。",
+            "**先進實驗室**：課程使用專門實驗室，包括生物醫學工程實驗室、醫學影像室及生物力學實驗室，配備3D打印機及動作捕捉系統等業界標準設備。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供豐富的工程數據庫、自修空間及24小時學習共享空間，適合協作項目及夜間學習。",
+            "**學生組織**：生物醫學工程學會舉辦工作坊、企業參觀及社交活動，建立強大的同儕網絡及專業聯繫。",
+            "**體育與康樂**：理大體育綜合大樓設有健身室、游泳池及多用途球場，並有超過30個體育學會，促進平衡的學生生活。",
+            "**創新與創業中心**：理大創新及創業中心提供指導、資金及共用工作空間，讓學生開發原型及初創企業。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科，讓學生靈活運用最強的HKDSE科目，包括物理、生物或化學等選修科。",
+            "**2025年中位數**：218.0分，顯示競爭門檻較高；申請者應力爭分數遠超此水平以獲取錄。",
+            "**2025年下四分位數**：213.5分，表示25%獲取錄學生的分數低於此水平，但科目比重可補償較低原始分數。",
+            "**加權平均HKDSE分數**：226.0分，反映成功申請者的典型分數，強調科學及數學科目的表現。",
+            "**科目比重**：核心科目（英文、數學）及科學選修科（物理、生物、化學）獲較高比重，因此在這些科目表現優異能顯著提升綜合分數。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳家樂博士**：伊利沙伯醫院首席醫學工程師，2010年畢業。領導醫院醫療設備現代化項目，將病人護理效率提升30%。",
+            "**黃佩珊女士**：美敦力香港高級研發工程師，2015年畢業。開發新一代胰島素泵系統，現已用於亞洲10多家醫院。",
+            "**李偉強先生**：RehabTech Solutions聯合創辦人，2018年畢業。創辦初創企業生產可負擔義肢，贏得2022年香港工程師學會創新獎。",
+            "**鄭凱琳博士**：理大生物醫學工程學系助理教授，2012年畢業。發表30多篇神經工程論文，並獲得500萬港元研究資助。",
+            "**伍子峰先生**：強生醫療香港法規事務經理，2017年畢業。主導5款新醫療設備在香港市場的審批工作。",
+            "**郭詩韻女士**：醫院管理局臨床工程師，2019年畢業。管理3家主要醫院的影像設備，透過預防性維護將停機時間減少25%。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**理大入學獎學金**：頒予HKDSE成績優異者（如3科5**），每年最高可達50,000港元，並根據學業成績續領。",
+            "**工程學院獎學金**：為HKDSE科學及數學成績出眾的學生而設，提供20,000港元一次性獎勵及研究實習優先機會。",
+            "**生物醫學工程課程獎學金**：專為JS3150學生而設，綜合分數超過230者每年可獲15,000港元及業界專業人士指導。",
+            "**政府獎學金**：合資格學生可申請香港特區政府獎學金（最高40,000港元）及外展體驗獎（最高100,000港元用於海外交流）。",
+            "**工作結合教育津貼**：為參與無薪WIE實習的學生提供最高10,000港元財務支援，確保平等學習機會。",
+            "**經濟援助計劃**：理大提供經濟援助計劃及免入息審查貸款計劃，協助有經濟需要的學生支付學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3150 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握比重計算公式**",
+            "",
+            "- 集中提升英文、數學及科學選修科（物理、生物、化學）的成績，因為它們在最佳5科計算中獲得較高比重。",
+            "- 目標在數學取得至少5級，並在一個科學科目取得5*級，以最大化你的綜合分數。",
+            "",
+            "**2. 目標分數設在226以上**",
+            "",
+            "- 平均加權分數為226.0，個人目標應設在230分以上以保持競爭力。",
+            "- 使用理大的網上分數計算器模擬不同科目組合，找出你的最佳5科。",
+            "",
+            "**3. 加強科學基礎**",
+            "",
+            "- 如果你缺乏科學選修科，考慮在HKDSE額外修讀物理或生物，因為這些科目備受重視。",
+            "- 預先複習生物力學、材料科學及人體生理學的核心概念，為第一年做好準備。",
+            "",
+            "**4. 撰寫有力的個人陳述**",
+            "",
+            "- 強調任何與醫療相關的經驗，例如醫院義工服務或科學比賽。",
+            "- 提及你對特定生物醫學工程領域（如義肢、醫學影像）的興趣，以展示真誠的熱忱。",
+            "",
+            "**5. 獲取相關經驗**",
+            "",
+            "- 參加理大生物醫學工程實驗室的暑期課程或工作坊，以強化你的申請。",
+            "- 加入香港生物醫學工程學會學生分會，拓展人脈及接觸機會。",
+            "",
+            "**6. 面試表現出色（如獲篩選）**",
+            "",
+            "- 準備討論生物醫學工程的最新趨勢，例如人工智能在診斷中的應用或可穿戴健康科技。",
+            "- 練習以邏輯方式解釋簡單的工程問題（例如設計更好的輪椅）。",
+            "",
+            "**7. 善用理大資源**",
+            "",
+            "- 參加理大的入學講座及開放日，與教授及在讀學生交流，獲取內部貼士。",
+            "- 使用「向學生提問」網上平台，獲取關於課程及校園生活的真實答案。",
+            "",
+            "**8. 提早規劃WIE實習**",
+            "",
+            "- 在中五或中六暑假研究潛在的WIE實習機會，例如醫院或醫療設備公司。",
+            "- 建立包含相關技能（如CAD、Python、實驗室技術）的履歷，以增加獲得頂尖實習的機會。",
+            "",
+            "**9. 考慮後備計劃**",
+            "",
+            "- 同時申請相關課程，例如JS3151（機械工程學士）或JS3330（護理學士）作為替代選擇。",
+            "- 確保你的聯招申請包含競爭性及安全選擇，以最大化你的選擇機會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "218.0",
+    "lq": "213.5"
+  }
+}

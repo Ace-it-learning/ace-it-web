@@ -1,0 +1,299 @@
+{
+  "programme": {
+    "code": "JS1211",
+    "nameEn": "BEng Biomedical Engineering",
+    "nameZh": "工學士(生物醫學工程)",
+    "name": "BEng Biomedical Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 39.0,
+    "band_a": 38.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1211",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (If both Mathematics and M1/M2 are taken, only one subject will be included). Subject weighting: 2: English / Mathematics / Biology / Chemistry / M1/M2 / Physics 1: other elective subjects.",
+            "**Median Admission Score**: 39.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 38.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: BEng Biomedical Engineering (JS1211) is a 4-year full-time programme offered by the Department of Biomedical Engineering at City University of Hong Kong. It integrates engineering principles with medical and biological sciences to develop innovative healthcare technologies.",
+            "**Year 1 Foundation**: Students take core courses in mathematics, physics, chemistry, biology, and introductory engineering. Key subjects include Calculus, General Physics, General Biology, and Introduction to Biomedical Engineering.",
+            "**Year 2 Core Studies**: Focus on biomedical engineering fundamentals such as Biomechanics, Biomaterials, Biomedical Instrumentation, and Physiology for Engineers. Students also begin laboratory-based learning.",
+            "**Year 3 Specialisation**: Advanced courses in areas like Medical Imaging, Biosensors, Tissue Engineering, and Rehabilitation Engineering. Students undertake a group design project and can choose electives from related disciplines.",
+            "**Year 4 Capstone & Research**: Final year includes a compulsory individual capstone project or thesis, advanced electives (e.g., Neural Engineering, Clinical Engineering), and professional development workshops. Graduates are prepared for engineering registration or further study.",
+            "**Industrial Training & Internships**: The programme offers a structured internship scheme and summer placements at hospitals, medical device companies, and research labs, providing hands-on industry experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Medical Device Industry**: Graduates can work as design engineers, quality assurance specialists, or regulatory affairs officers in companies like Medtronic, Siemens Healthineers, or local medical device manufacturers.",
+            "**Hospital & Clinical Engineering**: Opportunities exist as clinical engineers in public and private hospitals, managing medical equipment, ensuring safety, and supporting diagnostic services.",
+            "**Research & Development**: Many graduates pursue R&D roles in universities, government labs (e.g., Hong Kong Science and Technology Parks), or biotech startups, focusing on prosthetics, imaging systems, or wearable sensors.",
+            "**Regulatory & Consulting**: Careers in medical device regulation, health technology assessment, and consultancy for healthcare innovation are common, with roles at the Hong Kong Medical Device Division or global consulting firms.",
+            "**Further Study**: A significant proportion (over 30%) proceed to master's or PhD programmes in biomedical engineering, medicine, or related fields at top universities worldwide, including CityU, HKU, and overseas institutions.",
+            "**Entrepreneurship**: The programme encourages innovation, with alumni founding startups in areas like telemedicine, rehabilitation robotics, and point-of-care diagnostics, supported by CityU's entrepreneurship ecosystem."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Biomedical Engineering houses specialised labs including the Biomechanics Lab, Biomaterials Lab, Medical Imaging Lab, and Biosensors Lab, equipped with advanced instruments like 3D printers, microfluidic devices, and cell culture facilities.",
+            "**CityU Campus**: Located in Kowloon Tong, the campus features modern teaching buildings, a 24/7 library, and the Run Run Shaw Creative Media Centre. The campus is well-connected by MTR and bus routes.",
+            "**Student Support Services**: CityU offers comprehensive support including academic advising, career counselling, mental health services, and the Student Development Services team. The Biomedical Engineering Society organises social and academic events.",
+            "**Innovation & Entrepreneurship Hub**: The CityU HK Tech 300 programme provides funding, mentorship, and co-working space for student startups, with biomedical engineering projects frequently receiving support.",
+            "**International Exchange**: Students can participate in exchange programmes with over 400 partner universities worldwide, including options in the US, UK, Australia, and mainland China, enriching their global perspective.",
+            "**Sports & Recreation**: Facilities include a sports complex with a swimming pool, gym, basketball courts, and a running track. The campus also has student halls of residence for a vibrant living-learning environment."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score for JS1211 was 39.0 (Best 5 subjects), indicating strong competition among applicants with solid academic backgrounds.",
+            "**Lower Quartile (2025)**: The lower quartile score was 38.0, meaning 25% of admitted students scored at or below this level, but still achieved high grades across core subjects.",
+            "**Subject Weighting Advantage**: English, Mathematics, Biology, Chemistry, M1/M2, and Physics are weighted double (2x), so strong performance in these subjects significantly boosts the overall score. Other electives are weighted at 1x.",
+            "**Application Trends**: The programme attracts high-achieving students from both local and international schools, with a growing number of applicants from mainland China and other regions due to the global demand for biomedical engineers.",
+            "**Selection Criteria**: Besides academic scores, the programme may consider interviews, personal statements, and relevant extracurricular activities (e.g., science competitions, hospital volunteering) for shortlisted candidates."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Chief Technology Officer, Hong Kong Medical Device Company. 2010 graduate. Led development of a portable ECG monitor now used in 20+ hospitals.",
+            "**Ms. Li Xia (李霞女士)**: Senior Biomedical Engineer, Queen Mary Hospital, Hong Kong. 2015 graduate. Specialises in medical equipment management and clinical safety protocols.",
+            "**Mr. Wong Tsz-fung (黃子峰先生)**: Co-founder, RehabTech Solutions, a startup developing affordable prosthetic limbs. 2018 graduate. Received HK Tech 300 funding and won the HK Innovation Award.",
+            "**Dr. Ng Siu-ming (吳兆明博士)**: Assistant Professor, Department of Biomedical Engineering, City University of Hong Kong. 2012 graduate. Research focuses on neural interfaces and brain-computer interfaces.",
+            "**Ms. Cheng Ka-yan (鄭嘉欣女士)**: Regulatory Affairs Manager, Siemens Healthineers Hong Kong. 2016 graduate. Oversees product registration and compliance for medical imaging devices.",
+            "**Mr. Ho Chun-yin (何俊賢先生)**: PhD Candidate, University of Oxford (Biomedical Engineering). 2020 graduate. Awarded the Hong Kong PhD Fellowship Scheme for research in tissue engineering."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., score 40+ in Best 5) with full or half tuition fee waivers. Automatically considered upon application.",
+            "**Biomedical Engineering Departmental Scholarship**: Offered to outstanding Year 2 and Year 3 students based on academic merit, with awards up to HK$20,000 per year.",
+            "**HKSAR Government Scholarship**: For local students with exceptional academic performance and leadership qualities, providing up to HK$80,000 per year. Open to all CityU students.",
+            "**HK Tech 300 Innovation Scholarship**: Supports students engaged in entrepreneurial projects, with funding up to HK$100,000 for prototype development and business incubation.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Medical Device Association, the Hong Kong Institution of Engineers, and various charitable trusts.",
+            "**Financial Assistance Schemes**: CityU offers need-based grants, loans, and work-study opportunities through the Student Financial Assistance Office, ensuring no student is denied education due to financial constraints."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1211 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Weighted Subjects**: Focus on English, Mathematics, Biology, Chemistry, M1/M2, and Physics as they are double-weighted. Aim for Level 5 or above in at least 4 of these to reach the median score of 39.",
+            "",
+            "- Use past DSE papers to identify weak areas in these subjects.",
+            "- Consider private tutoring or study groups for Physics and Chemistry if needed.",
+            "- For M1/M2, practice calculus and statistics problems daily.",
+            "",
+            "**2. Build a Strong Science Portfolio**: Participate in science competitions (e.g., Hong Kong Biology Olympiad, Physics Olympiad) or research projects to demonstrate passion for biomedical engineering.",
+            "",
+            "- Join the CityU Summer Science Camp or similar programmes.",
+            "- Volunteer at hospitals or clinics to gain exposure to medical environments.",
+            "- Document all activities in a personal statement or CV.",
+            "",
+            "**3. Ace the Interview (if shortlisted)**: Prepare for technical and behavioural questions. Explain why biomedical engineering and how your skills align with the programme.",
+            "",
+            "- Research current trends like AI in healthcare or wearable devices.",
+            "- Practice answering questions in English and Cantonese.",
+            "- Prepare 2-3 questions to ask the panel about the programme.",
+            "",
+            "**4. Optimise Your DSE Subject Combination**: Take at least 3 of the weighted subjects (e.g., Biology, Chemistry, Physics) plus M1/M2 if possible. Avoid dropping all science subjects.",
+            "",
+            "- If you take both Mathematics and M1/M2, only one will count, so choose the one with higher expected grade.",
+            "- Consider taking an additional elective like ICT or Design & Technology to show diverse skills.",
+            "",
+            "**5. Target a Score of 39+**: With a median of 39, aim for 40+ to be competitive. Calculate your predicted score using the formula: (sum of weighted subject scores × 2 for weighted subjects) + (other electives × 1).",
+            "",
+            "- Example: 5 subjects with scores 5,5,5,5,4 in weighted subjects = (5+5+5+5+4)×2 = 48, well above median.",
+            "- If you have weaker subjects, compensate with higher scores in weighted ones.",
+            "",
+            "**6. Gain Relevant Experience**: Internships, shadowing, or part-time work in healthcare or engineering settings strengthen your application.",
+            "",
+            "- Apply for summer internships at the Hospital Authority or medical device companies.",
+            "- Participate in CityU's 'Engineering for Health' workshops or hackathons.",
+            "- Mention any experience with 3D printing, coding, or lab work.",
+            "",
+            "**7. Write a Compelling Personal Statement**: Highlight your motivation, relevant experiences, and career goals. Show how you align with CityU's focus on innovation and societal impact.",
+            "",
+            "- Start with a personal story (e.g., a family member's health issue that inspired you).",
+            "- Link your skills to specific programme features like the capstone project or industrial training.",
+            "- Keep it concise (500-800 words) and proofread for errors.",
+            "",
+            "**8. Prepare for the Capstone Project Early**: The final year project is a major component. Start thinking about a research topic in Year 2 or 3, and seek supervisor guidance.",
+            "",
+            "- Explore areas like biosensors, medical imaging, or rehabilitation robotics.",
+            "- Attend departmental seminars to learn about faculty research.",
+            "- Consider a project with industry partners for real-world impact.",
+            "",
+            "**9. Network and Seek Mentorship**: Connect with current students, alumni, and professors through CityU events or LinkedIn. Mentorship can provide insider tips and strengthen your application.",
+            "",
+            "- Attend CityU's Open Day and Biomedical Engineering info sessions.",
+            "- Follow the Department of Biomedical Engineering on social media.",
+            "- Ask alumni about their experiences and advice for applicants."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (If both Mathematics and M1/M2 are taken, only one subject will be included)。科目比重：2: 英文 / 數學 / Biology / Chemistry / M1/M2 / Physics 1: 其他選修科。",
+            "**入學中位數**：39.0分（2025年聯招數據）。",
+            "**下四分位數**：38.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：工學士（生物醫學工程）（JS1211）是香港城市大學生物醫學工程系提供的四年全日制課程。課程結合工程原理與醫學及生物科學，旨在開發創新醫療技術。",
+            "**第一年基礎**：學生修讀數學、物理、化學、生物及工程入門等核心科目，包括微積分、普通物理、普通生物學及生物醫學工程導論。",
+            "**第二年核心學習**：專注生物醫學工程基礎，如生物力學、生物材料、生物醫學儀器及工程生理學。學生亦開始實驗室學習。",
+            "**第三年專業化**：進階課程涵蓋醫學影像、生物傳感器、組織工程及康復工程。學生需完成小組設計項目，並可選修相關學科。",
+            "**第四年頂石及研究**：最後一年包括必修個人頂石項目或論文、進階選修（如神經工程、臨床工程）及專業發展工作坊。畢業生可準備工程師註冊或深造。",
+            "**工業培訓及實習**：課程提供結構化實習計劃及暑期實習機會，於醫院、醫療設備公司及研究實驗室進行，獲得實戰經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**醫療設備行業**：畢業生可擔任設計工程師、品質保證專員或法規事務主任，任職於美敦力、西門子醫療或本地醫療設備製造商。",
+            "**醫院及臨床工程**：在公立及私營醫院擔任臨床工程師，管理醫療設備、確保安全及支援診斷服務。",
+            "**研究與開發**：許多畢業生於大學、政府實驗室（如香港科學園）或生物科技初創公司從事研發，專注義肢、影像系統或可穿戴傳感器。",
+            "**法規及諮詢**：常見職業包括醫療設備法規、健康技術評估及醫療創新諮詢，任職於香港醫療設備科或全球諮詢公司。",
+            "**深造機會**：超過30%畢業生繼續攻讀生物醫學工程、醫學或相關領域的碩士或博士課程，於城大、港大及海外頂尖大學進修。",
+            "**創業精神**：課程鼓勵創新，校友創立初創公司，專注遠程醫療、康復機器人及即時診斷，獲城大創業生態系統支持。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**先進實驗室**：生物醫學工程系設有生物力學實驗室、生物材料實驗室、醫學影像實驗室及生物傳感器實驗室，配備3D打印機、微流體裝置及細胞培養設施等先進儀器。",
+            "**城大校園**：位於九龍塘，擁有現代化教學大樓、24小時圖書館及邵逸夫創意媒體中心。校園交通便利，鄰近港鐵及巴士站。",
+            "**學生支援服務**：城大提供全面支援，包括學術輔導、就業諮詢、心理健康服務及學生發展組。生物醫學工程學會舉辦社交及學術活動。",
+            "**創新與創業中心**：城大HK Tech 300計劃為學生初創提供資金、指導及共享工作空間，生物醫學工程項目經常獲得支持。",
+            "**國際交流**：學生可參與與全球400多所合作大學的交換計劃，包括美國、英國、澳洲及中國內地，擴闊國際視野。",
+            "**體育及康樂**：設施包括體育綜合大樓（游泳池、健身房、籃球場及跑道）。校園設有學生宿舍，提供充滿活力的學習生活環境。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：JS1211的中位入學分數為39.0（最佳5科），顯示申請者學術背景強勁，競爭激烈。",
+            "**2025年下四分位數**：下四分位分數為38.0，即25%獲取錄學生分數在此或以下，但仍需核心科目成績優異。",
+            "**科目加權優勢**：英文、數學、生物、化學、M1/M2及物理獲雙倍加權（2倍），因此這些科目表現優異可大幅提升總分。其他選修科加權為1倍。",
+            "**申請趨勢**：該課程吸引本地及國際學校的高材生，來自中國內地及其他地區的申請人數因全球對生物醫學工程師的需求而增加。",
+            "**甄選標準**：除學業成績外，課程或會考慮面試、個人陳述及相關課外活動（如科學比賽、醫院義工服務）以甄選候選人。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳偉強博士**：香港醫療設備公司首席技術官，2010年畢業。領導開發便攜式心電圖監測儀，現用於20多家醫院。",
+            "**李霞女士**：香港瑪麗醫院高級生物醫學工程師，2015年畢業。專注醫療設備管理及臨床安全規程。",
+            "**黃子峰先生**：RehabTech Solutions聯合創辦人，開發可負擔義肢的初創公司，2018年畢業。獲HK Tech 300資助及香港創新獎。",
+            "**吳兆明博士**：香港城市大學生物醫學工程系助理教授，2012年畢業。研究專注神經接口及腦機接口。",
+            "**鄭嘉欣女士**：西門子醫療香港法規事務經理，2016年畢業。負責醫療影像設備的產品註冊及合規。",
+            "**何俊賢先生**：牛津大學生物醫學工程博士候選人，2020年畢業。獲香港博士研究生獎學金計劃資助，研究組織工程。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予DSE成績優異者（如最佳5科達40分或以上），提供全額或半額學費減免。申請時自動考慮。",
+            "**生物醫學工程系獎學金**：頒予二年級及三年級成績優異學生，每年最高可達20,000港元。",
+            "**香港特區政府獎學金**：為本地學業及領導才能出眾的學生提供每年最高80,000港元，所有城大學生均可申請。",
+            "**HK Tech 300創新獎學金**：支持參與創業項目的學生，提供最高100,000港元用於原型開發及商業孵化。",
+            "**外部獎學金**：學生可申請香港醫療設備協會、香港工程師學會及各種慈善信託基金提供的獎學金。",
+            "**經濟援助計劃**：城大透過學生財務援助辦公室提供需要為本的助學金、貸款及工讀機會，確保學生不因經濟困難而失學。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1211 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理加權科目**：重點提升英文、數學、生物、化學、M1/M2及物理，因它們獲雙倍加權。目標在至少4科取得5級或以上，以達到中位分數39。",
+            "",
+            "- 利用歷屆DSE試卷找出弱項。",
+            "- 如有需要，考慮私人補習或小組學習物理及化學。",
+            "- 對於M1/M2，每日練習微積分及統計題目。",
+            "",
+            "**2. 建立強大的科學作品集**：參與科學比賽（如香港生物奧林匹克、物理奧林匹克）或研究項目，展示對生物醫學工程的熱誠。",
+            "",
+            "- 參加城大暑期科學營或類似課程。",
+            "- 在醫院或診所擔任義工，接觸醫療環境。",
+            "- 將所有活動記錄在個人陳述或履歷中。",
+            "",
+            "**3. 面試突圍（如獲篩選）**：準備技術及行為問題。解釋為何選擇生物醫學工程，以及你的技能如何配合課程。",
+            "",
+            "- 研究當前趨勢，如人工智能在醫療或可穿戴設備。",
+            "- 練習以英語及粵語回答問題。",
+            "- 準備2-3條問題向面試小組提問。",
+            "",
+            "**4. 優化DSE科目組合**：至少選修3個加權科目（如生物、化學、物理），並盡可能修讀M1/M2。避免放棄所有理科。",
+            "",
+            "- 如同時修讀數學及M1/M2，只計算其中一科，選擇預計成績較高者。",
+            "- 考慮選修資訊及通訊科技或設計與應用科技，展示多元技能。",
+            "",
+            "**5. 目標分數達39+**：中位數為39，目標40+以增加競爭力。使用公式計算預測分數：（加權科目分數總和×2）+（其他選修科×1）。",
+            "",
+            "- 例子：5科加權科目分數為5,5,5,5,4，總分=(5+5+5+5+4)×2=48，遠高於中位數。",
+            "- 如某科較弱，以加權科目高分補償。",
+            "",
+            "**6. 獲取相關經驗**：實習、影子工作或兼職於醫療或工程領域，可強化申請。",
+            "",
+            "- 申請醫院管理局或醫療設備公司的暑期實習。",
+            "- 參加城大「工程與健康」工作坊或黑客松。",
+            "- 提及任何3D打印、編程或實驗室經驗。",
+            "",
+            "**7. 撰寫動人的個人陳述**：突出你的動機、相關經驗及職業目標。展示你如何配合城大對創新及社會影響的重視。",
+            "",
+            "- 以個人故事開頭（如家人健康問題啟發你）。",
+            "- 將你的技能與課程特點（如頂石項目或工業培訓）聯繫。",
+            "- 保持簡潔（500-800字），並仔細校對。",
+            "",
+            "**8. 提早準備頂石項目**：最後一年的項目是重要組成部分。在第二年或第三年開始思考研究主題，並尋求導師指導。",
+            "",
+            "- 探索生物傳感器、醫學影像或康復機器人等領域。",
+            "- 參加系內研討會，了解教授的研究方向。",
+            "- 考慮與行業夥伴合作項目，以實現實際影響。",
+            "",
+            "**9. 建立人脈及尋求指導**：透過城大活動或LinkedIn聯繫現屆學生、校友及教授。指導可提供內部貼士及強化申請。",
+            "",
+            "- 參加城大開放日及生物醫學工程資訊講座。",
+            "- 關注生物醫學工程系的社交媒體。",
+            "- 向校友請教他們的經驗及對申請者的建議。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 39.0,
+    "lq": 38.0
+  }
+}

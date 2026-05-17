@@ -1,0 +1,2501 @@
+{
+  "JS6004": {
+    "nameEn": "Bachelor of Arts in Architectural Studies",
+    "nameZh": "建築學文學士",
+    "faculty": "建築學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6016": {
+    "nameEn": "Bachelor of Science in Surveying",
+    "nameZh": "理學士(測量學)",
+    "faculty": "建築學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6028": {
+    "nameEn": "Bachelor of Arts in Landscape Studies",
+    "nameZh": "園境學文學士",
+    "faculty": "建築學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6042": {
+    "nameEn": "Bachelor of Arts in Urban Studies",
+    "nameZh": "文學士(城市研究)",
+    "faculty": "文學院",
+    "university": "香港大學",
+    "category": "Social Science"
+  },
+  "JS6066": {
+    "nameEn": "BA and BEd in Language Education - English",
+    "nameZh": "文學士及教育學士(語文教育)-英文教育",
+    "faculty": "教育學院",
+    "university": "香港大學",
+    "category": "Education"
+  },
+  "JS6078": {
+    "nameEn": "Bachelor of Arts and Bachelor of Laws",
+    "nameZh": "文學士及法學士",
+    "faculty": "法律學院",
+    "university": "香港大學",
+    "category": "Law"
+  },
+  "JS6080": {
+    "nameEn": "BA and BEd in Language Education - Chinese",
+    "nameZh": "文學士及教育學士(語文教育)-中文教育",
+    "faculty": "教育學院",
+    "university": "香港大學",
+    "category": "Education"
+  },
+  "JS6092": {
+    "nameEn": "Bachelor of Education in Early Childhood and Special Education",
+    "nameZh": "教育學士(幼兒教育及特殊教育)",
+    "faculty": "教育學院",
+    "university": "香港大學",
+    "category": "Education"
+  },
+  "JS6157": {
+    "nameEn": "Bachelor of Science in Speech-Language Pathology",
+    "nameZh": "理學士(言語及語言病理學)",
+    "faculty": "醫學院",
+    "university": "香港大學",
+    "category": "Medicine"
+  },
+  "JS6200": {
+    "nameEn": "Computing and Data Science (Delta+)",
+    "nameZh": "計算與數據科學(港滬科技菁英)",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6224": {
+    "nameEn": "Bachelor of Arts and Sciences in Applied Artificial Intelligence",
+    "nameZh": "文理學士(應用人工智能)",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6236": {
+    "nameEn": "Bachelor of Arts and Sciences in Design+",
+    "nameZh": "文理學士(設計＋)",
+    "faculty": "建築學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6248": {
+    "nameEn": "Bachelor of Arts and Sciences in Financial Technology",
+    "nameZh": "文理學士(金融科技)",
+    "faculty": "商學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6250": {
+    "nameEn": "Bachelor of Arts and Sciences in Global Health and Development",
+    "nameZh": "文理學士(環球衞生及發展)",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Health Science"
+  },
+  "JS6274": {
+    "nameEn": "Bachelor of Arts in Global Creative Industries",
+    "nameZh": "文學士(全球創意產業)",
+    "faculty": "文學院",
+    "university": "香港大學",
+    "category": "Arts"
+  },
+  "JS1000": {
+    "nameEn": "BSc Computational Finance and Financial Technology",
+    "nameZh": "理學士(計算金融及金融科技)",
+    "faculty": "商學院",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1001": {
+    "nameEn": "BBA Global Business",
+    "nameZh": "工商管理學士(環球商業)",
+    "faculty": "商學院",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1002": {
+    "nameEn": "BBA Accountancy",
+    "nameZh": "工商管理學士(會計)",
+    "faculty": "商學院",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1005": {
+    "nameEn": "BBA Management",
+    "nameZh": "工商管理學士(管理學)",
+    "faculty": "商學院",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1211": {
+    "nameEn": "BEng Biomedical Engineering",
+    "nameZh": "工學士(生物醫學工程)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Medicine"
+  },
+  "JS1300": {
+    "nameEn": "Integrative Bioscience & Bioengineering Programme",
+    "nameZh": "綜合生物科學與生物工程課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1805": {
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Medicine"
+  },
+  "JS1806": {
+    "nameEn": "BSc Biological Sciences",
+    "nameZh": "理學士(生物科學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1807": {
+    "nameEn": "BSc Biomedical Sciences",
+    "nameZh": "理學士(生物醫學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Medicine"
+  },
+  "JS1007": {
+    "nameEn": "BBA Marketing",
+    "nameZh": "工商管理學士(市場學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1012": {
+    "nameEn": "Economics and Finance",
+    "nameZh": "經濟及金融",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Business"
+  },
+  "JS1013": {
+    "nameEn": "BBA Business Economics",
+    "nameZh": "工商管理學士(商業經濟)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1014": {
+    "nameEn": "BBA Finance",
+    "nameZh": "工商管理學士(金融)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1017": {
+    "nameEn": "Intelligent Information Systems",
+    "nameZh": "智能資訊系統學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1018": {
+    "nameEn": "BBA Global Business Systems Management",
+    "nameZh": "工商管理學士(環球商業系統管理)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1019": {
+    "nameEn": "BBA Artificial Intelligence in Business",
+    "nameZh": "工商管理學士(商業人工智能)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1026": {
+    "nameEn": "BBA Business Decision Analytics",
+    "nameZh": "工商管理學士(商業決策分析)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1027": {
+    "nameEn": "BBA Global Operations Management",
+    "nameZh": "工商管理學士(環球營運管理)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1070": {
+    "nameEn": "AI, Computing and Transformation",
+    "nameZh": "人工智能・計算・突破課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1071": {
+    "nameEn": "Data Science",
+    "nameZh": "數據科學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1072": {
+    "nameEn": "BSc Data Science",
+    "nameZh": "理學士(數據科學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1074": {
+    "nameEn": "BSc Data and Systems Engineering",
+    "nameZh": "理學士(數據與系統工程)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1204": {
+    "nameEn": "BSc Computer Science",
+    "nameZh": "理學士(計算機科學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1218": {
+    "nameEn": "BSc Cybersecurity",
+    "nameZh": "理學士(網絡安全)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS1201": {
+    "nameEn": "Architecture and Civil Engineering",
+    "nameZh": "建築學及土木工程學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS1205": {
+    "nameEn": "Electrical Engineering",
+    "nameZh": "電機工程學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1207": {
+    "nameEn": "Mechanical Engineering",
+    "nameZh": "機械工程學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1210": {
+    "nameEn": "BEng Materials Science and Engineering",
+    "nameZh": "工學士(材料科學及工程)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1216": {
+    "nameEn": "BEng Intelligent Manufacturing Engineering",
+    "nameZh": "工學士(智能製造工程學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1217": {
+    "nameEn": "Pathway for Research, Innovation, and Multinational Engineering",
+    "nameZh": "研究、創新和環球工程課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1219": {
+    "nameEn": "BEng Innovation and Enterprise Engineering",
+    "nameZh": "工學士(創新與企業工程)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1102": {
+    "nameEn": "BSocSc International Relations and Global Affairs",
+    "nameZh": "社會科學學士(國際關係及全球事務)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Social Science"
+  },
+  "JS1103": {
+    "nameEn": "BA Chinese and History",
+    "nameZh": "文學士(中文及歷史)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Arts"
+  },
+  "JS1104": {
+    "nameEn": "BA English",
+    "nameZh": "文學士(英語語言)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Arts"
+  },
+  "JS1106": {
+    "nameEn": "Media and Communication",
+    "nameZh": "媒體與傳播",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Communication & Media"
+  },
+  "JS1108": {
+    "nameEn": "BSocSc Public Affairs and Management",
+    "nameZh": "社會科學學士(公共事務與管理)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Social Science"
+  },
+  "JS1109": {
+    "nameEn": "BA Linguistics and Language Applications",
+    "nameZh": "文學士(語言學及語言應用)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Arts"
+  },
+  "JS1111": {
+    "nameEn": "BSocSc Crime Science",
+    "nameZh": "社會科學學士(犯罪科學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Social Science"
+  },
+  "JS1112": {
+    "nameEn": "BSocSc Psychology",
+    "nameZh": "社會科學學士(心理學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Social Science"
+  },
+  "JS1113": {
+    "nameEn": "BSocSc Social Work",
+    "nameZh": "社會科學學士(社會工作)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Social Science"
+  },
+  "JS1200": {
+    "nameEn": "Global Research Enrichment and Technopreneurship",
+    "nameZh": "環球精研與科創課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS1202": {
+    "nameEn": "BSc Chemistry",
+    "nameZh": "理學士(化學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1206": {
+    "nameEn": "BSc Computing Mathematics",
+    "nameZh": "理學士(計算數學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1208": {
+    "nameEn": "BSc Physics",
+    "nameZh": "理學士(物理學)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1801": {
+    "nameEn": "Bachelor of Veterinary Medicine",
+    "nameZh": "獸醫學學士",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Medicine"
+  },
+  "JS1040": {
+    "nameEn": "Creative Arts and Technology Excellence",
+    "nameZh": "卓越創藝與科技課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Design"
+  },
+  "JS1041": {
+    "nameEn": "Creative Media",
+    "nameZh": "創意媒體",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Design"
+  },
+  "JS1042": {
+    "nameEn": "BA Creative Media",
+    "nameZh": "文學士(創意媒體)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Design"
+  },
+  "JS1043": {
+    "nameEn": "BSc Creative Media",
+    "nameZh": "理學士(創意媒體)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1044": {
+    "nameEn": "BAS New Media",
+    "nameZh": "文理學士(新媒體)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1050": {
+    "nameEn": "International Sustainability Programme for Innovation, Research & Entrepreneurship",
+    "nameZh": "環球可持續發展科創課程",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS1051": {
+    "nameEn": "Energy and Environment",
+    "nameZh": "能源及環境學",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS1053": {
+    "nameEn": "BSc Environment and Sustainable Business",
+    "nameZh": "理學士(環境及可持續發展商業)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Science"
+  },
+  "JS1061": {
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "法律學學士",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Law"
+  },
+  "JS1052": {
+    "nameEn": "BEng Environmental Science and Engineering and BBA Finance",
+    "nameZh": "工學士(環境科學及工程學)與工商管理學士(金融)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Engineering"
+  },
+  "JS1062": {
+    "nameEn": "Bachelor of Laws and BBA Accountancy",
+    "nameZh": "法律學學士與工商管理學士(會計)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Law"
+  },
+  "JS1123": {
+    "nameEn": "BSocSc Crime Science and Bachelor of Laws",
+    "nameZh": "社會科學學士(犯罪科學)與法律學學士",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Law"
+  },
+  "JS1221": {
+    "nameEn": "BSc Computer Science and BSc Computational Finance and Financial Technology",
+    "nameZh": "理學士(計算機科學)與理學士(計算金融及金融科技)",
+    "faculty": "",
+    "university": "香港城市大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4501": {
+    "nameEn": "Bachelor of Medicine and Bachelor of Surgery (MBChB)",
+    "nameZh": "內外全科醫學士",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4513": {
+    "nameEn": "Bachelor of Nursing",
+    "nameZh": "護理學士",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4601": {
+    "nameEn": "Bachelor of Science",
+    "nameZh": "理學士",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4801": {
+    "nameEn": "Bachelor of Social Science",
+    "nameZh": "社會科學學士",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4903": {
+    "nameEn": "Bachelor of Laws (LLB)",
+    "nameZh": "法學士",
+    "faculty": "法律學院",
+    "university": "香港中文大學",
+    "category": "Law"
+  },
+  "JS4202": {
+    "nameEn": "Integrated Bachelor of Business Administration",
+    "nameZh": "工商管理學士綜合課程",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4412": {
+    "nameEn": "Computer Science and Engineering",
+    "nameZh": "計算機科學與工程",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4525": {
+    "nameEn": "Pharmacy",
+    "nameZh": "藥劑學",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4824": {
+    "nameEn": "Economics",
+    "nameZh": "經濟學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4862": {
+    "nameEn": "Psychology",
+    "nameZh": "心理學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4214": {
+    "nameEn": "Global Business Studies",
+    "nameZh": "環球商業學",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4240": {
+    "nameEn": "Professional Accountancy",
+    "nameZh": "專業會計學",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4542": {
+    "nameEn": "Chinese Medicine",
+    "nameZh": "中醫學",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4812": {
+    "nameEn": "Architectural Studies",
+    "nameZh": "建築學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS4850": {
+    "nameEn": "Journalism and Communication",
+    "nameZh": "新聞與傳播學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Communication & Media"
+  },
+  "JS8001": {
+    "nameEn": "Bachelor of Arts (Honours) in Creative and Digital Arts and Bachelor of Education (Honours) (Music)",
+    "nameZh": "創意藝術與數碼藝術榮譽文學士及音樂教育榮譽學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Design"
+  },
+  "JS8002": {
+    "nameEn": "Bachelor of Arts (Honours) in Creative and Digital Arts and Bachelor of Education (Honours) (Visual Arts)",
+    "nameZh": "創意藝術與數碼藝術榮譽文學士及視覺藝術教育榮譽學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Design"
+  },
+  "JS8003": {
+    "nameEn": "Bachelor of Arts (Honours) in Digital Chinese Culture and Communication and Bachelor of Education (Honours) (Chinese Language)",
+    "nameZh": "數碼中國文化與傳意榮譽文學士及中文教育榮譽學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Communication & Media"
+  },
+  "JS8004": {
+    "nameEn": "Bachelor of Arts (Honours) in English Studies and Digital Communication and Bachelor of Education (Honours) (English Language)",
+    "nameZh": "英語研究及數碼傳訊榮譽文學士及英文教育榮譽學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Communication & Media"
+  },
+  "JS8005": {
+    "nameEn": "Bachelor of Arts (Honours) in Heritage Education and Arts Management and Bachelor of Education (Honours) (Chinese History)",
+    "nameZh": "文化傳承教育與藝術管理榮譽文學士及中國歷史教育榮譽學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Education"
+  },
+  "JS8006": {
+    "nameEn": "Bachelor of Social Sciences (Honours) in Psychology and Bachelor of Education (Honours) (Early Childhood Education)",
+    "nameZh": "心理學榮譽社會科學學士及幼兒教育榮譽學士",
+    "faculty": "Faculty of Education and Human Development",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS8007": {
+    "nameEn": "Bachelor of Arts (Honours) in Personal Finance and Bachelor of Education (Honours) (Business, Accounting and Financial Studies)",
+    "nameZh": "個人理財榮譽文學士及企業、會計與財務概論教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Education"
+  },
+  "JS8008": {
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Information and Communication Technology and Primary Science)",
+    "nameZh": "人工智能與教育科技榮譽理學士及資訊及通訊科技及小學科學教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Computer & Data Science"
+  },
+  "JS8009": {
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Primary Mathematics)",
+    "nameZh": "人工智能與教育科技榮譽理學士及小學數學教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Computer & Data Science"
+  },
+  "JS8010": {
+    "nameEn": "Bachelor of Science (Honours) in Sports Science and Coaching and Bachelor of Education (Honours) (Physical Education)",
+    "nameZh": "運動科學及教練榮譽理學士及體育教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS8011": {
+    "nameEn": "Bachelor of Science (Honours) in Integrated Environmental Management and Bachelor of Education (Honours) (Science)",
+    "nameZh": "綜合環境管理榮譽理學士及科學教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS8012": {
+    "nameEn": "Bachelor of Social Sciences (Honours) in Sociology and Community Studies and Bachelor of Education (Honours) (Geography)",
+    "nameZh": "社會學與社區研究榮譽社會科學學士及地理教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Social Science"
+  },
+  "JS8013": {
+    "nameEn": "Bachelor of Social Sciences (Honours) in Sociology and Community Studies and Bachelor of Education (Honours) (Primary Humanities)",
+    "nameZh": "社會學與社區研究榮譽社會科學學士及小學人文科教育榮譽學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Social Science"
+  },
+  "JS8507": {
+    "nameEn": "Higher Diploma in Early Childhood Education",
+    "nameZh": "幼兒教育高級文憑",
+    "faculty": "Faculty of Education and Human Development",
+    "university": "香港教育大學",
+    "category": "Education"
+  },
+  "JS8651": {
+    "nameEn": "Bachelor of Social Sciences (Honours) in Psychology",
+    "nameZh": "心理學榮譽社會科學學士",
+    "faculty": "Faculty of Education and Human Development",
+    "university": "香港教育大學",
+    "category": "Social Science"
+  },
+  "JS8663": {
+    "nameEn": "Bachelor of Arts (Honours) in Special Education",
+    "nameZh": "特殊教育榮譽文學士",
+    "faculty": "Faculty of Education and Human Development",
+    "university": "香港教育大學",
+    "category": "Education"
+  },
+  "JS8674": {
+    "nameEn": "Bachelor of Arts (Honours) in Digital Chinese Culture and Communication",
+    "nameZh": "數碼中國文化與傳意榮譽文學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Communication & Media"
+  },
+  "JS8675": {
+    "nameEn": "Bachelor of Arts (Honours) in English Studies and Digital Communication",
+    "nameZh": "英語研究及數碼傳訊榮譽文學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Communication & Media"
+  },
+  "JS8685": {
+    "nameEn": "Bachelor of Arts (Honours) in Creative and Digital Arts (Music)",
+    "nameZh": "創意藝術與數碼藝術榮譽文學士 (音樂)",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Design"
+  },
+  "JS8686": {
+    "nameEn": "Bachelor of Arts (Honours) in Creative and Digital Arts (Visual Arts)",
+    "nameZh": "創意藝術與數碼藝術榮譽文學士 (視覺藝術)",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Design"
+  },
+  "JS8687": {
+    "nameEn": "Bachelor of Arts (Honours) in Heritage Education and Arts Management",
+    "nameZh": "文化傳承教育與藝術管理榮譽文學士",
+    "faculty": "Faculty of Humanities",
+    "university": "香港教育大學",
+    "category": "Education"
+  },
+  "JS8688": {
+    "nameEn": "Bachelor of Arts (Honours) in Personal Finance",
+    "nameZh": "個人理財榮譽文學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Business"
+  },
+  "JS8702": {
+    "nameEn": "Bachelor of Science (Honours) in Integrated Environmental Management",
+    "nameZh": "綜合環境管理榮譽理學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS8714": {
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology",
+    "nameZh": "人工智能與教育科技榮譽理學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Computer & Data Science"
+  },
+  "JS8726": {
+    "nameEn": "Bachelor of Science (Honours) in Sports Science and Coaching",
+    "nameZh": "運動科學及教練榮譽理學士",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS8727": {
+    "nameEn": "Bachelor of Science (Honours) in Speech Pathology and Rehabilitation",
+    "nameZh": "言語病理學及復康榮譽理學士",
+    "faculty": "Faculty of Education and Human Development",
+    "university": "香港教育大學",
+    "category": "Science"
+  },
+  "JS2020": {
+    "nameEn": "Bachelor of Arts (Hons) (Chinese Language and Literature / Creative and Professional Writing / English Language and Literature / Humanities / Translation)",
+    "nameZh": "文學士(榮譽) (中國語言文學 / 創意及專業寫作 / 英國語言文學 / 人文學 / 翻譯學)",
+    "faculty": "Faculty of Arts",
+    "university": "香港浸會大學",
+    "category": "Arts"
+  },
+  "JS2025": {
+    "nameEn": "Bachelor of Arts (Hons) in Religion, Philosophy and Ethics",
+    "nameZh": "宗教、哲學及倫理文學士(榮譽)",
+    "faculty": "Faculty of Arts",
+    "university": "香港浸會大學",
+    "category": "Arts"
+  },
+  "JS2060": {
+    "nameEn": "Bachelor of Arts (Hons) / Bachelor of Music (Hons) (Music / Creative Industries)",
+    "nameZh": "文學士(榮譽) / 音樂學士(榮譽) (音樂 / 創意產業)",
+    "faculty": "Faculty of Arts",
+    "university": "香港浸會大學",
+    "category": "Arts"
+  },
+  "JS2110": {
+    "nameEn": "Bachelor of Business Administration (Hons) - Accounting Concentration",
+    "nameZh": "工商管理學士(榮譽) - 會計學專修",
+    "faculty": "School of Business",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2120": {
+    "nameEn": "Bachelor of Business Administration (Hons)",
+    "nameZh": "工商管理學士(榮譽)",
+    "faculty": "School of Business",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2310": {
+    "nameEn": "Bachelor of Communication (Hons) (Journalism and Digital Media / Public Relations and Advertising)",
+    "nameZh": "傳理學學士(榮譽) (新聞與數碼媒體 / 公關及廣告)",
+    "faculty": "School of Communication",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2330": {
+    "nameEn": "Bachelor of Arts (Hons) in Film and Television",
+    "nameZh": "電影電視文學士(榮譽)",
+    "faculty": "School of Communication",
+    "university": "香港浸會大學",
+    "category": "Communication & Media"
+  },
+  "JS2340": {
+    "nameEn": "Bachelor of Fine Arts (Hons) in Acting for Global Screen",
+    "nameZh": "環球螢幕演技藝術學士(榮譽)",
+    "faculty": "School of Communication",
+    "university": "香港浸會大學",
+    "category": "Communication & Media"
+  },
+  "JS2370": {
+    "nameEn": "Bachelor of Communication (Hons) in Game Design and Animation",
+    "nameZh": "傳理學學士(榮譽) - 遊戲設計與動畫主修",
+    "faculty": "School of Communication",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2410": {
+    "nameEn": "Bachelor of Chinese Medicine and Bachelor of Science (Hons) in Biomedical Science",
+    "nameZh": "中醫學學士及生物醫學理學士(榮譽)",
+    "faculty": "School of Chinese Medicine",
+    "university": "香港浸會大學",
+    "category": "Medicine"
+  },
+  "JS2420": {
+    "nameEn": "Bachelor of Pharmacy (Hons) in Chinese Medicine",
+    "nameZh": "中藥學學士(榮譽)",
+    "faculty": "School of Chinese Medicine",
+    "university": "香港浸會大學",
+    "category": "Medicine"
+  },
+  "JS2510": {
+    "nameEn": "Bachelor of Science (Hons)",
+    "nameZh": "理學士(榮譽)",
+    "faculty": "Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2610": {
+    "nameEn": "Bachelor of Arts (Hons) / Bachelor of Social Sciences (Hons) (European Studies [French/German Stream] / Geography/ Global and China Studies/ Government and International Studies/ History/ Sociology)",
+    "nameZh": "文學士(榮譽) / 社會科學學士(榮譽) (歐洲研究 [法文/德文] / 地理 / 全球及中國研究 / 政治及國際關係學 / 歷史 / 社會學)",
+    "faculty": "Faculty of Social Sciences",
+    "university": "香港浸會大學",
+    "category": "Social Science"
+  },
+  "JS2620": {
+    "nameEn": "Bachelor of Arts (Hons) in Physical Education and Recreation Management",
+    "nameZh": "體育及康樂管理文學士(榮譽)",
+    "faculty": "Faculty of Social Sciences",
+    "university": "香港浸會大學",
+    "category": "Education"
+  },
+  "JS2660": {
+    "nameEn": "Bachelor of Social Work (Hons)",
+    "nameZh": "社會工作學士(榮譽)",
+    "faculty": "Faculty of Social Sciences",
+    "university": "香港浸會大學",
+    "category": "Social Science"
+  },
+  "JS2810": {
+    "nameEn": "Bachelor of Arts (Hons) in Visual Arts",
+    "nameZh": "視覺藝術文學士(榮譽)",
+    "faculty": "Academy of Visual Arts",
+    "university": "香港浸會大學",
+    "category": "Design"
+  },
+  "JS2910": {
+    "nameEn": "Bachelor of Science (Hons) in Business Computing and Data Analytics",
+    "nameZh": "商業計算及數據分析理學士(榮譽)",
+    "faculty": "Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2920": {
+    "nameEn": "Bachelor of Arts and Science (Hons) in Arts and Technology",
+    "nameZh": "藝術及科技文理學士(榮譽)",
+    "faculty": "Faculty of Arts / Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS2930": {
+    "nameEn": "Bachelor of Arts (Hons) in Business Administration (Global Entertainment)",
+    "nameZh": "工商管理文學士(榮譽)(全球娛樂)",
+    "faculty": "School of Business",
+    "university": "香港浸會大學",
+    "category": "Business"
+  },
+  "JS2940": {
+    "nameEn": "Bachelor of Social Sciences (Hons) / Bachelor of Science (Hons) in Innovation in Health and Social Well-Being",
+    "nameZh": "創新醫療及社會健康社會科學學士(榮譽) / 理學士(榮譽)",
+    "faculty": "Faculty of Social Sciences / Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Health Science"
+  },
+  "JS2950": {
+    "nameEn": "Bachelor of Arts, Science and Technology (Hons) in Individualised Major",
+    "nameZh": "文理及科技學士(榮譽)自訂主修",
+    "faculty": "Faculty of Arts / Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Arts"
+  },
+  "JS2960": {
+    "nameEn": "Bachelor of Arts and Science (Hons) in Digital Futures and Humanities",
+    "nameZh": "數位未來與人文學科文理學士(榮譽)",
+    "faculty": "Faculty of Arts / Faculty of Science",
+    "university": "香港浸會大學",
+    "category": "Science"
+  },
+  "JS9009": {
+    "nameEn": "Bachelor of Social Sciences with Honours",
+    "nameZh": "社會科學榮譽學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Social Science"
+  },
+  "JS9010": {
+    "nameEn": "Bachelor of Social Sciences with Honours in Psychology",
+    "nameZh": "心理學榮譽社會科學學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Social Science"
+  },
+  "JS9011": {
+    "nameEn": "Bachelor of Arts with Honours in Chinese",
+    "nameZh": "中文榮譽文學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Arts"
+  },
+  "JS9013": {
+    "nameEn": "Bachelor of Arts with Honours in Language Studies and Translation",
+    "nameZh": "語言研究與翻譯榮譽文學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Arts"
+  },
+  "JS9016": {
+    "nameEn": "Bachelor of Arts with Honours in Creative Advertising and Media Design",
+    "nameZh": "創意廣告及媒體設計榮譽文學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Design"
+  },
+  "JS9019": {
+    "nameEn": "Bachelor of Arts with Honours in English Language and Culture",
+    "nameZh": "英語及文化榮譽文學士",
+    "faculty": "人文社會科學院",
+    "university": "香港都會大學",
+    "category": "Arts"
+  },
+  "JS9220": {
+    "nameEn": "Bachelor of Business Administration with Honours in Professional Accounting",
+    "nameZh": "專業會計榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9230": {
+    "nameEn": "Bachelor of Business Administration with Honours in Business Management",
+    "nameZh": "商業管理學榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9240": {
+    "nameEn": "Bachelor of Business Administration with Honours in Global Business",
+    "nameZh": "環球商業榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9262": {
+    "nameEn": "Bachelor of Business Administration with Honours in Human Resource Management",
+    "nameZh": "人力資源管理學榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9266": {
+    "nameEn": "Bachelor of Business Administration with Honours in Marketing",
+    "nameZh": "市場學榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9276": {
+    "nameEn": "Bachelor of Business Administration with Honours in Real Estate and Surveying",
+    "nameZh": "房地產及測量學榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS9280": {
+    "nameEn": "Bachelor of Applied Psychology with Honours, Bachelor of Business Management with Honours",
+    "nameZh": "應用心理學榮譽學士，商業管理榮譽學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9291": {
+    "nameEn": "Bachelor of Business Administration with Honours in Sustainable Tourism and Hospitality Management",
+    "nameZh": "持續旅遊及款待管理榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9294": {
+    "nameEn": "Bachelor of Business Administration with Honours in Sports and eSports Management",
+    "nameZh": "運動及電競運動管理榮譽工商管理學士",
+    "faculty": "李兆基商業管理學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9520": {
+    "nameEn": "Bachelor of Education with Honours (Putonghua and Chinese Language Education) and Bachelor of Language Studies with Honours (Chinese Linguistic Studies)",
+    "nameZh": "教育榮譽學士（普通話及中文教育）及語言研究榮譽學士（漢語語言學研究）",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Education"
+  },
+  "JS9530": {
+    "nameEn": "Bachelor of Education with Honours in English Language Teaching and Bachelor of English Language Studies with Honours",
+    "nameZh": "英語教學榮譽教育學士及英語研究榮譽學士",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Education"
+  },
+  "JS9540": {
+    "nameEn": "Bachelor of English Language Studies with Honours",
+    "nameZh": "英語研究榮譽學士",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Arts"
+  },
+  "JS9550": {
+    "nameEn": "Bachelor of Language Studies with Honours (Applied Chinese Language Studies)",
+    "nameZh": "語言研究榮譽學士（應用中國語言）",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Education"
+  },
+  "JS9560": {
+    "nameEn": "Bachelor of Education with Honours (Chinese Language Teaching) and Bachelor of Language Studies with Honours (Applied Chinese Language Studies)",
+    "nameZh": "教育榮譽學士（中國語文教學）及語言研究榮譽學士（應用中國語言）",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Education"
+  },
+  "JS9580": {
+    "nameEn": "Bachelor of Education with Honours in Early Childhood Education (Leadership and Special Educational Needs)",
+    "nameZh": "教育榮譽學士（幼兒教育：領導及特殊教育需要）",
+    "faculty": "教育及語文學院",
+    "university": "香港都會大學",
+    "category": "Education"
+  },
+  "JS9719": {
+    "nameEn": "Bachelor of Science with Honours in Cyber and Computer Security",
+    "nameZh": "網路及電腦安全榮譽理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9720": {
+    "nameEn": "Bachelor of Engineering with Honours in Electronic and Computer Engineering",
+    "nameZh": "電子及電腦工程學榮譽工學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Engineering"
+  },
+  "JS9731": {
+    "nameEn": "Bachelor of Science with Honours in Environmental Science and Green Management",
+    "nameZh": "環境科學與綠色管理榮譽理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9732": {
+    "nameEn": "Bachelor of Science with Honours in Biomedical Sciences and Biotechnology",
+    "nameZh": "生物醫學與生物科技榮譽理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Medicine"
+  },
+  "JS9733": {
+    "nameEn": "Bachelor of Science with Honours in Science (STEAM)",
+    "nameZh": "科學（STEAM）榮譽理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Science"
+  },
+  "JS9775": {
+    "nameEn": "Bachelor of Applied Science with Honours in Robotics and Automation Engineering",
+    "nameZh": "機器人和自動化工程榮譽應用理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Engineering"
+  },
+  "JS9776": {
+    "nameEn": "Bachelor of Science with Honours in Building Engineering and Management",
+    "nameZh": "建造工程與管理榮譽理學士",
+    "faculty": "科技學院",
+    "university": "香港都會大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS5101": {
+    "nameEn": "International Research Enrichment",
+    "nameZh": "國際科研",
+    "faculty": "School of Science",
+    "university": "香港科技大學",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS5102": {
+    "nameEn": "Science (Group A)",
+    "nameZh": "理學Ａ組",
+    "faculty": "School of Science",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5103": {
+    "nameEn": "Science (Group B)",
+    "nameZh": "理學Ｂ組",
+    "faculty": "School of Science",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5118": {
+    "nameEn": "BSc in Biomedical and Health Sciences",
+    "nameZh": "理學士（生物醫學及健康科學）",
+    "faculty": "School of Science",
+    "university": "香港科技大學",
+    "category": "Medicine"
+  },
+  "JS5181": {
+    "nameEn": "Science (Group A) with Extended Major in Artificial Intelligence",
+    "nameZh": "理學Ａ組– 人工智能延伸主修",
+    "faculty": "School of Science",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5212": {
+    "nameEn": "BEng in Computer Engineering",
+    "nameZh": "工學士（計算機工程學）",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5220": {
+    "nameEn": "Department of Chemical and Biological Engineering",
+    "nameZh": "化學及生物工程學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Engineering"
+  },
+  "JS5230": {
+    "nameEn": "Department of Civil and Environmental Engineering",
+    "nameZh": "土木及環境工程學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Engineering"
+  },
+  "JS5240": {
+    "nameEn": "Department of Computer Science and Engineering",
+    "nameZh": "計算機科學及工程學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5250": {
+    "nameEn": "Department of Electronic and Computer Engineering",
+    "nameZh": "電子及計算機工程學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5260": {
+    "nameEn": "Department of Industrial Engineering and Decision Analytics",
+    "nameZh": "工業工程及決策分析學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Engineering"
+  },
+  "JS5270": {
+    "nameEn": "Department of Mechanical and Aerospace Engineering",
+    "nameZh": "機械及航空航天工程學系",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Engineering"
+  },
+  "JS5282": {
+    "nameEn": "Engineering with Extended Major in Artificial Intelligence",
+    "nameZh": "工程學 – 人工智能延伸主修",
+    "faculty": "School of Engineering",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5300": {
+    "nameEn": "Business and Management",
+    "nameZh": "工商管理",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Business"
+  },
+  "JS5311": {
+    "nameEn": "BBA in Economics",
+    "nameZh": "工商管理學士（經濟學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5312": {
+    "nameEn": "BBA in Finance",
+    "nameZh": "工商管理學士（金融學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5313": {
+    "nameEn": "BBA in Global Business",
+    "nameZh": "工商管理學士（環球商業管理）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5314": {
+    "nameEn": "BBA in Information Systems",
+    "nameZh": "工商管理學士（資訊系統學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Computer & Data Science"
+  },
+  "JS5315": {
+    "nameEn": "BBA in Management",
+    "nameZh": "工商管理學士（管理學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5316": {
+    "nameEn": "BBA in Marketing",
+    "nameZh": "工商管理學士（市場學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5317": {
+    "nameEn": "BBA in Operations Management",
+    "nameZh": "工商管理學士（營運管理學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5318": {
+    "nameEn": "BBA in Professional Accounting",
+    "nameZh": "工商管理學士（專業會計學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5331": {
+    "nameEn": "BSc in Economics and Finance",
+    "nameZh": "理學士（經濟及金融學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5332": {
+    "nameEn": "BSc in Quantitative Finance",
+    "nameZh": "理學士（量化金融學）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5411": {
+    "nameEn": "BSc in Global China Studies",
+    "nameZh": "理學士（環球中國研究）",
+    "faculty": "School of Humanities and Social Science",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5412": {
+    "nameEn": "BSc in Quantitative Social Analysis",
+    "nameZh": "理學士（定量社會數據分析）",
+    "faculty": "School of Humanities and Social Science",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5711": {
+    "nameEn": "BSc in Innovation, Design and Technology",
+    "nameZh": "理學士（創新設計與科技）",
+    "faculty": "Academy of Interdisciplinary Studies",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5811": {
+    "nameEn": "BSc in Biotechnology and Business",
+    "nameZh": "理學士（生物科技及商學）",
+    "faculty": "Joint Programs",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5812": {
+    "nameEn": "BSc in Environmental Management and Technology",
+    "nameZh": "理學士（環境管理及科技）",
+    "faculty": "Academy of Interdisciplinary Studies",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5813": {
+    "nameEn": "BSc in Mathematics and Economics",
+    "nameZh": "理學士（數學與經濟學）",
+    "faculty": "Joint Programs",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5814": {
+    "nameEn": "BSc in Risk Management and Business Intelligence",
+    "nameZh": "理學士（風險管理及商業智能學）",
+    "faculty": "Joint Programs",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5822": {
+    "nameEn": "BSc in Sustainable and Green Finance",
+    "nameZh": "理學士（可持續發展及綠色金融）",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS5901": {
+    "nameEn": "BEng/BSc & BBA Dual Degree Program in Technology and Management",
+    "nameZh": "科技及管理學雙學位課程",
+    "faculty": "School of Business and Management",
+    "university": "香港科技大學",
+    "category": "Science"
+  },
+  "JS7101": {
+    "nameEn": "Bachelor of Arts (Honours) in Chinese",
+    "nameZh": "中文(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7123": {
+    "nameEn": "Bachelor of Liberal Arts (Hons) in Global Development and Sustainability",
+    "nameZh": "環球可持續發展(榮譽)博雅學士",
+    "faculty": "School of Interdisciplinary Studies",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7133": {
+    "nameEn": "Bachelor of Arts (Honours) in Animation and Digital Arts",
+    "nameZh": "動畫及數碼藝術(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Design"
+  },
+  "JS7204": {
+    "nameEn": "Bachelor of Arts (Honours) in Translation",
+    "nameZh": "翻譯(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7211": {
+    "nameEn": "Bachelor of Business Administration (Honours)-Accounting and Corporate Governance",
+    "nameZh": "工商管理(榮譽)學士-會計與企業管治",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Business"
+  },
+  "JS7212": {
+    "nameEn": "Bachelor of Business Administration (Honours)-Business Analytics & Innovation",
+    "nameZh": "工商管理(榮譽)學士-商業分析與創新",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Business"
+  },
+  "JS7213": {
+    "nameEn": "Bachelor of Business Administration (Honours)-Finance",
+    "nameZh": "工商管理(榮譽)學士-金融",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Business"
+  },
+  "JS7214": {
+    "nameEn": "Bachelor of Business Administration (Honours)-Management and Analytics",
+    "nameZh": "工商管理(榮譽)學士-管理與分析",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Business"
+  },
+  "JS7215": {
+    "nameEn": "Bachelor of Business Administration (Honours)-Marketing and Social Media",
+    "nameZh": "工商管理(榮譽)學士-市場學及社交媒體",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Communication & Media"
+  },
+  "JS7216": {
+    "nameEn": "Bachelor of Business Administration (Honours) in Risk and Insurance Management",
+    "nameZh": "工商管理(榮譽)學士-風險及保險管理",
+    "faculty": "Faculty of Business",
+    "university": "嶺南大學",
+    "category": "Business"
+  },
+  "JS7225": {
+    "nameEn": "Bachelor of Science (Honours) in Data Science",
+    "nameZh": "數據科學(榮譽)理學士",
+    "faculty": "School of Data Science",
+    "university": "嶺南大學",
+    "category": "Computer & Data Science"
+  },
+  "JS7301": {
+    "nameEn": "Bachelor of Social Sciences (Honours)-Economics",
+    "nameZh": "社會科學(榮譽)學士-經濟學",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7302": {
+    "nameEn": "Bachelor of Social Sciences (Honours) - Government and International Affairs",
+    "nameZh": "社會科學(榮譽)學士-政府與國際事務學",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7303": {
+    "nameEn": "Bachelor of Social Sciences (Honours)-Psychology",
+    "nameZh": "社會科學(榮譽)學士-心理學",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7304": {
+    "nameEn": "Bachelor of Social Sciences (Honours)-Sociology",
+    "nameZh": "社會科學(榮譽)學士-社會學",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7305": {
+    "nameEn": "Bachelor of Social Sciences (Honours) - Health and Social Services Management",
+    "nameZh": "社會科學(榮譽)學士-健康及社會服務管理",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7306": {
+    "nameEn": "Bachelor of Social Sciences (Honours)-Social and Public Policy Studies",
+    "nameZh": "社會科學(榮譽)學士-社會與公共政策研究",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Social Science"
+  },
+  "JS7307": {
+    "nameEn": "Bachelor of Social Sciences (Honours)-Social Data Science",
+    "nameZh": "社會科學(榮譽)學士-社會數據科學",
+    "faculty": "Faculty of Social Sciences",
+    "university": "嶺南大學",
+    "category": "Computer & Data Science"
+  },
+  "JS7503": {
+    "nameEn": "Bachelor of Arts (Honours) in English Studies",
+    "nameZh": "英語語言文學課程(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7606": {
+    "nameEn": "Bachelor of Arts (Honours) in Cultural Studies",
+    "nameZh": "文化研究(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7709": {
+    "nameEn": "Bachelor of Arts (Honours) in History",
+    "nameZh": "歷史(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7802": {
+    "nameEn": "Bachelor of Arts (Honours) in Philosophy",
+    "nameZh": "哲學(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Arts"
+  },
+  "JS7905": {
+    "nameEn": "Bachelor of Arts (Honours) in Film and Visual Arts",
+    "nameZh": "電影與視覺藝術(榮譽)文學士",
+    "faculty": "Faculty of Arts",
+    "university": "嶺南大學",
+    "category": "Design"
+  },
+  "JS3000": {
+    "nameEn": "Bachelor's Degree Scheme in Interdisciplinary Studies",
+    "nameZh": "跨學科組合學士課程",
+    "faculty": "Interdisciplinary",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS3003": {
+    "nameEn": "BBA Scheme in Business Administration",
+    "nameZh": "工商管理組合學士課程",
+    "faculty": "Business",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Business"
+  },
+  "JS3004": {
+    "nameEn": "Bachelor's Degree Scheme in Construction and Environment",
+    "nameZh": "建設及環境組合學士課程",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3005": {
+    "nameEn": "Bachelor's Degree Scheme in Engineering",
+    "nameZh": "工程學科組合學士課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3006": {
+    "nameEn": "Bachelor's Degree Scheme in Computer and Mathematical Sciences",
+    "nameZh": "計算機及數學科學組合學士課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Computer & Data Science"
+  },
+  "JS3007": {
+    "nameEn": "Bachelor's Degree Scheme in Humanities",
+    "nameZh": "人文學科組合學士課程",
+    "faculty": "Humanities",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Arts"
+  },
+  "JS3008": {
+    "nameEn": "Bachelor's Degree Scheme in Science",
+    "nameZh": "理學組合學士課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3011": {
+    "nameEn": "BSc Scheme in Biotechnology and Chemical Technology",
+    "nameZh": "生物科技及化學科技(榮譽)理學士組合課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3030": {
+    "nameEn": "BSc in Physics with Secondary Major in AIDA / IE",
+    "nameZh": "物理學(榮譽)理學士副主修AIDA/IE",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3050": {
+    "nameEn": "BA Scheme in Fashion",
+    "nameZh": "時裝(榮譽)文學士組合課程",
+    "faculty": "Design",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Design"
+  },
+  "JS3060": {
+    "nameEn": "BBA Scheme in Accounting and Finance",
+    "nameZh": "會計及金融(榮譽)工商管理學士組合課程",
+    "faculty": "Business",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3070": {
+    "nameEn": "BBA Scheme in Global Business and Logistics",
+    "nameZh": "環球商業及物流(榮譽)工商管理學士組合課程",
+    "faculty": "Business",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3080": {
+    "nameEn": "BBA Scheme in Management and Marketing",
+    "nameZh": "管理及市場學(榮譽)工商管理學士組合課程",
+    "faculty": "Business",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3130": {
+    "nameEn": "BSc Scheme in Spatial Data Science and Smart Cities",
+    "nameZh": "空間數據科學及智慧城市(榮譽)理學士組合課程",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3140": {
+    "nameEn": "BEng Scheme in Aviation Engineering",
+    "nameZh": "航空工程學(榮譽)工學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3150": {
+    "nameEn": "BSc in Biomedical Engineering",
+    "nameZh": "生物醫學工程(榮譽)理學士",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Medicine"
+  },
+  "JS3160": {
+    "nameEn": "BSc in Sports Science and Technology",
+    "nameZh": "體育科技(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3170": {
+    "nameEn": "BEng Scheme in Electrical Engineering",
+    "nameZh": "電機工程學(榮譽)工學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3180": {
+    "nameEn": "BEng/BSc Scheme in Information and AI Engineering",
+    "nameZh": "資訊及人工智能工程學(榮譽)工學士/理學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Computer & Data Science"
+  },
+  "JS3211": {
+    "nameEn": "BEng in Building Sciences and Engineering",
+    "nameZh": "建築科學及工程學(榮譽)工學士",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3214": {
+    "nameEn": "BSc in Architectural Studies",
+    "nameZh": "建築學(榮譽)理學士",
+    "faculty": "Design",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3220": {
+    "nameEn": "BSc Scheme in Applied Mathematics and Finance Analytics",
+    "nameZh": "應用數學及金融分析(榮譽)理學士組合課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3223": {
+    "nameEn": "BSc Scheme in Data Science and Artificial Intelligence",
+    "nameZh": "數據科學及人工智能(榮譽)理學士組合課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Computer & Data Science"
+  },
+  "JS3236": {
+    "nameEn": "BEng Scheme in Product Innovation and Smart Manufacturing",
+    "nameZh": "產品創新及智能製造(榮譽)工學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3237": {
+    "nameEn": "BSc Scheme in Intelligent Supply Chain and Engineering Management",
+    "nameZh": "智能供應鏈及工程管理(榮譽)理學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3240": {
+    "nameEn": "BA in English and Applied Linguistics",
+    "nameZh": "英文及應用語言學(榮譽)文學士",
+    "faculty": "Humanities",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Arts"
+  },
+  "JS3242": {
+    "nameEn": "BSc in Speech Therapy",
+    "nameZh": "言語治療(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3243": {
+    "nameEn": "BSc in Language Science and Technology",
+    "nameZh": "語言科學及技術(榮譽)理學士",
+    "faculty": "Humanities",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3250": {
+    "nameEn": "BA Scheme in Applied Social Sciences",
+    "nameZh": "應用社會科學(榮譽)文學士組合課程",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Social Science"
+  },
+  "JS3255": {
+    "nameEn": "BSc Scheme in Food Science and Nutrition",
+    "nameZh": "食品科學及營養學(榮譽)理學士組合課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3290": {
+    "nameEn": "BSc in Optometry",
+    "nameZh": "眼科視光學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3310": {
+    "nameEn": "BSc Scheme in Hotel and Tourism Management",
+    "nameZh": "酒店及旅遊管理(榮譽)理學士組合課程",
+    "faculty": "Business",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Science"
+  },
+  "JS3320": {
+    "nameEn": "BA in Chinese History and Culture",
+    "nameZh": "中國歷史及文化(榮譽)文學士",
+    "faculty": "Humanities",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Arts"
+  },
+  "JS3337": {
+    "nameEn": "BSc in Mental Health Nursing",
+    "nameZh": "精神健康護理學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3375": {
+    "nameEn": "BEng in Environmental Engineering and Sustainable Development",
+    "nameZh": "環境工程及可持續發展學(榮譽)工學士",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3478": {
+    "nameEn": "BSc in Medical Laboratory Science",
+    "nameZh": "醫療化驗科學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3569": {
+    "nameEn": "BA Scheme in Design",
+    "nameZh": "設計學(榮譽)文學士組合課程",
+    "faculty": "Design",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Design"
+  },
+  "JS3612": {
+    "nameEn": "BSc in Radiography",
+    "nameZh": "放射學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3624": {
+    "nameEn": "BSc in Occupational Therapy",
+    "nameZh": "職業治療學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3636": {
+    "nameEn": "BSc in Physiotherapy",
+    "nameZh": "物理治療學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3648": {
+    "nameEn": "BSc in Nursing",
+    "nameZh": "護理學(榮譽)理學士",
+    "faculty": "Health",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Health Science"
+  },
+  "JS3739": {
+    "nameEn": "BEng in Civil Engineering",
+    "nameZh": "土木工程學(榮譽)工學士",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3741": {
+    "nameEn": "BEng Scheme in Mechanical Engineering",
+    "nameZh": "機械工程學(榮譽)工學士組合課程",
+    "faculty": "Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Engineering"
+  },
+  "JS3789": {
+    "nameEn": "BSc in Surveying",
+    "nameZh": "地產及建設測量學(榮譽)理學士",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3791": {
+    "nameEn": "BSc in Building Engineering and Management",
+    "nameZh": "建築工程及管理學(榮譽)理學士",
+    "faculty": "Construction and Environment",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Architecture & Built Environment"
+  },
+  "JS3868": {
+    "nameEn": "BSc Scheme in Computing and AI",
+    "nameZh": "電子計算及人工智能(榮譽)理學士組合課程",
+    "faculty": "Science",
+    "university": "The Hong Kong Polytechnic University",
+    "category": "Computer & Data Science"
+  },
+  "JS4006": {
+    "nameEn": "Anthropology",
+    "nameZh": "人類學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4018": {
+    "nameEn": "Chinese Language and",
+    "nameZh": "中國語言及文學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4032": {
+    "nameEn": "English",
+    "nameZh": "英文",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4044": {
+    "nameEn": "Fine Arts",
+    "nameZh": "藝術",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Design"
+  },
+  "JS4056": {
+    "nameEn": "History",
+    "nameZh": "歷史",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4068": {
+    "nameEn": "Japanese Studies",
+    "nameZh": "日本研究",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4070": {
+    "nameEn": "Linguistics",
+    "nameZh": "語言學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4082": {
+    "nameEn": "Music",
+    "nameZh": "音樂",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4094": {
+    "nameEn": "Philosophy",
+    "nameZh": "哲學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4100": {
+    "nameEn": "Public Humanities",
+    "nameZh": "公共人文學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4109": {
+    "nameEn": "Religious Studies",
+    "nameZh": "宗教研究",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4111": {
+    "nameEn": "Theology",
+    "nameZh": "神學",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4123": {
+    "nameEn": "Translation",
+    "nameZh": "翻譯",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4136": {
+    "nameEn": "Chinese Studies",
+    "nameZh": "中國研究",
+    "faculty": "文學院",
+    "university": "香港中文大學",
+    "category": "Arts"
+  },
+  "JS4226": {
+    "nameEn": "Hospitality and Real Estate",
+    "nameZh": "酒店旅遊及房地產",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4238": {
+    "nameEn": "Insurance, Financial and Actuarial Analysis",
+    "nameZh": "保險、金融與精算學",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4252": {
+    "nameEn": "Quantitative Finance",
+    "nameZh": "計量金融學",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4254": {
+    "nameEn": "Programme in Global Economics",
+    "nameZh": "環球經濟與金融跨學科主修課程",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4264": {
+    "nameEn": "BBA(IBBA) – JD Double Degree",
+    "nameZh": "工商管理學士（工商管理學士綜合課程）及法律博士雙學位課程",
+    "faculty": "商學院及法律學院",
+    "university": "香港中文大學",
+    "category": "Law"
+  },
+  "JS4276": {
+    "nameEn": "Quantitative Finance and Risk Management Science",
+    "nameZh": "計量金融學及風險管理科學",
+    "faculty": "商學院",
+    "university": "香港中文大學",
+    "category": "Business"
+  },
+  "JS4320": {
+    "nameEn": "Human Movement Science and",
+    "nameZh": "人體運動科學與健康研究",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4329": {
+    "nameEn": "Physical Education, Exercise",
+    "nameZh": "健康與體育運動科學",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4331": {
+    "nameEn": "BA (Chinese Language Studies) and BEd (Chinese Language Education)",
+    "nameZh": "文學士 (中國語文研究) 及教育學士 (中國語文教育)",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Education"
+  },
+  "JS4343": {
+    "nameEn": "BA (English Studies) and BEd",
+    "nameZh": "文學士(英國語文研究)及教育學士(英國語文教育)",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Education"
+  },
+  "JS4361": {
+    "nameEn": "BEd in Mathematics and Mathematics Education",
+    "nameZh": "教育學士(數學及數學教育)",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4372": {
+    "nameEn": "BEd in Early Childhood Education",
+    "nameZh": "教育學士(幼兒教育)",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Education"
+  },
+  "JS4386": {
+    "nameEn": "BSc in Learning Design and Technology",
+    "nameZh": "理學士（學習設計與科技）",
+    "faculty": "教育學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4408": {
+    "nameEn": "Mechanical and Automation Engineering",
+    "nameZh": "機械與自動化工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4416": {
+    "nameEn": "Computational Data Science",
+    "nameZh": "計算數據科學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4428": {
+    "nameEn": "Financial Technology",
+    "nameZh": "金融科技學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4434": {
+    "nameEn": "Electronic Engineering",
+    "nameZh": "電子工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4446": {
+    "nameEn": "Information Engineering",
+    "nameZh": "信息工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4458": {
+    "nameEn": "Systems Engineering and Engineering Management",
+    "nameZh": "系統工程與工程管理",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4460": {
+    "nameEn": "Biomedical Engineering",
+    "nameZh": "生物醫學工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4462": {
+    "nameEn": "Energy and Environmental Engineering",
+    "nameZh": "能源與環境工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4468": {
+    "nameEn": "Artificial Intelligence: Systems and Technologies",
+    "nameZh": "人工智能：系統與科技",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4470": {
+    "nameEn": "Materials Science and",
+    "nameZh": "材料科學與工程學",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4502": {
+    "nameEn": "Global Physician-Leadership",
+    "nameZh": "內外全科醫學士課程環球醫學領袖培訓專修組別",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4537": {
+    "nameEn": "Public Health",
+    "nameZh": "公共衞生",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4550": {
+    "nameEn": "Biomedical Sciences",
+    "nameZh": "生物醫學",
+    "faculty": "醫學院",
+    "university": "香港中文大學",
+    "category": "Medicine"
+  },
+  "JS4648": {
+    "nameEn": "Earth and Environmental Sciences",
+    "nameZh": "地球與環境科學",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4682": {
+    "nameEn": "Enrichment Mathematics",
+    "nameZh": "數學精研",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4690": {
+    "nameEn": "Enrichment Stream in Theoretical Physics",
+    "nameZh": "理論物理精研",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4719": {
+    "nameEn": "Risk Management Science",
+    "nameZh": "風險管理科學",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4725": {
+    "nameEn": "Biotechnology, Entrepreneurship",
+    "nameZh": "生物科技、創業與醫療管理",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Science"
+  },
+  "JS4733": {
+    "nameEn": "Mathematics and Information",
+    "nameZh": "數學與信息工程學",
+    "faculty": "理學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4750": {
+    "nameEn": "Informatics & X Double Major",
+    "nameZh": "航天科學與地球信息學及Ｘ雙主修課程",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4760": {
+    "nameEn": "Interdisciplinary Data Analytics &",
+    "nameZh": "跨學科數據分析及Ｘ雙主修課程",
+    "faculty": "工程學院",
+    "university": "香港中文大學",
+    "category": "Engineering"
+  },
+  "JS4836": {
+    "nameEn": "Geography and Resource Management",
+    "nameZh": "地理與資源管理學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4838": {
+    "nameEn": "Urban Studies",
+    "nameZh": "城市研究",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4848": {
+    "nameEn": "Government and Public Administration",
+    "nameZh": "政治與行政學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4858": {
+    "nameEn": "Global Communication",
+    "nameZh": "全球傳播",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Communication & Media"
+  },
+  "JS4874": {
+    "nameEn": "Social Work",
+    "nameZh": "社會工作",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4886": {
+    "nameEn": "Sociology",
+    "nameZh": "社會學",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4892": {
+    "nameEn": "Global Studies",
+    "nameZh": "全球研究",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS4893": {
+    "nameEn": "Data Science and Policy Studies",
+    "nameZh": "數據科學與政策研究",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Computer & Data Science"
+  },
+  "JS4898": {
+    "nameEn": "Diplomacy and International Studies",
+    "nameZh": "外交與國際事務",
+    "faculty": "社會科學院",
+    "university": "香港中文大學",
+    "category": "Social Science"
+  },
+  "JS6054": {
+    "nameEn": "Bachelor of Arts",
+    "nameZh": "Bachelor of Arts",
+    "faculty": "文學院",
+    "university": "香港大學",
+    "category": "Arts"
+  },
+  "JS6107": {
+    "nameEn": "Bachelor of Dental Surgery",
+    "nameZh": "Bachelor of Dental Surgery",
+    "faculty": "牙醫學院",
+    "university": "香港大學",
+    "category": "Medicine"
+  },
+  "JS6119": {
+    "nameEn": "Bachelor of Engineering in Data Science and Engineering",
+    "nameZh": "Bachelor of Engineering in Data Science and Engineering",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6286": {
+    "nameEn": "Bachelor of Arts in Humanities and Digital Technologies",
+    "nameZh": "Bachelor of Arts in Humanities and Digital Technologies",
+    "faculty": "文學院",
+    "university": "香港大學",
+    "category": "Arts"
+  },
+  "JS6298": {
+    "nameEn": "Bachelor of Arts and Bachelor of Engineering in AI and Data Science",
+    "nameZh": "Bachelor of Arts and Bachelor of Engineering in AI and Data Science",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6303": {
+    "nameEn": "Bachelor of Engineering Elite Programme",
+    "nameZh": "Bachelor of Engineering Elite Programme",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Engineering"
+  },
+  "JS6315": {
+    "nameEn": "Bachelor of Engineering in Mechanical Engineering",
+    "nameZh": "Bachelor of Engineering in Mechanical Engineering",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Engineering"
+  },
+  "JS6339": {
+    "nameEn": "Bachelor of Engineering in Civil Engineering",
+    "nameZh": "Bachelor of Engineering in Civil Engineering",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6353": {
+    "nameEn": "Bachelor of Engineering in Civil Engineering (existing)",
+    "nameZh": "Bachelor of Engineering in Civil Engineering (existing)",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Architecture & Built Environment"
+  },
+  "JS6377": {
+    "nameEn": "Bachelor of Engineering and Master of Science in Engineering in AI",
+    "nameZh": "Bachelor of Engineering and Master of Science in Engineering in AI",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6406": {
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "Bachelor of Laws",
+    "faculty": "法律學院",
+    "university": "香港大學",
+    "category": "Law"
+  },
+  "JS6418": {
+    "nameEn": "Bachelor of Nursing (Advanced Leadership Track)",
+    "nameZh": "Bachelor of Nursing (Advanced Leadership Track)",
+    "faculty": "李嘉誠醫學院",
+    "university": "香港大學",
+    "category": "Medicine"
+  },
+  "JS6717": {
+    "nameEn": "",
+    "nameZh": "",
+    "faculty": "",
+    "university": "香港大學",
+    "category": "Interdisciplinary / Broad-based"
+  },
+  "JS6729": {
+    "nameEn": "Bachelor of Science in Actuarial Science",
+    "nameZh": "Bachelor of Science in Actuarial Science",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Science"
+  },
+  "JS6731": {
+    "nameEn": "Bachelor of Social Work",
+    "nameZh": "Bachelor of Social Work",
+    "faculty": "社會科學學院",
+    "university": "香港大學",
+    "category": "Social Science"
+  },
+  "JS6755": {
+    "nameEn": "Bachelor of Business Administration",
+    "nameZh": "Bachelor of Business Administration",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6767": {
+    "nameEn": "Bachelor of Economics",
+    "nameZh": "Bachelor of Economics",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6779": {
+    "nameEn": "Bachelor of Science in Statistical Decision Sciences",
+    "nameZh": "Bachelor of Science in Statistical Decision Sciences",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Science"
+  },
+  "JS6781": {
+    "nameEn": "Bachelor of Business Administration in Accounting and Finance",
+    "nameZh": "Bachelor of Business Administration in Accounting and Finance",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6793": {
+    "nameEn": "Bachelor of Business Administration (Business Analytics)",
+    "nameZh": "(",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6808": {
+    "nameEn": "Bachelor of Business Administration (Law) and Bachelor of Laws",
+    "nameZh": "Bachelor of Business Administration (Law) and Bachelor of Laws",
+    "faculty": "法律學院",
+    "university": "香港大學",
+    "category": "Law"
+  },
+  "JS6810": {
+    "nameEn": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "nameZh": "Bachelor of Social Sciences (Government and Laws) and Bachelor of Laws",
+    "faculty": "社會科學學院",
+    "university": "香港大學",
+    "category": "Law"
+  },
+  "JS6822": {
+    "nameEn": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "nameZh": "Bachelor of Journalism, Media and Artificial Intelligence",
+    "faculty": "社會科學學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  },
+  "JS6846": {
+    "nameEn": "Bachelor of Science in Marketing Analytics and Technology",
+    "nameZh": "Bachelor of Science in Marketing Analytics and Technology",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Science"
+  },
+  "JS6858": {
+    "nameEn": "Bachelor of Science and Bachelor of Laws",
+    "nameZh": "Bachelor of Science and Bachelor of Laws",
+    "faculty": "法律學院",
+    "university": "香港大學",
+    "category": "Law"
+  },
+  "JS6860": {
+    "nameEn": "Bachelor of Finance in Asset Management and Private Banking",
+    "nameZh": "Bachelor of Finance in Asset Management and Private Banking",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6884": {
+    "nameEn": "Bachelor of Science in Quantitative Finance",
+    "nameZh": "Bachelor of Science in Quantitative Finance",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6896": {
+    "nameEn": "Bachelor of Business Administration (International Business and Global Management)",
+    "nameZh": "Bachelor of Business Administration (International Business and Global Management)",
+    "faculty": "經管學院",
+    "university": "香港大學",
+    "category": "Business"
+  },
+  "JS6901": {
+    "nameEn": "Bachelor of Science",
+    "nameZh": "Bachelor of Science",
+    "faculty": "理學院",
+    "university": "香港大學",
+    "category": "Science"
+  },
+  "JS6925": {
+    "nameEn": "Bachelor of Engineering in Biomedical Engineering",
+    "nameZh": "Bachelor of Engineering in Biomedical Engineering",
+    "faculty": "李嘉誠醫學院",
+    "university": "香港大學",
+    "category": "Medicine"
+  },
+  "JS6937": {
+    "nameEn": "Global Engineering and Business Programme",
+    "nameZh": "Global Engineering and Business Programme",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Engineering"
+  },
+  "JS6949": {
+    "nameEn": "Bachelor of Biomedical Sciences",
+    "nameZh": "Bachelor of Biomedical Sciences",
+    "faculty": "李嘉誠醫學院",
+    "university": "香港大學",
+    "category": "Medicine"
+  },
+  "JS6987": {
+    "nameEn": "Bachelor of Engineering in Computer Engineering",
+    "nameZh": "Bachelor of Engineering in Computer Engineering",
+    "faculty": "工程學院",
+    "university": "香港大學",
+    "category": "Engineering"
+  },
+  "JS6999": {
+    "nameEn": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "nameZh": "Bachelor of Arts and Sciences in Computing and Data Science",
+    "faculty": "文學院",
+    "university": "香港大學",
+    "category": "Computer & Data Science"
+  }
+}

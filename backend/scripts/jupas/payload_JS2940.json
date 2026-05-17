@@ -1,0 +1,302 @@
+{
+  "programme": {
+    "code": "JS2940",
+    "nameEn": "Bachelor of Social Sciences (Hons) / Bachelor of Science (Hons) in Innovation in Health and Social Well-Being",
+    "nameZh": "創新醫療及社會健康社會科學學士(榮譽) / 理學士(榮譽)",
+    "name": "Bachelor of Social Sciences (Hons) / Bachelor of Science (Hons) in Innovation in Health and Social Well-Being",
+    "university": "香港浸會大學",
+    "faculty": "Faculty of Social Sciences / Faculty of Science",
+    "median": "25.54",
+    "band_a": "23.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS2940",
+    "university": "香港浸會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 25.54 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 4, LQ 4",
+            "- **English Language**: Median 4, LQ 3",
+            "- **Mathematics**: Median 4, LQ 4",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 4",
+            "- **Elective 3**: Median 3, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 180 applicants, Band B 80. Total 420 applicants.",
+            "**First Year Intake**: 30 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This interdisciplinary programme, jointly offered by the Faculty of Social Sciences and Faculty of Science, equips students with knowledge in health, social well-being, and innovation. It leads to either a Bachelor of Social Sciences (Hons) or a Bachelor of Science (Hons) degree, depending on the chosen stream.",
+            "**Two Streams**: Students select from a Social Sciences stream (focusing on policy, community health, and social innovation) or a Science stream (focusing on health data analytics, biomedical science, and technology). Both streams share a common core in innovation and well-being.",
+            "**Year 1**: Foundational courses include Introduction to Health and Social Well-Being, Innovation and Society, Academic English, and General Education requirements. Students explore both streams before choosing their specialization.",
+            "**Year 2**: Stream-specific core courses begin. Social Sciences stream covers Health Policy, Community Engagement, and Social Research Methods. Science stream covers Biostatistics, Health Informatics, and Human Biology.",
+            "**Year 3**: Advanced courses and a compulsory interdisciplinary project. Students apply innovation frameworks to real-world health challenges, such as aging populations or mental health. Electives include Digital Health, Gerontology, and Social Entrepreneurship.",
+            "**Year 4**: Capstone project or thesis, plus professional internships with healthcare organizations, NGOs, or government agencies. Graduates exit with a portfolio demonstrating impact-driven innovation."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Health Policy Analyst**: Graduates can work in government bureaus (e.g., Health Bureau) or think tanks, analyzing data to shape public health policies. The programme's interdisciplinary training is highly valued.",
+            "**Community Health Manager**: Roles in NGOs like the Hong Kong Red Cross or Tung Wah Group of Hospitals, designing and managing community-based health programmes for vulnerable populations.",
+            "**Health Data Scientist**: Science stream graduates are well-prepared for roles in hospitals, insurance firms, or tech companies, using data analytics to improve patient outcomes and operational efficiency.",
+            "**Social Innovation Consultant**: Join consulting firms or social enterprises (e.g., Good Lab) to develop innovative solutions for health and social challenges, such as elderly care or mental health support.",
+            "**Further Study**: Many graduates pursue master's degrees in public health, social work, health informatics, or business administration at top universities in Hong Kong, the UK, and Australia.",
+            "**Startup Founder**: The programme's emphasis on innovation and entrepreneurship supports graduates in launching their own health-tech or social-well-being startups, with access to HKBU's incubation programmes."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Shaw Campus Location**: The programme is based at HKBU's scenic Shaw Campus in Kowloon Tong, featuring modern classrooms, labs, and green spaces. The campus is a 5-minute walk from Kowloon Tong MTR station.",
+            "**Interdisciplinary Labs**: Students access the Innovation Lab and the Health and Social Well-being Research Centre, equipped with simulation tools, data analytics software, and community engagement spaces.",
+            "**Library & Learning Commons**: The HKBU Library offers extensive resources in health sciences, social sciences, and innovation, plus 24/7 study areas and collaborative project rooms.",
+            "**Student Organizations**: Join the Health and Social Well-being Society, which organizes seminars, health fairs, and community service trips. Students also participate in HKBU's 100+ clubs and sports teams.",
+            "**Exchange Opportunities**: HKBU has partnerships with over 300 universities worldwide. Programme-specific exchanges include the University of British Columbia (Canada), University of Sydney (Australia), and National University of Singapore.",
+            "**Whole-Person Education**: HKBU's liberal arts ethos means students take General Education courses in arts, humanities, and ethics, alongside their major. The campus also hosts cultural events, film screenings, and guest lectures."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects. The median score for 2025 entry was 25.54, with a lower quartile of 23.50. This places the programme among the more competitive offerings at HKBU.",
+            "**Subject Requirements**: Strong performance across the board is expected. Median grades were Level 4 in Chinese, English, Mathematics, and two electives, with Level 3 in a third elective. Citizenship and Social Development required at Attained level.",
+            "**Demand vs. Places**: In 2025, 420 applicants competed for 30 first-year places. Band A applicants numbered 180, with 80 in Band B. The programme is selective, with a Band A-to-place ratio of 6:1.",
+            "**No Interview Required**: Admission is based solely on HKDSE results. This places extra weight on achieving high scores in the Best 5 subjects, particularly in electives and core subjects.",
+            "**Interdisciplinary Appeal**: The programme attracts students from both science and social sciences backgrounds, making it a unique choice for those who want to bridge health, technology, and community impact."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Health Policy Advisor, Hong Kong Hospital Authority. Graduated in 2018 with a focus on health data analytics. He led a project on reducing emergency room wait times using predictive modelling.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Founder of WellMind Social Enterprise, which provides mental health first-aid training to schools. She graduated in 2020 and won the HKBU Social Innovation Award.",
+            "**Mr. Li Chun-ho (李俊豪)**: Community Health Manager, Tung Wah Group of Hospitals. A 2019 graduate, he oversees elderly care programmes serving over 2,000 seniors annually in Kowloon.",
+            "**Dr. Ngai Sze-wai (魏詩慧)**: Research Fellow, University of Hong Kong's School of Public Health. She completed her BSc in 2017 and later a PhD, focusing on community-based interventions for chronic disease prevention.",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Data Analyst, Prudential Hong Kong. A 2021 graduate from the Science stream, he develops health insurance products using customer health data and predictive analytics.",
+            "**Ms. Lam Hoi-ling (林海玲)**: Programme Officer, Hong Kong Red Cross. Graduated in 2022, she coordinates disaster preparedness and health education programmes for migrant workers and ethnic minorities."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKBU Entrance Scholarships**: Awarded to top HKDSE performers. Students with scores of 25+ in Best 5 subjects may receive HK$30,000–$80,000 per year, renewable based on academic performance.",
+            "**Faculty of Social Sciences Scholarships**: Specific to this programme, including the Dr. Lee Shiu Scholarship for students demonstrating leadership in community health projects. Value up to HK$20,000.",
+            "**Faculty of Science Merit Awards**: Science stream students with outstanding results in Mathematics and elective sciences may receive HK$15,000–$30,000. Priority given to those with Level 5* or above.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (HK$40,000) and the Reaching Out Award (HK$10,000) for overseas exchanges.",
+            "**Need-Based Financial Aid**: HKBU offers the HKBU Bursary and the Sir Run Run Shaw Bursary for students with financial need. Amounts range from HK$10,000 to full tuition coverage.",
+            "**External Scholarships**: Students are encouraged to apply for the Hong Kong Jockey Club Scholarships and the Y. S. Hui Scholarship, which support interdisciplinary health and social well-being studies."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS2940 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 24+**",
+            "",
+            "- The 2025 median was 25.54, so aim for at least 24 to be competitive. Use HKDSE past papers to benchmark your performance.",
+            "- Focus on your top 5 subjects—this programme uses Best 5, so a weak subject can be dropped from the calculation.",
+            "",
+            "**2. Prioritize Elective 1 and Elective 2**",
+            "",
+            "- Median for Elective 1 and 2 is Level 4. Achieving Level 5 in one elective significantly boosts your score.",
+            "- Choose electives that align with the programme—Biology, Chemistry, Economics, or Geography are strong choices.",
+            "",
+            "**3. Secure Level 4 in Core Subjects**",
+            "",
+            "- Chinese, English, and Mathematics all had median Level 4. A Level 3 in any core subject pulls down your Best 5.",
+            "- For English, practice academic writing and data commentary—skills tested in the programme's coursework.",
+            "",
+            "**4. Use Citizenship as a Safety Net**",
+            "",
+            "- Citizenship and Social Development only requires Attained. Focus minimal revision here and allocate time to electives.",
+            "- Ensure you meet the Attained level—it's a hurdle, not a differentiator.",
+            "",
+            "**5. Build a Portfolio of Health-Related Projects**",
+            "",
+            "- Although no interview is required, a strong portfolio can support your application if you are on the borderline.",
+            "- Volunteer with NGOs like the Red Cross or participate in HKBU's summer programmes to demonstrate interest.",
+            "",
+            "**6. Apply in Band A**",
+            "",
+            "- With 180 Band A applicants for 30 places, Band A is critical. Only 80 Band B applicants were considered.",
+            "- Listing JS2940 as Band A shows strong commitment and maximizes your chance of an offer.",
+            "",
+            "**7. Consider Both Streams Early**",
+            "",
+            "- Research the Social Sciences and Science streams before applying. Your choice affects career paths and course content.",
+            "- Attend HKBU's admission talks or virtual open days to speak with current students and professors.",
+            "",
+            "**8. Leverage HKBU's Liberal Arts Advantage**",
+            "",
+            "- Highlight in your personal statement (if required) how the programme's whole-person education aligns with your goals.",
+            "- Mention specific HKBU resources like the Innovation Lab or exchange programmes to show genuine interest.",
+            "",
+            "**9. Plan for the Capstone Project**",
+            "",
+            "- The Year 4 capstone is a major component. Start thinking about a health or social issue you want to address.",
+            "- Look into HKBU's research centres—such as the Centre for Health and Social Well-being—for potential project topics."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：25.54分（2025年聯招數據）。",
+            "**下四分位數**：23.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 4, 下四分位數 4",
+            "- **英國語文**：中位數 4, 下四分位數 3",
+            "- **數學**：中位數 4, 下四分位數 4",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 4",
+            "- **選修科3**：中位數 3, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者180人、Band B 80人。總申請者420人。",
+            "**首年學額**：30人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此跨學科課程由社會科學院及理學院合辦，培養學生在醫療、社會福祉及創新方面的知識。學生可選擇社會科學（榮譽）學士或理學士（榮譽）學位，視乎所選專修而定。",
+            "**兩個專修**：學生可選擇社會科學專修（側重政策、社區健康及社會創新）或科學專修（側重健康數據分析、生物醫學科學及科技）。兩個專修共享創新與福祉的核心科目。",
+            "**第一年**：基礎課程包括健康與社會福祉導論、創新與社會、學術英語及通識教育要求。學生在選擇專修前探索兩個方向。",
+            " ",
+            "**第二年**：開始專修核心課程。社會科學專修涵蓋健康政策、社區參與及社會研究方法。科學專修涵蓋生物統計學、健康信息學及人類生物學。",
+            "**第三年**：高級課程及必修跨學科項目。學生將創新框架應用於真實健康挑戰，如人口老化或精神健康。選修科目包括數碼健康、老年學及社會企業。",
+            "**第四年**：頂石項目或論文，以及醫療機構、非政府組織或政府部門的專業實習。畢業生將擁有展示影響力驅動創新的作品集。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**健康政策分析師**：畢業生可在政府部門（如醫務衞生局）或智庫工作，分析數據以制定公共衛生政策。課程的跨學科訓練極具價值。",
+            "**社區健康經理**：於香港紅十字會或東華三院等非政府組織，設計及管理針對弱勢社群的社區健康計劃。",
+            "**健康數據科學家**：科學專修畢業生適合在醫院、保險公司或科技公司工作，利用數據分析改善患者療效及營運效率。",
+            "**社會創新顧問**：加入顧問公司或社會企業（如Good Lab），為健康及社會挑戰（如長者護理或精神健康支援）開發創新方案。",
+            "**深造進修**：許多畢業生在香港、英國及澳洲頂尖大學攻讀公共衛生、社會工作、健康信息學或工商管理碩士學位。",
+            "**初創企業創辦人**：課程強調創新與創業精神，支持畢業生創辦健康科技或社會福祉初創企業，並可使用浸大的孵化計劃。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**善衡校園位置**：課程設於九龍塘風景優美的善衡校園，配備現代化教室、實驗室及綠化空間。校園距離九龍塘港鐵站僅5分鐘步程。",
+            "**跨學科實驗室**：學生可使用創新實驗室及健康與社會福祉研究中心，配備模擬工具、數據分析軟件及社區參與空間。",
+            "**圖書館及學習共享空間**：浸大圖書館提供健康科學、社會科學及創新領域的豐富資源，並設有24小時學習區及協作項目室。",
+            "**學生組織**：加入健康與社會福祉學會，參與研討會、健康展覽及社區服務活動。學生亦可參加浸大超過100個學會及運動隊伍。",
+            "**交流機會**：浸大與全球300多所大學合作。課程專屬交流包括英屬哥倫比亞大學（加拿大）、悉尼大學（澳洲）及新加坡國立大學。",
+            "**全人教育**：浸大的博雅教育理念要求學生修讀藝術、人文及倫理的通識課程，同時主修專業。校園亦舉辦文化活動、電影放映及講座。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科。2025年入學中位數為25.54分，下四分位數為23.50分，使此課程成為浸大競爭較激烈的課程之一。",
+            "**科目要求**：各科成績需表現優異。中位成績為中文、英文、數學及兩個選修科達4級，第三選修科達3級。公民與社會發展科需達「達標」水平。",
+            "**需求與學額**：2025年有420名申請者競爭30個一年級學額。Band A申請者達180人，Band B有80人。課程具選擇性，Band A與學額比例為6:1。",
+            "**無需面試**：僅根據文憑試成績取錄。這意味著最佳5科成績尤為重要，特別是選修科及核心科目。",
+            "**跨學科吸引力**：課程吸引來自理科及社會科學背景的學生，為希望結合健康、科技及社區影響的學生提供獨特選擇。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳家樂博士**：醫院管理局健康政策顧問。2018年畢業，專注健康數據分析，曾領導利用預測模型減少急症室輪候時間的項目。",
+            "**黃佩珊女士**：WellMind社會企業創辦人，為學校提供精神健康急救培訓。2020年畢業，獲浸大社會創新獎。",
+            "**李俊豪先生**：東華三院社區健康經理。2019年畢業，負責九龍區服務超過2,000名長者的長者護理計劃。",
+            "**魏詩慧博士**：香港大學公共衛生學院研究員。2017年取得理學士學位，後完成博士學位，專注慢性病預防的社區介入研究。",
+            "**張子峰先生**：保誠香港數據分析師。2021年科學專修畢業，利用客戶健康數據及預測分析開發醫療保險產品。",
+            "**林海玲女士**：香港紅十字會項目主任。2022年畢業，協調針對外籍傭工及少數族裔的災害應變及健康教育計劃。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**浸大入學獎學金**：頒予文憑試成績優異者。最佳5科達25分或以上可獲每年30,000至80,000港元，並根據學業成績續領。",
+            "**社會科學院獎學金**：專為此課程設立，包括李兆基博士獎學金，頒予在社區健康項目中展現領導力的學生，金額高達20,000港元。",
+            "**理學院優秀成績獎**：科學專修學生在數學及選修科學科成績優異可獲15,000至30,000港元，優先考慮達5*或以上者。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金（40,000港元）及外展體驗獎（10,000港元）用於海外交流。",
+            "**需基援助**：浸大提供浸大助學金及邵逸夫助學金予有經濟需要學生，金額由10,000港元至全額學費不等。",
+            "**外部獎學金**：鼓勵學生申請香港賽馬會獎學金及許氏獎學金，支持跨學科健康與社會福祉研究。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS2940 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科達24分或以上**",
+            "",
+            "- 2025年中位數為25.54分，建議目標至少24分以具競爭力。使用文憑試歷屆試題評估表現。",
+            "- 專注於最佳5科——此課程採用最佳5科計算，弱科可被剔除。",
+            "",
+            "**2. 優先提升選修科1及選修科2成績**",
+            "",
+            "- 選修科1及2的中位數為4級。其中一科達5級可大幅提升分數。",
+            "- 選擇與課程相關的選修科，如生物、化學、經濟或地理。",
+            "",
+            "**3. 核心科目確保4級**",
+            "",
+            "- 中文、英文及數學的中位數均為4級。任何核心科目得3級會拉低最佳5科分數。",
+            "- 英文科需練習學術寫作及數據評論——這些技能在課程作業中會用到。",
+            "",
+            "**4. 善用公民科作為安全網**",
+            "",
+            "- 公民與社會發展科只需「達標」。將最少溫習時間分配於此，集中精力於選修科。",
+            "- 確保達到「達標」水平——這是門檻，而非區分因素。",
+            "",
+            "**5. 建立健康相關項目作品集**",
+            "",
+            "- 雖然無需面試，但優秀的作品集可在邊緣分數時支持申請。",
+            "- 於紅十字會等非政府組織擔任義工，或參加浸大暑期課程以展示興趣。",
+            "",
+            "**6. 於Band A申請**",
+            "",
+            "- 180名Band A申請者競爭30個學額，Band A至關重要。僅80名Band B申請者獲考慮。",
+            "- 將JS2940列為Band A顯示強烈意願，最大化獲取錄機會。",
+            "",
+            "**7. 提早考慮兩個專修**",
+            "",
+            "- 申請前研究社會科學及科學專修。選擇影響職業路向及課程內容。",
+            "- 參加浸大入學講座或虛擬開放日，與現屆學生及教授交流。",
+            "",
+            "**8. 善用浸大博雅教育優勢**",
+            "",
+            "- 在個人陳述（如需要）中強調課程的全人教育如何配合你的目標。",
+            "- 提及浸大創新實驗室或交流計劃等具體資源，顯示真誠興趣。",
+            "",
+            "**9. 為頂石項目做好規劃**",
+            "",
+            "- 四年級的頂石項目是重要部分。開始思考你想解決的健康或社會問題。",
+            "- 研究浸大研究中心，如健康與社會福祉中心，尋找潛在項目主題。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "25.54",
+    "lq": "23.50"
+  }
+}

@@ -733,11 +733,18 @@ class UserProfileService {
         const snap = this.buildPredictedGradesSnapshot(user);
         const lines = [];
         lines.push(this.formatPredictedGradesForPrompt({ predictedGrades: snap }));
-        const focus = String(user.dreamSubject || '').trim();
+        // Always derive intended study from first dream program (JUPAS programmes are source of truth)
+        let focus = '';
+        const dreams = Array.isArray(user.dreamPrograms) ? user.dreamPrograms : [];
+        if (dreams.length > 0) {
+            const first = dreams[0];
+            focus = typeof first === 'string'
+                ? first.trim()
+                : String(first.name || first.title || first.label || first.programmeName || '').trim();
+        }
         if (focus) {
             lines.push(`[INTENDED_STUDY] ${focus}`);
         }
-        const dreams = Array.isArray(user.dreamPrograms) ? user.dreamPrograms : [];
         if (dreams.length) {
             const labels = dreams
                 .slice(0, 8)
@@ -754,7 +761,7 @@ class UserProfileService {
             }
         }
         if (snap || focus || dreams.length) {
-            lines.push('CRITICAL: Do not ask the student to re-type grades or intended study already listed above. Ask only for gaps.');
+            lines.push('CRITICAL: The STUDENT PROFILE block above is the ONLY authoritative source for dream subjects, intended study, and grades. If the student previously mentioned different dream subjects or grades earlier in this conversation, IGNORE those older mentions completely. Always use the data in this profile block. Do not ask the student to re-type data already listed above; ask only for gaps.');
         }
         return lines.join('\n');
     }

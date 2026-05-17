@@ -200,14 +200,45 @@ router.post('/grade', async (req, res) => {
                 'writing_organization': pillars.organization?.score || pillars.organization || result.overall_score || 4
             };
 
+            // Also map genre-specific skill if textType is a known genre
+            const genreSkillMap = {
+                'debate speech': 'writing_genre_debate',
+                'debate-speech': 'writing_genre_debate',
+                'letter to the editor': 'writing_genre_lte',
+                'lte': 'writing_genre_lte',
+                'expository essay': 'writing_genre_exp',
+                'expository': 'writing_genre_exp',
+                'short story': 'writing_genre_fic',
+                'fiction': 'writing_genre_fic',
+                'personal experience': 'writing_genre_per',
+                'biographical profile': 'writing_genre_bio',
+                'formal letter': 'writing_genre_fml',
+                'report': 'writing_genre_rpt',
+                'proposal': 'writing_genre_prp',
+                'review': 'writing_genre_rev',
+                'feature article': 'writing_genre_art',
+                'article': 'writing_genre_art',
+                'personal letter': 'writing_genre_let',
+                'email': 'writing_genre_let'
+            };
+            const genreKey = (finalTextType || '').toLowerCase().trim();
+            const genreSkillId = genreSkillMap[genreKey];
+            if (genreSkillId) {
+                const overallMastery = ((result.overall_score || 4) / 7) * 100;
+                pillarMap[genreSkillId] = result.overall_score || 4;
+                console.log(`[WritingRoutes] Genre skill detected: ${genreSkillId} for ${finalTextType}`);
+            }
+
             const masteryPromises = Object.entries(pillarMap).map(([skillId, pillarScore]) => {
                 const masteryScore = (pillarScore / 7) * 100;
                 return UserProfileService.updateMicroSkillLevel(uid, 'english', skillId, masteryScore, {
                     type: 'Quest',
-                    difficulty: 4
+                    difficulty: 4,
+                    genre: finalTextType
                 });
             });
             await Promise.all(masteryPromises);
+            console.log(`[WritingRoutes] Updated ${masteryPromises.length} writing micro-skills for ${uid}`);
         }
 
         // --- AWARD XP ---

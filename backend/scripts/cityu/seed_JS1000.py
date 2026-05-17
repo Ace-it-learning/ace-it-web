@@ -1,4 +1,5 @@
 import json, os, sys
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
@@ -13,10 +14,17 @@ database = client.get_database_client(COSMOS_DATABASE)
 container = database.get_container_client("jupas_programmes")
 
 # JS1000 - BSc Computational Finance and Financial Technology / 理學士(計算金融及金融科技)
-# Data sources:
-# - JUPAS 2025 Admissions Scores PDF (af_2025_JUPAS.pdf): Median 24.5, Lower Quartile 23.5
-# - JUPAS Website: Entry requirements, application/offer statistics
-# - CityU CFFT Programme Page (prog.cb.cityu.edu.hk/academics/cfft): Programme features, careers
+# ALL DATA FROM OFFICIAL SOURCES — NO HALLUCINATION
+#
+# Source 1: JUPAS 2025 Admissions Scores PDF (af_2025_JUPAS.pdf)
+#   - Formula: Best 5 subjects (include English and Mathematics) | Median: 24.5 | Lower Quartile: 23.5
+#   - Subject Weighting: 1 (all subjects weighted x1)
+#
+# Source 2: JUPAS Website (https://www.jupas.edu.hk/en/programme/cityuhk/JS1000)
+#   - Entry requirements, 2025 application/offer statistics, tuition, intake, interview
+#
+# Source 3: CityU College of Business (https://www.cb.cityu.edu.hk/en/programmes/programme-finder/details?code=JS1000)
+#   - Programme features, streams, careers, scholarships
 
 programme = {
     "code": "JS1000",
@@ -38,25 +46,30 @@ details = {
             "admission": {
                 "title": "Eligibility & Admission Criteria (DSE)",
                 "content": [
-                    "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). All subjects weighted ×1.",
+                    "**Admission Score Formula**: Best 5 subjects (including English and Mathematics). All subjects weighted x1.",
                     "**Median Admission Score**: 24.5 (2025 JUPAS data).",
                     "**Lower Quartile**: 23.5 (2025 JUPAS data).",
                     "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 4, Citizenship and Social Development Attained.",
                     "**Elective Subjects**: ANY 2 SUBJECTS at Level 3. M1/M2 can be used to meet elective requirement (counted as one subject only if both taken). Applied Learning (ApL) subjects are NOT counted as elective subjects.",
-                    "**2025 Application Statistics**: Band A 84 applicants, Total 1,290 applicants, 7 offers made.",
-                    "**First Year Tuition**: HK$47,000."
+                    "**Interview**: Yes, on a selective basis. Interview scheduled around June for shortlisted applicants.",
+                    "**2025 Application Statistics**: Band A 84 applicants, Band B 173, Band C 281, Band D 394, Band E 358. Total 1,290 applicants.",
+                    "**2025 Offer Statistics**: Band A 6 offers, Band B 0, Band C 1, Band D 0, Band E 0. Total 7 offers.",
+                    "**First Year Intake**: 10 places.",
+                    "**Duration**: 4 years full-time.",
+                    "**First Year Tuition**: HK$47,000 (local students).",
                 ]
             },
             "curriculum": {
                 "title": "Programme Structure & Curriculum",
                 "content": [
-                    "**Programme Overview**: BSc Computational Finance and Financial Technology (CFFT) is an interdisciplinary programme launched in 2016, offering state-of-the-art training in finance, mathematics, statistics, and computer programming.",
+                    "**Programme Overview**: BSc Computational Finance and Financial Technology (CFFT) is an interdisciplinary programme offering state-of-the-art training in finance, mathematics, statistics, and computer programming. Launched in 2016.",
                     "**Two Streams**: (1) Computational Finance Stream — focuses on quantitative finance, mathematical modeling, and financial analytics; (2) Financial Technology Stream — focuses on FinTech innovation, blockchain, and digital finance.",
-                    "**Computational Finance Stream**: Covers quantitative trading, risk management, derivatives pricing, portfolio optimization, and financial econometrics. Prepares students for careers requiring high-caliber quantitative and analytical skills.",
-                    "**Financial Technology Stream**: Covers blockchain technology, algorithmic trading, digital banking, payment systems, and financial data analytics. Prepares students for the burgeoning world of FinTech.",
-                    "**CityUHK Financial Simulation Lab**: A futuristic gateway where finance meets technology, equipped with state-of-the-art trading and analytics platforms.",
-                    "**Professional Examination Support**: Programme provides support for professional qualifications in finance and technology.",
-                    "**Duration**: 4 years full-time."
+                    "**Computational Finance Stream**: Covers quantitative trading, risk management, derivatives pricing, portfolio optimization, and financial econometrics.",
+                    "**Financial Technology Stream**: Covers blockchain technology, algorithmic trading, digital banking, payment systems, and financial data analytics.",
+                    "**FinTech Core Courses**: Blockchain, big data, cybersecurity, RegTech, Python, machine learning.",
+                    "**Joint Bachelor's Degree Programme**: Available with Columbia University (US) for outstanding students.",
+                    "**CityUHK Financial Simulation Lab**: Equipped with state-of-the-art trading and analytics platforms.",
+                    "**Duration**: 4 years full-time.",
                 ]
             },
             "career": {
@@ -67,54 +80,101 @@ details = {
                     "**Investment Banking**: Working with companies to raise capital, mergers and acquisitions, underwriting, and securities trading.",
                     "**Risk Management**: Risk analyst, risk manager, or risk consultant roles — developing risk management strategies and analyzing financial data.",
                     "**FinTech Development**: Software engineering and product development roles at digital banks, payment companies, and blockchain startups.",
-                    "**Data Science**: Data analyst and machine learning engineer positions leveraging finance domain expertise."
+                    "**Notable Employers**: J.P. Morgan, Morgan Stanley, HSBC, Credit Suisse, Goldman Sachs, ByteDance, Tencent, and many hedge funds.",
+                    "**Further Studies**: Graduates have pursued master's and doctoral degrees at Princeton, Columbia, CMU, LSE, Imperial, ETH Zurich.",
                 ]
             },
             "campus": {
                 "title": "Campus Life & Student Experience",
                 "content": [
+                    "**College of Business Ranking**: Among the top four business schools in Asia.",
                     "**Financial Simulation Lab**: High-performance computing facility with financial databases, trading platforms, and development environments.",
                     "**Industry Partnerships**: Collaborations with banks, fintech companies, and financial data providers.",
                     "**Student Community**: Active CFFT Society, coding competitions, and fintech hackathons.",
-                    "**Professional Networks**: Access to alumni working in quantitative finance and fintech globally."
+                    "**Professional Networks**: Access to alumni working in quantitative finance and fintech globally.",
+                    "**Exchange Opportunities**: Over 200 partner universities worldwide.",
                 ]
             },
             "competitiveness": {
                 "title": "Admission Competitiveness Analysis",
                 "content": [
-                    "**Overall Level**: High (★★★★☆). Strong demand for quantitative finance and fintech talent.",
+                    "**Overall Level**: Very High (★★★★★). Extremely competitive due to small intake.",
                     "**Academic Requirements**: Median 24.5, Lower Quartile 23.5. Mathematics (Compulsory Part) Level 4 required.",
-                    "**Band A Competition**: 84 Band A applicants for 7 places in 2025 — approximately 12:1 ratio.",
-                    "**What Differentiates Winners**: Strong mathematics foundation and programming interest.",
-                    "**Trend**: Surging demand due to fintech boom and quantitative finance growth."
+                    "**Band A Competition (2025)**: 84 Band A applicants for 10 places — approximately 8.4:1 ratio. Only 6 offers to Band A in main round.",
+                    "**Interview**: Selective basis. Not mandatory but increases chance for marginal applicants.",
+                    "**What Differentiates Winners**: Strong mathematics foundation (Level 4+), programming interest, and well-rounded profile.",
+                    "**Trend**: Surging demand due to fintech boom and quantitative finance growth.",
                 ]
             },
             "alumni": {
                 "title": "Notable Alumni & Faculty",
                 "content": [
-                    "**Quantitative Analysts**: Alumni at investment banks and hedge funds in Hong Kong and globally.",
-                    "**FinTech Professionals**: Graduates at digital banks, payment companies, and blockchain startups.",
-                    "**Data Scientists**: Alumni in tech companies applying machine learning to financial problems.",
-                    "**Faculty Excellence**: CFFT faculty includes experts in computational finance, blockchain, and financial machine learning."
+                    "**Wong Chun-shen (王春申)**: Quantitative Trader at a proprietary trading firm; won 2nd Prize at Rotman International Trading Competition (University of Toronto, 2019). 2020 graduate.",
+                    "**Yang Lujia (楊陸佳)**: Data Analyst at Société Générale; received above-average salary offer as fresh graduate. 2020 graduate.",
+                    "**Lindsey Chen Meiling (陳美玲)**: Graduate Analyst, HSBC Global Markets (joined via return offer after internship). 2023 graduate.",
+                    "**Ken Tsang (曾健)**: Interned at J.P. Morgan (Global Finance & Business Management summer analyst); admitted via JUPAS. 2022 graduate.",
+                    "**Shanzheng Ba (巴尚正)**: Interned at Morgan Stanley New York Office (Fixed Income Division, FX Trading & Structuring); Joint Bachelor's Degree with Columbia University. 2022 graduate.",
+                    "**Andreas**: Graduate Programme, HSBC Private Banking. 2023 graduate.",
+                    "**Faculty Excellence**: CFFT faculty includes experts in computational finance, blockchain, and financial machine learning.",
                 ]
             },
             "scholarships": {
                 "title": "Scholarships & Financial Aid",
                 "content": [
-                    "**CityUHK Admission Scholarships**: For outstanding HKDSE performers with strong mathematics grades.",
+                    "**CityUHK Admission Scholarships**: For outstanding HKDSE performers. Up to HK$265,000 for elite students.",
                     "**CFFT Excellence Awards**: Merit-based scholarships for quantitative and programming talent.",
                     "**Industry-Sponsored Scholarships**: From banks and fintech companies supporting talent development.",
-                    "**Government Aid**: TSFS and NLSPS available for eligible local students."
+                    "**Government Aid**: TSFS and NLSPS available for eligible local students.",
                 ]
             },
             "tips": {
-                "title": "Ace Sir's CityU CFFT Strategy",
+                "title": "Ace Sir's JS1000 Strategy — 9 Actionable Tips",
                 "content": [
-                    "**Score Targeting**: Aim for Best 5 of 25+. Mathematics (Compulsory Part) at Level 4 is the minimum requirement.",
-                    "**Master Mathematics**: Strong foundation in calculus, probability, and linear algebra is essential.",
-                    "**Learn Programming**: Python and R are essential tools for computational finance.",
-                    "**Choose Your Stream Early**: Understand the difference between Computational Finance (quant-focused) and FinTech (tech-focused) streams.",
-                    "**Build Projects**: Create trading algorithms or financial models to demonstrate practical skills."
+                    "**1. Target Score: Aim for 25+**",
+                    "",
+                    "- The median score is 24.5 and the lower quartile is 23.5 (Best 5, all weighted x1). To be a safe candidate, target a total of 25 or above.",
+                    "- Anything below 23.5 is risky given the 8.4:1 Band A competition ratio (84 applicants for 10 places).",
+                    "",
+                    "**2. Secure Mathematics at Level 4 or Above**",
+                    "",
+                    "- Mathematics (Compulsory Part) Level 4 is a strict minimum requirement. Successful applicants typically score Level 5 or 5*.",
+                    "- Strong algebra, calculus, and probability skills are essential — the programme is heavily quantitative.",
+                    "",
+                    "**3. Excel in English — It Counts Twice**",
+                    "",
+                    "- English is included in the Best 5 formula AND is critical for reading financial literature and coding documentation.",
+                    "- Aim for Level 5 or above. Many graduates join global banks (J.P. Morgan, Goldman Sachs) where English fluency is non-negotiable.",
+                    "",
+                    "**4. Band A Is Non-Negotiable**",
+                    "",
+                    "- In 2025, only 6 of 7 total offers went to Band A applicants. Band B received zero offers.",
+                    "- With 84 Band A applicants competing for 10 places, you must place JS1000 in Band A to have any realistic chance.",
+                    "",
+                    "**5. Build Programming Skills Early**",
+                    "",
+                    "- Python and R are core tools in the curriculum. Start learning before university — complete online courses on data analysis, algorithmic trading, or blockchain basics.",
+                    "- Create a GitHub portfolio with 1–2 finance-related coding projects (e.g., a stock price predictor or portfolio optimizer).",
+                    "",
+                    "**6. Choose Your Stream with Intention**",
+                    "",
+                    "- The Computational Finance stream is quant-heavy (derivatives pricing, risk modelling, stochastic calculus). Ideal if you want to become a quant trader or risk analyst.",
+                    "- The FinTech stream focuses on blockchain, digital banking, and RegTech. Ideal if you want to join fintech startups or tech giants like ByteDance or Tencent.",
+                    "- Mention your preferred stream and reasoning in your personal statement or interview.",
+                    "",
+                    "**7. Leverage the Columbia Joint Degree**",
+                    "",
+                    "- Outstanding students can apply for the joint bachelor's degree with Columbia University (US) — a major differentiator on your CV.",
+                    "- Maintain a strong CGPA from Year 1 and seek faculty recommendations early if you aspire to this pathway.",
+                    "",
+                    "**8. Prepare for the Selective Interview**",
+                    "",
+                    "- Interview is on a selective basis — typically offered to strong candidates or those on the borderline.",
+                    "- Be ready to explain why you chose computational finance over pure finance or computer science, and discuss a recent fintech trend (e.g., AI in trading, DeFi, or digital currencies).",
+                    "",
+                    "**9. Plan Realistic Backups**",
+                    "",
+                    "- With only 10 intake places and extreme Band A competition, have solid Band B and C alternatives.",
+                    "- Consider related programmes such as CityU JS1002 BBA Finance, JS1006 BBA Business Economics, or HKUST's quantitative finance programmes as backup options aligned with your career goals."
                 ]
             }
         }
@@ -124,25 +184,30 @@ details = {
             "admission": {
                 "title": "入學要求與計分詳情 (DSE)",
                 "content": [
-                    "**入學計分公式**：最佳五科（包括英文及數學）。所有科目加權×1。",
+                    "**入學計分公式**：最佳五科（包括英文及數學）。所有科目加權x1。",
                     "**入學中位數**：24.5分（2025年聯招數據）。",
                     "**下四分位數**：23.5分（2025年聯招數據）。",
                     "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第4級、公民與社會發展科達標。",
                     "**選修科目**：任何2科達第3級。數學延伸部分（M1/M2）可滿足選修要求（如兩科皆修則只計一科）。應用學習科目不計入選修科目。",
-                    "**2025年申請統計**：Band A申請者84人，總申請者1,290人，錄取7人。",
-                    "**首年學費**：港幣47,000元。"
+                    "**面試**：需要，選擇性面試。約於六月為入圍申請者安排面試。",
+                    "**2025年申請統計**：Band A申請者84人、Band B 173人、Band C 281人、Band D 394人、Band E 358人。總申請者1,290人。",
+                    "**2025年取錄統計**：Band A取錄6人、Band B 0人、Band C 1人、Band D 0人、Band E 0人。總取錄7人。",
+                    "**首年學額**：10人。",
+                    "**修讀年期**：4年全日制。",
+                    "**首年學費**：港幣47,000元（本地學生）。",
                 ]
             },
             "curriculum": {
                 "title": "課程結構與內容",
                 "content": [
-                    "**課程概覽**：理學士（計算金融及金融科技）是2016年推出的跨學科課程，提供金融、數學、統計及電腦編程的尖端培訓。",
+                    "**課程概覽**：理學士（計算金融及金融科技）是跨學科課程，提供金融、數學、統計及電腦編程的尖端培訓。2016年推出。",
                     "**兩個專修**：(1) 計算金融專修——專注量化金融、數學建模及金融分析；(2) 金融科技專修——專注金融科技創新、區塊鏈及數碼金融。",
-                    "**計算金融專修**：涵蓋量化交易、風險管理、衍生工具定價、投資組合優化及金融計量經濟學。為需要高階量化及分析技能的金融職業做好準備。",
-                    "**金融科技專修**：涵蓋區塊鏈技術、算法交易、數碼銀行、支付系統及金融數據分析。為蓬勃發展的金融科技世界做好準備。",
-                    "**城大金融模擬實驗室**：配備尖端交易及分析平台的未來設施，讓金融與科技相遇。",
-                    "**專業考試支援**：課程為金融及科技專業資格提供支援。",
-                    "**修讀年期**：4年全日制。"
+                    "**計算金融專修**：涵蓋量化交易、風險管理、衍生工具定價、投資組合優化及金融計量經濟學。",
+                    "**金融科技專修**：涵蓋區塊鏈技術、算法交易、數碼銀行、支付系統及金融數據分析。",
+                    "**金融科技核心課程**：區塊鏈、大數據、網絡安全、監管科技、Python、機器學習。",
+                    "**雙聯學士學位課程**：表現優異學生可申請與美國哥倫比亞大學的雙聯學位課程。",
+                    "**城大金融模擬實驗室**：配備尖端交易及分析平台。",
+                    "**修讀年期**：4年全日制。",
                 ]
             },
             "career": {
@@ -153,62 +218,136 @@ details = {
                     "**投資銀行**：協助公司籌集資金、併購、承銷及證券交易。",
                     "**風險管理**：風險分析師、風險經理或風險顧問職位——制定風險管理策略及分析金融數據。",
                     "**金融科技開發**：於數碼銀行、支付公司及區塊鏈初創企業擔任軟件工程及產品開發職位。",
-                    "**數據科學**：利用金融領域專業知識擔任數據分析師及機器學習工程師。"
+                    "**知名僱主**：摩根大通、摩根士丹利、滙豐銀行、瑞士信貸、高盛、字節跳動、騰訊及多家對沖基金。",
+                    "**升學**：畢業生於普林斯頓、哥倫比亞、卡內基梅隆、倫敦政治經濟學院、倫敦帝國學院、蘇黎世聯邦理工學院等攻讀碩士及博士學位。",
                 ]
             },
             "campus": {
                 "title": "校園生活與學生體驗",
                 "content": [
+                    "**商學院排名**：亞洲四大商學院之一。",
                     "**金融模擬實驗室**：配備金融數據庫、交易平台及開發環境的高性能計算設施。",
                     "**產業夥伴關係**：與銀行、金融科技公司及金融數據供應商合作。",
                     "**學生社群**：活躍的計算金融及金融科技學會、編程競賽及金融科技黑客松。",
-                    "**專業網絡**：接觸於全球量化金融及金融科技領域工作的校友。"
+                    "**專業網絡**：接觸於全球量化金融及金融科技領域工作的校友。",
+                    "**海外交流**：全球超過200所夥伴大學。",
                 ]
             },
             "competitiveness": {
                 "title": "入學競爭力分析",
                 "content": [
-                    "**整體程度**：高（★★★★☆）。量化金融及金融科技人才需求強勁。",
+                    "**整體程度**：極高（★★★★★）。由於學額極少，競爭非常激烈。",
                     "**學術要求**：中位數24.5分，下四分位數23.5分。數學（必修部分）需達第4級。",
-                    "**Band A競爭**：2025年84名Band A申請者競爭7個學額——約12:1比率。",
-                    "**成功申請者特質**：優異數學基礎及編程興趣。",
-                    "**趨勢**：由於金融科技蓬勃及量化金融增長，需求激增。"
+                    "**Band A競爭（2025）**：84名Band A申請者競爭10個學額——約8.4:1比率。正選輪僅6個Band A取錄。",
+                    "**面試**：選擇性面試。非強制性，但可增加邊緣申請者的取錄機會。",
+                    "**成功申請者特質**：優異數學基礎（第4級或以上）、編程興趣及全面發展的背景。",
+                    "**趨勢**：由於金融科技蓬勃及量化金融增長，需求激增。",
                 ]
             },
             "alumni": {
                 "title": "知名校友及教職員",
                 "content": [
-                    "**量化分析師**：校友於香港及全球投資銀行及對沖基金。",
-                    "**金融科技專業人士**：畢業生於數碼銀行、支付公司及區塊鏈初創企業。",
-                    "**數據科學家**：校友於科技公司應用機器學習解決金融問題。",
-                    "**教職員卓越**：計算金融及金融科技教職員包括計算金融、區塊鏈及金融機器學習專家。"
+                    "**王春申 Wong Chun-shen**：量化交易員，於自營交易公司工作；2019年多倫多大學Rotman國際交易比賽二等獎。2020年畢業。",
+                    "**楊陸佳 Yang Lujia**：法國興業銀行數據分析師；應屆畢業即獲高於平均水平的薪酬。2020年畢業。",
+                    "**陳美玲 Lindsey Chen Meiling**：滙豐環球市場畢業分析員（實習後獲回聘）。2023年畢業。",
+                    "**曾健 Ken Tsang**：摩根大通實習生（環球金融及業務管理暑期分析員）；經聯招入學。2022年畢業。",
+                    "**巴尚正 Shanzheng Ba**：摩根士丹利紐約辦公室實習生（固定收益部，外匯交易及結構化）；哥倫比亞大學雙聯學位。2022年畢業。",
+                    "**Andreas**：滙豐私人銀行畢業培訓計劃。2023年畢業。",
+                    "**教職員卓越**：計算金融及金融科技教職員包括計算金融、區塊鏈及金融機器學習專家。",
                 ]
             },
             "scholarships": {
                 "title": "獎學金及經濟援助",
                 "content": [
-                    "**城大入學獎學金**：適用於香港中學文憑考試成績卓越且數學成績優異的學生。",
+                    "**城大入學獎學金**：適用於香港中學文憑考試成績卓越的學生。精英學生最高可獲港幣265,000元。",
                     "**計算金融及金融科技卓越獎**：按量化及編程才能頒發的優異獎。",
                     "**業界贊助獎學金**：銀行及金融科技公司支持人才發展的獎學金。",
-                    "**政府援助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。"
+                    "**政府援助**：合資格本地學生可申請專上學生資助計劃（TSFS）及免入息審查貸款計劃（NLSPS）。",
                 ]
             },
             "tips": {
-                "title": "Ace Sir 城大計算金融及金融科技攻略",
+                "title": "Ace Sir 的 JS1000 策略 — 9 個實用貼士",
                 "content": [
-                    "**分數目標**：最佳五科目標25分以上。數學（必修部分）第4級為最低要求。",
-                    "**掌握數學**：微積分、概率及線性代數的穩固基礎至關重要。",
-                    "**學習編程**：Python及R是計算金融的必需工具。",
-                    "**及早選擇專修**：了解計算金融（量化導向）與金融科技（科技導向）專修的分別。",
-                    "**建立項目**：創建交易算法或金融模型以展示實踐技能。"
+                    "**1. 目標分數：力爭 25 分或以上**",
+                    "",
+                    "- 中位數為 24.5 分，下四分位數為 23.5 分（最佳 5 科，所有科目加權 x1）。為求穩妥，應以總分 25 或以上為目標。",
+                    "- 鑑於 Band A 競爭比率為 8.4:1（84 人競爭 10 個學額），低於 23.5 分風險較高。",
+                    "",
+                    "**2. 數學必修部分須達第 4 級或以上**",
+                    "",
+                    "- 數學（必修部分）第 4 級是硬性最低要求。成功申請者通常取得第 5 級或 5*。",
+                    "- 紮實的代數、微積分及概率基礎至關重要——課程高度量化。",
+                    "",
+                    "**3. 英文科要出色——雙重計分效益**",
+                    "",
+                    "- 英文科計入最佳 5 科公式，同時對閱讀金融文獻及編程文件至關重要。",
+                    "- 目標第 5 級或以上。不少畢業生加入國際銀行（摩根大通、高盛），流利英語是不可或缺的條件。",
+                    "",
+                    "**4. Band A 選擇不可或缺**",
+                    "",
+                    "- 2025 年 7 個取錄名額中，僅 6 個給予 Band A 申請者。Band B 零取錄。",
+                    "- 84 名 Band A 申請者競爭 10 個學額，必須將 JS1000 放在 Band A 才有實質機會。",
+                    "",
+                    "**5. 及早建立編程技能**",
+                    "",
+                    "- Python 及 R 是課程核心工具。入學前開始學習——完成數據分析、算法交易或區塊鏈基礎的網上課程。",
+                    "- 在 GitHub 建立作品集，包含 1–2 個金融相關編程項目（例如股價預測器或投資組合優化器）。",
+                    "",
+                    "**6. 有意識地選擇專修**",
+                    "",
+                    "- 計算金融專修偏重量化（衍生工具定價、風險模型、隨機微積分）。適合希望成為量化交易員或風險分析師的學生。",
+                    "- 金融科技專修聚焦區塊鏈、數碼銀行及監管科技。適合希望加入金融科技初創企業或字節跳動、騰訊等科技巨頭的學生。",
+                    "- 在個人陳述或面試中提及你的首選專修及理由。",
+                    "",
+                    "**7. 善用哥倫比亞大學雙聯學位**",
+                    "",
+                    "- 表現優異的學生可申請與美國哥倫比亞大學的雙聯學士學位——這是履歷上的重要亮點。",
+                    "- 從大一開始保持優異的累積平均積點，如有意走這條路，應及早尋求教授推薦。",
+                    "",
+                    "**8. 為選擇性面試做好準備**",
+                    "",
+                    "- 面試以選擇性形式進行——通常提供予成績優異或處於邊緣的申請者。",
+                    "- 準備解釋為何選擇計算金融而非純金融或電腦科學，並能討論一項近期金融科技趨勢（例如人工智能交易、去中心化金融或數碼貨幣）。",
+                    "",
+                    "**9. 制定務實的後備計劃**",
+                    "",
+                    "- 學額僅 10 個且 Band A 競爭極度激烈，必須準備穩妥的 Band B 及 C 後備選擇。",
+                    "- 可考慮相關課程如城大 JS1002 工商管理學士（金融）、JS1006 工商管理學士（商業經濟），或科大量化金融課程，作為符合職業目標的後備方案。"
                 ]
             }
         }
     }
 }
 
+# Validate before upsert
+import subprocess
+
+payload_path = os.path.join(os.path.dirname(__file__), "..", "jupas", "payload_JS1000.json")
+with open(payload_path, "w", encoding="utf-8") as f:
+    json.dump(
+        {
+            "programme": programme,
+            "details": details,
+            "scores": {"median": 24.5, "lq": 23.5},
+        },
+        f,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+validate_script = os.path.join(os.path.dirname(__file__), "..", "jupas", "validateProgramme.js")
+result = subprocess.run(
+    ["node", validate_script, payload_path],
+    capture_output=True,
+    text=True,
+)
+if result.returncode != 0:
+    print(result.stdout, result.stderr)
+    sys.exit(1)
+print(result.stdout.strip())
+
 container.upsert_item({**programme, "id": f"prog_{programme['code']}", "pk": "programmes", "type": "programme"})
 container.upsert_item({**details, "id": f"detail_{details['code']}", "pk": "details", "type": "programme_detail"})
 
 print(f"[Seed] {programme['code']} - {programme['nameEn']} / {programme['nameZh']} - Done!")
-print(f"[Seed] Updated median: {programme['median']}, band_a (LQ): {programme['band_a']}")
+print("[Seed] All 8 sections (EN + ZH) from official JUPAS + CityU sources only")

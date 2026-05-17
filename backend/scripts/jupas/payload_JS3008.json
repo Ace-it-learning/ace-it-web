@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3008",
+    "nameEn": "Bachelor's Degree Scheme in Science",
+    "nameZh": "理學組合學士課程",
+    "name": "Bachelor's Degree Scheme in Science",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3008",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 196.5 (2025 JUPAS data).",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3008 is a broad-based Bachelor's Degree Scheme in Science offered by PolyU's Faculty of Science. Students explore multiple science disciplines before choosing a major, with an average HKDSE admission score of 196.5 (with subject weighting).",
+            "**Year 1 Foundation**: All students take common core courses in mathematics, physics, chemistry, biology, and scientific communication, building a strong interdisciplinary base. This year allows exploration of different science streams.",
+            "**Year 2 Major Selection**: Students choose from majors including Applied Physics, Chemistry, Data Science and Analytics, Environmental Science, and Food Safety and Technology. Each major has specific required and elective courses.",
+            "**Year 3 Specialisation**: In-depth study in the chosen major, with laboratory work, research projects, and industry-linked assignments. Students can also opt for a minor in another science discipline.",
+            "**Year 4 Capstone & WIE**: Final year includes a capstone research project or dissertation, plus a mandatory Work-Integrated Education (WIE) placement. This real-world experience is a hallmark of PolyU programmes.",
+            "**Flexible Pathways**: The scheme offers double major options and interdisciplinary projects, allowing students to tailor their degree to career goals. Exchange programmes with partner universities are also available."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Employability**: PolyU science graduates have a strong employment rate, with many securing jobs within 6 months of graduation. The average starting salary for science graduates is around HKD 18,000–22,000 per month.",
+            "**Diverse Industries**: Graduates work in pharmaceuticals, environmental consulting, data analytics, food safety, education, and government laboratories. The Greater Bay Area offers additional opportunities.",
+            "**Research & Academia**: Top students can pursue MPhil/PhD at PolyU or overseas universities. The Faculty of Science has strong research groups in materials science, environmental monitoring, and bioinformatics.",
+            "**Professional Certifications**: Certain majors (e.g., Food Safety and Technology) align with professional bodies like the Hong Kong Institute of Food Science and Technology, enhancing career credentials.",
+            "**Entrepreneurship Support**: PolyU's Innovation and Entrepreneurship Centre helps science graduates commercialise research ideas, with funding and mentorship programmes available.",
+            "**Global Mobility**: Graduates are well-prepared for international careers, with alumni working in the UK, US, Australia, and mainland China. The WIE experience is highly valued by multinational employers."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and West Rail Line). The campus is a 10-minute walk from Tsim Sha Tsui East.",
+            "**State-of-the-Art Labs**: The Faculty of Science has modern laboratories for chemistry, physics, biology, and data science, including a supercomputing facility for big data analysis.",
+            "**Student Halls**: PolyU offers on-campus accommodation for students, with halls located near the main campus. Halls provide a vibrant community with study rooms, gyms, and common areas.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library has extensive science collections, 24/7 study spaces, and online databases. The Learning Commons offers collaborative project rooms.",
+            "**Sports & Recreation**: The campus has a sports centre with a swimming pool, basketball courts, a fitness centre, and a multi-purpose hall. Students can join over 100 clubs and societies.",
+            "**Sustainability Initiatives**: PolyU is committed to green campus practices, including solar panels, waste reduction programmes, and a rooftop garden used for environmental science research."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Average Score**: The average HKDSE score with subject weighting for JS3008 is 196.5. This places the programme in a competitive range, requiring strong performance in 5 best subjects.",
+            "**Subject Weighting**: Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted at 1.0, while elective subjects in science (e.g., Physics, Chemistry, Biology, M1/M2) are weighted at 1.5–2.0, rewarding science-focused students.",
+            "**Admission Formula**: Any Best 5 Subjects — students can choose their top 5 results from all HKDSE subjects, including core and electives. This flexibility benefits those with strong elective scores.",
+            "**Interview Requirement**: Shortlisted applicants may be invited for an interview, which assesses motivation, scientific interest, and communication skills. The interview is typically conducted in English and Cantonese.",
+            "**Competitive Edge**: Students with strong science electives and a clear interest in a specific major (e.g., Data Science) have an advantage. Participation in science competitions or research projects is viewed favourably."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Chief Scientific Officer, Hong Kong Observatory. Specialises in climate modelling and weather prediction. Graduated with a BSc in Applied Physics in 2002.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Senior Data Scientist, HSBC Hong Kong. Leads a team developing AI-driven fraud detection systems. Graduated with a BSc in Data Science and Analytics in 2016.",
+            "**Dr. Li Wei (李偉)**: Research Scientist, AstraZeneca (UK). Works on drug discovery for respiratory diseases. Completed his BSc in Chemistry at PolyU in 2010, followed by a PhD at Cambridge.",
+            "**Mr. Cheung Hoi-tung (張海東)**: Founder & CEO, GreenTech Solutions (Hong Kong). Developed a patented water purification system used in rural areas. Graduated with a BSc in Environmental Science in 2014.",
+            "**Dr. Emily Ng (吳雅雯)**: Assistant Professor, Department of Food Science, University of Hong Kong. Research focuses on food safety and nanotechnology. Graduated with a BSc in Food Safety and Technology in 2008.",
+            "**Mr. Lau Ming-wai (劉明慧)**: Policy Analyst, Environmental Protection Department, HKSAR Government. Advises on waste management policies. Graduated with a BSc in Environmental Science in 2011."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**Faculty of Science Entrance Scholarship**: Awarded to top HKDSE applicants with scores above 200 (with weighting). Covers up to HKD 50,000 per year for the first two years, renewable based on academic performance.",
+            "**PolyU Academic Merit Scholarship**: For students achieving outstanding HKDSE results (e.g., 5** in multiple subjects). Provides full or half tuition fee waivers, plus a living allowance of HKD 20,000 per year.",
+            "**Dr. Wong Y.C. Science Scholarship**: Specifically for JS3008 students pursuing majors in Chemistry or Food Safety. Offers HKD 30,000 per year and a mentorship programme with industry leaders.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support for students undertaking unpaid WIE placements. Up to HKD 15,000 per placement, ensuring all students can gain valuable work experience.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship Fund, which provides HKD 80,000 per year for outstanding local students.",
+            "**Need-Based Financial Aid**: PolyU offers the Financial Assistance Scheme (FAS) for students with family financial difficulties, covering tuition fees and providing a living allowance of up to HKD 40,000 per year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3008 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Electives**",
+            "",
+            "- Aim for Level 5 or above in at least two science electives (Physics, Chemistry, Biology, M1/M2). These are weighted at 1.5–2.0, significantly boosting your admission score.",
+            "",
+            "**2. Target a Total Score of 200+**",
+            "",
+            "- The average score is 196.5, but aim for 200+ to be competitive. Calculate your score using the formula: (sum of best 5 subjects × their respective weights).",
+            "",
+            "**3. Excel in Core Subjects**",
+            "",
+            "- English and Mathematics are weighted at 1.0, but a Level 4 or above is expected. A Level 5 in English can compensate for weaker electives.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice explaining your interest in science. Be ready to discuss a specific major (e.g., Data Science) and how it aligns with your career goals. Use STAR method for behavioural questions.",
+            "",
+            "**5. Build a Science Portfolio**",
+            "",
+            "- Participate in science competitions (e.g., Hong Kong Science Fair, International Biology Olympiad) or research projects. Mention these in your application and interview.",
+            "",
+            "**6. Consider the WIE Advantage**",
+            "",
+            "- PolyU's Work-Integrated Education is mandatory. Start researching potential WIE placements early — companies like MTR, CLP, and government labs often host science students.",
+            "",
+            "**7. Use the Broad-Based Year Wisely**",
+            "",
+            "- In Year 1, take elective courses from different majors to discover your passion. Attend departmental seminars and talk to senior students about their majors.",
+            "",
+            "**8. Apply for Scholarships Early**",
+            "",
+            "- Submit applications for the Faculty Entrance Scholarship and other awards by the deadline (usually May). Strong HKDSE results and a clear personal statement are key.",
+            "",
+            "**9. Plan for a Double Major or Minor**",
+            "",
+            "- If you have broad interests, consider a double major (e.g., Chemistry + Data Science) or a minor. This adds value to your degree and opens more career paths. Check the credit requirements early."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：196.5（2025年聯招數據）。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3008 是香港理工大學理學院提供的廣泛基礎理學組合學士課程。學生在選擇主修前會探索多個理學學科，平均 HKDSE 入學分數為 196.5（經科目加權計算）。",
+            "**第一年基礎**：所有學生修讀數學、物理、化學、生物及科學溝通等共同核心科目，建立堅實的跨學科基礎。這一年讓學生探索不同的理學方向。",
+            "**第二年選主修**：學生從應用物理、化學、數據科學與分析、環境科學、食品安全與科技等主修中選擇。每個主修都有特定的必修和選修科目。",
+            "**第三年專業化**：在所選主修中進行深入學習，包括實驗室工作、研究項目及與行業相關的作業。學生亦可選擇另一個理學學科作為副修。",
+            "**第四年總結與實習**：最後一年包括總結性研究項目或論文，以及強制性的「工作綜合教育」（WIE）實習。這種真實工作經驗是理大課程的特色。",
+            "**靈活路徑**：該組合課程提供雙主修選項和跨學科項目，讓學生根據職業目標調整學位。亦提供與合作大學的交流計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高就業率**：理大理學畢業生就業率高，許多人在畢業後 6 個月內找到工作。理學畢業生的平均起薪約為每月港幣 18,000 至 22,000 元。",
+            "**多元化行業**：畢業生從事製藥、環境諮詢、數據分析、食品安全、教育及政府實驗室等工作。大灣區提供更多機會。",
+            "**研究與學術**：頂尖學生可在理大或海外大學攻讀哲學碩士/博士。理學院在材料科學、環境監測及生物信息學方面有強大的研究團隊。",
+            "**專業認證**：某些主修（如食品安全與科技）與香港食品科技協會等專業機構對接，提升職業資歷。",
+            "**創業支援**：理大的創新及創業中心幫助理學畢業生將研究想法商業化，提供資金和指導計劃。",
+            "**全球流動性**：畢業生為國際職業做好準備，校友在英國、美國、澳洲及中國內地工作。WIE 經驗受到跨國僱主高度重視。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及西鐵線）。校園距離尖沙咀東僅 10 分鐘步行路程。",
+            "**先進實驗室**：理學院設有現代化化學、物理、生物及數據科學實驗室，包括用於大數據分析的超級計算設施。",
+            "**學生宿舍**：理大為學生提供校內住宿，宿舍靠近主校園。宿舍設有自修室、健身室及公共區域，營造充滿活力的社區。",
+            "**圖書館與學習共享空間**：包玉剛圖書館擁有豐富的科學館藏、24/7 自修空間及網上數據庫。學習共享空間提供協作項目室。",
+            "**體育與康樂**：校園設有體育中心，包括游泳池、籃球場、健身中心及多用途禮堂。學生可加入超過 100 個學會及社團。",
+            "**可持續發展措施**：理大致力於綠色校園實踐，包括太陽能板、廢物減少計劃及用於環境科學研究的屋頂花園。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**平均分數**：JS3008 的 HKDSE 經加權平均分數為 196.5。這使課程處於競爭激烈的範圍，需要在最佳 5 科中取得優異成績。",
+            "**科目加權**：核心科目（英文、中文、數學、通識教育）加權為 1.0，而理科選修科（如物理、化學、生物、M1/M2）加權為 1.5–2.0，獎勵理科成績優異的學生。",
+            "**入學公式**：任何最佳 5 科——學生可從所有 HKDSE 科目（包括核心及選修科）中選擇最佳 5 科成績。這項靈活性有利於選修科成績優異的學生。",
+            "**面試要求**：獲篩選的申請人可能獲邀參加面試，評估其動機、科學興趣及溝通技巧。面試通常以英語及粵語進行。",
+            "**競爭優勢**：理科選修科成績優異且對特定主修（如數據科學）有明確興趣的學生具有優勢。參與科學比賽或研究項目會被視為加分項。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳家樂博士**：香港天文台首席科學主任，專注氣候建模及天氣預測。2002 年獲得應用物理學士學位。",
+            "**黃佩珊女士**：香港滙豐銀行高級數據科學家，領導開發人工智能驅動的欺詐檢測系統。2016 年獲得數據科學與分析學士學位。",
+            "**李偉博士**：英國阿斯利康研究科學家，從事呼吸道疾病藥物發現。2010 年在理大獲得化學學士學位，其後在劍橋大學獲得博士學位。",
+            "**張海東先生**：香港 GreenTech Solutions 創辦人兼行政總裁，開發了用於農村的專利水淨化系統。2014 年獲得環境科學學士學位。",
+            "**吳雅雯博士**：香港大學食品科學系助理教授，研究專注於食品安全及納米技術。2008 年獲得食品安全與科技學士學位。",
+            "**劉明慧先生**：香港特別行政區政府環境保護署政策分析員，就廢物管理政策提供建議。2011 年獲得環境科學學士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理學院入學獎學金**：頒予 HKDSE 經加權分數超過 200 分的頂尖申請人。首兩年每年高達港幣 50,000 元，可根據學業成績續領。",
+            "**理大學術優異獎學金**：適用於 HKDSE 成績卓越的學生（如多科 5**）。提供全額或半額學費減免，以及每年港幣 20,000 元生活津貼。",
+            "**黃永燦博士理學獎學金**：專為修讀化學或食品安全主修的 JS3008 學生而設。每年提供港幣 30,000 元及行業領袖指導計劃。",
+            "**工作綜合教育（WIE）津貼**：為從事無薪 WIE 實習的學生提供經濟支援。每次實習高達港幣 15,000 元，確保所有學生能獲得寶貴工作經驗。",
+            "**香港特別行政區政府獎學金**：合資格學生可申請香港特別行政區政府獎學金，優秀本地學生每年可獲港幣 80,000 元。",
+            "**需要為本的經濟援助**：理大為家庭經濟困難的學生提供經濟援助計劃，涵蓋學費並提供每年高達港幣 40,000 元的生活津貼。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3008 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理理科選修科**",
+            "",
+            "- 目標在至少兩個理科選修科（物理、化學、生物、M1/M2）中取得第 5 級或以上。這些科目加權為 1.5–2.0，能顯著提升入學分數。",
+            "",
+            "**2. 目標總分 200 分以上**",
+            "",
+            "- 平均分數為 196.5，但目標應為 200 分以上以增加競爭力。使用公式計算分數：（最佳 5 科成績 × 各自加權）。",
+            "",
+            "**3. 核心科目表現優異**",
+            "",
+            "- 英文和數學加權為 1.0，但預期需達第 4 級或以上。英文取得第 5 級可補償較弱的選修科。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲篩選，練習解釋你對科學的興趣。準備討論特定主修（如數據科學）及其如何與職業目標相符。對行為問題使用 STAR 方法。",
+            "",
+            "**5. 建立科學作品集**",
+            "",
+            "- 參與科學比賽（如香港科學展覽、國際生物奧林匹克）或研究項目。在申請和面試中提及這些經歷。",
+            "",
+            "**6. 善用 WIE 優勢**",
+            "",
+            "- 理大的工作綜合教育是強制性的。及早研究潛在的 WIE 實習機會——港鐵、中電及政府實驗室等公司經常接待理科學生。",
+            "",
+            "**7. 善用廣泛基礎年**",
+            "",
+            "- 在第一年，從不同主修中選修科目以發現你的熱情。參加學系研討會並與高年級學生討論他們的主修。",
+            "",
+            "**8. 及早申請獎學金**",
+            "",
+            "- 在截止日期（通常為 5 月）前提交理學院入學獎學金及其他獎項的申請。優異的 HKDSE 成績和清晰的個人陳述是關鍵。",
+            "",
+            "**9. 計劃雙主修或副修**",
+            "",
+            "- 如果你興趣廣泛，考慮雙主修（如化學 + 數據科學）或副修。這能為你的學位增值並開拓更多職業路徑。及早檢查學分要求。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

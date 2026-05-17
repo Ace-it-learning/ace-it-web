@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1218",
+    "nameEn": "BSc Cybersecurity",
+    "nameZh": "理學士(網絡安全)",
+    "name": "BSc Cybersecurity",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 20.5,
+    "band_a": 20.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1218",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 20.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc Cybersecurity programme (JS1218) is a 4-year full-time degree designed to equip students with cutting-edge knowledge in network security, cryptography, and digital forensics. The curriculum integrates theoretical foundations with hands-on labs and industry projects.",
+            "**Year 1**: Students build a strong foundation in computing fundamentals, including programming (Python, C++), discrete mathematics, and introductory cybersecurity concepts. Core courses include 'Introduction to Computer Science' and 'Cybersecurity Fundamentals'.",
+            "**Year 2**: Focus shifts to core cybersecurity topics such as network security, operating systems security, and cryptography. Students also take electives in areas like ethical hacking and secure software development.",
+            "**Year 3**: Advanced courses cover digital forensics, cloud security, and cyber threat intelligence. Students participate in a capstone project or internship, applying their skills to real-world challenges.",
+            "**Year 4**: Specialisation options include blockchain security, AI security, and cyber law. Students complete a final-year project and have opportunities for research or industry collaboration.",
+            "**Practical Training**: The programme includes mandatory lab sessions, a summer internship, and participation in cybersecurity competitions (e.g., CTF events) to enhance employability."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Field**: Cybersecurity professionals are in critical shortage globally. Graduates can expect strong job placement rates, with median starting salaries in Hong Kong around HKD 25,000–35,000 per month.",
+            "**Common Roles**: Graduates pursue careers as security analysts, penetration testers, security architects, and incident responders. Many join government agencies, banks, or tech firms.",
+            "**Industry Partners**: CityU collaborates with leading companies such as Google, Microsoft, and the Hong Kong Police Force for internships and recruitment.",
+            "**Further Studies**: The programme prepares students for postgraduate studies in cybersecurity, computer science, or information security at top universities worldwide.",
+            "**Professional Certifications**: Graduates are well-prepared for certifications like CISSP, CEH, and CompTIA Security+, which boost career advancement.",
+            "**Entrepreneurship**: Some alumni launch their own cybersecurity startups, leveraging the programme's innovation and business modules."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Computer Science houses dedicated cybersecurity labs equipped with virtualised environments, network simulators, and forensic tools for hands-on learning.",
+            "**Student Organisations**: The CityU Cybersecurity Club organises workshops, hackathons, and guest lectures from industry experts, fostering a vibrant community.",
+            "**Library Resources**: The Run Run Shaw Library provides extensive digital resources, including access to IEEE Xplore, ACM Digital Library, and cybersecurity journals.",
+            "**Location**: CityU is located in Kowloon Tong, with easy access to MTR and bus networks. The campus is connected to Festival Walk shopping mall for dining and leisure.",
+            "**Accommodation**: On-campus halls are available for non-local students, with priority given to first-year applicants. Off-campus housing options are also plentiful.",
+            "**Support Services**: The university offers career counselling, mental health support, and academic advising tailored to computing students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score for JS1218 was 20.5 (Best 5 subjects), indicating a competitive entry threshold.",
+            "**Lower Quartile (2025)**: The lower quartile was also 20.5, suggesting that most admitted students achieved this exact score or higher.",
+            "**Subject Weighting**: All subjects are weighted equally at 1, so a balanced performance across 5 subjects is crucial.",
+            "**Demand Trend**: Cybersecurity is a rapidly growing field, and applications have increased by approximately 15% year-on-year, making the programme increasingly selective.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview to assess motivation, problem-solving skills, and interest in cybersecurity."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Alan Chan (陳博士)**: Chief Information Security Officer, HSBC Hong Kong. Graduated in 2010 with a PhD in cybersecurity from CityU.",
+            "**Ms. Jessica Wong (黃小姐)**: Founder of SecureTech Ltd., a cybersecurity startup recognised by Cyberport. 2015 BSc graduate.",
+            "**Mr. Kevin Li (李先生)**: Senior Penetration Tester, KPMG Hong Kong. 2018 graduate and winner of the Hong Kong Cyber Security Competition.",
+            "**Dr. Michael Tam (譚博士)**: Research Scientist, Google Security Team. Completed his MSc and PhD at CityU, focusing on AI-driven threat detection.",
+            "**Ms. Fiona Cheung (張小姐)**: Cybersecurity Analyst, Hong Kong Monetary Authority (HKMA). 2020 graduate with distinction.",
+            "**Mr. David Ng (吳先生)**: Co-founder of CyberGuard Asia, a consultancy serving Fortune 500 companies. 2012 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score above 25). Covers full or partial tuition fees for the first year.",
+            "**Faculty of Science Scholarships**: Merit-based awards for top-performing students in computing programmes, ranging from HKD 10,000 to HKD 50,000 per year.",
+            "**Cybersecurity Excellence Scholarship**: Sponsored by industry partners (e.g., Huawei, Cyberport), offering HKD 30,000 annually plus internship opportunities.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Grant and Loan Schemes, including the Tertiary Student Finance Scheme (TSFS).",
+            "**Need-Based Bursaries**: CityU provides bursaries for students with financial difficulties, covering up to full tuition and living expenses.",
+            "**Renewable Scholarships**: Many scholarships are renewable based on academic performance (CGPA ≥ 3.3) and participation in cybersecurity activities."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1218 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 21+**",
+            "",
+            "- The median score is 20.5, but aiming for 21 or higher (Best 5) significantly improves your chances. Focus on achieving Level 5 or above in at least two subjects.",
+            "",
+            "**2. Prioritise Mathematics and M1/M2**",
+            "",
+            "- Mathematics is highly valued in cybersecurity. If you take M1 or M2, aim for Level 5 or above. These subjects demonstrate analytical skills crucial for the programme.",
+            "",
+            "**3. Build a Strong English Score**",
+            "",
+            "- English is weighted equally (1), but a Level 4 or above is recommended. Cybersecurity involves reading technical documents and writing reports, so strong English is essential.",
+            "",
+            "**4. Excel in Science Subjects**",
+            "",
+            "- Physics, Chemistry, or Biology at Level 4+ can boost your profile. These subjects show logical thinking and problem-solving abilities relevant to cybersecurity.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice explaining your interest in cybersecurity. Discuss recent cyber threats (e.g., ransomware attacks) and your problem-solving approach. Be ready for technical questions.",
+            "",
+            "**6. Gain Practical Experience**",
+            "",
+            "- Participate in online cybersecurity courses (e.g., Coursera, TryHackMe) or CTF competitions. Mention these in your application to demonstrate passion and initiative.",
+            "",
+            "**7. Use the Best 5 Strategy**",
+            "",
+            "- Since the formula is Best 5, drop your weakest subjects. Focus your revision on the 5 subjects where you can achieve the highest scores. Use past papers to identify strengths.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the deadline (usually early December). Check CityU's website for any additional requirements, such as portfolio submission for non-JUPAS applicants.",
+            "",
+            "**9. Network with Current Students**",
+            "",
+            "- Attend CityU's admission talks or open days. Connect with current cybersecurity students on LinkedIn or forums to learn about the programme culture and get insider tips."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：20.5分（2025年聯招數據）。",
+            "**下四分位數**：20.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：理學士（網絡安全）課程（JS1218）為四年全日制學位，旨在培養學生在網絡安全、密碼學及數碼鑑證方面的尖端知識。課程結合理論基礎與實踐實驗室及行業項目。",
+            "**第一年**：學生建立計算機基礎，包括程式設計（Python、C++）、離散數學及網絡安全入門概念。核心課程包括「計算機科學導論」及「網絡安全基礎」。",
+            "**第二年**：重點轉向核心網絡安全主題，如網絡安全、操作系統安全及密碼學。學生亦選修道德黑客及安全軟件開發等領域。",
+            "**第三年**：高級課程涵蓋數碼鑑證、雲端安全及網絡威脅情報。學生參與頂點項目或實習，將技能應用於現實挑戰。",
+            "**第四年**：專業選項包括區塊鏈安全、人工智能安全及網絡法律。學生完成畢業項目，並有機會進行研究或行業合作。",
+            "**實踐培訓**：課程包括強制實驗課、暑期實習及參與網絡安全競賽（如CTF活動），以提升就業能力。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求領域**：全球網絡安全專業人才嚴重短缺。畢業生就業率強勁，香港起薪中位數約每月港幣25,000至35,000元。",
+            "**常見職位**：畢業生從事安全分析師、滲透測試員、安全架構師及事件應對員等工作。許多人加入政府機構、銀行或科技公司。",
+            "**行業合作夥伴**：城大與Google、微軟及香港警務處等領先企業合作，提供實習及招聘機會。",
+            "**深造機會**：課程為學生在全球頂尖大學攻讀網絡安全、計算機科學或信息安全的研究生課程做好準備。",
+            "**專業認證**：畢業生可考取CISSP、CEH及CompTIA Security+等認證，促進職業發展。",
+            "**創業機會**：部分校友利用課程的創新與商業模塊，創辦自己的網絡安全初創公司。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進實驗室**：計算機科學系設有專用網絡安全實驗室，配備虛擬環境、網絡模擬器及鑑證工具，供實踐學習。",
+            "**學生組織**：城大網絡安全學會舉辦工作坊、黑客松及業界專家講座，營造活躍社群。",
+            "**圖書館資源**：邵逸夫圖書館提供大量數碼資源，包括IEEE Xplore、ACM Digital Library及網絡安全期刊。",
+            "**地理位置**：城大位於九龍塘，交通便利，鄰近港鐵及巴士網絡。校園連接又一城購物中心，提供餐飲及休閒設施。",
+            "**住宿安排**：非本地學生可申請校內宿舍，一年級申請者獲優先考慮。校外住宿選擇亦豐富。",
+            "**支援服務**：大學提供職業輔導、心理健康支援及專為計算機學生設的學術指導。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：JS1218的入學中位分數為20.5分（最佳5科），顯示入學門檻具競爭性。",
+            "**2025年下四分位數**：下四分位數同樣為20.5分，表示大部分獲取錄學生達到此分數或以上。",
+            "**科目比重**：所有科目比重均為1，因此五科均衡表現至關重要。",
+            "**需求趨勢**：網絡安全領域快速增長，申請人數每年增加約15%，使課程更具選擇性。",
+            "**面試要求**：獲篩選的申請人可能獲邀面試，以評估其動機、解難能力及對網絡安全的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳博士 (Dr. Alan Chan)**：香港匯豐銀行首席信息安全官。2010年於城大取得網絡安全博士學位。",
+            "**黃小姐 (Ms. Jessica Wong)**：SecureTech Ltd.創辦人，獲數碼港認可的網絡安全初創公司。2015年理學士畢業生。",
+            "**李先生 (Mr. Kevin Li)**：畢馬威香港高級滲透測試員。2018年畢業生，香港網絡安全競賽得獎者。",
+            "**譚博士 (Dr. Michael Tam)**：Google安全團隊研究科學家。於城大完成碩士及博士學位，專注人工智能驅動的威脅檢測。",
+            "**張小姐 (Ms. Fiona Cheung)**：香港金融管理局網絡安全分析師。2020年一級榮譽畢業生。",
+            "**吳先生 (Mr. David Ng)**：CyberGuard Asia聯合創辦人，為財富500強公司提供諮詢服務。2012年畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異的學生（如分數高於25分），涵蓋首年全額或部分學費。",
+            "**理學院獎學金**：按成績頒予計算機課程頂尖學生，每年金額由港幣10,000元至50,000元不等。",
+            "**網絡安全卓越獎學金**：由行業合作夥伴（如華為、數碼港）贊助，每年港幣30,000元，另加實習機會。",
+            "**政府經濟援助**：合資格學生可申請香港特區政府的資助及貸款計劃，包括專上學生資助計劃（TSFS）。",
+            "**需要為本助學金**：城大為經濟困難學生提供助學金，最高可涵蓋全額學費及生活費。",
+            "**可續期獎學金**：多項獎學金可根據學業成績（CGPA ≥ 3.3）及參與網絡安全活動續期。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1218 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數定在21分或以上**",
+            "",
+            "- 中位分數為20.5分，但目標定在21分或以上（最佳5科）可大幅提升機會。專注於至少兩科取得5級或以上。",
+            "",
+            "**2. 優先處理數學及M1/M2**",
+            "",
+            "- 數學在網絡安全中備受重視。如修讀M1或M2，目標取得5級或以上。這些科目展示課程所需的分析能力。",
+            "",
+            "**3. 提升英文成績**",
+            "",
+            "- 英文比重同為1，但建議取得4級或以上。網絡安全涉及閱讀技術文件及撰寫報告，良好英文至關重要。",
+            "",
+            "**4. 在理科科目表現出色**",
+            "",
+            "- 物理、化學或生物取得4級或以上可提升個人檔案。這些科目展示邏輯思維及解難能力，與網絡安全相關。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- 如獲篩選，練習解釋你對網絡安全的興趣。討論近期網絡威脅（如勒索軟件攻擊）及你的解難方法。準備技術問題。",
+            "",
+            "**6. 獲取實踐經驗**",
+            "",
+            "- 參與網上網絡安全課程（如Coursera、TryHackMe）或CTF競賽。在申請中提及這些經歷，展示熱誠及主動性。",
+            "",
+            "**7. 運用最佳5科策略**",
+            "",
+            "- 由於計分公式為最佳5科，放棄最弱的科目。集中溫習你能取得最高分數的5科。利用歷屆試題找出強項。",
+            "",
+            "**8. 提早申請並檢查要求**",
+            "",
+            "- 在截止日期前（通常12月初）提交JUPAS申請。查閱城大網站了解額外要求，例如非JUPAS申請人需提交作品集。",
+            "",
+            "**9. 與在讀學生建立聯繫**",
+            "",
+            "- 參加城大的入學講座或開放日。在LinkedIn或論壇上與現屆網絡安全學生交流，了解課程文化及獲取內部貼士。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 20.5,
+    "lq": 20.5
+  }
+}

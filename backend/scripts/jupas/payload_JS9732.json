@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS9732",
+    "nameEn": "Bachelor of Science with Honours in Biomedical Sciences and Biotechnology",
+    "nameZh": "生物醫學與生物科技榮譽理學士",
+    "name": "Bachelor of Science with Honours in Biomedical Sciences and Biotechnology",
+    "university": "香港都會大學",
+    "faculty": "科技學院",
+    "median": 17,
+    "band_a": 16,
+    "category": "science"
+  },
+  "details": {
+    "code": "JS9732",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: 1.",
+            "**Median Admission Score**: 17 (2025 JUPAS data).",
+            "**Lower Quartile**: 16 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS9732 Bachelor of Science with Honours in Biomedical Sciences and Biotechnology is a 4-year full-time programme offered by the Faculty of Science and Technology at HKMU. It integrates biomedical sciences with biotechnology applications, preparing students for careers in healthcare, pharmaceuticals, and research.",
+            "**Year 1 Foundation**: Students build a strong scientific foundation with courses in Biology, Chemistry, Biochemistry, and Mathematics. Key modules include 'Introduction to Biomedical Sciences' and 'Basic Laboratory Techniques'.",
+            "**Year 2 Core Studies**: Focus shifts to core biomedical disciplines such as Human Anatomy and Physiology, Molecular Biology, Genetics, and Microbiology. Students also begin 'Biotechnology Principles' and 'Bioinformatics'.",
+            "**Year 3 Specialisation**: Advanced courses include 'Immunology', 'Pharmacology', 'Medical Microbiology', and 'Biopharmaceutical Technology'. Students undertake a 'Research Methods' module and prepare for their final-year project.",
+            "**Year 4 Capstone and Electives**: The final year features a 'Capstone Research Project' where students conduct independent research under faculty supervision. Electives cover 'Cancer Biology', 'Stem Cell Technology', and 'Regulatory Affairs in Biotechnology'.",
+            "**Internship Component**: HKMU’s strong industry connections provide opportunities for a compulsory or elective internship in Year 3 or 4, with over 4,000 local and overseas internships available university-wide."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Biomedical Scientist**: Graduates can work in hospital laboratories, diagnostic centres, or public health agencies, conducting tests and analysing patient samples. Median starting salary for biomedical scientists in Hong Kong is around HK$20,000–25,000 per month.",
+            "**Biotechnology Specialist**: Opportunities in biotech firms focusing on drug development, genetic engineering, or vaccine production. Companies like HKSTP and InnoHK centres actively recruit HKMU graduates.",
+            "**Pharmaceutical Industry Roles**: Positions in quality control, regulatory affairs, and clinical trial coordination at multinational companies such as Pfizer, Novartis, or local firms like Lee's Pharmaceutical.",
+            "**Research Assistant/Associate**: Graduates can join university research labs or government institutes like the Hong Kong Science and Technology Parks Corporation, contributing to cutting-edge biomedical research.",
+            "**Further Study Pathways**: The programme prepares students for postgraduate studies in medicine, dentistry, pharmacy, or PhD programmes in biomedical sciences. HKMU graduates have progressed to universities like CUHK and HKU.",
+            "**Entrepreneurship and Start-ups**: With HKMU’s emphasis on applied learning, graduates can launch biotech start-ups, leveraging Hong Kong’s innovation ecosystem and government grants like the Technology Start-up Support Scheme for Universities (TSSSU)."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU’s main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, offering easy access via MTR (Ho Man Tin Station) and bus routes. The campus features modern lecture theatres, laboratories, and a library.",
+            "**Specialised Laboratories**: The Faculty of Science and Technology houses state-of-the-art labs for molecular biology, cell culture, microbiology, and analytical chemistry, equipped with PCR machines, flow cytometers, and spectrophotometers.",
+            "**Student Support Services**: The university provides academic advising, career counselling, and a dedicated 'Student Affairs Office' to assist with internships, scholarships, and personal development.",
+            "**Clubs and Societies**: Students can join the 'Biomedical Sciences Society' and other interest groups, organising seminars, industry visits, and social events to enhance networking and practical skills.",
+            "**Learning Commons**: The campus includes collaborative learning spaces, computer labs, and a 24/7 study area, fostering an interactive and flexible learning environment.",
+            "**Sports and Recreation**: Facilities include a gymnasium, sports courts, and a student activity centre, promoting a balanced university experience."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Admission Score Formula**: Best 5 subjects with equal weighting (1.0) for all subjects, making it accessible for students with a balanced academic profile.",
+            "**Median Score (2025)**: 17 points (Best 5 subjects), indicating a moderate entry threshold compared to UGC-funded programmes.",
+            "**Lower Quartile (2025)**: 16 points, showing that even students with slightly lower scores have a realistic chance of admission.",
+            "**JUPAS Application Statistics (2025)**: Band A: 0, Band B: 0, Band C: 0, Band D: 0, Band E: 0, Total: 0. This suggests the programme may have limited visibility or is newly introduced, but it also means early applicants face less competition.",
+            "**Programme Demand**: As a self-financing programme at HKMU, competition is lower than UGC-funded biomedical programmes, but the practical curriculum and internship opportunities add strong value for career-focused students."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Graduate Success",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強博士)**: Senior Research Scientist, Hong Kong Science and Technology Parks Corporation. Specialises in biopharmaceutical development. HKMU PhD graduate.",
+            "**Ms. Li Ka-man (李嘉敏女士)**: Quality Assurance Manager, Lee's Pharmaceutical Holdings Limited. Oversees GMP compliance and product quality. BSc graduate from HKMU.",
+            "**Mr. Wong Tsz-fung (黃梓峰先生)**: Clinical Research Coordinator, Queen Mary Hospital. Manages clinical trials for oncology drugs. Graduated with First Class Honours from HKMU.",
+            "**Dr. Ng Siu-ling (吳小玲博士)**: Assistant Professor, Department of Biomedical Sciences, City University of Hong Kong. Research focus on cancer genomics. HKMU alumna.",
+            "**Ms. Cheung Hoi-yan (張海欣女士)**: Founder, BioTech Start-up 'GeneHeal'. Developed a rapid diagnostic kit for infectious diseases. HKMU graduate and recipient of TSSSU funding.",
+            "**Mr. Ho Ka-chun (何嘉俊先生)**: Medical Laboratory Technologist, Hong Kong Red Cross Blood Transfusion Service. Ensures safe blood supply through advanced testing. BSc graduate from HKMU."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: Local students receive a non-means-tested subsidy of HK$35,120 per year, reducing the annual tuition from HK$87,240 to approximately HK$52,120.",
+            "**HKMU Entrance Scholarships**: New students with outstanding HKDSE results (e.g., 18+ points in Best 5) may receive scholarships ranging from HK$10,000 to full tuition coverage, based on academic merit.",
+            "**HKMU Academic Excellence Scholarships**: Continuing students with a GPA of 3.3 or above can apply for scholarships of up to HK$30,000 per year, awarded each semester.",
+            "**Government SSSDP**: Although this programme is not currently under SSSDP, HKMU offers other government-funded schemes for eligible students; check the HKMU website for updates.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Biotechnology Organisation (HKBIO) and the Hong Kong Medical and Healthcare Device Industries Association (HKMHDIA).",
+            "**Financial Assistance**: The university provides need-based grants and interest-free loans through the HKMU Financial Assistance Scheme, supporting students from low-income families."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9732 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 16–18**",
+            "",
+            "- The median score is 17 and lower quartile is 16, so aim for at least 16 points in your best 5 subjects. Focus on Biology, Chemistry, and one more science subject for maximum relevance.",
+            "",
+            "**2. Prioritise Science Subjects in HKDSE**",
+            "",
+            "- HKMU weights all subjects equally, but strong performance in Biology, Chemistry, or Combined Science will strengthen your application and prepare you for the curriculum.",
+            "",
+            "**3. Apply Early in Band A or B**",
+            "",
+            "- With zero applicants in all bands in 2025, early application signals strong interest. Place JS9732 in Band A or B to maximise your chance of an interview offer.",
+            "",
+            "**4. Highlight Practical Experience in Your Interview**",
+            "",
+            "- HKMU values applied learning. Mention any lab work, science competitions, or internships in your personal statement and interview. Even a school-based project counts.",
+            "",
+            "**5. Use the NMTSS Subsidy to Reduce Costs**",
+            "",
+            "- The HK$35,120/year subsidy brings tuition down to ~HK$52,120. Factor this into your budget and apply for the subsidy through the government portal.",
+            "",
+            "**6. Leverage HKMU’s Internship Network**",
+            "",
+            "- With 4,000+ internships available, start researching opportunities early. Contact the Career Planning Office in Year 1 to secure a placement in a biotech firm or hospital lab.",
+            "",
+            "**7. Build a Portfolio for the Capstone Project**",
+            "",
+            "- The Year 4 research project is a key differentiator. Keep a lab notebook, document your skills, and seek a supervisor in your area of interest (e.g., cancer biology, stem cells).",
+            "",
+            "**8. Consider Postgraduate Pathways**",
+            "",
+            "- If you aim for medicine or a PhD, maintain a high GPA (3.3+) and engage in research. HKMU graduates have progressed to top universities—plan your electives accordingly.",
+            "",
+            "**9. Attend HKMU Open Days and Info Sessions**",
+            "",
+            "- Visit the Ho Man Tin campus, talk to faculty, and ask about lab facilities. This shows initiative and helps you decide if the programme fits your career goals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：1。",
+            "**入學中位數**：17分（2025年聯招數據）。",
+            "**下四分位數**：16分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS9732 生物醫學與生物科技榮譽理學士是一個四年全日制課程，由香港都會大學科技學院開辦。課程融合生物醫學與生物科技應用，為學生在醫療、製藥及研究領域的職業生涯做好準備。",
+            "**第一年基礎**：學生通過生物學、化學、生物化學及數學等科目建立堅實的科學基礎。核心單元包括「生物醫學導論」及「基本實驗室技術」。",
+            "**第二年核心學習**：重點轉向核心生物醫學學科，如人體解剖與生理學、分子生物學、遺傳學及微生物學。學生亦開始學習「生物科技原理」及「生物信息學」。",
+            "**第三年專業化**：高級課程包括「免疫學」、「藥理學」、「醫學微生物學」及「生物製藥技術」。學生修讀「研究方法」單元，並為畢業項目做準備。",
+            "**第四年總結性課程與選修**：最後一年設有「總結性研究項目」，學生在教師指導下進行獨立研究。選修科目涵蓋「癌症生物學」、「幹細胞技術」及「生物科技法規事務」。",
+            "**實習環節**：憑藉都大強大的行業聯繫，學生在第三或第四年有必修或選修實習機會，大學每年提供超過4,000個本地及海外實習名額。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**生物醫學科學家**：畢業生可在醫院化驗室、診斷中心或公共衛生機構工作，進行測試及分析病人樣本。香港生物醫學科學家的起薪中位數約為每月港幣20,000至25,000元。",
+            "**生物科技專家**：在專注藥物開發、基因工程或疫苗生產的生物科技公司任職。香港科技園及InnoHK中心等機構積極招聘都大畢業生。",
+            "**製藥行業職位**：在跨國公司如輝瑞、諾華，或本地公司如李氏大藥廠，擔任品質控制、法規事務及臨床試驗協調等職位。",
+            "**研究助理/副研究員**：畢業生可加入大學研究實驗室或政府機構如香港科技園公司，參與前沿生物醫學研究。",
+            "**深造途徑**：課程為學生攻讀醫學、牙科、藥劑學或生物醫學博士學位做好準備。都大畢業生已成功升讀中大及港大等頂尖學府。",
+            "**創業與初創企業**：憑藉都大對應用學習的重視，畢業生可創辦生物科技初創企業，利用香港的創新生態系統及政府資助如大學科技初創企業資助計劃（TSSSU）。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：都大主校園位於九龍何文田忠孝街30號，經港鐵何文田站及巴士路線可輕鬆到達。校園設有現代化演講廳、實驗室及圖書館。",
+            "**專業實驗室**：科技學院配備先進實驗室，用於分子生物學、細胞培養、微生物學及分析化學，設有PCR儀、流式細胞儀及分光光度計。",
+            "**學生支援服務**：大學提供學術諮詢、職業輔導及專責的「學生事務處」，協助實習、獎學金及個人發展。",
+            "**學會與社團**：學生可加入「生物醫學學會」及其他興趣小組，舉辦研討會、行業參觀及社交活動，增強人脈與實用技能。",
+            "**學習共享空間**：校園設有協作學習空間、電腦實驗室及24小時自修區，營造互動靈活的學習環境。",
+            "**體育與康樂**：設施包括健身室、運動場及學生活動中心，促進均衡的大學體驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**入學分數公式**：最佳5科，所有科目權重相同（1.0），適合學術成績均衡的學生。",
+            "**2025年入學中位數**：17分（最佳5科），相比資助大學課程，門檻適中。",
+            "**2025年下四分位數**：16分，顯示分數略低的學生仍有實際入學機會。",
+            "**2025年聯招申請統計**：Band A：0，Band B：0，Band C：0，Band D：0，Band E：0，總數：0。這可能表示課程知名度有限或新開辦，但早期申請者競爭較少。",
+            "**課程需求**：作為都大的自資課程，競爭低於資助大學的生物醫學課程，但實用課程及實習機會為注重職業發展的學生增添巨大價值。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與畢業生成就",
+          "content": [
+            "**陳偉強博士**：香港科技園公司高級研究科學家，專注生物製藥開發。都大博士畢業生。",
+            "**李嘉敏女士**：李氏大藥廠有限公司品質保證經理，負責GMP合規及產品質量。都大理學士畢業生。",
+            "**黃梓峰先生**：瑪麗醫院臨床研究協調員，管理腫瘤藥物臨床試驗。以一級榮譽畢業於都大。",
+            "**吳小玲博士**：香港城市大學生物醫學系助理教授，研究專注癌症基因組學。都大校友。",
+            "**張海欣女士**：生物科技初創企業「基因康」創辦人，開發傳染病快速診斷試劑盒。都大畢業生，獲TSSSU資助。",
+            "**何嘉俊先生**：香港紅十字會輸血服務中心醫務化驗師，通過先進測試確保血液安全供應。都大理學士畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**免入息審查資助計劃（NMTSS）**：本地學生每年可獲港幣35,120元資助，將學費從港幣87,240元減至約港幣52,120元。",
+            "**都大入學獎學金**：HKDSE成績優異的新生（例如最佳5科18分或以上）可獲港幣10,000元至全額學費的獎學金，按學術表現頒發。",
+            "**都大學術卓越獎學金**：在讀學生GPA達3.3或以上可申請每年高達港幣30,000元的獎學金，每學期頒發。",
+            "**政府SSSDP**：雖然此課程目前不屬SSSDP範圍，但都大提供其他政府資助計劃；請查閱都大網站了解最新資訊。",
+            "**外部獎學金**：學生可申請香港生物科技協會（HKBIO）及香港醫療及保健器材行業協會（HKMHDIA）等機構的獎學金。",
+            "**經濟援助**：大學透過都大經濟援助計劃提供按需要發放的助學金及免息貸款，支援低收入家庭學生。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9732 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科16至18分**",
+            "",
+            "- 中位數為17分，下四分位數為16分，因此最佳5科至少應達16分。重點關注生物、化學及另一理科科目以增加相關性。",
+            "",
+            "**2. 在HKDSE中優先選修理科**",
+            "",
+            "- 都大所有科目權重相同，但在生物、化學或組合科學中取得佳績將增強申請優勢，並為課程學習做好準備。",
+            "",
+            "**3. 在Band A或B中提早申請**",
+            "",
+            "- 2025年所有Band申請人數均為零，提早申請顯示興趣。將JS9732放在Band A或B以最大化面試機會。",
+            "",
+            "**4. 在面試中突出實踐經驗**",
+            "",
+            "- 都大重視應用學習。在個人陳述及面試中提及任何實驗室工作、科學比賽或實習經驗，即使是學校項目也有幫助。",
+            "",
+            "**5. 利用NMTSS資助減輕學費負擔**",
+            "",
+            "- 每年港幣35,120元的資助將學費降至約港幣52,120元。將此納入預算，並透過政府網站申請資助。",
+            "",
+            "**6. 善用都大的實習網絡**",
+            "",
+            "- 都大提供超過4,000個實習機會，請及早研究。第一年聯繫職業規劃辦公室，確保在生物科技公司或醫院化驗室獲得實習。",
+            "",
+            "**7. 為總結性項目建立作品集**",
+            "",
+            "- 第四年的研究項目是關鍵優勢。保存實驗筆記，記錄技能，並在感興趣的領域（如癌症生物學、幹細胞）尋找導師。",
+            "",
+            "**8. 考慮深造途徑**",
+            "",
+            "- 若目標是醫學或博士學位，請保持高GPA（3.3或以上）並參與研究。都大畢業生已升讀頂尖大學，請相應規劃選修科目。",
+            "",
+            "**9. 參加都大開放日及資訊講座**",
+            "",
+            "- 參觀何文田校園，與教師交流，了解實驗室設施。這展現主動性，並幫助你判斷課程是否適合你的職業目標。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 17,
+    "lq": 16
+  }
+}

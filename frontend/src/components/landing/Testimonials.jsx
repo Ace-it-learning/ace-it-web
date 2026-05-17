@@ -3,11 +3,18 @@ import { Star, MessageSquare } from 'lucide-react';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { useLanguage } from '../../context/LanguageContext';
 
+/** Set to true when real student testimonials are ready to publish. */
+const SHOW_LANDING_TESTIMONIALS = false;
+
 const Testimonials = () => {
     const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
     const { t } = useLanguage();
 
     const testimonialData = t('landing.testimonials');
+
+    if (!SHOW_LANDING_TESTIMONIALS) {
+        return null;
+    }
 
     return (
         <section ref={sectionRef} className="py-24 bg-[#f8f7f5] dark:bg-[#1a110a] relative overflow-hidden">

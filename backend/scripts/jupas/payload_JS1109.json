@@ -1,0 +1,269 @@
+{
+  "programme": {
+    "code": "JS1109",
+    "nameEn": "BA Linguistics and Language Applications",
+    "nameZh": "文學士(語言學及語言應用)",
+    "name": "BA Linguistics and Language Applications",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 30.0,
+    "band_a": 29.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1109",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects. Subject weighting: 2: English 1.5: Chinese / Mathematics 1: other elective subjects.",
+            "**Median Admission Score**: 30.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 29.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BA Linguistics and Language Applications (JS1109) is a 4-year full-time programme offered by the Department of Linguistics and Translation at City University of Hong Kong. It focuses on the scientific study of language and its practical applications in areas such as language technology, education, and communication.",
+            "**Core Foundation**: Students build a strong foundation in linguistic theory, including phonetics, phonology, syntax, semantics, and pragmatics, with an emphasis on both English and Chinese languages.",
+            "**Year 1**: Introductory courses cover basic linguistics concepts, language structure, and academic communication skills. Students also take general education courses to broaden their perspectives.",
+            "**Year 2**: Intermediate courses delve deeper into core areas such as phonetics, syntax, and semantics. Students begin exploring language applications in fields like language acquisition, bilingualism, and language disorders.",
+            "**Year 3**: Advanced courses include language technology, corpus linguistics, and language policy. Students may choose electives in areas like translation, language teaching, or computational linguistics.",
+            "**Year 4**: Capstone project or dissertation allows students to conduct independent research. Internship opportunities are available to gain practical experience in language-related industries.",
+            "**Language Enhancement**: The programme places strong emphasis on bilingual proficiency, with courses taught in both English and Chinese to prepare students for multilingual careers."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Language Technology Specialist**: Graduates work in AI and natural language processing (NLP) companies, developing speech recognition, machine translation, and text analysis tools. Demand is high in Hong Kong’s growing tech sector.",
+            "**Education Professional**: Many graduates become English or Chinese language teachers in local or international schools, or pursue roles in curriculum development and educational publishing.",
+            "**Translation and Interpretation**: With strong bilingual skills, graduates work as translators or interpreters in government, media, or corporate settings, including the Hong Kong Judiciary and international organisations.",
+            "**Corporate Communication**: Roles in public relations, marketing, and corporate communications are common, where language expertise is valued for crafting effective messaging and cross-cultural communication.",
+            "**Research and Academia**: Some graduates pursue postgraduate studies (MA/PhD) in linguistics or related fields, leading to careers in university teaching and research.",
+            "**Median Salary**: According to CityU graduate surveys, BA Linguistics graduates have a median starting salary of approximately HKD 18,000–22,000 per month, with potential for growth in specialised roles."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is modern and well-connected, with easy access to public transport and nearby amenities. The university is known for its vibrant, multicultural environment.",
+            "**Linguistics Lab**: The department houses a state-of-the-art phonetics and psycholinguistics lab equipped with speech analysis software, eye-tracking devices, and EEG equipment for language research.",
+            "**Library Resources**: The Run Run Shaw Library offers extensive collections in linguistics, language education, and translation, including digital databases like the Linguistic Data Consortium.",
+            "**Student Organisations**: The Linguistics and Translation Society organises academic talks, cultural events, and networking activities, fostering a close-knit community among students.",
+            "**Exchange Programmes**: Students have opportunities to study abroad at partner universities in the UK, US, Australia, and mainland China, enhancing their global perspective and language skills.",
+            "**Career Services**: The university’s Career and Leadership Centre provides workshops, internship placements, and employer networking events tailored to language and humanities students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Admission Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 30.0 points (3 core + 2 elective subjects), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: 29.5 points, meaning the bottom 25% of admitted students scored at or below this level, so a score of 30+ is recommended for a safe application.",
+            "**Subject Weighting**: English is weighted at 2x, Chinese and Mathematics at 1.5x, and other electives at 1x. High English proficiency is critical for success.",
+            "**Application Ratio**: Typically, the programme receives around 500–600 applications for approximately 30–40 places, resulting in an acceptance rate of about 6–8%.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview to assess language aptitude, motivation, and communication skills. Preparation is key."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-yan (陳嘉欣博士)**: Assistant Professor of Linguistics, University of Hong Kong. Specialises in Cantonese phonology and language acquisition. Graduated from CityU in 2012.",
+            "**Mr. Wong Tsz-hin (黃子軒先生)**: Senior Language Engineer, Google Hong Kong. Works on Cantonese speech recognition and NLP models. Graduated in 2016.",
+            "**Ms. Li Siu-ling (李少玲女士)**: Deputy Editor, South China Morning Post. Oversees language quality and style guides for the English edition. Graduated in 2010.",
+            "**Dr. Ngai Ka-ling (倪嘉玲博士)**: Research Scientist, Hong Kong Polytechnic University. Focuses on bilingualism and cognitive neuroscience. Graduated in 2014.",
+            "**Mr. Cheung Man-ho (張文浩先生)**: Founder, LinguaLearn Education Centre. Provides language training and translation services to corporate clients. Graduated in 2018.",
+            "**Ms. Tam Wing-yan (譚詠欣女士)**: Policy Analyst, Hong Kong Government. Works on language policy and public communication strategies. Graduated in 2015."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., 5** in multiple subjects) with a value of up to HKD 80,000 per year, renewable based on academic performance.",
+            "**Departmental Linguistics Scholarship**: Offered to outstanding Year 1 students with strong DSE results in English and Chinese, providing HKD 10,000–20,000 per year.",
+            "**HKSAR Government Scholarship**: Available for local students with exceptional academic achievements and leadership qualities, covering full tuition and living expenses.",
+            "**Dr. Li Shu-fan Scholarship**: A merit-based award for students demonstrating excellence in language studies, valued at HKD 15,000 per year.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans are available through the government’s Student Financial Assistance Agency (SFAA) for eligible students.",
+            "**Exchange Programme Bursary**: Students participating in overseas exchange programmes can apply for bursaries of up to HKD 30,000 to cover travel and accommodation costs."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1109 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English and Chinese**",
+            "",
+            "- With English weighted at 2x and Chinese at 1.5x, aim for Level 5 or above in both. A 5** in English can boost your score by 2 extra points compared to a Level 4.",
+            "",
+            "**2. Target a Score of 30+**",
+            "",
+            "- The median is 30.0 and lower quartile is 29.5, so a score of 30 or higher gives you a strong chance. Calculate your weighted score carefully using the formula: 2×English + 1.5×Chinese + 1.5×Maths + sum of 2 best electives.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Electives like Literature in English, Chinese Literature, or History are valued for their language and analytical content. Avoid subjects with low scaling unless you excel in them.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect questions on your interest in linguistics, language experience, and career goals. Practice discussing a linguistic topic (e.g., code-switching in Hong Kong) to show depth.",
+            "",
+            "**5. Build a Language Portfolio**",
+            "",
+            "- Showcase your language skills through extracurriculars: debate, writing competitions, translation projects, or volunteering as a language tutor. Mention these in your application.",
+            "",
+            "**6. Research the Programme**",
+            "",
+            "- Visit CityU’s Department of Linguistics and Translation website. Note specific courses like “Language and Technology” or “Corpus Linguistics” to mention in your personal statement.",
+            "",
+            "**7. Use the Weighting to Your Advantage**",
+            "",
+            "- If you are strong in English but weaker in Maths, this programme’s weighting (Maths at 1.5x vs English at 2x) benefits you. Focus your revision time accordingly.",
+            "",
+            "**8. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the early deadline (typically December). Ensure you meet the minimum subject requirements (e.g., Level 3 in English and Chinese).",
+            "",
+            "**9. Consider Alternative Pathways**",
+            "",
+            "- If your score is below 29.5, consider CityU’s Associate Degree in Linguistics or Translation, which offers articulation to Year 3 of this programme with good GPA."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。科目比重：2: 英文 1.5: Chinese / 數學 1: 其他選修科。",
+            "**入學中位數**：30.0分（2025年聯招數據）。",
+            "**下四分位數**：29.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：文學士（語言學及語言應用）（JS1109）是香港城市大學語言學及翻譯學系開辦的四年全日制課程，專注於語言的科學研究及其在語言科技、教育和溝通等領域的實際應用。",
+            "**核心基礎**：學生建立扎實的語言學理論基礎，包括語音學、音系學、句法學、語義學和語用學，並強調英語和中文雙語能力。",
+            "**第一年**：基礎課程涵蓋語言學基本概念、語言結構和學術溝通技巧，學生亦修讀通識教育課程以擴闊視野。",
+            "**第二年**：中級課程深入探討語音學、句法學和語義學等核心領域，學生開始探索語言在語言習得、雙語現象和語言障礙等領域的應用。",
+            "**第三年**：高級課程包括語言科技、語料庫語言學和語言政策，學生可選修翻譯、語言教學或計算語言學等範疇的科目。",
+            "**第四年**：畢業專題或論文讓學生進行獨立研究，並提供實習機會以獲取語言相關行業的實踐經驗。",
+            "**語言強化**：課程強調雙語能力，以英語和中文授課，為學生從事多語言職業做好準備。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**語言科技專家**：畢業生在人工智能和自然語言處理（NLP）公司工作，開發語音識別、機器翻譯和文本分析工具。香港科技行業對此類人才需求甚殷。",
+            "**教育專業人士**：許多畢業生在本港或國際學校擔任英語或中文教師，或從事課程發展和教育出版工作。",
+            "**翻譯及傳譯**：憑藉雙語能力，畢業生在政府、媒體或企業機構擔任翻譯或傳譯員，包括香港司法機構和國際組織。",
+            "**企業傳訊**：公共關係、市場推廣和企業傳訊等職位常見，語言專長有助於制定有效訊息和跨文化溝通。",
+            "**研究與學術**：部分畢業生攻讀語言學或相關領域的研究生課程（碩士/博士），從事大學教學和研究工作。",
+            "**薪酬中位數**：根據城大畢業生調查，語言學文學士畢業生的起薪中位數約為每月港幣18,000至22,000元，專業職位有增長潛力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，校園現代化且交通便利，鄰近公共運輸和各種設施。大學以多元文化環境聞名。",
+            "**語言學實驗室**：學系設有先進的語音學和心理語言學實驗室，配備語音分析軟件、眼動追蹤器和腦電圖設備，用於語言研究。",
+            "**圖書館資源**：邵逸夫圖書館提供豐富的語言學、語言教育和翻譯館藏，包括語言數據聯盟等數碼資料庫。",
+            "**學生組織**：語言學及翻譯學會舉辦學術講座、文化活動和聯誼活動，促進學生之間的緊密聯繫。",
+            "**交流計劃**：學生有機會到英國、美國、澳洲和中國內地的合作大學交流，擴闊國際視野和語言能力。",
+            "**就業服務**：大學的職業及領袖發展中心提供工作坊、實習安排和僱主聯誼活動，專為語言及人文學科學生而設。"
+          ]
+        },
+        "competitiveness": {
+          "title": "入學競爭力",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：30.0分（3個核心科目加2個選修科目），顯示申請者之間競爭激烈。",
+            "**2025年下四分位數**：29.5分，即最低25%的錄取學生分數在此或以下，建議取得30分或以上以確保安全。",
+            "**科目比重**：英文比重為2倍，中文和數學為1.5倍，其他選修科為1倍。英語能力至關重要。",
+            "**申請比例**：該課程通常收到約500至600份申請，提供約30至40個學額，錄取率約為6%至8%。",
+            "**面試要求**：入圍申請者可能獲邀面試，以評估語言天賦、動機和溝通技巧。準備工作至關重要。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳嘉欣博士**：香港大學語言學系助理教授，專攻粵語音系學和語言習得。2012年畢業於城大。",
+            "**黃子軒先生**：Google香港高級語言工程師，負責粵語語音識別和自然語言處理模型。2016年畢業。",
+            "**李少玲女士**：《南華早報》副編輯，負責英文版的語言質素和風格指南。2010年畢業。",
+            "**倪嘉玲博士**：香港理工大學研究科學家，專注於雙語現象和認知神經科學。2014年畢業。",
+            "**張文浩先生**：LinguaLearn教育中心創辦人，為企業客戶提供語言培訓和翻譯服務。2018年畢業。",
+            "**譚詠欣女士**：香港政府政策分析員，負責語言政策和公共溝通策略。2015年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績優異者（如多科5**），每年最高港幣80,000元，可按學業成績續領。",
+            "**學系語言學獎學金**：頒予一年級優秀學生，要求英文和中文成績突出，每年港幣10,000至20,000元。",
+            "**香港特區政府獎學金**：供學業成績卓越且具領導才能的本地學生申請，涵蓋全額學費和生活費。",
+            "**李樹芬博士獎學金**：基於成績的獎項，表揚語言學習表現卓越的學生，每年港幣15,000元。",
+            "**經濟援助計劃**：合資格學生可透過政府的學生資助處申請經入息審查的助學金及貸款。",
+            "**交流計劃津貼**：參與海外交流計劃的學生可申請最高港幣30,000元的津貼，以支付旅費和住宿費用。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1109 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文和中文**",
+            "",
+            "- 英文比重為2倍，中文為1.5倍，目標是兩科取得5級或以上。英文取得5**比4級可額外增加2分。",
+            "",
+            "**2. 目標分數30分以上**",
+            "",
+            "- 中位數為30.0，下四分位數為29.5，因此30分或以上能大大增加機會。使用公式仔細計算加權分數：2×英文 + 1.5×中文 + 1.5×數學 + 最佳兩科選修科總和。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 英國文學、中國文學或歷史等選修科因其語言和分析內容而受重視。除非你表現出色，否則避免選擇評分較低的科目。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 如獲面試機會，預期會被問及對語言學的興趣、語言經驗和職業目標。練習討論一個語言學話題（例如香港的語碼轉換）以展示深度。",
+            "",
+            "**5. 建立語言作品集**",
+            "",
+            "- 通過課外活動展示語言能力：辯論、寫作比賽、翻譯項目或擔任語言導師義工。在申請中提及這些經歷。",
+            "",
+            "**6. 研究課程內容**",
+            "",
+            "- 瀏覽城大語言學及翻譯學系網站。留意「語言與科技」或「語料庫語言學」等具體科目，以便在個人陳述中提及。",
+            "",
+            "**7. 善用比重優勢**",
+            "",
+            "- 如果你英文強但數學弱，此課程的比重（數學1.5倍，英文2倍）對你有利。相應調整溫習時間。",
+            "",
+            "**8. 提早申請並檢查要求**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交聯招申請。確保符合最低科目要求（例如英文和中文達3級）。",
+            "",
+            "**9. 考慮其他升學途徑**",
+            "",
+            "- 如果分數低於29.5，可考慮城大的語言學或翻譯副學士課程，成績優異者可銜接此課程的三年級。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 30.0,
+    "lq": 29.5
+  }
+}

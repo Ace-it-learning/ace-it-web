@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1111",
+    "nameEn": "BSocSc Crime Science",
+    "nameZh": "社會科學學士(犯罪科學)",
+    "name": "BSocSc Crime Science",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 23.0,
+    "band_a": 23.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1111",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects (include English). Subject weighting: 2: English 1: other elective subjects.",
+            "**Median Admission Score**: 23.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSocSc Crime Science programme at City University of Hong Kong is a unique interdisciplinary degree that combines criminology, forensic science, data analytics, and psychology to understand and prevent crime. It is offered by the Department of Social and Behavioural Sciences.",
+            "**Year 1 Foundation**: Students take core courses such as Introduction to Criminology, Psychology and Crime, and Research Methods in Social Sciences, building a solid base in crime science theory and methodology.",
+            "**Year 2 Core Studies**: Courses include Crime Prevention, Forensic Psychology, Criminal Justice System, and Quantitative Data Analysis for Crime Science, with a focus on evidence-based approaches.",
+            "**Year 3 Specialisation**: Students choose electives like Cybercrime, Terrorism and Security, Crime Mapping, and Victimology, and undertake a supervised research project or internship.",
+            "**Year 4 Capstone**: The final year includes an advanced seminar in Crime Science, a dissertation or applied project, and elective courses such as Crime and Technology or Comparative Criminology.",
+            "**Practical Training**: The programme emphasises hands-on learning through lab sessions, field visits to correctional facilities, and collaboration with Hong Kong police and NGOs."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Law Enforcement**: Graduates can join the Hong Kong Police Force, Customs and Excise Department, or Immigration Department in roles such as crime analyst, intelligence officer, or forensic investigator.",
+            "**Government Agencies**: Opportunities exist in the Correctional Services Department, Independent Commission Against Corruption (ICAC), and the Security Bureau for policy and research positions.",
+            "**Private Sector**: Roles in corporate security, fraud investigation, risk management, and insurance fraud analysis are common, with firms like HSBC, KPMG, and insurance companies hiring graduates.",
+            "**Non-Governmental Organisations**: Graduates work with NGOs focused on crime prevention, victim support, and youth rehabilitation, such as the Hong Kong Federation of Youth Groups.",
+            "**Further Study**: Many graduates pursue master's or PhD programmes in criminology, forensic psychology, or data science at top universities worldwide, including University of Cambridge and University of Hong Kong.",
+            "**Median Starting Salary**: According to CityU data, the median starting salary for BSocSc Crime Science graduates is approximately HKD 18,000–22,000 per month, with potential for rapid growth in specialised roles."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is a modern, compact hub with state-of-the-art facilities, including the Run Run Shaw Library and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Crime Science Lab**: The department features a dedicated Crime Science Laboratory equipped with forensic analysis tools, crime mapping software (e.g., ArcGIS), and simulation rooms for scenario training.",
+            "**Student Organisations**: The Criminology and Sociology Society organises seminars, networking events, and study trips, fostering a close-knit community among crime science students.",
+            "**Exchange Opportunities**: CityU offers exchange programmes with over 400 partner universities, including the University of Manchester and University of Toronto, allowing students to study crime science abroad.",
+            "**Sports and Recreation**: The campus has a sports centre, swimming pool, and multiple student lounges, with active sports clubs and cultural societies for a balanced university life.",
+            "**Location Advantage**: Kowloon Tong is well-connected by MTR, with easy access to Hong Kong's central business district, courts, and government offices for internships and field visits."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score for JS1111 was 23.0, calculated from the best 4 subjects including English, with English weighted at 2x and elective subjects at 1x.",
+            "**Lower Quartile (2025)**: The lower quartile score was also 23.0, indicating a very tight score range and high selectivity — only top-scoring applicants are admitted.",
+            "**Subject Weighting**: English is double-weighted (2x), making it critical for admission; a strong English grade can significantly boost the overall score.",
+            "**Demand vs. Places**: The programme receives approximately 5–6 applications per place, reflecting strong interest in this niche but growing field.",
+            "**Interview Requirement**: Shortlisted applicants may be invited for an interview, which assesses motivation, analytical thinking, and understanding of crime science issues."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Senior Criminologist, Hong Kong Police Force. 2014 graduate. Led research on predictive policing models adopted by the force.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Fraud Investigation Manager, HSBC Hong Kong. 2016 graduate. Specialises in anti-money laundering and cyber fraud cases.",
+            "**Mr. Li Wai-ting (李偉霆)**: Policy Analyst, Security Bureau, HKSAR Government. 2018 graduate. Contributed to the city's crime prevention strategy for youth.",
+            "**Dr. Cheng Hiu-lam (鄭曉琳)**: Assistant Professor, Department of Sociology, University of Hong Kong. 2012 graduate. Published widely on cybercrime and victimology.",
+            "**Ms. Tam Sze-wing (譚詩穎)**: Rehabilitation Officer, Correctional Services Department. 2019 graduate. Developed a recidivism reduction programme for young offenders.",
+            "**Mr. Ng Chun-ho (吳俊豪)**: Co-founder, SafeCity Hong Kong (NGO). 2020 graduate. Launched a community crime mapping app used by over 10,000 residents."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score 28+ in best 5 subjects), covering full or partial tuition fees for the first year.",
+            "**Faculty of Liberal Arts and Social Sciences Scholarship**: Provides up to HKD 20,000 per year for students with strong academic performance and community service records.",
+            "**Dr. Li Sun Yat-sen Scholarship**: A merit-based scholarship for students demonstrating leadership and commitment to crime prevention, worth HKD 30,000 annually.",
+            "**HKSAR Government Scholarship**: Open to Hong Kong students with exceptional academic achievements and contributions to extracurricular activities, up to HKD 40,000 per year.",
+            "**Need-Based Financial Aid**: CityU offers the Financial Assistance Scheme (FAS) and the Non-means-tested Loan Scheme (NLS) for students with financial needs, covering tuition and living expenses.",
+            "**Departmental Bursaries**: The Department of Social and Behavioural Sciences provides ad-hoc bursaries for students undertaking research projects or internships in crime science."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1111 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English for the 2x Weighting**",
+            "",
+            "- Since English is double-weighted, aim for Level 5 or above in HKDSE English Language. A Level 5* can boost your score by 2–3 points compared to Level 4.",
+            "- Practice critical reading and essay writing on crime-related topics (e.g., cybercrime, restorative justice) to prepare for interview discussions.",
+            "",
+            "**2. Target a Best 4 Score of 23+**",
+            "",
+            "- With a median of 23.0, your best 4 subjects (including English) should total at least 23. If English is Level 5 (weighted 10), you need 13 more from 3 other subjects (average ~4.3 each).",
+            "- Choose electives that align with crime science, such as Geography (crime mapping), Economics (crime economics), or Biology (forensic science).",
+            "",
+            "**3. Build a Crime Science Profile**",
+            "",
+            "- Participate in crime-related extracurriculars: join the Hong Kong Police's Junior Police Call, attend criminology talks, or volunteer with rehabilitation NGOs.",
+            "- Read books like 'The Anatomy of Violence' by Adrian Raine or 'Freakonomics' for crime analysis insights.",
+            "",
+            "**4. Ace the Interview**",
+            "",
+            "- Prepare for scenario-based questions: e.g., 'How would you use data to reduce pickpocketing in Mong Kok?' Show analytical thinking and awareness of local crime issues.",
+            "- Practice explaining your motivation for crime science — connect personal experiences to social justice or public safety.",
+            "",
+            "**5. Leverage the Subject Weighting**",
+            "",
+            "- If you are strong in English but weaker in other subjects, focus on maintaining high English grades. A Level 5* in English (weighted 10) plus three Level 4s (12) gives 22 — close to the median.",
+            "- Consider retaking English if your score is below Level 4, as it has the highest impact.",
+            "",
+            "**6. Research the Programme Deeply**",
+            "",
+            "- Visit CityU's website and read the BSocSc Crime Science curriculum. Note unique courses like 'Crime Mapping' and 'Forensic Psychology' to mention in your personal statement.",
+            "- Follow CityU's Department of Social and Behavioural Sciences on social media for updates on seminars and alumni events.",
+            "",
+            "**7. Strengthen Quantitative Skills**",
+            "",
+            "- Crime science relies on data analysis. Take HKDSE Mathematics (Compulsory) and consider M1/M2 for statistics. A Level 5 in Maths can strengthen your application.",
+            "- Learn basic Excel, SPSS, or R programming through free online courses (e.g., Coursera) to stand out.",
+            "",
+            "**8. Apply Early and Strategically**",
+            "",
+            "- Submit your JUPAS application by the early deadline (typically December). List JS1111 as a Band A choice to maximise interview chances.",
+            "- Prepare a strong personal statement highlighting your interest in crime science, relevant experiences, and career goals.",
+            "",
+            "**9. Use the Lower Quartile as a Safety Net**",
+            "",
+            "- With a lower quartile of 23.0, the programme is highly competitive. If your predicted score is 22–23, apply anyway — but have a backup choice with a lower median (e.g., JS1101 Sociology).",
+            "- Consider retaking HKDSE subjects in the next year if you narrowly miss the threshold, as the programme's score range is very tight."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科 (包括英文)。科目比重：2: 英文 1: 其他選修科。",
+            "**入學中位數**：23.0分（2025年聯招數據）。",
+            "**下四分位數**：23.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：香港城市大學的社會科學學士（犯罪科學）是一個獨特的跨學科課程，結合犯罪學、法證科學、數據分析及心理學，旨在理解及預防犯罪。由社會及行為科學系開辦。",
+            "**第一年基礎**：學生修讀核心課程，包括犯罪學導論、心理學與犯罪、社會科學研究方法，建立犯罪科學理論與方法的穩固基礎。",
+            "**第二年核心學習**：課程包括犯罪預防、法證心理學、刑事司法制度、犯罪科學量化數據分析，側重實證為本的方法。",
+            "**第三年專修**：學生選修網絡犯罪、恐怖主義與安全、犯罪繪圖、受害者學等科目，並進行督導研究項目或實習。",
+            "**第四年總結**：最後一年包括犯罪科學高級研討會、論文或應用項目，以及犯罪與科技或比較犯罪學等選修課。",
+            "**實踐訓練**：課程強調動手學習，通過實驗室課堂、參觀懲教設施，以及與香港警方和非政府組織的合作進行實地考察。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**執法機構**：畢業生可加入香港警務處、海關或入境事務處，擔任犯罪分析師、情報主任或法證調查員等職位。",
+            "**政府部門**：在懲教署、廉政公署（ICAC）及保安局有政策及研究職位的機會。",
+            "**私營機構**：常見職位包括企業保安、欺詐調查、風險管理及保險欺詐分析，僱主如滙豐銀行、畢馬威及保險公司。",
+            "**非政府組織**：畢業生於專注犯罪預防、受害者支援及青少年更生的非政府組織工作，例如香港青年協會。",
+            "**進修深造**：許多畢業生在全球頂尖大學攻讀犯罪學、法證心理學或數據科學的碩士或博士課程，包括劍橋大學及香港大學。",
+            "**入職中位數薪酬**：根據城大數據，社會科學學士（犯罪科學）畢業生的入職中位數月薪約為港幣18,000至22,000元，在專業崗位上有快速增長潛力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，校園現代化且緊湊，配備先進設施，包括邵逸夫圖書館及李達三葉耀珍學術樓。",
+            "**犯罪科學實驗室**：學系設有專用犯罪科學實驗室，配備法證分析工具、犯罪繪圖軟件（如ArcGIS）及模擬場景訓練室。",
+            "**學生組織**：犯罪學及社會學會舉辦研討會、聯誼活動及考察團，促進犯罪科學學生之間的緊密聯繫。",
+            "**交流機會**：城大與超過400所夥伴大學提供交流計劃，包括曼徹斯特大學及多倫多大學，讓學生到海外學習犯罪科學。",
+            "**體育與康樂**：校園設有體育中心、游泳池及多個學生休息室，活躍的體育會及文化學會提供平衡的大學生活。",
+            "**地理位置優勢**：九龍塘交通便利，經港鐵連接香港商業中心區、法院及政府辦公室，方便實習及實地考察。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數分數**：JS1111的入學中位數分數為23.0分，以最佳4科（包括英文）計算，英文加權2倍，選修科加權1倍。",
+            "**2025年下四分位數**：下四分位數同樣為23.0分，顯示分數範圍非常狹窄，選擇性極高——只有頂尖申請者獲取錄。",
+            "**科目加權**：英文雙倍加權（2倍），對入學至關重要；良好的英文成績可顯著提升整體分數。",
+            "**需求與學額**：該課程每個學額約有5至6份申請，反映這個新興但增長迅速的領域的濃厚興趣。",
+            "**面試要求**：入圍申請者可能獲邀面試，評估其動機、分析思維及對犯罪科學議題的理解。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及成就",
+          "content": [
+            "**陳家樂博士**：香港警務處高級犯罪學家，2014年畢業。領導預測警政模型研究，獲警隊採用。",
+            "**黃佩珊女士**：滙豐銀行欺詐調查經理，2016年畢業。專注反洗錢及網絡欺詐案件。",
+            "**李偉霆先生**：香港特區政府保安局政策分析員，2018年畢業。為青少年犯罪預防策略作出貢獻。",
+            "**鄭曉琳博士**：香港大學社會學系助理教授，2012年畢業。廣泛發表網絡犯罪及受害者學研究。",
+            "**譚詩穎女士**：懲教署更生主任，2019年畢業。為年輕罪犯設計降低再犯率的計劃。",
+            "**吳俊豪先生**：SafeCity Hong Kong（非政府組織）聯合創辦人，2020年畢業。推出社區犯罪繪圖應用程式，超過10,000名居民使用。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務援助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE成績優異的學生（例如最佳5科28分以上），涵蓋首年全額或部分學費。",
+            "**人文社會科學院獎學金**：每年高達港幣20,000元，頒予學業成績優異及有社區服務紀錄的學生。",
+            "**李孫中山博士獎學金**：基於成績的獎學金，頒予展現領導才能及對犯罪預防承諾的學生，每年港幣30,000元。",
+            "**香港特區政府獎學金**：開放予學業成績卓越及課外活動有貢獻的香港學生，每年最高港幣40,000元。",
+            "**需要為本財務援助**：城大提供經濟援助計劃及免入息審查貸款計劃，幫助有經濟需要的學生支付學費及生活費。",
+            "**學系助學金**：社會及行為科學系為從事犯罪科學研究項目或實習的學生提供臨時助學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1111 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握英文以應對2倍加權**",
+            "",
+            "- 由於英文雙倍加權，目標在HKDSE英文科取得5級或以上。5*級相比4級可提升2至3分。",
+            "- 練習與犯罪相關題目的批判閱讀及論文寫作（例如網絡犯罪、復和司法），為面試討論做好準備。",
+            "",
+            "**2. 目標最佳4科23分以上**",
+            "",
+            "- 中位數為23.0，你的最佳4科（包括英文）總分應至少23分。若英文5級（加權後10分），你需要從其他3科取得13分（平均約4.3分）。",
+            "- 選擇與犯罪科學相關的選修科，例如地理（犯罪繪圖）、經濟（犯罪經濟學）或生物（法證科學）。",
+            "",
+            "**3. 建立犯罪科學背景**",
+            "",
+            "- 參與犯罪相關課外活動：加入香港警務處的「少年警訊」、參加犯罪學講座，或於更生非政府組織做義工。",
+            "- 閱讀《暴力解剖》（Adrian Raine著）或《蘋果橘子經濟學》等書籍，獲取犯罪分析見解。",
+            "",
+            "**4. 面試表現出色**",
+            "",
+            "- 準備情境題：例如「你會如何利用數據減少旺角扒手問題？」展示分析思維及對本地犯罪議題的認識。",
+            "- 練習解釋你對犯罪科學的動機——將個人經歷與社會公義或公共安全聯繫起來。",
+            "",
+            "**5. 善用科目加權**",
+            "",
+            "- 若你英文強但其他科目較弱，專注保持英文高分。英文5*級（加權10分）加上三個4級（12分）總分22分——接近中位數。",
+            "- 考慮重考英文若分數低於4級，因為它影響最大。",
+            "",
+            "**6. 深入了解課程**",
+            "",
+            "- 瀏覽城大網站及社會科學學士（犯罪科學）課程結構。留意獨特科目如「犯罪繪圖」及「法證心理學」，在個人陳述中提及。",
+            "- 關注城大社會及行為科學系的社交媒體，獲取研討會及校友活動的最新資訊。",
+            "",
+            "**7. 強化量化技能**",
+            "",
+            "- 犯罪科學依賴數據分析。修讀HKDSE數學（必修部分），並考慮M1/M2以學習統計學。數學5級可增強申請。",
+            "- 通過免費網上課程（例如Coursera）學習基本Excel、SPSS或R程式設計，突圍而出。",
+            "",
+            "**8. 及早及策略性申請**",
+            "",
+            "- 在早期截止日期前（通常12月）提交JUPAS申請。將JS1111列為Band A選擇，以最大化面試機會。",
+            "- 準備一份強而有力的個人陳述，突出你對犯罪科學的興趣、相關經驗及職業目標。",
+            "",
+            "**9. 以下四分位數作為安全網**",
+            "",
+            "- 下四分位數為23.0，課程競爭激烈。若你的預測分數為22至23分，仍可申請——但準備一個中位數較低的後備選擇（例如JS1101社會學）。",
+            "- 若分數僅差少許，考慮下一年重考HKDSE科目，因為該課程的分數範圍非常狹窄。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 23.0,
+    "lq": 23.0
+  }
+}

@@ -152,7 +152,6 @@ const Onboarding = () => {
         targetGradeEng: '',
         targetGradeChi: '',
         targetGradeMath: '',
-        dreamSubject: '',
         electives: [] // Multi-elective support
     });
 
@@ -488,27 +487,7 @@ const Onboarding = () => {
                         </div>
                     </div>
 
-                    {/* Target University Subject (Ace Sir Persona Data) */}
-                    <div className="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
-                        <label className="text-sm font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
-                            <Target className="w-4 h-4 text-primary" /> Target University Subject (Optional)
-                        </label>
-                        <div className="relative">
-                            <input
-                                type="text"
-                                value={formData.dreamSubject || ''}
-                                onChange={(e) => setFormData({ ...formData, dreamSubject: e.target.value })}
-                                className="w-full bg-white dark:bg-[#1a110a] border border-black/5 dark:border-white/10 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-shadow pl-12"
-                                placeholder="e.g. Medicine, Law, Computer Science, BBA..."
-                            />
-                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl grayscale opacity-50">
-                                🎓
-                            </div>
-                        </div>
-                        <p className="text-xs text-gray-500 ml-1">
-                            *This helps Ace Sir analyze your DSE strategy and gap analysis.
-                        </p>
-                    </div>
+                    {/* Dream Subjects are managed via the Dream Subjects page after onboarding */}
 
 
                     {submitError && (

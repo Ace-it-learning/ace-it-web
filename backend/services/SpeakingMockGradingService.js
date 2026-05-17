@@ -108,6 +108,7 @@ class SpeakingMockGradingService {
      */
     mapScoreToLevel(score) {
         if (score >= 26) return "5**";
+        if (score >= 24) return "5*";
         if (score >= 22) return "5";
         if (score >= 18) return "4";
         if (score >= 14) return "3";

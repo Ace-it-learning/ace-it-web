@@ -1,0 +1,471 @@
+{
+  "_source": "af_2025_JUPAS.pdf (CityU section, pdfplumber tables)",
+  "_note": "UQ (Upper Quartile) is NOT listed in this PDF. Only Median and Lower Quartile are provided.",
+  "_columnOrder": "Median | Lower Quartile",
+  "programmes": [
+    {
+      "code": "JS1211",
+      "nameEn": "BEng Biomedical Engineering (Features: Medical Technology / Bioinstrumentation / Cell and Tissue Engineering / Biomedical Robotics)",
+      "formula": "Best 5 subjects (If both Mathematics and M1/M2 are taken, only one subject will be included)",
+      "subjectWeighting": "2: English / Mathematics / Biology / Chemistry / M1/M2 / Physics 1: other elective subjects",
+      "median": "39",
+      "lq": "38"
+    },
+    {
+      "code": "JS1300",
+      "nameEn": "Integrative Bioscience & Bioengineering Programme (Bio3) (Features: Free Choice of Major / Overseas Research Opportunities / Interdisciplinary)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: English / Biology / Chemistry 1.5: Mathematics / Business, Accounting and Financial Studies / Design and Applied Technology / Information and Communication Technology / M1/M2 / Physics 1: other elective subjects",
+      "median": "New Programme in 2026 JUPAS",
+      "lq": ""
+    },
+    {
+      "code": "JS1805",
+      "nameEn": "Biomedical Sciences (Majors: BSc Biological Sciences / BSc Biomedical Sciences)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "",
+      "median": "38.5",
+      "lq": "37.5"
+    },
+    {
+      "code": "JS1806",
+      "nameEn": "BSc Biological Sciences (Features: Bioinformatics, Biochemistry, Genetics, Cellular & Molecular Biology, Immunology / Research Rotation Projects for Hands-on Experience)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "",
+      "median": "35.5",
+      "lq": "35"
+    },
+    {
+      "code": "JS1807",
+      "nameEn": "BSc Biomedical Sciences (Features: Clinical Chemistry, Hematology, Microbiology and Pathology / Clinical or Industrial Attachment / Intensive Laboratory Experience)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "",
+      "median": "45.5",
+      "lq": "43"
+    },
+    {
+      "code": "JS1000",
+      "nameEn": "BSc Computational Finance and Financial Technology (Streams: Computational Finance Stream / Financial Technology)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "1",
+      "median": "24.5",
+      "lq": "23.5"
+    },
+    {
+      "code": "JS1001",
+      "nameEn": "BBA Global Business (Features: 3 Exchanges / Joint Bachelor’s Degree Program with Columbia University (US) / Overseas Summer School & Study Tour / Business Consultancy Project/Scholarship and Sponsorship)",
+      "formula": "Best 5 subjects",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "29.5",
+      "lq": "28"
+    },
+    {
+      "code": "JS1002",
+      "nameEn": "BBA Accountancy (Streams: Professional Accounting / ESG and Tech)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "22",
+      "lq": "21.5"
+    },
+    {
+      "code": "JS1005",
+      "nameEn": "BBA Management (Streams: Human Resources Management / Strategy and International Management)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "22",
+      "lq": "21.5"
+    },
+    {
+      "code": "JS1007",
+      "nameEn": "BBA Marketing (Streams: Global Marketing / Marketing Analytics)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "24.5",
+      "lq": "23.5"
+    },
+    {
+      "code": "JS1012",
+      "nameEn": "Economics and Finance (Majors: BBA Business Economics / BBA Finance)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "23",
+      "lq": "22.5"
+    },
+    {
+      "code": "JS1013",
+      "nameEn": "BBA Business Economics (Features: Economic Theory / International Economics / Economic and Business Forecasting / Quantitative Analysis)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "22",
+      "lq": "21.5"
+    },
+    {
+      "code": "JS1014",
+      "nameEn": "BBA Finance (Features: Investment Analysis / Financial Markets / Corporate Finance / Risk Management / Trading Room Workshop)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "21.5",
+      "lq": "21.5"
+    },
+    {
+      "code": "JS1017",
+      "nameEn": "Intelligent Information Systems (Majors: BBA Global Business Systems Management / BBA Artificial Intelligence in Business)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "21",
+      "lq": "20.5"
+    },
+    {
+      "code": "JS1018",
+      "nameEn": "BBA Global Business Systems Management (Features: Intelligent Technologies / Global Business / Study Exchange)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "1",
+      "median": "24",
+      "lq": "23.5"
+    },
+    {
+      "code": "JS1019",
+      "nameEn": "BBA Artificial Intelligence in Business (Streams: Business Intelligence / Information Systems Auditing / Internet Services and Social Networks / Data Informatics)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "21",
+      "lq": "21"
+    },
+    {
+      "code": "JS1026",
+      "nameEn": "BBA Business Decision Analytics (Streams: Decision Analytics / Data Informatics)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "21.5",
+      "lq": "21"
+    },
+    {
+      "code": "JS1027",
+      "nameEn": "BBA Global Operations Management (Features: Supply Chain Management / Operations Efficiency / Process Improvement / Operations Analytics / Resource Planning)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "1",
+      "median": "21.5",
+      "lq": "21"
+    },
+    {
+      "code": "JS1070",
+      "nameEn": "AI, Computing and Transformation (ACT) (Features: Free Choice of Major / One-to- One Advisor / Elite Work Placement / Executive Mentor Scheme / Premium Overseas Exchange / Internship Exchange)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: English / Mathematics 1: other elective subjects",
+      "median": "31",
+      "lq": "30"
+    },
+    {
+      "code": "JS1071",
+      "nameEn": "Data Science (Majors: BSc Data Science / BSc Data and Systems Engineering)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: Mathematics 1.5: English 1: other elective subjects",
+      "median": "27.5",
+      "lq": "27.5"
+    },
+    {
+      "code": "JS1072",
+      "nameEn": "BSc Data Science (Features: Data Science / Machine Learning / Data Mining / Big Data Analysis)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "29",
+      "lq": "28.5"
+    },
+    {
+      "code": "JS1074",
+      "nameEn": "BSc Data and Systems Engineering (Features: Data Science / FinTech & Decision Analytics / Industrial AI / Smart City)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: Mathematics 1.5: English 1: other elective subjects",
+      "median": "28",
+      "lq": "27.5"
+    },
+    {
+      "code": "JS1204",
+      "nameEn": "BSc Computer Science (Streams: Artificial Intelligence / Cybersecurity / Data Science / Multimedia Computing / Software Engineering and Project Management)",
+      "formula": "Best 5 subjects",
+      "subjectWeighting": "1",
+      "median": "23",
+      "lq": "22"
+    },
+    {
+      "code": "JS1218",
+      "nameEn": "BSc Cybersecurity (Features: System Security / Software Security / Cryptography / Privacy-Enhancing Technologies / Cyber Risk Management)",
+      "formula": "Best 5 subjects",
+      "subjectWeighting": "1",
+      "median": "20.5",
+      "lq": "20.5"
+    },
+    {
+      "code": "JS1201",
+      "nameEn": "Architecture and Civil Engineering (Majors: BEng Architectural Engineering / BEng Civil Engineering / BSc Architecture and Surveying)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2.5: English / Mathematics / M1/M2 / Physics 1.5: Chinese 1: other elective subjects",
+      "median": "43.5",
+      "lq": "42.5"
+    },
+    {
+      "code": "JS1205",
+      "nameEn": "Electrical Engineering (Majors: BEng Computer and Data Engineering / BEng Electronic and Electrical Engineering / BEng Information Engineering / BEng Microelectronics Engineering)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "2: English / Mathematics / Information and Communication Technology / M1/M2 / Physics 1.5: Biology / Chemistry 1: other elective subjects",
+      "median": "39",
+      "lq": "37"
+    },
+    {
+      "code": "JS1207",
+      "nameEn": "Mechanical Engineering (Majors: BEng Aerospace Engineering / BEng Mechanical Engineering / BEng Nuclear and Risk Engineering)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "2: English / Mathematics / Physics 1.5: Chemistry / Design and Applied Technology / M1/M2 1: other elective subjects",
+      "median": "34.5",
+      "lq": "34"
+    },
+    {
+      "code": "JS1210",
+      "nameEn": "BEng Materials Science and Engineering (Features: HKIE Accredited / Industrial and Research Internships / Overseas Double-degrees / Knowledge Transfer / World-leading Research)",
+      "formula": "Best 5 subjects (include Mathematics)",
+      "subjectWeighting": "2: Mathematics / Physics 1.5: English / Biology / Chemistry / M1/M2 1: other elective subjects",
+      "median": "34",
+      "lq": "32.5"
+    },
+    {
+      "code": "JS1216",
+      "nameEn": "BEng Intelligent Manufacturing Engineering (Features: Industrial Internet-of-Things / Industrial Big Data / Robotics and Automation / Logistics and Supply Chain / Smart City Engineering)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "1",
+      "median": "20",
+      "lq": "18"
+    },
+    {
+      "code": "JS1217",
+      "nameEn": "Pathway for Research, Innovation, and Multinational Engineering (PRIME) (any major in College of Engineering + Overseas Experience / Interdisciplinary / Entrepreneurial Training)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2: English / Mathematics / Biology / Chemistry / Design and Applied Technology / Information and Communication Technology / M1/M2 / Physics 1: other elective subjects",
+      "median": "38.5",
+      "lq": "38"
+    },
+    {
+      "code": "JS1219",
+      "nameEn": "BEng Innovation and Enterprise Engineering (Features: Engineering / Technology / Innovation / Enterprise / Entrepreneurship)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "1",
+      "median": "19.5",
+      "lq": "18.5"
+    },
+    {
+      "code": "JS1102",
+      "nameEn": "BSocSc International Relations and Global Affairs (Streams: Asian Studies / International Studies / Development Studies)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "24",
+      "lq": "23.5"
+    },
+    {
+      "code": "JS1103",
+      "nameEn": "BA Chinese and History (Streams: Chinese / History and Cultural Heritage)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: English / Chinese 1.5: Chinese History / Chinese Literature / History / Visual Arts 1: other elective subjects",
+      "median": "36",
+      "lq": "35.5"
+    },
+    {
+      "code": "JS1104",
+      "nameEn": "BA English (Streams: English and Professional Communication / Language and Literature)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2.5: English 1.5: Literature in English 1: other elective subjects",
+      "median": "32",
+      "lq": "29.5"
+    },
+    {
+      "code": "JS1106",
+      "nameEn": "Media and Communication (Majors: BA Digital Television and Broadcasting / BA Media and Communication)",
+      "formula": "Best 4 subjects (include English)",
+      "subjectWeighting": "1.25: English / Chinese 1: other elective subjects",
+      "median": "20.5",
+      "lq": "20"
+    },
+    {
+      "code": "JS1108",
+      "nameEn": "BSocSc Public Affairs and Management (Streams: Public Affairs and Governance / Public Policy and Management)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "23.5",
+      "lq": "23"
+    },
+    {
+      "code": "JS1109",
+      "nameEn": "BA Linguistics and Language Applications (Features: General Linguistics / Computational Linguistics / Corpus Linguistics / Experimental Linguistics / Language Technology and Applications)",
+      "formula": "3 core + 2 elective subjects",
+      "subjectWeighting": "2: English 1.5: Chinese / Mathematics 1: other elective subjects",
+      "median": "30",
+      "lq": "29.5"
+    },
+    {
+      "code": "JS1111",
+      "nameEn": "BSocSc Crime Science (Features: Crime Prevention / Security Practice / Global Policing / Crime Analytics / Cyber and Future Crimes)",
+      "formula": "Best 4 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "23",
+      "lq": "23"
+    },
+    {
+      "code": "JS1112",
+      "nameEn": "BSocSc Psychology (Streams: Health and Development / Mind and Brain)",
+      "formula": "Best 4 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "24.5",
+      "lq": "24"
+    },
+    {
+      "code": "JS1113",
+      "nameEn": "BSocSc Social Work (Features: Social Engagement and Concern for People’s Health and Well-Being / Human Diversities and Sustainability / People-in-Environment Interventions)",
+      "formula": "Best 4 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "23",
+      "lq": "23"
+    },
+    {
+      "code": "JS1200",
+      "nameEn": "Global Research Enrichment and Technopreneurship (GREAT) [Majors: BSc Chemistry / BSc Computing Mathematics / BSc Physics + Global Research Enrichment and Technopreneurship (GREAT)]",
+      "formula": "Best 4 subjects",
+      "subjectWeighting": "2.5: Chemistry / M2 / Physics 2: English / Mathematics / M1 1.5: Biology / Economics 1: other elective subjects",
+      "median": "37",
+      "lq": "36.5"
+    },
+    {
+      "code": "JS1202",
+      "nameEn": "BSc Chemistry [Streams: Comprehensive Chemistry / Cosmetic Chemistry / Forensic Chemistry / Global Research Enrichment and Technopreneurship (GREAT)]",
+      "formula": "Best 4 subjects",
+      "subjectWeighting": "2: English / Chemistry 1.5: Mathematics 1: other elective subjects",
+      "median": "27.5",
+      "lq": "27"
+    },
+    {
+      "code": "JS1206",
+      "nameEn": "BSc Computing Mathematics [Streams: Enriched Mathematics / Financial Mathematics / Global Research Enrichment and Technopreneurship (GREAT)]",
+      "formula": "Best 4 subjects (include Mathematics)",
+      "subjectWeighting": "2.5: Mathematics 2: English / M1/M2 1.5: Biology / Chemistry / Physics 1: other elective subjects",
+      "median": "37",
+      "lq": "36"
+    },
+    {
+      "code": "JS1208",
+      "nameEn": "BSc Physics [Features: Classical Physics / Modern Physics / Experimental and Computational Physics / Medical Physics / Condensed Matter Physics / Global Research Enrichment and Technopreneurship (GREAT)]",
+      "formula": "Best 4 subjects (include Mathematics)",
+      "subjectWeighting": "2: English / Physics 1.5: M1/M2 1.25: Mathematics 1: other elective subjects",
+      "median": "28",
+      "lq": "27"
+    },
+    {
+      "code": "JS1801",
+      "nameEn": "Bachelor of Veterinary Medicine (Features: One Health / Animal Health & Welfare / Public Health / Dual Accreditation)",
+      "formula": "Best 5 subjects (include English, Mathematics, Biology and Chemistry)",
+      "subjectWeighting": "1",
+      "median": "33.5",
+      "lq": "32"
+    },
+    {
+      "code": "JS1040",
+      "nameEn": "Creative Arts and Technology Excellence (CREATE) (Options: Creative Media (School-based) / BA Creative Media / BSc Creative Media / BAS New Media)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "28",
+      "lq": "24.5"
+    },
+    {
+      "code": "JS1041",
+      "nameEn": "Creative Media (Majors: BA Creative Media / BSc Creative Media / BAS New Media)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "25.5",
+      "lq": "25"
+    },
+    {
+      "code": "JS1042",
+      "nameEn": "BA Creative Media (Features: Animation / Cinema & Photography / Critical Theory & Practices / Game & Playable Media / New Media Art / Sound Art)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "27.5",
+      "lq": "27"
+    },
+    {
+      "code": "JS1043",
+      "nameEn": "BSc Creative Media (Features: Combination of Creative Media and Computer Science Courses / Animation/ Games / Installation / Interactivity)",
+      "formula": "Best 5 subjects (include English and Mathematics)",
+      "subjectWeighting": "2: English 1.5: Mathematics 1: other elective subjects",
+      "median": "26.5",
+      "lq": "25.5"
+    },
+    {
+      "code": "JS1044",
+      "nameEn": "BAS New Media (Features: Media Art / Robotics & AI / Art & Technology / Materials & Digital Fabrication)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "2: English 1: other elective subjects",
+      "median": "24",
+      "lq": "24"
+    },
+    {
+      "code": "JS1050",
+      "nameEn": "International Sustainability Programme for Innovation, Research & Entrepreneurship (INSPIRE) (Majors: BEng Energy Science & Engineering / BEng Environmental Science & Engineering + Features: Global Focus)",
+      "formula": "Best 5 subjects (include English, Mathematics and one subject from Biology, Chemistry or Physics)",
+      "subjectWeighting": "2.5: Mathematics 2.5: Biology / Chemistry / Physics in 1st Elective 2: English 1.5: Biology / Chemistry / Geography / M1/M2 / Physics in 2nd Elective 1: other elective subjects",
+      "median": "38",
+      "lq": "36.5"
+    },
+    {
+      "code": "JS1051",
+      "nameEn": "Energy and Environment (Majors: BEng Energy Science and Engineering / BEng Environmental Science and Engineering)",
+      "formula": "Best 5 subjects",
+      "subjectWeighting": "",
+      "median": "40.5",
+      "lq": "40"
+    },
+    {
+      "code": "JS1053",
+      "nameEn": "BSc Environment and Sustainable Business [Features: Environmental Science / Business Sustainability / Environmental, Social & Governance (ESG)]",
+      "formula": "Best 5 subjects (include English, Mathematics and one subject from Biology, Chemistry or Physics)",
+      "subjectWeighting": "2.5: Mathematics 2.5: Biology / Chemistry / Physics in 1st Elective 2.5: Economics / Business, Accounting and Financial Studies in 2nd Elective 2: English 1.5: Biology / Chemistry / Geography / M1/M2 / Physics in 2nd Elective 1: other elective subjects",
+      "median": "40",
+      "lq": "39.5"
+    },
+    {
+      "code": "JS1061",
+      "nameEn": "Bachelor of Laws",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "1",
+      "median": "23",
+      "lq": "21.5"
+    },
+    {
+      "code": "JS1052",
+      "nameEn": "BEng Environmental Science and Engineering and BBA Finance [Double Degree; Features: Environmental, Social & Governance (ESG) / Green Finance / Environmental Technology / Interdisciplinary Education]",
+      "formula": "Best 5 subjects (include English, Mathematics and one subject from Biology, Chemistry or Physics)",
+      "subjectWeighting": "2.5: Mathematics 2.5: Biology / Chemistry / Physics in 1st Elective 2: English 1.5: Biology / Chemistry / Geography / M1/M2 / Physics in 2nd Elective 1: other elective subjects",
+      "median": "40",
+      "lq": "39.5"
+    },
+    {
+      "code": "JS1062",
+      "nameEn": "Bachelor of Laws and BBA Accountancy (Double Degree)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "1.5: English 1: other elective subjects",
+      "median": "29",
+      "lq": "25"
+    },
+    {
+      "code": "JS1123",
+      "nameEn": "BSocSc Crime Science and Bachelor of Laws (Double Degree)",
+      "formula": "Best 5 subjects (include English)",
+      "subjectWeighting": "1",
+      "median": "24.5",
+      "lq": "23"
+    },
+    {
+      "code": "JS1221",
+      "nameEn": "BSc Computer Science and BSc Computational Finance and Financial Technology (Double Degree; Features: Corporate Accounting & Economics / Computational Finance / Advanced Statistics / Modeling & Algorithms / Financial Technologies Software Engineering)",
+      "formula": "Best 5 subjects",
+      "subjectWeighting": "1",
+      "median": "23",
+      "lq": "22"
+    }
+  ]
+}

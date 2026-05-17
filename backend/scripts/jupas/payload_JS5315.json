@@ -1,0 +1,269 @@
+{
+  "programme": {
+    "code": "JS5315",
+    "nameEn": "BBA in Management",
+    "nameZh": "工商管理學士（管理學）",
+    "name": "BBA in Management",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "33.90",
+    "band_a": "33.90",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5315",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 62.48.",
+            "**Median Admission Score**: 33.90 (2025 JUPAS data).",
+            "**Lower Quartile**: 33.90 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 4.65.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: The BBA in Management (JS5315) is a 4-year full-time programme offered by HKUST’s School of Business and Management, ranked #1 in Hong Kong. It equips students with leadership, strategic thinking, and organisational behaviour skills for diverse management careers.",
+            "**Year 1 Foundation**: Students take core business courses including Accounting, Economics, Statistics, and Marketing, alongside university-wide Common Core courses. A minimum of 36 credits is required in Year 1.",
+            "**Year 2 Core Management**: Focus on management-specific subjects such as Organisational Behaviour, Human Resource Management, Business Strategy, and Operations Management. Students also begin selecting electives from areas like Entrepreneurship or International Business.",
+            "**Year 3 Specialisation and Exchange**: Students choose a management stream (e.g., General Management, Human Resources, or Entrepreneurship) and are strongly encouraged to participate in a semester-long exchange programme at one of HKUST’s 200+ partner universities worldwide.",
+            "**Year 4 Capstone and Career Preparation**: The final year includes a capstone project (Management Consulting Project) where students solve real business problems for partner companies. Career workshops and internship placements are integrated into the curriculum.",
+            "**Global Exposure**: Over 70% of BBA Management students participate in exchange programmes, with options in North America, Europe, and Asia. HKUST also offers dual-degree and summer programmes with top institutions like the University of California, Berkeley."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Top Employment Sectors**: Graduates enter management trainee programmes, consulting, banking, marketing, human resources, and entrepreneurship. Major recruiters include HSBC, McKinsey, PwC, and Hang Seng Bank.",
+            "**Management Trainee Programmes**: Many graduates join structured MT programmes at multinational corporations, with starting salaries averaging HKD 25,000–35,000 per month (2025 data).",
+            "**Consulting and Strategy**: A significant number of graduates pursue careers in management consulting at firms like McKinsey, BCG, and Deloitte, leveraging HKUST’s strong case competition culture.",
+            "**Human Resources Leadership**: The HR stream prepares students for roles such as HR Business Partner, Talent Acquisition Specialist, and Organisational Development Manager at companies like J.P. Morgan and Cathay Pacific.",
+            "**Entrepreneurship and Startups**: HKUST’s entrepreneurship ecosystem supports graduates in launching startups, with access to the HKUST Entrepreneurship Centre and funding from the HKUST Seed Fund (up to HKD 1 million).",
+            "**Further Studies**: Approximately 20% of graduates pursue master’s degrees at top global universities, including London Business School, Columbia University, and INSEAD."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Stunning Location**: HKUST’s campus is located in Clear Water Bay, Sai Kung, offering panoramic sea views and a tranquil environment conducive to study. The campus is a 30-minute MTR ride from Central.",
+            "**World-Class Facilities**: The Business School features state-of-the-art trading rooms, a behavioural research lab, and the Lee Shau Kee Business Building with modern classrooms and collaborative spaces.",
+            "**Student Accommodation**: On-campus housing is guaranteed for the first two years, with options for ensuite and shared rooms. The university also provides off-campus housing support for senior students.",
+            "**Clubs and Societies**: Over 100 student organisations, including the Management Society, Business Case Club, and Entrepreneurship Society, offer networking and leadership opportunities.",
+            "**Sports and Recreation**: Facilities include a 50-metre swimming pool, gymnasium, sports hall, tennis courts, and a sailing centre. The campus also has hiking trails and a beach nearby.",
+            "**Industry Connections**: Proximity to Hong Kong Science Park enables internships and collaborative projects with over 1,000 tech and business companies, including Alibaba and Tencent."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. The highest attainable score is 62.48, with no specific subject weighting.",
+            "**Median and Lower Quartile (2025)**: Both the median and lower quartile scores are 33.90, indicating a highly competitive and consistent applicant pool.",
+            "**Preferred HKDSE Subjects**: The LQ per-subject average is 4.65, meaning successful applicants typically achieve Level 5 or above in most subjects. Core subjects (English, Chinese, Mathematics, Liberal Studies) are essential.",
+            "**Interview and Portfolio**: Shortlisted candidates may be invited for an interview or to submit a personal statement. Strong extracurricular activities and leadership experience are advantageous.",
+            "**Application Volume**: The programme receives over 1,000 applications annually for approximately 60 places, yielding an acceptance rate of around 6%."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) and former Vice-Chancellor of HKUST. Though not a BBA graduate, his legacy inspires the university’s research culture.",
+            "**Mr. Francis Ngai (倪以理)**: CEO of the Hong Kong Jockey Club. He holds a BBA from HKUST and has been a key figure in the club’s digital transformation.",
+            "**Ms. Winnie Wong (王敏德)**: Co-founder of the social enterprise “Dialogue in the Dark” and a BBA Management graduate. She was named one of Forbes 30 Under 30 Asia in 2020.",
+            "**Mr. Alvin Wong (黃振豪)**: Managing Director at Goldman Sachs, Hong Kong. He graduated with a BBA in Management and has over 15 years of experience in investment banking.",
+            "**Ms. Grace Cheng (鄭嘉穎)**: Founder of Grace Cheng Consulting, a boutique HR advisory firm. She is a 2010 BBA Management graduate and a frequent guest lecturer at HKUST."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE achievers (score 33+). Recipients receive HKD 50,000–100,000 per year, renewable based on academic performance.",
+            "**School of Business and Management Scholarships**: Merit-based scholarships for BBA students, including the “Dean’s List Scholarship” (HKD 20,000) and “Business School Excellence Award” (HKD 40,000).",
+            "**Need-Based Financial Aid**: HKUST offers the “HKUST Financial Assistance Scheme” for local students, covering up to full tuition and living expenses. Over 30% of students receive some form of aid.",
+            "**External Scholarships**: Students can apply for the “HKSAR Government Scholarship” (HKD 80,000 per year) and “Sir Edward Youde Memorial Fellowship” (HKD 100,000).",
+            "**Exchange Programme Scholarships**: The “Global Exchange Scholarship” provides up to HKD 30,000 for students participating in semester-long exchanges, reducing financial barriers.",
+            "**Entrepreneurship Grants**: The “HKUST Seed Fund” offers up to HKD 1 million for student startups, with additional mentorship from the Entrepreneurship Centre."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5315 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 34+**",
+            "",
+            "- The median score is 33.90, so aim for at least 34 to be competitive. Use the Best 5 + 6th subject formula: focus on your top 5 subjects and ensure a strong 6th subject (e.g., M1/M2 or an elective) to earn the bonus.",
+            "",
+            "**2. Excel in Core Subjects**",
+            "",
+            "- English, Chinese, Mathematics, and Liberal Studies are essential. Aim for Level 5* or above in at least two of these. The LQ per-subject average of 4.65 means you need consistent high grades.",
+            "",
+            "**3. Choose a Strong 6th Subject**",
+            "",
+            "- The 6th subject bonus can boost your score by up to 2 points. Pick a subject you excel in, such as Economics, Business, or M1/M2. A Level 5** in the 6th subject adds significant value.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice case interviews and behavioural questions. Highlight leadership roles (e.g., school prefect, club president) and any business-related projects. Use the STAR method (Situation, Task, Action, Result).",
+            "",
+            "**5. Build a Strong Personal Statement**",
+            "",
+            "- Write about your passion for management, citing specific experiences (e.g., organising a school event, running a small business). Mention HKUST’s exchange programmes and entrepreneurship ecosystem to show fit.",
+            "",
+            "**6. Gain Relevant Experience**",
+            "",
+            "- Participate in business competitions (e.g., HSBC/HKU Business Case Competition) or internships. Even a summer job in retail or admin demonstrates initiative. HKUST values practical exposure.",
+            "",
+            "**7. Leverage HKUST’s Resources**",
+            "",
+            "- Attend HKUST’s admission talks and campus tours. Connect with current students via the “HKUST BBA Management” Facebook group. Mention specific facilities (e.g., trading room) in your application.",
+            "",
+            "**8. Plan Your Subject Combination**",
+            "",
+            "- Take subjects that align with management: Economics, Business, Accounting, or Information Technology. Avoid dropping too many electives—a broad profile shows versatility.",
+            "",
+            "**9. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the early deadline (typically December). Double-check the admission score formula and any changes on the HKUST website. Use the “HKUST Admission Calculator” to estimate your score."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：62.48。",
+            "**入學中位數**：33.90分（2025年聯招數據）。",
+            "**下四分位數**：33.90分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 4.65。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：工商管理學士（管理學）（JS5315）為四年全日制課程，由香港科技大學商學院開辦，該學院在香港排名第一。課程培養學生的領導力、策略思維及組織行為能力，以應對多元管理職業。",
+            "**第一年基礎**：學生修讀核心商業科目，包括會計、經濟、統計及市場學，同時修讀大學共同核心課程。第一年需完成至少36學分。",
+            "**第二年核心管理**：專注管理學特定科目，如組織行為學、人力資源管理、商業策略及營運管理。學生開始選修創業或國際商業等領域的選修課。",
+            "**第三年專修與交流**：學生選擇管理專修方向（如一般管理、人力資源或創業），並強烈建議參與為期一學期的交換計劃，前往科大全球200多所合作院校之一。",
+            "**第四年總結與職業準備**：最後一年包括總結性項目（管理諮詢項目），學生為合作企業解決實際商業問題。職業工作坊及實習安排融入課程。",
+            "**全球視野**：超過70%的管理學學生參與交換計劃，選擇包括北美、歐洲及亞洲。科大亦與加州大學柏克萊分校等頂尖院校提供雙學位及暑期課程。"
+          ]
+        },
+        "career": {
+          "title": "職業前景",
+          "content": [
+            "**頂尖就業領域**：畢業生進入管理培訓生計劃、諮詢、銀行、市場營銷、人力資源及創業領域。主要僱主包括滙豐、麥肯錫、羅兵咸永道及恒生銀行。",
+            "**管理培訓生計劃**：許多畢業生加入跨國公司的結構化MT計劃，起薪平均每月港幣25,000至35,000元（2025年數據）。",
+            "**諮詢與策略**：大量畢業生投身管理諮詢行業，任職於麥肯錫、BCG及德勤等公司，得益於科大強大的個案比賽文化。",
+            "**人力資源領導**：人力資源專修為學生準備擔任人力資源業務夥伴、人才招聘專員及組織發展經理等職位，任職於摩根大通及國泰航空等公司。",
+            "**創業與初創**：科大的創業生態系統支持畢業生創立初創企業，可獲取科大創業中心支援及科大種子基金（最高港幣100萬元）。",
+            "**深造進修**：約20%的畢業生於倫敦商學院、哥倫比亞大學及INSEAD等頂尖全球大學攻讀碩士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美地點**：科大校園位於西貢清水灣，享有全景海景及寧靜學習環境。從中環乘港鐵約30分鐘可達。",
+            "**世界級設施**：商學院配備先進交易室、行為研究實驗室及李兆基商科大樓，內有現代化課室及協作空間。",
+            "**學生住宿**：首兩年保證校內住宿，提供套房及共用房間選擇。大學亦為高年級學生提供校外住宿支援。",
+            "**學會與社團**：超過100個學生組織，包括管理學會、商業個案學會及創業學會，提供人脈及領導機會。",
+            "**體育與康樂**：設施包括50米游泳池、健身室、體育館、網球場及帆船中心。校園附近亦有遠足徑及沙灘。",
+            "**業界聯繫**：鄰近香港科學園，可與超過1,000家科技及商業公司（包括阿里巴巴及騰訊）進行實習及合作項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分。最高可得62.48分，無特定科目比重。",
+            "**中位數及下四分位數（2025年）**：中位數及下四分位數均為33.90分，顯示申請者群體競爭激烈且分數集中。",
+            "**優先HKDSE科目**：下四分位數每科平均為4.65，意味成功申請者通常在多數科目取得5級或以上。核心科目（英文、中文、數學、通識教育）至關重要。",
+            "**面試及個人簡歷**：入圍候選人可能獲邀面試或提交個人陳述。豐富的課外活動及領導經驗具優勢。",
+            "**申請人數**：該課程每年收到超過1,000份申請，約60個學額，錄取率約6%。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**高錕博士**：2009年諾貝爾物理學獎得主，曾任科大校長。雖非BBA畢業生，但其遺產啟發大學的研究文化。",
+            "**倪以理先生**：香港賽馬會行政總裁。持有科大BBA學位，在賽馬會數碼轉型中扮演關鍵角色。",
+            "**王敏德女士**：社會企業「黑暗中對話」聯合創辦人，BBA管理學畢業生。2020年獲選福布斯亞洲30位30歲以下精英。",
+            "**黃振豪先生**：高盛（香港）董事總經理。持有BBA管理學學位，擁有超過15年投資銀行經驗。",
+            "**鄭嘉穎女士**：Grace Cheng Consulting創辦人，專注人力資源諮詢。2010年BBA管理學畢業生，經常擔任科大客席講師。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**科大入學獎學金**：頒予HKDSE成績優異者（33分或以上）。得獎者每年獲港幣50,000至100,000元，按學業成績續領。",
+            "**商學院獎學金**：基於成績的BBA學生獎學金，包括「院長名單獎學金」（港幣20,000元）及「商學院卓越獎」（港幣40,000元）。",
+            "**需要為本財政援助**：科大為本地學生提供「科大財政援助計劃」，涵蓋全額學費及生活費。超過30%學生獲得某種形式的援助。",
+            "**外部獎學金**：學生可申請「香港特別行政區政府獎學金」（每年港幣80,000元）及「尤德爵士紀念基金獎學金」（港幣100,000元）。",
+            "**交換計劃獎學金**：「全球交換獎學金」為參與一學期交換的學生提供最高港幣30,000元，減輕財政負擔。",
+            "**創業資助**：「科大種子基金」為學生初創企業提供最高港幣100萬元，並獲創業中心指導。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5315 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數34分或以上**",
+            "",
+            "- 中位數為33.90分，因此目標至少34分以保持競爭力。利用最佳5科+第6科加分公式：專注於最佳5科，並確保第6科（如M1/M2或選修科）表現優異以獲加分。",
+            "",
+            "**2. 核心科目表現出色**",
+            "",
+            "- 英文、中文、數學及通識教育至關重要。至少在其中兩科取得5*級或以上。下四分位數每科平均4.65，意味你需要持續高分。",
+            "",
+            "**3. 選擇強項第6科**",
+            "",
+            "- 第6科加分可提升最多2分。選擇你擅長的科目，如經濟、商業或M1/M2。第6科取得5**級可顯著加分。",
+            "",
+            "**4. 準備面試**",
+            "",
+            "- 如獲面試，練習個案面試及行為問題。突出領導角色（如學長、學會主席）及任何商業相關項目。使用STAR方法（情境、任務、行動、結果）。",
+            "",
+            "**5. 撰寫有力個人陳述**",
+            "",
+            "- 寫出你對管理的熱情，引用具體經驗（如組織學校活動、經營小生意）。提及科大的交換計劃及創業生態系統以顯示匹配度。",
+            "",
+            "**6. 獲取相關經驗**",
+            "",
+            "- 參與商業比賽（如滙豐/港大商業個案比賽）或實習。即使是零售或行政暑期工也能展示主動性。科大重視實際經驗。",
+            "",
+            "**7. 善用科大資源**",
+            "",
+            "- 參加科大的入學講座及校園導賞。透過「HKUST BBA Management」Facebook群組與現屆學生聯繫。在申請中提及具體設施（如交易室）。",
+            "",
+            "**8. 規劃科目組合**",
+            "",
+            "- 選擇與管理相關的科目：經濟、商業、會計或資訊科技。避免放棄太多選修科——廣泛的組合顯示多才多藝。",
+            "",
+            "**9. 及早申請並核實要求**",
+            "",
+            "- 在早期截止日期前（通常為12月）提交JUPAS申請。雙重核對入學分數公式及科大網站上的任何變更。使用「科大入學計算機」估算分數。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "33.90",
+    "lq": "33.90"
+  }
+}

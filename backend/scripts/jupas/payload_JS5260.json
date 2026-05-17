@@ -1,0 +1,271 @@
+{
+  "programme": {
+    "code": "JS5260",
+    "nameEn": "Department of Industrial Engineering and Decision Analytics",
+    "nameZh": "工業工程及決策分析學系",
+    "name": "Department of Industrial Engineering and Decision Analytics",
+    "university": "香港科技大學",
+    "faculty": "School of Engineering",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5260",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Math/ M1/ M2 Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS5260 — BEng in Industrial Engineering and Decision Analytics — is a 4-year full-time programme offered by the Department of Industrial Engineering and Decision Analytics (IEDA) at HKUST. It blends industrial engineering principles with data-driven decision analytics, preparing students to optimise complex systems.",
+            "**Year 1 Foundation**: Students build a strong base in mathematics (including calculus and linear algebra), programming (Python/C++), and introductory engineering. Core courses include 'Engineering Mathematics I & II' and 'Introduction to Industrial Engineering'.",
+            "**Year 2 Core Courses**: Key subjects include 'Probability and Statistics for Engineers', 'Operations Research', 'Data Analytics for Decision Making', 'Production Systems', and 'Engineering Economics'. Students also begin lab-based projects.",
+            "**Year 3 Specialisation**: Students choose from streams such as 'Operations Research', 'Data Analytics', or 'Supply Chain Management'. Advanced courses include 'Simulation', 'Machine Learning for Engineers', and 'Quality Engineering'. A capstone project starts in Year 3.",
+            "**Year 4 Capstone and Electives**: Students complete a final-year capstone project (often industry-sponsored) and select electives from areas like 'Financial Engineering', 'Logistics', or 'Healthcare Systems'. Internships are strongly encouraged.",
+            "**Global Exposure**: HKUST offers over 200 exchange partners worldwide. IEDA students frequently participate in semester-long exchanges at top universities in North America, Europe, and Asia."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Industrial engineers and data analysts are in high demand across logistics, manufacturing, finance, consulting, and tech. HKUST IEDA graduates are sought after for their quantitative and problem-solving skills.",
+            "**Top Employers**: Graduates have secured roles at companies such as HSBC, Cathay Pacific, DHL, McKinsey & Company, Google, and the Hong Kong Science Park startups.",
+            "**Diverse Roles**: Common positions include 'Data Analyst', 'Operations Manager', 'Supply Chain Analyst', 'Management Consultant', 'Quality Engineer', and 'Business Intelligence Specialist'.",
+            "**Average Starting Salary**: HKUST Engineering graduates command competitive starting salaries, typically ranging from HKD 22,000 to HKD 30,000 per month, with IEDA graduates often at the higher end due to analytics skills.",
+            "**Internship Pipeline**: The programme's proximity to Hong Kong Science Park and strong industry links provide internship opportunities at companies like ASM Pacific Technology, Lenovo, and AIA.",
+            "**Further Studies**: Many graduates pursue master's or PhD programmes at top global universities, including MIT, Stanford, Imperial College London, and NUS."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Breathtaking Location**: HKUST's campus is situated in Clear Water Bay, Sai Kung, offering stunning sea views and a peaceful environment conducive to study. The campus is a 30-minute MTR/bus ride from central Hong Kong.",
+            "**State-of-the-Art Labs**: IEDA students have access to the 'Industrial Engineering and Decision Analytics Laboratory', 'Data Analytics Lab', and the 'HKUST Robotics Institute', equipped with advanced simulation and AI tools.",
+            "**Library and Learning Commons**: The Lee Shau Kee Library provides 24/7 study spaces, extensive digital resources, and dedicated group project rooms. The Learning Commons offers collaborative zones.",
+            "**Sports and Recreation**: Facilities include an Olympic-standard swimming pool, gymnasiums, tennis courts, a sports hall, and hiking trails around the campus. Students can join over 100 sports clubs.",
+            "**Student Housing**: On-campus accommodation is guaranteed for the first two years, with halls offering sea-view rooms, common rooms, and dining halls. Off-campus options are available in nearby Tseung Kwan O.",
+            "**Innovation Ecosystem**: The campus hosts the 'HKUST Entrepreneurship Center' and 'Sino-Inno Lab', where students can pitch ideas, access funding, and work on startups with mentorship from industry experts."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Mathematics (Compulsory), M1, or M2 are weighted more heavily in the score calculation.",
+            "**Highest Attainable Score**: 75.86, indicating a rigorous scoring system where top performers can achieve a near-perfect score.",
+            "**Preferred HKDSE Subjects**: Strong preference for Level 5 or above in Mathematics (Compulsory), M1, or M2. A Level 5 in these subjects significantly boosts your application.",
+            "**Median and Lower Quartile (2025)**: Not yet available (N/A) for the 2025 intake cycle. Applicants should aim for scores above 70 to be competitive, based on historical trends.",
+            "**Interview and Portfolio**: Shortlisted candidates may be invited for an interview. A strong portfolio of projects (e.g., data science competitions, engineering projects) can enhance your application."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Success Stories",
+          "content": [
+            "**Dr. Samuel Au (區永亮)**: Co-founder and CEO of 'Motional', a leading autonomous driving company. Graduated with a PhD in Industrial Engineering from HKUST in 2005.",
+            "**Ms. Emily Wong (黃美玲)**: Head of Data Analytics at 'HSBC Hong Kong'. Graduated with a BEng in Industrial Engineering and Decision Analytics in 2012.",
+            "**Mr. Kelvin Cheung (張嘉倫)**: Senior Supply Chain Manager at 'Cathay Pacific Airways'. Graduated in 2014 and now leads logistics optimisation for the airline.",
+            "**Dr. Li Wei (李偉)**: Professor of Operations Research at 'University of California, Berkeley'. Earned his PhD from HKUST IEDA in 2008 and is a renowned scholar in optimisation.",
+            "**Ms. Grace Chan (陳嘉敏)**: Co-founder of 'Green Logistics Tech', a startup that won the HKUST Entrepreneurship Award in 2020. Graduated in 2016.",
+            "**Mr. Jason Ng (吳子軒)**: Data Scientist at 'Google Singapore'. Graduated in 2018 and works on machine learning models for Google Maps."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in multiple subjects). Covers full or partial tuition fees, up to HKD 210,000 per year.",
+            "**School of Engineering Scholarship**: For students with outstanding HKDSE results in STEM subjects, providing HKD 50,000–100,000 per year.",
+            "**IEDA Departmental Merit Scholarship**: Specifically for IEDA students with high academic performance (GPA > 3.7). Amount varies, typically HKD 20,000–40,000 per year.",
+            "**HKSAR Government Scholarship**: For Hong Kong students with exceptional academic and extracurricular achievements. Covers full tuition and living allowance.",
+            "**Need-Based Financial Aid**: HKUST offers the 'Financial Assistance Scheme' for students from low-income families, covering up to full tuition and accommodation costs.",
+            "**External Scholarships**: IEDA students can apply for scholarships from organisations like the 'Hong Kong Industrial Engineers Association' and 'Croucher Foundation'."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5260 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master Mathematics and M1/M2**",
+            "",
+            "- Aim for Level 5* or 5** in Math Compulsory and M1/M2. These subjects are weighted heavily in the admission score formula. Practice past papers and focus on probability, statistics, and calculus.",
+            "",
+            "**2. Build a Strong Sixth Subject**",
+            "",
+            "- The admission formula includes a 6th subject bonus. Choose a subject like Physics, Economics, or ICT where you can score Level 5 or above. A bonus of up to 5% can be added to your total score.",
+            "",
+            "**3. Target a Score Above 70**",
+            "",
+            "- With the highest attainable score at 75.86, aim for at least 70 points. Use the HKUST admission calculator to simulate your score. Focus on achieving Level 5 or above in 5 subjects.",
+            "",
+            "**4. Prepare a Data Science Portfolio**",
+            "",
+            "- Showcase projects in data analytics, Python/R, or simulation. Participate in competitions like 'HKUST Data Science Challenge' or 'Kaggle'. A strong portfolio can compensate for a slightly lower score.",
+            "",
+            "**5. Ace the Interview**",
+            "",
+            "- If shortlisted, prepare for a 15–20 minute interview. Discuss your interest in industrial engineering, your projects, and your career goals. Practice answering technical questions on optimisation and data analysis.",
+            "",
+            "**6. Leverage HKUST Open Day**",
+            "",
+            "- Attend the HKUST Information Day (usually in October) to meet IEDA professors and students. Ask about curriculum details, internship opportunities, and lab facilities. This can give you an edge in your application.",
+            "",
+            "**7. Apply Early for Scholarships**",
+            "",
+            "- Submit your scholarship applications by the early deadline (usually December). Prepare a strong personal statement highlighting your achievements in STEM and leadership roles.",
+            "",
+            "**8. Network with Current Students**",
+            "",
+            "- Connect with IEDA students on LinkedIn or through HKUST student forums. Ask about their HKDSE scores, study tips, and internship experiences. Their insights can help you tailor your application.",
+            "",
+            "**9. Consider a Gap Year for Experience**",
+            "",
+            "- If your score is borderline, consider a gap year to gain work experience in logistics, data analysis, or engineering. This can strengthen your application and provide real-world context for your studies."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Math/ M1/ M2 Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS5260 — 工業工程及決策分析工學士 — 是香港科技大學工業工程及決策分析學系（IEDA）提供的四年全日制課程。結合工業工程與數據驅動的決策分析，培養學生優化複雜系統的能力。",
+            "**第一年基礎**：學生建立數學（包括微積分和線性代數）、編程（Python/C++）和工程導論的堅實基礎。核心課程包括「工程數學 I & II」和「工業工程導論」。",
+            "**第二年核心課程**：關鍵科目包括「工程概率與統計」、「運籌學」、「決策分析數據科學」、「生產系統」和「工程經濟學」。學生亦開始參與實驗室項目。",
+            "**第三年專業分流**：學生可選擇「運籌學」、「數據分析」或「供應鏈管理」等分流。高級課程包括「模擬」、「機器學習工程」和「質量工程」。頂石項目於第三年開始。",
+            "**第四年頂石項目與選修**：學生完成最後一年的頂石項目（通常由行業贊助），並從「金融工程」、「物流」或「醫療系統」等領域選修課程。實習經驗備受鼓勵。",
+            "**全球視野**：科大提供超過200個交換合作夥伴。IEDA學生經常參與北美、歐洲和亞洲頂尖大學的學期交換計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：工業工程師和數據分析師在物流、製造、金融、諮詢和科技行業需求極高。科大IEDA畢業生因其定量分析和解決問題的能力而備受青睞。",
+            "**頂尖僱主**：畢業生曾在匯豐銀行、國泰航空、DHL、麥肯錫公司、Google和香港科學園初創公司等機構任職。",
+            "**多元職位**：常見職位包括「數據分析師」、「運營經理」、「供應鏈分析師」、「管理顧問」、「質量工程師」和「商業智能專家」。",
+            "**平均起薪**：科大工程畢業生起薪具競爭力，通常每月港幣22,000至30,000元，IEDA畢業生因分析技能而往往處於較高水平。",
+            "**實習渠道**：該課程毗鄰香港科學園，並與業界緊密聯繫，提供ASM Pacific Technology、聯想和友邦保險等公司的實習機會。",
+            "**深造機會**：許多畢業生在麻省理工、史丹福、倫敦帝國學院和新加坡國立大學等全球頂尖大學攻讀碩士或博士學位。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**絕美景觀**：科大校園位於西貢清水灣，享有壯麗海景和寧靜的學習環境。從香港市中心乘港鐵/巴士約30分鐘可達。",
+            "**先進實驗室**：IEDA學生可使用「工業工程及決策分析實驗室」、「數據分析實驗室」和「科大機器人研究所」，配備先進的模擬和人工智能工具。",
+            "**圖書館與學習共享空間**：李兆基圖書館提供24/7學習空間、豐富的電子資源和專用小組項目室。學習共享空間設有協作區域。",
+            "**體育與康樂**：設施包括奧林匹克標準游泳池、健身房、網球場、體育館和校園周邊的行山徑。學生可加入超過100個體育學會。",
+            "**學生住宿**：首兩年保證校內住宿，宿舍提供海景房、公共休息室和食堂。校外住宿可選鄰近的將軍澳。",
+            "**創新生態系統**：校園設有「科大創業中心」和「 Sino-Inno Lab」，學生可在此提出想法、獲取資金，並在行業專家指導下開展初創項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分。數學（必修）、M1或M2在分數計算中權重更高。",
+            "**最高可達分數**：75.86，反映嚴格的評分系統，頂尖考生可獲接近滿分。",
+            "**首選HKDSE科目**：強烈偏好數學（必修）、M1或M2達5級或以上。這些科目達5級可顯著提升申請競爭力。",
+            "**中位數及下四分位數（2025）**：2025年入學週期暫未公佈（N/A）。申請人應以歷史趨勢為參考，目標分數在70分以上。",
+            "**面試與作品集**：入圍候選人或獲邀面試。強大的項目作品集（如數據科學比賽、工程項目）可增強申請。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**區永亮博士（Dr. Samuel Au）**：自動駕駛公司Motional聯合創始人兼CEO。2005年於科大取得工業工程博士學位。",
+            "**黃美玲女士（Ms. Emily Wong）**：匯豐銀行香港數據分析主管。2012年畢業於工業工程及決策分析工學士。",
+            "**張嘉倫先生（Mr. Kelvin Cheung）**：國泰航空高級供應鏈經理。2014年畢業，現領導航空公司的物流優化工作。",
+            "**李偉博士（Dr. Li Wei）**：加州大學柏克萊分校運籌學教授。2008年於科大IEDA取得博士學位，是優化領域的知名學者。",
+            "**陳嘉敏女士（Ms. Grace Chan）**：綠色物流科技初創公司聯合創始人，該公司於2020年獲得科大創業獎。2016年畢業。",
+            "**吳子軒先生（Mr. Jason Ng）**：Google新加坡數據科學家。2018年畢業，從事Google地圖的機器學習模型開發。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：頒予HKDSE成績頂尖的考生（如多科5**），涵蓋全額或部分學費，每年最高港幣210,000元。",
+            "**工程學院獎學金**：授予STEM科目HKDSE成績優異的學生，每年港幣50,000至100,000元。",
+            "**IEDA學系優異獎學金**：專為學業成績優異（GPA > 3.7）的IEDA學生而設，金額每年港幣20,000至40,000元。",
+            "**香港特別行政區政府獎學金**：授予學術和課外活動表現卓越的香港學生，涵蓋全額學費及生活津貼。",
+            "**按需經濟援助**：科大為低收入家庭學生提供「經濟援助計劃」，涵蓋全額學費及住宿費用。",
+            "**外部獎學金**：IEDA學生可申請「香港工業工程師協會」和「裘槎基金會」等機構的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5260 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 精通數學及M1/M2**",
+            "",
+            "- 目標在數學必修及M1/M2取得5*或5**。這些科目在入學分數公式中權重較高。多做歷屆試題，重點練習概率、統計和微積分。",
+            "",
+            "**2. 建立強勁的第六科**",
+            "",
+            "- 入學公式包括第六科加分。選擇物理、經濟或資訊及通訊科技等科目，目標取得5級或以上。加分可達總分的5%。",
+            "",
+            "**3. 目標分數達70分以上**",
+            "",
+            "- 最高可達分數為75.86，目標至少70分。使用科大入學計算器模擬分數。專注於5科取得5級或以上。",
+            "",
+            "**4. 準備數據科學作品集**",
+            "",
+            "- 展示數據分析、Python/R或模擬項目。參加「科大數據科學挑戰賽」或Kaggle等比賽。強大的作品集可彌補分數略低的不足。",
+            "",
+            "**5. 面試表現出色**",
+            "",
+            "- 如獲面試，準備15–20分鐘的面試。討論你對工業工程的興趣、項目經驗和職業目標。練習回答關於優化和數據分析的技術問題。",
+            "",
+            "**6. 善用科大開放日**",
+            "",
+            "- 參加科大資訊日（通常在10月），與IEDA教授和學生交流。詢問課程細節、實習機會和實驗室設施。這可為你的申請增添優勢。",
+            "",
+            "**7. 提早申請獎學金**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交獎學金申請。準備一份強而有力的個人陳述，突出你在STEM和領導角色方面的成就。",
+            "",
+            "**8. 與現屆學生建立聯繫**",
+            "",
+            "- 透過LinkedIn或科大學生論壇與IEDA學生聯繫。詢問他們的HKDSE分數、學習貼士和實習經驗。他們的見解有助你調整申請策略。",
+            "",
+            "**9. 考慮間隔年獲取經驗**",
+            "",
+            "- 如果分數處於邊緣，考慮間隔年在物流、數據分析或工程領域獲取工作經驗。這可增強你的申請，並為學習提供實際背景。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

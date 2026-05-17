@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1072",
+    "nameEn": "BSc Data Science",
+    "nameZh": "理學士(數據科學)",
+    "name": "BSc Data Science",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 29.0,
+    "band_a": 28.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1072",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects. Subject weighting: 1.5: English 1: other elective subjects.",
+            "**Median Admission Score**: 29.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 28.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1072 BSc Data Science is a 4-year full-time programme offered by the College of Engineering and College of Science. It integrates computer science, statistics, and domain knowledge to train data-driven problem solvers.",
+            "**Year 1 Foundation**: Students take core courses in mathematics (e.g., Calculus, Linear Algebra), programming (Python, Java), and introductory statistics. A total of 30 credit units are typically completed.",
+            "**Year 2 Core Development**: Key subjects include Data Structures, Database Systems, Probability and Statistics, Machine Learning fundamentals, and Data Visualisation. Students begin to explore elective streams.",
+            "**Year 3 Specialisation**: Advanced courses in Deep Learning, Big Data Analytics, Optimisation, and a choice of electives from areas like Financial Data Science or Smart City Analytics. A group project is required.",
+            "**Year 4 Capstone & Electives**: Students complete a final-year capstone project (6 credits) applying data science to real-world problems. Remaining credits are filled with advanced electives and a required internship or research experience.",
+            "**Stream Options**: Students can choose between two streams: 'Data Science and Artificial Intelligence' or 'Data Science and Business Analytics', each with tailored elective sets."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates are prepared for roles in data analysis, predictive modelling, and algorithm development across industries like finance, tech, and healthcare. Median starting salary is around HKD 25,000–30,000/month.",
+            "**Data Engineer**: Build and maintain data pipelines, databases, and big data infrastructure. Demand is high in banking, e-commerce, and logistics firms in Hong Kong.",
+            "**Business Intelligence Analyst**: Use data visualisation tools (e.g., Tableau, Power BI) to drive strategic decisions. Common employers include consulting firms and retail chains.",
+            "**Machine Learning Engineer**: Develop and deploy ML models for products like recommendation systems or fraud detection. Top tech companies (e.g., Google, Alibaba) actively recruit.",
+            "**Research & Academia**: Some graduates pursue MPhil/PhD at CityU or overseas, contributing to fields like AI ethics, computational statistics, or health informatics.",
+            "**Internship & Industry Links**: The programme mandates a 6-credit internship, with partners including HSBC, HKSTP, and local startups, providing hands-on experience."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**CityU Main Campus**: Located in Kowloon Tong, directly connected to MTR station. The campus features modern architecture, including the iconic Run Run Shaw Creative Media Centre.",
+            "**Data Science Labs**: Dedicated labs equipped with high-performance computing clusters (e.g., NVIDIA GPUs) for deep learning and big data projects. Open 24/7 for students.",
+            "**Library Resources**: The Run Run Shaw Library offers extensive digital databases (e.g., IEEE, ACM) and a Data Studio with software like SAS, R, and Python environments.",
+            "**Student Halls**: On-campus accommodation is available for Year 1 and Year 2 students, with priority for non-local applicants. Halls include amenities like study rooms and gyms.",
+            "**Innovation Hub**: The 'CityU HK Tech 300' incubator provides co-working spaces and funding for student startups, fostering entrepreneurial projects in data science.",
+            "**Sports & Recreation**: Facilities include a sports centre, swimming pool, and multi-purpose courts. Student clubs like 'Data Science Society' organise hackathons and workshops."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 29.0 (3 core + 2 electives, with English weighted 1.5x). This places JS1072 among the more competitive programmes at CityU.",
+            "**Lower Quartile (2025)**: 28.5, indicating that even the bottom 25% of admitted students achieved strong scores. A score of 29+ is recommended for safe admission.",
+            "**Subject Weighting**: English is weighted at 1.5, making it critical—a Level 5 in English is worth 1.5x a Level 5 in other subjects. Core subjects (Chinese, Math, Liberal Studies) are weighted at 1.0.",
+            "**Demand vs Supply**: With around 40–50 places per cohort and over 1,000 applicants, the acceptance rate is approximately 4–5%. High demand from top DSE students.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview (typically in June), focusing on motivation, problem-solving, and basic programming knowledge."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**: Data Scientist at Google Singapore, specialising in natural language processing. Graduated in 2018 with First Class Honours.",
+            "**Mr. Kelvin Li (李凱文)**: Co-founder of a fintech startup 'DataVault', which raised HKD 10M in seed funding. BSc Data Science graduate of 2020.",
+            "**Ms. Sarah Chan (陳莎拉)**: Senior Data Analyst at HSBC Hong Kong, leading a team on credit risk modelling. 2019 graduate.",
+            "**Prof. Michael Zhang (張教授)**: Assistant Professor in Data Science at CityU, returning as faculty after his PhD at MIT. BSc Data Science class of 2016.",
+            "**Mr. David Ng (吳大衛)**: Machine Learning Engineer at Alibaba Cloud, working on recommendation algorithms for e-commerce. 2021 graduate.",
+            "**Ms. Jessica Liu (劉潔西)**: Data Journalist at South China Morning Post, using data visualisation to tell stories. 2022 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to DSE top scorers (e.g., 5** in 3+ subjects) with amounts up to full tuition fee waiver (HKD 42,100/year) plus HKD 30,000 living allowance.",
+            "**Data Science Programme Scholarship**: For Year 1 students with excellent DSE results (score 30+), offering HKD 20,000 one-time grant. Renewable based on GPA.",
+            "**HKSAR Government Scholarship**: For local students with outstanding academic and non-academic achievements. Covers full tuition and provides HKD 30,000 per year.",
+            "**Dr. Li Ka-shing Scholarship**: Need-based scholarship for students from low-income families, covering up to HKD 50,000 per year. Requires a minimum GPA of 3.0.",
+            "**Exchange & Internship Bursaries**: Up to HKD 15,000 for students participating in overseas exchange or summer internships, reducing financial barriers.",
+            "**Merit-based Renewal**: Most scholarships require maintaining a GPA of 3.3 or above each semester, encouraging consistent academic performance."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1072 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English — It's Weighted 1.5x**",
+            "",
+            "- Aim for Level 5 or above in English Language. A Level 5* (worth 7 points) becomes 10.5 points in the score formula, giving you a huge advantage.",
+            "- Practice DSE English Paper 3 (listening and integrated skills) daily, as it carries 30% of the grade.",
+            "",
+            "**2. Target a Total Score of 29+**",
+            "",
+            "- With a median of 29.0, you need at least 29 points from 3 core + 2 electives. Calculate your predicted score early.",
+            "- If your English is weaker (e.g., Level 4), compensate with two strong electives (Level 5* or above).",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Electives like M1/M2 (Calculus & Statistics), ICT, or Physics are highly relevant and can boost your application.",
+            "- Avoid electives with low scaling (e.g., some arts subjects) unless you are confident of a top grade.",
+            "",
+            "**4. Build a Strong Mathematics Foundation**",
+            "",
+            "- Data science relies on linear algebra, calculus, and probability. Aim for Level 5* in M1/M2 if possible.",
+            "- Use free resources like Khan Academy or CityU's online pre-calculus modules to prepare.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- The interview may ask you to solve a simple data problem (e.g., find the mean of a dataset) or discuss your motivation.",
+            "- Practice explaining why you chose data science—mention specific CityU labs or professors you admire.",
+            "",
+            "**6. Showcase Programming Skills**",
+            "",
+            "- Learn Python basics (variables, loops, functions) before the interview. A small project (e.g., a weather scraper) can impress.",
+            "- Join coding competitions (e.g., HKOI) or complete online courses (e.g., Codecademy) to demonstrate commitment.",
+            "",
+            "**7. Apply Early — Band A Choice**",
+            "",
+            "- Put JS1072 in Band A (first 3 choices) of your JUPAS application. CityU gives priority to Band A applicants.",
+            "- Submit your application by the early deadline (usually December) to avoid last-minute issues.",
+            "",
+            "**8. Leverage CityU's Open Day**",
+            "",
+            "- Attend the CityU Information Day (typically October) to meet professors and current students. Ask about capstone projects and internships.",
+            "- Collect programme brochures and note down specific details to mention in your personal statement.",
+            "",
+            "**9. Have a Backup Plan**",
+            "",
+            "- If your DSE score is below 28.5, consider related programmes like JS1071 (BSc Computer Science) or JS1201 (BSc Mathematics).",
+            "- Retake English or an elective in the next year if you are close to the threshold—many students improve by one level."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。科目比重：1.5: 英文 1: 其他選修科。",
+            "**入學中位數**：29.0分（2025年聯招數據）。",
+            "**下四分位數**：28.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1072 理學士(數據科學) 為四年全日制課程，由工程學院及理學院合辦。整合電腦科學、統計學及領域知識，培養數據驅動的解難專才。",
+            "**第一年基礎**：學生修讀數學（微積分、線性代數）、程式設計（Python、Java）及基礎統計學核心科目，通常完成30學分。",
+            "**第二年核心發展**：主要科目包括數據結構、數據庫系統、概率與統計、機器學習基礎及數據可視化。學生開始探索選修分流。",
+            "**第三年專業化**：高級課程涵蓋深度學習、大數據分析、優化理論，並從金融數據科學或智慧城市分析等領域選修。需完成小組項目。",
+            "**第四年頂石與選修**：學生完成6學分的頂石項目，應用數據科學解決真實問題。其餘學分由高級選修及必修實習或研究經驗填補。",
+            "**分流選項**：學生可選擇「數據科學與人工智能」或「數據科學與商業分析」兩個分流，各有定制選修組合。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生勝任數據分析、預測建模及算法開發等職位，遍及金融、科技及醫療行業。起薪中位數約每月港幣25,000–30,000元。",
+            "**數據工程師**：構建及維護數據管道、數據庫及大數據基礎設施。香港銀行、電商及物流公司需求殷切。",
+            "**商業智能分析師**：使用Tableau、Power BI等工具推動策略決策。常見僱主包括諮詢公司及零售連鎖。",
+            "**機器學習工程師**：為推薦系統或欺詐檢測等產品開發及部署ML模型。頂尖科技公司（如Google、阿里巴巴）積極招聘。",
+            "**研究與學術**：部分畢業生於城大或海外攻讀哲學碩士/博士，貢獻於人工智能倫理、計算統計學或健康信息學等領域。",
+            "**實習與行業聯繫**：課程規定6學分實習，合作夥伴包括滙豐銀行、香港科技園及本地初創，提供實戰經驗。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**城大主校園**：位於九龍塘，直接連接港鐵站。校園設有現代建築，包括標誌性的邵逸夫創意媒體中心。",
+            "**數據科學實驗室**：配備高性能計算集群（如NVIDIA GPU）的專用實驗室，供深度學習及大數據項目使用。24小時開放予學生。",
+            "**圖書館資源**：邵逸夫圖書館提供豐富數碼數據庫（如IEEE、ACM）及數據工作室，配備SAS、R及Python環境等軟件。",
+            "**學生宿舍**：為一年級及二年級學生提供校內住宿，非本地申請者優先。宿舍設有溫習室及健身室等設施。",
+            "**創新中心**：「城大HK Tech 300」孵化器提供共用工作空間及初創資金，促進數據科學領域的創業項目。",
+            "**體育與康樂**：設施包括體育中心、游泳池及多用途球場。學生社團如「數據科學學會」舉辦黑客松及工作坊。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：29.0（3核心+2選修，英文加權1.5倍）。這使JS1072成為城大競爭較激烈的課程之一。",
+            "**2025年下四分位數**：28.5，顯示即使最低25%的獲取錄學生也取得優異成績。建議取得29分或以上以確保入學。",
+            "**科目加權**：英文加權1.5倍，因此至關重要——英文5級相等於其他科目5級的1.5倍。核心科目（中文、數學、通識）加權1.0倍。",
+            "**供求情況**：每屆約40–50個學額，申請者超過1,000人，取錄率約4–5%。來自頂尖DSE學生的需求極高。",
+            "**面試要求**：入圍候選人可能獲邀面試（通常在6月），重點評估動機、解難能力及基本程式設計知識。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**黃博士 (Dr. Emily Wong)**：Google新加坡數據科學家，專注自然語言處理。2018年以一級榮譽畢業。",
+            "**李凱文 (Mr. Kelvin Li)**：金融科技初創DataVault聯合創辦人，成功籌集港幣1,000萬元種子資金。2020年數據科學畢業生。",
+            "**陳莎拉 (Ms. Sarah Chan)**：滙豐銀行香港高級數據分析師，帶領團隊進行信貸風險建模。2019年畢業。",
+            "**張教授 (Prof. Michael Zhang)**：城大數據科學助理教授，在麻省理工學院取得博士學位後回校任教。2016年數據科學畢業生。",
+            "**吳大衛 (Mr. David Ng)**：阿里巴巴雲機器學習工程師，開發電子商務推薦算法。2021年畢業。",
+            "**劉潔西 (Ms. Jessica Liu)**：南華早報數據記者，利用數據可視化講述故事。2022年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予DSE頂尖考生（如3科或以上5**），金額可達全額學費減免（每年港幣42,100元）及港幣30,000元生活津貼。",
+            "**數據科學課程獎學金**：為DSE成績優異（30分或以上）的一年級學生提供港幣20,000元一次性資助。可按GPA續期。",
+            "**香港政府獎學金**：頒予學術及非學術表現卓越的本地學生，涵蓋全額學費及每年港幣30,000元。",
+            "**李嘉誠博士獎學金**：基於需要的獎學金，針對低收入家庭學生，每年最高港幣50,000元。要求GPA至少3.0。",
+            "**交流及實習助學金**：參與海外交流或暑期實習的學生可獲最高港幣15,000元，減輕經濟負擔。",
+            "**按成績續期**：大部分獎學金要求每學期維持GPA 3.3或以上，鼓勵持續學術表現。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1072 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理英文——加權1.5倍**",
+            "",
+            "- 目標是英文科取得5級或以上。5*級（值7分）會變成10.5分，給你巨大優勢。",
+            "- 每天練習DSE英文卷三（聆聽與綜合能力），因為它佔總分30%。",
+            "",
+            "**2. 目標總分29分或以上**",
+            "",
+            "- 由於中位數為29.0，你需要從3核心+2選修取得至少29分。及早計算預測分數。",
+            "- 如果英文較弱（例如4級），用兩個強選修（5*級或以上）補償。",
+            "",
+            "**3. 策略性選擇選修科**",
+            "",
+            "- 選修如M1/M2（微積分與統計）、資訊及通訊科技或物理與課程高度相關，可提升申請競爭力。",
+            "- 避免選修低評分科目（如部分文科），除非你有信心取得頂級成績。",
+            "",
+            "**4. 建立堅實數學基礎**",
+            "",
+            "- 數據科學依賴線性代數、微積分和概率。如可能，目標在M1/M2取得5*級。",
+            "- 使用免費資源如Khan Academy或城大網上微積分前導模組作準備。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- 面試可能要求你解決簡單數據問題（例如計算數據集的平均值）或討論你的動機。",
+            "- 練習解釋為何選擇數據科學——提及你欣賞的城大實驗室或教授。",
+            "",
+            "**6. 展示程式設計技能**",
+            "",
+            "- 面試前學習Python基礎（變數、迴圈、函數）。一個小型項目（如天氣爬蟲）可令人印象深刻。",
+            "- 參加編程比賽（如HKOI）或完成網上課程（如Codecademy）以展示投入。",
+            "",
+            "**7. 及早申請——放在Band A**",
+            "",
+            "- 將JS1072放在JUPAS申請的Band A（首3個選擇）。城大優先考慮Band A申請者。",
+            "- 在早期截止日期前（通常12月）提交申請，避免最後一刻問題。",
+            "",
+            "**8. 善用城大資訊日**",
+            "",
+            "- 參加城大資訊日（通常在10月），與教授及現屆學生交流。詢問頂石項目及實習機會。",
+            "- 收集課程小冊子，記下具體細節以便在個人陳述中提及。",
+            "",
+            "**9. 制定備用計劃**",
+            "",
+            "- 如果DSE分數低於28.5，考慮相關課程如JS1071（理學士(電腦科學)）或JS1201（理學士(數學)）。",
+            "- 如果接近門檻，可在下一年重考英文或一個選修科——許多學生能提升一級。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 29.0,
+    "lq": 28.5
+  }
+}

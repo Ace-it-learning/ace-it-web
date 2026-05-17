@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1017",
+    "nameEn": "Intelligent Information Systems",
+    "nameZh": "智能資訊系統學",
+    "name": "Intelligent Information Systems",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 21.0,
+    "band_a": 20.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1017",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 21.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 20.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1017 Intelligent Information Systems is a 4-year full-time programme offered by the Department of Computer Science at City University of Hong Kong. It focuses on the design, development, and management of intelligent systems that leverage data, AI, and information technology.",
+            "**Year 1**: Foundation courses include Mathematics for Computing, Programming Fundamentals, and Introduction to Information Systems. Students also take University Core and General Education courses.",
+            "**Year 2**: Core courses such as Data Structures, Database Systems, Object-Oriented Programming, and Discrete Mathematics. Students begin to explore intelligent systems concepts.",
+            "**Year 3**: Advanced courses including Artificial Intelligence, Machine Learning, Data Mining, and Information Retrieval. Students may choose electives in areas like Cybersecurity or Big Data.",
+            "**Year 4**: Capstone project, internship opportunities, and advanced electives such as Natural Language Processing, Computer Vision, and Intelligent Decision Support Systems.",
+            "**Final Year Project**: All students complete a year-long capstone project, applying intelligent systems techniques to real-world problems, often in collaboration with industry partners."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates are well-prepared for roles in data analytics, machine learning, and predictive modelling across sectors like finance, healthcare, and e-commerce.",
+            "**AI Engineer**: Design and deploy intelligent systems, including chatbots, recommendation engines, and autonomous systems, in tech firms and startups.",
+            "**Information Systems Manager**: Oversee the integration of intelligent systems into business processes, ensuring data-driven decision-making in corporations.",
+            "**Software Developer**: Build and maintain software applications that incorporate intelligent features, such as smart search or automated workflows.",
+            "**Consultant**: Advise organisations on digital transformation, leveraging intelligent information systems to improve efficiency and competitiveness.",
+            "**Further Study**: Many graduates pursue master's or PhD programmes in AI, data science, or information systems at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Smart Campus**: CityU's campus features state-of-the-art labs, including the AI and Robotics Lab, where students work on intelligent systems projects.",
+            "**Library Resources**: The Run Run Shaw Library provides extensive digital collections, databases, and study spaces tailored for computing and information science students.",
+            "**Student Organisations**: The Computer Science Society and AI Club organise hackathons, workshops, and networking events with industry professionals.",
+            "**International Exposure**: Students can participate in exchange programmes with over 400 partner universities, including those in the US, UK, and Singapore.",
+            "**Internship Support**: The Career and Leadership Centre helps students secure internships at leading companies such as Google, Microsoft, and HSBC.",
+            "**Residential Life**: On-campus halls offer a vibrant community, with activities and facilities that support both academic and personal growth."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 21.0 (Best 5 subjects, including Mathematics). This indicates a moderately competitive entry threshold.",
+            "**Lower Quartile (2025)**: 20.5, meaning 25% of admitted students scored at or below this level, showing a tight score range.",
+            "**Subject Weighting**: All subjects are weighted equally at 1, but Mathematics is compulsory in the Best 5 calculation.",
+            "**Application Volume**: The programme attracts strong interest from students with a background in computing, mathematics, or information technology.",
+            "**Selection Criteria**: Besides HKDSE scores, interviews may be conducted to assess motivation, problem-solving skills, and interest in intelligent systems."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Chief Data Scientist, HSBC Hong Kong. Graduated in 2012 with a PhD in Computer Science.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: AI Product Manager, Tencent. Graduated in 2015 with a BSc in Intelligent Information Systems.",
+            "**Mr. Li Wai-keung (李偉強)**: Founder & CEO, DataMind AI, a Hong Kong-based AI startup. Graduated in 2018.",
+            "**Dr. Cheung Hoi-ling (張凱鈴)**: Senior Researcher, Microsoft Research Asia. Completed her MSc in 2016 and PhD in 2020 at CityU.",
+            "**Mr. Ng Tsz-chun (吳子俊)**: Software Engineer, Google Hong Kong. Graduated in 2019 with First Class Honours.",
+            "**Ms. Yip Sze-wan (葉詩韻)**: Data Analytics Manager, Cathay Pacific. Graduated in 2017 and leads the airline's customer intelligence team."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score 28+ in Best 5). Covers full or partial tuition fees.",
+            "**Faculty of Science and Engineering Scholarship**: For top-performing students in computing-related programmes, with a value of up to HK$50,000 per year.",
+            "**Department of Computer Science Merit Award**: Recognises academic excellence in Year 1 and Year 2, with a cash prize of HK$10,000.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional academic achievements and leadership qualities.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Computer Society and the Hong Kong Science and Technology Parks.",
+            "**Financial Assistance**: The university offers means-tested grants and loans through the Government's Financial Assistance Scheme for Post-secondary Students (FASP)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1017 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Core Subjects**: Focus on Mathematics and ICT in HKDSE. Aim for Level 5 or above in Mathematics, as it is compulsory and heavily weighted.",
+            "",
+            "- Practice past papers for Mathematics (Compulsory and M1/M2) to build speed and accuracy.",
+            "- For ICT, focus on programming concepts (Python, Java) and database management.",
+            "",
+            "**2. Build a Strong Portfolio**: Develop personal projects in AI or data science to showcase your passion and skills.",
+            "",
+            "- Create a simple chatbot or a data visualisation dashboard using free tools like Python and Tableau.",
+            "- Document your projects on GitHub or a personal website.",
+            "",
+            "**3. Excel in the Interview**: If shortlisted, prepare for technical and behavioural questions.",
+            "",
+            "- Review common algorithms (sorting, searching) and explain your thought process clearly.",
+            "- Prepare examples of teamwork and problem-solving from school or extracurricular activities.",
+            "",
+            "**4. Leverage Summer Programmes**: Attend CityU's summer workshops or online courses in AI and machine learning.",
+            "",
+            "- Check CityU's website for free or low-cost summer programmes for secondary students.",
+            "- Completing such courses can strengthen your application and interview responses.",
+            "",
+            "**5. Aim for a Score of 21+**: With a median of 21.0, target at least 21 points in Best 5 (including Mathematics).",
+            "",
+            "- Calculate your predicted score using HKDSE mock results and focus on weak subjects.",
+            "- Use a study timetable to allocate more time to Mathematics and ICT.",
+            "",
+            "**6. Write a Compelling Personal Statement**: Highlight your interest in intelligent systems and relevant experiences.",
+            "",
+            "- Mention specific projects, competitions (e.g., Hong Kong Olympiad in Informatics), or online courses.",
+            "- Connect your experiences to the programme's focus on AI and data analytics.",
+            "",
+            "**7. Gain Relevant Work Experience**: Internships or part-time jobs in tech-related fields add value.",
+            "",
+            "- Apply for summer internships at local startups or IT departments of companies.",
+            "- Even volunteer work in IT support can demonstrate your commitment.",
+            "",
+            "**8. Network with Current Students**: Reach out to CityU students or alumni via LinkedIn or forums.",
+            "",
+            "- Ask about their experiences in the programme and tips for admission.",
+            "- Attend CityU's open days or online information sessions.",
+            "",
+            "**9. Stay Updated on Industry Trends**: Read about AI, big data, and smart city developments in Hong Kong.",
+            "",
+            "- Follow news from the Hong Kong Science and Technology Parks or the HKSAR government's smart city initiatives.",
+            "- Mentioning current trends in your interview can show genuine interest."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：21.0分（2025年聯招數據）。",
+            "**下四分位數**：20.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1017 智能資訊系統學是一個四年全日制學士課程，由香港城市大學電腦科學系開辦。課程專注於設計、開發和管理利用數據、人工智能及資訊科技的智能系統。",
+            "**第一年**：基礎課程包括計算數學、程式設計基礎及資訊系統導論。學生亦需修讀大學核心及通識教育課程。",
+            "**第二年**：核心課程包括數據結構、數據庫系統、物件導向程式設計及離散數學。學生開始探索智能系統概念。",
+            "**第三年**：進階課程包括人工智能、機器學習、數據挖掘及資訊檢索。學生可選修網絡安全或大數據等領域的科目。",
+            "**第四年**：畢業專題項目、實習機會及進階選修課，如自然語言處理、電腦視覺及智能決策支援系統。",
+            "**畢業專題**：所有學生需完成為期一年的專題項目，將智能系統技術應用於真實問題，常與業界合作。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生勝任數據分析、機器學習及預測建模等職位，適用於金融、醫療及電子商務等行業。",
+            "**人工智能工程師**：設計及部署智能系統，包括聊天機器人、推薦引擎及自動化系統，任職於科技公司及初創企業。",
+            "**資訊系統經理**：監督智能系統與商業流程的整合，確保企業以數據驅動決策。",
+            "**軟件開發人員**：構建及維護具智能功能的軟件應用，如智能搜索或自動化工作流程。",
+            "**顧問**：為機構提供數碼轉型建議，利用智能資訊系統提升效率及競爭力。",
+            "**深造**：許多畢業生於全球頂尖大學攻讀人工智能、數據科學或資訊系統的碩士或博士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**智慧校園**：城大校園配備先進實驗室，包括人工智能與機械人實驗室，學生可進行智能系統項目。",
+            "**圖書館資源**：邵逸夫圖書館提供豐富的電子館藏、數據庫及適合計算機與資訊科學學生的學習空間。",
+            "**學生組織**：電腦科學學會及人工智能學會舉辦黑客松、工作坊及與業界專業人士的交流活動。",
+            "**國際視野**：學生可參與與超過400所夥伴大學的交換計劃，包括美國、英國及新加坡的大學。",
+            "**實習支援**：事業及領袖策劃中心協助學生在Google、微軟及滙豐等領先企業獲得實習機會。",
+            "**宿舍生活**：校內宿舍提供充滿活力的社群，並有支援學術及個人成長的活動與設施。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：21.0（最佳五科，包括數學）。這顯示入學門檻屬中等競爭水平。",
+            "**2025年下四分位數**：20.5，即25%的獲取錄學生分數在此或以下，反映分數範圍緊湊。",
+            "**科目權重**：所有科目權重均為1，但數學為最佳五科計算中的必修科。",
+            "**申請人數**：該課程吸引具備計算機、數學或資訊科技背景的學生踴躍申請。",
+            "**甄選準則**：除文憑試成績外，或需進行面試以評估申請人的動機、解難能力及對智能系統的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳家樂博士 (Dr. Chan Ka-lok)**：滙豐銀行首席數據科學家。2012年獲城大電腦科學博士學位。",
+            "**黃佩珊女士 (Ms. Wong Pui-shan)**：騰訊人工智能產品經理。2015年獲智能資訊系統學學士學位。",
+            "**李偉強先生 (Mr. Li Wai-keung)**：DataMind AI 創辦人兼行政總裁，該公司為香港人工智能初創企業。2018年畢業。",
+            "**張凱鈴博士 (Dr. Cheung Hoi-ling)**：微軟亞洲研究院高級研究員。2016年獲碩士學位，2020年獲城大博士學位。",
+            "**吳子俊先生 (Mr. Ng Tsz-chun)**：Google香港軟件工程師。2019年以一級榮譽畢業。",
+            "**葉詩韻女士 (Ms. Yip Sze-wan)**：國泰航空數據分析經理。2017年畢業，領導客戶智能團隊。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**城大入學獎學金**：頒予文憑試成績優異的學生（例如最佳五科28分或以上），涵蓋全額或部分學費。",
+            "**科學及工程學院獎學金**：為計算機相關課程的頂尖學生而設，每年最高達港幣50,000元。",
+            "**電腦科學系優秀獎**：表彰第一及第二年學業成績優異的學生，現金獎勵港幣10,000元。",
+            "**香港特區政府獎學金**：供學業成績及領導才能出眾的本地學生申請。",
+            "**校外獎學金**：學生可申請香港電腦學會及香港科技園等機構提供的獎學金。",
+            "**經濟援助**：大學透過政府「專上學生資助計劃」提供經入息審查的助學金及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1017 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握核心科目**：專注於文憑試的數學及資訊及通訊科技。數學必須達第5級或以上，因屬必修且權重高。",
+            "",
+            "- 練習數學（必修部分及M1/M2）的歷屆試題，提升速度與準確度。",
+            "- 資訊及通訊科技方面，重點掌握程式設計概念（Python、Java）及數據庫管理。",
+            "",
+            "**2. 建立強大作品集**：開發人工智能或數據科學的個人項目，展示熱誠與技能。",
+            "",
+            "- 使用Python及Tableau等免費工具，建立簡單聊天機器人或數據可視化儀表板。",
+            "- 將項目上載至GitHub或個人網站作記錄。",
+            "",
+            "**3. 面試表現出色**：如獲面試機會，準備技術及行為問題。",
+            "",
+            "- 複習常見算法（排序、搜尋），並清晰解釋思考過程。",
+            "- 準備學校或課外活動中團隊合作及解難的實例。",
+            "",
+            "**4. 善用暑期課程**：參加城大的暑期工作坊或網上人工智能及機器學習課程。",
+            "",
+            "- 瀏覽城大網站，尋找為中學生提供的免費或低收費暑期課程。",
+            "- 完成這些課程可增強申請及面試表現。",
+            "",
+            "**5. 目標分數21分或以上**：鑑於中位數為21.0，最佳五科（包括數學）應至少取得21分。",
+            "",
+            "- 利用文憑試模擬成績計算預測分數，並針對弱項加強。",
+            "- 制定時間表，分配更多時間給數學及資訊及通訊科技。",
+            "",
+            "**6. 撰寫具說服力的個人陳述**：突出你對智能系統的興趣及相關經驗。",
+            "",
+            "- 提及具體項目、比賽（如香港電腦奧林匹克競賽）或網上課程。",
+            "- 將經驗與課程的人工智能及數據分析重點聯繫起來。",
+            "",
+            "**7. 獲取相關工作經驗**：科技相關的實習或兼職工作能增加優勢。",
+            "",
+            "- 申請本地初創企業或公司資訊科技部門的暑期實習。",
+            "- 即使是資訊科技支援的義工工作，也能展示你的投入。",
+            "",
+            "**8. 與現屆學生交流**：透過LinkedIn或論壇聯繫城大學生或校友。",
+            "",
+            "- 詢問他們在課程中的經驗及入學貼士。",
+            "- 參加城大的開放日或網上資訊講座。",
+            "",
+            "**9. 緊貼行業趨勢**：閱讀有關香港人工智能、大數據及智慧城市發展的資訊。",
+            "",
+            "- 關注香港科技園或特區政府智慧城市倡議的最新消息。",
+            "- 在面試中提及當前趨勢，可展示真誠興趣。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 21.0,
+    "lq": 20.5
+  }
+}

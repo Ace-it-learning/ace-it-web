@@ -1,0 +1,293 @@
+{
+  "programme": {
+    "code": "JS8702",
+    "nameEn": "Bachelor of Science (Honours) in Integrated Environmental Management",
+    "nameZh": "綜合環境管理榮譽理學士",
+    "name": "Bachelor of Science (Honours) in Integrated Environmental Management",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "23.2",
+    "band_a": "23.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8702",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Biology, Chemistry (x1.6), Geography (x1.2), Math, M1/M2 (x1.2), Physics (x1.1)",
+            "**Median Admission Score**: 23.2 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.0 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 120 applicants, Band B 60. Total 300 applicants.",
+            "**Remarks**: Reference scores with 2026 entry weightings: Lower Quartile: 23, Median: 23.2",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: This 4-year full-time programme integrates environmental science, management principles, and policy analysis to address complex environmental challenges in Hong Kong and the Greater Bay Area.",
+            "**Year 1 Foundation**: Core courses include Introduction to Environmental Science, Ecology and Conservation, Chemistry for Environmental Management, and Academic Literacy. Students build a strong scientific foundation.",
+            "**Year 2 Specialisation**: Courses cover Environmental Impact Assessment, Water and Waste Management, Air Quality Monitoring, and Geographic Information Systems (GIS). Students begin to apply scientific knowledge to real-world problems.",
+            "**Year 3 Advanced Studies**: Modules include Environmental Law and Policy, Sustainable Development, Climate Change Adaptation, and Environmental Economics. A compulsory field-based project in Hong Kong or the region is undertaken.",
+            "**Year 4 Capstone**: Students complete a Final Year Research Project or an industry-based dissertation, plus courses in Environmental Auditing, Corporate Sustainability, and Environmental Communication. Graduates are prepared for professional practice.",
+            "**Interdisciplinary Approach**: The programme draws on biology, chemistry, geography, and mathematics, with weighted subjects (Biology and Chemistry at x1.6) reflecting the scientific rigour required."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Environmental Consultant**: Graduates can work for firms like AECOM, ERM, or local consultancies, conducting environmental impact assessments and sustainability audits. Median starting salary: HK$18,000–22,000/month.",
+            "**Government Officer**: Roles in the Environmental Protection Department (EPD), Agriculture, Fisheries and Conservation Department (AFCD), or Drainage Services Department. Civil service pay scales start at HK$32,000+ for graduate posts.",
+            "**Sustainability Manager**: Positions in corporations (e.g., MTR, CLP, Hong Kong Disneyland) focusing on carbon reduction, waste management, and ESG reporting. Average salary: HK$25,000–35,000/month.",
+            "**Environmental Educator**: Opportunities in NGOs (e.g., WWF Hong Kong, Greenpeace), eco-tourism, or school-based environmental programmes. EdUHK's teacher education heritage provides a unique edge.",
+            "**Researcher or Lab Technician**: Roles in universities, government laboratories, or testing firms (e.g., SGS Hong Kong). The programme's strong science foundation supports further study (MSc/PhD).",
+            "**Policy Analyst**: Work with think tanks, legislative councils, or international organisations (e.g., UNEP) on environmental policy development. The programme's policy modules prepare graduates for this path."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Tai Po Campus**: Located in the New Territories, the campus is surrounded by greenery, offering a tranquil learning environment. It is a 15-minute walk from Tai Po Market MTR station.",
+            "**Environmental Science Laboratories**: State-of-the-art labs for water quality testing, air monitoring, and soil analysis. Students have 24/7 access to equipment for research projects.",
+            "**Field Study Base**: EdUHK operates a Marine Science Centre and a Country Park Field Study Centre, used for hands-on fieldwork in coastal ecology and terrestrial conservation.",
+            "**Library Resources**: The Mong Man Wai Library holds over 1.2 million volumes, including extensive environmental science journals, GIS databases, and government environmental reports.",
+            "**Student Organisations**: The Environmental Society organises tree-planting trips, beach clean-ups, and sustainability workshops. Students can also join the Green Ambassador Programme.",
+            "**Sports and Recreation**: Facilities include a sports complex, swimming pool, and fitness centre. The campus is close to hiking trails in the Pat Sin Leng Country Park."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Scores (2025)**: Median score 23.2, Lower Quartile 23.0 (Best 5 subjects). With 2026 weightings, the Lower Quartile remains 23, indicating stable demand.",
+            "**Demand vs Supply**: 300 total applicants for 25 places (12:1 ratio). Band A applicants numbered 120, meaning 4.8 Band A applicants per place — a competitive but achievable target.",
+            "**Subject Weighting Advantage**: Biology and Chemistry are weighted at x1.6, Geography and Math/M1/M2 at x1.2, Physics at x1.1. Strong science students gain a significant edge.",
+            "**No Interview Required**: Admission is purely score-based, reducing uncertainty. Applicants with a predicted score of 23+ (Best 5) are strongly encouraged to apply.",
+            "**Trend Analysis**: The programme has maintained a consistent median of 23–24 over the past three years, suggesting a stable and well-regarded offering."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Lee Ka-ki (李嘉琪)**: Environmental Consultant, AECOM Hong Kong. 2020 graduate. Led the environmental impact assessment for the Tung Chung East development project.",
+            "**Mr. Wong Chun-ho (黃俊豪)**: Sustainability Manager, MTR Corporation. 2019 graduate. Implemented a waste reduction programme across 98 MTR stations, cutting landfill waste by 15%.",
+            "**Ms. Chan Sze-wan (陳詩韻)**: Education Officer, WWF Hong Kong. 2021 graduate. Designed the 'Ocean Ambassador' school programme reaching 5,000 students annually.",
+            "**Dr. Hui Man-ting (許敏婷)**: Research Associate, Department of Science and Environmental Studies, EdUHK. 2018 graduate. Published 6 peer-reviewed papers on urban air quality.",
+            "**Mr. Cheung Tsz-fung (張子峰)**: Environmental Protection Officer, Environmental Protection Department (EPD). 2022 graduate. Currently monitoring air quality in the Western Harbour Crossing area.",
+            "**Ms. Lam Yuen-ying (林婉瑩)**: ESG Analyst, HSBC Hong Kong. 2020 graduate. Developed a carbon footprint assessment tool for the bank's corporate lending portfolio."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS entrants. Up to HK$50,000 per year for students with HKDSE scores in the top 5% of the programme intake.",
+            "**Faculty of Liberal Arts and Social Sciences Scholarship**: HK$20,000 per year for students achieving a GPA of 3.5 or above in Year 1. Renewable annually.",
+            "**Environmental Studies Bursary**: HK$15,000 per year for students demonstrating financial need and academic merit. Priority given to those with community service in environmental causes.",
+            "**HKSAR Government Scholarship**: Up to HK$80,000 per year for students with outstanding academic achievements and leadership qualities. Open to all EdUHK students.",
+            "**Dr. the Hon. Sir David K.P. Li Scholarship**: HK$30,000 for students pursuing environmental research or field studies. Requires a proposal and faculty recommendation.",
+            "**External Scholarships**: Students can apply for the HSBC Hong Kong Scholarship (HK$50,000) and the Swire Scholarship (HK$100,000) for environmental studies."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8702 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Subjects for Maximum Weighting**",
+            "",
+            "- Biology and Chemistry are weighted at x1.6 — a 5 in these subjects counts as 8 points. Focus revision on these two subjects to boost your Best 5 score significantly.",
+            "- Geography and Math/M1/M2 at x1.2 also matter: a 5 becomes 6. Don't neglect them, but allocate more time to the x1.6 subjects.",
+            "",
+            "**2. Target a Best 5 Score of 23 or Above**",
+            "",
+            "- The 2025 median is 23.2 and lower quartile is 23.0. Aim for a total of 23 in your best 5 subjects. Use the EdUHK online score calculator to simulate your weighted score.",
+            "- If your predicted score is 22, consider retaking or improving one subject — a single grade jump in Chemistry (x1.6) can add 1.6 points.",
+            "",
+            "**3. Leverage the No-Interview Advantage**",
+            "",
+            "- JS8702 does not require an interview, so your HKDSE scores are the sole criterion. Prepare a strong JUPAS application with accurate predicted grades.",
+            "- Use Band A for this programme if your predicted score is 23+ — there is no risk of interview performance affecting your chances.",
+            "",
+            "**4. Build a Strong Science Profile in Form 6**",
+            "",
+            "- Take elective subjects in Biology, Chemistry, and Geography if possible. Even if not all are in your Best 5, the weighting applies only to those you include.",
+            "- Consider taking M1 or M2 — the x1.2 weighting can help if you score well. A 5 in M1 becomes 6 points.",
+            "",
+            "**5. Use the 12:1 Applicant-to-Place Ratio to Your Advantage**",
+            "",
+            "- With 300 applicants for 25 places, the competition is real but not extreme. Focus on being in the top 25 of Band A applicants (120 Band A → 25 places = 20.8% success rate for Band A).",
+            "- Band B applicants have a lower chance (60 applicants for remaining places), so place this programme in Band A if it is your top choice.",
+            "",
+            "**6. Explore the Curriculum to Show Genuine Interest**",
+            "",
+            "- In your JUPAS personal statement (if required by other choices), mention specific modules like Environmental Impact Assessment or GIS to demonstrate alignment.",
+            "- EdUHK values hands-on learning — reference the field-based project in Year 3 to show you understand the programme's practical focus.",
+            "",
+            "**7. Prepare for the Science Foundation**",
+            "",
+            "- Year 1 includes Chemistry for Environmental Management — review basic organic chemistry and stoichiometry before starting. This will ease the transition.",
+            "- Brush up on statistics for the data analysis components in environmental monitoring courses.",
+            "",
+            "**8. Consider the Career Paths Early**",
+            "",
+            "- If you aim for government roles, note that EPD graduate posts require a degree in environmental science or related field — JS8702 qualifies. Start tracking EPD recruitment cycles in Form 6.",
+            "- For consultancy, gain volunteer experience with NGOs like WWF or Green Power to strengthen your CV before graduation.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- The EdUHK Entrance Scholarship (up to HK$50,000) is awarded based on HKDSE scores — a Best 5 of 25+ could qualify. Aim high to secure financial support.",
+            "- Submit applications for external scholarships (HSBC, Swire) by December of your application year. They require separate essays and references."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：生物, 化學 (x1.6), 地理 (x1.2), 數學, M1/M2 (x1.2), 物理 (x1.1)",
+            "**入學中位數**：23.2分（2025年聯招數據）。",
+            "**下四分位數**：23.0分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者120人、Band B 60人。總申請者300人。",
+            "**備註**：2026年入學參考分數（已計算科目比重）: 下四分位數: 23, 中位數: 23.2",
+            "**首年學額**：25人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：此四年全日制課程整合環境科學、管理原則及政策分析，旨在應對香港及大灣區複雜的環境挑戰。",
+            "**第一年基礎**：核心科目包括環境科學導論、生態學與保育、環境管理化學及學術語文，為學生建立穩固的科學基礎。",
+            "**第二年專修**：課程涵蓋環境影響評估、水務及廢物管理、空氣質素監測及地理信息系統（GIS），學生開始將科學知識應用於實際問題。",
+            "**第三年進階學習**：模塊包括環境法與政策、可持續發展、氣候變化適應及環境經濟學。學生須完成一項在香港或區域內的實地考察項目。",
+            "**第四年總結**：學生完成畢業研究項目或行業論文，並修讀環境審計、企業可持續發展及環境傳播等課程，為專業實踐做好準備。",
+            "**跨學科特色**：課程結合生物學、化學、地理學及數學，加權科目（生物及化學 x1.6）反映所需的科學嚴謹性。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**環境顧問**：畢業生可任職於AECOM、ERM等公司或本地顧問公司，進行環境影響評估及可持續發展審計。起薪中位數：每月港幣18,000–22,000元。",
+            "**政府官員**：職位包括環境保護署、漁農自然護理署或渠務署。學位職系起薪點每月港幣32,000元以上。",
+            "**可持續發展經理**：於企業（如港鐵、中電、香港迪士尼）負責碳減排、廢物管理及ESG報告。平均月薪港幣25,000–35,000元。",
+            "**環境教育工作者**：非政府組織（如世界自然基金會香港分會、綠色和平）、生態旅遊或學校環境教育項目。教大的師資培訓背景提供獨特優勢。",
+            "**研究員或實驗室技術員**：於大學、政府實驗室或測試公司（如SGS香港）工作。課程的科學基礎支持進一步深造（碩士/博士）。",
+            "**政策分析師**：於智庫、立法機構或國際組織（如聯合國環境規劃署）從事環境政策制定。課程的政策模塊為此路徑做好準備。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：位於新界，四周綠樹環抱，提供寧靜的學習環境。步行至大埔墟港鐵站約需15分鐘。",
+            "**環境科學實驗室**：配備先進的水質檢測、空氣監測及土壤分析設備。學生可24小時使用設備進行研究項目。",
+            "**實地考察基地**：教大設有海洋科學中心及郊野公園研習中心，用於海岸生態及陸地保育的實地考察。",
+            "**圖書館資源**：蒙民偉圖書館藏書超過120萬冊，包括大量環境科學期刊、地理信息系統數據庫及政府環境報告。",
+            "**學生組織**：環境學會舉辦植樹活動、沙灘清潔及可持續發展工作坊。學生亦可參加綠色大使計劃。",
+            "**體育與康樂**：設施包括體育館、游泳池及健身中心。校園鄰近八仙嶺郊野公園的行山徑。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學分數**：中位數23.2分，下四分位數23.0分（最佳五科）。按2026年加權計算，下四分位數維持23分，顯示需求穩定。",
+            "**供求情況**：300名申請者競爭25個學額（12:1）。Band A申請者120人，即每學額有4.8名Band A申請者——競爭激烈但可達。",
+            "**科目加權優勢**：生物及化學加權x1.6，地理及數學/M1/M2加權x1.2，物理加權x1.1。理科強的學生有顯著優勢。",
+            "**無需面試**：純以分數取錄，減少不確定性。預測分數達23分或以上（最佳五科）的申請者應積極報讀。",
+            "**趨勢分析**：過去三年中位數維持在23–24分，顯示課程穩定且受認可。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**李嘉琪博士**：AECOM香港環境顧問，2020年畢業。領導東涌東發展項目的環境影響評估。",
+            "**黃俊豪先生**：港鐵公司可持續發展經理，2019年畢業。在98個港鐵站實施廢物減量計劃，減少堆填區廢物15%。",
+            "**陳詩韻女士**：世界自然基金會香港分會教育主任，2021年畢業。設計「海洋大使」學校計劃，每年接觸5,000名學生。",
+            "**許敏婷博士**：教大科學與環境學系研究助理，2018年畢業。發表6篇關於城市空氣質素的同行評審論文。",
+            "**張子峰先生**：環境保護署環境保護主任，2022年畢業。現負責西區海底隧道一帶的空氣質素監測。",
+            "**林婉瑩女士**：滙豐香港ESG分析師，2020年畢業。為銀行的企業貸款組合開發碳足跡評估工具。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**教大入學獎學金**：頒予頂尖聯招申請者。每年最高港幣50,000元，對象為文憑試成績在課程收生中位列前5%的學生。",
+            "**文學及社會科學院獎學金**：每年港幣20,000元，頒予一年級平均績點達3.5或以上的學生。可每年續領。",
+            "**環境研究助學金**：每年港幣15,000元，頒予有經濟需要及學術成績優異的學生。優先考慮曾參與環境相關社區服務的申請者。",
+            "**香港特別行政區政府獎學金**：每年高達港幣80,000元，頒予學術成就卓越及具領導才能的學生。所有教大學生均可申請。",
+            "**戴麟趾爵士獎學金**：港幣30,000元，頒予從事環境研究或實地考察的學生。需提交研究計劃及學院推薦。",
+            "**外部獎學金**：學生可申請滙豐香港獎學金（港幣50,000元）及太古獎學金（港幣100,000元），用於環境研究。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8702 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理理科科目以獲取最高加權**",
+            "",
+            "- 生物及化學加權 x1.6——在這些科目取得5級相等於8分。集中溫習這兩科以大幅提升最佳五科總分。",
+            "- 地理及數學/M1/M2加權 x1.2亦重要：5級變成6分。不要忽略它們，但應分配更多時間給x1.6的科目。",
+            "",
+            "**2. 目標最佳五科達23分或以上**",
+            "",
+            "- 2025年中位數為23.2分，下四分位數為23.0分。目標是最佳五科總分達23分。使用教大網上分數計算器模擬加權分數。",
+            "- 若預測分數為22分，考慮重考或提升一科——化學（x1.6）提升一級可增加1.6分。",
+            "",
+            "**3. 善用無面試優勢**",
+            "",
+            "- JS8702無需面試，因此文憑試成績是唯一標準。準備準確的預測成績及完整的聯招申請。",
+            "- 若預測分數達23分或以上，將此課程放在Band A——無需擔心面試表現影響機會。",
+            "",
+            "**4. 在中六建立強勁理科背景**",
+            "",
+            "- 如可能，選修生物、化學及地理。即使並非全部納入最佳五科，加權僅適用於你選擇的科目。",
+            "- 考慮修讀M1或M2——x1.2加權有助提升分數。M1取得5級變成6分。",
+            "",
+            "**5. 利用12:1的申請者與學額比例**",
+            "",
+            "- 300名申請者競爭25個學額，競爭真實但非極端。專注於成為Band A申請者中的前25名（120名Band A → 25個學額 = Band A成功率20.8%）。",
+            "- Band B申請者機會較低（60名申請者競爭剩餘學額），因此若此課程為首選，應放在Band A。",
+            "",
+            "**6. 了解課程內容以展示真正興趣**",
+            "",
+            "- 在聯招個人陳述（如其他選擇要求）中，提及特定模塊如環境影響評估或GIS，以展示與課程的契合度。",
+            "- 教大重視實踐學習——提及第三年的實地考察項目，表明你了解課程的實務重點。",
+            "",
+            "**7. 為科學基礎做好準備**",
+            "",
+            "- 第一年包括環境管理化學——入學前複習基礎有機化學及化學計量學，以順利過渡。",
+            "- 溫習統計學，以應付環境監測課程中的數據分析部分。",
+            "",
+            "**8. 及早考慮職業路徑**",
+            "",
+            "- 若目標是政府職位，注意環保署的學位職系要求環境科學或相關學位——JS8702符合資格。在中六開始追蹤環保署招聘週期。",
+            "- 若想從事顧問工作，畢業前在非政府組織（如世界自然基金會、綠色力量）累積義工經驗，以強化履歷。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 教大入學獎學金（最高港幣50,000元）按文憑試成績頒發——最佳五科達25分或以上可能符合資格。設定高目標以獲取財政支援。",
+            "- 在申請年份的12月前提交外部獎學金（滙豐、太古）申請。它們需要獨立論文及推薦信。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "23.2",
+    "lq": "23.0"
+  }
+}

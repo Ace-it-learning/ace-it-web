@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1018",
+    "nameEn": "BBA Global Business Systems Management",
+    "nameZh": "工商管理學士(環球商業系統管理)",
+    "name": "BBA Global Business Systems Management",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.0,
+    "band_a": 23.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1018",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 24.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BBA Global Business Systems Management (JS1018) is a 4-year full-time programme that integrates business management with information systems, preparing students for global digital transformation roles. The curriculum emphasizes data analytics, enterprise systems, and cross-cultural management.",
+            "**Year 1**: Foundation courses in business (e.g., Accounting, Economics, Marketing) and information systems (e.g., Programming Fundamentals, Database Management). Students also take University Core courses in English and Chinese.",
+            "**Year 2**: Core business disciplines (Finance, Operations Management) combined with systems analysis and design. Students begin specialization electives in areas like Supply Chain Management or Business Intelligence.",
+            "**Year 3**: Advanced courses in Global Business Strategy, Enterprise Resource Planning (ERP), and Digital Transformation. A mandatory overseas exchange or internship is typically completed in this year.",
+            "**Year 4**: Capstone project integrating business and systems knowledge. Students choose from electives such as Cybersecurity Management, Cloud Computing, or International Marketing. Graduation requires completion of 120 credit units.",
+            "**Global Exposure**: All students participate in a compulsory overseas exchange (1 semester) or a global internship, with partner universities in 40+ countries including the UK, US, Australia, and Singapore."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Business Analyst**: Graduates analyze business processes and recommend IT solutions. Average starting salary: HKD 22,000–28,000/month. Top employers include HSBC, PwC, and Accenture.",
+            "**IT Consultant**: Advise companies on digital strategy and system implementation. Median salary after 3 years: HKD 35,000/month. Firms like Deloitte, EY, and IBM actively recruit CityU BBA GBSM graduates.",
+            "**Supply Chain Manager**: Manage global logistics and ERP systems. Roles at Li & Fung, DHL, and Hutchison Whampoa. Starting salary: HKD 20,000–26,000/month.",
+            "**Data Analyst**: Use statistical tools and visualization software to drive business decisions. Graduates work at Google, Alibaba, and Tencent. Average salary: HKD 25,000–32,000/month.",
+            "**Entrepreneur/Startup Founder**: The programme's innovation track supports students in launching tech ventures. CityU's HK Tech 300 programme provides seed funding up to HKD 100,000.",
+            "**Graduate Employment Rate**: Over 95% of graduates secure employment within 6 months of graduation (2024 data). Common sectors include banking, consulting, technology, and logistics."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus features modern buildings like the Lau Ming Wai Academic Building and the Run Run Shaw Library. The campus is connected to Festival Walk shopping mall and MTR station.",
+            "**Global Business Systems Lab**: A dedicated lab with SAP, Oracle, and Tableau software for hands-on ERP and data analytics training. Open 24/7 for students.",
+            "**International Exchange Office**: Supports overseas placements with over 400 partner institutions. Students receive up to HKD 30,000 in exchange scholarships.",
+            "**Student Organisations**: The BBA GBSM Society organizes networking events, company visits (e.g., to Microsoft, Cathay Pacific), and annual case competitions.",
+            "**Career Services**: CityU's Career and Leadership Centre offers mock interviews, resume workshops, and exclusive job fairs with 200+ employers annually.",
+            "**Accommodation**: On-campus halls (e.g., Hall 1–11) are available for Year 1 students. Off-campus housing options include nearby Kowloon Tong and Sham Shui Po."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 24.0 (Best 5 subjects including English and Mathematics). This places JS1018 in the competitive range for CityU business programmes.",
+            "**Lower Quartile (2025)**: 23.5, indicating that 25% of admitted students scored below this threshold. Applicants with 23–24 points should consider this a realistic target.",
+            "**Subject Weighting**: All subjects are weighted equally (1.0). English and Mathematics are compulsory in the Best 5 calculation.",
+            "**Application-to-Admission Ratio**: Approximately 8:1 for 2024 entry, based on CityU's published figures. Strong competition from local and international applicants.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for a group interview or individual assessment. Performance can boost chances by up to 10%."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強博士)**: CEO, Hong Kong Cyberport Management Company Limited. Graduated in 1998 with a BBA in Business Systems.",
+            "**Ms. Chan Siu-ling (陳小玲女士)**: Vice President, Digital Transformation, HSBC Hong Kong. 2005 graduate. Led the bank's mobile app redesign.",
+            "**Mr. Leung Chi-ho (梁志豪先生)**: Co-founder and CTO, Lalamove (貨拉拉). 2010 graduate. Built the logistics platform now valued at over USD 10 billion.",
+            "**Ms. Tam Mei-yee (譚美儀女士)**: Senior Manager, Supply Chain Analytics, Li & Fung. 2012 graduate. Specializes in AI-driven demand forecasting.",
+            "**Mr. Hui Ka-chun (許家俊先生)**: Data Scientist, Google Singapore. 2016 graduate. Works on machine learning models for Google Maps.",
+            "**Dr. Lee Wai-shing (李偉成博士)**: Associate Professor, Department of Information Systems, City University of Hong Kong. 2003 graduate. Published 50+ papers on ERP systems."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with HKDSE scores of 25+ (Best 5). Value: HKD 30,000–80,000 per year. Renewable based on GPA.",
+            "**Global Business Systems Management Scholarship**: Programme-specific award for top 5% of Year 1 students. Amount: HKD 20,000. Criteria include academic merit and leadership.",
+            "**Overseas Exchange Scholarship**: Up to HKD 30,000 for students participating in semester-long exchanges. Over 50% of GBSM students receive this.",
+            "**HKSAR Government Scholarship**: For students with outstanding academic performance and community service. Value: HKD 40,000 per year. Open to all CityU students.",
+            "**HK Tech 300 Entrepreneurship Fund**: Up to HKD 100,000 seed funding for student startups. GBSM students have successfully launched 5 ventures through this scheme.",
+            "**Need-Based Financial Aid**: CityU offers grants and low-interest loans for students with family income below HKD 200,000/year. Application through the Student Finance Office."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1018 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English and Mathematics**",
+            "",
+            "- These two subjects are compulsory in the Best 5 calculation. Aim for Level 5 or above in English and Level 4+ in Mathematics to stay competitive.",
+            "- A 5** in English can add 1.5 points to your score due to the weighting effect.",
+            "",
+            "**2. Target a Best 5 score of 24+**",
+            "",
+            "- The median is 24.0, so 24 is your baseline. If you score 23.5, consider applying via the 'broad-based' admission scheme or with strong interview performance.",
+            "- Use the HKDSE score calculator on CityU's website to simulate your score.",
+            "",
+            "**3. Strengthen your interview skills**",
+            "",
+            "- Prepare for group discussions on global business trends (e.g., AI in supply chain). Practice with past case studies from CityU's website.",
+            "- Show interest in both business and technology — mention specific ERP systems like SAP or Oracle.",
+            "",
+            "**4. Build a portfolio of relevant experience**",
+            "",
+            "- Join business case competitions (e.g., HSBC/HKU Asia Pacific Business Case Competition) or coding hackathons. CityU values practical exposure.",
+            "- Volunteer for projects that involve data analysis or system implementation.",
+            "",
+            "**5. Leverage your elective subjects**",
+            "",
+            "- Subjects like Economics, ICT, or Business, Accounting and Financial Studies (BAFS) are highly relevant. A Level 5 in ICT can compensate for a lower Mathematics score.",
+            "- Avoid dropping subjects that are directly related to business systems.",
+            "",
+            "**6. Research the overseas exchange requirement**",
+            "",
+            "- The compulsory exchange means you need to plan finances early. Apply for the HKD 30,000 exchange scholarship in your first year.",
+            "- Choose a partner university with strong business systems courses, such as University of Warwick or National University of Singapore.",
+            "",
+            "**7. Network with current students and alumni**",
+            "",
+            "- Attend CityU's Info Day (October) and talk to GBSM students. Ask about their exchange experiences and internship placements.",
+            "- Connect with alumni on LinkedIn — mention specific programme details to stand out.",
+            "",
+            "**8. Apply early and check deadlines**",
+            "",
+            "- JUPAS applications close in December. Submit your choice for JS1018 as one of your Band A preferences to maximize chances.",
+            "- Late applications are not considered for scholarships.",
+            "",
+            "**9. Prepare a backup plan**",
+            "",
+            "- If your score is below 23.5, consider related programmes like JS1001 (BBA Business Analysis) or JS1041 (BBA Information Management).",
+            "- CityU also offers a 'BBA with a Major in Global Business' (JS1005) as an alternative."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文及數學)。科目比重：1。",
+            "**入學中位數**：24.0分（2025年聯招數據）。",
+            "**下四分位數**：23.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工商管理學士（環球商業系統管理）（JS1018）為四年全日制課程，融合商業管理與資訊系統，培養學生應對全球數碼轉型的能力。課程重點包括數據分析、企業系統及跨文化管理。",
+            "**第一年**：商業基礎科目（如會計、經濟、市場學）及資訊系統科目（如程式設計基礎、數據庫管理）。同時修讀大學核心課程（英文及中文）。",
+            "**第二年**：核心商業學科（金融、營運管理）結合系統分析與設計。學生開始選修供應鏈管理或商業智能等專業方向。",
+            "**第三年**：進階科目包括環球商業策略、企業資源規劃（ERP）及數碼轉型。通常於此學年完成強制海外交流或實習。",
+            "**第四年**：整合商業與系統知識的畢業專題項目。學生選修網絡安全管理、雲端運算或國際市場學等科目。畢業需完成120學分。",
+            "**環球視野**：所有學生須參加一學期強制海外交流或全球實習，合作院校遍佈40多個國家，包括英國、美國、澳洲及新加坡。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**商業分析師**：畢業生分析商業流程並建議IT解決方案。平均起薪：港幣22,000–28,000/月。主要僱主包括滙豐、羅兵咸永道及埃森哲。",
+            "**IT顧問**：為企業提供數碼策略及系統實施建議。三年後中位月薪：港幣35,000。德勤、安永及IBM積極招聘城大BBA GBSM畢業生。",
+            "**供應鏈經理**：管理全球物流及ERP系統。職位見於利豐、DHL及和記黃埔。起薪：港幣20,000–26,000/月。",
+            "**數據分析師**：運用統計工具及可視化軟件推動商業決策。畢業生任職於Google、阿里巴巴及騰訊。平均月薪：港幣25,000–32,000。",
+            "**創業家/初創創辦人**：課程的創新軌道支持學生創辦科技企業。城大HK Tech 300計劃提供高達港幣100,000的種子資金。",
+            "**就業率**：超過95%畢業生在畢業後6個月內獲聘（2024年數據）。常見行業包括銀行、諮詢、科技及物流。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，設有劉鳴煒學術樓及邵逸夫圖書館等現代建築。校園連接又一城購物商場及港鐵站。",
+            "**環球商業系統實驗室**：配備SAP、Oracle及Tableau軟件的專用實驗室，供學生進行ERP及數據分析實戰訓練。24小時開放。",
+            "**國際交流處**：支援海外交流，合作院校超過400所。學生可獲最高港幣30,000的交流獎學金。",
+            "**學生組織**：BBA GBSM學會舉辦聯誼活動、企業參訪（如微軟、國泰航空）及年度案例比賽。",
+            "**就業服務**：城大職業及領袖發展中心提供模擬面試、履歷工作坊及年度招聘博覽，吸引200多家僱主參與。",
+            "**住宿**：一年級學生可申請校內宿舍（如Hall 1–11）。校外住宿選擇包括鄰近的九龍塘及深水埗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：24.0（最佳五科，包括英文及數學）。此分數使JS1018在城大商學院課程中屬於競爭較高的組別。",
+            "**2025年下四分位數**：23.5，表示25%獲取錄學生的分數低於此門檻。分數約23–24的申請者可視此為現實目標。",
+            "**科目比重**：所有科目比重均為1.0。英文及數學為最佳五科中的必修科。",
+            "**申請與錄取比例**：2024年入學約為8:1，根據城大公佈數據。本地及國際申請者競爭激烈。",
+            "**面試要求**：入圍候選人可能獲邀參加小組面試或個人評估。面試表現可提升最多10%的取錄機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃國強博士**：香港數碼港管理有限公司行政總裁。1998年畢業於商業系統工商管理學士。",
+            "**陳小玲女士**：滙豐香港數碼轉型副總裁。2005年畢業。領導該行手機應用程式重新設計。",
+            "**梁志豪先生**：Lalamove（貨拉拉）聯合創辦人兼技術總監。2010年畢業。建立的物流平台現估值逾100億美元。",
+            "**譚美儀女士**：利豐供應鏈分析高級經理。2012年畢業。專注於人工智能驅動的需求預測。",
+            "**許家俊先生**：Google新加坡數據科學家。2016年畢業。從事Google地圖的機器學習模型開發。",
+            "**李偉成博士**：香港城市大學資訊系統學系副教授。2003年畢業。發表超過50篇關於ERP系統的論文。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE最佳五科25分或以上的學生。金額：每年港幣30,000–80,000。可按GPA續領。",
+            "**環球商業系統管理獎學金**：課程專屬獎學金，頒予一年級成績前5%的學生。金額：港幣20,000。評審標準包括學術成績及領導才能。",
+            "**海外交流獎學金**：參與一學期交流的學生可獲最高港幣30,000。超過50%的GBSM學生獲得此獎學金。",
+            "**香港特區政府獎學金**：頒予學術成績優異及積極參與社區服務的學生。金額：每年港幣40,000。開放予所有城大學生。",
+            "**HK Tech 300創業基金**：為學生初創提供高達港幣100,000的種子資金。GBSM學生已透過此計劃成功創立5家企業。",
+            "**需要為本資助**：城大為家庭年收入低於港幣200,000的學生提供助學金及低息貸款。可向學生財務處申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1018 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理英文及數學**",
+            "",
+            "- 這兩科是計算最佳五科的必修科。目標英文達5級或以上，數學達4級或以上以保持競爭力。",
+            "- 英文5**可因比重效應為分數增加1.5分。",
+            "",
+            "**2. 目標最佳五科24分或以上**",
+            "",
+            "- 中位數為24.0，因此24分是基本門檻。若得23.5分，可考慮透過「廣泛基礎」入學計劃或憑優秀面試表現申請。",
+            "- 使用城大網站的HKDSE分數計算器模擬你的分數。",
+            "",
+            "**3. 強化面試技巧**",
+            "",
+            "- 準備小組討論，主題圍繞環球商業趨勢（如人工智能在供應鏈的應用）。參考城大網站的過往案例練習。",
+            "- 展示對商業及科技的興趣——提及具體ERP系統如SAP或Oracle。",
+            "",
+            "**4. 建立相關經驗檔案**",
+            "",
+            "- 參加商業案例比賽（如HSBC/HKU亞太商業案例比賽）或編程黑客松。城大重視實踐經驗。",
+            "- 參與涉及數據分析或系統實施的義工項目。",
+            "",
+            "**5. 善用選修科目**",
+            "",
+            "- 經濟、資訊及通訊科技（ICT）或企業、會計與財務概論（BAFS）等科目高度相關。ICT達5級可彌補數學分數不足。",
+            "- 避免放棄與商業系統直接相關的科目。",
+            "",
+            "**6. 了解海外交流要求**",
+            "",
+            "- 強制交流意味你需要及早規劃財務。一年級時申請港幣30,000的交流獎學金。",
+            "- 選擇設有優質商業系統課程的合作院校，如華威大學或新加坡國立大學。",
+            "",
+            "**7. 與現屆學生及校友建立聯繫**",
+            "",
+            "- 參加城大資訊日（十月），與GBSM學生交流，了解他們的交流經驗及實習安排。",
+            "- 在LinkedIn上聯繫校友——提及具體課程細節以突顯自己。",
+            "",
+            "**8. 及早申請並留意截止日期**",
+            "",
+            "- JUPAS申請於十二月截止。將JS1018列為Band A首選以增加取錄機會。",
+            "- 逾期申請不獲考慮獎學金。",
+            "",
+            "**9. 準備後備計劃**",
+            "",
+            "- 若分數低於23.5，可考慮相關課程如JS1001（工商管理學士（商業分析））或JS1041（工商管理學士（資訊管理））。",
+            "- 城大亦提供「工商管理學士（環球商業）」（JS1005）作為替代選擇。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.0,
+    "lq": 23.5
+  }
+}

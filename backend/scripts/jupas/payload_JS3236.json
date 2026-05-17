@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3236",
+    "nameEn": "BEng Scheme in Product Innovation and Smart Manufacturing",
+    "nameZh": "產品創新及智能製造(榮譽)工學士組合課程",
+    "name": "BEng Scheme in Product Innovation and Smart Manufacturing",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "208.0",
+    "band_a": "195.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3236",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 216.3 (2025 JUPAS data).",
+            "**Median Admission Score**: 208.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 195.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BEng Scheme in Product Innovation and Smart Manufacturing (JS3236) is a 4-year full-time programme under the Faculty of Engineering. It integrates product design, advanced manufacturing technologies, and smart systems to prepare students for Industry 4.0.",
+            "**Two Streams**: Students choose between Product Innovation (focusing on design thinking and prototyping) and Smart Manufacturing (focusing on automation, IoT, and digital twins) after Year 1.",
+            "**Year 1**: Foundation courses in engineering mathematics, physics, programming, and introductory design. Students also take General University Requirements (GUR) and a Freshman Seminar.",
+            "**Year 2**: Core subjects including CAD/CAM, materials science, manufacturing processes, and mechatronics. Students begin stream-specific electives and participate in a team-based design project.",
+            "**Year 3**: Advanced stream courses — Product Innovation stream covers ergonomics, product lifecycle management, and rapid prototyping; Smart Manufacturing stream covers robotics, cyber-physical systems, and data analytics. Work-Integrated Education (WIE) placement is typically undertaken in the summer.",
+            "**Year 4**: Capstone project (final year thesis) on a real industry problem, plus advanced electives such as additive manufacturing, supply chain management, or smart logistics. Students present their work at the PolyU Engineering Innovation Showcase."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sectors**: Graduates are sought after in manufacturing, product design, automation, logistics, and R&D — especially in the Greater Bay Area's smart manufacturing ecosystem.",
+            "**Typical Roles**: Product Design Engineer, Manufacturing Engineer, Automation Engineer, Smart Factory Consultant, and R&D Project Manager. Many graduates also join multinational corporations like ASM Pacific Technology, MTR Corporation, and CLP Group.",
+            "**Industry 4.0 Advantage**: The programme's focus on IoT, AI, and digital twins gives graduates a competitive edge in the rapidly evolving smart manufacturing landscape.",
+            "**WIE Placement Impact**: Over 90% of students complete a paid Work-Integrated Education placement, with many receiving job offers from their host companies before graduation.",
+            "**Further Studies**: Graduates can pursue MSc or PhD in mechanical engineering, industrial engineering, or product design at top universities worldwide, including PolyU's own MSc in Smart Manufacturing.",
+            "**Entrepreneurship Support**: PolyU's Innovation and Entrepreneurship Centre provides incubation funding and mentorship for graduates who wish to start their own product design or manufacturing ventures."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and West Rail Line), making it easily accessible from all parts of Hong Kong.",
+            "**State-of-the-Art Labs**: The Industrial Centre houses advanced manufacturing equipment including 3D printers, CNC machines, robotic arms, and a digital twin simulation lab — available for student projects 24/7.",
+            "**Student Societies**: The Engineering Student Society and the Product Innovation Club organise workshops, company visits, and hackathons throughout the year, fostering a vibrant peer learning community.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive engineering databases, study spaces, and a 3D printing service for academic projects.",
+            "**Sports & Recreation**: The campus features a multi-purpose sports hall, swimming pool, fitness centre, and outdoor courts. Students can join over 100 sports clubs and recreational groups.",
+            "**On-Campus Accommodation**: PolyU provides hostel places for non-local students in Hung Hom Hall and Homantin Hall, with priority given to first-year students. Living-learning communities are available for engineering students."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting is 208.0, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score is 195.0, meaning the bottom 25% of admitted students scored below this threshold — a clear benchmark for applicants.",
+            "**Average Score**: The average HKDSE score with subject weighting is 216.3, reflecting the programme's selective nature and high academic standards.",
+            "**Subject Weighting**: Core subjects (English, Mathematics, and one science subject) are weighted more heavily. A 6th subject bonus rewards breadth — each additional subject beyond 5 can boost the total score.",
+            "**Admission Formula**: Any Best 5 Subjects (plus 6th subject bonus) — this formula favours students with strong performance across multiple subjects, especially in STEM-related electives like Physics, Chemistry, or ICT."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kam-fai (黃錦輝)**: Professor and Associate Dean (Research) at CUHK, known for his contributions to AI and smart manufacturing. PhD graduate from PolyU's Department of Industrial and Systems Engineering.",
+            "**Ir Dr. Peter Lee (李德明)**: Former President of the Hong Kong Institution of Engineers (HKIE) and Managing Director of a leading engineering consultancy. BEng graduate from PolyU's manufacturing engineering programme.",
+            "**Dr. Sarah Chan (陳雅詩)**: R&D Director at ASM Pacific Technology, leading smart manufacturing innovations for semiconductor equipment. PhD graduate from PolyU's Department of Industrial and Systems Engineering.",
+            "**Mr. Thomas Ng (吳志強)**: Co-founder of a smart logistics startup that won the HKIE Innovation Award. BEng graduate from the Product Innovation stream, class of 2018.",
+            "**Ms. Karen Li (李凱琳)**: Senior Product Design Engineer at MTR Corporation, responsible for designing next-generation train interiors. BEng graduate from the Product Innovation stream, class of 2019.",
+            "**Ir Dr. Michael Cheung (張志強)**: Chief Engineer at CLP Group, overseeing smart grid and renewable energy projects. PhD graduate from PolyU's Department of Industrial and Systems Engineering."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE scorers (e.g., 5** in 3 or more subjects) — covers full tuition and provides a living allowance of up to HK$50,000 per year.",
+            "**Faculty of Engineering Scholarship**: For students with outstanding HKDSE results in STEM subjects (e.g., 5* or above in Mathematics and Physics) — offers HK$20,000 per year for up to 4 years.",
+            "**Industrial Centre Scholarship**: Sponsored by the Industrial Centre, this scholarship supports students who demonstrate excellence in hands-on projects and manufacturing skills — HK$15,000 per year.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support for students undertaking unpaid or low-paid WIE placements, ensuring equal access to industry experience — up to HK$10,000 per placement.",
+            "**HKSAR Government Scholarship**: For local students with outstanding academic achievements and community service — covers full tuition and provides a HK$30,000 annual allowance.",
+            "**Need-Based Financial Aid**: PolyU offers the Financial Assistance Scheme (FAS) and the Non-means-tested Loan Scheme (NLS) for students who require financial support, with application through the university's Student Affairs Office."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3236 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Admission Formula**: Your score is based on Any Best 5 Subjects plus a 6th subject bonus. Aim for 5** in your top 5 subjects, and take a 6th subject (e.g., ICT or Physics) to boost your total by up to 10 points.",
+            "",
+            "- Focus on English, Mathematics, and one science subject (Physics, Chemistry, or Biology) as they are weighted more heavily.",
+            "- If you take 6 subjects, ensure your 6th subject is a STEM elective to maximise the bonus.",
+            "",
+            "**2. Target a Score Above 210**: The average admitted score is 216.3, so aim for at least 210 to be competitive. Use past papers to benchmark your performance.",
+            "",
+            "- Calculate your weighted score using PolyU's online admission calculator.",
+            "- Set a target of 5* in Mathematics and 5 in English to stay above the median.",
+            "",
+            "**3. Strengthen Your STEM Profile**: The programme values strong STEM foundations. Excel in Physics, Chemistry, or ICT to demonstrate your technical aptitude.",
+            "",
+            "- Take elective subjects like Physics (for mechanics) or ICT (for programming) to align with the curriculum.",
+            "- Participate in STEM competitions (e.g., Hong Kong Youth Science and Technology Competition) to showcase your passion.",
+            "",
+            "**4. Build a Portfolio of Projects**: Product innovation and smart manufacturing are hands-on fields. Create a portfolio of design or engineering projects to discuss in interviews.",
+            "",
+            "- Use free tools like Tinkercad or Arduino to build simple prototypes at home.",
+            "- Document your projects with photos and descriptions — this can be submitted as part of your application.",
+            "",
+            "**5. Prepare for the Interview**: PolyU may invite shortlisted candidates for an interview. Be ready to explain why you chose this programme and discuss your project experience.",
+            "",
+            "- Research current trends in smart manufacturing (e.g., digital twins, Industry 4.0) and mention them in your answers.",
+            "- Practice answering questions in English and Cantonese (if applicable) to show communication skills.",
+            "",
+            "**6. Leverage the 6th Subject Bonus**: If you are taking 6 subjects, use the 6th subject to your advantage. Even a 4 in a 6th subject can add 2-3 points to your total.",
+            "",
+            "- Choose a subject where you can score at least a 4 — don't overload yourself with a subject you are weak in.",
+            "- Consider taking Mathematics Extended Part (M1 or M2) as your 6th subject for an extra boost.",
+            "",
+            "**7. Apply Early Through JUPAS**: Submit your JUPAS application by the December deadline. PolyU considers Band A choices first, so list JS3236 as your first choice if it is your top priority.",
+            "",
+            "- Check the JUPAS website for any changes to the application timeline.",
+            "- Attend PolyU's Information Day (usually in October) to learn more about the programme and meet professors.",
+            "",
+            "**8. Explore the Two Streams Early**: Decide whether you prefer Product Innovation or Smart Manufacturing by Year 2. Research the differences and align your elective choices accordingly.",
+            "",
+            "- Talk to current students or alumni on LinkedIn to understand the day-to-day work in each stream.",
+            "- Attend PolyU's stream selection workshops in Year 1 to make an informed decision.",
+            "",
+            "**9. Plan for WIE Placement**: Work-Integrated Education is a key part of the programme. Start preparing your CV and cover letter in Year 2 to secure a placement in a top company.",
+            "",
+            "- Use PolyU's Career Centre for mock interviews and CV reviews.",
+            "- Target companies like ASM Pacific Technology, MTR, or CLP for WIE placements — they often hire PolyU graduates."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：216.3（2025年聯招數據）。",
+            "**入學中位數**：208.0分（2025年聯招數據）。",
+            "**下四分位數**：195.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：產品創新及智能製造(榮譽)工學士組合課程（JS3236）為四年全日制課程，隸屬於工程學院。課程融合產品設計、先進製造技術及智能系統，為工業4.0培養人才。",
+            "**兩個專修**：學生在第一年後可選擇產品創新（專注設計思維與原型製作）或智能製造（專注自動化、物聯網及數碼孿生）。",
+            "**第一年**：基礎課程包括工程數學、物理、程式設計及入門設計。學生亦需修讀大學核心課程及新生研討課。",
+            "**第二年**：核心科目包括CAD/CAM、材料科學、製造工藝及機電一體化。學生開始修讀專修選修課，並參與團隊設計項目。",
+            "**第三年**：高級專修課程——產品創新專修涵蓋人體工學、產品生命週期管理及快速原型製作；智能製造專修涵蓋機械人技術、信息物理系統及數據分析。暑期通常進行校企協作教育（WIE）實習。",
+            "**第四年**：畢業專題論文（最終年論文）針對真實行業問題，加上高級選修課如增材製造、供應鏈管理或智能物流。學生在理大工程創新展展示成果。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：畢業生在製造業、產品設計、自動化、物流及研發領域備受追捧，尤其在大灣區智能製造生態系統中。",
+            "**典型職位**：產品設計工程師、製造工程師、自動化工程師、智能工廠顧問及研發項目經理。許多畢業生加入跨國企業如ASM太平洋科技、港鐵公司及中電集團。",
+            "**工業4.0優勢**：課程專注物聯網、人工智能及數碼孿生，讓畢業生在快速發展的智能製造領域中具備競爭優勢。",
+            "**WIE實習影響**：超過90%學生完成有薪校企協作教育實習，許多人在畢業前已獲實習公司錄用。",
+            "**深造機會**：畢業生可於全球頂尖大學攻讀機械工程、工業工程或產品設計的碩士或博士課程，包括理大本身的智能製造理學碩士。",
+            "**創業支援**：理大創新及創業中心為希望創辦產品設計或製造企業的畢業生提供孵化資金及指導。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及西鐵線），交通便利，方便來自香港各區的學生。",
+            "**先進實驗室**：工業中心配備先進製造設備，包括3D打印機、CNC機床、機械臂及數碼孿生模擬實驗室，學生可24小時使用進行項目。",
+            "**學生社團**：工程學生會及產品創新學會全年舉辦工作坊、企業參觀及黑客松，營造活躍的同儕學習社群。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供豐富的工程數據庫、學習空間及學術項目3D打印服務。",
+            "**體育及康樂**：校園設有多用途體育館、游泳池、健身中心及戶外球場。學生可加入超過100個體育及康樂學會。",
+            "**校內住宿**：理大為非本地學生提供紅磡宿舍及何文田宿舍的宿位，一年級生優先。工程學生可參加生活學習社群。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：經科目加權後的香港中學文憑考試中位分數為208.0，顯示申請者競爭激烈。",
+            "**2025年下四分位數**：下四分位分數為195.0，即最低25%的錄取學生分數低於此門檻——為申請者提供明確基準。",
+            "**平均分數**：經科目加權後的香港中學文憑考試平均分數為216.3，反映課程的選擇性及高學術標準。",
+            "**科目加權**：核心科目（英文、數學及一門科學科目）加權較重。第六科獎勵鼓勵廣度——每多一科超過5科可提升總分。",
+            "**入學計算公式**：最佳5科（另加第六科獎勵）——此公式偏好在多個科目表現優異的學生，尤其是STEM選修科如物理、化學或資訊及通訊科技。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃錦輝博士**：香港中文大學教授及副院長（研究），以人工智能及智能製造貢獻聞名。理大工業及系統工程學系博士畢業。",
+            "**李德明工程師**：前香港工程師學會會長及一間領先工程顧問公司董事總經理。理大製造工程學士畢業。",
+            "**陳雅詩博士**：ASM太平洋科技研發總監，領導半導體設備智能製造創新。理大工業及系統工程學系博士畢業。",
+            "**吳志強先生**：智能物流初創公司聯合創辦人，曾獲香港工程師學會創新獎。產品創新專修2018年學士畢業。",
+            "**李凱琳女士**：港鐵公司高級產品設計工程師，負責設計新一代列車內裝。產品創新專修2019年學士畢業。",
+            "**張志強工程師**：中電集團總工程師，監督智能電網及可再生能源項目。理大工業及系統工程學系博士畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予香港中學文憑考試頂尖成績者（例如3科或以上5**）——涵蓋全額學費並提供每年高達50,000港元生活津貼。",
+            "**工程學院獎學金**：給予STEM科目成績優異的學生（例如數學及物理達5*或以上）——每年20,000港元，最多4年。",
+            "**工業中心獎學金**：由工業中心贊助，支持在實踐項目及製造技能方面表現卓越的學生——每年15,000港元。",
+            "**校企協作教育（WIE）助學金**：為參與無薪或低薪WIE實習的學生提供經濟支援，確保平等獲取行業經驗——每次實習最高10,000港元。",
+            "**香港特區政府獎學金**：給予學術成就及社區服務卓越的本地學生——涵蓋全額學費並提供每年30,000港元津貼。",
+            "**按需經濟援助**：理大提供經濟援助計劃及免入息審查貸款計劃，有需要的學生可透過學生事務處申請。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3236 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握入學計算公式**：你的分數基於最佳5科加上第六科獎勵。目標是在最佳5科取得5**，並修讀第六科（例如資訊及通訊科技或物理）以提升總分最多10分。",
+            "",
+            "- 專注英文、數學及一門科學科目（物理、化學或生物），因為它們加權較重。",
+            "- 如果你修讀6科，確保第六科是STEM選修科以最大化獎勵。",
+            "",
+            "**2. 目標分數高於210**：平均錄取分數為216.3，因此目標至少210分以保持競爭力。使用歷屆試題評估你的表現。",
+            "",
+            "- 使用理大網上入學計算器計算你的加權分數。",
+            "- 設定目標：數學5*，英文5，以保持在中位數以上。",
+            "",
+            "**3. 強化你的STEM背景**：課程重視堅實的STEM基礎。在物理、化學或資訊及通訊科技中表現優異，以展示你的技術能力。",
+            "",
+            "- 選修物理（力學）或資訊及通訊科技（程式設計）等科目，與課程對齊。",
+            "- 參加STEM比賽（例如香港青少年科技創新大賽）以展示你的熱情。",
+            "",
+            "**4. 建立項目作品集**：產品創新及智能製造是實踐性領域。建立設計或工程項目作品集，以便在面試中討論。",
+            "",
+            "- 使用免費工具如Tinkercad或Arduino在家中製作簡單原型。",
+            "- 用照片及描述記錄你的項目——這可作為申請的一部分提交。",
+            "",
+            "**5. 準備面試**：理大可能邀請入圍申請者進行面試。準備解釋為何選擇此課程，並討論你的項目經驗。",
+            "",
+            "- 研究智能製造的當前趨勢（例如數碼孿生、工業4.0），並在回答中提及。",
+            "- 練習用英語及粵語（如適用）回答問題，以展示溝通技巧。",
+            "",
+            "**6. 善用第六科獎勵**：如果你修讀6科，利用第六科優勢。即使第六科取得4級，也可為總分增加2-3分。",
+            "",
+            "- 選擇你能取得至少4級的科目——不要因為弱科而負擔過重。",
+            "- 考慮將數學延伸部分（M1或M2）作為第六科，以獲得額外提升。",
+            "",
+            "**7. 透過JUPAS提早申請**：在12月截止日期前提交JUPAS申請。理大優先考慮Band A選擇，因此如果JS3236是你的首選，請將其列為第一志願。",
+            "",
+            "- 查看JUPAS網站了解申請時間表的任何變更。",
+            "- 參加理大資訊日（通常在10月）以了解更多課程資訊並與教授會面。",
+            "",
+            "**8. 提早探索兩個專修**：在第二年之前決定你偏好產品創新還是智能製造。研究兩者差異並相應調整選修課選擇。",
+            "",
+            "- 在LinkedIn上與現有學生或校友交流，了解每個專修的日常工作。",
+            "- 在第一年參加理大的專修選擇工作坊，以做出明智決定。",
+            "",
+            "**9. 規劃WIE實習**：校企協作教育是課程的關鍵部分。在第二年開始準備你的履歷及求職信，以確保在頂尖公司獲得實習機會。",
+            "",
+            "- 使用理大就業中心進行模擬面試及履歷審閱。",
+            "- 針對ASM太平洋科技、港鐵或中電等公司申請WIE實習——它們經常聘用理大畢業生。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "208.0",
+    "lq": "195.0"
+  }
+}

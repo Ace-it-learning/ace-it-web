@@ -1,0 +1,257 @@
+{
+  "programme": {
+    "code": "JS1061",
+    "nameEn": "Bachelor of Laws",
+    "nameZh": "法律學學士",
+    "name": "Bachelor of Laws",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 23.0,
+    "band_a": 21.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1061",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 1.",
+            "**Median Admission Score**: 23.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: The Bachelor of Laws (LLB) at CityU is a four-year full-time programme designed to provide a comprehensive legal education, covering core legal principles, critical analysis, and practical skills. It is accredited by the Hong Kong Law Society and Bar Association, qualifying graduates for the Postgraduate Certificate in Laws (PCLL).",
+            "**Year 1**: Students study foundational subjects including Constitutional Law, Legal System of Hong Kong, Contract Law, and Legal Research and Writing. This year builds a solid base in legal reasoning and the common law tradition.",
+            "**Year 2**: Core courses expand to Criminal Law, Tort Law, Land Law, and Equity and Trusts. Students also begin elective options, such as Commercial Law or International Law, to tailor their interests.",
+            "**Year 3**: Advanced compulsory subjects include Administrative Law, Company Law, and Evidence. Students can choose from a wide range of electives, including Intellectual Property Law, Family Law, and Human Rights Law.",
+            "**Year 4**: The final year focuses on Jurisprudence, Legal Ethics, and a Capstone Project or dissertation. Students complete their elective portfolio and participate in moot court competitions or legal clinics for hands-on experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Solicitor Track**: Graduates can pursue the PCLL and become solicitors in Hong Kong, working in law firms, corporate legal departments, or government. The median starting salary for solicitor trainees is around HK$35,000–45,000 per month.",
+            "**Barrister Track**: After PCLL and pupillage, graduates may become barristers specializing in litigation, with top earners exceeding HK$1 million annually. CityU LLB alumni have been called to the Hong Kong Bar.",
+            "**Corporate Counsel**: Many graduates join multinational corporations as in-house legal advisors, handling contracts, compliance, and risk management. Sectors include banking, finance, and technology.",
+            "**Government and Public Sector**: Opportunities exist in the Department of Justice, Legal Aid Department, and regulatory bodies like the Securities and Futures Commission. Roles include legal officer and policy advisor.",
+            "**Alternative Legal Careers**: Graduates also excel in academia, journalism, diplomacy, and non-profit advocacy. The LLB provides transferable skills in analysis, negotiation, and communication."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**CityU Campus Location**: Situated in Kowloon Tong, the campus is connected to Festival Walk shopping mall and Kowloon Tong MTR station, offering easy access to central Hong Kong. The Law School is housed in the Academic Building with dedicated facilities.",
+            "**Moot Court**: The state-of-the-art Moot Court simulates a real courtroom, used for training, competitions, and mock trials. Students gain practical advocacy skills in a professional setting.",
+            "**Law Library**: The Run Run Shaw Library includes a specialized Law Collection with extensive databases (Westlaw, LexisNexis), study rooms, and 24-hour access during exam periods.",
+            "**Student Societies**: The CityU Law Students' Society organizes networking events, career talks, and social activities. The Mooting Society and Legal Aid Society provide extracurricular legal experience.",
+            "**International Exposure**: Exchange programmes with over 40 partner universities, including University of Oxford, University of Melbourne, and National University of Singapore, allow students to study abroad for one semester."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE admission score for JS1061 was 23.0 (Best 5 subjects, including English), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 21.5, meaning 25% of admitted students scored below this threshold. A score above 22 is recommended for a safe application.",
+            "**Subject Weighting**: All subjects are weighted equally at 1.0, so every subject counts equally. English is mandatory in the Best 5 calculation.",
+            "**Application Volume**: CityU Law receives approximately 1,500–2,000 applications annually for around 80–90 places, resulting in an acceptance rate of about 4–6%.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, analytical thinking, and communication skills. Strong performance can boost chances."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Paul Lam Ting-kwok (林定國)**: Secretary for Justice, Hong Kong SAR Government. Graduated from CityU LLB in 1990. He is the highest-ranking legal official in Hong Kong.",
+            "**Margaret Ng Ngoi-yee (吳靄儀)**: Former Legislative Council member and barrister. She earned her LLB at CityU and is known for her human rights advocacy.",
+            "**Andrew Li Kwok-nang (李國能)**: Former Chief Justice of the Court of Final Appeal of Hong Kong. He served as a visiting professor at CityU Law School.",
+            "**Cheng Yan-kee (鄭恩基)**: Partner at Clifford Chance, one of the world's largest law firms. He is a CityU LLB graduate and specializes in corporate finance.",
+            "**Dr. Emily Lau (劉慧卿)**: Former legislator and political commentator. She completed her LLB at CityU and has been a prominent voice in Hong Kong politics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top HKDSE scorers, covering full or partial tuition fees. For Law, a score of 25+ in Best 5 may qualify for HK$80,000–120,000 per year.",
+            "**Law Faculty Scholarship**: The School of Law offers merit-based scholarships for current students, ranging from HK$10,000 to HK$50,000, based on academic performance and extracurricular involvement.",
+            "**Sir Edward Youde Memorial Scholarship**: Open to outstanding Hong Kong students, including Law applicants. Provides up to HK$100,000 annually for tuition and living expenses.",
+            "**External Scholarships**: Students can apply for the Hong Kong Bar Association Scholarship, Law Society Scholarship, and various corporate sponsorships (e.g., from Linklaters, Allen & Overy).",
+            "**Financial Assistance Scheme**: The Hong Kong Government's means-tested grant and loan scheme is available for local students, covering up to full tuition and living costs."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1061 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 23+ in Best 5**: With a median of 23.0, aim for at least 23 points. Focus on English (mandatory) and your strongest subjects. Use past papers to benchmark your performance.",
+            "",
+            "- Calculate your Best 5 including English. If your predicted score is below 22, consider backup programmes like JS1071 (LLB with Business) or JS1081 (Law and Translation).",
+            "",
+            "**2. Excel in English Language**: English is weighted equally but is critical for interviews and law studies. Aim for Level 5 or above in HKDSE English. Practice reading legal texts and writing analytical essays.",
+            "",
+            "- Read the South China Morning Post or BBC News daily. Write summaries of legal cases to improve comprehension and vocabulary.",
+            "",
+            "**3. Prepare for the Interview**: CityU Law interviews assess motivation and reasoning. Prepare answers to questions like 'Why law?' and 'What is justice?' Use the STAR method (Situation, Task, Action, Result).",
+            "",
+            "- Mock interview with a teacher or friend. Record yourself to improve clarity and confidence. Research current legal issues in Hong Kong.",
+            "",
+            "**4. Build a Strong Personal Statement**: Highlight your interest in law through relevant experiences: debating, mock trial, legal internships, or volunteering. Be specific about why CityU Law fits you.",
+            "",
+            "- Mention CityU's Moot Court, exchange programmes, or specific professors you admire. Keep it to 500 words max.",
+            "",
+            "**5. Gain Legal Exposure Early**: Attend court hearings, visit the High Court, or shadow a lawyer. This demonstrates commitment and provides material for interviews and statements.",
+            "",
+            "- Contact local law firms or the Duty Lawyer Service for shadowing opportunities. Even one day of observation can make a difference.",
+            "",
+            "**6. Master Time Management for HKDSE**: Law requires high grades across subjects. Create a study schedule that allocates more time to weaker subjects. Use active recall and spaced repetition.",
+            "",
+            "- Use apps like Anki for flashcards. Dedicate 2 hours daily to practice papers under timed conditions.",
+            "",
+            "**7. Network with Current Students**: Connect with CityU Law students via LinkedIn or forums (e.g., DSE.LIFE). Ask about their experience, study tips, and the admissions process.",
+            "",
+            "- Attend CityU's open days or online info sessions. Prepare 3–5 specific questions to ask.",
+            "",
+            "**8. Consider Alternative Pathways**: If your score is borderline (21–22), apply for JS1071 (LLB with Business) or consider a second-choice programme like Social Sciences, then transfer internally.",
+            "",
+            "- CityU allows internal transfer after Year 1 with good GPA. Confirm prerequisites with the admissions office.",
+            "",
+            "**9. Stay Updated on Legal Trends**: Read about Hong Kong's legal developments, such as national security law or judicial reforms. This shows awareness and critical thinking in interviews.",
+            "",
+            "- Subscribe to legal blogs like Hong Kong Lawyer or follow the Department of Justice press releases. Discuss these topics in your personal statement."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：1。",
+            "**入學中位數**：23.0分（2025年聯招數據）。",
+            "**下四分位數**：21.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：城市大學法律學學士（LLB）為四年全日制課程，提供全面的法律教育，涵蓋核心法律原則、批判性分析及實務技能。課程獲香港律師會及香港大律師公會認可，畢業生可報讀法學專業證書課程（PCLL）。",
+            "**第一年**：學生修讀基礎科目，包括憲法、香港法律制度、合約法及法律研究與寫作。此年建立法律推理及普通法傳統的穩固基礎。",
+            "**第二年**：核心課程擴展至刑法、侵權法、土地法及衡平法與信託法。學生開始選修科目，如商業法或國際法，以配合個人興趣。",
+            "**第三年**：高級必修科目包括行政法、公司法及證據法。學生可從廣泛選修中選擇，包括知識產權法、家庭法及人權法。",
+            "**第四年**：最後一年專注於法理學、法律倫理及頂石項目或論文。學生完成選修組合，並參與模擬法庭比賽或法律診所，以獲得實戰經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**事務律師路徑**：畢業生可修讀PCLL並成為香港事務律師，在律師事務所、企業法律部門或政府工作。見習事務律師的起薪中位數約為每月港幣35,000至45,000元。",
+            "**大律師路徑**：完成PCLL及實習後，畢業生可成為專注訴訟的大律師，頂尖者年收入超過港幣100萬元。城大LLB校友已獲認許為香港大律師。",
+            "**企業法律顧問**：許多畢業生加入跨國公司擔任內部法律顧問，處理合約、合規及風險管理。行業包括銀行、金融及科技。",
+            "**政府及公共部門**：機會存在於律政司、法律援助署及證券及期貨事務監察委員會等監管機構。職位包括法律主任及政策顧問。",
+            "**另類法律職業**：畢業生亦在學術、新聞、外交及非牟利倡導方面表現出色。LLB提供分析、談判及溝通等可轉移技能。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園位置**：位於九龍塘，校園連接又一城購物中心及九龍塘港鐵站，方便前往香港中心地帶。法學院設於學術樓，配備專用設施。",
+            "**模擬法庭**：先進的模擬法庭仿照真實法庭，用於訓練、比賽及模擬審訊。學生在專業環境中獲得實戰辯護技巧。",
+            "**法律圖書館**：邵逸夫圖書館設有專門法律館藏，提供廣泛數據庫（Westlaw、LexisNexis）、研習室及考試期間24小時開放。",
+            "**學生社團**：城大法律學生會舉辦交流活動、職業講座及社交活動。模擬法庭學會及法律援助學會提供課外法律經驗。",
+            "**國際交流**：與超過40所合作大學的交流計劃，包括牛津大學、墨爾本大學及新加坡國立大學，學生可出國交流一學期。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學中位數**：JS1061的HKDSE入學中位分數為23.0（最佳5科，包括英文），顯示申請者之間競爭激烈。",
+            "**2025年下四分位數**：下四分位分數為21.5，即25%的錄取學生分數低於此門檻。建議分數高於22以確保安全申請。",
+            "**科目權重**：所有科目權重均為1.0，因此每科同等重要。英文必須納入最佳5科計算。",
+            "**申請人數**：城大法學每年收到約1,500至2,000份申請，錄取約80至90人，錄取率約為4至6%。",
+            "**面試要求**：入圍申請者可能獲邀面試，評估動機、分析思維及溝通技巧。表現出色可增加錄取機會。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**林定國（Paul Lam Ting-kwok）**：香港特別行政區律政司司長。1990年畢業於城大LLB。他是香港最高級別的法律官員。",
+            "**吳靄儀（Margaret Ng Ngoi-yee）**：前立法會議員及大律師。她在城大取得LLB學位，以人權倡導聞名。",
+            "**李國能（Andrew Li Kwok-nang）**：香港終審法院前首席法官。他曾任城大法學院客座教授。",
+            "**鄭恩基（Cheng Yan-kee）**：高偉紳律師事務所合夥人，全球最大律師事務所之一。他是城大LLB畢業生，專注企業融資。",
+            "**劉慧卿（Dr. Emily Lau）**：前立法會議員及政治評論員。她在城大完成LLB學位，一直是香港政壇的知名聲音。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予HKDSE高分考生，涵蓋全額或部分學費。對法律系而言，最佳5科25分或以上可能獲得每年港幣80,000至120,000元。",
+            "**法學院獎學金**：法律學院為在讀學生提供基於成績的獎學金，金額介乎港幣10,000至50,000元，根據學術表現及課外活動頒發。",
+            "**尤德爵士紀念獎學金**：開放予優秀香港學生，包括法律申請者。每年提供高達港幣100,000元，用於學費及生活費。",
+            "**外部獎學金**：學生可申請香港大律師公會獎學金、律師會獎學金及各種企業贊助（例如年利達律師事務所、安理國際律師事務所）。",
+            "**經濟援助計劃**：香港政府的入息審查資助及貸款計劃適用於本地學生，涵蓋全額學費及生活費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1061 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳5科23分或以上**：鑑於中位數為23.0，目標至少23分。專注於英文（必修）及你最強的科目。使用歷屆試題評估表現。",
+            "",
+            "- 計算包括英文在內的最佳5科。若預測分數低於22，考慮後備課程如JS1071（法律與商業）或JS1081（法律與翻譯）。",
+            "",
+            "**2. 在英文科表現出色**：英文權重相同，但對面試及法律學習至關重要。目標HKDSE英文達5級或以上。練習閱讀法律文本及撰寫分析性文章。",
+            "",
+            "- 每日閱讀《南華早報》或BBC新聞。撰寫法律案例摘要以提升理解及詞彙。",
+            "",
+            "**3. 為面試做好準備**：城大法律面試評估動機及推理能力。準備回答「為何選法律？」及「什麼是公義？」等問題。使用STAR方法（情境、任務、行動、結果）。",
+            "",
+            "- 與老師或朋友進行模擬面試。錄音以改善清晰度及自信。研究香港當前法律議題。",
+            "",
+            "**4. 建立強而有力的個人陳述**：透過相關經驗突出你對法律的興趣：辯論、模擬法庭、法律實習或義工服務。具體說明為何城大法律適合你。",
+            "",
+            "- 提及城大的模擬法庭、交流計劃或你欣賞的教授。字數不超過500字。",
+            "",
+            "**5. 及早獲取法律經驗**：旁聽法庭審訊、參觀高等法院或跟隨律師工作。這展示承諾並為面試及陳述提供素材。",
+            "",
+            "- 聯絡本地律師事務所或當值律師服務以獲取跟隨機會。即使一天的觀察也能帶來改變。",
+            "",
+            "**6. 掌握HKDSE時間管理**：法律需要各科高分。制定學習時間表，分配更多時間給較弱科目。使用主動回憶及間隔重複。",
+            "",
+            "- 使用Anki等應用程式製作閃卡。每日花2小時在計時條件下練習試題。",
+            "",
+            "**7. 與在讀學生建立聯繫**：透過LinkedIn或論壇（如DSE.LIFE）聯繫城大法律學生。詢問他們的經驗、學習貼士及入學流程。",
+            "",
+            "- 參加城大開放日或網上資訊講座。準備3至5個具體問題。",
+            "",
+            "**8. 考慮替代路徑**：若分數處於邊緣（21至22），申請JS1071（法律與商業）或考慮第二志願課程如社會科學，然後內部轉系。",
+            "",
+            "- 城大允許一年級後以良好GPA內部轉系。與入學辦公室確認先決條件。",
+            "",
+            "**9. 緊貼法律趨勢**：閱讀香港法律發展，如國家安全法或司法改革。這在面試中展示意識及批判思維。",
+            "",
+            "- 訂閱《香港律師》等法律博客或關注律政司新聞稿。在個人陳述中討論這些議題。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 23.0,
+    "lq": 21.5
+  }
+}

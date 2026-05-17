@@ -98,9 +98,16 @@ class WritingCheatService {
 
             You MUST return a JSON object with this EXACT structure:
             {
-                "title": "...",
-                "content": "..."
+                "title": "The essay title here",
+                "content": "The full essay text here. Use \\n for newlines. Escape all double quotes inside the text with a backslash."
             }
+
+            CRITICAL JSON RULES:
+            1. The entire response must be valid JSON only — no markdown, no explanations.
+            2. Inside "content", replace all actual newlines with \\n (escaped newline character).
+            3. Inside "content", escape any double quotes (") as \\\".
+            4. Do NOT use smart quotes or curly quotes — only straight ASCII quotes.
+            5. Keep the essay under 600 words to ensure it fits within output limits.
         `;
 
         try {
@@ -111,10 +118,20 @@ class WritingCheatService {
                 model: level === '5**' ? "ace-it-pro" : "ace-it-flash",
                 temperature: (level === '2' || level === '4') ? 0.8 : 0.3,
                 highQuality: level === '5**',
-                retries: 5
+                retries: 5,
+                generationConfig: {
+                    maxOutputTokens: 4096
+                }
             });
 
-            if (response && response.data) return response.data;
+            if (response && response.data) {
+                const data = response.data;
+                // Normalize newlines in content
+                if (data.content) {
+                    data.content = data.content.replace(/\\n/g, '\n').replace(/\\"/g, '"');
+                }
+                return data;
+            }
             throw new Error("Empty AI response data");
 
         } catch (error) {
@@ -124,15 +141,23 @@ class WritingCheatService {
             try {
                 console.log(`[CheatService] Attempting fallback generation for Part ${part}...`);
                 const fallbackResult = await GenerativeAIService.generateContent(prompt, {
-                    model: "gemini-1.5-flash", 
-                    temperature: 0.5
+                    model: "ace-it-flash",
+                    temperature: 0.5,
+                    generationConfig: {
+                        maxOutputTokens: 4096
+                    }
                 });
                 
                 const text = fallbackResult.response.text();
                 const jsonStr = GenerativeAIService.extractJson(text);
                 const data = JSON.parse(jsonStr);
                 
-                if (data.title && data.content) return data;
+                if (data.title && data.content) {
+                    if (data.content) {
+                        data.content = data.content.replace(/\\n/g, '\n').replace(/\\"/g, '"');
+                    }
+                    return data;
+                }
                 throw new Error("Incomplete JSON data in fallback");
                 
             } catch (fallbackError) {

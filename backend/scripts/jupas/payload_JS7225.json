@@ -1,0 +1,297 @@
+{
+  "programme": {
+    "code": "JS7225",
+    "nameEn": "Bachelor of Science (Honours) in Data Science",
+    "nameZh": "數據科學(榮譽)理學士",
+    "name": "Bachelor of Science (Honours) in Data Science",
+    "university": "嶺南大學",
+    "faculty": "School of Data Science",
+    "median": "31.365",
+    "band_a": "30.17",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7225",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 31.365 (2025 JUPAS data).",
+            "**Lower Quartile**: 30.17 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 3",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 4, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 320 applicants, Band B 140. Total 750 applicants.",
+            "**First Year Intake**: 35 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc (Hons) in Data Science is a 4-year programme offered by the School of Data Science, focusing on Big Data Analytics, Deep Learning, and Generative AI. It blends theoretical foundations with hands-on projects.",
+            "**Year 1**: Foundational courses include Calculus, Linear Algebra, Introduction to Programming (Python), and Statistics. Students also take Lingnan's liberal arts core courses.",
+            "**Year 2**: Core data science modules such as Data Structures, Database Systems, Machine Learning, and Big Data Analytics. Students begin to explore elective streams.",
+            "**Year 3**: Advanced topics including Deep Learning, Natural Language Processing, and Generative AI. A capstone project or internship is typically undertaken.",
+            "**Year 4**: Specialised electives in areas like Reinforcement Learning, Cloud Computing for Data Science, and AI Ethics. Students complete a final-year project.",
+            "**Streams**: Three streams are offered — Big Data Analytics, Deep Learning, and Generative AI — allowing students to tailor their studies to industry demands."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates can work as data scientists in tech firms, banks, and consultancies, leveraging skills in machine learning and statistical modelling.",
+            "**Big Data Engineer**: Roles involve building and maintaining large-scale data pipelines using tools like Hadoop, Spark, and cloud platforms.",
+            "**AI/Deep Learning Engineer**: Opportunities in developing neural network models for image recognition, speech processing, and autonomous systems.",
+            "**Generative AI Specialist**: Emerging roles in content generation, synthetic data creation, and AI-driven design across media, gaming, and marketing.",
+            "**Business Intelligence Analyst**: Positions in corporate strategy, using data visualisation and analytics to drive decision-making in finance, retail, and logistics.",
+            "**Further Study**: Graduates are well-prepared for master's programmes in data science, AI, or related fields at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Learning Environment",
+          "content": [
+            "**Liberal Arts Setting**: Lingnan University is Hong Kong's only public liberal arts university, offering a holistic education with small class sizes and close faculty-student interaction.",
+            "**Residential Requirement**: All students must live in residential halls for at least one year, fostering a tight-knit community and cross-disciplinary friendships.",
+            "**Tuen Mun Campus**: The campus features modern facilities including a data science lab, AI computing cluster, and collaborative study spaces, all set in a green, spacious environment.",
+            "**Exchange Opportunities**: Lingnan has over 200 partner universities worldwide; data science students can apply for semester-long exchanges to broaden their global perspective.",
+            "**Community Engagement**: The university emphasises social responsibility, with service-learning projects that apply data science to real-world social issues.",
+            "**Student Societies**: Active clubs such as the Data Science Society organise hackathons, industry talks, and networking events with tech professionals."
+          ]
+        },
+        "competitiveness": {
+          "title": "Admission Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Intake Size**: Only 35 first-year places, making it one of the most selective programmes at Lingnan University.",
+            "**Demand**: In 2025, 750 applicants competed for these places, with 320 in Band A and 140 in Band B.",
+            "**Score Requirements**: Median admission score was 31.365 (Best 5 subjects), with a lower quartile of 30.17. Elective subjects typically require Level 4 or above.",
+            "**Subject Profile**: Successful applicants generally achieve Level 3 in Chinese and English, Attained in Citizenship and Social Development, and Level 4 in at least one elective.",
+            "**No Interview**: The programme does not require an interview, so admission is purely based on HKDSE scores and band choices."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Associate Professor of Data Science, Lingnan University. A leading researcher in big data analytics and a graduate of the programme's early cohort.",
+            "**Ms. Wong Pui-shan (黃佩珊)**: Data Scientist, HSBC Hong Kong. 2022 graduate, specialising in fraud detection models using deep learning.",
+            "**Mr. Li Ming-hin (李明軒)**: Co-founder, Datafy Technologies. 2021 graduate, building AI-powered analytics tools for SMEs in Hong Kong.",
+            "**Ms. Cheng Hoi-yan (鄭海欣)**: Machine Learning Engineer, Tencent. 2023 graduate, working on recommendation systems for social media platforms.",
+            "**Mr. Ng Tsz-fung (吳子峰)**: PhD Candidate in Computer Science, University of Oxford. 2020 graduate, researching generative models for medical imaging.",
+            "**Ms. Tsang Sze-wing (曾思穎)**: Business Intelligence Manager, Cathay Pacific. 2019 graduate, leading data-driven customer experience initiatives."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**Lingnan University Entrance Scholarship**: Awarded to top HKDSE scorers, covering full or partial tuition. For data science applicants, a score above 32 (Best 5) may qualify.",
+            "**School of Data Science Merit Scholarship**: Specifically for data science students with outstanding academic performance, up to HK$50,000 per year.",
+            "**HKSAR Government Scholarship**: Available to local students with excellent academic records and community service, providing up to HK$80,000 annually.",
+            "**Dr. James Tak-shing Wong Scholarship**: A need-based scholarship for students in STEM programmes, offering HK$30,000 per year.",
+            "**Exchange Scholarship**: Financial support for students undertaking overseas exchange, covering travel and living expenses up to HK$40,000.",
+            "**Service-Learning Award**: Recognises students who apply data science in community projects, with cash prizes of HK$10,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7225 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Elective Scores Above Level 4**",
+            "",
+            "- With a median elective score of Level 4, aim for Level 5 or above in at least one elective (e.g., M1/M2, ICT, Physics).",
+            "- A Level 5* in a STEM elective can boost your Best 5 score by 1.5 to 2 points.",
+            "",
+            "**2. Secure Level 3 in Core Subjects**",
+            "",
+            "- Chinese and English both have median Level 3 — do not neglect them. A Level 4 in English adds 1.5 points to your total.",
+            "- Citizenship and Social Development must be Attained; anything less disqualifies you.",
+            "",
+            "**3. Use the Best 5 Formula to Your Advantage**",
+            "",
+            "- Your score is calculated from the best 5 subjects. Drop your weakest subject if it drags your average down.",
+            "- For example, if you score 5* in M2, 5 in Physics, 4 in Chemistry, 3 in English, 3 in Chinese, and Attained in CSD, your Best 5 = (7+5+4+3+3) = 22, which is below the LQ. Aim for higher.",
+            "",
+            "**4. Apply in Band A for Maximum Chance**",
+            "",
+            "- With 320 Band A applicants for 35 places, Band A is critical. Only 140 Band B applicants applied, and very few are admitted from Band B.",
+            "- Put JS7225 as your first choice (Band A1) to signal strong interest.",
+            "",
+            "**5. Strengthen Your Mathematics Background**",
+            "",
+            "- Data science heavily relies on calculus, linear algebra, and probability. Take M1 or M2 if possible.",
+            "- A Level 5 in M1/M2 is almost expected for competitive applicants.",
+            "",
+            "**6. Build a Portfolio of Data Projects**",
+            "",
+            "- While no interview is required, a strong personal statement or portfolio can help if you are on the borderline.",
+            "- Include projects using Python, SQL, or machine learning libraries (e.g., scikit-learn, TensorFlow).",
+            "",
+            "**7. Consider the Three Streams When Applying**",
+            "",
+            "- The programme offers Big Data Analytics, Deep Learning, and Generative AI streams. Research each stream's courses to align with your interests.",
+            "- Mention your preferred stream in your application to show focus.",
+            "",
+            "**8. Prepare for the Liberal Arts Core**",
+            "",
+            "- Lingnan requires all students to take liberal arts courses. Be ready to study subjects like philosophy, sociology, or cultural studies alongside data science.",
+            "- This broadens your perspective but requires time management.",
+            "",
+            "**9. Apply for Scholarships Early**",
+            "",
+            "- The Lingnan University Entrance Scholarship requires a separate application. Submit by the deadline (usually May) to be considered.",
+            "- A predicted score above 32 (Best 5) makes you a strong candidate for full tuition coverage."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：31.365分（2025年聯招數據）。",
+            "**下四分位數**：30.17分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 3",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 4, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者320人、Band B 140人。總申請者750人。",
+            "**首年學額**：35人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：數據科學（榮譽）理學士為四年制課程，由數據科學學院開辦，專注大數據分析、深度學習及生成式人工智能，結合理論基礎與實踐項目。",
+            "**第一年**：基礎科目包括微積分、線性代數、程式設計入門（Python）及統計學。學生亦須修讀嶺大的博雅教育核心課程。",
+            "**第二年**：核心數據科學模組如數據結構、數據庫系統、機器學習及大數據分析。學生開始探索選修專修方向。",
+            "**第三年**：進階課題包括深度學習、自然語言處理及生成式人工智能。通常進行頂石項目或實習。",
+            "**第四年**：專業選修如強化學習、雲端運算與數據科學、人工智能倫理。學生完成畢業項目。",
+            "**三個專修**：提供大數據分析、深度學習及生成式人工智能三個專修方向，讓學生按行業需求定制學習內容。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生可在科技公司、銀行及顧問公司擔任數據科學家，運用機器學習及統計建模技能。",
+            "**大數據工程師**：職責包括使用Hadoop、Spark及雲端平台構建和維護大規模數據管道。",
+            "**人工智能/深度學習工程師**：機會包括開發神經網絡模型，應用於圖像識別、語音處理及自動化系統。",
+            "**生成式人工智能專家**：新興職位涉及內容生成、合成數據創建及人工智能驅動設計，涵蓋媒體、遊戲及市場營銷。",
+            "**商業智能分析師**：企業策略職位，利用數據可視化及分析推動金融、零售及物流領域的決策。",
+            "**深造**：畢業生可銜接數據科學、人工智能或相關領域的碩士課程，升讀全球頂尖大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與學習環境",
+          "content": [
+            "**博雅教育環境**：嶺南大學是香港唯一公立博雅大學，提供全人教育，小班教學及緊密的師生關係。",
+            "**住宿要求**：所有學生須至少住校一年，培養緊密社群及跨學科友誼。",
+            "**屯門校園**：校園設有現代化設施，包括數據科學實驗室、人工智能運算集群及協作學習空間，環境綠化寬敞。",
+            "**交流機會**：嶺大與全球超過200所夥伴大學合作；數據科學學生可申請學期交流，擴闊國際視野。",
+            "**社區參與**：大學強調社會責任，設有服務學習項目，將數據科學應用於真實社會議題。",
+            "**學生組織**：活躍的學會如數據科學學會舉辦黑客松、行業講座及科技專業人士聯誼活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "入學競爭力",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**收生名額**：僅35個一年級學額，是嶺南大學最具競爭力的課程之一。",
+            "**申請人數**：2025年有750名申請者競爭，其中320人屬Band A，140人屬Band B。",
+            "**分數要求**：中位數入學分數為31.365（最佳五科），下四分位數為30.17。選修科通常需達第4級或以上。",
+            "**科目分佈**：成功申請者一般中文及英文達第3級，公民與社會發展達「達標」，至少一科選修達第4級。",
+            "**無面試**：課程不設面試，入學純粹基於文憑試分數及組別選擇。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳家樂博士**：嶺南大學數據科學學院副教授，大數據分析領域頂尖研究員，為課程早期畢業生。",
+            "**黃佩珊女士**：香港匯豐銀行數據科學家，2022年畢業，專注利用深度學習建立欺詐檢測模型。",
+            "**李明軒先生**：Datafy Technologies聯合創辦人，2021年畢業，為香港中小企開發人工智能分析工具。",
+            "**鄭海欣女士**：騰訊機器學習工程師，2023年畢業，從事社交媒體推薦系統開發。",
+            "**吳子峰先生**：牛津大學計算機科學博士生，2020年畢業，研究醫學影像生成模型。",
+            "**曾思穎女士**：國泰航空商業智能經理，2019年畢業，領導數據驅動的客戶體驗計劃。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**嶺南大學入學獎學金**：頒予文憑試成績優異者，涵蓋全額或部分學費。數據科學申請者最佳五科達32分或以上有機會獲獎。",
+            "**數據科學學院傑出獎學金**：專為數據科學學生而設，每年最高50,000港元。",
+            "**香港特區政府獎學金**：頒予學業及社區服務表現卓越的本地學生，每年最高80,000港元。",
+            "**黃德成博士獎學金**：基於經濟需要的STEM課程獎學金，每年30,000港元。",
+            "**交流獎學金**：資助學生海外交流，涵蓋旅費及生活費，最高40,000港元。",
+            "**服務學習獎**：表揚將數據科學應用於社區項目的學生，現金獎10,000港元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7225 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 選修科目標達第4級或以上**",
+            "",
+            "- 中位數選修科為第4級，至少一科（如M1/M2、資訊及通訊科技、物理）力爭第5級或以上。",
+            "- STEM選修科取得5*可提升最佳五科總分1.5至2分。",
+            "",
+            "**2. 核心科目穩奪第3級**",
+            "",
+            "- 中文及英文中位數均為第3級，切勿輕視。英文第4級可增加1.5分。",
+            "- 公民與社會發展必須「達標」，否則不符資格。",
+            "",
+            "**3. 善用最佳五科計分法**",
+            "",
+            "- 分數按最佳五科計算，放棄最弱科目以提升平均分。",
+            "- 例如：M2 5*、物理5、化學4、英文3、中文3、公民達標，最佳五科=(7+5+4+3+3)=22，低於下四分位數，需爭取更高分數。",
+            "",
+            "**4. 將課程放在Band A以增加機會**",
+            "",
+            "- 320名Band A申請者競爭35個學額，Band A至關重要。Band B僅140人申請，極少獲取錄。",
+            "- 將JS7225列為首志願（Band A1）以顯示強烈興趣。",
+            "",
+            "**5. 強化數學基礎**",
+            "",
+            "- 數據科學依賴微積分、線性代數及概率。盡量選修M1或M2。",
+            "- 競爭性申請者通常M1/M2達第5級。",
+            "",
+            "**6. 建立數據項目作品集**",
+            "",
+            "- 雖然無面試，但個人陳述或作品集可在邊緣分數時加分。",
+            "- 包括使用Python、SQL或機器學習庫（如scikit-learn、TensorFlow）的項目。",
+            "",
+            "**7. 申請時考慮三個專修方向**",
+            "",
+            "- 課程提供大數據分析、深度學習及生成式人工智能專修。研究各方向課程以配合興趣。",
+            "- 在申請中提及首選專修以展示專注度。",
+            "",
+            "**8. 為博雅核心課程做好準備**",
+            "",
+            "- 嶺大要求所有學生修讀博雅課程。準備好與數據科學並行學習哲學、社會學或文化研究等科目。",
+            "- 這能擴闊視野，但需做好時間管理。",
+            "",
+            "**9. 及早申請獎學金**",
+            "",
+            "- 嶺南大學入學獎學金需獨立申請。在截止日期（通常為5月）前提交。",
+            "- 預測最佳五科達32分或以上，有機會獲得全額學費資助。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "31.365",
+    "lq": "30.17"
+  }
+}

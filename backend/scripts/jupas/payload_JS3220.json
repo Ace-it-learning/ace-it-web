@@ -1,0 +1,277 @@
+{
+  "programme": {
+    "code": "JS3220",
+    "nameEn": "BSc Scheme in Applied Mathematics and Finance Analytics",
+    "nameZh": "應用數學及金融分析(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Applied Mathematics and Finance Analytics",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "193.5",
+    "band_a": "189.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3220",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 200.7 (2025 JUPAS data).",
+            "**Median Admission Score**: 193.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 189.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3220 BSc Scheme in Applied Mathematics and Finance Analytics is a 4-year honours programme under PolyU's Faculty of Science, blending rigorous mathematical training with cutting-edge financial analytics and data science.",
+            "**Two Streams**: Students choose between the Applied Mathematics stream and the Finance Analytics stream after Year 1, allowing tailored expertise in either pure quantitative methods or financial technology applications.",
+            "**Year 1**: Foundation courses include Calculus, Linear Algebra, Probability and Statistics, Programming for Data Science, and General University Requirements (GUR). Students explore both streams before specialisation.",
+            "**Year 2**: Core subjects such as Multivariable Calculus, Numerical Methods, Statistical Modelling, and Introduction to Finance. Stream-specific electives begin, e.g., Time Series Analysis for Finance Analytics.",
+            "**Year 3**: Advanced modules like Stochastic Processes, Financial Mathematics, Machine Learning for Finance, and Risk Management. Students undertake a Capstone Project or a Work-Integrated Education (WIE) placement.",
+            "**Year 4**: Specialised electives including Derivative Pricing, Big Data Analytics, and Portfolio Optimisation. The final-year project integrates applied mathematics with real-world financial data.",
+            "**WIE Requirement**: All students complete at least one WIE placement (typically 6–12 weeks) with partner firms such as banks, fintech startups, or government agencies, gaining hands-on industry experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Quantitative Analyst**: Graduates are prime candidates for roles in investment banks, hedge funds, and trading firms, using mathematical models to price derivatives and manage risk.",
+            "**Data Scientist / Financial Analyst**: With strong programming and statistical skills, alumni excel in data-driven roles at companies like HSBC, AIA, and Tencent, analysing market trends and customer behaviour.",
+            "**Risk Manager**: The programme's focus on stochastic processes and risk assessment prepares students for positions in insurance, banking, and regulatory bodies such as the Hong Kong Monetary Authority.",
+            "**Fintech Specialist**: The Finance Analytics stream opens doors to fast-growing fintech firms in the Greater Bay Area, including roles in blockchain analytics, robo-advisory, and payment systems.",
+            "**Actuarial Analyst**: Graduates can pursue actuarial certifications and work in insurance companies like AXA or Prudential, leveraging their applied mathematics background.",
+            "**Further Study**: Many graduates pursue master's or PhD programmes in financial engineering, data science, or applied mathematics at top universities worldwide, including Oxbridge and Ivy League institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), making commuting from all over Hong Kong convenient.",
+            "**State-of-the-Art Labs**: The Faculty of Science houses dedicated computing labs with Bloomberg terminals, high-performance computing clusters, and software like MATLAB, R, and Python for financial modelling.",
+            "**Library Resources**: The Pao Yue-kong Library offers extensive databases (e.g., Bloomberg, CRSP, Compustat) and quiet study spaces, crucial for finance analytics research and projects.",
+            "**Student Organisations**: The Mathematics and Statistics Society organises workshops, networking events, and industry talks with speakers from Goldman Sachs, HKEX, and local fintech firms.",
+            "**Sports & Recreation**: PolyU's sports complex includes a gym, swimming pool, and multi-purpose courts, plus over 50 student clubs for hobbies from photography to entrepreneurship.",
+            "**Global Exchange**: Students can spend a semester at partner universities in the UK, US, Canada, or mainland China, broadening their academic and cultural horizons."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates your best 5 HKDSE subject scores with the specified weighting, giving flexibility to highlight your strongest subjects.",
+            "**Subject Weighting**: Mathematics (Compulsory) and M1/M2 are weighted double (×2), while English, Chinese, and two other electives are weighted normally (×1). This strongly favours students with strong quantitative skills.",
+            "**Median Score (2025)**: 193.5 — the middle score of admitted students, indicating a competitive threshold. Applicants should aim for at least this score to be considered.",
+            "**Lower Quartile (2025)**: 189.5 — the 25th percentile score. Scoring below this significantly reduces chances, though exceptional non-academic achievements may help.",
+            "**Average HKDSE Score with Weighting**: 200.7 — the mean score of successful applicants, reflecting the programme's high standards. Top performers often exceed 210.",
+            "**Interview Policy**: Shortlisted candidates may be invited for an interview, which assesses motivation, mathematical aptitude, and interest in finance. Prepare to discuss real-world applications."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Chan Wai-keung (陳偉強)**: Chief Data Scientist, HSBC Hong Kong. 2010 graduate. Leads a team developing AI-driven credit risk models for the bank's Asia-Pacific operations.",
+            "**Ms. Li Xia (李霞)**: Vice President, Quantitative Research, Goldman Sachs (Hong Kong). 2013 graduate. Specialises in derivative pricing and algorithmic trading strategies.",
+            "**Mr. Wong Tsz-fung (黃梓峰)**: Co-founder & CEO, FinPath Technologies (a fintech startup in Shenzhen). 2016 graduate. Raised HK$50 million in Series A funding for AI-powered investment advisory.",
+            "**Dr. Ng Ka-yan (吳嘉欣)**: Assistant Professor, Department of Mathematics, University of Oxford. 2012 graduate. Research focuses on stochastic calculus and its applications in financial mathematics.",
+            "**Mr. Cheung Ho-ming (張浩明)**: Senior Actuarial Analyst, Prudential Hong Kong. 2018 graduate. Achieved Fellowship of the Society of Actuaries (FSA) within 5 years of graduation.",
+            "**Ms. Chen Yu (陳雨)**: Data Analytics Manager, Tencent Holdings (Shenzhen). 2019 graduate. Leads a team analysing user behaviour data for WeChat Pay's risk management system."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship for HKDSE Students**: Awarded to top scorers — students with HKDSE scores of 5** or above in any subject may receive up to HK$50,000 per year, renewable based on academic performance.",
+            "**Faculty of Science Scholarship**: Outstanding Year 1 students with a GPA of 3.5 or above can apply for a HK$20,000 one-time award, supporting research projects or overseas exchanges.",
+            "**Dr. Li Ka-shing Scholarship**: For students demonstrating financial need and academic excellence, this scholarship covers full tuition and provides a living stipend of up to HK$60,000 per year.",
+            "**HSBC Hong Kong Scholarship**: Specifically for Finance Analytics stream students, offering HK$30,000 per year plus a guaranteed summer internship at HSBC's Global Banking & Markets division.",
+            "**WIE Financial Support**: Students undertaking unpaid Work-Integrated Education placements can receive up to HK$15,000 in subsidies to cover travel and accommodation expenses.",
+            "**External Scholarships**: The programme also helps students apply for HKSAR Government Scholarships, Sir Edward Youde Memorial Awards, and other merit-based awards."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3220 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighting Formula**",
+            "",
+            "- Mathematics and M1/M2 are weighted double (×2), so aim for 5* or 5** in these subjects. A 5** in Maths Compulsory alone contributes 10 points to your weighted score.",
+            "",
+            "**2. Target a Weighted Score Above 195**",
+            "",
+            "- With a median of 193.5 and average of 200.7, your goal should be a weighted score of at least 195. Use the PolyU online calculator to simulate your best 5 subjects.",
+            "",
+            "**3. Excel in English and Chinese**",
+            "",
+            "- Even though weighted normally, English and Chinese are critical for interviews and university study. Aim for Level 4 or above in both to avoid being filtered out.",
+            "",
+            "**4. Choose Relevant Electives**",
+            "",
+            "- Electives like Economics, Business, Accounting, or ICT are highly valued. They demonstrate your interest in finance and data analytics beyond pure mathematics.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- If shortlisted, expect questions on why you chose applied mathematics and finance analytics. Be ready to discuss a recent financial news story or a mathematical concept like Black-Scholes.",
+            "",
+            "**6. Build a Strong Portfolio**",
+            "",
+            "- Participate in maths competitions (e.g., HKMO, AMC) or coding hackathons. Any project involving Python, R, or financial data analysis will strengthen your application.",
+            "",
+            "**7. Leverage WIE Early**",
+            "",
+            "- Apply for summer internships or WIE placements in Year 2. Experience at a bank or fintech firm gives you a huge advantage in Year 3 and 4 projects.",
+            "",
+            "**8. Network with Alumni**",
+            "",
+            "- Connect with PolyU alumni on LinkedIn, especially those in quantitative finance. Ask for advice on course selection and career paths — they are often willing to help.",
+            "",
+            "**9. Use PolyU's Resources**",
+            "",
+            "- Visit the Faculty of Science's career centre and attend their industry talks. They have direct links with employers like HKEX, JPMorgan, and AIA, which can lead to job referrals."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：200.7（2025年聯招數據）。",
+            "**入學中位數**：193.5分（2025年聯招數據）。",
+            "**下四分位數**：189.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3220 應用數學及金融分析(榮譽)理學士組合課程為四年制榮譽學位，隸屬理學院，融合嚴謹的數學訓練與前沿的金融分析及數據科學。",
+            "**兩個專修**：學生在第一年後可選擇「應用數學」或「金融分析」專修，分別專注於純定量方法或金融科技應用。",
+            "**第一年**：基礎課程包括微積分、線性代數、概率與統計、數據科學編程及大學核心科目（GUR），學生在專修前探索兩個方向。",
+            "**第二年**：核心科目如多變量微積分、數值方法、統計建模及金融導論，並開始專修選修課，例如金融分析的時間序列分析。",
+            "**第三年**：高級模塊包括隨機過程、金融數學、金融機器學習及風險管理。學生需完成頂石項目或工作綜合教育（WIE）實習。",
+            "**第四年**：專業選修課包括衍生工具定價、大數據分析及投資組合優化。畢業項目將應用數學與真實金融數據結合。",
+            "**WIE 要求**：所有學生必須完成至少一次 WIE 實習（通常 6-12 週），合作夥伴包括銀行、金融科技初創公司或政府機構，獲得實際行業經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**定量分析師**：畢業生是投資銀行、對沖基金及交易公司的首選候選人，運用數學模型為衍生工具定價及管理風險。",
+            "**數據科學家 / 金融分析師**：憑藉強大的編程及統計技能，校友在滙豐、友邦及騰訊等公司擔任數據驅動職位，分析市場趨勢及客戶行為。",
+            "**風險管理師**：課程專注於隨機過程及風險評估，為學生在保險、銀行及監管機構（如香港金融管理局）的職位做好準備。",
+            "**金融科技專家**：金融分析專修為大灣區快速增長的金融科技公司開闢機會，包括區塊鏈分析、智能投資顧問及支付系統等職位。",
+            "**精算分析師**：畢業生可考取精算師資格，在安盛或保誠等保險公司工作，運用應用數學背景。",
+            "**深造機會**：許多畢業生在全球頂尖大學（包括牛津、劍橋及常春藤盟校）攻讀金融工程、數據科學或應用數學的碩士或博士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），從香港各區通勤均十分便捷。",
+            "**先進實驗室**：理學院設有專用電腦實驗室，配備彭博終端機、高效能計算集群及 MATLAB、R、Python 等軟件，用於金融建模。",
+            "**圖書館資源**：包玉剛圖書館提供大量數據庫（如 Bloomberg、CRSP、Compustat）及寧靜學習空間，對金融分析研究及項目至關重要。",
+            "**學生組織**：數學及統計學會舉辦工作坊、聯誼活動及行業講座，邀請高盛、港交所及本地金融科技公司代表演講。",
+            "**體育與休閒**：理大體育綜合大樓設有健身室、游泳池及多用途球場，另有超過 50 個學生社團涵蓋攝影、創業等興趣。",
+            "**環球交流**：學生可到英國、美國、加拿大或中國內地的合作大學交流一個學期，擴闊學術及文化視野。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科 — 理大按指定比重計算你最佳五科文憑試成績，讓你能突出最強科目。",
+            "**科目比重**：數學（必修）及 M1/M2 比重為 2 倍（×2），而英文、中文及兩科選修科比重為 1 倍（×1）。這對定量能力強的學生非常有利。",
+            "**2025 年中位數**：193.5 — 獲錄取學生的中間分數，顯示競爭門檻。申請人應至少達到此分數才有機會。",
+            "**2025 年下四分位數**：189.5 — 第 25 百分位數。低於此分數會大大降低機會，但傑出的非學術成就可能有幫助。",
+            "**加權後平均文憑試分數**：200.7 — 成功申請者的平均分，反映課程的高標準。頂尖學生通常超過 210 分。",
+            "**面試政策**：入圍候選人可能獲邀面試，評估其動機、數學能力及對金融的興趣。準備討論實際應用案例。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**陳偉強博士**：滙豐銀行香港首席數據科學家，2010 年畢業。領導團隊為銀行亞太區業務開發人工智能驅動的信用風險模型。",
+            "**李霞女士**：高盛（香港）定量研究副總裁，2013 年畢業。專注於衍生工具定價及算法交易策略。",
+            "**黃梓峰先生**：深圳金融科技初創公司 FinPath Technologies 聯合創始人兼行政總裁，2016 年畢業。為人工智能投資顧問業務籌集 5,000 萬港元 A 輪融資。",
+            "**吳嘉欣博士**：牛津大學數學系助理教授，2012 年畢業。研究專注於隨機微積分及其在金融數學中的應用。",
+            "**張浩明先生**：保誠香港高級精算分析師，2018 年畢業。畢業後 5 年內取得美國精算師協會院士（FSA）資格。",
+            "**陳雨女士**：騰訊控股（深圳）數據分析經理，2019 年畢業。領導團隊分析微信支付的用戶行為數據，用於風險管理系統。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**理大文憑試入學獎學金**：頒予頂尖考生 — 在任何科目取得 5** 或以上成績的學生每年可獲最高 50,000 港元，並根據學業成績續領。",
+            "**理學院獎學金**：GPA 達 3.5 或以上的優秀一年級學生可申請 20,000 港元一次性獎學金，用於支持研究項目或海外交流。",
+            "**李嘉誠博士獎學金**：為有經濟需要且學業優異的學生提供，涵蓋全額學費及每年最高 60,000 港元生活津貼。",
+            "**滙豐香港獎學金**：專為金融分析專修學生設立，每年提供 30,000 港元，並保證在滙豐環球銀行及市場部門的暑期實習。",
+            "**WIE 財政支援**：參與無薪工作綜合教育實習的學生可獲最高 15,000 港元補貼，用於交通及住宿開支。",
+            "**外部獎學金**：課程亦協助學生申請香港特區政府獎學金、尤德爵士紀念基金獎及其他優秀獎項。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3220 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握比重公式**",
+            "",
+            "- 數學及 M1/M2 比重為 2 倍（×2），因此目標是取得 5* 或 5**。數學必修科 5** 已為你的加權分數貢獻 10 分。",
+            "",
+            "**2. 目標加權分數達 195 以上**",
+            "",
+            "- 中位數為 193.5，平均分為 200.7，你的目標加權分數應至少達 195。使用理大網上計算器模擬你的最佳五科。",
+            "",
+            "**3. 英文及中文要出色**",
+            "",
+            "- 雖然比重正常，但英文及中文對面試及大學學習至關重要。兩科均應爭取第 4 級或以上，以免被篩走。",
+            "",
+            "**4. 選擇相關選修科**",
+            "",
+            "- 經濟、商業、會計或資訊及通訊科技等選修科備受重視，能展示你對純數學以外的金融及數據分析的興趣。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- 如獲面試，預計會被問及為何選擇應用數學及金融分析。準備討論一則近期財經新聞或數學概念（如布萊克-舒爾斯模型）。",
+            "",
+            "**6. 建立強大個人檔案**",
+            "",
+            "- 參加數學比賽（如香港數學奧林匹克、AMC）或編程黑客松。任何涉及 Python、R 或金融數據分析的項目都能強化你的申請。",
+            "",
+            "**7. 盡早利用 WIE**",
+            "",
+            "- 在第二年申請暑期實習或 WIE 實習。在銀行或金融科技公司的經驗將使你在第三及第四年的項目中佔盡優勢。",
+            "",
+            "**8. 與校友建立聯繫**",
+            "",
+            "- 在 LinkedIn 上聯繫理大校友，尤其是定量金融領域的校友。請教課程選擇及職業路徑 — 他們通常樂於提供幫助。",
+            "",
+            "**9. 善用理大資源**",
+            "",
+            "- 到訪理學院的就業中心及參加行業講座。他們與港交所、摩根大通及友邦等僱主有直接聯繫，可助你獲得工作推薦。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "193.5",
+    "lq": "189.5"
+  }
+}

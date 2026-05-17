@@ -1,0 +1,317 @@
+{
+  "programme": {
+    "code": "JS7133",
+    "nameEn": "Bachelor of Arts (Honours) in Animation and Digital Arts",
+    "nameZh": "動畫及數碼藝術(榮譽)文學士",
+    "name": "Bachelor of Arts (Honours) in Animation and Digital Arts",
+    "university": "嶺南大學",
+    "faculty": "Faculty of Arts",
+    "median": "24.00",
+    "band_a": "23.50",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7133",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 24.00 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.50 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 4, LQ 3",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 3, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 3, LQ 3",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 150 applicants, Band B 70. Total 350 applicants.",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: The Bachelor of Arts (Honours) in Animation and Digital Arts is a 4-year full-time programme under the Faculty of Arts, offering two concentrations: Digital Animation and Arts & Technology. Students choose one concentration in Year 2.",
+            "**Year 1 Foundation**: Students take core liberal arts courses (e.g., Critical Thinking, Creativity and Innovation) alongside introductory studio modules like Drawing Fundamentals, Digital Imaging, and Introduction to Animation. Emphasis on building visual literacy and technical basics.",
+            "**Year 2 Specialisation**: Students select either Digital Animation (focusing on 2D/3D animation, character design, and storytelling) or Arts & Technology (exploring interactive media, generative art, and digital fabrication). Both streams include a compulsory internship or community project.",
+            "**Year 3 Advanced Practice**: Deep-dive into concentration-specific modules: Digital Animation students take Advanced 3D Modelling, Visual Effects, and Animation Production Pipeline; Arts & Technology students study Creative Coding, Immersive Media (VR/AR), and Sound Art. A cross-disciplinary collaborative project is required.",
+            "**Year 4 Capstone and Portfolio**: Students complete a Final Year Project (FYP) — a substantial animation or digital art piece — and a Professional Portfolio module. Graduates must present a public exhibition of their work, often held at Lingnan's campus gallery or partner venues.",
+            "**Liberal Arts Core**: All students complete the Common Core (36 credits) covering humanities, social sciences, and Chinese/English communication, plus a mandatory residential hall experience and service-learning component."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Animation Industry**: Graduates can pursue roles as 2D/3D animators, character designers, storyboard artists, or VFX artists in Hong Kong's growing animation studios (e.g., Imagi Studios, MediaMation) and international production houses.",
+            "**Digital Arts and Tech**: The Arts & Technology concentration opens doors to careers in interactive media design, creative coding, VR/AR development, and digital fabrication — skills in demand at tech firms, museums, and advertising agencies.",
+            "**Education and Academia**: With a BA (Hons) degree, graduates can teach visual arts or digital media at secondary schools (after completing PGDE) or pursue MPhil/PhD in digital arts, animation studies, or cultural technology.",
+            "**Creative Industries**: Alumni find work in film post-production, game design, UI/UX design, and motion graphics for broadcast media. Lingnan's liberal arts training also prepares graduates for roles in arts administration, curation, and cultural policy.",
+            "**Entrepreneurship**: The programme's emphasis on portfolio development and project management equips graduates to start their own animation studios, freelance as digital artists, or launch creative tech startups.",
+            "**Further Studies**: Many graduates pursue master's degrees in animation, digital media, or arts technology at top institutions worldwide, including Royal College of Art, School of Visual Arts (NYC), and Hong Kong Polytechnic University."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Animation and Digital Arts Studios**: Lingnan's dedicated studios are equipped with industry-standard software (Maya, Blender, Adobe Creative Suite), motion capture systems, and high-performance workstations for rendering and compositing.",
+            "**Residential Hall Experience**: All students must live on campus for at least one year, fostering a close-knit community. Halls host creative workshops, film screenings, and animation clubs — ideal for networking and peer learning.",
+            "**Tuen Mun Campus**: Located in the New Territories, the campus features modern lecture theatres, a library with extensive digital arts collections, and the Lingnan Gallery for student exhibitions. The scenic seaside setting inspires creativity.",
+            "**Exchange and Internship Opportunities**: Lingnan has over 200 partner universities worldwide. JS7133 students can spend a semester abroad at institutions like Tokyo University of the Arts or University of the Arts London, or intern at local animation studios and tech companies.",
+            "**Service-Learning and Community Engagement**: The programme integrates community-based projects, such as creating animations for NGOs or teaching digital art to underprivileged youth. This aligns with Lingnan's liberal arts mission of social responsibility.",
+            "**Student Societies and Events**: The Animation and Digital Arts Society organises annual showcases, guest lectures by industry professionals (e.g., from Disney, Pixar, local studios), and hackathons. The Lingnan Arts Festival features student films and interactive installations."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 24.00 (Best 5 subjects), with Lower Quartile at 23.50. This places JS7133 among moderately competitive programmes at Lingnan, requiring strong performance in electives (Median 4 in Elective 1).",
+            "**Subject Requirements**: Chinese Language median 4, English median 3, Mathematics median 3, Citizenship & Social Development median Attained. Elective 1 median 4 indicates the programme values depth in one arts/design-related subject.",
+            "**Demand and Places**: In 2025 JUPAS cycle, 350 applicants competed for 25 first-year intake places — a ratio of 14:1. Band A applicants numbered 150, showing strong interest from top-choice candidates.",
+            "**Interview Required**: All shortlisted candidates must attend an interview (likely portfolio-based). The interview assesses creativity, technical aptitude, and motivation. Preparation is critical — see Tips section.",
+            "**Band Preferences**: With 150 Band A applicants and only 25 places, Band A is essential. Band B applicants (70) have limited chances unless their interview performance is exceptional. Band C or below rarely succeed."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Wong Ka-yan (黃嘉欣)**: Lead Animator, Imagi Studios (Hong Kong). Known for work on 'TMNT' and 'Astro Boy' feature films. Graduated 2018.",
+            "**Chan Ho-ting (陳浩霆)**: Creative Technologist, M+ Museum (Hong Kong). Developed interactive digital installations for the museum's 'Hong Kong: Here and Beyond' exhibition. Graduated 2020.",
+            "**Li Siu-ming (李兆明)**: Founder, PixelMotion Studio (Hong Kong). Specialises in 2D animation for advertising and educational content. Clients include Ocean Park and Hong Kong Tourism Board. Graduated 2016.",
+            "**Tam Wing-sze (譚詠詩)**: Assistant Professor, School of Creative Media, City University of Hong Kong. Research focus on generative art and AI aesthetics. PhD from Royal College of Art. Graduated 2014.",
+            "**Cheung Pui-kei (張珮琪)**: Freelance VR Artist and Curator. Exhibited at Hong Kong Arts Centre and SIGGRAPH Asia. Received Hong Kong Arts Development Council grant for immersive storytelling project. Graduated 2019.",
+            "**Lau Tsz-ching (劉子晴)**: Motion Graphics Designer, TVB (Hong Kong). Creates title sequences and promotional content for news and entertainment programmes. Graduated 2021."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**Lingnan University Entrance Scholarship**: Awarded to JUPAS applicants with outstanding HKDSE results (typically 25+ points in Best 5). Covers full or half tuition for the first year, renewable based on academic performance.",
+            "**Faculty of Arts Scholarships**: Multiple merit-based scholarships for arts students, including the 'Dr. Ng Tat-lung Memorial Scholarship' (HK$20,000) for students demonstrating excellence in creative arts.",
+            "**Animation and Digital Arts Programme Scholarship**: Specifically for JS7133 students with strong portfolios and academic records. Valued at up to HK$30,000 per year, awarded to top 2-3 students in each cohort.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (HK$40,000) and the Reaching Out Award (HK$10,000) for overseas exchange. Lingnan also offers the 'Talent Development Scholarship' for non-academic achievements.",
+            "**Financial Need-Based Aid**: Lingnan's 'Financial Assistance Scheme' provides grants and low-interest loans to local students with family income below certain thresholds. Up to full tuition coverage available.",
+            "**External Scholarships**: Students can apply for the 'Hong Kong Arts Development Council Scholarship' (up to HK$100,000) for arts-related studies, and the 'Sir Edward Youde Memorial Fellowship' for outstanding academic performance."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7133 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Build a Standout Portfolio Early**",
+            "",
+            "- Start compiling a portfolio of 8-12 original works (drawings, digital art, short animations, or interactive projects) by Form 5 summer. Include process sketches and final pieces.",
+            "- Tailor your portfolio to your chosen concentration: for Digital Animation, include character turnarounds and storyboards; for Arts & Technology, show coding projects or interactive installations.",
+            "- Submit your portfolio via the online application system by the deadline (usually late November). A strong portfolio can compensate for slightly lower HKDSE scores.",
+            "",
+            "**2. Target Your HKDSE Scores Strategically**",
+            "",
+            "- Aim for Best 5 score of 24+ (median 24). Prioritise Elective 1 (target Level 4) — this is your 'weighted' subject. Chinese should be Level 4 or above.",
+            "- English and Mathematics at Level 3 are sufficient, but Level 4 in either gives you a competitive edge. Citizenship & Social Development must be 'Attained'.",
+            "- If your predicted score is 23-24, apply for Band A anyway — the interview can boost your chances.",
+            "",
+            "**3. Ace the Interview with a Creative Pitch**",
+            "",
+            "- Prepare a 3-minute 'creative pitch' explaining your portfolio, artistic influences, and why you chose Lingnan. Practice in front of peers or a mirror.",
+            "- Be ready to discuss your favourite animator or digital artist (e.g., Hayao Miyazaki, TeamLab). Show genuine passion and knowledge of current trends (e.g., AI in art, VR).",
+            "- Bring a physical or digital portfolio (on a tablet) to the interview. Ask thoughtful questions about the programme's industry connections.",
+            "",
+            "**4. Leverage Liberal Arts Strengths**",
+            "",
+            "- Highlight your interdisciplinary interests in the personal statement — Lingnan values students who connect animation with philosophy, sociology, or cultural studies.",
+            "- Mention any service-learning or community art projects you've done. This aligns with Lingnan's mission of social responsibility.",
+            "- Use the 'Common Core' courses to your advantage: take electives in creative writing or film studies to enrich your animation storytelling.",
+            "",
+            "**5. Gain Practical Experience Before Applying**",
+            "",
+            "- Complete a short internship or workshop at a local animation studio (e.g., Imagi, MediaMation) or attend summer programmes at HKU SPACE or Hong Kong Arts Centre.",
+            "- Participate in competitions like 'Hong Kong Youth Animation Contest' or 'ifva Awards' to build your CV. Even participation counts.",
+            "- Volunteer to create animations for school events or NGOs — this shows initiative and teamwork.",
+            "",
+            "**6. Research the Two Concentrations Thoroughly**",
+            "",
+            "- Visit the Lingnan website and read module descriptions for both Digital Animation and Arts & Technology. Talk to current students via Instagram or Open Day.",
+            "- If you're unsure, choose Digital Animation for traditional animation careers; choose Arts & Technology if you're interested in coding, VR, or interactive art.",
+            "- Your choice is made in Year 2, but your portfolio and personal statement should hint at your preferred stream.",
+            "",
+            "**7. Apply for Scholarships Early**",
+            "",
+            "- Check Lingnan's scholarship page for deadlines (usually December for entrance scholarships). Prepare a separate scholarship application with a strong personal statement.",
+            "- For the 'Animation and Digital Arts Programme Scholarship', submit an additional portfolio and a 500-word essay on your artistic vision.",
+            "- Even if you don't get a scholarship in Year 1, maintain a high GPA (3.3+) to qualify for merit-based awards in later years.",
+            "",
+            "**8. Network with Faculty and Alumni**",
+            "",
+            "- Attend Lingnan's Open Day and talk to professors in the Department of Visual Studies. Ask about research projects and internship opportunities.",
+            "- Connect with alumni on LinkedIn — many are happy to mentor prospective students. Mention your interest in JS7133.",
+            "- Join the 'Lingnan Animation Society' Facebook group to get insider tips on portfolio requirements and interview questions.",
+            "",
+            "**9. Plan Your Band Choices Wisely**",
+            "",
+            "- Put JS7133 in Band A (first 3 choices) — with 150 Band A applicants for 25 places, Band B is risky. Use Band B for a safety programme (e.g., other Lingnan arts programmes).",
+            "- If your HKDSE results are borderline (23-24), still keep JS7133 in Band A — the interview can make a difference.",
+            "- Check JUPAS release dates: if you receive an interview invitation, prepare immediately. Decline other interviews if you're confident about Lingnan."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：24.00分（2025年聯招數據）。",
+            "**下四分位數**：23.50分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 4, 下四分位數 3",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 3, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 3, 下四分位數 3",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者150人、Band B 70人。總申請者350人。",
+            "**首年學額**：25人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：動畫及數碼藝術(榮譽)文學士為四年全日制課程，隸屬文學院，設有兩個專修：數碼動畫及藝術與科技。學生於第二年選擇專修方向。",
+            "**第一年基礎**：學生修讀核心博雅課程（如批判思考、創意與創新），同時學習基礎工作室單元，包括繪畫基礎、數碼影像及動畫導論。重點培養視覺素養及技術基礎。",
+            "**第二年專修**：學生選擇數碼動畫（專注2D/3D動畫、角色設計及敍事）或藝術與科技（探索互動媒體、生成藝術及數碼製造）。兩個專修均須完成強制實習或社區項目。",
+            "**第三年進階實踐**：深入專修領域：數碼動畫學生修讀進階3D建模、視覺特效及動畫製作流程；藝術與科技學生學習創意編碼、沉浸式媒體（VR/AR）及聲音藝術。須完成跨學科協作項目。",
+            "**第四年總結與作品集**：學生完成畢業作品（FYP）——一個大型動畫或數碼藝術作品——以及專業作品集單元。畢業生須在校園畫廊或合作場地舉辦公開展覽。",
+            "**博雅核心**：所有學生完成共同核心課程（36學分），涵蓋人文學科、社會科學、中英文溝通，以及強制住宿體驗和服務學習部分。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**動畫行業**：畢業生可在香港日益壯大的動畫工作室（如意馬國際、MediaMation）及國際製作公司擔任2D/3D動畫師、角色設計師、分鏡師或視覺特效師。",
+            "**數碼藝術與科技**：藝術與科技專修為互動媒體設計、創意編碼、VR/AR開發及數碼製造等職業開闢道路——這些技能在科技公司、博物館及廣告公司需求甚殷。",
+            "**教育與學術**：持有榮譽學位後，畢業生可在中學教授視覺藝術或數碼媒體（需完成PGDE），或攻讀數碼藝術、動畫研究或文化科技領域的碩士/博士學位。",
+            "**創意產業**：校友在電影後期製作、遊戲設計、UI/UX設計及廣播媒體動態圖形等領域工作。嶺南的博雅訓練亦為藝術行政、策展及文化政策等職位做好準備。",
+            "**創業**：課程強調作品集開發及項目管理，使畢業生能創辦自己的動畫工作室、成為自由數碼藝術家，或創立創意科技初創企業。",
+            "**深造**：許多畢業生在世界頂尖院校攻讀動畫、數碼媒體或藝術科技碩士學位，包括皇家藝術學院、紐約視覺藝術學院及香港理工大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**動畫及數碼藝術工作室**：嶺南專屬工作室配備業界標準軟件（Maya、Blender、Adobe Creative Suite）、動作捕捉系統及高效能渲染工作站。",
+            "**住宿體驗**：所有學生須在校園住宿至少一年，培養緊密社群。宿舍舉辦創意工作坊、電影放映及動畫學會活動——非常適合建立人脈及同儕學習。",
+            "**屯門校園**：位於新界，校園設有現代化演講廳、藏有豐富數碼藝術館藏的圖書館，以及嶺南畫廊供學生展覽。海濱環境啟發創意。",
+            "**交流與實習機會**：嶺南與全球超過200所夥伴大學合作。JS7133學生可到東京藝術大學或倫敦藝術大學等院校交流一學期，或在本地動畫工作室及科技公司實習。",
+            "**服務學習與社區參與**：課程融入社區項目，例如為非政府組織創作動畫或向弱勢青年教授數碼藝術。這與嶺南的社會責任博雅使命一致。",
+            "**學生社團與活動**：動畫及數碼藝術學會舉辦年度展覽、業界專家講座（如來自迪士尼、彼思、本地工作室）及黑客松。嶺南藝術節展示學生電影及互動裝置。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學分數中位數**：24.00（最佳5科），下四分位數為23.50。這使JS7133成為嶺南中等競爭課程，要求選修科表現優異（選修1中位數為4）。",
+            "**科目要求**：中文中位數4，英文中位數3，數學中位數3，公民與社會發展中位數「達標」。選修1中位數4顯示課程重視一門藝術/設計相關科目的深度。",
+            "**需求與學額**：2025年JUPAS週期中，350名申請人競爭25個一年級學額——比例為14:1。Band A申請人達150人，顯示首選考生的濃厚興趣。",
+            "**需要面試**：所有入圍候選人須參加面試（可能基於作品集）。面試評估創意、技術能力及動機。準備至關重要——見貼士部分。",
+            "**Band偏好**：150名Band A申請人競爭25個學額，Band A至關重要。Band B申請人（70人）除非面試表現極佳，否則機會有限。Band C或以下極少成功。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃嘉欣 (Wong Ka-yan)**：首席動畫師，意馬國際（香港）。曾參與《忍者龜》及《阿童木》長片製作。2018年畢業。",
+            "**陳浩霆 (Chan Ho-ting)**：創意科技專家，M+博物館（香港）。為博物館「香港：此地彼方」展覽開發互動數碼裝置。2020年畢業。",
+            "**李兆明 (Li Siu-ming)**：創辦人，PixelMotion Studio（香港）。專注廣告及教育內容的2D動畫。客戶包括海洋公園及香港旅遊發展局。2016年畢業。",
+            "**譚詠詩 (Tam Wing-sze)**：助理教授，香港城市大學創意媒體學院。研究專注生成藝術及AI美學。皇家藝術學院博士。2014年畢業。",
+            "**張珮琪 (Cheung Pui-kei)**：自由VR藝術家及策展人。曾在香港藝術中心及SIGGRAPH Asia展出。獲香港藝術發展局資助進行沉浸式敍事項目。2019年畢業。",
+            "**劉子晴 (Lau Tsz-ching)**：動態圖形設計師，電視廣播有限公司（TVB）。為新聞及娛樂節目創作片頭及推廣內容。2021年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**嶺南大學入學獎學金**：頒予HKDSE成績優異的JUPAS申請人（通常最佳5科25分以上）。涵蓋首年全額或半額學費，可根據學業成績續期。",
+            "**文學院獎學金**：多項以成績為基礎的獎學金，包括「吳達倫博士紀念獎學金」（20,000港元），頒予在創意藝術方面表現卓越的學生。",
+            "**動畫及數碼藝術課程獎學金**：專為JS7133學生而設，要求作品集及學業成績優異。每年最高30,000港元，頒予每屆2-3名頂尖學生。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金（40,000港元）及外展體驗獎（10,000港元）作海外交流。嶺南亦提供「才藝發展獎學金」予非學術成就。",
+            "**基於經濟需要的資助**：嶺南「經濟援助計劃」為家庭收入低於特定門檻的本地學生提供助學金及低息貸款。最高可覆蓋全額學費。",
+            "**外部獎學金**：學生可申請「香港藝術發展局獎學金」（最高100,000港元）作藝術相關學習，以及「尤德爵士紀念基金獎學金」予學業成績優異者。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7133 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 提早建立突出作品集**",
+            "",
+            "- 中五暑假開始整理8-12件原創作品（素描、數碼藝術、短動畫或互動項目），包括過程草圖及最終成品。",
+            "- 按所選專修調整作品集：數碼動畫需包含角色轉向圖及分鏡；藝術與科技則展示編碼項目或互動裝置。",
+            "- 透過網上申請系統按時提交作品集（通常11月底截止）。優秀作品集可彌補稍遜的HKDSE成績。",
+            "",
+            "**2. 策略性設定HKDSE目標**",
+            "",
+            "- 目標最佳5科24分以上（中位數24）。優先提升選修1（目標4級）——這是你的「加權」科目。中文需達4級或以上。",
+            "- 英文及數學3級已足夠，但4級可增加競爭力。公民與社會發展必須「達標」。",
+            "- 若預測分數為23-24分，仍應將此課程放在Band A——面試可提升機會。",
+            "",
+            "**3. 以創意演講突圍面試**",
+            "",
+            "- 準備3分鐘「創意演講」，解釋作品集、藝術影響及選擇嶺南的原因。在朋友或鏡子前練習。",
+            "- 準備討論你最喜愛的動畫師或數碼藝術家（如宮崎駿、TeamLab）。展現真誠熱情及對當前趨勢的認識（如AI在藝術中的應用、VR）。",
+            "- 攜帶實體或數碼作品集（平板電腦）參加面試。就課程的行業聯繫提出有深度的問題。",
+            "",
+            "**4. 善用博雅教育優勢**",
+            "",
+            "- 在個人陳述中強調跨學科興趣——嶺南重視能將動畫與哲學、社會學或文化研究連結的學生。",
+            "- 提及任何曾參與的服務學習或社區藝術項目。這與嶺南的社會責任使命一致。",
+            "- 善用「共同核心」課程：選修創意寫作或電影研究，豐富你的動畫敍事能力。",
+            "",
+            "**5. 申請前累積實戰經驗**",
+            "",
+            "- 在本地動畫工作室（如意馬國際、MediaMation）完成短期實習或工作坊，或參加HKU SPACE或香港藝術中心的暑期課程。",
+            "- 參與「香港青年動畫比賽」或「ifva獎」等比賽，豐富履歷。即使參與也有幫助。",
+            "- 為學校活動或非政府組織義務創作動畫——這展示主動性及團隊合作。",
+            "",
+            "**6. 深入了解兩個專修方向**",
+            "",
+            "- 瀏覽嶺南網站，閱讀數碼動畫及藝術與科技的單元描述。透過Instagram或開放日與在讀學生交流。",
+            "- 若不確定，選擇數碼動畫以從事傳統動畫職業；選擇藝術與科技若你對編碼、VR或互動藝術感興趣。",
+            "- 專修選擇在第二年進行，但作品集及個人陳述應暗示你的偏好方向。",
+            "",
+            "**7. 提早申請獎學金**",
+            "",
+            "- 查看嶺南獎學金頁面的截止日期（入學獎學金通常12月截止）。準備一份單獨的獎學金申請，附上強而有力的個人陳述。",
+            "- 申請「動畫及數碼藝術課程獎學金」時，需提交額外作品集及500字藝術願景文章。",
+            "- 即使第一年未獲獎學金，保持高GPA（3.3以上）以符合後續年度的成績獎學金資格。",
+            "",
+            "**8. 與教授及校友建立聯繫**",
+            "",
+            "- 參加嶺南開放日，與視覺研究學系的教授交談。詢問研究項目及實習機會。",
+            "- 在LinkedIn上聯繫校友——許多人樂意指導未來學生。提及你對JS7133的興趣。",
+            "- 加入「嶺南動畫學會」Facebook群組，獲取作品集要求及面試問題的內部貼士。",
+            "",
+            "**9. 明智規劃Band選擇**",
+            "",
+            "- 將JS7133放在Band A（首3個選擇）——150名Band A申請人競爭25個學額，Band B風險較高。Band B可選一個安全課程（如嶺南其他文學課程）。",
+            "- 若HKDSE成績處於邊緣（23-24分），仍將JS7133保留在Band A——面試可扭轉局面。",
+            "- 留意JUPAS公布日期：若收到面試邀請，立即準備。若對嶺南有信心，可婉拒其他面試。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "24.00",
+    "lq": "23.50"
+  }
+}

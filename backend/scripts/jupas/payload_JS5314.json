@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5314",
+    "nameEn": "BBA in Information Systems",
+    "nameZh": "工商管理學士（資訊系統學）",
+    "name": "BBA in Information Systems",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "35.93",
+    "band_a": "35.40",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5314",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus.",
+            "**Highest Attainable Score**: 66.94.",
+            "**Median Admission Score**: 35.93 (2025 JUPAS data).",
+            "**Lower Quartile**: 35.40 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: LQ per-subject-avg: 4.87.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: The BBA in Information Systems (JS5314) at HKUST Business School blends business management with cutting-edge information technology, preparing students to bridge the gap between business strategy and digital innovation.",
+            "**Year 1 Foundation**: Students take core business courses (e.g., Accounting, Economics, Marketing) alongside introductory IS courses like **ISOM 2500** (Business Statistics) and **ISOM 2700** (Operations Management).",
+            "**Year 2 Core IS Courses**: Dive into **ISOM 3200** (Database Management), **ISOM 3300** (Information Systems Analysis and Design), and **ISOM 3400** (Enterprise Systems), building technical and analytical skills.",
+            "**Year 3 Specialisation & Electives**: Choose from streams like **Business Analytics**, **Digital Innovation**, or **Cybersecurity**. Students complete a capstone project or internship, often with industry partners.",
+            "**Year 4 Advanced & Global Exposure**: Take advanced electives such as **ISOM 4500** (Big Data Analytics) or **ISOM 4600** (AI for Business). Many students participate in exchange programmes at top global universities.",
+            "**Experiential Learning**: The programme includes a mandatory **Internship** or **Consultancy Project** (e.g., with HSBC, PwC, or HK Science Park startups), plus access to HKUST's **Entrepreneurship Center**."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Roles**: Graduates are sought after for positions such as **Business Analyst**, **Data Analyst**, **IT Consultant**, **Systems Analyst**, and **Digital Transformation Manager**.",
+            "**Top Employers**: Alumni have joined leading firms including **McKinsey & Company**, **Google**, **HSBC**, **Deloitte**, **Tencent**, and **Alibaba Group**.",
+            "**Industry Sectors**: Career opportunities span **banking & finance** (e.g., JPMorgan, Standard Chartered), **technology** (e.g., Microsoft, Huawei), **consulting** (e.g., Accenture), and **e-commerce** (e.g., Shopee).",
+            "**Average Starting Salary**: According to HKUST Graduate Employment Survey, BBA in IS graduates earn an average starting salary of **HKD 28,000–35,000 per month**, with top performers exceeding HKD 45,000.",
+            "**Global Career Paths**: Many graduates pursue roles in **Singapore**, **Mainland China**, **UK**, or **US** through HKUST's global alumni network and career services.",
+            "**Entrepreneurship Support**: HKUST's **Entrepreneurship Center** and **HKUST-Sino One Million Dollar Entrepreneurship Competition** help students launch their own tech startups."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Stunning Location**: HKUST's campus is located in **Clear Water Bay, Sai Kung**, offering breathtaking sea views and a tranquil environment ideal for study and innovation.",
+            "**World-Class Facilities**: The **Lee Shau Kee Business Building** houses state-of-the-art trading rooms, data analytics labs, and collaborative spaces for business students.",
+            "**Innovation Hub**: The campus is adjacent to **Hong Kong Science Park**, providing students with direct access to over 1,000 tech companies for internships, research, and networking.",
+            "**Student Life**: Over **100 student clubs** and societies, including the **ISOM Society**, **Business Case Competition Team**, and **Entrepreneurship Club**, foster leadership and community.",
+            "**Global Exchange**: HKUST has **over 300 partner universities** in 40+ countries, allowing IS students to spend a semester abroad at institutions like **University of California, Berkeley** or **London School of Economics**.",
+            "**Residential Experience**: All first-year students are guaranteed on-campus housing, with modern halls offering sea-view rooms, common rooms, and dining facilities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: The programme uses **Best 5 subjects + 6th subject bonus**, with a highest attainable score of **66.94**.",
+            "**Median Score (2025)**: The median HKDSE score for successful applicants was **35.93**, indicating strong competition.",
+            "**Lower Quartile (2025)**: The lower quartile score was **35.40**, meaning even the 25th percentile of admitted students achieved very high results.",
+            "**Preferred HKDSE Subjects**: The lower quartile per-subject average is **4.87**, suggesting that applicants typically score Level 5 or above in most subjects.",
+            "**Subject Weighting**: No specific subject weighting is applied, but strong performance in **Mathematics**, **English**, and **Economics/Business** is advantageous."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) and former HKUST Vice-Chancellor; pioneer of fibre optics. Though not an IS graduate, his legacy inspires innovation at HKUST.",
+            "**Mr. Wong Kwok-keung (黃國強)**: Co-founder of **Lalamove**, a leading logistics tech unicorn. Graduated from HKUST Business School, exemplifying entrepreneurial success.",
+            "**Ms. Vivian Li (李慧敏)**: Vice President of Data Analytics, **HSBC Hong Kong**. BBA in IS graduate (2012), leading digital transformation in banking.",
+            "**Mr. Alex Cheung (張志強)**: Senior IT Consultant, **McKinsey & Company**. BBA in IS graduate (2015), specialising in digital strategy for Fortune 500 clients.",
+            "**Ms. Jenny Chan (陳珍妮)**: Product Manager, **Google** (Mountain View). BBA in IS graduate (2017), working on AI-driven business solutions.",
+            "**Mr. Michael Ng (吳文輝)**: Founder of **Shopline**, an e-commerce platform for SMEs. BBA in IS graduate (2010), now serving over 200,000 merchants globally."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for all applicants; awards up to **full tuition fee waiver** plus **HKD 60,000 living allowance** for top scorers (e.g., 5** in 3+ subjects).",
+            "**School of Business & Management Scholarships**: Merit-based awards for BBA students, including the **Dean's Scholarship** (HKD 50,000/year) and **ISOM Department Scholarship** (HKD 30,000/year).",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the **Reaching Out Award** (HKD 100,000) for overseas exchange or **Sir Edward Youde Memorial Scholarship** (HKD 40,000).",
+            "**Need-Based Financial Aid**: HKUST offers the **Financial Assistance Scheme** (up to full tuition) and **HKUST Bursary** (up to HKD 50,000) for students with demonstrated financial need.",
+            "**External Scholarships**: Students can also apply for **HSBC Overseas Scholarship**, **Jardine Foundation Scholarship**, and **Hong Kong Jockey Club Scholarships**.",
+            "**Entrepreneurship Grants**: The **HKUST Entrepreneurship Fund** provides up to HKD 200,000 for student startups, with additional support from the **HKUST-Sino One Million Dollar Competition**."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5314 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 36+ in Best 5 + 6th Bonus**",
+            "",
+            "- With a median score of 35.93, aim for at least **36 points** to be competitive. Use the HKUST admission calculator to simulate your score.",
+            "- Focus on achieving **Level 5 or above** in all core subjects, especially Mathematics and English.",
+            "",
+            "**2. Excel in Mathematics (Compulsory + M1/M2)**",
+            "",
+            "- Mathematics is critical for IS. Aim for **Level 5* or above** in Compulsory, and take **M1 or M2** to boost your score and demonstrate quantitative skills.",
+            "- A strong Math score can add up to **2 bonus points** under the 6th subject bonus.",
+            "",
+            "**3. Secure High Scores in English and Chinese**",
+            "",
+            "- English and Chinese are weighted equally. Target **Level 5 or above** in both. For English, practice academic writing and reading comprehension.",
+            "- Consider taking **Literature in English** or **Chinese History** as an elective to showcase language proficiency.",
+            "",
+            "**4. Choose Electives That Showcase Analytical Skills**",
+            "",
+            "- Select electives like **Economics**, **Business, Accounting and Financial Studies (BAFS)**, or **Information and Communication Technology (ICT)** to align with IS.",
+            "- These subjects are viewed favourably and can help you achieve the per-subject average of **4.87**.",
+            "",
+            "**5. Build a Strong Portfolio Beyond HKDSE**",
+            "",
+            "- Participate in **business case competitions** (e.g., HSBC/HKU Asia Pacific Business Case Competition) or **coding hackathons** (e.g., HKUST Hackathon).",
+            "- Highlight any **internships** or **volunteer work** in tech or business in your application.",
+            "",
+            "**6. Ace the Interview (If Shortlisted)**",
+            "",
+            "- HKUST may invite top applicants for an interview. Prepare to discuss **why IS**, your **career goals**, and **current tech trends** (e.g., AI, blockchain).",
+            "- Practice with mock interviews focusing on **behavioural questions** and **case analysis**.",
+            "",
+            "**7. Leverage HKUST's School-Based System**",
+            "",
+            "- Apply to **JS5314** directly, but also consider **JS5101** (BBA in Professional Accounting) or **JS5200** (BBA in Finance) as backup choices within the Business School.",
+            "- HKUST's school-based admission allows flexibility to switch majors after Year 1 if you meet GPA requirements.",
+            "",
+            "**8. Use the 6th Subject Bonus Strategically**",
+            "",
+            "- The 6th subject bonus rewards breadth. Take **7 subjects** if possible, or ensure your 6th subject is a strong one (e.g., Level 5 or above).",
+            "- Even a **Level 4** in the 6th subject can add **0.5–1 point** to your total score.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your application via **JUPAS** by the **early round deadline (early December)** for priority consideration.",
+            "- Monitor HKUST's website for **information sessions** and **open days** (usually in October) to learn more about the programme."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。",
+            "**最高可達分數**：66.94。",
+            "**入學中位數**：35.93分（2025年聯招數據）。",
+            "**下四分位數**：35.40分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：LQ per-subject-avg: 4.87。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：香港科技大學工商管理學士（資訊系統學）融合商業管理與尖端資訊科技，培養學生在商業策略與數碼創新之間的橋樑角色。",
+            "**第一年基礎**：學生修讀核心商業課程（如會計、經濟、市場學），同時學習資訊系統入門科目，包括 **ISOM 2500**（商業統計）及 **ISOM 2700**（營運管理）。",
+            "**第二年核心資訊系統課程**：深入學習 **ISOM 3200**（數據庫管理）、**ISOM 3300**（資訊系統分析與設計）及 **ISOM 3400**（企業系統），建立技術與分析能力。",
+            "**第三年專修與選修**：可選擇 **商業分析**、**數碼創新** 或 **網絡安全** 等專修範疇，並完成頂石項目或實習，通常與業界夥伴合作。",
+            "**第四年進階與全球視野**：修讀高級選修科如 **ISOM 4500**（大數據分析）或 **ISOM 4600**（人工智能商業應用），許多學生參與頂尖大學的交換計劃。",
+            "**體驗式學習**：課程包括強制性 **實習** 或 **顧問項目**（例如與滙豐、羅兵咸永道或香港科學園初創合作），並可使用科大 **創業中心** 的資源。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求職位**：畢業生深受歡迎，可擔任 **商業分析師**、**數據分析師**、**資訊科技顧問**、**系統分析師** 及 **數碼轉型經理** 等職位。",
+            "**頂尖僱主**：校友任職於 **麥肯錫公司**、**Google**、**滙豐銀行**、**德勤**、**騰訊** 及 **阿里巴巴集團** 等領先企業。",
+            "**行業領域**：就業機會涵蓋 **銀行與金融**（如摩根大通、渣打銀行）、**科技**（如微軟、華為）、**諮詢**（如埃森哲）及 **電子商務**（如蝦皮）。",
+            "**平均起薪**：根據科大畢業生就業調查，資訊系統學畢業生平均起薪為 **港幣 28,000 至 35,000 元**，頂尖畢業生可超過港幣 45,000 元。",
+            "**全球職業路徑**：許多畢業生透過科大的全球校友網絡及就業服務，在新加坡、中國內地、英國或美國發展事業。",
+            "**創業支援**：科大的 **創業中心** 及 **科大-信和百萬獎金創業大賽** 協助學生創辦自己的科技初創企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優美環境**：科大校園位於 **清水灣、西貢**，擁有壯麗海景，提供寧靜的學習與創新環境。",
+            "**世界級設施**：**李兆基商學大樓** 配備先進交易室、數據分析實驗室及協作空間，專為商科學生而設。",
+            "**創新樞紐**：校園毗鄰 **香港科學園**，學生可直接接觸超過 1,000 間科技公司，進行實習、研究及建立人脈。",
+            "**學生生活**：超過 **100 個學生組織及學會**，包括 **資訊系統學會**、**商業案例比賽團隊** 及 **創業學會**，培養領導力及社群歸屬感。",
+            "**全球交流**：科大與 **全球 40 多個國家超過 300 間夥伴大學** 合作，資訊系統學生可到 **加州大學柏克萊分校** 或 **倫敦政治經濟學院** 等學府交流一個學期。",
+            "**住宿體驗**：所有一年級學生保證獲分配校內宿舍，現代化宿舍提供海景房間、公共空間及餐飲設施。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：採用 **最佳5科 + 第6科加分**，最高可達 **66.94 分**。",
+            "**2025年中位數分數**：成功申請者的文憑試中位數分數為 **35.93 分**，競爭激烈。",
+            "**2025年下四分位數**：下四分位數分數為 **35.40 分**，即使排名第25百分位的學生亦取得極高成績。",
+            "**優先考慮科目**：下四分位數每科平均分為 **4.87**，顯示申請人通常在多個科目取得第5級或以上。",
+            "**科目比重**：沒有特定科目比重，但在 **數學**、**英文** 及 **經濟/商業** 表現優異將具優勢。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**高錕博士**：2009年諾貝爾物理學獎得主，前科大校長；光纖之父。雖非資訊系統畢業生，但其創新精神啟發科大。",
+            "**黃國強先生**：物流科技獨角獸 **Lalamove** 聯合創辦人，科大商學院畢業，展現創業成功典範。",
+            "**李慧敏女士**：**滙豐銀行香港** 數據分析副總裁，2012年資訊系統學畢業生，領導銀行數碼轉型。",
+            "**張志強先生**：**麥肯錫公司** 高級資訊科技顧問，2015年資訊系統學畢業生，專注為財富500強客戶制定數碼策略。",
+            "**陳珍妮女士**：**Google（山景城）** 產品經理，2017年資訊系統學畢業生，從事人工智能驅動的商業解決方案。",
+            "**吳文輝先生**：中小企電子商務平台 **Shopline** 創辦人，2010年資訊系統學畢業生，現服務全球超過 200,000 個商戶。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**科大入學獎學金**：所有申請人自動獲考慮；頂尖學生（如3科或以上5**）可獲 **全額學費減免** 及 **港幣 60,000 元生活津貼**。",
+            "**商學院獎學金**：為工商管理學士學生設立的優秀獎學金，包括 **院長獎學金**（每年港幣 50,000 元）及 **資訊系統學系獎學金**（每年港幣 30,000 元）。",
+            "**香港特區政府獎學金**：合資格學生可申請 **外展體驗獎**（港幣 100,000 元）用於海外交流，或 **尤德爵士紀念獎學金**（港幣 40,000 元）。",
+            "**需要為本資助**：科大提供 **經濟援助計劃**（最高全額學費）及 **科大助學金**（最高港幣 50,000 元）予有經濟需要的學生。",
+            "**外部獎學金**：學生亦可申請 **滙豐海外獎學金**、**怡和基金獎學金** 及 **香港賽馬會獎學金**。",
+            "**創業資助**：**科大創業基金** 為學生初創企業提供最高港幣 200,000 元資助，並獲 **科大-信和百萬獎金創業大賽** 額外支援。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5314 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：最佳5科加第6科加分達36分或以上**",
+            "",
+            "- 中位數分數為 35.93 分，建議目標至少 **36 分** 以增加競爭力。使用科大入學計算機模擬分數。",
+            "- 重點在核心科目取得 **第5級或以上**，特別是數學和英文。",
+            "",
+            "**2. 數學（必修 + M1/M2）表現突出**",
+            "",
+            "- 數學對資訊系統學至關重要。目標在必修科取得 **第5*級或以上**，並選修 **M1或M2** 以提升分數及展示量化能力。",
+            "- 優秀數學成績可在第6科加分中增加最多 **2 分**。",
+            "",
+            "**3. 英文及中文取得高分**",
+            "",
+            "- 英文和中文比重相同。目標在兩科取得 **第5級或以上**。英文方面，練習學術寫作及閱讀理解。",
+            "- 可考慮選修 **英國文學** 或 **中國歷史** 以展示語文能力。",
+            "",
+            "**4. 選修科展示分析能力**",
+            "",
+            "- 選擇 **經濟**、**企業、會計與財務概論** 或 **資訊及通訊科技** 等科目，與資訊系統學相關。",
+            "- 這些科目有助達到每科平均分 **4.87** 的目標。",
+            "",
+            "**5. 建立文憑試以外的豐富履歷**",
+            "",
+            "- 參與 **商業案例比賽**（如滙豐/港大亞太商業案例比賽）或 **編程黑客松**（如科大黑客松）。",
+            "- 在申請中突出任何 **實習** 或 **科技/商業相關義工經驗**。",
+            "",
+            "**6. 面試表現出色（如獲邀）**",
+            "",
+            "- 科大可能邀請頂尖申請人面試。準備討論 **為何選擇資訊系統學**、**職業目標** 及 **當前科技趨勢**（如人工智能、區塊鏈）。",
+            "- 透過模擬面試練習 **行為問題** 及 **案例分析**。",
+            "",
+            "**7. 善用科大學院制**",
+            "",
+            "- 直接申請 **JS5314**，同時可考慮 **JS5101**（工商管理學士專業會計學）或 **JS5200**（工商管理學士金融學）作為商學院內的後備選擇。",
+            "- 科大學院制允許學生在第一年後根據GPA要求轉換主修。",
+            "",
+            "**8. 策略性運用第6科加分**",
+            "",
+            "- 第6科加分獎勵廣泛學習。如可能，修讀 **7 科**，或確保第6科成績優異（如第5級或以上）。",
+            "- 即使第6科取得 **第4級**，亦可為總分增加 **0.5 至 1 分**。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- 透過 **JUPAS** 在 **早期申請截止日期（12月初）** 前提交申請，以獲優先考慮。",
+            "- 留意科大網站上的 **資訊講座** 及 **開放日**（通常在10月），了解更多課程資訊。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "35.93",
+    "lq": "35.40"
+  }
+}

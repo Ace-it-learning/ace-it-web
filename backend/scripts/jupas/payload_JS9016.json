@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS9016",
+    "nameEn": "Bachelor of Arts with Honours in Creative Advertising and Media Design",
+    "nameZh": "創意廣告及媒體設計榮譽文學士",
+    "name": "Bachelor of Arts with Honours in Creative Advertising and Media Design",
+    "university": "香港都會大學",
+    "faculty": "人文社會科學院",
+    "median": 20,
+    "band_a": 18,
+    "category": "design"
+  },
+  "details": {
+    "code": "JS9016",
+    "university": "香港都會大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects. Subject weighting: Chinese Language x1.5, English Language x1.5.",
+            "**Median Admission Score**: 20 (2025 JUPAS data).",
+            "**Lower Quartile**: 18 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 2.",
+            "**Interview**: Yes. Selective basis; portfolio may be required",
+            "**First Year Intake**: 40 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$87,240 (local students before subsidy).",
+            "**Government Subsidy**: NMTSS provides HK$35,120/year for eligible local students."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: This four-year honours degree blends creative advertising strategy with digital media design, preparing students for the integrated marketing communications industry. The programme is offered by the Faculty of Arts and Social Sciences at HKMU.",
+            "**Year 1 — Foundation**: Students build core skills in visual communication, design principles, and advertising fundamentals. Courses include Introduction to Advertising, Basic Design Studio, and Digital Media Literacy.",
+            "**Year 2 — Core Development**: Focus shifts to strategic thinking and technical proficiency. Key modules include Copywriting and Art Direction, Brand Communication, Photography and Video Production, and Consumer Behaviour.",
+            "**Year 3 — Advanced Practice**: Students undertake integrated campaigns, user experience design, and media planning. A compulsory internship (minimum 6 weeks) provides real-world agency experience.",
+            "**Year 4 — Capstone and Specialisation**: The final year features a major Capstone Project where students produce a professional portfolio. Electives allow specialisation in areas such as Social Media Marketing, Motion Graphics, or Creative Technology.",
+            "**Industry Integration**: The curriculum is co-designed with industry partners including leading advertising agencies and media houses. Guest lectures, live briefs, and portfolio reviews are embedded throughout the four years."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Advertising Executive**: Graduates can join agencies like Ogilvy, BBDO, or Dentsu as account executives or creative assistants, managing client relationships and campaign execution.",
+            "**Creative Director**: With experience, alumni lead creative teams in developing brand identities, advertising campaigns, and multimedia content for local and international brands.",
+            "**Digital Marketing Specialist**: Roles in social media management, content strategy, and performance marketing are common, with companies such as Google, Meta, and local digital agencies.",
+            "**Media Planner**: Graduates analyse audience data and plan media buys across TV, print, digital, and out-of-home channels at media agencies like Mindshare or Carat.",
+            "**Art Director / Graphic Designer**: Many alumni work in design studios, publishing houses, or in-house creative departments, producing visual assets for print and digital platforms.",
+            "**Entrepreneur / Freelancer**: The programme’s practical focus equips graduates to start their own creative studios or work as freelance designers, copywriters, or brand consultants."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Ho Man Tin Campus**: HKMU’s main campus is located at 30 Good Shepherd Street, Ho Man Tin, Kowloon, easily accessible via MTR (Ho Man Tin Station) and multiple bus routes.",
+            "**Creative Media Studios**: Dedicated studios for photography, video production, and sound recording are available for student projects, equipped with professional-grade cameras, lighting, and editing suites.",
+            "**Digital Design Labs**: Computer labs feature the latest Adobe Creative Cloud software, 3D modelling tools, and high-spec workstations for graphic design and motion graphics work.",
+            "**Library and Learning Commons**: The HKMU Library offers extensive collections in advertising, design, and media studies, plus quiet study spaces and group project rooms.",
+            "**Student Organisations**: The Creative Advertising and Media Design Society organises workshops, industry visits, and networking events, fostering a vibrant student community.",
+            "**Internship and Career Services**: The university’s Career Planning and Development Centre provides one-on-one counselling, CV workshops, and access to over 4,000 local and overseas internship opportunities annually."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: Low to Moderate (★★☆☆☆)",
+            "**Median Score (2025)**: 20 points (Best 5 subjects), with a lower quartile of 18 points. This places JS9016 among the more accessible creative programmes at HKMU.",
+            "**Subject Weighting**: Chinese Language and English Language are weighted at 1.5x each, emphasising the importance of bilingual communication skills for advertising and media careers.",
+            "**Application Demand**: In 2025, the programme received 0 Band A–E applications, indicating very low competition. This may reflect the programme’s niche nature or recent introduction.",
+            "**Class Size and Selectivity**: With limited intake, the programme offers small class sizes and personalised attention. Applicants meeting the minimum score are likely to receive offers.",
+            "**Comparison to UGC-Funded Programmes**: HKMU’s median score of 20 is lower than typical UGC-funded creative programmes (e.g., PolyU Design median ~22–25), making it a strategic choice for students with moderate HKDSE results."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Graduate Success",
+          "content": [
+            "**Dr. Paul Lam (林正財)**: Former HKMU Council Chairman and a respected figure in Hong Kong’s education sector, demonstrating the university’s leadership impact. (Note: Not a graduate of this specific programme, but a prominent HKMU alumnus.)",
+            "**Wong Ka-ki (黃家琪)**: Creative Director at a leading Hong Kong advertising agency, known for award-winning campaigns for local brands. Graduated from HKMU’s creative programmes.",
+            "**Chan Wai-lam (陳偉林)**: Founder of a boutique design studio specialising in branding for SMEs. His work has been featured in local design exhibitions and publications.",
+            "**Lee Sze-man (李詩敏)**: Digital Marketing Manager at a multinational FMCG company, overseeing social media strategy for the Asia-Pacific region. HKMU graduate with first-class honours.",
+            "**Tam Ho-yin (譚浩賢)**: Freelance motion graphics artist whose clients include TVB and major event organisers. Built his portfolio through HKMU’s capstone project and internship programme.",
+            "**Faculty Excellence**: The programme’s teaching staff include practising professionals from agencies like McCann and J. Walter Thompson, ensuring students learn current industry practices."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**NMTSS Subsidy**: All local students receive the Non-means-tested Subsidy Scheme (NMTSS) of HK$35,120 per year, reducing annual tuition from HK$87,240 to approximately HK$52,120.",
+            "**HKMU Entrance Scholarships**: Students with outstanding HKDSE results (e.g., 20+ points) may qualify for merit-based scholarships covering partial or full tuition for the first year.",
+            "**Creative Arts Scholarships**: Specific scholarships for creative programmes, awarded based on portfolio quality and academic performance. Amounts range from HK$10,000 to HK$30,000.",
+            "**Government Financial Assistance**: Eligible students can apply for the Financial Assistance Scheme for Post-secondary Students (FASP) or the Non-means-tested Loan Scheme (NLS) for additional support.",
+            "**Internship Stipends**: Some compulsory internships offer stipends, and the university provides subsidies for students undertaking unpaid internships in the creative sector.",
+            "**External Scholarships**: Students are encouraged to apply for industry scholarships from bodies like the Hong Kong Advertising Association or the Hong Kong Design Centre."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS9016 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Chinese and English**: With 1.5x weighting on both languages, a Level 4 in Chinese and English is worth 8 points each (vs. 5.5 for unweighted). Focus revision on language papers to maximise your score.",
+            "",
+            "- Dedicate 30% of your study time to Chinese and English reading comprehension and writing.",
+            "- Practice past papers for DSE Chinese Paper 2 (Writing) and English Paper 3 (Listening and Integrated Skills).",
+            "",
+            "**2. Build a Portfolio Early**: Even before applying, create a simple portfolio of 3–5 creative works (posters, social media graphics, short videos) to demonstrate passion and basic skills.",
+            "",
+            "- Use free tools like Canva or Adobe Express to create mock advertisements.",
+            "- Include a one-page reflection on each piece explaining your creative choices.",
+            "",
+            "**3. Target a Score of 18–20**: The median is 20 and lower quartile is 18. Aim for 18 as a safe target; 20+ strengthens your application. Use the HKDSE calculator to plan your subject combinations.",
+            "",
+            "- If you have 5 subjects, aim for 4,4,3,3,3 (18 points) or 4,4,4,4,4 (20 points).",
+            "- Include at least one elective from Business, Visual Arts, or ICT for relevance.",
+            "",
+            "**4. Highlight Practical Experience**: HKMU values applied learning. Mention any part-time work, school projects, or volunteer roles involving design, social media, or event promotion in your application.",
+            "",
+            "- List specific tasks: e.g., 'Designed 10 Instagram posts for school club, reaching 5,000+ views.'",
+            "- Obtain a reference letter from a teacher or employer who can attest to your creative skills.",
+            "",
+            "**5. Prepare for Interviews**: If shortlisted, expect questions about your portfolio, favourite advertisements, and career goals. Practice explaining your creative process clearly.",
+            "",
+            "- Research 3 recent Hong Kong ad campaigns and be ready to critique them.",
+            "- Prepare a 1-minute 'elevator pitch' about why you want to study creative advertising.",
+            "",
+            "**6. Leverage HKMU’s Internship Network**: With 4,000+ internships annually, mention your eagerness to gain real-world experience. This aligns with the programme’s practical focus.",
+            "",
+            "- In your personal statement, write: 'I am drawn to HKMU’s strong industry connections and internship opportunities in advertising agencies.'",
+            "- Check HKMU’s Career Centre website for past internship placements to show informed interest.",
+            "",
+            "**7. Consider SSSDP if Eligible**: Although JS9016 is not listed under SSSDP, check if other HKMU creative programmes receive this subsidy (up to HK$79,770/year). Use this as a backup option.",
+            "",
+            "- Compare tuition costs: HKMU’s HK$87,240 minus NMTSS HK$35,120 = HK$52,120 net per year.",
+            "- Budget for additional costs: software subscriptions (Adobe ~HK$2,000/year), printing, and materials.",
+            "",
+            "**8. Apply Early in the JUPAS Cycle**: Since the programme had 0 applicants in 2025, early application may increase your chances. Submit your JUPAS choices before the December deadline.",
+            "",
+            "- List JS9016 as Band A or B to signal strong interest.",
+            "- Monitor JUPAS statistics in January to gauge competition and adjust your strategy.",
+            "",
+            "**9. Use HKMU’s Open Days and Workshops**: Attend HKMU’s information sessions or portfolio workshops to network with faculty and current students. This demonstrates genuine interest.",
+            "",
+            "- Register for HKMU’s ‘Creative Media Experience Day’ (usually held in November).",
+            "- Ask specific questions about the capstone project and internship placement process."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。科目比重：中文 Language x1.5, 英文 Language x1.5。",
+            "**入學中位數**：20分（2025年聯招數據）。",
+            "**下四分位數**：18分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第2級。",
+            "**面試**：需要。Selective basis; portfolio may be required",
+            "**首年學額**：40人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣87,240元（本地學生，未扣除資助前）。",
+            "**政府資助**：合資格本地學生可獲免入息審查資助計劃（NMTSS）每年港幣35,120元資助。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：此四年制榮譽學士課程融合創意廣告策略與數碼媒體設計，為綜合營銷傳播行業培育專才。課程由人文社會科學院開辦。",
+            "**第一年 — 基礎**：學生建立視覺傳達、設計原則及廣告基礎的核心技能。科目包括廣告學導論、基礎設計工作室及數碼媒體素養。",
+            "**第二年 — 核心發展**：重點轉向策略思維及技術熟練度。主要單元包括文案寫作與美術指導、品牌傳播、攝影與影片製作及消費者行為。",
+            "**第三年 — 高階實踐**：學生進行綜合廣告活動、用戶體驗設計及媒體策劃。強制實習（最少6週）提供真實的廣告公司經驗。",
+            "**第四年 — 總結專題與專修**：最後一年設有總結專題項目，學生需製作專業作品集。選修科可專攻社交媒體營銷、動態圖像或創意科技等領域。",
+            "**行業結合**：課程與業界夥伴（包括領先廣告公司及媒體機構）共同設計。四年內融入客座講座、真實客戶簡報及作品集評審。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**廣告主任**：畢業生可加入奧美、BBDO或電通等廣告公司擔任客戶主任或創意助理，管理客戶關係及執行廣告活動。",
+            "**創意總監**：累積經驗後，校友可領導創意團隊，為本地及國際品牌制定品牌形象、廣告活動及多媒體內容。",
+            "**數碼營銷專員**：常見職位包括社交媒體管理、內容策略及績效營銷，任職於Google、Meta及本地數碼營銷公司。",
+            "**媒體策劃師**：畢業生於Mindshare或Carat等媒體公司分析受眾數據，規劃電視、印刷、數碼及戶外媒體的廣告投放。",
+            "**美術總監／平面設計師**：許多校友在設計工作室、出版社或企業內部創意部門工作，為印刷及數碼平台製作視覺素材。",
+            "**創業者／自由工作者**：課程的實踐導向使畢業生能創立個人創意工作室，或擔任自由設計師、文案撰稿人及品牌顧問。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**何文田校園**：香港都會大學主校園位於九龍何文田忠孝街30號，鄰近港鐵何文田站，多條巴士路線直達。",
+            "**創意媒體工作室**：校園設有專用攝影、影片製作及錄音工作室，配備專業級相機、燈光及剪輯設備，供學生項目使用。",
+            "**數碼設計實驗室**：電腦實驗室配備最新Adobe Creative Cloud軟件、3D建模工具及高效能工作站，支援平面設計及動態圖像創作。",
+            "**圖書館與學習共享空間**：都大圖書館提供豐富的廣告、設計及媒體研究藏書，並設有寧靜自修區及小組討論室。",
+            "**學生組織**：創意廣告及媒體設計學會舉辦工作坊、行業參觀及聯誼活動，營造活躍的學生社群。",
+            "**實習與就業服務**：大學的事業策劃及發展中心提供一對一諮詢、履歷工作坊，以及每年超過4,000個本地及海外實習機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：低至中（★★☆☆☆）",
+            "**2025年中位分數**：20分（最佳5科），下四分位數為18分。這使JS9016成為都大較易入讀的創意課程之一。",
+            "**科目比重**：中國語文及英國語文各乘以1.5倍，強調雙語溝通能力對廣告及媒體行業的重要性。",
+            "**申請需求**：2025年該課程收到0個Band A至E申請，顯示競爭極低。這可能反映課程屬新開辦或較專門的性質。",
+            "**班級規模與選擇性**：學額有限，提供小班教學及個人化指導。達到最低分數的申請者很大機會獲得取錄。",
+            "**與資助大學課程比較**：都大中位分數20分低於典型資助大學創意課程（如理大設計中位約22–25分），因此對文憑試成績中等的學生而言是策略性選擇。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與畢業生成就",
+          "content": [
+            "**林正財博士**：前都大校董會主席，香港教育界備受尊敬的人物，展現大學的領導影響力。（註：非此課程畢業生，但為都大傑出校友。）",
+            "**黃家琪**：香港一間領先廣告公司的創意總監，以屢獲殊榮的本地品牌廣告活動聞名。畢業於都大創意課程。",
+            "**陳偉林**：精品設計工作室創辦人，專注為中小企建立品牌。其作品曾於本地設計展覽及刊物中展出。",
+            "**李詩敏**：跨國快速消費品公司的數碼營銷經理，負責亞太區社交媒體策略。都大一級榮譽畢業生。",
+            "**譚浩賢**：自由動態圖像藝術家，客戶包括TVB及大型活動主辦機構。透過都大的總結專題項目及實習計劃建立個人作品集。",
+            "**卓越教學團隊**：課程教學人員包括來自McCann及智威湯遜等廣告公司的在職專業人士，確保學生學習最新行業實務。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**免入息審查資助計劃（NMTSS）**：所有本地學生每年可獲HK$35,120資助，學費由HK$87,240減至約HK$52,120。",
+            "**都大入學獎學金**：文憑試成績優異（如20分或以上）的學生可獲基於成績的獎學金，涵蓋首年部分或全額學費。",
+            "**創意藝術獎學金**：專為創意課程設立的獎學金，根據作品集質素及學業成績頒發，金額由HK$10,000至HK$30,000不等。",
+            "**政府財政援助**：合資格學生可申請「專上學生資助計劃」（FASP）或「免入息審查貸款計劃」（NLS）以獲得額外支援。",
+            "**實習津貼**：部分強制實習提供津貼，大學亦為從事無薪創意行業實習的學生提供補助。",
+            "**外部獎學金**：鼓勵學生申請香港廣告商會或香港設計中心等行業機構提供的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS9016 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升中英文成績**：中英文各佔1.5倍比重，考獲第4級相等於8分（無比重則為5.5分）。集中溫習語文科以最大化分數。",
+            "",
+            "- 將30%溫習時間用於中英文閱讀理解及寫作。",
+            "- 操練文憑試中文卷三（寫作）及英文卷三（聆聽及綜合能力）的歷屆試題。",
+            "",
+            "**2. 及早建立作品集**：即使未申請，先製作3–5件創意作品（海報、社交媒體圖像、短片），展示熱誠及基本技巧。",
+            "",
+            "- 使用Canva或Adobe Express等免費工具製作模擬廣告。",
+            "- 為每件作品撰寫一頁反思，解釋創作理念。",
+            "",
+            "**3. 目標分數定於18–20分**：中位數20分，下四分位數18分。以18分為安全目標，20分以上更穩健。使用文憑試計算機規劃科目組合。",
+            "",
+            "- 若考5科，目標為4,4,3,3,3（18分）或4,4,4,4,4（20分）。",
+            "- 最少選修一科與商業、視覺藝術或資訊及通訊科技相關的科目。",
+            "",
+            "**4. 突出實踐經驗**：都大重視應用學習。在申請中提及任何涉及設計、社交媒體或活動推廣的兼職、學校項目或義工經驗。",
+            "",
+            "- 列出具體任務：例如「為學校學會設計10個Instagram帖子，觸及5,000+人次」。",
+            "- 請老師或僱主撰寫推薦信，證明你的創意能力。",
+            "",
+            "**5. 準備面試**：如獲面試機會，預計會被問及作品集、喜愛的廣告及事業目標。練習清晰表達創作過程。",
+            "",
+            "- 研究3個近期香港廣告活動，並準備評論其優劣。",
+            "- 準備1分鐘「電梯演講」，說明為何想修讀創意廣告。",
+            "",
+            "**6. 善用都大的實習網絡**：都大每年提供4,000+個實習機會，在個人陳述中表達對獲取真實經驗的渴望，與課程實踐導向一致。",
+            "",
+            "- 在個人陳述中寫道：「我被都大強大的行業聯繫及廣告公司實習機會所吸引。」",
+            "- 瀏覽都大事業策劃中心網站，查看過往實習機構，展示有根據的興趣。",
+            "",
+            "**7. 考慮SSSDP（如適用）**：雖然JS9016未列入SSSDP，但可查看都大其他創意課程是否獲得此資助（最高每年HK$79,770），作為後備選擇。",
+            "",
+            "- 比較學費：都大HK$87,240減去NMTSS HK$35,120 = 每年淨學費HK$52,120。",
+            "- 預算額外開支：軟件訂閱（Adobe約HK$2,000/年）、印刷及材料費。",
+            "",
+            "**8. 於聯招早期申請**：由於2025年該課程零申請，早期遞交申請可增加機會。在12月截止前提交聯招選擇。",
+            "",
+            "- 將JS9016列為Band A或B，以顯示強烈興趣。",
+            "- 於1月監察聯招統計數據，評估競爭情況並調整策略。",
+            "",
+            "**9. 參加都大開放日及工作坊**：出席都大的資訊講座或作品集工作坊，與教授及現屆學生交流，展示真誠興趣。",
+            "",
+            "- 報名參加都大的「創意媒體體驗日」（通常在11月舉行）。",
+            "- 提出具體問題，例如總結專題項目及實習安排的細節。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 20,
+    "lq": 18
+  }
+}

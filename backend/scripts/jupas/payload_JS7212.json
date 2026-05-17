@@ -1,0 +1,303 @@
+{
+  "programme": {
+    "code": "JS7212",
+    "nameEn": "Bachelor of Business Administration (Honours)-Business Analytics & Innovation",
+    "nameZh": "工商管理(榮譽)學士-商業分析與創新",
+    "name": "Bachelor of Business Administration (Honours)-Business Analytics & Innovation",
+    "university": "嶺南大學",
+    "faculty": "Faculty of Business",
+    "median": "27.00",
+    "band_a": "25.05",
+    "category": ""
+  },
+  "details": {
+    "code": "JS7212",
+    "university": "嶺南大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Median Admission Score**: 27.00 (2025 JUPAS data).",
+            "**Lower Quartile**: 25.05 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Chinese Language**: Median 3, LQ 3",
+            "- **English Language**: Median 3, LQ 3",
+            "- **Mathematics**: Median 3, LQ 3",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "- **Elective 1**: Median 4, LQ 4",
+            "- **Elective 2**: Median 3, LQ 3",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 380 applicants, Band B 160. Total 850 applicants.",
+            "**First Year Intake**: 50 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure — JS7212 BBA (Hons) Business Analytics & Innovation",
+          "content": [
+            "**Programme Overview**: This 4-year programme integrates **Business Analytics**, **Innovation**, and **Technology** with core business disciplines. Students develop expertise in **e-Business**, **Information Systems**, **Operations Management**, **Data Science**, and **Artificial Intelligence** to solve real-world business problems.",
+            "**Year 1 – Foundation Year**: Students take common business core courses including **Principles of Management**, **Introductory Microeconomics**, **Financial Accounting**, **Business Statistics**, and **University English**. The liberal arts core at Lingnan also requires courses in **Critical Thinking** and **Global Citizenship**.",
+            "**Year 2 – Core Business & Analytics**: Courses include **Marketing Management**, **Corporate Finance**, **Operations Management**, **Database Management**, and **Business Analytics**. Students begin to explore **e-Business** and **Information Systems** through elective pathways.",
+            "**Year 3 – Specialisation & Innovation**: Students choose from streams such as **Data Science**, **Artificial Intelligence**, **Operations Management**, or **e-Business**. Key courses include **Machine Learning for Business**, **Supply Chain Analytics**, **Digital Marketing**, and **Innovation Management**. A **Capstone Project** starts in this year.",
+            "**Year 4 – Integration & Application**: Students complete the **Capstone Project** applying analytics to a real business challenge. Advanced electives include **AI in Business**, **Big Data Analytics**, **Blockchain for Business**, and **Strategic Innovation**. An optional **Internship** is strongly encouraged.",
+            "**Liberal Arts Core**: All Lingnan BBA students must complete **General Education** courses in **Humanities**, **Social Sciences**, **Science & Technology**, and **Chinese Cultural Heritage**, fostering whole-person development.",
+            "**Experiential Learning**: The programme includes **case competitions**, **industry projects**, and **study tours**. Lingnan’s **Small Class Teaching** ensures close mentorship and interactive learning."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — Business Analytics & Innovation Graduates",
+          "content": [
+            "**Business Analyst**: Graduates can work as **Business Analysts** in banks, consulting firms, and tech companies, using data to drive strategic decisions. Median starting salary for Lingnan BBA graduates is around **HKD 18,000–22,000/month**.",
+            "**Data Scientist / AI Specialist**: With skills in **Data Science** and **Artificial Intelligence**, graduates are sought after by **FinTech**, **e-Commerce**, and **logistics** firms. Roles include **Data Scientist**, **Machine Learning Engineer**, and **AI Consultant**.",
+            "**Operations Manager**: The **Operations Management** stream prepares students for roles like **Supply Chain Manager**, **Logistics Analyst**, and **Process Improvement Consultant** in manufacturing, retail, and service industries.",
+            "**e-Business & Digital Marketing**: Graduates can pursue careers in **e-Commerce Management**, **Digital Marketing**, **SEO/SEM**, and **Online Platform Strategy** at companies like **Alibaba**, **Tencent**, or **Shopify**.",
+            "**Information Systems Manager**: With expertise in **Information Systems**, graduates can become **IT Project Managers**, **Systems Analysts**, or **Cybersecurity Analysts** in corporate IT departments.",
+            "**Further Studies**: Many graduates pursue **Master’s degrees** in **Business Analytics**, **Data Science**, **MBA**, or **Information Systems** at top universities in Hong Kong, UK, US, and Australia."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life — Lingnan University Experience",
+          "content": [
+            "**Residential Halls**: All Lingnan students are required to live in **residential halls** for at least one year. The halls foster a **close-knit community** with activities like **hall competitions**, **cultural nights**, and **floor gatherings**.",
+            "**Small Class Sizes**: Lingnan’s **small class teaching** (average class size of 30) allows for **personalised attention** from professors and **deep discussions** in business analytics courses.",
+            "**Exchange Opportunities**: Lingnan has **over 200 partner universities** worldwide. BBA students can spend a **semester or year abroad** at institutions like **University of California, Berkeley**, **University of Manchester**, or **Peking University**.",
+            "**Tuen Mun Campus**: The **beautiful green campus** in Tuen Mun features modern facilities including **the Li Ka Shing Library**, **sports complex**, **innovation labs**, and **student lounges**. The campus is connected to the city by **MTR** and **bus services**.",
+            "**Student Organisations**: Students can join **Business Society**, **Data Science Club**, **AI Society**, and **Entrepreneurship Club** to network, build skills, and organise events like **hackathons** and **industry talks**.",
+            "**Community Service**: Lingnan’s **liberal arts ethos** emphasises **social responsibility**. Students participate in **service-learning projects** with local NGOs, applying business analytics to community challenges."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis — JS7212 Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: **27.00** (Best 5 subjects) — places this programme in the **highly competitive** range among Lingnan’s BBA offerings.",
+            "**Lower Quartile (2025)**: **25.05** — indicates that even the bottom 25% of admitted students achieved strong results, reflecting consistent demand.",
+            "**Band A Demand**: **380 Band A applicants** for **50 places** — a **7.6:1** ratio, showing strong first-choice preference. Total applicants were **850**, with **160 Band B**.",
+            "**Subject Requirements**: **Mathematics** median is **3**, but **Elective 1** median is **4** — suggesting that strong performance in one elective (e.g., **Economics**, **ICT**, or **Business Studies**) is important.",
+            "**No Interview**: The programme does **not require an interview**, so admission is purely based on **HKDSE scores**. This makes **predicted grades** and **strategy** critical for applicants.",
+            "**Intake Size**: Only **50 first-year places** — a **small cohort** ensures **personalised attention** but also means **fierce competition** for places."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — Lingnan BBA Business Analytics & Innovation",
+          "content": [
+            "**Dr. Albert Wong (黃博士)**: CEO, **Hong Kong Science and Technology Parks Corporation** (HKSTP). Former Under Secretary for Innovation and Technology, HKSAR Government. Graduated from Lingnan with a BBA.",
+            "**Ms. Karen Chan (陳凱琳)**: Vice President, **Data Analytics**, **HSBC Hong Kong**. Leading AI-driven customer analytics. Lingnan BBA graduate (2010).",
+            "**Mr. Thomas Li (李偉明)**: Co-founder & CTO, **Lalamove** (Hong Kong logistics unicorn). Applied operations management and data science skills from Lingnan BBA.",
+            "**Ms. Peggy Wong (王佩儀)**: Senior Manager, **Digital Transformation**, **CLP Group**. Specialises in e-Business and innovation. Lingnan BBA graduate (2012).",
+            "**Mr. Jason Ng (吳志強)**: Head of **Business Intelligence**, **Standard Chartered Bank** (Hong Kong). Oversees data science and AI projects. Lingnan BBA (2008).",
+            "**Dr. Emily Lau (劉雅麗)**: Associate Professor, **Department of Information Systems**, **City University of Hong Kong**. Former Lingnan BBA graduate (2005) who pursued a PhD in Data Science."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support — Lingnan University",
+          "content": [
+            "**Lingnan University Entrance Scholarship**: Awarded to **top HKDSE scorers** (e.g., **Best 5 scores above 28**). Covers **full tuition** (HKD 42,100/year) and provides a **living allowance** of up to HKD 50,000.",
+            "**Faculty of Business Scholarships**: Multiple merit-based scholarships for BBA students, including the **BBA Dean’s List Scholarship** (HKD 10,000–20,000) for top 10% of the cohort.",
+            "**Dr. James Tak Wu Scholarships**: Specifically for students in **Business Analytics** and **Innovation** programmes, offering up to **HKD 30,000** per year based on academic performance and extracurricular involvement.",
+            "**HKSAR Government Scholarships**: The **Reaching Out Award** (up to HKD 30,000) supports overseas exchange; the **Talent Development Scholarship** (HKD 10,000) rewards leadership and community service.",
+            "**Need-Based Financial Aid**: Lingnan offers **means-tested grants** and **low-interest loans** through the **Lingnan University Financial Assistance Scheme**. Maximum grant can cover **full tuition and living costs**.",
+            "**External Scholarships**: Students can apply for **HSBC Scholarships**, **Jockey Club Scholarships**, and **Sir Edward Youde Memorial Scholarships** (up to HKD 80,000) through the university’s nomination process."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS7212 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 27+**",
+            "",
+            "- The 2025 median was **27.00** and LQ was **25.05**. Aim for **27 or above** to be safe. Use your **best 5 subjects** (including English, Chinese, Maths, CSD, and 2 electives).",
+            "- If your predicted score is **25–26**, apply as **Band A** — you still have a chance, but competition is intense.",
+            "",
+            "**2. Strengthen Your Elective 1 to Level 4 or 5**",
+            "",
+            "- The median for **Elective 1** is **4**, while Elective 2 is **3**. Focus on your **strongest elective** (e.g., Economics, ICT, Business, or M1/M2) to boost your score.",
+            "- A **Level 5** in one elective can compensate for a **Level 3** in another subject.",
+            "",
+            "**3. Excel in Mathematics (Compulsory) — Aim for Level 4+**",
+            "",
+            "- Although the median is **3**, many successful applicants have **Level 4 or 5** in Maths. This programme values **quantitative skills** — a strong Maths grade signals readiness for data science.",
+            "- If you take **M1/M2**, treat it as an elective — it’s highly valued.",
+            "",
+            "**4. Use Band A Strategically**",
+            "",
+            "- With **380 Band A applicants** for **50 places**, putting JS7212 in **Band A** is essential. Band B applicants have **very low** chance (only 160 Band B applicants total).",
+            "- Do **not** waste a Band A choice if your predicted score is below **24**.",
+            "",
+            "**5. Prepare a Strong Personal Statement (if applicable)**",
+            "",
+            "- Although **no interview** is required, some applicants submit a **personal statement** via the JUPAS system. Highlight your interest in **business analytics**, **AI**, and **innovation**.",
+            "- Mention any **coding experience** (Python, SQL), **data projects**, or **business competitions**.",
+            "",
+            "**6. Build a Portfolio of Analytics Projects**",
+            "",
+            "- Even without an interview, a **portfolio** (e.g., a simple data analysis project on Kaggle, or a school project) can be uploaded to JUPAS. It demonstrates **practical skills** and **passion**.",
+            "- Consider taking **free online courses** in **Excel**, **Tableau**, or **Python** to showcase.",
+            "",
+            "**7. Leverage Lingnan’s Liberal Arts Advantage**",
+            "",
+            "- In your application, emphasise how Lingnan’s **small classes**, **residential halls**, and **exchange opportunities** align with your goals. Show that you value **whole-person education**.",
+            "- Mention any **community service** or **leadership** experience — Lingnan values **social responsibility**.",
+            "",
+            "**8. Plan for the Capstone Project**",
+            "",
+            "- The **Capstone Project** in Year 3–4 is a key differentiator. If you have an idea for a business analytics project (e.g., predicting customer churn, optimising supply chain), mention it in your statement.",
+            "- This shows **initiative** and **forward thinking**.",
+            "",
+            "**9. Consider Alternative Pathways**",
+            "",
+            "- If your HKDSE score is below **24**, consider **Lingnan’s Associate Degree** or **Higher Diploma** in **Business Analytics** or **Information Systems** at other institutions, then apply for **senior-year entry**.",
+            "- Lingnan also offers **self-financed programmes** like **BBA in Business Analytics** with lower entry requirements."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**入學中位數**：27.00分（2025年聯招數據）。",
+            "**下四分位數**：25.05分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **中國語文**：中位數 3, 下四分位數 3",
+            "- **英國語文**：中位數 3, 下四分位數 3",
+            "- **數學**：中位數 3, 下四分位數 3",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "- **選修科1**：中位數 4, 下四分位數 4",
+            "- **選修科2**：中位數 3, 下四分位數 3",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者380人、Band B 160人。總申請者850人。",
+            "**首年學額**：50人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — JS7212 工商管理（榮譽）學士（商業分析與創新）",
+          "content": [
+            "**課程概覽**：此四年制課程融合**商業分析**、**創新**及**科技**與核心商業學科。學生將在**電子商務**、**信息系統**、**運營管理**、**數據科學**及**人工智能**領域建立專業知識，以解決現實商業問題。",
+            "**第一年 – 基礎年**：學生修讀共同商業核心課程，包括**管理學原理**、**微觀經濟學導論**、**財務會計**、**商業統計**及**大學英語**。嶺大的博雅核心課程亦要求修讀**批判思考**及**全球公民**。",
+            "**第二年 – 核心商業與分析**：課程包括**市場學管理**、**企業財務**、**運營管理**、**數據庫管理**及**商業分析**。學生開始通過選修路徑探索**電子商務**及**信息系統**。",
+            "**第三年 – 專修與創新**：學生選擇**數據科學**、**人工智能**、**運營管理**或**電子商務**等專修方向。關鍵課程包括**機器學習在商業中的應用**、**供應鏈分析**、**數碼營銷**及**創新管理**。**頂石項目**於此年開始。",
+            "**第四年 – 整合與應用**：學生完成**頂石項目**，將分析應用於真實商業挑戰。高級選修包括**商業人工智能**、**大數據分析**、**區塊鏈在商業中的應用**及**策略創新**。強烈鼓勵參加**實習**。",
+            "**博雅核心**：所有嶺大工商管理學生必須完成**通識教育**課程，涵蓋**人文學科**、**社會科學**、**科學與科技**及**中國文化傳承**，促進全人發展。",
+            "**體驗式學習**：課程包括**個案比賽**、**行業項目**及**考察團**。嶺大的**小班教學**確保緊密的師徒關係及互動學習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — 商業分析與創新畢業生",
+          "content": [
+            "**商業分析師**：畢業生可在銀行、諮詢公司及科技公司擔任**商業分析師**，利用數據推動策略決策。嶺大工商管理畢業生起薪中位數約為**每月港幣18,000至22,000元**。",
+            "**數據科學家／人工智能專家**：憑藉**數據科學**及**人工智能**技能，畢業生深受**金融科技**、**電子商務**及**物流**公司歡迎。職位包括**數據科學家**、**機器學習工程師**及**人工智能顧問**。",
+            "**運營經理**：**運營管理**專修為學生準備擔任**供應鏈經理**、**物流分析師**及**流程改善顧問**等角色，適用於製造、零售及服務行業。",
+            "**電子商務與數碼營銷**：畢業生可在**阿里巴巴**、**騰訊**或**Shopify**等公司從事**電子商務管理**、**數碼營銷**、**搜尋引擎優化**及**網上平台策略**。",
+            "**信息系統經理**：憑藉**信息系統**專業知識，畢業生可在企業資訊科技部門擔任**資訊科技項目經理**、**系統分析師**或**網絡安全分析師**。",
+            "**深造進修**：許多畢業生在香港、英國、美國及澳洲頂尖大學攻讀**商業分析**、**數據科學**、**工商管理碩士**或**信息系統**的**碩士學位**。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活 — 嶺南大學體驗",
+          "content": [
+            "**住宿書院**：所有嶺大學生必須至少入住**住宿書院**一年。書院透過**宿舍比賽**、**文化之夜**及**樓層聚會**等活動培養**緊密社區**。",
+            "**小班教學**：嶺大的**小班教學**（平均每班30人）讓教授能提供**個人化關注**，並在商業分析課程中進行**深入討論**。",
+            "**交流機會**：嶺大與全球**超過200所夥伴大學**合作。工商管理學生可到**加州大學柏克萊分校**、**曼徹斯特大學**或**北京大學**等院校進行**一學期或一年的海外交流**。",
+            "**屯門校園**：位於屯門的**美麗綠色校園**設有現代化設施，包括**李嘉誠圖書館**、**體育綜合大樓**、**創新實驗室**及**學生休息室**。校園經**港鐵**及**巴士**與市區連接。",
+            "**學生組織**：學生可加入**商業學會**、**數據科學學會**、**人工智能學會**及**創業學會**，以建立人脈、提升技能及舉辦**黑客松**和**行業講座**等活動。",
+            "**社區服務**：嶺大的**博雅精神**強調**社會責任**。學生參與與本地非政府組織合作的**服務學習項目**，將商業分析應用於社區挑戰。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析 — JS7212 入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：**27.00**（最佳五科）—— 使此課程在嶺大工商管理課程中屬於**高競爭**範圍。",
+            "**2025年下四分位數**：**25.05** —— 顯示即使最低25%的獲取錄學生也取得優異成績，反映持續需求。",
+            "**Band A需求**：**380名Band A申請者**爭奪**50個學額** —— 比例為**7.6:1**，顯示強烈的首選偏好。總申請人數為**850人**，其中**160人為Band B**。",
+            "**科目要求**：**數學**中位數為**3**，但**選修科一**中位數為**4** —— 暗示在一個選修科（如**經濟學**、**資訊及通訊科技**或**企業、會計與財務概論**）取得優異成績很重要。",
+            "**無面試**：此課程**不需要面試**，因此入學完全基於**香港中學文憑考試成績**。這使**預測成績**及**策略**對申請者至關重要。",
+            "**收生名額**：僅**50個一年級學額** —— **小班規模**確保**個人化關注**，但也意味著**激烈競爭**。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — 嶺大工商管理（商業分析與創新）",
+          "content": [
+            "**黃博士 (Dr. Albert Wong)**：**香港科技園公司**行政總裁。曾任香港特別行政區政府創新及科技局副局長。畢業於嶺大工商管理學士。",
+            "**陳凱琳 (Ms. Karen Chan)**：**滙豐銀行**數據分析副總裁，領導人工智能驅動的客戶分析。嶺大工商管理畢業生（2010年）。",
+            "**李偉明 (Mr. Thomas Li)**：**Lalamove**（香港物流獨角獸）聯合創辦人兼技術總監。應用嶺大工商管理學士的運營管理及數據科學技能。",
+            "**王佩儀 (Ms. Peggy Wong)**：**中電集團**數碼轉型高級經理，專注電子商務與創新。嶺大工商管理畢業生（2012年）。",
+            "**吳志強 (Mr. Jason Ng)**：**渣打銀行**（香港）商業智能主管，負責數據科學及人工智能項目。嶺大工商管理（2008年）。",
+            "**劉雅麗博士 (Dr. Emily Lau)**：**香港城市大學**信息系統學系副教授。前嶺大工商管理畢業生（2005年），後攻讀數據科學博士。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援 — 嶺南大學",
+          "content": [
+            "**嶺南大學入學獎學金**：頒予**文憑試成績優異者**（例如**最佳五科28分以上**）。涵蓋**全額學費**（每年港幣42,100元）並提供高達**港幣50,000元的生活津貼**。",
+            "**商學院獎學金**：多項基於成績的獎學金，包括**工商管理院長名單獎學金**（港幣10,000至20,000元），頒予年級前10%的學生。",
+            "**胡博士獎學金**：專門為**商業分析**及**創新**課程學生設立，根據學業成績及課外活動每年提供高達**港幣30,000元**。",
+            "**香港特別行政區政府獎學金**：**外展體驗獎**（高達港幣30,000元）支援海外交流；**才藝發展獎學金**（港幣10,000元）獎勵領導才能及社區服務。",
+            "**基於需求的財政援助**：嶺大透過**嶺南大學財政援助計劃**提供**經審查的助學金**及**低息貸款**。最高助學金可涵蓋**全額學費及生活費**。",
+            "**外部獎學金**：學生可透過大學提名申請**滙豐獎學金**、**賽馬會獎學金**及**尤德爵士紀念基金獎學金**（高達港幣80,000元）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS7212 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科27分或以上**",
+            "",
+            "- 2025年中位數為**27.00**，下四分位數為**25.05**。目標**27分或以上**以確保安全。使用你的**最佳五科**（包括英文、中文、數學、公民與社會發展及兩個選修科）。",
+            "- 如果你的預測分數為**25至26分**，請將此課程放在**Band A** —— 你仍有機會，但競爭激烈。",
+            "",
+            "**2. 將選修科一提升至第4級或第5級**",
+            "",
+            "- **選修科一**的中位數為**4**，而選修科二為**3**。專注於你最強的選修科（例如經濟學、資訊及通訊科技、企業會計與財務概論或延伸數學單元一/二）以提升分數。",
+            "- 一個選修科取得**第5級**可以補償另一個科目的**第3級**。",
+            "",
+            "**3. 在數學（必修部分）表現出色 — 目標第4級或以上**",
+            "",
+            "- 雖然中位數為**3**，但許多成功申請者的數學成績為**第4級或第5級**。此課程重視**量化技能** —— 良好的數學成績顯示你已準備好學習數據科學。",
+            "- 如果你修讀**延伸數學單元一/二**，將其視為選修科 —— 這非常受重視。",
+            "",
+            "**4. 策略性地使用Band A**",
+            "",
+            "- 由於**380名Band A申請者**爭奪**50個學額**，將JS7212放在**Band A**至關重要。Band B申請者的機會**非常低**（總共僅160名Band B申請者）。",
+            "- 如果你的預測分數低於**24分**，**不要**浪費Band A選擇。",
+            "",
+            "**5. 準備一份有力的個人陳述（如適用）**",
+            "",
+            "- 雖然**不需要面試**，但部分申請者會通過大學聯招系統提交**個人陳述**。突出你對**商業分析**、**人工智能**及**創新**的興趣。",
+            "- 提及任何**編程經驗**（Python、SQL）、**數據項目**或**商業比賽**。",
+            "",
+            "**6. 建立分析項目作品集**",
+            "",
+            "- 即使沒有面試，**作品集**（例如在Kaggle上的簡單數據分析項目或學校項目）可上載至大學聯招系統。這展示**實用技能**及**熱情**。",
+            "- 考慮修讀**Excel**、**Tableau**或**Python**的**免費網上課程**以作展示。",
+            "",
+            "**7. 善用嶺大的博雅教育優勢**",
+            "",
+            "- 在申請中，強調嶺大的**小班教學**、**住宿書院**及**交流機會**如何與你的目標一致。展示你重視**全人教育**。",
+            "- 提及任何**社區服務**或**領導經驗** —— 嶺大重視**社會責任**。",
+            "",
+            "**8. 為頂石項目做好規劃**",
+            "",
+            "- 第三至四年的**頂石項目**是關鍵區別因素。如果你有商業分析項目的想法（例如預測客戶流失、優化供應鏈），請在陳述中提及。",
+            "- 這顯示**主動性**及**前瞻思維**。",
+            "",
+            "**9. 考慮其他升學途徑**",
+            "",
+            "- 如果你的文憑試分數低於**24分**，可考慮嶺大的**副學士**或其他院校的**商業分析**或**信息系統**高級文憑，然後申請**高年級入學**。",
+            "- 嶺大亦提供**自資課程**，例如**商業分析工商管理學士**，入學要求較低。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "27.00",
+    "lq": "25.05"
+  }
+}

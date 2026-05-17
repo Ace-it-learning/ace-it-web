@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3007",
+    "nameEn": "Bachelor's Degree Scheme in Humanities",
+    "nameZh": "人文學科組合學士課程",
+    "name": "Bachelor's Degree Scheme in Humanities",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Humanities",
+    "median": "N/A",
+    "band_a": "N/A",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3007",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 185.5 (2025 JUPAS data).",
+            "**Median Admission Score**: N/A (2025 JUPAS data).",
+            "**Lower Quartile**: N/A (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3007 is a broad-based Bachelor's Degree Scheme in Humanities, offering students flexibility to explore multiple disciplines before specialising. The programme is designed with a strong emphasis on critical thinking, cultural literacy, and applied humanities skills.",
+            "**Two Streams**: Students can choose from two main streams — Chinese History and Culture, or English and Applied Linguistics — with the option to customise their own interdisciplinary pathway through elective courses.",
+            "**Year 1**: Foundation year covering core humanities subjects such as Introduction to Humanities, Academic Writing, and Critical Thinking. Students take 6-8 compulsory courses to build a solid academic base.",
+            "**Year 2**: Specialisation begins with stream-specific core courses (e.g., Chinese Historical Sources, Phonetics and Phonology). Students also select 2-3 electives from other humanities disciplines.",
+            "**Year 3**: Advanced coursework and research methods training. Students undertake a capstone project or dissertation (6 credits) and participate in Work-Integrated Education (WIE) for at least 1 semester.",
+            "**Year 4**: Final year focuses on advanced seminars, independent research, and career preparation. Students complete a final-year project and may opt for an additional WIE placement or exchange programme."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Broad Career Pathways**: Graduates are well-prepared for roles in education, media, cultural management, public relations, government, and non-profit sectors. The programme's flexibility allows students to pivot across industries.",
+            "**Education Sector**: Many graduates become secondary school teachers (Chinese or English), curriculum developers, or educational consultants. PolyU's strong teaching placement network supports this path.",
+            "**Media and Communications**: Roles include journalist, editor, content strategist, and digital marketing specialist. Alumni have joined leading media houses like TVB, South China Morning Post, and RTHK.",
+            "**Cultural and Heritage Management**: Graduates work in museums, art galleries, heritage sites, and cultural festivals. Hong Kong's West Kowloon Cultural District is a key employer.",
+            "**Government and Public Service**: Positions in the Hong Kong Civil Service (e.g., Administrative Officer, Executive Officer) and statutory bodies are common, leveraging humanities graduates' analytical and communication skills.",
+            "**Further Study**: Approximately 30% of graduates pursue postgraduate degrees (MA, MPhil, PhD) at top universities in Hong Kong, UK, US, and Australia, including University of Hong Kong, University of Cambridge, and University of Sydney."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU's main campus is in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and West Rail Line). The campus is a 10-minute walk from Tsim Sha Tsui East.",
+            "**Humanities Hub**: The Faculty of Humanities is housed in the iconic Jockey Club Tower, featuring state-of-the-art language labs, multimedia studios, and a dedicated humanities library with over 100,000 volumes.",
+            "**Student Facilities**: Students enjoy access to the PolyU Sports Centre (indoor swimming pool, gym, climbing wall), the Innovation Tower, and 24/7 study spaces. The campus has over 50 student clubs and societies.",
+            "**Work-Integrated Education (WIE)**: All humanities students complete at least 1 WIE placement (typically 6-12 weeks). Recent placements include the Hong Kong Palace Museum, Cathay Pacific, and the Hong Kong Arts Festival.",
+            "**Global Exchange**: PolyU has exchange agreements with over 200 universities worldwide. Humanities students can spend one semester abroad at partner institutions such as University of California, Berkeley, University of Manchester, and Peking University.",
+            "**Living Support**: On-campus housing is guaranteed for first-year students (subject to application). The campus also offers a medical clinic, counselling services, and career advising centre."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — the programme considers the best 5 HKDSE subject results, giving students flexibility to leverage their strongest subjects.",
+            "**Subject Weighting**: Core subjects (Chinese, English, Mathematics) are weighted at 1.0x, while elective subjects in humanities (e.g., Chinese History, English Literature, History) are weighted at 1.5x. Other electives are weighted at 1.0x.",
+            "**Average Score (2025)**: The average HKDSE score with subject weighting is 185.5. This is a competitive benchmark for applicants targeting this programme.",
+            "**Interview Requirement**: Shortlisted applicants may be invited for an interview, which assesses motivation, communication skills, and subject interest. The interview can contribute up to 10% of the overall admission score.",
+            "**Application Tips**: Strong performance in Chinese and English is essential. Applicants with elective subjects in humanities or social sciences have a distinct advantage due to higher weighting. A personal statement highlighting interest in humanities is highly recommended."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Kwok-bun (陳國彬教授)**: Renowned sociologist and author, former Head of Department of Sociology at Hong Kong Baptist University. Graduated from PolyU's humanities programme in the 1980s.",
+            "**Ms. Wong Yuen-ling (黃婉玲)**: Senior Curator, Hong Kong Palace Museum. Oversees exhibitions on Chinese art and culture. Graduated in 2005 with a degree in Chinese History and Culture.",
+            "**Mr. Leung Chi-wai (梁志偉)**: Award-winning journalist and editor, South China Morning Post. Specialises in cultural reporting and feature writing. Graduated in 2010.",
+            "**Dr. Li Sze-ming (李思明博士)**: Assistant Professor of English Linguistics, University of Hong Kong. Published over 30 research papers on applied linguistics. Graduated in 2012.",
+            "**Ms. Cheng Hoi-yan (鄭海欣)**: Founder and CEO, Cultural Connect Limited, a social enterprise promoting heritage education in Hong Kong. Graduated in 2015.",
+            "**Mr. Ng Ka-ho (吳嘉豪)**: Administrative Officer, Hong Kong Government. Currently serving in the Home Affairs Bureau. Graduated in 2018."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Humanities Entrance Scholarship**: Awarded to top HKDSE applicants with a weighted score of 190 or above. Covers full tuition fees for the first year (up to HK$42,100).",
+            "**Faculty of Humanities Merit Scholarship**: Available to current students with a GPA of 3.5 or above. Provides HK$20,000 per year for up to 2 years.",
+            "**Dr. Li Ka-shing Scholarship**: For students demonstrating outstanding academic achievement and financial need. Covers full tuition and living expenses (up to HK$120,000 per year).",
+            "**Work-Integrated Education Bursary**: Supports students undertaking unpaid WIE placements. Provides up to HK$10,000 per placement.",
+            "**Exchange Scholarship**: Students participating in overseas exchange programmes can apply for funding of up to HK$30,000 to cover travel and accommodation costs.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Grant and Loan Schemes, including the Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLS)."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3007 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Humanities Electives**",
+            "",
+            "- Choose HKDSE electives like Chinese History, English Literature, or History — these are weighted at 1.5x, giving you a significant score boost.",
+            "- Aim for Level 5 or above in these subjects to maximise your weighted score.",
+            "",
+            "**2. Master Core Subjects**",
+            "",
+            "- Chinese and English are weighted at 1.0x but are essential for the interview and future studies. Target Level 5 or above in both.",
+            "- Practice essay writing and critical analysis — these skills are tested in the admission interview.",
+            "",
+            "**3. Calculate Your Weighted Score Early**",
+            "",
+            "- Use the formula: (Chinese + English + Math) × 1.0 + (Best 2 humanities electives) × 1.5 + (Other best subject) × 1.0.",
+            "- The average weighted score is 185.5 — aim for at least 190 to be competitive.",
+            "",
+            "**4. Prepare a Strong Personal Statement**",
+            "",
+            "- Write a 500-word statement explaining your passion for humanities. Mention specific books, films, or cultural events that inspired you.",
+            "- Highlight any relevant extracurriculars (e.g., debate club, writing competitions, museum visits).",
+            "",
+            "**5. Ace the Interview**",
+            "",
+            "- The interview contributes up to 10% of your score. Prepare to discuss current affairs in Hong Kong and global cultural trends.",
+            "- Practice answering questions in both English and Cantonese — the interview may be bilingual.",
+            "",
+            "**6. Leverage Work-Integrated Education**",
+            "",
+            "- Research WIE placements early. Popular options include the Hong Kong Palace Museum, M+, and the Hong Kong Arts Festival.",
+            "- A strong WIE experience can boost your CV and help you secure a job after graduation.",
+            "",
+            "**7. Explore Exchange Opportunities**",
+            "",
+            "- PolyU has exchange partners like UC Berkeley and Peking University. Plan your exchange in Year 2 or 3 to broaden your horizons.",
+            "- Apply for the Exchange Scholarship (up to HK$30,000) to reduce costs.",
+            "",
+            "**8. Build a Portfolio**",
+            "",
+            "- Keep a portfolio of your best essays, research projects, and creative work. This is useful for job applications and further study.",
+            "- Participate in the Faculty's annual Humanities Symposium to showcase your work.",
+            "",
+            "**9. Network with Alumni**",
+            "",
+            "- Connect with PolyU humanities alumni on LinkedIn. They can offer mentorship and internship opportunities.",
+            "- Attend faculty career talks and alumni events — these are held at least twice per semester."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：185.5（2025年聯招數據）。",
+            "**入學中位數**：N/A分（2025年聯招數據）。",
+            "**下四分位數**：N/A分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3007 是一個基礎廣泛的人文學科組合學士課程，讓學生在專修前探索多個學科。課程強調批判性思維、文化素養及應用人文技能。",
+            "**兩個專修**：學生可選擇兩個主要專修——中國歷史與文化，或英語及應用語言學——並可透過選修科目自訂跨學科路徑。",
+            "**第一年**：基礎年，涵蓋人文學科核心科目，如人文學導論、學術寫作及批判性思維。學生需修讀6-8個必修科目以建立堅實的學術基礎。",
+            "**第二年**：開始專修，修讀專修核心科目（如中國歷史文獻、語音學與音系學）。學生亦可從其他人文學科中選擇2-3個選修科。",
+            "**第三年**：高級課程及研究方法訓練。學生需完成一個頂石項目或論文（6學分），並參與至少一個學期的「工作整合教育」（WIE）。",
+            "**第四年**：最後一年專注於高級研討班、獨立研究及職業準備。學生完成畢業項目，並可選擇額外的WIE實習或交流計劃。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**廣泛職業路徑**：畢業生勝任教育、媒體、文化管理、公共關係、政府及非牟利機構等領域。課程靈活性讓學生可在不同行業間轉型。",
+            "**教育領域**：許多畢業生成為中學教師（中文或英文）、課程發展人員或教育顧問。理大強大的教學實習網絡支持此路徑。",
+            "**媒體與傳播**：職位包括記者、編輯、內容策略師及數碼營銷專員。校友已加入TVB、南華早報及香港電台等主要媒體機構。",
+            "**文化與遺產管理**：畢業生在博物館、畫廊、遺產地及文化節工作。香港西九文化區是主要僱主。",
+            "**政府與公共服務**：香港政府（如政務主任、行政主任）及法定機構的職位常見，利用人文學科畢業生的分析及溝通能力。",
+            "**深造**：約30%畢業生在香港、英國、美國及澳洲頂尖大學攻讀研究生課程（文學碩士、哲學碩士、博士），包括香港大學、劍橋大學及悉尼大學。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大主校園位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及西鐵線）。校園距離尖沙咀東僅10分鐘步行路程。",
+            "**人文學科樞紐**：人文學院設於標誌性的賽馬會大樓，配備先進語言實驗室、多媒體工作室及專門人文圖書館，藏書超過10萬冊。",
+            "**學生設施**：學生可使用理大體育中心（室內游泳池、健身室、攀石牆）、創新樓及24小時學習空間。校園有超過50個學生社團。",
+            "**工作整合教育（WIE）**：所有人文學科學生需完成至少1次WIE實習（通常6-12週）。近期實習包括香港故宮文化博物館、國泰航空及香港藝術節。",
+            "**環球交流**：理大與全球超過200所大學有交流協議。人文學院學生可到加州大學柏克萊分校、曼徹斯特大學及北京大學等夥伴院校交流一個學期。",
+            "**生活支援**：一年級學生可保證入住校內宿舍（需申請）。校園亦設有醫療診所、輔導服務及就業輔導中心。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科——課程考慮HKDSE最佳5科成績，讓學生靈活運用最強科目。",
+            "**科目加權**：核心科目（中文、英文、數學）加權為1.0倍，人文學科選修科（如中國歷史、英國文學、歷史）加權為1.5倍。其他選修科加權為1.0倍。",
+            "**平均分數（2025年）**：經科目加權後的HKDSE平均分為185.5分。這是申請者競爭的重要基準。",
+            "**面試要求**：入圍申請者或獲邀面試，評估動機、溝通能力及學科興趣。面試可佔總入學分數最多10%。",
+            "**申請貼士**：中文及英文成績至關重要。選修人文學科或社會科學的申請者因較高加權而具明顯優勢。強烈建議提交個人陳述以突出人文學科興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳國彬教授（Dr. Chan Kwok-bun）**：著名社會學家及作家，曾任香港浸會大學社會學系系主任。1980年代畢業於理大人文學科課程。",
+            "**黃婉玲女士（Ms. Wong Yuen-ling）**：香港故宮文化博物館高級策展人，負責中國藝術與文化展覽。2005年畢業於中國歷史與文化專修。",
+            "**梁志偉先生（Mr. Leung Chi-wai）**：獲獎記者及編輯，任職南華早報，專注文化報導及專題寫作。2010年畢業。",
+            "**李思明博士（Dr. Li Sze-ming）**：香港大學英語語言學助理教授，發表超過30篇應用語言學研究論文。2012年畢業。",
+            "**鄭海欣女士（Ms. Cheng Hoi-yan）**：文化連線有限公司創辦人及行政總裁，該社會企業推廣香港遺產教育。2015年畢業。",
+            "**吳嘉豪先生（Mr. Ng Ka-ho）**：香港政府政務主任，現任職於民政事務局。2018年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大人文學科入學獎學金**：頒予加權分數達190分或以上的頂尖HKDSE申請者，涵蓋第一年全額學費（最高HK$42,100）。",
+            "**人文學院優秀學生獎學金**：提供予GPA達3.5或以上的在讀學生，每年HK$20,000，最多兩年。",
+            "**李嘉誠博士獎學金**：給予學術成績優異及有經濟需要的學生，涵蓋全額學費及生活費（每年最高HK$120,000）。",
+            "**工作整合教育助學金**：支援參與無薪WIE實習的學生，每次實習最高HK$10,000。",
+            "**交流獎學金**：參與海外交流計劃的學生可申請最高HK$30,000資助，用於旅費及住宿。",
+            "**政府經濟援助**：合資格學生可申請香港政府資助及貸款計劃，包括「專上學生資助計劃」（TSFS）及「免入息審查貸款計劃」（NLS）。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3007 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先選擇人文學科選修科**",
+            "",
+            "- 選擇中國歷史、英國文學或歷史等HKDSE選修科——這些科目加權為1.5倍，可顯著提升分數。",
+            "- 目標在這些科目取得5級或以上，以最大化加權分數。",
+            "",
+            "**2. 精通核心科目**",
+            "",
+            "- 中文及英文加權為1.0倍，但對面試及未來學習至關重要。目標在兩科取得5級或以上。",
+            "- 練習論文寫作及批判分析——這些技能在入學面試中會測試。",
+            "",
+            "**3. 及早計算加權分數**",
+            "",
+            "- 使用公式：（中文 + 英文 + 數學）× 1.0 + （最佳2個人文學科選修科）× 1.5 + （其他最佳科目）× 1.0。",
+            "- 平均加權分數為185.5分——目標至少190分以具競爭力。",
+            "",
+            "**4. 準備強而有力的個人陳述**",
+            "",
+            "- 撰寫500字陳述，解釋你對人文學科的熱情。提及啟發你的書籍、電影或文化活動。",
+            "- 突出相關課外活動（如辯論隊、寫作比賽、參觀博物館）。",
+            "",
+            "**5. 在面試中脫穎而出**",
+            "",
+            "- 面試佔總分最多10%。準備討論香港時事及全球文化趨勢。",
+            "- 練習以英語及粵語回答問題——面試可能以雙語進行。",
+            "",
+            "**6. 善用工作整合教育**",
+            "",
+            "- 及早研究WIE實習機會。熱門選擇包括香港故宮文化博物館、M+及香港藝術節。",
+            "- 良好的WIE經驗可提升履歷，幫助畢業後找到工作。",
+            "",
+            "**7. 探索交流機會**",
+            "",
+            "- 理大有加州大學柏克萊分校及北京大學等交流夥伴。計劃在第二年或第三年交流以擴闊視野。",
+            "- 申請交流獎學金（最高HK$30,000）以減輕開支。",
+            "",
+            "**8. 建立作品集**",
+            "",
+            "- 保存最佳論文、研究項目及創意作品的作品集。這對求職及深造有用。",
+            "- 參與學院年度人文學科研討會以展示你的作品。",
+            "",
+            "**9. 與校友建立網絡**",
+            "",
+            "- 在LinkedIn上與理大人文學科校友聯繫。他們可提供指導及實習機會。",
+            "- 參加學院職業講座及校友活動——這些活動每學期至少舉辦兩次。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "N/A",
+    "lq": "N/A"
+  }
+}

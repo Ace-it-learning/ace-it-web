@@ -149,8 +149,7 @@ const VocabularyPage = () => {
                     <div>
                         <h3 className="text-sm font-bold text-blue-900 mb-1">💡 DSE Strategist's Pro Tip: The "300 + 100" Rule</h3>
                         <p className="text-xs text-blue-700 leading-relaxed">
-                            To secure a **Level 5**, master the <strong>Core 300</strong> (Verbs, Adjectives, Nouns) to ensure you never misinterpret a question. <br />
-                            To reach **5\*\***, use the <strong>Elite 100</strong> upgrades (e.g., swapping "bad" for "detrimental") to impress markers in Paper 2 Writing.
+                            Master the <strong>Core 300</strong> (Verbs, Adjectives, Nouns) to ensure you never misinterpret a question, and use the <strong>Elite 100</strong> upgrades (e.g., swapping "bad" for "detrimental") to impress markers in Paper 2 Writing.
                         </p>
                     </div>
                 </div>

@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3739",
+    "nameEn": "BEng in Civil Engineering",
+    "nameZh": "土木工程學(榮譽)工學士",
+    "name": "BEng in Civil Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Construction and Environment",
+    "median": "216.5",
+    "band_a": "205.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3739",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 218.5 (2025 JUPAS data).",
+            "**Median Admission Score**: 216.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 205.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3739 BEng in Civil Engineering is a 4-year full-time programme under the Faculty of Construction and Environment, focusing on infrastructure design, construction management, and sustainable development.",
+            "**Year 1**: Foundation courses in mathematics, physics, engineering mechanics, and introduction to civil engineering, plus General University Requirements (GUR) subjects.",
+            "**Year 2**: Core subjects including structural analysis, geotechnical engineering, fluid mechanics, construction materials, and surveying, with laboratory sessions.",
+            "**Year 3**: Advanced topics such as structural design, transportation engineering, hydraulics, and environmental engineering, plus a compulsory Work-Integrated Education (WIE) placement.",
+            "**Year 4**: Capstone design project, elective specialisations (e.g., structural, geotechnical, or transportation streams), and professional practice subjects.",
+            "**Professional Accreditation**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), allowing graduates to pursue Chartered Engineer status."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Graduate Roles**: Common positions include civil engineer, structural engineer, geotechnical engineer, project manager, and site supervisor in government and private sectors.",
+            "**Employers**: Graduates are hired by the Hong Kong Government (e.g., Civil Engineering and Development Department), MTR Corporation, AECOM, Ove Arup & Partners, and Gammon Construction.",
+            "**Industry Demand**: Hong Kong’s infrastructure projects (e.g., Northern Metropolis, Lantau Tomorrow) and Greater Bay Area development drive strong demand for civil engineers.",
+            "**Average Starting Salary**: Fresh graduates typically earn HKD 20,000–25,000 per month, with rapid growth after obtaining professional chartership.",
+            "**Career Progression**: With 5–10 years of experience, engineers can advance to senior engineer, project director, or technical manager roles.",
+            "**Global Opportunities**: The degree is recognised internationally, enabling graduates to work in the UK, Australia, Singapore, and other regions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), with a 10-minute walk to Tsim Sha Tsui.",
+            "**Engineering Facilities**: The Faculty of Construction and Environment houses state-of-the-art labs including the Structural Engineering Laboratory, Geotechnical Laboratory, and Hydraulics Laboratory.",
+            "**Student Organisations**: The Civil Engineering Society organises academic workshops, site visits, and social events, fostering a strong student community.",
+            "**Library & Study Spaces**: The Pao Yue-kong Library offers extensive engineering resources, group study rooms, and 24/7 access during exam periods.",
+            "**Sports & Recreation**: The campus features a sports centre, swimming pool, gym, and multi-purpose courts, plus nearby waterfront promenades for relaxation.",
+            "**Work-Integrated Education (WIE)**: All students complete at least one summer internship or placement, gaining real-world experience with leading engineering firms."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates the total score from the applicant’s best five HKDSE subjects, with specific weightings for core and elective subjects.",
+            "**Subject Weighting**: Mathematics and M1/M2 are weighted at 1.5x; Physics, Chemistry, and Biology at 1.2x; English and Chinese at 1.0x; other electives at 1.0x.",
+            "**Median Score (2025)**: 216.5 (weighted), indicating a competitive threshold — applicants should aim for at least this score to have a strong chance.",
+            "**Lower Quartile (2025)**: 205.0 (weighted) — the lowest score among admitted students in the 25th percentile, showing the minimum benchmark for consideration.",
+            "**Average HKDSE Score (2025)**: 218.5 (weighted) — the mean score of admitted students, reflecting the typical profile of successful applicants."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Ir Dr. Albert Chan (陳國璋)**: Former Director of Civil Engineering and Development, Hong Kong Government. Graduated with a BEng in Civil Engineering from PolyU.",
+            "**Ir Dr. Thomas Tang (鄧振強)**: Managing Director, AECOM Asia. Recognised for leading major infrastructure projects in Hong Kong and the region.",
+            "**Ir Prof. K. C. Wong (黃國強)**: Professor Emeritus, Department of Civil and Environmental Engineering, PolyU. Pioneered research in structural health monitoring.",
+            "**Ir Dr. Raymond Wong (黃志強)**: Chief Engineer, MTR Corporation. Oversaw design and construction of the Shatin to Central Link project.",
+            "**Ir Dr. Stephen Lau (劉偉成)**: Vice President, Gammon Construction. Led award-winning projects including the Hong Kong-Zhuhai-Macao Bridge related works.",
+            "**Ir Dr. Fanny Chan (陳慧儀)**: Deputy Director, Drainage Services Department, Hong Kong Government. Expert in flood management and sustainable drainage systems."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entry Scholarship**: HKD 15,000–50,000 for students with outstanding HKDSE results (e.g., 5** in multiple subjects), automatically considered upon application.",
+            "**Faculty of Construction and Environment Scholarship**: Up to HKD 20,000 per year for top-performing students in civil engineering, based on academic merit.",
+            "**HKIE Scholarship**: Sponsored by the Hong Kong Institution of Engineering, offering HKD 30,000–50,000 to students pursuing professional accreditation.",
+            "**Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship (HKD 40,000) and Reaching Out Award (HKD 10,000) for overseas exchanges.",
+            "**Need-Based Financial Aid**: PolyU provides the Financial Assistance Scheme (FASP) and Non-means-tested Loan Scheme (NLS) for students with financial needs.",
+            "**Industry-Sponsored Awards**: Companies like AECOM, Ove Arup, and Gammon offer annual prizes (HKD 5,000–15,000) for outstanding final-year projects."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3739 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Physics**",
+            "",
+            "- Mathematics and M1/M2 are weighted at 1.5x — a 5** in these subjects adds 75 points to your weighted score. Aim for at least Level 5 in both.",
+            "- Physics is weighted at 1.2x — a Level 5* contributes 54 points. If you take Chemistry or Biology, they also get 1.2x weighting.",
+            "",
+            "**2. Target a Weighted Score Above 220**",
+            "",
+            "- The median score is 216.5, but the average is 218.5. To be safe, aim for 220+ by focusing on your best five subjects.",
+            "- Use PolyU's online admission calculator to simulate your weighted score with different subject combinations.",
+            "",
+            "**3. Excel in English and Chinese**",
+            "",
+            "- Both are weighted at 1.0x, but they count as core subjects. A Level 5 in English adds 50 points; Level 4 adds 40 points.",
+            "- For non-Chinese speaking applicants, Chinese can be replaced by another language — check PolyU’s alternative requirements.",
+            "",
+            "**4. Build a Strong Elective Portfolio**",
+            "",
+            "- Choose electives like M2, Physics, or Design and Applied Technology (DAT) to align with civil engineering requirements.",
+            "- Avoid low-scoring electives — every point matters. If you take three electives, your best five will include the highest-scoring ones.",
+            "",
+            "**5. Gain Practical Experience Before Applying**",
+            "",
+            "- Participate in engineering summer camps, site visits, or competitions (e.g., Hong Kong Engineering Olympiad) to strengthen your portfolio.",
+            "- Mention these experiences in your JUPAS personal statement or interview to demonstrate genuine interest.",
+            "",
+            "**6. Prepare for the Admission Interview**",
+            "",
+            "- Shortlisted applicants may be invited for an interview. Prepare to discuss your motivation, relevant projects, and understanding of civil engineering.",
+            "- Practice answering questions in both English and Cantonese, as interviews may be bilingual.",
+            "",
+            "**7. Leverage the Work-Integrated Education (WIE) Programme**",
+            "",
+            "- WIE is compulsory — secure a summer internship after Year 2 or Year 3. Companies like MTR, AECOM, and Gammon actively recruit PolyU students.",
+            "- A strong WIE report can boost your final-year project and job applications.",
+            "",
+            "**8. Apply for Scholarships Early**",
+            "",
+            "- PolyU entry scholarships are automatic, but external scholarships (e.g., HKIE) require separate applications. Submit by the deadline (usually August).",
+            "- Maintain a high GPA (3.3 or above) to qualify for faculty and departmental scholarships in subsequent years.",
+            "",
+            "**9. Network with Alumni and Faculty**",
+            "",
+            "- Attend PolyU’s open days, career fairs, and alumni talks. Connect with alumni on LinkedIn to gain insights into the industry.",
+            "- Faculty members often have industry connections — ask for recommendations or research opportunities to stand out."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：218.5（2025年聯招數據）。",
+            "**入學中位數**：216.5分（2025年聯招數據）。",
+            "**下四分位數**：205.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3739 土木工程學(榮譽)工學士為四年全日制課程，隸屬於建設及環境學院，專注於基礎設施設計、施工管理及可持續發展。",
+            "**第一年**：基礎課程包括數學、物理、工程力學及土木工程導論，並修讀大學核心科目（GUR）。",
+            "**第二年**：核心科目包括結構分析、岩土工程、流體力學、建築材料及測量學，並設有實驗課。",
+            "**第三年**：進階課題如結構設計、運輸工程、水力學及環境工程，並須完成必修的「工作綜合教育」（WIE）實習。",
+            "**第四年**：畢業設計項目、選修專修（如結構、岩土或運輸方向）及專業實踐科目。",
+            "**專業認證**：課程獲香港工程師學會（HKIE）認可，畢業生可申請成為特許工程師。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**畢業生職位**：常見職位包括土木工程師、結構工程師、岩土工程師、項目經理及工地監督，任職於政府及私營機構。",
+            "**主要僱主**：畢業生受僱於香港政府（如土木工程拓展署）、港鐵公司、艾奕康（AECOM）、奧雅納（Ove Arup）及金門建築等。",
+            "**行業需求**：香港的基建項目（如北部都會區、明日大嶼）及大灣區發展帶動土木工程師的強勁需求。",
+            "**平均起薪**：應屆畢業生月薪約港幣 20,000–25,000 元，取得專業資格後薪酬增長迅速。",
+            "**職業晉升**：具 5–10 年經驗後，可晉升至高級工程師、項目總監或技術經理等職位。",
+            "**國際機會**：學位獲國際認可，畢業生可在英國、澳洲、新加坡等地工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：理大位於九龍紅磡，毗鄰紅磡港鐵站（東鐵線及屯馬線），步行 10 分鐘可達尖沙咀。",
+            "**工程設施**：建設及環境學院配備先進實驗室，包括結構工程實驗室、岩土工程實驗室及水力學實驗室。",
+            "**學生組織**：土木工程學會舉辦學術工作坊、實地考察及社交活動，營造濃厚的學生社群氛圍。",
+            "**圖書館與自修空間**：包玉剛圖書館提供豐富的工程資源、小組研習室及考試期間的 24 小時開放服務。",
+            "**體育與休閒**：校園設有體育中心、游泳池、健身室及多用途球場，附近海濱長廊適合放鬆。",
+            "**工作綜合教育（WIE）**：所有學生須完成至少一次暑期實習，在頂尖工程公司獲得真實工作經驗。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳五科 — 理大從申請人最佳的五科香港中學文憑考試成績計算總分，並對核心及選修科目設有特定加權。",
+            "**科目加權**：數學及 M1/M2 加權為 1.5 倍；物理、化學及生物加權為 1.2 倍；英文及中文加權為 1.0 倍；其他選修科加權為 1.0 倍。",
+            "**2025 年中位數**：216.5 分（加權後），顯示競爭門檻 — 申請人應至少達到此分數以增加機會。",
+            "**2025 年下四分位數**：205.0 分（加權後）— 獲錄取學生中第 25 百分位的最低分數，反映考慮的最低基準。",
+            "**2025 年平均分數**：218.5 分（加權後）— 獲錄取學生的平均分數，反映成功申請人的典型成績。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳國璋博士工程師**：前香港政府土木工程拓展署署長。畢業於理大土木工程學士課程。",
+            "**鄧振強博士工程師**：艾奕康亞洲區董事總經理，領導香港及區域多項大型基建項目。",
+            "**黃國強教授工程師**：理大土木及環境工程學系榮休教授，開創結構健康監測研究。",
+            "**黃志強博士工程師**：港鐵公司總工程師，負責沙田至中環線的設計與施工。",
+            "**劉偉成博士工程師**：金門建築副總裁，領導獲獎項目包括港珠澳大橋相關工程。",
+            "**陳慧儀博士工程師**：香港政府渠務署副署長，專注防洪管理及可持續排水系統。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：港幣 15,000–50,000 元，頒予文憑試成績優異的學生（如多科 5**），申請時自動考慮。",
+            "**建設及環境學院獎學金**：每年高達港幣 20,000 元，頒予土木工程成績頂尖的學生，按學術表現評選。",
+            "**香港工程師學會獎學金**：由香港工程師學會贊助，金額港幣 30,000–50,000 元，鼓勵學生追求專業認證。",
+            "**政府獎學金**：合資格學生可申請香港特區政府獎學金（港幣 40,000 元）及「拓展視野獎學金」（港幣 10,000 元）作海外交流。",
+            "**需要為本經濟援助**：理大提供「經濟援助計劃」（FASP）及「免入息審查貸款計劃」（NLS）予有經濟需要的學生。",
+            "**行業贊助獎項**：艾奕康、奧雅納及金門建築等公司每年頒發獎項（港幣 5,000–15,000 元），表揚優秀畢業設計。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3739 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升數學及物理成績**",
+            "",
+            "- 數學及 M1/M2 加權為 1.5 倍 — 考獲 5** 可加 75 分。目標至少達第 5 級。",
+            "- 物理加權為 1.2 倍 — 第 5* 級貢獻 54 分。如選修化學或生物，同樣獲 1.2 倍加權。",
+            "",
+            "**2. 目標加權總分達 220 以上**",
+            "",
+            "- 中位數為 216.5，平均分為 218.5。為穩妥起見，目標定於 220 分以上，集中提升最佳五科。",
+            "- 使用理大網上入學計算器，模擬不同科目組合的加權分數。",
+            "",
+            "**3. 英文及中文成績要突出**",
+            "",
+            "- 兩科加權均為 1.0 倍，但屬核心科目。英文第 5 級加 50 分；第 4 級加 40 分。",
+            "- 非華語申請人可用其他語言代替中文 — 請查閱理大的替代要求。",
+            "",
+            "**4. 建立強勁的選修科組合**",
+            "",
+            "- 選擇 M2、物理或設計與應用科技（DAT）等與土木工程相關的選修科。",
+            "- 避免低分選修科 — 每分都重要。如修讀三科選修，最佳五科會包括最高分的科目。",
+            "",
+            "**5. 申請前積累實踐經驗**",
+            "",
+            "- 參加工程夏令營、實地考察或比賽（如香港工程奧林匹克），豐富個人檔案。",
+            "- 在 JUPAS 個人陳述或面試中提及這些經歷，展示對土木工程的熱誠。",
+            "",
+            "**6. 準備入學面試**",
+            "",
+            "- 獲篩選的申請人可能獲邀面試。準備討論你的動機、相關項目及對土木工程的理解。",
+            "- 練習以英文及廣東話回答問題，因面試可能以雙語進行。",
+            "",
+            "**7. 善用工作綜合教育（WIE）計劃**",
+            "",
+            "- WIE 為必修 — 在第二年或第三年後尋找暑期實習。港鐵、艾奕康及金門建築等公司積極招聘理大學生。",
+            "- 一份出色的 WIE 報告可提升畢業設計及求職競爭力。",
+            "",
+            "**8. 及早申請獎學金**",
+            "",
+            "- 理大入學獎學金自動考慮，但外部獎學金（如 HKIE）需獨立申請。截止日期前提交（通常為 8 月）。",
+            "- 保持高 GPA（3.3 或以上），以符合學院及學系獎學金的資格。",
+            "",
+            "**9. 與校友及教授建立聯繫**",
+            "",
+            "- 參加理大的開放日、就業博覽及校友講座。在 LinkedIn 上聯繫校友，獲取行業見解。",
+            "- 教授通常擁有業界人脈 — 主動請教推薦信或研究機會，讓自己脫穎而出。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "216.5",
+    "lq": "205.0"
+  }
+}

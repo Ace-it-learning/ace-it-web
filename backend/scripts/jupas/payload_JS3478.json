@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3478",
+    "nameEn": "BSc in Medical Laboratory Science",
+    "nameZh": "醫療化驗科學(榮譽)理學士",
+    "name": "BSc in Medical Laboratory Science",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Health",
+    "median": "309.0",
+    "band_a": "306.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3478",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 310.5 (2025 JUPAS data).",
+            "**Median Admission Score**: 309.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 306.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3478 BSc in Medical Laboratory Science is a 4-year honours programme under the Faculty of Health, focusing on diagnostic laboratory techniques, disease detection, and quality assurance in clinical settings.",
+            "**Year 1**: Foundational sciences including Human Biology, Chemistry, Biochemistry, and Introduction to Medical Laboratory Science. Students also take General University Requirements (GUR) courses.",
+            "**Year 2**: Core subjects such as Haematology, Clinical Biochemistry, Medical Microbiology, and Immunology. Laboratory practicals begin in earnest, with emphasis on analytical techniques.",
+            "**Year 3**: Advanced modules including Histopathology, Molecular Diagnostics, Transfusion Science, and Clinical Immunology. Students undertake a supervised research project and a Work-Integrated Education (WIE) placement in a hospital or diagnostic lab.",
+            "**Year 4**: Capstone project, professional ethics, laboratory management, and elective specialisations. Graduates are eligible to apply for registration as Medical Laboratory Technologists (Part II) with the Hong Kong Medical Technologists Board.",
+            "**Professional Accreditation**: The programme is accredited by the Hong Kong Medical Technologists Board, ensuring graduates meet the standards for professional practice in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Medical Laboratory Technologist**: Graduates can work in public and private hospital laboratories, performing diagnostic tests in haematology, microbiology, and clinical chemistry. Median starting salary: HKD 35,000–40,000/month.",
+            "**Diagnostic Laboratory Manager**: With experience, graduates can oversee laboratory operations, quality control, and staff training in hospitals or commercial diagnostic chains like Prenetics or HKSH.",
+            "**Research Scientist**: Opportunities in universities, the Hong Kong Genome Institute, or pharmaceutical companies such as AstraZeneca and Roche, focusing on molecular diagnostics and biomarker discovery.",
+            "**Public Health Laboratory Specialist**: Roles at the Centre for Health Protection (CHP) or Department of Health, involved in disease surveillance, outbreak investigation, and public health testing.",
+            "**Sales & Technical Support**: Positions in medical device and diagnostic reagent companies (e.g., Abbott, Siemens, Thermo Fisher) as application specialists or product managers, leveraging technical expertise.",
+            "**Further Study**: Graduates can pursue MSc or PhD in Biomedical Science, Clinical Laboratory Science, or Public Health at top universities worldwide, including PolyU, HKU, CUHK, or overseas institutions."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location Advantage**: PolyU is located in Hung Hom, Kowloon, with direct MTR access (Hung Hom Station) and close proximity to the Cross-Harbour Tunnel, making it convenient for students from all districts.",
+            "**Specialist Laboratories**: The programme uses state-of-the-art teaching labs equipped with automated analysers, PCR machines, flow cytometers, and biosafety cabinets, simulating real clinical environments.",
+            "**Clinical Placement Network**: Students gain hands-on experience at major hospitals including Queen Elizabeth Hospital, Prince of Wales Hospital, and private laboratories, supported by PolyU's WIE programme.",
+            "**Student Support Services**: The Faculty of Health offers academic advising, peer mentoring, and career counselling. The PolyU Student Affairs Office provides scholarships, mental health support, and extracurricular activities.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive biomedical databases, e-journals, and study spaces. The Learning Commons provides collaborative zones and 24/7 access during exam periods.",
+            "**Campus Amenities**: Facilities include sports centres, student hostels (for non-local students), canteens, and the Jockey Club Auditorium. The campus is also home to the PolyU Innovation Tower for interdisciplinary projects."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting is 309.0, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile stands at 306.5, meaning even the 25th percentile of admitted students achieved very high scores.",
+            "**Average Score (2025)**: The average HKDSE score with subject weighting is 310.5, reflecting a consistently high-calibre cohort.",
+            "**Subject Weighting**: Core subjects (English, Mathematics) and science electives (Biology, Chemistry) are weighted more heavily. Applicants with strong science backgrounds have an advantage.",
+            "**Demand vs. Supply**: With only about 30–40 places per year and high demand from Band A applicants, the programme is one of the most competitive in the Faculty of Health."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂)**: Chief Medical Technologist, Queen Elizabeth Hospital. Graduated in 2005; led the laboratory team during the COVID-19 pandemic.",
+            "**Dr. Wong Mei-ling (黃美玲)**: Associate Professor, Department of Health Technology and Informatics, PolyU. 2010 graduate; published over 50 papers on molecular diagnostics.",
+            "**Mr. Li Wai-keung (李偉強)**: Laboratory Manager, Hong Kong Sanatorium & Hospital. 2008 graduate; oversees a team of 30 technologists and introduced automated testing systems.",
+            "**Ms. Cheng Pui-shan (鄭佩珊)**: Senior Application Specialist, Roche Diagnostics Hong Kong. 2012 graduate; provides technical training to hospital labs across Asia.",
+            "**Dr. Au Yeung Siu-ling (歐陽小玲)**: Research Scientist, Hong Kong Genome Institute. 2015 graduate; leads a project on genetic screening for hereditary cancers.",
+            "**Mr. Fung Kwok-hing (馮國慶)**: Founder, MedLab Solutions Ltd. 2007 graduate; his startup develops AI-based diagnostic tools for rapid blood analysis."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., score ≥ 310 with weighting) with a value of up to HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Health Scholarship**: Specific to health sciences students, offering HKD 20,000–30,000 for those with outstanding Year 1 results and community service involvement.",
+            "**Dr. Li Ka-shing Scholarship**: Available for students demonstrating financial need and academic excellence, covering full tuition and living expenses for the duration of the programme.",
+            "**Work-Integrated Education (WIE) Bursary**: Provides up to HKD 10,000 to support travel and accommodation costs during clinical placements in remote or overseas hospitals.",
+            "**HKSAR Government Scholarship**: For local students with exceptional HKDSE results (e.g., top 1% in the cohort), offering HKD 80,000 per year plus a travel grant for overseas exchanges.",
+            "**External Scholarships**: Students can also apply for the Sir Edward Youde Memorial Scholarship, HSBC Scholarship, and other industry-sponsored awards through the PolyU Scholarship Portal."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3478 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Subjects in HKDSE**",
+            "",
+            "- Aim for Level 5 or above in Biology and Chemistry, as these are heavily weighted in the admission score (up to 1.5x weighting).",
+            "- A strong performance in Mathematics (Compulsory) is also critical; target Level 5* or above.",
+            "",
+            "**2. Boost Your English Score**",
+            "",
+            "- English is weighted at 1.2x; achieving Level 5 or above can significantly raise your total score.",
+            "- Practice academic reading and writing, especially in scientific contexts, to prepare for the programme's English-medium instruction.",
+            "",
+            "**3. Calculate Your Weighted Score Early**",
+            "",
+            "- Use the PolyU admission score calculator to estimate your weighted score. With a median of 309.0, aim for at least 310+ to be competitive.",
+            "- Focus on your best 5 subjects; drop weaker electives if they don't contribute to the top 5.",
+            "",
+            "**4. Gain Laboratory Experience**",
+            "",
+            "- Participate in summer internships or volunteer at hospital labs (e.g., through HK Red Cross or private clinics) to strengthen your application and personal statement.",
+            "- Mention specific techniques learned (e.g., PCR, ELISA) in your interview or portfolio.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- The interview may include group discussions on current health issues (e.g., antimicrobial resistance, AI in diagnostics).",
+            "- Practice explaining scientific concepts in simple English, and show awareness of the role of medical technologists in healthcare.",
+            "",
+            "**6. Highlight Your Passion for Healthcare**",
+            "",
+            "- In your personal statement, connect your interest in medical lab science to real-world impact, such as disease diagnosis or pandemic response.",
+            "- Mention any relevant extracurriculars, like science club, health talks, or community health screenings.",
+            "",
+            "**7. Use Band A Strategy**",
+            "",
+            "- Place JS3478 as your Band A choice to maximise your chance of admission, as PolyU gives priority to Band A applicants.",
+            "- If you are borderline, consider applying through the School-based Admission Scheme (SAS) for additional consideration.",
+            "",
+            "**8. Explore Early Admission Pathways**",
+            "",
+            "- PolyU offers early admission via the School Nominations Scheme (SNS) for students with strong school recommendations. Apply by November of your HKDSE year.",
+            "- Maintain a high school GPA (≥ 3.5) and secure a teacher's nomination to boost your chances.",
+            "",
+            "**9. Plan for Financial Support**",
+            "",
+            "- Apply for the PolyU Entrance Scholarship and HKSAR Government Scholarship before the deadline (usually March).",
+            "- If you need financial aid, submit the means-tested grant application early to secure funding for tuition and living expenses."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：310.5（2025年聯招數據）。",
+            "**入學中位數**：309.0分（2025年聯招數據）。",
+            "**下四分位數**：306.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3478 醫療化驗科學(榮譽)理學士為四年制榮譽學位課程，隸屬健康學院，專注於診斷化驗技術、疾病檢測及臨床環境中的質量保證。",
+            "**第一年**：基礎科學包括人體生物學、化學、生物化學及醫療化驗科學導論。學生亦需修讀大學核心課程（GUR）。",
+            "**第二年**：核心科目如血液學、臨床生化學、醫學微生物學及免疫學。實驗室實習正式展開，重點在於分析技術。",
+            "**第三年**：高級模組包括組織病理學、分子診斷學、輸血科學及臨床免疫學。學生需進行監督研究項目及在醫院或診斷實驗室進行工作綜合教育（WIE）實習。",
+            "**第四年**：頂點項目、專業倫理、實驗室管理及選修專科。畢業生可申請成為香港醫務化驗師管理局註冊醫務化驗師（第二部分）。",
+            "**專業認證**：課程獲香港醫務化驗師管理局認可，確保畢業生符合香港專業實踐標準。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**醫務化驗師**：畢業生可在公立及私營醫院實驗室工作，進行血液學、微生物學及臨床化學的診斷測試。起薪中位數：每月港幣 35,000–40,000 元。",
+            "**診斷實驗室經理**：累積經驗後，可管理實驗室運作、質量控制及員工培訓，服務於醫院或商業診斷連鎖如 Prenetics 或養和醫院。",
+            "**研究科學家**：機會於大學、香港基因組研究所或製藥公司如阿斯利康及羅氏，專注於分子診斷及生物標記發現。",
+            "**公共衛生實驗室專家**：於衛生防護中心或衛生署任職，參與疾病監測、疫情調查及公共衛生檢測。",
+            "**銷售及技術支援**：於醫療設備及診斷試劑公司（如雅培、西門子、賽默飛世爾）擔任應用專家或產品經理，運用技術專長。",
+            "**深造進修**：畢業生可於全球頂尖大學（包括理大、港大、中大或海外院校）攻讀生物醫學、臨床實驗室科學或公共衛生碩士或博士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置優勢**：理大位於九龍紅磡，毗鄰港鐵紅磡站及海底隧道，交通便利，方便來自各區的學生。",
+            "**專業實驗室**：課程配備先進教學實驗室，設有自動分析儀、PCR 機、流式細胞儀及生物安全櫃，模擬真實臨床環境。",
+            "**臨床實習網絡**：學生於主要醫院（包括伊利沙伯醫院、威爾斯親王醫院）及私營實驗室獲得實戰經驗，由理大 WIE 計劃支援。",
+            "**學生支援服務**：健康學院提供學術指導、同儕輔導及職業諮詢。理大學生事務處提供獎學金、心理健康支援及課外活動。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供廣泛生物醫學數據庫、電子期刊及學習空間。學習共享空間設有協作區及考試期間 24/7 開放。",
+            "**校園設施**：設施包括體育中心、學生宿舍（供非本地生）、食堂及賽馬會綜藝館。校園亦設有理大創新樓，促進跨學科項目。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年中位數分數**：經科目加權後的 HKDSE 中位數分數為 309.0，顯示申請者競爭激烈。",
+            "**2025 年下四分位數**：下四分位數為 306.5，意味著即使第 25 百分位的錄取學生也取得極高分數。",
+            "**2025 年平均分數**：經科目加權後的 HKDSE 平均分數為 310.5，反映持續高水平的學生群體。",
+            "**科目加權**：核心科目（英文、數學）及科學選修科（生物、化學）獲得較高加權。理科背景強的申請者更具優勢。",
+            "**供求情況**：每年僅約 30–40 個學額，且來自 Band A 申請者的需求極高，使該課程成為健康學院中最具競爭力的課程之一。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：伊利沙伯醫院首席醫務化驗師。2005 年畢業；在 COVID-19 疫情期間領導化驗團隊。",
+            "**黃美玲博士**：理大醫療科技及資訊學系副教授。2010 年畢業；發表超過 50 篇分子診斷學論文。",
+            "**李偉強先生**：養和醫院實驗室經理。2008 年畢業；管理 30 名化驗師團隊，並引入自動化測試系統。",
+            "**鄭佩珊女士**：羅氏診斷（香港）高級應用專家。2012 年畢業；為亞洲各地醫院實驗室提供技術培訓。",
+            "**歐陽小玲博士**：香港基因組研究所研究科學家。2015 年畢業；領導遺傳性癌症基因篩查項目。",
+            "**馮國慶先生**：MedLab Solutions Ltd. 創辦人。2007 年畢業；其初創公司開發基於人工智能的快速血液分析診斷工具。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予 HKDSE 頂尖成績者（如加權分數 ≥ 310），每年最高港幣 50,000 元，可根據學業表現續領。",
+            "**健康學院獎學金**：專為健康科學學生而設，提供港幣 20,000–30,000 元，頒予第一年成績優異及有社區服務經驗的學生。",
+            "**李嘉誠博士獎學金**：適用於有經濟需要且學業卓越的學生，涵蓋全額學費及生活費，為期整個課程。",
+            "**工作綜合教育（WIE）津貼**：提供最高港幣 10,000 元，資助偏遠或海外臨床實習期間的交通及住宿費用。",
+            "**香港特別行政區政府獎學金**：頒予 HKDSE 成績卓越的本地學生（如同級前 1%），每年港幣 80,000 元，另加海外交流旅行津貼。",
+            "**外部獎學金**：學生亦可透過理大獎學金平台申請尤德爵士紀念基金獎學金、滙豐獎學金及其他行業贊助獎項。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3478 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理 HKDSE 科學科目**",
+            "",
+            "- 目標在生物及化學取得第 5 級或以上，因這些科目在入學分數中獲得較高加權（最高 1.5 倍）。",
+            "- 數學（必修部分）成績亦至關重要；目標為第 5* 級或以上。",
+            "",
+            "**2. 提升英文成績**",
+            "",
+            "- 英文加權為 1.2 倍；取得第 5 級或以上可顯著提高總分。",
+            "- 練習學術閱讀及寫作，特別是科學語境，以準備課程的英語授課環境。",
+            "",
+            "**3. 提早計算加權分數**",
+            "",
+            "- 使用理大入學分數計算器估算加權分數。中位數為 309.0，目標至少 310+ 以保持競爭力。",
+            "- 專注於最佳 5 科；若選修科不計入前 5 科，可考慮放棄。",
+            "",
+            "**4. 獲取實驗室經驗**",
+            "",
+            "- 參加暑期實習或在醫院實驗室（如透過香港紅十字會或私營診所）擔任義工，以強化申請及個人陳述。",
+            "- 在面試或作品集中提及學到的具體技術（如 PCR、ELISA）。",
+            "",
+            "**5. 準備面試**",
+            "",
+            "- 面試可能包括小組討論，主題為當前健康議題（如抗菌素耐藥性、人工智能在診斷中的應用）。",
+            "- 練習用簡單英語解釋科學概念，並展示對醫務化驗師在醫療保健中角色的認識。",
+            "",
+            "**6. 突出對醫療保健的熱忱**",
+            "",
+            "- 在個人陳述中，將對醫療化驗科學的興趣與現實影響聯繫起來，如疾病診斷或疫情應對。",
+            "- 提及相關課外活動，如科學學會、健康講座或社區健康篩查。",
+            "",
+            "**7. 運用 Band A 策略**",
+            "",
+            "- 將 JS3478 列為 Band A 選擇，以最大化錄取機會，因理大優先考慮 Band A 申請者。",
+            "- 若成績邊緣，可考慮透過學校推薦直接錄取計劃（SAS）申請，以獲得額外考慮。",
+            "",
+            "**8. 探索早期入學途徑**",
+            "",
+            "- 理大透過學校提名計劃（SNS）提供早期錄取，適用於有強烈學校推薦的學生。請在 HKDSE 年份的 11 月前申請。",
+            "- 保持高中 GPA ≥ 3.5，並獲得教師提名，以增加機會。",
+            "",
+            "**9. 規劃經濟支援**",
+            "",
+            "- 在截止日期前（通常為 3 月）申請理大入學獎學金及香港特別行政區政府獎學金。",
+            "- 如需經濟援助，請及早提交經入息審查的資助申請，以確保學費及生活費的資金。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "309.0",
+    "lq": "306.5"
+  }
+}

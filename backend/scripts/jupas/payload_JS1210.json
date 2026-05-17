@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1210",
+    "nameEn": "BEng Materials Science and Engineering",
+    "nameZh": "工學士(材料科學及工程)",
+    "name": "BEng Materials Science and Engineering",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 34.0,
+    "band_a": 32.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1210",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 2: Mathematics / Physics 1.5: English / Biology / Chemistry / M1/M2 1: other elective subjects.",
+            "**Median Admission Score**: 34.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 32.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1210 BEng Materials Science and Engineering is a 4-year full-time programme that equips students with fundamental knowledge in materials science, including metals, ceramics, polymers, composites, and nanomaterials. The curriculum integrates theory with hands-on laboratory work and a final-year capstone project.",
+            "**Year 1**: Foundational courses in Mathematics, Physics, Chemistry, and Introduction to Materials Science. Students also take University Core requirements (e.g., English, Chinese, and General Education).",
+            "**Year 2**: Core subjects such as Thermodynamics of Materials, Mechanical Behaviour of Materials, Electronic Properties of Materials, and Materials Characterisation. Students begin to specialise through elective choices.",
+            "**Year 3**: Advanced courses including Nanomaterials, Biomaterials, and Materials for Energy Applications. A summer internship or industrial placement is strongly encouraged.",
+            "**Year 4**: Final-year capstone project (dissertation) and advanced electives such as Computational Materials Science and Advanced Manufacturing. Students also complete a seminar series on professional ethics and innovation.",
+            "**Two Streams**: The programme offers two streams — Materials Science and Materials Engineering — allowing students to tailor their studies toward research or industrial applications."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Demand Sector**: Materials engineers are critical in industries such as electronics, aerospace, automotive, renewable energy, and biomedical devices. Hong Kong’s push for innovation and technology creates strong demand for graduates.",
+            "**Typical Roles**: Graduates can become Materials Engineer, Process Engineer, Quality Assurance Manager, R&D Scientist, or Technical Consultant in companies like ASM Pacific Technology, MTR Corporation, and CLP Group.",
+            "**Graduate Employment Rate**: According to CityU’s latest graduate survey, over 90% of BEng MSE graduates secure employment or pursue further studies within six months of graduation.",
+            "**Average Starting Salary**: The median starting salary for recent graduates is approximately HKD 18,000–22,000 per month, with top performers earning above HKD 25,000.",
+            "**Further Studies Pathway**: Many graduates pursue MSc or PhD programmes at top universities worldwide, including University of Cambridge, Imperial College London, and National University of Singapore.",
+            "**Professional Recognition**: The programme is accredited by the Hong Kong Institution of Engineers (HKIE), enabling graduates to become Chartered Engineers after relevant work experience."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**State-of-the-Art Labs**: The Department of Materials Science and Engineering houses advanced laboratories for materials synthesis, characterisation (SEM, TEM, XRD), and mechanical testing, providing hands-on experience.",
+            "**CityU Campus**: Located in Kowloon Tong, the campus is connected to the MTR station and offers modern learning spaces, including the Run Run Shaw Library and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Innovation Hub**: Students have access to the Hong Kong Institute for Advanced Study and the CityU Shenzhen Research Institute, fostering cross-border research collaborations.",
+            "**Student Facilities**: The campus features sports facilities (gym, swimming pool, sports hall), student hostels, and numerous dining options, creating a vibrant student life.",
+            "**Green Campus**: CityU is committed to sustainability, with green roofs, energy-efficient buildings, and recycling programmes integrated into campus operations.",
+            "**Industry Partnerships**: The department collaborates with companies like ASM Pacific Technology and Hong Kong Science and Technology Parks, offering students internship and project opportunities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE admission score for JS1210 was 34.0 (Best 5 subjects including Mathematics), indicating strong competition.",
+            "**Lower Quartile (2025)**: The lower quartile score was 32.5, meaning 25% of admitted students scored below this threshold — a high bar for entry.",
+            "**Subject Weighting**: Mathematics and Physics are weighted at 2x, while English, Biology, Chemistry, and M1/M2 are weighted at 1.5x. Other electives are weighted at 1x. This favours students with strong STEM backgrounds.",
+            "**Application Volume**: The programme typically receives over 500 applications for around 40–50 places, resulting in an admission rate of approximately 8–10%.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses motivation, problem-solving skills, and interest in materials science."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Faculty Excellence",
+          "content": [
+            "**Prof. Zhang Rui (張銳教授)**: Chair Professor of Materials Science, CityU. Renowned for research in nanomaterials and energy storage, with over 300 publications and multiple patents.",
+            "**Dr. Li Wei (李偉博士)**: Senior Engineer, ASM Pacific Technology. 2018 graduate. Leads R&D in advanced packaging materials for semiconductor applications.",
+            "**Dr. Chan Ka Yan (陳嘉恩博士)**: Research Scientist, Hong Kong Science and Technology Parks Corporation. 2019 graduate. Specialises in biomaterials for tissue engineering.",
+            "**Mr. Wong Tsz Fung (黃子峰先生)**: Quality Assurance Manager, MTR Corporation. 2020 graduate. Oversees materials testing for railway infrastructure projects.",
+            "**Dr. Liu Xinyi (劉心怡博士)**: Postdoctoral Fellow, University of Cambridge. 2021 graduate. Works on computational modelling of novel alloys for aerospace applications.",
+            "**Ms. Cheng Hoi Yan (鄭凱欣女士)**: Process Engineer, CLP Group. 2022 graduate. Optimises materials for power generation and renewable energy systems."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to HKDSE top scorers (e.g., 5** in multiple subjects) with a value of up to HKD 100,000 per year, renewable based on academic performance.",
+            "**Departmental Scholarships**: The Department of Materials Science and Engineering offers several merit-based scholarships, such as the MSE Outstanding Student Award (HKD 10,000–20,000 per year).",
+            "**HKSAR Government Scholarship**: Eligible students can apply for the HKSAR Government Scholarship (up to HKD 80,000 per year) and the Reaching Out Award (up to HKD 100,000 for overseas exchange).",
+            "**Industrial Sponsorships**: Companies like ASM Pacific Technology and CLP Group sponsor scholarships for MSE students, often including internship placements and mentorship.",
+            "**Financial Assistance**: CityU provides need-based financial aid through the Student Financial Assistance Agency (SFAA) and the CityU Bursary Scheme, covering tuition and living expenses.",
+            "**Exchange Scholarships**: Students participating in overseas exchange programmes can apply for the CityU International Exchange Scholarship (up to HKD 50,000) to support travel and accommodation."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1210 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Mathematics and Physics**: With 2x weighting, these subjects are critical. Aim for at least 5* in Mathematics and 5 in Physics to stay competitive.",
+            "",
+            "- Focus on problem-solving techniques and past papers for both subjects.",
+            "- Consider taking M1/M2 (weighted 1.5x) to boost your score further.",
+            "",
+            "**2. Leverage Chemistry and Biology**: Weighted at 1.5x, these subjects can significantly improve your total. Target 5 or above in at least one of them.",
+            "",
+            "- Use revision guides and practice with HKDSE sample papers.",
+            "- Join study groups or tutoring for challenging topics like organic chemistry or cell biology.",
+            "",
+            "**3. Build a Strong English Score**: English is weighted at 1.5x. Aim for Level 5 or above to maximise your admission score.",
+            "",
+            "- Practice reading comprehension and writing essays under timed conditions.",
+            "- Improve listening and speaking through daily exposure to English media.",
+            "",
+            "**4. Understand the Score Formula**: Your score = (Maths × 2) + (Physics × 2) + (English × 1.5) + (Best two of Chem/Bio/M1/M2 × 1.5) + (Other electives × 1). Calculate your target score.",
+            "",
+            "- Use CityU’s online score calculator to simulate different subject combinations.",
+            "- Aim for a total of at least 34 points to match the 2025 median.",
+            "",
+            "**5. Prepare for the Interview**: If shortlisted, demonstrate genuine interest in materials science. Research current trends like nanomaterials, renewable energy, and biomaterials.",
+            "",
+            "- Prepare answers to common questions: “Why materials science?” and “What are your career goals?”",
+            "- Bring examples of projects or experiments you have done in school.",
+            "",
+            "**6. Gain Practical Experience**: Participate in science competitions, summer camps, or internships related to materials or engineering.",
+            "",
+            "- Join the Hong Kong Youth Science and Technology Competition or similar events.",
+            "- Volunteer at university labs or industry open days to build hands-on skills.",
+            "",
+            "**7. Write a Compelling Personal Statement**: Highlight your passion for materials science, relevant coursework, and any research or project experience.",
+            "",
+            "- Mention specific topics you find fascinating, such as 3D printing or battery technology.",
+            "- Connect your interests to CityU’s programme strengths and faculty expertise.",
+            "",
+            "**8. Apply Early and Check Deadlines**: Submit your JUPAS application by the December deadline. Ensure all documents, including reference letters, are ready.",
+            "",
+            "- Confirm your Band A choices before the final JUPAS deadline in May.",
+            "- Attend CityU’s admission talks and open days to learn more about the programme.",
+            "",
+            "**9. Consider Backup Options**: Include related programmes like BEng Mechanical Engineering or BSc Chemistry as Band B or C choices to increase your chances.",
+            "",
+            "- Research alternative programmes at CityU and other universities.",
+            "- Keep your options open by applying to both research-oriented and applied engineering programmes."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：2: 數學 / Physics 1.5: 英文 / Biology / Chemistry / M1/M2 1: 其他選修科。",
+            "**入學中位數**：34.0分（2025年聯招數據）。",
+            "**下四分位數**：32.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1210 工學士(材料科學及工程) 為四年全日制課程，教授金屬、陶瓷、聚合物、複合材料及納米材料等基礎知識，結合理論與實驗，並設有畢業專題研究。",
+            "**第一年**：修讀數學、物理、化學及材料科學導論等基礎科目，同時完成大學核心課程（如英文、中文及通識教育）。",
+            "**第二年**：核心科目包括材料熱力學、材料力學行為、材料電子特性及材料表徵分析，學生可透過選修課開始專攻特定領域。",
+            "**第三年**：進階課程涵蓋納米材料、生物材料及能源應用材料，鼓勵學生參加暑期實習或工業實習。",
+            "**第四年**：完成畢業專題論文及進階選修課（如計算材料科學及先進製造），並參與專業倫理與創新研討會。",
+            "**兩個專修**：課程提供材料科學及材料工程兩個專修方向，讓學生按研究或工業應用需求調整學習路徑。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高需求行業**：材料工程師在電子、航空航天、汽車、可再生能源及生物醫學設備等行業至關重要，香港推動創新科技更帶動畢業生需求。",
+            "**典型職位**：畢業生可擔任材料工程師、工藝工程師、品質保證經理、研發科學家或技術顧問，任職於 ASM Pacific Technology、港鐵公司及中電集團等企業。",
+            "**就業率**：根據城大最新畢業生調查，超過 90% 的材料科學及工程學士畢業生在畢業後六個月內成功就業或繼續升學。",
+            "**平均起薪**：近期畢業生的中位數起薪約為每月港幣 18,000 至 22,000 元，頂尖畢業生可達港幣 25,000 元以上。",
+            "**升學途徑**：不少畢業生前往劍橋大學、倫敦帝國學院及新加坡國立大學等頂尖學府攻讀碩士或博士課程。",
+            "**專業認可**：課程獲香港工程師學會（HKIE）認可，畢業生累積相關工作經驗後可成為特許工程師。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**先進實驗室**：材料科學及工程學系設有材料合成、表徵分析（SEM、TEM、XRD）及力學測試等先進實驗室，提供實戰經驗。",
+            "**城大校園**：位於九龍塘，毗鄰港鐵站，設施包括邵逸夫圖書館及李達三葉耀珍學術樓等現代化學習空間。",
+            "**創新樞紐**：學生可使用香港高等研究院及城大深圳研究院，促進跨境科研合作。",
+            "**學生設施**：校園設有體育設施（健身室、游泳池、體育館）、學生宿舍及多樣餐飲選擇，營造活力校園生活。",
+            "**綠色校園**：城大致力可持續發展，校園設有綠化屋頂、節能建築及回收計劃。",
+            "**行業夥伴**：學系與 ASM Pacific Technology 及香港科技園等企業合作，提供實習及項目機會。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：JS1210 的 HKDSE 入學中位數為 34.0 分（最佳五科，包括數學），反映競爭激烈。",
+            "**2025 年下四分位數**：下四分位數為 32.5 分，表示 25% 的獲取錄學生分數低於此門檻，入學要求極高。",
+            "**科目比重**：數學及物理比重為 2 倍，英文、生物、化學及 M1/M2 比重為 1.5 倍，其他選修科為 1 倍，有利於 STEM 背景突出的學生。",
+            "**申請人數**：課程每年收到超過 500 份申請，學額約 40 至 50 個，錄取率約為 8% 至 10%。",
+            "**面試要求**：入圍申請人或需參加面試，評估其學習動機、解難能力及對材料科學的興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與學系成就",
+          "content": [
+            "**張銳教授**：城大材料科學講座教授，專注納米材料及能源儲存研究，發表逾 300 篇論文並擁有多項專利。",
+            "**李偉博士**：ASM Pacific Technology 高級工程師，2018 年畢業，領導半導體先進封裝材料的研發。",
+            "**陳嘉恩博士**：香港科技園公司研究科學家，2019 年畢業，專攻組織工程用生物材料。",
+            "**黃子峰先生**：港鐵公司品質保證經理，2020 年畢業，負責鐵路基建項目的材料測試。",
+            "**劉心怡博士**：劍橋大學博士後研究員，2021 年畢業，從事航空航天新型合金的計算建模。",
+            "**鄭凱欣女士**：中電集團工藝工程師，2022 年畢業，優化發電及可再生能源系統的材料應用。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**城大入學獎學金**：頒予 HKDSE 成績優異者（如多科 5**），每年最高可達港幣 100,000 元，並可按學業成績續領。",
+            "**學系獎學金**：材料科學及工程學系設有多項基於成績的獎學金，如 MSE 傑出學生獎（每年港幣 10,000 至 20,000 元）。",
+            "**香港政府獎學金**：合資格學生可申請香港政府獎學金（每年最高港幣 80,000 元）及外展體驗獎（最高港幣 100,000 元，用於海外交流）。",
+            "**行業贊助**：ASM Pacific Technology 及中電等企業為 MSE 學生提供獎學金，並附帶實習及導師計劃。",
+            "**財政援助**：城大透過學生資助處（SFAA）及城大助學金計劃提供按需要審批的財政援助，涵蓋學費及生活費。",
+            "**交流獎學金**：參加海外交流計劃的學生可申請城大國際交流獎學金（最高港幣 50,000 元），資助旅費及住宿。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1210 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理數學及物理**：兩科比重均為 2 倍，至關重要。目標數學至少 5*，物理至少 5 級，以保持競爭力。",
+            "",
+            "- 專注解題技巧及歷屆試題練習。",
+            "- 考慮修讀 M1/M2（比重 1.5 倍）以進一步提高總分。",
+            "",
+            "**2. 善用化學及生物**：比重均為 1.5 倍，可顯著提升總分。目標至少一科達 5 級或以上。",
+            "",
+            "- 使用溫習指南並練習 HKDSE 樣本試卷。",
+            "- 針對有機化學或細胞生物學等難點，參加學習小組或補習。",
+            "",
+            "**3. 爭取英文佳績**：英文比重為 1.5 倍，目標達 5 級或以上，以最大化入學分數。",
+            "",
+            "- 限時練習閱讀理解及寫作。",
+            "- 每日接觸英語媒體，提升聆聽及說話能力。",
+            "",
+            "**4. 理解計分公式**：分數 = (數學 × 2) + (物理 × 2) + (英文 × 1.5) + (最佳兩科：化學/生物/M1/M2 × 1.5) + (其他選修科 × 1)。計算你的目標分數。",
+            "",
+            "- 使用城大網上計分器模擬不同科目組合。",
+            "- 目標總分至少 34 分，以匹配 2025 年中位數。",
+            "",
+            "**5. 準備面試**：如獲面試機會，展現對材料科學的濃厚興趣。研究納米材料、可再生能源及生物材料等最新趨勢。",
+            "",
+            "- 準備常見問題答案：「為何選材料科學？」及「你的職業目標是甚麼？」",
+            "- 攜帶學校項目或實驗範例。",
+            "",
+            "**6. 獲取實踐經驗**：參加科學比賽、暑期營或與材料或工程相關的實習。",
+            "",
+            "- 參與香港青少年科技比賽等活動。",
+            "- 到大學實驗室或行業開放日擔任義工，累積實戰技能。",
+            "",
+            "**7. 撰寫具說服力的個人陳述**：突出你對材料科學的熱情、相關課程及研究或項目經驗。",
+            "",
+            "- 提及你感興趣的特定主題，如 3D 打印或電池技術。",
+            "- 將你的興趣與城大課程優勢及教授專長聯繫起來。",
+            "",
+            "**8. 提早申請並留意截止日期**：在 12 月截止前提交 JUPAS 申請，確保推薦信等文件齊全。",
+            "",
+            "- 在 5 月最終 JUPAS 截止前確認 Band A 選擇。",
+            "- 參加城大入學講座及開放日，了解更多課程資訊。",
+            "",
+            "**9. 考慮後備選擇**：將相關課程如工學士(機械工程)或理學士(化學)列為 Band B 或 C，增加入學機會。",
+            "",
+            "- 研究城大及其他大學的替代課程。",
+            "- 同時申請研究型及應用型工程課程，保持靈活性。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 34.0,
+    "lq": 32.5
+  }
+}

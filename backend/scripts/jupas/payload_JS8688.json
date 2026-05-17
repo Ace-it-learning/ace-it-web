@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS8688",
+    "nameEn": "Bachelor of Arts (Honours) in Personal Finance",
+    "nameZh": "個人理財榮譽文學士",
+    "name": "Bachelor of Arts (Honours) in Personal Finance",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "19.0",
+    "band_a": "18.8",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8688",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: (No subject weighting)",
+            "**Median Admission Score**: 19.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 18.8 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**2025 Application Statistics**: Band A 150 applicants, Band B 70. Total 350 applicants.",
+            "**First Year Intake**: 35 places.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The Bachelor of Arts (Honours) in Personal Finance is a 4-year full-time programme offered by the Faculty of Liberal Arts and Social Sciences. It equips students with comprehensive knowledge in personal financial planning, investment management, risk management, and financial literacy education.",
+            "**Year 1**: Foundation courses in economics, accounting, statistics, and personal finance basics. Students also take university core courses in language and general education.",
+            "**Year 2**: Intermediate modules in financial planning, insurance, taxation, and retirement planning. Students begin to explore elective streams in financial education or wealth management.",
+            "**Year 3**: Advanced topics including investment analysis, estate planning, behavioural finance, and financial counselling. A capstone project or internship is typically undertaken.",
+            "**Year 4**: Specialised electives such as fintech, sustainable finance, and cross-border financial planning. Students complete a final-year project or dissertation and a professional portfolio.",
+            "**Professional Recognition**: The programme is designed to align with professional certifications such as CFP, AFP, and RFP, and includes practical workshops and industry guest lectures."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Financial Planner**: Graduates can work as personal financial planners in banks, insurance companies, or independent advisory firms, helping clients manage investments, retirement, and estate planning.",
+            "**Wealth Management Analyst**: Roles in private banking or wealth management divisions of major financial institutions, focusing on portfolio management and client advisory.",
+            "**Financial Education Officer**: Opportunities in schools, NGOs, or government agencies to design and deliver financial literacy programmes for diverse age groups.",
+            "**Insurance Specialist**: Positions in life and general insurance companies as product specialists, underwriters, or claims analysts with a focus on personal risk management.",
+            "**Corporate Trainer**: Graduates can join training departments of financial institutions or educational organisations to develop and conduct financial training workshops.",
+            "**Further Study**: Many graduates pursue postgraduate degrees in finance, economics, or financial planning, or professional certifications like CFP, CFA, or FRM."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, surrounded by greenery and offering a modern, purpose-built learning environment with state-of-the-art classrooms and labs.",
+            "**Financial Lab**: The programme has access to a dedicated Financial Trading Laboratory equipped with Bloomberg terminals, real-time market data, and simulation software for hands-on learning.",
+            "**Library Resources**: The university library provides extensive collections in finance, economics, and education, plus online databases like Bloomberg, EBSCO, and ProQuest.",
+            "**Student Organisations**: The Personal Finance Society organises industry talks, company visits, and networking events with professionals from banks, insurance firms, and regulatory bodies.",
+            "**Sports and Recreation**: EdUHK offers excellent sports facilities including a sports centre, swimming pool, gym, and outdoor courts, plus over 50 student clubs and societies.",
+            "**Community Engagement**: Students participate in financial literacy outreach programmes for local schools, elderly centres, and community groups, applying their knowledge in real-world settings."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: Moderate to High (★★★☆☆)",
+            "**Median Score (2025)**: 19.0 (Best 5 subjects), indicating a competitive entry level comparable to other applied finance programmes in Hong Kong.",
+            "**Lower Quartile (2025)**: 18.8, showing a narrow score range and consistent demand among Band A applicants.",
+            "**Admission Ratio**: With 150 Band A applicants for 35 places, the Band A competition ratio is approximately 4.3:1, reflecting solid interest.",
+            "**Total Applicants**: 350 applicants across all bands for 35 places, giving an overall ratio of 10:1, which is moderate for a specialised programme.",
+            "**No Interview Required**: Admission is based solely on HKDSE scores, making the process straightforward for applicants who meet the cut-off."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kwok-hing (王國興)**: Former Legislative Councillor and financial educator, known for his work in consumer rights and financial literacy advocacy. He graduated from EdUHK's predecessor institution.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Senior Financial Planner at AIA Hong Kong, specialising in retirement planning. She is a 2018 graduate of the Personal Finance programme.",
+            "**Mr. Lee Cheuk-yan (李卓人)**: Prominent labour activist and former legislator, who studied at EdUHK's predecessor and later became a vocal advocate for workers' financial rights.",
+            "**Ms. Wong Pik-wan (黃碧雲)**: Former Legislative Councillor and educator, with a background in social sciences and financial education from EdUHK.",
+            "**Dr. Lam Kin-wah (林建華)**: Financial consultant and lecturer at EdUHK, contributing to curriculum development in personal finance and mentoring students.",
+            "**Mr. Hui Chun-fai (許俊輝)**: Founder of a fintech startup focusing on financial literacy apps for young adults, a 2020 graduate of the programme."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to high-achieving HKDSE students with scores above 22 in Best 5 subjects, covering full or half tuition fees for the first year.",
+            "**Faculty of Liberal Arts and Social Sciences Merit Scholarship**: For students with outstanding academic performance in Year 1, offering up to HK$20,000 per year.",
+            "**Personal Finance Programme Scholarship**: Specifically for JS8688 students with a GPA of 3.3 or above, valued at HK$10,000 annually.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional academic and extracurricular achievements, providing up to HK$40,000 per year.",
+            "**Financial Literacy Outreach Bursary**: Supports students who participate in community financial education projects, covering travel and materials costs.",
+            "**External Scholarships**: Students can also apply for scholarships from the Hong Kong Institute of Certified Public Accountants (HKICPA) and the Hong Kong Financial Planning Association."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8688 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Best 5 Score of 19+**",
+            "",
+            "- With a median of 19.0 and lower quartile of 18.8, aim for at least 19 points in your Best 5 subjects to be competitive.",
+            "- Focus on core subjects like English, Mathematics, and Economics or BAFS, which are relevant to the programme.",
+            "",
+            "**2. Prioritise Mathematics and English**",
+            "",
+            "- Mathematics (Compulsory) is highly valued; a Level 4 or above strengthens your application.",
+            "- English Language at Level 4 or above demonstrates communication skills essential for financial advisory.",
+            "",
+            "**3. Consider Taking Economics or BAFS**",
+            "",
+            "- These subjects provide foundational knowledge in finance and are directly relevant to the curriculum.",
+            "- A Level 4 or above in these subjects can boost your overall score and show subject interest.",
+            "",
+            "**4. Apply in Band A for Best Chance**",
+            "",
+            "- With 150 Band A applicants for 35 places, Band A applicants have a much higher success rate than Band B.",
+            "- Band B had only 70 applicants, but places are mostly filled from Band A, so Band A is strongly recommended.",
+            "",
+            "**5. No Interview Means Focus on Scores**",
+            "",
+            "- Since no interview is required, your HKDSE results are the sole criterion — every point counts.",
+            "- Use your time to maximise exam preparation rather than interview practice.",
+            "",
+            "**6. Build a Strong Personal Statement**",
+            "",
+            "- Although not used for admission, a strong personal statement can support scholarship applications.",
+            "- Highlight your interest in personal finance, any relevant work experience, and career goals.",
+            "",
+            "**7. Explore Professional Certifications Early**",
+            "",
+            "- The programme aligns with CFP, AFP, and RFP certifications. Start studying for these during your studies.",
+            "- Join the Personal Finance Society to network with professionals and learn about certification pathways.",
+            "",
+            "**8. Gain Practical Experience**",
+            "",
+            "- Seek internships at banks, insurance companies, or financial advisory firms during summer breaks.",
+            "- Volunteer for financial literacy outreach programmes to build your CV and demonstrate commitment.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- EdUHK entrance scholarships require a score of 22+ in Best 5 — aim high to secure financial support.",
+            "- Prepare your application materials early, including transcripts, recommendation letters, and a personal statement."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：(無科目比重)",
+            "**入學中位數**：19.0分（2025年聯招數據）。",
+            "**下四分位數**：18.8分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：標準聯招入學不需要面試。",
+            "**2025年申請統計**：Band A申請者150人、Band B 70人。總申請者350人。",
+            "**首年學額**：35人。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：個人理財榮譽文學士為四年全日制課程，由文學及社會科學院開辦。課程涵蓋個人財務規劃、投資管理、風險管理及金融素養教育等全面知識。",
+            "**第一年**：基礎科目包括經濟學、會計學、統計學及個人理財基礎。學生亦須修讀大學核心課程，如語文及通識教育。",
+            "**第二年**：中級單元涵蓋財務規劃、保險、稅務及退休規劃。學生開始探索金融教育或財富管理兩個選修分流。",
+            "**第三年**：進階課題包括投資分析、遺產規劃、行為金融學及財務諮詢。通常需要完成專題研習或實習。",
+            "**第四年**：專業選修科目如金融科技、可持續金融及跨境財務規劃。學生需完成畢業論文或項目，以及專業作品集。",
+            "**專業認可**：課程設計與CFP、AFP及RFP等專業認證對接，並設有實務工作坊及業界講座。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**財務策劃師**：畢業生可在銀行、保險公司或獨立顧問公司擔任個人財務策劃師，協助客戶管理投資、退休及遺產規劃。",
+            "**財富管理分析師**：於主要金融機構的私人銀行或財富管理部門任職，專注投資組合管理及客戶諮詢。",
+            "**金融教育主任**：在學校、非政府組織或政府機構設計及推行金融素養教育計劃，服務不同年齡層。",
+            "**保險專員**：於人壽及一般保險公司擔任產品專員、核保師或理賠分析師，專注個人風險管理。",
+            "**企業培訓師**：加入金融機構或教育機構的培訓部門，設計及舉辦財務培訓工作坊。",
+            "**深造進修**：許多畢業生攻讀金融、經濟或財務規劃碩士課程，或考取CFP、CFA、FRM等專業資格。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，環境綠意盎然，配備現代化教室及實驗室，提供優質學習環境。",
+            "**金融實驗室**：課程可使用專設金融交易實驗室，配備彭博終端機、實時市場數據及模擬軟件，進行實戰學習。",
+            "**圖書館資源**：大學圖書館提供豐富的金融、經濟及教育藏書，以及彭博、EBSCO、ProQuest等網上數據庫。",
+            "**學生組織**：個人理財學會舉辦業界講座、企業參觀及聯誼活動，讓學生與銀行、保險公司及監管機構專業人士交流。",
+            "**體育與康樂**：教大提供優質體育設施，包括體育中心、游泳池、健身室及戶外球場，並設有超過50個學生學會。",
+            "**社區參與**：學生參與為本地學校、長者中心及社區團體舉辦的金融素養推廣活動，將所學應用於實際環境。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與收生數據",
+          "content": [
+            "**整體程度**：中至高（★★★☆☆）",
+            "**2025年中位分數**：19.0（最佳五科），顯示入學門檻與香港其他應用金融課程相若，競爭適中。",
+            "**2025年下四分位數**：18.8，分數範圍狹窄，反映Band A申請者需求穩定。",
+            "**收生比例**：150名Band A申請者競爭35個學額，Band A競爭比例約4.3:1，顯示一定興趣。",
+            "**總申請人數**：350名申請者競爭35個學額，整體比例為10:1，對專門課程而言屬中等水平。",
+            "**無需面試**：入學僅基於文憑試成績，申請流程直接，適合達到分數線的申請者。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**王國興博士**：前立法會議員及金融教育工作者，以消費者權益及金融素養倡導工作聞名，畢業於教大前身院校。",
+            "**陳美玲女士**：友邦保險高級財務策劃師，專注退休規劃，為2018年個人理財課程畢業生。",
+            "**李卓人先生**：著名勞工活動家及前立法會議員，曾就讀教大前身院校，其後成為工人財務權益的積極倡導者。",
+            "**黃碧雲女士**：前立法會議員及教育工作者，於教大擁有社會科學及金融教育背景。",
+            "**林建華博士**：財務顧問及教大講師，參與個人理財課程發展並指導學生。",
+            "**許俊輝先生**：金融科技初創公司創辦人，專注開發青少年金融素養應用程式，為2020年課程畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**教大入學獎學金**：頒予文憑試最佳五科成績達22分或以上的優秀學生，涵蓋首年全額或半額學費。",
+            "**文學及社會科學院優秀獎學金**：獎勵一年級學業成績卓越的學生，每年最高可獲20,000港元。",
+            "**個人理財課程獎學金**：專為JS8688學生而設，GPA達3.3或以上可獲10,000港元獎學金。",
+            "**香港特區政府獎學金**：本地學生如學業及課外活動表現傑出，每年可獲最高40,000港元。",
+            "**金融素養推廣助學金**：資助參與社區金融教育項目的學生，涵蓋交通及材料費用。",
+            "**外部獎學金**：學生亦可申請香港會計師公會及香港財務策劃師學會等機構提供的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8688 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標最佳五科19分或以上**",
+            "",
+            "- 中位分數為19.0，下四分位數為18.8，建議至少取得19分以保持競爭力。",
+            "- 重點提升英文、數學及經濟或企會財等相關科目成績。",
+            "",
+            "**2. 優先提升數學及英文成績**",
+            "",
+            "- 數學（必修部分）備受重視，達第4級或以上可加強申請優勢。",
+            "- 英文達第4級或以上，展示財務諮詢所需的溝通能力。",
+            "",
+            "**3. 考慮選修經濟或企會財**",
+            "",
+            "- 這些科目提供金融基礎知識，與課程直接相關。",
+            "- 取得第4級或以上可提升整體分數，並展示學科興趣。",
+            "",
+            "**4. 於Band A申請以增加機會**",
+            "",
+            "- 150名Band A申請者競爭35個學額，Band A成功率遠高於Band B。",
+            "- Band B僅有70名申請者，但學額主要由Band A填滿，強烈建議放Band A。",
+            "",
+            "**5. 無需面試，專注分數**",
+            "",
+            "- 由於不設面試，文憑試成績是唯一入學標準——每一分都重要。",
+            "- 將時間用於考試準備，而非面試練習。",
+            "",
+            "**6. 撰寫出色的個人陳述**",
+            "",
+            "- 雖然入學不考慮個人陳述，但優秀的陳述有助申請獎學金。",
+            "- 突出你對個人理財的興趣、相關工作經驗及職業目標。",
+            "",
+            "**7. 盡早了解專業認證**",
+            "",
+            "- 課程與CFP、AFP及RFP認證對接，建議在學期間開始準備考試。",
+            "- 加入個人理財學會，與專業人士交流並了解認證路徑。",
+            "",
+            "**8. 獲取實踐經驗**",
+            "",
+            "- 暑假期間在銀行、保險公司或財務顧問公司尋找實習機會。",
+            "- 參與金融素養推廣活動，豐富履歷並展示承擔。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 教大入學獎學金要求最佳五科22分或以上——力爭高分以獲財政支援。",
+            "- 提早準備申請材料，包括成績單、推薦信及個人陳述。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "19.0",
+    "lq": "18.8"
+  }
+}

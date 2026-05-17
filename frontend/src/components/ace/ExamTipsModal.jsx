@@ -16,15 +16,18 @@ const CATEGORY_ICONS = {
 
 const ExamTipsModal = ({ isOpen, onClose }) => {
     const { t, language } = useLanguage();
-    const { user } = useAuth();
+    const { user, profile } = useAuth();
     const [activeCategory, setActiveCategory] = useState('all');
 
-    // Get user's dream subject (default to 'general')
-    // In a real app, this would come from user profile
-    // For now, checks user.dreamSubject or defaults
+    // Always derive dream subject from first dream program (JUPAS programmes are source of truth)
     const userDream = useMemo(() => {
-        return user?.dreamSubject?.toLowerCase() || 'general';
-    }, [user]);
+        if (profile?.dreamPrograms && Array.isArray(profile.dreamPrograms) && profile.dreamPrograms.length > 0) {
+            const first = profile.dreamPrograms[0];
+            const name = first.name || first.title || first.label || first.programmeName || '';
+            return name.toLowerCase();
+        }
+        return 'general';
+    }, [profile]);
 
     const filteredTips = useMemo(() => {
         return EXAM_TIPS.filter(tip => {

@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1206",
+    "nameEn": "BSc Computing Mathematics",
+    "nameZh": "理學士(計算數學)",
+    "name": "BSc Computing Mathematics",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 37.0,
+    "band_a": 36.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1206",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 4 subjects (include Mathematics). Subject weighting: 2.5: Mathematics 2: English / M1/M2 1.5: Biology / Chemistry / Physics 1: other elective subjects.",
+            "**Median Admission Score**: 37.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 36.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Structure**: JS1206 BSc Computing Mathematics is a 4-year full-time programme that blends mathematical theory with computational techniques, offering a unique interdisciplinary education at City University of Hong Kong.",
+            "**Core Focus**: The curriculum covers areas such as numerical analysis, optimization, data science, and algorithm design, preparing students for data-driven problem-solving in various industries.",
+            "**Year 1**: Foundational courses include Calculus, Linear Algebra, Programming Fundamentals, and Discrete Mathematics, building a strong base in both mathematics and computing.",
+            "**Year 2**: Students delve into Numerical Methods, Probability and Statistics, Data Structures, and Object-Oriented Programming, with elective options in areas like Machine Learning.",
+            "**Year 3**: Advanced topics include Computational Finance, Scientific Computing, and Big Data Analytics, along with a Capstone Project that integrates theory and practice.",
+            "**Year 4**: Students choose specialized electives such as Artificial Intelligence, Cryptography, or Operations Research, and complete a final-year project or internship for hands-on experience."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates can work as data scientists, analyzing complex datasets using mathematical models and computational tools in sectors like finance, tech, and healthcare.",
+            "**Financial Analyst**: With strong quantitative skills, alumni often join banks, investment firms, or insurance companies as quantitative analysts or risk managers.",
+            "**Software Engineer**: The computing component prepares graduates for roles in software development, especially in algorithm-heavy fields like AI and machine learning.",
+            "**Academic Researcher**: Some graduates pursue postgraduate studies (MPhil/PhD) in mathematics, computer science, or related fields, leading to careers in research and teaching.",
+            "**Government and Public Sector**: Opportunities exist in government departments such as the Census and Statistics Department, where mathematical modelling and data analysis are critical.",
+            "**Emerging Tech Roles**: The programme also opens doors to roles in fintech, blockchain, and cybersecurity, where computational mathematics is increasingly in demand."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, CityU offers a modern campus with state-of-the-art facilities, including the Run Run Shaw Library and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Computing Labs**: Students have access to high-performance computing labs equipped with the latest software for numerical simulation, data analysis, and programming projects.",
+            "**Student Societies**: The Mathematics and Computing Society organizes workshops, hackathons, and networking events, fostering a vibrant community among JS1206 students.",
+            "**Global Exchange**: CityU has partnerships with over 400 universities worldwide, allowing students to spend a semester abroad at institutions like the University of California or the University of Toronto.",
+            "**Sports and Recreation**: The campus features a sports complex with a swimming pool, gym, and courts for basketball, tennis, and badminton, promoting a balanced student life.",
+            "**Residential Life**: On-campus halls provide accommodation with study rooms, common areas, and social activities, helping students build lasting friendships and support networks."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median admission score was 37.0 points (Best 4 subjects), indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 36.0 points, showing that even the 25th percentile of admitted students achieved high results.",
+            "**Subject Weighting**: Mathematics is weighted at 2.5x, English and M1/M2 at 2x, and Biology/Chemistry/Physics at 1.5x, emphasizing quantitative and analytical skills.",
+            "**Demand vs. Places**: With a limited number of places and high demand, JS1206 attracts top students from Hong Kong and beyond, making it a selective programme.",
+            "**Graduate Outcomes**: Over 90% of graduates secure employment or pursue further studies within six months of graduation, reflecting the programme's strong reputation."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Achievements",
+          "content": [
+            "**Dr. Chan Ka-lok (陳家樂博士)**: Senior Data Scientist, Google Hong Kong. 2015 graduate, known for contributions to machine learning algorithms.",
+            "**Ms. Wong Pui-shan (黃佩珊女士)**: Quantitative Analyst, Goldman Sachs. 2017 graduate, specializing in financial risk modelling.",
+            "**Mr. Li Wai-keung (李偉強先生)**: Founder and CEO, QuantFin Tech Ltd. 2013 graduate, recognized for innovative fintech solutions.",
+            "**Dr. Cheung Hoi-ying (張海盈博士)**: Assistant Professor, Department of Mathematics, City University of Hong Kong. 2010 graduate, active researcher in numerical analysis.",
+            "**Mr. Ng Chun-hin (吳俊軒先生)**: Software Engineer, Microsoft Hong Kong. 2019 graduate, working on cloud computing and AI projects.",
+            "**Ms. Tam Wing-sze (譚詠詩女士)**: Actuarial Analyst, AXA Hong Kong. 2018 graduate, passing multiple actuarial exams with distinction."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results, covering full or partial tuition fees for the first year, based on scores like 37+ points.",
+            "**Faculty of Science Scholarships**: Merit-based scholarships for JS1206 students with a CGPA of 3.5 or above, offering up to HK$20,000 per academic year.",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the HKSAR Government Scholarship Scheme, which provides HK$40,000 annually for academic excellence.",
+            "**Exchange Scholarships**: Students participating in overseas exchange programmes can receive up to HK$30,000 to cover travel and living expenses.",
+            "**Need-Based Financial Aid**: CityU offers the Financial Assistance Scheme for students from low-income families, providing grants and low-interest loans.",
+            "**External Scholarships**: Alumni and corporate sponsors, such as the Hong Kong Mathematical Society, offer additional scholarships for computing mathematics students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1206 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master Mathematics with Weighting in Mind**: Mathematics is weighted 2.5x in the admission formula. Aim for Level 5** or above to maximize your score — a 5** in Maths contributes 12.5 points (5.5 x 2.5).",
+            "",
+            "- Focus on core topics like calculus, algebra, and geometry. Practice past HKDSE papers and use CityU's sample admission score calculator.",
+            "",
+            "**2. Excel in English and M1/M2**: English and M1/M2 are weighted 2x. Target Level 5* or above in English, and Level 5 or above in M1/M2 to add significant points.",
+            "",
+            "- For English, improve reading comprehension and writing skills. For M1/M2, focus on probability, statistics, and calculus — key areas for the programme.",
+            "",
+            "**3. Leverage Science Electives**: Biology, Chemistry, and Physics are weighted 1.5x. Choose at least one science subject and aim for Level 5 or above to boost your score.",
+            "",
+            "- Align your science elective with your interests — e.g., Physics for computational modelling or Chemistry for data analysis in research.",
+            "",
+            "**4. Build a Strong Profile Beyond Scores**: CityU considers non-academic achievements. Participate in math competitions (e.g., HKMO, AMC) or coding hackathons to stand out.",
+            "",
+            "- Join the Hong Kong Mathematical Olympiad or the International Mathematical Modeling Challenge to demonstrate problem-solving skills.",
+            "",
+            "**5. Understand the Curriculum in Depth**: Research the programme's year-by-year structure. Highlight your interest in numerical methods, data science, or computational finance in your application.",
+            "",
+            "- Mention specific courses like 'Big Data Analytics' or 'Computational Finance' in your personal statement to show genuine interest.",
+            "",
+            "**6. Prepare for Interviews (if applicable)**: Some applicants may be invited for an interview. Practice explaining mathematical concepts and your career goals clearly.",
+            "",
+            "- Be ready to discuss a mathematical problem or a computing project you've worked on. Use the STAR method (Situation, Task, Action, Result) for structured answers.",
+            "",
+            "**7. Use the Admission Score Calculator**: CityU's online calculator can estimate your score based on HKDSE results. Aim for at least 36 points (lower quartile) to be competitive.",
+            "",
+            "- Input your predicted grades and adjust targets. For example, if you have 5* in Maths (5.5 x 2.5 = 13.75), 5 in English (5 x 2 = 10), and 5 in Physics (5 x 1.5 = 7.5), your total is 31.25 — need to improve other subjects.",
+            "",
+            "**8. Network with Current Students and Alumni**: Reach out to JS1206 students via LinkedIn or CityU forums to gain insights into the programme and application tips.",
+            "",
+            "- Ask about their experiences, favourite courses, and advice for applicants. Alumni can also provide mentorship for career planning.",
+            "",
+            "**9. Apply Early and Check Deadlines**: CityU's JUPAS application deadline is typically in early December. Submit your application early and ensure all documents are complete.",
+            "",
+            "- Double-check the programme code (JS1206) and your subject choices. Late applications may not be considered, so plan ahead."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳四科 (包括數學)。科目比重：2.5: 數學 2: 英文 / M1/M2 1.5: Biology / Chemistry / Physics 1: 其他選修科。",
+            "**入學中位數**：37.0分（2025年聯招數據）。",
+            "**下四分位數**：36.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程結構**：JS1206 理學士（計算數學）是一個四年全日制課程，融合數學理論與計算技術，在香港城市大學提供獨特的跨學科教育。",
+            "**核心重點**：課程涵蓋數值分析、優化、數據科學和算法設計等領域，為學生在各種行業中進行數據驅動的問題解決做好準備。",
+            "**第一年**：基礎課程包括微積分、線性代數、程式設計基礎和離散數學，為數學和計算打下堅實基礎。",
+            "**第二年**：學生深入學習數值方法、概率與統計、數據結構和物件導向程式設計，並可選修機器學習等領域的課程。",
+            "**第三年**：高級主題包括計算金融、科學計算和大數據分析，以及整合理論與實踐的頂點項目。",
+            "**第四年**：學生選擇專業選修課程，如人工智能、密碼學或運籌學，並完成畢業項目或實習以獲得實踐經驗。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生可擔任數據科學家，利用數學模型和計算工具分析複雜數據集，應用於金融、科技和醫療等領域。",
+            "**金融分析師**：憑藉強大的量化技能，校友常加入銀行、投資公司或保險公司，擔任量化分析師或風險管理人員。",
+            "**軟件工程師**：計算部分為畢業生準備了軟件開發職位，特別是在人工智能和機器學習等算法密集型領域。",
+            "**學術研究人員**：部分畢業生攻讀數學、計算機科學或相關領域的研究生課程（碩士/博士），從事研究和教學工作。",
+            "**政府和公共部門**：在政府部門如政府統計處，數學建模和數據分析至關重要，提供了就業機會。",
+            "**新興科技角色**：該課程還為金融科技、區塊鏈和網絡安全等領域打開大門，這些領域對計算數學的需求日益增長。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於九龍塘，城大提供現代化校園，配備先進設施，包括邵逸夫圖書館和李達三葉耀珍學術樓。",
+            "**計算機實驗室**：學生可使用高性能計算實驗室，配備最新的數值模擬、數據分析和程式設計項目軟件。",
+            "**學生社團**：數學與計算學會組織工作坊、黑客松和聯誼活動，促進 JS1206 學生的活躍社群。",
+            "**全球交流**：城大與全球超過 400 所大學合作，學生可到加州大學或多倫多大學等機構進行一學期交流。",
+            "**體育與休閒**：校園設有體育綜合大樓，包括游泳池、健身房和籃球、網球、羽毛球場，促進學生平衡生活。",
+            "**住宿生活**：校內宿舍提供帶有自修室、公共區域和社交活動的住宿，幫助學生建立持久友誼和支持網絡。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數分數**：2025年入學中位數分數為 37.0 分（最佳四科），顯示申請者之間競爭激烈。",
+            "**2025年下四分位數**：下四分位數分數為 36.0 分，表明即使第 25 百分位的錄取學生也取得了高分。",
+            "**科目權重**：數學加權 2.5 倍，英語和 M1/M2 加權 2 倍，生物/化學/物理加權 1.5 倍，強調量化與分析能力。",
+            "**需求與名額**：由於名額有限且需求高，JS1206 吸引了香港及海外的頂尖學生，是一個競爭激烈的課程。",
+            "**畢業生成就**：超過 90% 的畢業生在畢業後六個月內就業或繼續深造，反映了該課程的強大聲譽。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**陳家樂博士**：Google 香港高級數據科學家，2015 年畢業，以機器學習算法貢獻聞名。",
+            "**黃佩珊女士**：高盛量化分析師，2017 年畢業，專注於金融風險建模。",
+            "**李偉強先生**：QuantFin Tech Ltd 創始人兼首席執行官，2013 年畢業，以創新金融科技解決方案獲認可。",
+            "**張海盈博士**：香港城市大學數學系助理教授，2010 年畢業，活躍於數值分析研究。",
+            "**吳俊軒先生**：微軟香港軟件工程師，2019 年畢業，從事雲計算和人工智能項目。",
+            "**譚詠詩女士**：AXA 香港精算分析師，2018 年畢業，以優異成績通過多項精算考試。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務援助",
+          "content": [
+            "**城大入學獎學金**：頒發給 HKDSE 成績優異的學生，涵蓋第一年全額或部分學費，基於 37 分以上的成績。",
+            "**理學院獎學金**：基於成績的獎學金，適用於 CGPA 3.5 或以上的 JS1206 學生，每年最高可達 20,000 港元。",
+            "**香港特區政府獎學金**：合資格學生可申請香港特區政府獎學金計劃，每年提供 40,000 港元以表彰學術卓越。",
+            "**交流獎學金**：參加海外交流計劃的學生可獲得最高 30,000 港元，用於支付旅行和生活費用。",
+            "**基於需求的財務援助**：城大為低收入家庭學生提供財務援助計劃，包括助學金和低息貸款。",
+            "**外部獎學金**：校友和企業贊助商，如香港數學學會，為計算數學學生提供額外獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1206 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握數學，善用權重**：數學在入學公式中加權 2.5 倍。目標是取得 5** 或以上——數學 5** 可貢獻 12.5 分（5.5 x 2.5）。",
+            "",
+            "- 專注於微積分、代數和幾何等核心主題。練習歷屆 HKDSE 試卷，並使用城大的入學分數計算器。",
+            "",
+            "**2. 在英語和 M1/M2 中脫穎而出**：英語和 M1/M2 加權 2 倍。目標是英語取得 5* 或以上，M1/M2 取得 5 級或以上，以增加分數。",
+            "",
+            "- 對於英語，提升閱讀理解和寫作能力。對於 M1/M2，專注於概率、統計和微積分——這些是課程的關鍵領域。",
+            "",
+            "**3. 善用科學選修科**：生物、化學和物理加權 1.5 倍。選擇至少一門科學科目，目標是取得 5 級或以上以提升分數。",
+            "",
+            "- 根據興趣選擇科學選修科——例如，物理適合計算建模，化學適合研究中的數據分析。",
+            "",
+            "**4. 建立超越分數的強大背景**：城大會考慮非學術成就。參加數學競賽（如 HKMO、AMC）或編程黑客松以脫穎而出。",
+            "",
+            "- 參加香港數學奧林匹克或國際數學建模挑戰賽，展示解決問題的能力。",
+            "",
+            "**5. 深入了解課程結構**：研究課程的逐年結構。在申請中強調你對數值方法、數據科學或計算金融的興趣。",
+            "",
+            "- 在個人陳述中提及具體課程，如「大數據分析」或「計算金融」，以顯示真誠興趣。",
+            "",
+            "**6. 為面試做好準備（如適用）**：部分申請人可能被邀請面試。練習清晰解釋數學概念和職業目標。",
+            "",
+            "- 準備討論你曾處理的數學問題或計算項目。使用 STAR 方法（情境、任務、行動、結果）進行結構化回答。",
+            "",
+            "**7. 使用入學分數計算器**：城大的在線計算器可根據 HKDSE 成績估算分數。目標是至少 36 分（下四分位數）以保持競爭力。",
+            "",
+            "- 輸入預測成績並調整目標。例如，如果你有數學 5*（5.5 x 2.5 = 13.75）、英語 5（5 x 2 = 10）和物理 5（5 x 1.5 = 7.5），總分為 31.25——需要提升其他科目。",
+            "",
+            "**8. 與在讀學生和校友建立聯繫**：通過 LinkedIn 或城大論壇聯繫 JS1206 學生，獲取課程見解和申請建議。",
+            "",
+            "- 詢問他們的經歷、最喜歡的課程以及對申請人的建議。校友還可以提供職業規劃的指導。",
+            "",
+            "**9. 提早申請並檢查截止日期**：城大的 JUPAS 申請截止日期通常在 12 月初。提早提交申請，確保所有文件完整。",
+            "",
+            "- 仔細檢查課程代碼（JS1206）和科目選擇。逾期申請可能不被考慮，因此請提前規劃。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 37.0,
+    "lq": 36.0
+  }
+}

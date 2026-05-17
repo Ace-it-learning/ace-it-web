@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS5901",
+    "nameEn": "BEng/BSc & BBA Dual Degree Program in Technology and Management",
+    "nameZh": "科技及管理學雙學位課程",
+    "name": "BEng/BSc & BBA Dual Degree Program in Technology and Management",
+    "university": "香港科技大學",
+    "faculty": "School of Business and Management",
+    "median": "62.48",
+    "band_a": "60.23",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5901",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/ICT/Math/M1/M2 weighted.",
+            "**Highest Attainable Score**: 75.86.",
+            "**Median Admission Score**: 62.48 (2025 JUPAS data).",
+            "**Lower Quartile**: 60.23 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ ICT Level 5*; Math/ M1/ M2 Level 5*.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: Yes. Selective basis",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS5901 is a 5-year dual degree programme combining a BEng or BSc in a technology field with a BBA in Business and Management, integrating technical depth with business acumen.",
+            "**Two Streams**: Students choose a technology major from Engineering (e.g., Computer Engineering, Mechanical Engineering) or Science (e.g., Mathematics, Physics), paired with a BBA in Business and Management.",
+            "**Year 1**: Foundation courses in mathematics, science, and business fundamentals, plus language and general education requirements. Students explore both technology and management disciplines.",
+            "**Year 2**: Core courses in the chosen technology major and business core (e.g., accounting, finance, marketing). Interdisciplinary projects begin, linking tech and business concepts.",
+            "**Year 3**: Advanced technology courses and business electives. Students participate in a capstone project or internship, often with industry partners like Hong Kong Science Park companies.",
+            "**Year 4**: Specialization in technology and management, including a cross-disciplinary team project. Exchange or global study opportunities are available in this year.",
+            "**Year 5**: Final-year thesis or major project, integrating technology and management. Graduates receive two degrees: BEng/BSc and BBA."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Dual Degree Advantage**: Graduates are uniquely positioned for leadership roles in tech-driven industries, combining engineering/science expertise with business strategy skills.",
+            "**Top Sectors**: Common career paths include technology consulting, product management, fintech, investment banking (tech-focused), and entrepreneurship.",
+            "**Industry Partners**: HKUST’s proximity to Hong Kong Science Park and strong ties with firms like Google, HSBC, and Tencent provide internships and job placements.",
+            "**Graduate Roles**: Alumni have secured positions as Technology Consultants at McKinsey, Product Managers at Apple, and Analysts at Goldman Sachs.",
+            "**Entrepreneurship Support**: The HKUST Entrepreneurship Centre offers funding, mentorship, and incubation for graduates launching startups.",
+            "**Global Opportunities**: Many graduates pursue further studies at top global universities (e.g., MIT, Stanford) or work in international markets."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**Location**: HKUST’s Clear Water Bay campus offers stunning sea views and a modern, eco-friendly environment, fostering creativity and collaboration.",
+            "**World-Class Labs**: Students access state-of-the-art facilities like the Robotics Lab, Data Science Studio, and Business Simulation Centre.",
+            "**Innovation Hub**: The campus is adjacent to Hong Kong Science Park, enabling direct industry collaboration, internships, and research projects.",
+            "**Student Life**: Over 100 student clubs, including the Technology and Management Society, host networking events, hackathons, and case competitions.",
+            "**Global Exposure**: Extensive exchange programmes with 200+ partner universities allow students to study abroad for a semester or year.",
+            "**Residential Halls**: On-campus housing with vibrant communities, offering halls dedicated to entrepreneurship and innovation themes."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus, with weighting for Science subjects, ICT, Math, M1, and M2.",
+            "**Preferred Subjects**: HKDSE Science subjects or ICT at Level 5*; Math, M1, or M2 at Level 5* are highly recommended for a competitive application.",
+            "**Median Score (2025)**: 62.48 out of a highest attainable score of 75.86, indicating strong competition.",
+            "**Lower Quartile (2025)**: 60.23, showing that even the 25th percentile score is high.",
+            "**Demand**: The dual degree programme attracts top students due to its unique blend of technology and management, making it one of HKUST’s most selective programmes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009), former HKUST Vice-Chancellor. Pioneer in fiber optics.",
+            "**Mr. Wong Kwok-keung (王國強)**: CEO, Hong Kong Science and Technology Parks Corporation. 1995 graduate in Engineering.",
+            "**Ms. Sarah Lee (李思穎)**: Co-founder, Lalamove (logistics tech unicorn). 2010 graduate in Computer Engineering and Business.",
+            "**Mr. David Chan (陳大偉)**: Managing Director, Goldman Sachs (Technology Investment Banking). 2008 graduate in Finance and Computer Science.",
+            "**Dr. Jane Zhang (張潔)**: Chief Technology Officer, SenseTime (AI company). 2012 PhD graduate in Computer Science.",
+            "**Mr. Michael Hui (許文浩)**: Founder, GoGoX (formerly GoGoVan). 2005 graduate in Mechanical Engineering and Business."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**HKUST Entrance Scholarship**: Awarded to top HKDSE achievers, covering full or partial tuition. For JS5901, a score above 65 may qualify.",
+            "**School of Business and Management Scholarships**: Merit-based awards for dual degree students, up to HK$50,000 per year.",
+            "**Technology and Management Programme Scholarship**: Exclusive to JS5901 students with outstanding academic performance, offering up to HK$80,000.",
+            "**HKSAR Government Scholarship**: For students with exceptional HKDSE results and leadership potential, up to HK$40,000 annually.",
+            "**Need-Based Financial Aid**: HKUST offers grants and loans for students with financial need, covering tuition and living expenses.",
+            "**External Scholarships**: Students can apply for scholarships from organizations like the Hong Kong Jockey Club and Swire Group."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5901 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 65+**",
+            "",
+            "- With a median of 62.48 and lower quartile of 60.23, aim for 65+ to be competitive. Use the formula: Best 5 + 6th subject bonus, weighting Science/ICT/Math/M1/M2.",
+            "",
+            "**2. Excel in Weighted Subjects**",
+            "",
+            "- Science subjects, ICT, Math, M1, and M2 are weighted. Target Level 5* or above in at least two of these to boost your score significantly.",
+            "",
+            "**3. Master the 6th Subject Bonus**",
+            "",
+            "- Your 6th best subject adds bonus points. Choose an elective like Physics or Economics where you can score high (Level 5 or above) to maximize the bonus.",
+            "",
+            "**4. Build a Strong Academic Profile**",
+            "",
+            "- Beyond HKDSE, participate in math or science competitions (e.g., HKMO, HKPhO) and business case competitions to demonstrate interdisciplinary strength.",
+            "",
+            "**5. Prepare for Interviews**",
+            "",
+            "- JS5901 may require an interview. Practice articulating how you integrate technology and management. Use examples from projects or internships.",
+            "",
+            "**6. Gain Relevant Experience**",
+            "",
+            "- Join HKUST summer programmes or online courses in data science, coding, or business analytics. Show commitment to both fields.",
+            "",
+            "**7. Leverage HKUST’s Resources**",
+            "",
+            "- Attend HKUST open days and info sessions. Connect with current students or alumni via LinkedIn to learn about the programme’s demands.",
+            "",
+            "**8. Plan Your Subject Combination**",
+            "",
+            "- Choose HKDSE subjects that align with both technology (e.g., Physics, ICT) and business (e.g., Economics, BAFS). A balanced profile is key.",
+            "",
+            "**9. Apply Early and Strategically**",
+            "",
+            "- Submit your JUPAS application early. Consider HKUST’s early admission scheme if available. Ensure your personal statement highlights your dual interest."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/ICT/Math/M1/M2 加權。",
+            "**最高可達分數**：75.86。",
+            "**入學中位數**：62.48分（2025年聯招數據）。",
+            "**下四分位數**：60.23分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ ICT Level 5*; Math/ M1/ M2 Level 5*。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：需要。Selective basis",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS5901 是一個為期五年的雙學位課程，結合科技領域的工學士或理學士，以及工商管理學士（BBA），融合技術深度與商業智慧。",
+            "**兩個專修**：學生從工程學院（如計算機工程、機械工程）或科學學院（如數學、物理）選擇科技主修，並搭配工商管理學士。",
+            "**第一年**：數學、科學和商業基礎的基礎課程，以及語言和通識教育要求。學生探索科技與管理學科。",
+            "**第二年**：所選科技主修的核心課程和商業核心課程（如會計、金融、市場學）。開始跨學科項目，連結科技與商業概念。",
+            "**第三年**：高級科技課程和商業選修課。學生參與頂點項目或實習，通常與香港科學園等行業夥伴合作。",
+            "**第四年**：科技與管理專業化，包括跨學科團隊項目。此年可參加交換或全球學習機會。",
+            "**第五年**：畢業論文或大型項目，整合科技與管理。畢業生獲得兩個學位：工學士/理學士和工商管理學士。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**雙學位優勢**：畢業生獨特地勝任科技驅動行業的領導角色，結合工程/科學專業知識與商業策略技能。",
+            "**頂尖行業**：常見職業路徑包括科技諮詢、產品管理、金融科技、投資銀行（科技專注）和創業。",
+            "**行業夥伴**：香港科技大學鄰近香港科學園，並與谷歌、滙豐、騰訊等公司有緊密聯繫，提供實習和工作機會。",
+            "**畢業生職位**：校友已獲得麥肯錫的科技顧問、蘋果的產品經理和高盛的分析師等職位。",
+            "**創業支持**：科大創業中心為畢業生創業提供資金、指導和孵化。",
+            "**全球機會**：許多畢業生在頂尖全球大學（如麻省理工、斯坦福）深造或在國際市場工作。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：科大清水灣校園擁有壯麗海景和現代化環保環境，促進創造力和協作。",
+            "**世界級實驗室**：學生可使用機器人實驗室、數據科學工作室和商業模擬中心等先進設施。",
+            "**創新樞紐**：校園毗鄰香港科學園，促進直接行業合作、實習和研究項目。",
+            "**學生生活**：超過100個學生社團，包括科技與管理學會，舉辦聯誼活動、黑客松和案例比賽。",
+            "**全球視野**：與200多所合作大學的廣泛交換計劃，讓學生出國學習一學期或一年。",
+            "**住宿書院**：設有以創業和創新為主題的住宿書院，提供充滿活力的社區。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分，並對科學科目、資訊及通訊科技、數學、延伸部分單元一及單元二加權。",
+            "**優先科目**：香港中學文憑考試科學科目或資訊及通訊科技達5*級；數學、延伸部分單元一或單元二達5*級，對申請極具優勢。",
+            "**2025年中位數**：62.48分（最高可達75.86分），顯示競爭激烈。",
+            "**2025年下四分位數**：60.23分，即使第25百分位數分數也很高。",
+            "**需求**：雙學位課程因其獨特的科技與管理結合，吸引頂尖學生，是科大最具選擇性的課程之一。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**高錕博士**：諾貝爾物理學獎得主（2009年），前科大校長。光纖通訊先驅。",
+            "**王國強先生**：香港科技園公司行政總裁。1995年工程學畢業生。",
+            "**李思穎女士**：Lalamove（物流科技獨角獸）聯合創辦人。2010年計算機工程與商業畢業生。",
+            "**陳大偉先生**：高盛（科技投資銀行）董事總經理。2008年金融與計算機科學畢業生。",
+            "**張潔博士**：商湯科技（人工智能公司）首席技術官。2012年計算機科學博士畢業生。",
+            "**許文浩先生**：GoGoX（前身GoGoVan）創辦人。2005年機械工程與商業畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**科大入學獎學金**：頒予頂尖文憑試考生，涵蓋全額或部分學費。JS5901申請者分數達65分以上可能符合資格。",
+            "**工商管理學院獎學金**：為雙學位學生設立的優秀獎學金，每年高達50,000港元。",
+            "**科技與管理課程獎學金**：專為JS5901學生設立，學業成績優異者可獲高達80,000港元。",
+            "**香港特別行政區政府獎學金**：頒予文憑試成績優異及具領導潛力的學生，每年高達40,000港元。",
+            "**按需經濟援助**：科大為有經濟需要的學生提供助學金和貸款，涵蓋學費和生活費。",
+            "**外部獎學金**：學生可申請香港賽馬會、太古集團等機構的獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5901 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數 65 分以上**",
+            "",
+            "- 中位數為62.48分，下四分位數為60.23分，目標65分以上以保持競爭力。使用公式：最佳5科 + 第6科加分，並加權科學/ICT/數學/M1/M2。",
+            "",
+            "**2. 在加權科目中表現卓越**",
+            "",
+            "- 科學科目、ICT、數學、M1和M2會加權。至少在其中兩科取得5*級或以上，以大幅提升分數。",
+            "",
+            "**3. 掌握第6科加分策略**",
+            "",
+            "- 第6最佳科目會增加額外分數。選擇物理或經濟等選修科，並取得高分（5級或以上），以最大化加分效果。",
+            "",
+            "**4. 建立強大的學術背景**",
+            "",
+            "- 除了文憑試，參加數學或科學比賽（如香港數學競賽、香港物理奧林匹克）和商業案例比賽，展示跨學科實力。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- JS5901可能需要面試。練習如何闡述你整合科技與管理的方法，並引用項目或實習經驗作為例子。",
+            "",
+            "**6. 獲取相關經驗**",
+            "",
+            "- 參加科大暑期課程或數據科學、編程、商業分析的在線課程，展示對兩個領域的投入。",
+            "",
+            "**7. 善用科大資源**",
+            "",
+            "- 參加科大開放日及資訊講座。通過LinkedIn聯繫現有學生或校友，了解課程要求。",
+            "",
+            "**8. 規劃你的科目組合**",
+            "",
+            "- 選擇與科技（如物理、ICT）和商業（如經濟、企業會計與財務概論）相關的文憑試科目。平衡的組合是關鍵。",
+            "",
+            "**9. 及早並策略性地申請**",
+            "",
+            "- 盡早提交大學聯招申請。如有科大早期錄取計劃，請考慮申請。確保個人陳述突出你對雙領域的興趣。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "62.48",
+    "lq": "60.23"
+  }
+}

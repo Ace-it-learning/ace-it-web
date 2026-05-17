@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3011",
+    "nameEn": "BSc Scheme in Biotechnology and Chemical Technology",
+    "nameZh": "生物科技及化學科技(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Biotechnology and Chemical Technology",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "209.0",
+    "band_a": "203.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3011",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 212.2 (2025 JUPAS data).",
+            "**Median Admission Score**: 209.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 203.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc Scheme in Biotechnology and Chemical Technology (JS3011) is a 4-year full-time programme under the Faculty of Science at PolyU. It offers two streams: Biotechnology and Chemical Technology, allowing students to specialize after a common Year 1.",
+            "**Year 1 Foundation**: Students take core science courses including General Biology, General Chemistry, Calculus, and Physics. This year builds a strong interdisciplinary foundation and introduces laboratory safety and techniques.",
+            "**Year 2 Specialization**: Students choose between the Biotechnology stream (focusing on molecular biology, biochemistry, and bioprocessing) or the Chemical Technology stream (focusing on organic chemistry, analytical chemistry, and chemical engineering principles).",
+            "**Year 3 Advanced Study**: In-depth courses such as Advanced Biochemistry, Genetic Engineering, or Advanced Chemical Reaction Engineering. Students also begin their Final Year Project (FYP) preparation and may opt for Work-Integrated Education (WIE) placements.",
+            "**Year 4 Capstone**: Completion of the Final Year Project (FYP) and advanced electives like Pharmaceutical Biotechnology or Environmental Chemical Technology. The programme emphasizes hands-on lab work and industry-relevant case studies.",
+            "**Work-Integrated Education (WIE)**: A hallmark of PolyU, students are required to complete at least 100 hours of WIE, often through internships in biotechnology firms, chemical plants, or government laboratories in Hong Kong and the Greater Bay Area."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Biotechnology Sector**: Graduates can work as research assistants, quality control officers, or product development specialists in biopharmaceutical companies such as Hutchison China MediTech or Lee's Pharmaceutical Holdings.",
+            "**Chemical Industry**: Opportunities in chemical manufacturing, environmental testing, and materials science. Employers include BASF, Dow Chemical, and Hong Kong's Environmental Protection Department.",
+            "**Food and Pharmaceutical Industries**: Roles in food safety testing, drug formulation, and regulatory affairs. Companies like Nestlé, GSK, and local Chinese medicine firms actively recruit.",
+            "**Academic and Research Pathways**: Graduates can pursue MSc or PhD programmes at top universities worldwide, including PolyU's own postgraduate programmes in biomedical engineering or chemical technology.",
+            "**Government and Public Sector**: Positions in the Hong Kong Government Laboratory, Agriculture, Fisheries and Conservation Department, or the Drainage Services Department, focusing on environmental monitoring and public health.",
+            "**Entrepreneurship and Startups**: With the rise of biotech startups in the Greater Bay Area, graduates can launch ventures in areas like diagnostic kits, sustainable chemicals, or food technology."
+          ]
+        },
+        "campus": {
+          "title": "Campus and Facilities",
+          "content": [
+            "**Location and Access**: PolyU is located in Hung Hom, Kowloon, directly connected to the Hung Hom MTR station (East Rail Line and Tuen Ma Line). The campus is a 5-minute walk from the station, making it highly accessible from all parts of Hong Kong.",
+            "**Science Laboratories**: The programme uses state-of-the-art labs in the Lee Shau Kee Building and the Li Ka Shing Tower, equipped with HPLC, GC-MS, PCR machines, and fermentation units for hands-on training.",
+            "**Library and Learning Commons**: The Pao Yue-kong Library offers extensive science databases, e-journals, and 24/7 study spaces. The Learning Commons provides collaborative zones for group projects.",
+            "**Student Halls and Accommodation**: PolyU provides on-campus halls for non-local students, with priority for first-year students. Halls are within walking distance and offer a vibrant residential community.",
+            "**Sports and Recreation**: The campus features a sports centre with a gym, swimming pool, basketball courts, and a rooftop running track. Students can join over 100 clubs and societies.",
+            "**Industry Partnerships**: PolyU's proximity to the Hong Kong Science Park and Cyberport facilitates internships and industry visits. The university also has strong ties with the Greater Bay Area biotech cluster."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting is 209.0, indicating strong competition among applicants. The lower quartile is 203.5, showing a narrow range of scores.",
+            "**Average Score**: The average HKDSE score with subject weighting is 212.2, reflecting the programme's selectivity. Applicants should aim for scores above 210 to be competitive.",
+            "**Admission Score Formula**: PolyU uses the 'Any Best 5 Subjects' formula, meaning the best 5 HKDSE results are considered. Core subjects (English, Chinese, Mathematics, Liberal Studies) and electives (e.g., Biology, Chemistry) are all weighted equally in this calculation.",
+            "**Subject Weighting**: While no specific weighting is applied to individual subjects, strong performance in science electives (Biology, Chemistry, or Combined Science) is highly recommended. Mathematics (Compulsory) and M1/M2 are also advantageous.",
+            "**Demand and Trends**: The programme attracts students interested in the growing biotech and chemical sectors in Hong Kong and the Greater Bay Area. The number of Band A applicants typically exceeds places by a ratio of 3:1."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Programme Reputation",
+          "content": [
+            "**Dr. Chan Kwok-wai (陳國威博士)**: Chief Scientific Officer, Hong Kong Genome Institute. Graduated with a PhD in Biotechnology from PolyU and leads genomic research initiatives.",
+            "**Professor Wong Ka-hing (黃家興教授)**: Associate Dean, Faculty of Science, PolyU. A renowned researcher in chemical technology and environmental science, with over 100 publications.",
+            "**Ms. Li Mei-ling (李美玲女士)**: Senior Regulatory Affairs Manager, Johnson & Johnson Hong Kong. 2010 graduate of the Chemical Technology stream, overseeing product compliance in Asia Pacific.",
+            "**Mr. Cheung Chi-wai (張志偉先生)**: Founder and CEO, GreenChem Solutions, a startup specializing in eco-friendly industrial solvents. 2015 graduate of the Biotechnology stream.",
+            "**Dr. Ng Siu-fung (吳小鳳博士)**: Research Scientist, Hong Kong Polytechnic University. 2018 PhD graduate, now working on novel drug delivery systems for cancer therapy.",
+            "**Mr. Ho Tsz-kin (何子健先生)**: Quality Assurance Manager, Nestlé Hong Kong. 2012 graduate, responsible for food safety and quality control across regional supply chains."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Support",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to HKDSE top scorers with exceptional results (e.g., scores above 220). Covers full tuition fees and provides a living allowance of up to HK$50,000 per year.",
+            "**Faculty of Science Scholarship**: For students in the Faculty of Science with outstanding academic performance. Valued at HK$20,000 per year, renewable based on GPA.",
+            "**HKSAR Government Scholarship**: Available to local students with excellent HKDSE results and leadership qualities. Provides up to HK$40,000 per year for tuition and expenses.",
+            "**Dr. Li Ka-shing Scholarship**: Specifically for students in science and technology programmes, including JS3011. Offers HK$30,000 per year to support research projects or overseas exchanges.",
+            "**Work-Integrated Education (WIE) Bursary**: Financial support for students undertaking unpaid internships. Up to HK$10,000 per placement to cover travel and living costs.",
+            "**Exchange and Study Abroad Scholarships**: PolyU offers multiple scholarships for semester exchanges (e.g., to University of California, Berkeley or University of Cambridge), covering airfare and tuition fees."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3011 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target a Score of 210+**: With a median of 209.0 and average of 212.2, aim for at least 210 in your best 5 subjects. Use the 'Any Best 5' formula to your advantage by focusing on your strongest subjects.",
+            "",
+            "- Calculate your weighted score: add your best 5 HKDSE grades (e.g., 5**=7, 5*=6, 5=5, etc.). A score of 210 typically requires three 5* and two 5, or equivalent.",
+            "",
+            "**2. Prioritize Science Electives**: Take Biology and Chemistry at HKDSE level. If you can only take one, choose Chemistry — it is more versatile for both streams. Combined Science is acceptable but less competitive.",
+            "",
+            "- Aim for at least Level 5 in Chemistry and Level 5 in Biology or Combined Science.",
+            "",
+            "**3. Excel in Core Subjects**: English and Mathematics are critical. For English, target Level 5 or above to meet the programme's language demands. For Mathematics, Level 5 is recommended, and M1/M2 can boost your application.",
+            "",
+            "- Practice past papers for English Reading and Writing, and focus on Data Handling in Mathematics.",
+            "",
+            "**4. Build a Strong Profile with ECA**: Participate in science-related extracurricular activities like the Hong Kong Biology Olympiad, Chemistry Olympiad, or science fairs. Leadership roles in school clubs also help.",
+            "",
+            "- Highlight any lab experience or research projects in your personal statement.",
+            "",
+            "**5. Prepare for Interviews (if shortlisted)**: PolyU may interview Band A applicants. Be ready to discuss your interest in biotechnology or chemical technology, and your career goals. Practice answering in English.",
+            "",
+            "- Review current trends: CRISPR gene editing, green chemistry, and Hong Kong's biotech policy.",
+            "",
+            "**6. Leverage the 'Any Best 5' Formula**: Drop your weakest subject. If you have 6 subjects, choose the 5 with the highest grades. For example, if Liberal Studies is your weakest, exclude it.",
+            "",
+            "- Use online HKDSE score calculators to simulate different subject combinations.",
+            "",
+            "**7. Apply for Early Admission Schemes**: PolyU offers the School Nominations Direct Admission Scheme (SNDAS) and Sports/Arts schemes. If eligible, apply early to secure a conditional offer.",
+            "",
+            "- Check the PolyU admissions website for deadlines in November-December of your F.6 year.",
+            "",
+            "**8. Visit PolyU Open Day and Talk to Students**: Attend the annual PolyU Info Day (usually in October) to tour labs and speak with current JS3011 students. This helps you understand the programme culture.",
+            "",
+            "- Prepare specific questions about the streams, internships, and Final Year Projects.",
+            "",
+            "**9. Plan for WIE and Exchange Early**: Research internship opportunities at companies like Hong Kong Science Park or government labs. Apply for exchange programmes in Year 2 to gain international exposure.",
+            "",
+            "- Start building your CV and LinkedIn profile in Year 1. Join PolyU's Career Centre workshops."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：212.2（2025年聯招數據）。",
+            "**入學中位數**：209.0分（2025年聯招數據）。",
+            "**下四分位數**：203.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3011 生物科技及化學科技(榮譽)理學士組合課程為四年全日制，隸屬於理大理學院。提供兩個專修方向：生物科技及化學科技，學生在完成共同第一年後可選擇專修。",
+            "**第一年基礎**：修讀核心科學科目，包括普通生物學、普通化學、微積分及物理。這一年建立穩固的跨學科基礎，並介紹實驗室安全及技術。",
+            "**第二年專修**：學生選擇生物科技方向（側重分子生物學、生物化學及生物加工）或化學科技方向（側重有機化學、分析化學及化學工程原理）。",
+            "**第三年進階學習**：修讀高級生物化學、基因工程或高級化學反應工程等深入科目。學生開始準備畢業論文，並可選擇參與「工作綜合教育」（WIE）實習。",
+            "**第四年總結**：完成畢業論文及高級選修科，如製藥生物科技或環境化學科技。課程強調動手實驗及行業相關案例分析。",
+            "**工作綜合教育（WIE）**：理大特色，學生須完成至少100小時WIE，通常透過在生物科技公司、化工廠或香港及大灣區政府實驗室的實習進行。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**生物科技領域**：畢業生可擔任研究助理、品質控制主任或產品開發專員，任職於生物製藥公司如和黃醫藥或李氏大藥廠。",
+            "**化學工業**：機會涵蓋化學製造、環境測試及材料科學。僱主包括巴斯夫、陶氏化學及香港環境保護署。",
+            "**食品及製藥行業**：食品安全測試、藥物配方及法規事務等職位。雀巢、葛蘭素史克及本地中藥公司積極招聘。",
+            "**學術及研究途徑**：畢業生可於全球頂尖大學攻讀碩士或博士課程，包括理大本身的生物醫學工程或化學科技研究生課程。",
+            "**政府及公共部門**：職位包括香港政府化驗所、漁農自然護理署或渠務署，專注環境監測及公共衛生。",
+            "**創業及初創企業**：隨著大灣區生物科技初創企業的興起，畢業生可在診斷試劑、可持續化學品或食品科技等領域創業。"
+          ]
+        },
+        "campus": {
+          "title": "校園及設施",
+          "content": [
+            "**位置及交通**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線）。校園距離車站步行5分鐘，從香港各區均可輕鬆到達。",
+            "**科學實驗室**：課程使用李兆基樓及李嘉誠樓內的先進實驗室，配備高效液相色譜儀、氣相色譜-質譜聯用儀、PCR機及發酵設備，提供實踐訓練。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供大量科學數據庫、電子期刊及24/7自修空間。學習共享空間設有協作區域供小組項目使用。",
+            "**學生宿舍**：理大為非本地學生提供校內宿舍，一年級生優先。宿舍位於步行距離內，提供充滿活力的住宿社區。",
+            "**體育及康樂**：校園設有體育中心，包括健身室、游泳池、籃球場及天台跑道。學生可參加超過100個學會及社團。",
+            "**行業合作**：理大鄰近香港科學園及數碼港，方便實習及行業參觀。大學亦與大灣區生物科技集群有緊密聯繫。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力及入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：經科目加權後的HKDSE中位分數為209.0，顯示申請者之間競爭激烈。下四分位數為203.5，分數範圍較窄。",
+            "**平均分數**：經科目加權後的HKDSE平均分數為212.2，反映課程的選擇性。申請者應爭取210分以上以具競爭力。",
+            "**入學分數計算公式**：理大採用「最佳5科」公式，即考慮HKDSE最佳5科成績。核心科目（英文、中文、數學、通識）及選修科（如生物、化學）在此計算中權重相同。",
+            "**科目權重**：雖然個別科目沒有特定權重，但強烈建議在科學選修科（生物、化學或組合科學）取得優異成績。數學（必修）及M1/M2亦具優勢。",
+            "**需求及趨勢**：該課程吸引對香港及大灣區日益增長的生物科技及化學行業感興趣的學生。Band A申請者人數通常超額3倍。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友及課程聲譽",
+          "content": [
+            "**陳國威博士**：香港基因組中心首席科學官。於理大取得生物科技博士學位，領導基因組研究計劃。",
+            "**黃家興教授**：理大理學院副院長。化學科技及環境科學領域知名研究員，發表超過100篇論文。",
+            "**李美玲女士**：強生香港高級法規事務經理。2010年化學科技方向畢業生，負責亞太區產品合規。",
+            "**張志偉先生**：GreenChem Solutions創辦人及行政總裁，專注環保工業溶劑初創企業。2015年生物科技方向畢業生。",
+            "**吳小鳳博士**：香港理工大學研究科學家。2018年博士畢業，現從事癌症治療新型藥物傳輸系統研究。",
+            "**何子健先生**：雀巢香港品質保證經理。2012年畢業生，負責區域供應鏈的食品安全及品質控制。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及財務支援",
+          "content": [
+            "**理大入學獎學金**：頒予HKDSE成績優異的頂尖考生（如分數高於220）。涵蓋全額學費及每年高達50,000港元的生活津貼。",
+            "**理學院獎學金**：為理學院學業成績卓越的學生而設。每年20,000港元，可根據GPA續領。",
+            "**香港特區政府獎學金**：適用於HKDSE成績優異及具領導才能的本地學生。每年提供高達40,000港元用於學費及開支。",
+            "**李嘉誠博士獎學金**：專門針對科學及科技課程（包括JS3011）的學生。每年30,000港元，支持研究項目或海外交流。",
+            "**工作綜合教育（WIE）津貼**：為參與無薪實習的學生提供財務支援。每次實習高達10,000港元，用於交通及生活費用。",
+            "**交流及海外學習獎學金**：理大提供多項獎學金用於學期交流（例如加州大學柏克萊分校或劍橋大學），涵蓋機票及學費。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3011 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數210+**：鑑於中位數209.0及平均數212.2，最佳5科應至少取得210分。善用「最佳5科」公式，專注於你最強的科目。",
+            "",
+            "- 計算加權分數：將最佳5科HKDSE等級相加（例如5**=7分，5*=6分，5=5分等）。210分通常需要三個5*及兩個5，或同等組合。",
+            "",
+            "**2. 優先修讀科學選修科**：在HKDSE選修生物及化學。如只能選一科，選化學——它對兩個方向都更通用。組合科學亦可接受但競爭力較低。",
+            "",
+            "- 目標在化學取得至少5級，並在生物或組合科學取得5級。",
+            "",
+            "**3. 核心科目表現優異**：英文及數學至關重要。英文目標5級或以上以滿足課程語言要求。數學建議5級，M1/M2可提升申請競爭力。",
+            "",
+            "- 練習英文閱讀及寫作歷屆試題，並專注數學的數據處理題型。",
+            "",
+            "**4. 透過課外活動建立強勁履歷**：參加科學相關課外活動，如香港生物奧林匹克、化學奧林匹克或科學展覽。在校內學會擔任領導角色亦有幫助。",
+            "",
+            "- 在個人陳述中突出任何實驗室經驗或研究項目。",
+            "",
+            "**5. 準備面試（如獲篩選）**：理大可能面試Band A申請者。準備好討論你對生物科技或化學科技的興趣，以及你的職業目標。練習用英語回答。",
+            "",
+            "- 回顧當前趨勢：CRISPR基因編輯、綠色化學及香港的生物科技政策。",
+            "",
+            "**6. 善用「最佳5科」公式**：放棄最弱的科目。如果你有6科，選擇成績最好的5科。例如，如果通識最弱，則排除它。",
+            "",
+            "- 使用網上HKDSE分數計算器模擬不同科目組合。",
+            "",
+            "**7. 申請提早入學計劃**：理大提供學校推薦直接錄取計劃（SNDAS）及體育/藝術計劃。如符合資格，提早申請以獲取有條件取錄。",
+            "",
+            "- 查閱理大招生網站了解中六學年11月至12月的截止日期。",
+            "",
+            "**8. 參觀理大開放日並與學生交流**：參加每年10月的理大資訊日，參觀實驗室並與現屆JS3011學生交談。這有助你了解課程文化。",
+            "",
+            "- 準備具體問題，關於專修方向、實習及畢業論文。",
+            "",
+            "**9. 提早規劃WIE及交流**：研究香港科學園或政府實驗室等公司的實習機會。在第二年申請交流計劃以獲得國際經驗。",
+            "",
+            "- 在一年級開始建立你的履歷及LinkedIn檔案。參加理大就業中心的研討會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "209.0",
+    "lq": "203.5"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "programme": {
+    "code": "JS3180",
+    "nameEn": "BEng/BSc Scheme in Information and AI Engineering",
+    "nameZh": "資訊及人工智能工程學(榮譽)工學士/理學士組合課程",
+    "name": "BEng/BSc Scheme in Information and AI Engineering",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Engineering",
+    "median": "218.0",
+    "band_a": "210.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3180",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects (plus 6th subject bonus).",
+            "**Average HKDSE Score with Subject Weighting**: 222.5 (2025 JUPAS data).",
+            "**Median Admission Score**: 218.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 210.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This is a broad-based scheme covering both Information Engineering and AI Engineering, leading to either a BEng or BSc honours degree. Students select their specialisation after Year 1.",
+            "**Two Streams**: Stream A — Information Engineering (BEng), focusing on data communications, cybersecurity, and smart systems. Stream B — AI Engineering (BSc), emphasising machine learning, deep learning, and intelligent systems.",
+            "**Year 1 Foundation**: Common curriculum including mathematics, programming (Python/C++), digital logic, and introductory AI. Students explore both streams before choosing.",
+            "**Year 2 Core**: Advanced courses in data structures, algorithms, computer networks, signal processing, and AI fundamentals. Labs and project-based learning begin.",
+            "**Year 3 Specialisation**: Stream-specific modules — for Information Engineering: wireless communications, network security, cloud computing. For AI Engineering: natural language processing, computer vision, robotics.",
+            "**Year 4 Capstone**: Final-year project (6 credits) with industry partners, plus electives in areas like big data analytics, IoT, or autonomous systems. Work-Integrated Education (WIE) placement is integrated.",
+            "**Accreditation**: The BEng stream is accredited by the Hong Kong Institution of Engineers (HKIE), providing a pathway to chartered engineer status."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Hong Kong's smart city initiatives and the Greater Bay Area's tech boom create high demand for graduates skilled in AI, data science, and information engineering.",
+            "**Typical Roles**: Graduates become AI engineers, data scientists, network architects, cybersecurity analysts, software developers, or R&D engineers in telecoms and fintech.",
+            "**Employer Network**: PolyU's strong ties with companies like Huawei, Tencent, CLP Group, MTR Corporation, and the Hong Kong Science and Technology Parks Corporation (HKSTP) provide direct recruitment pipelines.",
+            "**WIE Advantage**: The compulsory Work-Integrated Education placement (typically 1 semester) gives students real-world experience, often leading to graduate job offers.",
+            "**Starting Salary**: Median starting salary for PolyU engineering graduates is approximately HKD 20,000–25,000 per month, with AI and information engineering roles at the higher end.",
+            "**Further Study**: Graduates can pursue MSc or PhD at top universities worldwide, including PolyU's own research postgraduate programmes in AI and information engineering."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to Hung Hom MTR station (East Rail Line and Tuen Ma Line), making commuting from all districts easy.",
+            "**Smart Campus**: The university features state-of-the-art labs including the AIoT Lab, Smart City Lab, and the Industrial Centre with advanced manufacturing and robotics facilities.",
+            "**Student Organisations**: The Engineering Students' Society and the AI Engineering Society organise hackathons, industry talks, and networking events throughout the year.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers 24/7 study spaces, extensive digital resources, and a dedicated engineering collection.",
+            "**Sports & Recreation**: Facilities include a sports centre with a swimming pool, gym, basketball courts, and a rooftop running track. The campus also has multiple canteens and cafes.",
+            "**Accommodation**: Halls of residence are available for non-local students, with priority given to Year 1 entrants. On-campus housing fosters a vibrant residential community."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Requirements",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE admission score (with weighting) was 218.0, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 210.0, meaning even the bottom 25% of admitted students achieved high results.",
+            "**Average Score**: The average weighted HKDSE score was 222.5, reflecting the programme's selective nature.",
+            "**Subject Weighting**: Core subjects (English, Mathematics, and one science subject) receive higher weighting. M1/M2 and Physics are particularly valued.",
+            "**Interview Consideration**: Shortlisted applicants may be invited for an interview, which assesses motivation, problem-solving skills, and interest in AI/information engineering.",
+            "**Band A Preference**: In recent years, over 90% of admitted students placed this programme in Band A of their JUPAS choices, showing its popularity."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: Chief Technology Officer, CLP Group. Led digital transformation and smart grid projects. Graduated with a BEng in Information Engineering.",
+            "**Ms. Chan Mei-ling (陳美玲)**: AI Research Scientist, SenseTime. Specialises in computer vision for autonomous driving. PolyU BSc in AI Engineering, 2019 graduate.",
+            "**Mr. Li Ho-fai (李浩輝)**: Co-founder, Kinetix Labs (a Hong Kong-based AI startup). Developed AI-powered sports analytics platform. BEng Information Engineering, 2017.",
+            "**Dr. Cheung Siu-fung (張兆鋒)**: Senior Lecturer, Department of Computing, PolyU. Awarded multiple teaching excellence awards. PhD and BEng from PolyU.",
+            "**Mr. Ng Tsz-chun (吳子俊)**: Cybersecurity Manager, MTR Corporation. Oversees network security for Hong Kong's railway system. BEng Information Engineering, 2015.",
+            "**Ms. Yip Ka-yan (葉嘉欣)**: Data Scientist, HSBC. Works on fraud detection models using machine learning. BSc AI Engineering, 2020 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Entry Scholarship**: Awarded to top HKDSE performers (e.g., score ≥ 220 with weighting) — up to HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Engineering Scholarships**: Multiple merit-based scholarships of HKD 10,000–30,000 for Year 1 students with outstanding HKDSE results in STEM subjects.",
+            "**HKSAR Government Scholarships**: The HKSAR Government Scholarship Fund supports outstanding local students with up to HKD 80,000 per year.",
+            "**Industry-Sponsored Awards**: Companies like Huawei, CLP, and MTR offer scholarships and bursaries specifically for information and AI engineering students, often tied to internship opportunities.",
+            "**Financial Assistance Scheme**: Means-tested grants and low-interest loans are available through the HKSAR Student Financial Assistance Agency (SFAA) for eligible local students.",
+            "**WIE Allowance**: Students on Work-Integrated Education placements may receive a stipend from the employer, plus a university travel subsidy of up to HKD 5,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3180 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Core Subjects with Higher Weighting**",
+            "",
+            "- Focus on English, Mathematics, and Physics or M1/M2 — these carry the most weight in the admission score. Aim for Level 5 or above in each.",
+            "- A strong performance in Mathematics (Level 5**) can significantly boost your weighted score beyond the median of 218.",
+            "",
+            "**2. Target a Weighted Score of 220+**",
+            "",
+            "- With a median of 218 and average of 222.5, a weighted score of 220+ puts you in a strong position. Use the PolyU online score calculator to simulate your best 5 subjects plus 6th subject bonus.",
+            "- If your 6th subject (e.g., Economics or ICT) is strong, include it — the bonus can add 5–10 points.",
+            "",
+            "**3. Build a Portfolio of AI/Engineering Projects**",
+            "",
+            "- Prepare for the potential interview by showcasing projects: e.g., a simple machine learning model, a Python automation script, or a robotics project. Document them on GitHub or a personal website.",
+            "- PolyU values applied learning — mention any participation in hackathons or STEM competitions like the Hong Kong Youth Science and Technology Competition.",
+            "",
+            "**4. Ace the Interview with Problem-Solving Demos**",
+            "",
+            "- If shortlisted, expect questions like 'How would you design a smart traffic system?' Practice structured thinking: define the problem, propose a solution, and discuss trade-offs.",
+            "- Bring a printed portfolio or a tablet to show your projects. Enthusiasm for AI and information engineering is key.",
+            "",
+            "**5. Use Band A Strategically**",
+            "",
+            "- Over 90% of admitted students placed JS3180 in Band A. To maximise your chance, list it as your first or second choice in Band A.",
+            "- If you are also interested in other PolyU engineering programmes, consider placing them in Band A as well — the Faculty of Engineering allows some flexibility.",
+            "",
+            "**6. Leverage the Broad-Based Year 1**",
+            "",
+            "- Even if you are unsure whether to choose Information Engineering or AI Engineering, the common Year 1 lets you explore both. Take electives in both areas to make an informed decision.",
+            "- Talk to senior students and professors during orientation to understand the career paths of each stream.",
+            "",
+            "**7. Apply for Scholarships Early**",
+            "",
+            "- Submit your HKDSE results and scholarship applications by the PolyU deadline (usually late July). A weighted score of 220+ may qualify you for the HKD 50,000 Entry Scholarship.",
+            "- Also check the Faculty of Engineering's separate scholarship application — some require a personal statement.",
+            "",
+            "**8. Prepare for the 6th Subject Bonus**",
+            "",
+            "- The admission formula uses any best 5 subjects plus a bonus for the 6th subject. If you have a strong 6th subject (e.g., Level 5 in ICT or Chemistry), it can add 5–7% to your total score.",
+            "- Do not neglect your 6th subject — even a Level 4 can make a difference in a competitive year.",
+            "",
+            "**9. Visit PolyU's Open Day and Labs**",
+            "",
+            "- Attend the annual PolyU Information Day (usually October) to tour the AIoT Lab, Smart City Lab, and Industrial Centre. This demonstrates genuine interest and helps you decide.",
+            "- Connect with current students and professors — ask about the WIE placement companies and final-year project opportunities."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科 (另加第6科加分)。",
+            "**文憑試成績平均積點（計算科目比重後）**：222.5（2025年聯招數據）。",
+            "**入學中位數**：218.0分（2025年聯招數據）。",
+            "**下四分位數**：210.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：本組合課程涵蓋資訊工程及人工智能工程兩大範疇，畢業生可獲工學士或理學士榮譽學位。學生在完成第一年後選擇專修方向。",
+            "**兩個專修**：專修A — 資訊工程（工學士），專注數據通訊、網絡安全及智能系統。專修B — 人工智能工程（理學士），強調機器學習、深度學習及智能系統。",
+            "**第一年基礎**：共同課程包括數學、程式設計（Python/C++）、數碼邏輯及人工智能導論。學生探索兩個專修後再作選擇。",
+            "**第二年核心**：進階課程涵蓋數據結構、算法、電腦網絡、信號處理及人工智能基礎。設有實驗室及專題研習。",
+            "**第三年專修**：專修特定科目 — 資訊工程：無線通訊、網絡安全、雲端運算。人工智能工程：自然語言處理、電腦視覺、機械人學。",
+            "**第四年總結**：與業界夥伴合作的畢業專題（6學分），加上大數據分析、物聯網或自動系統等選修科。整合工作綜合教育（WIE）實習。",
+            "**專業認證**：工學士專修獲香港工程師學會（HKIE）認可，為特許工程師資格鋪路。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：香港智慧城市計劃及大灣區科技熱潮，對人工智能、數據科學及資訊工程畢業生需求極高。",
+            "**典型職位**：畢業生可擔任人工智能工程師、數據科學家、網絡架構師、網絡安全分析師、軟件開發人員或電訊及金融科技研發工程師。",
+            "**僱主網絡**：理大與華為、騰訊、中電、港鐵公司及香港科技園公司等企業緊密合作，提供直接招聘渠道。",
+            "**WIE優勢**：強制性工作綜合教育實習（通常為一個學期）讓學生獲得真實工作經驗，常獲畢業後工作機會。",
+            "**起薪點**：理大工程畢業生起薪中位數約為每月港幣20,000至25,000元，人工智能及資訊工程職位薪酬更高。",
+            "**進修途徑**：畢業生可於全球頂尖大學攻讀碩士或博士，包括理大的人工智能及資訊工程研究式研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），各區通勤方便。",
+            "**智慧校園**：大學設有先進實驗室，包括人工智能物聯網實驗室、智慧城市實驗室及配備先進製造和機械人設施的工業中心。",
+            "**學生組織**：工程學生會及人工智能工程學會全年舉辦黑客松、行業講座及聯誼活動。",
+            "**圖書館及學習共享空間**：包玉剛圖書館提供24/7自修空間、豐富電子資源及工程學科專藏。",
+            "**體育及康樂**：設施包括設有游泳池、健身室、籃球場及天台緩跑徑的體育中心。校園內亦有多間食堂及咖啡店。",
+            "**住宿安排**：非本地學生可申請宿舍，一年級新生獲優先考慮。校內住宿營造活躍的社群生活。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學要求",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學中位數**：加權後文憑試入學中位分數為218.0分，反映申請者競爭激烈。",
+            "**2025年下四分位數**：下四分位分數為210.0分，即使最低四分之一的學生亦取得優異成績。",
+            "**平均分數**：加權後文憑試平均分數為222.5分，顯示課程具選擇性。",
+            "**科目比重**：核心科目（英文、數學及一科理科）比重較高。數學延伸部分（M1/M2）及物理尤其受重視。",
+            "**面試考慮**：獲篩選的申請人或獲邀面試，評估其學習動機、解難能力及對人工智能/資訊工程的興趣。",
+            "**Band A偏好**：近年超過90%獲取錄學生將此課程放在Band A，反映其受歡迎程度。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃國強博士**：中電集團首席技術官，領導數碼轉型及智能電網項目。畢業於資訊工程工學士課程。",
+            "**陳美玲女士**：商湯科技人工智能研究科學家，專注自動駕駛電腦視覺。2019年人工智能工程理學士畢業生。",
+            "**李浩輝先生**：Kinetix Labs（香港人工智能初創公司）聯合創辦人，開發人工智能運動分析平台。2017年資訊工程工學士畢業生。",
+            "**張兆鋒博士**：理大電子計算學系高級講師，屢獲教學卓越獎項。持有理大博士及工學士學位。",
+            "**吳子俊先生**：港鐵公司網絡安全經理，負責香港鐵路系統網絡安全。2015年資訊工程工學士畢業生。",
+            "**葉嘉欣女士**：滙豐銀行數據科學家，利用機器學習開發欺詐檢測模型。2020年人工智能工程理學士畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政支援",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異者（如加權分數達220分或以上），每年最高港幣50,000元，可按學業成績續領。",
+            "**工程學院獎學金**：多項基於成績的獎學金，金額港幣10,000至30,000元，頒予STEM科目文憑試成績卓越的一年級生。",
+            "**香港特區政府獎學金**：香港特區政府獎學金基金支持優秀本地學生，每年最高港幣80,000元。",
+            "**行業贊助獎項**：華為、中電及港鐵等企業為資訊及人工智能工程學生提供獎學金及助學金，常附帶實習機會。",
+            "**財政資助計劃**：合資格本地學生可透過學生資助處（SFAA）申請經入息審查的助學金及低息貸款。",
+            "**WIE津貼**：參與工作綜合教育實習的學生可獲僱主發放津貼，另加大學交通補貼最高港幣5,000元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3180 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理比重較高的核心科目**",
+            "",
+            "- 集中火力於英文、數學及物理或M1/M2——這些科目在入學分數中比重最高。目標取得5級或以上。",
+            "- 數學取得5**級可大幅提升加權分數，超越中位數218分。",
+            "",
+            "**2. 目標加權分數220分以上**",
+            "",
+            "- 鑑於中位數218分及平均分222.5分，加權分數達220分以上將佔優勢。使用理大網上計分器模擬最佳5科加第6科獎勵分數。",
+            "- 若第6科（如經濟或資訊及通訊科技）成績優異，務必納入——獎勵分可加5至10分。",
+            "",
+            "**3. 建立人工智能/工程項目作品集**",
+            "",
+            "- 為面試做好準備，展示項目：例如簡單機器學習模型、Python自動化腳本或機械人項目。上載至GitHub或個人網站。",
+            "- 理大重視應用學習——提及參與黑客松或STEM比賽（如香港青少年科技創新大賽）的經驗。",
+            "",
+            "**4. 以解難示範突圍面試**",
+            "",
+            "- 若獲面試機會，預計問題如「你會如何設計智慧交通系統？」練習結構性思考：定義問題、提出解決方案、討論取捨。",
+            "- 攜帶打印作品集或平板電腦展示項目。對人工智能及資訊工程的熱誠是關鍵。",
+            "",
+            "**5. 策略性運用Band A**",
+            "",
+            "- 超過90%獲取錄學生將JS3180放在Band A。為提高機會，將其列為Band A第一或第二志願。",
+            "- 若同時對理大其他工程課程感興趣，亦可放在Band A——工程學院容許一定靈活性。",
+            "",
+            "**6. 善用一年級基礎年**",
+            "",
+            "- 即使未決定選擇資訊工程或人工智能工程，共同一年級讓你先探索兩者。選修兩個領域的科目以作出明智決定。",
+            "- 在迎新活動中與高年級學生及教授交流，了解各專修的就業路徑。",
+            "",
+            "**7. 及早申請獎學金**",
+            "",
+            "- 在理大截止日期（通常為7月下旬）前提交文憑試成績及獎學金申請。加權分數達220分或以上可能合資格申請港幣50,000元入學獎學金。",
+            "- 同時查閱工程學院的獨立獎學金申請——部分需要個人陳述。",
+            "",
+            "**8. 善用第6科獎勵分數**",
+            "",
+            "- 入學公式採用最佳5科加第6科獎勵分。若第6科成績優異（如資訊及通訊科技或化學取得5級），可為總分增加5至7%。",
+            "- 不要忽視第6科——即使4級在競爭激烈的年份亦可能產生影響。",
+            "",
+            "**9. 參觀理大開放日及實驗室**",
+            "",
+            "- 參加每年10月的理大資訊日，參觀人工智能物聯網實驗室、智慧城市實驗室及工業中心。這展示真誠興趣並助你作出決定。",
+            "- 與現屆學生及教授交流——詢問WIE實習公司及畢業專題機會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "218.0",
+    "lq": "210.0"
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "programme": {
+    "code": "JS8001",
+    "nameEn": "Bachelor of Arts (Honours) in Creative and Digital Arts and Bachelor of Education (Honours) (Music)",
+    "nameZh": "創意藝術與數碼藝術榮譽文學士及音樂教育榮譽學士",
+    "name": "Bachelor of Arts (Honours) in Creative and Digital Arts and Bachelor of Education (Honours) (Music)",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Humanities",
+    "median": "21.5",
+    "band_a": "21.3",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8001",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Music (x1.5), Specified ApL subject(s) (x1.5)",
+            "**Median Admission Score**: 21.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.3 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 180 applicants, Band B 80. Total 420 applicants.",
+            "**Remarks**: Satisfactory performance in an audition is required. Applicants who obtain Level 4 or above in HKDSE Music will be exempted from the audition.",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: This is a 5-year integrated double degree programme combining a Bachelor of Arts (Honours) in Creative and Digital Arts with a Bachelor of Education (Honours) (Music). Students gain expertise in both creative digital arts and music education, leading to professional teacher registration in Hong Kong.",
+            "**Year 1**: Foundation courses in creative arts, digital media, music theory, and education studies. Includes introductory modules on digital art tools, music composition, and classroom pedagogy.",
+            "**Year 2**: Intermediate studies in digital arts (e.g., animation, interactive media) and music education (e.g., choral conducting, music technology). Students begin school observation placements.",
+            "**Year 3**: Advanced creative digital arts projects and music curriculum design. Teaching practicum in local schools (first block). Elective options in areas like sound design or arts management.",
+            "**Year 4**: Specialisation in either creative digital arts or music education. Second teaching practicum block. Research methods and capstone project preparation.",
+            "**Year 5**: Final teaching practicum (extended block), honours project/portfolio, and professional seminars. Graduates eligible for Hong Kong teacher registration in music."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Music Teacher**: Graduates are fully qualified to teach music in Hong Kong primary and secondary schools. The programme's dual focus on creative digital arts also enables teaching of digital arts subjects.",
+            "**Creative Arts Educator**: Opportunities in community arts centres, museums, and NGOs offering arts education programmes. EdUHK's strong network in local schools supports job placement.",
+            "**Digital Content Creator**: Skills in animation, interactive media, and digital design open roles in media production houses, advertising agencies, and e-learning companies.",
+            "**Arts Administrator**: Manage arts programmes, festivals, or cultural events for organisations like the Hong Kong Arts Development Council or West Kowloon Cultural District.",
+            "**Music Therapist**: With further training, graduates can pursue careers in music therapy, working with special needs populations. EdUHK's expertise in inclusive education provides a strong foundation.",
+            "**Further Studies**: Many graduates pursue Master's degrees in music education, creative arts, or educational leadership at local and international universities."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, surrounded by greenery and offering a tranquil learning environment. The campus is well-connected by public transport to Kowloon and Hong Kong Island.",
+            "**Arts Facilities**: Dedicated music practice rooms, digital arts studios, recording studios, and a performing arts theatre. Students have 24/7 access to specialised equipment for creative projects.",
+            "**Library Resources**: The EdUHK Library houses extensive collections in music education, digital arts, and pedagogy. Includes streaming media services and a digital arts lab.",
+            "**Student Accommodation**: On-campus halls provide single and double rooms for local and non-local students. Priority is given to students with longer commute distances.",
+            "**Sports & Wellness**: Sports facilities include a gymnasium, swimming pool, and multi-purpose courts. The university promotes work-life balance with fitness classes and wellness programmes.",
+            "**Community Engagement**: EdUHK emphasises community service. Students can participate in arts outreach programmes, teaching in underprivileged schools, and cultural exchange activities."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects with Music weighted at x1.5 and specified ApL subjects at x1.5. This rewards strong performance in music-related subjects.",
+            "**Median Score (2025)**: 21.5 (Best 5). The lower quartile was 21.3, indicating a tight score band and high selectivity.",
+            "**Application Demand**: In 2025, 180 Band A applicants and 80 Band B applicants competed for only 25 first-year intake places. Total applicants reached 420.",
+            "**Interview Requirement**: An audition is mandatory unless the applicant achieves Level 4 or above in HKDSE Music. The audition assesses musical proficiency and teaching potential.",
+            "**Competition Ratio**: With 420 total applicants for 25 places, the overall competition ratio is approximately 16.8 applicants per place. Band A applicants face a ratio of 7.2 to 1."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Leung Chi-hin (梁志軒)**: Principal of a leading secondary school in Hong Kong and former music educator. Graduated from EdUHK's music education programme.",
+            "**Ms. Wong Ka-yan (黃嘉欣)**: Award-winning music teacher at Diocesan Girls' School, recognised for innovative use of digital arts in music curriculum. EdUHK graduate.",
+            "**Mr. Chan Wai-keung (陳偉強)**: Founder of a community arts organisation promoting music education for underprivileged youth. EdUHK music education alumnus.",
+            "**Dr. Tam Siu-lan (譚小蘭)**: Assistant Professor in Music Education at EdUHK, specialising in digital pedagogy and creative arts integration. Former student of the programme.",
+            "**Ms. Lee Sze-wing (李思穎)**: Music therapist at the Hong Kong Christian Service, working with children with special educational needs. EdUHK double degree graduate.",
+            "**Mr. Ho Tsz-fung (何梓峰)**: Digital arts producer at a major Hong Kong media company, combining music and animation skills. EdUHK creative digital arts graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS applicants with outstanding HKDSE results. Covers full or partial tuition fees for the first year. Based on academic merit.",
+            "**Faculty of Humanities Scholarships**: Multiple scholarships for students in humanities programmes, including those in creative arts and music education. Valued at HK$10,000–HK$30,000.",
+            "**Music Talent Scholarship**: Specifically for students with exceptional musical performance in the audition or HKDSE Music. Supports participation in masterclasses and competitions.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Tertiary Student Finance Scheme (TSFS) and Non-means-tested Loan Scheme (NLS).",
+            "**Community Service Scholarships**: EdUHK offers awards for students who demonstrate commitment to community engagement and arts outreach. Amounts vary based on project scope.",
+            "**Overseas Exchange Bursary**: Financial support for students participating in exchange programmes or international arts festivals. Covers travel and accommodation costs."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8001 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Music in HKDSE**",
+            "",
+            "- Music is weighted at x1.5 in the admission formula. Aim for Level 4 or above to gain automatic audition exemption and boost your score significantly.",
+            "- If you take an ApL subject in music or creative arts, it also receives x1.5 weighting — choose wisely.",
+            "",
+            "**2. Target a Best 5 Score of 22+**",
+            "",
+            "- The median score is 21.5 and lower quartile is 21.3. With only 25 places, aim for 22 or above to be competitive.",
+            "- Use the HKDSE calculator to simulate your weighted score: (Music score x1.5) + (other 4 best subjects).",
+            "",
+            "**3. Prepare a Strong Audition**",
+            "",
+            "- Unless you have Level 4+ in Music, the audition is mandatory. Prepare two contrasting pieces (e.g., classical and contemporary) and be ready for sight-reading and aural tests.",
+            "- Demonstrate teaching potential — the panel looks for communication skills and passion for music education.",
+            "",
+            "**4. Build a Portfolio of Creative Work**",
+            "",
+            "- The programme values creative digital arts. Compile a portfolio of your best digital art, compositions, or multimedia projects. Submit it with your application if possible.",
+            "- Include evidence of community arts involvement, such as teaching music to children or volunteering at arts events.",
+            "",
+            "**5. Apply as Band A**",
+            "",
+            "- In 2025, 180 Band A applicants competed for 25 places. Band B had only 80 applicants, but interviews are prioritised for Band A. Put JS8001 as your first choice.",
+            "- EdUHK considers Band A applicants first for interviews and offers.",
+            "",
+            "**6. Gain Teaching Experience**",
+            "",
+            "- Volunteer as a teaching assistant in music classes or lead a school choir. This strengthens your interview answers and personal statement.",
+            "- EdUHK values hands-on experience in educational settings.",
+            "",
+            "**7. Research the Programme Structure**",
+            "",
+            "- Understand the 5-year integrated curriculum: Years 1-2 focus on foundations, Years 3-4 on specialisation, Year 5 on final practicum. Tailor your portfolio to show interest in both arts and education.",
+            "- Mention specific modules like 'Digital Media in Music Education' or 'Interactive Art Design' in your personal statement.",
+            "",
+            "**8. Prepare for the Interview**",
+            "",
+            "- The interview includes an audition and a personal interview. Practice explaining why you want to combine creative digital arts with music teaching.",
+            "- Be ready to discuss current trends in arts education, such as using technology in the classroom.",
+            "",
+            "**9. Consider Alternative Pathways**",
+            "",
+            "- If your HKDSE scores are slightly below the median, consider applying through EdUHK's self-financed programmes or associate degree in creative arts, then transfer.",
+            "- EdUHK also offers a Bachelor of Education (Honours) (Music) single degree (JS8002) as a backup option."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：音樂 (x1.5), 指定應用學習 科目 (x1.5)",
+            "**入學中位數**：21.5分（2025年聯招數據）。",
+            "**下四分位數**：21.3分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者180人、Band B 80人。總申請者420人。",
+            "**備註**：須通過試音/試奏考核。 香港中學文憑考試音樂科達第4級或以上可獲豁免試音。",
+            "**首年學額**：25人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：此為五年制綜合雙學位課程，結合創意藝術與數碼藝術榮譽文學士及音樂教育榮譽學士。學生將同時掌握創意數碼藝術與音樂教育的專業知識，畢業後可獲香港教師註冊資格。",
+            "**第一年**：基礎課程包括創意藝術、數碼媒體、音樂理論及教育學。涵蓋數碼藝術工具、音樂創作及課堂教學法等入門單元。",
+            "**第二年**：中級數碼藝術（如動畫、互動媒體）及音樂教育（如合唱指揮、音樂科技）學習。學生開始參與學校觀課實習。",
+            "**第三年**：進階創意數碼藝術項目及音樂課程設計。首次在本地學校進行教學實習。選修科目包括聲音設計或藝術管理等。",
+            "**第四年**：專注於創意數碼藝術或音樂教育其中一個範疇。第二次教學實習。研究方法及畢業項目準備。",
+            "**第五年**：最後一次教學實習（延長時段）、榮譽項目/作品集及專業研討會。畢業生符合香港音樂科教師註冊資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**音樂教師**：畢業生完全符合資格在香港中小學教授音樂。課程同時涵蓋創意數碼藝術，亦可教授數碼藝術相關科目。",
+            "**創意藝術教育工作者**：在社區藝術中心、博物館及提供藝術教育課程的非政府組織工作。教大在本地學校的強大網絡有助就業配對。",
+            "**數碼內容創作者**：動畫、互動媒體及數碼設計技能可應用於媒體製作公司、廣告公司及電子學習企業。",
+            "**藝術行政人員**：為香港藝術發展局或西九文化區等機構管理藝術項目、節慶或文化活動。",
+            "**音樂治療師**：完成進修後可從事音樂治療，服務有特殊需要人士。教大在融合教育方面的專長提供堅實基礎。",
+            "**進修深造**：許多畢業生在本港及海外大學攻讀音樂教育、創意藝術或教育領導碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，環境綠意盎然，提供寧靜的學習環境。校園交通便利，連接九龍及香港島。",
+            "**藝術設施**：設有專用音樂練習室、數碼藝術工作室、錄音室及演藝劇院。學生可24小時使用專業設備進行創作項目。",
+            "**圖書館資源**：教大圖書館收藏豐富的音樂教育、數碼藝術及教學法資料。提供串流媒體服務及數碼藝術實驗室。",
+            "**學生住宿**：校內宿舍提供單人及雙人房間，供本地及非本地學生申請。長途通勤學生可獲優先考慮。",
+            "**體育與健康**：體育設施包括健身室、游泳池及多用途球場。大學推廣工作與生活平衡，提供健身班及健康計劃。",
+            "**社區參與**：教大重視社區服務。學生可參與藝術外展計劃、在弱勢學校教學及文化交流活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科，其中音樂科加權 x1.5，指定應用學習科目加權 x1.5。此舉獎勵在音樂相關科目的優秀表現。",
+            "**2025年中位分數**：21.5（最佳五科）。下四分位數為21.3，顯示分數範圍緊湊，選拔性高。",
+            "**申請需求**：2025年有180名Band A申請者及80名Band B申請者，競爭僅25個一年級學額。總申請人數達420人。",
+            "**面試要求**：必須參加試音，除非申請人在香港中學文憑試音樂科取得第4級或以上。試音評估音樂造詣及教學潛能。",
+            "**競爭比例**：420名申請者爭奪25個學額，整體競爭比例約為16.8人爭一位。Band A申請者比例為7.2比1。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**梁志軒博士**：香港一所知名中學校長，前音樂教育工作者。畢業於教大音樂教育課程。",
+            "**黃嘉欣女士**：拔萃女書院獲獎音樂教師，以創新運用數碼藝術於音樂課程聞名。教大畢業生。",
+            "**陳偉強先生**：社區藝術組織創辦人，推廣弱勢青少年音樂教育。教大音樂教育校友。",
+            "**譚小蘭博士**：教大音樂教育助理教授，專注數碼教學法及創意藝術整合。曾為此課程學生。",
+            "**李思穎女士**：香港基督教服務處音樂治療師，服務有特殊教育需要兒童。教大雙學位畢業生。",
+            "**何梓峰先生**：香港大型媒體公司數碼藝術製作人，結合音樂與動畫技能。教大創意數碼藝術畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**教大入學獎學金**：頒予在香港中學文憑試成績優異的頂尖聯招申請者。涵蓋首年全額或部分學費。根據學業成績頒發。",
+            "**人文學院獎學金**：多項獎學金供人文學科學生申請，包括創意藝術及音樂教育課程。金額為港幣10,000至30,000元。",
+            "**音樂才華獎學金**：特別授予在試音或文憑試音樂科表現卓越的學生。資助參與大師班及比賽。",
+            "**政府經濟援助**：合資格學生可申請香港政府專上學生資助計劃及免入息審查貸款計劃。",
+            "**社區服務獎學金**：教大頒發獎項予在社區參與及藝術外展方面表現突出的學生。金額按項目規模而定。",
+            "**海外交流助學金**：資助學生參加交流計劃或國際藝術節。涵蓋交通及住宿費用。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8001 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 在文憑試中專注音樂科**",
+            "",
+            "- 音樂科在入學公式中加權 x1.5。目標取得第4級或以上，以自動豁免試音並大幅提升分數。",
+            "- 如選修應用學習科目（音樂或創意藝術），同樣獲 x1.5 加權 — 謹慎選擇。",
+            "",
+            "**2. 目標最佳五科22分或以上**",
+            "",
+            "- 中位分數為21.5，下四分位數為21.3。僅25個學額，目標22分或以上以增加競爭力。",
+            "- 使用文憑試計算機模擬加權分數：（音樂分數 x1.5）+（其他最佳四科分數）。",
+            "",
+            "**3. 準備出色的試音**",
+            "",
+            "- 除非音樂科達第4級或以上，否則必須參加試音。準備兩首對比曲目（如古典及現代），並準備視奏及聽力測試。",
+            "- 展示教學潛能 — 評審小組重視溝通技巧及對音樂教育的熱誠。",
+            "",
+            "**4. 建立創意作品集**",
+            "",
+            "- 課程重視創意數碼藝術。整理最佳數碼藝術、作曲或多媒體項目作品集。如可能，隨申請提交。",
+            "- 包括社區藝術參與的證據，例如教授兒童音樂或於藝術活動擔任義工。",
+            "",
+            "**5. 將課程列為Band A首選**",
+            "",
+            "- 2025年有180名Band A申請者競爭25個學額。Band B僅80人，但面試優先考慮Band A。將JS8001放在首選。",
+            "- 教大優先處理Band A申請者的面試及取錄。",
+            "",
+            "**6. 累積教學經驗**",
+            "",
+            "- 擔任音樂課教學助理或領導學校合唱團。這有助強化面試回答及個人陳述。",
+            "- 教大重視教育環境的實際經驗。",
+            "",
+            "**7. 研究課程結構**",
+            "",
+            "- 了解五年制綜合課程：第一至二年為基礎，第三至四年為專修，第五年為最後實習。調整作品集以展示對藝術及教育的興趣。",
+            "- 在個人陳述中提及特定單元，如「音樂教育中的數碼媒體」或「互動藝術設計」。",
+            "",
+            "**8. 為面試做好準備**",
+            "",
+            "- 面試包括試音及個人面談。練習解釋為何想結合創意數碼藝術與音樂教學。",
+            "- 準備討論藝術教育的最新趨勢，例如在課堂中使用科技。",
+            "",
+            "**9. 考慮其他途徑**",
+            "",
+            "- 如文憑試分數略低於中位數，可考慮申請教大自資課程或創意藝術副學士，然後轉讀。",
+            "- 教大亦提供音樂教育榮譽學士（JS8002）作為後備選擇。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "21.5",
+    "lq": "21.3"
+  }
+}

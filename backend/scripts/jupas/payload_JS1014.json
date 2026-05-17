@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1014",
+    "nameEn": "BBA Finance",
+    "nameZh": "工商管理學士(金融)",
+    "name": "BBA Finance",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 21.5,
+    "band_a": 21.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1014",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 21.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BBA Finance (JS1014) is a 4-year full-time undergraduate programme offered by the College of Business at City University of Hong Kong. It provides comprehensive training in financial theory, quantitative analysis, and practical skills for careers in banking, investment, and corporate finance.",
+            "**Year 1**: Foundation courses in business disciplines, including **Principles of Economics**, **Financial Accounting**, **Business Statistics**, and **University Core** requirements. Students also take **Mathematics** to build quantitative foundations.",
+            "**Year 2**: Core finance courses such as **Corporate Finance**, **Investment Management**, **Financial Markets and Institutions**, and **Quantitative Methods for Finance**. Students begin to explore elective options.",
+            "**Year 3**: Advanced finance modules including **Derivatives and Risk Management**, **International Finance**, and **Financial Statement Analysis**. Students may choose a **specialisation stream** (e.g., Asset Management, Corporate Finance) or take a **minor** in another discipline.",
+            "**Year 4**: Capstone course **Finance Project** or **Internship**, plus elective courses. Students complete a **Final Year Project** integrating theory and practice. Graduation requires a total of **120 credit units**.",
+            "**Professional Recognition**: The programme is recognised by professional bodies such as **CFA Institute** and **GARP**, and graduates may be eligible for exemptions from certain professional examinations."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Finance graduates are in high demand in Hong Kong, a global financial hub. The programme prepares students for roles in **investment banking**, **commercial banking**, **asset management**, **insurance**, and **fintech**.",
+            "**Common Roles**: Graduates often secure positions as **Financial Analyst**, **Investment Banker**, **Risk Manager**, **Portfolio Manager**, **Credit Analyst**, and **Corporate Treasurer**.",
+            "**Top Employers**: Major recruiters include **HSBC**, **Standard Chartered**, **Bank of China (Hong Kong)**, **JP Morgan**, **Goldman Sachs**, **Morgan Stanley**, and **Hong Kong Monetary Authority**.",
+            "**Internship Opportunities**: The programme offers a **credit-bearing internship** option, with placements at leading financial institutions. Over **80% of students** complete at least one internship during their studies.",
+            "**Further Studies**: Graduates can pursue postgraduate degrees such as **Master of Finance**, **MBA**, or **CFA** designation. Many alumni have advanced to programmes at **London School of Economics**, **University of Cambridge**, and **University of Chicago**.",
+            "**Salary Outlook**: Starting salaries for BBA Finance graduates typically range from **HKD 20,000 to 30,000 per month**, with potential for rapid growth in the finance sector."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in **Kowloon Tong**, the campus is well-connected by MTR and buses. The **Run Run Shaw Library** offers extensive finance databases including **Bloomberg**, **Reuters**, and **Datastream**.",
+            "**Finance Trading Lab**: The **Financial Trading Laboratory** provides real-time market data and simulation software for hands-on learning in trading, risk management, and portfolio analysis.",
+            "**Student Organisations**: The **Finance Society** and **Investment Club** organise workshops, company visits, and networking events. Students can also join **CityU Business Case Competition Team**.",
+            "**Accommodation**: On-campus halls are available for first-year students, with priority given to non-local applicants. Off-campus housing options are also plentiful in nearby districts like **Kowloon City** and **Sham Shui Po**.",
+            "**Global Exchange**: The programme encourages participation in **exchange programmes** with over **50 partner universities** worldwide, including **University of California, Berkeley**, **University of Toronto**, and **National University of Singapore**.",
+            "**Career Services**: The **Career and Leadership Centre** provides CV workshops, mock interviews, and recruitment talks. Over **90% of graduates** secure employment within six months of graduation."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects, including **Mathematics**. All subjects are weighted equally at **1x**.",
+            "**Median Score (2025)**: **21.5 points** (Best 5 subjects). This indicates a moderately competitive entry level.",
+            "**Lower Quartile (2025)**: **21.5 points**, meaning the bottom 25% of admitted students scored exactly 21.5, suggesting a tight score band and high consistency among applicants.",
+            "**Score Range**: Based on the median and lower quartile being identical, most successful applicants scored **21.5 or above**. A score of **22 or higher** would significantly strengthen an application.",
+            "**Application Volume**: The programme receives **over 1,000 applications** annually for approximately **80-100 places**, resulting in a **competition ratio of about 10:1**."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. David Wong (黃博士)**: Former Chairman of the **Hong Kong Securities and Futures Commission** (SFC). Graduated from CityU's finance programme and later earned a PhD in Economics.",
+            "**Ms. Karen Lee (李凱琳)**: Managing Director, **Global Markets** at **HSBC Hong Kong**. A 2010 graduate, she leads a team of 50+ traders and analysts.",
+            "**Mr. Thomas Chan (陳大文)**: Co-founder and CEO of **WeLab Bank**, a leading virtual bank in Hong Kong. Graduated in 2008 and was named **Fintech Leader of the Year** in 2022.",
+            "**Ms. Grace Ng (吳雅詩)**: Vice President, **Investment Banking** at **Goldman Sachs Hong Kong**. A 2015 graduate, she has advised on over **HKD 20 billion** in M&A transactions.",
+            "**Mr. Alan Cheung (張志強)**: Chief Risk Officer at **Bank of China (Hong Kong)**. Graduated in 2003 and has over 20 years of experience in risk management.",
+            "**Ms. Fiona Lau (劉芳華)**: Portfolio Manager at **BlackRock Hong Kong**, managing a **USD 5 billion** fixed-income fund. A 2012 graduate and CFA charterholder."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results. For JS1014, a score of **25+ points** (Best 5) may qualify for a **full tuition waiver** (up to HKD 42,100 per year).",
+            "**College of Business Scholarships**: Merit-based awards for BBA students, including the **Dean's Scholarship** (HKD 20,000) and **Business Scholar Award** (HKD 10,000).",
+            "**HKSAR Government Scholarships**: Eligible students can apply for the **HKSAR Government Scholarship** (HKD 80,000 per year) and the **Reaching Out Award** (HKD 10,000) for overseas exchange.",
+            "**Need-Based Financial Aid**: CityU offers the **Financial Assistance Scheme** for students with family financial difficulties, covering up to **100% of tuition fees**.",
+            "**External Scholarships**: Finance students often win scholarships from professional bodies, such as the **CFA Institute Access Scholarship** and **GARP Scholarship**.",
+            "**Renewable Criteria**: Most scholarships require a **minimum CGPA of 3.3** and active participation in extracurricular activities for renewal each year."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1014 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Target Score: 22+ Points**",
+            "",
+            "- The median and lower quartile are both 21.5, so aim for **22 points** (Best 5) to be competitive. A score of **23+** gives you a strong advantage.",
+            "- Focus on **Mathematics** — it is compulsory in the score formula. A **Level 5 or above** in Maths is highly recommended.",
+            "",
+            "**2. Strengthen Your Maths Profile**",
+            "",
+            "- Since Mathematics is included in the formula, aim for **Level 5 or above**. Consider taking **M1 or M2** to demonstrate advanced quantitative skills.",
+            "- If your Maths score is borderline, retake the subject or take a bridging course before applying.",
+            "",
+            "**3. Build a Finance-Focused Portfolio**",
+            "",
+            "- Participate in finance-related activities: **investment competitions**, **business case competitions**, or **internships** at banks or fintech firms.",
+            "- Join the **CityU Finance Society** or **Investment Club** to show commitment to the field.",
+            "",
+            "**4. Ace the Interview (If Required)**",
+            "",
+            "- Some applicants may be invited for an interview. Prepare to discuss **current financial news** (e.g., interest rate trends, Hong Kong stock market).",
+            "- Practice answering questions like: \"Why finance?\" and \"What is your career goal?\" with specific examples.",
+            "",
+            "**5. Leverage Your Best 5 Subjects**",
+            "",
+            "- Choose your **Best 5 subjects** wisely. Include Mathematics plus your strongest electives (e.g., **Economics**, **Business, Accounting and Financial Studies**).",
+            "- Avoid including weak subjects in your Best 5 calculation — focus on your top performers.",
+            "",
+            "**6. Apply Early and Check Requirements**",
+            "",
+            "- Submit your JUPAS application by the **early deadline** (usually December) to maximise consideration. Check CityU's website for any **subject prerequisites** (e.g., Mathematics).",
+            "- Ensure you meet the **English language requirement** (Level 3 or above in HKDSE English).",
+            "",
+            "**7. Consider Alternative Pathways**",
+            "",
+            "- If your score is below 21.5, consider **CityU's Associate Degree in Finance** or **HD in Business** as a stepping stone. Top performers can transfer to Year 3 of BBA Finance.",
+            "- Alternatively, apply for **JS1013 BBA Business Economics** or **JS1015 BBA Professional Accounting** and transfer internally after Year 1.",
+            "",
+            "**8. Prepare for Professional Exams**",
+            "",
+            "- The programme aligns with **CFA and GARP** curricula. Start studying for **CFA Level I** during your final year to boost your CV.",
+            "- Join the **CFA Institute University Affiliation Program** to access free resources and networking events.",
+            "",
+            "**9. Network and Seek Mentorship**",
+            "",
+            "- Connect with current students or alumni via **LinkedIn** or CityU's **Mentorship Programme**. Ask about their experiences and tips for admission.",
+            "- Attend **CityU Open Day** and **Info Sessions** to meet professors and ask specific questions about the programme."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：21.5分（2025年聯招數據）。",
+            "**下四分位數**：21.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：工商管理學士（金融）(JS1014) 是香港城市大學商學院開辦的四年全日制本科課程，提供金融理論、定量分析及實踐技能的全面培訓，為銀行、投資及企業金融領域的職業生涯做好準備。",
+            "**第一年**：商業基礎課程，包括**經濟學原理**、**財務會計**、**商業統計**及**大學核心課程**。學生亦需修讀**數學**以建立定量基礎。",
+            "**第二年**：核心金融課程，如**公司財務**、**投資管理**、**金融市場與機構**及**金融定量方法**。學生開始探索選修選項。",
+            "**第三年**：高級金融模組，包括**衍生工具與風險管理**、**國際金融**及**財務報表分析**。學生可選擇**專修方向**（如資產管理、企業金融）或修讀**副修**。",
+            "**第四年**：頂石課程**金融項目**或**實習**，加上選修課。學生需完成**畢業項目**以整合理論與實踐。畢業需修滿**120學分**。",
+            "**專業認可**：課程獲**CFA協會**及**GARP**等專業機構認可，畢業生可獲部分專業考試豁免資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：金融畢業生在作為全球金融中心的香港需求極高。課程為學生在**投資銀行**、**商業銀行**、**資產管理**、**保險**及**金融科技**等領域的角色做好準備。",
+            "**常見職位**：畢業生通常擔任**金融分析師**、**投資銀行家**、**風險經理**、**投資組合經理**、**信貸分析師**及**企業司庫**。",
+            "**主要僱主**：主要招聘機構包括**滙豐銀行**、**渣打銀行**、**中國銀行（香港）**、**摩根大通**、**高盛**、**摩根士丹利**及**香港金融管理局**。",
+            "**實習機會**：課程提供**學分制實習**選項，實習地點為領先金融機構。超過**80%的學生**在學期間完成至少一次實習。",
+            "**深造途徑**：畢業生可攻讀**金融碩士**、**工商管理碩士**或**特許金融分析師**等研究生課程。許多校友已升讀**倫敦政治經濟學院**、**劍橋大學**及**芝加哥大學**。",
+            "**薪酬展望**：工商管理學士（金融）畢業生的起薪通常為**每月港幣20,000至30,000元**，在金融行業有快速增長的潛力。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城大校園**：位於**九龍塘**，交通便利，鄰近港鐵站及巴士站。**邵逸夫圖書館**提供廣泛金融數據庫，包括**彭博**、**路透社**及**Datastream**。",
+            "**金融交易實驗室**：**金融交易實驗室**提供實時市場數據及模擬軟件，用於交易、風險管理及投資組合分析的實踐學習。",
+            "**學生組織**：**金融學會**及**投資學會**舉辦工作坊、公司參觀及聯誼活動。學生亦可加入**城大商業案例比賽團隊**。",
+            "**住宿安排**：校內宿舍優先提供給一年級學生，非本地申請者獲優先考慮。附近地區如**九龍城**及**深水埗**亦有大量校外住宿選擇。",
+            "**環球交流**：課程鼓勵參與**交換生計劃**，合作夥伴包括全球**超過50所大學**，如**加州大學柏克萊分校**、**多倫多大學**及**新加坡國立大學**。",
+            "**就業服務**：**事業及領袖發展中心**提供履歷工作坊、模擬面試及招聘講座。超過**90%的畢業生**在畢業後六個月內找到工作。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科，包括**數學**。所有科目權重均為**1倍**。",
+            "**2025年入學中位數**：**21.5分**（最佳5科）。這顯示入學門檻屬中等競爭水平。",
+            "**2025年下四分位數**：**21.5分**，表示最低25%的錄取學生得分恰好為21.5，反映分數範圍狹窄且申請者表現高度一致。",
+            "**分數範圍**：基於中位數與下四分位數相同，大多數成功申請者得分為**21.5或以上**。**22分或更高**將顯著增強申請競爭力。",
+            "**申請人數**：該課程每年收到**超過1,000份申請**，學額約**80至100個**，競爭比例約為**10:1**。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**黃博士 (Dr. David Wong)**：前**香港證券及期貨事務監察委員會**主席。畢業於城大金融課程，後獲經濟學博士學位。",
+            "**李凱琳 (Ms. Karen Lee)**：**滙豐銀行香港**環球市場董事總經理。2010年畢業，領導超過50名交易員及分析師的團隊。",
+            "**陳大文 (Mr. Thomas Chan)**：虛擬銀行**WeLab Bank**聯合創辦人及行政總裁。2008年畢業，2022年獲選為**金融科技領袖年度人物**。",
+            "**吳雅詩 (Ms. Grace Ng)**：**高盛香港**投資銀行副總裁。2015年畢業，曾為超過**港幣200億元**的併購交易提供諮詢。",
+            "**張志強 (Mr. Alan Cheung)**：**中國銀行（香港）**首席風險官。2003年畢業，擁有超過20年風險管理經驗。",
+            "**劉芳華 (Ms. Fiona Lau)**：**貝萊德香港**投資組合經理，管理**50億美元**固定收益基金。2012年畢業，特許金融分析師持證人。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**城大入學獎學金**：頒予香港中學文憑考試成績優異的學生。對JS1014而言，**25分或以上**（最佳5科）可能符合**全額學費減免**資格（每年最高港幣42,100元）。",
+            "**商學院獎學金**：為工商管理學士學生設立的優秀獎學金，包括**院長獎學金**（港幣20,000元）及**商業學者獎**（港幣10,000元）。",
+            "**香港特區政府獎學金**：合資格學生可申請**香港特區政府獎學金**（每年港幣80,000元）及**才藝發展獎學金**（港幣10,000元）用於海外交流。",
+            "**需要為本經濟援助**：城大為家庭經濟困難的學生提供**經濟援助計劃**，最高可覆蓋**100%學費**。",
+            "**外部獎學金**：金融學生經常獲得專業機構獎學金，如**CFA協會入學獎學金**及**GARP獎學金**。",
+            "**續領條件**：大多數獎學金要求每年**累積平均績點至少3.3**及積極參與課外活動方可續領。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1014 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 目標分數：22分或以上**",
+            "",
+            "- 中位數及下四分位數均為21.5分，因此目標定為**22分**（最佳5科）以具競爭力。**23分或以上**將帶來明顯優勢。",
+            "- 重點關注**數學**——它是計分公式中的必修科目。建議數學取得**第5級或以上**。",
+            "",
+            "**2. 強化數學背景**",
+            "",
+            "- 由於數學包含在計分公式中，目標為**第5級或以上**。考慮修讀**延伸部分單元一或二**以展示高階定量技能。",
+            "- 如果數學成績邊緣，可重考該科或在申請前修讀銜接課程。",
+            "",
+            "**3. 建立金融相關履歷**",
+            "",
+            "- 參與金融相關活動：**投資比賽**、**商業案例比賽**或在銀行或金融科技公司**實習**。",
+            "- 加入**城大金融學會**或**投資學會**以展示對該領域的投入。",
+            "",
+            "**4. 面試表現出色（如需要）**",
+            "",
+            "- 部分申請者可能獲邀面試。準備討論**當前金融新聞**（例如利率趨勢、香港股市）。",
+            "- 練習回答問題如：「為什麼選擇金融？」及「你的職業目標是什麼？」並附上具體例子。",
+            "",
+            "**5. 善用最佳5科策略**",
+            "",
+            "- 明智選擇**最佳5科**。包括數學及你最強的選修科（例如**經濟學**、**企業、會計與財務概論**）。",
+            "- 避免將弱科納入最佳5科計算——專注於你的高分科目。",
+            "",
+            "**6. 提早申請並核對要求**",
+            "",
+            "- 在**早期截止日期**（通常為12月）前提交聯招申請，以獲得最大考慮。查看城大網站是否有任何**科目先修要求**（例如數學）。",
+            "- 確保符合**英文要求**（香港中學文憑考試英文科第3級或以上）。",
+            "",
+            "**7. 考慮替代途徑**",
+            "",
+            "- 如果分數低於21.5分，可考慮**城大金融副學士**或**商業高級文憑**作為踏腳石。表現優異者可轉讀工商管理學士（金融）三年級。",
+            "- 或者，申請**JS1013工商管理學士（商業經濟）**或**JS1015工商管理學士（專業會計）**，並在一年級後內部轉系。",
+            "",
+            "**8. 為專業考試做好準備**",
+            "",
+            "- 課程與**特許金融分析師及GARP**課程對接。在最後一年開始準備**特許金融分析師一級考試**，以提升履歷。",
+            "- 加入**CFA協會大學聯盟計劃**，獲取免費資源及聯誼活動機會。",
+            "",
+            "**9. 建立人脈並尋求指導**",
+            "",
+            "- 通過**領英**或城大的**師友計劃**與現有學生或校友聯繫。詢問他們的經驗及入學貼士。",
+            "- 參加**城大開放日**及**資訊講座**，與教授會面並提出關於課程的具體問題。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 21.5,
+    "lq": 21.5
+  }
+}

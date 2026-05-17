@@ -1,0 +1,273 @@
+{
+  "programme": {
+    "code": "JS3003",
+    "nameEn": "BBA Scheme in Business Administration",
+    "nameZh": "工商管理組合學士課程",
+    "name": "BBA Scheme in Business Administration",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Business",
+    "median": "179.0",
+    "band_a": "177.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3003",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 179.2 (2025 JUPAS data).",
+            "**Median Admission Score**: 179.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 177.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3003 is a broad-based BBA Scheme that allows students to explore business disciplines before choosing a major. The programme is designed to provide a solid foundation in business fundamentals, with flexibility to specialise in areas such as Accounting, Finance, Marketing, Management, or Logistics.",
+            "**Year 1 — Foundation Year**: Students take core business courses including Financial Accounting, Microeconomics, Business Statistics, and Management Principles. This year also includes a compulsory English enhancement course and an introduction to PolyU's Work-Integrated Education (WIE) programme.",
+            "**Year 2 — Broadening and Major Selection**: Students continue with core courses such as Macroeconomics, Corporate Finance, Marketing Management, and Operations Management. By the end of Year 2, students select their preferred major from the BBA scheme based on academic performance and interest.",
+            "**Year 3 — Specialisation and WIE**: Students dive into their chosen major with advanced courses. All students are required to complete a 1-semester Work-Integrated Education (WIE) placement, gaining real-world experience in Hong Kong or the Greater Bay Area.",
+            "**Year 4 — Capstone and Electives**: The final year includes a Capstone Project that integrates business knowledge, plus elective courses to tailor the degree. Students also have the option to take cross-disciplinary courses or a minor.",
+            "**Global Learning Opportunities**: Students can participate in exchange programmes with over 200 partner universities worldwide, including institutions in the UK, US, Canada, and Mainland China."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Connections**: PolyU's Faculty of Business has strong ties with leading companies such as HSBC, PwC, DHL, and Hang Seng Bank, providing students with internship and graduate job opportunities.",
+            "**Graduate Roles**: Common career paths include Management Trainee, Business Analyst, Marketing Executive, Financial Analyst, and Logistics Coordinator. Many graduates join multinational corporations or local SMEs in Hong Kong.",
+            "**Salary Outlook**: According to PolyU's graduate survey, BBA graduates typically earn a starting salary of HKD 18,000–25,000 per month, with top performers in finance and consulting earning significantly higher.",
+            "**WIE Advantage**: The mandatory Work-Integrated Education placement gives students a competitive edge — over 80% of WIE participants receive job offers from their placement companies.",
+            "**Greater Bay Area Opportunities**: The programme prepares students for careers in the Greater Bay Area, with increasing demand for bilingual business professionals in Shenzhen, Guangzhou, and Macau.",
+            "**Further Studies**: Graduates are well-prepared for postgraduate programmes such as MBA, MSc in Finance, or MSc in Marketing at top universities worldwide."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, directly connected to the Hung Hom MTR station (East Rail Line and Tuen Ma Line), making it easily accessible from all parts of Hong Kong.",
+            "**Modern Business Facilities**: The Faculty of Business houses state-of-the-art trading rooms, data analytics labs, and collaborative learning spaces equipped with Bloomberg terminals and industry-standard software.",
+            "**Student Organisations**: The Business Faculty Student Association organises networking events, company visits, and case competitions throughout the year, fostering a vibrant student community.",
+            "**Library and Learning Commons**: The Pao Yue-kong Library offers extensive business databases, 24/7 study spaces, and dedicated postgraduate reading areas.",
+            "**Sports and Recreation**: PolyU's campus includes a sports centre with a swimming pool, gym, basketball courts, and a rooftop running track, plus student lounges and cafes.",
+            "**Accommodation**: While on-campus halls are limited, PolyU assists students in finding off-campus housing in nearby areas such as Hung Hom, To Kwa Wan, and Kowloon City."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score for JS3003 was 179.0, indicating strong competition among applicants.",
+            "**Lower Quartile (2025)**: The lower quartile score was 177.0, meaning 75% of admitted students scored 177 or above.",
+            "**Average Score**: The average weighted HKDSE score was 179.2, reflecting consistently high entry standards.",
+            "**Subject Weighting**: The programme uses a 'Best 5 Subjects' formula with specific weighting — English and Mathematics are typically weighted more heavily, while Liberal Studies and elective subjects also contribute.",
+            "**Demand**: JS3003 is one of the most popular programmes in the Faculty of Business, attracting over 1,000 first-choice applicants annually for approximately 200 places."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Clement Chen (陳志輝)**: Former Chairman of the Hong Kong Tourism Board and former Council Chairman of PolyU. Graduated with a BBA in 1975.",
+            "**Mr. Peter Wong (王冬勝)**: Chairman of HSBC Asia Pacific and former CEO of HSBC Hong Kong. Holds an honorary doctorate from PolyU and is a prominent business leader.",
+            "**Ms. Grace Cheng (鄭靜雯)**: Founder and CEO of Grace Cheng Associates, a leading fashion retail consultancy in Hong Kong. BBA graduate in Marketing.",
+            "**Mr. Albert Wong (黃志光)**: CEO of the Hong Kong Science and Technology Parks Corporation (HKSTP). Graduated with a BBA in Management.",
+            "**Ms. Vivian Lau (劉慧兒)**: Managing Director of DHL Express Hong Kong, overseeing logistics operations across the region. BBA graduate in Logistics.",
+            "**Dr. William Lo (羅志強)**: Founder of the Lo Family Foundation and a prominent philanthropist. BBA graduate in Accounting, later earned a PhD from PolyU."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to top HKDSE scorers (e.g., 5** or above in multiple subjects) with a value of up to HKD 50,000 per year, renewable based on academic performance.",
+            "**Faculty of Business Scholarships**: Multiple scholarships are available for BBA students, including the 'HSBC Business Scholarship' (HKD 20,000) and 'DHL Logistics Scholarship' (HKD 15,000).",
+            "**WIE Financial Support**: Students undertaking unpaid Work-Integrated Education placements may receive a stipend of up to HKD 10,000 to cover living expenses.",
+            "**Exchange Programme Bursaries**: Students participating in overseas exchange programmes can apply for bursaries of up to HKD 30,000 to offset travel and accommodation costs.",
+            "**Need-Based Financial Aid**: PolyU offers the 'PolyU Bursary' for students with financial needs, covering up to full tuition fees, plus living allowances.",
+            "**External Scholarships**: Students are encouraged to apply for government scholarships such as the HKSAR Government Scholarship (HKD 80,000) and the Sir Edward Youde Memorial Scholarship."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3003 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Focus on Core Subjects — English and Mathematics Matter Most**",
+            "",
+            "- English and Mathematics are heavily weighted in JS3003's admission formula. Aim for at least Level 5 in both to stay competitive. A Level 5 in English can boost your weighted score by 10–15 points.",
+            "",
+            "**2. Target a 'Best 5' Score of 180+**",
+            "",
+            "- With a median of 179.0 and lower quartile of 177.0, you should aim for a weighted total of 180 or above. This typically requires 5 subjects at Level 5 or above.",
+            "",
+            "**3. Choose Electives Strategically**",
+            "",
+            "- Select electives that align with business — Economics, Business, Accounting, or Information Technology are highly valued. Avoid low-scoring subjects like Visual Arts unless you are confident of a high grade.",
+            "",
+            "**4. Prepare for the Admission Interview**",
+            "",
+            "- Shortlisted candidates may be invited for an interview. Practice common business questions (e.g., 'Why do you want to study business?') and prepare a 1-minute self-introduction in English and Cantonese.",
+            "",
+            "**5. Highlight Your WIE Readiness**",
+            "",
+            "- PolyU values work experience. Mention any part-time jobs, internships, or volunteer work in your application to demonstrate your readiness for the Work-Integrated Education programme.",
+            "",
+            "**6. Use the 'Band A' Strategy**",
+            "",
+            "- Place JS3003 in Band A (top 3 choices) to maximise your chances. PolyU gives priority to Band A applicants, and historical data shows over 90% of admitted students placed it in Band A.",
+            "",
+            "**7. Attend PolyU Information Day**",
+            "",
+            "- Visit the Faculty of Business during PolyU's Information Day (usually in October) to speak with professors and current students. This can give you insider tips on the programme and admission process.",
+            "",
+            "**8. Build a Strong Personal Statement**",
+            "",
+            "- Write a personal statement that connects your interests to business — e.g., a family business, a school entrepreneurship project, or a passion for finance. Keep it concise (300–500 words) and professional.",
+            "",
+            "**9. Consider the Greater Bay Area Advantage**",
+            "",
+            "- Emphasise your interest in the Greater Bay Area in your application. PolyU has strong ties with GBA companies, and this can set you apart from other applicants."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：179.2（2025年聯招數據）。",
+            "**入學中位數**：179.0分（2025年聯招數據）。",
+            "**下四分位數**：177.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3003 是一個廣泛基礎的工商管理組合學士課程，讓學生在選擇主修前探索不同商業領域。課程旨在提供堅實的商業基礎，並靈活地專注於會計、金融、市場學、管理學或物流等範疇。",
+            "**第一年 — 基礎年**：學生修讀核心商業課程，包括財務會計、微觀經濟學、商業統計學及管理學原理。這一年亦包括必修的英語強化課程及理大「工作綜合教育」（WIE）簡介。",
+            "**第二年 — 拓寬視野與主修選擇**：學生繼續修讀宏觀經濟學、企業財務、市場學管理及營運管理等核心課程。在第二年結束前，學生根據學業成績及興趣從工商管理組合中選擇主修。",
+            "**第三年 — 專修與WIE**：學生深入所選主修，修讀高級課程。所有學生須完成一個學期的「工作綜合教育」（WIE）實習，在香港或大灣區獲得真實工作經驗。",
+            "**第四年 — 總結性項目與選修科**：最後一年包括整合商業知識的總結性項目，以及選修科目以定製學位。學生亦可選擇跨學科課程或副修。",
+            "**全球學習機會**：學生可參與與全球超過200所夥伴大學的交換計劃，包括英國、美國、加拿大及中國內地的院校。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業聯繫**：理大工商管理學院與滙豐、羅兵咸永道、DHL及恒生銀行等領先企業有緊密聯繫，為學生提供實習及畢業就業機會。",
+            "**畢業生職位**：常見職業路徑包括管理培訓生、商業分析師、市場主任、財務分析師及物流統籌員。許多畢業生加入跨國企業或香港本地中小企。",
+            "**薪酬展望**：根據理大畢業生調查，工商管理學士畢業生起薪通常為每月港幣18,000至25,000元，金融及諮詢領域的頂尖畢業生薪酬更高。",
+            "**WIE優勢**：強制性的「工作綜合教育」實習為學生帶來競爭優勢——超過80%的WIE參與者獲得實習公司的錄用通知。",
+            "**大灣區機會**：課程為學生在大灣區的職業生涯做好準備，深圳、廣州及澳門對雙語商業專業人才的需求日益增加。",
+            "**進修途徑**：畢業生可順利報讀全球頂尖大學的工商管理碩士、金融理學碩士或市場學理學碩士等研究生課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越位置**：理大位於九龍紅磡，直接連接紅磡港鐵站（東鐵線及屯馬線），從香港各區均可輕鬆抵達。",
+            "**現代化商業設施**：工商管理學院設有先進的交易室、數據分析實驗室及協作學習空間，配備彭博終端機及業界標準軟件。",
+            "**學生組織**：工商管理學院學生會全年舉辦聯誼活動、企業參觀及個案比賽，營造充滿活力的學生社群。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供廣泛的商業數據庫、24/7學習空間及專用的研究生閱讀區。",
+            "**體育與康樂**：理大校園包括設有游泳池、健身室、籃球場及天台緩跑徑的體育中心，以及學生休息室和咖啡店。",
+            "**住宿安排**：雖然校內宿舍名額有限，理大會協助學生在紅磡、土瓜灣及九龍城等附近地區尋找校外住宿。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：JS3003的文憑試中位數分數為179.0分，顯示申請者之間競爭激烈。",
+            "**2025年下四分位數**：下四分位數分數為177.0分，即75%的獲取錄學生分數達177分或以上。",
+            "**平均分數**：加權後的文憑試平均分數為179.2分，反映持續高企的入學門檻。",
+            "**科目比重**：課程採用「最佳5科」計算公式，並設有特定比重——英文及數學通常比重較高，而通識教育及選修科目亦有貢獻。",
+            "**需求情況**：JS3003是工商管理學院最受歡迎的課程之一，每年吸引超過1,000名首志願申請者，學額約200個。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳志輝博士**：前香港旅遊發展局主席及理大校董會主席。1975年畢業於工商管理學士課程。",
+            "**王冬勝先生**：滙豐亞太區主席兼滙豐香港前行政總裁。獲理大頒授榮譽博士學位，是傑出的商業領袖。",
+            "**鄭靜雯女士**：Grace Cheng Associates創辦人兼行政總裁，該公司是香港領先的時尚零售顧問公司。市場學工商管理學士畢業生。",
+            "**黃志光先生**：香港科技園公司行政總裁。管理學工商管理學士畢業生。",
+            "**劉慧兒女士**：DHL Express香港區董事總經理，負責區域物流營運。物流學工商管理學士畢業生。",
+            "**羅志強博士**：羅氏家族基金創辦人及著名慈善家。會計學工商管理學士畢業生，其後於理大取得博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**理大入學獎學金**：頒予文憑試成績優異的學生（如多科考獲5**或以上），每年最高達港幣50,000元，並可根據學業成績續領。",
+            "**工商管理學院獎學金**：設有多項獎學金供工商管理學士學生申請，包括「滙豐商業獎學金」（港幣20,000元）及「DHL物流獎學金」（港幣15,000元）。",
+            "**WIE財政支援**：參與無薪「工作綜合教育」實習的學生可獲最高港幣10,000元的津貼，以支付生活開支。",
+            "**交換計劃助學金**：參與海外交換計劃的學生可申請最高港幣30,000元的助學金，以補貼交通及住宿費用。",
+            "**需要為本財政援助**：理大為有經濟需要的學生提供「理大助學金」，涵蓋全額學費及生活津貼。",
+            "**外部獎學金**：鼓勵學生申請政府獎學金，如香港特別行政區政府獎學金（港幣80,000元）及尤德爵士紀念基金獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3003 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 專注核心科目——英文及數學最重要**",
+            "",
+            "- 英文及數學在JS3003的入學計分中比重較高。目標至少取得第5級，以保持競爭力。英文第5級可為加權分數增加10至15分。",
+            "",
+            "**2. 目標「最佳5科」取得180分或以上**",
+            "",
+            "- 由於中位數為179.0分，下四分位數為177.0分，你應爭取加權總分達180分或以上。這通常需要5科取得第5級或以上。",
+            "",
+            "**3. 策略性地選擇選修科**",
+            "",
+            "- 選擇與商業相關的選修科——經濟、商業、會計或資訊科技備受重視。除非有信心取得高分，否則應避免低分科目如視覺藝術。",
+            "",
+            "**4. 為入學面試做好準備**",
+            "",
+            "- 獲篩選的申請人或獲邀參加面試。練習常見商業問題（如「你為何想讀商科？」），並準備1分鐘的英文及廣東話自我介紹。",
+            "",
+            "**5. 突出你的WIE準備程度**",
+            "",
+            "- 理大重視工作經驗。在申請中提及任何兼職、實習或義工經驗，以展示你已為「工作綜合教育」做好準備。",
+            "",
+            "**6. 使用「Band A」策略**",
+            "",
+            "- 將JS3003放在Band A（首3個選擇），以最大化獲取錄機會。理大優先考慮Band A申請者，歷史數據顯示超過90%的獲取錄學生將其放在Band A。",
+            "",
+            "**7. 參加理大資訊日**",
+            "",
+            "- 在理大資訊日（通常在10月）參觀工商管理學院，與教授及現屆學生交流。這可為你提供課程及入學程序的內部貼士。",
+            "",
+            "**8. 撰寫出色的個人陳述**",
+            "",
+            "- 撰寫將你的興趣與商業聯繫起來的個人陳述——例如家族企業、學校創業項目或對金融的熱情。保持簡潔（300至500字）及專業。",
+            "",
+            "**9. 考慮大灣區優勢**",
+            "",
+            "- 在申請中強調你對大灣區的興趣。理大與大灣區企業有緊密聯繫，這可令你從其他申請者中脫穎而出。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "179.0",
+    "lq": "177.0"
+  }
+}

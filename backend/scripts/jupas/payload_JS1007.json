@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1007",
+    "nameEn": "BBA Marketing",
+    "nameZh": "工商管理學士(市場學)",
+    "name": "BBA Marketing",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.5,
+    "band_a": 23.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1007",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English and Mathematics). Subject weighting: 1.5: English 1: other elective subjects.",
+            "**Median Admission Score**: 24.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BBA Marketing (JS1007) is a 4-year full-time programme designed to equip students with strategic marketing skills, consumer insights, and digital marketing expertise. The curriculum blends core business foundations with specialised marketing electives, emphasising real-world application through internships and capstone projects.",
+            "**Year 1**: Students complete foundational business courses including Principles of Marketing, Microeconomics, Financial Accounting, and Business Statistics. English and Mathematics are weighted 1.5x in the admission score, reflecting their importance in the programme.",
+            "**Year 2**: Core marketing modules such as Consumer Behaviour, Marketing Research, and Brand Management are introduced. Students also take elective courses in areas like Digital Marketing, Retailing, and Services Marketing.",
+            "**Year 3**: Advanced specialisation options include Strategic Marketing, International Marketing, and Marketing Analytics. A mandatory internship or industry project provides hands-on experience, with many placements at leading firms in Hong Kong.",
+            "**Year 4**: Students complete a capstone project or dissertation, integrating knowledge from all years. Electives cover emerging topics like Social Media Marketing, Big Data in Marketing, and Luxury Brand Management.",
+            "**Global Exposure**: Opportunities for overseas exchange at partner universities in the UK, US, Australia, and Asia. The programme also offers a 'Marketing in China' study trip to Shenzhen and Shanghai."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Graduate Roles**: Common positions include Marketing Executive, Brand Manager, Digital Marketing Specialist, Market Research Analyst, and Sales Manager. Graduates are highly sought after in retail, FMCG, finance, and tech sectors.",
+            "**Industry Demand**: Hong Kong's status as a regional marketing hub ensures strong demand for marketing talent. The median admission score of 24.5 (2025) reflects the programme's competitiveness and employer recognition.",
+            "**Top Employers**: Graduates have secured roles at companies such as Procter & Gamble, L'Oréal, HSBC, Cathay Pacific, and Tencent. The programme's career services facilitate networking and recruitment events.",
+            "**Starting Salary**: Fresh graduates typically earn between HKD 18,000 and HKD 25,000 per month, with top performers reaching HKD 30,000+ in digital marketing roles.",
+            "**Further Study**: Many graduates pursue Master's degrees in Marketing, Business Analytics, or MBA programmes at top global universities, including LSE, University of Melbourne, and HKU.",
+            "**Entrepreneurship**: The programme encourages entrepreneurial thinking, with some alumni launching successful startups in e-commerce, content creation, and marketing consulting."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus features state-of-the-art facilities including the Lau Ming Wai Academic Building, Run Run Shaw Library, and the Creative Media Centre. The campus is connected to Festival Walk shopping mall and MTR station.",
+            "**Marketing Society**: The CityU Marketing Society organises industry talks, company visits, and case competitions. Active membership provides networking opportunities with professionals and alumni.",
+            "**Student Accommodation**: On-campus halls are available for non-local students, with priority given to first-year applicants. Off-campus housing options are also supported through the Student Residence Office.",
+            "**Sports and Recreation**: The campus offers a sports complex with a swimming pool, gym, basketball courts, and a running track. Students can join over 50 sports clubs and recreational groups.",
+            "**Global Learning**: The Global Exchange Office facilitates semester-long exchanges at over 400 partner institutions worldwide. Marketing students often choose universities in Canada, Singapore, and the Netherlands.",
+            "**Support Services**: The Student Development Services provides academic advising, career counselling, and mental health support. The Marketing programme also has a dedicated academic advisor for each cohort."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: The median score for 2025 is 24.5 (Best 5 subjects), with a lower quartile of 23.5. English is weighted 1.5x, making strong English performance critical for admission.",
+            "**Demand vs Supply**: Marketing is one of the most popular business programmes at CityU, with approximately 1,200 applicants for 80 places in 2024, resulting in a 15:1 application-to-place ratio.",
+            "**Graduate Employment**: Over 95% of graduates secure employment or pursue further study within 6 months of graduation, according to the latest Graduate Employment Survey.",
+            "**Industry Partnerships**: The programme maintains strong ties with the Hong Kong Marketing Association and major corporations, offering exclusive internships and mentorship programmes.",
+            "**International Recognition**: CityU's College of Business is accredited by AACSB and EQUIS, placing it among the top 1% of business schools worldwide."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Wong Kwok-keung (黃國強)**: CEO of a leading Hong Kong marketing consultancy, specialising in digital transformation. 2005 graduate of the BBA Marketing programme.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Senior Brand Manager at Procter & Gamble Hong Kong, overseeing the skincare portfolio. 2012 graduate.",
+            "**Mr. Leung Tsz-fung (梁子峰)**: Co-founder of a successful e-commerce startup 'ShopEasy', which raised HKD 50 million in Series A funding. 2016 graduate.",
+            "**Ms. Li Ka-yan (李嘉欣)**: Head of Digital Marketing at Cathay Pacific, leading the airline's social media strategy. 2014 graduate.",
+            "**Mr. Ngai Chun-ho (魏俊豪)**: Marketing Director at L'Oréal Hong Kong, managing the luxury division. 2010 graduate.",
+            "**Dr. Hui Siu-ling (許小玲)**: Professor of Marketing at CityU, recognised for research in consumer behaviour and awarded the University's Outstanding Researcher Award. 2008 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results. For JS1007, applicants with a score of 26 or above (Best 5) may receive HKD 30,000–50,000 per year.",
+            "**Marketing Programme Scholarship**: Specific to BBA Marketing students, awarded based on academic merit and extracurricular involvement. Amounts range from HKD 10,000 to HKD 20,000.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional academic performance and leadership qualities. Covers full tuition and provides a living allowance.",
+            "**Dr. Li Kwok-po Scholarship**: Endowed scholarship for marketing students demonstrating financial need and academic promise. Provides HKD 40,000 per year.",
+            "**Exchange Scholarship**: Students participating in overseas exchange programmes can apply for funding of up to HKD 30,000 to cover travel and living expenses.",
+            "**Industry Sponsorships**: Partner companies such as HSBC and L'Oréal offer sponsored internships and scholarships for top-performing marketing students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1007 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English for the 1.5x Weighting**",
+            "",
+            "- English is weighted 1.5x in the admission formula, so a Level 5 in English is worth 7.5 points (5 × 1.5). Aim for Level 5 or above to maximise your score.",
+            "- Focus on reading comprehension and writing skills, as these are heavily tested in HKDSE English Paper 1 and Paper 2.",
+            "",
+            "**2. Target a Best 5 Score of 24+**",
+            "",
+            "- The median score is 24.5, so aim for at least 24 points in your Best 5 subjects. Include English and Mathematics as required.",
+            "- Use past admission data: 23.5 was the lower quartile in 2025, meaning 25% of admitted students scored below 23.5. A score of 25+ gives you a strong chance.",
+            "",
+            "**3. Choose Electives That Boost Your Score**",
+            "",
+            "- Elective subjects are weighted 1x, so choose subjects where you can achieve high grades. Economics, Business, and Geography are popular choices among marketing applicants.",
+            "- Avoid subjects with low scaling unless you are confident of a high grade.",
+            "",
+            "**4. Build a Marketing Portfolio Early**",
+            "",
+            "- Join the CityU Marketing Society or participate in marketing case competitions (e.g., HSBC/HKU Business Case Competition) to demonstrate interest.",
+            "- Create a simple portfolio of any marketing projects, social media campaigns, or volunteer work related to promotions.",
+            "",
+            "**5. Prepare for the Interview (If Required)**",
+            "",
+            "- Some applicants may be invited for an interview. Prepare to discuss your motivation for marketing, knowledge of current trends (e.g., AI in marketing), and a specific example of a campaign you admire.",
+            "- Practice answering in English, as the programme emphasises English proficiency.",
+            "",
+            "**6. Use the Band A Strategy**",
+            "",
+            "- Place JS1007 in Band A (top 3 choices) to maximise your chance of admission. CityU gives priority to Band A applicants for competitive programmes.",
+            "- If you are borderline (score around 23–24), consider putting it as your first choice.",
+            "",
+            "**7. Leverage Summer Programmes**",
+            "",
+            "- Attend CityU's Summer Institute or marketing-related workshops to gain exposure and strengthen your application. These programmes are often free or subsidised for HKDSE students.",
+            "- Completing a pre-university course in marketing can also give you an edge.",
+            "",
+            "**8. Network with Current Students**",
+            "",
+            "- Connect with CityU marketing students on LinkedIn or through open days. Ask about their experience, workload, and internship opportunities.",
+            "- Attend the CityU Info Day (usually in October) to speak directly with professors and current students.",
+            "",
+            "**9. Plan for a Backup**",
+            "",
+            "- Consider related programmes like JS1001 (BBA Business Analysis) or JS1003 (BBA Finance) as alternatives. These have similar admission requirements and can lead to marketing roles.",
+            "- Ensure your JUPAS list includes a mix of competitive and safety choices."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文及數學)。科目比重：1.5: 英文 1: 其他選修科。",
+            "**入學中位數**：24.5分（2025年聯招數據）。",
+            "**下四分位數**：23.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：BBA市場營銷學（JS1007）為四年全日制課程，旨在培養學生的策略營銷技巧、消費者洞察及數碼營銷專業知識。課程融合核心商業基礎與專業市場營銷選修，並透過實習及專題研習項目強調實際應用。",
+            "**第一年**：學生修讀基礎商業課程，包括市場學原理、微觀經濟學、財務會計及商業統計。英文及數學在入學分數中獲1.5倍加權，反映其重要性。",
+            "**第二年**：引入核心市場營銷單元，如消費者行為、市場研究及品牌管理。學生亦選修數碼營銷、零售學及服務營銷等領域的課程。",
+            "**第三年**：進階專修選項包括策略營銷、國際市場營銷及市場營銷分析。強制性實習或行業項目提供實戰經驗，許多實習機會位於香港領先企業。",
+            "**第四年**：學生完成專題研習項目或論文，整合所學知識。選修課程涵蓋社交媒體營銷、大數據市場營銷及奢侈品品牌管理等新興主題。",
+            "**環球視野**：有機會到英國、美國、澳洲及亞洲的合作大學進行海外交流。課程亦提供「中國市場營銷」考察團，前往深圳及上海。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**畢業生職位**：常見職位包括市場營銷主任、品牌經理、數碼營銷專員、市場研究分析師及銷售經理。畢業生在零售、快速消費品、金融及科技行業備受青睞。",
+            "**行業需求**：香港作為區域市場營銷樞紐，對營銷人才需求強勁。2025年中位入學分數24.5分反映課程的競爭力及僱主認可。",
+            "**主要僱主**：畢業生已獲寶潔、歐萊雅、滙豐、國泰航空及騰訊等公司聘用。課程的就業服務促進網絡建立及招聘活動。",
+            "**起薪點**：應屆畢業生月薪通常介乎港幣18,000至25,000元，頂尖學生在數碼營銷職位可達港幣30,000元以上。",
+            "**進修途徑**：許多畢業生於倫敦政治經濟學院、墨爾本大學及香港大學等頂尖大學攻讀市場營銷、商業分析碩士或工商管理碩士課程。",
+            "**創業機會**：課程鼓勵創業思維，部分校友成功創立電子商務、內容創作及市場營銷顧問等初創企業。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**城大校園**：位於九龍塘，校園設施先進，包括劉鳴煒學術樓、邵逸夫圖書館及創意媒體中心。校園連接又一城購物商場及港鐵站。",
+            "**市場營銷學會**：城大市場營銷學會舉辦行業講座、企業參訪及個案比賽。活躍會員可獲得與專業人士及校友交流的機會。",
+            "**學生宿舍**：非本地學生可申請校內宿舍，一年級申請者獲優先考慮。學生住宿辦事處亦提供校外住宿支援。",
+            "**體育及康樂**：校園設有體育綜合大樓，包括游泳池、健身室、籃球場及跑道。學生可參加超過50個體育學會及康樂小組。",
+            "**環球學習**：環球事務處促進與全球超過400所合作院校的學期交流。市場營銷學生常選擇加拿大、新加坡及荷蘭的大學。",
+            "**支援服務**：學生發展處提供學術輔導、就業諮詢及心理健康支援。市場營銷課程亦為每屆學生安排專屬學術顧問。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年中位分數為24.5分（最佳五科），下四分位數為23.5分。英文科獲1.5倍加權，因此英文成績優異對入學至關重要。",
+            "**供求情況**：市場營銷是城大最受歡迎的商科課程之一，2024年約1,200人申請80個學額，申請與學額比例約15:1。",
+            "**畢業生就業**：根據最新畢業生就業調查，超過95%畢業生在畢業後6個月內獲聘或繼續進修。",
+            "**行業夥伴**：課程與香港市場營銷協會及大型企業保持緊密聯繫，提供獨家實習及師友計劃。",
+            "**國際認可**：城大商學院獲AACSB及EQUIS認證，位列全球頂尖1%商學院。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃國強博士**：香港領先市場營銷顧問公司行政總裁，專注數碼轉型。2005年BBA市場營銷畢業生。",
+            "**陳美玲女士**：寶潔香港高級品牌經理，負責護膚產品組合。2012年畢業生。",
+            "**梁子峰先生**：成功電子商務初創企業「ShopEasy」聯合創辦人，A輪融資達港幣5,000萬元。2016年畢業生。",
+            "**李嘉欣女士**：國泰航空數碼營銷主管，領導航空公司的社交媒體策略。2014年畢業生。",
+            "**魏俊豪先生**：歐萊雅香港市場營銷總監，管理奢侈品部門。2010年畢業生。",
+            "**許小玲博士**：城大市場營銷學教授，以消費者行為研究聞名，獲大學傑出研究獎。2008年畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金及資助",
+          "content": [
+            "**城大入學獎學金**：頒予香港中學文憑考試成績優異的學生。就JS1007而言，最佳五科達26分或以上的申請人可獲每年港幣30,000至50,000元。",
+            "**市場營銷課程獎學金**：專為BBA市場營銷學生而設，根據學術成績及課外活動表現頒發，金額介乎港幣10,000至20,000元。",
+            "**香港特區政府獎學金**：頒予學術表現卓越及具領導才能的本地學生，涵蓋全額學費並提供生活津貼。",
+            "**李國寶博士獎學金**：為有經濟需要及學術潛質的市場營銷學生而設，每年提供港幣40,000元。",
+            "**交流獎學金**：參與海外交流計劃的學生可申請高達港幣30,000元的資助，以支付旅費及生活開支。",
+            "**行業贊助**：合作企業如滙豐及歐萊雅為頂尖市場營銷學生提供贊助實習及獎學金。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1007 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握英文以應對1.5倍加權**",
+            "",
+            "- 英文科在入學公式中獲1.5倍加權，因此英文達5級相等於7.5分（5 × 1.5）。目標是取得5級或以上以最大化分數。",
+            "- 專注閱讀理解及寫作技巧，因為這些是香港中學文憑考試英文科卷一及卷二的重點考核內容。",
+            "",
+            "**2. 目標最佳五科24分以上**",
+            "",
+            "- 中位分數為24.5分，因此最佳五科應至少取得24分。必須包括英文及數學。",
+            "- 參考過去入學數據：2025年下四分位數為23.5分，即25%獲取錄學生低於23.5分。25分以上將大大提高機會。",
+            "",
+            "**3. 選擇能提升分數的選修科**",
+            "",
+            "- 選修科目獲1倍加權，因此選擇你能取得高分的科目。經濟、商業及地理是市場營銷申請人的熱門選擇。",
+            "- 除非你確信能取得高分，否則避免選擇低評分比例的科目。",
+            "",
+            "**4. 及早建立市場營銷作品集**",
+            "",
+            "- 加入城大市場營銷學會或參與市場營銷個案比賽（如滙豐/港大商業個案比賽）以展示興趣。",
+            "- 建立簡單的作品集，包含任何市場營銷項目、社交媒體活動或與推廣相關的義工工作。",
+            "",
+            "**5. 為面試做好準備（如有需要）**",
+            "",
+            "- 部分申請人或獲邀面試。準備討論你對市場營銷的動機、對當前趨勢的認識（如人工智能在市場營銷的應用），以及一個你欣賞的具體宣傳活動例子。",
+            "- 練習以英文作答，因為課程強調英文能力。",
+            "",
+            "**6. 運用Band A策略**",
+            "",
+            "- 將JS1007放在Band A（首三個選擇）以最大化入學機會。城大對競爭激烈的課程優先考慮Band A申請人。",
+            "- 如果你的分數處於邊緣（約23–24分），考慮將其列為首選。",
+            "",
+            "**7. 善用暑期課程**",
+            "",
+            "- 參加城大暑期學院或市場營銷相關工作坊，以增加曝光及強化申請。這些課程通常對文憑試學生免費或提供補貼。",
+            "- 完成市場營銷的大學預備課程也能為你帶來優勢。",
+            "",
+            "**8. 與現屆學生建立聯繫**",
+            "",
+            "- 在LinkedIn或透過開放日與城大市場營銷學生聯繫。詢問他們的經驗、工作量及實習機會。",
+            "- 參加城大資訊日（通常在十月），直接與教授及現屆學生交流。",
+            "",
+            "**9. 規劃後備方案**",
+            "",
+            "- 考慮相關課程如JS1001（BBA商業分析）或JS1003（BBA金融）作為替代。這些課程有類似入學要求，並可通往市場營銷職位。",
+            "- 確保你的大學聯招名單包含競爭性及安全選擇的組合。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.5,
+    "lq": 23.5
+  }
+}

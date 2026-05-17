@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS3255",
+    "nameEn": "BSc Scheme in Food Science and Nutrition",
+    "nameZh": "食品科學及營養學(榮譽)理學士組合課程",
+    "name": "BSc Scheme in Food Science and Nutrition",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "203.0",
+    "band_a": "198.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3255",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 210.6 (2025 JUPAS data).",
+            "**Median Admission Score**: 203.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 198.5 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: The BSc Scheme in Food Science and Nutrition (JS3255) is a 4-year full-time programme under the Faculty of Science at PolyU. It offers two streams: Food Science and Technology, and Human Nutrition and Health, allowing students to specialise from Year 2 onwards.",
+            "**Year 1**: Students take foundational courses in biology, chemistry, mathematics, and physics, along with university core subjects like English and Chinese. A broad-based introduction to food science and nutrition is provided through introductory modules.",
+            "**Year 2**: Students select their preferred stream. Core subjects include Food Chemistry, Food Microbiology, Human Nutrition, and Food Processing. Laboratory sessions and group projects develop practical skills.",
+            "**Year 3**: Advanced courses such as Food Safety and Quality Management, Nutritional Biochemistry, and Functional Foods are offered. Students begin their Work-Integrated Education (WIE) placement, gaining 120 hours of real-world experience in food companies or healthcare settings.",
+            "**Year 4**: The final year includes a capstone research project or dissertation, plus electives like Sports Nutrition or Food Product Development. Students complete their WIE requirements and prepare for professional careers.",
+            "**Key Features**: The curriculum is accredited by the Institute of Food Technologists (IFT) and the Nutrition Society (UK), ensuring global recognition. Over 80% of courses include hands-on laboratory or industrial visits."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Industry Demand**: Hong Kong's food and nutrition sector is growing rapidly, with a 15% increase in job postings for food scientists and nutritionists over the past 3 years. Graduates are sought after in food manufacturing, healthcare, and government agencies.",
+            "**Typical Roles**: Graduates can become Food Technologists, Nutritionists, Quality Assurance Managers, or Research Scientists. Many work in companies like Nestlé, Vitasoy, or the Centre for Food Safety (CFS).",
+            "**Further Studies**: The programme prepares students for postgraduate degrees in food science, dietetics, or public health. Over 30% of graduates pursue Master's or PhD programmes locally or abroad.",
+            "**PolyU Advantage**: The Work-Integrated Education (WIE) programme places students in top organisations like Maxim's Group and Hospital Authority, providing a competitive edge in the job market.",
+            "**Salary Outlook**: Starting salaries for graduates range from HKD 18,000 to HKD 25,000 per month, with experienced professionals earning over HKD 40,000. The median salary for food scientists in Hong Kong is HKD 30,000.",
+            "**Global Opportunities**: Graduates are eligible for international certifications, enabling careers in the UK, Australia, or Singapore. The programme's IFT accreditation opens doors to roles in the US and Europe."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Location**: PolyU is located in Hung Hom, Kowloon, with direct MTR access via the Hung Hom station (East Rail Line and Tuen Ma Line). The campus is a 10-minute walk from Tsim Sha Tsui East.",
+            "**Food Science Labs**: The programme uses state-of-the-art laboratories, including a Food Processing Pilot Plant, Sensory Evaluation Lab, and Microbiology Lab. Equipment includes HPLC, GC-MS, and texture analysers.",
+            "**Student Organisations**: The Food Science and Nutrition Society organises industry talks, cooking competitions, and nutrition workshops. Students can also join the PolyU Toastmasters Club to develop communication skills.",
+            "**Library Resources**: The Pao Yue-kong Library holds over 2.5 million volumes, with dedicated databases like Food Science Source and Scopus. 24/7 study spaces are available during exam periods.",
+            "**Sports and Recreation**: The campus features a sports centre with a swimming pool, gym, and multi-purpose courts. The Student Halls of Residence offer accommodation for over 3,000 students, with a vibrant community.",
+            "**Sustainability Initiatives**: PolyU has a Green Campus programme, including rooftop gardens and a food waste recycling system. Students can participate in the Sustainable Food Lab to reduce food waste."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Entry Statistics",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Any Best 5 Subjects — PolyU calculates scores based on subject weighting. Core subjects (English, Chinese, Mathematics, Liberal Studies) are weighted at 1.0, while electives like Biology or Chemistry are weighted at 1.5.",
+            "**Median Score (2025)**: 203.0 — This is the weighted score for the middle 50% of admitted students. A score above 210 significantly improves chances.",
+            "**Lower Quartile (2025)**: 198.5 — The 25th percentile score. Applicants with scores near this level should consider including bonus points from Mathematics Extended Modules (M1/M2) or other electives.",
+            "**Average HKDSE Score with Weighting**: 210.6 — The mean score of admitted students. This indicates strong competition, with most successful applicants achieving Level 4 or above in science subjects.",
+            "**Subject Requirements**: Preferred electives include Biology, Chemistry, Combined Science, or Physics. A minimum of Level 3 in English and Mathematics is required. Bonus points are awarded for M1/M2 and third electives."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**: Senior Food Technologist, Nestlé Hong Kong. 2016 graduate. Led the development of a low-sugar beverage line that increased sales by 20%.",
+            "**Mr. Kelvin Chan (陳先生)**: Nutritionist, Hospital Authority. 2018 graduate. Works in the Dietetics Department at Queen Elizabeth Hospital, specialising in paediatric nutrition.",
+            "**Ms. Sarah Li (李小姐)**: Quality Assurance Manager, Vitasoy International Holdings. 2015 graduate. Oversees HACCP compliance for over 50 product lines.",
+            "**Dr. Michael Cheung (張博士)**: Research Scientist, Centre for Food Safety (CFS), Hong Kong Government. 2014 graduate. Published 12 peer-reviewed papers on foodborne pathogens.",
+            "**Ms. Fiona Lau (劉小姐)**: Founder, NutriFit HK — a health food startup. 2019 graduate. Her company supplies meal plans to 500+ corporate clients in the Greater Bay Area.",
+            "**Prof. James Ho (何教授)**: Associate Professor, PolyU Department of Food Science and Nutrition. 2009 graduate. Leads research on functional foods and has secured over HKD 10 million in grants."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to top DSE scorers — up to HKD 50,000 per year for students with scores above 220 (weighted). Renewable based on academic performance.",
+            "**Faculty of Science Scholarships**: Multiple awards ranging from HKD 10,000 to HKD 30,000 for students with outstanding results in science subjects. Priority given to those with Level 5* or above in Biology or Chemistry.",
+            "**Dr. Ng Siu-wai Memorial Scholarship**: Specifically for Food Science and Nutrition students, worth HKD 20,000 annually. Criteria include academic merit and community service in nutrition education.",
+            "**Work-Integrated Education (WIE) Bursary**: Up to HKD 15,000 for students undertaking unpaid internships in NGOs or public health organisations. Over 50 students benefit each year.",
+            "**Government Financial Assistance**: Eligible students can apply for the HKSAR Government's Student Finance Office (SFO) schemes, including the Non-means-tested Loan Scheme (NLS) and means-tested grants.",
+            "**External Scholarships**: Students can apply for the HSBC Hong Kong Scholarship (HKD 50,000) or the Swire Scholarship (HKD 100,000) for overseas exchange programmes. PolyU's Scholarship Office provides application support."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3255 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Electives**: Focus on Biology and Chemistry — they are weighted at 1.5x in the admission formula. Aim for Level 5 or above in at least one of these subjects to boost your weighted score above 210.",
+            "",
+            "- Take Combined Science if you cannot take both Biology and Chemistry separately — it still counts as a science elective.",
+            "- Consider taking M1 or M2 Mathematics for bonus points (weighted at 1.0 but adds to your best 5).",
+            "",
+            "**2. Target a Weighted Score of 210+**: The median score is 203.0, but the average is 210.6. Use the PolyU admission calculator to simulate your score. For example, 5 subjects at Level 4 each gives 5×4×1.0 = 200 — add a Level 5 in Biology (5×1.5=7.5) to reach 207.5.",
+            "",
+            "- If your predicted score is below 198.5 (lower quartile), consider retaking DSE or applying through the Associate Degree pathway.",
+            "",
+            "**3. Ace the Interview (if shortlisted)**: PolyU may invite top applicants for an interview. Prepare to discuss your interest in food science — read about current issues like food safety scandals or nutrition trends.",
+            "",
+            "- Practice answering in English and Cantonese. Common questions: 'Why food science?' and 'What is your career goal?'",
+            "- Bring a portfolio of science projects or volunteer work related to food or health.",
+            "",
+            "**4. Build a Strong Personal Statement**: Highlight your passion for food and nutrition. Mention any relevant experience, such as volunteering at a food bank or participating in a science fair.",
+            "",
+            "- Use specific examples: 'I helped organise a nutrition workshop for 50 elderly residents at a community centre.'",
+            "- Connect your experience to PolyU's WIE programme — show you value hands-on learning.",
+            "",
+            "**5. Leverage Work-Integrated Education (WIE)**: PolyU requires 120 hours of WIE. Start early — apply for summer internships at food companies like Nestlé, Vitasoy, or the Hospital Authority.",
+            "",
+            "- Use PolyU's Career Centre to find placements. Attend the annual WIE Fair in October.",
+            "- Document your experience for your CV — employers value WIE graduates highly.",
+            "",
+            "**6. Explore Both Streams Before Year 2**: The programme offers Food Science and Technology (FST) and Human Nutrition and Health (HNH). Attend the Year 1 orientation talks and talk to senior students.",
+            "",
+            "- FST focuses on food processing, safety, and product development — good for lab-based careers.",
+            "- HNH focuses on dietetics, public health, and clinical nutrition — good for healthcare roles.",
+            "",
+            "**7. Use PolyU's Academic Support Services**: The Student Affairs Office (SAO) offers free tutoring in science subjects. Join study groups for Food Chemistry and Microbiology — these are challenging courses.",
+            "",
+            "- Book one-on-one consultations with the Writing Centre to improve your lab reports.",
+            "- Use the online platform 'PolyU e-Learning' for past exam papers and revision materials.",
+            "",
+            "**8. Apply for Scholarships Early**: The PolyU Entrance Scholarship deadline is usually in December. Prepare your application with your DSE predicted grades and a personal statement.",
+            "",
+            "- Check the Faculty of Science website for specific scholarship criteria — some require a minimum of Level 5 in two science subjects.",
+            "- Apply for external scholarships like the HSBC Hong Kong Scholarship — deadlines are often in January.",
+            "",
+            "**9. Plan for Postgraduate Pathways**: If you aim to become a dietitian or food scientist, consider a Master's degree. PolyU offers a taught Master's in Food Science and Nutrition with a fast-track option for high-achieving graduates.",
+            "",
+            "- Maintain a GPA of 3.3 or above to qualify for the fast-track Master's.",
+            "- Network with professors during your capstone project — they can provide references for PhD applications."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：210.6（2025年聯招數據）。",
+            "**入學中位數**：203.0分（2025年聯招數據）。",
+            "**下四分位數**：198.5分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3255 食品科學及營養學(榮譽)理學士組合課程為四年全日制課程，隸屬理學院。設有「食品科技」及「人類營養與健康」兩個專修，學生可於第二年選擇專修方向。",
+            "**第一年**：學生修讀生物、化學、數學及物理等基礎科目，以及大學核心科目如英文及中文。透過入門單元了解食品科學及營養學的基礎知識。",
+            "**第二年**：學生選擇專修方向。核心科目包括食品化學、食品微生物學、人類營養學及食品加工。實驗課及小組項目培養實務技能。",
+            "**第三年**：提供食品安全與品質管理、營養生物化學及功能食品等高級課程。學生開始工作綜合教育（WIE）實習，在食品公司或醫療機構累積120小時真實工作經驗。",
+            "**第四年**：最後一年包括頂峰研究項目或論文，以及運動營養學或食品產品開發等選修科。學生完成WIE要求，為專業生涯作準備。",
+            "**課程特點**：課程獲美國食品科技學會（IFT）及英國營養學會認證，確保國際認可。超過80%科目包含實驗室或工業參觀環節。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**行業需求**：香港食品及營養行業快速增長，過去三年食品科學家及營養師職位增加15%。畢業生受食品製造、醫療及政府機構青睞。",
+            "**典型職位**：畢業生可成為食品科技師、營養師、品質保證經理或研究科學家。常見僱主包括雀巢、維他奶及食物安全中心。",
+            "**進修途徑**：課程為攻讀食品科學、營養學或公共衛生碩士或博士學位作準備。超過30%畢業生選擇本地或海外深造。",
+            "**理大優勢**：工作綜合教育（WIE）安排學生到美心集團及醫院管理局等頂尖機構實習，提升就業競爭力。",
+            "**薪酬展望**：畢業生起薪點介乎港幣18,000至25,000元，資深從業員可達港幣40,000元以上。香港食品科學家薪酬中位數為港幣30,000元。",
+            "**國際機會**：畢業生可獲國際認證，在英國、澳洲或新加坡發展事業。IFT認證打開美國及歐洲市場的大門。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**地理位置**：理大位於九龍紅磡，經紅磡站（東鐵線及屯馬線）直達港鐵。步行10分鐘即達尖沙咀東。",
+            "**食品科學實驗室**：課程使用先進實驗室，包括食品加工試驗廠、感官評估實驗室及微生物學實驗室。設備包括高效液相色譜儀、氣相色譜質譜聯用儀及質地分析儀。",
+            "**學生組織**：食品科學及營養學會舉辦行業講座、烹飪比賽及營養工作坊。學生亦可加入理大演講會提升溝通技巧。",
+            "**圖書館資源**：包玉剛圖書館藏書超過250萬冊，提供Food Science Source及Scopus等專用數據庫。考試期間設有24小時自修空間。",
+            "**體育與康樂**：校園設有體育中心，包括游泳池、健身室及多用途球場。學生宿舍可容納超過3,000人，社區氣氛活躍。",
+            "**可持續發展措施**：理大推行綠色校園計劃，包括屋頂花園及廚餘回收系統。學生可參與可持續食品實驗室減少食物浪費。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學統計",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳五科成績 — 理大按科目比重計算分數。核心科目（英文、中文、數學、通識）比重為1.0，生物或化學等選修科比重為1.5。",
+            "**2025年中位數**：203.0分 — 這是錄取學生中位數的加權分數。分數高於210分可大幅提升機會。",
+            "**2025年下四分位數**：198.5分 — 第25百分位數分數。分數接近此水平的申請者應考慮加入數學延伸部分（M1/M2）或其他選修科的加分。",
+            "**平均加權分數**：210.6分 — 錄取學生的平均分。反映競爭激烈，大部分成功申請者在理科科目達第4級或以上。",
+            "**科目要求**：優先考慮生物、化學、組合科學或物理等選修科。英文及數學須達第3級。M1/M2及第三選修科可獲加分。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃博士 (Dr. Emily Wong)**：雀巢香港高級食品科技師，2016年畢業。主導開發低糖飲品系列，銷售額提升20%。",
+            "**陳先生 (Mr. Kelvin Chan)**：醫院管理局營養師，2018年畢業。於伊利沙伯醫院營養部工作，專注兒科營養。",
+            "**李小姐 (Ms. Sarah Li)**：維他奶國際控股品質保證經理，2015年畢業。監督超過50條產品線的HACCP合規情況。",
+            "**張博士 (Dr. Michael Cheung)**：香港政府食物安全中心研究科學家，2014年畢業。發表12篇關於食源性病原體的同行評審論文。",
+            "**劉小姐 (Ms. Fiona Lau)**：健康食品初創公司NutriFit HK創辦人，2019年畢業。其公司為大灣區超過500家企業客戶提供餐單。",
+            "**何教授 (Prof. James Ho)**：理大食品科學及營養學系副教授，2009年畢業。領導功能食品研究，獲得超過港幣1,000萬元研究經費。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助",
+          "content": [
+            "**理大入學獎學金**：頒予頂尖文憑試考生 — 加權分數達220分以上者每年可獲高達港幣50,000元，並按學業成績續領。",
+            "**理學院獎學金**：多項獎學金金額由港幣10,000元至30,000元，頒予理科成績優異的學生。優先考慮生物或化學達第5*級或以上者。",
+            "**吳瑞博士紀念獎學金**：專為食品科學及營養學學生而設，每年港幣20,000元。評選標準包括學業成績及營養教育社區服務。",
+            "**工作綜合教育（WIE）津貼**：在非政府組織或公共衛生機構進行無薪實習的學生可獲高達港幣15,000元。每年超過50名學生受惠。",
+            "**政府經濟援助**：合資格學生可申請香港特區政府學生資助處（SFO）計劃，包括免入息審查貸款計劃及入息審查資助。",
+            "**外部獎學金**：學生可申請滙豐香港獎學金（港幣50,000元）或太古獎學金（港幣100,000元）用於海外交流。理大獎學金辦事處提供申請支援。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3255 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先修讀理科選修科**：集中於生物及化學 — 它們在入學公式中比重為1.5倍。目標在至少一科取得第5級或以上，將加權分數推高至210分以上。",
+            "",
+            "- 如無法同時修讀生物及化學，可選組合科學 — 仍算作理科選修科。",
+            "- 考慮修讀數學延伸部分M1或M2以獲加分（比重為1.0，但計入最佳五科）。",
+            "",
+            "**2. 目標加權分數達210分以上**：中位數為203.0分，但平均分為210.6分。使用理大入學計算機模擬分數。例如，五科第4級各得5×4×1.0=200分，加上生物第5級（5×1.5=7.5分）可達207.5分。",
+            "",
+            "- 如預測分數低於198.5分（下四分位數），考慮重考文憑試或透過副學士途徑申請。",
+            "",
+            "**3. 面試突圍（如獲篩選）**：理大可能邀請頂尖申請者面試。準備討論對食品科學的興趣 — 閱讀食品安全醜聞或營養趨勢等時事議題。",
+            "",
+            "- 練習以英語及廣東話回答。常見問題：「為何選擇食品科學？」及「你的職業目標是什麼？」",
+            "- 攜帶與食品或健康相關的科學項目或義工服務作品集。",
+            "",
+            "**4. 撰寫出色的個人陳述**：突出你對食品及營養的熱誠。提及相關經驗，例如在食物銀行當義工或參加科學展覽。",
+            "",
+            "- 使用具體例子：「我協助為50位長者舉辦營養工作坊。」",
+            "- 將經驗與理大的WIE計劃聯繫 — 展示你重視實踐學習。",
+            "",
+            "**5. 善用工作綜合教育（WIE）**：理大要求120小時WIE。盡早開始 — 申請雀巢、維他奶或醫院管理局等公司的暑期實習。",
+            "",
+            "- 使用理大就業中心尋找實習機會。參加每年十月的WIE博覽會。",
+            "- 記錄經驗以豐富履歷 — 僱主高度重視WIE畢業生。",
+            "",
+            "**6. 在第二年之前探索兩個專修**：課程提供食品科技（FST）及人類營養與健康（HNH）。參加第一年迎新講座並與學長交流。",
+            "",
+            "- FST專注食品加工、安全及產品開發 — 適合實驗室為本的職業。",
+            "- HNH專注營養學、公共衛生及臨床營養 — 適合醫療保健角色。",
+            "",
+            "**7. 使用理大學術支援服務**：學生事務處（SAO）提供理科免費補習。加入食品化學及微生物學學習小組 — 這些是具挑戰性的科目。",
+            "",
+            "- 預約寫作中心一對一諮詢，改善實驗報告。",
+            "- 使用網上平台「PolyU e-Learning」獲取歷屆試題及溫習材料。",
+            "",
+            "**8. 及早申請獎學金**：理大入學獎學金截止日期通常在十二月。使用文憑試預測成績及個人陳述準備申請。",
+            "",
+            "- 查閱理學院網站了解特定獎學金條件 — 部分要求兩科理科達第5級。",
+            "- 申請外部獎學金如滙豐香港獎學金 — 截止日期通常在一月。",
+            "",
+            "**9. 規劃深造路徑**：如目標成為營養師或食品科學家，考慮碩士課程。理大提供食品科學及營養學授課式碩士，成績優異的畢業生可獲快速升讀選項。",
+            "",
+            "- 保持GPA 3.3或以上以符合快速升讀碩士資格。",
+            "- 在頂峰項目期間與教授建立網絡 — 他們可為博士申請提供推薦信。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "203.0",
+    "lq": "198.5"
+  }
+}

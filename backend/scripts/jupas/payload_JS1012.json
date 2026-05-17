@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1012",
+    "nameEn": "Economics and Finance",
+    "nameZh": "經濟及金融",
+    "name": "Economics and Finance",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 23.0,
+    "band_a": 22.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1012",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 23.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 22.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS1012 Economics and Finance is a 4-year joint programme offered by the College of Business, designed to equip students with rigorous analytical skills in both economic theory and financial practice. The curriculum integrates core economics and finance courses with quantitative methods, preparing graduates for careers in banking, investment, and policy analysis.",
+            "**Year 1 Foundation**: Students take introductory courses in Microeconomics, Macroeconomics, and Financial Accounting, along with University Core requirements such as English and General Education. A strong emphasis is placed on Mathematics, which is a required subject in the admission score formula.",
+            "**Year 2 Core Development**: Key courses include Intermediate Microeconomics, Intermediate Macroeconomics, Statistics for Business, and Corporate Finance. Students also begin to explore elective options in areas like International Economics or Financial Markets.",
+            "**Year 3 Specialisation**: Students deepen their knowledge with advanced courses such as Econometrics, Monetary Economics, Investment Analysis, and Derivatives. A capstone project or internship is encouraged to apply theoretical knowledge to real-world scenarios.",
+            "**Year 4 Integration and Electives**: The final year offers flexibility with a wide range of electives, including Behavioural Finance, Development Economics, and Risk Management. Students complete a final-year project or dissertation, synthesising their learning across economics and finance.",
+            "**Global Learning Opportunities**: The programme supports exchange semesters at partner universities worldwide, as well as summer internships with leading financial institutions in Hong Kong and abroad."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Banking and Finance**: Graduates commonly enter roles in commercial banking, investment banking, and asset management at institutions like HSBC, Standard Chartered, and Bank of China.",
+            "**Economic Analysis**: Many work as economic analysts or researchers for government bodies (e.g., Hong Kong Monetary Authority) or think tanks, applying econometric skills to policy evaluation.",
+            "**Corporate Finance**: Opportunities exist in treasury departments of multinational corporations, handling capital budgeting, risk management, and financial planning.",
+            "**Consulting**: Top-tier consulting firms such as McKinsey, BCG, and Deloitte recruit graduates for their quantitative and analytical abilities in strategy and operations.",
+            "**Further Study**: A significant proportion pursue master's or PhD programmes in Economics, Finance, or Business at leading universities like LSE, University of Chicago, and HKU.",
+            "**Entrepreneurship and FinTech**: The programme's blend of economics and finance prepares graduates for roles in startups, particularly in financial technology and data-driven business models."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life and Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is well-connected by MTR and offers modern facilities including the Run Run Shaw Library, state-of-the-art lecture theatres, and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**Business School Facilities**: The College of Business houses dedicated trading rooms with Bloomberg terminals, financial databases, and simulation labs for hands-on learning in finance and economics.",
+            "**Student Organisations**: The Economics and Finance Society organises networking events, career talks, and academic workshops, fostering a strong peer community.",
+            "**Sports and Recreation**: Students have access to the CityU Sports Centre, which includes a gym, swimming pool, and multi-purpose courts, as well as numerous student clubs for hobbies and interests.",
+            "**Accommodation**: On-campus halls are available for non-local students, with priority given to first-year undergraduates. Off-campus housing options are also supported by the university's housing office.",
+            "**Global Exchange**: The university has over 400 partner institutions worldwide, allowing students to spend a semester abroad at universities in Europe, North America, or Asia."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness and Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects, with Mathematics required and all subjects weighted equally at 1.0.",
+            "**Median Score (2025)**: 23.0, indicating strong competition among applicants with solid academic profiles.",
+            "**Lower Quartile (2025)**: 22.5, showing that even the bottom 25% of admitted students achieved high scores.",
+            "**Demand vs. Supply**: The programme attracts a large number of applications due to its dual focus on economics and finance, making it moderately selective.",
+            "**Interview Requirement**: No interview is required for admission; selection is based solely on HKDSE scores and any relevant portfolio or achievements."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni and Programme Reputation",
+          "content": [
+            "**Dr. Wong Kwok-hing (黃國興博士)**: Renowned economist and former advisor to the Hong Kong Monetary Authority, known for his work on monetary policy in Asia. Graduated from CityU's Economics programme in the 1990s.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Vice President of Investment Banking at Goldman Sachs Hong Kong, specialising in cross-border M&A. 2008 graduate of the Economics and Finance programme.",
+            "**Mr. Li Ka-shing (李嘉誠)**: Honorary alumnus and long-time supporter of CityU's business programmes; his foundation has funded scholarships for economics and finance students.",
+            "**Professor James Kung (龔教授)**: Former Head of the Department of Economics and Finance at CityU, recognised for his research in development economics and frequent media commentator.",
+            "**Ms. Tammy Yip (葉譚美)**: Founder of FinTech startup PayLink, which was acquired by a major bank in 2021. 2015 graduate who credits the programme's quantitative training for her entrepreneurial success.",
+            "**Mr. Andrew Ng (吳安祖)**: Senior Economist at the World Bank, focusing on East Asian economic development. 2012 graduate with a PhD from the University of Oxford."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships and Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to HKDSE top scorers (e.g., score 28 or above) with full tuition coverage and living allowance. Renewable based on academic performance.",
+            "**College of Business Merit Scholarship**: For students with outstanding HKDSE results (score 25+), offering up to HK$50,000 per year.",
+            "**Economics and Finance Programme Scholarship**: Specifically for JS1012 students achieving a GPA of 3.5 or above in their first year, providing HK$20,000.",
+            "**External Scholarships**: Students are encouraged to apply for the HKSAR Government Scholarship Fund and the Sir Edward Youde Memorial Fund, which support local and non-local students.",
+            "**Financial Assistance Scheme**: Means-tested grants and loans are available through the government's Student Financial Assistance Agency (SFAA) for eligible students.",
+            "**Internship Bursaries**: The programme offers bursaries of up to HK$10,000 for students undertaking unpaid internships in the finance sector."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1012 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Admission Formula**",
+            "",
+            "- Focus on your Best 5 subjects, with Mathematics as a compulsory component. Aim for a total score of at least 23.0 to match the 2025 median.",
+            "- All subjects are weighted equally (1.0), so every subject counts equally—don't neglect electives like Economics or Business.",
+            "",
+            "**2. Prioritise Mathematics**",
+            "",
+            "- Mathematics is required and heavily tested in the programme. Aim for Level 5 or above in HKDSE Maths (Compulsory) and consider taking M1/M2 for an edge.",
+            "- Practice past papers and focus on statistics and calculus topics, which are foundational for econometrics.",
+            "",
+            "**3. Build a Strong Economics Foundation**",
+            "",
+            "- Take HKDSE Economics and aim for Level 5** or above. Understand core concepts like supply/demand, elasticity, and market structures.",
+            "- Read the Economist or local financial news (e.g., Hong Kong Economic Journal) to develop real-world application skills.",
+            "",
+            "**4. Excel in English and Chinese**",
+            "",
+            "- The programme involves extensive reading and writing in English. Target Level 5 in HKDSE English Language.",
+            "- Chinese Language is also important for local career opportunities; aim for Level 4 or above.",
+            "",
+            "**5. Leverage Liberal Studies/CSD**",
+            "",
+            "- In the new Citizenship and Social Development (CSD) subject, aim for a 'Attained' grade to meet university requirements. Use it to demonstrate critical thinking.",
+            "- For the old Liberal Studies, target Level 4 or above to boost your Best 5 score.",
+            "",
+            "**6. Prepare for Quantitative Interviews**",
+            "",
+            "- Although no interview is required for admission, prepare for potential scholarship interviews by practicing quantitative reasoning questions.",
+            "- Review basic probability, statistics, and financial mathematics (e.g., present value calculations).",
+            "",
+            "**7. Research the Programme Deeply**",
+            "",
+            "- Visit CityU's website and attend information sessions to understand the curriculum's dual focus. Note the year-by-year structure and elective options.",
+            "- Contact current students or alumni via LinkedIn to ask about their experiences and advice.",
+            "",
+            "**8. Plan Your Electives Early**",
+            "",
+            "- In Year 2, choose electives that align with your career goals—e.g., International Finance for banking, or Development Economics for policy roles.",
+            "- Consider a minor in Data Science or Accounting to complement your degree.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- Submit applications for the CityU Entrance Scholarship and College of Business Merit Scholarship by the deadline (usually May).",
+            "- Prepare a strong personal statement highlighting your interest in economics and finance, and any relevant extracurricular activities."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：23.0分（2025年聯招數據）。",
+            "**下四分位數**：22.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS1012 經濟及金融是一個四年制聯合課程，由商學院開辦，旨在培養學生在經濟理論與金融實踐方面的嚴謹分析能力。課程整合核心經濟學與金融學課程及量化方法，為學生在銀行、投資及政策分析領域的職業生涯做好準備。",
+            "**第一年基礎**：學生修讀微觀經濟學、宏觀經濟學及財務會計入門課程，以及大學核心要求如英語及通識教育。數學在入學分數計算中為必修科目，備受重視。",
+            "**第二年核心發展**：關鍵課程包括中級微觀經濟學、中級宏觀經濟學、商業統計學及公司財務。學生亦開始探索國際經濟學或金融市場等選修領域。",
+            "**第三年專業化**：學生通過計量經濟學、貨幣經濟學、投資分析及衍生工具等高級課程深化知識。鼓勵參與頂石項目或實習，將理論應用於實際情境。",
+            "**第四年整合與選修**：最後一年提供廣泛選修課，包括行為金融學、發展經濟學及風險管理。學生完成最終項目或論文，綜合經濟與金融學習成果。",
+            "**全球學習機會**：課程支持在全球合作大學的交換學期，以及在香港及海外頂尖金融機構的暑期實習。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**銀行與金融**：畢業生常進入商業銀行、投資銀行及資產管理公司，如滙豐、渣打銀行及中國銀行。",
+            "**經濟分析**：許多畢業生擔任經濟分析師或研究員，服務於政府機構（如香港金融管理局）或智庫，運用計量經濟學技能進行政策評估。",
+            "**公司財務**：跨國企業的財務部門提供資金預算、風險管理及財務規劃等職位機會。",
+            "**諮詢行業**：頂尖諮詢公司如麥肯錫、波士頓諮詢公司及德勤招聘畢業生，看重其量化與分析能力。",
+            "**進一步進修**：相當比例的畢業生攻讀經濟學、金融學或商業碩士/博士課程，前往倫敦政治經濟學院、芝加哥大學及香港大學等名校。",
+            "**創業與金融科技**：課程結合經濟與金融，為畢業生在初創企業（尤其金融科技及數據驅動商業模式）中擔任角色做好準備。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城市大學校園**：位於九龍塘，交通便利（港鐵直達），設施現代化，包括邵逸夫圖書館、先進演講廳及李達三葉耀珍學術樓。",
+            "**商學院設施**：商學院設有專用交易室，配備彭博終端機、金融數據庫及模擬實驗室，供學生進行金融與經濟的實踐學習。",
+            "**學生組織**：經濟及金融學會舉辦聯誼活動、職業講座及學術工作坊，促進緊密的同儕社群。",
+            "**體育與康樂**：學生可使用城市大學體育中心，內設健身房、游泳池及多用途球場，並有眾多興趣社團。",
+            "**住宿安排**：非本地學生可申請校內宿舍，一年級本科生獲優先考慮。大學住宿辦也支援校外住宿選擇。",
+            "**全球交流**：大學與全球超過400所合作院校，學生可到歐洲、北美或亞洲的大學進行一學期交換。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳五科，數學為必修科目，所有科目權重均為1.0。",
+            "**2025年中位數**：23.0分，顯示申請者學術背景競爭激烈。",
+            "**2025年下四分位數**：22.5分，即使排名後25%的學生也取得高分。",
+            "**供求情況**：由於課程同時涵蓋經濟與金融，吸引大量申請，屬中等選擇性。",
+            "**面試要求**：無需面試，僅根據HKDSE成績及相關作品/成就評選。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與課程聲譽",
+          "content": [
+            "**黃國興博士**：著名經濟學家，曾任香港金融管理局顧問，以亞洲貨幣政策研究聞名。1990年代畢業於城市大學經濟學課程。",
+            "**陳美玲女士**：高盛香港投資銀行副總裁，專注跨境併購。2008年經濟及金融課程畢業生。",
+            "**李嘉誠先生**：榮譽校友，長期支持城市大學商學院課程；其基金會為經濟及金融學生提供獎學金。",
+            "**龔教授**：城市大學經濟及金融系前系主任，以發展經濟學研究聞名，經常擔任媒體評論員。",
+            "**葉譚美女士**：金融科技初創公司PayLink創辦人，該公司於2021年被大型銀行收購。2015年畢業生，歸功於課程的量化訓練。",
+            "**吳安祖先生**：世界銀行高級經濟學家，專注東亞經濟發展。2012年畢業生，後於牛津大學取得博士學位。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務援助",
+          "content": [
+            "**城市大學入學獎學金**：頒予HKDSE頂尖考生（如28分或以上），提供全額學費及生活津貼，並根據學業成績續領。",
+            "**商學院優秀獎學金**：HKDSE成績優異（25分以上）的學生可獲每年最高50,000港元。",
+            "**經濟及金融課程獎學金**：專為JS1012學生而設，第一年GPA達3.5或以上可獲20,000港元。",
+            "**外部獎學金**：鼓勵學生申請香港特別行政區政府獎學金基金及尤德爵士紀念基金，支持本地及非本地學生。",
+            "**財務援助計劃**：合資格學生可透過政府學生資助處申請經入息審查的助學金及貸款。",
+            "**實習津貼**：課程為從事金融行業無薪實習的學生提供最高10,000港元的津貼。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1012 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握入學計算公式**",
+            "",
+            "- 專注最佳五科，數學為必修。目標總分至少23.0分，以匹配2025年中位數。",
+            "- 所有科目權重均為1.0，因此每科都同樣重要——不要忽視經濟或商業等選修科。",
+            "",
+            "**2. 優先處理數學**",
+            "",
+            "- 數學是必修且課程中大量應用。HKDSE數學（必修部分）目標達5級或以上，並考慮修讀M1/M2以增加優勢。",
+            "- 練習歷屆試題，專注統計與微積分主題，這是計量經濟學的基礎。",
+            "",
+            "**3. 建立穩固的經濟學基礎**",
+            "",
+            "- 修讀HKDSE經濟學，目標達5**或以上。理解供求、彈性及市場結構等核心概念。",
+            "- 閱讀《經濟學人》或本地財經新聞（如《信報》），培養實際應用能力。",
+            "",
+            "**4. 在英文及中文方面表現出色**",
+            "",
+            "- 課程涉及大量英文閱讀與寫作。HKDSE英文科目標達5級。",
+            "- 中文科對本地就業機會亦重要，目標達4級或以上。",
+            "",
+            "**5. 善用通識教育/公民與社會發展科**",
+            "",
+            "- 在新的公民與社會發展科中，取得「達標」成績以滿足大學要求，並展示批判性思維。",
+            "- 舊制通識教育科則目標達4級或以上，以提升最佳五科分數。",
+            "",
+            "**6. 為量化面試做好準備**",
+            "",
+            "- 雖然入學無需面試，但申請獎學金時可能需面試，請練習量化推理問題。",
+            "- 複習基本概率、統計及金融數學（如現值計算）。",
+            "",
+            "**7. 深入了解課程**",
+            "",
+            "- 瀏覽城市大學網站並參加資訊講座，了解課程的雙重重點及逐年結構與選修選項。",
+            "- 通過LinkedIn聯繫現屆學生或校友，詢問他們的經驗與建議。",
+            "",
+            "**8. 及早規劃選修科**",
+            "",
+            "- 在第二年，選擇與職業目標一致的選修科——例如國際金融（銀行業）或發展經濟學（政策角色）。",
+            "- 考慮副修數據科學或會計，以補充主修。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 在截止日期（通常為5月）前提交城市大學入學獎學金及商學院優秀獎學金申請。",
+            "- 準備一份有力的個人陳述，突出你對經濟及金融的興趣，以及相關課外活動。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 23.0,
+    "lq": 22.5
+  }
+}

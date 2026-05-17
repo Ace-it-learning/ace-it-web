@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import ChatInterface from '../components/ChatInterface';
 import { cn } from '../utils/cn';
-import StatsBar from '../components/StatsBar'; // Keeping it imported even if unused for now
+// StatsBar removed from dashboard — now embedded in Sidebar
 import { useAvatar } from '../context/AvatarContext';
 import { useLanguage } from '../context/LanguageContext';
 import RoadmapWidget from '../components/dashboard/RoadmapWidget';
@@ -73,20 +73,19 @@ const Dashboard = () => {
     return (
         <>
             <div className={cn(
-                "grid grid-cols-1 gap-8 items-start h-full",
-                isFocusMode ? "grid-cols-1" : "md:grid-cols-12"
+                "flex h-[calc(100vh-5rem)]",
+                isFocusMode && "h-full"
             )}>
-                {/* Left Column: Header + Sidebar */}
+                {/* Left Column: Sidebar */}
                 {!isFocusMode && (
-                    <div className="md:col-span-3 flex flex-col gap-6 h-full overflow-y-auto pr-2 custom-scrollbar animate-in slide-out-to-left-4 duration-300">
-                        <Sidebar />
+                    <div className="w-full md:w-[280px] lg:w-[320px] flex-shrink-0 h-full overflow-y-auto custom-scrollbar border-r border-black/5 dark:border-white/10">
+                        <Sidebar stats={stats} />
                     </div>
                 )}
 
                 {/* Right Column: Chat Interface */}
-                <div className="md:col-span-9 h-full flex flex-col gap-4">
+                <div className="flex-1 h-full overflow-hidden">
                     <ChatInterface onOpenQuest={handleOpenQuest} />
-                    <StatsBar />
                 </div>
             </div>
 

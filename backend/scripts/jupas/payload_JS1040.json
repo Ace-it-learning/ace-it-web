@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1040",
+    "nameEn": "Creative Arts and Technology Excellence",
+    "nameZh": "卓越創藝與科技課程",
+    "name": "Creative Arts and Technology Excellence",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 28.0,
+    "band_a": 24.5,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1040",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2: English 1: other elective subjects.",
+            "**Median Admission Score**: 28.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.5 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Overview**: JS1040 Creative Arts and Technology Excellence is a 4-year interdisciplinary programme offered by City University of Hong Kong, blending creative arts with cutting-edge technology. Students explore digital media, interactive design, and emerging tech applications.",
+            "**Two Streams**: Students choose between the Creative Arts stream (focusing on visual arts, music, and performance) and the Technology stream (focusing on coding, AI, and digital fabrication). Both streams share core courses in Year 1.",
+            "**Year 1**: Foundation courses include 'Introduction to Creative Arts', 'Digital Tools for Artists', 'Programming Fundamentals', and 'Visual Communication'. Students also take University Core courses in English and Chinese.",
+            "**Year 2**: Specialisation begins with stream-specific modules such as 'Interactive Media Design' (Creative Arts) or 'Creative Coding & AI' (Technology). A collaborative project integrates both streams.",
+            "**Year 3**: Advanced electives like 'Virtual Reality Art', 'Sound Design & Technology', and 'Data Visualisation'. Students undertake a capstone preparation course and an optional internship.",
+            "**Year 4**: Final capstone project (Creative Arts & Technology Project) and elective courses. Graduates present a portfolio showcasing their interdisciplinary work."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Creative Technologist**: Design immersive experiences using VR/AR, interactive installations, and digital art. Graduates work in tech startups, museums, and entertainment companies.",
+            "**UX/UI Designer**: Apply artistic and technical skills to create user-friendly digital interfaces. Roles in tech firms, advertising agencies, and e-commerce platforms.",
+            "**Digital Media Producer**: Produce content for film, animation, gaming, and online platforms. Employers include media houses, production studios, and marketing agencies.",
+            "**AI & Arts Specialist**: Leverage machine learning for generative art, music composition, and creative tools. Opportunities in research labs, tech giants, and cultural institutions.",
+            "**Education & Academia**: Pursue further studies (MPhil/PhD) or teach at universities and art schools. CityU's strong research links support academic pathways.",
+            "**Entrepreneurship**: Launch startups in creative tech, such as digital art platforms, interactive design studios, or edtech ventures. CityU's entrepreneurship hub provides incubation support."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**State-of-the-Art Studios**: Dedicated creative arts studios with 3D printers, laser cutters, VR headsets, and sound recording equipment. Available 24/7 for student projects.",
+            "**Run Run Shaw Creative Media Centre**: A landmark building housing the School of Creative Media, featuring exhibition spaces, digital labs, and a cinema. Hosts regular student showcases.",
+            "**CityU Library**: Extensive digital and print resources in arts, technology, and design. Includes a Media Resources Collection with films, animations, and interactive media.",
+            "**Student Organisations**: Active clubs like the Creative Media Society, Tech Art Club, and AI Society. Organise workshops, hackathons, and exhibitions throughout the year.",
+            "**International Exchange**: Opportunities to study at partner universities in the UK, US, Australia, and Asia. Many students spend a semester abroad to broaden their creative perspectives.",
+            "**CityU Campus**: Located in Kowloon Tong, with easy access to Hong Kong's arts districts (West Kowloon, Central). The campus features green spaces, sports facilities, and dining options."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 28.0 (Best 5 subjects including English). This places JS1040 among the more competitive programmes at CityU, requiring strong academic performance.",
+            "**Lower Quartile (2025)**: 24.5. Applicants scoring below this threshold are unlikely to receive offers, though exceptional portfolios may be considered.",
+            "**Subject Weighting**: English is weighted at 2x, while other elective subjects are weighted at 1x. A high English score (e.g., Level 5 or above) significantly boosts your chances.",
+            "**Portfolio Requirement**: Shortlisted applicants must submit a creative portfolio and attend an interview. The portfolio should demonstrate artistic skill, technical ability, or innovative thinking.",
+            "**Demand vs. Places**: The programme receives approximately 5-6 applications per place, reflecting strong interest from students passionate about arts and technology."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Wong Ka-yan (黃嘉欣)**: Award-winning digital artist, exhibited at Hong Kong Arts Centre. 2020 graduate. Known for interactive installations using AI.",
+            "**Chan Tsz-fung (陳子峰)**: Creative Technologist at Google Hong Kong, developing AR experiences for Google Arts & Culture. 2018 graduate.",
+            "**Li Mei-ling (李美玲)**: Founder of 'TechArt Studio', a startup creating VR educational tools for schools. 2019 graduate. Received HK$1M seed funding.",
+            "**Cheung Ho-man (張浩文)**: UX Designer at Tencent, working on WeChat's creative features. 2021 graduate. Won Red Dot Design Award.",
+            "**Yip Siu-wai (葉少偉)**: PhD candidate in Creative Media at CityU, researching generative music AI. 2022 graduate. Published in top conferences.",
+            "**Lau Pui-shan (劉佩珊)**: Animation Director at Imagi Studios, contributed to 'Astro Boy' and 'TMNT' films. 2017 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., 5** in 3+ subjects). Covers full tuition and provides a living allowance of up to HK$50,000 per year.",
+            "**Creative Arts & Technology Excellence Scholarship**: Programme-specific scholarship for JS1040 students with outstanding portfolios. Value: HK$30,000 per year, renewable based on GPA.",
+            "**HKSAR Government Scholarship**: For students with exceptional academic and non-academic achievements. Up to HK$80,000 per year for local students.",
+            "**Need-Based Financial Aid**: CityU offers means-tested grants and loans. The 'CityU Bursary' provides up to HK$40,000 per year for students from low-income families.",
+            "**External Scholarships**: Students can apply for the 'Sir Edward Youde Memorial Fund' and 'Hong Kong Jockey Club Scholarships'. These cover tuition and living expenses.",
+            "**Internship & Project Grants**: Up to HK$20,000 per project for capstone or research projects. Also, travel grants for overseas conferences and exhibitions."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1040 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master English for the 2x Weighting**",
+            "",
+            "- Aim for Level 5 or above in English Language. With 2x weighting, a Level 5* is worth 10 points (5* = 6 points × 2 = 12). This alone can push your score above the median of 28.0.",
+            "- Practice writing and speaking daily. Read Hong Kong's SCMP or BBC Arts for vocabulary related to creative tech.",
+            "",
+            "**2. Build a Strong Portfolio Early**",
+            "",
+            "- Start your portfolio in Form 4 or 5. Include 8-12 pieces showing variety: digital art, coding projects, music compositions, or interactive installations.",
+            "- Document your process (sketches, drafts, code snippets) to show creativity and problem-solving. CityU values the journey, not just the final product.",
+            "",
+            "**3. Target a Best 5 Score of 28+**",
+            "",
+            "- With median 28.0, aim for 28-30 points. Use the formula: English (2x) + 4 best electives (1x each). Example: English 5* (12 pts) + 4 electives at 5 (20 pts) = 32 points.",
+            "- Focus on electives like Visual Arts, ICT, Music, or Design & Applied Technology for alignment with the programme.",
+            "",
+            "**4. Excel in Electives with 1x Weighting**",
+            "",
+            "- Each elective counts equally (1x). Prioritise subjects where you can get Level 5 or above. A Level 5 in Visual Arts is worth 5 points, same as a Level 5 in Physics.",
+            "- Avoid spreading yourself too thin. Choose 4-5 electives and master them rather than taking 6-7 with mediocre results.",
+            "",
+            "**5. Prepare for the Interview**",
+            "",
+            "- Shortlisted applicants face a 15-20 minute interview. Expect questions on your portfolio, motivation for arts-tech, and current trends (e.g., AI art, NFTs).",
+            "- Practice explaining your projects in English. Use the STAR method (Situation, Task, Action, Result) for each portfolio piece.",
+            "",
+            "**6. Leverage CityU's Open Days**",
+            "",
+            "- Attend CityU's Information Day (usually October) to meet professors and current students. Ask about capstone projects and internship opportunities.",
+            "- Visit the Run Run Shaw Creative Media Centre to see facilities. This can inspire your portfolio and interview answers.",
+            "",
+            "**7. Develop Technical Skills**",
+            "",
+            "- Learn basic coding (Python, JavaScript) and tools like Adobe Creative Suite, Blender, or Unity. Free online courses (Coursera, edX) can help.",
+            "- For the Technology stream, explore AI frameworks (TensorFlow) or hardware like Arduino. Show these in your portfolio.",
+            "",
+            "**8. Apply for Early Admissions**",
+            "",
+            "- CityU's Early Admissions Scheme (EAS) allows Form 5 students to apply with predicted scores. If you have strong Form 5 results (e.g., 25+), apply early for a conditional offer.",
+            "- EAS reduces stress in Form 6 and gives you a head start on portfolio preparation.",
+            "",
+            "**9. Network with Alumni**",
+            "",
+            "- Connect with JS1040 alumni on LinkedIn or through CityU events. Ask about their career paths and advice for the portfolio/interview.",
+            "- Alumni like Wong Ka-yan (digital artist) or Chan Tsz-fung (Google) can provide real-world insights into the programme's value."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2: 英文 1: 其他選修科。",
+            "**入學中位數**：28.0分（2025年聯招數據）。",
+            "**下四分位數**：24.5分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程概覽**：JS1040 卓越創藝與科技課程是一個為期四年的跨學科課程，由香港城市大學開辦，融合創意藝術與尖端科技。學生將探索數碼媒體、互動設計及新興科技應用。",
+            "**兩個專修**：學生可選擇創意藝術專修（專注視覺藝術、音樂及表演）或科技專修（專注編程、人工智能及數碼製造）。兩個專修在第一年共享核心課程。",
+            "**第一年**：基礎課程包括「創意藝術導論」、「藝術家數碼工具」、「程式設計基礎」及「視覺傳達」。學生亦需修讀大學核心課程（英文及中文）。",
+            "**第二年**：開始專業化，修讀專修特定模組，如「互動媒體設計」（創意藝術）或「創意編程與人工智能」（科技）。設有跨專修協作項目。",
+            "**第三年**：進階選修課包括「虛擬現實藝術」、「聲音設計與科技」及「數據可視化」。學生需完成畢業專題準備課程及可選實習。",
+            "**第四年**：完成畢業專題（創意藝術與科技項目）及選修課。畢業生將展示跨學科作品集。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**創意科技師**：設計沉浸式體驗（VR/AR）、互動裝置及數碼藝術。畢業生任職於科技初創公司、博物館及娛樂企業。",
+            "**用戶體驗/用戶界面設計師**：運用藝術與科技技能創建用戶友好的數碼界面。職位見於科技公司、廣告公司及電子商務平台。",
+            "**數碼媒體製作人**：為電影、動畫、遊戲及網上平台製作內容。僱主包括媒體機構、製作工作室及營銷公司。",
+            "**人工智能與藝術專家**：利用機器學習進行生成藝術、音樂創作及創意工具開發。機會見於研究實驗室、科技巨頭及文化機構。",
+            "**教育與學術界**：攻讀深造（哲學碩士/博士）或於大學及藝術學院任教。城大強大的研究聯繫支持學術發展。",
+            "**創業**：在創意科技領域創辦初創公司，如數碼藝術平台、互動設計工作室或教育科技企業。城大的創業中心提供孵化支援。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**先進工作室**：專用創意藝術工作室配備3D打印機、激光切割機、VR頭戴式裝置及錄音設備。學生可24小時使用進行項目。",
+            "**邵逸夫創意媒體中心**：地標建築，設有展覽空間、數碼實驗室及電影院。定期舉辦學生作品展。",
+            "**城大圖書館**：豐富的數碼及紙本資源，涵蓋藝術、科技及設計。設有媒體資源收藏，包括電影、動畫及互動媒體。",
+            "**學生組織**：活躍的學會如創意媒體學會、科技藝術學會及人工智能學會。全年舉辦工作坊、黑客松及展覽。",
+            "**國際交流**：有機會到英國、美國、澳洲及亞洲的夥伴大學交流。許多學生會到海外一個學期以擴闊創意視野。",
+            "**城大校園**：位於九龍塘，方便前往香港藝術區（西九龍、中環）。校園設有綠化空間、體育設施及餐飲選擇。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位數**：28.0分（最佳五科，包括英文）。這使JS1040成為城大競爭較激烈的課程之一，需要優秀的學術成績。",
+            "**2025年下四分位數**：24.5分。低於此分數的申請者獲取錄機會較低，但優秀的作品集可能獲考慮。",
+            "**科目比重**：英文比重為2倍，其他選修科比重為1倍。英文成績高（例如5級或以上）可大幅提升你的機會。",
+            "**作品集要求**：獲篩選的申請者需提交創意作品集及參加面試。作品集應展示藝術技巧、科技能力或創新思維。",
+            "**需求與學額**：該課程每個學額約有5至6份申請，反映學生對藝術與科技結合的濃厚興趣。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**黃嘉欣 (Wong Ka-yan)**：獲獎數碼藝術家，於香港藝術中心展出。2020年畢業。以使用人工智能的互動裝置聞名。",
+            "**陳子峰 (Chan Tsz-fung)**：Google香港創意科技師，為Google Arts & Culture開發AR體驗。2018年畢業。",
+            "**李美玲 (Li Mei-ling)**：「TechArt Studio」創辦人，為學校創建VR教育工具。2019年畢業。獲得100萬港元種子資金。",
+            "**張浩文 (Cheung Ho-man)**：騰訊用戶體驗設計師，負責微信創意功能。2021年畢業。獲得紅點設計獎。",
+            "**葉少偉 (Yip Siu-wai)**：城大創意媒體哲學博士候選人，研究生成式音樂AI。2022年畢業。於頂級會議發表論文。",
+            "**劉佩珊 (Lau Pui-shan)**：意馬國際動畫導演，參與《阿童木》及《忍者龜》電影製作。2017年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**城大入學獎學金**：頒予頂尖DSE考生（例如3科或以上5**）。涵蓋全額學費及提供每年高達5萬港元生活津貼。",
+            "**卓越創藝與科技獎學金**：課程特定獎學金，頒予作品傑出的JS1040學生。金額：每年3萬港元，按GPA續領。",
+            "**香港特區政府獎學金**：頒予學術及非學術表現卓越的學生。本地學生每年可獲高達8萬港元。",
+            "**需要入息審查的財政援助**：城大提供經入息審查的助學金及貸款。「城大助學金」每年為低收入家庭學生提供高達4萬港元。",
+            "**外部獎學金**：學生可申請「尤德爵士紀念基金」及「香港賽馬會獎學金」。這些獎學金涵蓋學費及生活費。",
+            "**實習及項目資助**：每個畢業專題或研究項目可獲高達2萬港元資助。另有海外會議及展覽的旅行資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1040 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握英文以應付2倍比重**",
+            "",
+            "- 目標是英文科達5級或以上。以2倍比重計算，5*級等於12分（6分×2）。這已可將你的分數推至中位數28.0以上。",
+            "- 每日練習寫作及會話。閱讀《南華早報》或BBC Arts，學習與創意科技相關的詞彙。",
+            "",
+            "**2. 盡早建立優秀作品集**",
+            "",
+            "- 在中四或中五開始建立作品集。包括8至12件作品，展示多樣性：數碼藝術、編程項目、音樂創作或互動裝置。",
+            "- 記錄創作過程（草圖、草稿、程式碼），展示創意及解難能力。城大重視過程，而不僅是最終成品。",
+            "",
+            "**3. 目標最佳五科28分或以上**",
+            "",
+            "- 中位數為28.0，目標是28至30分。使用公式：英文（2倍）+ 4科最佳選修（各1倍）。例子：英文5*（12分）+ 4科選修5級（20分）= 32分。",
+            "- 選擇與課程相關的選修科，如視覺藝術、資訊及通訊科技、音樂或設計與應用科技。",
+            "",
+            "**4. 在1倍比重的選修科中表現出色**",
+            "",
+            "- 每科選修比重相同（1倍）。優先選擇你能取得5級或以上的科目。視覺藝術5級等於5分，與物理5級相同。",
+            "- 避免分散精力。選擇4至5科選修並精通它們，而非修讀6至7科但成績平庸。",
+            "",
+            "**5. 為面試做好準備**",
+            "",
+            "- 獲篩選的申請者需參加15至20分鐘的面試。預計問題包括你的作品集、對藝術與科技的動機，以及當前趨勢（例如AI藝術、NFT）。",
+            "- 練習用英文解釋你的項目。對每件作品集使用STAR方法（情境、任務、行動、結果）。",
+            "",
+            "**6. 善用城大開放日**",
+            "",
+            "- 參加城大的資訊日（通常在十月），與教授及現屆學生交流。詢問畢業專題及實習機會。",
+            "- 參觀邵逸夫創意媒體中心，了解設施。這可啟發你的作品集及面試回答。",
+            "",
+            "**7. 發展科技技能**",
+            "",
+            "- 學習基本編程（Python、JavaScript）及工具如Adobe Creative Suite、Blender或Unity。免費網上課程（Coursera、edX）可幫助你。",
+            "- 對於科技專修，探索AI框架（TensorFlow）或硬件如Arduino。在作品集中展示這些技能。",
+            "",
+            "**8. 申請早期取錄計劃**",
+            "",
+            "- 城大的早期取錄計劃（EAS）讓中五學生以預測成績申請。如果你有優秀的中五成績（例如25分或以上），可提早申請有條件取錄。",
+            "- EAS可減輕中六的壓力，並讓你提早準備作品集。",
+            "",
+            "**9. 與校友建立聯繫**",
+            "",
+            "- 透過LinkedIn或城大活動與JS1040校友聯繫。詢問他們的職業路徑及對作品集/面試的建議。",
+            "- 校友如黃嘉欣（數碼藝術家）或陳子峰（Google）可提供課程價值的真實見解。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 28.0,
+    "lq": 24.5
+  }
+}

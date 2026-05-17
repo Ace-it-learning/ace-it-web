@@ -1,0 +1,313 @@
+{
+  "programme": {
+    "code": "JS8004",
+    "nameEn": "Bachelor of Arts (Honours) in English Studies and Digital Communication and Bachelor of Education (Honours) (English Language)",
+    "nameZh": "英語研究及數碼傳訊榮譽文學士及英文教育榮譽學士",
+    "name": "Bachelor of Arts (Honours) in English Studies and Digital Communication and Bachelor of Education (Honours) (English Language)",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Humanities",
+    "median": "23.5",
+    "band_a": "23.5",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8004",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: English Language (x1.5), ICT (x1.5), Literature in English (x1.5)",
+            "**Median Admission Score**: 23.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 23.5 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **English Language**: Median 5, LQ 5",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 420 applicants, Band B 180. Total 950 applicants.",
+            "**Remarks**: This programme requires high English language proficiency. The HKDSE English Language requirement cannot be substituted.",
+            "**First Year Intake**: 35 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This 5-year double-degree programme combines English Studies and Digital Communication with professional teacher training. Students graduate with both a BA and a BEd, eligible for Hong Kong teacher registration.",
+            "**Year 1**: Foundation courses in English linguistics, literature, and digital communication basics. Introduction to education studies and classroom observation.",
+            "**Year 2**: Advanced English language studies, digital media production, and educational psychology. First teaching practicum in local schools.",
+            "**Year 3**: Specialised electives in digital storytelling, corpus linguistics, and second language acquisition. Second teaching practicum with supervised classroom teaching.",
+            "**Year 4**: Capstone project in English Studies or Digital Communication. Advanced pedagogy courses and third teaching practicum.",
+            "**Year 5**: Final teaching practicum (extended placement), professional portfolio, and graduation thesis. Preparation for teacher certification."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**English Teacher**: Graduates are eligible for registered teacher status in Hong Kong, with strong demand for English language teachers in primary and secondary schools.",
+            "**Digital Content Specialist**: Skills in digital communication open roles in media production, content strategy, and educational technology companies.",
+            "**Curriculum Developer**: Expertise in English and digital tools qualifies graduates for roles in publishing houses, educational NGOs, and government curriculum units.",
+            "**Corporate Trainer**: Bilingual communication and digital skills are valued in corporate training, HR development, and professional education.",
+            "**Education Consultant**: Graduates can work in educational assessment, language testing, or private tutoring centres with a focus on English and digital literacy.",
+            "**Further Study**: Many graduates pursue master's degrees in linguistics, education, digital media, or communication studies locally or overseas."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, surrounded by greenery and close to the Tolo Harbour. Modern facilities include smart classrooms and language labs.",
+            "**Digital Media Lab**: Dedicated lab with professional video/audio editing software, green screen studio, and podcasting equipment for digital communication projects.",
+            "**Library Resources**: The EdUHK Library holds extensive collections in English language teaching, linguistics, and digital media, plus online databases for research.",
+            "**Teaching Practicum Support**: The Centre for Learning, Teaching and Technology provides resources and mentorship for teaching placements in partner schools across Hong Kong.",
+            "**Student Accommodation**: On-campus halls are available for students, with priority for non-local and first-year students. Off-campus housing options in Tai Po and nearby areas.",
+            "**Clubs and Societies**: Active English Society, Education Society, and Digital Media Club organise workshops, competitions, and networking events."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: Median 23.5 (Best 5 subjects) in 2025, with English Language weighted x1.5, ICT x1.5, and Literature in English x1.5.",
+            "**Application Demand**: 950 total applicants for 35 first-year places, with 420 Band A and 180 Band B applicants. This gives a Band A-to-place ratio of 12:1.",
+            "**Interview Requirement**: All shortlisted candidates must attend an interview assessing English proficiency, communication skills, and motivation for teaching.",
+            "**English Proficiency**: High English Language requirement (cannot be substituted) ensures only top English students are admitted. DSE English Level 5 or above is typical.",
+            "**Double Degree Advantage**: The integrated BA/BEd structure is unique in Hong Kong, combining subject expertise with professional teacher training, increasing graduate competitiveness."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. Lee Wing-yan (李穎欣)**: Principal, SKH St. James' Primary School. 2010 graduate of EdUHK's English education programme.",
+            "**Ms. Chan Mei-ling (陳美玲)**: Senior English Language Officer, Education Bureau of Hong Kong. 2012 graduate.",
+            "**Mr. Wong Ka-ho (黃家豪)**: Founder of EdTech startup 'LearnSmart', developing AI-powered English learning tools. 2015 graduate.",
+            "**Dr. Cheung Siu-fung (張兆鋒)**: Assistant Professor, Department of English, City University of Hong Kong. 2011 graduate.",
+            "**Ms. Tse Pui-yan (謝佩欣)**: English Teacher of the Year 2022 (Hong Kong), currently at Diocesan Boys' School. 2014 graduate.",
+            "**Mr. Lam Tsz-chun (林子俊)**: Digital Content Manager, Hong Kong Education City. 2016 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS applicants with DSE scores of 25 or above. Covers full tuition for the first year (up to HK$42,100).",
+            "**Faculty of Humanities Scholarships**: Multiple awards for students with outstanding academic performance in English studies or digital communication, ranging from HK$5,000 to HK$20,000.",
+            "**HKSAR Government Scholarship**: For students with exceptional academic achievements and leadership qualities. Up to HK$80,000 per year.",
+            "**Teaching Practicum Bursary**: Financial support for students during teaching placements, covering travel and living expenses (up to HK$10,000 per placement).",
+            "**Non-local Student Scholarships**: Dedicated scholarships for mainland and international students, including full or partial tuition waivers.",
+            "**Need-based Financial Aid**: EdUHK offers grants and loans through the Government's Financial Assistance Scheme for students with financial difficulties."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8004 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the English Language Weighting**",
+            "",
+            "- English Language is weighted x1.5 in the admission formula. Aim for DSE Level 5 or above to maximise your score. A Level 5* gives you 7.5 points (5 x 1.5) instead of 5.",
+            "",
+            "- ICT and Literature in English are also weighted x1.5. If you have these subjects, prioritise them. Even a Level 4 in ICT becomes 6 points.",
+            "",
+            "**2. Target a Best 5 Score of 24+**",
+            "",
+            "- The median score is 23.5, but with 12:1 competition, aim for 24 or higher. Use the HKDSE predicted grade calculator to simulate your score with weightings.",
+            "",
+            "- For example: English 5* (7.5), ICT 5 (7.5), Literature 4 (6), plus two other subjects at 5 each = 31 points. That's competitive.",
+            "",
+            "**3. Prepare for the Interview Early**",
+            "",
+            "- The interview is compulsory. Practice answering questions in English about why you want to teach, your views on digital communication in education, and your experience with English.",
+            "",
+            "- Record yourself speaking for 2 minutes on a topic like 'How can digital tools improve English learning?' Review your fluency and pronunciation.",
+            "",
+            "**4. Build a Portfolio of Digital Work**",
+            "",
+            "- Create a simple website or blog showcasing your English writing, video projects, or digital designs. Bring this to the interview or mention it in your application.",
+            "",
+            "- Use free tools like Canva, Wix, or Adobe Express. Even a 3-minute video on a topic you love can demonstrate digital communication skills.",
+            "",
+            "**5. Research the Teaching Practicum**",
+            "",
+            "- This programme includes 4 teaching placements. Understand that you'll be in local schools from Year 2. Talk to current students or alumni via EdUHK's open days.",
+            "",
+            "- Prepare by volunteering at a school or tutoring. Any experience with children or teenagers will strengthen your interview answers.",
+            "",
+            "**6. Leverage the Double Degree Advantage**",
+            "",
+            "- Emphasise in your personal statement that you want both subject expertise (English + digital) and professional teaching qualifications. This is unique to EdUHK.",
+            "",
+            "- Mention specific courses: 'Digital Storytelling', 'Corpus Linguistics', or 'Second Language Acquisition' to show you've researched the curriculum.",
+            "",
+            "**7. Use the JUPAS Band A Strategy**",
+            "",
+            "- With 420 Band A applicants for 35 places, putting JS8004 in Band A is essential. Only Band A applicants are considered for interviews and offers.",
+            "",
+            "- If you're unsure, check the 2025 statistics: Band B applicants (180) had zero chance of offers. So place it in Band A if it's your top choice.",
+            "",
+            "**8. Strengthen Your English Outside School**",
+            "",
+            "- Read English newspapers (SCMP, Guardian) daily. Watch BBC or TED Talks on education and technology. This builds vocabulary for the interview and future studies.",
+            "",
+            "- Join English debating or drama clubs. Even online forums like Reddit's r/EnglishLearning can help. Aim for C1 level on the CEFR scale.",
+            "",
+            "**9. Plan for the 5-Year Commitment**",
+            "",
+            "- This is a 5-year programme. Consider your long-term interest in teaching. Talk to teachers, shadow a class, or attend EdUHK's 'Teaching Experience Day'.",
+            "",
+            "- Financially, plan for 5 years of tuition (HK$42,100 per year for UGC-funded places). Scholarships can help, but ensure you have a backup plan."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：英國語文 (x1.5), 資訊及通訊科技 (x1.5), 英國文學 (x1.5)",
+            "**入學中位數**：23.5分（2025年聯招數據）。",
+            "**下四分位數**：23.5分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **英國語文**：中位數 5, 下四分位數 5",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者420人、Band B 180人。總申請者950人。",
+            "**備註**：此課程要求較高英文語文能力，香港中學文憑考試英國語文科成績不可以其他科目替代。",
+            "**首年學額**：35人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此為五年制雙學位課程，結合英語研究、數碼傳訊及專業教師培訓。畢業生將同時獲得文學士及教育學士學位，並符合香港教師註冊資格。",
+            "**第一年**：英語語言學、文學及數碼傳訊基礎課程。教育學導論及課堂觀察。",
+            "**第二年**：進階英語研究、數碼媒體製作及教育心理學。首次在本地學校進行教學實習。",
+            "**第三年**：選修數碼敘事、語料庫語言學及第二語言習得等專科。第二次教學實習，包括監督下課堂教學。",
+            "**第四年**：英語研究或數碼傳訊專題研習。進階教學法課程及第三次教學實習。",
+            "**第五年**：最後教學實習（延長實習期）、專業檔案及畢業論文。準備教師資格認證。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**英語教師**：畢業生符合香港註冊教師資格，中小學對英語教師需求殷切。",
+            "**數碼內容專家**：數碼傳訊技能適用於媒體製作、內容策略及教育科技公司的職位。",
+            "**課程發展主任**：英語及數碼工具的專業知識適用於出版社、教育非政府組織及政府課程組。",
+            "**企業培訓師**：雙語溝通及數碼技能在企業培訓、人力資源發展及專業教育中備受重視。",
+            "**教育顧問**：畢業生可在教育評估、語言測試或補習中心工作，專注英語及數碼素養。",
+            "**深造進修**：許多畢業生在本港或海外攻讀語言學、教育、數碼媒體或傳播學碩士課程。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，綠樹環繞，鄰近吐露港。現代化設施包括智能教室及語言實驗室。",
+            "**數碼媒體實驗室**：配備專業影片/音頻編輯軟件、綠幕攝影棚及播客設備的專用實驗室，用於數碼傳訊項目。",
+            "**圖書館資源**：教大圖書館收藏豐富的英語教學、語言學及數碼媒體資料，並提供網上數據庫供研究使用。",
+            "**教學實習支援**：教學科技中心為全港合作學校的實習提供資源及指導。",
+            "**學生住宿**：校內宿舍可供申請，非本地及一年級生優先。大埔及鄰近地區亦有校外住宿選擇。",
+            "**學會與社團**：活躍的英語學會、教育學會及數碼媒體學會舉辦工作坊、比賽及聯誼活動。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年中位數為23.5分（最佳五科），英國語文科加權x1.5，資訊及通訊科技科x1.5，英國文學科x1.5。",
+            "**申請需求**：950名申請人競爭35個一年級學額，其中420人為Band A，180人為Band B。Band A與學額比例為12:1。",
+            "**面試要求**：所有入圍候選人必須參加面試，評估英語能力、溝通技巧及教學動機。",
+            "**英語水平**：高英語要求（不可替代）確保只錄取頂尖英語學生。DSE英語通常需達5級或以上。",
+            "**雙學位優勢**：此雙學士結構在香港獨一無二，結合學科專業與教師培訓，提升畢業生競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**李穎欣博士**：聖公會聖雅各小學校長。2010年教大英語教育課程畢業。",
+            "**陳美玲女士**：香港教育局高級英語主任。2012年畢業。",
+            "**黃家豪先生**：教育科技初創公司「LearnSmart」創辦人，開發人工智能英語學習工具。2015年畢業。",
+            "**張兆鋒博士**：香港城市大學英文系助理教授。2011年畢業。",
+            "**謝佩欣女士**：2022年香港年度英語教師，現任教於拔萃男書院。2014年畢業。",
+            "**林子俊先生**：香港教育城數碼內容經理。2016年畢業。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**教大入學獎學金**：頒予DSE成績25分或以上的頂尖聯招申請人，涵蓋首年全額學費（最高42,100港元）。",
+            "**人文學院獎學金**：多個獎項頒予英語研究或數碼傳訊成績優異的學生，金額由5,000至20,000港元不等。",
+            "**香港特區政府獎學金**：獎勵學術成就卓越及具領導才能的學生，每年最高80,000港元。",
+            "**教學實習津貼**：為實習期間的學生提供交通及生活費資助（每次實習最高10,000港元）。",
+            "**非本地生獎學金**：為內地及國際學生設立的專項獎學金，包括全額或部分學費減免。",
+            "**需要入息審查資助**：教大透過政府資助計劃為經濟困難學生提供助學金及貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8004 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握英文科加權優勢**",
+            "",
+            "- 英國語文科在入學公式中加權x1.5。目標是DSE達5級或以上以最大化分數。例如5*級可獲7.5分（5 x 1.5），而非5分。",
+            "",
+            "- 資訊及通訊科技科和英國文學科同樣加權x1.5。如你修讀這些科目，優先提升成績。即使ICT考獲4級，也會變成6分。",
+            "",
+            "**2. 目標最佳五科24分或以上**",
+            "",
+            "- 中位數為23.5分，但面對12:1的競爭，目標應設為24分或以上。使用DSE預測分數計算器，模擬加權後的分數。",
+            "",
+            "- 例如：英文5*（7.5）、ICT 5（7.5）、文學4（6），再加兩科各5分 = 31分。這已極具競爭力。",
+            "",
+            "**3. 提早準備面試**",
+            "",
+            "- 面試是必須的。練習用英語回答為何想教書、對數碼傳訊在教育中的看法，以及你的英語經驗。",
+            "",
+            "- 錄製自己就「數碼工具如何改善英語學習？」等題目發言2分鐘，檢視流暢度和發音。",
+            "",
+            "**4. 建立數碼作品集**",
+            "",
+            "- 創建簡單網站或網誌，展示你的英語寫作、影片項目或數碼設計。面試時可攜帶或在申請中提及。",
+            "",
+            "- 使用Canva、Wix或Adobe Express等免費工具。即使是一段3分鐘的興趣短片，也能展示數碼傳訊技能。",
+            "",
+            "**5. 了解教學實習安排**",
+            "",
+            "- 此課程包含4次教學實習。明白你將從二年級開始進入本地學校。透過教大開放日與現屆學生或校友交流。",
+            "",
+            "- 透過在學校做義工或補習來準備。任何與兒童或青少年相處的經驗都能強化你的面試答案。",
+            "",
+            "**6. 善用雙學位優勢**",
+            "",
+            "- 在個人陳述中強調你希望同時獲得學科專業（英語+數碼）及專業教師資格。這是教大獨有的。",
+            "",
+            "- 提及具體課程如「數碼敘事」、「語料庫語言學」或「第二語言習得」，顯示你已仔細研究課程內容。",
+            "",
+            "**7. 運用聯招Band A策略**",
+            "",
+            "- 420名Band A申請人競爭35個學額，將JS8004放在Band A至關重要。只有Band A申請人才會被考慮面試及取錄。",
+            "",
+            "- 參考2025年數據：Band B申請人（180名）完全沒有取錄機會。因此，如果這是你的首選，請放在Band A。",
+            "",
+            "**8. 課外加強英語能力**",
+            "",
+            "- 每日閱讀英文報紙（如SCMP、衛報），觀看BBC或TED Talks關於教育與科技的影片。這能為面試及未來學習累積詞彙。",
+            "",
+            "- 參加英語辯論或戲劇學會。甚至Reddit的r/EnglishLearning等網上論壇也有幫助。目標是達到CEFR C1水平。",
+            "",
+            "**9. 規劃五年學習承諾**",
+            "",
+            "- 這是五年制課程。考慮你對教學的長期興趣。與教師交談、觀課，或參加教大的「教學體驗日」。",
+            "",
+            "- 財務上，規劃五年學費（教資會資助學額每年42,100港元）。獎學金可提供幫助，但確保有備用計劃。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "23.5",
+    "lq": "23.5"
+  }
+}

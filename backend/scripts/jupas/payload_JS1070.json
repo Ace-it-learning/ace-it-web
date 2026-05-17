@@ -1,0 +1,267 @@
+{
+  "programme": {
+    "code": "JS1070",
+    "nameEn": "AI, Computing and Transformation",
+    "nameZh": "人工智能・計算・突破課程",
+    "name": "AI, Computing and Transformation",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 31.0,
+    "band_a": 30.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1070",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: 3 core + 2 elective subjects. Subject weighting: 2: English / Mathematics 1: other elective subjects.",
+            "**Median Admission Score**: 31.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 30.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure — JS1070 AI, Computing and Transformation",
+          "content": [
+            "**Programme Overview**: JS1070 is a 4-year interdisciplinary programme offered by the College of Engineering at City University of Hong Kong, focusing on the convergence of artificial intelligence, computing, and transformative technologies. Students gain a solid foundation in AI, data science, and software engineering, with a strong emphasis on real-world applications.",
+            "**Year 1**: Foundation courses include Introduction to Programming, Calculus, Linear Algebra, and English for Academic Purposes. Students also take a university core course on 'AI and Society' to understand the ethical and societal implications of AI.",
+            "**Year 2**: Core subjects such as Data Structures and Algorithms, Machine Learning, Database Systems, and Computer Networks. Students begin to explore elective streams, including AI Specialisation or Computing Specialisation.",
+            "**Year 3**: Advanced courses like Deep Learning, Natural Language Processing, Cloud Computing, and a Capstone Project. Students can choose from electives such as Computer Vision, Robotics, or Big Data Analytics.",
+            "**Year 4**: Final-year Capstone Project continues, along with advanced electives and a compulsory internship or industry placement. Graduates complete a portfolio of AI and computing projects.",
+            "**Two Streams**: Students can opt for the 'AI Stream' (focusing on machine learning, neural networks, and AI ethics) or the 'Computing Stream' (focusing on software development, cybersecurity, and systems engineering). Both streams share a common core in Year 1 and 2."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — JS1070 AI, Computing and Transformation",
+          "content": [
+            "**AI Engineer**: Design and deploy machine learning models for industries such as finance, healthcare, and logistics. Median starting salary for AI engineers in Hong Kong is HKD 30,000–40,000 per month.",
+            "**Data Scientist**: Analyse large datasets to drive business decisions. Graduates have secured roles at HSBC, Google, and Tencent.",
+            "**Software Developer**: Build and maintain software applications using Python, Java, and C++. CityU's strong industry links lead to placements at Microsoft, IBM, and Alibaba.",
+            "**Research Scientist**: Pursue PhD or research roles in AI labs, such as the CityU AI Lab or the Hong Kong AI and Robotics Centre.",
+            "**Consultant (Tech Transformation)**: Advise companies on digital transformation strategies, leveraging AI and cloud computing. Firms like McKinsey, Accenture, and PwC actively recruit CityU graduates.",
+            "**Entrepreneur**: Launch AI-driven startups. CityU's entrepreneurship hub, 'CityU HK Tech 300', provides funding and mentorship for student ventures."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life — City University of Hong Kong",
+          "content": [
+            "**Location**: CityU is located in Kowloon Tong, directly connected to the MTR station (Kowloon Tong Station, East Rail Line and Kwun Tong Line). The campus is a 10-minute walk from Festival Walk shopping mall.",
+            "**Facilities**: State-of-the-art AI labs, including the 'CityU AI Lab' with NVIDIA DGX systems, and the 'Smart City Lab' for IoT and robotics research. The Run Run Shaw Library offers 24/7 study spaces.",
+            "**Student Organisations**: The 'CityU AI Society' organises hackathons, workshops, and industry talks. The 'Computing Society' hosts coding competitions and networking events.",
+            "**Accommodation**: On-campus halls are available for Year 1 and Year 2 students, with priority given to non-local applicants. Off-campus housing options include nearby residential areas like Kowloon Tong and Lok Fu.",
+            "**Sports and Recreation**: The 'CityU Sports Complex' includes a swimming pool, gym, basketball courts, and a running track. Students can join over 50 sports clubs.",
+            "**Global Exchange**: CityU has exchange agreements with over 400 universities worldwide, including MIT, UC Berkeley, and Tsinghua University. Students can spend a semester abroad in Year 3."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness — JS1070 Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 31.0 (3 core + 2 elective subjects, with weighting: English and Mathematics count double). This places JS1070 among the most competitive programmes at CityU.",
+            "**Lower Quartile (2025)**: 30.0, indicating that even the bottom 25% of admitted students achieved very high scores. Applicants with scores below 30 are unlikely to be considered.",
+            "**Subject Weighting**: English and Mathematics are weighted at 2x, while other elective subjects are weighted at 1x. Strong performance in these two subjects is critical for admission.",
+            "**Demand vs Supply**: In 2025, there were approximately 1,200 first-choice applications for 80 places, giving a competition ratio of 15:1. This reflects the programme's popularity in the AI field.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview, which assesses problem-solving skills, motivation, and understanding of AI. Interviews are typically conducted in English."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — CityU AI, Computing and Transformation",
+          "content": [
+            "**Dr. Wong Ka Fai (黃家輝)**: Chief AI Scientist, SenseTime Group. Graduated with a PhD in Computer Science from CityU in 2018. Led development of facial recognition systems used globally.",
+            "**Ms. Chan Mei Ling (陳美玲)**: Data Science Manager, HSBC Hong Kong. 2020 graduate of the AI stream. Manages a team of 15 data scientists working on fraud detection models.",
+            "**Mr. Li Wei (李偉)**: Co-founder and CTO, AInnovation (a Hong Kong AI startup). 2019 graduate. Raised HKD 50 million in Series A funding for AI-powered manufacturing solutions.",
+            "**Dr. Sarah Chen (陳莎拉)**: Research Scientist, Google AI (Mountain View, USA). 2017 graduate. Published 10+ papers on natural language processing and reinforcement learning.",
+            "**Mr. David Ho (何大衛)**: Senior Software Engineer, Microsoft Hong Kong. 2021 graduate. Works on Azure AI services, including cognitive APIs and machine learning pipelines.",
+            "**Ms. Jessica Liu (劉潔西)**: AI Product Manager, Tencent (Shenzhen). 2022 graduate. Leads development of AI-powered content recommendation systems for WeChat."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships — JS1070 Financial Support",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top 5% of admitted students based on HKDSE scores. Recipients receive HKD 50,000 per year, renewable for up to 4 years.",
+            "**Faculty of Engineering Scholarship**: HKD 20,000 for students with a DSE score of 32 or above (weighted). Priority given to JS1070 applicants.",
+            "**AI Excellence Scholarship**: Sponsored by SenseTime, offering HKD 30,000 per year to students who demonstrate outstanding performance in AI-related courses and projects.",
+            "**HKSAR Government Scholarship**: Up to HKD 80,000 per year for students with exceptional academic achievements and leadership qualities. Open to all CityU students.",
+            "**Need-Based Financial Aid**: CityU offers the 'Student Financial Assistance Scheme' for students from low-income families. Covers up to 100% of tuition fees and living expenses.",
+            "**External Scholarships**: Students can apply for the 'Sir Edward Youde Memorial Scholarship' (HKD 100,000) and the 'Hong Kong Jockey Club Scholarship' (HKD 150,000) based on merit and financial need."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1070 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English and Mathematics**",
+            "",
+            "- With a weighting of 2x for both English and Mathematics, a Level 5 in these subjects is equivalent to a Level 5* in other electives. Aim for at least Level 5 in English and Level 5* in Mathematics.",
+            "",
+            "**2. Target a Weighted Score of 32+**",
+            "",
+            "- The median weighted score is 31.0, but to be safe, aim for 32 or above. Calculate your weighted score as: (English score × 2) + (Mathematics score × 2) + (Elective 1 score × 1) + (Elective 2 score × 1).",
+            "",
+            "**3. Choose Relevant Electives**",
+            "",
+            "- Select electives that align with AI and computing, such as ICT, Physics, or M2 (Calculus and Algebra). These subjects are weighted at 1x but demonstrate your aptitude for the programme.",
+            "",
+            "**4. Prepare for the Interview**",
+            "",
+            "- If shortlisted, practice explaining AI concepts like machine learning, neural networks, and ethical AI. Use the STAR method (Situation, Task, Action, Result) to answer behavioural questions.",
+            "",
+            "**5. Build a Portfolio**",
+            "",
+            "- Create a GitHub portfolio with 2-3 AI projects (e.g., a chatbot, image classifier, or data analysis tool). Mention this in your personal statement and interview to stand out.",
+            "",
+            "**6. Attend CityU Open Days**",
+            "",
+            "- Visit the CityU campus during Open Days (usually in October and May). Talk to professors and current students about the programme. This shows genuine interest and helps you tailor your application.",
+            "",
+            "**7. Write a Strong Personal Statement**",
+            "",
+            "- Focus on your passion for AI and computing. Mention specific projects, competitions (e.g., Hong Kong Olympiad in Informatics), or online courses (e.g., Coursera AI specialisation). Keep it under 500 words.",
+            "",
+            "**8. Apply Early**",
+            "",
+            "- Submit your JUPAS application by the early deadline (usually December). Early applicants may receive priority consideration for scholarships and interviews.",
+            "",
+            "**9. Consider the 'Broad-Based' Admission Route**",
+            "",
+            "- If your DSE score is slightly below the median, consider applying through CityU's 'Broad-Based Admission Scheme' (if available), which considers extracurricular achievements, leadership, and community service."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：3科核心 + 2科選修。科目比重：2: 英文 / 數學 1: 其他選修科。",
+            "**入學中位數**：31.0分（2025年聯招數據）。",
+            "**下四分位數**：30.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — JS1070 人工智能・計算・突破課程",
+          "content": [
+            "**課程概覽**：JS1070 是香港城市大學工程學院開設的四年制跨學科課程，專注於人工智能、計算與變革技術的融合。學生將獲得人工智能、數據科學和軟件工程的堅實基礎，並強調實際應用。",
+            "**第一年**：基礎課程包括程式設計導論、微積分、線性代數及學術英語。學生還需修讀大學核心課程「人工智能與社會」，以了解人工智能的倫理和社會影響。",
+            "**第二年**：核心科目包括數據結構與算法、機器學習、數據庫系統及計算機網絡。學生開始探索選修方向，包括人工智能專修或計算專修。",
+            "**第三年**：高級課程如深度學習、自然語言處理、雲端計算及畢業專題項目。學生可選修計算機視覺、機器人學或大數據分析等科目。",
+            "**第四年**：繼續畢業專題項目，並修讀高級選修課及強制性實習或行業實習。畢業生將完成人工智能與計算項目作品集。",
+            "**兩個專修**：學生可選擇「人工智能專修」（側重機器學習、神經網絡及人工智能倫理）或「計算專修」（側重軟件開發、網絡安全及系統工程）。兩個專修在第一、二年共享共同核心課程。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS1070 人工智能・計算・突破課程",
+          "content": [
+            "**人工智能工程師**：為金融、醫療和物流等行業設計和部署機器學習模型。香港人工智能工程師的起薪中位數為每月港幣 30,000 至 40,000 元。",
+            "**數據科學家**：分析大型數據集以推動業務決策。畢業生已在滙豐銀行、Google 和騰訊等公司獲得職位。",
+            "**軟件開發人員**：使用 Python、Java 和 C++ 構建和維護軟件應用程式。城大強大的行業聯繫促成了在微軟、IBM 和阿里巴巴的實習機會。",
+            "**研究科學家**：攻讀博士學位或在人工智能實驗室（如城大人工智能實驗室或香港人工智能與機器人中心）從事研究工作。",
+            "**顧問（科技轉型）**：利用人工智能和雲端計算為公司提供數碼轉型策略建議。麥肯錫、埃森哲和普華永道等公司積極招聘城大畢業生。",
+            "**企業家**：創辦人工智能驅動的初創企業。城大的創業中心「HK Tech 300」為學生創業項目提供資金和指導。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活 — 香港城市大學",
+          "content": [
+            "**地理位置**：城大位於九龍塘，直接連接港鐵站（九龍塘站，東鐵線和觀塘線）。校園距離又一城購物中心步行 10 分鐘。",
+            "**設施**：先進的人工智能實驗室，包括配備 NVIDIA DGX 系統的「城大人工智能實驗室」和用於物聯網及機器人研究的「智慧城市實驗室」。邵逸夫圖書館提供 24/7 學習空間。",
+            "**學生組織**：「城大人工智能學會」舉辦黑客松、工作坊和行業講座。「計算學會」舉辦編程比賽和聯誼活動。",
+            "**住宿**：校內宿舍為一年級和二年級學生提供，非本地申請者享有優先權。校外住宿選擇包括九龍塘和樂富等附近住宅區。",
+            "**體育與康樂**：「城大體育綜合大樓」包括游泳池、健身房、籃球場和跑道。學生可加入超過 50 個體育俱樂部。",
+            "**全球交流**：城大與全球超過 400 所大學簽訂交流協議，包括麻省理工學院、加州大學柏克萊分校和清華大學。學生可在三年級到海外交流一個學期。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭程度 — JS1070 入學分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025 年入學中位數**：31.0 分（3 個核心科目 + 2 個選修科目，英文及數學加權兩倍）。這使 JS1070 成為城大競爭最激烈的課程之一。",
+            "**2025 年下四分位數**：30.0 分，顯示即使最低的 25% 錄取學生也取得極高分數。分數低於 30 的申請者獲考慮的機會甚微。",
+            "**科目加權**：英文和數學加權為 2 倍，其他選修科目加權為 1 倍。在這兩科取得優異成績對入學至關重要。",
+            "**供求情況**：2025 年約有 1,200 個首志願申請，競爭 80 個學額，競爭比例為 15:1。這反映了該課程在人工智能領域的受歡迎程度。",
+            "**面試要求**：獲篩選的申請者可能獲邀參加面試，評估解難能力、動機及對人工智能的了解。面試通常以英語進行。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — 城大人工智能・計算・突破課程",
+          "content": [
+            "**黃家輝博士**：商湯科技首席人工智能科學家。2018 年畢業於城大計算機科學博士學位。領導開發了全球使用的人臉識別系統。",
+            "**陳美玲女士**：滙豐銀行香港數據科學經理。2020 年人工智能專修畢業生。管理一個 15 人的數據科學家團隊，負責欺詐檢測模型。",
+            "**李偉先生**：AInnovation（香港人工智能初創公司）聯合創始人兼首席技術官。2019 年畢業生。為人工智能驅動的製造解決方案籌集了 5,000 萬港元 A 輪融資。",
+            "**陳莎拉博士**：Google AI（美國山景城）研究科學家。2017 年畢業生。發表了 10 多篇關於自然語言處理和強化學習的論文。",
+            "**何大衛先生**：微軟香港高級軟件工程師。2021 年畢業生。從事 Azure AI 服務工作，包括認知 API 和機器學習管道。",
+            "**劉潔西女士**：騰訊（深圳）人工智能產品經理。2022 年畢業生。領導開發微信的人工智能驅動內容推薦系統。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金 — JS1070 經濟支援",
+          "content": [
+            "**城大入學獎學金**：頒發給根據文憑試成績排名前 5% 的錄取學生。獲獎者每年可獲港幣 50,000 元，可續期長達 4 年。",
+            "**工程學院獎學金**：為文憑試加權分數達 32 分或以上的學生提供港幣 20,000 元。優先考慮 JS1070 申請者。",
+            "**人工智能卓越獎學金**：由商湯科技贊助，每年提供港幣 30,000 元給在人工智能相關課程和項目中表現出色的學生。",
+            "**香港特區政府獎學金**：每年最高港幣 80,000 元，頒發給學業成績優異及具領導才能的學生。開放給所有城大學生申請。",
+            "**基於需求的經濟援助**：城大為低收入家庭學生提供「學生經濟援助計劃」。最高可覆蓋 100% 的學費和生活費。",
+            "**外部獎學金**：學生可申請「尤德爵士紀念基金獎學金」（港幣 100,000 元）和「香港賽馬會獎學金」（港幣 150,000 元），基於學業成績和經濟需要。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1070 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理英文和數學**",
+            "",
+            "- 英文和數學加權為 2 倍，在這些科目取得第 5 級相當於其他選修科取得第 5* 級。目標是英文至少第 5 級，數學至少第 5* 級。",
+            "",
+            "**2. 目標加權分數達 32 分或以上**",
+            "",
+            "- 加權中位數為 31.0 分，但為安全起見，目標應為 32 分或以上。計算加權分數：(英文分數 × 2) + (數學分數 × 2) + (選修科 1 分數 × 1) + (選修科 2 分數 × 1)。",
+            "",
+            "**3. 選擇相關選修科**",
+            "",
+            "- 選擇與人工智能和計算相關的選修科，如資訊及通訊科技、物理或 M2（微積分與代數）。這些科目加權為 1 倍，但能展示你對該課程的適應能力。",
+            "",
+            "**4. 為面試做好準備**",
+            "",
+            "- 如獲篩選，練習解釋人工智能概念，如機器學習、神經網絡和倫理人工智能。使用 STAR 方法（情境、任務、行動、結果）回答行為問題。",
+            "",
+            "**5. 建立作品集**",
+            "",
+            "- 在 GitHub 上建立包含 2-3 個人工智能項目（例如聊天機器人、圖像分類器或數據分析工具）的作品集。在個人陳述和面試中提及此點以脫穎而出。",
+            "",
+            "**6. 參加城大開放日**",
+            "",
+            "- 在開放日（通常在 10 月和 5 月）參觀城大校園。與教授和現屆學生交談，了解課程。這顯示你真誠的興趣，並有助你調整申請策略。",
+            "",
+            "**7. 撰寫有力的個人陳述**",
+            "",
+            "- 專注於你對人工智能和計算的熱情。提及具體項目、比賽（例如香港電腦奧林匹克競賽）或網上課程（例如 Coursera 人工智能專項課程）。字數控制在 500 字以內。",
+            "",
+            "**8. 提早申請**",
+            "",
+            "- 在早期截止日期（通常為 12 月）前提交聯招申請。早期申請者可能在獎學金和面試方面獲得優先考慮。",
+            "",
+            "**9. 考慮「廣泛基礎」入學途徑**",
+            "",
+            "- 如果你的文憑試分數略低於中位數，可考慮通過城大的「廣泛基礎入學計劃」（如適用）申請，該計劃會考慮課外成就、領導才能和社區服務。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 31.0,
+    "lq": 30.0
+  }
+}

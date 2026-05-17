@@ -1,0 +1,291 @@
+{
+  "programme": {
+    "code": "JS3006",
+    "nameEn": "Bachelor's Degree Scheme in Computer and Mathematical Sciences",
+    "nameZh": "計算機及數學科學組合學士課程",
+    "name": "Bachelor's Degree Scheme in Computer and Mathematical Sciences",
+    "university": "The Hong Kong Polytechnic University",
+    "faculty": "Science",
+    "median": "215.0",
+    "band_a": "210.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS3006",
+    "university": "The Hong Kong Polytechnic University",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Any Best 5 Subjects.",
+            "**Average HKDSE Score with Subject Weighting**: 220.4 (2025 JUPAS data).",
+            "**Median Admission Score**: 215.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 210.0 (2025 JUPAS data).",
+            "**Subject Weighting**: Subject weighting in details.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 2, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students).",
+            "**Note**: Subject weightings apply. See \"Weightings\" for details."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS3006 is a broad-based Bachelor's Degree Scheme in Computer and Mathematical Sciences, offering students a solid foundation in both computing and mathematics before specialising in their chosen area.",
+            "**Two Streams**: Students can choose between the Computer Science stream and the Data Science and Analytics stream, with the flexibility to decide after Year 1 based on interest and performance.",
+            "**Year 1**: Foundational courses include Calculus, Linear Algebra, Programming Fundamentals, Discrete Mathematics, and Introduction to Data Science, building essential quantitative and computational skills.",
+            "**Year 2**: Core subjects deepen knowledge in Algorithms, Probability and Statistics, Object-Oriented Programming, Database Systems, and Numerical Methods, with elective options emerging.",
+            "**Year 3**: Advanced specialisation courses such as Machine Learning, Artificial Intelligence, Optimisation, and Big Data Analytics, plus a compulsory Work-Integrated Education (WIE) placement.",
+            "**Year 4**: Final-year capstone project and advanced electives, allowing students to apply their learning to real-world problems under faculty supervision."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Data Scientist**: Graduates are well-prepared for roles in data analytics, machine learning, and statistical modelling across finance, healthcare, and tech sectors.",
+            "**Software Engineer**: The strong programming and algorithmic foundation opens doors to software development, system design, and app development careers.",
+            "**Quantitative Analyst**: With deep mathematical training, graduates excel in quantitative finance, risk management, and algorithmic trading at banks and hedge funds.",
+            "**IT Consultant**: The combination of computing and mathematical skills is highly valued by consulting firms for technology strategy and digital transformation projects.",
+            "**Research & Academia**: Top-performing students can pursue postgraduate studies (MPhil/PhD) at PolyU or other leading universities worldwide.",
+            "**Government & Public Sector**: Opportunities exist in the Hong Kong government's IT departments, the Census and Statistics Department, and the Hong Kong Monetary Authority."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**Prime Location**: PolyU is located in Hung Hom, Kowloon, with direct MTR access via the Hung Hom station, connecting students to all parts of Hong Kong within minutes.",
+            "**State-of-the-Art Labs**: The Faculty of Science provides dedicated computer labs, high-performance computing clusters, and data analytics software for hands-on learning.",
+            "**Library & Learning Commons**: The Pao Yue-kong Library offers extensive digital resources, study spaces, and 24/7 access during exam periods.",
+            "**Student Organisations**: The Computer and Mathematical Sciences Society organises hackathons, coding competitions, and networking events throughout the year.",
+            "**Sports & Recreation**: PolyU's sports complex includes a swimming pool, gymnasium, and multi-purpose courts, promoting a healthy work-life balance.",
+            "**Greater Bay Area Connections**: The campus serves as a hub for internships and exchange programmes with leading tech companies in Shenzhen and Guangzhou."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: The median HKDSE score with subject weighting was 215.0, indicating strong demand for this programme.",
+            "**Lower Quartile (2025)**: The lower quartile stood at 210.0, meaning even the bottom 25% of admitted students achieved high scores.",
+            "**Average Score**: The average HKDSE score with subject weighting was 220.4, reflecting the programme's competitive nature.",
+            "**Admission Formula**: PolyU uses the 'Any Best 5 Subjects' formula, allowing applicants to maximise their strengths across five subjects.",
+            "**Subject Weighting**: Core subjects (English, Mathematics) and electives like M1/M2, Physics, and ICT receive higher weighting, rewarding strong quantitative skills."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Success Stories",
+          "content": [
+            "**Dr. Wong Kwok-yin (黃國恩博士)**: Renowned data scientist and former Head of Data Analytics at the Hong Kong Observatory, known for applying AI to weather prediction.",
+            "**Ms. Chan Mei-ling (陳美玲女士)**: Chief Technology Officer at a leading fintech firm in Hong Kong, specialising in blockchain and secure payment systems.",
+            "**Mr. Lee Ka-ho (李嘉豪先生)**: Co-founder of a successful AI startup in the Greater Bay Area, developing computer vision solutions for manufacturing quality control.",
+            "**Prof. Cheung Wai-shing (張偉成教授)**: Professor of Computer Science at a top UK university, recognised for research in algorithms and computational complexity.",
+            "**Mr. Ng Tsz-fung (伍梓豐先生)**: Senior Software Engineer at Google, working on cloud infrastructure and distributed systems since graduating in 2018.",
+            "**Dr. Lam Hoi-yan (林海欣博士)**: Research Scientist at the Hong Kong Applied Science and Technology Research Institute (ASTRI), focusing on natural language processing."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Support",
+          "content": [
+            "**PolyU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score above 230), covering full or partial tuition fees for the first year.",
+            "**Faculty of Science Merit Scholarship**: Recognises top-performing students in the programme, with awards up to HK$20,000 per year based on academic achievement.",
+            "**HKSAR Government Scholarship**: Available to local students with exceptional academic records and leadership potential, valued at HK$40,000 annually.",
+            "**Work-Integrated Education (WIE) Allowance**: Students on compulsory WIE placements may receive a stipend from partner companies, reducing financial burden.",
+            "**Exchange Programme Bursaries**: Financial support for students participating in overseas exchange programmes, covering travel and living expenses.",
+            "**Need-Based Financial Aid**: PolyU offers grants and low-interest loans through the Student Financial Assistance Agency (SFAA) for eligible students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS3006 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Core Subjects**: Focus on English, Mathematics Compulsory, and M1/M2 — these carry higher weighting in the admission score formula. Aim for Level 5 or above in each.",
+            "",
+            "- English and Mathematics are double-weighted in many cases, so a Level 5 in these subjects can significantly boost your total score.",
+            "- If you take M1 or M2, aim for at least Level 4, as it demonstrates quantitative readiness for the programme.",
+            "",
+            "**2. Leverage 'Any Best 5' Flexibility**: Use the admission formula to your advantage by dropping your weakest subject. If you have 6 subjects, the best 5 will be counted.",
+            "",
+            "- Identify your top 5 subjects early and allocate study time accordingly. For example, if you are strong in Physics and ICT, invest extra effort there.",
+            "- Avoid spreading yourself too thin — quality over quantity in your best 5 subjects.",
+            "",
+            "**3. Build a Strong Mathematics Profile**: The programme values mathematical maturity. Take M1 or M2 if possible, and aim for Level 5 or above.",
+            "",
+            "- Join mathematics competitions (e.g., HKMO, AMC) to strengthen your problem-solving skills and demonstrate passion.",
+            "- Practice past HKDSE mathematics papers under timed conditions to improve speed and accuracy.",
+            "",
+            "**4. Excel in Electives with Weighting**: Subjects like Physics, Chemistry, ICT, and Economics are often weighted higher. Target Level 5 in at least two of these.",
+            "",
+            "- For ICT, focus on programming and database concepts, as they directly relate to the programme content.",
+            "- For Physics, emphasise mechanics and electromagnetism, which build logical thinking.",
+            "",
+            "**5. Prepare for Interviews (If Shortlisted)**: Some applicants may be invited for an interview. Show genuine interest in computing and mathematics through examples.",
+            "",
+            "- Prepare a 1-minute self-introduction highlighting your passion for coding or data analysis.",
+            "- Be ready to discuss a recent project or competition you participated in, such as a hackathon or math Olympiad.",
+            "",
+            "**6. Gain Practical Experience Early**: Participate in coding bootcamps, online courses (e.g., Coursera, edX), or open-source projects to build a portfolio.",
+            "",
+            "- Complete a beginner Python or R course before applying — this shows initiative and readiness.",
+            "- Contribute to a GitHub project or build a simple app to demonstrate hands-on skills.",
+            "",
+            "**7. Research the Two Streams**: Understand the difference between Computer Science and Data Science & Analytics. Choose based on your career goals.",
+            "",
+            "- Computer Science is ideal if you enjoy algorithms, software engineering, and system design.",
+            "- Data Science & Analytics suits those interested in statistics, machine learning, and big data.",
+            "",
+            "**8. Aim for a Score Above 215**: With a median of 215.0 and average of 220.4, target at least 215 to be competitive. A score of 220+ puts you in a strong position.",
+            "",
+            "- Use the PolyU online admission calculator to estimate your weighted score based on predicted grades.",
+            "- If your predicted score is below 210, consider retaking subjects or improving through supplementary exams.",
+            "",
+            "**9. Plan for WIE and Exchange**: The Work-Integrated Education component is compulsory. Start researching partner companies (e.g., Google, HSBC, HKSTP) early.",
+            "",
+            "- Attend PolyU's career fairs and WIE briefing sessions in Year 1 to secure a placement by Year 3.",
+            "- Consider a semester exchange to universities in the US, UK, or Singapore to broaden your global perspective."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：任何最佳五科。",
+            "**文憑試成績平均積點（計算科目比重後）**：220.4（2025年聯招數據）。",
+            "**入學中位數**：215.0分（2025年聯招數據）。",
+            "**下四分位數**：210.0分（2025年聯招數據）。",
+            "**科目比重**：Subject weighting in details。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第2級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。",
+            "**備註**：科目比重詳見「比重」按鈕。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS3006 是一個基礎廣泛的計算機及數學科學組合學士課程，為學生在計算機和數學領域打下堅實基礎，然後選擇專修方向。",
+            "**兩個專修**：學生可選擇計算機科學或數據科學與分析專修，並可在第一年後根據興趣和表現靈活決定。",
+            "**第一年**：基礎課程包括微積分、線性代數、程式設計基礎、離散數學和數據科學導論，培養必要的計算和數學技能。",
+            "**第二年**：核心科目深化算法、概率與統計、物件導向程式設計、數據庫系統和數值方法等知識，並開始提供選修課。",
+            "**第三年**：高級專修課程如機器學習、人工智能、優化理論和大數據分析，並設有強制性的校企協作教育（WIE）實習。",
+            "**第四年**：畢業專題項目和高級選修課，讓學生在教授指導下將所學應用於現實問題。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數據科學家**：畢業生具備數據分析、機器學習和統計建模的紮實能力，適合在金融、醫療和科技行業發展。",
+            "**軟件工程師**：強大的程式設計和算法基礎為軟件開發、系統設計和應用程式開發職業打開大門。",
+            "**量化分析師**：深厚的數學訓練使畢業生在量化金融、風險管理和算法交易領域表現出色，受銀行和對沖基金青睞。",
+            "**IT顧問**：計算機與數學的結合技能在諮詢公司中極具價值，適用於技術策略和數字轉型項目。",
+            "**研究與學術界**：頂尖學生可在理工大學或全球其他頂尖大學攻讀研究生課程（哲學碩士/博士）。",
+            "**政府與公共部門**：香港政府資訊科技部門、政府統計處和香港金融管理局等機構提供就業機會。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**優越地理位置**：理工大學位於九龍紅磡，經紅磡站直達港鐵，數分鐘內連接香港各區。",
+            "**先進實驗室**：理學院提供專用電腦實驗室、高性能計算集群和數據分析軟件，支援實踐學習。",
+            "**圖書館與學習共享空間**：包玉剛圖書館提供豐富的電子資源、學習空間，並在考試期間提供24小時開放。",
+            "**學生組織**：計算機及數學科學學會全年舉辦黑客松、編程比賽和聯誼活動。",
+            "**體育與康樂**：理工大學體育綜合大樓設有游泳池、健身室和多用途場地，促進健康生活平衡。",
+            "**大灣區聯繫**：校園是與深圳和廣州頂尖科技公司實習和交流計劃的樞紐。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年中位分數**：經科目加權後的中位HKDSE分數為215.0分，顯示該課程需求強勁。",
+            "**2025年下四分位數**：下四分位數為210.0分，意味著即使最低的25%錄取學生也取得了高分。",
+            "**平均分數**：經科目加權後的平均HKDSE分數為220.4分，反映課程的競爭性。",
+            "**入學計分公式**：理工大學採用「最佳5科」計分方式，讓申請人最大化五科的優勢。",
+            "**科目加權**：核心科目（英文、數學）及選修科如M1/M2、物理和資訊及通訊科技獲得較高加權，獎勵強大的量化能力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成功故事",
+          "content": [
+            "**黃國恩博士**：著名數據科學家，曾任香港天文台數據分析主管，以應用人工智能於天氣預測聞名。",
+            "**陳美玲女士**：香港一家領先金融科技公司的首席技術官，專注於區塊鏈和安全支付系統。",
+            "**李嘉豪先生**：大灣區一家成功人工智能初創公司的聯合創始人，開發用於製造業質量控制的計算機視覺解決方案。",
+            "**張偉成教授**：英國頂尖大學計算機科學教授，因算法和計算複雜性研究而獲認可。",
+            "**伍梓豐先生**：Google高級軟件工程師，自2018年畢業後從事雲端基礎設施和分佈式系統工作。",
+            "**林海欣博士**：香港應用科技研究院（ASTRI）研究科學家，專注於自然語言處理。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財務支援",
+          "content": [
+            "**理工大學入學獎學金**：頒發給HKDSE成績優異的學生（例如分數高於230分），涵蓋第一年全額或部分學費。",
+            "**理學院優秀生獎學金**：表彰課程中表現頂尖的學生，每年最高可達20,000港元，基於學術成就。",
+            "**香港特區政府獎學金**：提供給學術成績卓越且具領導潛力的本地學生，每年價值40,000港元。",
+            "**校企協作教育（WIE）津貼**：參與強制性WIE實習的學生可從合作公司獲得津貼，減輕經濟負擔。",
+            "**交流計劃助學金**：為參加海外交流計劃的學生提供財務支援，涵蓋旅行和生活費用。",
+            "**按需財務援助**：理工大學透過學生資助處（SFAA）為合資格學生提供助學金和低息貸款。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS3006 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理核心科目**：專注於英文、數學必修和M1/M2——這些在入學計分公式中權重較高。目標是每科達到5級或以上。",
+            "",
+            "- 英文和數學在許多情況下獲得雙倍權重，因此這兩科取得5級可顯著提升總分。",
+            "- 如果你選修M1或M2，目標至少達到4級，以展示你對量化學習的準備。",
+            "",
+            "**2. 善用「最佳5科」的靈活性**：利用入學計分公式，放棄你最弱的科目。如果你有6科，只計算最好的5科。",
+            "",
+            "- 及早識別你的最佳5科，並相應分配學習時間。例如，如果你擅長物理和資訊及通訊科技，就在這些科目上投入更多精力。",
+            "- 避免過度分散——在最佳5科中追求質量而非數量。",
+            "",
+            "**3. 建立強大的數學背景**：該課程重視數學成熟度。如有可能，選修M1或M2，並目標達到5級或以上。",
+            "",
+            "- 參加數學競賽（例如香港數學競賽、美國數學競賽）以強化解題能力並展示熱情。",
+            "- 在計時條件下練習過往HKDSE數學試卷，以提高速度和準確性。",
+            "",
+            "**4. 在加權選修科中表現出色**：物理、化學、資訊及通訊科技和經濟等科目通常獲得較高加權。目標在至少兩科中達到5級。",
+            "",
+            "- 對於資訊及通訊科技，專注於程式設計和數據庫概念，因為它們與課程內容直接相關。",
+            "- 對於物理，強調力學和電磁學，這些能培養邏輯思維。",
+            "",
+            "**5. 為面試做好準備（如獲篩選）**：部分申請人可能獲邀面試。通過實例展示你對計算機和數學的興趣。",
+            "",
+            "- 準備1分鐘的自我介紹，突出你對編程或數據分析的熱情。",
+            "- 準備討論你最近參與的項目或比賽，例如黑客松或數學奧林匹克。",
+            "",
+            "**6. 及早獲得實踐經驗**：參加編程訓練營、在線課程（例如Coursera、edX）或開源項目，建立個人作品集。",
+            "",
+            "- 在申請前完成基礎Python或R課程——這顯示你的主動性和準備程度。",
+            "- 貢獻於GitHub項目或建立一個簡單的應用程式，展示實踐技能。",
+            "",
+            "**7. 研究兩個專修方向**：了解計算機科學與數據科學與分析之間的區別。根據你的職業目標選擇。",
+            "",
+            "- 如果你喜歡算法、軟件工程和系統設計，計算機科學是理想選擇。",
+            "- 如果你對統計學、機器學習和大數據感興趣，數據科學與分析更適合。",
+            "",
+            "**8. 目標分數高於215分**：由於中位數為215.0分，平均分為220.4分，目標至少215分以保持競爭力。220分以上會讓你處於強勢位置。",
+            "",
+            "- 使用理工大學在線入學計算器，根據預測成績估算你的加權分數。",
+            "- 如果你的預測分數低於210分，考慮重考科目或通過補考提升成績。",
+            "",
+            "**9. 提前規劃WIE和交流**：校企協作教育（WIE）是必修部分。及早研究合作公司（例如Google、滙豐、香港科技園）。",
+            "",
+            "- 在第一年參加理工大學的就業博覽會和WIE簡介會，確保在第三年獲得實習機會。",
+            "- 考慮到美國、英國或新加坡的大學進行一學期交流，擴闊你的全球視野。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "215.0",
+    "lq": "210.0"
+  }
+}

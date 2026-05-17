@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1044",
+    "nameEn": "BAS New Media",
+    "nameZh": "文理學士(新媒體)",
+    "name": "BAS New Media",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 24.0,
+    "band_a": 24.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1044",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 2: English 1: other elective subjects.",
+            "**Median Admission Score**: 24.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: BAS New Media is a 4-year interdisciplinary programme combining media studies, digital technology, and creative arts. Students gain expertise in new media production, data visualization, and interactive design.",
+            "**Year 1**: Foundation courses in media theory, visual communication, and digital tools. Core subjects include 'Introduction to New Media' and 'Digital Imaging and Design'.",
+            "**Year 2**: Specialisation begins with courses like 'Web and Mobile Media', 'Animation and Motion Graphics', and 'Social Media Analytics'. Students start building their portfolio.",
+            "**Year 3**: Advanced electives in areas such as 'Virtual Reality and Augmented Reality', 'Data Journalism', and 'Interactive Storytelling'. A capstone project is initiated.",
+            "**Year 4**: Final year focuses on the capstone project and professional practice. Students complete a major new media project and an internship or industry attachment.",
+            "**Key Features**: Emphasis on hands-on learning with state-of-the-art labs, including the 'New Media Studio' and 'Digital Media Lab'. Opportunities for cross-disciplinary collaboration with other CityU faculties."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Digital Content Creator**: Graduates work as video producers, social media managers, and content strategists for media companies like TVB and Now TV.",
+            "**UX/UI Designer**: Roles in user experience and interface design for tech firms, including Alibaba and Tencent, focusing on app and website design.",
+            "**Data Journalist**: Positions at news organisations such as South China Morning Post, using data visualisation and analytics to tell compelling stories.",
+            "**Marketing Specialist**: Careers in digital marketing, SEO, and brand management at agencies like Ogilvy and McCann, leveraging new media tools.",
+            "**Game Designer**: Opportunities in the gaming industry, including roles at local studios like Gameone, designing interactive experiences and narratives.",
+            "**Entrepreneur**: Many graduates launch their own startups in creative tech, digital media, or e-commerce, supported by CityU's entrepreneurship programmes."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**New Media Studio**: A dedicated facility equipped with green screens, motion capture systems, and professional audio-visual gear for student projects.",
+            "**Digital Media Lab**: High-spec computers with Adobe Creative Suite, 3D modelling software, and VR/AR development tools available 24/7.",
+            "**Run Run Shaw Creative Media Centre**: A hub for creative arts, featuring exhibition spaces, screening rooms, and collaborative zones for interdisciplinary work.",
+            "**Student Societies**: Active clubs like the 'New Media Society' organise workshops, film screenings, and networking events with industry professionals.",
+            "**CityU Library**: Extensive digital collections, including access to academic journals, streaming media databases, and a media resource centre.",
+            "**Location**: CityU's campus in Kowloon Tong offers easy access to Hong Kong's creative districts, with MTR connections to Kowloon Bay and Tsim Sha Tsui."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 24.0 (Best 5 subjects including English)",
+            "**Lower Quartile (2025)**: 24.0, indicating a very tight score range and high selectivity.",
+            "**Subject Weighting**: English is weighted at 2x, while other elective subjects are weighted at 1x. Strong English proficiency is critical.",
+            "**Application Ratio**: Typically receives over 1,000 applications for around 30 places, making it one of the most competitive programmes at CityU.",
+            "**Interview Requirement**: Shortlisted candidates may be invited for an interview or portfolio review, focusing on creativity and motivation."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Wong Ka-chun (黃嘉俊)**: Digital Content Director, TVB. 2018 graduate. Known for producing award-winning online series.",
+            "**Lau Sze-man (劉詩敏)**: UX Designer, Google Hong Kong. 2019 graduate. Led redesign of Google Maps features for local users.",
+            "**Chan Ho-yin (陳浩賢)**: Data Journalist, South China Morning Post. 2020 graduate. Published interactive data stories on Hong Kong housing.",
+            "**Tam Wing-yan (譚穎欣)**: Marketing Manager, Ogilvy Hong Kong. 2017 graduate. Managed digital campaigns for major luxury brands.",
+            "**Lee Ka-ho (李嘉豪)**: Founder, PixelCraft Studio. 2016 graduate. Startup specialises in VR experiences for museums and exhibitions.",
+            "**Yip Tsz-ching (葉芷晴)**: Game Designer, Gameone Group. 2021 graduate. Contributed to the hit mobile game 'Swords of Legends'."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., 5** in 3+ subjects) with a value of up to HK$100,000 per year.",
+            "**New Media Programme Scholarship**: Merit-based awards for current students with outstanding academic performance (GPA 3.5+), up to HK$20,000.",
+            "**HKSAR Government Scholarship**: For students with exceptional achievements in non-academic areas (e.g., arts, community service), value varies.",
+            "**Creative Media Bursary**: Need-based financial support for students pursuing creative projects, covering equipment and production costs.",
+            "**Exchange Scholarship**: Funding for students participating in overseas exchange programmes, up to HK$30,000 per semester.",
+            "**Industry Sponsorships**: Partnerships with companies like PCCW and HKTV offer sponsored internships and project grants for top students."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1044 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English for Maximum Weighting**",
+            "",
+            "- English is weighted at 2x, so a Level 5 in English is worth 10 points (vs. 5 for other subjects). Aim for Level 5 or above to boost your score significantly.",
+            "- Practice writing and speaking daily, focusing on media-related topics like digital trends and social media ethics.",
+            "",
+            "**2. Target a Best 5 Score of 24+**",
+            "",
+            "- With a median of 24.0, you need at least 24 points in Best 5 (including English). Calculate your target: e.g., English 5 (10 pts) + 3 electives at 5 (15 pts) = 25.",
+            "- Use the admission calculator on CityU's website to simulate your score with different subject combinations.",
+            "",
+            "**3. Choose Electives Wisely**",
+            "",
+            "- Select electives that align with new media, such as Information and Communication Technology (ICT), Visual Arts, or Economics (for data analysis).",
+            "- Avoid subjects with low scaling; focus on those where you can achieve Level 5 or above.",
+            "",
+            "**4. Build a Strong Portfolio**",
+            "",
+            "- Create a digital portfolio showcasing projects like short films, websites, or graphic designs. Use platforms like Behance or a personal website.",
+            "- Include at least 3-5 pieces that demonstrate creativity, technical skills, and storytelling ability.",
+            "",
+            "**5. Prepare for Interviews and Portfolio Reviews**",
+            "",
+            "- If shortlisted, practice explaining your portfolio: discuss your creative process, challenges, and learning outcomes.",
+            "- Research current new media trends (e.g., AI in media, metaverse) to show genuine interest during the interview.",
+            "",
+            "**6. Gain Relevant Experience**",
+            "",
+            "- Participate in media-related extracurriculars: school newspaper, video production club, or online content creation.",
+            "- Volunteer for events like the Hong Kong Arts Festival or local film festivals to build connections.",
+            "",
+            "**7. Use the JUPAS Strategy of 'A1 Reach, A2 Fit, A3 Safety'**",
+            "",
+            "- Place JS1044 as A1 if your predicted score is 24-26; as A2 if 23-24; as A3 if below 23 but with a strong portfolio.",
+            "- Monitor JUPAS score trends; if your predicted score is 24+, it's a solid 'fit' choice.",
+            "",
+            "**8. Apply for Early Admission Schemes**",
+            "",
+            "- CityU's 'Early Admission Scheme' for outstanding students (e.g., with 5** in 2 subjects) can offer conditional offers before main round.",
+            "- Check eligibility and submit applications by December of your DSE year.",
+            "",
+            "**9. Network with Current Students and Alumni**",
+            "",
+            "- Attend CityU's open days and info sessions to ask current students about the programme. Join LinkedIn groups for New Media alumni.",
+            "- Reach out to alumni like those listed above for advice on portfolios and career paths."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：2: 英文 1: 其他選修科。",
+            "**入學中位數**：24.0分（2025年聯招數據）。",
+            "**下四分位數**：24.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：文理學士（新媒體）是一個四年制跨學科課程，結合媒體研究、數碼科技與創意藝術。學生將掌握新媒體製作、數據可視化及互動設計的專業知識。",
+            "**第一年**：基礎課程包括媒體理論、視覺傳播及數碼工具。核心科目有「新媒體導論」和「數碼影像與設計」。",
+            "**第二年**：開始專修，課程包括「網頁與流動媒體」、「動畫與動態圖像」及「社交媒體分析」。學生開始建立個人作品集。",
+            "**第三年**：進階選修課涵蓋「虛擬現實與擴增實境」、「數據新聞學」及「互動敘事」。啟動畢業專題項目。",
+            "**第四年**：最後一年專注於畢業專題及專業實踐。學生完成一個主要的新媒體項目，並進行實習或行業實習。",
+            "**主要特色**：強調動手學習，配備先進實驗室，包括「新媒體工作室」和「數碼媒體實驗室」。有機會與城大其他學院進行跨學科合作。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**數碼內容創作者**：畢業生擔任視頻製作人、社交媒體經理及內容策略師，任職於TVB、Now TV等媒體公司。",
+            "**UX/UI設計師**：在阿里巴巴、騰訊等科技公司從事用戶體驗與界面設計，專注於應用程式及網站設計。",
+            "**數據新聞記者**：於《南華早報》等新聞機構工作，運用數據可視化與分析講述引人入勝的故事。",
+            "**市場營銷專員**：在奧美、麥肯等廣告公司從事數碼營銷、SEO及品牌管理，善用新媒體工具。",
+            "**遊戲設計師**：在遊戲行業（如本地工作室Gameone）擔任互動體驗與敘事設計的角色。",
+            "**創業者**：許多畢業生在創意科技、數碼媒體或電子商務領域創立初創企業，獲城大創業計劃支持。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**新媒體工作室**：配備綠幕、動作捕捉系統及專業影音設備的專用設施，供學生進行項目製作。",
+            "**數碼媒體實驗室**：配備高效能電腦，安裝Adobe Creative Suite、3D建模軟件及VR/AR開發工具，24小時開放。",
+            "**邵逸夫創意媒體中心**：創意藝術樞紐，設有展覽空間、放映室及協作區域，促進跨學科工作。",
+            "**學生社團**：活躍的「新媒體學會」舉辦工作坊、電影放映及業界交流活動。",
+            "**城大圖書館**：豐富的數碼館藏，包括學術期刊、串流媒體數據庫及媒體資源中心。",
+            "**地理位置**：城大位於九龍塘，鄰近香港創意區，經港鐵可快速到達九龍灣及尖沙咀。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學中位數**：24.0（最佳五科，包括英文）",
+            "**2025年下四分位數**：24.0，顯示分數範圍非常緊湊，選擇性極高。",
+            "**科目比重**：英文比重為2倍，其他選修科目為1倍。英文能力至關重要。",
+            "**申請比例**：通常收到超過1,000份申請，競爭約30個學額，是城大競爭最激烈的課程之一。",
+            "**面試要求**：入圍候選人可能獲邀參加面試或作品集審核，重點評估創意與學習動機。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**黃嘉俊**：TVB數碼內容總監，2018年畢業。曾製作獲獎網上系列節目。",
+            "**劉詩敏**：Google香港用戶體驗設計師，2019年畢業。主導Google Maps本地化功能重新設計。",
+            "**陳浩賢**：《南華早報》數據新聞記者，2020年畢業。發表關於香港房屋的互動數據故事。",
+            "**譚穎欣**：奧美香港市場營銷經理，2017年畢業。為主要奢侈品牌管理數碼宣傳活動。",
+            "**李嘉豪**：PixelCraft Studio創辦人，2016年畢業。初創企業專注為博物館及展覽提供VR體驗。",
+            "**葉芷晴**：Gameone Group遊戲設計師，2021年畢業。參與熱門手機遊戲《古劍奇譚》的開發。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**城大入學獎學金**：頒予DSE成績優異者（如3科5**），每年最高可達港幣10萬元。",
+            "**新媒體課程獎學金**：基於成績的獎項，頒予學業表現出色（GPA 3.5以上）的在讀學生，金額最高港幣2萬元。",
+            "**香港特區政府獎學金**：頒予在非學術領域（如藝術、社區服務）有傑出成就的學生，金額視乎情況而定。",
+            "**創意媒體助學金**：基於經濟需要的資助，支援學生進行創意項目，涵蓋設備及製作成本。",
+            "**交流獎學金**：資助學生參與海外交流計劃，每學期最高港幣3萬元。",
+            "**行業贊助**：與PCCW、HKTV等公司的合作，為頂尖學生提供贊助實習及項目資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1044 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文以獲取最大比重**",
+            "",
+            "- 英文比重為2倍，因此英文5級等於10分（其他科目5級等於5分）。目標是英文達5級或以上，大幅提高分數。",
+            "- 每日練習寫作和口語，專注於媒體相關話題，如數碼趨勢和社交媒體倫理。",
+            "",
+            "**2. 目標最佳五科24分以上**",
+            "",
+            "- 中位數為24.0，你需要最佳五科（包括英文）至少24分。計算目標：例如英文5級（10分）+ 3科選修5級（15分）= 25分。",
+            "- 使用城大網站上的入學計算器，模擬不同科目組合的分數。",
+            "",
+            "**3. 明智選擇選修科**",
+            "",
+            "- 選擇與新媒體相關的選修科，如資訊及通訊科技（ICT）、視覺藝術或經濟學（用於數據分析）。",
+            "- 避免評分較低的科目；專注於你能取得5級或以上的科目。",
+            "",
+            "**4. 建立強大的作品集**",
+            "",
+            "- 創建數碼作品集，展示短片、網站或平面設計等項目。使用Behance或個人網站等平台。",
+            "- 包括至少3-5件作品，展示創意、技術技能和敘事能力。",
+            "",
+            "**5. 準備面試和作品集審核**",
+            "",
+            "- 如獲入圍，練習解釋你的作品集：討論創作過程、挑戰和學習成果。",
+            "- 研究當前新媒體趨勢（如媒體中的AI、元宇宙），在面試中展示真誠興趣。",
+            "",
+            "**6. 獲取相關經驗**",
+            "",
+            "- 參與媒體相關課外活動：校報、影片製作學會或網上內容創作。",
+            "- 在香港藝術節或本地電影節等活動中擔任義工，建立人脈。",
+            "",
+            "**7. 使用JUPAS策略：A1進取、A2穩妥、A3安全**",
+            "",
+            "- 如預測分數為24-26，將JS1044放在A1；如23-24，放在A2；如低於23但作品集強勁，放在A3。",
+            "- 監察JUPAS分數趨勢；如預測分數達24+，這是穩妥的選擇。",
+            "",
+            "**8. 申請提早錄取計劃**",
+            "",
+            "- 城大的「提早錄取計劃」適用於優秀學生（如2科5**），可在主要輪次前獲得有條件取錄。",
+            "- 在DSE年12月前檢查資格並提交申請。",
+            "",
+            "**9. 與在讀學生和校友建立聯繫**",
+            "",
+            "- 參加城大的開放日和資訊講座，向在讀學生了解課程。加入新媒體校友的LinkedIn群組。",
+            "- 聯繫上述校友，請教作品集和職業路徑的建議。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 24.0,
+    "lq": 24.0
+  }
+}

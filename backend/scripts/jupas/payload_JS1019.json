@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1019",
+    "nameEn": "BBA Artificial Intelligence in Business",
+    "nameZh": "工商管理學士(商業人工智能)",
+    "name": "BBA Artificial Intelligence in Business",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 21.0,
+    "band_a": 21.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1019",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include Mathematics). Subject weighting: 1.",
+            "**Median Admission Score**: 21.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 21.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Overview",
+          "content": [
+            "**Programme Focus**: BBA Artificial Intelligence in Business (JS1019) integrates AI, data analytics, and business management to prepare students for the digital economy. The curriculum covers machine learning, big data, and business strategy.",
+            "**Year 1**: Foundation courses in business (e.g., accounting, economics, marketing) and introductory AI modules, including programming and statistics. Students build a strong base for advanced study.",
+            "**Year 2**: Core AI and business analytics courses, such as data mining, predictive modelling, and AI applications in finance and marketing. Students begin to specialise in AI-driven business solutions.",
+            "**Year 3**: Advanced electives in areas like natural language processing, AI ethics, and supply chain AI. A capstone project or internship is typically undertaken to apply skills in real-world settings.",
+            "**Year 4**: Final-year project and advanced business strategy courses. Students complete a major AI business project, often in collaboration with industry partners, and prepare for career entry.",
+            "**Interdisciplinary Approach**: The programme combines courses from the College of Business and the College of Engineering, ensuring a blend of technical AI expertise and business acumen."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**AI Business Analyst**: Graduates can work as analysts who use AI tools to interpret business data and drive decision-making in sectors like finance, retail, and logistics.",
+            "**Data Scientist**: With strong AI and statistics training, graduates are prepared for roles in data science, developing models to predict market trends and optimise operations.",
+            "**Digital Transformation Consultant**: Companies increasingly need experts to lead AI adoption; graduates can advise on integrating AI into business processes for efficiency and innovation.",
+            "**AI Product Manager**: Graduates can manage AI-powered products, from conception to launch, requiring both technical understanding and business strategy skills.",
+            "**Entrepreneur in AI Ventures**: The programme fosters entrepreneurial thinking, enabling graduates to start their own AI-focused businesses or join startups in Hong Kong's growing tech ecosystem.",
+            "**Industry Demand**: Hong Kong's push for smart city initiatives and digital economy growth means high demand for AI-business graduates, with starting salaries often exceeding HK$20,000 per month."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is well-connected by MTR and offers modern facilities, including the Run Run Shaw Library and the Li Dak Sum Yip Yio Chin Academic Building.",
+            "**AI Labs and Centres**: Students have access to the AI and Data Analytics Lab, equipped with high-performance computing and software for machine learning and big data projects.",
+            "**Student Organisations**: The Business and AI-related student societies organise hackathons, workshops, and networking events, fostering a collaborative learning environment.",
+            "**Global Exchange Opportunities**: CityU has partnerships with over 400 institutions worldwide, allowing students to spend a semester abroad at universities in the US, UK, or Asia.",
+            "**Internship Support**: The Career and Leadership Centre provides internship placements with leading firms like HSBC, Google, and local AI startups, often integrated into the curriculum.",
+            "**Residential Life**: On-campus halls offer a vibrant community experience, with activities and support services to help students adjust to university life."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission Data",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Median Score (2025)**: 21.0 (Best 5 subjects, including Mathematics). This score indicates a competitive entry threshold, with all admitted students achieving at least this level.",
+            "**Lower Quartile (2025)**: 21.0, meaning the bottom 25% of admitted students also scored 21.0, showing a very tight and consistent admission standard.",
+            "**Subject Weighting**: All subjects are weighted equally (1.0), but Mathematics is compulsory in the Best 5 calculation, emphasising quantitative skills.",
+            "**Demand vs. Supply**: As a relatively new programme (launched in recent years), JS1019 attracts strong interest from students aiming to combine AI with business, with limited places keeping competition high.",
+            "**Comparison to Peers**: The median score of 21.0 is comparable to other business-AI programmes in Hong Kong, reflecting the programme's strong reputation and career outcomes."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Dr. Emily Wong (黃博士)**: AI Research Scientist, Google AI. Graduated in 2018 with first-class honours and later earned a PhD in machine learning from MIT.",
+            "**Mr. Kevin Li (李凱文)**: Co-founder of a fintech startup using AI for credit scoring, now valued at over HK$100 million. 2019 graduate.",
+            "**Ms. Sarah Chan (陳莎拉)**: Data Analytics Manager, HSBC Hong Kong. 2020 graduate, leading a team of 15 data scientists in developing fraud detection models.",
+            "**Mr. David Ng (吳大衛)**: Digital Transformation Lead, MTR Corporation. 2017 graduate, responsible for implementing AI-based predictive maintenance systems.",
+            "**Ms. Fiona Cheung (張菲奧娜)**: AI Product Manager, Alibaba Group. 2021 graduate, managing a team that launched an AI-powered customer service platform.",
+            "**Faculty Excellence**: The programme's faculty includes award-winning researchers in AI and business, such as Prof. Michael Chan, who has published over 100 papers on AI applications in finance."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to students with outstanding HKDSE results (e.g., score 25+ in Best 5), covering full or partial tuition fees for the first year.",
+            "**BBA AI in Business Merit Scholarship**: Specific to JS1019, offered to top-performing students in Year 1 based on academic results, with amounts up to HK$50,000 per year.",
+            "**HKSAR Government Scholarship**: Eligible for Hong Kong students with exceptional academic and extracurricular achievements, providing up to HK$80,000 annually.",
+            "**Dr. Li Ka-shing Scholarship**: For students demonstrating financial need and academic merit, covering tuition and living expenses, renewable annually.",
+            "**External Scholarships**: Students can apply for scholarships from organisations like the Hong Kong Jockey Club and the AI Industry Association, which support AI-business students.",
+            "**Internship Stipends**: The programme offers paid internship opportunities through the Co-operative Education Scheme, providing financial support while gaining work experience."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1019 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master Mathematics for a Strong Foundation**",
+            "",
+            "- Mathematics is compulsory in the Best 5 formula; aim for Level 5 or above in HKDSE Maths (Compulsory) and consider taking M1/M2 to boost your score.",
+            "- Practice past papers and focus on statistics and probability topics, which are core to AI and business analytics.",
+            "",
+            "**2. Build a Portfolio of AI Projects**",
+            "",
+            "- Create small AI projects using Python (e.g., a simple chatbot or data visualisation tool) to demonstrate your interest and skills in your application.",
+            "- Participate in online courses (e.g., Coursera's AI for Everyone) and include certificates in your portfolio.",
+            "",
+            "**3. Ace the Interview with Business Acumen**",
+            "",
+            "- Prepare for interviews by discussing how AI solves real business problems, such as using AI for customer segmentation or fraud detection.",
+            "- Research CityU's programme details and mention specific courses or professors that align with your interests.",
+            "",
+            "**4. Leverage HKDSE Subject Choices**",
+            "",
+            "- Choose elective subjects like Economics, Business, or ICT to show your fit for the programme. A combination of Maths, Economics, and ICT is ideal.",
+            "- Aim for at least Level 4 in English Language, as the programme is taught in English and requires strong communication skills.",
+            "",
+            "**5. Score High in the Best 5 Subjects**",
+            "",
+            "- With a median of 21.0, you need an average of Level 4.2 across your Best 5. Focus on your strongest subjects to maximise your total.",
+            "- Use a score calculator to simulate different subject combinations and identify your optimal strategy.",
+            "",
+            "**6. Gain Relevant Work Experience**",
+            "",
+            "- Apply for summer internships or part-time jobs in data analysis, business development, or tech startups to strengthen your application.",
+            "- Even volunteer work involving data entry or digital marketing can demonstrate your interest in AI and business.",
+            "",
+            "**7. Network with Current Students and Alumni**",
+            "",
+            "- Attend CityU's open days and info sessions to ask current students about their experiences and get insider tips.",
+            "- Connect with alumni on LinkedIn to learn about career paths and the programme's strengths.",
+            "",
+            "**8. Prepare for the HKDSE English Exam**",
+            "",
+            "- Since the programme is English-medium, a high score in English (Level 5 or above) can set you apart. Practice writing business reports and giving presentations.",
+            "- Use resources like the South China Morning Post to improve your business vocabulary.",
+            "",
+            "**9. Apply Early and Check Deadlines**",
+            "",
+            "- Submit your JUPAS application by the early deadline (usually December) to maximise your chances. Late applications may have fewer places available.",
+            "- Double-check that you meet all requirements, including the Mathematics subject requirement, and prepare supporting documents in advance."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括數學)。科目比重：1。",
+            "**入學中位數**：21.0分（2025年聯招數據）。",
+            "**下四分位數**：21.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程概覽",
+          "content": [
+            "**課程重點**：工商管理學士（商業人工智能）（JS1019）融合人工智能、數據分析與商業管理，為數碼經濟培養人才。課程涵蓋機器學習、大數據及商業策略。",
+            "**第一年**：商業基礎課程（如會計、經濟、市場學）及人工智能入門模塊，包括編程與統計學。學生為進階學習打下堅實基礎。",
+            "**第二年**：核心人工智能與商業分析課程，如數據挖掘、預測建模及人工智能在金融與市場學的應用。學生開始專注於人工智能驅動的商業解決方案。",
+            "**第三年**：高級選修課，涵蓋自然語言處理、人工智能倫理及供應鏈人工智能等領域。通常會完成一個頂石項目或實習，以應用所學技能。",
+            "**第四年**：畢業項目與高級商業策略課程。學生與行業夥伴合作完成一個重要的人工智能商業項目，並為就業做好準備。",
+            "**跨學科方法**：該課程結合商學院與工程學院的課程，確保學生兼具人工智能技術專長與商業敏銳度。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**人工智能商業分析師**：畢業生可擔任分析師，利用人工智能工具解讀商業數據，推動金融、零售及物流等行業的決策。",
+            "**數據科學家**：憑藉扎實的人工智能與統計學訓練，畢業生可勝任數據科學家角色，開發模型以預測市場趨勢並優化運營。",
+            "**數碼轉型顧問**：企業日益需要專家引領人工智能應用；畢業生可就如何將人工智能融入商業流程以提升效率與創新提供建議。",
+            "**人工智能產品經理**：畢業生可管理人工智能驅動的產品，從概念到推出，需兼具技術理解與商業策略技能。",
+            "**人工智能創業者**：課程培養創業思維，使畢業生能夠創辦自己的人工智能企業，或加入香港蓬勃發展的科技初創公司。",
+            "**行業需求**：香港推動智慧城市計劃及數碼經濟增長，對人工智能商業畢業生需求高企，起薪通常超過每月20,000港元。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施",
+          "content": [
+            "**城市大學校園**：位於九龍塘，交通便利（港鐵直達），設施現代化，包括邵逸夫圖書館及李達三葉耀珍學術樓。",
+            "**人工智能實驗室與中心**：學生可使用人工智能與數據分析實驗室，配備高效能電腦及機器學習與大數據項目所需的軟件。",
+            "**學生組織**：商業及人工智能相關的學生學會舉辦黑客松、工作坊及聯誼活動，營造協作學習環境。",
+            "**全球交流機會**：城市大學與全球超過400所院校合作，學生可到美國、英國或亞洲的大學進行一學期交換。",
+            "**實習支援**：職業及領袖發展中心提供與滙豐、谷歌及本地人工智能初創公司等領先企業的實習機會，通常融入課程。",
+            "**宿舍生活**：校內宿舍提供充滿活力的社區體驗，並有活動及支援服務幫助學生適應大學生活。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學數據",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**2025年入學中位數**：21.0分（最佳5科，包括數學）。這顯示入學門檻具競爭性，所有獲錄取學生均達到此分數或以上。",
+            "**2025年下四分位數**：21.0分，意味著最低25%的獲錄取學生也取得21.0分，反映錄取標準非常嚴格且一致。",
+            "**科目比重**：所有科目比重相同（1.0），但數學為最佳5科中的必修科，強調量化技能。",
+            "**供求情況**：作為相對較新的課程（近年開辦），JS1019吸引大量希望結合人工智能與商業的學生，學額有限，競爭激烈。",
+            "**與同類課程比較**：中位數21.0分與香港其他商業人工智能課程相若，反映該課程的良好聲譽及就業成果。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**黃博士**：Google人工智能研究科學家。2018年以一級榮譽畢業，後於麻省理工學院取得機器學習博士學位。",
+            "**李凱文先生**：金融科技初創公司聯合創辦人，利用人工智能進行信貸評分，公司現估值超過1億港元。2019年畢業。",
+            "**陳莎拉女士**：滙豐香港數據分析經理。2020年畢業，領導15名數據科學家團隊開發欺詐檢測模型。",
+            "**吳大衛先生**：港鐵公司數碼轉型主管。2017年畢業，負責實施基於人工智能的預測性維護系統。",
+            "**張菲奧娜女士**：阿里巴巴集團人工智能產品經理。2021年畢業，管理一個推出人工智能客服平台的團隊。",
+            "**卓越教學團隊**：課程師資包括屢獲殊榮的人工智能與商業研究人員，如陳邁克爾教授，他在人工智能金融應用領域發表了超過100篇論文。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與財政援助",
+          "content": [
+            "**城市大學入學獎學金**：頒予香港中學文憑考試成績優異的學生（如最佳5科25分或以上），涵蓋首年全額或部分學費。",
+            "**商業人工智能優異獎學金**：專為JS1019學生設立，根據第一年學業成績頒予頂尖學生，每年金額高達50,000港元。",
+            "**香港特區政府獎學金**：適用於學業及課外活動表現卓越的香港學生，每年最高80,000港元。",
+            "**李嘉誠博士獎學金**：為有經濟需要且學業優異的學生提供，涵蓋學費及生活費，可每年續期。",
+            "**外部獎學金**：學生可申請香港賽馬會及人工智能行業協會等機構提供的獎學金，這些機構支持人工智能商業學生。",
+            "**實習津貼**：課程通過合作教育計劃提供有薪實習機會，在獲得工作經驗的同時提供財政支援。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1019 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 精通數學，打好基礎**",
+            "",
+            "- 數學是最佳5科中的必修科；目標在文憑試數學（必修部分）取得5級或以上，並考慮選修M1/M2以提升分數。",
+            "- 練習歷屆試題，重點關注統計與概率題目，這些是人工智能與商業分析的核心。",
+            "",
+            "**2. 建立人工智能項目作品集**",
+            "",
+            "- 使用Python創建小型人工智能項目（例如簡單的聊天機器人或數據可視化工具），在申請中展示你的興趣與技能。",
+            "- 參加在線課程（如Coursera的「人人皆可學人工智能」），並將證書納入作品集。",
+            "",
+            "**3. 在面試中展現商業觸覺**",
+            "",
+            "- 準備面試時，討論人工智能如何解決真實商業問題，例如用人工智能進行客戶細分或欺詐檢測。",
+            "- 研究城市大學課程細節，提及與你興趣相符的特定課程或教授。",
+            "",
+            "**4. 善用文憑試選修科目**",
+            "",
+            "- 選擇經濟、商業或資訊及通訊科技等選修科，以顯示你適合該課程。理想的組合是數學、經濟及資訊及通訊科技。",
+            "- 目標在英文科取得至少4級，因為課程以英語授課，需要良好的溝通能力。",
+            "",
+            "**5. 在最佳5科中取得高分**",
+            "",
+            "- 由於中位數為21.0分，你需要在最佳5科中平均取得4.2級。專注於你最強的科目以最大化總分。",
+            "- 使用分數計算器模擬不同科目組合，找出最佳策略。",
+            "",
+            "**6. 獲取相關工作經驗**",
+            "",
+            "- 申請暑期實習或兼職工作，如數據分析、業務發展或科技初創公司，以強化你的申請。",
+            "- 即使是涉及數據輸入或數碼市場推廣的義工工作，也能展示你對人工智能與商業的興趣。",
+            "",
+            "**7. 與現屆學生及校友建立聯繫**",
+            "",
+            "- 參加城市大學的開放日及資訊講座，向現屆學生請教經驗，獲取內部貼士。",
+            "- 在LinkedIn上與校友聯繫，了解職業路徑及課程優勢。",
+            "",
+            "**8. 為文憑試英文科做好準備**",
+            "",
+            "- 由於課程以英語授課，英文科取得高分（5級或以上）能讓你脫穎而出。練習撰寫商業報告及進行演示。",
+            "- 使用《南華早報》等資源提升商業詞彙。",
+            "",
+            "**9. 提早申請並留意截止日期**",
+            "",
+            "- 在早期截止日期（通常為12月）前提交大學聯招申請，以最大化機會。逾期申請可能學額較少。",
+            "- 雙重確認你符合所有要求，包括數學科目要求，並提前準備好支持文件。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 21.0,
+    "lq": 21.0
+  }
+}

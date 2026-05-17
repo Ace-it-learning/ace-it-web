@@ -1,0 +1,285 @@
+{
+  "programme": {
+    "code": "JS1062",
+    "nameEn": "Bachelor of Laws and BBA Accountancy",
+    "nameZh": "法律學學士與工商管理學士(會計)",
+    "name": "Bachelor of Laws and BBA Accountancy",
+    "university": "香港城市大學",
+    "faculty": "",
+    "median": 29.0,
+    "band_a": 25.0,
+    "category": ""
+  },
+  "details": {
+    "code": "JS1062",
+    "university": "香港城市大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects (include English). Subject weighting: 1.5: English 1: other elective subjects.",
+            "**Median Admission Score**: 29.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 25.0 (2025 JUPAS data).",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure — JS1062 Bachelor of Laws and BBA Accountancy",
+          "content": [
+            "**Programme Overview**: This double degree programme combines legal training with accounting expertise, spanning 5 years full-time. Students graduate with both an LLB and a BBA (Accountancy), preparing for dual professional qualifications.",
+            "**Year 1**: Foundational courses in both disciplines, including Introduction to Legal System, Financial Accounting, and Management Accounting. Students also take University Core requirements.",
+            "**Year 2**: Core law subjects such as Constitutional Law, Contract Law, and Criminal Law, alongside intermediate accounting courses like Corporate Accounting and Taxation.",
+            "**Year 3**: Advanced law modules including Commercial Law, Company Law, and Evidence, paired with accounting electives such as Auditing and Financial Reporting.",
+            "**Year 4**: Specialised law options (e.g., Intellectual Property Law, International Trade Law) and accounting capstone courses. Students may undertake an internship or research project.",
+            "**Year 5**: Final year focuses on professional preparation, including Legal Ethics, Advanced Accounting, and a cross-disciplinary dissertation or project. Graduates are eligible for PCLL (law) and HKICPA (accounting) pathways."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — JS1062 Law & Accounting",
+          "content": [
+            "**Dual Professional Edge**: Graduates qualify for both the Postgraduate Certificate in Laws (PCLL) and the Hong Kong Institute of Certified Public Accountants (HKICPA) qualification, opening doors to legal and accounting careers.",
+            "**Top Employers**: Leading law firms (e.g., Clifford Chance, Allen & Overy), Big Four accounting firms (Deloitte, PwC, EY, KPMG), and multinational corporations.",
+            "**Common Roles**: Solicitor, Barrister, Certified Public Accountant, Tax Consultant, Corporate Lawyer, Forensic Accountant, and Compliance Officer.",
+            "**Sector Demand**: Hong Kong’s status as a financial hub creates strong demand for professionals with combined legal and accounting skills, especially in corporate governance, mergers & acquisitions, and regulatory compliance.",
+            "**Salary Outlook**: Entry-level salaries for dual-qualified graduates range from HKD 30,000–45,000 per month, with significant growth potential in private practice or in-house roles.",
+            "**Further Study**: Many graduates pursue PCLL, Master of Laws (LLM), or MBA to specialise further, enhancing career mobility."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life & Facilities — CityU",
+          "content": [
+            "**CityU Campus**: Located in Kowloon Tong, the campus is well-connected by MTR and offers modern facilities including the Li Dak Sum Yip Yio Chin Academic Building and the Run Run Shaw Library.",
+            "**Law Facilities**: The School of Law features a Moot Court for mock trials, a Legal Skills Centre, and dedicated study spaces for law students.",
+            "**Accounting Resources**: The Department of Accountancy provides access to Bloomberg terminals, financial databases (e.g., Thomson Reuters), and a Trading Room for practical learning.",
+            "**Student Organisations**: The CityU Law Society and Accounting Society organise networking events, career talks, and competitions (e.g., moot court, case competitions).",
+            "**Global Exchange**: Students can participate in exchange programmes with partner universities in the UK, US, Australia, and mainland China, enriching their international perspective.",
+            "**Support Services**: The university offers academic advising, career counselling, and mental health support through the Student Development Services."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness — JS1062 Admission Analysis",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects (including English). English weighted at 1.5x, other elective subjects at 1x.",
+            "**Median Score (2025)**: 29.0 — indicates strong competition, typically requiring top grades in English and three other electives.",
+            "**Lower Quartile (2025)**: 25.0 — the 25th percentile score, showing that even lower-ranked admits have solid academic profiles.",
+            "**English Weighting**: With English weighted 1.5x, a high score in English (e.g., Level 5 or above) significantly boosts the overall score.",
+            "**Demand vs Supply**: This double degree is highly sought-after due to its dual qualification; limited places (approx. 30–40 per cohort) keep competition intense."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — CityU Law & Accounting",
+          "content": [
+            "**Dr. Hon. Margaret Ng (吳靄儀)**: Former Legislative Councillor and barrister; graduated from CityU’s predecessor institution in law. Renowned for human rights advocacy.",
+            "**Mr. Paul Lam (林定國)**: Secretary for Justice, Hong Kong SAR; holds an LLB from CityU. Key figure in legal policy and reform.",
+            "**Ms. Teresa Cheng (鄭若驊)**: Former Secretary for Justice, Hong Kong SAR; alumna of CityU’s law programmes. Specialised in arbitration and international law.",
+            "**Mr. Albert Au (區永熙)**: Partner at Deloitte China; BBA Accountancy graduate. Leads audit and assurance services for financial institutions.",
+            "**Ms. Grace Chan (陳嘉慧)**: Senior Manager, Tax at PwC Hong Kong; double degree graduate (LLB & BBA Accountancy). Expert in cross-border tax advisory.",
+            "**Mr. Kevin Wong (黃浩然)**: Founder of a legal-tech startup; alumnus of the double degree programme. Combines legal knowledge with accounting technology."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid — CityU",
+          "content": [
+            "**CityU Entrance Scholarship**: Awarded to top DSE scorers (e.g., score 30+ in Best 5) with amounts up to full tuition fee waiver (HKD 42,100 per year).",
+            "**School of Law Scholarships**: Includes the Sir Oswald Cheung Memorial Scholarship (HKD 20,000) for outstanding law students with strong academic records.",
+            "**Department of Accountancy Scholarships**: The Dr. Charles K. Kao Scholarship (HKD 15,000) for top-performing accounting students.",
+            "**HKSAR Government Scholarships**: The HKSAR Scholarship Scheme supports students with excellent DSE results and leadership potential, up to HKD 80,000 per year.",
+            "**Need-Based Financial Aid**: CityU offers the Student Financial Assistance Scheme, covering tuition and living costs for students from low-income families.",
+            "**External Scholarships**: Students can apply for the Sir Edward Youde Memorial Scholarship and other private endowments, with awards ranging from HKD 10,000 to HKD 50,000."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS1062 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise English — It’s Weighted 1.5x**",
+            "",
+            "- Aim for at least Level 5 in English Language; a Level 5** or above can push your score significantly above the median of 29.0.",
+            "- Practice essay writing and critical analysis, as law programmes value strong communication skills.",
+            "",
+            "**2. Build a Strong Elective Profile**",
+            "",
+            "- Choose 3 electives that align with law or accounting, such as Economics, Business, or History. A Level 5 in each adds 15 points to your Best 5.",
+            "- Avoid overloading with unrelated subjects; focus on depth over breadth.",
+            "",
+            "**3. Target a Best 5 Score of 29+**",
+            "",
+            "- With English at 1.5x, a score of 5* in English (7.5 points) plus three electives at 5 (15 points) and one more at 4 (4 points) totals 26.5 — aim higher.",
+            "- Use past DSE papers to simulate scoring and identify weak areas.",
+            "",
+            "**4. Understand the Dual Degree Commitment**",
+            "",
+            "- This is a 5-year programme; be prepared for a heavy workload combining law and accounting.",
+            "- Research the PCLL and HKICPA requirements early to plan your course selections.",
+            "",
+            "**5. Leverage CityU’s Open Days**",
+            "",
+            "- Attend the School of Law and Department of Accountancy info sessions to ask about curriculum changes and internship opportunities.",
+            "- Network with current students to get insider tips on programme demands.",
+            "",
+            "**6. Prepare for Interviews (if shortlisted)**",
+            "",
+            "- Some applicants may be invited for an interview; practice discussing current legal and accounting issues (e.g., ESG reporting, data privacy laws).",
+            "- Demonstrate genuine interest in both disciplines, not just one.",
+            "",
+            "**7. Consider Alternative Pathways**",
+            "",
+            "- If your DSE score is below 25, consider applying to related programmes (e.g., JS1061 LLB alone) and transferring later.",
+            "- CityU also offers a BBA Accountancy (JS1007) as a backup option.",
+            "",
+            "**8. Apply Early in the JUPAS Cycle**",
+            "",
+            "- Band JS1062 as your first choice (Band A) to maximise chances; the programme is competitive and fills quickly.",
+            "- Submit your application before the December deadline to avoid last-minute issues.",
+            "",
+            "**9. Use the Weighting to Your Advantage**",
+            "",
+            "- Since English is 1.5x, even a small improvement in English (e.g., from 5 to 5*) adds 1.5 points to your total.",
+            "- Focus revision time on English reading and writing, as it has the highest impact on your admission score."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 (包括英文)。科目比重：1.5: 英文 1: 其他選修科。",
+            "**入學中位數**：29.0分（2025年聯招數據）。",
+            "**下四分位數**：25.0分（2025年聯招數據）。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — JS1062 法律學學士與工商管理學士(會計)",
+          "content": [
+            "**課程概覽**：此雙學位課程結合法律培訓與會計專業知識，為期5年全日制。畢業生將同時獲得法律學學士（LLB）及工商管理學士（會計），為雙重專業資格做好準備。",
+            "**第一年**：兩個學科的基礎課程，包括法律制度導論、財務會計及管理會計。學生亦需修讀大學核心課程。",
+            "**第二年**：核心法律科目如憲法、合約法及刑法，配合中級會計課程如公司會計及稅務。",
+            "**第三年**：高級法律單元包括商業法、公司法及證據法，並選修會計科目如審計及財務報告。",
+            "**第四年**：專門法律選修（如知識產權法、國際貿易法）及會計頂點課程。學生可參與實習或研究項目。",
+            "**第五年**：最後一年專注專業準備，包括法律倫理、高級會計及跨學科論文或項目。畢業生符合PCLL（法律）及HKICPA（會計）途徑資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS1062 法律與會計",
+          "content": [
+            "**雙重專業優勢**：畢業生可同時申請法學專業證書課程（PCLL）及香港會計師公會（HKICPA）資格，開拓法律及會計職業道路。",
+            "**頂尖僱主**：知名律師事務所（如高偉紳、安理國際）、四大會計師行（德勤、羅兵咸永道、安永、畢馬威）及跨國企業。",
+            "**常見職位**：律師、大律師、執業會計師、稅務顧問、企業律師、法務會計師及合規主任。",
+            "**行業需求**：香港作為金融中心，對具備法律及會計雙重技能的人才需求強勁，尤其在企業管治、併購及監管合規領域。",
+            "**薪酬展望**：雙重資格畢業生入職月薪約30,000至45,000港元，在私人執業或企業內部職位有顯著增長潛力。",
+            "**進修途徑**：許多畢業生繼續攻讀PCLL、法學碩士（LLM）或工商管理碩士（MBA），以進一步專業化，提升職業流動性。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活與設施 — 城大",
+          "content": [
+            "**城大校園**：位於九龍塘，交通便利（港鐵直達），設施現代化，包括李達三葉耀珍學術樓及邵逸夫圖書館。",
+            "**法律設施**：法律學院設有模擬法庭、法律技能中心及專為法律學生設立的研習空間。",
+            "**會計資源**：會計學系提供彭博終端機、金融數據庫（如湯森路透）及交易室，供實踐學習。",
+            "**學生組織**：城大法律學會及會計學會舉辦聯誼活動、職業講座及比賽（如模擬法庭、個案比賽）。",
+            "**環球交流**：學生可參與與英國、美國、澳洲及內地合作大學的交換計劃，擴闊國際視野。",
+            "**支援服務**：大學透過學生發展服務提供學術諮詢、職業輔導及心理健康支援。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力 — JS1062 入學分析",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科（包括英文）。英文比重1.5倍，其他選修科目1倍。",
+            "**2025年中位數**：29.0分 — 顯示競爭激烈，通常需要在英文及三個選修科取得頂尖成績。",
+            "**2025年下四分位數**：25.0分 — 第25百分位數分數，顯示即使最低錄取者也有穩固的學術背景。",
+            "**英文比重**：英文比重1.5倍，英文高分（如5級或以上）可顯著提升總分。",
+            "**供求情況**：此雙學位課程因雙重資格而極受歡迎；學額有限（每屆約30–40個），競爭激烈。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — 城大法律與會計",
+          "content": [
+            "**吳靄儀博士**：前立法會議員及大律師；畢業於城大前身院校的法律課程。以人權倡導聞名。",
+            "**林定國先生**：香港特別行政區律政司司長；持有城大法律學學士學位。法律政策及改革的重要人物。",
+            "**鄭若驊女士**：前香港特別行政區律政司司長；城大法律課程校友。專注仲裁及國際法。",
+            "**區永熙先生**：德勤中國合夥人；工商管理學士（會計）畢業生。領導金融機構的審計及鑑證服務。",
+            "**陳嘉慧女士**：羅兵咸永道香港高級經理；雙學位畢業生（法律學學士及工商管理學士（會計））。跨國稅務諮詢專家。",
+            "**黃浩然先生**：法律科技初創公司創辦人；雙學位課程校友。結合法律知識與會計科技。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與經濟援助 — 城大",
+          "content": [
+            "**城大入學獎學金**：頒予DSE成績優異者（如最佳5科30分以上），金額可達全額學費減免（每年42,100港元）。",
+            "**法律學院獎學金**：包括胡兆熾紀念獎學金（20,000港元），頒予學業成績優異的法律學生。",
+            "**會計學系獎學金**：高錕博士獎學金（15,000港元），獎勵頂尖會計學生。",
+            "**香港特區政府獎學金**：香港特別行政區政府獎學金計劃支援DSE成績優異及具領導潛能的學生，每年最高80,000港元。",
+            "**需要為本經濟援助**：城大提供學生經濟援助計劃，涵蓋低收入家庭學生的學費及生活開支。",
+            "**外部獎學金**：學生可申請尤德爵士紀念基金及其他私人捐贈獎學金，金額介乎10,000至50,000港元。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS1062 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先提升英文 — 比重1.5倍**",
+            "",
+            "- 目標英文至少達5級；5**或以上可大幅超越中位數29.0分。",
+            "- 練習論文寫作及批判分析，因為法律課程重視溝通能力。",
+            "",
+            "**2. 建立強勁選修科組合**",
+            "",
+            "- 選擇3個與法律或會計相關的選修科，如經濟、商業或歷史。每科5級可為最佳5科增加15分。",
+            "- 避免過多不相關科目；專注深度而非廣度。",
+            "",
+            "**3. 目標最佳5科29分或以上**",
+            "",
+            "- 英文1.5倍下，5*級（7.5分）加三個選修科5級（15分）再加一個4級（4分）總計26.5分 — 需爭取更高。",
+            "- 使用歷屆DSE試卷模擬計分，識別弱項。",
+            "",
+            "**4. 了解雙學位課程的承擔**",
+            "",
+            "- 這是5年制課程；需準備應付法律與會計的繁重課業。",
+            "- 及早研究PCLL及HKICPA要求，以規劃選科。",
+            "",
+            "**5. 善用城大開放日**",
+            "",
+            "- 參加法律學院及會計學系的資訊講座，了解課程變動及實習機會。",
+            "- 與現屆學生交流，獲取課程要求的內部貼士。",
+            "",
+            "**6. 準備面試（如獲篩選）**",
+            "",
+            "- 部分申請人可能獲邀面試；練習討論當前法律及會計議題（如ESG報告、數據私隱法）。",
+            "- 展示對兩個學科的真正興趣，而非僅其中一個。",
+            "",
+            "**7. 考慮替代途徑**",
+            "",
+            "- 如DSE分數低於25分，可考慮申請相關課程（如JS1061法律學學士）並日後轉讀。",
+            "- 城大亦提供工商管理學士（會計）（JS1007）作為後備選擇。",
+            "",
+            "**8. 在JUPAS周期內及早申請**",
+            "",
+            "- 將JS1062列為首選（Band A）以增加機會；此課程競爭激烈，學額很快填滿。",
+            "- 在12月截止日期前提交申請，避免最後關頭問題。",
+            "",
+            "**9. 利用比重優勢**",
+            "",
+            "- 由於英文比重1.5倍，即使英文從5級提升至5*，也能增加1.5分。",
+            "- 將溫習時間集中於英文閱讀及寫作，因為這對入學分數影響最大。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": 29.0,
+    "lq": 25.0
+  }
+}

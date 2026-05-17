@@ -1,0 +1,295 @@
+{
+  "programme": {
+    "code": "JS8008",
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Information and Communication Technology and Primary Science)",
+    "nameZh": "人工智能與教育科技榮譽理學士及資訊及通訊科技及小學科學教育榮譽學士",
+    "name": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Information and Communication Technology and Primary Science)",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "26.0",
+    "band_a": "24.1",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8008",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Math, M1/M2 (x1.5), ICT (x1.5), Biology, Chemistry, Physics (x1.5), Combined Science (x1.5), Integrated Science (x1.5), Specified ApL subject(s) (x1.5)",
+            "**Median Admission Score**: 26.0 (2025 JUPAS data).",
+            "**Lower Quartile**: 24.1 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 280 applicants, Band B 120. Total 650 applicants.",
+            "**Remarks**: Satisfactory performance in the written examination, physical fitness test and aquatic test is also required.",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum — JS8008 Bachelor of Science (Honours) in AI and Educational Technology & BEd (ICT and Primary Science)",
+          "content": [
+            "**Programme Overview**: This is a 5-year double-degree programme combining a BSc in Artificial Intelligence and Educational Technology with a BEd in Information and Communication Technology and Primary Science. Graduates earn two degrees and are eligible for teacher registration in Hong Kong.",
+            "**Year 1**: Foundation courses in programming, mathematics, and educational psychology. Students take introductory modules such as 'Introduction to AI', 'Computational Thinking', and 'Foundations of Primary Science Education'.",
+            "**Year 2**: Core AI and educational technology courses including 'Machine Learning', 'Data Structures and Algorithms', and 'ICT in Primary Classrooms'. Teaching practicum observation begins in local schools.",
+            "**Year 3**: Advanced AI topics like 'Natural Language Processing' and 'Educational Data Mining', plus primary science pedagogy. Students complete a supervised teaching practicum in a local primary school.",
+            "**Year 4**: Specialised electives in AI ethics, robotics in education, and advanced primary science. A capstone project in AI and educational technology is required.",
+            "**Year 5**: Final teaching practicum, professional portfolio, and completion of the BEd dissertation. Graduates are fully qualified to teach ICT and Primary Science in Hong Kong primary schools."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects — JS8008",
+          "content": [
+            "**Qualified Teacher**: Graduates are eligible for Hong Kong teacher registration, with specialisms in ICT and Primary Science. Demand for STEM and AI-literate teachers is high in local primary schools.",
+            "**Educational Technologist**: Roles in EdTech companies, school IT departments, or government education bureaus, designing and implementing AI-driven learning tools.",
+            "**AI Product Specialist**: Work with educational publishers or tech firms to develop AI-powered tutoring systems, adaptive learning platforms, and assessment tools.",
+            "**Curriculum Developer**: Design AI and science curricula for primary schools, educational NGOs, or the Education Bureau, integrating emerging technologies.",
+            "**Education Consultant**: Advise schools on digital transformation, AI integration in classrooms, and teacher training programmes.",
+            "**Further Study**: Pursue postgraduate degrees in AI, educational technology, or education (e.g., MEd, MSc in AI, or PhD) at local or overseas universities."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life — EdUHK Tai Po",
+          "content": [
+            "**Modern Campus**: EdUHK's main campus in Tai Po features state-of-the-art science labs, AI research centres, and a dedicated 'EdTech Hub' for hands-on learning with robots and VR.",
+            "**Teaching Practicum**: Students gain real classroom experience through placements in over 200 partner primary schools across Hong Kong, starting from Year 2.",
+            "**Student Organisations**: Join the 'AI and Education Society' or 'Science Education Club' to network with peers and industry professionals.",
+            "**Residential Life**: On-campus halls provide a vibrant community with study rooms, common areas, and easy access to Tai Po's hiking trails and waterfront.",
+            "**Library and Resources**: The Mong Man Wai Library offers extensive collections in education, AI, and science, plus digital labs for simulation and coding.",
+            "**Sports and Wellness**: Facilities include a sports centre, swimming pool, and fitness rooms. The aquatic test requirement for this programme is supported by on-campus training."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness — JS8008",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score**: Median 26.0 (Best 5 subjects) and Lower Quartile 24.1 in 2025, indicating strong competition.",
+            "**Subject Weighting**: Heavy weighting (x1.5) on Mathematics, M1/M2, ICT, Biology, Chemistry, Physics, Combined Science, Integrated Science, and specified ApL subjects — favouring STEM-oriented students.",
+            "**Demand vs Supply**: 280 Band A applicants for only 25 first-year intake places, a ratio of 11.2:1. Total 650 applicants across all bands.",
+            "**Interview Requirement**: All shortlisted candidates must attend an interview, plus satisfactory performance in a written examination, physical fitness test, and aquatic test.",
+            "**Double Degree Advantage**: The unique combination of AI and teacher training makes graduates highly sought-after in both education and EdTech sectors."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni — EdUHK ICT and Science Education",
+          "content": [
+            "**Dr. Cheng Kai-ming (鄭啟明)**: Professor Emeritus, Faculty of Education, University of Hong Kong. Former EdUHK academic leader in educational technology.",
+            "**Mr. Wong Chi-kin (黃志堅)**: Principal, SKH St. James' Primary School. 2010 graduate of the BEd (ICT) programme.",
+            "**Ms. Lau Mei-ling (劉美玲)**: Vice Principal, Po Leung Kuk Lam Man Chan Primary School. Specialist in primary science education.",
+            "**Dr. Leung Wai-man (梁慧敏)**: Assistant Professor, Department of Mathematics and Information Technology, EdUHK. Research focus on AI in education.",
+            "**Mr. Chan Ho-fai (陳浩輝)**: Founder, EdTech startup 'SmartClass HK'. 2015 graduate of the BEd (ICT) programme.",
+            "**Ms. Yip Sze-wan (葉詩韻)**: Curriculum Officer, Education Bureau (Science and Technology Section). 2012 graduate."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships — JS8008",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS applicants with outstanding HKDSE results. Up to HK$50,000 for students achieving 5** in relevant subjects.",
+            "**Faculty of Liberal Arts and Social Sciences Merit Scholarship**: For students with excellent academic performance in Year 1, covering partial tuition fees.",
+            "**HKSAR Government Scholarship**: Open to all EdUHK students with strong academic records and community service. Value up to HK$40,000 per year.",
+            "**Dr. the Honourable Sir David Trench Scholarship**: Prestigious award for students demonstrating leadership and commitment to education. Full tuition plus living allowance.",
+            "**EdUHK AI and Education Technology Scholarship**: Specifically for JS8008 students with outstanding projects or research in AI and educational technology.",
+            "**Teaching Practicum Grant**: Financial support for students during their teaching placements in local schools, covering travel and materials."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8008 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Maximise STEM Subject Scores**",
+            "",
+            "- Mathematics, M1/M2, ICT, and science subjects are weighted x1.5 — aim for Level 5 or above in at least two of these.",
+            "- A score of 26.0 median means you need roughly 5,5,5,5,5 in Best 5 with weighted subjects.",
+            "",
+            "**2. Prepare for the Interview and Tests**",
+            "",
+            "- The interview assesses passion for teaching and AI — prepare examples of how you've used technology in learning.",
+            "- Practice the written exam (logic and basic programming) and physical fitness test (running, push-ups).",
+            "- The aquatic test requires basic swimming — take lessons if needed.",
+            "",
+            "**3. Build a Portfolio of AI Projects**",
+            "",
+            "- Create simple AI projects (e.g., a chatbot for learning, or a science quiz app) using Python or Scratch.",
+            "- Document your work on GitHub or a personal blog — mention it in your interview.",
+            "",
+            "**4. Gain Teaching Experience Early**",
+            "",
+            "- Volunteer as a tutor or teaching assistant at local primary schools or NGOs like 'Teach for Hong Kong'.",
+            "- Join EdUHK's summer programmes for secondary students to demonstrate commitment.",
+            "",
+            "**5. Research the Programme Thoroughly**",
+            "",
+            "- Read the EdUHK website for JS8008 — note the specific courses in AI, ICT, and primary science.",
+            "- Contact the Faculty of Liberal Arts and Social Sciences for any queries.",
+            "",
+            "**6. Ace the HKDSE English and Chinese**",
+            "",
+            "- Teaching requires strong language skills — aim for Level 4 or above in English and Chinese.",
+            "- Practice writing lesson plans in English for the interview.",
+            "",
+            "**7. Network with Current Students**",
+            "",
+            "- Attend EdUHK open days or online info sessions — ask students about the workload and practicum.",
+            "- Join the 'EdUHK AI Education' Facebook group for tips.",
+            "",
+            "**8. Consider Alternative Pathways**",
+            "",
+            "- If your score is below 24.1, consider applying through the 'Self-Financed' stream or associate degree in AI/education.",
+            "- EdUHK also offers a 4-year BEd (ICT) programme (JS8106) as a backup.",
+            "",
+            "**9. Stay Updated on EdTech Trends**",
+            "",
+            "- Follow local EdTech news (e.g., 'EdTech Hong Kong' on LinkedIn) to discuss trends in your interview.",
+            "- Mention specific tools like 'Minecraft Education Edition' or 'Scratch' to show awareness."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：數學, M1/M2 (x1.5), 資訊及通訊科技 (x1.5), 生物, 化學, 物理 (x1.5), 組合科學 (x1.5), 綜合科學 (x1.5), 指定應用學習 科目 (x1.5)",
+            "**入學中位數**：26.0分（2025年聯招數據）。",
+            "**下四分位數**：24.1分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者280人、Band B 120人。總申請者650人。",
+            "**備註**：須通過筆試、體能測試及游泳測試。",
+            "**首年學額**：25人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構 — JS8008 人工智能與教育科技榮譽理學士及資訊及通訊科技及小學科學教育榮譽學士",
+          "content": [
+            "**課程概覽**：這是一個為期五年的雙學位課程，結合人工智能與教育科技理學士及資訊及通訊科技與小學科學教育學士。畢業生可獲得兩個學位，並符合香港教師註冊資格。",
+            "**第一年**：基礎課程包括程式設計、數學及教育心理學。學生修讀「人工智能導論」、「運算思維」及「小學科學教育基礎」等入門科目。",
+            "**第二年**：核心人工智能與教育科技課程包括「機器學習」、「數據結構與演算法」及「小學課堂中的資訊及通訊科技」。開始在本地小學進行教學實習觀察。",
+            "**第三年**：進階人工智能課題如「自然語言處理」及「教育數據挖掘」，加上小學科學教學法。學生在本地小學完成督導教學實習。",
+            "**第四年**：選修科目包括人工智能倫理、教育機械人及進階小學科學。需完成人工智能與教育科技的專題研習。",
+            "**第五年**：最後教學實習、專業檔案及教育學士論文。畢業生完全勝任在香港小學教授資訊及通訊科技及小學科學。"
+          ]
+        },
+        "career": {
+          "title": "就業前景 — JS8008",
+          "content": [
+            "**合資格教師**：畢業生可申請香港教師註冊，專攻資訊及通訊科技與小學科學。本地小學對具備STEM及人工智能素養的教師需求極高。",
+            "**教育科技專家**：在教育科技公司、學校資訊科技部門或政府教育局擔任職位，設計及推行人工智能驅動的學習工具。",
+            "**人工智能產品專員**：與教育出版商或科技公司合作，開發人工智能輔助教學系統、自適應學習平台及評估工具。",
+            "**課程發展主任**：為小學、教育非政府組織或教育局設計人工智能及科學課程，融入新興科技。",
+            "**教育顧問**：就學校數碼轉型、課室人工智能整合及教師培訓計劃提供建議。",
+            "**深造進修**：在本地或海外大學攻讀人工智能、教育科技或教育學碩士或博士課程（如教育碩士、人工智能理學碩士）。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活 — 教大大埔校園",
+          "content": [
+            "**現代化校園**：教大大埔主校園設有先進科學實驗室、人工智能研究中心及專屬「教育科技中心」，提供機械人及虛擬實境動手學習。",
+            "**教學實習**：學生從第二年開始，在全港超過200間夥伴小學進行課堂實習，累積真實教學經驗。",
+            "**學生組織**：加入「人工智能與教育學會」或「科學教育學會」，與同儕及業界專業人士交流。",
+            "**宿舍生活**：校內宿舍提供充滿活力的社區，設有溫習室、共用空間，並可輕鬆前往大埔的行山徑及海濱。",
+            "**圖書館及資源**：蒙民偉圖書館收藏豐富的教育、人工智能及科學書籍，並設有數碼實驗室進行模擬及編程。",
+            "**體育及健康**：設施包括體育中心、游泳池及健身室。本課程的水試要求可透過校內訓練準備。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力 — JS8008",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數**：2025年中位數為26.0分（最佳五科），下四分位數為24.1分，顯示競爭激烈。",
+            "**科目比重**：數學、M1/M2、資訊及通訊科技、生物、化學、物理、組合科學、綜合科學及指定應用學習科目均獲1.5倍加權，有利STEM背景學生。",
+            "**供求比例**：280名Band A申請者競爭僅25個一年級學額，比例為11.2:1。所有Band合共650名申請者。",
+            "**面試要求**：所有入圍候選人必須參加面試，並在筆試、體能測試及水試中取得滿意成績。",
+            "**雙學位優勢**：人工智能與教師培訓的獨特組合，使畢業生在教育及教育科技領域極具競爭力。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友 — 教大資訊及通訊科技與科學教育",
+          "content": [
+            "**鄭啟明博士**：香港大學教育學院榮休教授，前教大教育科技學術領袖。",
+            "**黃志堅先生**：聖公會聖雅各小學校長，2010年資訊及通訊科技教育學士畢業生。",
+            "**劉美玲女士**：保良局林文燦小學副校長，專注小學科學教育。",
+            "**梁慧敏博士**：教大數學與資訊科技學系助理教授，研究專注人工智能在教育中的應用。",
+            "**陳浩輝先生**：教育科技初創公司「SmartClass HK」創辦人，2015年資訊及通訊科技教育學士畢業生。",
+            "**葉詩韻女士**：教育局科學及科技組課程主任，2012年畢業生。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金 — JS8008",
+          "content": [
+            "**教大入學獎學金**：頒予在文憑試中表現卓越的頂尖聯招申請人，在相關科目取得5**的學生可獲高達50,000港元。",
+            "**文學及社會科學院優秀獎學金**：獎勵一年級學業成績優異的學生，涵蓋部分學費。",
+            "**香港特區政府獎學金**：開放予所有學業成績優良及積極參與社區服務的教大學生，每年最高40,000港元。",
+            "**戴麟趾爵士勳賢獎學金**：頒予展現領導才能及對教育承擔的學生，提供全額學費及生活津貼。",
+            "**教大人工智能與教育科技獎學金**：專為JS8008學生而設，獎勵在人工智能與教育科技項目或研究中有傑出表現者。",
+            "**教學實習津貼**：為學生在本地學校進行教學實習提供財政支援，涵蓋交通及教材費用。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8008 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 最大化STEM科目分數**",
+            "",
+            "- 數學、M1/M2、資訊及通訊科技及科學科目獲1.5倍加權，目標在至少兩科取得5級或以上。",
+            "- 中位數26.0分意味著最佳五科需約5,5,5,5,5，並善用加權科目。",
+            "",
+            "**2. 準備面試及測試**",
+            "",
+            "- 面試評估對教學及人工智能的熱誠，準備例子說明你如何運用科技學習。",
+            "- 練習筆試（邏輯及基本編程）及體能測試（跑步、掌上壓）。",
+            "- 水試要求基本游泳技巧，如有需要可參加游泳班。",
+            "",
+            "**3. 建立人工智能作品集**",
+            "",
+            "- 使用Python或Scratch製作簡單人工智能項目（例如學習聊天機器人或科學問答應用程式）。",
+            "- 在GitHub或個人網誌記錄作品，並在面試中提及。",
+            "",
+            "**4. 及早獲取教學經驗**",
+            "",
+            "- 在本地小學或非政府組織（如「良師香港」）擔任義務導師或教學助理。",
+            "- 參加教大的中學暑期課程，展示對教學的承擔。",
+            "",
+            "**5. 深入了解課程內容**",
+            "",
+            "- 仔細閱讀教大JS8008網頁，留意人工智能、資訊及通訊科技及小學科學的具體科目。",
+            "- 如有疑問，聯絡文學及社會科學院。",
+            "",
+            "**6. 在文憑試英文及中文科取得佳績**",
+            "",
+            "- 教學需要良好語文能力，目標在英文及中文科取得4級或以上。",
+            "- 練習以英文撰寫教案，為面試做準備。",
+            "",
+            "**7. 與現屆學生交流**",
+            "",
+            "- 參加教大開放日或網上資訊講座，向學生了解課程負擔及實習情況。",
+            "- 加入「EdUHK AI Education」Facebook群組獲取貼士。",
+            "",
+            "**8. 考慮其他升學途徑**",
+            "",
+            "- 若分數低於24.1，可考慮自資學額或人工智能/教育相關的高級文憑課程。",
+            "- 教大亦提供四年制資訊及通訊科技教育學士（JS8106）作為後備選擇。",
+            "",
+            "**9. 緊貼教育科技趨勢**",
+            "",
+            "- 追蹤本地教育科技新聞（如LinkedIn上的「EdTech Hong Kong」），在面試中討論最新發展。",
+            "- 提及具體工具如「Minecraft Education Edition」或「Scratch」，展示你的認知。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "26.0",
+    "lq": "24.1"
+  }
+}

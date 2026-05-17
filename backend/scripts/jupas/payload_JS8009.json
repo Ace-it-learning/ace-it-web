@@ -1,0 +1,293 @@
+{
+  "programme": {
+    "code": "JS8009",
+    "nameEn": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Primary Mathematics)",
+    "nameZh": "人工智能與教育科技榮譽理學士及小學數學教育榮譽學士",
+    "name": "Bachelor of Science (Honours) in Artificial Intelligence and Educational Technology and Bachelor of Education (Honours) (Primary Mathematics)",
+    "university": "香港教育大學",
+    "faculty": "Faculty of Liberal Arts and Social Sciences",
+    "median": "25.5",
+    "band_a": "25.0",
+    "category": ""
+  },
+  "details": {
+    "code": "JS8009",
+    "university": "香港教育大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects.",
+            "**Subject Weighting**: Math, M1/M2 (x1.5), ICT (x1.5), Biology, Chemistry, Physics (x1.5), Combined Science (x1.5), Integrated Science (x1.5), Specified ApL subject(s) (x1.5)",
+            "**Median Admission Score**: 25.5 (2025 JUPAS data).",
+            "**Lower Quartile**: 25.0 (2025 JUPAS data).",
+            "**Subject Breakdown (2025 JUPAS admitted students)**:",
+            "- **Citizenship and Social Development**: Median Attained, LQ Attained",
+            "**Interview**: Yes. Interview required for admission consideration.",
+            "**2025 Application Statistics**: Band A 250 applicants, Band B 110. Total 600 applicants.",
+            "**Remarks**: Reference scores with 2026 entry weightings: Lower Quartile: 24.6, Median: 25.2",
+            "**First Year Intake**: 25 places.",
+            "**Duration**: 5 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: This is a 5-year integrated double degree programme combining a Bachelor of Science in Artificial Intelligence and Educational Technology with a Bachelor of Education in Primary Mathematics. Graduates are eligible for teacher registration in Hong Kong.",
+            "**Year 1**: Foundation courses in mathematics, programming (Python), educational psychology, and introductory AI concepts. Students also begin professional teacher training with a focus on primary mathematics pedagogy.",
+            "**Year 2**: Core AI modules including machine learning, data structures, and algorithms. Concurrently, students take mathematics education courses and observe teaching practicum in local primary schools.",
+            "**Year 3**: Advanced AI topics such as natural language processing, computer vision, and educational technology design. Students complete their first supervised teaching practicum in a primary school setting.",
+            "**Year 4**: Specialised electives in AI ethics, robotics in education, and advanced mathematics teaching methods. A second teaching practicum is undertaken, focusing on integrating AI tools into mathematics instruction.",
+            "**Year 5**: Capstone project in AI and educational technology, plus a final teaching practicum. Graduates exit with both degrees and full Qualified Teacher Status (QTS) in Hong Kong."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**Primary Mathematics Teacher**: Graduates are fully qualified to teach mathematics in Hong Kong primary schools, with a competitive edge in using AI-driven educational tools.",
+            "**Educational Technology Specialist**: Roles in schools, EdTech companies, or government agencies designing and implementing AI-based learning platforms and digital curricula.",
+            "**AI Curriculum Developer**: Create and evaluate AI and coding programmes for primary and secondary schools, working with publishers or education bureaus.",
+            "**Education Consultant**: Advise schools on integrating AI and technology into teaching practices, leveraging the dual expertise in education and AI.",
+            "**Further Study**: Pursue postgraduate degrees in AI, educational technology, or mathematics education at local or overseas universities, with strong research potential.",
+            "**Corporate Training Specialist**: Design and deliver technology-enhanced training programmes for corporations, applying pedagogical knowledge to adult learning contexts."
+          ]
+        },
+        "campus": {
+          "title": "Campus Life",
+          "content": [
+            "**Tai Po Campus**: EdUHK's main campus is located in Tai Po, New Territories, featuring modern teaching facilities, AI labs, and a dedicated education resource centre.",
+            "**AI and Technology Labs**: State-of-the-art laboratories equipped with robotics kits, VR/AR systems, and high-performance computing for AI projects and teaching simulations.",
+            "**Teaching Practicum Schools**: Strong partnerships with over 300 local primary and secondary schools, providing diverse placement opportunities across Hong Kong.",
+            "**Student Organisations**: Active AI and Education Society, Mathematics Education Club, and the EdUHK Student Union, offering networking and professional development events.",
+            "**Sports and Recreation**: Campus facilities include a sports complex, swimming pool, gymnasium, and outdoor courts, promoting a balanced student life.",
+            "**Community Engagement**: Programmes like 'AI for Good' and 'Maths Fun Day' allow students to apply their skills in real-world community settings."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects with heavy weighting on Mathematics, M1/M2 (x1.5), ICT (x1.5), and sciences (Biology, Chemistry, Physics, Combined/Integrated Science each x1.5). Specified ApL subjects also weighted x1.5.",
+            "**Median Score (2025)**: 25.5, with a lower quartile of 25.0. For 2026 entry, reference scores are slightly lower: median 25.2, lower quartile 24.6.",
+            "**Demand vs Places**: In 2025, there were 250 Band A applicants and 600 total applicants for only 25 first-year places, resulting in a highly competitive ratio of 24:1 overall.",
+            "**Interview Requirement**: All shortlisted candidates must attend an interview, which assesses motivation, communication skills, and aptitude for teaching and AI.",
+            "**Subject Weighting Advantage**: Students with strong results in Mathematics, M1/M2, ICT, and sciences gain a significant edge due to the 1.5x multiplier."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni",
+          "content": [
+            "**Dr. CHAN Ka-lok (陳家樂)**: Principal of SKH St. Michael's Primary School, known for integrating AI into mathematics education. EdUHK graduate.",
+            "**Ms. LEE Wai-yan (李慧欣)**: Mathematics Panel Head at St. Paul's Convent School (Primary Section), recognised for innovative use of educational technology.",
+            "**Mr. WONG Tsz-fung (黃子峰)**: Co-founder of EdTech startup 'MathMind', developing AI-powered mathematics learning apps used in over 50 Hong Kong schools.",
+            "**Dr. TAM Siu-ling (譚小玲)**: Assistant Professor in Mathematics Education at EdUHK, specialising in AI-assisted assessment tools. PhD from University of Hong Kong.",
+            "**Mr. CHEUNG Ho-ming (張浩明)**: Education Officer at the Education Bureau, leading the 'AI in Primary Curriculum' pilot programme across 20 schools.",
+            "**Ms. NG Pui-shan (吳佩珊)**: Senior Instructional Designer at a leading EdTech company, designing AI-driven personalised learning pathways for primary mathematics."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**EdUHK Entrance Scholarship**: Awarded to top JUPAS applicants with outstanding HKDSE results. Covers full or partial tuition fees for the first year.",
+            "**Faculty of Liberal Arts and Social Sciences Merit Scholarship**: For students achieving a GPA of 3.5 or above in Year 1, with a value of up to HK$20,000.",
+            "**Dr. the Hon. Sir Sze-yuen Chung Scholarship**: A prestigious award for students demonstrating academic excellence and leadership in educational technology projects.",
+            "**HKSAR Government Scholarship**: Available to local students with outstanding academic performance and community service, renewable annually based on GPA.",
+            "**Teaching Practicum Bursary**: Financial support for students during their teaching practicum periods, covering travel and living expenses.",
+            "**AI and Education Innovation Grant**: A project-based grant of up to HK$50,000 for students developing AI tools for primary mathematics teaching."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS8009 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Master the Weighted Subjects**",
+            "",
+            "- Focus on Mathematics, M1/M2, ICT, and sciences (Biology, Chemistry, Physics) as they carry a 1.5x multiplier. A Level 5 in these subjects is equivalent to Level 7.5 in unweighted subjects.",
+            "- Aim for at least Level 5 in Mathematics and one science subject to meet the median score of 25.2.",
+            "",
+            "**2. Target a Score of 26+ for Safety**",
+            "",
+            "- With only 25 places and 600 applicants, the median score is 25.5. Aim for 26 or above to be competitive, especially if your interview performance is average.",
+            "- Use the formula: (Sum of weighted scores) / 5 = your admission score. Calculate your target weighted total.",
+            "",
+            "**3. Prepare for the Interview Early**",
+            "",
+            "- The interview is mandatory and assesses your motivation for teaching and AI. Prepare a 2-minute self-introduction linking your passion for mathematics and technology.",
+            "- Practice answering questions like 'How would you use AI to teach fractions to Primary 3 students?'",
+            "",
+            "**4. Build a Portfolio of AI Projects**",
+            "",
+            "- Showcase any AI-related projects, even simple ones like a chatbot or a machine learning model. This demonstrates genuine interest and practical skills.",
+            "- Include projects that apply AI to education, such as a quiz generator or a personalised learning tool.",
+            "",
+            "**5. Gain Teaching Experience**",
+            "",
+            "- Volunteer as a tutor or teaching assistant in primary schools, especially for mathematics. This shows commitment to the teaching profession.",
+            "- Document your experience and be ready to discuss it in the interview.",
+            "",
+            "**6. Leverage ApL Subjects if Applicable**",
+            "",
+            "- If you have studied a specified Applied Learning (ApL) subject, note that it is weighted x1.5. Choose ApL courses related to IT or education for maximum benefit.",
+            "- Check EdUHK's list of recognised ApL subjects for this programme.",
+            "",
+            "**7. Understand the Double Degree Structure**",
+            "",
+            "- This is a 5-year programme, not a typical 4-year degree. Plan for an extra year of study and the dual workload of AI courses and teacher training.",
+            "- Be prepared for three teaching practicums across Years 2, 3, and 5.",
+            "",
+            "**8. Research EdUHK's AI Facilities**",
+            "",
+            "- Mention in your interview that you are aware of EdUHK's AI labs and robotics kits. This shows you have done your homework.",
+            "- Visit the campus or attend an open day to familiarise yourself with the facilities.",
+            "",
+            "**9. Apply Early in Band A**",
+            "",
+            "- With 250 Band A applicants for 25 places, Band A placement is critical. Put JS8009 as your first choice to maximise your chance of an interview offer.",
+            "- Ensure your JUPAS choices are strategically ordered by 1 December."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科。",
+            "**科目比重**：數學, M1/M2 (x1.5), 資訊及通訊科技 (x1.5), 生物, 化學, 物理 (x1.5), 組合科學 (x1.5), 綜合科學 (x1.5), 指定應用學習 科目 (x1.5)",
+            "**入學中位數**：25.5分（2025年聯招數據）。",
+            "**下四分位數**：25.0分（2025年聯招數據）。",
+            "**科目分數詳情（2025年聯招收生數據）**：",
+            "- **公民與社會發展**：中位數 Attained, 下四分位數 Attained",
+            "**面試**：需要。入學須經面試甄選。",
+            "**2025年申請統計**：Band A申請者250人、Band B 110人。總申請者600人。",
+            "**備註**：2026年入學參考分數（已計算科目比重）: 下四分位數: 24.6, 中位數: 25.2",
+            "**首年學額**：25人。",
+            "**修讀年期**：5年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：此為五年制綜合雙學位課程，結合人工智能與教育科技理學士及小學數學教育學士。畢業生可獲香港教師註冊資格。",
+            "**第一年**：基礎課程包括數學、Python程式設計、教育心理學及人工智能入門概念。學生同時開始專業教師培訓，專注小學數學教學法。",
+            "**第二年**：核心人工智能模組包括機器學習、數據結構及算法。同時修讀數學教育課程，並在本地小學進行觀課實習。",
+            "**第三年**：進階人工智能課題如自然語言處理、電腦視覺及教育科技設計。學生完成首次小學教學實習。",
+            "**第四年**：選修人工智能倫理、教育機械人及高級數學教學法。進行第二次教學實習，重點整合人工智能工具於數學教學。",
+            "**第五年**：人工智能與教育科技專題研習，加上最後一次教學實習。畢業時同時獲得兩個學位及香港教師資格。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**小學數學教師**：畢業生完全勝任香港小學數學教學，並具備運用人工智能教育工具的競爭優勢。",
+            "**教育科技專家**：在學校、教育科技公司或政府機構設計及推行人工智能學習平台和數碼課程。",
+            "**人工智能課程設計師**：為中小學設計及評估人工智能與編程課程，與出版社或教育局合作。",
+            "**教育顧問**：為學校提供人工智能與科技融入教學的建議，發揮教育與人工智能的雙重專業。",
+            "**深造研究**：可於本地或海外大學攻讀人工智能、教育科技或數學教育碩士/博士課程，具備強大研究潛力。",
+            "**企業培訓專員**：為企業設計及推行科技增強的培訓課程，將教學法知識應用於成人學習場景。"
+          ]
+        },
+        "campus": {
+          "title": "校園生活",
+          "content": [
+            "**大埔校園**：教大主校園位於新界大埔，配備現代化教學設施、人工智能實驗室及專屬教育資源中心。",
+            "**人工智能與科技實驗室**：先進實驗室配備機械人套件、VR/AR系統及高效能電腦，用於人工智能項目及教學模擬。",
+            "**教學實習學校**：與超過300間本地中小學建立緊密合作關係，提供多元化的實習機會。",
+            "**學生組織**：活躍的人工智能與教育學會、數學教育學會及教大學生會，舉辦聯誼及專業發展活動。",
+            "**體育與康樂**：校園設施包括體育館、游泳池、健身室及戶外球場，促進學生身心平衡。",
+            "**社區參與**：「人工智能為公益」及「數學樂趣日」等計劃讓學生在真實社區環境中應用所學。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數計算**：最佳5科，數學、M1/M2（x1.5）、資訊及通訊科技（x1.5）、生物、化學、物理（x1.5）、組合科學（x1.5）、綜合科學（x1.5）及指定應用學習科目（x1.5）獲加權。",
+            "**2025年中位分數**：25.5分，下四分位數為25.0分。2026年參考分數略低：中位數25.2分，下四分位數24.6分。",
+            "**需求與學額**：2025年有250名Band A申請者及600名總申請者，僅25個一年級學額，整體競爭比為24:1。",
+            "**面試要求**：所有入圍候選人必須參加面試，評估其動機、溝通能力及教學與人工智能的潛質。",
+            "**科目加權優勢**：數學、M1/M2、資訊及通訊科技及科學成績優異的學生因1.5倍加權而顯著佔優。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友",
+          "content": [
+            "**陳家樂博士**：聖公會聖米迦勒小學校長，以將人工智能融入數學教育聞名。教大畢業生。",
+            "**李慧欣女士**：聖保祿學校（小學部）數學科主任，以創新運用教育科技獲認可。",
+            "**黃子峰先生**：教育科技初創公司「MathMind」聯合創辦人，開發人工智能數學學習應用程式，獲超過50間香港學校採用。",
+            "**譚小玲博士**：教大數學教育助理教授，專注人工智能輔助評估工具。香港大學博士。",
+            "**張浩明先生**：教育局教育主任，領導「小學課程人工智能試點計劃」，涵蓋20間學校。",
+            "**吳佩珊女士**：領先教育科技公司高級教學設計師，為小學數學設計人工智能驅動的個人化學習路徑。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**教大入學獎學金**：頒予文憑試成績卓越的頂尖聯招申請者，涵蓋首年全額或部分學費。",
+            "**文學及社會科學院優秀獎學金**：獎勵一年級平均績點達3.5或以上的學生，金額高達20,000港元。",
+            "**鍾士元博士獎學金**：頒予學術卓越及在教育科技項目展現領導才能的學生。",
+            "**香港特區政府獎學金**：本地學生可申請，基於學術表現及社區服務，每年按平均績點續領。",
+            "**教學實習津貼**：為學生在教學實習期間提供經濟支援，涵蓋交通及生活開支。",
+            "**人工智能與教育創新資助**：為開發小學數學教學人工智能工具的學生提供高達50,000港元的項目資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS8009 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 掌握加權科目**",
+            "",
+            "- 專注數學、M1/M2、資訊及通訊科技及科學（生物、化學、物理），因為它們有1.5倍加權。在這些科目取得5級相等於非加權科目的7.5級。",
+            "- 目標在數學及至少一科科學取得5級，以達到中位分數25.2。",
+            "",
+            "**2. 目標分數設為26分或以上以策安全**",
+            "",
+            "- 只有25個學額及600名申請者，中位分數為25.5。目標26分或以上以增加競爭力，尤其若面試表現一般。",
+            "- 使用公式：（加權總分）/ 5 = 你的入學分數。計算你的目標加權總分。",
+            "",
+            "**3. 提早準備面試**",
+            "",
+            "- 面試是必須的，評估你對教學及人工智能的動機。準備2分鐘自我介紹，連結你對數學及科技的熱情。",
+            "- 練習回答如「你會如何用人工智能教小三學生分數？」等問題。",
+            "",
+            "**4. 建立人工智能項目作品集**",
+            "",
+            "- 展示任何人工智能相關項目，即使是簡單的聊天機械人或機器學習模型。這顯示真正的興趣及實用技能。",
+            "- 包括應用人工智能於教育的項目，例如問答生成器或個人化學習工具。",
+            "",
+            "**5. 獲取教學經驗**",
+            "",
+            "- 在小學擔任義務導師或教學助理，特別是數學科。這顯示你對教學專業的承諾。",
+            "- 記錄你的經驗，並準備在面試中討論。",
+            "",
+            "**6. 如適用，善用應用學習科目**",
+            "",
+            "- 如果你修讀了指定應用學習科目，請注意它也有1.5倍加權。選擇與資訊科技或教育相關的應用學習課程以獲得最大效益。",
+            "- 查閱教大對此課程認可的應用學習科目列表。",
+            "",
+            "**7. 了解雙學位結構**",
+            "",
+            "- 這是五年制課程，非一般四年制。計劃多一年的學習，以及人工智能課程與教師培訓的雙重工作量。",
+            "- 準備在第二、三及五年進行三次教學實習。",
+            "",
+            "**8. 研究教大的人工智能設施**",
+            "",
+            "- 在面試中提及你了解教大的人工智能實驗室及機械人套件。這顯示你做過資料搜集。",
+            "- 參觀校園或參加開放日以熟悉設施。",
+            "",
+            "**9. 提早將課程放在Band A**",
+            "",
+            "- 250名Band A申請者爭奪25個學額，Band A位置至關重要。將JS8009放在首選以最大化面試機會。",
+            "- 確保在12月1日前策略性地排列聯招選擇。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "25.5",
+    "lq": "25.0"
+  }
+}

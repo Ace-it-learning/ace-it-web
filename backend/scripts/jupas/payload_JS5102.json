@@ -1,0 +1,289 @@
+{
+  "programme": {
+    "code": "JS5102",
+    "nameEn": "Science (Group A)",
+    "nameZh": "理學Ａ組",
+    "name": "Science (Group A)",
+    "university": "香港科技大學",
+    "faculty": "School of Science",
+    "median": "33.13",
+    "band_a": "32.63",
+    "category": ""
+  },
+  "details": {
+    "code": "JS5102",
+    "university": "香港科技大學",
+    "en": {
+      "sections": {
+        "admission": {
+          "title": "Eligibility & Admission Criteria (DSE)",
+          "content": [
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Subject weighting: Science subjects/M1/M2 weighted.",
+            "**Highest Attainable Score**: 66.94.",
+            "**Median Admission Score**: 33.13 (2025 JUPAS data).",
+            "**Lower Quartile**: 32.63 (2025 JUPAS data).",
+            "**Preferred HKDSE Subjects**: Science subjects/ M1/ M2 Level 5.",
+            "**Core Subjects Minimum Level**: Chinese Language 3, English Language 3, Mathematics (Compulsory Part) 3, Citizenship and Social Development Attained.",
+            "**Elective Subjects**: ANY 2 SUBJECTS at Level 3.",
+            "**Interview**: No interview required for standard JUPAS admission.",
+            "**Duration**: 4 years full-time.",
+            "**First Year Tuition**: HK$44,500 (local students)."
+          ]
+        },
+        "curriculum": {
+          "title": "Curriculum Structure",
+          "content": [
+            "**Programme Overview**: JS5102 Science (Group A) is a broad-based programme under the School of Science, allowing students to explore multiple science disciplines before choosing a major. The curriculum emphasises foundational knowledge in mathematics, physics, chemistry, and life sciences, with flexibility to specialise from Year 2 onwards.",
+            "**Year 1 – Foundation Year**: Students take core courses in calculus, linear algebra, general physics, general chemistry, and introductory biology. They also complete a common core course on scientific methodology and attend seminars introducing research areas within the School of Science.",
+            "**Year 2 – Major Selection**: Based on academic performance and interest, students select a major from options including Mathematics, Physics, Chemistry, Biochemistry & Cell Biology, Biotechnology, or Earth System Science. They begin major-specific courses while continuing general education requirements.",
+            "**Year 3 – Specialisation & Research**: Students deepen their knowledge through advanced major courses and elective modules. Many undertake a final-year project (FYP) or research internship, gaining hands-on experience in HKUST's world-class laboratories.",
+            "**Year 4 – Capstone & Career Preparation**: Students complete their FYP, take advanced electives, and participate in career development workshops. The programme also encourages overseas exchange (over 50% of students participate) and industry internships at nearby Hong Kong Science Park.",
+            "**Interdisciplinary Options**: Students can pursue double majors or minors across School of Science and other schools (e.g., Engineering, Business), leveraging HKUST's school-based system. Popular combinations include Mathematics & Computer Science and Chemistry & Environmental Science."
+          ]
+        },
+        "career": {
+          "title": "Career Prospects",
+          "content": [
+            "**High Employment Rate**: HKUST Science graduates achieve a 95% employment rate within 6 months of graduation, with median starting salary of HKD 22,000 per month (2024 Graduate Employment Survey).",
+            "**Diverse Sectors**: Graduates enter fields such as research & development, healthcare, finance, education, data science, and environmental consulting. Top employers include the Hong Kong Observatory, Hospital Authority, and multinational corporations like Pfizer and HSBC.",
+            "**Research & Academia Pathway**: Many graduates pursue postgraduate studies (MPhil/PhD) at HKUST or top global universities (e.g., Cambridge, MIT, ETH Zurich). The programme's strong research foundation prepares students for academic careers.",
+            "**Industry Internships**: Proximity to Hong Kong Science Park enables internships at over 200 tech companies, including SenseTime, Lenovo, and AstraZeneca. Over 60% of students complete at least one internship before graduation.",
+            "**Entrepreneurship Support**: HKUST's Entrepreneurship Centre and the HKUST-Sino One Million Dollar Entrepreneurship Competition provide funding and mentorship for science graduates launching startups in biotech, clean energy, and AI.",
+            "**Global Career Opportunities**: With HKUST's strong international reputation (#1 in Hong Kong, QS 2025), graduates are competitive for roles in global organisations such as the World Health Organization, NASA, and Google."
+          ]
+        },
+        "campus": {
+          "title": "Campus & Facilities",
+          "content": [
+            "**Stunning Seaside Location**: HKUST is located on a 60-hectare campus in Clear Water Bay, Sai Kung, offering panoramic sea views and a tranquil environment ideal for study and research. The campus is just 30 minutes from central Hong Kong.",
+            "**World-Class Laboratories**: The School of Science houses state-of-the-art facilities including the Materials Characterization and Preparation Facility, the Biosciences Central Research Facility, and the Supercomputer Centre, supporting cutting-edge research.",
+            "**Science-Specific Spaces**: Dedicated student lounges, study rooms, and the Science Library provide collaborative and quiet study areas. The Lee Shau Kee Building and the Lo Ka Chung Building are hubs for science lectures and labs.",
+            "**Residential Life**: Over 80% of undergraduate students live on campus in halls with sea views. Halls offer common rooms, study areas, and organise social events fostering a strong community among science students.",
+            "**Sports & Recreation**: The campus features an Olympic-standard indoor swimming pool, sports halls, tennis courts, a climbing wall, and a 400m running track. The nearby Clear Water Bay beaches offer outdoor activities.",
+            "**Sustainability Initiatives**: HKUST is committed to green campus practices, with solar panels, waste reduction programmes, and a campus-wide recycling system. The School of Science integrates sustainability into its curriculum and research."
+          ]
+        },
+        "competitiveness": {
+          "title": "Competitiveness & Admission",
+          "content": [
+            "**Overall Level**: High (★★★★☆)",
+            "**Admission Score Formula**: Best 5 subjects + 6th subject bonus. Science subjects, M1, and M2 receive weighted consideration, giving applicants with strong STEM backgrounds an advantage.",
+            "**Highest Attainable Score**: 66.94, reflecting the programme's rigorous academic standards and the premium placed on science and mathematics proficiency.",
+            "**Median Score (2025)**: 33.13, indicating that successful applicants typically achieve high grades across their best five subjects, with bonus points from a sixth subject.",
+            "**Lower Quartile (2025)**: 32.63, showing that even the 25th percentile applicants have strong scores, making JS5102 a highly selective programme.",
+            "**Preferred HKDSE Subjects**: Level 5 or above in science subjects (Physics, Chemistry, Biology) and M1/M2 is strongly recommended. Applicants with these subjects score higher due to weighting."
+          ]
+        },
+        "alumni": {
+          "title": "Notable Alumni & Achievements",
+          "content": [
+            "**Prof. Nancy Ip (葉玉如)**: Renowned neuroscientist and President of HKUST. She discovered the role of neurotrophic factors in Alzheimer's disease and was elected to the Chinese Academy of Sciences. She is a graduate of the School of Science (BSc in Chemistry, 1977).",
+            "**Dr. Charles K. Kao (高錕)**: Nobel Laureate in Physics (2009) for groundbreaking achievements concerning the transmission of light in fibers for optical communication. He served as a professor and later Vice-Chancellor of HKUST, and his legacy is honoured at the university.",
+            "**Dr. Vivian Yam (任詠華)**: Chair Professor of Chemistry and recipient of the L'Oréal-UNESCO For Women in Science Award. She is a world leader in luminescent materials and a graduate of the School of Science (BSc in Chemistry, 1985).",
+            "**Mr. Albert Wong (黃永光)**: CEO of the Hong Kong Science and Technology Parks Corporation. He holds a BSc in Physics from HKUST and has driven innovation and industry collaboration at the Science Park.",
+            "**Dr. Sarah Liao (廖秀冬)**: Former Secretary for the Environment, Transport and Works of Hong Kong. She earned a BSc in Chemistry from HKUST and has been a key figure in environmental policy in Hong Kong.",
+            "**Prof. Tony Chan (陳繁昌)**: Former President of HKUST and a leading mathematician. He earned his BSc in Mathematics from HKUST and later led the university to global prominence in research and education."
+          ]
+        },
+        "scholarships": {
+          "title": "Scholarships & Financial Aid",
+          "content": [
+            "**HKUST Admission Scholarship**: Automatically considered for all JUPAS applicants with outstanding HKDSE results. Recipients receive up to full tuition fee waiver and a living allowance of HKD 50,000 per year.",
+            "**School of Science Merit Scholarship**: Awarded to top-performing JS5102 students based on Year 1 results. Value ranges from HKD 10,000 to HKD 30,000, renewable annually.",
+            "**HKSAR Government Scholarship**: For local students with exceptional academic achievements and leadership qualities. Covers full tuition and provides a HKD 30,000 living stipend per year.",
+            "**Sir Edward Youde Memorial Scholarship**: Open to HKUST science students with outstanding academic records and financial need. Provides up to HKD 40,000 per year.",
+            "**Research Internship Scholarships**: Funded by the School of Science, these scholarships support students undertaking summer research projects in HKUST labs or overseas institutions, offering up to HKD 20,000.",
+            "**External Scholarships**: HKUST assists students in applying for scholarships from organisations like the Hong Kong Jockey Club, the Croucher Foundation, and the Swire Group, which offer substantial funding for science studies."
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir's JS5102 Strategy — 9 Actionable Tips",
+          "content": [
+            "**1. Prioritise Science Subjects and M1/M2**",
+            "",
+            "- Aim for Level 5 or above in at least two science subjects (Physics, Chemistry, Biology) and M1 or M2. These subjects are weighted heavily in the admission score formula.",
+            "- A Level 5* in a science subject can add up to 2 extra points to your score due to weighting.",
+            "",
+            "**2. Target a Best 5 Score of 33+**",
+            "",
+            "- The median score is 33.13, so aim for at least 33 points in your best five subjects. Use HKUST's online score calculator to simulate your score.",
+            "- Include a sixth subject (e.g., Economics, Geography) to earn bonus points — even a Level 4 can add 1-2 points.",
+            "",
+            "**3. Excel in Core Subjects**",
+            "",
+            "- English and Mathematics are compulsory. A Level 5 in English is highly recommended, as it is a common threshold for competitive programmes.",
+            "- For Mathematics, aim for Level 5 or above, as it is a foundation for all science majors.",
+            "",
+            "**4. Build a Strong Academic Profile**",
+            "",
+            "- Participate in science Olympiads (e.g., Hong Kong Biology Olympiad, Physics Olympiad) or research competitions. HKUST values evidence of scientific curiosity.",
+            "- Complete online courses (e.g., Coursera, edX) in advanced topics like calculus or programming to demonstrate initiative.",
+            "",
+            "**5. Prepare for Interviews (if shortlisted)**",
+            "",
+            "- Some applicants may be invited for an interview. Practice explaining your interest in science and why you chose HKUST. Be ready to discuss a specific research area or professor's work.",
+            "- Use the STAR method (Situation, Task, Action, Result) to structure answers about your projects or experiences.",
+            "",
+            "**6. Leverage School of Science Open Days**",
+            "",
+            "- Attend HKUST's Info Day and School of Science Open House. Talk to professors and current students about the programme and research opportunities.",
+            "- Collect materials on majors and labs to show genuine interest in your application.",
+            "",
+            "**7. Consider a Sixth Subject for Bonus Points**",
+            "",
+            "- Even if your sixth subject is not science-related, a good grade (Level 4 or above) can boost your total score. Choose a subject you enjoy to maximise effort.",
+            "- For example, a Level 5 in Economics can add 2 bonus points to your Best 5 score.",
+            "",
+            "**8. Plan Your Major Early**",
+            "",
+            "- Research the majors available under JS5102 (Mathematics, Physics, Chemistry, etc.) before applying. Mention your preferred major in your personal statement to show focus.",
+            "- If undecided, highlight your interest in interdisciplinary science and HKUST's flexibility.",
+            "",
+            "**9. Apply for Scholarships Proactively**",
+            "",
+            "- Submit all required documents for HKUST Admission Scholarship by the deadline (usually late November). Strong HKDSE results alone may qualify you for full funding.",
+            "- Also apply for external scholarships like the HKSAR Government Scholarship to increase your chances of financial support."
+          ]
+        }
+      }
+    },
+    "zh": {
+      "sections": {
+        "admission": {
+          "title": "入學要求與計分詳情 (DSE)",
+          "content": [
+            "**入學計分公式**：最佳五科 + 6th subject bonus。科目比重：Science subjects/M1/M2 加權。",
+            "**最高可達分數**：66.94。",
+            "**入學中位數**：33.13分（2025年聯招數據）。",
+            "**下四分位數**：32.63分（2025年聯招數據）。",
+            "**文憑試選修科平均成績**：Science subjects/ M1/ M2 Level 5。",
+            "**核心科目最低要求**：中國語文第3級、英國語文第3級、數學（必修部分）第3級、公民與社會發展科達標。",
+            "**選修科目**：任何2科達第3級。",
+            "**面試**：標準聯招入學不需要面試。",
+            "**修讀年期**：4年全日制。",
+            "**首年學費**：港幣44,500元（本地學生）。"
+          ]
+        },
+        "curriculum": {
+          "title": "課程結構",
+          "content": [
+            "**課程概覽**：JS5102 理學Ａ組是理學院下的基礎課程，讓學生在選擇主修前探索多個科學領域。課程強調數學、物理、化學和生命科學的基礎知識，並從二年級開始提供靈活的專修選擇。",
+            "**第一年 – 基礎年**：學生修讀微積分、線性代數、普通物理、普通化學和生物學入門等核心課程。同時完成科學方法論的共同核心課程，並參加介紹理學院研究領域的研討會。",
+            "**第二年 – 主修選擇**：根據學業成績和興趣，學生從數學、物理、化學、生物化學與細胞生物學、生物技術或地球系統科學中選擇主修。開始主修課程，同時繼續通識教育要求。",
+            "**第三年 – 專修與研究**：學生通過高級主修課程和選修模塊深化知識。許多人進行畢業專題項目（FYP）或研究實習，在科大世界級實驗室中獲得實踐經驗。",
+            "**第四年 – 總結與職業準備**：學生完成畢業專題項目，選修高級課程，並參加職業發展工作坊。課程鼓勵海外交流（超過50%學生參與）和鄰近香港科學園的產業實習。",
+            "**跨學科選項**：學生可通過科大學院制，在理學院及其他學院（如工程、商學院）攻讀雙主修或輔修。熱門組合包括數學與計算機科學、化學與環境科學。"
+          ]
+        },
+        "career": {
+          "title": "就業前景",
+          "content": [
+            "**高就業率**：科大科學畢業生在畢業後6個月內就業率達95%，2024年畢業生就業調查顯示中位起薪為每月港幣22,000元。",
+            "**多元行業**：畢業生進入研發、醫療保健、金融、教育、數據科學和環境諮詢等領域。頂尖僱主包括香港天文台、醫院管理局，以及輝瑞和滙豐等跨國公司。",
+            "**研究與學術路徑**：許多畢業生在科大或全球頂尖大學（如劍橋、麻省理工、蘇黎世聯邦理工學院）攻讀研究生課程（哲學碩士/博士）。課程紮實的研究基礎為學術生涯做好準備。",
+            "**產業實習**：鄰近香港科學園，學生可在超過200家科技公司實習，包括商湯科技、聯想和阿斯利康。超過60%的學生在畢業前完成至少一次實習。",
+            "**創業支持**：科大的創業中心和科大-信和百萬美元創業大賽為科學畢業生提供資金和指導，助其在生物科技、清潔能源和人工智能領域創立初創企業。",
+            "**全球職業機會**：憑藉科大強大的國際聲譽（2025年QS排名香港第一），畢業生在世界衛生組織、美國太空總署和谷歌等全球組織中具有競爭力。"
+          ]
+        },
+        "campus": {
+          "title": "校園與設施",
+          "content": [
+            "**壯麗海景位置**：科大坐落於西貢清水灣60公頃的校園，享有全景海景和寧靜環境，適合學習和研究。校園距離香港市中心僅30分鐘車程。",
+            "**世界級實驗室**：理學院擁有先進設施，包括材料表徵與製備設施、生物科學中央研究設施和超級計算中心，支持尖端研究。",
+            "**科學專屬空間**：專用學生休息室、自修室和科學圖書館提供協作和安靜的學習區域。李兆基大樓和盧家驄大樓是科學講座和實驗室的核心場所。",
+            "**住宿生活**：超過80%的本科生住在海景宿舍。宿舍設有公共休息室、學習區，並組織社交活動，促進科學學生的社區氛圍。",
+            "**運動與休閒**：校園設有奧運標準室內游泳池、體育館、網球場、攀岩牆和400米跑道。附近的清水灣海灘提供戶外活動。",
+            "**可持續發展倡議**：科大致力於綠色校園實踐，包括太陽能板、減廢計劃和校園回收系統。理學院將可持續發展融入課程和研究。"
+          ]
+        },
+        "competitiveness": {
+          "title": "競爭力與入學",
+          "content": [
+            "**整體程度**：高（★★★★☆）",
+            "**入學分數公式**：最佳5科 + 第6科加分。理科科目、M1和M2獲得加權考慮，使STEM背景強的申請者具有優勢。",
+            "**最高可達分數**：66.94分，反映課程嚴格的學術標準以及對科學和數學能力的重視。",
+            "**2025年中位分數**：33.13分，顯示成功申請者通常在最佳五科中取得高分，並從第六科獲得加分。",
+            "**2025年下四分位數**：32.63分，表明即使第25百分位的申請者也有強勁分數，使JS5102成為高選擇性課程。",
+            "**首選文憑試科目**：強烈建議在理科科目（物理、化學、生物）和M1/M2中取得5級或以上。由於加權，這些科目的申請者得分更高。"
+          ]
+        },
+        "alumni": {
+          "title": "知名校友與成就",
+          "content": [
+            "**葉玉如教授**：著名神經科學家，現任香港科技大學校長。她發現了神經營養因子在阿爾茨海默病中的作用，並當選中國科學院院士。她是理學院畢業生（1977年化學理學士）。",
+            "**高錕博士**：2009年諾貝爾物理學獎得主，因在光纖通信中光傳輸的開創性成就獲獎。他曾任科大教授及校長，其遺產在大學受到尊崇。",
+            "**任詠華博士**：化學講座教授，歐萊雅-聯合國教科文組織女性科學獎得主。她是發光材料領域的世界領袖，理學院畢業生（1985年化學理學士）。",
+            "**黃永光先生**：香港科技園公司行政總裁。他持有科大物理學理學士學位，推動了科學園的創新和產業合作。",
+            "**廖秀冬博士**：前香港環境運輸及工務局局長。她在科大獲得化學理學士學位，是香港環境政策的關鍵人物。",
+            "**陳繁昌教授**：前香港科技大學校長，著名數學家。他在科大獲得數學理學士學位，後來帶領大學在研究與教育方面達到全球頂尖水平。"
+          ]
+        },
+        "scholarships": {
+          "title": "獎學金與資助",
+          "content": [
+            "**科大入學獎學金**：所有文憑試成績優異的聯招申請者自動獲得考慮。獲獎者可獲全額學費減免及每年港幣50,000元生活津貼。",
+            "**理學院優秀獎學金**：根據第一年成績頒發給JS5102頂尖學生。金額從港幣10,000元到30,000元不等，可每年續領。",
+            "**香港特別行政區政府獎學金**：針對學術成就和領導才能出眾的本地學生。涵蓋全額學費並提供每年港幣30,000元生活津貼。",
+            "**尤德爵士紀念基金獎學金**：開放給學業成績優異且有經濟需要的科大科學學生。每年最高港幣40,000元。",
+            "**研究實習獎學金**：由理學院資助，支持學生在科大實驗室或海外機構進行暑期研究項目，最高港幣20,000元。",
+            "**外部獎學金**：科大協助學生申請來自香港賽馬會、裘槎基金會和太古集團等機構的獎學金，為科學學習提供大量資助。"
+          ]
+        },
+        "tips": {
+          "title": "Ace Sir JS5102 攻略 — 9 個實用貼士",
+          "content": [
+            "**1. 優先處理理科科目和M1/M2**",
+            "",
+            "- 目標是在至少兩科理科（物理、化學、生物）和M1或M2中取得5級或以上。這些科目在入學分數公式中權重較高。",
+            "- 理科科目取得5*級，由於加權可為你的分數增加最多2分。",
+            "",
+            "**2. 目標最佳5科33分以上**",
+            "",
+            "- 中位分數為33.13分，因此目標是在最佳五科中至少取得33分。使用科大的網上分數計算器模擬你的分數。",
+            "- 包括第六科（如經濟、地理）以獲得加分——即使4級也可增加1-2分。",
+            "",
+            "**3. 核心科目表現出色**",
+            "",
+            "- 英文和數學是必修科。強烈建議英文取得5級，因為這是競爭性課程的常見門檻。",
+            "- 數學目標為5級或以上，因為它是所有科學主修的基礎。",
+            "",
+            "**4. 建立強大的學術檔案**",
+            "",
+            "- 參加科學奧林匹克競賽（如香港生物奧林匹克、物理奧林匹克）或研究比賽。科大重視科學好奇心的證據。",
+            "- 完成在線課程（如Coursera、edX）的高級主題（如微積分或編程），以展示主動性。",
+            "",
+            "**5. 準備面試（如獲篩選）**",
+            "",
+            "- 部分申請者可能獲邀面試。練習解釋你對科學的興趣以及選擇科大的原因。準備討論特定的研究領域或教授的工作。",
+            "- 使用STAR方法（情境、任務、行動、結果）來結構化回答你的項目或經歷。",
+            "",
+            "**6. 善用理學院開放日**",
+            "",
+            "- 參加科大的資訊日和理學院開放日。與教授和現任學生討論課程和研究機會。",
+            "- 收集關於主修和實驗室的資料，以在申請中展示真誠興趣。",
+            "",
+            "**7. 考慮第六科以獲得加分**",
+            "",
+            "- 即使你的第六科與科學無關，良好的成績（4級或以上）也能提升你的總分。選擇你喜歡的科目以最大化努力。",
+            "- 例如，經濟科5級可為你的最佳5科分數增加2分加分。",
+            "",
+            "**8. 提前規劃你的主修**",
+            "",
+            "- 在申請前研究JS5102下的主修選項（數學、物理、化學等）。在個人陳述中提及你的首選主修以展示焦點。",
+            "- 如果未決定，強調你對跨學科科學和科大靈活性的興趣。",
+            "",
+            "**9. 主動申請獎學金**",
+            "",
+            "- 在截止日期前（通常為11月底）提交科大入學獎學金的所有所需文件。優秀的文憑試成績可能足以獲得全額資助。",
+            "- 同時申請外部獎學金，如香港特別行政區政府獎學金，以增加獲得經濟支持的機會。"
+          ]
+        }
+      }
+    }
+  },
+  "scores": {
+    "median": "33.13",
+    "lq": "32.63"
+  }
+}

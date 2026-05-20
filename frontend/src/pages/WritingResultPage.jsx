@@ -56,9 +56,11 @@ const WritingResultPage = () => {
         };
 
         const data = results.data || results;
+        // When loading from API, detailed fields are nested under data.feedback
+        const feedback = data.feedback || {};
         
         // Normalize Pillar Scores to always be lowercase keys
-        const rawPillars = getCI(data, 'pillar_scores') || getCI(data, 'pillarScores') || {};
+        const rawPillars = getCI(data, 'pillar_scores') || getCI(data, 'pillarScores') || getCI(feedback, 'pillar_scores') || getCI(feedback, 'pillarScores') || {};
         const normalizedPillars = {};
         Object.keys(rawPillars).forEach(k => {
             normalizedPillars[k.toLowerCase()] = rawPillars[k];
@@ -66,15 +68,15 @@ const WritingResultPage = () => {
 
         return {
             ...data,
-            predicted_level: getCI(data, 'predicted_level') || getCI(data, 'predictedLevel') || "4",
-            overall_score: getCI(data, 'overall_score') || getCI(data, 'overallScore') || 4,
+            predicted_level: getCI(data, 'predicted_level') || getCI(data, 'predictedLevel') || getCI(feedback, 'predicted_level') || getCI(feedback, 'predictedLevel') || "4",
+            overall_score: getCI(data, 'overall_score') || getCI(data, 'overallScore') || getCI(feedback, 'overall_score') || getCI(feedback, 'overallScore') || 4,
             pillar_scores: normalizedPillars,
-            examiner_summary: getCI(data, 'examiner_summary') || getCI(data, 'examinerSummary') || "",
-            improvement_goal: getCI(data, 'improvement_goal') || getCI(data, 'improvementGoal') || "",
-            exemplar_comparison: getCI(data, 'exemplar_comparison') || getCI(data, 'exemplarComparison') || null,
-            model_answer_5_star: getCI(data, 'model_answer_5_star') || getCI(data, 'modelAnswer5Star') || getCI(data, 'modelAnswer') || "",
-            high_score_tips: getCI(data, 'high_score_tips') || getCI(data, 'highScoreTips') || [],
-            grammar_diagnostics: getCI(data, 'grammar_diagnostics') || getCI(data, 'grammarDiagnostics') || []
+            examiner_summary: getCI(data, 'examiner_summary') || getCI(data, 'examinerSummary') || getCI(feedback, 'examiner_summary') || getCI(feedback, 'examinerSummary') || "",
+            improvement_goal: getCI(data, 'improvement_goal') || getCI(data, 'improvementGoal') || getCI(feedback, 'improvement_goal') || getCI(feedback, 'improvementGoal') || "",
+            exemplar_comparison: getCI(data, 'exemplar_comparison') || getCI(data, 'exemplarComparison') || getCI(feedback, 'exemplar_comparison') || getCI(feedback, 'exemplarComparison') || null,
+            model_answer_5_star: getCI(data, 'model_answer_5_star') || getCI(data, 'modelAnswer5Star') || getCI(data, 'modelAnswer') || getCI(feedback, 'model_answer_5_star') || getCI(feedback, 'modelAnswer5Star') || getCI(feedback, 'modelAnswer') || "",
+            high_score_tips: getCI(data, 'high_score_tips') || getCI(data, 'highScoreTips') || getCI(feedback, 'high_score_tips') || getCI(feedback, 'highScoreTips') || [],
+            grammar_diagnostics: getCI(data, 'grammar_diagnostics') || getCI(data, 'grammarDiagnostics') || getCI(feedback, 'grammar_diagnostics') || getCI(feedback, 'grammarDiagnostics') || []
         };
     }, [results]);
 
@@ -476,7 +478,7 @@ const WritingResultPage = () => {
                             </div>
                             <div className="text-slate-800 font-medium text-xl leading-[1.8] font-serif pr-6 whitespace-pre-wrap">
                                 <WritingHighlighter 
-                                    text={studentWork?.content || normalizedResults.exemplar_comparison?.original_paragraph || ""}
+                                    text={studentWork || normalizedResults.exemplar_comparison?.original_paragraph || ""}
                                     hotspots={normalizedResults.exemplar_comparison?.hotspots}
                                     isChinese={isChinese}
                                     t={t}
@@ -600,12 +602,6 @@ const WritingResultPage = () => {
                         <p className="text-sm font-bold italic">This evaluation is generated using the Ace-it High Fidelity Scoring Engine.</p>
                     </div>
                     <div className="flex gap-4">
-                        <button 
-                            onClick={() => window.print()}
-                            className="px-8 py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-slate-50 transition-all"
-                        >
-                            {t('writing_result.export_pdf')}
-                        </button>
                         <button 
                             onClick={() => navigate('/dashboard', { state: { openRoadmap: 'ENGLISH', roadmapFilter: 'WRITING' } })}
                             className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-black transition-all shadow-xl"

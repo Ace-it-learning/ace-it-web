@@ -58,6 +58,9 @@ import ReadingMockStudio from './pages/mock-eng/ReadingMockStudio';
 import WritingMockStudio from './pages/mock-eng/WritingMockStudio';
 import ListeningMockStudio from './pages/mock-eng/ListeningMockStudio';
 import SpeakingMockStudio from './pages/mock-eng/SpeakingMockStudio';
+import ReadingMockResultPage from './pages/mock-eng/ReadingMockResultPage';
+import WritingMockResultPage from './pages/mock-eng/WritingMockResultPage';
+import ListeningMockResultPage from './pages/mock-eng/ListeningMockResultPage';
 import MockLibraryMathPage from './pages/mock-math/MockLibraryMathPage';
 import DreamSubjectsPage from './pages/DreamSubjectsPage';
 import SpeakingPillarMenu from './pages/SpeakingPillarMenu';
@@ -70,9 +73,17 @@ import ErrorBoundary from './components/ErrorBoundary';
 import ScrollToTop from './components/utils/ScrollToTop';
 import AnalyticsTracker from './components/utils/AnalyticsTracker';
 import OrientationGuard from './components/utils/OrientationGuard';
+import RouteSeoManager from './components/RouteSeoManager';
 
 import SubscriptionPage from './pages/SubscriptionPage';
 import FeaturesPage from './pages/FeaturesPage.jsx';
+import EnglishHubPage from './pages/seo/EnglishHubPage';
+import PaperReadingGuidePage from './pages/seo/PaperReadingGuidePage';
+import PaperWritingGuidePage from './pages/seo/PaperWritingGuidePage';
+import PaperListeningGuidePage from './pages/seo/PaperListeningGuidePage';
+import PaperSpeakingGuidePage from './pages/seo/PaperSpeakingGuidePage';
+import EnglishGeoGuidePage from './pages/seo/EnglishGeoGuidePage';
+import EnglishRevisionCalendarPage from './pages/seo/EnglishRevisionCalendarPage';
 
 // Initialize Stripe
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
@@ -89,6 +100,7 @@ function App() {
               <ScrollToTop />
               <AnalyticsTracker />
               <OrientationGuard />
+              <RouteSeoManager />
               <Routes>
                 <Route
                   path="/subscription"
@@ -145,6 +157,34 @@ function App() {
                   element={<VerifyEmailSuccess />}
                 />
                 <Route
+                  path="/hkdse-english"
+                  element={<EnglishHubPage />}
+                />
+                <Route
+                  path="/hkdse-english/paper-1-reading"
+                  element={<PaperReadingGuidePage />}
+                />
+                <Route
+                  path="/hkdse-english/paper-2-writing"
+                  element={<PaperWritingGuidePage />}
+                />
+                <Route
+                  path="/hkdse-english/paper-3-listening"
+                  element={<PaperListeningGuidePage />}
+                />
+                <Route
+                  path="/hkdse-english/paper-4-speaking"
+                  element={<PaperSpeakingGuidePage />}
+                />
+                <Route
+                  path="/hkdse-english/revision-calendar"
+                  element={<EnglishRevisionCalendarPage />}
+                />
+                <Route
+                  path="/hkdse-english/guides/:slug"
+                  element={<EnglishGeoGuidePage />}
+                />
+                <Route
                   path="/auth-error"
                   element={<AuthErrorPage />}
                 />
@@ -152,7 +192,7 @@ function App() {
                   path="/dashboard"
                   element={
                     <ProtectedRoute>
-                      <MainLayout>
+                      <MainLayout hideFooter dashboard>
                         <Dashboard />
                       </MainLayout>
                     </ProtectedRoute>
@@ -457,6 +497,30 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <SpeakingResultPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/reading/results/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <ReadingMockResultPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/writing/results/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <WritingMockResultPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/mock-exam-eng/listening/results/:resultId"
+                  element={
+                    <ProtectedRoute>
+                      <ListeningMockResultPage />
                     </ProtectedRoute>
                   }
                 />

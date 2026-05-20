@@ -42,17 +42,20 @@ async function statsHandler(req, res) {
         // IMPORTANT: We do NOT force is_new_student: true here anymore, as it causes 
         // redirect loops if the DB is just slow. Instead, we assume returning but degraded.
         if (!user) {
-            console.warn(`[statsRoutes] User profile missing or timeout for ${uid}. Assuming RETURNING (degraded).`);
-            return res.status(200).json({ 
-                is_new_student: false, // Don't force redirect to onboarding
-                user: { status: 'active', onboarding_completed: true },
+            console.warn(`[statsRoutes] User profile missing or timeout for ${uid}. Treating as NEW (degraded).`);
+            return res.status(200).json({
+                is_new_student: true,
+                user: { status: 'pending', onboarding_completed: false },
                 stats: stats || { xp: 0, level: 1 },
                 _warning: "Data fetch degraded"
             });
         }
 
         // Logic check for "is_new_student"
-        const isNewStudent = user.is_new_student === true || (!user.onboarding_completed && user.status !== 'active');
+        const isNewStudent =
+            user.is_new_student === true ||
+            user.onboarding_completed === false ||
+            (!user.onboarding_completed && !user.school && user.status !== 'active');
 
         // Check if diagnostic is done
         const hasDiagnosticEnglish = user.diagnostic_completed === true || !!user.diagnostic_results?.english;
@@ -116,24 +119,14 @@ router.get('/unlocks', requireResolvedUid, async (req, res) => {
 
     try {
         console.log(`[statsRoutes] Checking unlocks for UID ${uid}`);
-        
-        const submissions = await ServiceMonitor.withTimeout(
-            CosmosStore.container('exam_submissions')
-                .then((c) => c.items.query({
-                    query: "SELECT * FROM c WHERE c.pk = @uid",
-                    parameters: [{ name: "@uid", value: uid }]
-                }).fetchAll())
-                .then((r) => r.resources || []),
-            4000,
-            []
-        );
 
         const ENGLISH_PAPER_TYPES = ['reading', 'writing', 'listening', 'speaking'];
         const MATHS_PAPER_TYPES = ['maths_p1', 'maths_p2'];
 
         const classify = (sub) => {
-            const id = (sub.examId || '').toLowerCase();
-            const type = (sub.type || sub.subject || '').toLowerCase();
+            const id = (sub.examId || sub.paperId || sub.mockId || '').toLowerCase();
+            const type = (sub.type || sub.subject || sub.paper || '').toLowerCase();
+            const topic = (sub.topic || sub.questName || '').toLowerCase();
             if (type.includes('read')) return 'reading';
             if (type.includes('writ')) return 'writing';
             if (type.includes('listen')) return 'listening';
@@ -149,13 +142,48 @@ router.get('/unlocks', requireResolvedUid, async (req, res) => {
             if (id.includes('listen')) return 'listening';
             if (id.includes('speak')) return 'speaking';
             if (id.includes('writ')) return 'writing';
-            return 'reading';
+            if (topic.includes('mock') && topic.includes('read')) return 'reading';
+            if (topic.includes('mock') && topic.includes('listen')) return 'listening';
+            if (topic.includes('mock') && topic.includes('speak')) return 'speaking';
+            if (topic.includes('mock') && topic.includes('writ')) return 'writing';
+            return null;
         };
 
         const completedTypes = new Set();
+
+        // 1. Check legacy exam_submissions
+        const submissions = await ServiceMonitor.withTimeout(
+            CosmosStore.container('exam_submissions')
+                .then((c) => c.items.query({
+                    query: "SELECT * FROM c WHERE c.pk = @uid",
+                    parameters: [{ name: "@uid", value: uid }]
+                }).fetchAll())
+                .then((r) => r.resources || []),
+            4000,
+            []
+        );
         if (Array.isArray(submissions)) {
             submissions.forEach((sub) => {
-                completedTypes.add(classify(sub));
+                const type = classify(sub);
+                if (type) completedTypes.add(type);
+            });
+        }
+
+        // 2. Check quest_results for mock exam completions
+        const questResults = await ServiceMonitor.withTimeout(
+            CosmosStore.container('quest_results')
+                .then((c) => c.items.query({
+                    query: "SELECT * FROM c WHERE c.pk = @uid",
+                    parameters: [{ name: "@uid", value: uid }]
+                }).fetchAll())
+                .then((r) => r.resources || []),
+            4000,
+            []
+        );
+        if (Array.isArray(questResults)) {
+            questResults.forEach((sub) => {
+                const type = classify(sub);
+                if (type) completedTypes.add(type);
             });
         }
 
@@ -226,6 +254,7 @@ router.post('/microskills/:uid/update', requireResolvedUid, async (req, res) => 
             microSkills: skills,
             lastUpdated: new Date().toISOString()
         });
+        await UserProfileService.saveProgressSnapshot(uid, subject);
         res.json({ success: true });
     } catch (e) {
         res.status(500).json({ error: 'Update failed' });

@@ -35,8 +35,19 @@ const NextPathRecommendations = ({ level, topic, lessonMode, onRetry, onExit, on
         if (onNextLevel) return onNextLevel();
 
         if (nextLvl) {
-            const params = new URLSearchParams(window.location.search);
+            // Listening quests have moved to the dedicated /listening/quest route
+            if (topic && topic.startsWith('listening_')) {
+                // Map lab level (3-7) to listening quest level (B1/B2) and targetLevel (1-5)
+                const levelMap = { '3': { level: 'B1', targetLevel: 3 }, '4': { level: 'B1', targetLevel: 4 }, '5': { level: 'B2', targetLevel: 3 }, '6': { level: 'B2', targetLevel: 4 }, '7': { level: 'B2', targetLevel: 5 } };
+                const mapped = levelMap[nextLvl] || { level: 'B2', targetLevel: 3 };
+                window.location.href = `/listening/menu?level=${mapped.level}&targetLevel=${mapped.targetLevel}`;
+                return;
+            }
+
+            // Build clean params - only topic and level, no step/taskId from previous session
+            const params = new URLSearchParams();
             params.set('level', nextLvl);
+            if (topic) params.set('topic', topic);
             window.location.href = `${window.location.pathname}?${params.toString()}`;
         }
     };
@@ -89,19 +100,7 @@ const NextPathRecommendations = ({ level, topic, lessonMode, onRetry, onExit, on
                     <h3 className="text-center text-gray-400 font-bold uppercase tracking-widest text-sm mb-8">
                         Select Your Next Learning Path
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-
-                        {/* Option 1: Retry / Strengthen */}
-                        <button
-                            onClick={onRetry}
-                            className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-2xl p-6 hover:border-gray-400 dark:hover:border-gray-500 transition-all text-left"
-                        >
-                            <div className="flex items-center justify-between mb-2">
-                                <span className="font-black text-lg">Strengthen Basics</span>
-                                <RefreshCcw size={20} className="text-gray-400 group-hover:rotate-180 transition-transform duration-500" />
-                            </div>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Retry with a new set of questions at Level {level}</p>
-                        </button>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
 
                         {/* Option 2: Level Up (If applicable) */}
                         {nextLvl ? (

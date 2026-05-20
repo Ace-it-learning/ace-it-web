@@ -396,13 +396,14 @@ JSON SCHEMA:
 
 class LabService {
   static formatLevelName(level) {
-    let lvl = String(level).trim();
+    let lvl = String(level).trim().toLowerCase();
     // Handle "41" or other concatenated garbage by taking the first digit
     if (/^\d{2,}$/.test(lvl)) {
       lvl = lvl.charAt(0);
     }
 
-    // Version 1.1: Frontend Level Mapping (1-4 -> 3, 4, 5, 7)
+    // Version 1.1: Frontend Tier Mapping (1-4 -> 3, 4, 5, 7)
+    // ONLY apply to tier values, not semantic level values
     const mappedLevels = {
         '1': '3',
         '2': '4',
@@ -413,12 +414,19 @@ class LabService {
         lvl = mappedLevels[lvl];
     }
 
+    // Text aliases (from Speaking Pillar Menu, direct URLs, etc.)
+    // These override any previous mapping
+    if (lvl === 'easy' || lvl === 'beginner' || lvl === 'basic') lvl = '3';
+    else if (lvl === 'intermediate' || lvl === 'medium' || lvl === 'moderate') lvl = '4';
+    else if (lvl === 'hard' || lvl === 'advanced' || lvl === 'difficult' || lvl === 'dse standard' || lvl === 'standard') lvl = '5';
+    else if (lvl === 'elite' || lvl === 'master' || lvl === 'expert') lvl = '7';
+
     if (lvl === '7') return 'HKDSE Level 5** (Mastery)';
     if (lvl === '6') return 'HKDSE Level 5* (Exemplary)';
     if (lvl === '5') return 'HKDSE Level 5 (Strong)';
     if (lvl === '4') return 'HKDSE Level 4 (Good)';
     if (lvl === '3') return 'HKDSE Level 3 (Adequate)';
-    return lvl && lvl.includes('HKDSE') ? lvl : `HKDSE Level ${lvl || '3'}`;
+    return lvl && lvl.includes('hkdse') ? lvl : `HKDSE Level ${lvl || '3'}`;
   }
 
   /**
@@ -809,6 +817,7 @@ class LabService {
     const TARGET_COUNT = isReadingTopic ? dynamicTarget : (targetCount || dynamicTarget);
 
     const levelName = this.formatLevelName(level);
+    console.log(`[LabService] formatLevelName('${level}') => '${levelName}'`);
 
     // Resolve Topic ID to Name if possible
     const skill = MICRO_SKILLS[topic];
@@ -876,14 +885,45 @@ class LabService {
           mixedQuestions = clusters[0].questions.slice(0, TARGET_COUNT);
           console.log(`[LabService] PICKED cluster with ${mixedQuestions.length} questions. Total in cluster: ${clusters[0].questions.length}`);
         } else {
-          console.warn(`[LabService] No sufficient question cluster found (Needed ${TARGET_COUNT}).`);
+          console.warn(`[LabService] No sufficient question cluster found (Needed ${TARGET_COUNT}). Clusters: ${clusters.length}, Best: ${clusters[0]?.questions.length || 0}`);
           
-          // CRITICAL: Block dynamic generation for Reading missions for students (only Factory Admin allowed)
-          if (isReadingTopic && !params.isFactory && uid !== 'FACTORY_ADMIN') {
-             console.error(`[LabService] BLOckED: Reading generation not allowed for public users. Quest bank is exhausted.`);
-             throw new Error("QUEST_BANK_EMPTY"); // We want to catch this and show a 'Wait for more content' UI
+          // FALLBACK: If user has seen most questions, rebuild clusters WITHOUT the seen filter
+          // to allow replaying questions. This prevents "Quest Coming Soon" when bank is exhausted.
+          const totalAvailable = strictDocs.length;
+          const totalUnseen = clusters.reduce((sum, c) => sum + c.questions.length, 0);
+          console.log(`[LabService] Fallback check: totalAvailable=${totalAvailable}, totalUnseen=${totalUnseen}, seen=${totalAvailable - totalUnseen}`);
+          
+          if (totalAvailable >= TARGET_COUNT && totalUnseen < TARGET_COUNT * 2) {
+            console.log(`[LabService] User has seen most questions. Rebuilding clusters with ALL questions to allow replay.`);
+            const allPassageGroups = {};
+            strictDocs.forEach((data) => {
+              if (!data.passage) return;
+              const pHash = crypto.createHash('md5').update(data.passage.trim()).digest('hex');
+              if (!allPassageGroups[pHash]) {
+                allPassageGroups[pHash] = { passage: data.passage, questions: [] };
+              }
+              allPassageGroups[pHash].questions.push({ ...data, id: data.id });
+            });
+            
+            const allClusters = Object.values(allPassageGroups);
+            allClusters.sort((a, b) => b.questions.length - a.questions.length);
+            
+            if (allClusters.length > 0 && allClusters[0].questions.length >= TARGET_COUNT) {
+              selectedPassage = allClusters[0].passage;
+              mixedQuestions = allClusters[0].questions.slice(0, TARGET_COUNT);
+              console.log(`[LabService] FALLBACK PICKED cluster with ${mixedQuestions.length} questions (including seen). Total in cluster: ${allClusters[0].questions.length}`);
+            }
           }
-          console.log(`[LabService] Forcing FULL GENERATION (Factory Mode).`);
+          
+          // If still no cluster, block generation
+          if (mixedQuestions.length === 0) {
+            // CRITICAL: Block dynamic generation for Reading missions for students (only Factory Admin allowed)
+            if (isReadingTopic && !params.isFactory && uid !== 'FACTORY_ADMIN') {
+               console.error(`[LabService] BLOckED: Reading generation not allowed for public users. Quest bank is exhausted.`);
+               throw new Error("QUEST_BANK_EMPTY"); // We want to catch this and show a 'Wait for more content' UI
+            }
+            console.log(`[LabService] Forcing FULL GENERATION (Factory Mode).`);
+          }
         }
 
       } catch (e) {

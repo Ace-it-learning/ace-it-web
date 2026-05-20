@@ -69,8 +69,45 @@ router.post('/submit', async (req, res) => {
             const UserProfileService = require('../services/UserProfileService');
             try {
                 await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+                await UserProfileService.saveProgressSnapshot(resolvedUid, 'english');
             } catch (e) {
                 console.warn("[Mock] syncMockResultsToMastery failed:", e.message);
+            }
+            try {
+                // Build minimal mock snapshot for standalone review
+                const mockSnapshot = {
+                    meta: mockData.meta,
+                    Part_A: mockData.Part_A ? {
+                        questions: mockData.Part_A.questions?.map(q => ({
+                            id: q.id, text: q.text, type: q.type, marks: q.marks,
+                            marking_scheme: q.marking_scheme, marking_logic: q.marking_logic
+                        }))
+                    } : null,
+                    Part_B1: mockData.Part_B1 ? {
+                        questions: mockData.Part_B1.questions?.map(q => ({
+                            id: q.id, text: q.text, type: q.type, marks: q.marks,
+                            marking_scheme: q.marking_scheme, marking_logic: q.marking_logic
+                        }))
+                    } : null,
+                    Part_B2: mockData.Part_B2 ? {
+                        questions: mockData.Part_B2.questions?.map(q => ({
+                            id: q.id, text: q.text, type: q.type, marks: q.marks,
+                            marking_scheme: q.marking_scheme, marking_logic: q.marking_logic
+                        }))
+                    } : null
+                };
+                const resultId = await UserProfileService.saveQuestResult(resolvedUid, {
+                    ...assessment,
+                    paperId,
+                    type: 'READING',
+                    topic: mockData.meta?.topic || 'Reading Mock',
+                    userAnswers: req.body.userAnswers,
+                    selectedSection: req.body.analytics?.selectedSection,
+                    mockSnapshot
+                });
+                if (resultId) assessment.resultId = resultId;
+            } catch (e) {
+                console.warn('[Mock] saveQuestResult (reading) failed:', e.message);
             }
             try {
                 await UserProfileService.saveMockSummary(resolvedUid, {
@@ -181,14 +218,18 @@ router.post('/submit-listening', async (req, res) => {
             try {
                 const UserProfileService = require('../services/UserProfileService');
                 await UserProfileService.syncMockResultsToMastery(resolvedUid, 'english', assessment);
+                await UserProfileService.saveProgressSnapshot(resolvedUid, 'english');
 
                 // Save for persistent review
-                await UserProfileService.saveQuestResult(resolvedUid, {
+                const resultId = await UserProfileService.saveQuestResult(resolvedUid, {
                     ...assessment,
                     paperId,
                     type: 'LISTENING',
-                    topic: mockData.meta?.topic || 'Listening Mock'
+                    topic: mockData.meta?.topic || 'Listening Mock',
+                    userAnswers: req.body.userAnswers,
+                    selectedSection: req.body.analytics?.selectedSection
                 });
+                if (resultId) assessment.resultId = resultId;
 
                 await UserProfileService.saveMockSummary(resolvedUid, {
                     paper: 'Paper 3',
@@ -266,11 +307,19 @@ router.post('/writing/submit', async (req, res) => {
             const targetWriteUid = targetUid;
             let resultId = null;
             try {
+                // Extract student drafts from responses for standalone review
+                const partA = responseRows.find(r => r.part === 'A') || {};
+                const partB = responseRows.find(r => r.part === 'B') || {};
                 resultId = await UserProfileService.saveQuestResult(targetWriteUid, {
                     ...results,
                     paperId,
                     type: 'WRITING',
-                    topic: topicLabel
+                    topic: topicLabel,
+                    draftA: partA.text || '',
+                    titleA: partA.title || '',
+                    draftB: partB.text || '',
+                    titleB: partB.title || '',
+                    selectedPartB: userAnswers.selectedPartB
                 });
                 if (resultId) results.resultId = resultId;
             } catch (e) {
@@ -317,6 +366,11 @@ router.post('/writing/submit', async (req, res) => {
                 }
             }
             await UserProfileService.syncMockResultsToMastery(targetWriteUid, 'english', results);
+            try {
+                await UserProfileService.saveProgressSnapshot(targetWriteUid, 'english');
+            } catch (e) {
+                console.warn("[Mock] saveProgressSnapshot (writing) failed:", e.message);
+            }
             try {
                 await UserProfileService.saveMockSummary(targetWriteUid, {
                     paper: 'Paper 2',

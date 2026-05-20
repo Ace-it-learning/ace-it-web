@@ -31,6 +31,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { load } from '@fingerprintjs/fingerprintjs';
 import { cn } from '../utils/cn';
 import AlertModal from '../components/shared/AlertModal';
+import CommunicationPreferences from '../components/account/CommunicationPreferences';
 
 const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
 
@@ -154,7 +155,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 
             {isOpen && (
                 <div className="absolute z-50 mt-2 max-h-60 w-full overflow-auto rounded-2xl bg-white border border-slate-200 py-1 text-base shadow-2xl focus:outline-none sm:text-sm">
-                    <div className="sticky top-0 z-10 bg-white px-3 py-2 border-b border-slate-100">
+                    <div className="sticky top-0 z-30 bg-white px-3 py-2 border-b border-slate-100">
                         <div className="relative">
                             <Search className="absolute left-2 top-2.5 h-4 w-4 text-slate-400" />
                             <input
@@ -175,7 +176,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
                     ) : (
                         filteredGroups.map(group => (
                             <div key={group.region}>
-                                <div className="sticky top-[45px] z-10 bg-slate-50 px-4 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                <div className="sticky top-[45px] z-20 bg-slate-50 px-4 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                     {group.region}
                                 </div>
                                 {group.list.map(school => (
@@ -260,6 +261,7 @@ const AccountPage = () => {
         send_copy_to_self: true
     });
     const [hasParentalChanges, setHasParentalChanges] = useState(false);
+    const [isCommSaving, setIsCommSaving] = useState(false);
 
     useEffect(() => {
         if (profile) {
@@ -306,6 +308,38 @@ const AccountPage = () => {
         fetchSchools();
     }, []);
 
+    const handleCommunicationPreference = async (optIn) => {
+        if (!user?.uid) return;
+        setIsCommSaving(true);
+        setMessage(null);
+        try {
+            const res = await fetch(`${API_URL}/api/user/communication-preferences`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ uid: user.uid, opt_in: optIn })
+            });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) throw new Error(data.error || 'Update failed');
+
+            await refreshProfile();
+
+            if (optIn && data.xp_awarded > 0) {
+                setMessage({
+                    type: 'success',
+                    text: t('communication.xp_success', { amount: data.xp_awarded })
+                });
+            } else if (optIn) {
+                setMessage({ type: 'success', text: t('communication.status_opted_in') });
+            } else {
+                setMessage({ type: 'success', text: t('communication.status_opted_out') });
+            }
+        } catch (err) {
+            setMessage({ type: 'error', text: t('communication.save_error') });
+        } finally {
+            setIsCommSaving(false);
+        }
+    };
+
     const handleProfileUpdate = async (e) => {
         e.preventDefault();
         setIsSaving(true);
@@ -319,7 +353,7 @@ const AccountPage = () => {
             });
 
             if (res.ok) {
-                setMessage({ type: 'success', text: 'Profile updated successfully!' });
+                setMessage({ type: 'success', text: t('account.profile_updated') });
                 refreshProfile();
             } else {
                 throw new Error("Update failed");
@@ -352,11 +386,11 @@ const AccountPage = () => {
                 setMessage({ type: 'success', text: 'Parental settings saved successfully!' });
             } else {
                 const err = await res.json();
-                setMessage({ type: 'error', text: err.error || "Failed to save settings" });
+                setMessage({ type: 'error', text: err.error || t('account.save_error') });
             }
         } catch (error) {
             console.error("Save Error:", error);
-            setMessage({ type: 'error', text: "Network error. Please try again." });
+            setMessage({ type: 'error', text: t('account.network_error') });
         } finally {
             setIsSaving(false);
         }
@@ -408,7 +442,7 @@ const AccountPage = () => {
             applyParentTestReportResponse(data, t('subscription.report_sent') || 'Test report sent!');
         } catch (error) {
             console.error("Test Report Error:", error);
-            setMessage({ type: 'error', text: "Network error." });
+            setMessage({ type: 'error', text: t('account.network_error') });
         } finally {
             setIsTesting(false);
         }
@@ -441,7 +475,7 @@ const AccountPage = () => {
             applyParentTestReportResponse(data, null);
         } catch (error) {
             console.error('Verifier sample email error:', error);
-            setMessage({ type: 'error', text: 'Network error. Try again.' });
+            setMessage({ type: 'error', text: t('account.network_error') });
         } finally {
             setIsVerifierTesting(false);
         }
@@ -459,7 +493,7 @@ const AccountPage = () => {
 
             if (res.ok) {
                 refreshProfile();
-                setMessage({ type: 'success', text: 'Device removed successfully.' });
+                setMessage({ type: 'success', text: t('account.device_removed') });
             } else {
                 setMessage({ type: 'error', text: 'Failed to remove device.' });
             }
@@ -681,7 +715,20 @@ const AccountPage = () => {
             setModal({
                 isOpen: true,
                 type: 'error',
-                message: "You must cancel your active subscription before you can delete your account.",
+                message: (
+                    <div className="space-y-3">
+                        <p>{t('account.active_subscription_note')}</p>
+                        <button
+                            onClick={() => {
+                                setModal({ isOpen: false });
+                                handleTabChange('subscription');
+                            }}
+                            className="text-primary font-bold underline hover:no-underline"
+                        >
+                            {t('account.go_to_subscription')}
+                        </button>
+                    </div>
+                ),
                 onConfirm: null
             });
             return;
@@ -690,7 +737,27 @@ const AccountPage = () => {
         setModal({
             isOpen: true,
             type: 'error',
-            message: "WARNING: This action is permanent. All your study data, achievements, and account details will be deleted forever. Do you wish to proceed?",
+            message: (
+                <div className="space-y-3">
+                    <p className="font-bold">{t('account.delete_confirm_title')}</p>
+                    <p>{t('account.delete_confirm_intro')}</p>
+                    <ul className="list-disc list-inside text-sm space-y-1 ml-1">
+                        <li>{t('account.delete_profile')}</li>
+                        <li>{t('account.delete_chat')}</li>
+                        <li>{t('account.delete_quest')}</li>
+                        <li>{t('account.delete_exam')}</li>
+                        <li>{t('account.delete_skill')}</li>
+                        <li>{t('account.delete_snapshots')}</li>
+                        <li>{t('account.delete_notebook')}</li>
+                        <li>{t('account.delete_inventory')}</li>
+                        <li>{t('account.delete_gamification')}</li>
+                        <li>{t('account.delete_practice')}</li>
+                        <li>{t('account.delete_roadmap')}</li>
+                        <li>{t('account.delete_reports')}</li>
+                    </ul>
+                    <p className="text-sm">{t('account.delete_subscription_first')}</p>
+                </div>
+            ),
             onConfirm: async () => {
                 try {
                     await deleteUserAccount();
@@ -788,37 +855,40 @@ const AccountPage = () => {
                                         <div className="space-y-4">
                                             <div className="space-y-2">
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <User size={14} className="text-primary" /> Nickname
+                                                    <User size={14} className="text-primary" /> {t('account.nickname')}
                                                 </label>
                                                 <div className="relative">
-                                                    <input 
-                                                        type="text" 
+                                                    <input
+                                                        type="text"
                                                         value={profileData.nickname}
                                                         onChange={e => setProfileData({...profileData, nickname: e.target.value})}
                                                         className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                                                        placeholder="Enter nickname"
+                                                        placeholder={t('account.enter_nickname')}
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="space-y-2">
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <User size={14} className="text-primary" /> Gender
+                                                    <User size={14} className="text-primary" /> {t('account.gender')}
                                                 </label>
                                                 <div className="flex gap-2">
-                                                    {['Male', 'Female'].map(g => (
+                                                    {[
+                                                        { key: 'Male', label: t('account.male') },
+                                                        { key: 'Female', label: t('account.female') }
+                                                    ].map(({ key, label }) => (
                                                         <button
-                                                            key={g}
+                                                            key={key}
                                                             type="button"
-                                                            onClick={() => setProfileData({...profileData, gender: g})}
+                                                            onClick={() => setProfileData({...profileData, gender: key})}
                                                             className={cn(
                                                                 "flex-1 py-3 rounded-xl text-xs font-bold border transition-all",
-                                                                profileData.gender === g 
-                                                                    ? "bg-slate-900 border-slate-900 text-white shadow-lg" 
+                                                                profileData.gender === key
+                                                                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
                                                                     : "bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300"
                                                             )}
                                                         >
-                                                            {g}
+                                                            {label}
                                                         </button>
                                                     ))}
                                                 </div>
@@ -826,7 +896,7 @@ const AccountPage = () => {
 
                                             <div className="space-y-2">
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <GraduationCap size={14} className="text-primary" /> Grade
+                                                    <GraduationCap size={14} className="text-primary" /> {t('account.grade')}
                                                 </label>
                                                 <div className="grid grid-cols-6 gap-2">
                                                     {['F4', 'F5', 'F6'].map((g) => (
@@ -845,20 +915,23 @@ const AccountPage = () => {
                                                             {g}
                                                         </button>
                                                     ))}
-                                                    {['Self study', 'Not specify'].map((g) => (
+                                                    {[
+                                                        { key: 'Self study', label: t('account.self_study') },
+                                                        { key: 'Not specify', label: t('account.not_specify') }
+                                                    ].map(({ key, label }) => (
                                                         <button
-                                                            key={g}
+                                                            key={key}
                                                             type="button"
-                                                            onClick={() => setProfileData({ ...profileData, grade: g })}
+                                                            onClick={() => setProfileData({ ...profileData, grade: key })}
                                                             className={cn(
                                                                 'col-span-3 min-h-[2.75rem] py-2.5 px-3 rounded-xl text-xs font-bold border transition-all text-center leading-snug whitespace-normal',
-                                                                profileData.grade === g
+                                                                profileData.grade === key
                                                                     ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
                                                                     : 'bg-slate-50 border-slate-200 text-slate-500 hover:border-slate-300'
                                                             )}
-                                                            title={g}
+                                                            title={label}
                                                         >
-                                                            {g}
+                                                            {label}
                                                         </button>
                                                     ))}
                                                 </div>
@@ -866,37 +939,45 @@ const AccountPage = () => {
                                         </div>
 
                                         <div className="space-y-4">
-                                            <div className="space-y-2">
-                                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <School size={14} className="text-primary" /> School
-                                                </label>
-                                                <SchoolAutocomplete 
-                                                    schools={schools} 
-                                                    value={profileData.school} 
-                                                    onChange={val => setProfileData({...profileData, school: val})}
-                                                    isLoading={isLoadingSchools}
-                                                />
-                                            </div>
-
                                             {/* Dream Subject is now managed via Dream Subjects page (JUPAS programmes) */}
                                             <div className="space-y-2">
                                                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                                                    <Target size={14} className="text-primary" /> Dream Subjects
+                                                    <Target size={14} className="text-primary" /> {t('account.dream_subjects')}
                                                 </label>
                                                 <div className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm text-slate-500">
-                                                    Managed via <a href="/dream-subjects" className="text-primary font-semibold underline">Dream Subjects</a> page
+                                                    {t('account.managed_via')} <a href="/dream-subjects" onClick={(e) => {
+                                                    if (profile?.subscription_tier !== 'premium') {
+                                                        e.preventDefault();
+                                                        window.location.href = '/subscription';
+                                                    }
+                                                }} className="text-primary font-semibold underline">{t('account.dream_subjects')}</a> {t('account.page')}
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        {/* School - full width row */}
+                                        <div className="md:col-span-2">
+                                            <div className="space-y-2">
+                                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
+                                                    <School size={14} className="text-primary" /> {t('account.school')}
+                                                </label>
+                                                <SchoolAutocomplete
+                                                    schools={schools}
+                                                    value={profileData.school}
+                                                    onChange={val => setProfileData({...profileData, school: val})}
+                                                    isLoading={isLoadingSchools}
+                                                />
                                             </div>
                                         </div>
 
                                         {/* Target Grades */}
                                         <div className="md:col-span-2 pt-4">
-                                            <label className="text-xs font-bold text-primary uppercase tracking-widest px-1 mb-4 block">Target DSE Levels (Core Subjects)</label>
+                                            <label className="text-xs font-bold text-primary uppercase tracking-widest px-1 mb-4 block">{t('account.target_dse_levels')}</label>
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                                 {[
-                                                    { label: 'English', key: 'targetGradeEng' },
-                                                    { label: 'Chinese', key: 'targetGradeChi' },
-                                                    { label: 'Maths', key: 'targetGradeMath' }
+                                                    { label: t('account.english'), key: 'targetGradeEng' },
+                                                    { label: t('account.chinese'), key: 'targetGradeChi' },
+                                                    { label: t('account.maths'), key: 'targetGradeMath' }
                                                 ].map(({ label, key }) => (
                                                     <div key={key} className="space-y-2">
                                                         <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">{label}</span>
@@ -906,7 +987,7 @@ const AccountPage = () => {
                                                             className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none"
                                                         >
                                                             <option value="">-</option>
-                                                            {['5**', '5*', '5', '4', '3', '2', '1'].map(lv => <option key={lv} value={lv}>Level {lv}</option>)}
+                                                            {['5**', '5*', '5', '4', '3', '2', '1'].map(lv => <option key={lv} value={lv}>{t('account.level')} {lv}</option>)}
                                                         </select>
                                                     </div>
                                                 ))}
@@ -916,8 +997,8 @@ const AccountPage = () => {
                                         {/* Electives */}
                                         <div className="md:col-span-2 pt-4">
                                             <div className="flex items-center justify-between mb-4">
-                                                <label className="text-xs font-bold text-primary uppercase tracking-widest px-1">Elective Subjects</label>
-                                                <button 
+                                                <label className="text-xs font-bold text-primary uppercase tracking-widest px-1">{t('account.elective_subjects')}</label>
+                                                <button
                                                     type="button"
                                                     onClick={() => setProfileData({
                                                         ...profileData,
@@ -925,21 +1006,21 @@ const AccountPage = () => {
                                                     })}
                                                     className="text-[10px] font-bold bg-primary/10 text-primary px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all flex items-center gap-1"
                                                 >
-                                                    <Plus size={12} /> Add Elective
+                                                    <Plus size={12} /> {t('account.add_elective')}
                                                 </button>
                                             </div>
                                             
                                             <div className="space-y-4">
                                                 {profileData.electives.length === 0 ? (
                                                     <p className="text-center py-8 text-xs text-slate-400 border-2 border-dashed border-slate-100 rounded-2xl">
-                                                        No electives added yet.
+                                                        {t('account.no_electives')}
                                                     </p>
                                                 ) : (
                                                     profileData.electives.map((elective, idx) => (
                                                         <div key={idx} className="flex gap-4 items-end animate-in fade-in slide-in-from-left-2 duration-300">
                                                             <div className="flex-1 space-y-2">
-                                                                <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">Subject</span>
-                                                                <select 
+                                                                <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">{t('account.subject')}</span>
+                                                                <select
                                                                     value={elective.subject}
                                                                     onChange={e => {
                                                                         const newElectives = [...profileData.electives];
@@ -948,14 +1029,14 @@ const AccountPage = () => {
                                                                     }}
                                                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none"
                                                                 >
-                                                                    <option value="">Select Subject</option>
+                                                                    <option value="">{t('account.select_subject')}</option>
                                                                     {['Biology', 'Business, Accounting and Financial Studies (BAFS)', 'Chemistry', 'Chinese History', 'Chinese Literature', 'Combined Science', 'Design and Applied Technology', 'Economics', 'Ethics and Religious Studies', 'Geography', 'Health Management and Social Care', 'History', 'Information and Communication Technology (ICT)', 'Integrated Science', 'Literature in English', 'Mathematics Extended Part (Module 1)', 'Mathematics Extended Part (Module 2)', 'Music', 'Physical Education', 'Physics', 'Technology and Living', 'Tourism and Hospitality Studies', 'Visual Arts'].map(s => (
                                                                         <option key={s} value={s}>{s}</option>
                                                                     ))}
                                                                 </select>
                                                             </div>
                                                             <div className="w-32 space-y-2">
-                                                                <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">Target</span>
+                                                                <span className="text-[10px] font-bold text-slate-400 uppercase ml-1">{t('account.target')}</span>
                                                                 <select 
                                                                     value={elective.targetGrade}
                                                                     onChange={e => {
@@ -986,14 +1067,28 @@ const AccountPage = () => {
                                         </div>
                                     </div>
 
+                                    <CommunicationPreferences
+                                        optIn={
+                                            profile?.marketing_opt_in === true
+                                                ? true
+                                                : profile?.marketing_opt_in === false
+                                                  ? false
+                                                  : null
+                                        }
+                                        xpAlreadyAwarded={profile?.marketing_opt_in_xp_awarded === true}
+                                        isLoading={isCommSaving}
+                                        onOptIn={() => handleCommunicationPreference(true)}
+                                        onOptOut={() => handleCommunicationPreference(false)}
+                                    />
+
                                     <div className="pt-6 border-t border-slate-100 flex justify-end">
-                                        <button 
+                                        <button
                                             type="submit"
                                             disabled={isSaving}
                                             className="px-10 py-4 bg-primary text-white rounded-[1.25rem] font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95 disabled:opacity-50 flex items-center gap-2"
                                         >
                                             {isSaving && <Loader2 size={18} className="animate-spin" />}
-                                            Save Changes
+                                            {t('account.save_changes')}
                                         </button>
                                     </div>
 
@@ -1104,8 +1199,8 @@ const AccountPage = () => {
                                                 {/* Send Copy to Self Toggle */}
                                                 <div className="flex items-center justify-between p-6 bg-slate-50 rounded-2xl border border-slate-100">
                                                     <div className="space-y-1">
-                                                        <p className="text-sm font-bold text-slate-900">Send a copy to me</p>
-                                                        <p className="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">Receive a copy of the weekly progress report at your registered email.</p>
+                                                        <p className="text-sm font-bold text-slate-900">{t('account.send_copy_to_me')}</p>
+                                                        <p className="text-[10px] text-slate-500 leading-relaxed max-w-[200px]">{t('account.send_copy_desc')}</p>
                                                     </div>
                                                     <button
                                                         type="button"
@@ -1141,7 +1236,7 @@ const AccountPage = () => {
                                                         )}
                                                     >
                                                         {isSaving && <Loader2 size={16} className="animate-spin" />}
-                                                        {hasParentalChanges ? 'Save Changes' : 'No Changes'}
+                                                        {hasParentalChanges ? t('account.save_changes') : t('account.no_changes')}
                                                     </button>
                                                 </div>
                                             </div>
@@ -1181,7 +1276,7 @@ const AccountPage = () => {
                                                     onClick={() => window.location.href = '/subscription'}
                                                     className="px-6 py-3 bg-white text-purple-600 rounded-xl font-bold text-sm shadow-lg hover:scale-105 transition-all"
                                                 >
-                                                    Upgrade Now
+                                                    {t('subscription.upgrade_premium')}
                                                 </button>
                                             </div>
                                         )}
@@ -1195,98 +1290,59 @@ const AccountPage = () => {
                                     {/* Password Section */}
                                     <section className="space-y-6">
                                         <div>
-                                            <h3 className="text-lg font-bold text-slate-900">Account Credentials</h3>
+                                            <h3 className="text-lg font-bold text-slate-900">{t('account.account_credentials')}</h3>
                                             <p className="text-sm text-slate-500">
-                                                {USE_ENTRA
-                                                    ? 'Your password is managed by Microsoft Entra ID. We will open Microsoft sign-in so you can update or reset it securely.'
-                                                    : 'Update your login password or link a new one.'}
+                                                {t('account.account_credentials_desc')}
                                             </p>
                                         </div>
 
-                                        <form onSubmit={handlePasswordChange} className="space-y-6 max-w-md">
-                                            {(!isGoogleOnly || hasPassword) && (
-                                                <div className="space-y-2">
-                                                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">Current Password</label>
-                                                    <input 
-                                                        type="password" 
-                                                        value={passwords.current}
-                                                        onChange={e => setPasswords({...passwords, current: e.target.value})}
-                                                        autoComplete="current-password"
-                                                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
-                                                        placeholder="••••••••"
-                                                        disabled={USE_ENTRA}
-                                                    />
-                                                    {USE_ENTRA && (
-                                                        <p className="text-[10px] text-slate-500 px-1">
-                                                            Not used for Microsoft-managed accounts — you will set/confirm your password on Microsoft&apos;s page.
+                                        <div className="max-w-lg space-y-4">
+                                            <div className="p-8 bg-slate-50 rounded-[2rem] border border-slate-100">
+                                                <div className="flex items-start gap-5">
+                                                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-primary shrink-0">
+                                                        <Lock size={24} />
+                                                    </div>
+                                                    <div className="space-y-4">
+                                                        <h4 className="text-base font-bold text-slate-900">{t('account.change_password_title')}</h4>
+                                                        <p className="text-sm text-slate-500 leading-relaxed">
+                                                            {t('account.change_password_desc')}
                                                         </p>
-                                                    )}
+                                                        <ol className="text-sm text-slate-600 space-y-2 list-decimal list-inside leading-relaxed">
+                                                            <li>{t('account.change_password_step1')}</li>
+                                                            <li>{t('account.change_password_step2')}</li>
+                                                            <li>{t('account.change_password_step3')}</li>
+                                                            <li>{t('account.change_password_step4')}</li>
+                                                        </ol>
+                                                        <button
+                                                            onClick={handleResetViaEmail}
+                                                            disabled={isSaving}
+                                                            className="mt-3 px-5 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-primary/90 transition-all active:scale-95 disabled:opacity-50 flex items-center gap-2"
+                                                        >
+                                                            {isSaving ? (
+                                                                <>
+                                                                    <Loader2 size={16} className="animate-spin" /> {t('account.opening')}
+                                                                </>
+                                                            ) : (
+                                                                <>
+                                                                    {t('account.change_password_btn')} <ChevronRight size={16} />
+                                                                </>
+                                                            )}
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            )}
-                                            <div className="space-y-2">
-                                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">{isGoogleOnly && !hasPassword ? 'New Password' : 'Change Password'}</label>
-                                                <input 
-                                                    type="password" 
-                                                    value={passwords.new}
-                                                    onChange={e => setPasswords({...passwords, new: e.target.value})}
-                                                    autoComplete="new-password"
-                                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
-                                                    placeholder="Enter new password"
-                                                    disabled={USE_ENTRA}
-                                                />
                                             </div>
-                                            <div className="space-y-2">
-                                                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">Confirm New Password</label>
-                                                <input 
-                                                    type="password" 
-                                                    value={passwords.confirm}
-                                                    onChange={e => setPasswords({...passwords, confirm: e.target.value})}
-                                                    autoComplete="new-password"
-                                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3.5 text-sm focus:ring-2 focus:ring-primary/20 outline-none"
-                                                    placeholder="Confirm new password"
-                                                    disabled={USE_ENTRA}
-                                                />
-                                            </div>
-                                            <button 
-                                                type="submit"
-                                                disabled={isSaving || (!USE_ENTRA && !passwords.new)}
-                                                className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold shadow-lg hover:bg-black transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2"
-                                            >
-                                                {isSaving && <Loader2 size={18} className="animate-spin" />}
-                                                {USE_ENTRA
-                                                    ? 'Continue to Microsoft'
-                                                    : (isGoogleOnly && !hasPassword ? 'Set Password' : 'Update Password')}
-                                            </button>
-                                        </form>
 
-                                        {/* Reset via Email Fallback */}
-                                        <div className="mt-4 p-6 bg-slate-50 rounded-[2rem] border border-slate-100 max-w-md">
-                                            <div className="flex items-start gap-4">
-                                                <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm text-primary">
-                                                    <Lock size={20} />
-                                                </div>
-                                                <div>
-                                                    <h4 className="text-sm font-bold text-slate-900">Forgot current password?</h4>
-                                                    <p className="text-[10px] text-slate-500 mt-1">
-                                                        {USE_ENTRA
-                                                            ? 'We will open Microsoft sign-in so you can reset your password with Microsoft Entra ID.'
-                                                            : "If you don't remember your current password, you can reset it via your registered email."}
-                                                    </p>
-                                                    <button 
-                                                        onClick={handleResetViaEmail}
-                                                        disabled={isSaving}
-                                                        className="mt-3 text-xs font-bold text-primary hover:underline flex items-center gap-1"
-                                                    >
-                                                        {USE_ENTRA ? (
-                                                            <>
-                                                                Open Microsoft reset <ChevronRight size={14} />
-                                                            </>
-                                                        ) : (
-                                                            <>
-                                                                Send Reset Email <ChevronRight size={14} />
-                                                            </>
-                                                        )}
-                                                    </button>
+                                            <div className="p-8 bg-amber-50/60 rounded-[2rem] border border-amber-100">
+                                                <div className="flex items-start gap-5">
+                                                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm text-amber-600 shrink-0">
+                                                        <AlertTriangle size={24} />
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="text-base font-bold text-amber-900">{t('account.signed_in_with_google')}</h4>
+                                                        <p className="text-sm text-amber-800/70 mt-2 leading-relaxed">
+                                                            {t('account.google_password_note')} <a href="https://myaccount.google.com/security" target="_blank" rel="noopener noreferrer" className="font-bold underline">{t('account.google_account_security')}</a> {t('account.settings')}.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1297,21 +1353,28 @@ const AccountPage = () => {
                                         <div className="flex items-center gap-3 text-red-600">
                                             <AlertTriangle size={24} />
                                             <div>
-                                                <h3 className="text-lg font-bold">Danger Zone</h3>
-                                                <p className="text-sm text-red-500/80">Permanent account actions. Proceed with caution.</p>
+                                                <h3 className="text-lg font-bold">{t('account.danger_zone')}</h3>
+                                                <p className="text-sm text-red-500/80">{t('account.danger_zone_desc')}</p>
                                             </div>
                                         </div>
-                                        
-                                        <div className="bg-red-50/50 border border-red-100 rounded-3xl p-6 flex flex-col md:flex-row justify-between items-center gap-6">
-                                            <div className="text-center md:text-left">
-                                                <p className="font-bold text-red-900 font-premium">Delete Account</p>
-                                                <p className="text-sm text-red-700 max-w-sm">Wipes all your study data, achievements, and statistics from our database. This is irreversible.</p>
+
+                                        <div className="bg-red-50/50 border border-red-100 rounded-3xl p-8 flex flex-col md:flex-row justify-between items-start gap-6">
+                                            <div className="space-y-3">
+                                                <p className="font-bold text-red-900 text-base">{t('account.delete_account')}</p>
+                                                <p className="text-sm text-red-700 max-w-md leading-relaxed">
+                                                    {t('account.delete_account_desc')}
+                                                </p>
+                                                {(profile?.subscription_tier !== 'free' && profile?.subscription_status !== 'cancelled') && (
+                                                    <p className="text-sm text-red-700">
+                                                        <span className="font-bold">{t('common.note') || 'Note:'}</span> {t('account.active_subscription_note')} <button onClick={() => handleTabChange('subscription')} className="text-primary font-bold underline hover:no-underline">{t('account.go_to_subscription')}</button>
+                                                    </p>
+                                                )}
                                             </div>
-                                            <button 
+                                            <button
                                                 onClick={handleDeleteClick}
-                                                className="px-8 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-all shadow-lg shadow-red-200 active:scale-95"
+                                                className="px-8 py-3 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-all shadow-lg shadow-red-200 active:scale-95 shrink-0"
                                             >
-                                                Delete Permanent
+                                                {t('account.delete_account_btn')}
                                             </button>
                                         </div>
                                     </section>
@@ -1322,8 +1385,8 @@ const AccountPage = () => {
                                 <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
                                     <div className="flex justify-between items-center">
                                         <div>
-                                            <h3 className="text-xl font-bold text-slate-900 tracking-tight">Current Subscription</h3>
-                                            <p className="text-sm text-slate-500">View and manage your current plan limits.</p>
+                                            <h3 className="text-xl font-bold text-slate-900 tracking-tight">{t('subscription.title')}</h3>
+                                            <p className="text-sm text-slate-500">{t('subscription.subtitle')}</p>
                                         </div>
                                         <div className={cn(
                                             "w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner",
@@ -1342,7 +1405,7 @@ const AccountPage = () => {
                                     )}>
                                         <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                                             <div className="space-y-1">
-                                                <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">Active Plan</span>
+                                                <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">{t('subscription.current_plan')}</span>
                                                 <h2 className="text-3xl font-black capitalize">{profile?.subscription_tier || 'Free'} Plan</h2>
                                                 <div className="flex items-center gap-2 mt-2 opacity-90">
                                                     <div className={cn(
@@ -1351,16 +1414,16 @@ const AccountPage = () => {
                                                     )} />
                                                     <span className="text-sm font-bold">
                                                         {profile?.subscription_status === 'cancelled'
-                                                            ? 'Auto-renewal cancelled'
+                                                            ? t('subscription.auto_renewal_cancelled')
                                                             : (!profile?.subscription_tier || profile?.subscription_tier === 'free')
-                                                                ? 'Standard Access'
-                                                                : 'Auto-renewing'}
+                                                                ? t('subscription.standard_access')
+                                                                : t('subscription.auto_renewing')}
                                                     </span>
                                                 </div>
                                             </div>
                                             <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 min-w-[180px]">
                                                 <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 flex items-center gap-1.5 font-premium">
-                                                    <ChevronRight size={10} /> Valid Until
+                                                    <ChevronRight size={10} /> {t('subscription.valid_until')}
                                                 </p>
                                                 <p className="text-xl font-bold mt-1">
                                                     {(() => {
@@ -1382,7 +1445,7 @@ const AccountPage = () => {
                                                 onClick={() => window.location.href = '/subscription'}
                                                 className="w-full py-4 bg-primary text-white rounded-2xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
                                             >
-                                                {profile?.subscription_status === 'cancelled' ? 'Renew Plan' : 'Upgrade to Pro - HK$68/mo'} <ChevronRight size={18} />
+                                                {profile?.subscription_status === 'cancelled' ? t('subscription.renew_plan') : t('subscription.upgrade_pro')} <ChevronRight size={18} />
                                             </button>
                                         ) : profile?.subscription_tier === 'pro' ? (
                                             <>
@@ -1392,7 +1455,7 @@ const AccountPage = () => {
                                                 >
                                                     <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
                                                         <Crown size={18} className="shrink-0" aria-hidden />
-                                                        <span>Upgrade to Premium</span>
+                                                        <span>{t('subscription.upgrade_premium')}</span>
                                                         <span className="opacity-95">HK$128/mo</span>
                                                     </span>
                                                 </button>
@@ -1400,13 +1463,13 @@ const AccountPage = () => {
                                                     onClick={handleCancelClick}
                                                     className="w-full py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 transition-all"
                                                 >
-                                                    Cancel Subscription
+                                                    {t('subscription.cancel_subscription')}
                                                 </button>
                                             </>
                                         ) : (
                                             <>
                                                 <button className="w-full py-4 bg-slate-100 text-slate-400 rounded-2xl font-bold border border-slate-100 cursor-default flex items-center justify-center gap-2">
-                                                    <Check size={18} /> Current Highest Plan
+                                                    <Check size={18} /> {t('subscription.current_highest')}
                                                 </button>
                                                 <button 
                                                     onClick={handleCancelClick}
@@ -1424,7 +1487,7 @@ const AccountPage = () => {
                                             disabled={isSaving}
                                             className="w-full py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl font-bold hover:bg-slate-50 transition-all"
                                         >
-                                            {isSaving ? 'Opening Billing Portal…' : 'Manage Billing & Card'}
+                                            {isSaving ? t('subscription.opening_billing') : t('subscription.manage_billing')}
                                         </button>
                                     )}
 
@@ -1471,7 +1534,7 @@ const AccountPage = () => {
                                                             onClick={() => handleConfirmForget(device.fingerprint)}
                                                             disabled={isForgetLoading === device.fingerprint}
                                                             className="p-2 text-slate-300 hover:text-red-500 hover:bg-red-50 transition-all rounded-lg disabled:opacity-50"
-                                                            title="Forget Device"
+                                                            title={t('account.forget_device')}
                                                         >
                                                             {isForgetLoading === device.fingerprint ? (
                                                                 <Loader2 size={16} className="animate-spin" />
@@ -1492,7 +1555,7 @@ const AccountPage = () => {
                                                     }}
                                                     className="text-[9px] text-slate-300 hover:text-slate-400 transition-colors"
                                                 >
-                                                    Doesn't look right? <span className="underline">Fix Label</span>
+                                                    {t('account.doesnt_look_right')} <span className="underline">{t('account.fix_label')}</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -1500,7 +1563,7 @@ const AccountPage = () => {
                                         <div className="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 flex gap-4">
                                             <Shield className="text-amber-600 shrink-0 w-5 h-5" />
                                             <p className="text-[10px] text-amber-800 leading-relaxed font-bold">
-                                                Security Note: You can register up to 3 devices (5 on Premium). If you reach the limit, please remove an old device above before signing in on a new one.
+                                                {t('account.security_note')}
                                             </p>
                                         </div>
                                     </div>

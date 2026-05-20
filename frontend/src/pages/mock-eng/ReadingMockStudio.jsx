@@ -626,9 +626,14 @@ const ReadingMockStudio = () => {
                 const results = await res.json();
                 setAssessmentResults(results);
                 localStorage.setItem(`mock_results_reading_${paperId}`, JSON.stringify(results));
-                setTimeout(() => updatePhase('RESULTS'), 500); // Small pause for 100% state
                 localStorage.removeItem(`mock_save_${paperId}`);
                 localStorage.removeItem('last_mock_inprogress_reading');
+                // Navigate to standalone result page if resultId is available
+                if (results.resultId) {
+                    navigate(`/mock-exam-eng/reading/results/${results.resultId}`);
+                } else {
+                    setTimeout(() => updatePhase('RESULTS'), 500);
+                }
             } else {
                 let detail = `HTTP ${res.status}`;
                 const ct = res.headers.get('content-type') || '';
@@ -1483,6 +1488,12 @@ const ReadingMockStudio = () => {
                         </div>
                     </div>
                 </div>
+                <UpgradeModal 
+                    isOpen={showUpgradeModal} 
+                    onClose={() => setShowUpgradeModal(false)}
+                    title="Pro / Premium Required"
+                    message="Please subscribe to a Pro or Premium plan to submit Mock Exams and receive AI evaluation with grade prediction."
+                />
             </div>
         );
     }
@@ -2123,8 +2134,8 @@ const ReadingMockStudio = () => {
                 <UpgradeModal 
                     isOpen={showUpgradeModal} 
                     onClose={() => setShowUpgradeModal(false)}
-                    title="Unlock Evaluation"
-                    message="Free tier users can preview the mock paper, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
+                    title="Pro / Premium Required"
+                    message="Please subscribe to a Pro or Premium plan to submit Mock Exams and receive AI evaluation with grade prediction."
                 />
             </div>
         );

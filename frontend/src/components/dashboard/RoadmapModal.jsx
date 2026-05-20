@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones, Target, Crown } from 'lucide-react';
+import { Lock, Compass, CheckCircle, Play, Map, Star, Clock, X, Trophy, Search, Sparkles, Zap, BookOpen, PenTool, Mic, MessageSquare, Layers, RefreshCcw, GraduationCap, Ear, ArrowRight, Calculator, Headphones, Target, Crown, Calendar, Coffee } from 'lucide-react';
 import { useAvatar } from '../../context/AvatarContext';
 import { MICRO_SKILLS, getSkillName, getSkillDesc, getSkillOutcome, getPaperBySkill, getSkillsByPaper } from '../../constants/microSkills';
 import { getMathSkillName, getSkillsByCategory } from '../../constants/mathMicroSkills';
@@ -10,12 +10,45 @@ import { calculateTier, getTierMetadata, getMasteryStats } from '../../utils/mas
 import { LISTENING_MISSION_SHELLS } from '../../data/listeningMissionShells';
 import { getGrammarMaxXp, getGrammarLevelOptionLabel } from '../../utils/grammarLabUtils';
 
+
+// --- DSE Exam Date Helpers ---
+// DSE English Paper 1 is always the first Tuesday of April each year.
+function getDseEnglishExamDate(year) {
+    const april = new Date(year, 3, 1); // April 1st
+    const day = april.getDay(); // 0=Sun, 1=Mon, 2=Tue...
+    const daysUntilTuesday = (2 - day + 7) % 7;
+    april.setDate(1 + daysUntilTuesday);
+    april.setHours(0, 0, 0, 0);
+    return april;
+}
+
+function getCurrentDseEnglishExamDate() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    let examDate = getDseEnglishExamDate(currentYear);
+    // If exam has passed this year, use next year's date
+    if (now > examDate) {
+        examDate = getDseEnglishExamDate(currentYear + 1);
+    }
+    return examDate;
+}
+
+function isWithinMockExamWindow(months = 6) {
+    const now = new Date();
+    const examDate = getCurrentDseEnglishExamDate();
+    const diffMs = examDate - now;
+    const diffMonths = diffMs / (1000 * 60 * 60 * 24 * 30.44);
+    return diffMonths <= months && diffMonths >= 0;
+}
+
 const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
+    if (!isOpen) return null;
+    
     const { user, profile } = useAuth();
     const { language, t } = useLanguage();
     const tier = (profile?.subscription_tier || 'free').toLowerCase();
     const isPaid = tier === 'pro' || tier === 'premium';
-    const { activeAgentId } = useAvatar();
+    const { activeAgent, activeAgentId } = useAvatar();
     const navigate = useNavigate();
     const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -31,6 +64,65 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
     const [writingMissions, setWritingMissions] = useState([]);
     const [isWritingLoading, setIsWritingLoading] = useState(false);
     const [weeklyTheme, setWeeklyTheme] = useState(null);
+    const [completedQuestIds, setCompletedQuestIds] = useState(new Set());
+
+    // Helper: check if a quest has been completed based on recent quest results
+    const isQuestCompleted = React.useCallback((quest) => {
+        if (!completedQuestIds || completedQuestIds.size === 0) return false;
+        
+        // Speaking: match by drill ID (quest_id) or module+focus
+        if (quest.category === 'speaking') {
+            const navState = quest.nav?.state;
+            const drillId = navState?.drill?.id;
+            if (drillId && completedQuestIds.has('speaking_' + drillId)) return true;
+            const pillarId = navState?.pillarId;
+            const moduleMap = { criterion_a: 'delivery', criterion_b: 'interaction', criterion_c: 'language_patterns', criterion_d: 'ideas_organisation', discussion: 'interaction' };
+            const moduleType = moduleMap[pillarId];
+            if (moduleType && completedQuestIds.has(moduleType + '_' + quest.skillId)) return true;
+        }
+        
+        // Listening: match by mission ID or topic
+        if (quest.category === 'listening') {
+            if (completedQuestIds.has(quest.skillId)) return true;
+            const navState = quest.nav?.state;
+            const questData = navState?.questData;
+            if (questData?.title && completedQuestIds.has(String(questData.title).trim().toLowerCase())) return true;
+        }
+        
+        // Writing: match by scenario title/topic
+        if (quest.category === 'writing') {
+            const navState = quest.nav?.state;
+            const questData = navState?.questData;
+            if (questData?.title && completedQuestIds.has(String(questData.title).trim().toLowerCase())) return true;
+            if (questData?.topic && completedQuestIds.has(String(questData.topic).trim().toLowerCase())) return true;
+            if (quest.title && completedQuestIds.has(String(quest.title).trim().toLowerCase())) return true;
+        }
+        
+        // Reading: match by skill ID, questName, or title
+        if (quest.category === 'reading') {
+            if (completedQuestIds.has('Reading_' + quest.skillId)) return true;
+            if (completedQuestIds.has(quest.skillId)) return true;
+            if (quest.title && completedQuestIds.has(String(quest.title).trim().toLowerCase())) return true;
+            if (quest.title && completedQuestIds.has('reading_' + String(quest.title).trim().toLowerCase().replace(/\s+/g, '_'))) return true;
+        }
+        
+        // Grammar: match by skill ID
+        if (quest.category === 'grammar') {
+            if (completedQuestIds.has(quest.skillId)) return true;
+        }
+        
+        // Math: match by skill/topic
+        if (quest.category === 'algebra' || quest.category === 'geometry' || quest.category === 'data') {
+            if (completedQuestIds.has(quest.skillId)) return true;
+        }
+        
+        // Weekly challenges: match by task ID
+        if (quest.isWeeklyChallenge) {
+            if (completedQuestIds.has(quest.id)) return true;
+        }
+        
+        return false;
+    }, [completedQuestIds]);
 
     // Fetch Listening/Writing Missions on open
     useEffect(() => {
@@ -161,12 +253,39 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
         }
     };
 
+    const fetchCompletedQuests = async () => {
+        if (!user?.uid) return;
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetchWithTimeout(`${API_URL}/api/quests/history?uid=${user.uid}&limit=50`);
+            if (res.ok) {
+                const data = await res.json();
+                const ids = new Set();
+                (data.results || []).forEach(r => {
+                    // Build composite keys for matching
+                    if (r.quest_id) ids.add('speaking_' + r.quest_id);
+                    if (r.module && r.focus) ids.add(r.module + '_' + r.focus);
+                    if (r.module && r.questName) ids.add(r.module + '_' + r.questName);
+                    if (r.topic) ids.add(String(r.topic).toLowerCase().replace(/\s+/g, '_'));
+                    if (r.paperId) ids.add(r.paperId);
+                    // Also store raw topic for flexible matching
+                    if (r.topic) ids.add(String(r.topic).trim().toLowerCase());
+                    if (r.questName) ids.add(String(r.questName).trim().toLowerCase());
+                });
+                setCompletedQuestIds(ids);
+            }
+        } catch (e) {
+            console.warn('Failed to load quest history', e);
+        }
+    };
+
     useEffect(() => {
         if (isOpen) {
             if (user?.uid) {
                 fetchRoadmap();
                 fetchUserSkills();
                 fetchWeeklyTheme();
+                fetchCompletedQuests();
             } else {
                 // If user isn't resolved yet, don't stay in loading forever
                 setLoading(false);
@@ -512,8 +631,6 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
         }
     };
 
-    if (!isOpen) return null;
-
     const completedCount = plan?.tasks ? plan.tasks.filter(t => t.status === 'COMPLETED' && t.type !== 'MOCK').length : 0;
     const totalKeys = 5; // Fixed at 5 targets
     const bossTask = plan?.tasks ? plan.tasks.find(t => t.type === 'MOCK') : null;
@@ -653,7 +770,456 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
     };
 
     const subjectInfo = getSubjectInfo();
+
+    // Compute weekKey at component scope for stable memoization
+    const getWeekKey = () => {
+        const now = new Date();
+        const hkOffset = 8 * 60;
+        const localOffset = now.getTimezoneOffset();
+        const hkTime = new Date(now.getTime() + (hkOffset + localOffset) * 60 * 1000);
+        const dayOfWeek = hkTime.getDay();
+        const daysSinceMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+        const mondayDate = new Date(hkTime);
+        mondayDate.setDate(hkTime.getDate() - daysSinceMonday);
+        mondayDate.setHours(0, 0, 0, 0);
+        return {
+            weekKey: mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0'),
+            mondayDate
+        };
+    };
+    const { weekKey, mondayDate } = getWeekKey();
+
+    // --- WEEKLY PLAN GENERATOR (Mon-Sat focus, Sun rest) ---
+    const generateWeeklyPlan = () => {
+        const isMath = activeAgentId === 'math' || activeAgentId === 'maths';
+        
+        let seed = 0;
+        for (let i = 0; i < weekKey.length; i++) seed = (seed * 31 + weekKey.charCodeAt(i)) >>> 0;
+        const rng = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+        
+        const shuffle = (arr) => {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(rng() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        };
+        
+        const take = (arr, n) => arr.slice(0, Math.min(n, arr.length));
+        
+        if (isMath) {
+            const categories = [
+                { id: 'algebra', label: 'Algebra', labelZh: '代數', icon: Calculator, color: 'indigo', skills: getSkillsByCategory('algebra') },
+                { id: 'geometry', label: 'Geometry & Trig', labelZh: '幾何與三角', icon: Map, color: 'blue', skills: getSkillsByCategory('geometry') },
+                { id: 'data', label: 'Data & Statistics', labelZh: '數據與統計', icon: Layers, color: 'emerald', skills: getSkillsByCategory('data') }
+            ];
+            
+            const scoredCats = categories.map(cat => {
+                const skillLevels = cat.skills.map(sid => ({ id: sid, level: userSkills[sid]?.level || 0 }));
+                const avgLevel = skillLevels.length ? skillLevels.reduce((s, sk) => s + sk.level, 0) / skillLevels.length : 0;
+                const unpracticed = skillLevels.filter(sk => sk.level < 1.5).length;
+                const priorityScore = avgLevel - (unpracticed * 0.5);
+                const sortedSkills = [...skillLevels].sort((a, b) => a.level - b.level);
+                return { ...cat, avgLevel, unpracticed, priorityScore, sortedSkills };
+            });
+            
+            const sortedCats = [...scoredCats].sort((a, b) => a.priorityScore - b.priorityScore);
+            const weakestCat = sortedCats[0];
+            
+            const buildMathDay = (cat) => {
+                const quests = [];
+                const targetSkills = take(cat.sortedSkills, 4);
+                targetSkills.forEach((sk) => {
+                    const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(sk.level || 1))));
+                    quests.push({
+                        id: sk.id,
+                        title: typeof getMathSkillName === 'function' ? getMathSkillName(sk.id, language) : sk.id,
+                        titleZh: typeof getMathSkillName === 'function' ? getMathSkillName(sk.id, 'zh') : sk.id,
+                        skillId: sk.id,
+                        level: targetLevel,
+                        xp: getMasteryStats(targetLevel).xp,
+                        type: 'PRACTICE',
+                        category: cat.id,
+                        nav: { path: '/maths/learn/' + sk.id, state: { topic: sk.id, level: targetLevel, isFactoryQuest: true } }
+                    });
+                });
+                return quests;
+            };
+            
+            const days = [
+                { dayKey: 'monday', label: t('roadmap.monday'), labelShort: 'Mon', isRest: false, focusCat: sortedCats[0] },
+                { dayKey: 'tuesday', label: t('roadmap.tuesday'), labelShort: 'Tue', isRest: false, focusCat: sortedCats[1] || sortedCats[0] },
+                { dayKey: 'wednesday', label: t('roadmap.wednesday'), labelShort: 'Wed', isRest: false, focusCat: sortedCats[2] || sortedCats[0] },
+                { dayKey: 'thursday', label: t('roadmap.thursday'), labelShort: 'Thu', isRest: false, focusCat: sortedCats[0] },
+                { dayKey: 'friday', label: t('roadmap.friday'), labelShort: 'Fri', isRest: false, focusCat: sortedCats[1] || sortedCats[0] },
+                { dayKey: 'saturday', label: t('roadmap.saturday'), labelShort: 'Sat', isRest: false, focusCat: null },
+                { dayKey: 'sunday', label: t('roadmap.sunday'), labelShort: 'Sun', isRest: true, focusCat: null }
+            ];
+            
+            const dayResults = days.map((d) => {
+                if (d.isRest) {
+                    return { ...d, focus: null, focusLabel: t('roadmap.rest_day'), focusLabelZh: '休息日', icon: Coffee, color: 'slate', quests: [] };
+                }
+                if (d.dayKey === 'saturday') {
+                    const isMockWeek = isWithinMockExamWindow(6);
+                    if (isMockWeek) {
+                        const mockQuests = [
+                            { id: 'mock_p1', title: 'Mock Exam Paper 1', titleZh: '模擬考試卷一', icon: BookOpen, color: 'blue', type: 'MOCK_EXAM', xp: 500, nav: { path: '/mock-eng/reading', state: { isMockMode: true } } },
+                            { id: 'mock_p2', title: 'Mock Exam Paper 2', titleZh: '模擬考試卷二', icon: PenTool, color: 'emerald', type: 'MOCK_EXAM', xp: 500, nav: { path: '/mock-eng/writing', state: { isMockMode: true } } },
+                            { id: 'mock_p3', title: 'Mock Exam Paper 3', titleZh: '模擬考試卷三', icon: Headphones, color: 'amber', type: 'MOCK_EXAM', xp: 500, nav: { path: '/mock-eng/listening', state: { isMockMode: true } } }
+                        ];
+                        return {
+                            ...d,
+                            focus: 'mock_exam',
+                            focusLabel: 'Mock Exam',
+                            focusLabelZh: '模擬考試',
+                            icon: GraduationCap,
+                            color: 'indigo',
+                            quests: mockQuests,
+                            isMockExam: true
+                        };
+                    }
+                    const challengeQuests = [
+                        { id: 'math_foundation', title: 'Section A1 Foundation', titleZh: '卷A1 基礎', icon: Zap, color: 'emerald', type: 'MATH_CHALLENGE', xp: 250, nav: { path: '/maths/lab', state: { topic: 'math_alg_formulas' } } },
+                        { id: 'math_standard', title: 'Section A2 Mastery', titleZh: '卷A2 精通', icon: Layers, color: 'blue', type: 'MATH_CHALLENGE', xp: 250, nav: { path: '/maths/lab', state: { topic: 'math_alg_quadratics' } } },
+                        { id: 'weekly_math', title: 'Section B Challenge', titleZh: '卷B 挑戰', icon: Trophy, color: 'orange', type: 'MATH_CHALLENGE', xp: 250, nav: { path: '/maths/lab', state: { topic: 'integrated_challenge' } } }
+                    ];
+                    return {
+                        ...d,
+                        focus: 'weekly_challenge',
+                        focusLabel: 'Weekly Challenges',
+                        focusLabelZh: '每週挑戰',
+                        icon: Trophy,
+                        color: 'orange',
+                        quests: challengeQuests,
+                        isWeeklyChallenge: true
+                    };
+                }
+                const cat = d.focusCat;
+                const quests = buildMathDay(cat);
+                return {
+                    ...d,
+                    focus: cat.id,
+                    focusLabel: cat.label,
+                    focusLabelZh: cat.labelZh,
+                    icon: Calculator,
+                    color: cat.color,
+                    quests,
+                    avgLevel: cat.avgLevel
+                };
+            });
+            
+            const dayPlanText = sortedCats.map(c => c.label).join(t('roadmap.day_plan_separator'));
+            const isMockWeekMath = isWithinMockExamWindow(6);
+            const tutorMessage = {
+                intro: t('roadmap.tutor_weekly_message_intro').replace('{{agentName}}', activeAgent?.name || 'Tutor'),
+                body: t('roadmap.tutor_weekly_message_math').replace('{{weakestArea}}', weakestCat.label),
+                strategy: t('roadmap.tutor_weekly_message_strategy').replace('{{dayPlans}}', dayPlanText),
+                challenge: isMockWeekMath ? t('roadmap.tutor_weekly_message_mock') : t('roadmap.tutor_weekly_message_challenge'),
+                bonus: t('roadmap.tutor_weekly_message_bonus')
+            };
+            
+            return { weekKey, mondayDate, days: dayResults, tutorMessage, weakestArea: weakestCat, challengeCompleted: weeklyQuestStatus?.completed || false };
+        }
+        
+        const isMockWeek = isWithinMockExamWindow(6);
+        
+        const papers = [
+            { id: 'reading', label: 'Reading', labelZh: '閱讀', icon: BookOpen, color: 'blue', skills: getSkillsByPaper('reading') },
+            { id: 'writing', label: 'Writing', labelZh: '寫作', icon: PenTool, color: 'emerald', skills: getSkillsByPaper('writing') },
+            { id: 'speaking', label: 'Speaking', labelZh: '說話', icon: Mic, color: 'rose', skills: getSkillsByPaper('speaking') },
+            { id: 'listening', label: 'Listening', labelZh: '聆聽', icon: Headphones, color: 'amber', skills: getSkillsByPaper('listening') }
+        ];
+        
+        const scoredPapers = papers.map(p => {
+            const skillLevels = p.skills.map(sid => ({ id: sid, level: userSkills[sid]?.level || 0 }));
+            const avgLevel = skillLevels.length ? skillLevels.reduce((s, sk) => s + sk.level, 0) / skillLevels.length : 0;
+            const unpracticed = skillLevels.filter(sk => sk.level < 1.5).length;
+            const priorityScore = avgLevel - (unpracticed * 0.5);
+            const sortedSkills = [...skillLevels].sort((a, b) => a.level - b.level);
+            return { ...p, avgLevel, unpracticed, priorityScore, sortedSkills };
+        });
+        
+        const grammarSkills = getSkillsByPaper('grammar');
+        const grammarLevels = grammarSkills.map(sid => ({ id: sid, level: userSkills[sid]?.level || 0 }));
+        const grammarAvg = grammarLevels.length ? grammarLevels.reduce((s, g) => s + g.level, 0) / grammarLevels.length : 7;
+        const sortedGrammar = [...grammarLevels].sort((a, b) => a.level - b.level);
+        
+        const shuffledWriting = shuffle([...writingMissions]);
+        const shuffledListening = shuffle([...listeningMissions]);
+        
+        const buildReadingDay = () => {
+            const skills = take(scoredPapers.find(p => p.id === 'reading').sortedSkills, 4);
+            return skills.map(sk => {
+                const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(sk.level || 1))));
+                return {
+                    id: sk.id,
+                    title: getSkillName(sk.id, language),
+                    titleZh: getSkillName(sk.id, 'zh'),
+                    skillId: sk.id,
+                    level: targetLevel,
+                    xp: getMasteryStats(targetLevel).xp,
+                    type: 'PRACTICE',
+                    category: 'reading',
+                    nav: {
+                        path: '/lab?topic=' + sk.id + '&level=' + targetLevel + '&taskId=' + sk.id,
+                        state: {
+                            topic: sk.id,
+                            taskId: sk.id,
+                            autoStart: { topic: sk.id, focus: ['vocabulary', 'comprehension'], level: targetLevel }
+                        }
+                    }
+                };
+            });
+        };
+        
+        const buildWritingDay = () => {
+            const scenarios = take(shuffledWriting, 4);
+            return scenarios.map((sc, idx) => ({
+                id: sc.id || 'writing_' + idx,
+                title: sc.title || sc.genre || 'Writing Practice',
+                titleZh: sc.title || sc.genre || '寫作練習',
+                skillId: sc.id,
+                level: sc.level || '5',
+                xp: 250,
+                type: 'PRACTICE',
+                category: 'writing',
+                nav: { path: '/writing/quest', state: { questData: sc } }
+            }));
+        };
+        
+        const buildSpeakingDay = () => {
+            // Map skill IDs to pillar info with correct module params
+            // Module values must match what the backend /api/speaking/quest/generate expects
+            const pillarInfo = {
+                speaking_delivery: { route: '/speaking/quest/delivery', pillar: 'criterion_a', module: 'delivery', drillPrefix: 'a' },
+                speaking_strategies: { route: '/speaking/quest/interaction-lab', pillar: 'criterion_b', module: 'interaction', drillPrefix: 'b' },
+                speaking_language: { route: '/speaking/quest/language', pillar: 'criterion_c', module: 'language_patterns', drillPrefix: 'c' },
+                speaking_organization: { route: '/speaking/quest/ideas', pillar: 'criterion_d', module: 'ideas_organisation', drillPrefix: 'd' },
+                speaking_groupDiscussion: { route: '/speaking/quest/interaction', pillar: 'discussion', module: 'interaction', drillPrefix: 'disc' }
+            };
+            
+            const skills = take(scoredPapers.find(p => p.id === 'speaking').sortedSkills, 4);
+            return skills.map((sk, idx) => {
+                const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(sk.level || 1))));
+                const info = pillarInfo[sk.id];
+                
+                // Generate deterministic drill ID based on week seed + skill + index
+                // This ensures the same drill is suggested all week, but changes weekly
+                const drillNum = (Math.floor(rng() * 20) + 1); // 1-20
+                const drillId = info ? (info.drillPrefix + '_' + drillNum) : ('a_' + drillNum);
+                const route = info ? info.route : '/speaking/quest/delivery';
+                const moduleType = info ? info.module : 'delivery';
+                const pillarId = info ? info.pillar : 'criterion_a';
+                
+                return {
+                    id: sk.id,
+                    title: getSkillName(sk.id, language),
+                    titleZh: getSkillName(sk.id, 'zh'),
+                    skillId: sk.id,
+                    level: targetLevel,
+                    xp: getMasteryStats(targetLevel).xp,
+                    type: 'PRACTICE',
+                    category: 'speaking',
+                    nav: {
+                        path: route + '?module=' + moduleType + '&topic=' + drillId + '&level=' + targetLevel,
+                        state: {
+                            drill: { id: drillId, title: getSkillName(sk.id, language), level: targetLevel },
+                            pillarId: pillarId
+                        }
+                    }
+                };
+            });
+        };
+        
+        const buildListeningDay = () => {
+            const missions = take(shuffledListening, 4);
+            return missions.map((m) => {
+                const targetLevel = m.level || '5';
+                return {
+                    id: m.id,
+                    title: m.title || 'Listening Mission',
+                    titleZh: m.title || '聆聽任務',
+                    skillId: m.id,
+                    level: targetLevel,
+                    xp: 250,
+                    type: 'PRACTICE',
+                    category: 'listening',
+                    nav: {
+                        path: '/listening/briefing/' + m.id,
+                        state: { questData: m, targetLevel: targetLevel, targetXp: 250, isNewSession: true }
+                    }
+                };
+            });
+        };
+        
+        const buildGrammarDay = () => {
+            const skills = take(sortedGrammar, 4);
+            return skills.map(sk => {
+                const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(sk.level || 1))));
+                const taskXp = getGrammarMaxXp(targetLevel);
+                return {
+                    id: sk.id,
+                    title: getSkillName(sk.id, language),
+                    titleZh: getSkillName(sk.id, 'zh'),
+                    skillId: sk.id,
+                    level: targetLevel,
+                    xp: taskXp,
+                    type: 'GRAMMAR_LAB',
+                    category: 'grammar',
+                    nav: {
+                        path: '/lab?topic=' + sk.id + '&level=' + targetLevel + '&taskId=' + sk.id,
+                        state: {
+                            topic: sk.id,
+                            taskId: sk.id,
+                            xp: taskXp,
+                            taskXp: taskXp,
+                            isGrammarLab: true,
+                            autoStart: { topic: sk.id, level: targetLevel, focus: ['grammar'] }
+                        }
+                    }
+                };
+            });
+        };
+        
+        const buildWeeklyChallengeDay = () => {
+            const challenges = [
+                { id: 'weekly_reading', title: 'Reading Challenge', titleZh: '閱讀挑戰', icon: BookOpen, color: 'blue', type: 'WEEKLY_QUEST', topic: 'reading_weekly' },
+                { id: 'weekly_writing', title: 'Writing Challenge', titleZh: '寫作挑戰', icon: PenTool, color: 'emerald', type: 'WEEKLY_QUEST', topic: 'writing_weekly' },
+                { id: 'weekly_listening', title: 'Listening Challenge', titleZh: '聆聽挑戰', icon: Headphones, color: 'amber', type: 'WEEKLY_QUEST', topic: 'listening_weekly' },
+                { id: 'weekly_speaking', title: 'Speaking Challenge', titleZh: '說話挑戰', icon: Mic, color: 'rose', type: 'SPEAKING_CHALLENGE', topic: 'speaking_weekly', isDiscussion: true }
+            ];
+            return challenges.map(c => ({
+                id: c.id,
+                title: c.title,
+                titleZh: c.titleZh,
+                skillId: c.id,
+                level: '5',
+                xp: 250,
+                type: c.type,
+                category: c.topic.replace('_weekly', ''),
+                isWeeklyChallenge: true,
+                isDiscussion: c.isDiscussion,
+                nav: c.isDiscussion
+                    ? { path: '/speaking/quest/interaction', state: { topic: c.topic, challengeType: 'weekly', level: '5' } }
+                    : c.topic.includes('reading')
+                        ? { path: '/lab?topic=' + c.topic + '&level=5&taskId=' + c.id, state: { isWeeklyQuest: true, level: '5', topic: c.topic, taskId: c.id } }
+                        : c.topic.includes('writing')
+                            ? { path: '/writing/quest', state: { isWeeklyQuest: true, level: '5', topic: c.topic, taskId: c.id, isAutoLoad: true } }
+                            : c.topic.includes('listening')
+                                ? { path: '/listening/briefing/' + c.id, state: { isWeeklyQuest: true, level: '5', topic: c.topic, taskId: c.id, targetLevel: '5', isNewSession: true } }
+                                : { path: '/speaking/quest/interaction', state: { topic: c.topic, challengeType: 'weekly', level: '5' } }
+            }));
+        };
+        
+        const orderedPapers = [...scoredPapers].sort((a, b) => a.priorityScore - b.priorityScore);
+
+        const buildMockExamDay = () => {
+            const mocks = [
+                { id: 'mock_reading', title: 'Reading Mock (Paper 1)', titleZh: '閱讀模擬考試（卷一）', skillId: 'mock_p1', level: '5', xp: 500, type: 'MOCK_EXAM', category: 'reading', nav: { path: '/mock-eng/reading', state: { isMockMode: true } } },
+                { id: 'mock_writing', title: 'Writing Mock (Paper 2)', titleZh: '寫作模擬考試（卷二）', skillId: 'mock_p2', level: '5', xp: 500, type: 'MOCK_EXAM', category: 'writing', nav: { path: '/mock-eng/writing', state: { isMockMode: true } } },
+                { id: 'mock_listening', title: 'Listening Mock (Paper 3)', titleZh: '聆聽模擬考試（卷三）', skillId: 'mock_p3', level: '5', xp: 500, type: 'MOCK_EXAM', category: 'listening', nav: { path: '/mock-eng/listening', state: { isMockMode: true } } },
+                { id: 'mock_speaking', title: 'Speaking Mock (Paper 4)', titleZh: '說話模擬考試（卷四）', skillId: 'mock_p4', level: '5', xp: 500, type: 'MOCK_EXAM', category: 'speaking', nav: { path: '/mock-eng/speaking', state: { isMockMode: true } } }
+            ];
+            return mocks;
+        };
+
+        const dayBuilders = {
+            monday: () => buildDayForPaper(orderedPapers[0]),
+            tuesday: () => buildDayForPaper(orderedPapers[1]),
+            wednesday: () => buildDayForPaper(orderedPapers[2]),
+            thursday: () => buildDayForPaper(orderedPapers[3]),
+            friday: buildGrammarDay,
+            saturday: isMockWeek ? buildMockExamDay : buildWeeklyChallengeDay,
+            sunday: () => []
+        };
+        
+        function buildDayForPaper(paper) {
+            if (!paper) return [];
+            if (paper.id === 'reading') return buildReadingDay();
+            if (paper.id === 'writing') return buildWritingDay();
+            if (paper.id === 'speaking') return buildSpeakingDay();
+            if (paper.id === 'listening') return buildListeningDay();
+            return [];
+        }
+        
+        const dayConfigs = [
+            { dayKey: 'monday', label: t('roadmap.monday'), labelShort: 'Mon', isRest: false, builder: 'monday' },
+            { dayKey: 'tuesday', label: t('roadmap.tuesday'), labelShort: 'Tue', isRest: false, builder: 'tuesday' },
+            { dayKey: 'wednesday', label: t('roadmap.wednesday'), labelShort: 'Wed', isRest: false, builder: 'wednesday' },
+            { dayKey: 'thursday', label: t('roadmap.thursday'), labelShort: 'Thu', isRest: false, builder: 'thursday' },
+            { dayKey: 'friday', label: t('roadmap.friday'), labelShort: 'Fri', isRest: false, builder: 'friday' },
+            { dayKey: 'saturday', label: t('roadmap.saturday'), labelShort: 'Sat', isRest: false, builder: 'saturday' },
+            { dayKey: 'sunday', label: t('roadmap.sunday'), labelShort: 'Sun', isRest: true, builder: 'sunday' }
+        ];
+        
+        const paperMeta = {
+            reading: { icon: BookOpen, color: 'blue' },
+            writing: { icon: PenTool, color: 'emerald' },
+            speaking: { icon: Mic, color: 'rose' },
+            listening: { icon: Headphones, color: 'amber' },
+            grammar: { icon: Layers, color: 'violet' },
+            weekly_challenge: { icon: Trophy, color: 'orange' },
+            mock_exam: { icon: GraduationCap, color: 'indigo' }
+        };
+        
+        const dayResults = dayConfigs.map(d => {
+            if (d.isRest) {
+                return { ...d, focus: null, focusLabel: t('roadmap.rest_day'), focusLabelZh: '休息日', icon: Coffee, color: 'slate', quests: [] };
+            }
+            const quests = dayBuilders[d.builder]();
+            const focusPaper = d.builder === 'friday' ? { id: 'grammar', label: 'Grammar', labelZh: '語法' }
+                : d.builder === 'saturday' && isMockWeek ? { id: 'mock_exam', label: 'Mock Exam', labelZh: '模擬考試' }
+                : d.builder === 'saturday' ? { id: 'weekly_challenge', label: 'Weekly Challenges', labelZh: '每週挑戰' }
+                : orderedPapers[['monday', 'tuesday', 'wednesday', 'thursday'].indexOf(d.builder)];
+            const meta = paperMeta[focusPaper?.id] || paperMeta.reading;
+            return {
+                ...d,
+                focus: focusPaper?.id,
+                focusLabel: language === 'zh' && focusPaper?.labelZh ? focusPaper.labelZh : (focusPaper?.label || 'Practice'),
+                icon: meta.icon,
+                color: meta.color,
+                quests
+            };
+        });
+        
+        const weakestPaper = orderedPapers[0];
+        const dayPlanText = orderedPapers.map(p => language === 'zh' ? p.labelZh : p.label).join(t('roadmap.day_plan_separator'));
+        const tutorMessage = {
+            intro: t('roadmap.tutor_weekly_message_intro').replace('{{agentName}}', activeAgent?.name || 'Tutor'),
+            body: t('roadmap.tutor_weekly_message_weakness')
+                .replace('{{weakestArea}}', language === 'zh' ? weakestPaper.labelZh : weakestPaper.label)
+                .replace('{{level}}', weakestPaper.avgLevel.toFixed(1)),
+            strategy: t('roadmap.tutor_weekly_message_strategy').replace('{{dayPlans}}', dayPlanText),
+            challenge: isMockWeek ? t('roadmap.tutor_weekly_message_mock') : t('roadmap.tutor_weekly_message_challenge'),
+            bonus: t('roadmap.tutor_weekly_message_bonus')
+        };
+        
+        return {
+            weekKey,
+            mondayDate,
+            days: dayResults,
+            tutorMessage,
+            weakestArea: weakestPaper,
+            challengeCompleted: weeklyQuestStatus?.completed || false
+        };
+    };
+    
+    const weeklyPlan = useMemo(() => generateWeeklyPlan(), [weekKey, activeAgentId, writingMissions.length, listeningMissions.length]);
+    
+    const getHkDayIndex = () => {
+        const now = new Date();
+        const hkOffset = 8 * 60;
+        const localOffset = now.getTimezoneOffset();
+        const hkTime = new Date(now.getTime() + (hkOffset + localOffset) * 60 * 1000);
+        const dow = hkTime.getDay();
+        return dow === 0 ? 6 : dow - 1;
+    };
+    const todayIndex = getHkDayIndex();
     const SubjectIcon = subjectInfo.icon;
+
+
 
     return (
         <div className="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
@@ -804,129 +1370,212 @@ const RoadmapModal = ({ isOpen, onClose, initialFilter = 'READING' }) => {
                                     })}
                                 </div>
 
-                                {/* Targeted Growth Strategy - Paper/Area Mastery Tracks */}
-                                <div className="mb-10">
+                                {/* Targeted Growth Strategy - Weekly Plan */}
+                                <div className={`mb-10 relative ${!isPaid ? 'opacity-50 pointer-events-none' : ''}`}>
+                                    {!isPaid && (
+                                        <div className="absolute inset-0 z-10 flex items-center justify-center">
+                                            <div className="bg-slate-900/80 backdrop-blur-sm px-6 py-4 rounded-2xl flex items-center gap-3 shadow-xl">
+                                                <Crown className="w-5 h-5 text-amber-400 fill-amber-400" />
+                                                <span className="text-white font-black text-sm uppercase tracking-wider">
+                                                    Pro / Premium Only
+                                                </span>
+                                            </div>
+                                        </div>
+                                    )}
                                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
-                                        <Sparkles className="w-6 h-6 text-indigo-600 shrink-0" />
-                                        <h3 className="font-black text-slate-800 uppercase tracking-widest text-sm sm:text-base">
-                                            {t('roadmap.target_growth_for_you')}
-                                        </h3>
+                                        <Calendar className="w-6 h-6 text-indigo-600 shrink-0" />
+                                        <div className="flex flex-col">
+                                            <h3 className="font-black text-slate-800 uppercase tracking-widest text-sm sm:text-base leading-tight">
+                                                {t('roadmap.this_week_focus')}
+                                            </h3>
+                                            <span className="text-[10px] font-bold text-slate-400 tracking-wide">
+                                                {t('roadmap.week_of')} {weeklyPlan.mondayDate.toLocaleDateString(language === 'zh' ? 'zh-HK' : 'en-GB', { month: 'short', day: 'numeric' })}
+                                            </span>
+                                        </div>
                                         <button 
                                             onClick={handleOpenMastery}
                                             type="button"
-                                            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
+                                            className="ml-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-cyan-50 text-[#00aeef] border border-cyan-100 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-2 hover:bg-[#00aeef] hover:text-white transition-all shadow-sm"
                                         >
                                             <Compass className="w-4 h-4 shrink-0" />
                                             {t('roadmap.detailed_ability_radar')}
                                         </button>
                                     </div>
 
-                                    <div className={`grid grid-cols-1 md:grid-cols-${(activeAgentId === 'math' || activeAgentId === 'maths') ? '3' : '2'} gap-4`}>
-                                        {(activeAgentId === 'math' || activeAgentId === 'maths' 
-                                            ? [
-                                                { id: 'algebra', label: 'Algebra Mastery', icon: Calculator, color: 'indigo' },
-                                                { id: 'geometry', label: 'Geometry & Trig', icon: Map, color: 'blue' },
-                                                { id: 'data', label: 'Data & Statistics', icon: Layers, color: 'emerald' }
-                                              ]
-                                            : [
-                                                { id: 'Reading', label: 'Reading (Paper 1)', icon: BookOpen, color: 'blue' },
-                                                { id: 'Writing', label: 'Writing (Paper 2)', icon: PenTool, color: 'emerald' },
-                                                { id: 'Listening', label: 'Listening (Paper 3)', icon: Headphones, color: 'amber' },
-                                                { id: 'Speaking', label: 'Speaking (Paper 4)', icon: Mic, color: 'rose' }
-                                              ]
-                                        ).map((track) => {
-                                            const level = (activeAgentId === 'math' || activeAgentId === 'maths') 
-                                                ? getMathAreaLevel(track.id) 
-                                                : getPaperLevel(track.id);
-                                            
-                                            // 0-7 scale to 0-100%
-                                            const progress = (level / 7) * 100;
-                                            const priority = getWeakestSkillInCategory(track.id, (activeAgentId === 'math' || activeAgentId === 'maths'));
-                                            const missionName = (activeAgentId === 'math' || activeAgentId === 'maths')
-                                                ? (priority ? (typeof getMathSkillName === 'function' ? getMathSkillName(priority.id, language) : priority.id) : 'All General Skills')
-                                                : (priority ? getSkillName(priority.id, language) : 'Foundations');
-
-                                            return (
-                                                <div key={track.id} className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow">
-                                                    <div className="flex items-center justify-between mb-4">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className={`p-2 bg-${track.color}-50 rounded-xl`}>
-                                                                 <track.icon className={`w-5 h-5 text-${track.color}-600`} />
-                                                            </div>
-                                                             <span className="font-black text-slate-800 text-sm tracking-tight flex items-center gap-2">
-                                                                 {track.label}
-                                                                 {!isPaid && <Crown className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />}
-                                                             </span>
-                                                        </div>
-                                                        <span className={`text-xs font-black text-${track.color}-600 bg-${track.color}-50 px-2 py-0.5 rounded-lg border border-${track.color}-100`}>
-                                                            Level {level.toFixed(1)}
-                                                        </span>
-                                                    </div>
-
-                                                    {/* Progress Gauge */}
-                                                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-5">
-                                                        <div 
-                                                            className={`h-full bg-gradient-to-r from-${track.color}-400 to-${track.color}-600 transition-all duration-1000`} 
-                                                            style={{ width: `${Math.max(10, progress)}%` }}
+                                    {/* Tutor Message Card */}
+                                    {weeklyPlan.tutorMessage && (
+                                        <div className="mb-5 bg-gradient-to-r from-indigo-50 via-white to-orange-50 border border-indigo-100 rounded-2xl p-4 sm:p-5 shadow-sm">
+                                            <div className="flex items-start gap-3">
+                                                <div className="shrink-0">
+                                                    {activeAgent?.avatar ? (
+                                                        <img 
+                                                            src={activeAgent.avatar} 
+                                                            alt={activeAgent.name}
+                                                            className="w-10 h-10 rounded-full object-cover border-2 border-indigo-200"
                                                         />
+                                                    ) : (
+                                                        <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                                                            <Sparkles className="w-5 h-5 text-indigo-600" />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="text-[11px] font-black text-indigo-600 uppercase tracking-wider mb-1">
+                                                        {activeAgent?.name || 'Tutor'}
+                                                    </p>
+                                                    <div className="space-y-1">
+                                                        <p className="text-sm text-slate-700 leading-relaxed">
+                                                            {weeklyPlan.tutorMessage.intro}
+                                                        </p>
+                                                        <p className="text-sm text-slate-700 leading-relaxed">
+                                                            {weeklyPlan.tutorMessage.body}
+                                                        </p>
+                                                        <p className="text-sm text-slate-600 leading-relaxed italic">
+                                                            {weeklyPlan.tutorMessage.strategy}
+                                                        </p>
+                                                        <p className="text-sm font-bold text-orange-600 leading-relaxed flex items-center gap-1.5 mt-2">
+                                                            <Trophy className="w-4 h-4 shrink-0" />
+                                                            {weeklyPlan.tutorMessage.challenge}
+                                                        </p>
+                                                        <p className="text-sm font-bold text-indigo-600 leading-relaxed flex items-center gap-1.5 mt-1">
+                                                            <Sparkles className="w-4 h-4 shrink-0" />
+                                                            {weeklyPlan.tutorMessage.bonus}
+                                                        </p>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
 
-                                                    {/* Priority Mission Action */}
-                                                    {priority && (() => {
-                                                        const targetLevel = String(Math.max(3, Math.min(5, Math.ceil(priority.level))));
-                                                        const stats = getMasteryStats(targetLevel);
-                                                        
-                                                        return (
-                                                            <div 
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    if (questLabGating.lockedIds.has(priority.id)) {
-                                                                        onClose();
-                                                                        navigate('/subscription');
-                                                                        return;
-                                                                    }
-                                                                    onClose();
-                                                                    if (activeAgentId === 'math' || activeAgentId === 'maths') {
-                                                                        navigate(`/maths/learn/${priority.id}`, { 
-                                                                            state: { 
-                                                                                topic: priority.id, 
-                                                                                level: '3', 
-                                                                                xp: stats.xp,
-                                                                                isFactoryQuest: true
-                                                                            } 
-                                                                        });
-                                                                    } else {
-                                                                        handleTaskClick({ 
-                                                                            id: priority.id, 
-                                                                            title: `Boost: ${missionName}`, 
-                                                                            topic: priority.id, 
-                                                                            type: 'PRACTICE', 
-                                                                            xp: stats.xp, 
-                                                                            level: targetLevel
-                                                                        });
-                                                                    }
-                                                                }}
-                                                                className="flex items-center justify-between p-3 bg-slate-50 border border-slate-100 rounded-2xl group cursor-pointer hover:border-indigo-200 hover:bg-indigo-50/30 transition-all"
-                                                            >
-                                                                <div className="flex items-center gap-3">
-                                                                    <div className="p-2 bg-white rounded-lg shadow-xs group-hover:scale-110 transition-transform">
-                                                                        <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Priority Boost</div>
-                                                                        <div className="text-[12px] font-black text-slate-700 italic group-hover:text-indigo-600 transition-colors line-clamp-1 flex items-center gap-2">
-                                                                             {missionName}
-                                                                             {!isPaid && <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
-                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="flex items-center gap-2">
-                                                                    <span className="text-[11px] font-black text-indigo-600">+{stats.xp} XP</span>
-                                                                    <Play className="w-3 h-3 text-slate-300 group-hover:text-indigo-600 transition-colors" />
-                                                                </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                                        {weeklyPlan.days.map((day, idx) => {
+                                            const isToday = idx === todayIndex;
+                                            const isRest = day.isRest;
+                                            const DayIcon = day.icon;
+                                            
+                                            const colorMap = {
+                                                blue: { bg: 'bg-blue-50', border: 'border-blue-100', text: 'text-blue-700', icon: 'text-blue-600', badge: 'bg-blue-100 text-blue-700', bar: 'bg-blue-500' },
+                                                emerald: { bg: 'bg-emerald-50', border: 'border-emerald-100', text: 'text-emerald-700', icon: 'text-emerald-600', badge: 'bg-emerald-100 text-emerald-700', bar: 'bg-emerald-500' },
+                                                amber: { bg: 'bg-amber-50', border: 'border-amber-100', text: 'text-amber-700', icon: 'text-amber-600', badge: 'bg-amber-100 text-amber-700', bar: 'bg-amber-500' },
+                                                rose: { bg: 'bg-rose-50', border: 'border-rose-100', text: 'text-rose-700', icon: 'text-rose-600', badge: 'bg-rose-100 text-rose-700', bar: 'bg-rose-500' },
+                                                indigo: { bg: 'bg-indigo-50', border: 'border-indigo-100', text: 'text-indigo-700', icon: 'text-indigo-600', badge: 'bg-indigo-100 text-indigo-700', bar: 'bg-indigo-500' },
+                                                violet: { bg: 'bg-violet-50', border: 'border-violet-100', text: 'text-violet-700', icon: 'text-violet-600', badge: 'bg-violet-100 text-violet-700', bar: 'bg-violet-500' },
+                                                orange: { bg: 'bg-orange-50', border: 'border-orange-100', text: 'text-orange-700', icon: 'text-orange-600', badge: 'bg-orange-100 text-orange-700', bar: 'bg-orange-500' },
+                                                slate: { bg: 'bg-slate-50', border: 'border-slate-100', text: 'text-slate-500', icon: 'text-slate-400', badge: 'bg-slate-100 text-slate-500', bar: 'bg-slate-400' }
+                                            };
+                                            const c = colorMap[day.color] || colorMap.slate;
+                                            
+                                            return (
+                                                <div 
+                                                    key={day.dayKey}
+                                                    className={`
+                                                        relative rounded-2xl border transition-all flex flex-col
+                                                        ${isToday ? 'ring-2 ring-indigo-400 ring-offset-2 shadow-md' : 'shadow-sm'}
+                                                        ${isRest ? 'bg-slate-50 border-slate-100 opacity-70' : 'bg-white border-slate-100 hover:shadow-md'}
+                                                    `}
+                                                >
+                                                    {/* Day header */}
+                                                    <div className={`px-4 py-3 border-b ${isRest ? 'border-slate-100' : 'border-slate-100'} flex items-center justify-between`}>
+                                                        <div className="flex items-center gap-2">
+                                                            <div className={`p-1.5 rounded-lg ${c.bg} ${c.border} border`}>
+                                                                <DayIcon className={`w-4 h-4 ${c.icon}`} />
                                                             </div>
-                                                        );
-                                                    })()}
+                                                            <span className={`text-xs font-black uppercase tracking-wider ${isToday ? 'text-indigo-600' : 'text-slate-500'}`}>
+                                                                {day.label}
+                                                            </span>
+                                                        </div>
+                                                        <div className="flex items-center gap-1.5">
+                                                            {isToday && (
+                                                                <span className="text-[9px] font-black bg-indigo-600 text-white px-2 py-0.5 rounded-full uppercase">
+                                                                    {t('roadmap.today')}
+                                                                </span>
+                                                            )}
+                                                            {isRest && (
+                                                                <span className="text-[9px] font-black bg-slate-200 text-slate-500 px-2 py-0.5 rounded-full uppercase">
+                                                                    {t('roadmap.rest_day')}
+                                                                </span>
+                                                            )}
+                                                            {!isRest && (
+                                                                <span className={`text-[9px] font-black px-2 py-0.5 rounded-full uppercase ${c.badge}`}>
+                                                                    {day.focusLabel}
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    {/* Quest cards */}
+                                                    <div className="p-3 flex-1 flex flex-col gap-2">
+                                                        {isRest ? (
+                                                            <div className="flex-1 flex flex-col items-center justify-center py-8 gap-3">
+                                                                <Coffee className="w-8 h-8 text-slate-300" />
+                                                                <p className="text-sm font-bold text-slate-400">{t('roadmap.rest_day')}</p>
+                                                            </div>
+                                                        ) : (
+                                                            <>
+                                                                {day.quests.map((quest, qIdx) => {
+                                                                    const completed = isQuestCompleted(quest);
+                                                                    return (
+                                                                    <div
+                                                                        key={quest.id + '_' + qIdx}
+                                                                        onClick={() => {
+                                                                            if (!isPaid) {
+                                                                                onClose();
+                                                                                navigate('/subscription');
+                                                                                return;
+                                                                            }
+                                                                            onClose();
+                                                                            navigate(quest.nav.path, { state: quest.nav.state });
+                                                                        }}
+                                                                        className={`
+                                                                            group relative p-3 rounded-xl border text-left transition-all duration-200 cursor-pointer
+                                                                            ${completed 
+                                                                                ? 'bg-emerald-50/60 border-emerald-200 hover:border-emerald-400 hover:shadow-md' 
+                                                                                : 'bg-white border-slate-100 hover:border-indigo-300 hover:shadow-md'}
+                                                                        `}
+                                                                    >
+                                                                        <div className="flex items-start gap-2.5">
+                                                                            <div className="flex-1 min-w-0">
+                                                                                <div className="flex items-center justify-between mb-0.5">
+                                                                                    <p className={`text-[11px] font-bold line-clamp-1 ${completed ? 'text-emerald-800' : 'text-slate-800'}`}>
+                                                                                        {language === 'zh' && quest.titleZh ? quest.titleZh : quest.title}
+                                                                                    </p>
+                                                                                    {completed ? (
+                                                                                        <CheckCircle className="w-3.5 h-3.5 text-emerald-500 fill-emerald-500 shrink-0 ml-1" />
+                                                                                    ) : !isPaid ? (
+                                                                                        <Crown className="w-3 h-3 text-amber-500 fill-amber-500 shrink-0 ml-1" />
+                                                                                    ) : null}
+                                                                                </div>
+                                                                                <div className="flex items-center gap-2">
+                                                                                    <span className={`text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded ${completed ? 'bg-emerald-100 text-emerald-700' : c.badge}`}>
+                                                                                        {completed ? 'Completed' : quest.category}
+                                                                                    </span>
+                                                                                    <span className={`text-[9px] font-bold ${completed ? 'text-emerald-500' : 'text-slate-400'}`}>
+                                                                                        {completed ? '+' + quest.xp + ' XP earned' : '+' + quest.xp + ' XP'}
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                            {completed ? (
+                                                                                <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-1" />
+                                                                            ) : (
+                                                                                <Play className="w-3.5 h-3.5 text-slate-300 group-hover:text-indigo-500 transition-colors shrink-0 mt-1" />
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                    );
+                                                                })}
+                                                                
+                                                                {/* Estimated time footer */}
+                                                                <div className="mt-1 pt-2 border-t border-slate-50 flex items-center justify-between">
+                                                                    <span className="text-[10px] text-slate-400 font-medium">
+                                                                        ~{day.quests.length * 15} min
+                                                                    </span>
+                                                                    <span className="text-[10px] text-slate-400 font-medium">
+                                                                        {day.quests.length} quests
+                                                                    </span>
+                                                                </div>
+                                                            </>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             );
                                         })}

@@ -32,7 +32,8 @@ class ParentReportService {
                 recentMock,
                 enMistakes,
                 mathMistakes,
-                personalizedContext
+                personalizedContext,
+                allMockResults
             ] = await Promise.all([
                 CosmosStore.getTimelineSince(uid, sevenDaysAgo),
                 CosmosStore.getUserStats(uid).catch(() => null),
@@ -43,7 +44,8 @@ class ParentReportService {
                 UserProfileService.getMockSummary(uid).catch(() => null),
                 UserProfileService.getMistakes(uid, 'english', 3).catch(() => []),
                 UserProfileService.getMistakes(uid, 'maths', 3).catch(() => []),
-                UserProfileService.getPersonalizedContext(uid, 'english').catch(() => null)
+                UserProfileService.getPersonalizedContext(uid, 'english').catch(() => null),
+                CosmosStore.listQuestResults(uid, 20).catch(() => [])
             ]);
 
             // 1. Aggregate Stats from timeline
@@ -129,7 +131,7 @@ class ParentReportService {
                     .slice(0, 3);
             }
 
-            // 6. Recent Mock Exam
+            // 6. Recent Mock Exam (from mock_summary) + All Mock Exams (from quest_results)
             let recentMockFormatted = null;
             if (recentMock) {
                 const mockDate = recentMock.timestamp || recentMock.completedAt;
@@ -145,6 +147,27 @@ class ParentReportService {
                     };
                 }
             }
+
+            // 6b. All Mock Exam History (from quest_results)
+            const mockExamHistory = (allMockResults || [])
+                .filter(r => r.type === 'READING' || r.type === 'WRITING' || r.type === 'LISTENING' || r.type === 'SPEAKING')
+                .map(r => ({
+                    type: r.type,
+                    topic: r.topic || r.paperId || 'Mock Exam',
+                    score: r.totalScore ?? r.score ?? null,
+                    total: r.possibleScore ?? null,
+                    percentage: r.percentage ?? null,
+                    level: r.level || null,
+                    date: r.completedAt || r.timestamp || null,
+                    sectionalScores: r.sectionalScores || null,
+                    skillScores: r.skillScores ? Object.entries(r.skillScores).map(([k, v]) => ({
+                        skill: k,
+                        score: v.score || 0,
+                        possible: v.possible || 0,
+                        percentage: v.possible > 0 ? Math.round((v.score / v.possible) * 100) : 0
+                    })) : []
+                }))
+                .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
             // 7. Top Mistakes
             const allMistakes = [...enMistakes, ...mathMistakes]
@@ -190,6 +213,7 @@ class ParentReportService {
                 xp,
                 recentQuests: quests,
                 recentMock: recentMockFormatted,
+                mockExamHistory,
                 subjectBreakdown,
                 topMistakes,
                 recommendedNextSteps

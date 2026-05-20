@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AuthForm from '../components/AuthForm';
 import { useAuth } from '../context/AuthContext';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { ensureEntraMsalClient } from '../entraMsalSingleton';
+import { ensureEntraMsalClient, resetEntraMsalClient } from '../entraMsalSingleton';
 
 const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
 
@@ -17,6 +17,16 @@ const LoginPage = () => {
     const { user, beginSignInFlow, retryEntraSession, initialized, loading, authError } = useAuth();
     const navigate = useNavigate();
     const [entraFormFallback, setEntraFormFallback] = useState(false);
+    const [showSlowSignInHint, setShowSlowSignInHint] = useState(false);
+
+    useEffect(() => {
+        if (!USE_ENTRA || entraFormFallback || user || authError) {
+            setShowSlowSignInHint(false);
+            return undefined;
+        }
+        const t = window.setTimeout(() => setShowSlowSignInHint(true), 14000);
+        return () => window.clearTimeout(t);
+    }, [user, authError, entraFormFallback]);
 
     useEffect(() => {
         if (!USE_ENTRA || user) return;
@@ -31,22 +41,49 @@ const LoginPage = () => {
             }
             sessionStorage.removeItem('aceit_post_logout_home');
         }
-        // resolve-identity failed — do not bounce back to Microsoft (user stays on picker forever).
-        if (authError) return;
 
         let cancelled = false;
         (async () => {
             try {
                 const client = await ensureEntraMsalClient();
                 if (cancelled) return;
+
+                // AuthContext's initEntra effect already called ensureEntraMsalClient(),
+                // which internally runs handleRedirectPromise().  Calling it again here
+                // returns null because the hash was already consumed.  We skip the
+                // redundant call and simply check whether MSAL already has an account.
                 const hasMsalAccount = client.getAllAccounts().length > 0;
                 if (hasMsalAccount) {
                     await retryEntraSession();
                     return;
                 }
-                await beginSignInFlow();
+                // No MSAL account and no previous error — start fresh sign-in
+                if (!authError) {
+                    await beginSignInFlow();
+                }
             } catch (e) {
                 console.error('[LoginPage] Entra redirect failed:', e);
+                // If MSAL reports interaction_in_progress, reset the singleton and retry once.
+                const msg = String(e?.message || e || '');
+                const code = e?.errorCode || e?.name || '';
+                if (code === 'interaction_in_progress' || msg.includes('interaction_in_progress')) {
+                    resetEntraMsalClient();
+                    try {
+                        const client = await ensureEntraMsalClient();
+                        if (cancelled) return;
+                        const hasMsalAccount = client.getAllAccounts().length > 0;
+                        if (hasMsalAccount) {
+                            await retryEntraSession();
+                            return;
+                        }
+                        if (!authError) {
+                            await beginSignInFlow();
+                        }
+                        return;
+                    } catch (e2) {
+                        console.error('[LoginPage] Entra retry failed:', e2);
+                    }
+                }
                 if (!cancelled) setEntraFormFallback(true);
             }
         })();
@@ -68,9 +105,29 @@ const LoginPage = () => {
     if (USE_ENTRA && !entraFormFallback) {
         return (
             <div className="flex-1 flex min-h-[50vh] flex-col items-center justify-center gap-6 p-4 max-w-lg mx-auto text-center">
+                <div
+                    className="h-9 w-9 shrink-0 rounded-full border-2 border-primary border-t-transparent animate-spin"
+                    aria-hidden
+                />
                 <p className="text-slate-600 dark:text-slate-400 text-sm">
                     {!initialized || loading ? 'Completing sign-in…' : 'Continuing…'}
                 </p>
+                {showSlowSignInHint && !authError && (
+                    <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-xs text-slate-700 dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-200">
+                        <p className="font-semibold text-slate-800 dark:text-slate-100">Still here?</p>
+                        <p className="mt-1 leading-relaxed">
+                            Microsoft sign-in finished, but Ace It! is still talking to the server. Check your network,
+                            confirm the API URL is correct for this environment, or try manual sign-in below.
+                        </p>
+                        <button
+                            type="button"
+                            onClick={() => setEntraFormFallback(true)}
+                            className="mt-3 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-xs font-bold text-slate-800 hover:bg-slate-50 dark:border-slate-500 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+                        >
+                            Use manual sign-in form
+                        </button>
+                    </div>
+                )}
                 {authError && (
                     <div className="rounded-2xl border border-red-200 bg-red-50 px-6 py-4 text-left text-sm text-red-900 dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-100">
                         <p className="font-bold mb-2">Could not finish sign-in</p>

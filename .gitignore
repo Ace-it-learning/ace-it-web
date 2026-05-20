@@ -69,3 +69,9 @@ backend/backups/
 
 # Backup Archives
 *.zip
+
+# Local tarball / mirror backups at repo root (do not publish)
+backups/
+
+# One-off temp workspace (scripts, scratch output)
+tmp/

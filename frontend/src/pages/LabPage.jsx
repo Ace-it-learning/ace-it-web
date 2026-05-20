@@ -466,10 +466,10 @@ const LabPage = () => {
         // Standardized Normalization: Support both 1-4 Tiers AND 3-7 Semantic Levels
         const lvlStr = String(initialLevel).toLowerCase().trim();
 
-        // 1. Text aliases (e.g. from AI tutor CTA)
+        // 1. Text aliases (e.g. from AI tutor CTA, Speaking Pillar Menu, or direct URL)
         if (lvlStr === 'easy' || lvlStr === 'beginner' || lvlStr === 'basic') return '3';
         if (lvlStr === 'intermediate' || lvlStr === 'medium' || lvlStr === 'moderate') return '4';
-        if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult') return '5';
+        if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult' || lvlStr === 'dse standard' || lvlStr === 'standard') return '5';
         if (lvlStr === 'elite' || lvlStr === 'master' || lvlStr === 'expert') return '7';
 
         // 2. Literal Tiers (Legacy)
@@ -625,10 +625,11 @@ const LabPage = () => {
             // Standardized Normalization: Support text aliases, 1-4 Tiers AND 3-7 Semantic Levels
             if (lvlStr === 'easy' || lvlStr === 'beginner' || lvlStr === 'basic') normalized = '3';
             else if (lvlStr === 'intermediate' || lvlStr === 'medium' || lvlStr === 'moderate') normalized = '4';
-            else if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult') normalized = '5';
+            else if (lvlStr === 'hard' || lvlStr === 'advanced' || lvlStr === 'difficult' || lvlStr === 'dse standard' || lvlStr === 'standard') normalized = '5';
             else if (lvlStr === 'elite' || lvlStr === 'master' || lvlStr === 'expert') normalized = '7';
             else if (lvlStr === '7' || lvlStr.includes('5**')) normalized = '7';
-            else if (lvlStr === '5' || lvlStr.includes('5*')) normalized = '5'; // Treat 5* as 5 or 7 depending on user preference, but here we'll map to 5 for now
+            else if (lvlStr === '6' || lvlStr.includes('5*')) normalized = '6'; // Level 6 (5*)
+            else if (lvlStr === '5') normalized = '5'; // Level 5
             else if (lvlStr === '4' || lvlStr === '2') normalized = '4'; // Level 4 or Tier 2
             else if (lvlStr === '3' || lvlStr === '1') normalized = '3'; // Level 3 or Tier 1
 
@@ -678,8 +679,9 @@ const LabPage = () => {
 
             try {
                 // Construct payload based on lab type
+                // Ensure level is always a string to prevent backend parsing issues
                 const payload = {
-                    level: currentLevel,
+                    level: String(currentLevel),
                     uid: user?.uid || 'placeholder'
                 };
 
@@ -1095,7 +1097,9 @@ const LabPage = () => {
                         answers: userAnswers,
                         uid: user?.uid || 'placeholder',
                         category: lessonData.type,
-                        isFactoryQuest
+                        isFactoryQuest,
+                        passage: lessonData.reading_passage || null,
+                        questName: lessonData.title || lessonData.topic || null
                     })
                 });
 
@@ -1162,11 +1166,12 @@ const LabPage = () => {
             }
 
             // XP Calculation: Proportional to score and level difficulty
+            // Uses backend tier table: 120/140/160/180
             const baseLevelXp = (
-                currentLevel === '7' ? 350 : 
-                currentLevel === '6' ? 250 : 
-                currentLevel === '5' ? 200 : 
-                currentLevel === '4' ? 150 : 100
+                currentLevel === '7' ? 180 : 
+                currentLevel === '6' ? 160 : 
+                currentLevel === '5' ? 140 : 
+                currentLevel === '4' ? 120 : 120
             );
             
             let taskXp = location.state?.taskXp || baseLevelXp;
@@ -1192,6 +1197,19 @@ const LabPage = () => {
                     incorrect: true
                 }));
 
+            // Build question data for review page
+            const questionData = interactiveTasks.map(t => ({
+                id: t.id,
+                question: t.question,
+                type: t.type,
+                options: t.options || null,
+                target_sentence: t.target_sentence || null,
+                expected_keywords: t.expected_keywords || null,
+                answer_logic: t.answer_logic || null,
+                userAnswer: userAnswers[t.id] || '',
+                correctAnswer: t.correct_answer || t.answer || null
+            }));
+
             // Persist results
             const submitRes = await fetch(`${API_URL}/api/lab/submit`, {
                 method: 'POST',
@@ -1208,7 +1226,10 @@ const LabPage = () => {
                     mistakes, // Send detected mistakes
                     isFactoryQuest,
                     isWeeklyQuest,
-                    isGrammarLab: location.state?.isGrammarLab
+                    isGrammarLab: location.state?.isGrammarLab,
+                    passage: lessonData.reading_passage || null,
+                    questions: questionData,
+                    skipTimeline: interactiveTasks.length > 0 // evaluate_batch already created timeline
                 })
             });
             if (!submitRes.ok) throw new Error("Failed to save mission progress");

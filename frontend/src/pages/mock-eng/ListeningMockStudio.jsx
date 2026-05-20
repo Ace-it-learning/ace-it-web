@@ -40,7 +40,8 @@ import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import { useAvatar } from '../../context/AvatarContext';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { BrainCircuit } from 'lucide-react';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import DataFileViewer from '../../components/listening/DataFileViewer';
 import Paper3AudioEngine from '../../components/listening/Paper3AudioEngine';
@@ -79,6 +80,7 @@ const ListeningMockStudio = () => {
     const [userAnswers, setUserAnswers] = useState({});
     const [drafts, setDrafts] = useState({}); // taskId -> string
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submissionProgress, setSubmissionProgress] = useState(0);
     const [submissionResults, setSubmissionResults] = useState(null);
     const [xpAwarded, setXpAwarded] = useState(0);
     const [activeResultPart, setActiveResultPart] = useState('A'); 
@@ -419,6 +421,19 @@ const ListeningMockStudio = () => {
         
         setShowSubmitModal(false);
         setIsSubmitting(true);
+        setSubmissionProgress(0);
+
+        // Progress Simulation
+        const progressInterval = setInterval(() => {
+            setSubmissionProgress(prev => {
+                if (prev >= 92) {
+                    clearInterval(progressInterval);
+                    return 92;
+                }
+                return prev + (prev < 50 ? 5 : 2);
+            });
+        }, 1500);
+
         let submissionSuccessful = false;
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -443,6 +458,9 @@ const ListeningMockStudio = () => {
                 body: JSON.stringify(payload)
             });
 
+            clearInterval(progressInterval);
+            setSubmissionProgress(100);
+
             if (res.ok) {
                 const assessment = await res.json();
                 localStorage.removeItem(`ace-it-listening-${paperId}`); 
@@ -454,8 +472,12 @@ const ListeningMockStudio = () => {
                 setSubmissionResults(assessment);
                 setXpAwarded(assessment.xpAwarded || 750);
                 
-                // CRITICAL: use updatePhase to sync URL, preventing revert on refresh
-                updatePhase('RESULTS');
+                // Navigate to standalone result page if resultId is available
+                if (assessment.resultId) {
+                    navigate(`/mock-exam-eng/listening/results/${assessment.resultId}`);
+                } else {
+                    updatePhase('RESULTS');
+                }
                 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 submissionSuccessful = true;
@@ -465,6 +487,7 @@ const ListeningMockStudio = () => {
                 alert(`Submission failed (${res.status}). Please check your connection.`);
             }
         } catch (err) {
+            clearInterval(progressInterval);
             console.error("Submission Error:", err);
             alert("Submission failed. Please check your connection and try again.");
         } finally {
@@ -1056,29 +1079,46 @@ const ListeningMockStudio = () => {
                     }
                 ` }} />
                 
-                <GradingOverlay 
-                    isOpen={isSubmitting}
-                    title="Transmitting Paper 3"
-                    status="Finalizing your listening scripts and integrated tasks..."
-                />
-
                 <AnimatePresence>
                     {isSubmitting && (
-                        <div className="fixed inset-0 z-[200] bg-slate-900/90 backdrop-blur-xl flex items-center justify-center text-center p-8">
-                            <div className="flex flex-col items-center">
-                                <div className="size-24 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin mb-8" />
-                                <h2 className="text-2xl font-black text-white uppercase tracking-widest">Evaluating Performance</h2>
-                                <p className="text-slate-400 font-bold mt-2">{englishTutor?.name || "Miss Janie"} is reviewing your Integrated Tasks...</p>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-[200] bg-slate-900/90 backdrop-blur-xl flex flex-col items-center justify-center text-center p-8"
+                        >
+                            <div className="relative mb-12">
+                                <div className="size-32 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <BrainCircuit size={48} className="text-white animate-pulse" />
+                                </div>
                             </div>
-                        </div>
+                            <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Pedagogical Analysis in Progress</h2>
+                            <p className="text-indigo-200 text-sm font-medium max-w-md leading-relaxed">
+                                {englishTutor?.name || "Miss Janie"} is evaluating your responses against the <span className="text-white font-bold">HKEAA Marking Rubric</span> and cross-referencing textual evidence...
+                            </p>
+                            <div className="mt-8 w-full max-w-sm space-y-4">
+                                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden border border-white/5">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{ width: `${submissionProgress}%` }}
+                                        className="h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.6)]"
+                                    />
+                                </div>
+                                <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] text-indigo-300">
+                                    <span>Syncing Rubric</span>
+                                    <span>{submissionProgress}%</span>
+                                </div>
+                            </div>
+                        </motion.div>
                     )}
                 </AnimatePresence>
 
                 <UpgradeModal 
                     isOpen={showUpgradeModal} 
                     onClose={() => setShowUpgradeModal(false)}
-                    title="Unlock Evaluation"
-                    message="Free trial users can attempt the Listening Mock paper, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
+                    title="Pro / Premium Required"
+                    message="Please subscribe to a Pro or Premium plan to submit Mock Exams and receive AI evaluation with grade prediction."
                 />
 
                 <AnimatePresence>

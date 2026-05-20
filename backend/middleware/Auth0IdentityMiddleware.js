@@ -98,8 +98,9 @@ class IdentityMiddleware {
                     email,
                     nickname: (profile?.name || email.split('@')[0] || 'Student').slice(0, 64),
                     role: 'student',
-                    status: 'active',
+                    status: 'pending',
                     is_new_student: true,
+                    onboarding_completed: false,
                     subscription_tier: 'free'
                 });
             }

@@ -89,6 +89,7 @@ class SpeakingMockGradingService {
                     });
                 });
                 await Promise.all(masteryPromises);
+                await UserProfileService.saveProgressSnapshot(uid, 'english');
                 console.log(`[SpeakingMockGrading] Updated ${masteryPromises.length} micro-skills for ${uid}`);
             }
 

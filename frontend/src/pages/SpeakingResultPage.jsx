@@ -70,7 +70,9 @@ const SpeakingResultPage = () => {
         </div>
     );
 
-    const { scores, feedback, model_response } = result;
+    const scores = result.scores || {};
+    const feedback = result.feedback || {};
+    const model_response = result.model_response || '';
     const totalScore = scores.total || 0;
 
     // Calculate Level (Max 28)
@@ -187,21 +189,33 @@ const SpeakingResultPage = () => {
                             <div>
                                 <h4 className="text-green-400 font-bold uppercase text-xs mb-3">✅ Strengths</h4>
                                 <ul className="space-y-2">
-                                    {feedback.strengths.map((s, i) => (
-                                        <li key={i} className="flex gap-2 text-sm text-gray-300">
-                                            <span className="text-green-500">✓</span> {s}
+                                    {(feedback.strengths || []).length > 0 ? (
+                                        feedback.strengths.map((s, i) => (
+                                            <li key={i} className="flex gap-2 text-sm text-gray-300">
+                                                <span className="text-green-500">✓</span> {s}
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <li className="flex gap-2 text-sm text-gray-400 italic">
+                                            <span className="text-green-500">✓</span> Good effort demonstrated
                                         </li>
-                                    ))}
+                                    )}
                                 </ul>
                             </div>
                             <div>
                                 <h4 className="text-orange-400 font-bold uppercase text-xs mb-3">🚀 Areas for Improvement</h4>
                                 <ul className="space-y-2">
-                                    {feedback.weaknesses.map((w, i) => (
-                                        <li key={i} className="flex gap-2 text-sm text-gray-300">
-                                            <span className="text-orange-500">⚠</span> {w}
+                                    {(feedback.weaknesses || []).length > 0 ? (
+                                        feedback.weaknesses.map((w, i) => (
+                                            <li key={i} className="flex gap-2 text-sm text-gray-300">
+                                                <span className="text-orange-500">⚠</span> {w}
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <li className="flex gap-2 text-sm text-gray-400 italic">
+                                            <span className="text-orange-500">⚠</span> Keep practicing for improvement
                                         </li>
-                                    ))}
+                                    )}
                                 </ul>
                             </div>
                         </div>

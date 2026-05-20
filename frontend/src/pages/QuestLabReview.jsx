@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { 
     CheckCircle2, XCircle, Info, ArrowLeft, 
     Trophy, Target, Calendar, MessageSquare, 
-    Zap, Headphones, BookOpen
+    Zap, Headphones, BookOpen, FileText, Eye
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { LoadingPage } from '../components/shared';
@@ -15,6 +15,7 @@ const QuestLabReview = () => {
     
     const [result, setResult] = useState(null);
     const [isFetching, setIsFetching] = useState(true);
+    const [showPassage, setShowPassage] = useState(true);
 
     useEffect(() => {
         const fetchResult = async () => {
@@ -52,47 +53,219 @@ const QuestLabReview = () => {
     if (!result) return null;
 
     const isListening = result.module?.toLowerCase() === 'listening';
+    const hasPassage = Boolean(result.passage);
+    const hasQuestions = Array.isArray(result.questions) && result.questions.length > 0;
     const Icon = isListening ? Headphones : BookOpen;
     const themeColor = isListening ? 'text-indigo-600' : 'text-emerald-600';
     const bgColor = isListening ? 'bg-indigo-50' : 'bg-emerald-50';
 
-    const renderBreakdown = () => {
-        const content = result.content || {};
-        // If it's a map of results
+
+    const renderPassage = () => {
+        if (!hasPassage) return null;
         return (
-            <div className="space-y-4">
-                {Object.entries(content).map(([id, data], idx) => (
-                    <div key={id} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm transition-all hover:shadow-md hover:border-slate-200">
-                        <div className="flex items-start justify-between mb-3">
-                            <div className="flex items-center gap-3">
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-black text-xs ${
-                                    data.correct ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
-                                }`}>
-                                    {idx + 1}
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 mb-8">
+                <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                        <FileText className={`w-5 h-5 ${themeColor}`} />
+                        <h4 className="font-black text-xs text-slate-400 uppercase tracking-[0.2em]">Reading Passage</h4>
+                    </div>
+                    <button
+                        onClick={() => setShowPassage(!showPassage)}
+                        className="text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors flex items-center gap-1"
+                    >
+                        <Eye className="w-3 h-3" />
+                        {showPassage ? 'Hide' : 'Show'}
+                    </button>
+                </div>
+                {showPassage && (
+                    <div className="prose prose-slate max-w-none">
+                        <div className="text-slate-700 leading-relaxed whitespace-pre-wrap text-sm">
+                            {result.passage}
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
+    const renderQuestionReview = () => {
+        if (!hasQuestions) {
+            // Fallback to old generic breakdown
+            return renderLegacyBreakdown();
+        }
+
+        const content = result.content || {};
+        
+        return (
+            <div className="space-y-6">
+                {result.questions.map((q, idx) => {
+                    const resultData = content[q.id] || {};
+                    const isCorrect = typeof resultData === 'boolean' ? resultData : resultData?.correct;
+                    const feedbackText = typeof resultData === 'string' ? resultData : (resultData?.feedback || "");
+                    const isMCQ = q.type === 'mcq' || (q.options && Array.isArray(q.options) && q.options.length > 0);
+                    
+                    return (
+                        <div key={q.id} className={`bg-white rounded-2xl p-6 border shadow-sm transition-all hover:shadow-md ${
+                            isCorrect ? 'border-green-200' : 'border-red-200'
+                        }`}>
+                            {/* Question Header */}
+                            <div className="flex items-start justify-between mb-4">
+                                <div className="flex items-center gap-3">
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-black text-xs ${
+                                        isCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
+                                    }`}>
+                                        {idx + 1}
+                                    </div>
+                                    <span className="text-xs font-black text-slate-400 uppercase tracking-wider">
+                                        {isMCQ ? 'Multiple Choice' : 'Open-ended'}
+                                    </span>
                                 </div>
-                                <h4 className="font-bold text-slate-800">Task Performance</h4>
+                                {isCorrect ? (
+                                    <span className="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 rounded-full text-[10px] font-black uppercase tracking-wider">
+                                        <CheckCircle2 size={12} /> Correct
+                                    </span>
+                                ) : (
+                                    <span className="flex items-center gap-1.5 px-3 py-1 bg-red-50 text-red-700 rounded-full text-[10px] font-black uppercase tracking-wider">
+                                        <XCircle size={12} /> Mistake
+                                    </span>
+                                )}
                             </div>
-                            {data.correct ? (
-                                <span className="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 rounded-full text-[10px] font-black uppercase tracking-wider">
-                                    <CheckCircle2 size={12} /> Correct
-                                </span>
-                            ) : (
-                                <span className="flex items-center gap-1.5 px-3 py-1 bg-red-50 text-red-700 rounded-full text-[10px] font-black uppercase tracking-wider">
-                                    <XCircle size={12} /> Mistake
-                                </span>
+                            
+                            {/* Question Text */}
+                            <div className="mb-4">
+                                <p className="text-slate-800 font-medium leading-relaxed">{q.question}</p>
+                            </div>
+                            
+                            {/* Options for MCQ */}
+                            {isMCQ && q.options && (
+                                <div className="space-y-2 mb-4">
+                                    {q.options.map((opt, optIdx) => {
+                                        const optLabel = String.fromCharCode(65 + optIdx); // A, B, C, D
+                                        const isUserChoice = q.userAnswer === optLabel;
+                                        const isCorrectOption = q.correctAnswer === optLabel;
+                                        
+                                        let optionClass = "flex items-center gap-3 p-3 rounded-xl border text-sm ";
+                                        if (isCorrectOption) {
+                                            optionClass += "bg-green-50 border-green-300 text-green-800";
+                                        } else if (isUserChoice && !isCorrectOption) {
+                                            optionClass += "bg-red-50 border-red-300 text-red-800";
+                                        } else {
+                                            optionClass += "bg-slate-50 border-slate-200 text-slate-600";
+                                        }
+                                        
+                                        return (
+                                            <div key={optIdx} className={optionClass}>
+                                                <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black ${
+                                                    isCorrectOption ? 'bg-green-500 text-white' :
+                                                    isUserChoice ? 'bg-red-500 text-white' :
+                                                    'bg-slate-200 text-slate-500'
+                                                }`}>
+                                                    {optLabel}
+                                                </span>
+                                                <span>{opt}</span>
+                                                {isUserChoice && (
+                                                    <span className="ml-auto text-[10px] font-black uppercase tracking-wider">
+                                                        {isCorrectOption ? 'Your Answer ✓' : 'Your Answer ✗'}
+                                                    </span>
+                                                )}
+                                                {isCorrectOption && !isUserChoice && (
+                                                    <span className="ml-auto text-[10px] font-black uppercase tracking-wider text-green-600">
+                                                        Correct Answer
+                                                    </span>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                            
+                            {/* Open-ended answer display */}
+                            {!isMCQ && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div className={`p-4 rounded-xl border ${
+                                        isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'
+                                    }`}>
+                                        <p className="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2">Your Answer</p>
+                                        <p className={`text-sm font-medium ${
+                                            isCorrect ? 'text-green-800' : 'text-red-800'
+                                        }`}>
+                                            {q.userAnswer || "(No answer provided)"}
+                                        </p>
+                                    </div>
+                                    {q.correctAnswer && (
+                                        <div className="p-4 rounded-xl border bg-green-50 border-green-200">
+                                            <p className="text-[10px] font-black uppercase tracking-wider text-green-600 mb-2">Correct Answer</p>
+                                            <p className="text-sm font-medium text-green-800">{q.correctAnswer}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            
+                            {/* Feedback */}
+                            {feedbackText && (
+                                <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                                    <p className="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-1">AI Examiner Feedback</p>
+                                    <p className="text-sm text-slate-600 leading-relaxed italic">{feedbackText}</p>
+                                </div>
                             )}
                         </div>
-                        <p className="text-sm text-slate-600 leading-relaxed italic bg-slate-50/50 p-4 rounded-xl border border-slate-100">
-                            "{data.feedback || "Standard assessment completed."}"
-                        </p>
-                    </div>
-                ))}
+                    );
+                })}
+            </div>
+        );
+    };
+
+    const renderLegacyBreakdown = () => {
+        const content = result.content || {};
+        const entries = Object.entries(content);
+        
+        if (entries.length === 0) {
+            return (
+                <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm text-center">
+                    <Info className="w-8 h-8 text-slate-300 mx-auto mb-3" />
+                    <p className="text-slate-500 font-medium">No detailed breakdown available for this quest.</p>
+                </div>
+            );
+        }
+        
+        return (
+            <div className="space-y-4">
+                {entries.map(([id, data], idx) => {
+                    const isCorrect = typeof data === 'boolean' ? data : data?.correct;
+                    const feedbackText = typeof data === 'string' ? data : (data?.feedback || "Standard assessment completed.");
+                    return (
+                        <div key={id} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm transition-all hover:shadow-md hover:border-slate-200">
+                            <div className="flex items-start justify-between mb-3">
+                                <div className="flex items-center gap-3">
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-black text-xs ${
+                                        isCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
+                                    }`}>
+                                        {idx + 1}
+                                    </div>
+                                    <h4 className="font-bold text-slate-800">Task Performance</h4>
+                                </div>
+                                {isCorrect ? (
+                                    <span className="flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 rounded-full text-[10px] font-black uppercase tracking-wider">
+                                        <CheckCircle2 size={12} /> Correct
+                                    </span>
+                                ) : (
+                                    <span className="flex items-center gap-1.5 px-3 py-1 bg-red-50 text-red-700 rounded-full text-[10px] font-black uppercase tracking-wider">
+                                        <XCircle size={12} /> Mistake
+                                    </span>
+                                )}
+                            </div>
+                            <p className="text-sm text-slate-600 leading-relaxed italic bg-slate-50/50 p-4 rounded-xl border border-slate-100">
+                                "{feedbackText}"
+                            </p>
+                        </div>
+                    );
+                })}
             </div>
         );
     };
 
     return (
-        <div className="min-h-screen bg-[#FDFDFF] font-sans selection:bg-indigo-100">
+        <div className="min-h-screen bg-[#FDFDFF] font-sans selection:bg-indigo-100 pb-24">
             {/* Header */}
             <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 px-8 py-4 flex items-center justify-between z-50 sticky top-0 shadow-sm">
                 <div className="flex items-center gap-6">
@@ -181,16 +354,21 @@ const QuestLabReview = () => {
                     </div>
                 </div>
 
+                {/* Passage Section (for Reading quests) */}
+                {renderPassage()}
+
                 <div className="relative mb-8">
                     <div className="absolute inset-0 flex items-center" aria-hidden="true">
                         <div className="w-full border-t border-slate-200"></div>
                     </div>
                     <div className="relative flex justify-center">
-                        <span className="bg-[#FDFDFF] px-4 text-xs font-black text-slate-400 uppercase tracking-[0.3em]">Performance Breakdown</span>
+                        <span className="bg-[#FDFDFF] px-4 text-xs font-black text-slate-400 uppercase tracking-[0.3em]">
+                            {hasQuestions ? 'Question Review' : 'Performance Breakdown'}
+                        </span>
                     </div>
                 </div>
 
-                {renderBreakdown()}
+                {renderQuestionReview()}
             </main>
 
             <div className="fixed bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-md border-t border-slate-100 z-50">

@@ -7,6 +7,7 @@ const UserProfileService = require('../services/UserProfileService');
 const GamificationService = require('../services/GamificationService');
 const DeviceService = require('../services/DeviceService');
 const { checkVoiceQuota } = require('../services/VoiceQuotaService');
+const CacheService = require('../services/CacheService');
 const { requireResolvedUid } = require('../middleware/requireResolvedUid');
 const cardPool = require('../data/card_pool.json');
 
@@ -29,20 +30,46 @@ function pickCardByRarity(cards) {
 
 // POST /api/user/onboarding
 router.post('/onboarding', requireResolvedUid, async (req, res) => {
-    const { uid } = req.body;
+    const { uid, marketing_opt_in, ...profileBody } = req.body;
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
-        const updatedUser = await UserProfileService.createOrUpdateProfile(uid, req.body);
-        res.json(updatedUser);
+        const updatedUser = await UserProfileService.createOrUpdateProfile(uid, profileBody);
+        let commsResult = null;
+        if (marketing_opt_in === true) {
+            commsResult = await UserProfileService.setMarketingOptIn(uid, true);
+        } else if (marketing_opt_in === false) {
+            commsResult = await UserProfileService.setMarketingOptIn(uid, false);
+        }
+        res.json({ ...updatedUser, communication: commsResult });
     } catch (e) {
         res.status(500).json({ error: "Failed to create profile" });
+    }
+});
+
+// POST /api/user/communication-preferences
+router.post('/communication-preferences', requireResolvedUid, async (req, res) => {
+    const { uid, opt_in } = req.body;
+    if (!uid) return res.status(400).json({ error: 'Missing uid' });
+    if (typeof opt_in !== 'boolean') {
+        return res.status(400).json({ error: 'opt_in must be a boolean' });
+    }
+    try {
+        const result = await UserProfileService.setMarketingOptIn(uid, opt_in);
+        res.json({ success: true, ...result });
+    } catch (e) {
+        console.error('[CommunicationPreferences] Update error:', e);
+        res.status(500).json({ error: 'Failed to update communication preferences' });
     }
 });
 
 // GET /api/user/profile/:uid
 router.get('/profile/:uid', requireResolvedUid, async (req, res) => {
     const { uid } = req.params;
+    const bypassCache = req.query?.bypass === 'true' || req.headers['x-bypass-cache'] === 'true';
     try {
+        if (bypassCache) {
+            CacheService.invalidateUserDbCache(uid);
+        }
         const profile = await UserProfileService.getProfile(uid);
         res.json(profile);
     } catch (e) {

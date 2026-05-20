@@ -195,6 +195,7 @@ router.post('/practice/submit', async (req, res) => {
                 difficulty: sessionDifficulty,
                 source: 'lab'
             });
+            await UserProfileService.saveProgressSnapshot(uid, 'maths');
             console.log(`[MathsPractice] Topic mastery updated for ${topic} (uid: ${uid}, score: ${masteryScore}%)`);
         }
 

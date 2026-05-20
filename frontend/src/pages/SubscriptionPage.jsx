@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { 
@@ -10,7 +10,8 @@ import {
     AlertCircle,
     ArrowRight,
     Search,
-    Loader2
+    Loader2,
+    RefreshCw
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 import { trackEvent } from '../utils/analytics';
@@ -23,11 +24,149 @@ const SubscriptionPage = () => {
     const [isApplying, setIsApplying] = useState(false);
     const [discountMultiplier, setDiscountMultiplier] = useState(1);
     const [isSaving, setIsSaving] = useState(false);
+    const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    
+    // Log on mount to verify component lifecycle
+    useEffect(() => {
+        console.log('[SubscriptionPage] MOUNTED. URL:', window.location.href);
+        return () => console.log('[SubscriptionPage] UNMOUNTED');
+    }, []);
+
+    // Detect returning from Stripe checkout and force profile refresh
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const isCheckoutSuccess = params.get('checkout') === 'success';
+        
+        if (!isCheckoutSuccess) return;
+        
+        // Only proceed if user is authenticated
+        if (!user?.uid) {
+            console.log('[SubscriptionPage] Checkout success detected but user not ready yet, waiting for auth...');
+            return;
+        }
+        
+        console.log('[SubscriptionPage] Auto-sync starting for uid=', user.uid);
+        setCheckoutSuccess(true);
+        // Clear the query param to prevent repeated refreshes
+        const cleanUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+        
+        let syncCompleted = false;
+        
+        // Force sync with Stripe and refresh profile
+        const syncAndRefresh = async (attempt = 1) => {
+            if (syncCompleted) return;
+            console.log(`[SubscriptionPage] syncAndRefresh attempt ${attempt}...`);
+            try {
+                const token = await user?.getIdToken?.(true); // forceRefresh = true to get fresh token
+                const syncRes = await fetch(`${API_URL}/api/payment/sync-subscription?uid=${user?.uid}`, {
+                    headers: token ? { Authorization: `Bearer ${token}` } : {}
+                });
+                const syncData = await syncRes.json();
+                console.log('[SubscriptionPage] Stripe sync result:', syncData);
+                
+                if (!syncRes.ok && attempt < 3) {
+                    console.log(`[SubscriptionPage] Sync failed, retrying in 3s...`);
+                    setTimeout(() => syncAndRefresh(attempt + 1), 3000);
+                    return;
+                }
+            } catch (e) {
+                console.warn('[SubscriptionPage] Sync call failed:', e);
+                if (attempt < 3) {
+                    console.log(`[SubscriptionPage] Sync failed, retrying in 3s...`);
+                    setTimeout(() => syncAndRefresh(attempt + 1), 3000);
+                    return;
+                }
+            }
+            
+            // Always refresh profile after sync attempt
+            await refreshProfile();
+            syncCompleted = true;
+            setCheckoutSuccess(false);
+        };
+        
+        // Poll profile until it reflects the paid tier
+        const pollProfile = async () => {
+            let polls = 0;
+            const maxPolls = 20; // Poll for up to 20 seconds
+            
+            const doPoll = async () => {
+                if (syncCompleted || polls >= maxPolls) return;
+                polls++;
+                
+                const currentTier = profile?.subscription_tier || 'free';
+                console.log(`[SubscriptionPage] Poll ${polls}: current tier = ${currentTier}`);
+                
+                if (currentTier !== 'free') {
+                    console.log('[SubscriptionPage] Profile updated to paid tier, stopping poll');
+                    syncCompleted = true;
+                    setCheckoutSuccess(false);
+                    return;
+                }
+                
+                // Refresh profile
+                await refreshProfile();
+                
+                // Schedule next poll
+                setTimeout(doPoll, 1000);
+            };
+            
+            // Start polling after initial sync attempt
+            setTimeout(doPoll, 2000);
+        };
+        
+        // Start sync immediately
+        syncAndRefresh(1);
+        
+        // Also start polling
+        pollProfile();
+        
+        // Fallback refresh after cache TTL
+        const fallbackTimer = setTimeout(() => {
+            if (!syncCompleted) {
+                console.log('[SubscriptionPage] Fallback refresh after 65s');
+                refreshProfile();
+            }
+        }, 65000);
+
+        return () => {
+            syncCompleted = true;
+            clearTimeout(fallbackTimer);
+        };
+    }, [refreshProfile, user, API_URL, profile?.subscription_tier]);
 
     const tier = profile?.subscription_tier || 'free';
     const debugBypass = import.meta.env.VITE_ENABLE_SUBSCRIPTION_DEBUG === 'true' && isCheatEnabled(user, profile);
+    
+    // Debug: log profile tier whenever it changes
+    useEffect(() => {
+        console.log('[SubscriptionPage] Profile tier:', tier, 'Full profile:', profile);
+    }, [tier, profile]);
+
+    const handleForceSync = async () => {
+        if (!user?.uid) return;
+        setCheckoutSuccess(true);
+        try {
+            const token = await user?.getIdToken?.();
+            // First call sync endpoint
+            const syncRes = await fetch(`${API_URL}/api/payment/sync-subscription?uid=${user?.uid}`, {
+                headers: token ? { Authorization: `Bearer ${token}` } : {}
+            });
+            const syncData = await syncRes.json();
+            console.log('[SubscriptionPage] Force sync result:', syncData);
+            alert(`Sync result: ${JSON.stringify(syncData, null, 2)}`);
+            
+            // Then refresh profile
+            await refreshProfile();
+        } catch (e) {
+            console.error('[SubscriptionPage] Force sync failed:', e);
+            alert('Sync failed: ' + e.message);
+        } finally {
+            setCheckoutSuccess(false);
+        }
+    };
 
     const handleRedeem = async () => {
         if (!promoCode) return;
@@ -117,6 +256,17 @@ const SubscriptionPage = () => {
                     return;
                 }
 
+                // Upgrade/downgrade from an existing subscription — redirect to Stripe Checkout
+                if (data.upgraded) {
+                    await refreshProfile();
+                    if (data.url) {
+                        window.location.href = data.url;
+                        return;
+                    }
+                    alert(data.message || `Your subscription has been updated to ${selectedTier}.`);
+                    return;
+                }
+
                 if (!data.url) {
                     alert('Checkout URL missing. Please try again.');
                     return;
@@ -201,18 +351,30 @@ const SubscriptionPage = () => {
                         <p className="text-slate-500">{t('subscription.subtitle') || 'Manage your plan and secure your account access.'}</p>
                     </div>
                     {user && (
-                        <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <div className={cn(
-                                "w-12 h-12 rounded-xl flex items-center justify-center shadow-inner",
-                                tier === 'premium' ? "bg-purple-100 text-purple-600" : 
-                                tier === 'pro' ? "bg-amber-100 text-amber-600" : "bg-slate-200 text-slate-500"
-                            )}>
-                                {tier === 'premium' ? <Crown /> : tier === 'pro' ? <Zap /> : <Shield />}
+                        <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                                <div className={cn(
+                                    "w-12 h-12 rounded-xl flex items-center justify-center shadow-inner",
+                                    tier === 'premium' ? "bg-purple-100 text-purple-600" : 
+                                    tier === 'pro' ? "bg-amber-100 text-amber-600" : "bg-slate-200 text-slate-500"
+                                )}>
+                                    {tier === 'premium' ? <Crown /> : tier === 'pro' ? <Zap /> : <Shield />}
+                                </div>
+                                <div>
+                                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('subscription.current_plan') || 'Current Plan'}</p>
+                                    <div className="flex items-center gap-2">
+                                        <p className="text-xl font-bold text-slate-900 capitalize">{t(`pricing.${tier}_name`) || tier}</p>
+                                        {checkoutSuccess && <RefreshCw className="w-4 h-4 text-primary animate-spin" />}
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('subscription.current_plan') || 'Current Plan'}</p>
-                                <p className="text-xl font-bold text-slate-900 capitalize">{t(`pricing.${tier}_name`) || tier}</p>
-                            </div>
+                            <button
+                                onClick={handleForceSync}
+                                disabled={checkoutSuccess}
+                                className="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-xl hover:bg-slate-700 transition-all disabled:opacity-50"
+                            >
+                                {checkoutSuccess ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Refresh'}
+                            </button>
                         </div>
                     )}
                 </div>
@@ -232,12 +394,12 @@ const SubscriptionPage = () => {
                 </div>
 
                 {/* 2. PLAN COMPARISON / UPGRADE GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:items-stretch">
                     {tiers.map((tData) => (
                         <div 
                             key={tData.id}
                             className={cn(
-                                "relative bg-white rounded-3xl p-8 shadow-sm border transition-all duration-300 hover:shadow-xl hover:-translate-y-1",
+                                "relative flex h-full flex-col bg-white rounded-3xl p-8 shadow-sm border transition-all duration-300 hover:shadow-xl hover:-translate-y-1",
                                 tData.popular ? "border-amber-400 ring-4 ring-amber-400/10" : "border-slate-200",
                                 tier === tData.id && "bg-slate-50 opacity-90 cursor-default grayscale-[0.5]"
                             )}
@@ -248,7 +410,7 @@ const SubscriptionPage = () => {
                                 </div>
                             )}
 
-                            <div className="mb-8">
+                            <div className="mb-8 shrink-0">
                                 <div className={cn(
                                     "w-12 h-12 rounded-xl flex items-center justify-center mb-4",
                                     tData.id === 'premium' ? "bg-purple-100 text-purple-600" :
@@ -281,37 +443,45 @@ const SubscriptionPage = () => {
                                 </div>
                             </div>
 
-                            <ul className="space-y-4 mb-8">
-                                {tData.features.map((feature, i) => (
-                                    <li key={i} className="flex gap-3 text-sm text-slate-600">
-                                        <Check className={cn("w-5 h-5 shrink-0", tier === tData.id ? "text-slate-400" : "text-green-500")} />
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className="flex min-h-0 flex-1 flex-col">
+                                <ul className="mb-6 space-y-4">
+                                    {tData.features.map((feature, i) => (
+                                        <li key={i} className="flex gap-3 text-sm text-slate-600">
+                                            <Check className={cn("w-5 h-5 shrink-0", tier === tData.id ? "text-slate-400" : "text-green-500")} />
+                                            <span>{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
 
-                            <button
-                                onClick={() => handleUpgrade(tData.id)}
-                                disabled={profile?.email !== 'fungtam@gmail.com' && (
-                                    (tier === tData.id && user) || 
-                                    (tier === 'premium' && tData.id === 'pro' && user)
-                                )}
-                                className={cn(
-                                    "w-full py-4 rounded-2xl font-bold transition-all shadow-lg active:scale-95",
-                                    (tier === tData.id && user) ? "bg-slate-200 text-slate-500 cursor-default shadow-none" :
-                                    tData.id === 'free' ? "border-2 border-slate-200 text-slate-600 hover:bg-slate-50 cursor-pointer" :
-                                    tData.id === 'premium' ? "bg-purple-600 text-white hover:bg-purple-700 shadow-purple-200" :
-                                    "bg-amber-400 text-white hover:bg-amber-500 shadow-amber-200"
-                                )}
-                            >
-                                 {isSaving ? (
-                                    <Loader2 className="w-5 h-5 animate-spin mx-auto" />
-                                ) : (tier === tData.id && user) ? (
-                                    t('subscription.active') || 'Active'
-                                ) : (
-                                    tData.id === 'free' ? (t('subscription.start_free_trial') || 'Start free trial') : (t('subscription.select_plan') || 'Select Plan')
-                                )}
-                            </button>
+                                <div className="mt-auto w-full shrink-0 pt-2">
+                                    {tData.id === 'free' && user && (tier === 'pro' || tier === 'premium') ? (
+                                        <div className="w-full py-4 min-h-[3.5rem]" aria-hidden />
+                                    ) : (
+                                        <button
+                                            type="button"
+                                            onClick={() => handleUpgrade(tData.id)}
+                                            disabled={profile?.email !== 'fungtam@gmail.com' && (
+                                                (tier === tData.id && user)
+                                            )}
+                                            className={cn(
+                                                "w-full py-4 rounded-2xl font-bold transition-all shadow-lg active:scale-95",
+                                                (tier === tData.id && user) ? "bg-slate-200 text-slate-500 cursor-default shadow-none" :
+                                                tData.id === 'free' ? "border-2 border-slate-200 text-slate-600 hover:bg-slate-50 cursor-pointer" :
+                                                tData.id === 'premium' ? "bg-purple-600 text-white hover:bg-purple-700 shadow-purple-200" :
+                                                "bg-amber-400 text-white hover:bg-amber-500 shadow-amber-200"
+                                            )}
+                                        >
+                                            {isSaving ? (
+                                                <Loader2 className="w-5 h-5 animate-spin mx-auto" />
+                                            ) : (tier === tData.id && user) ? (
+                                                t('subscription.active') || 'Active'
+                                            ) : (
+                                                tData.id === 'free' ? (t('subscription.start_free_trial') || 'Start free trial') : (t('subscription.select_plan') || 'Select Plan')
+                                            )}
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>

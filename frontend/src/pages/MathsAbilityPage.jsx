@@ -284,7 +284,7 @@ const MathsAbilityPage = () => {
                                             {mathsUnlocked ? <Trophy className="w-5 h-5 text-white" /> : <Lock className="w-5 h-5 text-white/60" />}
                                         </div>
                                         <span className="text-xs font-black uppercase tracking-[0.2em] text-orange-100 italic">
-                                            {mathsUnlocked ? t('math_ability.overall_level') : 'Prediction Locked'}
+                                            {mathsUnlocked ? t('math_ability.overall_level') : t('mastery.prediction_locked')}
                                         </span>
                                     </div>
 

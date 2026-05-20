@@ -14,27 +14,51 @@ const SpeakingMockGradingService = require('../services/SpeakingMockGradingServi
 
 /**
  * @route   GET /api/speaking/drills/:pillar
- * @desc    Fetch pre-written drills for a specific pillar
+ * @desc    Fetch pre-written drills for a specific pillar from Cosmos DB
  */
 router.get('/drills/:pillar', async (req, res) => {
     try {
         const { pillar } = req.params;
-        const fs = require('fs');
-        const path = require('path');
-        const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
-
-        if (!fs.existsSync(drillsPath)) {
-            return res.status(404).json({ error: 'Drills data not found' });
-        }
-
-        const data = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
-        const pillarData = data[pillar];
-
-        if (!pillarData) {
+        const QuestionBankStore = require('../services/QuestionBankStore');
+        
+        // Query speaking drills from Cosmos DB
+        const drills = await QuestionBankStore.querySpeakingDrillsByCriterion(pillar, 100);
+        
+        if (!drills || drills.length === 0) {
+            // Fallback to local JSON file if no data in Cosmos DB
+            const fs = require('fs');
+            const path = require('path');
+            const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
+            
+            if (fs.existsSync(drillsPath)) {
+                const data = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
+                const pillarData = data[pillar];
+                if (pillarData) {
+                    return res.json(pillarData);
+                }
+            }
             return res.status(404).json({ error: `No drills found for pillar: ${pillar}` });
         }
+        
+        // Transform Cosmos DB format back to the expected frontend format
+        const formattedDrills = drills.map(d => ({
+            id: d.id,
+            title: d.title || d.topic || d.scenario,
+            scenario: d.scenario,
+            level: d.level_raw || d.level,
+            level_label: d.level_label,
+            master_script: d.master_script,
+            vocabulary: d.vocabulary,
+            prosody: d.prosody,
+            focus_phonemes: d.focus_phonemes,
+            segments: d.segments,
+            power_words: d.power_words,
+            mind_map: d.mind_map,
+            discussion_points: d.discussion_points,
+            criteria: d.criteria
+        }));
 
-        res.json(pillarData);
+        res.json(formattedDrills);
     } catch (error) {
         console.error('[Speaking Drills] Fetch error:', error);
         res.status(500).json({ error: 'Failed to fetch drills' });
@@ -286,6 +310,18 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
         const finalResult = result.data || result;
         console.log(`[SpeakingQuest] Standardized Final Result:`, JSON.stringify(finalResult, null, 2));
 
+        // Normalize feedback to match SpeakingResultPage expectations
+        const normalizedFeedback = {
+            summary: finalResult.feedback?.summary || 'Great effort in your speaking practice!',
+            strengths: finalResult.feedback?.strengths || [
+                finalResult.feedback?.peel_analysis || 'Good structural organization'
+            ].filter(Boolean),
+            weaknesses: finalResult.feedback?.weaknesses || [
+                finalResult.feedback?.improvement_advice || 'Continue practicing fluency'
+            ].filter(Boolean),
+            improvement_advice: finalResult.feedback?.improvement_advice || 'Keep practicing to improve your speaking skills.'
+        };
+
         // PERSIST RESULT FOR HISTORICAL REVIEW
         let resultId = null;
         if (resolvedUid && resolvedUid !== 'guest') {
@@ -293,7 +329,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                 module,
                 quest_id,
                 scores: finalResult.scores,
-                feedback: finalResult.feedback,
+                feedback: normalizedFeedback,
                 word_analysis: finalResult.word_analysis || [],
                 transcript: historyToGrade || [],
                 level: parseInt(level),
@@ -307,14 +343,9 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
         // AWARD XP
         let xpResult = { earned: 0 };
         if (finalResult.scores && finalResult.scores.total > 0 && resolvedUid && resolvedUid !== 'guest') {
-            // New standardized XP logic
-            let baseXP = 150; // Default (Interaction/Group Discussion)
-            
-            // Scaled Criteria (everything except interaction)
-            if (module !== 'interaction') {
-                const GamificationService = require('../services/GamificationService');
-                baseXP = GamificationService.getTieredXP(level || '4');
-            }
+            // New standardized XP logic — all modules use tier table
+            const GamificationService = require('../services/GamificationService');
+            let baseXP = GamificationService.getTieredXP(level || '4');
 
             let questBonus = 0;
             // Handle Weekly Quest award
@@ -339,6 +370,21 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
             }) || { earned: 0 };
             
             xpResult.earned += questBonus;
+
+            // Check Weekly Focus bonus (Mon-Sat quests)
+            const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const hkDay = hkNow.getDay();
+            const daysSinceMonday = hkDay === 0 ? 6 : hkDay - 1;
+            const mondayDate = new Date(hkNow);
+            mondayDate.setDate(hkNow.getDate() - daysSinceMonday);
+            const weekKey = mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0');
+            const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const dayOfWeek = dayNames[hkDay];
+            const weeklyFocusResult = await GamificationService.awardWeeklyFocusBonus(resolvedUid, weekKey, dayOfWeek);
+            if (weeklyFocusResult.bonusAwarded) {
+                console.log(`[SpeakingRoutes] Weekly Focus bonus awarded: +${weeklyFocusResult.earned} XP to ${resolvedUid}`);
+            }
+            xpResult.earned += (weeklyFocusResult.earned || 0);
         }
 
         // UPDATE MICRO-SKILL MASTERY
@@ -360,6 +406,7 @@ router.post('/quest/submit', upload.single('audio'), async (req, res) => {
                 })
             );
             await Promise.all(skillPromises);
+            await UserProfileService.saveProgressSnapshot(resolvedUid, 'english');
             console.log(`[SpeakingRoutes] Persisted mastery for skills: ${targetSkills.join(', ')}`);
         }
 
@@ -577,6 +624,22 @@ router.post('/mock/submit', async (req, res) => {
 
         console.log(`[SpeakingMock] Submitting full mock for user: ${uid} (Tier: ${tier})`);
         const result = await SpeakingMockGradingService.gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse, tier);
+
+        // Save quest result for mock unlock tracking
+        if (uid && uid !== 'guest') {
+            try {
+                const UserProfileService = require('../services/UserProfileService');
+                await UserProfileService.saveQuestResult(uid, {
+                    ...result,
+                    type: 'SPEAKING',
+                    topic: mockData.topic || 'Speaking Mock',
+                    paper: 'Speaking',
+                    mockId: mockData.mockId || mockData.id || `speaking_mock_${Date.now()}`
+                });
+            } catch (e) {
+                console.warn('[SpeakingMock] saveQuestResult failed:', e.message);
+            }
+        }
 
         res.json(result);
     } catch (error) {

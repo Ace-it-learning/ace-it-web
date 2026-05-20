@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Upload, Check, Edit3, X, Loader2 } from 'lucide-react';
-import { cn } from '../utils/cn';
+import { readAndPrepareImageFile } from '../utils/prepareImageForOcr';
 
 const EssayUploader = ({ onConfirm, onCancel }) => {
     const [file, setFile] = useState(null);
@@ -24,69 +24,26 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
         setError(null);
 
         try {
-            const reader = new FileReader();
-            reader.onloadend = async () => {
-                // Compress Image Logic
-                const img = new Image();
-                img.src = reader.result;
-                img.onload = async () => {
-                    const canvas = document.createElement('canvas');
-                    let width = img.width;
-                    let height = img.height;
-                    const MAX_WIDTH = 1024;
-                    const MAX_HEIGHT = 1024;
+            const { base64Data, mimeType } = await readAndPrepareImageFile(file);
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-                    if (width > height) {
-                        if (width > MAX_WIDTH) {
-                            height *= MAX_WIDTH / width;
-                            width = MAX_WIDTH;
-                        }
-                    } else {
-                        if (height > MAX_HEIGHT) {
-                            width *= MAX_HEIGHT / height;
-                            height = MAX_HEIGHT;
-                        }
-                    }
+            const response = await fetch(`${API_URL}/api/ocr`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    image: { data: base64Data, mimeType }
+                })
+            });
 
-                    canvas.width = width;
-                    canvas.height = height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, width, height);
-
-                    const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7); // 70% quality JPEG
-                    const base64Data = compressedDataUrl.split(',')[1];
-
-                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
-                    try {
-                        const response = await fetch(`${API_URL}/api/ocr`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                image: {
-                                    data: base64Data,
-                                    mimeType: 'image/jpeg'
-                                }
-                            })
-                        });
-
-                        if (!response.ok) {
-                            const errorData = await response.json().catch(() => ({}));
-                            throw new Error(
-                                errorData.details || errorData.error || `Upload failed (${response.status})`
-                            );
-                        }
-                        const data = await response.json();
-                        setTranscription(data.transcription);
-                        setStatus('VERIFYING');
-                    } catch (fetchErr) {
-                        console.error(fetchErr);
-                        setError(fetchErr.message || "Server error during analysis. Please try again.");
-                        setStatus('IDLE');
-                    }
-                };
-            };
-            reader.readAsDataURL(file);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(
+                    errorData.details || errorData.error || `Upload failed (${response.status})`
+                );
+            }
+            const data = await response.json();
+            setTranscription(data.transcription);
+            setStatus('VERIFYING');
         } catch (err) {
             console.error(err);
             setError("Failed to process image. Please try again.");
@@ -105,8 +62,6 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
             <div className="bg-white dark:bg-[#1a110a] w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300">
-
-                {/* Header */}
                 <div className="p-6 border-b border-black/5 dark:border-white/10 flex justify-between items-center">
                     <h3 className="text-xl font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
                         <Upload className="w-5 h-5 text-primary" />
@@ -159,11 +114,9 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
 
                     {status === 'UPLOADING' && (
                         <div className="flex flex-col items-center justify-center py-12 gap-6 relative overflow-hidden">
-                            {/* Scanning Effect Overlay */}
-                            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-scan" style={{ top: '20%' }}></div>
-
+                            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-scan" style={{ top: '20%' }} />
                             <div className="relative">
-                                <div className="size-24 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+                                <div className="size-24 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
                                 <Loader2 className="size-10 text-primary absolute inset-0 m-auto animate-pulse" />
                             </div>
                             <div className="text-center z-10">

@@ -54,6 +54,7 @@ let pendingRedirectAuthResult = null;
 export function consumePostRedirectAuthResult() {
     const r = pendingRedirectAuthResult;
     pendingRedirectAuthResult = null;
+    // DEBUG: console.log('[consumePostRedirectAuthResult] consumed=', !!r);
     return r;
 }
 
@@ -76,9 +77,11 @@ export function ensureEntraMsalClient() {
             if (!entraConfig.auth.clientId || !entraConfig.auth.authority) {
                 throw new Error('Missing Entra config: VITE_ENTRA_CLIENT_ID or VITE_ENTRA_AUTHORITY');
             }
+            // DEBUG: console.log('[ensureEntraMsalClient] Creating new MSAL client, hash=', window.location.hash);
             const client = new PublicClientApplication(entraConfig);
             await client.initialize();
             const redirectResult = await client.handleRedirectPromise();
+            // DEBUG: console.log('[ensureEntraMsalClient] handleRedirectPromise result has account=', !!redirectResult?.account, 'has idToken=', !!redirectResult?.idToken);
             if (redirectResult?.account) {
                 client.setActiveAccount(redirectResult.account);
             }
@@ -87,8 +90,17 @@ export function ensureEntraMsalClient() {
             }
             return client;
         })();
+    } else {
+        // DEBUG: console.log('[ensureEntraMsalClient] Returning cached promise');
     }
     return bootstrapPromise;
+}
+
+/** Reset the singleton so the next call re-initializes MSAL (e.g. after logout). */
+export function resetEntraMsalClient() {
+    // DEBUG: console.log('[resetEntraMsalClient] Resetting MSAL singleton');
+    bootstrapPromise = null;
+    pendingRedirectAuthResult = null;
 }
 
 /**
@@ -115,12 +127,14 @@ export async function entraLoginRedirect(client, request) {
 }
 
 export async function entraLogoutRedirect(client, request) {
-    const run = async () => {
-        await prepareEntraInteractiveRedirect(client);
-        return client.logoutRedirect(request);
-    };
+    // For logout we must NOT call handleRedirectPromise() first — if there is a
+    // pending login redirect hash in the URL, handleRedirectPromise() would
+    // process it and MSAL would subsequently send a login authorize request
+    // instead of the logout endpoint.  We only need to wait for any silent
+    // token work to finish so we don't collide with an in-flight iframe.
+    await waitForEntraSilentChain();
     try {
-        return await run();
+        return await client.logoutRedirect(request);
     } catch (e) {
         const code = e?.errorCode || e?.name || '';
         const msg = String(e?.message || e || '');
@@ -129,6 +143,6 @@ export async function entraLogoutRedirect(client, request) {
             msg.includes('interaction_in_progress');
         if (!busy) throw e;
         await new Promise((r) => setTimeout(r, 400));
-        return await run();
+        return await client.logoutRedirect(request);
     }
 }

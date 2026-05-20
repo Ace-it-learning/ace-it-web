@@ -236,29 +236,39 @@ const AuthForm = ({ onAuthSuccess }) => {
             )}
 
             {USE_ENTRA && (
-                <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50/80 p-3 text-[11px] leading-relaxed text-amber-950 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-100">
-                    <p className="font-bold text-amber-900 dark:text-amber-50">Why you always leave this page</p>
-                    <ul className="mt-2 list-disc space-y-2 pl-4 text-amber-900/90 dark:text-amber-100/90">
-                        <li>
-                            <strong>Ace It cannot finish sign-up in this box.</strong> With Microsoft Entra, identity is
-                            handled on <strong>their secure pages</strong> — that <em>is</em> the product design (like
-                            “Sign in with …” on other sites). The next screen is expected, not a bug.
-                        </li>
-                        <li>
-                            The email you type is only a <strong>hint</strong>. Password is <strong>not</strong> collected
-                            here; Entra may use a one-time code or password <strong>on their screens</strong>, depending
-                            on your tenant settings.
-                        </li>
-                        <li>
-                            The orange button says “Microsoft” because <strong>Microsoft Entra orchestrates</strong> sign-up.
-                            If you still see <strong>Google</strong>, your Azure <strong>user flow</strong> includes Google
-                            as a sign-in method — Entra may show Google even after you typed{' '}
-                            <strong>{email?.trim() || 'an email'}</strong>. For @outlook / @hotmail you normally expect a
-                            Microsoft account screen; if Google appears first, try <strong>使用其他帳戶</strong> / “Use another
-                            account”, use Incognito, or ask your admin to put <strong>Email (local)</strong> before Google in
-                            the user flow.
-                        </li>
-                    </ul>
+                <div
+                    className="mb-4 rounded-xl border border-slate-200/90 bg-slate-50/90 p-3 text-[11px] leading-relaxed text-slate-700 dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-200"
+                    role="note"
+                    aria-label="How Microsoft sign-in works"
+                >
+                    <p className="font-bold text-slate-800 dark:text-slate-100">How sign-up works (not an error)</p>
+                    <p className="mt-1.5 text-slate-600 dark:text-slate-300">
+                        You continue on <strong>Microsoft Entra’s</strong> pages to finish creating your account — that
+                        redirect is normal.
+                    </p>
+                    <details className="mt-2 rounded-lg border border-slate-200/80 bg-white/60 p-2 dark:border-slate-600 dark:bg-slate-900/40">
+                        <summary className="cursor-pointer select-none font-semibold text-slate-700 dark:text-slate-200">
+                            More detail &amp; troubleshooting
+                        </summary>
+                        <ul className="mt-2 list-disc space-y-2 pl-4 text-slate-600 dark:text-slate-300">
+                            <li>
+                                <strong>Ace It cannot finish sign-up in this box.</strong> Identity is handled on{' '}
+                                <strong>Microsoft’s secure pages</strong> (same idea as “Sign in with …” elsewhere). The
+                                next screen is expected, not a bug.
+                            </li>
+                            <li>
+                                The email field is only a <strong>hint</strong>. Password is <strong>not</strong> collected
+                                here; Entra may use a one-time code or password on their screens, depending on tenant
+                                settings.
+                            </li>
+                            <li>
+                                If you see <strong>Google</strong> after typing @outlook / @hotmail, your Azure{' '}
+                                <strong>user flow</strong> may list Google first. Try “Use another account” /{' '}
+                                <strong>使用其他帳戶</strong>, Incognito, or ask your admin to put <strong>Email (local)</strong>{' '}
+                                before Google in the flow.
+                            </li>
+                        </ul>
+                    </details>
                 </div>
             )}
 

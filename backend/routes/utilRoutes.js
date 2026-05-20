@@ -51,10 +51,16 @@ router.post('/ocr', async (req, res) => {
         const { image, uid } = req.body;
         if (!image || !image.data) return res.status(400).json({ error: "No image provided" });
 
-        // Use the same OCR stack as /api/chat image grading (Tesseract + preprocessing + optional Azure Read).
-        // The old path used Gemini multimodal (inlineData); that breaks when AI_PROVIDER=deepseek (text-only).
-        const detailed = await OcrService.extractDetailedFromBase64(image.data, "eng");
+        // Azure Document Intelligence Read only (see OcrService).
+        const detailed = await OcrService.extractDetailedFromBase64(image.data);
         const text = (detailed?.text || "").trim();
+
+        if (detailed.engine === "azure_unconfigured") {
+            return res.status(503).json({
+                error: "OCR unavailable",
+                details: "Document Intelligence is not configured on the server. Contact support."
+            });
+        }
 
         if (!text || text.length < 5) {
             return res.status(422).json({
@@ -63,7 +69,11 @@ router.post('/ocr', async (req, res) => {
             });
         }
 
-        res.json({ transcription: text });
+        res.json({
+            transcription: text,
+            engine: detailed.engine || "unknown",
+            confidence: detailed.confidence ?? null
+        });
     } catch (e) {
         console.error("[utilRoutes] OCR error:", e.message);
         res.status(500).json({ error: "OCR failed", details: e.message });
@@ -112,7 +122,7 @@ router.get('/schools', async (req, res) => {
     try {
         const container = await getContainer('meta_schools', '/pk');
         const result = await container.items.query({
-            query: "SELECT c.name, c.code, c.district FROM c WHERE c.pk = @pk ORDER BY c.name",
+            query: "SELECT c.name, c.code, c.district, c.nickname, c.region, c.moi FROM c WHERE c.pk = @pk ORDER BY c.name",
             parameters: [{ name: "@pk", value: "meta_schools" }]
         }).fetchAll();
         const schoolsFromDb = result.resources || [];

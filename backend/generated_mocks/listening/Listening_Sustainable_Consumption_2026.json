@@ -502,7 +502,11 @@
       },
       {
         "speaker": "Announcer",
-        "text": "This is the end of Part A. Now, turn to Part B."
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)"
       },
       {
         "speaker": "Announcer",

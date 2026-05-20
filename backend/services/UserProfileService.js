@@ -60,7 +60,8 @@ class UserProfileService {
                 nickname: "Student",
                 role: "student",
                 is_new_student: true,
-                status: "active",
+                onboarding_completed: false,
+                status: "pending",
                 createdAt: now,
                 updatedAt: now,
                 equipped_tutor: "default_janie",
@@ -92,7 +93,6 @@ class UserProfileService {
      */
     async createOrUpdateProfile(uid, data) {
         if (!uid || uid === 'guest') return null;
-        CacheService.invalidateUserDbCache(uid);
         const { userRepo } = createRepositories();
         const existing = await userRepo.getProfile(uid);
         const now = new Date().toISOString();
@@ -124,10 +124,50 @@ class UserProfileService {
             lastStudyDate: now
         });
 
+        // Re-read the just-written profile to confirm the write succeeded
+        const freshProfile = await userRepo.getProfile(uid);
+
+        // Invalidate cache AFTER DB write is confirmed, then pre-warm with fresh data
+        CacheService.invalidateUserDbCache(uid);
+        const result = { ...(freshProfile || {}), ...(stats || {}), uid };
+        CacheService.setDbCache(`profile_${uid}`, result, 10); // Short 10s TTL to reduce race window
+
+        return result;
+    }
+
+    /**
+     * Set marketing / product communication opt-in. Awards 500 XP once on first opt-in.
+     */
+    async setMarketingOptIn(uid, optIn) {
+        if (!uid || uid === 'guest') return null;
+
+        const profile = await this.getProfile(uid) || {};
+        const wantsOptIn = optIn === true;
+        const patch = {
+            marketing_opt_in: wantsOptIn,
+            marketing_opt_in_at: wantsOptIn ? new Date().toISOString() : null
+        };
+
+        let xpAwarded = 0;
+        const alreadyAwarded = profile.marketing_opt_in_xp_awarded === true;
+
+        if (wantsOptIn && !alreadyAwarded) {
+            const GamificationService = require('./GamificationService');
+            const xpResult = await GamificationService.awardXP(uid, 500, 'general', {
+                reason: 'marketing_opt_in'
+            });
+            xpAwarded = xpResult?.earned ?? (xpResult?.success === false ? 0 : 500);
+            if (xpAwarded > 0 || xpResult?.success !== false) {
+                patch.marketing_opt_in_xp_awarded = true;
+            }
+        }
+
+        await this.createOrUpdateProfile(uid, patch);
+
         return {
-            ...(await userRepo.getProfile(uid)),
-            ...(stats || {}),
-            uid
+            marketing_opt_in: wantsOptIn,
+            marketing_opt_in_xp_awarded: patch.marketing_opt_in_xp_awarded || alreadyAwarded,
+            xp_awarded: xpAwarded
         };
     }
     
@@ -218,9 +258,10 @@ class UserProfileService {
             const yesterday = new Date(Date.now() - 86400000).toDateString();
             let stats = await CosmosStore.getUserStats(uid) || { xp: 0, level: 1, streakDays: 0, last_xp_date: null };
             if (stats.last_xp_date !== today) {
-                if (stats.last_xp_date === yesterday) stats.streakDays = (stats.streakDays || 0) + 1;
+                const prevStreak = stats.streakDays || 0;
+                if (stats.last_xp_date === yesterday) stats.streakDays = prevStreak + 1;
                 else stats.streakDays = 1;
-                stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
+                stats.totalActiveDays = (stats.totalActiveDays || prevStreak || 0) + 1;
                 stats.last_xp_date = today;
             } else if (!stats.streakDays) {
                 stats.streakDays = 1;
@@ -549,6 +590,17 @@ class UserProfileService {
             expirationDate.setDate(now.getDate() + daysToSunday);
             expirationDate.setHours(23, 59, 59, 999);
 
+            // Check if student completed any quests TODAY (for weekly focus reminder)
+            const hkNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const hkTodayStart = new Date(hkNow);
+            hkTodayStart.setHours(0, 0, 0, 0);
+            const hkTodayEnd = new Date(hkNow);
+            hkTodayEnd.setHours(23, 59, 59, 999);
+            const todayQuestCount = recentQuests.filter(q => {
+                const d = new Date(q.completedAt || q.timestamp || 0);
+                return d >= hkTodayStart && d <= hkTodayEnd;
+            }).length;
+
             // FETCH COMPLETED TOPICS
             const RoadmapService = require('./RoadmapService');
             const completedTopics = await RoadmapService.getCompletedTopics(uid, subject === 'math' ? 'maths' : subject);
@@ -647,7 +699,9 @@ class UserProfileService {
                     weekly: {
                         weekId: weeklyStatus?.weekId || null,
                         completed: Boolean(weeklyStatus?.completed),
-                        daysRemaining: daysToSunday
+                        daysRemaining: daysToSunday,
+                        todayCompleted: todayQuestCount > 0,
+                        todayQuestCount
                     },
                     dailyTasks: []
                 },
@@ -670,7 +724,9 @@ class UserProfileService {
                 weeklyQuest: {
                     weekId: weeklyStatus.weekId,
                     completed: weeklyStatus.completed,
-                    daysRemaining: daysToSunday
+                    daysRemaining: daysToSunday,
+                    todayCompleted: todayQuestCount > 0,
+                    todayQuestCount
                 },
                 availableQuests: availableQuests.slice(0, 30), // Limit to avoid token bloat
                 recentQuests,
@@ -778,7 +834,7 @@ class UserProfileService {
             `LVL:${pContext?.level || '?'}`,
             `W:${pContext?.topWeaknesses?.map(w => w.split(' (')[0]).join(',') || 'None'}`,
             `DONE:${pContext?.completedTopics?.length || 0}`,
-            `WEEKLY:${pContext?.weeklyQuest?.completed ? 'DONE' : (pContext?.weeklyQuest?.daysRemaining ? pContext.weeklyQuest.daysRemaining + 'd' : '?')}`,
+            `WEEKLY:${pContext?.weeklyQuest?.completed ? 'DONE' : (pContext?.weeklyQuest?.daysRemaining ? pContext.weeklyQuest.daysRemaining + 'd' : '?')}${pContext?.weeklyQuest?.todayCompleted ? '' : '|TODAY_PENDING'}`,
             `NEXT:${pContext?.recommendedNextSteps?.join(';') || 'None'}`,
             `QUESTS:${pContext?.availableQuests?.join(';') || 'None'}`
         ];
@@ -1134,6 +1190,32 @@ class UserProfileService {
         } catch (error) {
             console.error(`[UserProfileService] Error updating Math skills for ${uid}:`, error);
             throw error;
+        }
+    }
+
+    /**
+     * Save a progress snapshot for the Mastery Radar "Top Growth Skill" feature.
+     * Should be called after any activity that updates microSkills.
+     * @param {string} uid - User ID
+     * @param {string} subject - 'english' | 'maths'
+     */
+    async saveProgressSnapshot(uid, subject = 'english') {
+        if (!uid || uid === 'guest') return;
+        try {
+            const normalizedSubject = subject.toLowerCase();
+            const histSubject = (normalizedSubject === 'maths' || normalizedSubject === 'math')
+                ? 'maths_history'
+                : `${normalizedSubject}_history`;
+            const currentProgress = await CosmosStore.getProgress(uid, normalizedSubject);
+            if (!currentProgress) return;
+            await CosmosStore.addProgressSnapshot(uid, histSubject, {
+                microSkills: currentProgress.microSkills || {},
+                overall_level: currentProgress.overall_level || currentProgress.level || 1,
+                timestamp: new Date().toISOString()
+            });
+            console.log(`[UserProfileService] Saved progress snapshot for ${uid} (${normalizedSubject})`);
+        } catch (err) {
+            console.error(`[UserProfileService] Failed to save progress snapshot for ${uid}:`, err.message);
         }
     }
 
@@ -1952,6 +2034,14 @@ ${styleExemplar}`;
             await CosmosStore.purgeByPk('quest_results', uid);
             await CosmosStore.purgeByPk('notebook_items', uid);
             await CosmosStore.purgeByPk('progress_snapshots', uid);
+            await CosmosStore.purgeByPk('exam_submissions', uid);
+            await CosmosStore.purgeByPk('exam_attempts', uid);
+            await CosmosStore.purgeByPk('practice_history', uid);
+            await CosmosStore.purgeByPk('voice_usage', uid);
+            await CosmosStore.purgeByPk('roadmap_plans', uid);
+            await CosmosStore.purgeByPk('tutor_completion_events', uid);
+            await CosmosStore.purgeByPk('report_logs', uid);
+            await CosmosStore.purgeByPk('results', uid);
             await CosmosStore.clearProgress(uid, 'english');
             await CosmosStore.clearProgress(uid, 'maths');
             await CosmosStore.clearProgress(uid, 'mock_summary');

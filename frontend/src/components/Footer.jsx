@@ -5,7 +5,7 @@ import ContactModal from './shared/ContactModal';
 import FaqModal from './shared/FaqModal';
 
 const Footer = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [legalType, setLegalType] = useState(null); // 'terms', 'privacy', 'disclaimer', or null
     const [faqOpen, setFaqOpen] = useState(false);
     const [faqModalKey, setFaqModalKey] = useState(0);
@@ -19,6 +19,12 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 order-1 md:order-2">
+                    <a
+                        href="/hkdse-english"
+                        className="text-sm font-bold border-b border-transparent hover:border-white transition-all opacity-80 hover:opacity-100"
+                    >
+                        {language === 'zh' ? '英文科資源' : 'English Resource Hub'}
+                    </a>
                     <button 
                         type="button"
                         onClick={() => {

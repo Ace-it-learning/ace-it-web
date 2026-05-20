@@ -22,7 +22,8 @@ import {
     HelpCircle,
     Eye
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { BrainCircuit } from 'lucide-react';
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import { useAuth } from '../../context/AuthContext';
 import { fetchWithAuth } from '../../utils/apiAuth';
@@ -410,10 +411,15 @@ const WritingMockStudio = () => {
                 setTimeout(() => {
                     setSubmissionResults(results);
                     localStorage.setItem(`mock_results_${paperId}`, JSON.stringify(results));
-                    updatePhase('RESULTS');
                     localStorage.removeItem(`mock_save_${paperId}`);
                     localStorage.removeItem('last_mock_inprogress_writing');
                     setIsSubmitting(false);
+                    // Navigate to standalone result page if resultId is available
+                    if (results.resultId) {
+                        navigate(`/mock-exam-eng/writing/results/${results.resultId}`);
+                    } else {
+                        updatePhase('RESULTS');
+                    }
                 }, 1000);
             } else {
                 let detail = '';
@@ -654,17 +660,51 @@ const WritingMockStudio = () => {
                     )}
                 </AnimatePresence>
 
-                <GradingOverlay 
-                    isOpen={isInjecting || isSubmitting}
-                    title={isInjecting ? "Injecting AI Drafts" : "Evaluating Writing"}
-                    status={isInjecting ? "Synthesizing Level-Specific Content..." : `${englishTutor?.name || "Miss Janie"} is reviewing your work...`}
-                    progress={submissionProgress}
+                <AnimatePresence>
+                    {isSubmitting && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-[200] bg-slate-900/90 backdrop-blur-xl flex flex-col items-center justify-center text-center p-8"
+                        >
+                            <div className="relative mb-12">
+                                <div className="size-32 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <BrainCircuit size={48} className="text-white animate-pulse" />
+                                </div>
+                            </div>
+                            <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Pedagogical Analysis in Progress</h2>
+                            <p className="text-indigo-200 text-sm font-medium max-w-md leading-relaxed">
+                                {englishTutor?.name || "Miss Janie"} is evaluating your responses against the <span className="text-white font-bold">HKEAA Marking Rubric</span> and cross-referencing textual evidence...
+                            </p>
+                            <div className="mt-8 w-full max-w-sm space-y-4">
+                                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden border border-white/5">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{ width: `${submissionProgress}%` }}
+                                        className="h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.6)]"
+                                    />
+                                </div>
+                                <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] text-indigo-300">
+                                    <span>Syncing Rubric</span>
+                                    <span>{submissionProgress}%</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                <GradingOverlay
+                    isOpen={isInjecting}
+                    title="Injecting AI Drafts"
+                    status="Synthesizing Level-Specific Content..."
                 />
                 <UpgradeModal 
                     isOpen={showUpgradeModal} 
                     onClose={() => setShowUpgradeModal(false)}
-                    title="Unlock Evaluation"
-                    message="Free trial users can draft their Part A and Part B responses, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
+                    title="Pro / Premium Required"
+                    message="Please subscribe to a Pro or Premium plan to submit Mock Exams and receive AI evaluation with grade prediction."
                 />
             </WritingStudioLayout>
         );

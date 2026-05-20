@@ -8,7 +8,7 @@
         "total_xp_to_cap": 980100
     },
     "anti_cheating": {
-        "daily_xp_cap": 2500,
+        "daily_xp_cap": 999999,
         "suspicious_speed_threshold": "completion_time < 20%_of_average",
         "ai_detection_required_for": [
             "Level_5_Certificate"

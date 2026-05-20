@@ -73,18 +73,18 @@ const Dashboard = () => {
     return (
         <>
             <div className={cn(
-                "flex h-[calc(100vh-5rem)]",
+                "flex flex-1 h-full overflow-hidden gap-[10px]",
                 isFocusMode && "h-full"
             )}>
                 {/* Left Column: Sidebar */}
                 {!isFocusMode && (
-                    <div className="w-full md:w-[280px] lg:w-[320px] flex-shrink-0 h-full overflow-y-auto custom-scrollbar border-r border-black/5 dark:border-white/10">
+                    <div className="hidden md:block w-[280px] lg:w-[320px] flex-shrink-0 h-full overflow-y-auto custom-scrollbar">
                         <Sidebar stats={stats} />
                     </div>
                 )}
 
                 {/* Right Column: Chat Interface */}
-                <div className="flex-1 h-full overflow-hidden">
+                <div className="flex-1 min-w-0 h-full flex flex-col">
                     <ChatInterface onOpenQuest={handleOpenQuest} />
                 </div>
             </div>

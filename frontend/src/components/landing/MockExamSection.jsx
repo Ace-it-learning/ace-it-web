@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
     Target, 
     ClipboardCheck, 
@@ -77,10 +78,13 @@ const MockExamSection = ({ id }) => {
                             ))}
                         </div>
 
-                        <button className="group flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-primary/20 active:scale-95">
+                        <Link
+                            to="/hkdse-english"
+                            className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-primary/20 active:scale-95"
+                        >
                             {language === 'zh' ? '進入模擬試場' : 'Enter Mock Studio'}
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Visual Side */}

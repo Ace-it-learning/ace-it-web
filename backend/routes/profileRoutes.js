@@ -289,4 +289,18 @@ router.get('/redemption/collection', async (req, res) => {
     }
 });
 
+// GET /api/quests/history - Recent quest results for completion tracking
+router.get('/quests/history', async (req, res) => {
+    const { uid, limit } = req.query;
+    if (!uid) return res.status(400).json({ error: "Missing uid" });
+    try {
+        const CosmosStore = require('../services/CosmosStore');
+        const results = await CosmosStore.listQuestResults(uid, parseInt(limit) || 50);
+        res.json({ results });
+    } catch (e) {
+        console.error("Quest History Fetch Error:", e);
+        res.status(500).json({ error: "Failed to fetch quest history" });
+    }
+});
+
 module.exports = router;

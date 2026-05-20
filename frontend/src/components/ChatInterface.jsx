@@ -7,6 +7,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../utils/cn'; // Reusing cn utility
+import { readAndPrepareImageFile } from '../utils/prepareImageForOcr';
 import EssayUploader from './EssayUploader';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import LaunchCard from './LaunchCard';
@@ -53,6 +54,18 @@ const splitSuggestionText = (value) => String(value || '')
     .map(s => s.replace(/^\s*(?:[-*]|\d+[.)、])\s*/, '').trim())
     .filter(Boolean)
     .filter((item, index, arr) => arr.indexOf(item) === index);
+
+/** On reload, end the thread on the tutor's last reply — not a trailing student turn. */
+const trimTrailingUserTurnsForDisplay = (history) => {
+    if (!Array.isArray(history) || history.length === 0) return history;
+    const hasAssistant = history.some((m) => m.role === 'assistant');
+    if (!hasAssistant) return history;
+    const result = [...history];
+    while (result.length > 0 && result[result.length - 1].role === 'user') {
+        result.pop();
+    }
+    return result;
+};
 
 const normalizeChips = (chips) => {
     const source = Array.isArray(chips) ? chips : (chips ? [chips] : []);
@@ -809,13 +822,14 @@ const ChatInterface = ({ onOpenQuest }) => {
                         if (typeof m.content !== 'string') return false;
                         return m.content.trim().length > 0;
                     });
+                    const displayHistory = trimTrailingUserTurnsForDisplay(cleanHistory);
 
-                    if (cleanHistory.length > 0) {
-                        setMessages(cleanHistory);
+                    if (displayHistory.length > 0) {
+                        setMessages(displayHistory);
                         let restoredFromHistory = false;
 
                         // Restore dynamic chips from the last assistant message
-                        const lastAssistantMsg = [...cleanHistory].reverse().find(m => m.role === 'assistant');
+                        const lastAssistantMsg = [...displayHistory].reverse().find(m => m.role === 'assistant');
                         if (lastAssistantMsg) {
                             const parsed = parseSuggestions(lastAssistantMsg.content);
                             if (parsed.suggestions && parsed.suggestions.length > 0) {
@@ -1038,7 +1052,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
 
 
-    const handleFileSelect = (e) => {
+    const handleFileSelect = async (e) => {
         const file = e.target.files[0];
         console.log(`[ChatInterface] File selected:`, file ? file.name : 'none');
 
@@ -1046,7 +1060,7 @@ const ChatInterface = ({ onOpenQuest }) => {
 
         if (!file.type.startsWith('image/')) {
             console.warn('[ChatInterface] Unsupported file type:', file.type);
-            alert("Matt sir currently only supports Image files (JPG, PNG) for handwriting analysis. Please take a photo of your work!");
+            alert("Please upload an image file (JPG or PNG).");
             return;
         }
 
@@ -1054,41 +1068,30 @@ const ChatInterface = ({ onOpenQuest }) => {
         if (!user) {
             const uploadedImages = messages.filter(m => m.role === 'user' && m.image).length;
             if (uploadedImages >= 1) {
-                alert("Guest preview: You can only upload 1 handwriting sample per session. Sign up to upload more!");
+                alert("Guest preview: You can only upload 1 image per session. Sign up to upload more!");
                 return;
             }
         }
 
-        const reader = new FileReader();
-        console.log(`[ChatInterface] Starting file read...`);
-
-        reader.onload = () => {
-            console.log(`[ChatInterface] FileReader finished. Status: ${reader.readyState}`);
-            const base64Data = reader.result.split(',')[1];
-
+        try {
+            const { base64Data, mimeType } = await readAndPrepareImageFile(file);
             const previewUrl = URL.createObjectURL(file);
             setSelectedImage({
                 data: base64Data,
-                type: file.type,
+                type: mimeType,
                 preview: previewUrl
             });
-            console.log(`[ChatInterface] Selected image state set successfully.`);
 
-            // Trigger the Image Analysis Popup
             const defaultPrompt = activeAgentId === 'math'
-                ? "Please analyse my Math question"
-                : "Please analyze my handwriting";
+                ? "Please help me solve this maths question."
+                : t('chat.image_attach_default_prompt');
             setImagePrompt(defaultPrompt);
             setHasStartedTyping(false);
             setIsImageConfirmOpen(true);
-        };
-
-        reader.onerror = (err) => {
+        } catch (err) {
             console.error('[ChatInterface] FileReader error:', err);
             alert("Failed to read the file. Please try again.");
-        };
-
-        reader.readAsDataURL(file);
+        }
     };
 
 
@@ -1140,7 +1143,7 @@ const ChatInterface = ({ onOpenQuest }) => {
         let finalMessage = textToSend;
         if (!finalMessage.trim() && selectedImage) {
             // Default text for image-only uploads to provide context in the bubble
-            finalMessage = activeAgentId === 'math' ? "[Math Problem Assessment]" : "[Handwriting Analysis]";
+            finalMessage = activeAgentId === 'math' ? "[Math image]" : "[Image attached]";
         }
 
         const userMsg = {
@@ -1151,12 +1154,8 @@ const ChatInterface = ({ onOpenQuest }) => {
         };
 
         setMessages(prev => [...prev, userMsg]);
-        
-        // Save user message immediately for persistence in case of crash/refresh
-        // Skip hidden system triggers — they are ephemeral prompts, not chat history.
-        if (user && user.uid !== 'guest' && !isHidden) {
-            saveMessageToBackend(userMsg);
-        }
+        // User turns are persisted by POST /api/chat — avoid a second save that can
+        // race after the tutor reply and become the last row on refresh.
 
         const currentInput = finalMessage;
 
@@ -1197,9 +1196,19 @@ const ChatInterface = ({ onOpenQuest }) => {
                     parts: [{ text: m.content }]
                 }));
 
+            const authHeaders = { 'Content-Type': 'application/json' };
+            if (user && typeof user.getIdToken === 'function') {
+                try {
+                    const token = await user.getIdToken();
+                    if (token) authHeaders.Authorization = `Bearer ${token}`;
+                } catch (tokenErr) {
+                    console.warn('[ChatInterface] getIdToken failed:', tokenErr?.message || tokenErr);
+                }
+            }
+
             const response = await fetch(`${API_URL}/api/chat`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: authHeaders,
                 body: JSON.stringify({
                     uid: user?.uid || 'guest',
                     message: currentInput,
@@ -1577,10 +1586,10 @@ const ChatInterface = ({ onOpenQuest }) => {
         <section
             ref={sectionRef}
             className={cn(
-                "flex flex-col relative transition-all duration-500",
+                "flex flex-col relative transition-all duration-500 h-full overflow-hidden",
                 isFocusMode
                     ? "!fixed !top-0 !left-0 !m-0 inset-0 z-[999] rounded-none shadow-none h-screen w-screen flex flex-col overflow-hidden bg-white dark:bg-background-dark border-0"
-                    : "w-full h-full"
+                    : "w-full flex-1"
             )}>
             {/* Verification Overlay Removed */}
             {/* Verify-Then-Grade Modal */}
@@ -1733,7 +1742,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                 </div>
             </div>
 
-            {/* Chat Area - Scrollable */}
+            {/* Chat Area - Scrollable messages */}
             <div ref={chatContainerRef} className="flex-1 overflow-y-auto p-8 flex flex-col justify-start gap-6 min-h-0">
                 {/* Skeleton Loading State */}
                 {isHistoryLoading && (
@@ -2014,7 +2023,7 @@ const ChatInterface = ({ onOpenQuest }) => {
             <div
                 className={cn(
                     "p-4 transition-all duration-300",
-                    isFocusMode ? "bg-white dark:bg-background-dark" : "bg-white/60 dark:bg-white/5"
+                    isFocusMode ? "bg-white dark:bg-background-dark" : "bg-transparent"
                 )}
             >
                 <div
@@ -2181,16 +2190,18 @@ const ChatInterface = ({ onOpenQuest }) => {
                             {/* Right Side: Questions & Actions */}
                             <div className="w-full md:w-1/2 p-8 flex flex-col gap-6">
                                 <div className="space-y-2">
-                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">Handwriting Analysis</h3>
+                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">
+                                        {activeAgentId === 'math' ? "Maths photo" : t('chat.image_attach_title')}
+                                    </h3>
                                     <p className="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
                                         {activeAgentId === 'math'
-                                            ? "Add context or specific questions to help Matt Sir analyze your math problem."
-                                            : "Add context to help your tutor analyze your handwriting."}
+                                            ? "Add your question so Matt Sir can read the problem and help you step by step."
+                                            : t('chat.image_attach_subtitle')}
                                     </p>
                                 </div>
 
                                 <div className="flex-1">
-                                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">Your Question</label>
+                                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">{t('chat.image_attach_label')}</label>
                                     <textarea
                                         className="w-full h-32 bg-gray-50 dark:bg-white/5 rounded-2xl border-2 border-transparent focus:border-primary focus:bg-white dark:focus:bg-white/10 p-4 text-sm text-gray-800 dark:text-white resize-none transition-all placeholder-gray-400 outline-none"
                                         placeholder="Type your question here..."
@@ -2226,7 +2237,7 @@ const ChatInterface = ({ onOpenQuest }) => {
                                         className="flex-[1.5] py-4 bg-primary hover:bg-primary/90 text-white rounded-2xl font-black text-sm shadow-xl shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2"
                                     >
                                         <Send size={18} />
-                                        Analyze Now
+                                        {activeAgentId === 'math' ? t('chat.analyze_verb') : t('chat.image_attach_analyze_btn')}
                                     </button>
                                 </div>
                             </div>

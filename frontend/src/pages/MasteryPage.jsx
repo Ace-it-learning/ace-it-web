@@ -267,7 +267,7 @@ const MasteryPage = () => {
                             <Sparkles className="w-4 h-4" /> {t('mastery.overview')}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-none mb-4">
-                            English Mastery <span className="text-[#00aeef]">Radar.</span>
+                            {t('mastery.title')}
                         </h1>
                         <p className="text-slate-500 max-w-xl text-lg font-medium leading-relaxed">
                             {t('mastery.description')}
@@ -325,15 +325,15 @@ const MasteryPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     <div className="lg:col-span-4 space-y-6 animate-in fade-in slide-in-from-left-4 duration-700">
                         {viewMode === 'mock' && (
-                            <div className={`p-8 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group transition-all duration-500 ${englishUnlocked ? 'bg-gradient-to-br from-[#00aeef] to-blue-600 shadow-cyan-200' : 'bg-slate-800 shadow-slate-200'}`}>
+                            <div className={`p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group transition-all duration-500 ${englishUnlocked ? 'bg-gradient-to-br from-[#00aeef] to-blue-600 shadow-cyan-200 text-white' : 'bg-white border border-slate-100 shadow-sm text-slate-900'}`}>
                                 <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
                                 <div className="relative z-10">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
-                                            {englishUnlocked ? <Trophy className="w-5 h-5 text-white" /> : <Lock className="w-5 h-5 text-white/60" />}
+                                        <div className={`p-2 rounded-xl backdrop-blur-md ${englishUnlocked ? 'bg-white/20' : 'bg-slate-100'}`}>
+                                            {englishUnlocked ? <Trophy className="w-5 h-5 text-white" /> : <Lock className="w-5 h-5 text-slate-400" />}
                                         </div>
-                                        <span className="text-xs font-black uppercase tracking-[0.2em] text-cyan-100 italic">
-                                            {englishUnlocked ? t('mastery.overall_level') : 'Prediction Locked'}
+                                        <span className={`text-xs font-black uppercase tracking-[0.2em] italic ${englishUnlocked ? 'text-cyan-100' : 'text-slate-400'}`}>
+                                            {englishUnlocked ? t('mastery.overall_level') : t('mastery.prediction_locked')}
                                         </span>
                                     </div>
 
@@ -350,7 +350,7 @@ const MasteryPage = () => {
                                     ) : (
                                         <div className="space-y-4">
                                             <p className="text-sm font-bold text-slate-400 mb-4 leading-relaxed">
-                                                Complete all 4 Mock Exam papers to unlock your HKEAA-standard grade prediction.
+                                                {t('mastery.prediction_description')}
                                             </p>
                                             <div className="grid grid-cols-2 gap-3">
                                                 {[
@@ -361,8 +361,8 @@ const MasteryPage = () => {
                                                 ].map(paper => {
                                                     const isDone = completedTypes.includes(paper.id);
                                                     return (
-                                                        <div key={paper.id} className={`flex items-center gap-2 p-2.5 rounded-xl border ${isDone ? 'bg-cyan-500/20 border-cyan-500/30 text-cyan-100' : 'bg-white/5 border-white/10 text-white/40'}`}>
-                                                            {isDone ? <Check className="w-3.5 h-3.5 text-cyan-300" /> : <X className="w-3.5 h-3.5" />}
+                                                        <div key={paper.id} className={`flex items-center gap-2 p-2.5 rounded-xl border ${isDone ? 'bg-cyan-50 border-cyan-200 text-cyan-700' : 'bg-slate-50 border-slate-200 text-slate-400'}`}>
+                                                            {isDone ? <Check className="w-3.5 h-3.5 text-cyan-500" /> : <X className="w-3.5 h-3.5" />}
                                                             <span className="text-[10px] font-black uppercase tracking-wider">{paper.label}</span>
                                                         </div>
                                                     );
@@ -370,9 +370,9 @@ const MasteryPage = () => {
                                             </div>
                                             <button 
                                                 onClick={() => navigate('/mock-exam')}
-                                                className="w-full mt-4 py-3 bg-white text-slate-900 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-cyan-50 transition-colors"
+                                                className="w-full mt-4 py-3 bg-slate-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-800 transition-colors"
                                             >
-                                                Go to Mock Center
+                                                {t('mastery.go_to_mock_center')}
                                             </button>
                                         </div>
                                     )}

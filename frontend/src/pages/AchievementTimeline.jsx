@@ -261,10 +261,25 @@ const AchievementTimeline = () => {
                                                         {getRelativeTime(event.date)}
                                                     </p>
 
-                                                    {event.resultId && (
+                                                    {event.resultId && event.paper !== 'Grammar' && (
                                                         <button
                                                             onClick={() => {
                                                                 const paper = event.paper?.toLowerCase();
+                                                                const isMock = event.title?.toLowerCase().includes('mock exam') || event.type === 'mock';
+                                                                
+                                                                // Route mock exams to standalone result pages
+                                                                if (isMock) {
+                                                                    const mockRoute = paper === 'reading' ? '/mock-exam-eng/reading/results'
+                                                                        : paper === 'writing' ? '/mock-exam-eng/writing/results'
+                                                                        : paper === 'listening' ? '/mock-exam-eng/listening/results'
+                                                                        : paper === 'speaking' ? '/mock-exam-eng/speaking/results'
+                                                                        : '';
+                                                                    if (mockRoute) {
+                                                                        navigate(`${mockRoute}/${event.resultId}`);
+                                                                    }
+                                                                    return;
+                                                                }
+                                                                
                                                                 let route = '';
                                                                 if (paper === 'writing') route = '/writing/result';
                                                                 else if (paper === 'speaking') route = '/speaking/result';

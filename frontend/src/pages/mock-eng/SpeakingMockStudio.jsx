@@ -9,7 +9,8 @@ import {
 import { LoadingPage, GradingOverlay } from '../../components/shared';
 import UpgradeModal from '../../components/common/UpgradeModal';
 import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { BrainCircuit } from 'lucide-react';
 import { isCheatEnabled } from '../../utils/devAccess';
 
 const SpeakingMockStudio = () => {
@@ -431,6 +432,11 @@ const SpeakingMockStudio = () => {
         setIsSubmitting(true);
         if (window.speechSynthesis) window.speechSynthesis.cancel();
         if (recognition.current) try { recognition.current.stop(); } catch(e){}
+
+        // Progress Simulation
+        const progressInterval = setInterval(() => {
+            // Speaking mock navigates away on success, so we don't need complex progress state
+        }, 1500);
         
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -450,6 +456,7 @@ const SpeakingMockStudio = () => {
                 })
             });
 
+            clearInterval(progressInterval);
             if (res.ok) {
                 const result = await res.json();
                 navigate(`/mock-exam-eng/speaking/results/${result.id}`, { state: { result, mockData } });
@@ -457,6 +464,7 @@ const SpeakingMockStudio = () => {
                 throw new Error("Submission failed");
             }
         } catch (error) {
+            clearInterval(progressInterval);
             console.error("Submission error:", error);
             // Fallback for demo if backend not ready
             setTimeout(() => {
@@ -704,16 +712,45 @@ const SpeakingMockStudio = () => {
                     </div>
                 </div>
 
-                <GradingOverlay 
-                    isOpen={isSubmitting}
-                    title="Analyzing Performance"
-                    status="Evaluating fluency, pronunciation, and group interaction..."
-                />
+                <AnimatePresence>
+                    {isSubmitting && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-[200] bg-slate-900/90 backdrop-blur-xl flex flex-col items-center justify-center text-center p-8"
+                        >
+                            <div className="relative mb-12">
+                                <div className="size-32 border-4 border-white/10 border-t-indigo-500 rounded-full animate-spin" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <BrainCircuit size={48} className="text-white animate-pulse" />
+                                </div>
+                            </div>
+                            <h2 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Pedagogical Analysis in Progress</h2>
+                            <p className="text-indigo-200 text-sm font-medium max-w-md leading-relaxed">
+                                {englishTutor?.name || "Miss Janie"} is evaluating your responses against the <span className="text-white font-bold">HKEAA Marking Rubric</span> and cross-referencing textual evidence...
+                            </p>
+                            <div className="mt-8 w-full max-w-sm space-y-4">
+                                <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden border border-white/5">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{ width: '92%' }}
+                                        className="h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.6)]"
+                                    />
+                                </div>
+                                <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] text-indigo-300">
+                                    <span>Syncing Rubric</span>
+                                    <span>92%</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                 <UpgradeModal 
                     isOpen={showUpgradeModal} 
                     onClose={() => setShowUpgradeModal(false)}
-                    title="Unlock Evaluation"
-                    message="Free tier users can practice speaking with AI candidates, but AI evaluation and grade prediction are Pro features. Upgrade now to get your results!"
+                    title="Pro / Premium Required"
+                    message="Please subscribe to a Pro or Premium plan to submit Mock Exams and receive AI evaluation with grade prediction."
                 />
             </div>
         );

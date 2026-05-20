@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState, useCallback, use
 import { auth, googleProvider } from '../firebase';
 import {
     ensureEntraMsalClient,
+    resetEntraMsalClient,
     entraConfig,
     tieEntraSilent,
     entraLoginRedirect,
@@ -84,7 +85,10 @@ export const AuthProvider = ({ children }) => {
             clearTimeout(timeoutId);
             if (res.ok) {
                 const data = await res.json();
+                console.log('[AuthContext] Profile fetched, tier:', data?.subscription_tier);
                 setProfile(data);
+            } else {
+                console.error('[AuthContext] Profile fetch failed:', res.status, await res.text());
             }
         } catch (error) {
             console.error("[AuthContext] Failed to fetch profile:", error);
@@ -95,8 +99,10 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const refreshProfile = () => {
-        if (user?.uid) fetchProfile(user.uid);
+    const refreshProfile = async () => {
+        if (user?.uid) {
+            await fetchProfile(user.uid);
+        }
     };
 
     useEffect(() => {
@@ -126,9 +132,27 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const resolveIdentityWithToken = async (token, msUser) => {
-        const identityRes = await fetch(apiUrl('/api/user/resolve-identity'), {
-            headers: { Authorization: `Bearer ${token}` }
-        });
+        const controller = new AbortController();
+        const resolveTimeoutMs = 25000;
+        const idTimeout = setTimeout(() => controller.abort(), resolveTimeoutMs);
+        let identityRes;
+        try {
+            identityRes = await fetch(apiUrl('/api/user/resolve-identity'), {
+                headers: { Authorization: `Bearer ${token}` },
+                signal: controller.signal
+            });
+        } catch (e) {
+            clearTimeout(idTimeout);
+            if (e?.name === 'AbortError') {
+                const err = new Error(
+                    `Signing in timed out after ${Math.round(resolveTimeoutMs / 1000)}s waiting for the server. Check the API is reachable (VITE_API_URL) and try again.`
+                );
+                err.status = 504;
+                throw err;
+            }
+            throw e;
+        }
+        clearTimeout(idTimeout);
         if (!identityRes.ok) {
             let detail = '';
             try {
@@ -177,11 +201,13 @@ export const AuthProvider = ({ children }) => {
 
     const retryEntraSession = useCallback(async () => {
         if (!USE_ENTRA) return { ok: false };
+        // DEBUG: console.log('[AuthContext] retryEntraSession starting');
         setAuthError(null);
         setLoading(true);
         try {
             const client = await ensureEntraMsalClient();
             const activeAccount = client.getActiveAccount() || client.getAllAccounts()[0];
+            // DEBUG: console.log('[AuthContext] retryEntraSession activeAccount=', activeAccount?.username || 'none');
             if (!activeAccount) {
                 setLoading(false);
                 setAuthError('No Microsoft session in this browser. Use Sign in below.');
@@ -196,7 +222,9 @@ export const AuthProvider = ({ children }) => {
                 })
             );
             const idTok = pickMsalIdToken(tokenResp);
+            // DEBUG: console.log('[AuthContext] retryEntraSession resolving identity...');
             await resolveIdentityWithToken(idTok, activeAccount);
+            // DEBUG: console.log('[AuthContext] retryEntraSession success');
             setLoading(false);
             return { ok: true };
         } catch (err) {
@@ -214,6 +242,8 @@ export const AuthProvider = ({ children }) => {
                 } catch (clearErr) {
                     console.warn('[AuthContext] Failed to clear MSAL accounts:', clearErr);
                 }
+                // Reset singleton so the next page load re-runs handleRedirectPromise
+                resetEntraMsalClient();
                 setAuthError(
                     'Your sign-in session expired. Click "Retry linking to Ace-it" to sign in again.'
                 );
@@ -231,10 +261,15 @@ export const AuthProvider = ({ children }) => {
         if (!USE_ENTRA) return;
         const mine = ++entraInitGeneration.current;
 
-        const done = () => {
-            if (entraInitGeneration.current !== mine) return;
+        /** Always clears the auth “booting” flags — used after identity succeeds even if Strict Mode superseded this effect (mine no longer matches). */
+        const releaseLoadingGate = () => {
             setInitialized(true);
             setLoading(false);
+        };
+
+        const done = () => {
+            if (entraInitGeneration.current !== mine) return;
+            releaseLoadingGate();
         };
 
         const timeoutId = setTimeout(() => {
@@ -249,15 +284,22 @@ export const AuthProvider = ({ children }) => {
         }, 45000);
 
         const initEntra = async () => {
+            // DEBUG: console.log('[AuthContext] initEntra starting, mine=', mine, 'hash=', window.location.hash);
             try {
                 const client = await ensureEntraMsalClient();
-                if (entraInitGeneration.current !== mine) return;
+                // DEBUG: console.log('[AuthContext] ensureEntraMsalClient resolved, mine=', mine, 'accounts=', client.getAllAccounts().map(a => a.username));
+                if (entraInitGeneration.current !== mine) {
+                    // DEBUG: console.log('[AuthContext] initEntra aborted (stale generation), mine=', mine, 'current=', entraInitGeneration.current);
+                    return;
+                }
 
                 setAuthError(null);
 
                 const activeAccount = client.getActiveAccount() || client.getAllAccounts()[0];
+                // DEBUG: console.log('[AuthContext] activeAccount=', activeAccount?.username || 'none');
                 if (!activeAccount) {
                     if (entraInitGeneration.current !== mine) return;
+                    // DEBUG: console.log('[AuthContext] No active account, clearing user state');
                     setUser(null);
                     setProfile(null);
                     clearTimeout(timeoutId);
@@ -268,11 +310,14 @@ export const AuthProvider = ({ children }) => {
                 client.setActiveAccount(activeAccount);
 
                 const postRedirect = consumePostRedirectAuthResult();
+                // DEBUG: console.log('[AuthContext] postRedirect has idToken=', !!postRedirect?.idToken);
                 let idTok;
                 if (postRedirect?.idToken) {
                     idTok = pickMsalIdToken(postRedirect);
+                    // DEBUG: console.log('[AuthContext] Resolving identity with redirect token...');
                     await resolveIdentityWithToken(idTok, postRedirect.account || activeAccount);
                 } else {
+                    // DEBUG: console.log('[AuthContext] No redirect token, falling back to acquireTokenSilent');
                     const tokenResp = await tieEntraSilent(() =>
                         client.acquireTokenSilent({
                             account: activeAccount,
@@ -282,19 +327,26 @@ export const AuthProvider = ({ children }) => {
                     );
                     if (entraInitGeneration.current !== mine) return;
                     idTok = pickMsalIdToken(tokenResp);
+                    // DEBUG: console.log('[AuthContext] Resolving identity with silent token...');
                     await resolveIdentityWithToken(idTok, activeAccount);
                 }
-                if (entraInitGeneration.current !== mine) return;
-
+                // DEBUG: console.log('[AuthContext] initEntra success, releasing gate');
+                // Always release the loading gate after identity resolves. `done()` alone is not
+                // enough: it no-ops when Strict Mode bumped `entraInitGeneration` so `mine` is stale,
+                // which left the UI on "Completing sign-in…" forever even though sign-in succeeded.
                 clearTimeout(timeoutId);
-                done();
+                releaseLoadingGate();
             } catch (err) {
-                if (entraInitGeneration.current !== mine) return;
+                if (entraInitGeneration.current !== mine) {
+                    // DEBUG: console.log('[AuthContext] initEntra error handler aborted (stale generation), mine=', mine);
+                    return;
+                }
                 console.error('[AuthContext] Entra init error:', err);
 
                 // If backend rejected the token (401), the cached token is stale (key rotated or expired).
                 // Clear MSAL cache and force interactive re-login instead of getting stuck.
                 if (err?.status === 401) {
+                    // DEBUG: console.log('[AuthContext] Clearing MSAL cache due to 401');
                     try {
                         const client = await ensureEntraMsalClient();
                         const accounts = client.getAllAccounts();
@@ -304,6 +356,8 @@ export const AuthProvider = ({ children }) => {
                     } catch (clearErr) {
                         console.warn('[AuthContext] Failed to clear MSAL accounts:', clearErr);
                     }
+                    // Reset singleton so the next page load re-runs handleRedirectPromise
+                    resetEntraMsalClient();
                     setAuthError(
                         'Your sign-in session expired. Click "Retry linking to Ace-it" to sign in again.'
                     );
@@ -313,7 +367,11 @@ export const AuthProvider = ({ children }) => {
                 setUser(null);
                 setProfile(null);
                 clearTimeout(timeoutId);
-                done();
+                // Always release the loading gate on error, even if StrictMode bumped the
+                // generation. Using done() alone can leave the UI stuck on "Completing sign-in…"
+                // forever when the error handler belongs to a superseded effect run.
+                // DEBUG: console.log('[AuthContext] initEntra error, releasing gate');
+                releaseLoadingGate();
             }
         };
 
@@ -533,6 +591,9 @@ export const AuthProvider = ({ children }) => {
             setProfile(null);
             sessionStorage.setItem('aceit_post_logout_home', 'true');
             const client = await ensureEntraMsalClient();
+            // Reset the singleton so the next visit re-initializes MSAL cleanly.
+            // MSAL's logoutRedirect() will clear cached accounts automatically.
+            resetEntraMsalClient();
             return entraLogoutRedirect(client, {
                 postLogoutRedirectUri: `${window.location.origin}/`
             });

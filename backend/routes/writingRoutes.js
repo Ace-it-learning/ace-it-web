@@ -238,6 +238,7 @@ router.post('/grade', async (req, res) => {
                 });
             });
             await Promise.all(masteryPromises);
+            await UserProfileService.saveProgressSnapshot(uid, 'english');
             console.log(`[WritingRoutes] Updated ${masteryPromises.length} writing micro-skills for ${uid}`);
         }
 
@@ -246,8 +247,8 @@ router.post('/grade', async (req, res) => {
         if (uid && uid !== 'guest' && result.predicted_level) {
             const GamificationService = require('../services/GamificationService');
             
-            // New standardized XP: 150 for general writing quest
-            let baseAmount = 150;
+            // New standardized XP: 160 for general writing quest (Level 5)
+            let baseAmount = 160;
             let questBonus = 0;
 
             // Handle Weekly Quest award
@@ -267,11 +268,25 @@ router.post('/grade', async (req, res) => {
                 questName: finalTopic,
                 resultId: resultId
             }) || { earned: 0 };
+
+            // Check Weekly Focus bonus (Mon-Sat quests)
+            const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const hkDay = hkNow.getDay();
+            const daysSinceMonday = hkDay === 0 ? 6 : hkDay - 1;
+            const mondayDate = new Date(hkNow);
+            mondayDate.setDate(hkNow.getDate() - daysSinceMonday);
+            const weekKey = mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0');
+            const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const dayOfWeek = dayNames[hkDay];
+            const weeklyFocusResult = await GamificationService.awardWeeklyFocusBonus(uid, weekKey, dayOfWeek);
+            if (weeklyFocusResult.bonusAwarded) {
+                console.log(`[WritingRoutes] Weekly Focus bonus awarded: +${weeklyFocusResult.earned} XP to ${uid}`);
+            }
             
             res.json({
                 ...result,
                 resultId,
-                xp_awarded: (xpResult.earned || 0) + questBonus,
+                xp_awarded: (xpResult.earned || 0) + questBonus + (weeklyFocusResult.earned || 0),
                 xp_breakdown: xpResult.breakdown
             });
             return;

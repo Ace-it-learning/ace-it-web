@@ -248,6 +248,17 @@ class QuestionBankStore {
     );
     return sorted.slice(0, limit);
   }
+
+  /** Speaking drills by criterion (pillar) */
+  async querySpeakingDrillsByCriterion(criterion, limit = 100) {
+    const c = await this.container();
+    const { resources } = await c.items.query({
+      query: `SELECT TOP ${limit} * FROM c
+              WHERE c.pk = "question_bank" AND c.type = "speaking_drill" AND c.criterion = @criterion`,
+      parameters: [{ name: "@criterion", value: criterion }]
+    }).fetchAll();
+    return resources || [];
+  }
 }
 
 module.exports = new QuestionBankStore();

@@ -148,9 +148,9 @@ const Sidebar = ({ stats: statsProp }) => {
     const tutorRingClass = rarityRingStyles[equippedTutorRarity] || rarityRingStyles.default;
 
     return (
-        <aside className="lg:col-span-3 flex flex-col gap-6">
+        <aside className="lg:col-span-3 flex flex-col gap-6 mt-[1px]">
             {/* --- THE STUDY DUO SECTION --- */}
-            <div className="bg-white/80 dark:bg-white/10 backdrop-blur-md py-5 px-4 sm:px-5 rounded-3xl shadow-xl border border-primary/20 flex flex-col items-center gap-4 relative overflow-hidden">
+            <div className="bg-white dark:bg-[#3d2c20] py-5 px-4 sm:px-5 rounded-3xl shadow-xl border border-primary/20 flex flex-col items-center gap-4 relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-2 opacity-10">
                     <div className="size-24 bg-primary rounded-full blur-3xl"></div>
                 </div>
@@ -211,13 +211,7 @@ const Sidebar = ({ stats: statsProp }) => {
                         </div>
                         <p className="text-[10px] mt-1 font-bold text-orange-600 truncate w-20 mx-auto">{learnerDisplayName}</p>
 
-                        {/* XP Progress Bar (Mini) */}
-                        <div className="mt-1 w-16 mx-auto h-1.5 bg-gray-100 rounded-full overflow-hidden border border-black/5">
-                            <div
-                                className="h-full bg-gradient-to-r from-primary to-orange-400 rounded-full transition-all duration-1000"
-                                style={{ width: `${stats?.progressPercent || 0}%` }}
-                            ></div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -253,7 +247,7 @@ const Sidebar = ({ stats: statsProp }) => {
                                 <div className="size-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                                     <BookOpen className="w-3.5 h-3.5" />
                                 </div>
-                                <p className="text-[10px] font-bold text-emerald-950 uppercase tracking-tight">Vocab Master</p>
+                                <p className="text-[10px] font-bold text-emerald-950 uppercase tracking-tight">{t('sidebar.vocab_master')}</p>
                             </button>
                         </div>
                     )}

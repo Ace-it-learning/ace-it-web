@@ -129,8 +129,9 @@ class GamificationService {
 
             if (stats.last_xp_date !== today) {
                 // Streak Logic
+                const prevStreak = stats.streakDays || 0;
                 if (stats.last_xp_date === yesterday) {
-                    stats.streakDays = (stats.streakDays || 0) + 1;
+                    stats.streakDays = prevStreak + 1;
                     console.log(`[Gamification] Streak Increment: ${uid} now at ${stats.streakDays} days.`);
                 } else {
                     stats.streakDays = 1; // Missing day or first ever
@@ -139,7 +140,7 @@ class GamificationService {
 
                 // Cumulative Active Days Logic (NEW)
                 // Initialize from streak if totalActiveDays is missing
-                stats.totalActiveDays = (stats.totalActiveDays || stats.streakDays || 0) + 1;
+                stats.totalActiveDays = (stats.totalActiveDays || prevStreak || 0) + 1;
 
                 stats.daily_xp = 0; // Reset for new day
                 stats.last_xp_date = today;
@@ -149,7 +150,7 @@ class GamificationService {
                 if (!stats.totalActiveDays) stats.totalActiveDays = 1;
             }
 
-            if (stats.daily_xp >= this.config.anti_cheating.daily_xp_cap) {
+            if (stats.daily_xp >= this.config.anti_cheating.daily_xp_cap && !actionMetadata.alwaysRecordTimeline) {
                 return { success: false, reason: 'daily_cap_reached', earned: 0 };
             }
 
@@ -255,7 +256,8 @@ class GamificationService {
                 }
             };
 
-            if (finalAmount > 0 || actionMetadata.alwaysRecordTimeline) {
+            const shouldSkipTimeline = actionMetadata.skipTimeline === true;
+            if (!shouldSkipTimeline && (finalAmount > 0 || actionMetadata.alwaysRecordTimeline)) {
                 try {
                     await UserProfileService.recordTimelineEvent(uid, result.timelineEntry);
                 } catch (e) {
@@ -402,6 +404,65 @@ class GamificationService {
             case 'speaking': return 'Speaking Fluency Boost';
             case 'maths': return 'Math Milestone';
             default: return 'Earned Activity XP';
+        }
+    }
+
+    /**
+     * Award Weekly Focus Bonus (+1000 XP) when student completes all 6 daily focus quests (Mon-Sat).
+     * Tracks completions by weekKey and day-of-week to prevent double-counting.
+     */
+    async awardWeeklyFocusBonus(uid, weekKey, dayOfWeek) {
+        if (!uid || uid === 'guest' || !weekKey) return { success: false, reason: 'invalid_params' };
+
+        try {
+            const stats = (await CosmosStore.getUserStats(uid)) || {};
+            const weeklyFocus = stats.weekly_focus || {};
+            const currentWeek = weeklyFocus[weekKey] || { days: [], bonusAwarded: false };
+
+            // Already awarded bonus for this week
+            if (currentWeek.bonusAwarded) {
+                return { success: true, earned: 0, alreadyAwarded: true, weekKey };
+            }
+
+            // Record this day's completion (idempotent — no duplicate days)
+            if (!currentWeek.days.includes(dayOfWeek)) {
+                currentWeek.days.push(dayOfWeek);
+            }
+
+            // Check if all 6 days (Mon-Sat) are completed
+            const requiredDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const allCompleted = requiredDays.every(d => currentWeek.days.includes(d));
+
+            if (!allCompleted) {
+                // Save progress but no bonus yet
+                await CosmosStore.upsertUserStats(uid, {
+                    weekly_focus: { ...weeklyFocus, [weekKey]: currentWeek }
+                }, true);
+                return { success: true, earned: 0, progress: `${currentWeek.days.length}/6`, weekKey };
+            }
+
+            // All 6 days completed — award 1000 XP bonus!
+            const BONUS_XP = 1000;
+            const result = await this.awardXP(uid, BONUS_XP, 'weekly_focus_bonus', {
+                title: 'Weekly Focus Complete! +1000 XP',
+                subject: 'bonus',
+                weekKey
+            });
+
+            currentWeek.bonusAwarded = true;
+            await CosmosStore.upsertUserStats(uid, {
+                weekly_focus: { ...weeklyFocus, [weekKey]: currentWeek }
+            }, true);
+
+            return {
+                success: true,
+                earned: result.earned,
+                weekKey,
+                bonusAwarded: true
+            };
+        } catch (e) {
+            console.error('[Gamification] Weekly Focus Bonus Error:', e);
+            return { success: false, error: e.message };
         }
     }
 

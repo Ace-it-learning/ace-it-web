@@ -509,6 +509,8 @@ const SpeakingDeliveryPage = () => {
                                 activeWordIndex={karaoke.activeWordIndex}
                                 resultsMode={!!segmentFeedback}
                                 wordAnalysis={segmentFeedback?.word_analysis || []}
+                                user={user}
+                                sourceTitle={quest?.title || 'Speaking Delivery Quest'}
                             />
                         </div>
                     </div>

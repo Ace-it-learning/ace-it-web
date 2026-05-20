@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { translations } from '../utils/translations';
+import { resolveAppLanguage } from '../utils/resolveAppLanguage';
 
 const LanguageContext = createContext({
     language: 'zh',
@@ -9,22 +10,16 @@ const LanguageContext = createContext({
 });
 
 export const LanguageProvider = ({ children }) => {
-    // Default to 'zh' as per existing header, or check localStorage
-    const [language, setLanguage] = useState(() => {
-        const saved = localStorage.getItem('app-language-v2');
-        console.log("[LanguageContext] Initializing. Saved language:", saved);
-        
-        // Verify that the saved language actually exists in our translations
-        if (saved && translations[saved]) {
-            return saved;
-        }
-        
-        return 'zh'; // Default to Traditional Chinese
-    });
+    const [language, setLanguage] = useState(() => resolveAppLanguage());
 
     useEffect(() => {
         console.log("[LanguageContext] Language changed to:", language);
         localStorage.setItem('app-language-v2', language);
+
+        if (typeof document !== 'undefined') {
+            document.documentElement.lang = language === 'zh' ? 'zh-HK' : 'en-HK';
+            document.documentElement.setAttribute('data-app-language', language);
+        }
     }, [language]);
 
     const t = (path, params = {}) => {

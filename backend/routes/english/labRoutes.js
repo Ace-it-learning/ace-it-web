@@ -6,6 +6,132 @@ const fs = require('fs');
 const path = require('path');
 const UserProfileService = require('../../services/UserProfileService');
 
+const normalizeTaskType = (task) => String(task?.type || '').trim().toUpperCase();
+
+const normalizeIndexList = (arr) => {
+    if (!Array.isArray(arr)) return [];
+    return arr.map((v) => Number(v)).filter((n) => !Number.isNaN(n)).sort((a, b) => a - b);
+};
+
+const normalizeBucketMap = (map, bucketNames) => {
+    const names = bucketNames.length ? bucketNames : Object.keys(map || {});
+    const out = {};
+    names.forEach((name) => {
+        out[name] = normalizeIndexList((map || {})[name]);
+    });
+    return out;
+};
+
+const bucketMapsEqual = (userMap, correctMap, bucketNames) => {
+    const normUser = normalizeBucketMap(userMap, bucketNames);
+    const normCorrect = normalizeBucketMap(correctMap, bucketNames);
+    return bucketNames.every((name) => {
+        const u = normUser[name] || [];
+        const c = normCorrect[name] || [];
+        return u.length === c.length && u.every((v, i) => v === c[i]);
+    });
+};
+
+const resolveOrderingString = (task, raw) => {
+    if (raw === null || raw === undefined) return '';
+    if (Array.isArray(raw)) {
+        if (raw.every((v) => typeof v === 'number' || /^\d+$/.test(String(v)))) {
+            return raw.map((v) => Number(v)).join('-');
+        }
+        const options = Array.isArray(task?.options) ? task.options : [];
+        const indices = raw.map((v) => {
+            const idx = options.findIndex((opt) => String(opt).trim() === String(v).trim());
+            return idx >= 0 ? idx : Number(v);
+        });
+        return indices.filter((n) => !Number.isNaN(n)).join('-');
+    }
+    return String(raw).trim();
+};
+
+const gradeMcqTask = (task, userAnswer) => {
+    const correctAnswer = task.correct_answer ?? task.answer;
+    if (!correctAnswer || typeof correctAnswer === 'object') return null;
+
+    const user = String(userAnswer ?? '').trim().toUpperCase();
+    const correct = String(correctAnswer).trim().toUpperCase();
+    const isCorrect = user === correct;
+
+    return {
+        status: isCorrect ? 'correct' : 'incorrect',
+        correct: isCorrect,
+        feedback: isCorrect
+            ? `The selected answer ${user} matches the correct option.`
+            : `The selected answer ${user || '(none)'} is incorrect. The correct answer is ${correct}.`,
+        hkeaa_level: isCorrect ? 5 : 1
+    };
+};
+
+const gradeOrderingTask = (task, userAnswer) => {
+    const correctRaw = task.answer_order || task.correct_order || task.answer || task.correct_answer;
+    const correctStr = resolveOrderingString(task, correctRaw);
+    const userStr = resolveOrderingString(task, userAnswer);
+    const isCorrect = Boolean(correctStr) && userStr === correctStr;
+
+    return {
+        status: isCorrect ? 'correct' : 'incorrect',
+        correct: isCorrect,
+        feedback: isCorrect
+            ? 'Correct sequence.'
+            : `Incorrect order. The correct sequence is: ${correctStr || 'see model answer'}.`,
+        hkeaa_level: isCorrect ? 5 : 1
+    };
+};
+
+const gradeCategorizationTask = (task, userAnswer) => {
+    const correctMap = task.answer_map || task.bucket_map || task.correct_answer || task.answer;
+    if (!correctMap || typeof correctMap !== 'object' || Array.isArray(correctMap)) {
+        return {
+            status: 'incorrect',
+            correct: false,
+            feedback: 'This categorization task is missing a model answer key.',
+            hkeaa_level: 1
+        };
+    }
+
+    const bucketNames = Array.isArray(task.buckets) && task.buckets.length
+        ? task.buckets
+        : [...new Set([...Object.keys(correctMap), ...Object.keys(userAnswer || {})])];
+
+    const userMap = (userAnswer && typeof userAnswer === 'object' && !Array.isArray(userAnswer))
+        ? userAnswer
+        : {};
+
+    const optionCount = Array.isArray(task.options) ? task.options.length : 0;
+    const assigned = new Set();
+    bucketNames.forEach((b) => (userMap[b] || []).forEach((i) => assigned.add(Number(i))));
+
+    const allAssigned = optionCount === 0 || assigned.size === optionCount;
+    const isCorrect = allAssigned && bucketMapsEqual(userMap, correctMap, bucketNames);
+
+    let feedback;
+    if (isCorrect) {
+        feedback = 'Correct! All items are sorted into the right categories.';
+    } else if (!allAssigned) {
+        feedback = 'Incorrect. Assign every statement to a category before submitting.';
+    } else {
+        const wrongBuckets = bucketNames.filter((b) => {
+            const u = normalizeIndexList(userMap[b]);
+            const c = normalizeIndexList(correctMap[b]);
+            return u.length !== c.length || u.some((v, i) => v !== c[i]);
+        });
+        feedback = wrongBuckets.length
+            ? `Incorrect. Review items in: ${wrongBuckets.join(', ')}.`
+            : 'Incorrect categorization. Compare your sorting with the model answer.';
+    }
+
+    return {
+        status: isCorrect ? 'correct' : 'incorrect',
+        correct: isCorrect,
+        feedback,
+        hkeaa_level: isCorrect ? 5 : 1
+    };
+};
+
 // GET /api/lab/weekly-theme
 router.get('/weekly-theme', async (req, res) => {
     try {
@@ -73,6 +199,7 @@ router.get('/listening/:id', async (req, res) => {
 router.post('/generate', async (req, res) => {
     const { topic, focus, level, uid, isFactory } = req.body;
     console.log(`[Lab] Generating lesson for topic: ${topic}, user: ${uid}, level: ${level}, isFactory: ${isFactory}`);
+    console.log(`[Lab] FULL BODY:`, JSON.stringify(req.body));
 
     try {
         const lesson = await LabService.generateLesson({ topic, focus, level, uid, isFactory });
@@ -107,6 +234,7 @@ router.post('/submit', async (req, res) => {
         // Update Micro-Skill Level & Practiced Skills
         if (req.body.topic && uid !== 'placeholder') {
             await UserProfileService.updateMicroSkillLevel(uid, 'english', req.body.topic, req.body.masteryScore || 0);
+            await UserProfileService.saveProgressSnapshot(uid, 'english');
         }
 
         // Award XP & Quest Completion
@@ -171,12 +299,18 @@ router.post('/submit', async (req, res) => {
                         score: req.body.masteryScore || 0,
                         xpAwarded: rewardAmount,
                         content: req.body.results,
+                        passage: req.body.passage || null,
+                        questions: req.body.questions || null,
                         feedback: req.body.feedback || { summary: "Great practice session." },
                         timestamp: new Date()
                     });
                 } catch (e) { console.warn("Result save failed", e.message); }
             }
 
+            // Skip timeline for Reading quests that already created one via evaluate_batch
+            // to avoid duplicate entries in /achievements
+            const skipTimeline = req.body.skipTimeline === true;
+            
             const xpResult = await GamificationService.awardXP(uid, rewardAmount, sourceType, {
                 duration: req.body.duration || 0,
                 expectedDuration: 600,
@@ -186,14 +320,30 @@ router.post('/submit', async (req, res) => {
                 score: req.body.masteryScore ? `${req.body.masteryScore}%` : undefined,
                 paper: paper,
                 questName: questName,
-                resultId: resultId
+                resultId: resultId,
+                skipTimeline: skipTimeline
             });
+
+            // Check Weekly Focus bonus (Mon-Sat quests)
+            const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const hkDay = hkNow.getDay();
+            const daysSinceMonday = hkDay === 0 ? 6 : hkDay - 1;
+            const mondayDate = new Date(hkNow);
+            mondayDate.setDate(hkNow.getDate() - daysSinceMonday);
+            const weekKey = mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0');
+            const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const dayOfWeek = dayNames[hkDay];
+            const weeklyFocusResult = await GamificationService.awardWeeklyFocusBonus(uid, weekKey, dayOfWeek);
+            if (weeklyFocusResult.bonusAwarded) {
+                console.log(`[LabRoutes] Weekly Focus bonus awarded: +${weeklyFocusResult.earned} XP to ${uid}`);
+            }
 
             return res.json({ 
                 success: true, 
-                earnedTotal: questXP + xpResult.earned, 
+                earnedTotal: questXP + xpResult.earned + (weeklyFocusResult.earned || 0), 
                 questBonus: questXP, 
                 practiceXP: xpResult.earned, 
+                weeklyFocusBonus: weeklyFocusResult.earned || 0,
                 breakdown: xpResult.breakdown,
                 isFactoryQuest: req.body.isFactoryQuest 
             });
@@ -223,17 +373,49 @@ router.post('/evaluate_batch', async (req, res) => {
         }
         tasks = taskList;
 
-        const gradingRequests = tasks.map(t => ({
-            id: t.id,
-            type: t.type,
-            question: t.question,
-            answer: answers[t.id] || '',
-            logic: t.answer_logic,
-            keywords: t.expected_keywords,
-            target_sentence: t.target_sentence
-        }));
+        // --- PROGRAMMATIC GRADING (MCQ, ORDERING, CATEGORIZATION) ---
+        const deterministicResults = {};
+        const openEndedTasks = [];
 
-        const prompt = `You are a strict but fair HKDSE Senior English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab.
+        tasks.forEach((t) => {
+            const taskType = normalizeTaskType(t);
+            const userAnswer = answers[t.id];
+
+            if (taskType === 'MCQ') {
+                const graded = gradeMcqTask(t, userAnswer);
+                if (graded) {
+                    deterministicResults[t.id] = graded;
+                    return;
+                }
+            }
+
+            if (taskType === 'ORDERING') {
+                deterministicResults[t.id] = gradeOrderingTask(t, userAnswer);
+                return;
+            }
+
+            if (taskType === 'CATEGORIZATION') {
+                deterministicResults[t.id] = gradeCategorizationTask(t, userAnswer);
+                return;
+            }
+
+            openEndedTasks.push(t);
+        });
+
+        // --- AI GRADING FOR OPEN-ENDED QUESTIONS ONLY ---
+        let aiResults = {};
+        if (openEndedTasks.length > 0) {
+            const gradingRequests = openEndedTasks.map(t => ({
+                id: t.id,
+                type: t.type,
+                question: t.question,
+                answer: answers[t.id] || '',
+                logic: t.answer_logic,
+                keywords: t.expected_keywords,
+                target_sentence: t.target_sentence
+            }));
+
+            const prompt = `You are a strict but fair HKDSE Senior English Examiner. Grade these student answers for a ${category || 'general'} proficiency lab.
 Tasks to Grade: ${JSON.stringify(gradingRequests)}
 
 ### 📊 HKEAA READING LEVEL DESCRIPTORS (Official):
@@ -244,50 +426,53 @@ Tasks to Grade: ${JSON.stringify(gradingRequests)}
 **Level 1**: Predictable factual info, linear sequence only.
 
 ### 🎯 MARKING RULES:
-1. **SEMANTIC GRADING**: For open-ended questions, grade on SEMANTIC MEANING, not literal keyword matching. Different words expressing the same logical concept = correct.
+1. **SEMANTIC GRADING**: Grade on SEMANTIC MEANING, not literal keyword matching. Different words expressing the same logical concept = correct.
 2. **Full Marks**: Captures ALL required criteria. Award "status": "correct", "correct": true, "hkeaa_level": 5.
 3. **Partial Marks**: Captures main idea but misses nuance. Award "status": "partial", "correct": false, "hkeaa_level": 3.
 4. **Zero Marks**: Fundamentally misunderstands. Award "status": "incorrect", "correct": false, "hkeaa_level": 1.
-5. **MCQ**: "status" is "correct" ONLY if student's letter matches exactly.
-6. **Feedback**: Keep feedback concise (1 sentence). State if correct/partial/incorrect and why.
+5. **Feedback**: Keep feedback concise (1 sentence). State if correct/partial/incorrect and why.
 
 Return a SINGLE JSON OBJECT where keys are task IDs:
 { "id": { "status": "correct"|"partial"|"incorrect", "correct": boolean, "feedback": "...", "hkeaa_level": 1-5 } }`;
 
-        const result = await GenerativeAIService.generateContent(prompt, {
-            model: "ace-it-flash",
-            generationConfig: {
-                responseMimeType: "application/json",
-                maxOutputTokens: 4096
-            }
-        });
-
-        if (result.response && result.response.usageMetadata) {
-            TokenService.logUsage(uid || 'system', 'lab_evaluate_batch', result.response.usageMetadata);
-        }
-
-        let responseText = result.response.text().trim();
-        if (typeof fs !== 'undefined') {
-            fs.appendFileSync('lab_debug.log', `\n--- EVAL PROMPT ---\n${prompt}\n--- EVAL RESPONSE ---\n${responseText}\n`);
-        }
-
-        if (responseText.includes('```json')) {
-            responseText = responseText.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
-        } else if (responseText.startsWith('```')) {
-            responseText = responseText.replace(/```[\w]*\n?/g, '').replace(/```\n?/g, '').trim();
-        }
-
-        let json = JSON.parse(responseText);
-
-        // Robust Flattening
-        if (Array.isArray(json)) {
-            const flat = {};
-            json.forEach(item => {
-                const key = Object.keys(item)[0];
-                if (key) flat[key] = item[key];
+            const result = await GenerativeAIService.generateContent(prompt, {
+                model: "ace-it-flash",
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    maxOutputTokens: 4096
+                }
             });
-            json = flat;
+
+            if (result.response && result.response.usageMetadata) {
+                TokenService.logUsage(uid || 'system', 'lab_evaluate_batch', result.response.usageMetadata);
+            }
+
+            let responseText = result.response.text().trim();
+            if (typeof fs !== 'undefined') {
+                fs.appendFileSync('lab_debug.log', `\n--- EVAL PROMPT ---\n${prompt}\n--- EVAL RESPONSE ---\n${responseText}\n`);
+            }
+
+            if (responseText.includes('```json')) {
+                responseText = responseText.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+            } else if (responseText.startsWith('```')) {
+                responseText = responseText.replace(/```[\w]*\n?/g, '').replace(/```\n?/g, '').trim();
+            }
+
+            aiResults = JSON.parse(responseText);
+
+            // Robust Flattening
+            if (Array.isArray(aiResults)) {
+                const flat = {};
+                aiResults.forEach(item => {
+                    const key = Object.keys(item)[0];
+                    if (key) flat[key] = item[key];
+                });
+                aiResults = flat;
+            }
         }
+
+        // Merge deterministic and AI-graded results
+        const json = { ...deterministicResults, ...aiResults };
 
         // --- PERSIST MICRO-SKILL MASTERY & QUEST RESULT ---
         const resolvedUid = uid || req.body?.uid || req.query?.uid || null;
@@ -332,16 +517,36 @@ Return a SINGLE JSON OBJECT where keys are task IDs:
                     });
                 });
                 await Promise.all(skillUpdatePromises);
+                await UserProfileService.saveProgressSnapshot(resolvedUid, 'english');
                 console.log(`[Lab evaluate_batch] Updated ${skillUpdatePromises.length} micro-skills for ${resolvedUid}`);
 
-                // Save quest result for historical review
+                // Calculate the XP that was awarded via /lab/submit for consistency in review
+                const baseXP = GamificationService.getTieredXP(req.body.level || '4');
+                const xpAmount = Math.round((overallPercentage / 100) * baseXP);
+
+                // Build question data for review page (passage + questions + user answers + correct answers)
+                const questionData = tasks.map(t => ({
+                    id: t.id,
+                    question: t.question,
+                    type: t.type,
+                    options: t.options || null,
+                    target_sentence: t.target_sentence || null,
+                    expected_keywords: t.expected_keywords || null,
+                    answer_logic: t.answer_logic || null,
+                    userAnswer: answers[t.id] || '',
+                    correctAnswer: t.correct_answer || t.answer || null
+                }));
+
+                // Save quest result for historical review (with actual XP amount)
                 const resultId = await UserProfileService.saveQuestResult(resolvedUid, {
                     module: 'Reading',
                     questName: req.body.questName || `Reading Lab: ${category || 'General'}`,
                     score: overallPercentage,
                     hkeaaLevel: overallHkeaaLevel,
-                    xpAwarded: 0,
+                    xpAwarded: xpAmount,
                     content: resultsMap,
+                    passage: req.body.passage || null,
+                    questions: questionData,
                     feedback: {
                         summary: `HKDSE Level ${overallHkeaaLevel} performance (${correctCount}/${resultEntries.length} correct)`,
                         strength_areas: [],
@@ -352,18 +557,30 @@ Return a SINGLE JSON OBJECT where keys are task IDs:
                     timestamp: new Date()
                 });
 
-                // Award scaled XP for batch evaluation
-                const baseXP = GamificationService.getTieredXP(req.body.level || '4');
-                const xpAmount = Math.round((overallPercentage / 100) * baseXP);
-                if (xpAmount > 0) {
-                    await GamificationService.awardXP(resolvedUid, xpAmount, 'reading', {
-                        title: `Reading Lab: ${category || 'Practice'}`,
-                        score: `${overallPercentage}%`,
-                        subject: 'english',
-                        paper: 'Reading',
-                        questName: req.body.questName || `Reading Lab: ${category || 'General'}`,
-                        resultId: resultId
-                    });
+                // Award XP and create timeline event so it appears in /achievements
+                // alwaysRecordTimeline ensures the quest shows in /achievements even if daily XP cap is reached
+                await GamificationService.awardXP(resolvedUid, xpAmount, 'reading_quest', {
+                    title: req.body.questName || `Reading Lab: ${category || 'General'}`,
+                    subject: 'english',
+                    paper: 'Reading',
+                    score: `${overallPercentage}%`,
+                    questName: req.body.questName || `Reading Lab: ${category || 'General'}`,
+                    resultId: resultId,
+                    alwaysRecordTimeline: true
+                });
+
+                // Check Weekly Focus bonus (Mon-Sat quests)
+                const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+                const hkDay = hkNow.getDay();
+                const daysSinceMonday = hkDay === 0 ? 6 : hkDay - 1;
+                const mondayDate = new Date(hkNow);
+                mondayDate.setDate(hkNow.getDate() - daysSinceMonday);
+                const weekKey = mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0');
+                const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+                const dayOfWeek = dayNames[hkDay];
+                const weeklyFocusResult = await GamificationService.awardWeeklyFocusBonus(resolvedUid, weekKey, dayOfWeek);
+                if (weeklyFocusResult.bonusAwarded) {
+                    console.log(`[LabRoutes] Weekly Focus bonus awarded: +${weeklyFocusResult.earned} XP to ${resolvedUid}`);
                 }
             } catch (persistErr) {
                 console.warn(`[Lab evaluate_batch] Persistence failed for ${resolvedUid}:`, persistErr.message);
@@ -468,15 +685,55 @@ router.post('/evaluate_integrated', async (req, res) => {
     try {
         const evaluation = await LabService.evaluateIntegratedSimulation(questId, studentNotes, studentDraft, targetLevel);
         
-        // Award 120 XP for Part B completion
+        // Use tiered XP based on difficulty level
+        const partBBaseXP = GamificationService.getTieredXP(targetLevel || '4');
         let xpResult = null;
+        let resultId = null;
         if (uid && uid !== 'placeholder') {
-            xpResult = await GamificationService.awardXP(uid, 120, 'listening', {
+            xpResult = await GamificationService.awardXP(uid, partBBaseXP, 'listening', {
                 title: `Listening Part B: ${questId}`,
                 subject: 'english',
                 paper: 'Listening',
                 score: `${evaluation.overallScore}%`
             });
+
+            // Persist result for historical review
+            try {
+                resultId = await UserProfileService.saveQuestResult(uid, {
+                    module: 'Listening',
+                    questName: `Listening Part B: ${questId}`,
+                    score: evaluation.overallScore || 0,
+                    xpAwarded: partBBaseXP,
+                    content: { [questId]: { correct: (evaluation.overallScore || 0) >= 50, feedback: evaluation.feedback || 'Completed' } },
+                    feedback: {
+                        summary: evaluation.feedback || `Part B completed with score ${evaluation.overallScore}%`,
+                        strength_areas: [],
+                        weakness_areas: []
+                    },
+                    subject: 'english',
+                    paper: 'Listening',
+                    timestamp: new Date()
+                });
+            } catch (e) {
+                console.warn('[LabRoutes] Failed to save Part B result:', e.message);
+            }
+
+            // Check Weekly Focus bonus (Mon-Sat quests)
+            const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const hkDay = hkNow.getDay();
+            const daysSinceMonday = hkDay === 0 ? 6 : hkDay - 1;
+            const mondayDate = new Date(hkNow);
+            mondayDate.setDate(hkNow.getDate() - daysSinceMonday);
+            const weekKey = mondayDate.getFullYear() + '-' + String(mondayDate.getMonth() + 1).padStart(2, '0') + '-' + String(mondayDate.getDate()).padStart(2, '0');
+            const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const dayOfWeek = dayNames[hkDay];
+            const weeklyFocusResult = await GamificationService.awardWeeklyFocusBonus(uid, weekKey, dayOfWeek);
+            if (weeklyFocusResult.bonusAwarded) {
+                console.log(`[LabRoutes] Weekly Focus bonus awarded: +${weeklyFocusResult.earned} XP to ${uid}`);
+            }
+            if (xpResult && weeklyFocusResult.earned) {
+                xpResult.earned = (xpResult.earned || 0) + weeklyFocusResult.earned;
+            }
         }
         
         // Update Mastery
@@ -486,9 +743,10 @@ router.post('/evaluate_integrated', async (req, res) => {
                 type: 'Quest',
                 difficulty: targetLevel || 4
             });
+            await UserProfileService.saveProgressSnapshot(uid, 'english');
         }
         
-        res.json({ ...evaluation, xpResult });
+        res.json({ ...evaluation, xpResult, resultId });
     } catch (e) {
         console.error("Integrated Evaluation API Error:", e);
         res.status(500).json({ error: e.message || "Evaluation failed" });
@@ -502,15 +760,39 @@ router.post('/evaluate_sprint', async (req, res) => {
     try {
         const evaluation = await LabService.evaluateDataSprint(questId, answers);
         
-        // Award 80 XP for Part A completion
+        // Use tiered XP based on difficulty level
+        const partALevel = req.body.level || '4';
+        const partABaseXP = GamificationService.getTieredXP(partALevel);
         let xpResult = null;
+        let resultId = null;
         if (uid && uid !== 'placeholder') {
-            xpResult = await GamificationService.awardXP(uid, 80, 'listening', {
+            xpResult = await GamificationService.awardXP(uid, partABaseXP, 'listening', {
                 title: `Listening Part A: ${questId}`,
                 subject: 'english',
                 paper: 'Listening',
                 score: `${evaluation.score}%`
             });
+
+            // Persist result for historical review
+            try {
+                resultId = await UserProfileService.saveQuestResult(uid, {
+                    module: 'Listening',
+                    questName: `Listening Part A: ${questId}`,
+                    score: evaluation.score || 0,
+                    xpAwarded: partABaseXP,
+                    content: evaluation.details || { [questId]: { correct: (evaluation.score || 0) >= 50, feedback: 'Completed' } },
+                    feedback: {
+                        summary: `Part A Data Sprint completed with score ${evaluation.score}%`,
+                        strength_areas: [],
+                        weakness_areas: []
+                    },
+                    subject: 'english',
+                    paper: 'Listening',
+                    timestamp: new Date()
+                });
+            } catch (e) {
+                console.warn('[LabRoutes] Failed to save Part A result:', e.message);
+            }
         }
         
         // Update Mastery
@@ -518,11 +800,12 @@ router.post('/evaluate_sprint', async (req, res) => {
             const masteryScore = evaluation.score || 0;
             await UserProfileService.updateMicroSkillLevel(uid, 'english', 'Listening Part A', masteryScore, {
                 type: 'Quest',
-                difficulty: 4 // Part A is generally standard difficulty
+                difficulty: parseInt(partALevel) || 4
             });
+            await UserProfileService.saveProgressSnapshot(uid, 'english');
         }
         
-        res.json({ ...evaluation, xpResult });
+        res.json({ ...evaluation, xpResult, resultId });
     } catch (e) {
         console.error("Sprint Evaluation API Error:", e);
         res.status(500).json({ error: e.message || "Evaluation failed" });

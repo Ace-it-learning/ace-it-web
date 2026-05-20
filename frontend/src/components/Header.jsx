@@ -15,7 +15,7 @@ import { ensureEntraMsalClient } from '../entraMsalSingleton';
 const USE_ENTRA = import.meta.env.VITE_USE_ENTRA === 'true';
 
 const Header = () => {
-    const { user, profile, logout, beginSignInFlow, retryEntraSession } = useAuth();
+    const { user, profile, logout, beginSignInFlow, retryEntraSession, loading, initialized } = useAuth();
     const { isFocusMode, setIsFocusMode } = useAvatar();
     const { t, language, toggleLanguage } = useLanguage();
     const { isPinned, setIsPinned, isVisible, setIsVisible } = useHeader();
@@ -84,15 +84,26 @@ const Header = () => {
     };
 
     const handleEnterClassroom = async () => {
+        // DEBUG: console.log('[Header] handleEnterClassroom user=', !!user, 'loading=', loading, 'initialized=', initialized);
         if (user) {
+            navigate('/dashboard');
+            return;
+        }
+        // If auth state is still settling, go to dashboard optimistically.
+        // ProtectedRoute will bounce unauthenticated users back to /login anyway.
+        if (loading || !initialized) {
+            console.log('[Header] Auth still settling, navigating to dashboard optimistically');
             navigate('/dashboard');
             return;
         }
         if (USE_ENTRA) {
             try {
                 const client = await ensureEntraMsalClient();
-                if (client.getAllAccounts().length > 0) {
+                const accounts = client.getAllAccounts();
+                // DEBUG: console.log('[Header] MSAL accounts=', accounts.map(a => a.username));
+                if (accounts.length > 0) {
                     const r = await retryEntraSession();
+                // DEBUG: console.log('[Header] retryEntraSession result=', r);
                     if (r?.ok) {
                         navigate('/dashboard');
                         return;
@@ -102,6 +113,7 @@ const Header = () => {
                 console.error('[Header] Enter Classroom: could not reuse Microsoft session', e);
             }
         }
+        console.log('[Header] Starting fresh sign-in flow');
         await handleLogin();
     };
 

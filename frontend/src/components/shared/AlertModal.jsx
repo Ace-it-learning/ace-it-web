@@ -47,7 +47,7 @@ const AlertModal = ({
             />
 
             {/* Modal Card */}
-            <div className={`relative bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden animate-in zoom-in-95 duration-200 border-2 ${styles.border}`}>
+            <div className={`relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200 border-2 ${styles.border}`}>
                 <div className="p-6 flex flex-col items-center text-center">
                     {/* Icon Bubble */}
                     {styles.icon && (
@@ -60,9 +60,9 @@ const AlertModal = ({
                         {heading}
                     </h3>
 
-                    <p className="text-gray-600 mb-6 font-medium leading-relaxed">
+                    <div className="text-gray-600 mb-6 font-medium leading-relaxed text-left w-full">
                         {message}
-                    </p>
+                    </div>
 
                     <div className="flex gap-3 w-full">
                         {onRetry && (

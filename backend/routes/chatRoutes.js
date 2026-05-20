@@ -166,89 +166,6 @@ router.post('/chat', requireResolvedUid, async (req, res) => {
         agentId = body.agentId || 'ace';
         const { message, history: clientHistory, audio, audioType, image } = body;
 
-        // HARD OVERRIDE: English tutor image uploads should be treated as writing-content evaluation.
-        // This bypasses generic persona chat flow that can refuse "handwriting analysis".
-        if (image && agentId === 'english') {
-            let ocrText = "";
-            let ocrConfidence = 0;
-            let uncertainTokens = [];
-            try {
-                const ocr = await OcrService.extractDetailedFromBase64(image.data, "eng");
-                ocrText = ocr?.text || "";
-                ocrConfidence = Number(ocr?.confidence || 0);
-                uncertainTokens = Array.isArray(ocr?.uncertainTokens) ? ocr.uncertainTokens : [];
-            } catch (ocrErr) {
-                console.warn("[chatRoutes] English image OCR failed:", ocrErr.message);
-            }
-
-            if (!ocrText || ocrText.trim().length < 20) {
-                return res.json({
-                    role: 'model',
-                    tutorName: "Miss Janie",
-                    text: "我已收到圖片，但 OCR 暫時未能清楚讀取內容。請再上傳一張更清晰（光線充足、正面拍攝、字體完整）的照片，或者直接貼上文字版本，我可以即時按 HKDSE 寫作標準幫你批改。",
-                    diag_info: `image-ocr: insufficient_text`
-                });
-            }
-
-            const clipped = ocrText.slice(0, 3500);
-            const writingPrompt = `You are Miss Janie, a strict but encouraging HKDSE English writing tutor.
-
-Student uploaded handwritten writing. OCR transcript:
-"""
-${clipped}
-"""
-
-Task: Evaluate this writing CONTENT (not handwriting quality) using HKDSE criteria.
-Respond in Traditional Chinese with clear section headings and concise bullet points.
-
-OCR reliability policy (CRITICAL):
-- This draft comes from OCR and may contain character noise (e.g. y/r/n/m confusion, broken spacing).
-- DO NOT assert specific spelling mistakes unless you are highly certain they are true errors from context.
-- If a token might be OCR noise, mark it as "可能是 OCR 誤讀" and do not penalize heavily.
-- Never invent corrections for words that are likely legible in normal handwriting.
-- Prioritize macro quality (Content / Language range / Organisation) over micro typo policing.
-- Confidence gate: if OCR confidence < 88, you MUST avoid listing exact spelling errors unless at least 2+ independent contextual clues support it.
-- Uncertain OCR tokens (treat as noisy, low-trust):
-${uncertainTokens.length ? uncertainTokens.join(", ") : "(none flagged)"}
-
-Required output structure:
-1) 估計等級 (HKDSE) + 1-2句原因
-2) Content（內容）- 2-3 points
-3) Language（語言）- 2-3 points
-4) Organisation（組織）- 2-3 points
-5) Top 3 改善建議（最重要）
-6) Polished sample paragraph (rewrite one paragraph to stronger band)
-
-Important:
-- Do NOT say you cannot analyze handwriting.
-- Use the OCR text as the student's draft and provide best-effort marking.
-- If OCR has minor noise, continue with reasonable interpretation.`;
-
-            const writingResult = await GenerativeAIService.generateContent(writingPrompt, {
-                model: TIER_PRO_MODEL
-            });
-            const writingReply = writingResult?.response?.text?.() || "我已收到你的作文，請再給我一點時間整理詳細評語。";
-            selectedModelName = writingResult.usedModel || selectedModelName;
-
-            if (uid !== 'guest') {
-                UserProfileService.saveChatMessage(uid, agentId, {
-                    role: 'user',
-                    content: (message || "[Image Upload: Writing Draft]").toString()
-                }).catch(err => console.error("[chatRoutes] Failed to save writing upload user message:", err));
-                UserProfileService.saveChatMessage(uid, agentId, {
-                    role: 'model',
-                    content: writingReply
-                }).catch(err => console.error("[chatRoutes] Failed to save writing upload model message:", err));
-            }
-
-            return res.json({
-                text: writingReply,
-                role: 'model',
-                tutorName: "Miss Janie",
-                diag_info: writingResult.usedModel ? `${writingResult.usedPlatform || 'unknown'}: ${writingResult.usedModel} | ocr_conf=${Math.round(ocrConfidence)}` : `writing-ocr-fallback | ocr_conf=${Math.round(ocrConfidence)}`
-            });
-        }
-
         // 1. AI Service Discovery
         try {
             await GenerativeAIService.init();
@@ -553,46 +470,68 @@ Do not ask what the student wants to do next until after giving the plan.`;
             tierFlags.push('lang_skip');
         }
 
+        // Weekly Focus Reminder: If student hasn't completed any quests today, remind them
+        const weeklyFocus = pContext?.weeklyQuest;
+        if (weeklyFocus && !weeklyFocus.todayCompleted && !weeklyFocus.completed) {
+            const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const hkNow = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+            const todayName = dayNames[hkNow.getDay()];
+            const isRestDay = todayName === 'Sunday';
+            if (!isRestDay) {
+                systemPrompt += `\n[WEEKLY_FOCUS_REMINDER] Today is ${todayName}. The student has NOT yet completed any of today's Weekly Focus quests. If the conversation is casual or the student seems idle, proactively encourage them to check their Weekly Focus plan and complete today's quests. Be encouraging, not pushy. Mention the +1000 XP bonus for completing all 6 daily focus quests this week.`;
+                tierFlags.push('weekly_focus');
+            }
+        }
+
         let imageForModel = image || null;
         const activeProvider = GenerativeAIService.getActiveProvider?.() || "unknown";
         // DeepSeek text models do not accept inline image parts; run OCR fallback.
         if (imageForModel && activeProvider === "deepseek") {
             try {
-                const ocr = await OcrService.extractDetailedFromBase64(imageForModel.data, "eng");
-                const ocrText = ocr?.text || "";
+                const ocr = await OcrService.extractDetailedFromBase64(imageForModel.data);
+                const ocrText = (ocr?.text || "").trim();
                 const ocrConfidence = Number(ocr?.confidence || 0);
-                const uncertainTokens = Array.isArray(ocr?.uncertainTokens) ? ocr.uncertainTokens : [];
-                if (ocrText) {
-                    const clipped = ocrText.slice(0, 3000);
-                    systemPrompt += `\n[HANDWRITING_OCR] OCR transcript from uploaded image (treat as student's writing content):\n${clipped}`;
-                    systemPrompt += `\n[OCR_CONFIDENCE] ${Math.round(ocrConfidence)} / 100`;
-                    if (uncertainTokens.length > 0) {
-                        systemPrompt += `\n[OCR_UNCERTAIN_TOKENS] ${uncertainTokens.join(", ")}`;
-                    }
-                    if (agentId === 'english') {
-                        systemPrompt += `\n[WRITING_ANALYSIS_MODE] The user uploaded handwritten English writing. You MUST analyze the WRITING CONTENT using HKDSE criteria (Content, Language, Organisation). Do NOT refuse by saying you cannot analyze handwriting. Use the OCR transcript as the writing draft.`;
-                        effectiveMessage = `Please grade and comment on my writing using HKDSE criteria (Content, Language, Organisation). Provide:
-1) estimated band/level
-2) key strengths
-3) top 3 improvements
-4) a polished sample paragraph
 
-[OCR_TRANSCRIPT]
-${clipped}`;
-                    } else {
-                        effectiveMessage = `${effectiveMessage || "Please analyze my uploaded handwriting image and give comments."}\n\n[OCR_TRANSCRIPT]\n${clipped}`;
-                    }
-                    tierFlags.push('ocr');
-                } else {
-                    effectiveMessage = `${effectiveMessage || "Please analyze my uploaded handwriting image and give comments."}\n\n[OCR_TRANSCRIPT]\n(No clear text detected from image. Please still provide best-effort comments and ask for a clearer image only if absolutely needed.)`;
-                    tierFlags.push('ocr_empty');
+                if (ocr.engine === "azure_unconfigured") {
+                    return res.json({
+                        role: 'model',
+                        tutorName: persona?.name || "Tutor",
+                        text: "Image reading is temporarily unavailable on the server. Please try again later or paste your text instead.",
+                        diag_info: "image-ocr: azure_unconfigured"
+                    });
                 }
+
+                if (!ocrText || ocrText.length < 8) {
+                    const noTextReply = agentId === 'english'
+                        ? "我已收到圖片，但暫時讀不清楚內容。請上傳更清晰的照片（光線充足、正面、字體清楚），或直接輸入你想問的問題。"
+                        : "I received your image but could not read the text clearly. Please upload a clearer photo or type your question.";
+                    return res.json({
+                        role: 'model',
+                        tutorName: persona?.name || "Tutor",
+                        text: noTextReply,
+                        diag_info: `image-ocr: insufficient_text | engine=${ocr.engine || "none"}`
+                    });
+                }
+
+                const clipped = ocrText.slice(0, 3500);
+                const studentQuestion = (effectiveMessage || message || "").trim()
+                    || "Please help me with what is shown in this image.";
+
+                systemPrompt += `\n[IMAGE_OCR] Azure Document Intelligence transcript from the student's attached image (essay, notes, worksheet, or other study material — do not assume type unless they say so):\n${clipped}`;
+                systemPrompt += `\n[OCR_CONFIDENCE] ${Math.round(ocrConfidence)} / 100`;
+                systemPrompt += `\n[IMAGE_TUTOR_POLICY] Answer the student's specific question about this image. Only give full HKDSE essay grading if they explicitly ask to grade or mark writing. Otherwise explain, discuss, check answers, or teach as appropriate. Do NOT refuse because the image was uploaded. OCR may have minor errors — interpret charitably.`;
+
+                effectiveMessage = `${studentQuestion}\n\n[OCR_TRANSCRIPT]\n${clipped}`;
+                tierFlags.push('ocr');
             } catch (ocrErr) {
-                console.warn("[chatRoutes] OCR fallback failed:", ocrErr.message);
-                effectiveMessage = `${effectiveMessage || "Please analyze my uploaded handwriting image and give comments."}\n\n[OCR_TRANSCRIPT]\n(OCR processing failed. Provide best-effort writing guidance based on the user's request.)`;
-                tierFlags.push('ocr_failed');
+                console.warn("[chatRoutes] OCR failed:", ocrErr.message);
+                return res.json({
+                    role: 'model',
+                    tutorName: persona?.name || "Tutor",
+                    text: "Sorry, I could not read that image right now. Please try again or paste the text.",
+                    diag_info: `image-ocr: error`
+                });
             }
-            // Prevent unsupported inline image payload from being sent to DeepSeek.
             imageForModel = null;
         }
 

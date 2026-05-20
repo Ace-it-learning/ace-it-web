@@ -21,10 +21,11 @@ const isEmailVerificationSatisfied = (authUser) => {
 
 const profileIndicatesOnboarded = (profile) => {
     if (!profile || typeof profile !== 'object') return false;
-    if (profile.is_new_student === false) return true;
-    if (profile.status === 'active') return true;
+    // Explicit flags only — do not treat default nickname "Student" as completed onboarding
+    if (profile.is_new_student === true) return false;
     if (profile.onboarding_completed === true) return true;
-    if (profile.school || profile.nickname) return true;
+    if (profile.is_new_student === false) return true;
+    if (profile.school) return true;
     return false;
 };
 
@@ -90,13 +91,6 @@ const ProtectedRoute = ({ children }) => {
 
                         // If user is explicitly flagged as NEW, they are NOT onboarded.
                         if (data.is_new_student === true) {
-                            if (profileIndicatesOnboarded(profile)) {
-                                console.log("ProtectedRoute: stats says NEW but profile shows returning — allow dashboard.");
-                                setIsOnboarded(true);
-                                onboardedRef.current = true;
-                                setCheckedUid(user.uid);
-                                return;
-                            }
                             console.log("ProtectedRoute: User is flagged as NEW, setting isOnboarded to false");
                             localStorage.removeItem('justOnboarded'); // Clear stale flag
                             setIsOnboarded(false);
@@ -137,9 +131,9 @@ const ProtectedRoute = ({ children }) => {
                             setCheckedUid(user.uid);
                         }
                     } else {
-                        console.error(`ProtectedRoute: API error ${res.status}. Allowing access as fallback.`);
-                        setIsOnboarded(true);
-                        onboardedRef.current = true;
+                        console.error(`ProtectedRoute: API error ${res.status}. Sending to onboarding as safe default.`);
+                        setIsOnboarded(false);
+                        onboardedRef.current = false;
                         setCheckedUid(user.uid);
                     }
                 } catch (err) {
@@ -147,9 +141,9 @@ const ProtectedRoute = ({ children }) => {
                     if (retries > 0) {
                         setTimeout(() => checkOnboarding(retries - 1), 1000);
                     } else {
-                        console.warn("ProtectedRoute: Max retries reached. Allowing access as emergency fallback.");
-                        setIsOnboarded(true);
-                        onboardedRef.current = true;
+                        console.warn("ProtectedRoute: Max retries reached. Sending to onboarding as safe default.");
+                        setIsOnboarded(false);
+                        onboardedRef.current = false;
                         setCheckedUid(user.uid);
                     }
                 }
@@ -249,12 +243,6 @@ const ProtectedRoute = ({ children }) => {
     // Redirect to onboarding if profile not found
     // IMPORTANT: Only check this if we have actually verified the CURRENT user
     if (user && checkedUid === user.uid && isOnboarded === false) {
-        if (isLocalDevHost() && import.meta.env.DEV) {
-            console.warn(
-                'ProtectedRoute: DEV localhost — allowing dashboard (complete onboarding from Account when ready).'
-            );
-            return children;
-        }
         console.log("ProtectedRoute: User not onboarded, REDIRECTING to /onboarding");
         return <Navigate to="/onboarding" />;
     }

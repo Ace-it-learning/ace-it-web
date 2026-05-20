@@ -478,6 +478,7 @@ router.post('/submit-exam', async (req, res) => {
             const updatedMicroSkills = { ...(currentSkillMap.microSkills || {}), ...newSkills };
             const newWeaknesses = MicroSkillAssessor.prioritizeWeaknesses(updatedMicroSkills);
             await UserProfileService.saveSkillMap(uid, 'english', { microSkills: updatedMicroSkills, weaknessPriority: newWeaknesses, lastUpdated: new Date().toISOString() });
+            await UserProfileService.saveProgressSnapshot(uid, 'english');
         } catch (mErr) { console.error("Mastery Update Failed:", mErr); }
 
         res.json({ success: true, result: { totalScore, totalMaxScore, percentage: resultData.percentage, partScores, feedback, xpEarned } });

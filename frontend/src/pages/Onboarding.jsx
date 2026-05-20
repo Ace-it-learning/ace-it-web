@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { User, School, GraduationCap, ArrowRight, Check, ChevronsUpDown, Search, Target, Plus, PlusCircle, Trash2 } from 'lucide-react';
+import CommunicationPreferences from '../components/account/CommunicationPreferences';
 
 const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -152,7 +153,8 @@ const Onboarding = () => {
         targetGradeEng: '',
         targetGradeChi: '',
         targetGradeMath: '',
-        electives: [] // Multi-elective support
+        electives: [], // Multi-elective support
+        marketing_opt_in: null
     });
 
     const [schools, setSchools] = useState({ HK: [], KLN: [], NT: [], Other: [] });
@@ -211,22 +213,37 @@ const Onboarding = () => {
             return;
         }
 
+        if (formData.marketing_opt_in !== true && formData.marketing_opt_in !== false) {
+            setSubmitError(t('communication.choice_required'));
+            return;
+        }
+
         setIsSubmitting(true);
         setSubmitError('');
 
         try {
             // Save to backend
             const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const { marketing_opt_in, ...profileFields } = formData;
+            const onboardingBody = {
+                uid: user.uid,
+                email: user.email,
+                ...profileFields,
+                is_new_student: false,
+                onboarding_completed: true,
+                photoURL:
+                    formData.gender === 'Male'
+                        ? '/avatars/Student/Marcus.jpeg'
+                        : user.photoURL || '/avatars/Student/Natalie.jpeg'
+            };
+            if (marketing_opt_in === true || marketing_opt_in === false) {
+                onboardingBody.marketing_opt_in = marketing_opt_in;
+            }
+
             const res = await fetch(`${API_URL}/api/onboarding`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    uid: user.uid,
-                    email: user.email,
-                    ...formData,
-                    is_new_student: false, // Ensure flag is cleared
-                    photoURL: formData.gender === 'Male' ? '/avatars/Student/Marcus.jpeg' : (user.photoURL || '/avatars/Student/Natalie.jpeg')
-                })
+                body: JSON.stringify(onboardingBody)
             });
 
             if (!res.ok) {
@@ -489,6 +506,19 @@ const Onboarding = () => {
 
                     {/* Dream Subjects are managed via the Dream Subjects page after onboarding */}
 
+                    <CommunicationPreferences
+                        compact
+                        optIn={formData.marketing_opt_in}
+                        xpAlreadyAwarded={false}
+                        onOptIn={() => {
+                            setFormData({ ...formData, marketing_opt_in: true });
+                            setSubmitError('');
+                        }}
+                        onOptOut={() => {
+                            setFormData({ ...formData, marketing_opt_in: false });
+                            setSubmitError('');
+                        }}
+                    />
 
                     {submitError && (
                         <div className="p-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-xl text-sm font-medium border border-red-100 dark:border-red-900/50">

@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "The Slashie Economy",
-    "topic": "Youth pursuing multiple careers; freedom vs. stability in HK.",
-    "difficulty": "Level 5** Authentic (High Stamina / 2026 Edition)",
-    "total_marks_part_a": 55,
+    "title": "The Slashie Economy 2026",
+    "topic": "Youth pursuing multiple careers; freedom vs. stability in HK",
+    "difficulty": "Level 5** Authentic (High Stamina)",
+    "total_marks_part_a": 50,
     "total_marks_part_b": 50
   },
   "Part_A": {
     "tasks": [
       {
         "id": "Task_1",
-        "instructions": "You are at the reception desk for the 'SlashFest 2026' Youth Career Summit. Complete the registration and sponsorship form. You now have two minutes to study the task. (120-second pause)",
+        "instructions": "You are at the reception desk for the 'SlashFest 2026' Youth Career Summit. Complete the registration form below.",
         "questions": [
           {
             "id": "t1_q1",
@@ -83,24 +83,12 @@
             "type": "Fill_in_Blanks",
             "label": "Workshop attending:",
             "answer": "Monetizing Passion"
-          },
-          {
-            "id": "t1_q13",
-            "type": "Fill_in_Blanks",
-            "label": "Technical Equipment Needed:",
-            "answer": "Tablet charging station"
-          },
-          {
-            "id": "t1_q14",
-            "type": "Fill_in_Blanks",
-            "label": "Early Bird Discount Applied:",
-            "answer": "Yes"
           }
         ]
       },
       {
         "id": "Task_2",
-        "instructions": "Listen to a keynote by Dr. Elena Vong on 'The Rise of the Slashie'. Complete the notes. You now have two minutes to study the task. (120-second pause)",
+        "instructions": "Listen to a keynote by Dr. Elena Vong on 'The Rise of the Slashie'. Complete the notes and answer the questions.",
         "questions": [
           {
             "id": "t2_q1",
@@ -152,8 +140,13 @@
           },
           {
             "id": "t2_q9",
-            "type": "Fill_in_Blanks",
-            "label": "Target Age Demographic for the fund:",
+            "type": "Multiple_Choice",
+            "question": "What is the target age demographic for the fund?",
+            "options": [
+              "18 to 35",
+              "21 to 40",
+              "25 to 45"
+            ],
             "answer": "18 to 35"
           },
           {
@@ -173,53 +166,44 @@
             "type": "Fill_in_Blanks",
             "label": "Proposed Payment Cycle (Days):",
             "answer": "30"
-          },
-          {
-            "id": "t2_q13",
-            "type": "Fill_in_Blanks",
-            "label": "Late Payment Fine ($):",
-            "answer": "10,000"
-          },
-          {
-            "id": "t2_q14",
-            "type": "Fill_in_Blanks",
-            "label": "Slashie Burnout Rate (%):",
-            "answer": "22%"
-          },
-          {
-            "id": "t2_q15",
-            "type": "Fill_in_Blanks",
-            "label": "Key Speaker's Twitter/X Handle:",
-            "answer": "@ElenaV_Wellness"
-          },
-          {
-            "id": "t2_q16",
-            "type": "Fill_in_Blanks",
-            "label": "Next Summit Location:",
-            "answer": "Singapore"
           }
         ]
       },
       {
         "id": "Task_3",
-        "instructions": "Listen to the panel discussion on 'Slashie Sustainability'. Complete the table. You now have two minutes to study the task. (120-second pause)",
+        "instructions": "Three experts are debating 'Slashie Sustainability'. Tick the correct boxes to indicate their opinions.",
         "questions": [
           {
             "id": "t3_q1",
-            "type": "Fill_in_Blanks",
-            "label": "Cecilia's dual roles:",
+            "type": "Multiple_Choice",
+            "question": "Cecilia's dual roles are:",
+            "options": [
+              "Graphic Designer and Yoga Instructor",
+              "Writer and Photographer",
+              "Chef and Nutritionist"
+            ],
             "answer": "Graphic Designer and Yoga Instructor"
           },
           {
             "id": "t3_q2",
-            "type": "Fill_in_Blanks",
-            "label": "MPF Contribution Rate (%):",
+            "type": "Multiple_Choice",
+            "question": "What is the MPF Contribution Rate (%)?",
+            "options": [
+              "3%",
+              "5%",
+              "7%"
+            ],
             "answer": "5%"
           },
           {
             "id": "t3_q3",
-            "type": "Fill_in_Blanks",
-            "label": "Legal Status for Slashies:",
+            "type": "Multiple_Choice",
+            "question": "What is the legal status for Slashies?",
+            "options": [
+              "Self-Employed Person (SEP)",
+              "Full-Time Employee",
+              "Part-Time Contractor"
+            ],
             "answer": "Self-Employed Person (SEP)"
           },
           {
@@ -280,7 +264,7 @@
       },
       {
         "id": "Task_4",
-        "instructions": "Listen to the forum on 'The Freelance Fairness Act'. Complete the matrix. You now have two minutes to study the task. (120-second pause)",
+        "instructions": "Stakeholders are discussing the 'Freelance Fairness Act'. Complete the matrix with their specific views.",
         "questions": [
           {
             "id": "t4_q1",
@@ -353,14 +337,174 @@
             "type": "Fill_in_Blanks",
             "label": "Feedback Email:",
             "answer": "fairness@labor.gov.hk"
-          },
-          {
-            "id": "t4_q13",
-            "type": "Fill_in_Blanks",
-            "label": "Event Chairperson:",
-            "answer": "Ms. Beatrice Lam"
           }
         ]
+      }
+    ],
+    "script": [
+      {
+        "speaker": "Announcer",
+        "text": "Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "The entire broadcast will last approximately one hour. During the examination, you will hear several recordings. You will have time to read the instructions and the questions. You will also have time to check your work."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Part A. Task 1. You are at the reception desk for the SlashFest 2026 Youth Career Summit. You will hear a conversation between a staff member and a delegate. Complete the registration form below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Good morning! Welcome to SlashFest 2026. We are expecting a huge crowd today—nearly one thousand young professionals. How can I help you with your registration today?"
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Hello! I'm here to pick up my badge. My name is Marcus Chui. I'm a Graphic Designer and Coffee Roaster. I believe I'm registered under the Young Professional category."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Let me see... Marcus Chui... Ah, yes, here it is. Your mobile is 9122 3847 and your email is m.chui@creativelab.hk. Your Badge ID is SF-2026-MC."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "That's correct. And my sponsorship tier?"
+      },
+      {
+        "speaker": "Staff",
+        "text": "You're on the Silver tier. Your sponsorship amount is $5,500. Your booth location is B12. I also see you're affiliated with the Freelance Union HK."
+      },
+      {
+        "speaker": "Marcus",
+        "text": "Yes, Freelance Union HK. And I'm attending the 'Monetizing Passion' workshop this afternoon."
+      },
+      {
+        "speaker": "Staff",
+        "text": "Monetizing Passion. Got it. You're all set, Marcus. Enjoy SlashFest!"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 2. You will hear a keynote presentation by Dr. Elena Vong on 'The Rise of the Slashie'. Listen to the presentation and complete the notes below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Dr Vong",
+        "text": "Good morning, everyone. I'm Dr. Elena Vong. Our recent Youth Career Index shows a staggering 65% adoption rate for the 'Slashie' lifestyle among Gen Z in Hong Kong. We call this the Portfolio Career—a deliberate blending of diverse professional roles."
+      },
+      {
+        "speaker": "Dr Vong",
+        "text": "Traditional job security has seen a 40% loss in the last five years, but we see an 85% increase in life satisfaction among successful slashies. This is 'Work-Life Integration'—blending career goals with personal identity. However, high property prices remain the main barrier. Currently, 55% of slashies work remotely."
+      },
+      {
+        "speaker": "Dr Vong",
+        "text": "The government has introduced a Digital Nomad Visa. The target age demographic for the new startup fund is 18 to 35. We are also proposing the Freelance Fairness Act, specifically Article 18C, which mandates a 30-day payment cycle. Thank you."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 3. You will hear a panel of three experts discussing 'Slashie Sustainability'. Listen to the discussion and tick the correct boxes in the table. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Welcome to our panel. Joining us are Cecilia, Mr. Cheng, and Sam. Cecilia, tell us about your dual roles."
+      },
+      {
+        "speaker": "Cecilia",
+        "text": "I'm a Graphic Designer and Yoga Instructor. The biggest hurdle is the Self-Employed Person or SEP status. The mandatory MPF contribution rate is 5% of net income. Health insurance premiums for independents have risen 12% this year, which is why I use GigGuard HK."
+      },
+      {
+        "speaker": "Mr Cheng",
+        "text": "As an employer, I love hiring slashies. It gives us access to diverse skillsets without full-time overhead."
+      },
+      {
+        "speaker": "Sam",
+        "text": "My concern is tax complexity. Young slashies face complex reporting for multiple income streams. The good news is the Slashie Startup Grant offers 1.2 million dollars. The deadline is July 31."
+      },
+      {
+        "speaker": "Host",
+        "text": "What are the qualifying criteria?"
+      },
+      {
+        "speaker": "Sam",
+        "text": "You need a minimum of 15 hours per week and max income for tax exemption is $120,000."
+      },
+      {
+        "speaker": "Host",
+        "text": "Thank you to our moderator, Dr. Felix Ho."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Task 4. You will hear three stakeholders discussing the 'Freelance Fairness Act'. Listen to their conversation and complete the matrix below. You now have two minutes to study the task. (120-second pause)"
+      },
+      {
+        "speaker": "Host",
+        "text": "Today we're joined by a Union Representative, a Platform CEO, and a Freelancer. Union Rep, what's your priority?"
+      },
+      {
+        "speaker": "Union Rep",
+        "text": "Enforceable payment timelines. Currently, 38% of invoices in Hong Kong's gig economy are paid late. Article 18C will fix this."
+      },
+      {
+        "speaker": "CEO",
+        "text": "I support fairness, but my concern is liability for individual worker safety. And worker misclassification is a grey area."
+      },
+      {
+        "speaker": "Freelancer",
+        "text": "We need protection against ghosting clients. The Labor Bureau Youth Division should oversee this. Stakeholder support is at 92%."
+      },
+      {
+        "speaker": "Host",
+        "text": "What about the grant?"
+      },
+      {
+        "speaker": "Union Rep",
+        "text": "The Slashie Startup Grant offers 1.2 million dollars. The public hearing is on September 14. Feedback can be sent to fairness@labor.gov.hk."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(60-second pause to tidy up answers)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of Part A. You now have five minutes to study the Part B Question-Answer Book and the Data File. (300-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Integrated Skills Recording. You will now hear a briefing from the CEO of Creative Lab, Janice Wong, to the Project Manager regarding the upcoming tasks. Listen carefully and take notes as you will need this information to complete the tasks in Part B."
+      },
+      {
+        "speaker": "Janice",
+        "text": "Good morning. I'm glad we're finally getting started on these tasks. We have a lot to do before the Q4 rollout. When you write that letter to the Platform CEO for Task 8, please don't just repeat the brochure points. Emphasise that we aren't just creating 'gig' jobs for delivery riders. Mention that we are specifically looking to hire people with 'project management skills' and 'client relations experience' to bridge the gap between freelance platforms and corporate clients. That's a key detail not in the Data File yet."
+      },
+      {
+        "speaker": "Janice",
+        "text": "Moving on to the internal memo for Task 9—don't just list the budget gap. Propose a specific 'Freelance Fairness Week' in October to fix the publicity issue. We need to get local business podcasts involved to build trust. And for the public social media post in Task 10, make sure to use a friendly, non-corporate tone. Use the phrase 'Passion with Paycheck' and make it sound like a friend talking to a friend."
+      },
+      {
+        "speaker": "Janice",
+        "text": "One last thing—I just heard from the Labor Bureau. They are very insistent that we describe our payment protection system as 'Bank Grade'. That's the specific term they want us to use in our responses to citizens like Mr. David Lee. 'Bank Grade'. Got it? Good. I expect those drafts on my desk by the end of the day. Good luck."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "That is the end of the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. Stop writing when you hear the signal at the end of the examination."
+      },
+      {
+        "speaker": "Announcer",
+        "text": "(4200-second pause)"
+      },
+      {
+        "speaker": "Announcer",
+        "text": "Stop writing now. The examination is over. Please stay in your seats until your scripts have been collected."
       }
     ]
   },
@@ -368,76 +512,64 @@
     "data_file": [
       {
         "id": "doc1",
-        "type": "email",
-        "title": "Email from CEO: Creative Lab (Janice Wong)",
-        "content": "Hi Team, we need to finalize the 'Slashie Economy' study. Task 5: Design the 'Gig Hub' brochure. Task 6: Draft the open letter to the Labor Bureau. Task 7: Social media push for Article 18C. Section B2: We need a formal proposal for the 'Slashie Startup Grant' rollout (Task 8). Note: mention the $1.2M fund."
+        "type": "minutes",
+        "title": "Minutes of the SlashFest 2026 Steering Committee Meeting",
+        "content": "Date: June 10, 2026\nLocation: Conference Room B, Gov HQ\n\nAttendees: Mr. K.W. Ho (Labor Bureau), Ms. Sarah Jenkins (Public Relations), Dr. Simon Lee (Economics Consultant).\n\nMain Points:\n1. Mr. Ho noted that public trust in the gig economy is currently low (approx 32% approval). We need to address freelancers' fear of 'income instability'.\n2. Ms. Jenkins suggested a 'Passion with Paycheck' campaign. The goal is to highlight how the Slashie economy creates new categories of jobs (e.g., Platform Coordinators, Portfolio Career Coaches).\n3. Action Item: Draft a persuasive letter to the Platform CEOs to calm nerves before the Q4 2026 rollout.\n4. Note: Avoid technical jargon. Use the 'Future of Work' slogan."
       },
       {
         "id": "doc2",
-        "type": "newspaper",
-        "title": "The HK Herald: The End of the 9-to-5?",
-        "content": "Youth are choosing 'Slashie' careers over stability. 65% of Gen Z have 2+ income streams. However, banks still favor traditional salary slips for mortgages."
+        "type": "brochure",
+        "title": "SlashFest 2026: Official Program Highlights",
+        "content": "A Vision for the Future:\n- Total Investment: $800 Million HKD.\n- Key Pillar: Freelance Fairness Act (Article 18C already drafted).\n- Upcoming: Labor Bureau Youth Division oversight office to open by November.\n\nWhy Slashies?\nFlexibility is not just about hours; it's about designing a career that fits your life. Our pilot co-working hubs have already supported 2,000 slashies in the first quarter."
       },
       {
         "id": "doc3",
-        "type": "fact_sheet",
-        "title": "Fact Sheet: The Portfolio Career",
-        "content": "A 'Portfolio Career' improves skills by 45%. 85% of Slashies report higher mental wellness. 'Digital Nomad' visas are increasing by 30% annually."
+        "type": "email",
+        "title": "Email from a Concerned Citizen (Mr. David Lee)",
+        "content": "To: Labor Bureau Feedback\nSubject: Payment Concerns regarding Freelance Platforms\n\nI am a freelance web developer and I am extremely uncomfortable with the 60-day payment delays on some platforms. Who is protecting our income? Is there enforcement? I heard rumours that GigGuard HK is rejecting claims. Please clarify immediately or I will organise a freelancer strike."
       },
       {
         "id": "doc4",
-        "type": "memo",
-        "title": "Incentive Policy: Skills-Future Tax Credit",
-        "content": "Slashies with a valid SEP status qualify for a $20,000 tax credit for upskilling. Must provide 15 hours/week of work evidence."
+        "type": "newspaper",
+        "title": "Editorial: The Gig Economy and the $1.2M Question",
+        "content": "South China Morning Post - June 15, 2026\n\nWhile the government brags about 'Slashie' status, thousands of young freelancers are being left behind. Dr. Vong's proposal for a $1.2M grant is a good start, but it won't fix the 38% unpaid invoice rate which is a barrier for many. We need a 'Freelance Safety Net' that includes both funding and legal protection."
       },
       {
         "id": "doc5",
         "type": "handwritten_note",
-        "title": "Director's Desk Notes (Handwritten)",
         "visual_style": "scrawled_handwriting",
-        "content": "- Slashie Startup Grant is actually $1.2M total (Audio point).\n- Target: 10,000 youth applicants by 2027.\n- Mention 'Article 18C' payment protections.\n- Need union affiliation for govt contracts."
+        "title": "Urgent Note from CEO Janice Wong (Post-it Note)",
+        "content": "To: Project Manager\n\nJust saw David Lee's email (Doc 3). We MUST reply to him. Be firm but polite. Explain that payment data is ENCRYPTED and never shared. Also, mention the Labor Bureau Youth Division is overseeing this. We can't afford a strike right now. Also, for the internal memo (Task 9), make sure you mention we are hiring 120 'Platform Liaisons' to show we are creating jobs!"
       },
       {
         "id": "doc6",
         "type": "table",
-        "title": "Sustainability Metrics: Slashie vs Traditional",
-        "content": "Metric | Slashie | Traditional Employee\nAvg Happiness Score | 7.8/10 | 5.2/10\nIncome Stability | Low | High\nSkill Variety | High | Low"
+        "title": "Table 1: SlashFest Budget vs. Actual Spending (Q1 2026)",
+        "content": "Category | Budgeted | Actual | Status\n--------------------------------------------\nHardware | $200M | $220M | Over-budget\nConsultancy | $80M | $70M | Under-budget\nPublicity | $60M | $25M | Critical Gap\nStaffing | $150M | $140M | On track\n\nNote: The 'Publicity' gap is why the public is currently so skeptical. We need to increase podcast presence immediately."
       },
       {
         "id": "doc7",
-        "type": "archive",
-        "title": "RED HERRING: Manufacturing Industrial Report 2018 (ARCHIVE)",
-        "content": "NOTE: ARCHIVED. \nFocus: Lifetime Employment in Textiles.\nSlogan: 'Loyalty First, Freedom Later'.\nMetric: 30-year average tenure at single firm. (Irrelevant to 2026 Slashie Economy)."
+        "type": "social_media_post",
+        "title": "Viral Post from 'HK Freelancers United'",
+        "content": "Shared 4,200 times:\n'THEY ARE EXPLOITING US! The new Freelance Fairness Act is too weak. They talk about \"flexibility\" but we know it means \"precarity.\" Stand with us on July 1st! #NoToGhostClients #ProtectOurPay'"
       },
       {
         "id": "doc8",
-        "type": "survey",
-        "title": "Public Survey: Freelance Fairness Act",
-        "content": "92% support Article 18C. 40% cite late payments as the #1 stressor. High demand for a 30-day payment cycle."
+        "type": "memo",
+        "title": "Internal Memo: Staffing Update",
+        "content": "Internal Use Only\nSubject: New Role Creation - Platform Liaisons\n\nTo counter the negative PR, we are announcing the creation of 120 'Platform Liaison' roles. These staff will be deployed to co-working hubs to teach 'Digital Client Management'. This proves our Slashie policy creates jobs for humans too!"
       },
       {
         "id": "doc9",
-        "type": "brochure_draft",
-        "title": "Brochure Draft: The Gig Hub",
-        "content": "A dedicated co-working space for Slashies. Features: Tablet charging stations, high-speed Wi-Fi, and mentoring sessions."
+        "type": "news_clip",
+        "title": "Tech News Daily: GigGuard HK Partnership",
+        "content": "GigGuard HK has officially signed a deal to provide discounted health and equipment insurance to all freelancers registered under the Freelance Union HK. This move aims to protect the most vulnerable from the recent surge in unpaid invoice disputes."
       },
       {
         "id": "doc10",
-        "type": "memo",
-        "title": "Internal Memo: Insurance for SEPs",
-        "content": "New partnership with GigGuard HK: Group health insurance for freelancers starting at $500/month."
-      },
-      {
-        "id": "doc11",
-        "type": "memo",
-        "title": "Office Stationery Inventory",
-        "content": "Pens: 500. Staples: 2000. (Noise)."
-      },
-      {
-        "id": "doc12",
-        "type": "card_design",
-        "title": "Coffee Shop Loyalty Card (Design)",
-        "content": "Buy 10 get 1 free. (Noise)."
+        "type": "policy_draft",
+        "title": "Draft Section: Payment Protection Laws",
+        "content": "Clause 5.2: All freelance platform payments must be processed within 30 days. Late fees under Article 18C apply after day 31. The Labor Bureau Youth Division will maintain a public blacklist of repeat offenders."
       }
     ],
     "Part_B1": {
@@ -445,48 +577,44 @@
         {
           "id": "Task_5",
           "type": "Formal Email",
-          "instructions": "Write an email to a potential co-working space partner. Explain the 40% subsidy and the goals of the SSS. Refer to Doc 2 and Doc 6.",
-          "wordCount": 300,
+          "instructions": "You are a Project Assistant. Write an email to Mr. David Lee (Doc 3) to address his concerns about payment delays. Use information from the brochure (Doc 2) and the news clip (Doc 9). Keep the tone polite and helpful.",
+          "wordCount": 150,
           "grading_rubric": {
             "content_points": [
-              "Promote 'Gig Hub' with tablet charging stations (Doc 9, Task 1)",
-              "Highlight 85% satisfaction rate for Portfolio Careers (Doc 3)",
-              "Address 65% Gen Z adoption rate in the intro (Doc 2, Task 2)",
-              "Mention the goal to reach 10,000 applicants (Doc 5)"
+              "Acknowledge the payment delay concern (Doc 3)",
+              "Explain that payment data is encrypted (Doc 5)",
+              "Mention GigGuard HK insurance partnership (Doc 9)",
+              "Highlight 2,000 slashies supported in Q1 (Doc 2)"
             ],
-            "tone": "Vibrant and Professional",
-            "deductions": [
-              "Penalty -0.5 for citing 2018 Manufacturing Report, Textile Mills, or 'Loyalty First' slogan (Doc 7)"
-            ]
+            "tone": "Polite and Helpful"
           }
         },
         {
           "id": "Task_6",
           "type": "Short Notice",
-          "instructions": "Draft a notice for the YDC website about the 'S-2026' Tax Code and simplified filing. Refer to Doc 2 and Doc 9.",
+          "instructions": "Write a short notice for the co-working hub's notice board about the new 'Platform Liaisons' program. Refer to Doc 8 and Doc 4.",
           "wordCount": 100,
           "grading_rubric": {
             "content_points": [
-              "Announce the S-2026 Tax Code for freelancers (Doc 2)",
-              "Explain that it simplifies filing (Doc 2)",
-              "Mention that Bank of HK accepts this for mortgages (Doc 9)"
+              "Announce the 120 new Platform Liaison roles (Doc 8)",
+              "Mention training is for freelancers (Doc 4)",
+              "Encourage participation to bridge the skills gap (Doc 4)"
             ],
-            "tone": "Informative"
+            "tone": "Clear and Informative"
           }
         },
         {
           "id": "Task_7",
-          "type": "Internal Briefing Note",
-          "instructions": "Summarize the current insurance coverage for slashies for our customer service team. Refer to Doc 2 and Doc 8.",
+          "type": "Feedback Form Summary",
+          "instructions": "Summarise the main budget points from the steering committee meeting for a general audience. Refer to Doc 1 and Doc 6.",
           "wordCount": 120,
           "grading_rubric": {
             "content_points": [
-              "$15,000 coverage for work accidents (Doc 2)",
-              "Outpatient care coverage (Doc 8)",
-              "Equipment theft coverage up to $5,000 (Doc 8)",
-              "Insurance budget status is on track (Doc 6)"
+              "Mention overall investment of $800 Million (Doc 2)",
+              "Explain the gap in publicity spending (Doc 6)",
+              "Note the target rollout in Q4 2026 (Doc 1)"
             ],
-            "tone": "Clear and Direct"
+            "tone": "Simple and Direct"
           }
         }
       ]
@@ -496,68 +624,51 @@
         {
           "id": "Task_8",
           "type": "Formal Letter",
-          "instructions": "Write a letter to Mrs. Cheng (Doc 3) to address her concerns about her son's future as a slashie. Use information from Docs 1, 2, 9, 10 and the audio briefing.",
-          "wordCount": 300,
+          "instructions": "You are a Project Manager at the Labor Bureau. Write a letter to the Platform CEO (Doc 7) addressing their concerns about the Freelance Fairness Act. Use information from the meeting minutes (Doc 1), the brochure (Doc 2), and the staffing update (Doc 8). Aim for a persuasive and reassuring tone.",
+          "wordCount": 250,
           "grading_rubric": {
             "content_points": [
-              "Propose Startup Grant rollout with $1.2M total fund (Audio/Doc 1, 5)",
-              "Link grant to valid SEP status and Skills-Future Tax Credit (Doc 4)",
-              "Mandate union affiliation for govt contracts (Doc 5/Audio)",
-              "Include 92% support for Freelance Fairness Act (Doc 8)",
-              "Mention $20,000 tax credit for upskilling (Doc 4)"
+              "Address fear of income instability (Doc 1)",
+              "Mention creation of 120 Platform Liaison roles (Doc 8)",
+              "Explain Labor Bureau Youth Division oversight (Doc 2)",
+              "MUST MENTION: Emphasis on hiring for 'project management skills' and 'client relations experience' (Audio)",
+              "Use 'Future of Work' slogan (Doc 1)"
             ],
-            "tone": "Formal and Persuasive",
-            "deductions": [
-              "Penalty -0.5 for citing 2018 Manufacturing Report, Textile Mills, or 'Loyalty First' slogan (Doc 7)"
-            ]
+            "tone": "Persuasive and Reassuring",
+            "oral_info_weight": 0.25
           }
         },
         {
           "id": "Task_9",
           "type": "Internal Memo",
-          "instructions": "Write a memo to the YDC staff regarding the 'Publicity Gap' and the new training initiatives. Refer to Doc 6 and the audio briefing.",
-          "wordCount": 200,
+          "instructions": "Write an internal memo to the Labor Bureau staff summarising the current budget situation and the urgent need for a publicity push. Refer to Doc 6 and Doc 5. Highlight the 'Critical Gap' in publicity spending.",
+          "wordCount": 150,
           "grading_rubric": {
             "content_points": [
-              "Support 'Article 18C' for 30-day payment cycle (Doc 8, Task 2)",
-              "Justify $10,000 late fee to combat ghosting (Doc 1, 8, Task 4)",
-              "Address 38% unpaid invoice rate in HK (Task 4)",
-              "Emphasize worker misclassification protection (Task 4)",
-              "Mention the 40% co-working subsidy success (Doc 2)",
-              "Propose 'Certification Blitz' for September (Audio)",
-              "Mention 'Lottery System' for Media Lab capacity (Audio)"
+              "Hardware is over-budget ($220M vs $200M) (Doc 6)",
+              "Publicity has a 'Critical Gap' (only $25M spent) (Doc 6)",
+              "Data is encrypted and never shared (Doc 5)",
+              "MUST PROPOSE: A 'Freelance Fairness Week' in October involving business podcasts (Audio)"
             ],
-            "tone": "Direct and Strategic",
-            "deductions": []
+            "tone": "Professional and Urgent"
           }
         },
         {
           "id": "Task_10",
-          "type": "Public Instagram Post",
-          "instructions": "Draft an Instagram post for the YDC account to attract new slashies to the scheme. Use the slogans and points from the audio and data files.",
+          "type": "Public Social Media Post",
+          "instructions": "Draft a short, engaging social media post (max 100 words) for the 'Future of Work' campaign. The goal is to reassure citizens like Mr. David Lee (Doc 3) about payment security and emphasise the benefits mentioned in Doc 2 and Doc 9. Use emojis where appropriate.",
           "wordCount": 100,
           "grading_rubric": {
             "content_points": [
-              "Target 18-35 demographic with 'Digital Nomad' life (Doc 3, Task 2)",
-              "Highlight 45% skill improvement via Portfolio Career (Doc 3)",
-              "Use slogan 'Freedom with a Safety Net' (Audio/Doc 2)",
-              "Mention GigGuard HK insurance partnership (Doc 10)",
-              "Include hashtag #SlashieHK2026 (Audio)",
-              "Mention $5,000 value for Mentorship Vouchers (Audio)"
+              "Highlight 2,000 slashies supported in Q1 (Doc 2)",
+              "Mention GigGuard HK insurance partnership (Doc 9)",
+              "MUST USE PHRASE: 'Bank Grade' to describe payment protection (Audio)",
+              "MUST USE PHRASE: 'Passion with Paycheck' (Audio)"
             ],
-            "tone": "Engaging and Uplifting",
-            "deductions": []
+            "tone": "Friendly and Non-corporate"
           }
         }
       ]
     }
-  },
-  "Script": {
-    "Announcer": "Good morning, candidates. Before we begin the 2026 English Language Paper 3 examination, I wish to address the profound, multi-dimensional, and structurally significant significance of today's theme: The Slashie Economy. In the high-density, hyper-velocity, and increasingly decentralized urban environment of Hong Kong, the traditional concept of 'one life, one career' is being fundamentally and irreversibly dismantled. As we enter the second half of this pivotal decade, we are witnessing a structural restructuring of the social contract between employer and worker that has underpinned our society since the early colonial era. The rise of the 'Portfolio Career' is not merely a lifestyle trend for the creatively inclined or the digitally native; it is a structural economic response to the volatile, uncertain, complex, and ambiguous world of 2026. To understand the Slashie Economy, we must first look at the history of labor in this city. In the 1950s and 60s, the Hong Kong economy was built on the backs of industrial workers—men and women who spent thirty years in the same textile mill or plastic flower factory. Loyalty was the primary currency. By the 1980s, we shifted to a services and finance model, where corporate tenure and the '9-to-5' desk job became the new gold standard. But even that model was built on a foundation of stability that no longer exists in the age of generative AI, global supply chain volatility, and the decentralization of professional expertise. In 2026, the individual is the firm. This is what we mean by 'Information Sovereignty'. This examination is designed to test your ability to navigate this new, fragmented, and technically demanding landscape with absolute precision and sustained auditory stamina. You will be asked to synthesize complex data regarding the 'Freelance Fairness Act', the legal architecture of 'Article 18C', and the sociological implications of the 'Gig Economy' versus the 'Sustainable Slashie' model. This is a high-stamina mock, modeled after the Golden Standard of the HKDSE. You will hear voices of innovation, technical debates on MPF self-contributions, and the regulatory framework of the 'Slashie Startup Grant'. Your task is not just to listen, but to filter the signal from the noise. In a city where digital connectivity is constant and information is often fragmented across multiple platforms, your ability to identify the precise figures—like the thirty-day payment cycles, the ten-thousand dollar late payment fines, or the eighty-five percent life satisfaction metrics—is what will separate a Level 5** candidate from the rest. We must also consider the mental health implications of this newfound freedom. While our research shows a seventy-two percent increase in professional autonomy, it also highlights a twenty-two percent burnout rate among those who fail to establish clear boundaries between their 'gigs'. The 'Slashie' movement is an economic necessity in an age of automation and AI, where agility is more valuable than tenure. It is about the 'Human Capital' being redeployed across multiple sectors simultaneously. As you listen to the registration dialogue and the subsequent keynote by Dr. Elena Vong, pay close attention to the specific metrics regarding sponsorship tiers, badge IDs, and the 'Skills-Future' tax credits. These are the data points of our new professional reality. You will also hear a panel discussion on 'Sustainability'—addressing the complex web of insurance, taxation, and retirement planning for those who operate outside the traditional corporate umbrella. This raises profound questions about the nature of community. If we no longer share an office, what do we share? If we no longer have a single employer, who protects our future? Is a 'Portfolio Career' a privilege for the elite or a necessity for the survival of the middle class? Is job security a relic of the industrial past or a target for the digital future? Today's examination venue at the Science Park is utilizing high-frequency auditory encryption and holographic monitoring to ensure the absolute integrity of this assessment. All of this information will be presented at a natural, professional pace, and you must maintain absolute focus for the entire duration of this seventy-minute recording. There will be no pauses for you to rest your ears. You must maintain a high level of cognitive processing from the first word to the last. We will now begin with a five-minute silence to allow you to study the Information Directory and the tasks ahead. Ensure your concentration is absolute. Hong Kong Diploma of Secondary Education Examination 2026. English Language Paper 3. Listening and Integrated Skills. The Slashie Economy - High Stamina Mock Exam. This recording will be played once only and contains no pauses other than those officially stated in the instructions. Candidates are reminded that accuracy in capturing technical details, including spelling, specific figures, and complex nomenclature, is vital for success. Please ensure you have the correct Question-Answer book and the Data File booklet. Check the page numbers and the document IDs carefully. Part A. Task 1. You are at the reception desk for the 'SlashFest 2026' Youth Career Summit at the Hong Kong Science Park. Listen to the conversation between the receptionist and a guest speaker, Marcus Chui. Complete the registration and sponsorship form. You now have two minutes to study the task. (120-second pause)",
-    "Task_1_Script": "Good morning! Welcome to SlashFest 2026. It is an incredibly busy and high-energy morning here at the Hong Kong Science Park. We have over eight hundred young professionals, freelancers, and entrepreneurs arriving from across the globe—from digital nomads in Berlin to tech-slashies in San Francisco—all here to discuss the philosophy of the 'Portfolio Career'. It’s a fascinating sight, isn't it? Everyone is carrying multiple devices, networking in the holographic zones, and debating the latest Article 18C updates before the first session even begins. The Science Park has actually had to increase the bandwidth of the 5G network by forty percent just to accommodate the live-streaming and the VR portfolio demos. May I have your name and organization, please? I need to check you into our VIP speaker portal and ensure your holographic credentials are ready for the morning workshop. Good morning. Yes, the energy is almost overwhelming. I’ve been trying to get through the biometric gates for the last fifteen minutes, but the crowd for the 'AI-Slashie' demo was blocking the entire South Entrance. My name is Marcus Chui. I'm with Creative Lab HK. I believe my team should have uploaded our Silver-tier sponsorship logistics last night via the summit’s secure portal, but I wanted to confirm everything in person just to be safe. We have a lot of sensitive design equipment and a holographic portfolio that needs careful syncing with your Grand Atrium server. We actually had a minor glitch with the biometric scanners earlier this morning—something about the light reflecting off the glass at this time of year—so we’ve moved to manual verification for the next hour. I can certainly imagine the pressure, Mr. Chui. Let me look you up on our main exhibitor database. Is that 'Chui' with a C at the beginning? C-H-U-I? I see a few entries for that spelling—one for a 'Chui's Culinary Arts' group specializing in molecular gastronomy and another for a logistics firm specializing in electric drone delivery. Common mistake, but it's C-H-U-I. Marcus. And the organization is Creative Lab HK. We’re one of the lead sponsors for the 'Creative Industries' track this year. I hope our credentials have been properly processed through the Cyberport gateway, as we’re collaborating with their media lab on several VR projects. Ah, Creative Lab HK. Yes, here you are. Marcus Chui. Primary role listed as Graphic Designer, though I see you’ve also tagged 'Coffee Roaster' as your secondary occupation. That's a very quintessential 'Slashie' combination! We actually had another speaker yesterday who was a 'Surgeon and Jazz Pianist'—the variety this year is truly incredible. And I need to confirm that your primary mobile contact is listed correctly in our database for the real-time event updates. It should be 9-1-2-2, 3-8-4-7. We’ve been having some connectivity issues with our old 5G relay in the Shatin district, so that mobile number is the best way to reach me directly for the holographic sync-check later this morning. We’ve actually just installed a new repeater in the Grand Atrium, so you should have near-perfect signal once you’re inside. 9-1-2-2, 3-8-4-7. Correct. And the email should be m-dot-chui at creative-lab dot H-K. We’ve officially retired our old gmail account to ensure better data security for our client portfolios. Updated and logged. Now, regarding your sponsorship. I see the Silver tier here. That includes the main stage logo rotation and a premium booth. The amount logged is five thousand five hundred dollars. Was that paid via bank transfer or the 'PaySmart' gateway? It was a corporate bank transfer. Reference number SF-2026-MC. It should have cleared on Tuesday morning. We wanted to make sure everything was settled before the early bird deadline ended. We actually had a bit of a delay with the bank’s internal compliance check because of the 'Startup Grant' we received last month. SF-2026-MC. Yes, I see the transaction here. It was cleared and confirmed by our finance team on Wednesday morning. Everything is confirmed and your logo is in the high-frequency rotation for the Grand Atrium. Your booth is B12—that’s in the 'Creative Innovation' zone, right next to the central networking fountain and the 'Gig-Hub' exhibition. B12. Perfect location. And I see I'm affiliated with the 'Freelance Union HK' on the system? Yes, we’re part of their 2026 collective bargaining group. It’s important for us to show solidarity with the 'Freelance Fairness' movement, especially with the 'Article 18C' vote coming up next month in the Legislative Council. Noted and tagged. Now, for your workshop. You’re listed as the primary presenter for 'Monetizing Passion' at 2:00 PM in Room 302. Will you need any specific technical equipment for your booth or the workshop? Yes, for the booth, I’ll need a tablet charging station for our interactive design portfolio—we have six tablets running simultaneously to show the different stages of our brand evolution. And for the workshop, I’ll definitely need the holographic projector. The standard 4K screens just don't capture the depth and the layering of the 3D brand models we’re presenting. Tablet charging station for the booth and a holographic projector for Room 302. Both are secured and will be ready. Lastly, I see the early bird discount was applied? Yes, that was processed back in January. Will you be staying for the post-event networking drinks at 6:00 PM? It’s a great chance to meet the planners from the 'Digital Nomad' visa office. Definitely. I'm looking forward to hearing their take on the new tax exemptions for those working in the Northern Metropolis. Thank you for your help, it’s been a very efficient check-in despite the crowds. (120-second pause) This is the end of Task 1.",
-    "Task_2_Script": "Task 2. Listen to a keynote by Dr. Elena Vong on 'The Rise of the Slashie'. Complete the notes. You now have two minutes to study the task. (120-second pause) Good morning, everyone. In 2026, Hong Kong is a city that is fundamentally redefining the meaning of work. We have always been famous for our work ethic and our relentless efficiency, but the structural model of that work is undergoing a profound metamorphosis. Our recent 'Youth Career Index', conducted across all eighteen districts from the central business hubs of Central to the growing residential areas of Tin Shui Wai, shows a staggering sixty-five percent adoption rate for the 'Slashie' lifestyle among those aged 18 to 35. This is no longer a fringe movement or a temporary 'side-hustle' phase; it is the dominant professional strategy for the next generation of Hong Kongers. We have moved beyond the 'Gig Economy'—a term that in the early 2020s was often associated with precarious, low-skill delivery labor—into what we call the 'Portfolio Career'. A Portfolio Career is a deliberate, strategic, and often high-tech blending of diverse professional roles that collectively form a stable and fulfilling career ecosystem. While traditional job security has seen a forty percent loss in the last five years as corporations move toward project-based hiring and automated administration, we see a corresponding eighty-five percent increase in life satisfaction among those who have successfully transitioned to the slashie model. This is about 'Work-Life Integration'—not just the elusive 'balance', but the conscious blending of career goals with personal identity. It’s about the freedom to choose your clients, your hours, and your physical location. However, the barriers in Hong Kong remain uniquely challenging. High property prices and the lack of affordable studio space force many to work from 'Gig Hubs' or shared community cafes. Currently, fifty-five percent of our slashie population works entirely remotely, utilizing the new 'Digital Nomad Visas' to work from international hubs like Bali, Tokyo, or Lisbon while still serving their core Hong Kong clients via secure cloud platforms. But mobility requires a legal and financial safety net. This is why our institute is supporting the 'Freelance Fairness Act of 2026', specifically the landmark 'Article 18C'. This law, which we hope to see passed by the end of 2026, mandates a strict thirty-day payment cycle for all independent contractors. No more 'ghosting' by large firms who treat freelancers as interest-free loans to balance their own books. Under Article 18C, companies that fail to pay within the thirty-day window will face a mandatory ten-thousand dollar late payment fine, which is paid directly to the freelancer as compensation for their lost time and financial stress. We also have to address the 'Slashie Burnout'. Managing multiple clients and disparate projects requires intense cognitive switching. Our data shows a twenty-two percent burnout rate among those who don't set firm digital boundaries. To support those starting out, the government has launched the 'Slashie Startup Grant', a fund that we fought long and hard to secure. If you want to follow my research or join our policy proposals, please visit my Twitter or X handle at-Elena-V-underscore-Wellness. And looking ahead, I am thrilled to announce that the 2027 SlashFest will be hosted in Singapore, further expanding our regional network and fostering cross-border collaboration in the 'Slashie' sector. Together, we can build an economy that respects the rhythm of the human spirit. Thank you for your time today. (120-second pause) This is the end of Task 2.",
-    "Task_3_Script": "Task 3. Listen to the panel discussion on 'Slashie Sustainability'. Complete the table. You now have two minutes to study the task. (120-second pause) Welcome to 'The Future of the Portfolio Career' segment of our summit. I'm Dr. Felix Ho, and I'm joined today by Cecilia, a graphic designer and yoga instructor who has been a 'slashie' for nearly six years; Mr. Cheng, an employer who has moved his entire digital marketing firm to a project-based freelancer model; and Sam, a financial expert specializing in freelance taxation and the new MPF reforms. Cecilia, you are the face of the modern slashie. How do you balance such diverse roles without losing your mind? It’s a constant logistical challenge, Felix, but a deeply rewarding one. My mornings are dedicated to high-focus branding work for international startups, and my evenings are spent at the studio teaching yoga to high-stress corporate clients. The biggest hurdle for me wasn't the work itself—I love the variety—but the 'Self-Employed Person' or SEP status. In 2026, we have to be extremely diligent with our administrative overhead. The mandatory MPF contribution rate is currently five percent of our net income, but many young slashies don't realize they have to consolidate all their income streams—from their pet sitting to their programming—into a single, unified return to qualify for the government subsidies. We’ve also seen a twelve percent increase in health insurance premiums for independent workers this year, which is why I use 'GigGuard HK'. They offer plans specifically for irregular income patterns and cover equipment theft, which is vital when you’re working from different cafes every day. Mr. Cheng, as an employer, what’s your perspective on this shift? Is it good for the bottom line? We love the agility it gives us. We can bring in a specialist like Cecilia for a high-end branding project without the massive overhead of a full-time senior role that might only be needed for ten percent of the year. It gives us access to a much more diverse skillset and fresh perspectives. But we also worry about the sustainability of our talent pool. If everyone is a freelancer, who builds the long-term culture of the firm? This is where the 'Slashie Startup Grant' comes in. It’s a one point two million dollar fund designed to help young slashies under 35 invest in their own infrastructure—be it professional cameras, high-end servers, or specialized studio rentals. The deadline for the first round of applications is July 31. Sam, what advice do you have for the applicants? You must maintain a valid SEP status for at least twelve months to qualify. And remember the tax benefits—if your annual income is below one hundred and twenty thousand dollars, you are exempt from income tax, but you still qualify for the 'Skills-Future' tax credits of twenty thousand dollars for professional upskilling. We need to simplify the reporting process, as the current trilingual training manuals are quite dense. I highly recommend the 'SlashTrack HK' app for real-time hour logging. It syncs directly with the Labor Bureau's database. The next round of government funding for these co-working hubs and 'Gig Hubs' opens in January. Thank you, panel. (120-second pause) This is the end of Task 3.",
-    "Task_4_Script": "Task 4. Listen to the forum on 'The Freelance Fairness Act'. Complete the matrix. You now have two minutes to study the task. (120-second pause) Good evening, everyone. We are here at the Science Park Grand Atrium to discuss the 2026 Freelance Fairness Act, specifically the controversial and much-debated Article 18C. I'm Ms. Beatrice Lam, and I'll be moderating this discussion. We have the Freelance Union representative, a platform CEO, and a young freelancer who has been active in the grassroots campaign. Union Rep, what is the core of your organization's argument for this legislation? Our priority is the 'Enforceable Payment Timeline'. Currently, thirty-eight percent of all invoices in Hong Kong’s gig economy are paid late, often by more than sixty or even ninety days. This is a form of financial abuse. Article 18C will put an end to this by mandating a strict thirty-day cutoff for all payments. The ten-thousand dollar late fee is not just a penalty; it’s a 'deterrent' against firms that use freelancers as interest-free loans to balance their own books. We saw a pilot scheme in 2025 that reduced late payments by fifty percent in the creative sector, so we know it works. Platform CEO, how do you respond to this? Is it a threat to your business model? While we support the spirit of fairness, we are deeply concerned about the 'Liability for Worker Safety'. If a freelancer is injured while working from a co-working space we recommend, are we liable? We also worry about 'Worker Misclassification'—if we provide too many benefits, the government might reclassify these freelancers as employees, which would destroy the flexibility of the model. This Act could make it too risky for small platforms to operate in Hong Kong. We need a balance. And our young freelancer, what’s your on-the-ground experience? The Act is vital for our survival. We are tired of being 'ghosted' by clients who ignore our emails for weeks. We need the Labor Bureau's Youth Division to enforce these late fees aggressively. We also need the 'Slashie Startup Grant' of one point two million dollars to be accessible even if we don't have a traditional corporate credit history. The government needs to recognize that diverse income streams are a form of stability. The public hearing on September 14 is a chance to fix these issues. Ninety-two percent of our community supports this Act. We need the government to stand with us. Please send your feedback to fairness at labor dot gov dot H-K. This is the end of Part A. (120-second pause)",
-    "Part_B_Script": "Part B. Introduction. You are Chris Wong, a research assistant at the Youth Development Council. You will hear a briefing given by the CEO, Janice Wong, regarding the 'Slashie Economy' study and the Q3 deliverables. As you listen, take notes which may help you to complete the tasks. You will have five minutes to study the Part B Information Directory and the tasks. (Pause 5m) Good morning, team. We have a lot of momentum after the SlashFest summit. The public is finally starting to realize that 'Slashie' is not just a synonym for 'unemployed' or 'drifting'. It is a new paradigm for the twenty-first century economy. However, as our recent survey shows, we still have a massive trust gap with the 'HK Parents Connect' group. They are terrified that their children are entering a world of precarious labor without a safety net or a path to home ownership. We need to address this in our Task 8 proposal to the Labor Bureau. Chris, take detailed notes on these specific updates for our upcoming tasks, as they are the key synthesis points for our Level 5 deliverables. First, I have an important 'Audio-Only' update regarding the 'Slashie Startup Grant'. We’ve just received official confirmation that the total grant prize fund for the 2026/27 cycle has been finalized at one point two million dollars. This is a massive increase from our initial 2025 pilot of five hundred thousand dollars. This specific fund is reserved for young entrepreneurs who can demonstrate a 'Portfolio Career' track record of at least two distinct income streams over the last twelve months. Make sure this specific one point two million dollar figure is featured prominently in your Task 8 proposal and Task 9 internal report. It shows the government's serious commitment to this new economy. We need to frame this as an 'Infrastructure of Opportunity'. Secondly, I want you to include a new requirement for all grant applicants: 'Union Affiliation'. From August 1st, any freelancer applying for government contracts, grants, or subsidies must be a registered member of the 'Freelance Union HK'. This ensures they have legal backing, a collective voice, and access to a professional network for dispute resolution. It also helps the Council track the 'Worker Misclassification' issues more effectively across the tech and creative sectors. This is a non-negotiable point for the Labor Bureau's final approval. Now, for Task 9... our biggest internal issue is the 'Publicity Gap'. Our current spending is only at five million out of a fifteen million dollar budget for 'Public Awareness'. The parents are filling this void with their own fears and misconceptions. I want you to propose a 'Certification Blitz' for the month of September. We will offer free forty-eight hour intensive certifications for high-demand digital skills like VR design, AI auditing, blockchain forensics, and sustainable supply chain management. These are not just 'online courses'; they are industry-recognized stamps of quality. This will allow slashies to prove their professional worth to skeptical clients and parents alike. It gives them a 'Stamp of Quality'. It will also help us close that ten-million dollar budget gap before the end of the fiscal year on March 31. We need to spend that money effectively to prevent it from being clawed back. Lastly, for the Instagram campaign in Task 10, keep the message punchy, aspirational, and visually engaging. Use our new slogan: 'Freedom with a Safety Net'. Mention the 'Mentorship Vouchers'—which allow for free one-on-one sessions with industry veterans for the first fifty applicants who register through our app—and the hashtag #SlashieHK2026. We need to show the youth that we aren't just giving them a grant; we are building an ecosystem. We are building the future of work in Hong Kong. I also want you to look into the 'Portable MPF' consolidation project. We need to make sure that the consolidation process is user-friendly. If a slashie has five different employers in a month, they should only see one combined contribution statement. This is a major selling point for the 'Sustainability' pillar of our project. Please have the first drafts of the formal letter and the internal memo on my desk by Friday afternoon. Ensure your tone is vibrant but professionally grounded. This is a critical moment for the Council’s reputation. We are not just supporting freelancers; we are supporting the next wave of Hong Kong’s economic growth. Also, I want to address the 2018 Manufacturing Industrial Report that's been making the rounds. PLEASE DISREGARD IT COMPLETELY. That report is nearly a decade old and focuses on lifetime employment in textile mills and a 'Loyalty First' slogan from a completely different era of labor. It has absolutely no relevance to the 2026 Slashie model of professional sovereignty. If anyone tries to cite that 30-year average tenure as a reason to avoid the Startup Grant, remind them that agility is the new security. I'll now provide a detailed addendum of the Grant Bylaws and answer some of the team's burning questions. The 2026 Slashie Startup Grant is subject to the following technical conditions: One: Applicants must be permanent residents of Hong Kong aged between 18 and 35 at the time of application. Two: A minimum of two distinct income streams must be evidenced through verified bank statements or tax returns for the preceding twelve-month period. Three: Total annual income from all sources must not exceed eight hundred thousand dollars to ensure the fund supports those truly in the 'startup' phase. Four: The grant funds must be used for professional development, equipment procurement, or workspace rental. Personal expenses are strictly prohibited. Five: Successful applicants must commit to providing at least ten hours of community mentorship to high school students over the following year. Regarding the Union Affiliation, the membership criteria for 'Freelance Union HK' involve: One: A registration fee of two hundred dollars per year. Two: Submission of at least three client testimonials or project contracts per year to maintain 'Active' status. Three: Participation in at least one 'Fairness Workshop' per quarter. And finally, the Certification Blitz curriculum for September includes: Module A: Advanced VR Architecture and Spatial Branding. Module B: AI Auditing and Ethics for Freelance Consultants. Module C: Blockchain Forensics for Digital Asset Management. Module D: Sustainable Supply Chain Logistics for E-commerce Slashies. Each module is forty-eight hours of intensive training, followed by a live project assessment. Now, let's open the floor for some internal Q&A. Yes, Sarah, you had a question about the co-working hubs? Yes, Janice. Will the co-working hub subsidy apply to private spaces or only government-owned ones? Great question. For 2026, the forty percent subsidy applies to our six 'Approved Partner' hubs. These are private hubs that have passed our 'Ergonomic and Connectivity' audit. We want to ensure that if the government is paying, the environment is truly professional. What about the 'Young Professional' definition? Is it strictly age-based? For the purposes of the registration form, yes, it's 18 to 35. But for the policy itself, we are looking at 'Professional Tenure'. If someone is forty but has just started their portfolio career after a corporate layoff, they can still access the mentorship vouchers, though not the primary startup grant. And the insurance? Does 'GigGuard HK' cover international travel? The standard plan is local, but they have a 'Digital Nomad' add-on for a small premium. This covers equipment and emergency medical care in over fifty countries. We need to make sure the youth know this is an option, especially with the rise of the nomadic lifestyle. One final question—the 'Article 18C' late fees. Who actually collects them? The Labor Bureau’s Youth Division manages the collection. The freelancer files a claim through the app, and if the client can't prove payment within five business days of the deadline, the ten-thousand dollar fine is automatically levied. It’s a very aggressive system, but it’s the only way to change the culture of late payments. We also need to consider the data privacy implications of the 'Global Portfolio' app. All data is encrypted and only accessible by the freelancer and their verified tax accountant. The Labor Bureau only sees the 'aggregrated' figures for policy purposes. This is vital for maintaining trust. Okay, that’s all the time we have for the briefing. Chris, you have everything you need. Let's make this the best Council report of the year. (End of simulation)This completes the Integrated Skills recording. You now have 1 hour and 10 minutes to complete your tasks. (4200-second pause)Wait, I'll add one more thing. The 'Mentorship Vouchers' are worth five thousand dollars each in market value. And the 'Certification Blitz' will be held at the Science Park Media Lab. We expect over five thousand applicants for the September intake. This is why the publicity gap is so dangerous—we need to manage expectations. Make sure your Task 9 memo addresses the capacity limits of the Media Lab. We might need to run a lottery system if demand exceeds two hundred percent of our capacity. The 2026 labor market is all about supply and demand of high-value skills. Let's make sure our youth are on the winning side of that equation. That is the final point. Good luck to all of you. (4200-second pause)"
   }
 }

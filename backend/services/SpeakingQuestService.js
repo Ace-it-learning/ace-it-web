@@ -13,81 +13,100 @@ class SpeakingQuestService {
 
         // 1. Check if the topic is a pre-written drill (e.g. a_1, b_2, etc.)
         // This bypasses AI generation for a snappier experience.
+        // PRIMARY: Query Cosmos DB first, fallback to local JSON file.
+        const QuestionBankStore = require('./QuestionBankStore');
         const fs = require('fs');
         const path = require('path');
-        const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
+        
+        let preWritten = null;
+        
+        // Try Cosmos DB first
+        try {
+            const cosmosDrill = await QuestionBankStore.getById(focus);
+            if (cosmosDrill && cosmosDrill.type === 'speaking_drill') {
+                console.log(`[SpeakingQuest] Cosmos DB Hit: Loading pre-written drill ${focus}`);
+                preWritten = cosmosDrill;
+            }
+        } catch (e) {
+            console.warn(`[SpeakingQuest] Cosmos DB lookup failed for ${focus}, falling back to local file`);
+        }
+        
+        // Fallback to local JSON file
+        if (!preWritten) {
+            const drillsPath = path.join(__dirname, '../data/speaking_drills.json');
+            if (fs.existsSync(drillsPath)) {
+                const drills = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
+                const flattenedDrills = [
+                    ...(drills.criterion_a || []),
+                    ...(drills.criterion_b || []),
+                    ...(drills.criterion_c || []),
+                    ...(drills.criterion_d || [])
+                ];
+                preWritten = flattenedDrills.find(d => d.id === focus);
+                if (preWritten) {
+                    console.log(`[SpeakingQuest] Local File Hit: Loading pre-written drill ${focus}`);
+                }
+            }
+        }
+        
+        if (preWritten) {
+            // Determine UX Mode and Cluster
+            let uxMode = 'delivery';
+            let clusterId = 'delivery';
+            if (preWritten.id.startsWith('b_')) { uxMode = 'interaction_lab'; clusterId = 'interaction'; }
+            if (preWritten.id.startsWith('c_')) { uxMode = 'vocabulary_lab'; clusterId = 'language_patterns'; }
+            if (preWritten.id.startsWith('d_')) { uxMode = 'logical_lab'; clusterId = 'ideas_organisation'; }
+            if (moduleId === 'flow') { uxMode = 'flow'; clusterId = 'flow'; }
 
-        if (fs.existsSync(drillsPath)) {
-            const drills = JSON.parse(fs.readFileSync(drillsPath, 'utf8'));
-            const flattenedDrills = [
-                ...(drills.criterion_a || []),
-                ...(drills.criterion_b || []),
-                ...(drills.criterion_c || []),
-                ...(drills.criterion_d || [])
-            ];
+            const response = {
+                template_id: preWritten.id,
+                role: preWritten.role || "AI Mentor",
+                scenario: preWritten.scenario || preWritten.title,
+                description: preWritten.description,
+                starting_question: preWritten.starting_question,
+                cluster_id: clusterId,
+                ux_mode: uxMode,
+                is_dynamic: false,
+                is_prewritten: true
+            };
 
-            const preWritten = flattenedDrills.find(d => d.id === focus); // 'focus' is often used as the drill ID in requests
-            if (preWritten) {
-                console.log(`[SpeakingQuest] Registry Hit: Loading pre-written drill ${focus}`);
-                
-                // Determine UX Mode and Cluster
-                let uxMode = 'delivery';
-                let clusterId = 'delivery';
-                if (preWritten.id.startsWith('b_')) { uxMode = 'interaction_lab'; clusterId = 'interaction'; }
-                if (preWritten.id.startsWith('c_')) { uxMode = 'vocabulary_lab'; clusterId = 'language_patterns'; }
-                if (preWritten.id.startsWith('d_')) { uxMode = 'logical_lab'; clusterId = 'ideas_organisation'; }
-                if (moduleId === 'flow') { uxMode = 'flow'; clusterId = 'flow'; }
-
-                const response = {
-                    template_id: preWritten.id,
-                    role: preWritten.role || "AI Mentor",
-                    scenario: preWritten.scenario || preWritten.title,
-                    description: preWritten.description,
-                    starting_question: preWritten.starting_question,
-                    cluster_id: clusterId,
-                    ux_mode: uxMode,
-                    is_dynamic: false,
-                    is_prewritten: true
+            // Inject specialized data for C/D
+            if (clusterId === 'language_patterns') {
+                response.power_words = preWritten.power_words || [];
+                response.practice_sentences = preWritten.practice_sentences || [];
+            } else if (clusterId === 'ideas_organisation') {
+                response.mind_map = preWritten.mind_map;
+                response.guidance = preWritten.guidance;
+            } else {
+                const segment = {
+                    segment_id: "P1",
+                    title: preWritten.title,
+                    master_script: preWritten.master_script || preWritten.stimulus,
+                    master_audio_voice: "en-GB-Standard-A",
+                    vocabulary: preWritten.vocabulary || [],
+                    prosody: preWritten.prosody || { pauses: [], emphasis: [], intonation: [] },
+                    focus_advice: preWritten.focus_advice || preWritten.strategy_goal || "Focus on natural rhythm and sentence-level stress.",
+                    stimulus: preWritten.stimulus,
+                    strategy_goal: preWritten.strategy_goal,
+                    power_phrases: preWritten.power_phrases || []
                 };
 
-                // Inject specialized data for C/D
-                if (clusterId === 'language_patterns') {
-                    response.power_words = preWritten.power_words || [];
-                    response.practice_sentences = preWritten.practice_sentences || [];
-                } else if (clusterId === 'ideas_organisation') {
-                    response.mind_map = preWritten.mind_map;
-                    response.guidance = preWritten.guidance;
-                } else {
-                    const segment = {
-                        segment_id: "P1",
-                        title: preWritten.title,
-                        master_script: preWritten.master_script || preWritten.stimulus,
-                        master_audio_voice: "en-GB-Standard-A",
-                        vocabulary: preWritten.vocabulary || [],
-                        prosody: preWritten.prosody || { pauses: [], emphasis: [], intonation: [] },
-                        focus_advice: preWritten.focus_advice || preWritten.strategy_goal || "Focus on natural rhythm and sentence-level stress.",
-                        stimulus: preWritten.stimulus,
-                        strategy_goal: preWritten.strategy_goal,
-                        power_phrases: preWritten.power_phrases || []
-                    };
-
-                    if (preWritten.id && preWritten.id.startsWith('a_')) {
-                        const masterDir = path.join(__dirname, '../data/speaking-master');
-                        const publicAudio = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.mp3`);
-                        const publicTimings = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.timings.json`);
-                        const hasAudio = fs.existsSync(publicAudio) || fs.existsSync(path.join(masterDir, `${preWritten.id}.mp3`));
-                        const hasTimings = fs.existsSync(publicTimings) || fs.existsSync(path.join(masterDir, `${preWritten.id}.timings.json`));
-                        if (hasAudio && hasTimings) {
-                            segment.master_audio_url = `/speaking-master/${preWritten.id}.mp3`;
-                            segment.master_timings_url = `/speaking-master/${preWritten.id}.timings.json`;
-                        }
+                if (preWritten.id && preWritten.id.startsWith('a_')) {
+                    const masterDir = path.join(__dirname, '../data/speaking-master');
+                    const publicAudio = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.mp3`);
+                    const publicTimings = path.join(__dirname, '../../frontend/public/speaking-master', `${preWritten.id}.timings.json`);
+                    const hasAudio = fs.existsSync(publicAudio) || fs.existsSync(path.join(masterDir, `${preWritten.id}.mp3`));
+                    const hasTimings = fs.existsSync(publicTimings) || fs.existsSync(path.join(masterDir, `${preWritten.id}.timings.json`));
+                    if (hasAudio && hasTimings) {
+                        segment.master_audio_url = `/speaking-master/${preWritten.id}.mp3`;
+                        segment.master_timings_url = `/speaking-master/${preWritten.id}.timings.json`;
                     }
-
-                    response.segments = [segment];
                 }
 
-                return response;
+                response.segments = [segment];
             }
+
+            return response;
         }
 
         let resolvedModuleId = moduleId;

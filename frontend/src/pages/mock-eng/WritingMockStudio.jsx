@@ -615,6 +615,21 @@ const WritingMockStudio = () => {
                         onDeleteImage={(idx) => handleDeleteImage(idx, isPartA ? 'A' : 'B')}
                         sparkNotes={sparkNotes}
                         onSparkChange={setSparkNotes}
+                        reviewData={null}
+                        onReviewTrigger={() => {}}
+                        isReviewing={false}
+                        qrSurface="writing_mock"
+                        qrMeta={{ part: isPartA ? 'A' : 'B' }}
+                        onQrPhoto={(msg) => {
+                            const url = msg?.payload?.publicUrl;
+                            if (!url) return;
+                            const part = msg.payload.part === 'B' ? 'B' : 'A';
+                            if (part === 'A') {
+                                setImagesA((prev) => (prev.length >= 4 ? prev : [...prev, url]));
+                            } else {
+                                setImagesB((prev) => (prev.length >= 4 ? prev : [...prev, url]));
+                            }
+                        }}
                     />
                 }
             >

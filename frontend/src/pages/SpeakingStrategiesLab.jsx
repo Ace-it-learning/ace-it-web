@@ -5,6 +5,8 @@ import { useAvatar } from '../context/AvatarContext';
 import { Mic, Play, Square, Volume2, Loader2, ArrowRight, Zap, Sparkles, MessageSquare, Brain, Target, Info, ChevronRight, CheckCircle2, Clock, User, AlertTriangle, RotateCcw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
+import { useAzureSpeechRecognition } from '../hooks/useAzureSpeechRecognition';
+import { useAzureTTS } from '../hooks/useAzureTTS';
 
 const FILLERS = [
     "Hmm, that's an interesting point. Let me think...",
@@ -52,6 +54,7 @@ const SpeakingStrategiesLab = () => {
     const [isRecording, setIsRecording] = useState(false);
     const [recordedBlob, setRecordedBlob] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isGrading, setIsGrading] = useState(false);
     const [gradingResult, setGradingResult] = useState(null);
     const [voiceLevel, setVoiceLevel] = useState(0);
     const [interimTranscript, setInterimTranscript] = useState("");
@@ -60,6 +63,7 @@ const SpeakingStrategiesLab = () => {
         role: null, 
         isSpeaking: false 
     });
+    const [sttError, setSttError] = useState(null);
 
     // Refs
     const mediaRecorder = useRef(null);
@@ -74,8 +78,11 @@ const SpeakingStrategiesLab = () => {
     const isFetchingRef = useRef({}); // Phase 48: Independent Fetching Status
     const localTurnQueue = useRef([]); // Phase 48: Pre-fetching buffer
     const isTurnInProgressRef = useRef(false); // Phase 48: Singleton guard
+    const streamRef = useRef(null);
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+    const { speak, stop } = useAzureTTS({ uid: user?.uid });
 
     // 2. Initial Setup
     useEffect(() => {
@@ -105,41 +112,12 @@ const SpeakingStrategiesLab = () => {
 
         fetchQuest();
 
-        // 2.a Speech Recognition Setup
-        if ('webkitSpeechRecognition' in window) {
-            const SpeechRecognition = window.webkitSpeechRecognition;
-            recognition.current = new SpeechRecognition();
-            recognition.current.continuous = true;
-            recognition.current.interimResults = true;
-            recognition.current.lang = 'en-US';
-
-            recognition.current.onresult = (event) => {
-                let interim = '';
-                let final = finalTranscriptRef.current;
-
-                for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) {
-                        final += event.results[i][0].transcript;
-                    } else {
-                        interim += event.results[i][0].transcript;
-                    }
-                }
-                finalTranscriptRef.current = final;
-                setInterimTranscript(final + interim);
-            };
-
-            recognition.current.onerror = (event) => {
-                console.error('Speech recognition error:', event.error);
-            };
-        }
-
         // Listen for tab close/navigation to kill ghost audio
         window.addEventListener('beforeunload', stopAllAudio);
         window.addEventListener('pagehide', stopAllAudio);
 
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
-            if (recognition.current) recognition.current.stop();
             window.removeEventListener('beforeunload', stopAllAudio);
             window.removeEventListener('pagehide', stopAllAudio);
             stopAllAudio();
@@ -168,6 +146,9 @@ const SpeakingStrategiesLab = () => {
             runIntro();
         } else if (phase === 'OUTRO') {
             runOutro();
+        } else if (phase === 'DISCUSSION') {
+            // Pre-connect Azure STT so recording starts instantly when user clicks mic
+            prepareAzureSTT();
         }
     }, [phase]);
 
@@ -175,85 +156,54 @@ const SpeakingStrategiesLab = () => {
     const stopAllAudio = () => {
         if (audioRef.current) {
             audioRef.current.pause();
-            // Critical loop cleanup to prevent ghost audio
             audioRef.current.onended = null;
             audioRef.current.onerror = null;
             audioRef.current.src = "";
             audioRef.current.load();
             audioRef.current = null;
         }
-        if (window.speechSynthesis) {
-            window.speechSynthesis.cancel();
-        }
+        stop();
         setSpeechState({ text: "", role: null, isSpeaking: false });
     };
 
     const playDirectAudio = (base64, text, role, onEnd) => {
-        // Phase 47: Fast-Path - Always use local synthesis to eliminate cloud audio lag
         playAudio(text, role, onEnd);
     };
 
     const playAudio = (text, role, onEnd) => {
-        stopAllAudio();
+        stop();
         const cleaned = text.replace(/^(Candidate[ _][A-D]|Examiner|Tutor):/i, "").replace(/\*.*?\*/g, "").trim();
         setSpeechState({ text: cleaned, role, isSpeaking: true });
 
-        const utterance = new SpeechSynthesisUtterance(cleaned);
-        
-        // Priority Voice Selection (Premium Browser Voices)
-        const voices = window.speechSynthesis.getVoices();
-        const preferredVoice = voices.find(v => v.name.includes('Google UK English Female') && v.lang.startsWith('en')) || 
-                        voices.find(v => v.lang.startsWith('en-GB')) || 
-                        voices.find(v => v.lang.startsWith('en-US')) ||
-                        voices[0];
-                        
-        if (preferredVoice) utterance.voice = preferredVoice;
-        utterance.lang = 'en-GB';
-        
-        // Character Personality Adjustments
+        const voiceOpts = { onEnd };
         if (role === 'Tutor' || role === 'Examiner') {
-            utterance.pitch = 1.0;
-            utterance.rate = 0.9;
-        } else { // Annie
-            utterance.pitch = 1.05;
-            utterance.rate = 1.0;
+            voiceOpts.pitch = 1.0;
+            voiceOpts.rate = 0.9;
+        } else {
+            voiceOpts.pitch = 1.05;
+            voiceOpts.rate = 1.0;
         }
 
         const cleanup = () => {
-            if (watchdog) clearTimeout(watchdog);
             setSpeechState({ text: "", role: null, isSpeaking: false });
-            if (onEnd) {
-                const cb = onEnd;
-                onEnd = null;
-                cb();
-            }
         };
 
-        // Network/System Watchdog (15s)
-        const watchdog = setTimeout(() => {
-            console.warn("Speech Watchdog triggered - Proceeding.");
-            cleanup();
-        }, 15000);
-
-        utterance.onend = cleanup;
-        utterance.onerror = (e) => {
-            console.error("Local Speech Error:", e);
-            cleanup();
-        };
-
-        if (window.speechSynthesis) {
-            window.speechSynthesis.cancel();
-            window.speechSynthesis.speak(utterance);
-        } else {
-            cleanup();
-        }
+        speak(cleaned, role, voiceOpts).then(cleanup).catch(cleanup);
     };
 
     const fetchBatch = async (hintSpeaker = "Annie", userTranscript = null) => {
         if (isFetchingRef.current[hintSpeaker]) return;
         isFetchingRef.current[hintSpeaker] = true;
 
+        // CRITICAL: If user just spoke, clear any stale pre-fetched turns
+        // so Annie responds to the user's actual point, not a generic one
+        if (userTranscript) {
+            localTurnQueue.current = [];
+            console.log(`🧹 Cleared stale pre-fetch queue — user spoke: "${userTranscript.substring(0, 40)}..."`);
+        }
+
         try {
+            // Include user's latest transcript in history for context
             const historyToUse = chatHistory.slice(-10);
             const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
                 method: 'POST',
@@ -265,10 +215,11 @@ const SpeakingStrategiesLab = () => {
                     level: level,
                     uid: user?.uid || 'guest',
                     user_transcript: userTranscript,
+                    user_name: user?.displayName || 'Student',
                     audioOutput: false,
                     mode: 'lab'
                 }),
-                signal: AbortSignal.timeout(20000)
+                signal: AbortSignal.timeout(15000)
             });
 
             const data = await res.json();
@@ -300,13 +251,25 @@ const SpeakingStrategiesLab = () => {
     };
 
     const runOutro = () => {
+        // CRITICAL: Stop any ongoing Annie speech and clear her turn queue
+        stopAllAudio();
+        localTurnQueue.current = [];
+        isTurnInProgressRef.current = false;
+        setIsAITurn(false);
+        
         const outroText = `Thank you everyone. That is all the time we have for today. Let's wrap up the discussion there.`;
         playAudio(outroText, 'Tutor', () => {
+            setIsGrading(true);
             submitFinalSession();
         });
     };
 
     const triggerAITurn = async (isFirst = false, audioBlob = null, userTranscript = null, manualHistory = null) => {
+        // BLOCK: Don't start new AI turns during OUTRO, REVIEW, or IDLE phases
+        if (phase === 'OUTRO' || phase === 'REVIEW' || phase === 'IDLE') {
+            console.log(`🚫 Blocked AI turn — phase is ${phase}`);
+            return;
+        }
         if (isTurnInProgressRef.current && !isFirst) return;
         isTurnInProgressRef.current = true;
         setIsAITurn(true);
@@ -314,16 +277,22 @@ const SpeakingStrategiesLab = () => {
         const target = 'Annie';
         let turnToPlay = null;
 
-        // Phase 48: Fast-Path - Check for pre-fetched turn first
-        if (localTurnQueue.current.length > 0) {
+        // For first turn, ignore pre-fetched queue and use stimulus directly
+        // Pre-fetched turns are generic responses, not the opening stimulus
+        if (isFirst) {
+            turnToPlay = { text: questData?.stimulus || "Let's start the discussion." };
+            console.log("🎯 First turn: using stimulus");
+        }
+        // Phase 48: Fast-Path - Check for pre-fetched turn first (non-first turns only)
+        else if (localTurnQueue.current.length > 0) {
             turnToPlay = localTurnQueue.current.shift();
             console.log("🎯 Playing turn from high-speed buffer");
         } 
         
-        // Polling Recovery: If no turn ready yet, poll every 500ms (Max 20s)
+        // Polling Recovery: If no turn ready yet, poll every 500ms (Max 10s)
         if (!turnToPlay && !isFirst) {
             let waitPoll = 0;
-            while (!turnToPlay && waitPoll < 40) {
+            while (!turnToPlay && waitPoll < 20) {
                 if (!isFetchingRef.current[target]) {
                     console.log("⏳ Buffer empty. Starting rescue fetch...");
                     await fetchBatch(target, userTranscript);
@@ -337,12 +306,17 @@ const SpeakingStrategiesLab = () => {
             }
         }
 
-        // Stimulus Handler
-        if (isFirst && !turnToPlay) {
-            turnToPlay = { text: questData?.stimulus || "Let's start the discussion." };
-        }
-
-        const turnText = turnToPlay?.text || "I see your point. Building on that, I believe we should also consider the broader implications for student development.";
+        // Fallback responses if API fails - more natural and varied
+        const fallbacks = [
+            "Actually, I'd like to add that we should think about how this affects students from different backgrounds.",
+            "From my perspective, there's another angle we haven't considered yet.",
+            "That's worth thinking about, but what if we also looked at some real examples from other schools?",
+            "I'm not entirely sure I agree - let me explain why. The issue is more complex than it first appears.",
+            "One thing I'd add is that we need to balance different needs here.",
+            "Building on that idea, perhaps we could think about the long-term benefits for everyone involved."
+        ];
+        const fallbackText = fallbacks[turnIndex % fallbacks.length];
+        const turnText = turnToPlay?.text || fallbackText;
 
         // Instant Text Display
         const currentAILabel = 'Annie';
@@ -366,18 +340,38 @@ const SpeakingStrategiesLab = () => {
     };
 
     const handleUserRecordingFinished = async (blob, transcription = null) => {
+        // Don't process if already handling
+        if (isSubmitting) return;
+        
         setIsSubmitting(true);
+        
+        // Safety timeout: force reset isSubmitting after 20s max
+        const safetyTimeout = setTimeout(() => {
+            setIsSubmitting(false);
+        }, 20000);
+        
         try {
-            // Append the transcription to chat history immediately for instant visual
-            const userText = transcription || "Processing speech...";
-            const nextHistory = [...chatHistory.filter(m => m.text !== "Processing speech..."), { speaker: 'Student', text: userText }];
-            setChatHistory(nextHistory);
+            // Get user's final transcript - already added to chatHistory by onFinal
+            const userText = transcription || finalTranscriptRef.current || "";
+            if (!userText.trim()) {
+                setIsSubmitting(false);
+                return;
+            }
             
+            // Use current chat history (which already includes the user's transcript from onFinal)
+            // Filter out interim messages to avoid duplicates
+            const nextHistory = chatHistory.filter(m => 
+                m.text !== "Listening..." && 
+                m.text !== "Processing speech..." &&
+                !m.isInterim
+            );
+
             // Pass the updated history directly to triggerAITurn to ENSURE context relevance
-            await triggerAITurn(false, blob, transcription, nextHistory);
+            await triggerAITurn(false, blob, userText, nextHistory);
         } catch (err) {
             console.error('Recording finish error:', err);
         } finally {
+            clearTimeout(safetyTimeout);
             setIsSubmitting(false);
             setRecordedBlob(null);
             setInterimTranscript("");
@@ -385,21 +379,62 @@ const SpeakingStrategiesLab = () => {
         }
     };
 
+    // Azure Speech Recognition Hook
+    const {
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript,
+        prepare: prepareAzureSTT
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 2000,
+        onPartial: (text) => {
+            setInterimTranscript(text);
+        },
+        onFinal: (text) => {
+            finalTranscriptRef.current = text;
+            // Replace interim message with final transcript
+            setChatHistory(prev => {
+                const filtered = prev.filter(m => 
+                    m.text !== "Listening..." && 
+                    m.text !== "Processing speech..." &&
+                    !m.isInterim
+                );
+                return [...filtered, { speaker: 'Student', text: text, isInterim: false }];
+            });
+            // Trigger Annie's response when final transcript is ready
+            if (text && text.trim()) {
+                handleUserRecordingFinished(null, text);
+            }
+        },
+        onError: (err) => {
+            console.error('[SpeakingStrategiesLab] Azure STT error:', err);
+            setSttError(err.message || 'Speech recognition failed. Please try again.');
+            setIsRecording(false);
+        }
+    });
+
     const startRecording = async () => {
         if (isAITurn || phase !== 'DISCUSSION') return;
+        
+        // Clear any previous error
+        setSttError(null);
         
         // Phase 48: Predictive Pre-fetching (Discussion Pattern)
         // Start 'thinking' as soon as the student opens the mic
         fetchBatch("Candidate_A");
 
         try {
+            // Get microphone access for waveform visualization
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            
+            // Set up waveform visualization
             audioContext.current = new (window.AudioContext || window.webkitAudioContext)();
             analyser.current = audioContext.current.createAnalyser();
             const source = audioContext.current.createMediaStreamSource(stream);
             source.connect(analyser.current);
             
             const updateVoiceLevel = () => {
+                if (!isRecording) return;
                 const dataArray = new Uint8Array(analyser.current.frequencyBinCount);
                 analyser.current.getByteFrequencyData(dataArray);
                 const avg = dataArray.reduce((p, c) => p + c, 0) / dataArray.length;
@@ -408,50 +443,59 @@ const SpeakingStrategiesLab = () => {
             };
             updateVoiceLevel();
 
-            mediaRecorder.current = new MediaRecorder(stream);
-            audioChunks.current = [];
-            mediaRecorder.current.ondataavailable = (e) => audioChunks.current.push(e.data);
-            mediaRecorder.current.onstop = async () => {
-                const blob = new Blob(audioChunks.current, { type: 'audio/webm' });
-                setRecordedBlob(blob);
-                if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
-                setVoiceLevel(0);
-                stream.getTracks().forEach(t => t.stop());
-                
-                // Transcribe and continue
-                const finalTranscription = (finalTranscriptRef.current + interimTranscript).trim();
-                await handleUserRecordingFinished(blob, finalTranscription);
-            };
-            mediaRecorder.current.start();
+            // Store stream for cleanup
+            streamRef.current = stream;
             
-            if (recognition.current) {
-                finalTranscriptRef.current = "";
-                setInterimTranscript("");
-                try { recognition.current.start(); } catch (e) {} 
-            }
+            // Reset and start Azure STT
+            finalTranscriptRef.current = "";
+            setInterimTranscript("");
+            resetAzureTranscript();
+            await startAzureListening();
             
             setIsRecording(true);
         } catch (err) {
             console.error('Record error:', err);
+            setSttError('Microphone access failed. Please check permissions.');
         }
     };
 
-
     const stopRecording = () => {
-        if (mediaRecorder.current) mediaRecorder.current.stop();
-        if (recognition.current) recognition.current.stop();
+        // Stop waveform animation
+        if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
+        setVoiceLevel(0);
+        
+        // Stop Azure STT - this will trigger onFinal with the transcript
+        stopAzureListening();
+        
+        // Clean up waveform stream
+        if (streamRef.current) {
+            streamRef.current.getTracks().forEach(t => t.stop());
+            streamRef.current = null;
+        }
+        if (audioContext.current) {
+            audioContext.current.close();
+            audioContext.current = null;
+        }
+        
         setIsRecording(false);
     };
 
     const submitFinalSession = async () => {
-        setIsSubmitting(true);
+        setIsGrading(true);
         try {
+            // Filter out interim messages and clean up chat history before submitting
+            const cleanHistory = chatHistory.filter(m => 
+                m.text !== "Listening..." && 
+                m.text !== "Processing speech..." &&
+                !m.isInterim
+            );
+            
             const formData = new FormData();
             formData.append('module', 'interaction');
             formData.append('quest_id', questData.template_id);
             formData.append('level', level);
             formData.append('uid', user?.uid || 'guest');
-            formData.append('messages', JSON.stringify(chatHistory));
+            formData.append('messages', JSON.stringify(cleanHistory));
             formData.append('mode', 'lab');
 
             formData.append('missionName', questData?.scenario || 'Group Discussion Strategy Lab');
@@ -468,6 +512,7 @@ const SpeakingStrategiesLab = () => {
         } catch (err) {
             console.error('Submit error:', err);
         } finally {
+            setIsGrading(false);
             setIsSubmitting(false);
         }
     };
@@ -649,6 +694,29 @@ const SpeakingStrategiesLab = () => {
         );
     }
 
+    // Show grading overlay during OUTRO phase while waiting for results
+    if (isGrading) {
+        const agentName = activeAgent?.name || 'Miss Janie';
+        return (
+            <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center gap-6">
+                    <Loader2 className="w-16 h-16 text-indigo-600 animate-spin" />
+                    <div className="text-center">
+                        <h2 className="text-2xl font-black text-slate-800 mb-2">Evaluating Your Session</h2>
+                        <p className="text-slate-500 font-medium">{agentName} is reviewing your discussion performance...</p>
+                    </div>
+                    <div className="w-64 h-2 bg-slate-200 rounded-full overflow-hidden">
+                        <motion.div 
+                            className="h-full bg-indigo-600 rounded-full"
+                            animate={{ width: ["0%", "100%"] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col pt-4">
             <main className="flex-1 max-w-6xl mx-auto w-full p-6 flex flex-col gap-8">
@@ -677,6 +745,24 @@ const SpeakingStrategiesLab = () => {
                             >
                                 <Play className="w-4 h-4 fill-current" />
                                 Start Discussion
+                            </button>
+                        )}
+                        {phase === 'INTRO' && (
+                            <button 
+                                disabled={isAITurn}
+                                onClick={async () => {
+                                    // Skip tutor intro and jump straight to discussion + recording
+                                    stopAllAudio();
+                                    setPhase('DISCUSSION');
+                                    setTurnIndex(1);
+                                    // Pre-connect STT while setting up, then start recording
+                                    await prepareAzureSTT();
+                                    setTimeout(() => startRecording(), 50);
+                                }}
+                                className={`px-6 py-2.5 rounded-xl font-black text-sm shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 ${isAITurn ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-emerald-500 text-white'}`}
+                            >
+                                <Mic className="w-4 h-4" />
+                                Skip Intro & Start Speaking
                             </button>
                         )}
                     </div>
@@ -755,8 +841,11 @@ const SpeakingStrategiesLab = () => {
                             </div>
 
                             <div className="min-h-[120px] bg-slate-50 rounded-3xl p-6 relative">
-                                 <p className={`text-lg font-bold leading-relaxed transition-all duration-700 ${!speechState.isSpeaking ? 'text-slate-400 italic' : 'text-slate-700'}`}>
-                                    {(speechState.isSpeaking && speechState.role !== 'Tutor') ? speechState.text : (chatHistory.filter(m => m.speaker === (currentSpeaker || 'Candidate_A')).pop()?.text || "") }
+                                 <p className={`text-lg font-bold leading-relaxed transition-all duration-700 ${!speechState.isSpeaking ? 'text-slate-700' : 'text-slate-700'}`}>
+                                    {(speechState.isSpeaking && speechState.role !== 'Tutor') 
+                                        ? speechState.text 
+                                        : (chatHistory.filter(m => m.speaker === 'Annie' || m.speaker === 'Candidate_A').pop()?.text || "Waiting to start...") 
+                                    }
                                 </p>
                             </div>
                         </motion.div>
@@ -795,9 +884,15 @@ const SpeakingStrategiesLab = () => {
                                             <div className="w-full">
                                                 <SpeakingWaveform isRecording={isRecording} />
                                             </div>
-                                            <div className="w-full px-4 py-3 bg-white/50 backdrop-blur-sm rounded-2xl border border-emerald-200">
-                                                <p className="text-sm font-bold text-slate-700 leading-relaxed text-center">
-                                                    {interimTranscript || "Listening to your point..."}
+                                            {/* Live transcript display — Azure STT */}
+                                            <div className="w-full px-4 py-3 bg-white rounded-2xl border border-emerald-200 shadow-sm">
+                                                <p className="text-[10px] font-black uppercase text-emerald-600 tracking-widest mb-1">Your Speech (Azure STT)</p>
+                                                <p className="text-sm font-bold text-slate-800 leading-relaxed min-h-[1.5em]">
+                                                    {interimTranscript ? (
+                                                        <span className="text-emerald-700">{interimTranscript}</span>
+                                                    ) : (
+                                                        <span className="text-slate-400 animate-pulse">🎤 Listening... Speak clearly</span>
+                                                    )}
                                                 </p>
                                             </div>
                                             <button 
@@ -811,12 +906,25 @@ const SpeakingStrategiesLab = () => {
                                         <>
                                             <Loader2 className="w-10 h-10 text-indigo-600 animate-spin" />
                                             <p className="text-xs font-black uppercase text-indigo-600 tracking-widest animate-pulse">Annie is thinking...</p>
+                                            <p className="text-[10px] text-slate-400 font-medium">If this takes too long, Annie will respond with a general point</p>
                                         </>
                                     ) : (
                                         <>
+                                            {sttError && (
+                                                <div className="w-full px-4 py-3 bg-red-50 rounded-2xl border border-red-200 shadow-sm">
+                                                    <p className="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Speech Recognition Error</p>
+                                                    <p className="text-sm font-bold text-red-800 leading-relaxed">{sttError}</p>
+                                                    <button 
+                                                        onClick={() => setSttError(null)}
+                                                        className="mt-2 text-xs font-bold text-red-600 hover:text-red-800 underline"
+                                                    >
+                                                        Dismiss
+                                                    </button>
+                                                </div>
+                                            )}
                                             <button 
                                                 disabled={isAITurn || phase !== 'DISCUSSION'}
-                                                onClick={startRecording}
+                                                onClick={() => { setSttError(null); startRecording(); }}
                                                 className={`size-16 flex items-center justify-center rounded-full shadow-xl transition-all ${!isAITurn && phase === 'DISCUSSION' ? 'bg-emerald-500 text-white shadow-emerald-100 hover:scale-110 active:scale-95' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}`}
                                             >
                                                 <Mic className="w-8 h-8" />

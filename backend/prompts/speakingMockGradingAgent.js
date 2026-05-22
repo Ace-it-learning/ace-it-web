@@ -73,6 +73,12 @@ Your task is to grade a student's performance in a full Speaking Mock Examinatio
 - **Transcript (Discussion)**: {DISCUSSION_HISTORY}
 - **Individual Question**: {INDIVIDUAL_QUESTION}
 - **Transcript (Individual Response)**: {INDIVIDUAL_RESPONSE}
+- **Pronunciation Metrics (from audio analysis)**: {PRONUNCIATION_METRICS}
+
+SCORE MAPPING GUIDE for Pronunciation & Delivery (use as anchor, adjust ±1):
+- Accuracy Score 90-100 → P&D 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
+- Fluency Score 90-100 → P&D 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
+- Prosody Score 90-100 → P&D 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
 
 ### OUTPUT JSON FORMAT:
 {

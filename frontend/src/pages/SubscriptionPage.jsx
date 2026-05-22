@@ -316,7 +316,6 @@ const SubscriptionPage = () => {
                 t('pricing.pro_f4') || '1.2x XP Multiplier',
                 t('pricing.pro_f5') || 'Weekly Challenge Quest',
                 t('pricing.pro_f6') || 'Recommended Quests & Skill map',
-                t('pricing.pro_f7') || '3 devices limit',
                 t('pricing.pro_f8') || 'Chat with Ace Sir (Academic & University advisor)'
             ],
             color: 'amber',
@@ -332,8 +331,8 @@ const SubscriptionPage = () => {
             features: [
                 t('pricing.premium_f1') || 'Unlimited Mock exam access',
                 t('pricing.premium_f2') || 'Pro AI model for Mock exam grading',
+                t('pricing.premium_f6') || 'Human-like AI voices for all Speaking Quests & Mock Exam',
                 t('pricing.premium_f3') || '1.5x XP Multiplier',
-                t('pricing.premium_f4') || '5 Device Limit',
                 t('pricing.premium_f5') || 'Parental monthly progress report'
             ],
             color: 'purple'
@@ -486,36 +485,7 @@ const SubscriptionPage = () => {
                     ))}
                 </div>
 
-                {/* 3. PROMO SECTION */}
-                <div className="max-w-4xl mx-auto space-y-8">
-                    <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 space-y-6">
-                        <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                            <Zap className="text-amber-500" />
-                            {t('subscription.promo_title') || 'Promo Codes'}
-                        </h2>
-                        <p className="text-sm text-slate-500 leading-relaxed">
-                            {t('subscription.promo_subtitle') || 'Enter a referral or promotional code to unlock special discounts.'}
-                        </p>
-                        
-                        <div className="flex gap-2">
-                            <input 
-                                type="text"
-                                value={promoCode}
-                                onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
-                                placeholder={t('subscription.promo_placeholder') || 'E.G. ACEIT2025'}
-                                className="flex-1 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none font-mono tracking-widest transition-all"
-                            />
-                            <button 
-                                onClick={handleRedeem}
-                                className="px-8 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-black transition-all active:scale-95 disabled:opacity-50"
-                                disabled={!promoCode || isApplying}
-                            >
-                                {isApplying ? <Loader2 className="w-5 h-5 animate-spin" /> : t('subscription.redeem') || 'Redeem'}
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
+                {/* 3. PROMO SECTION — hidden temporarily */}
 
         </div>
     </div>

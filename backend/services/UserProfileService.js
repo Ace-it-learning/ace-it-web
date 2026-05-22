@@ -101,6 +101,7 @@ class UserProfileService {
             ...cleanInput,
             updatedAt: now,
             subscription_tier: cleanInput.subscription_tier || existing?.subscription_tier || 'free',
+            subscription_expiry: cleanInput.subscription_expiry ?? existing?.subscription_expiry ?? null,
             subscribed_subjects: cleanInput.subscribed_subjects || existing?.subscribed_subjects || ['english', 'maths'],
             parent_report_enabled: cleanInput.parent_report_enabled ?? existing?.parent_report_enabled ?? false
         };

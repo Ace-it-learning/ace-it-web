@@ -213,7 +213,9 @@ class GenerativeAIService {
         this.azureDeploymentMap = {
             "gpt-4o-mini": process.env.AZURE_OPENAI_DEPLOYMENT_4O_MINI || "gpt-4o-mini",
             "gpt-4.1-mini": process.env.AZURE_OPENAI_DEPLOYMENT_4_1_MINI || "gpt-4.1-mini",
-            "o4-mini": process.env.AZURE_OPENAI_DEPLOYMENT_O4_MINI || "o4-mini"
+            "o4-mini": process.env.AZURE_OPENAI_DEPLOYMENT_O4_MINI || "o4-mini",
+            "gpt-realtime-mini": process.env.AZURE_OPENAI_DEPLOYMENT_REALTIME || "gpt-realtime-mini",
+            "gpt-4o-transcribe": process.env.AZURE_OPENAI_DEPLOYMENT_TRANSCRIBE || "gpt-4o-transcribe"
         };
         this.azureAliasMap = {
             "ace-it-flash": "gpt-4o-mini",
@@ -586,6 +588,11 @@ class GenerativeAIService {
             temperature: typeof config?.generationConfig?.temperature === 'number' ? config.generationConfig.temperature : 0.4,
             max_tokens: Math.min(requestedMax, 8192)
         };
+        
+        // If responseMimeType is application/json, request JSON format from DeepSeek
+        if (config?.generationConfig?.responseMimeType === 'application/json') {
+            payload.response_format = { type: 'json_object' };
+        }
 
         const promptPreview = typeof prompt === 'string'
             ? prompt.substring(0, 120)

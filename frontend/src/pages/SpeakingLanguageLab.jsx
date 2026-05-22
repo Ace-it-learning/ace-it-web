@@ -5,13 +5,15 @@ import {
     ArrowRight, Sparkles, BookOpen, Volume2, 
     CheckCircle2, AlertCircle, Info, Bookmark,
     ChevronRight, Brain, Languages, Target, Clock, Loader2,
-    Zap, AlertTriangle, Award
+    Zap, AlertTriangle, Award, MessageSquare
 } from 'lucide-react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { useAvatar } from '../context/AvatarContext';
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
+import { useAzureSpeechRecognition } from '../hooks/useAzureSpeechRecognition';
+import { useAzureTTS } from '../hooks/useAzureTTS';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 const API_BASE_URL = `${API_URL}/api`;
@@ -28,19 +30,30 @@ const SpeakingLanguageLab = () => {
     const [phase, setPhase] = useState('IDLE'); // IDLE, INTRO, PRACTICE, REVIEW
     const [quest, setQuest] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isGrading, setIsGrading] = useState(false);
     const [gradingResult, setGradingResult] = useState(null);
+    const [isWaitingForAnalyses] = useState(false);
     
-    // Practice State
+    // Practice State — 2-phase per sentence
     const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
+    const [currentStep, setCurrentStep] = useState('repeat'); // 'repeat' or 'create'
     const [responses, setResponses] = useState([]); 
     const [isRecording, setIsRecording] = useState(false);
     const [isSynthesizing, setIsSynthesizing] = useState(false);
     const [speechState, setSpeechState] = useState({ text: "", role: null, isSpeaking: false });
     const [activeSubtitle, setActiveSubtitle] = useState("");
     const [ttsSpeed, setTtsSpeed] = useState('standard'); // 'standard' or 'slower'
-    const [pendingAnalyses, setPendingAnalyses] = useState(0);
-    const [isWaitingForAnalyses, setIsWaitingForAnalyses] = useState(false);
+    // (Background analysis removed — Azure STT is the single source of truth)
     
+    // Refs to avoid stale closures in async handlers
+    const currentSentenceIndexRef = useRef(0);
+    const currentStepRef = useRef('repeat');
+    
+    useEffect(() => { currentSentenceIndexRef.current = currentSentenceIndex; }, [currentSentenceIndex]);
+    useEffect(() => { currentStepRef.current = currentStep; }, [currentStep]);
+    
+    const { speak, stop } = useAzureTTS({ uid: user?.uid });
+
     // Audio Context & Refs
     const mediaRecorder = useRef(null);
     const audioChunks = useRef([]);
@@ -70,7 +83,7 @@ const SpeakingLanguageLab = () => {
     // Cleanup speech on unmount
     useEffect(() => {
         return () => {
-            if (window.speechSynthesis) window.speechSynthesis.cancel();
+            stop();
         };
     }, []);
 
@@ -91,77 +104,95 @@ const SpeakingLanguageLab = () => {
 
     useEffect(() => {
         if (phase === 'INTRO' && quest) runIntro();
+        // Pre-connect Azure STT when entering PRACTICE so recording starts instantly
+        if (phase === 'PRACTICE') prepareAzureSTT();
     }, [phase, quest]);
 
     const playAudio = (text, role, onEnd) => {
-        if (!window.speechSynthesis) return;
-
-        // Force-clear and force-resume
-        window.speechSynthesis.cancel();
-        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+        stop();
 
         const cleaned = text.replace(/^(Candidate[ _][A-D]|Examiner|Tutor|Miss Janie):/i, "").replace(/\*.*?\*/g, "").trim();
         setSpeechState({ text: cleaned, role, isSpeaking: true });
         if (role !== 'Tutor') setActiveSubtitle(cleaned);
 
-        // --- Grace Period Fix ---
-        // Some browser engines hang if speak() is called instantly after cancel()
-        setTimeout(() => {
-            const voices = window.speechSynthesis.getVoices();
-            
-            const attemptSpeak = () => {
-                const currentVoices = window.speechSynthesis.getVoices();
-                const preferredVoice = currentVoices.find(v => v.name.includes('Google UK English Female')) || 
-                                currentVoices.find(v => v.lang.startsWith('en-GB')) || 
-                                currentVoices[0];
-                                
-                const utterance = new SpeechSynthesisUtterance(cleaned);
-                if (preferredVoice) utterance.voice = preferredVoice;
-                utterance.lang = 'en-GB';
-                
-                if (role === 'Tutor') {
-                    utterance.pitch = 1.0;
-                    utterance.rate = 0.95;
-                } else {
-                    utterance.pitch = 1.05;
-                    utterance.rate = ttsSpeed === 'standard' ? 1.0 : 0.75;
-                }
+        const voiceOpts = { onEnd };
+        if (role === 'Tutor') {
+            voiceOpts.pitch = 1.0;
+            voiceOpts.rate = 0.95;
+        } else {
+            voiceOpts.pitch = 1.05;
+            voiceOpts.rate = ttsSpeed === 'standard' ? 1.0 : 0.75;
+        }
 
-                const cleanup = () => {
-                    setSpeechState({ text: "", role: null, isSpeaking: false });
-                    setIsSynthesizing(false);
-                    if (onEnd) onEnd();
-                };
-
-                utterance.onend = cleanup;
-                utterance.onerror = (e) => {
-                    console.error("TTS Error:", e);
-                    cleanup();
-                };
-                
-                setIsSynthesizing(true);
-                window.speechSynthesis.speak(utterance);
-            };
-
-            if (voices.length === 0) {
-                // Wait for voices to load if list is empty
-                window.speechSynthesis.onvoiceschanged = () => {
-                    window.speechSynthesis.onvoiceschanged = null;
-                    attemptSpeak();
-                };
-            } else {
-                attemptSpeak();
-            }
-        }, 200);
+        setIsSynthesizing(true);
+        speak(cleaned, role, voiceOpts);
     };
 
     const readForMe = (text) => {
         playAudio(text, 'Annie');
     };
 
+    // Ref to track latest Azure transcript (avoids stale closure in onstop)
+    const azureTranscriptRef = useRef('');
+
+    // Azure Speech Recognition Hook
+    const {
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript,
+        prepare: prepareAzureSTT
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 2000,
+        onFinal: (text) => {
+            // Update ref immediately so onstop can read the latest value
+            azureTranscriptRef.current = text;
+            // Use refs to avoid stale closure — get CURRENT index/step at time of callback
+            const index = currentSentenceIndexRef.current;
+            const step = currentStepRef.current;
+            setResponses(prev => {
+                const newResponses = [...prev];
+                if (!newResponses[index]) {
+                    newResponses[index] = {
+                        sentence: quest?.practice_sentences?.[index]?.text || "",
+                        target_word: quest?.practice_sentences?.[index]?.target_word || "",
+                        status: 'done',
+                        repeatTranscript: step === 'repeat' ? text : "",
+                        createTranscript: step === 'create' ? text : "",
+                        transcript: text
+                    };
+                } else {
+                    newResponses[index] = {
+                        ...newResponses[index],
+                        status: 'done',
+                        repeatTranscript: step === 'repeat' ? text : newResponses[index].repeatTranscript,
+                        createTranscript: step === 'create' ? text : newResponses[index].createTranscript,
+                        transcript: text
+                    };
+                }
+                return newResponses;
+            });
+        },
+        onError: (err) => {
+            console.error('[SpeakingLanguageLab] Azure STT error:', err);
+            const index = currentSentenceIndexRef.current;
+            setResponses(prev => {
+                const newResponses = [...prev];
+                if (newResponses[index]) {
+                    newResponses[index] = { ...newResponses[index], status: 'error' };
+                }
+                return newResponses;
+            });
+        }
+    });
+
     const toggleRecording = async () => {
         if (!isRecording) {
             try {
+                // Ensure Azure STT is pre-connected before getting mic (prevents audio cropping)
+                if (!prepareAzureSTT) {
+                    console.warn('[VocabLab] prepareAzureSTT not available, falling back to on-demand connect');
+                }
+
                 const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
                 
                 // Audio level logic for waveform
@@ -186,92 +217,83 @@ const SpeakingLanguageLab = () => {
                     if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
                     stream.getTracks().forEach(t => t.stop());
                     
-                    const index = currentSentenceIndex;
+                    // Use refs to get CURRENT index/step at time of onstop (avoids stale closure)
+                    const index = currentSentenceIndexRef.current;
+                    const step = currentStepRef.current; // 'repeat' or 'create'
                     
-                    // 1. Save locally and mark as transcribing in foreground
+                    // Wait up to 2 seconds for Azure onFinal to fire (it usually fires within 500ms after stop)
+                    let waitCount = 0;
+                    while (!azureTranscriptRef.current && waitCount < 20) {
+                        await new Promise(r => setTimeout(r, 100));
+                        waitCount++;
+                    }
+                    
+                    // Read from ref to avoid stale closure
+                    const finalTranscript = azureTranscriptRef.current;
+                    
+                    // 1. Save locally — track both repeat and create transcripts
                     setResponses(prev => {
                         const newResponses = [...prev];
-                        newResponses[index] = {
-                            sentence: quest.practice_sentences[index].text,
-                            target_word: quest.practice_sentences[index].target_word,
-                            audioBlob,
-                            status: 'transcribing',
-                            transcript: ""
-                        };
+                        if (!newResponses[index]) {
+                            newResponses[index] = {
+                                sentence: quest.practice_sentences[index]?.text || "",
+                                target_word: quest.practice_sentences[index]?.target_word || "",
+                                audioBlob,
+                                status: 'done',
+                                repeatTranscript: step === 'repeat' ? (finalTranscript || "") : "",
+                                createTranscript: step === 'create' ? (finalTranscript || "") : "",
+                                transcript: finalTranscript || "" // backward compat
+                            };
+                        } else {
+                            newResponses[index] = {
+                                ...newResponses[index],
+                                audioBlob,
+                                status: 'done',
+                                repeatTranscript: step === 'repeat' ? (finalTranscript || "") : newResponses[index].repeatTranscript,
+                                createTranscript: step === 'create' ? (finalTranscript || "") : newResponses[index].createTranscript,
+                                transcript: finalTranscript || newResponses[index].transcript
+                            };
+                        }
                         return newResponses;
                     });
-
-                    // 2. Fire background transcription (non-blocking)
-                    runBackgroundAnalysis(index, audioBlob);
-                };
-
-                const runBackgroundAnalysis = async (index, blob) => {
-                    setPendingAnalyses(prev => prev + 1);
-                    try {
-                        const formData = new FormData();
-                        formData.append('audio', blob);
-                        formData.append('module', 'delivery');
-                        formData.append('master_script', quest.practice_sentences[index].text);
-                        formData.append('uid', user?.uid || 'guest');
-                        
-                        const res = await axios.post(`${API_BASE_URL}/speaking/quest/submit`, formData);
-                        const transcript = res.data.transcript || "";
-                        
-                        setResponses(prev => {
-                            const newResponses = [...prev];
-                            newResponses[index] = { ...newResponses[index], transcript, status: 'done' };
-                            return newResponses;
-                        });
-                    } catch (err) {
-                        console.error(`Analysis failed for sentence ${index}:`, err);
-                        setResponses(prev => {
-                            const newResponses = [...prev];
-                            newResponses[index] = { ...newResponses[index], status: 'error' };
-                            return newResponses;
-                        });
-                    } finally {
-                        setPendingAnalyses(prev => Math.max(0, prev - 1));
-                    }
                 };
                 mediaRecorder.current.start();
+                azureTranscriptRef.current = '';
+                resetAzureTranscript();
+                // Reuse pre-connected WebSocket if available
+                await startAzureListening();
                 setIsRecording(true);
             } catch (err) {
                 console.error("Recording error:", err);
             }
         } else {
             mediaRecorder.current.stop();
+            stopAzureListening();
             setIsRecording(false);
         }
     };
 
-    const nextSentence = () => {
-        if (currentSentenceIndex < (quest.practice_sentences?.length || 5) - 1) {
-            setCurrentSentenceIndex(prev => prev + 1);
+    const nextStep = () => {
+        if (currentStep === 'repeat') {
+            // Move to "create your own sentence" phase
+            setCurrentStep('create');
+            // Annie gives the prompt for original sentence
+            const targetWord = quest.practice_sentences[currentSentenceIndex].target_word;
+            const createPrompt = `Now, can you use '${targetWord}' in your own sentence? Try to talk about something from your daily life or school experience.`;
+            playAudio(createPrompt, 'Tutor');
         } else {
-            submitPractice();
+            // Finished create phase, move to next sentence
+            if (currentSentenceIndex < (quest.practice_sentences?.length || 5) - 1) {
+                setCurrentSentenceIndex(prev => prev + 1);
+                setCurrentStep('repeat');
+            } else {
+                submitPractice();
+            }
         }
     };
 
     const submitPractice = async () => {
-        setIsLoading(true);
-        
-        // --- Smart Wait Logic for Analysis Sync ---
-        if (pendingAnalyses > 0) {
-            setIsWaitingForAnalyses(true);
-            console.log(`[Vocab Lab] Waiting for ${pendingAnalyses} background analyses...`);
-            
-            let waitAttempts = 0;
-            const maxWait = 20; // 10 seconds (20 * 500ms)
-            
-            while (pendingAnalyses > 0 && waitAttempts < maxWait) {
-                await new Promise(r => setTimeout(r, 500));
-                waitAttempts++;
-                // Check state via a direct ref if possible, but here we'll rely on the functional nature of setPendingAnalyses
-                // However, since we're in an async function, the state 'pendingAnalyses' might be stale.
-                // Better approach: use a ref for real-time tracking of pending counts.
-            }
-            setIsWaitingForAnalyses(false);
-        }
+        setIsGrading(true);
 
         try {
             const res = await axios.post(`${API_BASE_URL}/speaking/quest/submit`, {
@@ -284,9 +306,12 @@ const SpeakingLanguageLab = () => {
                     sentence: r.sentence,
                     target_word: r.target_word
                 })),
+                // Send both repeat and create transcripts for 2-phase grading
                 messages: responses.map(r => ({
                     role: 'user',
-                    text: r.transcript || ""
+                    text: r.transcript || "",
+                    repeat_transcript: r.repeatTranscript || "",
+                    create_transcript: r.createTranscript || ""
                 }))
             });
 
@@ -295,9 +320,35 @@ const SpeakingLanguageLab = () => {
         } catch (err) {
             console.error("Grading failed:", err);
         } finally {
-            setIsLoading(false);
+            setIsGrading(false);
         }
     };
+
+    // Show grading overlay during evaluation
+    if (isGrading) {
+        const agentName = englishTutor?.name || activeAgent?.name || 'Miss Janie';
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50">
+                <div className="flex flex-col items-center gap-6">
+                    <Loader2 className="w-16 h-16 text-indigo-600 animate-spin" />
+                    <div className="text-center">
+                        <h2 className="text-2xl font-black text-slate-800 mb-2">Evaluating Your Session</h2>
+                        <p className="text-slate-500 font-medium">{agentName} is reviewing your vocabulary performance...</p>
+                    </div>
+                    <div className="w-64 h-2 bg-slate-200 rounded-full overflow-hidden">
+                        <motion.div 
+                            className="h-full bg-indigo-600 rounded-full"
+                            animate={{ width: ["0%", "100%"] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        />
+                    </div>
+                    {isWaitingForAnalyses && (
+                        <p className="text-xs font-bold text-slate-400">Syncing voice analysis data...</p>
+                    )}
+                </div>
+            </div>
+        );
+    }
 
     if (isLoading) {
         return (
@@ -310,27 +361,11 @@ const SpeakingLanguageLab = () => {
                         <Sparkles className="absolute -top-2 -right-2 text-amber-400 size-8 animate-bounce" />
                     </div>
                     <h1 className="text-3xl font-black text-white tracking-widest uppercase mb-4">
-                        {isWaitingForAnalyses ? "Finalizing Session..." : "Generating Report..."}
+                        Loading Mission...
                     </h1>
-                    <div className="flex items-center justify-center gap-3">
-                        <div className="h-1 w-24 bg-indigo-900 rounded-full overflow-hidden">
-                            <motion.div 
-                                animate={{ x: [-100, 100] }} 
-                                transition={{ repeat: Infinity, duration: 1.5 }} 
-                                className="h-full w-1/2 bg-indigo-400 rounded-full shadow-[0_0_15px_rgba(129,140,248,0.8)]"
-                            />
-                        </div>
-                        <p className="text-slate-400 font-black text-[10px] uppercase tracking-widest">
-                            {isWaitingForAnalyses ? "Syncing voice analysis data" : "Elite Grading in Progress"}
-                        </p>
-                        <div className="h-1 w-24 bg-indigo-900 rounded-full overflow-hidden">
-                            <motion.div 
-                                animate={{ x: [100, -100] }} 
-                                transition={{ repeat: Infinity, duration: 1.5 }} 
-                                className="h-full w-1/2 bg-indigo-400 rounded-full shadow-[0_0_15px_rgba(129,140,248,0.8)]"
-                            />
-                        </div>
-                    </div>
+                    <p className="text-slate-400 font-black text-[10px] uppercase tracking-widest">
+                        Preparing vocabulary practice sentences
+                    </p>
                 </div>
             </div>
         );
@@ -507,6 +542,10 @@ const SpeakingLanguageLab = () => {
                                 </div>
 
                                 <div className="mt-6 flex flex-col gap-3">
+                                    {/* Phase indicator badge */}
+                                    <div className={`px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-center ${currentStep === 'repeat' ? 'bg-indigo-100 text-indigo-600' : 'bg-amber-100 text-amber-600'}`}>
+                                        {currentStep === 'repeat' ? 'Phase 1: Listen & Repeat' : 'Phase 2: Create Your Own Sentence'}
+                                    </div>
                                     <button 
                                         onClick={() => readForMe(currentSentence.text)}
                                         disabled={isSynthesizing}
@@ -543,25 +582,28 @@ const SpeakingLanguageLab = () => {
                                 </div>
 
                                 <div className="bg-slate-50 rounded-3xl p-6 min-h-[160px] flex-1 flex flex-col items-center justify-center gap-4 border-2 border-dashed border-slate-200">
+                                    {/* Show phase-specific prompt */}
+                                    {currentStep === 'create' && !isRecording && (
+                                        <div className="text-center mb-2">
+                                            <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Your Turn</p>
+                                            <p className="text-sm font-bold text-slate-700">Use <span className="text-indigo-600">"{currentSentence.target_word}"</span> in your own sentence</p>
+                                        </div>
+                                    )}
                                     {isRecording ? (
                                         <>
                                             <SpeakingWaveform isRecording={isRecording} />
                                             <p className="text-sm font-black text-emerald-600 animate-pulse uppercase tracking-widest">Listening to you...</p>
                                         </>
-                                    ) : (responses[currentSentenceIndex]?.status === 'done' || responses[currentSentenceIndex]?.status === 'transcribing') ? (
+                                    ) : responses[currentSentenceIndex]?.status === 'done' ? (
                                         <div className="text-center">
                                             <div className="size-12 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-3">
-                                                {responses[currentSentenceIndex].status === 'transcribing' ? (
-                                                    <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
-                                                ) : (
-                                                    <CheckCircle2 className="w-6 h-6 text-emerald-600" />
-                                                )}
+                                                <CheckCircle2 className="w-6 h-6 text-emerald-600" />
                                             </div>
                                             <p className="text-sm font-bold text-slate-800 mb-1">
-                                                {responses[currentSentenceIndex].status === 'transcribing' ? 'Analyzing Accuracy...' : 'Practice Captured'}
+                                                {currentStep === 'repeat' ? 'Repeat Captured' : 'Original Sentence Captured'}
                                             </p>
                                             <p className="text-xs font-medium text-slate-400 truncate max-w-[240px] italic">
-                                                {responses[currentSentenceIndex].status === 'transcribing' ? 'Processing speech in background...' : `"${responses[currentSentenceIndex].transcript}"`}
+                                                `"${currentStep === 'repeat' ? responses[currentSentenceIndex].repeatTranscript : responses[currentSentenceIndex].createTranscript}"`
                                             </p>
                                         </div>
                                     ) : (
@@ -569,7 +611,9 @@ const SpeakingLanguageLab = () => {
                                             <div className="size-12 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-3">
                                                 <Mic className="w-6 h-6 text-slate-400" />
                                             </div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Press Mic to Repeat</p>
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">
+                                                {currentStep === 'repeat' ? 'Press Mic to Repeat' : 'Press Mic to Create'}
+                                            </p>
                                         </div>
                                     )}
                                 </div>
@@ -577,29 +621,29 @@ const SpeakingLanguageLab = () => {
                                 <div className="mt-8 flex gap-4">
                                     <button 
                                         onClick={toggleRecording}
-                                        disabled={isSynthesizing || (responses[currentSentenceIndex]?.status === 'transcribing')}
-                                        className={`flex-1 py-5 rounded-2xl font-black transition-all flex items-center justify-center gap-2 ${isRecording ? 'bg-rose-500 text-white shadow-lg shadow-rose-100' : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-100'} ${(responses[currentSentenceIndex]?.status === 'transcribing') ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                        disabled={isSynthesizing}
+                                        className={`flex-1 py-5 rounded-2xl font-black transition-all flex items-center justify-center gap-2 ${isRecording ? 'bg-rose-500 text-white shadow-lg shadow-rose-100' : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-100'}`}
                                     >
                                         {isRecording ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
-                                        {isRecording ? 'Finish Speaking' : 'Start Practice'}
+                                        {isRecording ? 'Finish Speaking' : (currentStep === 'repeat' ? 'Start Repeat' : 'Start Creating')}
                                     </button>
                                     
                                     {responses[currentSentenceIndex] && !isRecording && (
                                         <button 
-                                            onClick={nextSentence}
-                                            disabled={isLoading || (currentSentenceIndex === (quest.practice_sentences?.length - 1) && pendingAnalyses > 0)}
+                                            onClick={nextStep}
+                                            disabled={isLoading}
                                             className="flex-1 py-5 bg-indigo-600 text-white rounded-2xl font-black hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-100 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
-                                            {currentSentenceIndex === (quest.practice_sentences?.length - 1) ? (
-                                                pendingAnalyses > 0 ? (
-                                                    <>
-                                                        <Loader2 className="w-5 h-5 animate-spin" />
-                                                        Finalizing...
-                                                    </>
-                                                ) : 'Review Results'
+                                            {currentStep === 'repeat' ? (
+                                                <>
+                                                    Next: Create Your Own
+                                                    <ArrowRight className="w-5 h-5" />
+                                                </>
+                                            ) : currentSentenceIndex === (quest.practice_sentences?.length - 1) ? (
+                                                'Review Results'
                                             ) : (
                                                 <>
-                                                    Next Step
+                                                    Next Sentence
                                                     <ArrowRight className="w-5 h-5" />
                                                 </>
                                             )}
@@ -725,7 +769,46 @@ const SpeakingLanguageLab = () => {
                                     </div>
                                 </section>
 
-                                {/* 4. Elite Mastery (Roadmap Tips) */}
+                                {/* 4. Your Original Sentences */}
+                                <section>
+                                    <h2 className="text-sm font-black uppercase tracking-[0.2em] text-indigo-500 mb-6 flex items-center gap-3">
+                                        <MessageSquare className="w-5 h-5" /> Your Original Sentences
+                                    </h2>
+                                    <div className="space-y-4">
+                                        {responses.map((r, i) => (
+                                            <motion.div 
+                                                key={i}
+                                                initial={{ x: -20, opacity: 0 }}
+                                                animate={{ x: 0, opacity: 1 }}
+                                                transition={{ delay: i * 0.1 }}
+                                                className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm"
+                                            >
+                                                <div className="flex items-start gap-4">
+                                                    <div className="size-10 rounded-2xl bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                                                        <span className="text-sm font-black text-indigo-600">{i + 1}</span>
+                                                    </div>
+                                                    <div className="flex-1 min-w-0">
+                                                        <div className="flex items-center gap-2 mb-2">
+                                                            <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-lg text-[10px] font-black uppercase tracking-wider">Target: {r.target_word}</span>
+                                                        </div>
+                                                        <div className="space-y-2">
+                                                            <div className="flex gap-2">
+                                                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-wider w-16 flex-shrink-0 pt-1">Repeat</span>
+                                                                <p className="text-sm font-bold text-slate-600 italic">{r.repeatTranscript || "—"}</p>
+                                                            </div>
+                                                            <div className="flex gap-2">
+                                                                <span className="text-[10px] font-black text-indigo-400 uppercase tracking-wider w-16 flex-shrink-0 pt-1">Original</span>
+                                                                <p className="text-sm font-bold text-indigo-700">{r.createTranscript || "—"}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </section>
+
+                                {/* 5. Elite Mastery (Roadmap Tips) */}
                                 <section className="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative">
                                     <div className="absolute top-0 right-0 p-10 opacity-10">
                                         <Target className="w-40 h-40" />
@@ -734,11 +817,11 @@ const SpeakingLanguageLab = () => {
                                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-6">Target Roadmap: Level 5* & 5** Mastery</h2>
                                         <h3 className="text-4xl font-black mb-8 leading-tight">Expert Strategy for Vocab Range</h3>
                                         <div className="space-y-6">
-                                            {[
+                                            {(gradingResult.feedback?.roadmap_tips || gradingResult.feedback?.improvement_advice ? [gradingResult.feedback.improvement_advice] : [
                                                 "Focus on the precise pronunciation of final consonant clusters (e.g., -ts, -ks) in Power Words.",
                                                 "Use 'Sense Groups' to chunk complex sentences into meaningful segments for better prosody.",
                                                 "Incorporate target words into your 'Part B: Individual Response' to demonstrate a higher Linguistic Range."
-                                            ].map((tip, i) => (
+                                            ]).map((tip, i) => (
                                                 <div key={i} className="flex gap-6 items-start group">
                                                     <div className="size-10 rounded-2xl bg-white/10 flex items-center justify-center text-xl font-black text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">{i + 1}</div>
                                                     <p className="text-slate-400 font-bold group-hover:text-slate-200 transition-colors text-lg">{tip}</p>

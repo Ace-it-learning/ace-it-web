@@ -58,11 +58,14 @@ async function updateSubscriptionProfile(uid, subscription, explicitStatus) {
         getTierFromPriceId(priceId) ||
         'pro';
 
+    // current_period_end is on the subscription item, not the top-level subscription
+    const periodEnd = firstItem?.current_period_end || subscription.current_period_end;
+
     await UserProfileService.createOrUpdateProfile(uid, {
         subscription_tier: derivedTier,
         subscription_status: explicitStatus || subscription.status || 'active',
-        subscription_expiry: subscription.current_period_end
-            ? new Date(subscription.current_period_end * 1000).toISOString()
+        subscription_expiry: periodEnd
+            ? new Date(periodEnd * 1000).toISOString()
             : null,
         subscription_cancel_at_period_end: !!subscription.cancel_at_period_end,
         stripe_customer_id: subscription.customer || null,
@@ -236,11 +239,23 @@ router.post('/webhook', async (req, res) => {
             console.log(`[Stripe webhook] checkout.session.completed: uid=${uid || 'MISSING'}, tier=${tier || 'MISSING'}`);
             if (uid) {
                 try {
+                    // Fetch the subscription to get the current_period_end
+                    let subscriptionExpiry = null;
+                    if (checkoutSession.subscription) {
+                        const subscription = await stripe.subscriptions.retrieve(checkoutSession.subscription);
+                        const firstItem = subscription?.items?.data?.[0];
+                        const periodEnd = firstItem?.current_period_end || subscription.current_period_end;
+                        subscriptionExpiry = periodEnd
+                            ? new Date(periodEnd * 1000).toISOString()
+                            : null;
+                        console.log(`[Stripe webhook] checkout.session.completed: subscription_expiry=${subscriptionExpiry}`);
+                    }
                     await UserProfileService.createOrUpdateProfile(uid, {
                         subscription_tier: tier || 'pro',
                         subscription_status: 'active',
                         stripe_customer_id: checkoutSession.customer || null,
                         stripe_subscription_id: checkoutSession.subscription || null,
+                        subscription_expiry: subscriptionExpiry,
                         subscription_updated: new Date().toISOString()
                     });
                     console.log(`[Stripe webhook] checkout.session.completed -> profile updated for ${uid}`);
@@ -376,8 +391,8 @@ router.get('/sync-subscription', requireResolvedUid, async (req, res) => {
             await UserProfileService.createOrUpdateProfile(uid, {
                 subscription_tier: derivedTier,
                 subscription_status: activeSub.status,
-                subscription_expiry: activeSub.current_period_end
-                    ? new Date(activeSub.current_period_end * 1000).toISOString()
+                subscription_expiry: (activeSub.items?.data?.[0]?.current_period_end || activeSub.current_period_end)
+                    ? new Date((activeSub.items?.data?.[0]?.current_period_end || activeSub.current_period_end) * 1000).toISOString()
                     : null,
                 stripe_subscription_id: activeSub.id,
                 stripe_price_id: priceId,

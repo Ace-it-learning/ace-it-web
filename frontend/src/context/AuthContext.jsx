@@ -8,7 +8,9 @@ import {
     entraLoginRedirect,
     entraLogoutRedirect,
     consumePostRedirectAuthResult,
-    getMsalSilentRedirectUri
+    getMsalSilentRedirectUri,
+    startEntraTokenRefresh,
+    stopEntraTokenRefresh
 } from '../entraMsalSingleton';
 import { fetchWithAuth } from '../utils/apiAuth';
 import { apiUrl, getApiBase } from '../utils/apiBase';
@@ -79,9 +81,13 @@ export const AuthProvider = ({ children }) => {
             const subject = authUser || user;
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 8000);
-            const res = await fetchWithAuth(subject, apiUrl(`/api/user/profile/${uid}`), {
-                signal: controller.signal,
-            });
+            const res = USE_ENTRA
+                ? await apiFetchWithRetry(apiUrl(`/api/user/profile/${uid}`), {
+                      signal: controller.signal,
+                  })
+                : await fetchWithAuth(subject, apiUrl(`/api/user/profile/${uid}`), {
+                      signal: controller.signal,
+                  });
             clearTimeout(timeoutId);
             if (res.ok) {
                 const data = await res.json();
@@ -130,6 +136,58 @@ export const AuthProvider = ({ children }) => {
         });
         return unsubscribe;
     }, []);
+
+    /** Refresh the Entra ID token via MSAL silent acquisition (uses cache when valid). */
+    const refreshEntraToken = async (_forceRefresh) => {
+        const client = await ensureEntraMsalClient();
+        const activeAccount = client.getActiveAccount() || client.getAllAccounts()[0];
+        if (!activeAccount) {
+            throw new Error('No active Microsoft account');
+        }
+        client.setActiveAccount(activeAccount);
+        const tokenResp = await tieEntraSilent(() =>
+            client.acquireTokenSilent({
+                account: activeAccount,
+                scopes: ['openid', 'profile', 'email'],
+                redirectUri: getMsalSilentRedirectUri()
+            })
+        );
+        return pickMsalIdToken(tokenResp);
+    };
+
+    /**
+     * Wrap an API call with automatic token retry.
+     * If the call returns 401, try refreshing the Entra token once and retry.
+     */
+    const apiFetchWithRetry = async (url, options = {}) => {
+        const doFetch = async (token) => {
+            const opts = {
+                ...options,
+                headers: {
+                    ...(options.headers || {}),
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
+                }
+            };
+            return fetch(url, opts);
+        };
+
+        let token = null;
+        if (user && typeof user.getIdToken === 'function') {
+            try { token = await user.getIdToken(); } catch (_) { /* ignore */ }
+        }
+        let res = await doFetch(token);
+
+        // If 401 and we have an Entra user, try one silent refresh then retry
+        if (res.status === 401 && USE_ENTRA && user?.authProvider === 'entra') {
+            try {
+                const freshToken = await refreshEntraToken(true);
+                res = await doFetch(freshToken);
+            } catch (_) {
+                // Refresh failed — leave the 401 for the caller to handle
+            }
+        }
+        return res;
+    };
 
     const resolveIdentityWithToken = async (token, msUser) => {
         const controller = new AbortController();
@@ -193,7 +251,7 @@ export const AuthProvider = ({ children }) => {
             /** Entra-only hints for UI (Firebase uses providerData instead) */
             authProvider: 'entra',
             entraIdp,
-            getIdToken: async () => token
+            getIdToken: refreshEntraToken
         };
         setUser(mappedUser);
         await fetchProfile(mappedUser.uid, mappedUser);
@@ -224,6 +282,8 @@ export const AuthProvider = ({ children }) => {
             const idTok = pickMsalIdToken(tokenResp);
             // DEBUG: console.log('[AuthContext] retryEntraSession resolving identity...');
             await resolveIdentityWithToken(idTok, activeAccount);
+            // Restart background refresh after successful recovery.
+            startEntraTokenRefresh(client, 10);
             // DEBUG: console.log('[AuthContext] retryEntraSession success');
             setLoading(false);
             return { ok: true };
@@ -331,6 +391,8 @@ export const AuthProvider = ({ children }) => {
                     await resolveIdentityWithToken(idTok, activeAccount);
                 }
                 // DEBUG: console.log('[AuthContext] initEntra success, releasing gate');
+                // Start background refresh so the token doesn't expire while idle.
+                startEntraTokenRefresh(client, 10);
                 // Always release the loading gate after identity resolves. `done()` alone is not
                 // enough: it no-ops when Strict Mode bumped `entraInitGeneration` so `mine` is stale,
                 // which left the UI on "Completing sign-in…" forever even though sign-in succeeded.
@@ -396,7 +458,7 @@ export const AuthProvider = ({ children }) => {
             );
             try {
                 const token = pickMsalIdToken(tokenResp);
-                const nextUser = { ...(user || {}), getIdToken: async () => token };
+                const nextUser = { ...(user || {}), getIdToken: refreshEntraToken };
                 setUser(nextUser);
                 return nextUser;
             } catch {
@@ -589,6 +651,7 @@ export const AuthProvider = ({ children }) => {
         if (USE_ENTRA) {
             setUser(null);
             setProfile(null);
+            stopEntraTokenRefresh();
             sessionStorage.setItem('aceit_post_logout_home', 'true');
             const client = await ensureEntraMsalClient();
             // Reset the singleton so the next visit re-initializes MSAL cleanly.

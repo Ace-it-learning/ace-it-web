@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Upload, Check, Edit3, X, Loader2 } from 'lucide-react';
 import { readAndPrepareImageFile } from '../utils/prepareImageForOcr';
+import QrHandoffPanel from './handoff/QrHandoffPanel';
+import { useAuth } from '../context/AuthContext';
+import { fetchWithAuth } from '../utils/apiAuth';
+import { apiUrl } from '../utils/apiBase';
 
 const EssayUploader = ({ onConfirm, onCancel }) => {
+    const { user } = useAuth();
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
     const [transcription, setTranscription] = useState('');
@@ -25,9 +30,8 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
 
         try {
             const { base64Data, mimeType } = await readAndPrepareImageFile(file);
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
-            const response = await fetch(`${API_URL}/api/ocr`, {
+            const response = await fetchWithAuth(user, apiUrl('/api/ocr'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -59,12 +63,30 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
         setStatus('IDLE');
     };
 
+    const onHandoffPhoto = useCallback((msg) => {
+        if (!msg || msg.surface !== 'chat_essay_ocr' || !msg.payload) return;
+        const p = msg.payload;
+        setError(null);
+        setFile(null);
+        if (p.image?.data && p.image?.mimeType) {
+            setPreview(`data:${p.image.mimeType};base64,${p.image.data}`);
+        }
+        const text = (p.transcription || '').trim();
+        setTranscription(text);
+        if (text.length < 5) {
+            setError('Could not read enough text from the photo. Try again with better lighting.');
+            setStatus('IDLE');
+            return;
+        }
+        setStatus('VERIFYING');
+    }, []);
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
-            <div className="bg-white dark:bg-[#1a110a] w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300">
-                <div className="p-6 border-b border-black/5 dark:border-white/10 flex justify-between items-center">
-                    <h3 className="text-xl font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
-                        <Upload className="w-5 h-5 text-primary" />
+            <div className="bg-white dark:bg-[#1a110a] w-full max-w-4xl max-h-[min(92vh,900px)] rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 flex flex-col">
+                <div className="p-4 sm:p-6 border-b border-black/5 dark:border-white/10 flex justify-between items-center shrink-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-[#1d130c] dark:text-white flex items-center gap-2">
+                        <Upload className="w-5 h-5 text-primary shrink-0" />
                         Analysis: Verify-Then-Grade
                     </h3>
                     <button onClick={onCancel} className="p-2 hover:bg-black/5 rounded-full transition-colors">
@@ -72,32 +94,45 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
                     </button>
                 </div>
 
-                <div className="p-8">
+                <div className="p-4 sm:p-6 md:p-8 overflow-y-auto min-h-0 flex-1">
                     {status === 'IDLE' && (
-                        <div className="flex flex-col items-center gap-6">
-                            <div
-                                className="w-full h-64 border-2 border-dashed border-primary/20 rounded-2xl flex flex-col items-center justify-center gap-4 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer relative overflow-hidden"
-                                onClick={() => document.getElementById('essay-upload-input').click()}
-                            >
-                                {preview ? (
-                                    <img src={preview} className="w-full h-full object-contain p-4" alt="Preview" />
-                                ) : (
-                                    <>
-                                        <div className="p-4 bg-white rounded-full shadow-sm">
-                                            <Upload className="w-8 h-8 text-primary" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-500">
-                                            Click to upload a photo of your handwriting
-                                        </p>
-                                    </>
-                                )}
-                                <input
-                                    id="essay-upload-input"
-                                    type="file"
-                                    className="hidden"
-                                    accept="image/*"
-                                    onChange={handleFileChange}
-                                />
+                        <div className="flex flex-col gap-6">
+                            <div className="flex flex-col md:flex-row md:items-stretch gap-6">
+                                <div className="w-full md:flex-1 md:min-w-0 flex flex-col min-h-[200px] md:min-h-[260px]">
+                                    <div
+                                        className="w-full flex-1 min-h-[200px] md:min-h-[260px] border-2 border-dashed border-primary/20 rounded-2xl flex flex-col items-center justify-center gap-4 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer relative overflow-hidden"
+                                        onClick={() => document.getElementById('essay-upload-input').click()}
+                                    >
+                                        {preview ? (
+                                            <img src={preview} className="w-full h-full object-contain p-4" alt="Preview" />
+                                        ) : (
+                                            <>
+                                                <div className="p-4 bg-white rounded-full shadow-sm">
+                                                    <Upload className="w-8 h-8 text-primary" />
+                                                </div>
+                                                <p className="text-sm font-medium text-gray-500 text-center px-4">
+                                                    Click to upload a photo of your handwriting
+                                                </p>
+                                            </>
+                                        )}
+                                        <input
+                                            id="essay-upload-input"
+                                            type="file"
+                                            className="hidden"
+                                            accept="image/*"
+                                            onChange={handleFileChange}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="w-full md:w-[min(100%,280px)] md:shrink-0 flex flex-col">
+                                    <QrHandoffPanel
+                                        surface="chat_essay_ocr"
+                                        meta={{}}
+                                        onPhotoReceived={onHandoffPhoto}
+                                        onError={(m) => setError(m)}
+                                        className="w-full flex-1"
+                                    />
+                                </div>
                             </div>
 
                             {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -105,7 +140,7 @@ const EssayUploader = ({ onConfirm, onCancel }) => {
                             <button
                                 onClick={handleUpload}
                                 disabled={!file}
-                                className="w-full py-4 bg-primary text-white rounded-2xl font-bold shadow-lg shadow-primary/20 disabled:opacity-50 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-primary text-white rounded-2xl font-bold shadow-lg shadow-primary/20 disabled:opacity-50 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 shrink-0"
                             >
                                 Start Transcription
                             </button>

@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { RotateCw, Smartphone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const OrientationGuard = () => {
+    const { pathname } = useLocation();
+    /** Phone QR handoff: portrait is normal; do not block upload flow. */
+    if (pathname.startsWith('/m/capture')) return null;
+
     const [isPortrait, setIsPortrait] = useState(false);
     const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
     const [isDismissed, setIsDismissed] = useState(false);

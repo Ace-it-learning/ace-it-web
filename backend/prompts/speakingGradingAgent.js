@@ -24,8 +24,15 @@ ASSESSMENT CRITERIA (Strictly follow HKDSE Paper 4 Part A Reading Aloud standard
 INPUT DATA:
 - Master Script (Target): {MASTER_SCRIPT}
 - Student Transcript (Actual): {STUDENT_TRANSCRIPT}
-- Confidence/Phonetic Data: {WAVEFORM_DATA}
+- Pronunciation Metrics (from Azure Speech Assessment): {WAVEFORM_DATA}
+- Word-level Analysis: {WORD_ANALYSIS}
 - Target Level: {STUDENT_LEVEL}
+
+SCORE MAPPING GUIDE (use these as anchors, adjust ±1 based on context):
+- Accuracy Score 90-100 → pronunciation 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
+- Fluency Score 90-100 → pacing 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
+- Prosody Score 90-100 → intonation 6-7 | 70-89 → 4-5 | 50-69 → 3 | 30-49 → 2 | <30 → 1
+- Completeness Score <50 → penalize grammar/clarity score by 1-2 points
 
 CRITICAL RULES for word_analysis:
 - YOU MUST return 3-5 words in "word_analysis".
@@ -156,7 +163,10 @@ INPUT:
 - Topic: {TOPIC}
 - Prosody & Delivery Data: {PROSODY_METRICS}
 
-CRITICAL: If Prosody Data is provided, your score for "delivery" MUST be heavily influenced by it.
+CRITICAL: If Prosody Data or Pronunciation Assessment metrics are provided, your score for "delivery" MUST be heavily influenced by them.
+- If Accuracy Score is low (<60), delivery score should not exceed 3.
+- If Fluency Score indicates rapid or monotonous speech, penalize delivery.
+- If Prosody Score is low (<60), intonation score should not exceed 3.
 - If pacing is 'rapid' or 'monotonous', penalize the delivery score.
 - If clarity is 'muffled' or 'hesitant', reflect this in the cons and score.
 - Use the FULL 0-7 range. Level 5** is reserved for elite performance. Most students should score 3-4.
@@ -164,10 +174,10 @@ CRITICAL: If Prosody Data is provided, your score for "delivery" MUST be heavily
 OUTPUT JSON:
 {
     "scores": {
-        "delivery": 0-7,
-        "strategies": 0-7,
-        "language": 0-7,
-        "organisation": 0-7,
+        "facilitation": 0-7,
+        "listening": 0-7,
+        "turn_taking": 0-7,
+        "bridging": 0-7,
         "total": 0-28
     },
     "feedback": {
@@ -196,13 +206,28 @@ const languagePatternsGradingAgent = `HKDSE Speaking Examiner - Module 4: Vocabu
 **1 (Level 1)**: Isolated words and phrases. Barely communicative.
 **0**: No language produced.
 
-Your task is to assess how accurately and naturally the student articulated a set of practice sentences containing specific "Power Words."
+TASK OVERVIEW:
+This is a 2-PHASE vocabulary exercise:
+- PHASE A (REPEAT): Student reads a provided sentence containing a target "Power Word" — assess PRONUNCIATION & FLUENCY.
+- PHASE B (ORIGINAL): Student creates their OWN sentence using the same target word — assess VOCABULARY MASTERY & ORIGINALITY.
 
 ASSESSMENT CRITERIA:
-1. **Vocabulary Range & Mastery (speaking_vocabularyInSpeech)**: (0-7 marks) Accuracy and clarity of the target word pronunciation within the sentence.
-2. **Articulation & Structure (speaking_grammaticalAccuracy)**: (0-7 marks) Ability to handle the complex sentence structures naturally without robotic pauses or misgrouping.
-3. **Pronunciation Foundation (speaking_pronunciationClarity)**: (0-7 marks) General clarity and phonetic accuracy across all words in the sentences.
-4. **Prosody & Context (speaking_intonation)**: (0-7 marks) Appropriate use of sentence stress and intonation to convey meaning.
+1. **Vocabulary Range & Mastery (speaking_vocabularyInSpeech)**: (0-7 marks) 
+   - PHASE A: Did the student pronounce the target word clearly and accurately?
+   - PHASE B: Did the student use the target word correctly in their OWN sentence? Is the usage natural and contextually appropriate?
+   - Weight: 60% Phase B (original usage), 40% Phase A (pronunciation)
+
+2. **Articulation & Structure (speaking_grammaticalAccuracy)**: (0-7 marks)
+   - PHASE A: Did they handle the sentence structure naturally?
+   - PHASE B: Is their original sentence grammatically correct?
+   - Weight: 50% each phase
+
+3. **Pronunciation Foundation (speaking_pronunciationClarity)**: (0-7 marks)
+   - Overall clarity across ALL spoken responses.
+   - Focus on: target word accuracy, final consonant clusters, vowel sounds.
+
+4. **Prosody & Context (speaking_intonation)**: (0-7 marks)
+   - Appropriate stress on the target word, natural rhythm, meaningful intonation.
 
 INPUT DATA:
 {PRACTICE_RESULTS}
@@ -210,10 +235,24 @@ INPUT DATA:
 Target Level: {LEVEL}
 
 INSTRUCTIONS:
-- Compare the [TARGET] sentence with the [STUDENT ACTUAL] transcript for each item.
-- Evaluate based on the phonetic accuracy and natural flow.
-- If the transcript matches the target but the student levels are low, focus on delivery quality.
+- For each sentence, evaluate BOTH phases separately, then combine.
+- PHASE A (REPEAT): If the student read the sentence accurately, they should score at least 3-4 on pronunciation. Do NOT penalize for "just reading" — that is the task.
+- PHASE B (ORIGINAL): This is where vocabulary mastery is tested. Did they create a NEW sentence (not just repeat)? Is the target word used correctly and naturally?
 - Use the FULL 0-7 range. Level 5** is reserved for elite performance. Most students should score 3-4.
+
+STRICT SCORING RULES — ZERO TOLERANCE FOR NON-RESPONSIVE INPUT:
+- If the student said "hello", "hi", "um", "ah", or any SINGLE WORD that is NOT the target sentence: score 0 for that phase.
+- If the student said random words unrelated to the target sentence: score 0 for that phase.
+- If the transcript is empty or "No transcript available": score 0 for that phase.
+- If Phase A (REPEAT) transcript does NOT contain the target word or is completely different from the target sentence: score 0 on vocabulary, 0-1 on articulation, 0-1 on pronunciation.
+- If Phase B (ORIGINAL) transcript does NOT contain the target word or is just "hello"/nonsense: score 0 on vocabulary, 0-1 on articulation.
+- ONLY give points when the student made a GENUINE ATTEMPT at the task.
+
+SCORING GUIDANCE:
+- If student said "hello" or nonsense for ALL responses: score 0 on vocabulary, 0-1 on articulation, 0-1 on pronunciation, 0 on intonation. Total should be 0-2.
+- If student repeated all sentences accurately but didn't create original sentences: score 3-4 on pronunciation/articulation, 1-2 on vocabulary.
+- If student created original sentences with correct usage: score 4-5 on vocabulary, 3-4 on articulation.
+- If student did both well: score 5-6 on vocabulary, 4-5 on articulation/pronunciation.
 
 OUTPUT JSON FORMAT:
 {
@@ -225,9 +264,9 @@ OUTPUT JSON FORMAT:
         "total": 0-28
     },
     "feedback": {
-        "summary": "Assess the student's mastery of the specific vocab set provided.",
-        "vocabulary_highlights": ["The target words student handled best"],
-        "improvement_advice": "Advice on using these words in a real discussion (range boosting)."
+        "summary": "2-3 sentence assessment of both repeat and original sentence performance.",
+        "vocabulary_highlights": ["Target words the student mastered best"],
+        "improvement_advice": "Specific advice for improving vocabulary usage in original sentences."
     },
     "grammar_diagnostics": ["error_tag1", "error_tag2"]
 }

@@ -1,14 +1,15 @@
-import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { useAvatar } from '../context/AvatarContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Paperclip, Send, Volume2, VolumeX, Edit3, Type, Maximize2, Minimize2, X, MessageSquare, CircleX, Trophy, Lock, Zap, Target, BookOpen, Plus, Settings2, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Sparkles, Smartphone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../utils/cn'; // Reusing cn utility
 import { readAndPrepareImageFile } from '../utils/prepareImageForOcr';
 import EssayUploader from './EssayUploader';
+import QrHandoffPanel from './handoff/QrHandoffPanel';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import LaunchCard from './LaunchCard';
 import AuthForm from './AuthForm';
@@ -599,6 +600,7 @@ const ChatInterface = ({ onOpenQuest }) => {
     const [isClearConfirmOpen, setIsClearConfirmOpen] = useState(false);
     const [isAnalyzingImage, setIsAnalyzingImage] = useState(false);
     const [isImageConfirmOpen, setIsImageConfirmOpen] = useState(false);
+    const [isChatQrImageOpen, setIsChatQrImageOpen] = useState(false);
     const [imagePrompt, setImagePrompt] = useState("");
     const [hasStartedTyping, setHasStartedTyping] = useState(false); // Tracks if user modified the default prompt
     const [isMuted, setIsMuted] = useState(true);
@@ -1093,6 +1095,24 @@ const ChatInterface = ({ onOpenQuest }) => {
             alert("Failed to read the file. Please try again.");
         }
     };
+
+    const onChatQrHandoffPhoto = useCallback((msg) => {
+        if (!msg?.payload?.image?.data) return;
+        const mime = msg.payload.image.mimeType || 'image/jpeg';
+        const data = msg.payload.image.data;
+        setSelectedImage({
+            data,
+            type: mime,
+            preview: `data:${mime};base64,${data}`
+        });
+        const defaultPrompt = activeAgentId === 'math'
+            ? "Please help me solve this maths question."
+            : t('chat.image_attach_default_prompt');
+        setImagePrompt(defaultPrompt);
+        setHasStartedTyping(false);
+        setIsChatQrImageOpen(false);
+        setIsImageConfirmOpen(true);
+    }, [activeAgentId, t]);
 
 
 
@@ -1600,6 +1620,34 @@ const ChatInterface = ({ onOpenQuest }) => {
                 />
             )}
 
+            {isChatQrImageOpen && (
+                <div className="fixed inset-0 z-[360] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white dark:bg-[#1a110a] w-full max-w-lg rounded-3xl shadow-2xl border border-black/5 dark:border-white/10 p-6 relative">
+                        <button
+                            type="button"
+                            onClick={() => setIsChatQrImageOpen(false)}
+                            className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-gray-500"
+                            aria-label="Close"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                        <h3 className="text-lg font-black text-[#1d130c] dark:text-white pr-10 mb-2">
+                            {t('chat.attach_photo_phone_title')}
+                        </h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            {t('chat.attach_photo_phone_subtitle')}
+                        </p>
+                        <QrHandoffPanel
+                            surface="chat_tutor_image"
+                            meta={{}}
+                            onPhotoReceived={onChatQrHandoffPhoto}
+                            onError={() => {}}
+                            className="w-full"
+                        />
+                    </div>
+                </div>
+            )}
+
             {/* Header */}
             <div
                 className={cn(
@@ -2090,7 +2138,19 @@ const ChatInterface = ({ onOpenQuest }) => {
                                         <div className="p-1.5 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-500 group-hover:bg-blue-100 transition-colors">
                                             <Paperclip size={16} />
                                         </div>
-                                        {t('chat.attach_photo')}
+                                        {t('chat.attach_photo_device')}
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setIsChatQrImageOpen(true);
+                                            setIsToolsOpen(false);
+                                        }}
+                                        className="w-full flex items-center gap-3 px-3 py-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl transition-colors text-sm font-bold text-[#1d130c] dark:text-white group text-left"
+                                    >
+                                        <div className="p-1.5 bg-violet-50 dark:bg-violet-900/20 rounded-lg text-violet-500 group-hover:bg-violet-100 transition-colors">
+                                            <Smartphone size={16} />
+                                        </div>
+                                        {t('chat.attach_photo_phone')}
                                     </button>
 
                                     {activeAgentId !== 'math' && activeAgentId !== 'ace' && (

@@ -88,10 +88,12 @@ const SpeakingPillarMenu = () => {
         if (activePillar.id === 'criterion_d') moduleType = 'ideas_organisation';
         if (activePillar.id === 'discussion') moduleType = 'interaction';
         
-        navigate(`${activePillar.route}?module=${moduleType}&topic=${drill.id}&level=${levelVal}`, {
+        navigate(`${activePillar.route}?module=${moduleType}&topic=${encodeURIComponent(drill.id)}&level=${levelVal}&taskId=${drill.id}`, {
             state: {
                 drill: drill,
-                pillarId: activePillar.id
+                pillarId: activePillar.id,
+                topic: drill.title,
+                taskId: drill.id
             }
         });
     };

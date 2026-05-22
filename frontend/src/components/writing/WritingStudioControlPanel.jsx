@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Sparkles, MessageSquare, ChevronRight, Target, Star, Loader2, ShieldAlert, PenTool } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Sparkles, MessageSquare, ChevronRight, Target, Loader2, ShieldAlert, PenTool } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { getLocalizedValue } from '../../utils/writingUtils';
+import QrHandoffPanel from '../handoff/QrHandoffPanel';
 
 const WritingStudioControlPanel = ({ 
     sparkNotes, 
@@ -11,28 +12,51 @@ const WritingStudioControlPanel = ({
     onReviewTrigger, 
     isReviewing,
     isMock = false,
+    allowPaperUpload = false,
     uploadedImages = [],
     onUpload,
-    onDeleteImage
+    onDeleteImage,
+    qrSurface = null,
+    qrMeta = {},
+    onQrPhoto
 }) => {
     const { language } = useLanguage();
     const isChinese = language?.startsWith('zh');
-    const [activeTab, setActiveTab] = useState('spark');
+    const showUploadTab = isMock || allowPaperUpload;
 
-    const tabs = isMock 
-        ? [
-            { id: 'spark', label: 'Spark', icon: Sparkles, color: 'text-amber-500', bg: 'bg-amber-50' },
-            { id: 'upload', label: 'Upload', icon: PenTool, color: 'text-rose-500', bg: 'bg-rose-50' }
-          ]
-        : [
+    const [activeTab, setActiveTab] = useState(() => (showUploadTab ? 'upload' : 'spark'));
+
+    useEffect(() => {
+        if (!showUploadTab && activeTab === 'upload') {
+            setActiveTab('spark');
+        }
+    }, [showUploadTab, activeTab]);
+
+    const tabs = useMemo(() => {
+        if (isMock) {
+            return [
+                { id: 'upload', label: 'Upload', icon: PenTool, color: 'text-rose-500', bg: 'bg-rose-50' },
+                { id: 'spark', label: 'Spark', icon: Sparkles, color: 'text-amber-500', bg: 'bg-amber-50' }
+            ];
+        }
+        if (allowPaperUpload) {
+            return [
+                { id: 'upload', label: 'Upload', icon: PenTool, color: 'text-rose-500', bg: 'bg-rose-50' },
+                { id: 'spark', label: 'Spark', icon: Sparkles, color: 'text-amber-500', bg: 'bg-amber-50' },
+                { id: 'review', label: 'Review', icon: MessageSquare, color: 'text-indigo-500', bg: 'bg-indigo-50' }
+            ];
+        }
+        return [
             { id: 'spark', label: 'Spark', icon: Sparkles, color: 'text-amber-500', bg: 'bg-amber-50' },
             { id: 'review', label: 'Review', icon: MessageSquare, color: 'text-indigo-500', bg: 'bg-indigo-50' }
-          ];
+        ];
+    }, [isMock, allowPaperUpload]);
 
-    // If in Mock mode, default to spark but allow upload
-    useEffect(() => {
-        if (isMock && activeTab === 'review') setActiveTab('spark');
-    }, [isMock]);
+    const displayTab = useMemo(() => {
+        if (isMock && activeTab === 'review') return 'spark';
+        if (!showUploadTab && activeTab === 'upload') return 'spark';
+        return activeTab;
+    }, [isMock, showUploadTab, activeTab]);
 
     return (
         <div className="flex flex-col h-full bg-white border-l border-slate-100">
@@ -43,12 +67,12 @@ const WritingStudioControlPanel = ({
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
                         className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl transition-all
-                            ${activeTab === tab.id 
+                            ${displayTab === tab.id 
                                 ? 'bg-white shadow-sm text-slate-900' 
                                 : 'text-slate-400 hover:text-slate-600'
                             }`}
                     >
-                        <tab.icon size={16} className={activeTab === tab.id ? tab.color : ''} />
+                        <tab.icon size={16} className={displayTab === tab.id ? tab.color : ''} />
                         <span className="text-xs font-black uppercase tracking-widest">{tab.label}</span>
                     </button>
                 ))}
@@ -64,7 +88,7 @@ const WritingStudioControlPanel = ({
             {/* Content Area */}
             <div className="flex-1 overflow-y-auto overflow-x-hidden">
                 <AnimatePresence mode="wait">
-                    {activeTab === 'spark' && (
+                    {displayTab === 'spark' && (
                         <motion.div 
                             key="spark"
                             initial={{ opacity: 0, x: 20 }}
@@ -95,7 +119,7 @@ const WritingStudioControlPanel = ({
                         </motion.div>
                     )}
 
-                    {activeTab === 'upload' && isMock && (
+                    {displayTab === 'upload' && showUploadTab && (
                         <motion.div 
                             key="upload"
                             initial={{ opacity: 0, x: 20 }}
@@ -117,6 +141,15 @@ const WritingStudioControlPanel = ({
                                 <p className="text-sm font-bold text-slate-500 leading-relaxed">
                                     Prefer writing on paper? You can upload photos of your response here. The AI will transcribe and grade it directly.
                                 </p>
+
+                                {qrSurface && typeof onQrPhoto === 'function' && (
+                                    <QrHandoffPanel
+                                        surface={qrSurface}
+                                        meta={qrMeta}
+                                        onPhotoReceived={onQrPhoto}
+                                        className="w-full"
+                                    />
+                                )}
 
                                 <div className="grid grid-cols-2 gap-4">
                                     {uploadedImages.map((url, i) => (
@@ -151,16 +184,24 @@ const WritingStudioControlPanel = ({
                                 </div>
                             </div>
 
+                            {isMock ? (
                             <div className="mt-8 p-5 bg-rose-50 rounded-[2rem] border border-rose-100">
                                 <p className="text-sm font-bold text-rose-700 leading-tight flex items-start gap-3">
                                     <ShieldAlert size={16} className="shrink-0 mt-0.5" />
                                     Ensure your handwriting is legible and the photo is well-lit for accurate AI transcription.
                                 </p>
                             </div>
+                            ) : (
+                            <div className="mt-8 p-5 bg-slate-50 rounded-[2rem] border border-slate-100">
+                                <p className="text-sm font-bold text-slate-600 leading-tight">
+                                    You can combine typed work in the editor with up to four handwritten pages. Photos are graded together with your draft.
+                                </p>
+                            </div>
+                            )}
                         </motion.div>
                     )}
 
-                    {activeTab === 'review' && (
+                    {displayTab === 'review' && (
                         <motion.div 
                             key="review"
                             initial={{ opacity: 0, x: 20 }}

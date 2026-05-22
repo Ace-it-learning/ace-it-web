@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { 
     Mic, MicOff, Play, Pause, RotateCcw, Send, 
     ArrowRight, Sparkles, BookOpen, Volume2, 
@@ -10,6 +10,7 @@ import {
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import { useAzureSpeechRecognition } from '../hooks/useAzureSpeechRecognition';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 const API_BASE_URL = `${API_URL}/api`;
@@ -82,6 +83,27 @@ const SpeakingFlowPage = () => {
         setLatencyHistory(prev => [...prev, finalLatency]);
     };
 
+    // Ref to track latest Azure transcript (avoids stale closure in onstop)
+    const azureTranscriptRef = useRef('');
+
+    // Azure Speech Recognition Hook
+    const {
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 1500,
+        onFinal: (text) => {
+            // Update ref immediately so onstop can read the latest value
+            azureTranscriptRef.current = text;
+            // Auto-submit when Azure detects final transcript
+            handleSubmission(text);
+        },
+        onError: (err) => {
+            console.error('[SpeakingFlowPage] Azure STT error:', err);
+        }
+    });
+
     const toggleRecording = async () => {
         if (!isRecording) {
             try {
@@ -94,11 +116,17 @@ const SpeakingFlowPage = () => {
                 };
 
                 mediaRecorder.current.onstop = async () => {
-                    const audioBlob = new Blob(audioChunks.current, { type: 'audio/webm' });
-                    handleSubmission(audioBlob);
+                    // If Azure hasn't triggered onFinal yet, use the accumulated transcript from ref
+                    const finalText = azureTranscriptRef.current?.trim();
+                    if (finalText) {
+                        handleSubmission(finalText);
+                    }
                 };
 
                 mediaRecorder.current.start();
+                azureTranscriptRef.current = '';
+                resetAzureTranscript();
+                startAzureListening();
                 setIsRecording(true);
                 stopLatencyTracking();
             } catch (err) {
@@ -106,16 +134,15 @@ const SpeakingFlowPage = () => {
             }
         } else {
             mediaRecorder.current.stop();
+            stopAzureListening();
             setIsRecording(false);
         }
     };
 
-    const handleSubmission = async (audioBlob) => {
+    const handleSubmission = async (studentText) => {
+        if (!studentText?.trim()) return;
         setIsLoading(true);
         try {
-            // Simplified student response logic for Flow Lab
-            const studentText = "That is a very interesting question. Personally, I believe that we should focus more on renewable energy sources because fossil fuels are being depleted rapidly. This would ensure a cleaner future for our next generation.";
-            
             setChatHistory(prev => [...prev, { role: 'user', text: studentText, latency: latency }]);
             
             setIsAITyping(true);

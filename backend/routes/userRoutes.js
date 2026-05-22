@@ -305,13 +305,6 @@ router.delete('/', requireResolvedUid, async (req, res) => {
     const { uid } = req.body; // or req.query.uid
     if (!uid) return res.status(400).json({ error: "Missing uid" });
     try {
-        const profile = await UserProfileService.getProfile(uid);
-        if (profile && profile.subscription_tier !== 'free' && profile.subscription_status !== 'cancelled') {
-            return res.status(400).json({ 
-                error: "Subscription active", 
-                message: "Please cancel your active subscription before deleting your account." 
-                });
-        }
         await UserProfileService.deleteUserProfile(uid);
         res.json({ success: true });
     } catch (e) {

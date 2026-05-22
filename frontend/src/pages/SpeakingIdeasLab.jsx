@@ -11,6 +11,8 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import IdeasMindMap from '../components/speaking/IdeasMindMap';
+import { useAzureSpeechRecognition } from '../hooks/useAzureSpeechRecognition';
+import { useAzureTTS } from '../hooks/useAzureTTS';
 
 const FILLERS = [
     "That's a really good point! Actually, I was also thinking about how this might affect us as students. What do you think?",
@@ -34,6 +36,7 @@ const SpeakingIdeasLab = () => {
     const level = searchParams.get('level') || '3';
     
     const [isLoading, setIsLoading] = useState(true);
+    const [isGrading, setIsGrading] = useState(false);
     const [questData, setQuestData] = useState(null);
     const [phase, setPhase] = useState('IDLE'); // IDLE, INTRO, DISCUSSION, OUTRO, REVIEW
     
@@ -58,19 +61,57 @@ const SpeakingIdeasLab = () => {
     const [structureFeedback, setStructureFeedback] = useState([]); // PEEL Tracking
 
     // Refs
-    const mediaRecorder = useRef(null);
-    const audioChunks = useRef([]);
     const audioContext = useRef(null);
     const analyser = useRef(null);
     const animationFrame = useRef(null);
     const audioRef = useRef(null);
     const timerRef = useRef(null);
-    const recognition = useRef(null);
+    const streamRef = useRef(null);
     const finalTranscriptRef = useRef("");
     const silenceTimerRef = useRef(null);
     const isFetchingRef = useRef({});
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+    const { speak, stop } = useAzureTTS({ uid: user?.uid });
+
+    // Azure Speech Recognition Hook — MUST be declared before any useEffect that references it
+    const {
+        transcript: azureTranscript,
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript,
+        prepare: prepareAzureSTT
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 2500,
+        onPartial: (text) => {
+            setInterimTranscript(text);
+            // Real-time PEEL detection
+            const markers = {
+                'Point': ['believe', 'think', 'opinion', 'firstly', 'point'],
+                'Evidence': ['example', 'instance', 'support', 'fact', 'case'],
+                'Explanation': ['because', 'reason', 'meaning', 'leads to', 'result'],
+                'Link': ['thus', 'consequently', 'therefore', 'overall', 'summary', 'conclusion']
+            };
+            const currentText = text.toLowerCase();
+            const detected = [];
+            Object.entries(markers).forEach(([key, list]) => {
+                if (list.some(m => currentText.includes(m))) detected.push(key);
+            });
+            setStructureFeedback(prev => [...new Set([...prev, ...detected])]);
+        },
+        onFinal: (text) => {
+            finalTranscriptRef.current = text;
+            // Only handle submission here — NOT in mediaRecorder.onstop
+            // This prevents double transcript entries
+            handleSubmission(text);
+        },
+        onError: (err) => {
+            console.error('[SpeakingIdeasLab] Azure STT error:', err);
+            setIsRecording(false);
+            setIsSubmitting(false);
+        }
+    });
 
     const getStudentAvatar = () => {
         if (equipment?.student?.image) {
@@ -109,50 +150,9 @@ const SpeakingIdeasLab = () => {
 
         fetchQuest();
 
-        if ('webkitSpeechRecognition' in window) {
-            const SpeechRecognition = window.webkitSpeechRecognition;
-            recognition.current = new SpeechRecognition();
-            recognition.current.continuous = true;
-            recognition.current.interimResults = true;
-            recognition.current.lang = 'en-US';
-
-            recognition.current.onresult = (event) => {
-                let interim = '';
-                let final = finalTranscriptRef.current;
-                for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) final += event.results[i][0].transcript;
-                    else interim += event.results[i][0].transcript;
-                }
-                finalTranscriptRef.current = final;
-                setInterimTranscript(final + interim);
-                
-                // Real-time PEEL detection
-                const markers = {
-                    'Point': ['believe', 'think', 'opinion', 'firstly', 'point'],
-                    'Evidence': ['example', 'instance', 'support', 'fact', 'case'],
-                    'Explanation': ['because', 'reason', 'meaning', 'leads to', 'result'],
-                    'Link': ['thus', 'consequently', 'therefore', 'overall', 'summary', 'conclusion']
-                };
-                const currentText = (final + interim).toLowerCase();
-                const detected = [];
-                Object.entries(markers).forEach(([key, list]) => {
-                    if (list.some(m => currentText.includes(m))) detected.push(key);
-                });
-                setStructureFeedback(prev => [...new Set([...prev, ...detected])]);
-
-                // Silence detection: reset timer on every result
-                if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-                silenceTimerRef.current = setTimeout(() => {
-                    console.log("🤫 Silence detected, stopping recording...");
-                    stopRecording();
-                }, 2500); // 2.5 seconds threshold
-            };
-        }
-
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
             if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-            if (recognition.current) recognition.current.stop();
             stopAllAudio();
         };
     }, []);
@@ -179,6 +179,13 @@ const SpeakingIdeasLab = () => {
         else if (phase === 'OUTRO') runOutro();
     }, [phase]);
 
+    // Pre-connect Azure STT when entering DISCUSSION phase to eliminate audio cropping
+    useEffect(() => {
+        if (phase === 'DISCUSSION') {
+            prepareAzureSTT();
+        }
+    }, [phase, prepareAzureSTT]);
+
     // 4. Core Logic Functions
     const stopAllAudio = () => {
         if (audioRef.current) {
@@ -186,23 +193,25 @@ const SpeakingIdeasLab = () => {
             audioRef.current.src = "";
             audioRef.current = null;
         }
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        stop();
         setSpeechState({ text: "", role: null, isSpeaking: false });
     };
 
     const playAudio = (text, role, onEnd) => {
-        stopAllAudio();
+        stop();
         const cleaned = text.replace(/^(Candidate[ _][A-D]|Examiner|Tutor):/i, "").replace(/\*.*?\*/g, "").trim();
         setSpeechState({ text: cleaned, role, isSpeaking: true });
         
-        const utterance = new SpeechSynthesisUtterance(cleaned);
-        utterance.lang = 'en-GB'; // British English Accent
+        const voiceOpts = { onEnd };
+        if (role === 'Tutor' || role === 'Examiner') {
+            voiceOpts.pitch = 1.0;
+            voiceOpts.rate = 0.95;
+        } else {
+            voiceOpts.pitch = 1.05;
+            voiceOpts.rate = 1.0;
+        }
         
-        utterance.onend = () => {
-            setSpeechState(prev => ({ ...prev, isSpeaking: false }));
-            if (onEnd) onEnd();
-        };
-        window.speechSynthesis.speak(utterance);
+        speak(cleaned, role, voiceOpts);
     };
 
     const runIntro = () => {
@@ -234,6 +243,7 @@ const SpeakingIdeasLab = () => {
     const startRecording = async () => {
         if (isAITurn) return;
         try {
+            // Get mic stream for waveform visualization
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             
             // Audio Context for Waveform
@@ -251,23 +261,15 @@ const SpeakingIdeasLab = () => {
             };
             updateVoiceLevel();
 
-            mediaRecorder.current = new MediaRecorder(stream);
-            audioChunks.current = [];
+            // Store stream ref for cleanup
+            streamRef.current = stream;
+            
             finalTranscriptRef.current = "";
             setInterimTranscript("");
+            resetAzureTranscript();
             
-            mediaRecorder.current.ondataavailable = (e) => audioChunks.current.push(e.data);
-            mediaRecorder.current.onstop = () => {
-                const blob = new Blob(audioChunks.current, { type: 'audio/webm' });
-                setRecordedBlob(blob);
-                if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
-                setVoiceLevel(0);
-                stream.getTracks().forEach(t => t.stop());
-                handleSubmission(finalTranscriptRef.current || interimTranscript);
-            };
-
-            mediaRecorder.current.start();
-            if (recognition.current) recognition.current.start();
+            // Start Azure STT — WebSocket is already prepared
+            await startAzureListening();
             setIsRecording(true);
         } catch (err) {
             console.error("Mic error:", err);
@@ -276,24 +278,43 @@ const SpeakingIdeasLab = () => {
 
     const stopRecording = () => {
         if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
-        if (mediaRecorder.current && isRecording) {
-            mediaRecorder.current.stop();
-            if (recognition.current) recognition.current.stop();
+        if (isRecording) {
+            // Stop waveform animation
+            if (animationFrame.current) {
+                cancelAnimationFrame(animationFrame.current);
+                animationFrame.current = null;
+            }
+            // Stop waveform audio context
+            if (audioContext.current) {
+                audioContext.current.close();
+                audioContext.current = null;
+            }
+            // Stop mic stream for waveform
+            if (streamRef.current) {
+                streamRef.current.getTracks().forEach(t => t.stop());
+                streamRef.current = null;
+            }
+            setVoiceLevel(0);
+            stopAzureListening();
             setIsRecording(false);
+            // Note: onFinal from Azure hook will call handleSubmission with the final transcript
         }
     };
 
     const handleSubmission = async (text) => {
-        if (!text.trim()) return;
+        if (!text || !text.trim()) return;
         setIsSubmitting(true);
-        setChatHistory(prev => [...prev, { speaker: 'Student', text }]);
+        
+        // Add student message to history FIRST, then use the updated history for API call
+        const updatedHistory = [...chatHistory, { speaker: 'Student', text }];
+        setChatHistory(updatedHistory);
 
         try {
             const res = await fetch(`${API_URL}/api/speaking/flow/respond`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    history: chatHistory,
+                    history: updatedHistory,
                     user_response: text,
                     level
                 })
@@ -318,7 +339,7 @@ const SpeakingIdeasLab = () => {
     };
 
     const endSession = async () => {
-        setIsLoading(true);
+        setIsGrading(true);
         try {
             const res = await fetch(`${API_URL}/api/speaking/quest/submit`, {
                 method: 'POST',
@@ -342,7 +363,7 @@ const SpeakingIdeasLab = () => {
         } catch (err) {
             console.error("Grading error:", err);
         } finally {
-            setIsLoading(false);
+            setIsGrading(false);
         }
     };
 
@@ -351,6 +372,17 @@ const SpeakingIdeasLab = () => {
             <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-white">
                 <Loader2 className="w-12 h-12 text-emerald-500 animate-spin mb-4" />
                 <p className="font-black uppercase tracking-widest animate-pulse">Synchronizing Ideas Lab...</p>
+            </div>
+        );
+    }
+
+    // Evaluation overlay — shows when grading is in progress
+    if (isGrading) {
+        return (
+            <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-white">
+                <Loader2 className="w-12 h-12 text-emerald-500 animate-spin mb-4" />
+                <p className="font-black uppercase tracking-widest animate-pulse">Miss Janie is evaluating your ideas...</p>
+                <p className="text-slate-400 text-sm mt-2">Analysing PEEL structure, development &amp; organisation</p>
             </div>
         );
     }

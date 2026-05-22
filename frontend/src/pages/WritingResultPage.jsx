@@ -478,7 +478,7 @@ const WritingResultPage = () => {
                             </div>
                             <div className="text-slate-800 font-medium text-xl leading-[1.8] font-serif pr-6 whitespace-pre-wrap">
                                 <WritingHighlighter 
-                                    text={studentWork || normalizedResults.exemplar_comparison?.original_paragraph || ""}
+                                    text={studentWork?.content || studentWork || normalizedResults.exemplar_comparison?.original_paragraph || ""}
                                     hotspots={normalizedResults.exemplar_comparison?.hotspots}
                                     isChinese={isChinese}
                                     t={t}

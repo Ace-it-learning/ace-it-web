@@ -169,6 +169,96 @@ function extractAchievedSkills(skillScores) {
         .map((s) => s.skill);
 }
 
+function responsesHaveImages(responseRows) {
+    return (responseRows || []).some(
+        (r) => Array.isArray(r.images) && r.images.some((u) => typeof u === 'string' && u.trim())
+    );
+}
+
+function levelFromPercentageWriting(pct) {
+    if (pct >= 88) return '5**';
+    if (pct >= 80) return '5*';
+    if (pct >= 72) return '5';
+    if (pct >= 62) return '4';
+    if (pct >= 50) return '3';
+    if (pct >= 38) return '2';
+    return '1';
+}
+
+/**
+ * Map WritingQuestService.gradeMockPaper JSON into the shape expected by
+ * WritingMockResultPage + saveQuestResult (aligned with MockAssessmentService writing output).
+ */
+function adaptImageWritingGradingToWritingMockResult(g) {
+    const pillar = g?.pillar_scores || {};
+    const c = Math.max(0, Math.min(7, Number(pillar.content?.score ?? 0)));
+    const l = Math.max(0, Math.min(7, Number(pillar.language?.score ?? 0)));
+    const o = Math.max(0, Math.min(7, Number(pillar.organization?.score ?? 0)));
+    const triplet = c + l + o;
+
+    const fbEn = (x) => (typeof x === 'string' ? x : x?.en || x?.zh || '');
+
+    const splitDomain = (score, feedback) => {
+        const s1 = Math.floor(score / 2);
+        const s2 = score - s1;
+        return {
+            A: { score: s1, feedback: fbEn(feedback) },
+            B: { score: s2, feedback: fbEn(feedback) }
+        };
+    };
+
+    const dc = splitDomain(c, pillar.content?.feedback);
+    const dl = splitDomain(l, pillar.language?.feedback);
+    const dorg = splitDomain(o, pillar.organization?.feedback);
+
+    const sectionalScores = {
+        A: {
+            score: dc.A.score + dl.A.score + dorg.A.score,
+            possible: 21,
+            domains: {
+                content: { score: dc.A.score, feedback: dc.A.feedback },
+                language: { score: dl.A.score, feedback: dl.A.feedback },
+                organization: { score: dorg.A.score, feedback: dorg.A.feedback }
+            },
+            overallFeedback: fbEn(g.part_a_feedback) || 'See domain feedback.'
+        },
+        B: {
+            score: dc.B.score + dl.B.score + dorg.B.score,
+            possible: 21,
+            domains: {
+                content: { score: dc.B.score, feedback: dc.B.feedback },
+                language: { score: dl.B.score, feedback: dl.B.feedback },
+                organization: { score: dorg.B.score, feedback: dorg.B.feedback }
+            },
+            overallFeedback: fbEn(g.part_b_feedback) || 'See domain feedback.'
+        }
+    };
+
+    const totalScore = sectionalScores.A.score + sectionalScores.B.score;
+    const possibleScore = 42;
+    const percentage = possibleScore > 0 ? (totalScore / possibleScore) * 100 : 0;
+    const level =
+        (g?.predicted_level && String(g.predicted_level).trim()) ||
+        levelFromPercentageWriting(percentage);
+
+    const skillScores = {
+        Content: { score: c * 2, possible: 14 },
+        Language: { score: l * 2, possible: 14 },
+        Organization: { score: o * 2, possible: 14 }
+    };
+
+    return {
+        totalScore,
+        possibleScore,
+        percentage,
+        level,
+        sectionalScores,
+        skillScores,
+        analytics: { paperType: 'WRITING', gradingPath: 'image_handwriting' },
+        results: g
+    };
+}
+
 /**
  * POST /api/english/mock/submit-listening
  * Dedicated endpoint for Paper 3 (Listening & Integrated Skills)
@@ -291,11 +381,19 @@ router.post('/writing/submit', async (req, res) => {
             }
         }
 
-        // 3. Evaluate
-        const results = await MockAssessmentService.evaluatePaper(mockData, userAnswers, {
-            paperType: 'WRITING',
-            selectedPartB: userAnswers.selectedPartB
-        }, tier);
+        // 3. Evaluate (handwritten photos → multimodal grader; typed-only → rubric JSON path)
+        let results;
+        if (responsesHaveImages(responseRows)) {
+            const WritingQuestService = require('../services/writing/WritingQuestService');
+            const topicLabel = mockData.meta?.topic || 'Writing Paper 2';
+            const raw = await WritingQuestService.gradeMockPaper(topicLabel, responseRows, tier);
+            results = adaptImageWritingGradingToWritingMockResult(raw);
+        } else {
+            results = await MockAssessmentService.evaluatePaper(mockData, userAnswers, {
+                paperType: 'WRITING',
+                selectedPartB: userAnswers.selectedPartB
+            }, tier);
+        }
 
         const topicLabel = mockData.meta?.topic || 'Writing Mock';
         const baseMaxXP = 400;

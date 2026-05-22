@@ -333,6 +333,7 @@ export const translations = {
             premium_f3: "1.5x XP Multiplier",
             premium_f4: "5 Device Limit",
             premium_f5: "Parental monthly progress report",
+            premium_f6: "Human-like AI voices for all Speaking Quests & Mock Exam",
             tiers: {
                 free: {
                     name: "Free Trial",
@@ -519,7 +520,7 @@ export const translations = {
             google_password_note: "If you originally signed up using Google, your password is managed by your Google account. To change it, visit your",
             google_account_security: "Google Account Security",
             settings: "settings",
-            active_subscription_note: "You have an active subscription. Please cancel it first.",
+            active_subscription_note: "To cancel your subscription, please go to the ",
             go_to_subscription: "Go to Subscription tab →",
             delete_confirm_title: "WARNING: This action is permanent and cannot be undone.",
             delete_confirm_intro: "Deleting your account will remove the following data from our database:",
@@ -535,13 +536,17 @@ export const translations = {
             delete_practice: "Practice history and voice usage",
             delete_roadmap: "Study roadmaps and tutor completion events",
             delete_reports: "Weekly report logs",
-            delete_subscription_first: "Your subscription must be cancelled first. Do you wish to proceed?"
+            delete_subscription_first: "Your subscription must be cancelled first. Do you wish to proceed?",
+            delete_confirm_heading: "Delete Account",
+            delete_type_confirm: "To proceed, type the following exactly:",
+            confirm_delete: "Delete Account"
         },
         common: {
             cancel: "Cancel",
             confirm: "Confirm",
             loading: "Loading...",
-            back_to_dashboard: "Back to Dashboard"
+            back_to_dashboard: "Back to Dashboard",
+            note: "Note:"
         },
         sidebar: {
             study_duo: "Study Duo",
@@ -645,6 +650,10 @@ export const translations = {
             tools: "Tools",
             ai_features: "AI Features",
             attach_photo: "Attach Photo",
+            attach_photo_device: "From this device",
+            attach_photo_phone: "From phone (QR)",
+            attach_photo_phone_title: "Send a photo from your phone",
+            attach_photo_phone_subtitle: "Scan the QR code with your phone. After you take the photo, it appears here so you can add your question and send.",
             grade_essay: "Grade My Essay",
             image_attach_title: "Ask about this image",
             image_attach_subtitle: "Add a question for your tutor. The photo can be notes, homework, a worksheet, or anything you're studying — not only handwriting.",
@@ -1388,6 +1397,7 @@ export const translations = {
             premium_f3: "1.5x XP 經驗值加成",
             premium_f4: "5 台裝置上限",
             premium_f5: "家長每月進度報告",
+            premium_f6: "擬真 AI 語音練習所有口語任務及模擬考試",
             tiers: {
                 free: {
                     name: "免費試用",
@@ -1574,7 +1584,7 @@ export const translations = {
             google_password_note: "如果你最初使用 Google 註冊，你的密碼由 Google 帳戶管理。如要更改，請前往",
             google_account_security: "Google 帳戶安全",
             settings: "設定",
-            active_subscription_note: "你目前有生效中的訂閱。請先取消訂閱。",
+            active_subscription_note: "如要取消訂閱，請前往",
             go_to_subscription: "前往訂閱方案 →",
             delete_confirm_title: "警告：此操作為永久性，無法撤銷。",
             delete_confirm_intro: "刪除帳戶將從我們的數據庫中移除以下資料：",
@@ -1590,13 +1600,17 @@ export const translations = {
             delete_practice: "練習記錄及語音使用記錄",
             delete_roadmap: "學習路線圖及導師完成事件",
             delete_reports: "每週報告記錄",
-            delete_subscription_first: "你必須先取消訂閱。是否繼續？"
+            delete_subscription_first: "你必須先取消訂閱。是否繼續？",
+            delete_confirm_heading: "刪除帳戶",
+            delete_type_confirm: "如要繼續，請準確輸入以下文字：",
+            confirm_delete: "刪除帳戶"
         },
         common: {
             cancel: "取消",
             confirm: "確認",
             loading: "載入中...",
-            back_to_dashboard: "返回儀表板"
+            back_to_dashboard: "返回儀表板",
+            note: "注意："
         },
         sidebar: {
             study_duo: "學習拍檔",
@@ -1700,6 +1714,10 @@ export const translations = {
             tools: "功能",
             ai_features: "AI 功能",
             attach_photo: "上傳圖片",
+            attach_photo_device: "從此裝置上傳",
+            attach_photo_phone: "用手機掃碼上傳",
+            attach_photo_phone_title: "用手機傳送相片",
+            attach_photo_phone_subtitle: "用手機掃描二維碼並拍照，相片會顯示在這裡，然後你可輸入問題再發送給導師。",
             grade_essay: "批改作文",
             image_attach_title: "關於這張圖片",
             image_attach_subtitle: "輸入你想問導師的問題。圖片可以是筆記、功課、練習紙或任何學習內容，不限於手寫作文。",

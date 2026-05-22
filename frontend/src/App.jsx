@@ -18,6 +18,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import LoginPage from './pages/LoginPage';
 import VerifyEmailSuccess from './pages/VerifyEmailSuccess';
 import AuthErrorPage from './pages/AuthErrorPage';
+import MobileCapturePage from './pages/MobileCapturePage';
 
 import WritingResultPage from './pages/WritingResultPage';
 import WritingQuestPage from './pages/WritingQuestPage'; 
@@ -187,6 +188,10 @@ function App() {
                 <Route
                   path="/auth-error"
                   element={<AuthErrorPage />}
+                />
+                <Route
+                  path="/m/capture/:token"
+                  element={<MobileCapturePage />}
                 />
                 <Route
                   path="/dashboard"
@@ -662,7 +667,7 @@ function App() {
                   path="/speaking/quest/interaction"
                   element={
                     <ProtectedRoute>
-                      <MainLayout fullWidth={true}>
+                      <MainLayout fullWidth={true} hideHeader={true} hideFooter={true}>
                         <SpeakingInteractionPage />
                       </MainLayout>
                     </ProtectedRoute>

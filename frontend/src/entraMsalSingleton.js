@@ -16,6 +16,44 @@ export function tieEntraSilent(factory) {
     return next;
 }
 
+/** Active interval id for Entra token refresh */
+let refreshIntervalId = null;
+
+/**
+ * Start a background timer that silently refreshes the Entra ID token
+ * every `intervalMinutes` (default 10) so the session doesn't expire
+ * while the user is idle.  MSAL's acquireTokenSilent uses the cached
+ * refresh token; keeping it warm extends the SSO session.
+ */
+export function startEntraTokenRefresh(client, intervalMinutes = 10) {
+    stopEntraTokenRefresh();
+    const intervalMs = Math.max(intervalMinutes, 1) * 60 * 1000;
+    refreshIntervalId = setInterval(async () => {
+        const account = client.getActiveAccount() || client.getAllAccounts()[0];
+        if (!account) return;
+        try {
+            await tieEntraSilent(() =>
+                client.acquireTokenSilent({
+                    account,
+                    scopes: ['openid', 'profile', 'email'],
+                    redirectUri: getMsalSilentRedirectUri()
+                })
+            );
+        } catch {
+            // Silent refresh failed (e.g. session expired).  Stop the timer
+            // so the app can prompt interactive re-login on next API call.
+            stopEntraTokenRefresh();
+        }
+    }, intervalMs);
+}
+
+export function stopEntraTokenRefresh() {
+    if (refreshIntervalId) {
+        clearInterval(refreshIntervalId);
+        refreshIntervalId = null;
+    }
+}
+
 export function waitForEntraSilentChain() {
     return silentChain;
 }

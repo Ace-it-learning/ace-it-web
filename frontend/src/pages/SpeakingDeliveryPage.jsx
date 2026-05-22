@@ -6,6 +6,8 @@ import DeliveryScaffoldPassage from '../components/speaking/DeliveryScaffoldPass
 import SpeakingWaveform from '../components/speaking/SpeakingWaveform';
 import PhonemeSpotlight from '../components/speaking/PhonemeSpotlight';
 import { useKaraokeSync } from '../hooks/useKaraokeSync';
+import { useAzureSpeechRecognition } from '../hooks/useAzureSpeechRecognition';
+import { useAzureTTS } from '../hooks/useAzureTTS';
 
 // Simplified Speaking Scaffold Toolbar
 const SpeakingScaffoldToolbar = ({ settings, onChange }) => {
@@ -61,7 +63,6 @@ const SpeakingDeliveryPage = () => {
     const [results, setResults] = useState([]);
     const [isFinished, setIsFinished] = useState(false);
     const [recordedBlob, setRecordedBlob] = useState(null);
-    const [recordedBlobUrl, setRecordedBlobUrl] = useState(null);
     const [segmentFeedback, setSegmentFeedback] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isPlayingStudent, setIsPlayingStudent] = useState(false);
@@ -83,16 +84,11 @@ const SpeakingDeliveryPage = () => {
         timingsUrl: currentSegment?.master_timings_url ?? null,
     });
 
-    // Audio Playback for Spotlight (Forced Browser TTS)
+    const { speak, stop } = useAzureTTS({ uid: user?.uid });
+
+    // Audio Playback for Spotlight (Azure TTS)
     const handlePlayWord = (word) => {
-        try {
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(word);
-            utterance.lang = 'en-GB';
-            window.speechSynthesis.speak(utterance);
-        } catch (err) {
-            console.error('Word playback error:', err);
-        }
+        speak(word, 'Examiner', { pitch: 1.0, rate: 1.0 });
     };
 
     useEffect(() => {
@@ -131,25 +127,28 @@ const SpeakingDeliveryPage = () => {
             }
         };
 
-
         fetchDrill();
+    }, [topicId, level, user?.uid]);
+
+    // Cleanup on unmount only — don't include recordedBlobUrl in deps
+    useEffect(() => {
         return () => {
             stopAllAudio();
-            // Final cleanup of blob URLs on unmount
-            if (recordedBlobUrl) URL.revokeObjectURL(recordedBlobUrl);
+            if (studentAudio.current) {
+                studentAudio.current.pause();
+                studentAudio.current = null;
+            }
         };
-    }, [topicId, level, user?.uid, recordedBlobUrl]);
+    }, []);
 
 
     const stopMasterAudio = () => {
         karaoke.stop();
-        if (window.speechSynthesis) {
-            window.speechSynthesis.cancel();
-        }
+        stop();
     };
 
     const stopAllAudio = () => {
-        stopMasterAudio();
+        stop();
         if (studentAudio.current) {
             studentAudio.current.pause();
             studentAudio.current.onended = null;
@@ -175,6 +174,25 @@ const SpeakingDeliveryPage = () => {
         }
     }, [currentSegment?.master_audio_url, currentSegment?.master_timings_url]);
 
+    // Azure Speech Recognition Hook (for real-time transcript preview)
+    const {
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 6000,
+        onPartial: (text) => {
+            // Could show live transcript during reading practice
+            console.log('[SpeakingDelivery] Partial:', text);
+        },
+        onFinal: (text) => {
+            console.log('[SpeakingDelivery] Final transcript:', text);
+        },
+        onError: (err) => {
+            console.error('[SpeakingDelivery] Azure STT error:', err);
+        }
+    });
+
     // 3. Recording with Silence Detection
     const startRecording = async () => {
         stopAllAudio(); // CRITICAL: Stop all TTS and Demo audio before recording starts
@@ -196,8 +214,6 @@ const SpeakingDeliveryPage = () => {
                 const average = dataArray.reduce((a, b) => a + b) / bufferLength;
                 setVoiceLevel(average);
 
-                // Simple Silence Detection: If level is low for too long.
-                // We'll use a more robust timeout approach instead.
                 animationFrame.current = requestAnimationFrame(updateVoiceLevel);
             };
             updateVoiceLevel();
@@ -207,7 +223,6 @@ const SpeakingDeliveryPage = () => {
 
             mediaRecorder.current.ondataavailable = (e) => {
                 audioChunks.current.push(e.data);
-                // Reset silence timer on data
                 resetSilenceDetection();
             };
 
@@ -219,7 +234,9 @@ const SpeakingDeliveryPage = () => {
                 setVoiceLevel(0);
             };
 
-            mediaRecorder.current.start(1000); // Send data chunks every 1s
+            mediaRecorder.current.start(1000);
+            resetAzureTranscript();
+            startAzureListening();
             setIsRecording(true);
             resetSilenceDetection();
         } catch (err) {
@@ -233,12 +250,13 @@ const SpeakingDeliveryPage = () => {
         silenceTimeout.current = setTimeout(() => {
             console.log("[SpeakingQuest] Auto-stopping due to silence...");
             stopRecording();
-        }, 6000); // 6 seconds of silence = stop
+        }, 5000);
     };
 
     const stopRecording = () => {
         if (mediaRecorder.current && mediaRecorder.current.state === 'recording') {
             mediaRecorder.current.stop();
+            stopAzureListening();
             setIsRecording(false);
             if (silenceTimeout.current) clearTimeout(silenceTimeout.current);
         }
@@ -247,20 +265,35 @@ const SpeakingDeliveryPage = () => {
     // 4. Play Student Recording
     const playStudentRecording = () => {
         if (!recordedBlob) return;
-        
-        // Revoke previous URL to free memory
-        if (recordedBlobUrl) {
-            URL.revokeObjectURL(recordedBlobUrl);
+
+        // If already playing, stop first
+        if (studentAudio.current) {
+            studentAudio.current.pause();
+            studentAudio.current.currentTime = 0;
+            studentAudio.current = null;
         }
-        
+
+        // Create a fresh blob URL each time (don't reuse recordedBlobUrl state)
         const url = URL.createObjectURL(recordedBlob);
-        setRecordedBlobUrl(url);
-        
+
         const audio = new Audio(url);
-        setIsPlayingStudent(true);
-        audio.play();
-        audio.onended = () => setIsPlayingStudent(false);
+        audio.onended = () => {
+            setIsPlayingStudent(false);
+            URL.revokeObjectURL(url);
+        };
+        audio.onerror = () => {
+            console.error('[SpeakingDelivery] Playback error');
+            setIsPlayingStudent(false);
+            URL.revokeObjectURL(url);
+        };
+
         studentAudio.current = audio;
+        setIsPlayingStudent(true);
+        audio.play().catch(err => {
+            console.error('[SpeakingDelivery] Play failed:', err);
+            setIsPlayingStudent(false);
+            URL.revokeObjectURL(url);
+        });
     };
 
 
@@ -602,7 +635,7 @@ const SpeakingDeliveryPage = () => {
 
                                 {isRecording && (
                                     <p className="text-[10px] font-black text-red-500 uppercase tracking-widest animate-pulse">
-                                        Auto-stopping after 4s silence...
+                                        Auto-stopping after 5s silence...
                                     </p>
                                 )}
 

@@ -7,7 +7,7 @@ class SpeakingMockGradingService {
     /**
      * MAIN ENTRY: Grade a full Speaking Mock
      */
-    async gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse, tier = 'free') {
+    async gradeFullMock(uid, mockData, chatHistory, individualQuestion, individualResponse, tier = 'free', pronunciationMetrics = null) {
         console.log(`[SpeakingMockGrading] Grading session for ${uid} (Tier: ${tier})...`);
 
         // ... (Transcripts omitted for brevity in replace call, but I will include them)
@@ -20,13 +20,30 @@ class SpeakingMockGradingService {
             .map(msg => `${msg.role || msg.name}: ${msg.content}`)
             .join("\n\n");
 
+        // Build pronunciation metrics text for the prompt
+        let pronunciationMetricsText = "No pronunciation assessment data available.";
+        if (pronunciationMetrics) {
+            if (Array.isArray(pronunciationMetrics) && pronunciationMetrics.length > 0) {
+                // Per-turn metrics accumulated
+                const avgAccuracy = Math.round(pronunciationMetrics.reduce((s, m) => s + (m.accuracyScore || 0), 0) / pronunciationMetrics.length);
+                const avgFluency = Math.round(pronunciationMetrics.reduce((s, m) => s + (m.fluencyScore || 0), 0) / pronunciationMetrics.length);
+                const avgProsody = Math.round(pronunciationMetrics.reduce((s, m) => s + (m.prosodyScore || 0), 0) / pronunciationMetrics.length);
+                const avgCompleteness = Math.round(pronunciationMetrics.reduce((s, m) => s + (m.completenessScore || 0), 0) / pronunciationMetrics.length);
+                pronunciationMetricsText = `Average across ${pronunciationMetrics.length} turns: Accuracy=${avgAccuracy}/100, Fluency=${avgFluency}/100, Prosody=${avgProsody}/100, Completeness=${avgCompleteness}/100`;
+            } else if (typeof pronunciationMetrics === 'object') {
+                // Single aggregated metrics object
+                pronunciationMetricsText = `Accuracy=${pronunciationMetrics.accuracyScore || 0}/100, Fluency=${pronunciationMetrics.fluencyScore || 0}/100, Prosody=${pronunciationMetrics.prosodyScore || 0}/100, Completeness=${pronunciationMetrics.completenessScore || 0}/100`;
+            }
+        }
+
         // 2. Prepare the AI prompt
         const prompt = speakingMockGradingAgent
             .replace("{TOPIC}", mockData.title || "Unknown Topic")
             .replace("{DISCUSSION_POINTS}", (mockData.discussion_points || []).join(", "))
             .replace("{DISCUSSION_HISTORY}", fullDiscussionHistory)
             .replace("{INDIVIDUAL_QUESTION}", individualQuestion || "No question asked.")
-            .replace("{INDIVIDUAL_RESPONSE}", individualResponse || "No response recorded.");
+            .replace("{INDIVIDUAL_RESPONSE}", individualResponse || "No response recorded.")
+            .replace("{PRONUNCIATION_METRICS}", pronunciationMetricsText);
 
         try {
             // TIER-BASED MODEL SELECTION
@@ -35,7 +52,7 @@ class SpeakingMockGradingService {
             // 3. Call AI for grading
             const { data: evaluation } = await GenerativeAIService.generateJson(prompt, {
                 model: model, 
-                generationConfig: { temperature: 0.2 } // Keep it deterministic
+                generationConfig: { temperature: 0.2, max_tokens: 4096 } // Increased token limit for full grading output
             });
 
             // 4. Calculate Level Mapping (Double check AI's logic)

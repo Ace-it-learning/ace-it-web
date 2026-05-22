@@ -216,6 +216,12 @@ router.post("/data/uploads/sas", requireResolvedUid, async (req, res) => {
         return res.json({ ...sas, blobName, containerName });
     } catch (error) {
         console.error("[dataRoutes] uploads/sas failed:", error);
+        const hint = error?.message || "";
+        const isCreds =
+            /Azure Blob credentials|AZURE_BLOB_ACCOUNT|AZURE_BLOB_CONNECTION/i.test(hint);
+        if (isCreds) {
+            return res.status(503).json({ error: hint });
+        }
         return res.status(500).json({ error: "Failed to create upload URL" });
     }
 });

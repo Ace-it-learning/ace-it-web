@@ -6,11 +6,21 @@ export function isCheatEnabled(user, profile) {
         normalize(profile?.email)
     ].filter(Boolean);
 
+    const allowedEmails = [
+        'fungtam@gmail.com',
+        'projectace2026@gmail.com'
+    ];
+
     // Primary allowlist identity for internal QA.
-    if (emails.includes('fungtam@gmail.com')) return true;
+    for (const allowed of allowedEmails) {
+        if (emails.includes(allowed)) return true;
+    }
 
     // Defensive fallback for identity-provider variations.
-    if (emails.some((e) => e.startsWith('fungtam@'))) return true;
+    for (const allowed of allowedEmails) {
+        const prefix = allowed.split('@')[0] + '@';
+        if (emails.some((e) => e.startsWith(prefix))) return true;
+    }
 
     return false;
 }

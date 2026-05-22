@@ -110,6 +110,8 @@ const contactLimiter = rateLimit({
 });
 app.use('/api/english/mock', englishMockRoutes);
 app.use('/api/contact', contactLimiter, require('./routes/contactRoutes'));
+// Handoff (QR mobile upload + SSE) — mounted before global /api limiter to avoid throttling long-lived streams
+app.use('/api/handoff', require('./routes/handoffRoutes'));
 app.use('/api/', limiter);
 
 // Request Tracing
@@ -203,6 +205,146 @@ app.use((req, res) => {
     }
 });
 
+// --- WEBSOCKET: Azure OpenAI Real-Time STT ---
+const WebSocket = require('ws');
+const AzureSpeechService = require('./services/AzureSpeechService');
+
+function setupWebSocketServer(httpServer) {
+    const wss = new WebSocket.Server({
+        noServer: true,
+        // Only allow connections from our frontend origins
+        verifyClient: (info, done) => {
+            const origin = info.origin || '';
+            const allowed = [
+                'http://localhost:3005',
+                'https://localhost:3005',
+                'http://127.0.0.1:3005',
+                'https://ace-it-web.azurewebsites.net',
+                'https://ace-it-web-prod.azurewebsites.net'
+            ];
+            // In dev, be permissive; in prod, strict
+            if (!isProduction) {
+                done(true);
+                return;
+            }
+            done(allowed.some(a => origin.startsWith(a)));
+        }
+    });
+
+    // Handle upgrade manually to avoid conflicts with Express
+    httpServer.on('upgrade', (request, socket, head) => {
+        console.log(`[WS] Upgrade request for: ${request.url}`);
+        if (request.url === '/api/speaking/stream/transcribe') {
+            wss.handleUpgrade(request, socket, head, (ws) => {
+                wss.emit('connection', ws, request);
+            });
+        } else {
+            console.log(`[WS] Ignoring upgrade for non-matching path: ${request.url}`);
+            socket.destroy();
+        }
+    });
+
+    wss.on('connection', (clientWs, req) => {
+        const clientId = `${req.socket.remoteAddress}-${Date.now()}`;
+        console.log(`[WS:${clientId}] Client connected for real-time STT.`);
+
+        let azureSession = null;
+        let isClosing = false;
+
+        // Create Azure real-time session
+        try {
+            azureSession = AzureSpeechService.createSession();
+        } catch (err) {
+            console.error(`[WS:${clientId}] Failed to create Azure session:`, err.message);
+            clientWs.close(1011, 'Azure STT not configured');
+            return;
+        }
+
+        // Forward Azure transcripts to frontend
+        azureSession.onPartial = (text) => {
+            console.log(`[WS:${clientId}] 📤 PARTIAL -> frontend: "${text.substring(0, 60)}..."`);
+            if (clientWs.readyState === WebSocket.OPEN) {
+                clientWs.send(JSON.stringify({ type: 'partial', text }));
+            }
+        };
+
+        azureSession.onFinal = (text) => {
+            console.log(`[WS:${clientId}] 📤 FINAL -> frontend: "${text.substring(0, 60)}..."`);
+            if (clientWs.readyState === WebSocket.OPEN) {
+                clientWs.send(JSON.stringify({ type: 'final', text }));
+            }
+        };
+
+        azureSession.onError = (err) => {
+            console.error(`[WS:${clientId}] Azure error:`, err.message);
+            if (clientWs.readyState === WebSocket.OPEN) {
+                clientWs.send(JSON.stringify({ type: 'error', message: err.message }));
+            }
+        };
+
+        azureSession.onDisconnect = () => {
+            if (!isClosing && clientWs.readyState === WebSocket.OPEN) {
+                clientWs.close(1000, 'Azure session ended');
+            }
+        };
+
+        // Connect to Azure
+        azureSession.connect().then(() => {
+            if (clientWs.readyState === WebSocket.OPEN) {
+                clientWs.send(JSON.stringify({ type: 'connected', sessionId: azureSession.sessionId }));
+            }
+        }).catch((err) => {
+            console.error(`[WS:${clientId}] Azure connect failed:`, err.message);
+            if (clientWs.readyState === WebSocket.OPEN) {
+                clientWs.send(JSON.stringify({ type: 'error', message: 'Failed to connect to Azure STT' }));
+            }
+            clientWs.close(1011, 'Azure connect failed');
+        });
+
+        // Handle messages from frontend (audio chunks)
+        clientWs.on('message', (data) => {
+            try {
+                const msg = JSON.parse(data.toString());
+
+                if (msg.type === 'audio' && msg.data) {
+                    // Frontend sends base64 PCM16 audio chunks
+                    console.log(`[WS:${clientId}] 📥 Audio chunk: ${msg.data.length} chars base64`);
+                    azureSession.sendAudio(msg.data);
+                } else if (msg.type === 'commit') {
+                    // Frontend signals end of audio input
+                    console.log(`[WS:${clientId}] 📥 Commit signal received`);
+                    azureSession.commitAudio();
+                } else if (msg.type === 'ping') {
+                    clientWs.send(JSON.stringify({ type: 'pong' }));
+                }
+            } catch (e) {
+                // Binary data or non-JSON — ignore or log
+                console.warn(`[WS:${clientId}] Invalid message:`, e.message);
+            }
+        });
+
+        clientWs.on('close', (code, reason) => {
+            isClosing = true;
+            console.log(`[WS:${clientId}] Client disconnected. Code: ${code}`);
+            if (azureSession) {
+                azureSession.disconnect();
+                azureSession = null;
+            }
+        });
+
+        clientWs.on('error', (err) => {
+            console.error(`[WS:${clientId}] Client WebSocket error:`, err.message);
+            isClosing = true;
+            if (azureSession) {
+                azureSession.disconnect();
+                azureSession = null;
+            }
+        });
+    });
+
+    console.log(`🔌 WebSocket server mounted at /api/speaking/stream/transcribe`);
+}
+
 // --- SERVER ACTIVATION ---
 const PORT = process.env.PORT || 3001;
 const server = app.listen(PORT, () => {
@@ -219,6 +361,9 @@ const server = app.listen(PORT, () => {
         }
     }
 });
+
+// Setup WebSocket server on same HTTP server
+setupWebSocketServer(server);
 
 // Extend timeout for long AI response generation (10 mins)
 server.timeout = 600000;

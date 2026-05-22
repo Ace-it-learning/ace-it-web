@@ -145,24 +145,31 @@ router.post('/draft/structure', async (req, res) => {
 // POST /api/writing/grade
 // Final assessment of the piece
 router.post('/grade', async (req, res) => {
-    let { topic, textType, content, question, answer, uid } = req.body;
+    let { topic, textType, content, question, answer, uid, imageUrls } = req.body;
     uid = uid || req.uid || req.query?.uid || 'guest';
 
     // Normalize inputs to support both Quest (topic/content) and Exam (question/answer) formats
     const finalContent = content || answer;
     const finalTopic = topic || question || "General Writing";
     const finalTextType = textType || "Essay";
+    const imageUrlsNorm = Array.isArray(imageUrls) ? imageUrls.filter((u) => typeof u === "string" && u.trim()) : [];
 
-    if (!finalContent) return res.status(400).json({ error: "Content/Answer required" });
+    const textForGrade =
+        (finalContent && String(finalContent).trim()) ||
+        (imageUrlsNorm.length > 0 ? "(Student submitted handwritten work in attached images.)" : "");
+
+    if (!textForGrade && imageUrlsNorm.length === 0) {
+        return res.status(400).json({ error: "Content/Answer or at least one image URL required" });
+    }
     if (!uid || uid === 'guest') return res.status(401).json({ error: "Missing resolved uid" });
 
-    console.log(`[WritingRoutes] Grade request received | uid=${uid} | topic="${finalTopic}" | textType=${finalTextType} | contentLength=${finalContent.length}`);
+    console.log(`[WritingRoutes] Grade request received | uid=${uid} | topic="${finalTopic}" | textType=${finalTextType} | contentLength=${textForGrade.length} | imageUrls=${imageUrlsNorm.length}`);
 
     try {
         const persona = await UserProfileService.getPersona(uid, 'english');
         console.log(`[WritingRoutes] Calling gradeFinalPiece with model=ace-it-pro (deepseek-reasoner)...`);
         const gradeStart = Date.now();
-        const result = await WritingQuestService.gradeFinalPiece(finalTopic, finalTextType, finalContent);
+        const result = await WritingQuestService.gradeFinalPiece(finalTopic, finalTextType, textForGrade, imageUrlsNorm);
         console.log(`[WritingRoutes] gradeFinalPiece completed in ${Date.now() - gradeStart}ms | predicted_level=${result.predicted_level}`);
         
         // Inject identity into assessment
@@ -177,7 +184,8 @@ router.post('/grade', async (req, res) => {
             resultId = await UserProfileService.saveQuestResult(uid, {
                 topic: finalTopic,
                 textType: finalTextType,
-                content: finalContent,
+                content: finalContent || textForGrade,
+                imageUrls: imageUrlsNorm,
                 scores: result.pillar_scores || {},
                 pillar_scores: result.pillar_scores || {},
                 predicted_level: result.predicted_level || "4",

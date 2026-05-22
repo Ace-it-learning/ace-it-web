@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { 
@@ -208,6 +208,7 @@ const SchoolAutocomplete = ({ schools, value, onChange, isLoading }) => {
 const AccountPage = () => {
     const { user, profile, refreshProfile, changePassword, resetPassword, setPasswordForSocialUser, deleteUserAccount, logout } = useAuth();
     const { t, language } = useLanguage();
+    const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
     const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'general');
 
@@ -231,6 +232,7 @@ const AccountPage = () => {
     const [isLoadingSchools, setIsLoadingSchools] = useState(true);
 
     const [modal, setModal] = useState({ isOpen: false, type: 'info', message: '', onConfirm: null });
+    const [deleteConfirmText, setDeleteConfirmText] = useState('');
     const [isForgetLoading, setIsForgetLoading] = useState(null); // fingerprint
 
     const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -708,35 +710,11 @@ const AccountPage = () => {
     const handleManageBilling = () => openBillingPortal();
 
     const handleDeleteClick = () => {
-        const isPaid = profile?.subscription_tier !== 'free';
-        const isCancelled = profile?.subscription_status === 'cancelled';
-
-        if (isPaid && !isCancelled) {
-            setModal({
-                isOpen: true,
-                type: 'error',
-                message: (
-                    <div className="space-y-3">
-                        <p>{t('account.active_subscription_note')}</p>
-                        <button
-                            onClick={() => {
-                                setModal({ isOpen: false });
-                                handleTabChange('subscription');
-                            }}
-                            className="text-primary font-bold underline hover:no-underline"
-                        >
-                            {t('account.go_to_subscription')}
-                        </button>
-                    </div>
-                ),
-                onConfirm: null
-            });
-            return;
-        }
-
+        setDeleteConfirmText('');
         setModal({
             isOpen: true,
-            type: 'error',
+            type: 'warning',
+            title: t('account.delete_confirm_heading') || 'Delete Account',
             message: (
                 <div className="space-y-3">
                     <p className="font-bold">{t('account.delete_confirm_title')}</p>
@@ -755,13 +733,14 @@ const AccountPage = () => {
                         <li>{t('account.delete_roadmap')}</li>
                         <li>{t('account.delete_reports')}</li>
                     </ul>
-                    <p className="text-sm">{t('account.delete_subscription_first')}</p>
                 </div>
             ),
             onConfirm: async () => {
+                if (deleteConfirmText !== 'CONFIRM TO DELETE') return;
                 try {
                     await deleteUserAccount();
-                    logout(); // Force logout as user is deleted
+                    await logout(); // Force logout as user is deleted
+                    navigate('/'); // Redirect to landing page
                 } catch (err) {
                     setMessage({ type: 'error', text: err.message });
                     setModal({ isOpen: false });
@@ -1364,11 +1343,9 @@ const AccountPage = () => {
                                                 <p className="text-sm text-red-700 max-w-md leading-relaxed">
                                                     {t('account.delete_account_desc')}
                                                 </p>
-                                                {(profile?.subscription_tier !== 'free' && profile?.subscription_status !== 'cancelled') && (
-                                                    <p className="text-sm text-red-700">
-                                                        <span className="font-bold">{t('common.note') || 'Note:'}</span> {t('account.active_subscription_note')} <button onClick={() => handleTabChange('subscription')} className="text-primary font-bold underline hover:no-underline">{t('account.go_to_subscription')}</button>
-                                                    </p>
-                                                )}
+                                                <p className="text-sm text-red-700">
+                                                    <span className="font-bold">{t('common.note') || 'Note:'}</span> {t('account.active_subscription_note')} <button onClick={() => handleTabChange('subscription')} className="text-primary font-bold underline hover:no-underline">{t('account.go_to_subscription')}</button>
+                                                </p>
                                             </div>
                                             <button
                                                 onClick={handleDeleteClick}
@@ -1406,7 +1383,11 @@ const AccountPage = () => {
                                         <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                                             <div className="space-y-1">
                                                 <span className="text-[10px] font-bold uppercase tracking-widest opacity-80">{t('subscription.current_plan')}</span>
-                                                <h2 className="text-3xl font-black capitalize">{profile?.subscription_tier || 'Free'} Plan</h2>
+                                                <h2 className="text-3xl font-black capitalize">
+                                                    {profile?.subscription_tier === 'premium' ? t('pricing.premium_name') || '至尊計劃' :
+                                                     profile?.subscription_tier === 'pro' ? t('pricing.pro_name') || 'Pro Plan' :
+                                                     t('pricing.free_name') || 'Free Plan'}
+                                                </h2>
                                                 <div className="flex items-center gap-2 mt-2 opacity-90">
                                                     <div className={cn(
                                                         "w-2 h-2 rounded-full",
@@ -1427,7 +1408,9 @@ const AccountPage = () => {
                                                 </p>
                                                 <p className="text-xl font-bold mt-1">
                                                     {(() => {
+                                                        console.log('[AccountPage] profile.subscription_expiry:', profile?.subscription_expiry);
                                                         const expiry = getSubscriptionExpiryDate(profile);
+                                                        console.log('[AccountPage] computed expiry:', expiry);
                                                         return expiry ? formatHKDate(expiry) : 'Forever (Trial)';
                                                     })()}
                                                 </p>
@@ -1475,7 +1458,7 @@ const AccountPage = () => {
                                                     onClick={handleCancelClick}
                                                     className="w-full py-4 bg-white border border-slate-200 text-slate-600 rounded-2xl font-bold hover:bg-slate-50 transition-all"
                                                 >
-                                                    Cancel Subscription
+                                                    {t('subscription.cancel_subscription')}
                                                 </button>
                                             </>
                                         )}
@@ -1491,82 +1474,7 @@ const AccountPage = () => {
                                         </button>
                                     )}
 
-                                    {/* Multi-Device Info */}
-                                    <div className="space-y-6">
-                                        <div className="flex justify-between items-center px-1 pt-4">
-                                            <div className="flex items-center gap-2">
-                                                <Smartphone className="text-primary w-5 h-5" />
-                                                <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Active Devices</h4>
-                                            </div>
-                                            <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full">
-                                                {profile?.active_devices?.length || 0} / {profile?.subscription_tier === 'premium' ? '5' : '3'}
-                                            </span>
-                                        </div>
-
-                                        <div className="space-y-3">
-                                            {!profile?.active_devices || profile.active_devices.length === 0 ? (
-                                                <div className="text-center py-10 border-2 border-dashed border-slate-100 rounded-3xl bg-slate-50/30 flex flex-col items-center gap-3">
-                                                    <div className="w-12 h-12 rounded-full bg-white border border-slate-100 flex items-center justify-center text-slate-300">
-                                                        <Smartphone size={20} />
-                                                    </div>
-                                                    <p className="text-sm font-bold text-slate-400">No active devices registered</p>
-                                                </div>
-                                            ) : (
-                                                profile.active_devices.map((device, i) => (
-                                                    <div key={i} className="flex items-center justify-between p-4 bg-slate-50/50 rounded-[1.25rem] border border-slate-100 group hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
-                                                        <div className="flex items-center gap-4">
-                                                            <div className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
-                                                                {getDeviceIcon(device.os)}
-                                                            </div>
-                                                            <div>
-                                                                 <p className="text-sm font-bold text-slate-900">{device.name || 'Unknown Device'}</p>
-                                                                 <div className="flex flex-col gap-0.5">
-                                                                     <p className="text-[10px] text-slate-500">
-                                                                         {device.browser} • {device.os} • {device.lastSeen?.toDate?.().toLocaleDateString() || 'Recently'}
-                                                                     </p>
-                                                                     <p className="text-[9px] font-mono text-slate-400">
-                                                                         ID: {device.fingerprint ? `${device.fingerprint.slice(0, 4).toUpperCase()}...${device.fingerprint.slice(-4).toUpperCase()}` : 'Unknown ID'}
-                                                                     </p>
-                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        <button 
-                                                            onClick={() => handleConfirmForget(device.fingerprint)}
-                                                            disabled={isForgetLoading === device.fingerprint}
-                                                            className="p-2 text-slate-300 hover:text-red-500 hover:bg-red-50 transition-all rounded-lg disabled:opacity-50"
-                                                            title={t('account.forget_device')}
-                                                        >
-                                                            {isForgetLoading === device.fingerprint ? (
-                                                                <Loader2 size={16} className="animate-spin" />
-                                                            ) : (
-                                                                <Trash2 size={18} />
-                                                            )}
-                                                        </button>
-                                                    </div>
-                                                ))
-                                            )}
-
-                                            {/* Subtle Troubleshooter */}
-                                            <div className="mt-2 text-center">
-                                                <button 
-                                                    onClick={() => {
-                                                        const metadata = { name: "Chrome on Windows", browser: "Chrome", os: "Windows" };
-                                                        registerCurrentDevice(metadata);
-                                                    }}
-                                                    className="text-[9px] text-slate-300 hover:text-slate-400 transition-colors"
-                                                >
-                                                    {t('account.doesnt_look_right')} <span className="underline">{t('account.fix_label')}</span>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div className="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 flex gap-4">
-                                            <Shield className="text-amber-600 shrink-0 w-5 h-5" />
-                                            <p className="text-[10px] text-amber-800 leading-relaxed font-bold">
-                                                {t('account.security_note')}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    {/* Multi-Device Info — hidden temporarily */}
                                 </div>
                             )}
                         </div>
@@ -1578,7 +1486,27 @@ const AccountPage = () => {
             <AlertModal 
                 isOpen={modal.isOpen}
                 type={modal.type}
+                title={modal.title}
                 message={modal.message}
+                footer={
+                    modal.type === 'warning' ? (
+                        <div>
+                            <p className="text-sm font-bold text-red-700 mb-2">
+                                {t('account.delete_type_confirm') || 'To proceed, type the following exactly:'}
+                            </p>
+                            <p className="text-xs text-red-500 mb-1.5 font-mono tracking-wider">CONFIRM TO DELETE</p>
+                            <input
+                                type="text"
+                                value={deleteConfirmText}
+                                onChange={(e) => setDeleteConfirmText(e.target.value)}
+                                placeholder=""
+                                className="w-full px-4 py-2.5 border-2 border-red-200 rounded-xl text-sm font-bold tracking-wider uppercase focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 transition-all"
+                            />
+                        </div>
+                    ) : null
+                }
+                primaryLabel={modal.type === 'warning' ? (t('account.confirm_delete') || 'Delete Account') : 'OK'}
+                primaryDisabled={modal.type === 'warning' && deleteConfirmText !== 'CONFIRM TO DELETE'}
                 onClose={() => setModal({ ...modal, isOpen: false })}
                 onConfirm={modal.onConfirm || undefined}
             />

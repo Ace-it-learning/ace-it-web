@@ -4,6 +4,7 @@ import { X, WifiOff, CheckCircle2, AlertTriangle } from 'lucide-react';
 const defaultTitleForType = (type) => {
     if (type === 'success') return 'Success!';
     if (type === 'error') return 'Error';
+    if (type === 'warning') return 'Warning';
     if (type === 'network') return 'Connection Issue';
     return 'Notice';
 };
@@ -13,7 +14,9 @@ const AlertModal = ({
     type = 'info',
     title,
     message,
+    footer,
     primaryLabel = 'OK',
+    primaryDisabled = false,
     rootClassName,
     onClose,
     onRetry,
@@ -60,9 +63,15 @@ const AlertModal = ({
                         {heading}
                     </h3>
 
-                    <div className="text-gray-600 mb-6 font-medium leading-relaxed text-left w-full">
+                    <div className="text-gray-600 mb-4 font-medium leading-relaxed text-left w-full">
                         {message}
                     </div>
+
+                    {footer && (
+                        <div className="w-full mb-4">
+                            {footer}
+                        </div>
+                    )}
 
                     <div className="flex gap-3 w-full">
                         {onRetry && (
@@ -75,7 +84,8 @@ const AlertModal = ({
                         )}
                         <button
                             onClick={handlePrimaryClick}
-                            className={`flex-1 py-2.5 px-4 text-white rounded-xl font-bold shadow-lg shadow-gray-200 transition-all active:scale-95 ${styles.btn}`}
+                            disabled={primaryDisabled}
+                            className={`flex-1 py-2.5 px-4 text-white rounded-xl font-bold shadow-lg shadow-gray-200 transition-all active:scale-95 ${styles.btn} ${primaryDisabled ? 'opacity-40 cursor-not-allowed' : ''}`}
                         >
                             {onRetry ? 'Close' : primaryLabel}
                         </button>
@@ -109,6 +119,13 @@ const getAlertStyles = (type, size = 32) => {
             text: 'text-amber-800',
             icon: <WifiOff size={size} className="text-amber-600" />,
             btn: 'bg-amber-600 hover:bg-amber-700'
+        },
+        warning: {
+            bg: 'bg-red-50',
+            border: 'border-red-200',
+            text: 'text-red-800',
+            icon: <AlertTriangle size={size} className="text-red-600" />,
+            btn: 'bg-red-600 hover:bg-red-700'
         },
         info: {
             bg: 'bg-white',

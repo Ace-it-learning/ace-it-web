@@ -6,6 +6,8 @@ import { useAvatar } from '../context/AvatarContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, Save, Trash2 } from 'lucide-react';
 import { isCheatEnabled } from '../utils/devAccess';
+import { fetchWithAuth } from '../utils/apiAuth';
+import { apiUrl } from '../utils/apiBase';
 
 
 // Studio Components
@@ -41,6 +43,7 @@ const WritingQuestPage = () => {
     const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(true);
     const [cheatLibrary, setCheatLibrary] = useState(null);
     const [showQuitModal, setShowQuitModal] = useState(false);
+    const [uploadedImages, setUploadedImages] = useState([]);
 
     // Derived State
     const wordCount = content.trim().split(/\s+/).filter(x => x.length > 0).length;
@@ -335,12 +338,47 @@ const WritingQuestPage = () => {
         }
     };
 
+    const handlePaperImageUpload = async (file) => {
+        if (!user) return;
+        const folder = isMock
+            ? `writing_quest_mock/${user.uid}/${questData?.id || 'paper'}`
+            : `writing_quests/${user.uid}/${questData?.id || 'draft'}`;
+        try {
+            const sasRes = await fetchWithAuth(user, apiUrl('/api/data/uploads/sas'), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    folder,
+                    filename: file.name || 'page.jpg',
+                    contentType: file.type || 'application/octet-stream'
+                })
+            });
+            if (!sasRes.ok) {
+                const errBody = await sasRes.json().catch(() => ({}));
+                throw new Error(errBody.error || errBody.details || 'Failed to get upload URL');
+            }
+            const { uploadUrl, publicUrl } = await sasRes.json();
+            const uploadRes = await fetch(uploadUrl, {
+                method: 'PUT',
+                headers: {
+                    'x-ms-blob-type': 'BlockBlob',
+                    'Content-Type': file.type || 'application/octet-stream'
+                },
+                body: file
+            });
+            if (!uploadRes.ok) throw new Error('Upload to storage failed');
+            setUploadedImages((prev) => (prev.length >= 4 ? prev : [...prev, publicUrl]));
+        } catch (e) {
+            console.error('[WritingQuest] Image upload failed:', e);
+            alert(e?.message?.trim() ? e.message : 'Image upload failed. Please try again.');
+        }
+    };
+
     const handleSubmit = async () => {
-        if (wordCount < 50) return;
+        if (wordCount < 50 && uploadedImages.length === 0) return;
         setIsSubmitting(true);
         try {
-            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-            const res = await fetch(`${API_URL}/api/writing/grade`, {
+            const res = await fetchWithAuth(user, apiUrl('/api/writing/grade'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -348,7 +386,8 @@ const WritingQuestPage = () => {
                     textType: questData?.genre || questData?.id?.split('_')[0],
                     content: content,
                     userEmail: user?.email,
-                    uid: user?.uid
+                    uid: user?.uid,
+                    imageUrls: uploadedImages
                 })
             });
             if (!res.ok) {
@@ -539,6 +578,25 @@ const WritingQuestPage = () => {
                     onReviewTrigger={handleReview}
                     isReviewing={isReviewing}
                     isMock={isMock}
+                    allowPaperUpload={!isMock}
+                    uploadedImages={uploadedImages}
+                    onUpload={handlePaperImageUpload}
+                    onDeleteImage={(idx) => setUploadedImages((prev) => prev.filter((_, i) => i !== idx))}
+                    qrSurface={isMock ? 'writing_mock' : 'writing_quest'}
+                    qrMeta={isMock ? { part: 'A' } : { questId: questData?.id }}
+                    onQrPhoto={(msg) => {
+                        const url = msg?.payload?.publicUrl;
+                        const transcription = msg?.payload?.transcription;
+                        if (url) {
+                            setUploadedImages((prev) => (prev.length >= 4 ? prev : [...prev, url]));
+                        }
+                        if (transcription) {
+                            setContent((prev) => {
+                                const separator = prev.trim().length > 0 ? '\n\n' : '';
+                                return prev + separator + transcription;
+                            });
+                        }
+                    }}
                 />
             }
             isSidebarOpen={isSidebarOpen}

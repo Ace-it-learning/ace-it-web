@@ -12,6 +12,7 @@ import MockCountdownTimer from '../../components/utils/MockCountdownTimer';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BrainCircuit } from 'lucide-react';
 import { isCheatEnabled } from '../../utils/devAccess';
+import { useAzureSpeechRecognition } from '../../hooks/useAzureSpeechRecognition';
 
 const SpeakingMockStudio = () => {
     const { paperId } = useParams();
@@ -38,6 +39,9 @@ const SpeakingMockStudio = () => {
     const [voices, setVoices] = useState([]);
     const [individualQuestion, setIndividualQuestion] = useState("");
     const [individualResponse, setIndividualResponse] = useState("");
+    // Exam mode: hide subtitles by default; dev cheat toggle
+    const [showSubtitles, setShowSubtitles] = useState(false);
+    const cheatKeyPresses = useRef([]);
     
     // Refs for Interaction Engine
     const chatHistory = useRef([]);
@@ -122,97 +126,269 @@ const SpeakingMockStudio = () => {
         };
     }, []);
 
-    // Speech Recognition Setup
-    useEffect(() => {
-        if ('webkitSpeechRecognition' in window) {
-            const r = new window.webkitSpeechRecognition();
-            r.continuous = true;
-            r.interimResults = true;
-            r.lang = 'en-HK';
-            r.onstart = () => {
-                setIsRecording(true);
-                collectedTranscript.current = "";
-                addLog("🎙️ Listening...");
-            };
-            r.onend = () => setIsRecording(false);
-            r.onresult = (event) => {
-                let finalTranscript = "";
-                let interimTranscript = "";
-                for (let i = event.resultIndex; i < event.results.length; ++i) {
-                    if (event.results[i].isFinal) finalTranscript += event.results[i][0].transcript;
-                    else interimTranscript += event.results[i][0].transcript;
+    // Azure Speech Recognition Hook
+    const {
+        isListening: azureIsListening,
+        isConnected: azureIsConnected,
+        interimTranscript: azureInterimTranscript,
+        startListening: startAzureListening,
+        stopListening: stopAzureListening,
+        resetTranscript: resetAzureTranscript
+    } = useAzureSpeechRecognition({
+        silenceThresholdMs: 1200,
+        onPartial: (text) => {
+            setActiveSpeechText(text);
+            // Auto silence detection: 8s for exam mode (more time to think)
+            if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
+            userSilenceTimer.current = setTimeout(() => {
+                if (isUserTurn && text.trim()) {
+                    stopAzureListening();
+                    handleUserSpeech(text.trim());
                 }
-                if (interimTranscript) setActiveSpeechText(interimTranscript);
-                if (finalTranscript) collectedTranscript.current += " " + finalTranscript;
-
-                if (userSilenceTimer.current) clearTimeout(userSilenceTimer.current);
-                userSilenceTimer.current = setTimeout(() => {
-                    const totalSpeech = collectedTranscript.current.trim();
-                    if (totalSpeech) {
-                        r.stop();
-                        handleUserSpeech(totalSpeech);
-                    }
-                }, 1200);
-            };
-            recognition.current = r;
+            }, 8000);
+        },
+        onFinal: (text) => {
+            addLog(`📝 Final: "${text.substring(0, 30)}..."`);
+            handleUserSpeech(text);
+        },
+        onError: (err) => {
+            console.error('[SpeakingMockStudio] Azure STT error:', err);
+            addLog(`⚠️ STT Error: ${err.message}`);
         }
-        return () => {
-            if (recognition.current) {
-                try { recognition.current.stop(); } catch (e) {}
+    });
+
+    // Sync mic active state with Azure listening state
+    useEffect(() => {
+        setIsRecording(azureIsListening);
+    }, [azureIsListening]);
+
+    // Show interim results in UI
+    useEffect(() => {
+        if (azureInterimTranscript) {
+            setActiveSpeechText(azureInterimTranscript);
+        }
+    }, [azureInterimTranscript]);
+
+    // Dev cheat: triple-press Ctrl+Shift+S within 2s to toggle subtitles
+    useEffect(() => {
+        if (!isCheatMode) return;
+        const handler = (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+                e.preventDefault();
+                const now = Date.now();
+                cheatKeyPresses.current = cheatKeyPresses.current.filter(t => now - t < 2000);
+                cheatKeyPresses.current.push(now);
+                if (cheatKeyPresses.current.length >= 3) {
+                    cheatKeyPresses.current = [];
+                    setShowSubtitles(prev => {
+                        const next = !prev;
+                        addLog(next ? "🎯 DEV CHEAT: Subtitles ON" : "🎯 DEV CHEAT: Subtitles OFF");
+                        return next;
+                    });
+                }
             }
         };
-    }, [phase]);
+        window.addEventListener('keydown', handler);
+        return () => window.removeEventListener('keydown', handler);
+    }, [isCheatMode]);
+
+    // Cleanup on unmount
+    useEffect(() => {
+        return () => {
+            stopAzureListening();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // TTS Helpers
     const getVoice = (role) => {
-        const englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
-        const pool = englishVoices.length > 0 ? englishVoices : voices;
-        const find = (keywords) => pool.find(v => keywords.some(k => v.name.toLowerCase().includes(k.toLowerCase())));
-        
-        if (role === 'Examiner') return find(['google us english', 'samantha']) || pool[0];
-        if (role === 'Candidate_A') return find(['google uk english female', 'victoria']) || pool[0];
-        if (role === 'Candidate_B') return find(['google us english male', 'david', 'guy']) || pool[1] || pool[0];
-        if (role === 'Candidate_C') return find(['en-hk', 'daniel']) || pool[2] || pool[0];
+        if (!voices || voices.length === 0) return null;
+
+        const sortedVoices = [...voices].sort((a, b) => {
+            const aName = a.name.toLowerCase();
+            const bName = b.name.toLowerCase();
+            const score = (name) => {
+                let s = 0;
+                if (name.includes('natural')) s += 100;
+                if (name.includes('neural')) s += 80;
+                if (name.includes('premium')) s += 60;
+                if (name.includes('google')) s += 40;
+                if (name.includes('microsoft')) s += 20;
+                return s;
+            };
+            return score(bName) - score(aName);
+        });
+
+        const englishVoices = sortedVoices.filter(v => v.lang.toLowerCase().startsWith('en'));
+        const pool = englishVoices.length > 0 ? englishVoices : sortedVoices;
+
+        const getVoiceGender = (v) => {
+            if (v.gender) return v.gender.toLowerCase();
+            const name = v.name.toLowerCase();
+            const maleNames = ['david', 'guy', 'alex', 'daniel', 'james', 'oliver', 'harry', 'mark', 'peter', 'george', 'john', 'paul', 'richard', 'tom', 'sam', 'ben', 'matt', 'eric', 'frank'];
+            const femaleNames = ['samantha', 'victoria', 'moira', 'zira', 'susan', 'mary', 'aria', 'lisa', 'serena', 'emma', 'anna', 'jenny', 'sonia', 'libby', 'mia', 'hazel', 'helen', 'catherine'];
+            if (maleNames.some(n => name.includes(n))) return 'male';
+            if (femaleNames.some(n => name.includes(n))) return 'female';
+            if (name.includes('male') && !name.includes('female')) return 'male';
+            if (name.includes('female')) return 'female';
+            return null;
+        };
+
+        const findVoice = (preferredNames, gender) => {
+            for (const name of preferredNames) {
+                const match = pool.find(v => {
+                    const nameMatch = v.name.toLowerCase().includes(name.toLowerCase());
+                    const vGender = getVoiceGender(v);
+                    const genderMatch = !gender || !vGender || vGender === gender.toLowerCase();
+                    return nameMatch && genderMatch;
+                });
+                if (match) return match;
+            }
+            if (gender) {
+                const genderMatch = pool.find(v => getVoiceGender(v) === gender.toLowerCase());
+                if (genderMatch) return genderMatch;
+            }
+            return pool[0];
+        };
+
+        if (role === 'Examiner') {
+            return findVoice(['Jenny', 'Natasha', 'Aria', 'Sonia', 'Libby', 'Emma'], 'Female');
+        }
+        if (role === 'Candidate_A') {
+            return findVoice(['Sonia', 'Libby', 'Hazel', 'Olivia', 'Mia', 'Emma'], 'Female');
+        }
+        if (role === 'Candidate_B') {
+            return findVoice(['Ryan', 'Guy', 'Davis', 'Tony', 'Eric', 'Daniel'], 'Male');
+        }
+        if (role === 'Candidate_C') {
+            return findVoice(['Brandon', 'Christopher', 'Eric', 'Davis', 'Tony'], 'Male');
+        }
         return pool[0];
     };
 
-    const playSpeech = (role, text, onEnd) => {
+    const playBrowserTTS = (role, text, onEnd) => {
+        const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+        let idx = 0;
+        const voiceProfiles = {
+            'Examiner': { pitch: 1.0, rate: 0.95 },
+            'Candidate_A': { pitch: 1.08, rate: 1.02 },
+            'Candidate_B': { pitch: 0.95, rate: 0.98 },
+            'Candidate_C': { pitch: 0.88, rate: 0.92 }
+        };
+        const profile = voiceProfiles[role] || voiceProfiles['Examiner'];
+
+        const speakNext = () => {
+            if (idx >= sentences.length) {
+                setTimeout(() => {
+                    isTransitioning.current = false;
+                    activeUtterance.current = null;
+                    setActiveSubtitle("");
+                    if (onEnd) onEnd();
+                }, 100);
+                return;
+            }
+            const s = sentences[idx++].trim();
+            if (!s) { speakNext(); return; }
+            const u = new SpeechSynthesisUtterance(s);
+            activeUtterance.current = u;
+            const voice = getVoice(role);
+            if (voice) u.voice = voice;
+            u.pitch = profile.pitch;
+            u.rate = profile.rate;
+            u.onend = speakNext;
+            u.onerror = speakNext;
+            window.speechSynthesis.speak(u);
+        };
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        isTransitioning.current = true;
+        speakNext();
+    };
+
+    const playSpeech = async (role, text, onEnd) => {
         const cleaned = text.replace(/^(Candidate[ _][A-D]|Examiner):/i, "").trim();
         if (!cleaned) { if (onEnd) onEnd(); return; }
 
         setTranscript(prev => [...prev.slice(-10), { role, text: cleaned }]);
-        setActiveSubtitle(cleaned);
-        
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
-        
-        const u = new SpeechSynthesisUtterance(cleaned);
-        activeUtterance.current = u;
-        const voice = getVoice(role);
-        if (voice) u.voice = voice;
+        if (showSubtitles) setActiveSubtitle(cleaned);
 
-        if (role === 'Candidate_A') { u.pitch = 1.1; u.rate = 1.0; }
-        else if (role === 'Candidate_B') { u.pitch = 1.0; u.rate = 0.85; }
-        else if (role === 'Candidate_C') { u.pitch = 0.9; u.rate = 0.92; }
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const res = await fetch(`${API_URL}/api/speaking/tts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: cleaned, role, uid: user?.uid }),
+                signal: AbortSignal.timeout(10000)
+            });
+            if (!res.ok) throw new Error(`TTS HTTP ${res.status}`);
+            const data = await res.json();
+            if (data.audio) {
+                const audio = new Audio(`data:audio/mp3;base64,${data.audio}`);
+                activeUtterance.current = { abort: () => audio.pause() };
+                audio.onended = () => {
+                    activeUtterance.current = null;
+                    isTransitioning.current = false;
+                    setActiveSubtitle("");
+                    if (onEnd) onEnd();
+                };
+                audio.onerror = () => playBrowserTTS(role, cleaned, onEnd);
+                isTransitioning.current = true;
+                await audio.play();
+                return;
+            }
+        } catch (e) {
+            addLog(`⚠️ Azure TTS failed: ${e.message}. Using browser fallback.`);
+        }
+        playBrowserTTS(role, cleaned, onEnd);
+    };
 
-        isTransitioning.current = true;
-        u.onend = () => {
-            activeUtterance.current = null;
-            setActiveSubtitle("");
-            isTransitioning.current = false;
-            
-            if (isQueued.current) {
-                isQueued.current = false;
-                setIsQueuedState(false);
-                startUserTurn();
-            } else if (onEnd) onEnd();
-        };
-        u.onerror = () => {
-            activeUtterance.current = null;
-            isTransitioning.current = false;
-            if (onEnd) onEnd();
-        };
-
-        window.speechSynthesis.speak(u);
+    const playIntroTurn = async (speaker, onComplete) => {
+        addLog(`🎬 Intro: Fetching turn for ${speaker}...`);
+        setCurrentSpeaker(speaker);
+        try {
+            const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+            const levelMap = { 'Candidate_A': '6', 'Candidate_B': '3', 'Candidate_C': '4' };
+            const enrichedTopic = `${mockData?.topic_description || ''}\n[SYSTEM: Candidate Personas: A(${mockData?.candidates?.A}), B(${mockData?.candidates?.B}), C(${mockData?.candidates?.C})]`;
+            const res = await fetch(`${API_URL}/api/speaking/interaction/turn`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    history: chatHistory.current.slice(-10),
+                    current_speaker: speaker,
+                    topic: enrichedTopic,
+                    level: levelMap[speaker] || '5',
+                    uid: user?.uid,
+                    audioOutput: false
+                }),
+                signal: AbortSignal.timeout(15000)
+            });
+            if (!res.ok) throw new Error(`Server ${res.status}`);
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+            if (data.content) {
+                chatHistory.current.push({ role: speaker, content: data.content });
+                lastSpeakerRef.current = speaker;
+                addLog(`✅ Intro: ${speaker} says: "${data.content.substring(0, 40)}..."`);
+                playSpeech(speaker, data.content, () => {
+                    setCurrentSpeaker(null);
+                    if (onComplete) onComplete();
+                });
+            } else throw new Error('Empty content');
+        } catch (e) {
+            addLog(`⚠️ Intro fetch for ${speaker} failed: ${e.message}. Using fallback.`);
+            const topicName = mockData?.title || "this topic";
+            const fallbacks = {
+                'Candidate_A': `I believe there are both positive and negative aspects to consider regarding ${topicName}.`,
+                'Candidate_B': `That's a valid point. However, we must also consider how ${topicName} affects different groups.`,
+                'Candidate_C': `I agree. I think ${topicName} is something we need to discuss more openly.`
+            };
+            const fb = fallbacks[speaker] || fallbacks['Candidate_A'];
+            chatHistory.current.push({ role: speaker, content: fb });
+            lastSpeakerRef.current = speaker;
+            playSpeech(speaker, fb, () => {
+                setCurrentSpeaker(null);
+                if (onComplete) onComplete();
+            });
+        }
     };
 
     const handleUserSpeech = (text) => {
@@ -248,9 +424,10 @@ const SpeakingMockStudio = () => {
         setCurrentSpeaker("You");
         setActiveSpeechText("");
         
-        if (recognition.current) {
-            try { recognition.current.start(); } catch {}
-        }
+        resetAzureTranscript();
+        collectedTranscript.current = "";
+        startAzureListening();
+        addLog("🎙️ Azure STT listening started...");
     };
 
     const fetchBatch = async (hintSpeaker = "Candidate_A") => {
@@ -380,17 +557,18 @@ const SpeakingMockStudio = () => {
     }, [phase, currentSpeaker, isUserTurn, isRecording]);
 
     const startDiscussionFlow = () => {
-        if (chatHistory.current.length > 0) return; // Prevent double trigger
+        if (chatHistory.current.length > 0) return;
         updatePhase('DISCUSSION');
         setCurrentSpeaker('Examiner');
         
-        chatHistory.current.push({ role: "Examiner", content: `Good afternoon. We are here to discuss ${mockData?.title}. Candidate A, would you like to start?` });
+        const introText = `Good afternoon. We are here to discuss ${mockData?.title}. Candidate A, would you like to start?`;
+        chatHistory.current.push({ role: "Examiner", content: introText });
         
-        playSpeech("Examiner", `Good afternoon. We are here to discuss ${mockData?.title}. Candidate A, would you like to start?`, () => {
+        playSpeech("Examiner", introText, () => {
             setCurrentSpeaker(null);
-            triggerAITurn("Candidate_A", () => {
-                triggerAITurn("Candidate_B", () => {
-                    triggerAITurn("Candidate_C", () => {
+            playIntroTurn("Candidate_A", () => {
+                playIntroTurn("Candidate_B", () => {
+                    playIntroTurn("Candidate_C", () => {
                         setCurrentSpeaker("Examiner");
                         playSpeech("Examiner", "Candidate D, it's your turn. What are your thoughts?", () => {
                             setCurrentSpeaker(null);
@@ -403,12 +581,16 @@ const SpeakingMockStudio = () => {
     };
 
     const startIndividualResponse = () => {
-        activeTurnLoopId.current += 1; // Invalidate all pending discussion loops
+        activeTurnLoopId.current += 1;
         isTurnInProgressRef.current = false;
         localTurnQueue.current = [];
         
         updatePhase('INDIVIDUAL');
+        // Stop all AI speech immediately
         if (window.speechSynthesis) window.speechSynthesis.cancel();
+        if (activeUtterance.current?.abort) activeUtterance.current.abort();
+        activeUtterance.current = null;
+        isTransitioning.current = false;
         if (recognition.current) try { recognition.current.stop(); } catch(e){}
         
         setCurrentSpeaker("Examiner");
@@ -416,7 +598,6 @@ const SpeakingMockStudio = () => {
             const qs = mockData?.individual_response_questions || [];
             const q = qs[0] || "What is your view?";
             setIndividualQuestion(q);
-            // chatHistory.current.push({ role: "Examiner", content: q }); // Keep Part B out of Part A history
             playSpeech("Examiner", q, () => {
                 setCurrentSpeaker(null);
                 startUserTurn();
@@ -466,11 +647,9 @@ const SpeakingMockStudio = () => {
         } catch (error) {
             clearInterval(progressInterval);
             console.error("Submission error:", error);
-            // Fallback for demo if backend not ready
-            setTimeout(() => {
-                updatePhase('RESULTS');
-                setIsSubmitting(false);
-            }, 3000);
+            // Show error and allow user to retry or return to library
+            setIsSubmitting(false);
+            alert("Assessment processing failed. Please try again or return to the library.");
         }
     };
 
@@ -620,12 +799,17 @@ const SpeakingMockStudio = () => {
                             <div className="size-2 bg-rose-500 rounded-full animate-pulse" /> Live Exam
                         </div>
 
-                        {/* Subtitle / Speech Display */}
-                        <div className="absolute top-20 text-center max-w-2xl w-full">
-                            <p className="text-lg font-medium text-slate-300 min-h-[3rem] italic">
-                                {activeSubtitle || activeSpeechText || (isUserTurn ? "Waiting for your response..." : "")}
-                            </p>
-                        </div>
+                        {/* Subtitle / Speech Display — hidden in exam mode, dev cheat toggleable */}
+                        {showSubtitles && (
+                            <div className="absolute top-20 text-center max-w-2xl w-full">
+                                <div className="flex items-center justify-center gap-2 mb-1">
+                                    <span className="text-[9px] font-black text-amber-500 uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded">DEV MODE</span>
+                                </div>
+                                <p className="text-lg font-medium text-slate-300 min-h-[3rem] italic">
+                                    {activeSubtitle || activeSpeechText || (isUserTurn ? "Waiting for your response..." : "")}
+                                </p>
+                            </div>
+                        )}
 
                         {/* Candidates Grid */}
                         <div className="grid grid-cols-3 gap-8 w-full max-w-4xl place-items-center mt-20">

@@ -1,5 +1,5 @@
 # Production Dockerfile for Ace it! Backend
-# Optimized for Google Cloud Run (asia-east2 - Hong Kong)
+# Optimized for Azure App Service (Linux Container) — East Asia
 
 FROM node:20-slim
 

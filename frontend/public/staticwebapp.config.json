@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "route": "/login",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/logout",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/app/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/mock-eng/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/mock-math/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/diagnostic/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/quest/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/lab/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/tutor",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/dashboard",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/profile",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/settings",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/notebook",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/payment",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/admin/*",
+      "rewrite": "/index.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/static/*",
+      "*.js",
+      "*.css",
+      "*.png",
+      "*.jpg",
+      "*.jpeg",
+      "*.gif",
+      "*.svg",
+      "*.ico",
+      "*.json",
+      "*.woff",
+      "*.woff2",
+      "*.ttf",
+      "*.eot"
+    ]
+  },
+  "globalHeaders": {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "mimeTypes": {
+    ".json": "application/json"
+  }
+}

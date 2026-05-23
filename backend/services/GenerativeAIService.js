@@ -57,7 +57,7 @@ class GenerativeAIService {
         // 🛡️ HARD ISOLATION (2026 Cost Control)
         // In Development, we EXCLUSIVELY use AI Studio (Free Tier).
         // Vertex AI is physically blocked here to prevent accidental charges from the DEV service account.
-        const isDev = NODE_ENV === 'development' || !process.env.K_SERVICE; // K_SERVICE is only present in Cloud Run
+        const isDev = NODE_ENV === 'development' || !NODE_ENV;
         const isHardBlocked = isDev && process.env.I_KNOW_THIS_COSTS_MONEY !== 'true';
 
         if (isHardBlocked || forceAIStudio) {
@@ -101,7 +101,7 @@ class GenerativeAIService {
                 this.currentRegion = region;
                 this.vertexConfig = vertexConfig; 
 
-                const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+                const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
 
                 // 2026 Model Mapping - Tier-Based Lockdown for DEV
                 this.vertexModelMap = {
@@ -161,7 +161,7 @@ class GenerativeAIService {
         this.requestHistory = []; // Track RPM for free-tier protection
 
         // 2026 COST SAVER: In DEV, we map PRO requests to FLASH by default to prevent accidental Tier 1 billing.
-        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         const isDev = this.isDevMode;
         
         this.studioModelMap = {
@@ -195,7 +195,7 @@ class GenerativeAIService {
         this.isGroq = true;
         this.activeProvider = "groq";
         this.currentRegion = 'groq/api_key';
-        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         console.log(`[AIService] Initialized Groq API adapter | Dev Mode: ${this.isDevMode}`);
     }
 
@@ -233,7 +233,7 @@ class GenerativeAIService {
         this.isVertex = false;
         this.isAzureOpenAI = true;
         this.currentRegion = "azure_openai";
-        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         console.log(`[AIService] Initialized Azure OpenAI adapter | API ${apiVersion}`);
     }
 
@@ -255,7 +255,7 @@ class GenerativeAIService {
         this.isDeepSeek = true;
         this.activeProvider = "deepseek";
         this.currentRegion = "deepseek/api_key";
-        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        this.isDevMode = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         console.log(`[AIService] Initialized DeepSeek API adapter | Dev Mode: ${this.isDevMode}`);
     }
 
@@ -268,7 +268,7 @@ class GenerativeAIService {
      * Ensures we don't exceed the 15 RPM limit for Gemini 1.5 Flash
      */
     async enforceFreeTierLimits() {
-        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         if (!isDev || this.isVertex || this.isGroq || this.isDeepSeek) return;
 
         const now = Date.now();
@@ -890,7 +890,7 @@ class GenerativeAIService {
      */
     async executeWithRetry(action, input, config = {}, retries = 6) {
         // [COST GUARD]: Reduce retries in DEV to prevent "Retry Storms" that burn quota/tokens
-        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV || !process.env.K_SERVICE;
+        const isDev = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
         const effectiveRetries = isDev ? Math.min(retries, 2) : retries;
         
         await this.init();

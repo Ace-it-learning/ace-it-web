@@ -17,24 +17,23 @@ const DATA_PROVIDER = (process.env.DATA_PROVIDER || 'firebase').toLowerCase();
 const saFilename = NODE_ENV === 'production' ? 'config/antigravity-tutor-prod-key.json' : 'config/antigravity-tutor-dev-key.json';
 const serviceAccountPath = path.join(__dirname, saFilename);
 
-// Force production mode if running on Cloud Run or project matches
-const forceProduction = !!process.env.K_SERVICE || process.env.GOOGLE_CLOUD_PROJECT === 'ace-it-production-1e0a4';
-const needsFirebase = forceProduction || AUTH_PROVIDER === 'firebase' || DATA_PROVIDER === 'firebase' || DATA_PROVIDER === 'dual';
+// Firebase initialization is now purely provider-driven.
+// Remove hardcoded Cloud Run / GCP project detection.
+const needsFirebase = AUTH_PROVIDER === 'firebase' || DATA_PROVIDER === 'firebase' || DATA_PROVIDER === 'dual';
 
 if (needsFirebase) {
     const admin = require('firebase-admin');
-    if (forceProduction || NODE_ENV === 'production') {
-        // ON CLOUD RUN: We MUST use the production key or ADC.
+    if (NODE_ENV === 'production') {
         try {
-            const options = require('fs').existsSync(serviceAccountPath) 
-                ? { credential: admin.credential.cert(require(serviceAccountPath)) } 
+            const options = require('fs').existsSync(serviceAccountPath)
+                ? { credential: admin.credential.cert(require(serviceAccountPath)) }
                 : {}; // Fallback to ADC
-            
+
             admin.initializeApp(options);
             global.db = admin.firestore();
-            
+
             const projectId = admin.app().options.credential?.projectId || process.env.GOOGLE_CLOUD_PROJECT;
-            console.log(`\n✅ PRODUCTION BACKEND ACTIVE`);
+            console.log(`\n✅ PRODUCTION BACKEND ACTIVE (Firebase Stack)`);
             console.log(`🆔 Project ID: ${projectId}`);
         } catch (error) {
             console.error("❌ Firebase Admin Production initialization failed:", error);
@@ -54,10 +53,11 @@ if (needsFirebase) {
         console.warn(`⚠️ Firebase requested but no service account found at ${saFilename}. Firestore features disabled.`);
     }
 } else {
-    console.log(`\n🛠️ DEVELOPMENT BACKEND ACTIVE (Azure Stack)`);
+    const stackLabel = NODE_ENV === 'production' ? '✅ PRODUCTION BACKEND ACTIVE (Azure Stack)' : '🛠️ DEVELOPMENT BACKEND ACTIVE (Azure Stack)';
+    console.log(`\n${stackLabel}`);
     console.log(`🔐 Auth Provider: ${AUTH_PROVIDER}`);
     console.log(`🗄️  Data Provider: ${DATA_PROVIDER}`);
-    console.log(`🤖 AI Provider: ${process.env.AI_PROVIDER || 'google'}\n`);
+    console.log(`🤖 AI Provider: ${process.env.AI_PROVIDER || 'deepseek'}\n`);
 }
 
 // --- INITIALIZE STRIPE ---
@@ -75,15 +75,34 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(require('./middleware/Auth0IdentityMiddleware').enrichIdentity);
 
 // CORS Implementation
+// Add extra origins via CORS_ORIGINS env var (comma-separated)
+const EXTRA_CORS_ORIGINS = (process.env.CORS_ORIGINS || '')
+    .split(',')
+    .map(o => o.trim())
+    .filter(Boolean);
+const ALLOWED_ORIGINS = [
+    'http://localhost:3005',
+    'https://localhost:3005',
+    'http://127.0.0.1:3005',
+    'https://ace-it-web.azurewebsites.net',
+    'https://ace-it-web-prod.azurewebsites.net',
+    'https://orange-sand-0995bf300.7.azurestaticapps.net',
+    // Add your Azure Static Web Apps PROD URL and custom domain below:
+    // 'https://ace-it-prod.azurestaticapps.net',
+    // 'https://app.aceit-learning.com',
+    ...EXTRA_CORS_ORIGINS,
+];
+
 app.use((req, res, next) => {
     const origin = req.headers.origin;
-    // Explicitly allow local development port 3005
-    if (origin === 'http://localhost:3005' || origin?.includes('localhost:')) {
-        res.header('Access-Control-Allow-Origin', origin);
-    } else if (origin) {
-        res.header('Access-Control-Allow-Origin', origin);
+    if (origin) {
+        const isAllowed = ALLOWED_ORIGINS.some((o) => origin.toLowerCase() === o.toLowerCase());
+        const isLocalDev = origin === 'http://localhost:3005' || origin?.includes('localhost:');
+        if (isAllowed || isLocalDev || !isProduction) {
+            res.header('Access-Control-Allow-Origin', origin);
+        }
     }
-    
+
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-secret');
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -220,7 +239,10 @@ function setupWebSocketServer(httpServer) {
                 'https://localhost:3005',
                 'http://127.0.0.1:3005',
                 'https://ace-it-web.azurewebsites.net',
-                'https://ace-it-web-prod.azurewebsites.net'
+                'https://ace-it-web-prod.azurewebsites.net',
+                // Add your Azure Static Web Apps PROD URL and custom domain below:
+                // 'https://ace-it-prod.azurestaticapps.net',
+                // 'https://app.aceit-learning.com',
             ];
             // In dev, be permissive; in prod, strict
             if (!isProduction) {

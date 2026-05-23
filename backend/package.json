@@ -16,7 +16,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wipe-user": "node wipe_user.js",
     "deploy-dev": "echo 'DEV deployment is now Azure-based. Update this script with your Azure CLI command.'",
-    "deploy-prod": "gcloud run deploy ace-it-backend-prod --project ace-it-production-1e0a4 --region asia-east2 --set-env-vars NODE_ENV=production --source . --allow-unauthenticated"
+    "deploy-prod": "echo 'Run the Azure deployment script: ./scripts/deploy-azure-prod.sh'",
+    "build:prod": "docker build -t aceit-backend-prod:latest .",
+    "build-and-deploy-prod": "npm run build:prod && npm run deploy-prod"
   },
   "keywords": [],
   "author": "",

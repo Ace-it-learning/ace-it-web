@@ -4,17 +4,19 @@ This document explains how the application switches between **DEV** (Azure stack
 
 ## Stack Matrix
 
-| Layer | DEV (Local/Azure) | PROD (Firebase/GCP) |
+| Layer | DEV (Local/Azure) | PROD (Azure Cloud) |
 |-------|-------------------|---------------------|
-| **Auth** | Azure Entra (MSAL) | Firebase Auth |
-| **Database** | Azure Cosmos DB | Firebase Firestore |
-| **AI / LLM** | Deepseek API | Google Gemini / Vertex AI |
-| **Storage** | Azure Blob Storage | Google Cloud Storage |
-| **Hosting** | Azure App Service / Static Web Apps | Firebase Hosting + Cloud Run |
+| **Auth** | Azure Entra (MSAL) | Azure Entra (MSAL) |
+| **Database** | Azure Cosmos DB | Azure Cosmos DB |
+| **AI / LLM** | Deepseek API | Deepseek API |
+| **Storage** | Azure Blob Storage | Azure Blob Storage |
+| **Hosting** | Azure App Service / Static Web Apps | Azure App Service + Static Web Apps |
 
 ## Environment Variables
 
 The following environment variables control which stack is active. They must be set in `/backend/.env` and `/frontend/.env.development` (or `.env.production`).
+
+> **Note**: As of the latest migration, both DEV and PROD run on the Azure stack. Firebase/GCP configurations are legacy and only required if explicitly switching back.
 
 ### Backend (`/backend/.env`)
 

@@ -4,7 +4,7 @@
 
 Ace it! is an AI-powered tutoring platform targeting HKDSE (Hong Kong Diploma of Secondary Education) English Language and Mathematics exam preparation. It provides adaptive learning through AI tutors, mock exams, diagnostics, speaking/writing/listening quests, micro-skill tracking, and gamification (XP, streaks, leveling).
 
-The project is a full-stack JavaScript application with a React frontend and a Node.js/Express backend. Infrastructure is environment-dependent: **DEV runs on Azure**; **PROD runs on Firebase + Google Cloud**.
+The project is a full-stack JavaScript application with a React frontend and a Node.js/Express backend. Infrastructure: **Both DEV and PROD run on Azure Cloud**. Legacy Firebase + Google Cloud infrastructure has been deprecated.
 
 ---
 
@@ -43,9 +43,9 @@ The project is a full-stack JavaScript application with a React frontend and a N
 
 ### AI / ML Services
 - **Primary AI Gateway (DEV)**: Deepseek API
-- **Legacy AI (PROD — suspended)**: Google Gemini / Vertex AI (retained in production only; do not use in DEV)
-- **Speech**: Google Cloud Speech-to-Text (@google-cloud/speech)
-- **TTS**: Google Cloud Text-to-Speech (@google-cloud/text-to-speech)
+- **AI (PROD)**: Deepseek API (same as DEV)
+- **Speech**: Azure Speech Services (primary); Google Cloud Speech-to-Text (legacy, optional)
+- **TTS**: Azure Text-to-Speech (primary); Google Cloud Text-to-Speech (legacy, optional)
 - **Model Strategy (DEV)**:
   - Deepseek for all AI tasks (routing, chat, reasoning, essay grading)
 - **Model Strategy (PROD — legacy)**:
@@ -54,15 +54,15 @@ The project is a full-stack JavaScript application with a React frontend and a N
 
 ### Databases & Storage
 - **Primary Database (DEV)**: Azure Cosmos DB (@azure/cosmos) — single source of truth
-- **Legacy Database (PROD)**: Firebase Firestore (NoSQL document store)
-- **Relational Database**: PostgreSQL — **deprecated / removed in DEV**
-- **Object Storage**: Azure Blob Storage (@azure/storage-blob) — DEV primary. Google Cloud Storage — PROD only.
+- **Database (PROD)**: Azure Cosmos DB (same as DEV)
+- **Relational Database**: PostgreSQL — **deprecated / removed**
+- **Object Storage**: Azure Blob Storage (@azure/storage-blob) — primary for all environments
 
 ### Infrastructure & Deployment
 - **DEV Environment**: Azure (frontend + backend hosting)
-- **PROD Environment**: Firebase Hosting (frontend), Google Cloud Run (backend), Google App Engine (`app.yaml`)
+- **PROD Environment**: Azure App Service (backend), Azure Static Web Apps (frontend)
 - **Containerization**: Docker (`backend/Dockerfile`, Node 20 slim base)
-- **CDN/Static Assets**: Azure CDN — DEV; Firebase Hosting — PROD
+- **CDN/Static Assets**: Azure CDN / Static Web Apps edge — all environments
 
 > **Note**: Render hosting has been removed entirely.
 
@@ -126,8 +126,7 @@ The project is a full-stack JavaScript application with a React frontend and a N
 /backend                     Node.js/Express API
   server.js                  Express app bootstrap & route mounting
   package.json               Backend dependencies & scripts
-  app.yaml                   Google App Engine config (nodejs20)
-  Dockerfile                 Container image (Azure DEV + Google Cloud Run PROD)
+  Dockerfile                 Container image (Azure App Service — Linux Container)
   nodemon.json               Nodemon dev config
   /routes                    API route handlers
     chatRoutes.js            Primary chat endpoint
@@ -235,7 +234,7 @@ npm run verify:cosmos-parity  # Legacy: Verify Cosmos DB parity (do not run)
 npm run test:azure-migration  # Run Azure migration smoke test
 npm run wipe-user             # Wipe user data
 npm run deploy-dev            # Deploy to Azure DEV environment
-npm run deploy-prod           # Deploy to prod Cloud Run (asia-east2) — PROD only
+npm run build-and-deploy-prod # Build Docker image and deploy to Azure PROD
 ```
 
 ### Full Stack (from project root)
@@ -402,31 +401,36 @@ Frontend uses `parseSuggestions` for chips and existing regex blocks for others.
 - Backend runs as an Azure App Service or Azure Container Instance (Docker image from `backend/Dockerfile`).
 - Frontend is served via Azure Static Web Apps or Azure App Service.
 - Cosmos DB is the backing database.
-- No Firebase, Cloud Run, or Render involvement in DEV.
+- No Firebase, Cloud Run, or Render involvement in any environment.
 
-### PROD Deployment (Firebase + GCP — Retained)
-The backend deploys to Google Cloud Run with Docker:
+### PROD Deployment (Azure Cloud)
+
+#### Backend Deployment (Azure App Service)
 ```bash
 cd backend
-gcloud run deploy ace-it-backend-prod \
-  --project ace-it-production-1e0a4 \
-  --region asia-east2 \
-  --set-env-vars NODE_ENV=production \
-  --source . \
-  --allow-unauthenticated
-```
-- Dockerfile: Node 20 slim, port 3001, `npm install --omit=dev`.
-- Vertex AI region fallback: `asia-east1` (primary), `asia-southeast1`, `us-central1`.
-- App Engine fallback config exists in `app.yaml`.
 
-### Frontend Deployment (PROD — Firebase Hosting)
+# Build Docker image
+docker build -t aceit-backend-prod:latest .
+
+# Push to Azure Container Registry and deploy
+az acr login --name <your-acr-name>
+docker tag aceit-backend-prod:latest <your-acr-name>.azurecr.io/aceit-backend-prod:latest
+docker push <your-acr-name>.azurecr.io/aceit-backend-prod:latest
+
+az webapp config container set \
+  --name ace-it-backend-prod \
+  --resource-group rg-aceit-prod \
+  --docker-custom-image-name <your-acr-name>.azurecr.io/aceit-backend-prod:latest \
+  --docker-registry-server-url https://<your-acr-name>.azurecr.io
+```
+
+#### Frontend Deployment (Azure Static Web Apps)
 ```bash
 cd frontend && npm run build
-firebase deploy --only hosting
+swa deploy ./dist --env production --deployment-token <your-swa-token>
 ```
-- Firebase Hosting serves `frontend/dist`.
-- `/api/**` rewrites to Cloud Run service `ace-it-backend`.
 - SPA fallback: `/**` → `/index.html`.
+- API calls route to `VITE_API_URL` (Azure App Service).
 
 ### Git Workflow
 - **Never** commit directly to `main` for new features.
